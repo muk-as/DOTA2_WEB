@@ -1,0 +1,839 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible">
+   <link href="css/comicviewer.css" rel="stylesheet" type="text/css"/>
+   <link href="css/simplegrid.css?v=2020072819" rel="stylesheet" type="text/css"/>
+   <link href="css/aos.css" rel="stylesheet" type="text/css"/>
+   <link href="css/aghanimslabyrinth.css?v=2020072819" rel="stylesheet" type="text/css"/>
+   <script src="/main/libs/jquery-1.12.4.min.js" type="text/javascript">
+   </script>
+   <script src="js/howler.min.js" type="text/javascript">
+   </script>
+   <script src="js/jquery.utils.lite.min.js" type="text/javascript">
+   </script>
+   <script src="js/jquery.imagesloaded.min.js" type="text/javascript">
+   </script>
+   <script src="js/spin.min.js" type="text/javascript">
+   </script>
+   <script src="js/jquery.comicviewer.js?vmin.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    $J = jQuery;
+   </script>
+   <script src="https://www.dota2.com.cn/js/libs/aos/aos.js" type="text/javascript">
+   </script>
+   <title>
+    阿哈利姆的天地迷宫
+   </title>
+   <meta content="刀塔,DOTA2,DOTA,TI9,CNDOTA,电竞,dota2更新,刀塔更新,世外之争,刀塔新版本,dota2新版本" name="keywords"/>
+   <meta content="第十届国际邀请赛专属活动 开启游玩！ " name="description"/>
+   <meta content="width=device-width,initial-scale=1,maximum-scale=1.0" name="viewport"/>
+   <!-- <meta name="viewport" content="width=1400, initial-scale=0" /> -->
+   <script type="text/javascript">
+    /*  videoId = 'qop_arcana_video_embed';
+         var tag = document.createElement('script');
+         tag.src = "//www.youtube.com/iframe_api";
+         var firstScriptTag = document.getElementsByTagName('script')[0];
+         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+         var player;
+
+         function onYouTubeIframeAPIReady() {
+             player = new YT.Player('qop_arcana_video_embed', {
+                 playerVars: { 'rel': 0, 'autoplay': 0, 'controls': 1 },
+                 videoId: 'ybTSeX-ppvE',
+                 events: {
+                     'onReady': onPlayerReady,
+                     'onStateChange': onPlayerStateChange
+                 }
+             });
+         } */
+
+        function onPlayerReady(event) {
+            //Uncomment to autoplay function
+            //event.target.playVideo();
+        }
+
+        /* function fadeOutVideo() {
+            $('#header_youtube_embed').removeClass("fade_in_header_video");
+            $('#header_black_background').removeClass("fade_in_header_video");
+            $('#header_youtube_embed').addClass("fade_out_header_video");
+            $('#header_black_background').addClass("fade_out_header_video");
+            $('#trailer_header_div').addClass("show_post_trailer");
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+                fadeOutVideo();
+            }
+            else if (event.data === YT.PlayerState.PAUSED) {
+                setTimeout(function () {
+                    if (event.target.getPlayerState() == 2) {
+                        fadeOutVideo();
+                    }
+                }, 200)
+            }
+        } */
+
+        $(
+            function () {
+                let scrollRef = 0;
+                $('.page-contain').scroll(function () {
+                    scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+                });
+
+                function PadWithZeroes(str) {
+                    while (str.length < 3) str = '0' + str;
+                    return str;
+                }
+
+                /* $('.playcontainer').on(
+                    'click',
+                    function (e) {
+                        $('#header_youtube_embed').addClass("fade_in_header_video");
+                        $('#header_black_background').addClass("fade_in_header_video");
+                        $('#header_youtube_embed').removeClass("fade_out_header_video");
+                        $('#header_black_background').removeClass("fade_out_header_video");
+                        player.playVideo();
+                    }
+                ); */
+
+            }
+        );
+   </script>
+  </meta>
+ </head>
+ <body>
+  <!-- class="mobile" -->
+  <script language="javascript">
+   function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+            }
+        }
+
+        function PreloadHeaderImages() {
+            //  Preload header rollover images
+            //MM_preloadImages(
+            //);
+        }
+
+        if (document.addEventListener) {
+            document.addEventListener("DOMContentLoaded", PreloadHeaderImages, false);
+        } else if (document.attachEvent) {
+            document.attachEvent('onDomContentLoaded', PreloadHeaderImages);
+        }
+  </script>
+  <script language="javascript">
+   function closeSubMenu(target) {
+            $(target).find('.dn_arrow').attr("src", "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/arrow.png");
+            $(target).find('.menuSubItemList').hide();
+        }
+
+        function closeAllSubMenus() {
+            $('.navItem').each(function () {
+                closeSubMenu($(this));
+            });
+        }
+
+        function openSubMenu(target) {
+            closeAllSubMenus();
+
+            $(target).find('.dn_arrow').attr("src", "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/arrow_over.png");
+
+            // Show the sub-menu
+            var subItemList = $(target).find('.menuSubItemList');
+            if (subItemList.length) {
+                var itemTop = $(target).position().top + $(target).outerHeight() + 24;
+                var itemLeft = $(target).position().left;
+                subItemList
+                    .css({
+                        "top": itemTop + 'px',
+                        "left": itemLeft
+                    })
+                    .fadeIn('fast');
+            }
+        }
+
+        $(document).ready(function () {
+            // Deal with the nav bars
+            $('.navItem').each(function () {
+                $(this).hover(function () {
+                    $(this)
+                        .find('a.navBarItem img.top')
+                        .animate({
+                            "opacity": 1
+                        }, 100);
+                    if ($(this).find('.menuSubItemList').length !== 0) {
+                        openSubMenu(this);
+                    }
+                },
+                    function () {
+                        $(this)
+                            .find('a.navBarItem img.top')
+                            .animate({
+                                "opacity": 0
+                            }, 100);
+                        if ($(this).find('.menuSubItemList').length !== 0) {
+                            closeSubMenu(this);
+                        }
+                    }
+                );
+            });
+
+            // Deal with header drop-downs
+            var strMenus = '#languageSelector';
+
+            $(strMenus).each(function () {
+                $(this).hover(function () {
+                    //show its submenu
+                    $(this).find('div').fadeIn('fast');
+                },
+                    function () {
+                        //hide its submenu
+                        $(this).find('div').hide();
+                    }
+                );
+            });
+        });
+  </script>
+  <div class="page-contain parallax_wrapper show_post_trailer" id="trailer_header_div">
+   <!--
+
+
+	<div id="navBarBGRepeat" class="DotaFont">
+		<div id="navBarBG">
+			<div id="navBar">
+
+												<div id="navLoginAndLanguage">
+
+																												<a href="https://steamcommunity.com/oauth/login?client_id=9B2C1229&response_type=token&state=aghanim">登录</a>
+
+					<span id="HeaderAdminSeperator" class="DotaFont">|</span>
+
+					<div id="languageSelector" class="DotaFont">
+						<a href="javascript:void(0)">语言</a> <img style="margin-bottom: 2px;" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/header/small_arrow.png" width="5px" height="3px" border="0" /><br />
+						<div style="display:none;" id="languageList">
+																						<a class="DotaFont languageItem" href="?l=brazilian">Português-Brasil（葡萄牙语-巴西）</a>
+																						<a class="DotaFont languageItem" href="?l=bulgarian">български（保加利亚语）</a>
+																						<a class="DotaFont languageItem" href="?l=czech">Čeština（捷克语）</a>
+																						<a class="DotaFont languageItem" href="?l=danish">Dansk（丹麦语）</a>
+																						<a class="DotaFont languageItem" href="?l=dutch">Nederlands（荷兰语）</a>
+																						<a class="DotaFont languageItem" href="?l=english">English（英语）</a>
+																						<a class="DotaFont languageItem" href="?l=finnish">Suomi（芬兰语）</a>
+																						<a class="DotaFont languageItem" href="?l=french">Français（法语）</a>
+																						<a class="DotaFont languageItem" href="?l=german">Deutsch（德语）</a>
+																						<a class="DotaFont languageItem" href="?l=greek">Ελληνικά（希腊语）</a>
+																						<a class="DotaFont languageItem" href="?l=hungarian">Magyar（匈牙利语）</a>
+																						<a class="DotaFont languageItem" href="?l=italian">Italiano（意大利语）</a>
+																						<a class="DotaFont languageItem" href="?l=japanese">日本語（日语）</a>
+																						<a class="DotaFont languageItem" href="?l=koreana">한국어（韩语）</a>
+																						<a class="DotaFont languageItem" href="?l=latam">Español - Latinoamérica（西班牙语-拉丁美洲）</a>
+																						<a class="DotaFont languageItem" href="?l=norwegian">Norsk（挪威语）</a>
+																						<a class="DotaFont languageItem" href="?l=polish">Polski（波兰语）</a>
+																						<a class="DotaFont languageItem" href="?l=portuguese">Português（葡萄牙语）</a>
+																						<a class="DotaFont languageItem" href="?l=russian">Русский（俄语）</a>
+																						<a class="DotaFont languageItem" href="?l=romanian">Română（罗马尼亚语）</a>
+																													<a class="DotaFont languageItem" href="?l=spanish">Español-España（西班牙语 - 西班牙）</a>
+																						<a class="DotaFont languageItem" href="?l=swedish">Svenska（瑞典语）</a>
+																						<a class="DotaFont languageItem" href="?l=tchinese">繁體中文（繁体中文）</a>
+																						<a class="DotaFont languageItem" href="?l=thai">ไทย（泰语）</a>
+																						<a class="DotaFont languageItem" href="?l=turkish">Türkçe（土耳其语）</a>
+																						<a class="DotaFont languageItem" href="?l=ukrainian">Українська（乌克兰语）</a>
+																						<a class="DotaFont languageItem" href="?l=vietnamese">Tiếng Việt（越南语）</a>
+													</div>
+					</div>
+				</div>
+
+
+				<a href="http://store.steampowered.com/app/570/Dota_2/"><div id="PlayForFreeButton">
+					Play for Free
+				</div></a>
+
+									<span class="navItem navItemDotaLogo">
+						<a class="navBarItem DotaFont" href="http://www.dota2.com/play/">
+							<img border="0" class="DotaLogo" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/logo.png"/>
+						</a>
+					</span>
+
+											<span id="HeaderSeperator" class="DotaFont">|</span>
+													<span class="navItem">
+								<a class="navBarItem DotaFont" href="http://blog.dota2.com/">新闻</a>
+							</span>
+																	<span id="HeaderSeperator" class="DotaFont">|</span>
+													<span class="navItem">
+								<a class="navBarItem DotaFont" href="http://www.dota2.com/store/">商店(测试版)</a>
+							</span>
+																	<span id="HeaderSeperator" class="DotaFont">|</span>
+													<span class="navItem">
+								<a class="navBarItem DotaFont" href="javascript:void(0)">英雄百科</a>
+								<div style="display:none;" class="menuSubItemList">
+																				<a class="DotaFont" href="http://www.dota2.com/heroes/">英雄</a>
+																				<a class="DotaFont" href="http://www.dota2.com/items/">物品浏览器</a>
+																				<a class="DotaFont" href="http://www.dota2.com/workshop/builds">攻略</a>
+																				<a class="DotaFont" href="https://steamcommunity.com/app/570/guides" target="_blank">Steam指南</a>
+																				<a class="DotaFont" href="http://www.dota2.com/patches/">游戏性更新</a>
+																				<a class="DotaFont" href="http://www.dota2.com/quiz">商店老板的考验</a>
+														</div>
+								<img class="dn_arrow" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/arrow.png"/>
+							</span>
+																		</div>
+		</div>
+	</div>
+<script language="javascript">
+
+	function MM_preloadImages() { //v3.0
+	  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}
+
+	function PreloadHeaderImages()
+	{
+		//  Preload header rollover images
+		//MM_preloadImages(
+		//);
+	}
+
+			if ( document.addEventListener ) {
+		document.addEventListener( "DOMContentLoaded", PreloadHeaderImages, false );
+	} else if ( document.attachEvent ) {
+		document.attachEvent( 'onDomContentLoaded', PreloadHeaderImages );
+	}
+
+</script>
+
+
+
+	<script language="javascript">
+		function closeSubMenu( target ) {
+			$(target).find('.dn_arrow').attr( "src", "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/arrow.png" );
+			$(target).find('.menuSubItemList').hide();
+		}
+
+		function closeAllSubMenus() {
+			$('.navItem').each( function() {
+				closeSubMenu( $(this) );
+			});
+		}
+
+		function openSubMenu( target ) {
+			closeAllSubMenus();
+
+			$(target).find('.dn_arrow').attr( "src", "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/arrow_over.png" );
+
+			// Show the sub-menu
+			var subItemList = $(target).find('.menuSubItemList');
+			if ( subItemList.length ) {
+				var itemTop = $(target).position().top + $(target).outerHeight() + 24;
+				var itemLeft = $(target).position().left;
+				subItemList
+					.css({
+						"top": itemTop + 'px',
+						"left": itemLeft
+					})
+					.fadeIn( 'fast' );
+			}
+		}
+
+		$(document).ready( function () {
+			// Deal with the nav bars
+			$('.navItem').each( function() {
+				$(this).hover( function () {
+					$(this)
+						.find('a.navBarItem img.top')
+						.animate({
+							"opacity": 1
+						}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						openSubMenu( this );
+					}
+				},
+				function () {
+					$(this)
+					.find('a.navBarItem img.top')
+					.animate({
+						"opacity": 0
+					}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						closeSubMenu(this);
+					}
+				}
+				);
+			});
+
+			// Deal with header drop-downs
+			var strMenus = '#languageSelector';
+
+			$(strMenus).each( function() {
+				$(this).hover( function () {
+					//show its submenu
+					$( this ).find( 'div' ).fadeIn( 'fast' );
+				},
+				function () {
+					//hide its submenu
+					$( this ).find( 'div' ).hide();
+				}
+				);
+			});
+		});
+
+	</script>
+
+ -->
+   <!--  <div id="header_black_background">
+        </div> -->
+   <div id="header_youtube_embed">
+    <div id="qop_arcana_video_embed">
+    </div>
+   </div>
+   <!-- PRE-TRAILER HEADER -->
+   <div class="outer tease-bg parallax_bg" id="pre_trailer_header">
+    <div class="container">
+     <div class="row tease-copy">
+      <div class="col-12 center">
+       <div class="center playcontainer">
+        <img class="play-btn J_header_btn_player" src="https://img.dota2.com.cn/file/74/21/7421168a87f23cea7a3c7c71e1254b531594782623.png"/>
+        <br/>
+        <div class="playtext">
+         播放预告片
+        </div>
+       </div>
+       <div class="tease-subhead">
+        “跨越不同的维度，力量皆屈服于知识。
+        <br/>
+        但知识会在未知之物的阴影中枯萎。
+        <br/>
+        而未知之物只会顺应力量。”
+       </div>
+       <div class="lore-body top-quote">
+        ——格兰奇如是对俘获他的人说道
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- POST-TRAILER HEADER -->
+   <div class="outer hero-bg" id="post_trailer_header">
+    <video autoplay="" class="header_image_video" loop="" muted="" playsinline="" poster="http://gamevideo.wmupd.com/dota2media/media/aghanim/header_3930.jpg">
+    </video>
+    <div class="container">
+     <div class="row">
+      <div class="col-7 center">
+       <div class="aghs-logo">
+        <img class="title-bg" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/aghamins_logo_cn.png"/>
+        <div class="title-subhead">
+         全新的合作类Rogue模式
+        </div>
+        <div class="lore-body top-quote">
+         熟悉的怪物，来自不熟悉的维度，正在饥渴地等待！
+        </div>
+        <div class="center playcontainer">
+         <img class="play-btn J_header_btn_player" src="images/playbtn-hover.svg"/>
+         <br/>
+         <div class="playtext">
+          播放预告片
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="col-5 left">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="outer lore-bg">
+    <div class="lore-content container">
+     <div class="lore-top">
+      <div class="row">
+       <img class="lore-gems fullwidth" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/gems.png"/>
+       <div class="col-2">
+       </div>
+       <div class="col-8">
+        <div class="lore-text-container">
+         <div class="lore-text center">
+          <div class="lore-intro">
+           阿哈利姆携手怪物大军到来
+          </div>
+          <div class="lore-quote">
+           “我是阿哈利姆。对，就是那个阿哈利姆。
+          </div>
+          <div class="lore-quote">
+           超威大师阿哈利姆。学了黑暗禁忌的魔法，致力于打造伟大的法杖而迷失在精神维度之间的阿哈利姆。
+           <br/>
+           你肯定在英雄学院里听过我的杰作。但有些东西你们愚蠢的老师没有教给你们：
+          </div>
+          <div class="lore-quote">
+           阿哈利姆从最黑暗的位面中找出了最致命的生物，将他们带到这里，探一探英雄强者的深浅。磨快你们的战刃！吟唱你们的咒语！舒展开身子！锻炼好嗓子！“
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col-2">
+       </div>
+      </div>
+     </div>
+     <div class="row altstyle-section">
+      <!-- <div class="mini-aghs aghs1" data-aos="fade-left" data-aos-duration="1000"></div> -->
+      <div class="altstyle-img" data-aos="fade-left" data-aos-duration="1000">
+      </div>
+      <div class="col-6">
+       <!-- <img class="inline-aghs fullwidth" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/aghs-ui-1.png" > -->
+      </div>
+      <div class="col-6 altstyle-text center" data-aos="fade-in" data-aos-duration="500">
+       <div class="lore-intro">
+        进入迷宫
+       </div>
+       <div class="variant-body-sm">
+        召集三名好友或匹配他人。不需要勇士令状，所有玩家都能免费游玩。
+       </div>
+       <div class="lore-quote">
+        “在这里等待你们的有什么恐怖呢？让超威大师阿哈利姆告诉你们——好几种恐怖！”
+       </div>
+      </div>
+     </div>
+     <div class="row altstyle-section second">
+      <div class="col-12 altstyle-text center" data-aos="fade-in" data-aos-duration="500">
+       <div class="lore-intro">
+        选择你的路线
+       </div>
+       <div class="variant-body-sm">
+        完成每个房间后，你和你的战友将面临抉择。你需要什么技艺？你想要什么奖励？你希望接下来面对哪个阿哈利姆的怪物？选好你的对手，而且务必要明智。仓促的选择可能使你在迷宫迎来终点。
+       </div>
+       <div class="lore-quote">
+        “慷慨大师阿哈利姆为你们提供了很多条死路。”
+       </div>
+      </div>
+      <!-- <div class="col-6">
+                    <div class="mini-aghs aghs2" data-aos="fade-left" data-aos-duration="1000"></div>
+                </div> -->
+     </div>
+     <div class="row altstyle-section">
+      <!-- <div class="mini-aghs aghs3" data-aos="fade-left" data-aos-duration="1000"></div> -->
+      <div class="altstyle-img3" data-aos="fade-left" data-aos-duration="1000">
+      </div>
+      <div class="col-6">
+       <!-- <img class="inline-aghs fullwidth" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/aghs-ui-1.png" > -->
+      </div>
+      <div class="col-6 altstyle-text center" data-aos="fade-in" data-aos-duration="500">
+       <div class="lore-intro">
+        积聚你的力量
+       </div>
+       <div class="variant-body-sm">
+        收集阿哈利姆神杖碎片，通过各种独特的方式来加强英雄技能——每场游戏都能产生不同的组合。仔细选择你的升级；想要击败阿哈利姆的怪物需要精打细算。
+       </div>
+       <div class="lore-quote">
+        “如此强大的战士！想象一下你们拥有像‘技艺’和‘天赋’这样的工具会达成什么成就！”
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="outer row">
+     <div class="center bp-banner" data-aos="fade-up" data-aos-duration="1000">
+      <img class="BP-logo-sm" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/bp_logo_sm.png"/>
+      <div class="bp-banner-desc">
+       提升勇士令状
+      </div>
+      <div class="bp-banner-subdesc">
+       勇士令状玩家游玩阿哈利姆的天地迷宫时每周最多可以入手2000点勇士积分。
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="outer boss-bg padding-lg">
+    <div class="container">
+     <div class="row altstyle-section">
+      <div class="col-6 altstyle-text center" data-aos="fade-in" data-aos-duration="500">
+       <div class="variant-label">
+        与可怕的首领交战
+       </div>
+       <div class="lore-intro">
+        与顽强的敌人交战
+       </div>
+       <div class="variant-body-sm">
+        与阿哈利姆从无数维度俘获的最强怪物进行近距离交锋，最后还将面对巅峰法师本人。在可能性渺茫的胜利中，不断磨砺自己，迎接更为艰巨的挑战！
+       </div>
+       <div class="lore-quote">
+        “亲爱的朋友，谦逊大师阿哈利姆不会大吹法螺！但要是他吹了，听起来就像是你们全军覆没的悲号！”
+       </div>
+      </div>
+      <div class="col-6">
+      </div>
+     </div>
+     <div class="row altstyle-section">
+      <div class="altstyle-img4" data-aos="fade-left" data-aos-duration="1000">
+      </div>
+      <div class="col-6">
+       <!-- <img class="inline-aghs fullwidth" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/aghs-ui-1.png" > -->
+      </div>
+      <div class="col-6 altstyle-text center" data-aos="fade-in" data-aos-duration="500">
+       <div class="variant-label">
+        不同的关卡难度
+       </div>
+       <div class="lore-intro">
+        不断升级的挑战
+       </div>
+       <div class="variant-body-sm">
+        每次艰难取得胜利后都会解锁全新的关卡难度。只有赌上勇气和经验才有希望一路取胜。有四个难度级别，每一个通关后都会奖励独特的阿哈利姆聊天轮盘语句。
+       </div>
+       <div class="lore-quote">
+        是不是满腔热血？很好。是不是专注一心？完美。有没有挑选一块墓碑，上面写着“死于自大，身后只有一只猫和一堆血染的衣服？”我希望如此。
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="outer lore-bg">
+    <div class="container">
+     <div class="row">
+      <div class="col-2">
+      </div>
+      <div class="col-8">
+       <div class="lore-text-container">
+        <div class="lore-text center">
+         <div class="variant-label">
+          战术制定与重新尝试
+         </div>
+         <div class="lore-intro">
+          解锁福佑
+         </div>
+         <div class="lore-body">
+          不断收集奥术碎片，解锁永久升级效果后让自己日后在天地迷宫更加强大。每周首次获得1800块奥术碎片时将得到3倍奖励。
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="col-2">
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-12 center">
+       <img class="fullwidth blessings-img" data-aos="fade-up" data-aos-duration="1000" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/blessings.png"/>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="outer challenge-bg padding-md">
+    <div class="container">
+     <div class="row altstyle-section">
+      <div class="challenge-img">
+      </div>
+      <div class="col-6 altstyle-text center">
+       <div class="variant-label">
+        阿哈利姆的试炼
+       </div>
+       <div class="lore-intro">
+        全球顶尖高手将考验你的本领
+       </div>
+       <div class="challenge-body">
+        下周：与好友组队接受阿哈利姆的试炼
+       </div>
+       <div class="variant-body-sm">
+        每周都可以完成随机生成的相同迷宫，向全球排行榜进发。最快、最成功的队伍将得到阿哈利姆最珍贵的奖赏。
+       </div>
+       <a class="aghs-button" href="http://www.dota2.com.cn/aghanimstrials" target="_blank">
+        了解更多
+       </a>
+      </div>
+      <div class="col-6">
+      </div>
+     </div>
+    </div>
+   </div>
+   <!--
+            <div id="SectionLgBtm">
+            <div id="RocksLeft" class="sideRocks"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/rocks_left.png"></div>
+            <div id="RocksRight" class="sideRocks"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/rocks_right.png"></div>
+            <div class="container">
+                <div class="row padding-top-sm">
+                    <div class="col-12 center">
+                        <div class="BP_subhead">对<span>所有玩家</span>开放游玩</div>
+                        <a href="http://www.dota2.com/international/battlepass"><img class="BP-logo-sm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/bp_logo_sm.png"></a>
+                        <div class="BP_subhead3">无需任何购买</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+  </div>
+  <div class="mak" id="J_header_video">
+   <div class="mak-video">
+    <i class="close">
+    </i>
+    <div class="video-content">
+    </div>
+   </div>
+  </div>
+  <script>
+   var bEdge = window.navigator.userAgent.indexOf('Edge') > -1;
+
+        /** Edge only supports object-fit on <img> tags, so need special handling for our videos in edge. ;_; */
+        if (bEdge) {
+            document.body.className += ' MSEdge';
+        }
+
+        /** Edge also claims support for webm format but loads ours as a black video. Don't give Edge that option. */
+        var videoConfig = {
+            'header_image_video': {
+                mp4: 'aghs_spoiler_header.mp4',
+                webm: 'aghs_spoiler_header.webm'
+            },
+            'main-video': {
+                mp4: 'aghs_spoiler_header.mp4',
+                webm: 'aghs_spoiler_header.webm'
+            },
+            'sitting-video': {
+                mp4: 'aghs_spoiler_header.mp4',
+                webm: 'aghs_spoiler_header.webm'
+            }
+        }
+
+        function fnBuildSource(strPath, strType) {
+            var source = document.createElement('source');
+            source.setAttribute('type', strType);
+            source.setAttribute('src', 'https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/aghanins_labyrinth/' + strPath);
+
+            return source;
+        }
+
+        var bUseWebm = !bEdge;
+
+        Object.keys(videoConfig).forEach(function (key) {
+            var elem = document.querySelector('.' + key);
+            if (!elem) return;
+            var config = videoConfig[key];
+            if (bUseWebm && config.webm) {
+                elem.appendChild(fnBuildSource(config.webm, 'video/webm'));
+            }
+            elem.appendChild(fnBuildSource(config.mp4, 'video/mp4'));
+        });
+  </script>
+  <script>
+   AOS.init({
+            // Global settings:
+            disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        });
+  </script>
+  <script src="https://www.dota2.com.cn/js/libs/pwrd.mobile.js">
+  </script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js">
+  </script>
+  <script type="text/javascript">
+   var jurl = '/weixinShare?url=' + encodeURIComponent(location.href),
+            mxhr = new XMLHttpRequest(),
+            shareTitle = '阿哈利姆的天地迷宫',
+            shareInfo = '第十届国际邀请赛专属活动 开启游玩！',
+            shareURL = 'https://img.dota2.com.cn/file/9c/f4/9cf484d2dfa3aeba1756d9e1f63a5b331594781096.png';
+
+        mxhr.onreadystatechange = function () {
+            if (mxhr.readyState == 4 && mxhr.status == 200) {
+                mkWxShare(JSON.parse(mxhr.responseText))
+            }
+        }
+        mxhr.open('GET', jurl, true)
+        mxhr.send();
+
+        function wxready() {
+            wx.ready(function () {
+                //分享给朋友
+                wx.onMenuShareAppMessage({
+                    title: shareTitle, // 分享标题
+                    desc: shareInfo, // 分享描述
+                    link: location.href, // 分享链接
+                    imgUrl: shareURL, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () { }
+                });
+
+                //分享到朋友圈
+                wx.onMenuShareTimeline({
+                    title: shareTitle, // 分享标题
+                    link: location.href, // 分享链接
+                    imgUrl: shareURL, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () { }
+                });
+
+                //分享到QQ
+                wx.onMenuShareQQ({
+                    title: shareTitle, // 分享标题
+                    desc: shareInfo, // 分享描述
+                    link: location.href, // 分享链接
+                    imgUrl: shareURL, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+            })
+        }
+
+        function mkWxShare(cbObj) {
+            if (cbObj.status == 'failed') {
+                return;
+            }
+            var data = cbObj.data
+
+            wx.config({
+                debug: false,
+                appId: data.appId,
+                timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ']
+            });
+            wxready();
+        }
+  </script>
+  <script>
+   $(function () {
+            var J_header_video = $('#J_header_video');
+            J_header_video.on('click', '.close', function () {
+                $('#trailer_header_div').addClass('show_post_trailer')
+                J_header_video.find('.video-content').html('')
+                //$('#header_black_background').addClass("fade_in_header_video");
+                $(this).closest('.mak').hide();
+            })
+            $('.J_header_btn_player').on('click', function () {
+                J_header_video.find('.video-content').append('<video controls="" autoplay=""  width="1000" id="dunVideo" loop="">< source type = "video/webm" src = "http://gamevideo.wmupd.com/dota2media/media/aghanim/aghanim.webm" ><source type="video/mp4" src="http://gamevideo.wmupd.com/dota2media/media/aghanim/aghanim.mp4"></video>')
+                J_header_video.show();
+            })
+            if (isMobile()) {
+                $('body').addClass('mobile')
+            }
+        })
+  </script>
+  <!-- <script src="//www.dota2.com.cn/js/quajs/libs/dota2_common_201610.js"></script> -->
+  <script src="/js/libs/common.js?mode=special">
+  </script>
+ </body>
+</html>
