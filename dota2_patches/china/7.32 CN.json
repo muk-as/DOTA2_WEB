@@ -1,0 +1,5216 @@
+{
+  "patch_number": "7.32",
+  "patch_name": "7.32",
+  "patch_timestamp": 1661238000,
+  "generic": [
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "獸加入队长模式"
+    },
+    {
+      "indent_level": 1,
+      "note": "修改了每级所需经验值。",
+      "info": "旧与新：<br>2级  230      240\t<br>3级  370      400\t<br>4级  480      520\t<br>5级  580      600\t<br>6级  600      680\t<br>7级  720      760\t<br>8级  750      800\t<br>9级  890      900\t<br>10级 930      1000\t<br>11级 970      1100\t<br>12级 1010     1200\t<br>13级 1050     1300\t<br>14级 1225     1400\t<br>15级 1250     1500\t<br>16级 1275     1600\t<br>17级 1300     1700\t<br>18级 1325     1800\t<br>19级 1500     1900\t<br>20级 1590     2000\t<br>21级 1600     2200\t<br>22级 1850     2400\t<br>23级 2100     2600\t<br>24级 2350     2800\t<br>25级 2600     3000\t<br>26级 3500     4000\t<br>27级 4500     5000\t<br>28级 5500     6000\t<br>29级 6500     7000\t<br>30级 7500     8000<br>"
+    },
+    {
+      "indent_level": 1,
+      "note": "终结连杀的经验从x^2 - x + 8调整为1.25x^2 - 2.5x + 10 ",
+      "info": "旧与新：<br>连杀3人    14x等级    13.75x等级\t<br>连杀4人    20x等级    20x等级\t\t<br>连杀5人    28x等级    28.75x等级\t<br>连杀6人    38x等级    40x等级\t\t<br>连杀7人    50x等级    53.75x等级\t<br>连杀8人    64x等级    70x等级\t\t<br>连杀9人    80x等级    88.75x等级\t<br>连杀10人   98x等级    110x等级 \t\t<br>"
+    },
+    {
+      "indent_level": 1,
+      "note": "增加了士兵旗手。从2分钟开始每隔一波兵的其中一个近战兵会被替换为旗手。旗手拥有40%魔法抗性和鼓舞光环，向700范围内所有友军提供+3点/秒生命恢复。击杀敌方的旗手可以使自身和1200范围内所有友方英雄获得额外金钱，数额等于100%近战兵击杀金钱。反补不会获得金钱，不会被恶魔转化等英雄技能反补。"
+    },
+    {
+      "indent_level": 1,
+      "note": "夜魇的斜坡现在更深入野区（位置和之前一样，但是肉山附近的高地势变少了）"
+    },
+    {
+      "indent_level": 1,
+      "note": "夜魇方的前哨移至离河道更远处（顺应斜坡更深入的改动）"
+    },
+    {
+      "indent_level": 1,
+      "note": "赏金神符点移至离河道更远处（顺应斜坡更深入的改动）"
+    },
+    {
+      "indent_level": 1,
+      "note": "重做了夜魇主野区右边中型野怪营地附近的树木"
+    },
+    {
+      "indent_level": 1,
+      "note": "前哨的基础传送持续施法时间从5秒增加至6秒"
+    },
+    {
+      "indent_level": 1,
+      "note": "移除了中路附近的小型野怪营地"
+    },
+    {
+      "indent_level": 1,
+      "note": "现在防御符文会在一方每个级别的防御塔首次被摧毁时刷新。（如首座一塔被摧毁时刷新一次，首座二塔被摧毁时刷新一次，首座三塔被摧毁时刷新一次）"
+    },
+    {
+      "indent_level": 1,
+      "note": "现在泉水的无敌效果会在复活时施加，不论附近是否有敌方英雄"
+    },
+    {
+      "indent_level": 1,
+      "note": "每分钟被动金钱减少15%"
+    },
+    {
+      "indent_level": 1,
+      "note": "遗迹的护甲从13点增加至23点"
+    },
+    {
+      "indent_level": 1,
+      "note": "遗迹的偷塔保护生命恢复从90点生命/秒增加至180点/秒"
+    }
+  ],
+  "items": [
+    {
+      "ability_id": 116,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "天神下凡现在拥有50点魔法消耗"
+        }
+      ]
+    },
+    {
+      "ability_id": 127,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "持续时间从4.5秒增加至5.5秒"
+        }
+      ]
+    },
+    {
+      "ability_id": 121,
+      "postfix_lines": 2,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "图纸价格从900金减少至700金（总价格从4600金减少至4400金）"
+        },
+        {
+          "indent_level": 1,
+          "note": "主动效果的技能吸血倍数从2增加至2.5"
+        }
+      ]
+    },
+    {
+      "ability_id": 236,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在需要欢欣之刃、力量腰带、450金图纸（总价不变）"
+        },
+        {
+          "indent_level": 1,
+          "note": "攻击距离从+140增加至+150"
+        },
+        {
+          "indent_level": 1,
+          "note": "敏捷加成从+16减少至+15"
+        }
+      ]
+    },
+    {
+      "ability_id": 100,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在先净化，再施加龙卷风的效果"
+        }
+      ]
+    },
+    {
+      "ability_id": 596,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击力加成从+12增加至+14"
+        }
+      ]
+    },
+    {
+      "ability_id": 102,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "生命值加成从150点增加至175点"
+        },
+        {
+          "indent_level": 1,
+          "note": "冷却时间从20秒减少至19秒"
+        }
+      ]
+    },
+    {
+      "ability_id": 254,
+      "postfix_lines": 2,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "施法距离从550增加至600"
+        },
+        {
+          "indent_level": 1,
+          "note": "魔法抗性从15%增加至20%"
+        },
+        {
+          "indent_level": 1,
+          "note": "渐隐时间从0.6秒减少至0.5秒"
+        }
+      ]
+    },
+    {
+      "ability_id": 231,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "图纸价格增加50金（总价格从5100金减少至5050金）"
+        },
+        {
+          "indent_level": 1,
+          "note": "主动施放的治疗量从300点增加至350点"
+        }
+      ]
+    },
+    {
+      "ability_id": 65,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "对中立生物使用时，如果中立物品还未达到数量上限则必掉落一件"
+        }
+      ]
+    },
+    {
+      "ability_id": 210,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "施法距离从600增加至650"
+        }
+      ]
+    },
+    {
+      "ability_id": 635,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击英雄的吸血效果从18%增加至20%"
+        },
+        {
+          "indent_level": 1,
+          "note": "现在攻击非英雄单位的吸血效果为50%数值（10%）"
+        }
+      ]
+    },
+    {
+      "ability_id": 263,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "冷却时间从20秒减少至19秒"
+        }
+      ]
+    },
+    {
+      "ability_id": 598,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "魔法抗性从20%增加至25%"
+        }
+      ]
+    },
+    {
+      "ability_id": 172,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击英雄的吸血效果从20%增加至24%"
+        },
+        {
+          "indent_level": 1,
+          "note": "现在攻击非英雄单位的吸血效果为50%数值（12%）"
+        }
+      ]
+    },
+    {
+      "ability_id": 79,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "图纸价格从900金减少至800金（总价格从1875金减少至1775金）"
+        },
+        {
+          "indent_level": 1,
+          "note": "冷却时间从65秒减少至50秒"
+        }
+      ]
+    },
+    {
+      "ability_id": 26,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击英雄的吸血效果从15%增加至18%"
+        },
+        {
+          "indent_level": 1,
+          "note": "现在攻击非英雄单位的吸血效果为50%数值（9%）"
+        }
+      ]
+    },
+    {
+      "ability_id": 225,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "护甲加成从8点增加至10点"
+        },
+        {
+          "indent_level": 1,
+          "note": "否决的冷却时间从11秒减少至10秒"
+        }
+      ]
+    },
+    {
+      "ability_id": 90,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "洞察光环的魔法抗性从12%增加至15%"
+        }
+      ]
+    },
+    {
+      "ability_id": 137,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "灼烧的丢失几率从10%增加至15%"
+        }
+      ]
+    },
+    {
+      "ability_id": 110,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "冷却时间从170秒增加至180秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "魔法消耗从300点增加至350点"
+        }
+      ]
+    },
+    {
+      "ability_id": 260,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "魔法消耗从0增加至200点"
+        }
+      ]
+    },
+    {
+      "ability_id": 156,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击英雄的吸血效果从25%增加至30%"
+        },
+        {
+          "indent_level": 1,
+          "note": "不洁狂热的额外吸血从150%减少至145%（主动施放时总吸血效果还是175%）"
+        },
+        {
+          "indent_level": 1,
+          "note": "现在攻击非英雄单位的吸血效果为50%数值（15%）"
+        }
+      ]
+    },
+    {
+      "ability_id": 215,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在具有15秒持续时间"
+        }
+      ]
+    },
+    {
+      "ability_id": 81,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击英雄的吸血效果从15%增加至20%"
+        },
+        {
+          "indent_level": 1,
+          "note": "现在攻击非英雄单位的吸血效果为50%数值（10%）"
+        }
+      ]
+    },
+    {
+      "ability_id": 610,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在先净化，再施加龙卷风的效果"
+        }
+      ]
+    },
+    {
+      "ability_id": 534,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "智力加成从+14减少至+12"
+        }
+      ]
+    },
+    {
+      "ability_id": 908,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击英雄的吸血效果从18%增加至24%"
+        },
+        {
+          "indent_level": 1,
+          "note": "现在攻击非英雄单位的吸血效果为50%数值（12%）"
+        }
+      ]
+    }
+  ],
+  "neutral_items": [
+    {
+      "ability_id": 945,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">全新第1级物品</span>",
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "+100 生命"
+        },
+        {
+          "indent_level": 1,
+          "note": "主动：盎然生机。对350范围的地面施放。对作用范围内所有友方单位提供+8点/秒生命恢复。持续14秒。冷却时间：40秒"
+        }
+      ]
+    },
+    {
+      "ability_id": 946,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">全新第1级物品</span>",
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "+200 魔法"
+        },
+        {
+          "indent_level": 1,
+          "note": "被动：追逼。攻击背离英雄的敌人时将获得+15攻击力，并且施加12%/6%减速（近战/远程），持续1秒。"
+        }
+      ]
+    },
+    {
+      "ability_id": 947,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">全新第1级物品</span>",
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "+5 全属性"
+        },
+        {
+          "indent_level": 1,
+          "note": "被动：埃罗莎仪式。每次佩戴者被攻击时都会获得一个0.5点/秒魔法恢复的叠加效果，最多叠加5次。每个叠加效果持续10秒。"
+        }
+      ]
+    },
+    {
+      "ability_id": 565,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 287,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 354,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 990,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">全新第2级物品</span>",
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "+125 施法距离，-20% 最大魔法值"
+        }
+      ]
+    },
+    {
+      "ability_id": 1076,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">全新第2级物品</span>",
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "+8 全属性，+10 攻击力"
+        },
+        {
+          "indent_level": 1,
+          "note": "被动：破裂攻击。下次攻击会向攻击范围内2个额外目标发射弹道。只对远程英雄生效，不会触发攻击特效。冷却时间12秒。"
+        }
+      ]
+    },
+    {
+      "ability_id": 1077,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">全新第2级物品</span>",
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "+10 攻击速度"
+        },
+        {
+          "indent_level": 1,
+          "note": "主动：浸血。消耗100点生命值，暂时获得40点攻击力。持续8秒。冷却时间30秒。"
+        }
+      ]
+    },
+    {
+      "ability_id": 359,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 835,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 686,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 949,
+      "postfix_lines": 2,
+      "title": "<span class=\"New\">全新第3级物品</span>",
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "+12 力量"
+        },
+        {
+          "indent_level": 1,
+          "note": "主动：食人魔海豹扑打。像食人魔海豹一样向前扑打2次，每次扑打对225范围内敌人造成150点伤害和持续1秒的100%减速。扑跳距离：400。魔法消耗75点。冷却时间40秒。会摧毁树木。"
+        }
+      ]
+    },
+    {
+      "ability_id": 376,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在攻击非英雄单位的吸血效果为50%数值（8%）"
+        }
+      ]
+    },
+    {
+      "ability_id": 326,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 379,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品已移除"
+        }
+      ]
+    },
+    {
+      "ability_id": 364,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "物品回归"
+        }
+      ]
+    },
+    {
+      "ability_id": 374,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "魔法消耗从0点增加至350点"
+        }
+      ]
+    },
+    {
+      "ability_id": 301,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "冷却时间从8秒增加至12秒"
+        }
+      ]
+    }
+  ],
+  "heroes": [
+    {
+      "hero_id": 1,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "神杖升级闪烁碎片的魔法消耗从50点降低至45点"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+0.7秒 法力虚空眩晕改为+150 法力虚空作用范围"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5004,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从60点降低至45点"
+            },
+            {
+              "indent_level": 1,
+              "note": "距离从925/1000/1075/1150调整为750/900/1050/1200"
+            },
+            {
+              "indent_level": 1,
+              "note": "冷却时间从15/12/9/6秒降低至12/10/8/6秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 7314,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从45/50/55/60点降低至45点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 2,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "力量成长从3.4减少至2.8"
+        },
+        {
+          "indent_level": 1,
+          "note": "敏捷成长从2.2减少至2.0"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+1.5 魔法恢复改为+8 狂战士之怒护甲"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 移动速度改为战斗饥渴每作用一个目标提供+10% 移动速度"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5007,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法前摇从0.4秒降低至0.3秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5008,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速效果从8/17/26/35%提升至11/19/27/35%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5009,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级最大叠加次数从5次提升至6次"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级伤害降低从20%减少至15%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5010,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从150提升至175"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 3,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+12% 魔法抗性改为+20% 虚弱降低施法距离"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+5 护甲改为噩梦伤害会治疗祸乱之源这包括祸乱之源攻击噩梦作用下敌人的攻击伤害"
+        }
+      ]
+    },
+    {
+      "hero_id": 4,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+30 血怒攻击速度减少至+25"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+14% 焦渴最大移速提升至+18%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5015,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级敌人最大生命值的伤害/治疗从2%减少至1.8%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5017,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "最大移动速度加成从14/24/34/44%调整为16/24/32/40%"
+            }
+          ]
+        },
+        {
+          "ability_id": 902,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "移动速度减缓从25%提升至30%"
+            },
+            {
+              "indent_level": 1,
+              "note": "不再对技能免疫状态下的血魔造成伤害"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 5,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+20 奥术光环每次施法回魔改为+125 冰封禁制施法距离"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5128,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "水晶室女施法时不再使友方英雄回复魔法"
+            },
+            {
+              "indent_level": 1,
+              "note": "水晶室女附近1200范围内友军获得2倍魔法恢复。"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法恢复加成从0.5/1/1.5/2减少至0.6/0.9/1.2/1.5"
+            },
+            {
+              "indent_level": 1,
+              "note": "自身的加成倍数从3提升至4"
+            }
+          ]
+        },
+        {
+          "ability_id": 5129,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从90秒增加至100秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 6,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+50% 狂风致盲改为+15% 狂风对自身移动速度加成"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+250 狂风宽度改为狂风使隐身单位显形",
+          "info": "不会使守卫显形"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+28% 数箭齐发伤害减少至+25%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 343,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "箭矢伤害从85/110/135/160%提升至100/120/140/160%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 7,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+80 沟壑伤害提升至+90"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+30 基础攻击力提升至+40"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5023,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从21/19/17/15秒降低至18/17/16/15秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 8,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础移动速度从305减少至300"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+475 生命改为+2 治疗守卫摧毁所需攻击次数"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5028,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级移动速度从100减少至75"
+            }
+          ]
+        },
+        {
+          "ability_id": 5029,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "治疗作用范围从500减少至400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 9,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "敏捷成长从3.4减少至3.1"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+100 跳跃距离提升至+125"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+20 法力损毁改为+35 攻击力"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5051,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "次级目标的搜索范围从425提升至650"
+            }
+          ]
+        },
+        {
+          "ability_id": 5050,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "加速持续时间从2.5秒提升至4秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级弹道末端范围从300提升至450"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级弹道速度从1200提升至1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 10,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+20 力量改为+1秒 变体打击眩晕"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从眩晕时可属性变换改为+35 力量"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5055,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。现在被眩晕时也可以进行属性变换，并且敏捷加成提升6点"
+            },
+            {
+              "indent_level": 1,
+              "note": "每秒变换属性从3/6/12/24点调整为5/10/15/20点"
+            },
+            {
+              "indent_level": 1,
+              "note": "每秒消耗魔法从10点调整为5/10/15/20点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5056,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。现在被眩晕时也可以进行属性变换，并且力量加成提升6点"
+            },
+            {
+              "indent_level": 1,
+              "note": "每秒变换属性从3/6/12/24点调整为5/10/15/20点"
+            },
+            {
+              "indent_level": 1,
+              "note": "每秒消耗魔法从10点调整为5/10/15/20点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5057,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级窃取状态抗性从35%提升至40%"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级窃取攻击速度从50提升至70"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级窃取技能增强从20%提升至25%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 11,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础攻击力提升2点"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从-50秒 魂之挽歌冷却改为毁灭阴影施加攻击伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从-4 魔王降临护甲改为-5秒 毁灭阴影冷却"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5059,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "连续击中时还会施加一个可叠加的负面效果，降低30%转身速率和15%移动速度（从第二次击中开始）"
+            }
+          ]
+        },
+        {
+          "ability_id": 5064,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级还会降低30秒冷却时间"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 12,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从1.5提升至2.0"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+150 生命改为+50 灵魂之矛伤害"
+        }
+      ]
+    },
+    {
+      "hero_id": 13,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-2秒 幻象法球冷却改为+50 幻象法球伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+100 新月之痕伤害减少至+75"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-6秒 新月之痕冷却减少至-4秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+1秒 梦境缠绕眩晕改为+150 梦境缠绕初始/破碎伤害"
+        }
+      ]
+    },
+    {
+      "hero_id": 14,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从1.6倍 腐肉堆积力量/伤害格挡减少至1.5倍"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5076,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级额外作用范围从225减少至200"
+            }
+          ]
+        },
+        {
+          "ability_id": 5074,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从35/40/45/50点增加至35/50/65/80点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 15,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础移动速度从290减少至280"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+80 攻击速度改为0.8秒延迟后再施放一个等离子场"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从2 静电连接能量点数改为静电连接窃取攻击速度"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5083,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "加成效果的持续时间从15/16/17/18秒减少至9/12/15/18秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "可以对已拥有静电连接负面效果的目标施放。技能仍然无法对正与雷泽连接的敌人施放。"
+            }
+          ]
+        },
+        {
+          "ability_id": 5084,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。现在始终会打击最多3个有效目标，即使攻击者/施法者处于技能免疫状态。施法和攻击的目标选择规则一致（仅可见敌人）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 16,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+10% 腐尸毒减速改为+0.3秒 掘地穿刺眩晕"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+15 沙尘暴每秒伤害提升至+20"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5102,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从425/500/575/650提升至500/550/600/650"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 17,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "敏捷成长从1.9提升至2.6"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0.25提升至0.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从球状闪电每550距离释放残影降低至500"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5100,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级不再使友方英雄享受攻击弹射天赋的效果"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 18,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0.25提升至0.75"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5094,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在神杖升级可以设为自动施放。设置后斯温不会随着风暴之拳行进。"
+            }
+          ]
+        },
+        {
+          "ability_id": 5096,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从8秒提升至9秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从30/40/50/60点降低至30/35/40/45点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5097,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从110秒降低至105/100/95秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 19,
+      "abilities": [
+        {
+          "ability_id": 5107,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从90/100/110/120点增加至110/120/130/140点"
+            },
+            {
+              "indent_level": 1,
+              "note": "施法距离从900/1000/1100/1200减少至800/900/1000/1100"
+            }
+          ]
+        },
+        {
+          "ability_id": 5109,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "不再以固定数值减少攻击速度"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在减少30%攻击速度。这也会影响所有物品和技能加成效果。减少效果不会随着长大的等级而变化。"
+            },
+            {
+              "indent_level": 1,
+              "note": "攻击力加成从30/70/110点提升至50/100/150点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 20,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+12% 魔法抗性改为+150 移形换位对敌人伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+10 敏捷改为+125 魔法箭施法距离"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从-2.75秒 魔法箭冷却减少至-2秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5122,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从575/600/625/650提升至650"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级不再对魔法箭提供施法距离加成"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级弹射范围现在与当前施法距离一致"
+            }
+          ]
+        },
+        {
+          "ability_id": 5124,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从70/90/110/130点提升至85/100/115/130点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 21,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "力量成长从3.0减少至2.6"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-5% 强力击伤害降低改为+200 风行作用范围"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+225 风行作用范围改为-10% 强力击伤害降低"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从-4秒 风行冷却减少至-2秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从风行提供隐身效果改为风行不可驱散"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5132,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级不再使风行不可驱散"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级现在会提供隐身效果，攻击或施法不会脱离隐身。风行者在隐身时攻击会在自身位置产生一个较轻的风行效果"
+            },
+            {
+              "indent_level": 1,
+              "note": "减速/致盲效果在敌人进入技能免疫状态后不再粘滞"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 22,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "静电场的当前生命值伤害从9%减少至8%"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 移动速度改为+250 生命"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+1.25 魔法恢复改为-4秒 神圣一跳冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+350 生命改为神圣一跳后1.6秒内+30 移动速度"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 641,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从25/20/15/10秒增加至26/22/18/14秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "减速从100%减少至80%"
+            },
+            {
+              "indent_level": 1,
+              "note": "减速时间从1.6/1.9/2.2/2.5秒减少至1.6秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 23,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+0.4秒 洪流升空/眩晕改为+25% X标记移动速度"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+30 攻击力改为潮汐使者施加1秒60%减速"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+25% X标记移动速度改为+45 攻击力"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+100 洪流伤害改为+30% 洪流升空/眩晕时间"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5031,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从75/150/225/300点提升至80/160/240/320点"
+            },
+            {
+              "indent_level": 1,
+              "note": "移动速度减缓从25%/30%/35%/40%提升至40%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 25,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+125 攻击距离改为神灭斩为纯粹伤害且无视技能免疫"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 944,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。提供腾焰斗篷。莉娜获得飞行移动状态，法术伤害提升30%，魔法抗性提升35%。冷却时间：25秒。无法被驱散。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 26,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "转身速率从0.6提升至0.8"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+60 攻击力改为+65 裂地尖刺伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+15 移动速度改为+10% 法力吸取减速"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从-2秒 裂地尖刺冷却改为法力吸取可作用友军"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从法力吸取作用友军改为-2秒 妖术冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+800 裂地尖刺距离改为法力吸取造成150%吸魔量伤害"
+        }
+      ]
+    },
+    {
+      "hero_id": 27,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础攻击力从71-78减少至65-72"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5080,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从400提升至450"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级施法距离加成从125减少至75"
+            }
+          ]
+        },
+        {
+          "ability_id": 5081,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "转身速率从0.5提升至1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 28,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+10% 鱼人碎击减速改为+0.2秒 鱼人碎击眩晕"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+60 深海重击伤害减少至+50"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5114,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在处于河道中被动获得2/4/6/8点/秒生命恢复和1/2/3/4点护甲"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级护甲加成从10点提升至11点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5115,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从90/100/110/120点调整为100点"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在会产生一个250范围的水洼，持续3/4/5/6秒（神杖升级还是会产生一个更大的水洼）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 29,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "重做魔晶升级效果。提供新技能：深海触须。向目标方向释放一波触须。触须造成50%毁灭伤害和眩晕，行进距离为75%毁灭作用范围。冷却时间：20秒。魔法消耗：80"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-100 海妖外壳伤害临界值改为+50 锚击攻击力"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+20% 锚击降低攻击力提升至+25%"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+30 海妖外壳伤害格挡提升至+40"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-4 巨浪降低护甲改为锚击可作用建筑"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5119,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害格挡从15/30/45/60点提升至16/34/52/70点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 30,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础攻击距离从600减少至550"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+1.5% 巫毒疗法最大生命值治疗改为+1.5% 巫毒疗法最大生命值治疗/伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5138,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "初始弹道速度从1000提升至1200"
+            },
+            {
+              "indent_level": 1,
+              "note": "施法距离从700减少至600"
+            }
+          ]
+        },
+        {
+          "ability_id": 5139,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "作用范围从500提升至500/550/600/650"
+            },
+            {
+              "indent_level": 1,
+              "note": "治疗从16/24/32/40点减少至10/20/30/40点"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在对敌人造成伤害，数值与治疗量相同"
+            }
+          ]
+        },
+        {
+          "ability_id": 5141,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在具有50%额外必中（无视闪避的几率）。另外对巫毒变身术有效。"
+            }
+          ]
+        },
+        {
+          "ability_id": 632,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从2秒提升至3秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 31,
+      "abilities": [
+        {
+          "ability_id": 7325,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从1.4/1.7/2/2.3秒调整为1.3/1.7/2.1/2.5秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从80点降低至50/60/70/80点"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法吸取从共10/15/20/25%调整为每秒10%"
+            }
+          ]
+        },
+        {
+          "ability_id": 8028,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在寒冰尖柱需要5次英雄攻击或10次非英雄单位的攻击才会被摧毁"
+            },
+            {
+              "indent_level": 1,
+              "note": "对寒冰尖柱施放冰霜魔盾后魔盾每次造成伤害都会使尖柱回复1次英雄攻击次数"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 32,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+0.3秒 闪烁突袭减速提升至+0.4秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+75 烟幕范围减少至+60"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5143,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "额外伤害从40/60/80/100点减少至40/55/70/85点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5144,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在攻击非英雄单位时敏捷伤害系数加倍"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 33,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+0.35秒 憎恶眩晕改为+50 黑洞每秒伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+200 午夜凋零作用范围改为+350 生命"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+400 生命改为+200 午夜凋零作用范围"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5146,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。憎恶的眩晕时间提升0.35秒，并且每次对敌方英雄造成伤害时都会产生一个虚灵体，该虚灵体攻击一定次数后不会分裂，不过会刷新持续时间"
+            }
+          ]
+        },
+        {
+          "ability_id": 5149,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。造成3.5%最大生命的额外伤害，并且以175距离的速度牵引1200范围内所有敌人。额外范围内被牵引的单位依然可以移动"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 34,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+10% 技能增强改为防御矩阵提供25%冷却时间减少"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5150,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从105/120/135/150点降低至95/110/125/140点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5153,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续施法时间从3.5/2.5/1.5秒降低至3.25/2.25/1.25秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从150/225/300点降低至130/185/240点"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在拥有8/7/6秒冷却时间，再装填可以将其重置",
+              "info": "如果再装填被打断，技能进入冷却"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 35,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+15 攻击力改为+30 爆头伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 694,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在被缠绕或束缚时无法施放"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 36,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+8 生命改为+2秒 竭心光环恢复时间"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+15% 魔法抗性改为+15% 幽魂护罩自身恢复增强"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5161,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从120秒降低至110秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从200/350/500点增加至250/375/500点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 37,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+2秒 暗言术持续时间改为+75 剧变作用范围"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5163,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "治疗/伤害从18/27/36/45点减少至15/25/35/45点"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级不再提供移动速度变化效果"
+            }
+          ]
+        },
+        {
+          "ability_id": 5164,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每秒减速效果从12/17/22/27%减少至10/15/20/25%"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在造成伤害，伤害量逐渐增加，从每秒10点最高可达30/50/70/90点"
+            },
+            {
+              "indent_level": 1,
+              "note": "施法距离从1200减少至900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 38,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+1.75 魔法恢复改为+10 野性之心攻击速度"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+30 野性之心攻击速度改为-5秒 野性之斧冷却"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5168,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法前摇从0.4秒降低至0.3秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 7230,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速效果从10/20/30/40%减少至10/18/26/34%"
+            }
+          ]
+        },
+        {
+          "ability_id": 7231,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级现在可以使技能设为自动施放。设置后所有战鹰会立刻自动对视野范围内首个可见目标施放俯冲炸弹，不论战鹰是在飞行或者静止状态下"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级冷却时间减少从7秒提升至10秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "俯冲炸弹现在会造成2.5秒缠绕，而不是2秒眩晕"
+            },
+            {
+              "indent_level": 1,
+              "note": "俯冲炸弹的施法距离从1200减少至900"
+            }
+          ]
+        },
+        {
+          "ability_id": 5172,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "攻击速度加成从15/25/35/45减少至10/20/30/40"
+            }
+          ]
+        },
+        {
+          "ability_id": 1005,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。提供新技能，斯洛姆战鼓。兽王开始敲击他的战鼓，而且速度不断加快。每次敲鼓会对600范围内敌人造成110点伤害，并且自身和控制下单位回复对英雄造成伤害的25%、对非英雄造成伤害的5%。兽王被眩晕或沉默时战鼓不会造成伤害，也不会具有回复效果。持续时间：6秒。冷却时间：50秒。魔法消耗：100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 39,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+2 暗影突袭伤害次数改为-0.7秒 暗影突袭伤害间隔"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从525 范围型暗影突袭改为-60秒 超声冲击波冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从18秒 法术抵挡改为+200 超声冲击波伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5173,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。暗影突袭的初始伤害提升80点，并且施加给目标附近325范围内所有敌人。暗影突袭效果结束后或重新施加给敌方英雄时，目标将放出痛苦尖叫，伤害附近所有敌人。幻象或者英雄阵亡不会触发效果。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 40,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+175 生命改为+20% 毒刺降低生命恢复"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-6秒 瘴气冷却减少至-5秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从12% 技能吸血改为-1秒 瘟疫守卫冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-1.5秒 瘟疫守卫冷却改为瘴气产生2个瘟疫守卫"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5180,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从20/22/24/26点增加至21/24/27/30点"
+            }
+          ]
+        },
+        {
+          "ability_id": 986,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。提供新技能：蛰毒。对目标施加一个弱毒素，减速10%并造成每秒20点伤害，持续7秒。如果该毒素被驱散，目标将受到300点伤害并被眩晕2秒。魔法消耗：75。冷却时间：20秒。距离：600。施法前摇：0.2秒。弹道速度：1200"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 41,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+7% 时间膨胀冷却技能减速提升至+10%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5182,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "距离从650提升至650/700/750/800"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级距离加成从400减少至300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 42,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0.25提升至0.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+15 攻击速度改为+25% 骷髅兵持续时间/-25% 吸血灵魂冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 移动速度改为+8% 吸血灵魂吸血"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5087,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "骷髅兵的持续时间从60秒减少至40秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 43,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "敏捷从14 + 1.8提升至16 + 2.0"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础移动速度从325减少至285"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+1% 吸魂巫术最大生命值伤害改为+30 吸魂巫术伤害/治疗"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5685,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "不再造成最大生命值百分比的伤害"
+            },
+            {
+              "indent_level": 1,
+              "note": "伤害从10/12/14/16点提升至20/40/60/80点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5093,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在被动提供+12/16/20%移动速度"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 44,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+15% 吸血改为+25% 魅影无形闪避"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+25% 魅影无形闪避改为+60 幻影突袭攻击速度"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5191,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在持续时间内提供10/15/20/25%吸血"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 45,
+      "abilities": [
+        {
+          "ability_id": 5188,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "不再减少技能伤害"
+            },
+            {
+              "indent_level": 1,
+              "note": "基础伤害从50点提升至50/60/70/80点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5189,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。冷却时间减少50%。以敌方英雄为目标时，帕格纳每秒降低他们8%伤害输出，最高可达到75%，并且自身的伤害输出提升，最高可达到100%。对幽冥守卫施放时速率为4%。负面效果持续8秒。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 46,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 攻击速度改为+25 折光攻击力"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+20% 闪避改为被控制时可以施放折光"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5194,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从100点降低至85/90/95/100点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 47,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 攻击速度改为+5% 毒性攻击魔法抗性降低"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+300 生命改为+12% 腐蚀皮肤魔法抗性"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+8% 毒性攻击魔法抗性降低改为+25% 毒性攻击伤害/减速"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从2倍 腐蚀皮肤减速/魔抗改为-50% 蝮蛇突袭冷却/魔耗"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5218,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从18/20/22/24点增加至24点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5219,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从8秒减少至6.5/7/7.5/8秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5220,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级现在会使冥界亚龙附近500范围内敌人所受的伤害和减速效果加倍。另外腐蚀皮肤在施加负面效果时立刻造成第一次伤害"
+            }
+          ]
+        },
+        {
+          "ability_id": 983,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。提供极恶俯冲。冥界亚龙冲向地面，对500范围内敌人造成4秒缴械，并且1200范围内所有敌人均被溅上腐蚀皮肤的酸液。冷却时间：20秒。施法距离：300。行进速度：500。魔法消耗：75。施法前摇：0.3秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 48,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从-3秒 月光冷却减少至-2秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从全屏月之祝福且+200 夜间视野改为施放月光时发射2个月刃（对月蚀的月光无效）"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5222,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶。每次月光击中一名敌方英雄时，露娜的攻击力提升15点，持续12秒。"
+            }
+          ]
+        },
+        {
+          "ability_id": 5224,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在夜间时作用范围为全地图"
+            },
+            {
+              "indent_level": 1,
+              "note": "攻击力加成从5/15/25/35点调整为6/14/20/28点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 49,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+20 力量改为+75% 古龙形态下火焰气息伤害/施法距离"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5226,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从90/100/110/120点降低至90/95/100/105点"
+            },
+            {
+              "indent_level": 1,
+              "note": "攻击力降低从25%提升至30%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5229,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "移动速度加成从25提升至25/30/35"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 50,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+60 攻击速度改为+350 对剧毒之触作用下敌人的攻击距离"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+250 薄葬结束时治疗减少至+225"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5234,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从4/4.5/5/5.5秒减少至3.5/4/4.5/5秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5235,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "治疗/伤害从80/100/120/140点减少至60/85/110/135点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 51,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+60 能量齿轮魔法损失改为-2秒 能量齿轮冷却"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 321,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。施放时不再刷新发条技师的所有技能，也不会提供移动和攻击速度加成。超速运转生效时，发条技师的所有技能更为强力：弹幕冲击对作用范围内所有敌人造成伤害和眩晕。能量齿轮在发条技师位于其中时提升发条技师250攻击速度。照明火箭的冷却时间降低至3秒，并且对照明火箭的目标区域两侧额外发射2枚照明火箭。发射钩爪的眩晕作用范围和持续时间提升50%。超速运转结束后，发条技师被眩晕3秒。加成效果持续时间：13秒。冷却时间：50秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 52,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础攻击力提升2点"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+30 恶魔敕令爆炸次数减少至+25"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5244,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在每秒魔法消耗从施法1秒后开始结算，而不是施法后马上开始（启动魔法消耗依然会结算）"
+            },
+            {
+              "indent_level": 1,
+              "note": "每秒消耗魔法从20/40/60点增加至25/45/65点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 53,
+      "abilities": [
+        {
+          "ability_id": 997,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。提供新技能：青森诅咒。对1200范围内所有非隐身的敌方英雄施加一个诅咒，使他们在战争迷雾中显形，并且根据250范围内树木的数量造成持续伤害。在此情况下树人也被视为树木。每棵树木减缓7%移动速度，并造成每秒15点伤害。持续时间：6秒。冷却时间：20秒。魔法消耗：80。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 54,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+30 攻击速度改为+150 感染伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+10% 狂暴移动速度提升至+12%"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+10% 尸鬼狂暴减速提升至+15%"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+16% 闪避改为+15% 感染目标移动速度/生命"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 631,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "攻击速度加成从20/30/40/50提升至25/40/55/70"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 55,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+6 护甲改为+50 离子外壳作用范围"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+75 离子外壳作用范围改为离子外壳提供+225 生命值上限"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从平行光墙改为2 离子外壳能量点数"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5256,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从600提升至800"
+            }
+          ]
+        },
+        {
+          "ability_id": 5257,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。奔腾单位的身后留下一道路径，作用范围为150，持续7秒，对附近的敌人造成50%减速，并且每0.5秒造成35点伤害。可以设为自动施放，禁止留下路径。"
+            }
+          ]
+        },
+        {
+          "ability_id": 687,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在技能由神杖提供"
+            },
+            {
+              "indent_level": 1,
+              "note": "幻象攻击力与当前等级的复制之墙相同"
+            },
+            {
+              "indent_level": 1,
+              "note": "最低伤害从10点提升至50点"
+            },
+            {
+              "indent_level": 1,
+              "note": "最高伤害从300点提升至450点"
+            },
+            {
+              "indent_level": 1,
+              "note": "幻象产生延迟从0.7秒降低至0.25秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "冷却时间从14秒降低至9秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 56,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+25% 死亡契约生命减少至+20%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5259,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "箭矢数量从3/4/5/6提升至6"
+            },
+            {
+              "indent_level": 1,
+              "note": "箭矢伤害从65%减少至50/55/60/65%"
+            },
+            {
+              "indent_level": 1,
+              "note": "持续施法时间从1.2/1.6/2.0/2.4秒调整为2.0秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5261,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从75增加至80点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 57,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "天国恩赐现在施放时同时驱散全能骑士及其目标"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+4 天国恩赐每个负面效果力量/生命恢复减少至+3"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 656,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从50/60/70/80点降低至40/45/50/55点"
+            },
+            {
+              "indent_level": 1,
+              "note": "基础攻击力额外伤害从55/70/85/100%提升至60/80/100/120%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5266,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从5/6.5/8秒减少至5/6/7秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 58,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 移动速度改为自然之助期间+30 移动速度"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5269,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从12秒减少至9/10/11/12秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 981,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。提供新技能：密友。目标附近1200范围内所有敌方、友方和中立非英雄单位会攻击目标，并且具有100攻击速度加成和100%移动速度加成，持续6秒。魔法消耗：75。冷却时间：20秒。施法距离：600。无法以建筑为目标。目标不会被英雄或幻象攻击。"
+            }
+          ]
+        },
+        {
+          "ability_id": 320,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从5秒降低至4秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 59,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础护甲提升1点"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+1秒 心炎持续时间减少至+0.75秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-3秒 牺牲冷却时间提升至-4秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7300,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "修复阿哈利姆魔晶错误地提供+65 伤害的问题"
+            }
+          ]
+        },
+        {
+          "ability_id": 5273,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "生命恢复的最大力量百分比从16/34/52/70%提升至25/40/55/70%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5274,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级施法距离从850减少至750"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 60,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+10% 暗夜猎影移动速度改为+15% 暗夜猎影状态抗性"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5275,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级眩晕时间从0.8秒提升至1秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5276,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "夜晚的持续时间从4/5/6/7秒调整为4.5/5/5.5/6秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 61,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础移动速度从280提升至285"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+16 敏捷改为+130 小蜘蛛生命"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+400 生命改为+25 敏捷"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+15% 丝质重器减速改为400 范围型丝质重器"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+350 小蜘蛛生命改为+35% 丝质重器减速/丢失几率"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+50 极度饥渴攻击力/吸血改为-0.3秒 极度饥渴期间基础攻击间隔"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5282,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。提升2秒持续时间。开启极度饥渴后，攻击力加成每1秒提升12点。"
+            }
+          ]
+        },
+        {
+          "ability_id": 5280,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在使转身速率额外提升0.2"
+            },
+            {
+              "indent_level": 1,
+              "note": "移动速度加成从18/30/42/54%减少至18/28/38/48%"
+            }
+          ]
+        },
+        {
+          "ability_id": 639,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "丢失几率从40%提升至40/45/50/55%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 62,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+50 投掷飞镖伤害改为暗影步破隐一击沉默2秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5285,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "短暂眩晕时间从0.1秒提升至0.2秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5287,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。暗影步拥有2点能量点数，并且可以对友方英雄施放。对友方英雄施放时赏金猎人不会脱离隐身效果。友方英雄的渐隐时间始终为1秒。充能时间：15/14/13/12秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 63,
+      "abilities": [
+        {
+          "ability_id": 5290,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。缩地对敌人造成伤害时也会在他们身上留下一个标记，持续6秒。触发连击时，该标记附近1200范围内敌人也会被连击的第二次攻击击中"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 64,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "力量成长从2.8减少至2.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋+6% 技能增强改为+10%/10 冰火交加移动/攻击速度降低"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+325 攻击距离减少至+275"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5298,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在路径在地面上持续2.6/2.9/3.2/3.5秒（最大眩晕依然是1.6/1.9/2.2/2.5秒）"
+            },
+            {
+              "indent_level": 1,
+              "note": "冷却时间从21/18/13/9秒降低至18/15/12/9秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 553,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每秒最大生命值伤害从2.5%减少至2%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 65,
+      "abilities": [
+        {
+          "ability_id": 5320,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在击中时额外造成6/12/18/24点伤害（该伤害也会随着叠加层数的增多而增加）"
+            },
+            {
+              "indent_level": 1,
+              "note": "持续时间从7秒减少至6秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "作用范围从375/400/425/450降低至375"
+            },
+            {
+              "indent_level": 1,
+              "note": "额外伤害从7/14/21/28点减少至6/12/18/24点"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级现在每隔一次攻击施加一次粘性燃油"
+            }
+          ]
+        },
+        {
+          "ability_id": 5322,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "刷新这个技能会重置持续时间，而不是产生第二条路径"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 66,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+200 生命改为-2秒 神圣劝化传送延迟"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+16 神圣劝化攻击力加成减少至+12"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+3 神圣劝化单位上限和能量点数改为上帝之手施加强驱散"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5328,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "对友军的攻击速度加成从30/60/90/120减少至25/50/75/100"
+            }
+          ]
+        },
+        {
+          "ability_id": 5330,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。劝化单位获得一个新的主动技能，殉道。该单位可以牺牲自己，对选定的任意友军施放一个单体的上帝之手。施法距离为全地图。冷却时间：8秒（所有生物之间共用）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 67,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "智力成长从1.9减少至1.7"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5334,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从75/130/185/240点减少至70/120/170/220点"
+            },
+            {
+              "indent_level": 1,
+              "note": "对400范围内没有友军的目标施加一次荒芜伤害"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 68,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+8% 技能增强改为+40 寒霜之足每秒伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5346,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级攻击速度降低数值现在与移动速度减缓一致"
+            },
+            {
+              "indent_level": 1,
+              "note": "作用范围从275提升至300"
+            },
+            {
+              "indent_level": 1,
+              "note": "持续时间从16秒减少至14秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5347,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速持续时间从0.5秒提升至0.7/0.8/0.9/1秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 69,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "敏捷从11 + 0.9提升至15 + 1.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+12% 魔法抗性改为吞噬提供15% 魔法抗性"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从-8秒 焦土冷却改为+10% 焦土移动速度"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+15% 焦土移动速度改为-35秒 末日冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+30 末日每秒伤害改为-12秒 焦土冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+150% 分裂改为末日施加破坏"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5339,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "死亡时不再被驱散"
+            }
+          ]
+        },
+        {
+          "ability_id": 5342,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。目标附近325范围内敌人也会受到末日的作用。可以对自身施放，作用于施法者周围的敌人"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 70,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+10 敏捷改为震撼大地施加2层怒意狂击"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+350 生命改为+10% 激怒状态抗性"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+15% 激怒状态抗性改为-2秒 震撼大地冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从-3秒 震撼大地冷却改为施放激怒时对700范围内友军提供半额加成"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5357,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从85点增加至95点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 71,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础魔法恢复从0提升至0.5点/秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5353,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "眩晕时间从1.2/1.6/2.0/2.4秒提升至1.5/1.8/2.1/2.4秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 987,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。提供新技能：位面空洞。巴拉森使空间的结构扭曲，自身魔法抗性提升25%，并且900范围内敌方对友方英雄的首个指向性技能将改变方向朝他飞去。改向的技能击中他后魔法抗性加成会消失。持续时间：6秒。冷却时间：20秒。魔法消耗：75"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 72,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+300 高射火炮范围改为火箭弹幕期间+30 移动速度"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+30 移动速度改为+40 高射火炮伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5361,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "火箭伤害从7/12/17/22点调整为6/12/18/24点"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从90点降低至75/80/85/90点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 73,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在向友军赠送阿哈利姆神杖会直接使炼金术士获得攻击力和技能增强加成，即使炼金术士自身还未拥有神杖。"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+15 攻击速度改为+1 酸性喷雾降低护甲"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+350 生命改为酸性喷雾向友军提供护甲"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+20 攻击力改为贪魔的贪婪叠加效果+1 攻击力（最高24点攻击力）"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+25% 分裂改为-0.1秒 化学狂暴基础攻击间隔"
+        }
+      ]
+    },
+    {
+      "hero_id": 74,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+40% 混沌陨石伤害改为-6秒 强袭飓风冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-24秒 幽冥漫步冷却改为+20% 电磁脉冲法力燃烧"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-10秒 强袭飓风冷却改为+80% 混沌陨石伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5390,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从20->260点提升至60->300点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5381,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从45秒降低至35秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "持续时间从100秒减少至60秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "减速的作用范围从400提升至450"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从200点降低至175点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5386,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从100->475点提升至120->480点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 75,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础攻击速度从115减少至100"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础攻击间隔从1.7秒降低至1.6秒"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+100 攻击距离改为-25秒 全领域静默冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+8% 奥术诅咒减速改为+0.8 遗言智力差倍数"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-25秒 全领域静默冷却改为+10% 智慧之刃伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+1.2 遗言智力差倍数改为奥术诅咒不可驱散"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+15% 智慧之刃伤害改为+2 智慧之刃弹射"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5377,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "沉默期间伤害倍数从1.7减少至1.5"
+            },
+            {
+              "indent_level": 1,
+              "note": "每次施法的惩罚延长时间从3秒减少至2秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5378,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。现在智慧之刃每4次攻击就会沉默敌人1.75秒。另外每次攻击和击杀窃取的智力值均提升2点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5379,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "智力差倍数从1.5/2/2.5/3减少至1/1.5/2/2.5"
+            },
+            {
+              "indent_level": 1,
+              "note": "智力差倍数现在对没有智力值的单位有效（将他们看作0）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 76,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+250 魔法改为+100 星体禁锢施法距离"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从30% 技能吸血改为-60秒 神智之蚀冷却"
+        }
+      ]
+    },
+    {
+      "hero_id": 77,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础移动速度从315减少至305"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+30% 变身致命一击概率改为嗥叫降低总攻击力"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5395,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法抗性从70%减少至40/50/60/70%"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在致残效果可以叠加"
+            },
+            {
+              "indent_level": 1,
+              "note": "永久隐身的渐隐延迟从1.7秒增加至2秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5396,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在夜晚期间施放的效果为全地图"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 78,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+350 生命改为+1x 醉拳浸酒后加成倍数"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+1400 元素战士生命减少至+1200"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 942,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。提供新技能：元素伙伴。根据酒仙的当前醉拳拳法制造一个元素分离的元素战士。如果元素战士与酒仙的距离超过1600就会被沉默，并且被减速50%。如果元素战士受到来自英雄或英雄控制单位的伤害，3秒内无法召唤新的元素战士。如果元素战士阵亡，技能进入70秒的冷却状态。同一时间只能存在一个元素战士。所有通过元素伙伴召唤的元素战士的技能冷却时间为双倍。如果酒仙使用元素分离，现有的元素战士将会消失。冷却时间：20秒。魔法消耗：50"
+            }
+          ]
+        },
+        {
+          "ability_id": 5403,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在重新召唤元素战士不会使他们的技能刷新（即使刷新了元素分离，若没有经过所需时间则技能会处于冷却状态）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 79,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "灵魂猎手替换为散播"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-6秒 灵魂猎手冷却改为+10% 散播共享伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1001,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "只要目标受到伤害，目标附近600范围内所有敌人，若目标为敌人那也包括目标自身，他们都将受到该伤害的20%/25%/30%/35%。可以对敌方或友方目标施放。敌人被崩裂禁锢隐藏时效果暂停。持续时间6秒。冷却时间：30/26/22/18秒。魔法消耗：100。施法距离：700/800/900/1000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 80,
+      "abilities": [
+        {
+          "ability_id": 5414,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从1.4/1.8/2.2/2.6秒减少至1.1/1.6/2.1/2.6秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 81,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+200 实相裂隙牵引距离提升至+225"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20% 混沌一击吸血提升至+22%"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+12 力量改为-75% 混沌之军幻象承受伤害"
+        }
+      ]
+    },
+    {
+      "hero_id": 82,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "力量成长从2.2提升至2.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+375 生命改为囤积狂鼠（中立物品槽位可以装备任意物品）"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5430,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从26/20/14/8秒降低至16/14/12/10秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 7318,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "从非英雄单位的生命窃取从4/6/8/10点减少至3/5/7/9点"
+            }
+          ]
+        },
+        {
+          "ability_id": 547,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在没有持续施法时间，立刻生效"
+            },
+            {
+              "indent_level": 1,
+              "note": "冷却时间从50秒降低至40秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "生命回复从60%减少至40%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 83,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "敏捷成长从2.0减少至1.8"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+36 活体护甲治疗改为+2 活体护甲每秒治疗"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+100 疯狂生长每秒伤害改为疯狂生长不可驱散"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5436,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "修改了技能说明，现在会显示每秒治疗，而不是总治疗量"
+            },
+            {
+              "indent_level": 1,
+              "note": "提供每秒3/4/5/6点生命"
+            },
+            {
+              "indent_level": 1,
+              "note": "护甲加成从3/6/9/12点提升至6/8/10/12点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5434,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "移动速度加成从+15%减少至+12%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 84,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从3.25减少至0.25"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础护甲从5点减少至4点"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础攻击力提升20点"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5439,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在施加0.1秒后造成首次伤害（总伤害次数少1次）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 85,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "力量成长从2.8减少至2.4"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+55 腐朽伤害提升至+60"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+25 墓碑僵尸攻击力减少至+22"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-1.5秒 腐朽冷却提升至-2秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5442,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "负面/加成效果消失时不再修改生命值（敌人不会获得生命，不朽尸王也不会损失生命）"
+            },
+            {
+              "indent_level": 1,
+              "note": "施法前摇从0.45秒降低至0.3秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "伤害从20/50/80/110点调整为0/40/80/120点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5443,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法前摇从0.35秒降低至0.3秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5444,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从120/130/140/150点增加至120/140/160/180点"
+            },
+            {
+              "indent_level": 1,
+              "note": "施法前摇从0.45秒增加至0.6秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 86,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础护甲提升1点"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5448,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从125点降低至110点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5450,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每次跳跃降低伤害从7%减少至6%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 87,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+275 恶念瞥视到达伤害改为+250 恶念瞥视最大伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5459,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在到达时造成伤害，伤害数值基于起点和终点之间的距离。0距离时伤害最低，为50点，1400距离时伤害最高，为150/200/250/300点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 88,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+250 生命改为+0.5秒 尖刺外壳反弹持续时间"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5462,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从700提升至750"
+            }
+          ]
+        },
+        {
+          "ability_id": 5465,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从90/75/60秒降低至80/70/60秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 89,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 移动速度改为-2秒 诱捕冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-1 激流所需攻击次数改为+500 海妖之歌作用范围"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5468,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从23/20/17/14秒降低至21/18/15/12秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级不再降低诱捕的冷却时间，不过依然可以对技能免疫或睡眠中单位施放"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级现在还会提升50%弹道速度"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级施法距离加成从+400改为+50% 当前施法距离"
+            }
+          ]
+        },
+        {
+          "ability_id": 5469,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级不再对击中的敌人造成减速"
+            }
+          ]
+        },
+        {
+          "ability_id": 1008,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。提供新技能：捕捞。娜迦海妖持续施法最多5秒，将1400范围内诱捕作用下所有单位以150的速度向她牵引。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 90,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 移动速度改为-2秒 冲击波冷却"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5474,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从65秒增加至85秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "冲击波治疗从40/50/60%提升至50/60/70%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 91,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+4 生命恢复改为+15% 羁绊对敌减速"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+45 幽魂对英雄伤害提升至+55"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5485,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "生命/魔法恢复倍数从75/90/105/120%减少至60/80/100/120%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5486,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从120/130/140/150点降低至100/110/120/130点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5487,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "攻击速度从25/55/85/115调整为35/60/85/110"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 92,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+8 维萨吉和佣兽攻击力减少至+6"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+1.5 维萨吉和佣兽削弱护甲减少至+1"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+30 维萨吉和佣兽移动速度减少至+25"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5481,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从125点增加至135点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5483,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "佣兽的攻击距离从160提升至180"
+            }
+          ]
+        },
+        {
+          "ability_id": 7116,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "眩晕作用范围从350提升至375"
+            }
+          ]
+        },
+        {
+          "ability_id": 683,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "额外攻击伤害从30%减少至25%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 93,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "敏捷成长从1.7减少至1.5"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础攻击速度从110提升至120"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+1.5% 暗影之舞生命恢复改为+40 暗影之舞生命恢复"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5495,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "不再造成直接伤害"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在施加0/1/2/3次能量转移叠加效果"
+            }
+          ]
+        },
+        {
+          "ability_id": 5497,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每秒生命恢复从5/6/7%最大生命调整为60/90/120点生命"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 94,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+20 攻击速度改为+15% 秘术异蛇降低转身速率和移动速度"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+12% 分裂箭伤害减少至+10%"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从-1.5秒 秘术异蛇冷却提升至-2秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5507,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "物理伤害加深从40/45/50%调整为35/45/55%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 95,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+7 狂战士之怒护甲改为+2秒 旋风飞斧负面状态"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+30 攻击力改为+10 狂战士之怒护甲"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从-15秒 战斗专注冷却改为+15% 战斗专注移动速度加成"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5508,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "诱捕现在无视技能免疫"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 96,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础护甲减少3点"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0.25提升至4"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5516,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从15/30/45/60点减少至15/25/35/45点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5517,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从175/250/325%力量值调整为200/250/300%"
+            },
+            {
+              "indent_level": 1,
+              "note": "减速持续时间从2.5秒提升至3秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 980,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做神杖升级效果。提供新技能：便车。半人马将一名友军抛入他身后的一辆便车中。友军在便车内依然可以施法和攻击，不过无法移动，也无法成为敌人的目标。非指向性效果依然可以影响便车内的友军。便车内近战英雄的攻击距离提升200。魔法消耗：75。冷却时间：60秒。持续时间：8秒。施法距离：300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 97,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础魔法恢复从0提升至0.5点/秒"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+12 力量改为两极反转每击中一名英雄+12 力量（加成持续时间：15秒）"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5521,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从130秒降低至120秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 649,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速持续时间从1.25秒提升至2秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 98,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "力量成长从3.2提升至3.5"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5526,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "最大叠加次数从6/12/18/24提升至10/20/30/40"
+            },
+            {
+              "indent_level": 1,
+              "note": "英雄攻击会提供2层活性护甲叠加效果"
+            },
+            {
+              "indent_level": 1,
+              "note": "每次叠加的生命恢复加成从0.7/0.9/1.1/1.3减少至0.4/0.5/0.6/0.7（最大生命恢复从4.2/10.8/19.8/31.2点生命/秒减少至4/10/18/28点生命/秒）"
+            },
+            {
+              "indent_level": 1,
+              "note": "每次叠加的护甲加成从0.9/1/1.1/1.2减少至0.5/0.6/0.7/0.8（最大护甲从5.4/12/19.8/28.8点调整为5/12/21/32点）"
+            }
+          ]
+        },
+        {
+          "ability_id": 5527,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从80/140/200点降低至75/125/175点"
+            },
+            {
+              "indent_level": 1,
+              "note": "每秒魔法消耗从16/23/30点降低至14/22/30点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5645,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每秒魔法消耗从16/23/30点降低至14/22/30点"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从80/140/200点降低至75/125/175点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 99,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+20 攻击速度改为+150 粘稠鼻液施法距离"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+200 生命改为+8%/+4% 钢毛后背背后/侧面伤害减少"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+25 战意叠加攻击力减少至+18"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5548,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级作用范围从800改为粘稠鼻液的当前施法距离"
+            }
+          ]
+        },
+        {
+          "ability_id": 5551,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每层叠加攻击力从25/30/35点减少至20/25/30点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 100,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0.75提升至1.0"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础魔法恢复从0提升至0.5点/秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5566,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "眩晕时间从0.5/0.75/1/1.25秒提升至0.8/1.0/1.2/1.4秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5672,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在会被林肯法球抵挡"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 101,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+10 智力减少至+8"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5581,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从90点增加至95点"
+            }
+          ]
+        },
+        {
+          "ability_id": 833,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。每次天怒法师通过技能对英雄造成魔法伤害时，他都会获得一个状态效果，提供2点额外智力和0.5点额外护甲。每次施法的叠加效果相互独立。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 102,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+15 移动速度改为+15% 魔霭诅咒减速"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5586,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从100/110/120/130点降低至85/100/115/130点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5588,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级作用范围从1600减少至1200"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 103,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础敏捷从14提升至16"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+15% 魔法抗性改为+75 回音重踏伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+100 回音重踏伤害改为+100 自然秩序作用范围"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5589,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从70/90/110/130点提升至75/100/125/150点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 104,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+200 决斗施法距离改为+8 决斗攻击力加成"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+8% 勇气之霎几率提升至+10%"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+30 决斗攻击力加成改为+50% 勇气之霎吸血"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5595,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级非英雄单位提供的护甲加成从0.5点提升至1点"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级英雄提供的护甲加成从4点提升至5点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5598,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从150提升至200/250/300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 105,
+      "abilities": [
+        {
+          "ability_id": 879,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速持续时间从2.5秒提升至3秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 886,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在对攻击的敌人施加弱驱散"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级现在还会对攻击该作用下友军的敌人造成伤害"
+            }
+          ]
+        },
+        {
+          "ability_id": 5644,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从360秒降低至60秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "持续时间从180秒减少至60秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "施法时间从0增加至1秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在会使500范围内的地雷处于无敌状态"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 106,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "敏捷成长从2.9提升至3.2"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础移动速度从305减少至300"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0.75提升至1.25"
+        },
+        {
+          "indent_level": 1,
+          "note": "转身速率从0.6提升至0.8"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5605,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从80/90/100/110点降低至65/80/95/110点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5607,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从150点降低至100/125/150点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5606,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从0增加至0.5秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 107,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+300 巨石冲击击飞距离改为+20 磁化每秒伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+18% 技能增强改为地磁之握可作用友军"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从地磁之握可作用友军改为+25% 技能增强"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5608,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在选取单位为目标的规则与选取残岩类似。施放时会选择最近的实体来击飞，优先选择范围内的残岩，然后是最近的单位。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 108,
+      "abilities": [
+        {
+          "ability_id": 5613,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "最大生命值的烧灼伤害从1/2/3/4%调整为1.5/2/2.5/3%"
+            },
+            {
+              "indent_level": 1,
+              "note": "冷却时间从12秒增加至15/14/13/12秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 865,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从140/120/100秒降低至120/110/100秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "伤害降低从10/20/30%提升至14/22/30%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 109,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "转身速率从0.6提升至0.8"
+        },
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从1提升至1.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+2秒 倒影持续时间改为-3秒 倒影冷却"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5622,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从150/100/50点降低至100/75/50点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 110,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复提升1"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+25 烈火精灵每秒伤害减少至+20"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5625,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每秒伤害从15/35/55/75点提升至20/40/60/80点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 111,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+0.4秒 气运之末持续时间提升至+0.5秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+12 智力改为+10 虚妄之诺护甲"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+15 虚妄之诺护甲改为+80 气运之末伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5639,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从80点降低至75点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5640,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从120/90/60秒降低至110/85/60秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 932,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每秒治疗/伤害从50点提升至60点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 112,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "力量从24 + 2.6减少至22 + 2.5"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5651,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "飞行持续时间从10秒减少至7/8/9/10秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5653,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从1000减少至850/900/950/1000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 113,
+      "abilities": [
+        {
+          "ability_id": 5677,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速效果从20/30/40/50%减少至14/21/28/35%"
+            },
+            {
+              "indent_level": 1,
+              "note": "减速效果现在会持续存在（附近有友军时依然不会受到伤害）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 114,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+50% 丛林之舞视野范围改为+0.2秒 七十二变伤害免疫"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5716,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。可以设为自动施放，在金箍棒击中地面时快速跃至另一端。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 119,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+1.5秒 恐吓持续时间改为作祟无视技能免疫"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 6339,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "产生延迟从0.5秒降低至0.3秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 6342,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从80/100/120/140点降低至80/90/100/110点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 120,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+1.5 魔法恢复改为+3 幸运一击护甲降低"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+20 力量改为+5% 甲盾冲击每名英雄降低伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从-25秒 地雷滚滚冷却减少至-20秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 6344,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从80/90/100/110点降低至75/80/85/90点"
+            }
+          ]
+        },
+        {
+          "ability_id": 6461,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "持续时间从5/7/9/11秒减少至5秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "击中每名英雄减少伤害从15/16/17/18%提升至20%"
+            }
+          ]
+        },
+        {
+          "ability_id": 7307,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "触发几率从17%减少至15%"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在石鳞剑士的技能造成伤害时也会触发"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 121,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+15% 技能增强改为+20% 缚魂法术伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 8000,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速持续时间从1.5秒提升至1.75秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 6491,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从100/75/50秒降低至90/70/50秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 123,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-4秒 野地奇袭冷却减少至-3秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+1秒 密林奔走持续时间改为+40% 密林奔走开启时闪避"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从密林奔走伪装迷彩改为+60 野地奇袭伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 8429,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "初始弹道速度从2100提升至2200"
+            }
+          ]
+        },
+        {
+          "ability_id": 8158,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "弹道速度从1200提升至1300"
+            }
+          ]
+        },
+        {
+          "ability_id": 9627,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在由魔晶提供。伤害从350点减少至200点。技能伤害增加从25%减少至20%。不再降低状态抗性"
+            }
+          ]
+        },
+        {
+          "ability_id": 8107,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在由神杖提供。施放时，森海飞霞进入隐身状态，移动速度提升15%，并且产生一个自身的诱饵，开始准备发射一箭穿心，目标为3000范围内最近的可见敌人。如果被攻击，或者成为技能的目标，诱饵会被摧毁，并且向攻击者放出较弱的野地奇袭。如果诱饵未被攻击，将在瞄准的方向发射一箭穿心，造成60%伤害"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 126,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+80 共鸣脉冲伤害改为增加异化外圈"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+12% 技能增强改为+120 共鸣脉冲伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从异化眩晕1.75秒改为异化缠绕2秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7701,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。残阴的冷却时间减少2秒，观察距离提升150，并且残阴被非英雄单位触发后依然存在（会对非英雄单位造成一次伤害，但不会消失）"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在会作用于最接近残阴的单位，而不是最接近中心线的单位"
+            },
+            {
+              "indent_level": 1,
+              "note": "不再打断使目标位置改变的效果（如燃烧枷锁、捶）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 128,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+0.3秒 龙炎饼干眩晕改为+60 电光石火伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+80 电光石火伤害改为-4秒 龙炎饼干冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+20% 蜥蜴绝吻减速改为+60 蜥蜴绝吻冲击伤害"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 6483,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "重做魔晶升级效果。龙炎饼干的跳跃距离提升175，并且目标单位会留下一团蜥蜴绝吻的炎洼"
+            },
+            {
+              "indent_level": 1,
+              "note": "弹道速度从1000提升至1100"
+            },
+            {
+              "indent_level": 1,
+              "note": "眩晕时间从1.3/1.6/1.9/2.5秒提升至1.4/1.8/2.2/2.5秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 129,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-10% 护身甲盾移动速度惩罚改为+30% 护身甲盾开启后改向几率"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+1.5秒 神之谴戒减速改为+100 神之谴戒距离"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 6583,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从110/120/130/140点降低至100/110/120/130点"
+            }
+          ]
+        },
+        {
+          "ability_id": 6495,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "减速持续时间从2秒提升至2.5秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 6582,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "主动效果的改向不再是以玛尔斯为圆心的作用范围。现在仅在弹道目标位于玛尔斯身后的锥形区域内或在他身边100范围内才会生效"
+            },
+            {
+              "indent_level": 1,
+              "note": "改向的作用范围从800提升至900"
+            }
+          ]
+        },
+        {
+          "ability_id": 6598,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "战矛伤害从100/150/200点调整为75/150/225点"
+            },
+            {
+              "indent_level": 1,
+              "note": "修复飞行单位有时可以从竞技场中逃脱的问题"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 135,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础护甲减少1点"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7902,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "拥有魔晶后施放星破天惊时破晓辰星会开始朝目标区域移动，而不是站在原地。依然拥有自由移动"
+            }
+          ]
+        },
+        {
+          "ability_id": 7914,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法前摇从0.25秒降低至0.2秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "施法距离从1000/1100/1200/1300减少至700/900/1100/1300"
+            }
+          ]
+        },
+        {
+          "ability_id": 7906,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "神杖升级现在可以使目标区域以200速度移动"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 136,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+2 魔法恢复改为+60 过肩摔伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+5 护甲改为+125 回身踢施法/跳跃距离"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+200 回身踢施法/跳跃距离改为-3秒 回身踢冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+0.5秒 过肩摔眩晕改为+15% 健体术吸血"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+30 移动速度改为+15% 怒拳破移动速度"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+25% 健体术吸血改为+0.7秒 回身踢眩晕"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 8192,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在减速20/30/40/50%，持续3秒，而不是眩晕"
+            },
+            {
+              "indent_level": 1,
+              "note": "摔扔距离从300减少至275"
+            }
+          ]
+        },
+        {
+          "ability_id": 8235,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在眩晕落地区域内敌人0.9/1.3/1.7/2.1秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "友军的移动速度加成从45%减少至25/30/35/40%"
+            },
+            {
+              "indent_level": 1,
+              "note": "落地伤害从90/160/230/300点减少至75/150/225/300点"
+            },
+            {
+              "indent_level": 1,
+              "note": "落地效果的作用范围从375减少至250"
+            }
+          ]
+        },
+        {
+          "ability_id": 8198,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "脉冲不再对敌人造成减速"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在每次出拳还会减缓打击目标30%移动速度，持续2秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在每次出拳还会降低打击目标60/80/100攻击速度，持续2秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "不再对玛西施加弱驱散"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级现在还会在施放时对玛西施加弱驱散"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级冷却时间减少从10秒提升至20秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 137,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0提升至0.25"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+2 魔法恢复改为+90 突伤害"
+        },
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+12% 魔法抗性改为+20% 踏期间魔法抗性"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+120 突伤害改为施放咤时驱散自身"
+        },
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+3 咤每层叠加护甲改为-5秒 踏冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从施放咤时驱散自身改为+4 咤每层叠加护甲"
+        },
+        {
+          "indent_level": 1,
+          "note": "25级天赋从+50% 技能吸血改为捶无视技能免疫"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 995,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "增加神杖升级效果。咤在1.25秒延迟后释放出3波弹道，每波每层叠加效果有2个弹道。每个弹道对敌人造成100点伤害，并且施加破坏效果，持续2.5秒。"
+            },
+            {
+              "indent_level": 1,
+              "note": "现在可以在持续施法时使用"
+            }
+          ]
+        },
+        {
+          "ability_id": 7739,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在会分裂成3个较小的碎石，产生于第一个石头后方600距离。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "success": true
+}

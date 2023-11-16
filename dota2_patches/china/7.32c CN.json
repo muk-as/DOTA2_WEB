@@ -1,0 +1,1209 @@
+{
+  "patch_number": "7.32c",
+  "patch_name": "7.32c",
+  "patch_timestamp": 1664262000,
+  "generic": [
+    {
+      "indent_level": 1,
+      "note": "修复部分中立生物在夜间本应睡觉时会施放技能的问题（半人马、地狱熊怪、食人魔拳手和远古雷肤兽）"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复玄奥手镯在未装备时不会移除魔法恢复效果的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复半人马战行者的便车在半人马垂直方向发生位移或被移出地图时会被驱散的问题。（这会影响隔空取物、烈焰破击、投掷等技能）"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复黑暗贤者在没有神杖时普通一拳会保留的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复死亡先知可以在吸魂巫术的目标受到驱散效果后再次对其施加吸魂巫术的问题。"
+    },
+    {
+      "indent_level": 1,
+      "note": "修正阿哈利姆神杖升级的末日与窃取的末日之间的相互作用"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复阿哈利姆神杖升级的末日会对范围内高状态抗性的单位造成额外伤害的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复大地之灵的巨石翻滚伤害无视技能免疫的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复大地之灵的魔晶不会即时提供+4 残岩能量点数的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复大地之灵在巨石翻滚期间双击残岩会在英雄身后放置残岩的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复大地之灵的巨石冲击会以尸体为目标的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复上古巨神的灵体游魂穿过技能免疫状态下敌人后不会获得相应效果的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复灰烬之灵在激活残焰的飞行期间只能向地图右侧施放残焰的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复森海飞霞种下的树碰撞体积过大，会导致野地奇袭有时候看上去本该击中却会落空的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复噬魂鬼的25级狂暴天赋没有正确生效的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "优化了狼人的嗥叫在夜间的效果"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复玛尔斯的士兵会在玛尔斯受到缠绕、沉默等效果时停止攻击的问题。（现在只有玛尔斯被眩晕或缴械时停止）"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复米波的幻象不会获得囤积狂鼠中立物品槽位内物品的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复米波的克隆体在泉水内无敌时会无视发送给所有单位的指令"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复齐天大圣的魔晶效果还会提供一些老的加成效果的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复凤凰的烈火精灵数值没有更新至7.32版本的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修正獸与恶念瞥视和X标记的相互作用"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复力丸在闪烁突袭后若目标在移动时不会立刻攻击的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复拉比克拥有阿哈利姆魔晶后窃取敌法师的法术反制后会永久获得魔晶光环的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复裂魂人的位面空洞被麻痹药剂、投掷飞镖和连环霜冻击中后会产生2个弹跳弹道的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复巨牙海民受到裂魂人的位面空洞作用后失去雪球技能的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修正拉比克隔空取物的冷却时间与冷却时间减少效果和对友军施放隔空取物的相互作用"
+    },
+    {
+      "indent_level": 1,
+      "note": "修复若干技能的作用范围指示效果错误的问题"
+    },
+    {
+      "indent_level": 1,
+      "note": "修正并阐明了若干技能的描述说明"
+    }
+  ],
+  "items": [
+    {
+      "ability_id": 121,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "开启时不再消耗生命值"
+        }
+      ]
+    },
+    {
+      "ability_id": 110,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在和刷新碎片共享冷却时间"
+        },
+        {
+          "indent_level": 1,
+          "note": "在背包内将停止冷却"
+        }
+      ]
+    },
+    {
+      "ability_id": 260,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "现在和刷新球共享冷却时间"
+        },
+        {
+          "indent_level": 1,
+          "note": "在背包内将停止冷却"
+        },
+        {
+          "indent_level": 1,
+          "note": "冷却时间从200秒减少至180秒"
+        }
+      ]
+    }
+  ],
+  "neutral_items": [
+    {
+      "ability_id": 990,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "最大魔法值减少从-20%减少至-15%"
+        }
+      ]
+    },
+    {
+      "ability_id": 1077,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "攻击速度从10增加至15"
+        }
+      ]
+    }
+  ],
+  "heroes": [
+    {
+      "hero_id": 2,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础攻击力提升3点"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+10% 战斗饥渴减速提升至+12%"
+        }
+      ]
+    },
+    {
+      "hero_id": 4,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+10% 割裂初始伤害减少至+8%"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+475 割裂施法距离减少至+425"
+        }
+      ]
+    },
+    {
+      "hero_id": 6,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础移动速度从295提升至300"
+        }
+      ]
+    },
+    {
+      "hero_id": 11,
+      "abilities": [
+        {
+          "ability_id": 5059,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "连中的移动速度减缓效果从15%减少至12/13/14/15%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 12,
+      "abilities": [
+        {
+          "ability_id": 5065,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从525/600/675/750提升至600/650/700/750"
+            },
+            {
+              "indent_level": 1,
+              "note": "移动速度减缓从10/18/26/34%提升至14/21/28/35%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 14,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+10% 技能吸血减少至+8%"
+        }
+      ]
+    },
+    {
+      "hero_id": 16,
+      "abilities": [
+        {
+          "ability_id": 5104,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "移动速度减缓从10/15/20/25%提升至14/18/22/26%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 21,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+10% 强力击伤害降低提升至+15%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5133,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "攻击速度加成从300/400/500提升至350/425/500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 25,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础护甲减少1点"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+25 攻击力减少至+20"
+        }
+      ]
+    },
+    {
+      "hero_id": 26,
+      "abilities": [
+        {
+          "ability_id": 5045,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从500提升至550"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 28,
+      "abilities": [
+        {
+          "ability_id": 5114,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "河道中的移动速度加成从15%提升至18%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5116,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "眩晕时间从1.0/1.1/1.2/1.3秒提升至1.3秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 29,
+      "abilities": [
+        {
+          "ability_id": 5121,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从200/300/400点提升至250/350/450点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5118,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "负面效果的持续时间从4秒提升至4.5秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 31,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础生命恢复从0.25提升至0.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+125 寒霜爆发范围和伤害提升至+150"
+        }
+      ]
+    },
+    {
+      "hero_id": 32,
+      "abilities": [
+        {
+          "ability_id": 5142,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "作用范围从300/325/350/375提升至375"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 33,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "恶魔召唤虚灵体的魔法抗性从60%减少至30/40/50/60%"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+350 生命减少至+250"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5148,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每秒伤害从6/8/10/12%减少至5/7/9/11%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 37,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从剧变每秒提升友军10攻击速度提升至12"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5165,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从170秒降低至160秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 40,
+      "abilities": [
+        {
+          "ability_id": 5178,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从125点降低至95/105/115/125点"
+            }
+          ]
+        },
+        {
+          "ability_id": 986,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从600提升至800"
+            },
+            {
+              "indent_level": 1,
+              "note": "弹道速度从1200提升至1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 41,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从-1.5秒 时间漫游冷却减少至-1秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+120 时间结界内攻击速度减少至+95"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5182,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级距离加成从300减少至150"
+            }
+          ]
+        },
+        {
+          "ability_id": 5691,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "每个冷却技能的每秒伤害从10/11/12/13点减少至7/9/11/13点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 42,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+24 骷髅兵攻击力提升至+26"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5086,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从60/80/100/120点提升至75/90/105/120点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 43,
+      "abilities": [
+        {
+          "ability_id": 5090,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从8/7/6/5秒增加至9/8/7/6秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5685,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "充能时间从36/34/32/30秒增加至38秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5093,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "开启后移动速度加成从12/16/20%减少至8/12/16%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 44,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "转身速率从0.6提升至0.8"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5191,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "攻击速度加成从75/100/125/150提升至80/110/140/170"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 45,
+      "abilities": [
+        {
+          "ability_id": 5188,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害系数从0.75/1/1.25/1.5提升至1/1.2/1.4/1.6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 47,
+      "abilities": [
+        {
+          "ability_id": 5218,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "单次的移动速度减缓从6/8/10/12%减少至3/6/9/12%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 53,
+      "abilities": [
+        {
+          "ability_id": 5248,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从150/175/200点降低至130/160/190点"
+            }
+          ]
+        },
+        {
+          "ability_id": 997,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从20秒降低至18秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 55,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+225 离子外壳额外生命值提升至+250"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5257,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从19/16/13/9秒降低至18/15/12/9秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 57,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "天国恩赐的基础力量加成从8/18/28/38点减少至8/16/24/32点"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 656,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从10秒增加至16/14/12/10秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 60,
+      "abilities": [
+        {
+          "ability_id": 5278,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从150/140/130秒降低至140/135/130秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 61,
+      "abilities": [
+        {
+          "ability_id": 5280,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "生命恢复加成从3/5/7/9提升至5/7/9/11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 62,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础攻击力提升3点"
+        }
+      ]
+    },
+    {
+      "hero_id": 65,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+75 烈焰破击击退距离减少至+50"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5320,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法距离从550/600/650/700调整为600"
+            }
+          ]
+        },
+        {
+          "ability_id": 5321,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "击退距离从300减少至250"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 66,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从赎罪造成250点伤害减少至225点"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5330,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "攻击力加成从8/16/24/32点减少至4/10/16/22点"
+            }
+          ]
+        },
+        {
+          "ability_id": 7306,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "生命恢复加成从1.5/3/4.5/6减少至1/2/3/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 71,
+      "abilities": [
+        {
+          "ability_id": 5353,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "施法前摇从0.3秒降低至0.1秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "神杖升级不再降低施法前摇"
+            }
+          ]
+        },
+        {
+          "ability_id": 987,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在敌人的技能以裂魂人为目标时不再触发改向"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 72,
+      "abilities": [
+        {
+          "ability_id": 5363,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从20秒降低至18秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从50/60/70/80点降低至40/50/60/70点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 75,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "基础护甲提升1点"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5377,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "现在施加40/60/80/100点瞬间爆发伤害"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 76,
+      "abilities": [
+        {
+          "ability_id": 5392,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从24/20/16/12秒降低至18/16/14/12秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 78,
+      "abilities": [
+        {
+          "ability_id": 7310,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "点燃后总伤害从75/150/225/300点提升至80/160/240/320点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 79,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从+10 力量提升至+12"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5421,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从29/26/23/20秒降低至26/24/22/20秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 1001,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "散播的物理伤害现在会无视伤害格挡。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 82,
+      "abilities": [
+        {
+          "ability_id": 5433,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级投掷的减速从50%提升至60%"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级的投掷伤害从100点提升至120点"
+            }
+          ]
+        },
+        {
+          "ability_id": 547,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "回复的最大生命值从40%提升至50%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 85,
+      "abilities": [
+        {
+          "ability_id": 5442,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔法消耗从85/90/95/100点增加至100点"
+            }
+          ]
+        },
+        {
+          "ability_id": 5444,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "僵尸的移动速度减缓从7%减少至5%"
+            },
+            {
+              "indent_level": 1,
+              "note": "视野范围从1800减少至1500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 86,
+      "abilities": [
+        {
+          "ability_id": 5448,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "为着陆技能增加指示效果，可以预览单位的落地点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 90,
+      "abilities": [
+        {
+          "ability_id": 5476,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从100点提升至100/140/180点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 92,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "20级天赋从+25 维萨吉和佣兽移动速度减少至+20"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5480,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从16/14/12/10秒增加至17/15/13/11秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 5482,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "作用范围从1200减少至900"
+            },
+            {
+              "indent_level": 1,
+              "note": "魔晶升级回复的最大生命值从35%减少至25%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5483,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "佣兽的移动速度从430减少至420"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 93,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "10级天赋从-1秒 黑暗契约冷却减少至-0.5秒"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 729,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "作用范围从300减少至250"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 97,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "15级天赋从+12 两极反转每击中一名英雄增加力量提升至+16"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5518,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "伤害从75/150/225/300点提升至90/160/230/300点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 103,
+      "abilities": [
+        {
+          "ability_id": 5589,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级现在还会减少2秒冷却时间"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 105,
+      "abilities": [
+        {
+          "ability_id": 886,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "移动速度加成从15/20/25/30%提升至18/22/26/30%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 111,
+      "abilities": [
+        {
+          "ability_id": 5637,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "最短缠绕时间从0.5秒提升至0.75秒"
+            },
+            {
+              "indent_level": 1,
+              "note": "最长缠绕时间从2.5秒提升至2.75秒"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 121,
+      "abilities": [
+        {
+          "ability_id": 8006,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "幻影飞向目标的行进速度从750提升至850"
+            },
+            {
+              "indent_level": 1,
+              "note": "幻影飞回天涯墨客的行进速度从750提升至1150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 135,
+      "abilities": [
+        {
+          "ability_id": 7902,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "魔晶升级星破天惊期间移动速度减少25%，最低为215"
+            }
+          ]
+        },
+        {
+          "ability_id": 7918,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "攻击英雄的治疗量从30/40/50/60%减少至35/40/45/50%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 136,
+      "abilities": [
+        {
+          "ability_id": 8192,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "摔扔距离从275减少至250"
+            },
+            {
+              "indent_level": 1,
+              "note": "不再能将单位从黑洞和时间结界内扔出"
+            }
+          ]
+        },
+        {
+          "ability_id": 8235,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "冷却时间从17/15/13/12秒增加至24/20/16/12秒"
+            }
+          ]
+        },
+        {
+          "ability_id": 8198,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "移动速度和攻击速度降低效果不再无视技能免疫"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 137,
+      "abilities": [
+        {
+          "ability_id": 995,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "被动攻击力加成从10/15/20/25点减少至6/12/18/24点"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "neutral_creeps": [
+    {
+      "name": "npc_dota_neutral_satyr_soulstealer",
+      "localized_name": "萨特窃神者",
+      "neutral_creep_notes": [
+        {
+          "indent_level": 1,
+          "note": "魔法恢复光环从2.0点/秒减少至1.75点/秒"
+        },
+        {
+          "indent_level": 1,
+          "note": "燃烧魔法值从100点调整为20 + 2x 智力值"
+        }
+      ]
+    }
+  ],
+  "success": true
+}
