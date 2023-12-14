@@ -5,13 +5,13 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [1669],
   {
-    46571: (e) => {
+    88859: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    12424: (e) => {
+    3471: (e) => {
       e.exports = {
         Tooltip: "traileroverlay_Tooltip_vPqso",
         CarouselFade: "traileroverlay_CarouselFade_hAvyI",
@@ -40,7 +40,7 @@
         LogoRight: "traileroverlay_LogoRight_20t2E",
       };
     },
-    10627: (e) => {
+    59197: (e) => {
       e.exports = {
         Tooltip: "marci_Tooltip_1h1rl",
         CarouselFade: "marci_CarouselFade_2v-4q",
@@ -95,7 +95,7 @@
       "use strict";
       r.d(a, { U: () => c });
       var l = r(89526),
-        t = r(46571),
+        t = r(88859),
         i = r.n(t),
         o = r(54013);
       const c = () =>
@@ -109,7 +109,7 @@
       r.d(a, { F: () => l, y: () => _ });
       var l,
         t = r(89526),
-        i = r(12424),
+        i = r(3471),
         o = r.n(i),
         c = r(54013),
         m = r(3646),
@@ -274,13 +274,13 @@
         c = r(88464),
         m = r(58638),
         s = r(89526),
-        n = r(53672),
+        n = r(61011),
         _ = r(565),
         p = r(22396),
         d = r(78562),
         E = r(29706),
         u = r(70894),
-        g = r(10627),
+        g = r(59197),
         y = r.n(g),
         v = r(72210),
         b = r(6541),
@@ -293,7 +293,7 @@
             { className: y().MarciPage },
             s.createElement(E.j, { bOverlapping: !0 }),
             s.createElement(
-              n.q,
+              n.ql,
               null,
               s.createElement("title", null, (0, o.Jr)("#marci_title")),
             ),

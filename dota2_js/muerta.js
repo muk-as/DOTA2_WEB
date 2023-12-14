@@ -5,13 +5,13 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [7164],
   {
-    46571: (e) => {
+    88859: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    64142: (e) => {
+    66117: (e) => {
       e.exports = {
         Tooltip: "muerta_Tooltip_2KOuf",
         CarouselFade: "muerta_CarouselFade_1uXpQ",
@@ -160,7 +160,7 @@
       "use strict";
       t.d(a, { U: () => m });
       var r = t(89526),
-        l = t(46571),
+        l = t(88859),
         i = t.n(l),
         s = t(54013);
       const m = () =>
@@ -179,13 +179,13 @@
         m = t(88464),
         n = t(58638),
         c = t(89526),
-        o = t(53672),
+        o = t(61011),
         d = t(565),
         _ = t(22396),
         u = t(78562),
         N = t(29706),
         E = t(70894),
-        v = t(64142),
+        v = t(66117),
         g = t.n(v),
         p = t(59481),
         h = t(72210),
@@ -447,7 +447,7 @@
                   { className: (0, _.Z)(g().ParallaxLayer, g().Layer2) },
                   c.createElement(N.j, { bOverlapping: !0 }),
                   c.createElement(
-                    o.q,
+                    o.ql,
                     null,
                     c.createElement("title", null, (0, s.Jr)("#muerta_title")),
                   ),

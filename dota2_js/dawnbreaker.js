@@ -5,13 +5,13 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [3324],
   {
-    46571: (e) => {
+    88859: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    91896: (e) => {
+    40486: (e) => {
       e.exports = {
         ComparisonImage: "comparisonimage_ComparisonImage_3SX3h",
         ImageLabel: "comparisonimage_ImageLabel_3bKKQ",
@@ -24,7 +24,7 @@
         TabContentContainer: "comparisonimage_TabContentContainer_2tKRo",
       };
     },
-    60201: (e) => {
+    42570: (e) => {
       e.exports = {
         Tooltip: "dawnbreaker_Tooltip_OauU7",
         CarouselFade: "dawnbreaker_CarouselFade_3ZZDo",
@@ -97,7 +97,7 @@
       "use strict";
       t.d(a, { U: () => m });
       var r = t(89526),
-        n = t(46571),
+        n = t(88859),
         l = t.n(n),
         i = t(54013);
       const m = () =>
@@ -113,7 +113,7 @@
         n = t(54013),
         l = t(89526),
         i = t(565),
-        m = t(60201),
+        m = t(42570),
         c = t.n(m),
         _ = t(22396),
         d = t(78562),
@@ -122,12 +122,12 @@
         p = t(3646),
         b = t(29706),
         w = t(70894),
-        g = t(53672),
+        g = t(61011),
         E = t(59481),
         k = t(58638),
         h = t(63738),
         v = t(72210),
-        N = t(91896),
+        N = t(40486),
         y = t.n(N);
       const u = ({ image: e, is_new: a }) =>
           l.createElement(
@@ -187,7 +187,7 @@
             { className: c().DawnbreakerPage },
             l.createElement(b.j, { bOverlapping: !0 }),
             l.createElement(
-              g.q,
+              g.ql,
               null,
               l.createElement("title", null, (0, p.Jr)("#dawnbreaker_title")),
             ),

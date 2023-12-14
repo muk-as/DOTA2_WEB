@@ -5,7 +5,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [6247],
   {
-    79818: (e) => {
+    83346: (e) => {
       e.exports = {
         Tooltip: "bppurchasebutton_Tooltip_3SWNc",
         CarouselFade: "bppurchasebutton_CarouselFade_492j9",
@@ -38,7 +38,7 @@
         TextColorGreenGlow: "bppurchasebutton_TextColorGreenGlow_3azYF",
       };
     },
-    70928: (e) => {
+    47596: (e) => {
       e.exports = {
         Tooltip: "international2023_Tooltip_1taT2",
         CarouselFade: "international2023_CarouselFade_8BZdP",
@@ -127,7 +127,7 @@
       "use strict";
       a.d(t, { VJ: () => _, Y$: () => m });
       var n = a(89526),
-        i = a(79818),
+        i = a(83346),
         r = a.n(i),
         l = a(22396),
         o = a(3646),
@@ -398,14 +398,14 @@
         r = a(3646),
         l = a(88464),
         o = a(89526),
-        s = a(53672),
+        s = a(61011),
         c = a(22396),
         m = a(78562),
         _ = a(29706),
         d = a(70894),
-        p = a(70928),
+        p = a(47596),
         u = a.n(p),
-        g = a(65092),
+        g = a(59934),
         E = a(43083),
         h = a(82297),
         S = a(58638);
@@ -742,7 +742,7 @@
               "div",
               { id: v, className: u().International2023Page },
               o.createElement(
-                s.q,
+                s.ql,
                 null,
                 o.createElement(
                   "title",

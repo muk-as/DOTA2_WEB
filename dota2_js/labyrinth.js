@@ -5,7 +5,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [9431],
   {
-    12424: (e) => {
+    3471: (e) => {
       e.exports = {
         Tooltip: "traileroverlay_Tooltip_vPqso",
         CarouselFade: "traileroverlay_CarouselFade_hAvyI",
@@ -34,7 +34,7 @@
         LogoRight: "traileroverlay_LogoRight_20t2E",
       };
     },
-    97308: (e) => {
+    50447: (e) => {
       e.exports = {
         Tooltip: "labyrinth_Tooltip_mbsiX",
         CarouselFade: "labyrinth_CarouselFade_2LPkM",
@@ -142,7 +142,7 @@
       t.d(a, { F: () => r, y: () => m });
       var r,
         l = t(89526),
-        o = t(12424),
+        o = t(3471),
         n = t.n(o),
         s = t(54013),
         i = t(3646),
@@ -302,7 +302,7 @@
       t.r(a), t.d(a, { default: () => h });
       var r = t(54013),
         l = t(89526),
-        o = t(97308),
+        o = t(50447),
         n = t.n(o),
         s = t(22396),
         i = t(78562),
@@ -312,7 +312,7 @@
         d = t(70894),
         b = t(82297),
         y = t(68653),
-        p = t(53672),
+        p = t(61011),
         g = t(6541);
       const h = (0, c.Pi)(() => {
         i.P.RequestBPPrices([17707, 17708, 17709]);
@@ -384,7 +384,7 @@
           { className: n().HomePage },
           l.createElement(m.j, { bOverlapping: !0 }),
           l.createElement(
-            p.q,
+            p.ql,
             null,
             l.createElement("title", null, (0, _.Jr)("#labyrinth_title")),
           ),

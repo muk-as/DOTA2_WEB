@@ -5,13 +5,13 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [104],
   {
-    46571: (e) => {
+    88859: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    18675: (e) => {
+    58782: (e) => {
       e.exports = {
         Tooltip: "primalbeast_Tooltip_2FBKv",
         CarouselFade: "primalbeast_CarouselFade_3qj-r",
@@ -92,7 +92,7 @@
       "use strict";
       t.d(a, { U: () => m });
       var l = t(89526),
-        i = t(46571),
+        i = t(88859),
         s = t.n(i),
         r = t(54013);
       const m = () =>
@@ -111,13 +111,13 @@
         m = t(88464),
         c = t(58638),
         p = t(89526),
-        n = t(53672),
+        n = t(61011),
         _ = t(565),
         o = t(22396),
         b = t(78562),
         d = t(29706),
         E = t(70894),
-        h = t(18675),
+        h = t(58782),
         v = t.n(h),
         N = t(59481),
         y = t(72210),
@@ -130,7 +130,7 @@
             { className: v().PrimalBeastPage },
             p.createElement(d.j, { bOverlapping: !0 }),
             p.createElement(
-              n.q,
+              n.ql,
               null,
               p.createElement("title", null, (0, r.Jr)("#primalbeast_title")),
             ),

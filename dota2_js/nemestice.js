@@ -5,7 +5,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [6063],
   {
-    76135: (e) => {
+    13480: (e) => {
       e.exports = {
         Tooltip: "nemestice_Tooltip_2h7lS",
         CarouselFade: "nemestice_CarouselFade_HKaWh",
@@ -108,7 +108,7 @@
       t.r(a), t.d(a, { default: () => g });
       var s = t(54013),
         c = t(89526),
-        r = t(76135),
+        r = t(13480),
         l = t.n(r),
         n = t(22396),
         m = t(78562),
@@ -118,7 +118,7 @@
         d = t(70894),
         p = t(82297),
         E = t(68653),
-        v = t(53672);
+        v = t(61011);
       const g = (0, i.Pi)(() => {
         m.P.RequestBPPrices([18695, 18696, 18697]);
         const e = [
@@ -196,7 +196,7 @@
           { className: l().HomePage },
           c.createElement(_.j, { bOverlapping: !0 }),
           c.createElement(
-            v.q,
+            v.ql,
             null,
             c.createElement("title", null, (0, o.Jr)("#nemestice_title")),
           ),

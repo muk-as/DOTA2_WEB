@@ -5,7 +5,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [7929],
   {
-    44498: (e) => {
+    67594: (e) => {
       e.exports = {
         Tooltip: "juneupdate22_Tooltip_2AeNN",
         CarouselFade: "juneupdate22_CarouselFade_2342Q",
@@ -46,11 +46,11 @@
         i = a(54013),
         l = a(3646),
         c = a(89526),
-        r = a(53672),
+        r = a(61011),
         s = a(29706),
         d = a(70894),
         _ = a(39375),
-        u = a(44498),
+        u = a(67594),
         m = a.n(u),
         o = a(59481),
         p = a(88464);
@@ -85,7 +85,7 @@
             "div",
             { className: m().BattleReportPage },
             c.createElement(
-              r.q,
+              r.ql,
               null,
               c.createElement("title", null, (0, l.Jr)("#june22_title")),
             ),

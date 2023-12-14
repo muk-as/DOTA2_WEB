@@ -3,7 +3,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [4711],
   {
-    80318: (e) => {
+    19028: (e) => {
       e.exports = {
         Tooltip: "bpimmortalcarousel_Tooltip_1rogB",
         CarouselFade: "bpimmortalcarousel_CarouselFade_dt-ti",
@@ -53,7 +53,7 @@
         TextStyleFootnote: "bpimmortalcarousel_TextStyleFootnote_3ASKu",
       };
     },
-    79818: (e) => {
+    83346: (e) => {
       e.exports = {
         Tooltip: "bppurchasebutton_Tooltip_3SWNc",
         CarouselFade: "bppurchasebutton_CarouselFade_492j9",
@@ -92,7 +92,7 @@
       var a,
         o,
         l = r(89526),
-        s = r(80318),
+        s = r(19028),
         m = r.n(s),
         n = r(22396),
         c = r(3646),
@@ -437,7 +437,7 @@
       "use strict";
       r.d(t, { VJ: () => u, Y$: () => i });
       var a = r(89526),
-        o = r(79818),
+        o = r(83346),
         l = r.n(o),
         s = r(22396),
         m = r(3646),

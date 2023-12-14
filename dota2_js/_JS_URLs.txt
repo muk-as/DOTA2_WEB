@@ -27,14 +27,6 @@ international2023                       /international2023
 international2023alt                    /international23
 item                                    /item_react/${}
 labyrinth                               /labyrinth
-majorsregistration_autographs           /majorsregistration/autographupload
-majorsregistration_getautographs        /majorsregistration/getautographs
-majorsregistration_home                 /majorsregistration/home
-majorsregistration_player               /majorsregistration/player
-majorsregistration_requestforproposal   /majorsregistration/requestforproposal
-majorsregistration_rosters              /majorsregistration/rosters
-majorsregistration_signup               /majorsregistration/signup
-majorsregistration_submitautograph      /majorsregistration/submitautograph
 marci                                   /marci
 muerta                                  /deadreckoning
 nemestice                               /nemestice
@@ -47,12 +39,21 @@ patchnotes                              /patches/()
 personadetails                          /personadetails/${}
 portraitguidelines                      /portraitguidelines
 primalbeast                             /primalbeast
+proregistration_autographs              /proregistration/autographupload
+proregistration_getautographs           /proregistration/getautographs
+proregistration_home                    /proregistration/home
+proregistration_player                  /proregistration/player
+proregistration_requestforproposal      /proregistration/requestforproposal
+proregistration_rosters                 /proregistration/rosters
+proregistration_signup                  /proregistration/signup
+proregistration_submitautograph         /proregistration/submitautograph
 react                                   ${base}/react/${}
 root                                    /
 shortfilm                               /filmcontest
 springcleaning                          /springcleaning
 summer2023update                        /summer2023
 teamdetails                             /teamdetailsv2/${}
+winter2023                              /frostivus2023
 http://www.dota2.com/700
 http://www.dota2.com/acolyteofthelostarts
 http://www.dota2.com/aegisofchampions/
@@ -147,8 +148,6 @@ BASE_URL/heroes
 BASE_URL/ingest
 BASE_URL/international2023
 BASE_URL/items
-BASE_URL/majorsregistration_getautographs(),
-BASE_URL/majorsregistration_submitautograph()
 BASE_URL/matches/match/${X}?u=${X(DOTA_APP_ID)}&appid=${DOTA_APP_ID}&highlight=${X}
 BASE_URL/matches/match/${X}?u=${X}&appid=${DOTA_APP_ID}
 BASE_URL/newsentry/3398555399418412272
@@ -159,6 +158,8 @@ BASE_URL/patchnotes(X).slice(1)
 BASE_URL/persona/showplayerreact/,{params:X}
 BASE_URL/personadetails/${X}?u=${X}&appid=${DOTA_APP_ID}
 BASE_URL/play
+BASE_URL/proregistration_getautographs(),
+BASE_URL/proregistration_submitautograph()
 BASE_URL/quiz
 BASE_URL/react/getfavoriteteams,{}
 BASE_URL/react/getlivestreams,{params:{league_ids:X}}
@@ -198,6 +199,7 @@ BASE_URL/webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${X}&appid=${DOTA_A
 BASE_URL/workshop/builds
 CDN_URL/apps/${DOTA_APP_ID}/teamautographs/${DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${X}.png?v=${X}
 CDN_URL/apps/dota2/images/
+CDN_URL/apps/dota2/images/leagues/${X}/images/image_8.png
 CDN_URL/apps/dota2/images/leagues/${league_id}/images/image_8.png
 CDN_URL/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(X/10)}.png
 CDN_URL/apps/dota2/players/${X}.png
@@ -227,7 +229,7 @@ COMMUNITY_BASE_URL/gid/+this.clanSteamID.ConvertTo64BitString()+/eventcomments/+
 COMMUNITY_BASE_URL/gid/+this.m_clanSteamID.ConvertTo64BitString()+l
 COMMUNITY_BASE_URL/groups/+X+/ajaxgetvanityandclanid/
 COMMUNITY_BASE_URL/groups/+vanity_url+/eventcomments/+this.forumTopicGID
-COMMUNITY_BASE_URL/linkfilter/?url=+o
+COMMUNITY_BASE_URL/linkfilter/?u=+encodeURIComponent(X)
 COMMUNITY_BASE_URL/ogg/+X+/ajaxgetvanityandclanid/
 COMMUNITY_CDN_URL/g
 COMMUNITY_CDN_URL/public/shared/images/responsive/youtube_16x9_placeholder.gif
@@ -235,8 +237,8 @@ COMMUNITY_URL/app/${DOTA_APP_ID}/guides
 COMMUNITY_URL/app/570/guides
 COMMUNITY_URL/broadcast/watchnew/${null==X?void0:stream_url.replace(https:/steamcommunity.com/broadcast/watch/,)}?origin=https
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${X}
-COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${majorsregistration_autographs().substr(1)}
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${pathname.substr(1)}
+COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${proregistration_autographs().substr(1)}
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 HELP_BASE_URL/wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}
 HELP_BASE_URL/wizard/HelpWithLoginInfo?lost=8&issueid=402
@@ -668,6 +670,7 @@ IMG_URL/international2023/ti_logo_color.png
 IMG_URL/international2023/ti_logo_full_color.png
 IMG_URL/items/${X}.png
 IMG_URL/items/${null==X?void0:name.replace(item_,)}.png
+IMG_URL/items/recipe.png
 IMG_URL/juneupdate22/avoid_players_sc.png
 IMG_URL/juneupdate22/bg_repeat.jpg
 IMG_URL/juneupdate22/clip_builder_sc.jpg
@@ -888,6 +891,18 @@ IMG_URL/springcleaning22/list.jpg
 IMG_URL/teams_override/team_unknown_web.png
 IMG_URL/units/${name}.png
 IMG_URL/valve_logo.png
+IMG_URL/winter2023/${X}.png
+IMG_URL/winter2023/${video}.jpg
+IMG_URL/winter2023/armory_updates.jpg
+IMG_URL/winter2023/frostivus_2023_dotaplus_premium_sets.png
+IMG_URL/winter2023/frostivus_2023_gift_nice.png
+IMG_URL/winter2023/frostivus_2023_header_snowfall.png
+IMG_URL/winter2023/fullset_example.png
+IMG_URL/winter2023/profile_showcase_updates.jpg
+IMG_URL/winter2023/snowflake_1.png
+IMG_URL/winter2023/snowflake_2.png
+IMG_URL/winter2023/snowflake_2_gold.png
+IMG_URL/winter2023/unusual_example.png
 LOGIN_BASE_URL/jwt/ajaxrefresh
 LOGIN_BASE_URL/jwt/checkdevice/${this.m_steamid}
 LOGIN_BASE_URL/jwt/finalizelogin
@@ -898,7 +913,7 @@ MEDIA_CDN_URL/g
 MEDIA_CDN_URL/replace(${FILENAME},X)
 MEDIA_CDN_URL/steam/
 MEDIA_CDN_URL/steam/apps/+X+/header.jpg
-PARTNER_BASE_URL/
+PARTNER_BASE_URL/${X}
 PARTNER_BASE_URL/doc/${X}
 PARTNER_BASE_URL/partnerevents/ajaxgetpartnereventpermissions
 PARTNER_BASE_URL/sales/
@@ -929,7 +944,7 @@ STORE_BASE_URL/events/ajaxreportnewshubstats/
 STORE_BASE_URL/franchise/+this.m_strVanity+/
 STORE_BASE_URL/genre/Early%20Access/
 STORE_BASE_URL/genre/Free%20to%20Play/
-STORE_BASE_URL/join/
+STORE_BASE_URL/join/${X}
 STORE_BASE_URL/mobile
 STORE_BASE_URL/mobile/?show=steamapp
 STORE_BASE_URL/news/download/${X}/${X}/${GID}?${X}
@@ -1146,3 +1161,11 @@ VIDEO_URL/pb_header_loop.webm
 VIDEO_URL/primalbeast/creeps_731.jpg
 VIDEO_URL/primalbeast/creeps_731.webm
 VIDEO_URL/shortfilmcontest2023/clapper_2023.webm
+VIDEO_URL/winter2023/${video}.webm
+VIDEO_URL/winter2023/frostivus_2023_dotaplus_premium_sets.webm
+VIDEO_URL/winter2023/fullset_example.webm
+VIDEO_URL/winter2023/profile_showcase_updates.webm
+VIDEO_URL/winter2023/snowflakes.webm
+VIDEO_URL/winter2023/treasure/${X}.png
+VIDEO_URL/winter2023/treasure/${X}.webm
+VIDEO_URL/winter2023/unusual_example.webm

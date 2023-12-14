@@ -5,7 +5,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [7256],
   {
-    78611: (e) => {
+    24471: (e) => {
       e.exports = {
         Tooltip: "new_frontiers_Tooltip_2gy5M",
         CarouselFade: "new_frontiers_CarouselFade_3cu9a",
@@ -156,7 +156,7 @@
         _ = a(3646),
         l = a(88464),
         c = a(89526),
-        m = a(53672),
+        m = a(61011),
         d = a(14202),
         p = a(49213),
         h = a(22396),
@@ -164,26 +164,27 @@
         w = a(29706),
         f = a(70894),
         g = a(77108),
-        v = a(78611),
+        v = a(24471),
         E = a.n(v),
         N = a(59481),
-        R = a(65092),
-        I = a(43083);
-      const C = "NewFrontiersPage",
-        M = ({ children: e }) => {
+        R = a(59934),
+        I = a(43083),
+        C = a(57589);
+      const M = "NewFrontiersPage",
+        b = ({ children: e }) => {
           const { hash: t } = (0, R.TH)();
           return (
             (0, c.useEffect)(() => {
               t &&
                 setTimeout(() => {
                   const e = t.replace("#", "");
-                  (0, I.Z)(e, C);
+                  (0, I.Z)(e, M);
                 }, 500);
             }, [t]),
             null
           );
         };
-      function b(e) {
+      function T(e) {
         let t = "",
           a = !0;
         for (let r = 0; r < e.length; ++r)
@@ -194,7 +195,7 @@
             : (a = !0);
         return t;
       }
-      const T = (e) =>
+      const S = (e) =>
           c.createElement(
             "div",
             { className: E().Text },
@@ -226,7 +227,7 @@
                 e.contents,
               ),
           ),
-        S = (e) =>
+        y = (e) =>
           c.createElement(
             "div",
             {
@@ -235,7 +236,7 @@
               "data-aos-delay": "100",
               "data-aos-duration": "1000",
             },
-            c.createElement(T, {
+            c.createElement(S, {
               title: e.title,
               description: e.description,
               contents: e.contents,
@@ -245,7 +246,7 @@
               src: `${s.Y.IMG_URL}/` + e.image,
             }),
           ),
-        y = (e) =>
+        P = (e) =>
           c.createElement(
             "div",
             {
@@ -258,13 +259,13 @@
               className: E().Image,
               src: `${s.Y.IMG_URL}/` + e.image,
             }),
-            c.createElement(T, {
+            c.createElement(S, {
               title: e.title,
               description: e.description,
               contents: e.contents,
             }),
           );
-      let P = {
+      let k = {
         roshan: {
           title: "#new_frontiers_map_roshan_title",
           description: "#new_frontiers_map_roshan_desc",
@@ -336,8 +337,8 @@
           poster: "outpost_poster.jpg",
         },
       };
-      const k = (e) => {
-          let t = P[e.feature_id];
+      const D = (e) => {
+          let t = k[e.feature_id];
           return t
             ? c.createElement(
                 "div",
@@ -379,13 +380,13 @@
               )
             : null;
         },
-        D = (e) =>
-          P[e.feature_id]
+        H = (e) =>
+          k[e.feature_id]
             ? c.createElement(
                 p.HP,
                 {
                   toolTipContent: e.revealed
-                    ? c.createElement(k, { feature_id: e.feature_id })
+                    ? c.createElement(D, { feature_id: e.feature_id })
                     : null,
                   strTooltipClassname: E().MapFeatureTooltipContainer,
                   className: (0, h.Z)(E().MapFeature, e.featureClass),
@@ -399,7 +400,7 @@
                 }),
               )
             : null,
-        H = (0, l.Pi)(({ patchnotes: e, heroname: t }) => {
+        L = (0, l.Pi)(({ patchnotes: e, heroname: t }) => {
           const a = o.L.Get().getHeroList(),
             r =
               null == a
@@ -410,7 +411,7 @@
           return r
             ? c.createElement(
                 "div",
-                { className: (0, h.Z)(E().HeroRework, E()[b(t)]) },
+                { className: (0, h.Z)(E().HeroRework, E()[T(t)]) },
                 c.createElement(
                   "div",
                   { className: E().HeroName },
@@ -443,13 +444,13 @@
               )
             : null;
         }),
-        L = (e) => {
+        G = (e) => {
           if (!e.special.heading_loc) return null;
           let t = e.special.values_float.map((e, t) =>
               c.createElement(
                 "span",
                 { key: t, className: E().SingleValue },
-                e,
+                (0, C.L)(e),
               ),
             ),
             a = !1,
@@ -477,7 +478,7 @@
                 )
           );
         },
-        G = (0, l.Pi)(({ name: e }) => {
+        J = (0, l.Pi)(({ name: e }) => {
           var t;
           const a = o.L.Get().getItemList(),
             r = null == a ? void 0 : a.itemabilities.find((t) => t.name == e),
@@ -486,7 +487,7 @@
           let i = n.desc_loc;
           n.special_values.forEach((e) => {
             let t =
-              e.values_float.length > 0 ? e.values_float[0].toFixed(1) : "0";
+              e.values_float.length > 0 ? (0, C.L)(e.values_float[0]) : "0";
             (i = i.replace("%" + e.name + "%", t)),
               (i = i.replace("%" + e.name.toLowerCase() + "%", t));
           }),
@@ -494,7 +495,7 @@
           let l =
               null === (t = n.special_values) || void 0 === t
                 ? void 0
-                : t.map((e, t) => c.createElement(L, { key: t, special: e })),
+                : t.map((e, t) => c.createElement(G, { key: t, special: e })),
             m = n.name.replace("item_", ""),
             d = n.item_cost,
             p =
@@ -564,7 +565,7 @@
                             "div",
                             { className: E().ManaText },
                             n.mana_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + e.toFixed(0),
+                              (e, t) => (t > 0 ? " / " : "") + (0, C.L)(e),
                             ),
                           ),
                         ),
@@ -577,7 +578,7 @@
                             "div",
                             { className: E().HealthText },
                             n.health_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + e.toFixed(0),
+                              (e, t) => (t > 0 ? " / " : "") + (0, C.L)(e),
                             ),
                           ),
                         ),
@@ -595,7 +596,7 @@
                             "div",
                             { className: E().CooldownText },
                             n.cooldowns.map(
-                              (e, t) => (t > 0 ? " / " : "") + e.toFixed(1),
+                              (e, t) => (t > 0 ? " / " : "") + (0, C.L)(e),
                             ),
                           ),
                         ),
@@ -604,7 +605,7 @@
             ),
           );
         });
-      let J = class extends c.Component {
+      let W = class extends c.Component {
         constructor(e) {
           super(e),
             (this.videoRef = c.createRef()),
@@ -691,8 +692,8 @@
         render() {
           const e = u.P.getPatchNotes("7.33", s.Y.LANGUAGE);
           let t = [];
-          for (let e in P) {
-            let a = P[e];
+          for (let e in k) {
+            let a = k[e];
             t.push(
               c.createElement(
                 "div",
@@ -752,9 +753,9 @@
             "zh-cn" === a ? (a = "zh-Hans") : "zh-tw" === a && (a = "zh-Hant"),
             c.createElement(
               "div",
-              { id: C, className: E().NewFrontiersPage },
+              { id: M, className: E().NewFrontiersPage },
               c.createElement(
-                m.q,
+                m.ql,
                 null,
                 c.createElement(
                   "title",
@@ -969,157 +970,157 @@
                         c.createElement(
                           "div",
                           { className: E().MapOverlay },
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "roshan",
                             image: "dashboard_map_room_roshan_icon.png",
                             featureClass: E().RoshanNorthwest,
                             revealed: this.state.nMapIconRevealPhase >= 1,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "roshan",
                             image: "dashboard_map_room_roshan_icon.png",
                             featureClass: E().RoshanSoutheast,
                             revealed: this.state.nMapIconRevealPhase >= 1,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "lotus_pools",
                             image: "dashboard_map_room_orchard_icon.png",
                             featureClass: E().LotusPoolsNorthwest,
                             revealed: this.state.nMapIconRevealPhase >= 2,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "lotus_pools",
                             image: "dashboard_map_room_orchard_icon.png",
                             featureClass: E().LotusPoolsSoutheast,
                             revealed: this.state.nMapIconRevealPhase >= 2,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "tormentors",
                             image: "dashboard_map_room_sentinel_icon.png",
                             featureClass: E().TormentorsRadiant,
                             revealed: this.state.nMapIconRevealPhase >= 3,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "tormentors",
                             image: "dashboard_map_room_sentinel_icon.png",
                             featureClass: E().TormentorsDire,
                             revealed: this.state.nMapIconRevealPhase >= 3,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant1,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant2,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant3,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant4,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire1,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire2,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire3,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire4,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "wisdom_runes",
                             image: "dashboard_map_room_rune_icon.png",
                             featureClass: E().WisdomRuneRadiant,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "wisdom_runes",
                             image: "dashboard_map_room_rune_icon.png",
                             featureClass: E().WisdomRuneDire,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "shield_runes",
                             image: "dashboard_map_room_shield_rune_icon.png",
                             featureClass: E().ShieldRuneNorthWest,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "shield_runes",
                             image: "dashboard_map_room_shield_rune_icon.png",
                             featureClass: E().ShieldRuneSouthEast,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "twin_gates",
                             image: "dashboard_map_room_portal_icon.png",
                             featureClass: E().TwinGatesNorthwest,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "twin_gates",
                             image: "dashboard_map_room_portal_icon.png",
                             featureClass: E().TwinGatesSoutheast,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "barriers",
                             image: "defenders_gates_radiant.png",
                             featureClass: E().DefendersGatesRadiant,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "barriers",
                             image: "defenders_gates_dire.png",
                             featureClass: E().DefendersGatesDire,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostRadiant1,
                             revealed: this.state.nMapIconRevealPhase >= 7,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostRadiant2,
                             revealed: this.state.nMapIconRevealPhase >= 7,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostDire1,
                             revealed: this.state.nMapIconRevealPhase >= 7,
                           }),
-                          c.createElement(D, {
+                          c.createElement(H, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostDire2,
@@ -1159,19 +1160,19 @@
                     { className: E().Introduction },
                     (0, _.Jr)("#new_frontiers_major_gameplay_features_desc"),
                   ),
-                  c.createElement(S, {
+                  c.createElement(y, {
                     title:
                       "#new_frontiers_major_gameplay_all_stat_heroes_title",
                     description:
                       "#new_frontiers_major_gameplay_all_stat_heroes_desc",
                     image: "new_frontiers/balance_heroes.png",
                   }),
-                  c.createElement(S, {
+                  c.createElement(y, {
                     title: "#new_frontiers_major_gameplay_bkb_title",
                     description: "#new_frontiers_major_gameplay_bkb_desc",
                     image: "new_frontiers/bkb_changes.png",
                   }),
-                  c.createElement(S, {
+                  c.createElement(y, {
                     title:
                       "#new_frontiers_major_gameplay_neutral_item_token_title",
                     description:
@@ -1181,20 +1182,20 @@
                   c.createElement(
                     "div",
                     { className: E().FeatureRow },
-                    c.createElement(y, {
+                    c.createElement(P, {
                       title:
                         "#new_frontiers_major_gameplay_neutral_creep_scaling_title",
                       description:
                         "#new_frontiers_major_gameplay_neutral_creep_scaling_desc",
                       image: "new_frontiers/neutral_creep_scaling.png",
                     }),
-                    c.createElement(y, {
+                    c.createElement(P, {
                       title: "#new_frontiers_major_gameplay_kill_formula_title",
                       description:
                         "#new_frontiers_major_gameplay_kill_formula_desc",
                       image: "new_frontiers/kill_formula.png",
                     }),
-                    c.createElement(y, {
+                    c.createElement(P, {
                       title:
                         "#new_frontiers_major_gameplay_unstunning_stuns_title",
                       description:
@@ -1222,27 +1223,27 @@
                     c.createElement(
                       "div",
                       { className: E().HeroReworkContainer },
-                      c.createElement(H, {
+                      c.createElement(L, {
                         patchnotes: null == e ? void 0 : e.heroes,
                         heroname: "muerta",
                       }),
-                      c.createElement(H, {
+                      c.createElement(L, {
                         patchnotes: null == e ? void 0 : e.heroes,
                         heroname: "clinkz",
                       }),
-                      c.createElement(H, {
+                      c.createElement(L, {
                         patchnotes: null == e ? void 0 : e.heroes,
                         heroname: "arc_warden",
                       }),
-                      c.createElement(H, {
+                      c.createElement(L, {
                         patchnotes: null == e ? void 0 : e.heroes,
                         heroname: "ogre_magi",
                       }),
-                      c.createElement(H, {
+                      c.createElement(L, {
                         patchnotes: null == e ? void 0 : e.heroes,
                         heroname: "medusa",
                       }),
-                      c.createElement(H, {
+                      c.createElement(L, {
                         patchnotes: null == e ? void 0 : e.heroes,
                         heroname: "alchemist",
                       }),
@@ -1266,13 +1267,13 @@
                     c.createElement(
                       "div",
                       { className: E().ItemsContainer },
-                      c.createElement(G, { name: "item_blood_grenade" }),
-                      c.createElement(G, { name: "item_diadem" }),
-                      c.createElement(G, { name: "item_cornucopia" }),
-                      c.createElement(G, { name: "item_pavise" }),
-                      c.createElement(G, { name: "item_phylactery" }),
-                      c.createElement(G, { name: "item_harpoon" }),
-                      c.createElement(G, { name: "item_disperser" }),
+                      c.createElement(J, { name: "item_blood_grenade" }),
+                      c.createElement(J, { name: "item_diadem" }),
+                      c.createElement(J, { name: "item_cornucopia" }),
+                      c.createElement(J, { name: "item_pavise" }),
+                      c.createElement(J, { name: "item_phylactery" }),
+                      c.createElement(J, { name: "item_harpoon" }),
+                      c.createElement(J, { name: "item_disperser" }),
                     ),
                   ),
                   c.createElement(
@@ -1295,13 +1296,13 @@
                     c.createElement(
                       "div",
                       { className: E().ItemsContainer },
-                      c.createElement(G, { name: "item_duelist_gloves" }),
-                      c.createElement(G, { name: "item_spark_of_courage" }),
-                      c.createElement(G, { name: "item_gossamer_cape" }),
-                      c.createElement(G, { name: "item_defiant_shell" }),
-                      c.createElement(G, { name: "item_vindicators_axe" }),
-                      c.createElement(G, { name: "item_dandelion_amulet" }),
-                      c.createElement(G, { name: "item_martyrs_plate" }),
+                      c.createElement(J, { name: "item_duelist_gloves" }),
+                      c.createElement(J, { name: "item_spark_of_courage" }),
+                      c.createElement(J, { name: "item_gossamer_cape" }),
+                      c.createElement(J, { name: "item_defiant_shell" }),
+                      c.createElement(J, { name: "item_vindicators_axe" }),
+                      c.createElement(J, { name: "item_dandelion_amulet" }),
+                      c.createElement(J, { name: "item_martyrs_plate" }),
                     ),
                   ),
                   c.createElement("div", { className: E().WebsiteSubSection }),
@@ -1350,7 +1351,7 @@
                     ),
                     (0, _.Jr)("#new_frontiers_matchmaking_details_new_desc"),
                   ),
-                  c.createElement(S, {
+                  c.createElement(y, {
                     title: "#new_frontiers_matchmaking_immortals_title",
                     description: "#new_frontiers_matchmaking_immortals_desc",
                     image: "new_frontiers/immortal_matchmaking_ui.png",
@@ -1377,17 +1378,17 @@
                   c.createElement(
                     "div",
                     { className: E().FeatureRow },
-                    c.createElement(y, {
+                    c.createElement(P, {
                       title: "#new_frontiers_ui_shields_title",
                       description: "#new_frontiers_ui_shields_desc",
                       image: "new_frontiers/health_bar_shields.png",
                     }),
-                    c.createElement(y, {
+                    c.createElement(P, {
                       title: "#new_frontiers_ui_health_pips_title",
                       description: "#new_frontiers_ui_health_pips_desc",
                       image: "new_frontiers/health_bar_pips.png",
                     }),
-                    c.createElement(y, {
+                    c.createElement(P, {
                       title: "#new_frontiers_ui_health_cost_title",
                       description: "#new_frontiers_ui_health_cost_desc",
                       image: "new_frontiers/health_cost_abilities.png",
@@ -1476,15 +1477,15 @@
                     ),
                   ),
                 ),
-                c.createElement(M, null),
+                c.createElement(b, null),
                 c.createElement(f.U, null),
               ),
             )
           );
         }
       };
-      J = (0, r.gn)([l.Pi], J);
-      const F = J;
+      W = (0, r.gn)([l.Pi], W);
+      const F = W;
     },
   },
 ]);
