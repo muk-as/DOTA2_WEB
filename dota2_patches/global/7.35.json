@@ -1,0 +1,4578 @@
+{
+  "patch_number": "7.35",
+  "patch_name": "7.35",
+  "patch_timestamp": 1702540800,
+  "generic": [
+    {
+      "indent_level": 1,
+      "note": "Neutral Creeps bounty decreased by 2 across the board"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Neutral Creeps are no longer affected by Mines, Graveyard, Statue and Well buffs"
+    },
+    {
+      "indent_level": 1,
+      "note": "Super Creeps and Mega Creeps attack damage increased by 5"
+    },
+    {
+      "indent_level": 1,
+      "note": "Courier Health is replaced with attacks to kill. Courier dies after 1 melee hero attack, 2 ranged hero attacks or 6 creep/tower attacks."
+    },
+    {
+      "indent_level": 1,
+      "note": "Courier can no longer be healed and they can't regenerate health, except in the fountain"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Fountain now deals 25% splash damage in a 250 radius around the target"
+    },
+    {
+      "indent_level": 1,
+      "note": "Added Watchers in the Mines and Well areas"
+    },
+    {
+      "indent_level": 1,
+      "note": "Teleport times to Outposts in the Radiant and Dire jungles decreased from 6s to 4s"
+    },
+    {
+      "indent_level": 1,
+      "note": "Using Twin Gates now costs 75 mana"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Units without mana can use Twin Gates for free"
+    },
+    {
+      "indent_level": 1,
+      "note": "Tormentor can now no longer have less than 0 armor"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Tormentor now has a new ability: \"The Shining\". Deals 30 damage per second on 0.2s intervals (6 damage per tick) distributing it evenly among all units within 1200 range"
+    },
+    {
+      "indent_level": 1,
+      "note": "Added new Roshan ability Roar of Retribution. If attacked by the team that last killed him, Roshan will release a roar that is heard globally, damages all units in 900 AoE and applies a debuff on them that increases incoming damage by 25%. Triggers when Roshan's health drops below 80%. Damage: 50. Damage Bonus per Minute: 10. Debuff Duration: 8s. Cooldown: 20s"
+    },
+    {
+      "indent_level": 1,
+      "note": "Added a new Roshan drop: Roshan's Banner. It creates a banner anywhere on the map that buffs allied lane creeps for 45s once they walk in a 750 radius, increasing their health by 75% and damage by 50%. Banner lasts for 5 minutes or it can be destroyed with 6 hero attacks (creep attacks count as 1/4th of a hero attack). Item is consumed on use. Placing the banner informs an enemy team about its location. Multiple banners do not stack. Bounty on kill: 200g"
+    },
+    {
+      "indent_level": 1,
+      "note": "Starting from the second death, Roshan drops Cheese when killed on the Radiant side and Roshan's Banner when killed on the Dire side"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Starting with the third death, Roshan now drops Refresher Shard on the Radiant side and Aghanim's Blessing on the Dire side"
+    },
+    {
+      "indent_level": 1,
+      "note": "Double Damage Rune renamed to Amplify Damage Rune. Base damage bonus decreased from 100% to 80%. Now also provides +15% Spell Amplification."
+    },
+    {
+      "indent_level": 1,
+      "note": "Invisibility Rune now grants 25% damage reduction while invisible +5% for each full rune cycle"
+    },
+    {
+      "indent_level": 1,
+      "note": "Haste Rune now lasts for 22s +3s for each rune cycle"
+    },
+    {
+      "indent_level": 1,
+      "note": "Arcane Rune Cooldown Reduction decreased from 30% to 25%"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Regeneration Rune is no longer disabled by taking damage, instead it lowers the regen rate to 1% HP/MP per second"
+    },
+    {
+      "indent_level": 1,
+      "note": "Removed a tree on the area on top of Dire's Tier 2 Mid tower"
+    },
+    {
+      "indent_level": 1,
+      "note": "Removed a tree on the area on top of Radiant's Tier 1 Mid tower"
+    },
+    {
+      "indent_level": 1,
+      "note": "Removed a tree next to the Medium Neutral camp on top of Dire's Tier 1 Top tower"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Removed a tree on the path below Radiant's Tier 2 Bottom tower"
+    },
+    {
+      "indent_level": 1,
+      "note": "Added support for a new bonus: AoE Radius"
+    },
+    {
+      "indent_level": 1,
+      "note": "Affects Areas of Effect, increasing width and radius of spells. Does not affect lengths and ranges that are already increased by Aether Lens. Also ignores auras and passive aura-like components of some active spells (i.e. Urn's soul gathering radius and Silencer's INT steal range)"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "note": "Currently this effect is provided only by Bloodstone"
+    },
+    {
+      "indent_level": 1,
+      "note": "Fixed longstanding and game-breaking bug where the chance for hero melee damage block was 49% instead of 50%"
+    },
+    {
+      "indent_level": 1,
+      "note": "Fixed Lotus Pool lotuses not spawning at the exact minute mark"
+    }
+  ],
+  "items": [
+    {
+      "ability_id": 279,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">Returning Item</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Now is a basic Secret Shop item. Cost: 1800"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +12 Health Regen"
+        }
+      ]
+    },
+    {
+      "ability_id": 1802,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">New Item</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "New basic Secret Shop item. Cost: 1800"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +6 Mana Regen"
+        }
+      ]
+    },
+    {
+      "ability_id": 1808,
+      "postfix_lines": 1,
+      "title": "<span class=\"New\">New Item</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Requires Crystalys (2000), Phylactery (2400) and a 600g recipe. Total cost: 5000"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +50 Damage, +200 Health, +200 Mana and +8 All Attributes"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Critical Strike. 30% chance to deal 160% critical damage on attacks"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Empower Spell. The spell is similar to Phylactery's passive, but bonus damage is rescaled from flat 100 to 100 + 75% of your attack damage"
+        }
+      ]
+    },
+    {
+      "ability_id": 1806,
+      "postfix_lines": 2,
+      "title": "<span class=\"New\">New Item</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Requires Witch Blade (2775) and Mystic Staff (2800). Total cost: 5575"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +45 Intelligence, +40 Attack Speed, +8 Armor and +300 Attack Projectile Speed"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Magic Corruption. All your attacks apply a -20% Magic Resistance debuff on enemies for 4s"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Witch Blade. The spell is similar to Witch Blade's passive, but Intelligence Multiplier is increased from 0.75x to 1x and Cooldown is decreased from 9s to 7s"
+        }
+      ]
+    },
+    {
+      "ability_id": 7,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Cost decreased from 1100 to 900"
+        },
+        {
+          "indent_level": 1,
+          "note": "Pierce Damage decreased from 70 to 60"
+        }
+      ]
+    },
+    {
+      "ability_id": 10,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item removed from the game"
+        }
+      ]
+    },
+    {
+      "ability_id": 56,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item moved from the Secret Shop to the Miscellaneous category in the Main Shop"
+        }
+      ]
+    },
+    {
+      "ability_id": 24,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Cost increased from 2050 to 2800"
+        },
+        {
+          "indent_level": 1,
+          "note": "All Attributes bonus increased from +10 to +15"
+        }
+      ]
+    },
+    {
+      "ability_id": 57,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item moved from the Secret Shop to the Miscellaneous category in the Main Shop"
+        }
+      ]
+    },
+    {
+      "ability_id": 180,
+      "postfix_lines": 1,
+      "title": "<span class=\"Reworked\">Item Reworked</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Recipe changed. Now requires Boots of Speed (500), Ring of Basilius (425) and a 375g recipe. Total cost unchanged"
+        },
+        {
+          "indent_level": 2,
+          "note": "No longer provides +250 Mana"
+        },
+        {
+          "indent_level": 2,
+          "note": "Now also provides +0.75 Mana Regen"
+        },
+        {
+          "indent_level": 2,
+          "note": "Now has Basilius Aura: +1 Mana Regen to all allied units within 1200 radius"
+        },
+        {
+          "indent_level": 2,
+          "note": "No longer disassemblable at any time"
+        }
+      ]
+    },
+    {
+      "ability_id": 121,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Now also provides +75 AoE increase"
+        }
+      ]
+    },
+    {
+      "ability_id": 250,
+      "postfix_lines": 1,
+      "title": "<span class=\"Reworked\">Item Reworked</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Recipe changed. Now requires Orchid Malevolence (3475), Javelin (900), Hyperstone (2000) and a 450g recipe. Total cost increased from 6800 to 6825"
+        },
+        {
+          "indent_level": 2,
+          "note": "Intelligence bonus decreased from +32 to +15. Mana Regen bonus decreased from +5 to +3. Damage bonus decreased from +35 to +10"
+        },
+        {
+          "indent_level": 2,
+          "note": "Health Regen bonus increased from +6.25 to +6.5. Attack Speed bonus increased from +60 to +100"
+        },
+        {
+          "indent_level": 2,
+          "note": "No longer provides +25% Magic Resistance"
+        },
+        {
+          "indent_level": 2,
+          "note": "No longer grants Mage Slayer's passive"
+        },
+        {
+          "indent_level": 2,
+          "note": "Now also provides Javelin's passive. Effect is similar, but the piercing chance is increased from 30% to 40%"
+        },
+        {
+          "indent_level": 2,
+          "note": "Soul Rend now also causes all attacks against the target to deal 60 bonus magical damage"
+        }
+      ]
+    },
+    {
+      "ability_id": 139,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Claymore (1350) instead of Quarterstaff (875). Total cost increased from 4975 to 5450"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +30 Attack Speed"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +20% Base Attack Speed (Note: affects only the base Attack Speed and gained from Agility attribute. Does not affect Attack Speed bonuses from buffs and items)"
+        }
+      ]
+    },
+    {
+      "ability_id": 149,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Claymore (1350), Blades of Attack (450) and a 200g recipe. Total cost increased from 1900 to 2000"
+        }
+      ]
+    },
+    {
+      "ability_id": 141,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe cost decreased from 1000 to 900. Total cost unchanged"
+        }
+      ]
+    },
+    {
+      "ability_id": 1097,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Diffusal Blade (2500), Eaglesong (2800) and a 400g recipe. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer grants +45 Damage"
+        },
+        {
+          "indent_level": 1,
+          "note": "Agility bonus increased from +20 to +40"
+        },
+        {
+          "indent_level": 1,
+          "note": "Suppress duration increased from 4s to 5s"
+        }
+      ]
+    },
+    {
+      "ability_id": 133,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Now also provides +25% Spell Amplification"
+        }
+      ]
+    },
+    {
+      "ability_id": 252,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Ogre Axe (1000), Broadsword (1000) and Void Stone (700). Total cost increased from 2500 to 2700"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides neither +10 Intelligence nor +10 Attack Speed"
+        },
+        {
+          "indent_level": 1,
+          "note": "Damage bonus increased from +15 to +20"
+        },
+        {
+          "indent_level": 1,
+          "note": "Strength bonus increased from +13 to +15"
+        },
+        {
+          "indent_level": 1,
+          "note": "Echo Strike Cooldown decreased from 6s to 5s"
+        }
+      ]
+    },
+    {
+      "ability_id": 692,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Cloak (800), Ogre Axe (1000), Vitality Booster (1000) and 800g recipe. Total cost increased from 3100 to 3600"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +7 Health Regen"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +300 Health"
+        },
+        {
+          "indent_level": 1,
+          "note": "Magic Resistance bonus decreased from +35% to +25%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Shroud Percentage of Damage as mana restored rescaled from 30% after reductions to 20% before reductions"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now has an additional passive: Eternal Endurance. For every 300 magical damage equipped hero receives, it gains a stack up to a maximum of 6. Each stack increases Eternal Shroud's base magic resistance by 4% and lasts for 8s. Stack duration is independent from each other."
+        }
+      ]
+    },
+    {
+      "ability_id": 176,
+      "postfix_lines": 1,
+      "title": "<span class=\"Reworked\">Item Reworked</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Recipe changed. Now requires Aether Lens (2275), Ghost Scepter (1500) and a 1600g recipe. Total cost increased from 4650 to 5375"
+        },
+        {
+          "indent_level": 2,
+          "note": "No longer provides any of Kaya-based bonuses"
+        },
+        {
+          "indent_level": 2,
+          "note": "Now provides +8 All Attributes, +300 Mana, +3 Mana Regen and +250 Cast Range"
+        }
+      ]
+    },
+    {
+      "ability_id": 160,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Ultimate Orb (2800), Point Booster (1200) and a 1300g recipe."
+        },
+        {
+          "indent_level": 2,
+          "note": "Attack Speed reduction rescaled from 30/60 to 10%/20%"
+        }
+      ]
+    },
+    {
+      "ability_id": 1466,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe cost decreased from 700 to 450. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +30 Attack Speed (from the updated Maelstrom)"
+        }
+      ]
+    },
+    {
+      "ability_id": 231,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "No longer provides +250 Mana"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now provides +1.5 Mana Regen"
+        },
+        {
+          "indent_level": 1,
+          "note": "Guardian Aura now also grants +1.5 Mana Regen to allies and +5 to allies below 25% Health"
+        }
+      ]
+    },
+    {
+      "ability_id": 939,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Total cost increased from 4500 to 4700"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +10 Attack Speed"
+        },
+        {
+          "indent_level": 1,
+          "note": "Damage bonus increased from +15 to +25"
+        },
+        {
+          "indent_level": 1,
+          "note": "Strength bonus increased from +20 to +25"
+        },
+        {
+          "indent_level": 1,
+          "note": "Intelligence bonus decreased from +16 to +10"
+        },
+        {
+          "indent_level": 1,
+          "note": "Echo Strike Cooldown decreased from 6s to 5s"
+        }
+      ]
+    },
+    {
+      "ability_id": 114,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Reaver (2800), Ring of Tarrasque (1800) and a 600g recipe. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer grants +250 Health"
+        }
+      ]
+    },
+    {
+      "ability_id": 635,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Helm of the Dominator (2625), Ultimate Orb (2800) and a 775g recipe. Total cost decreased from 6400 to 6200"
+        },
+        {
+          "indent_level": 1,
+          "note": "All Attributes bonus increased from +7 to +21"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer grants Vladmir's Aura"
+        }
+      ]
+    },
+    {
+      "ability_id": 269,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Diadem (1000), Magic Wand (450) and a 900g recipe. Total cost decreased from 2400 to 2350"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer grants Regeneration Aura"
+        },
+        {
+          "indent_level": 1,
+          "note": "All Attributes bonus decreased from +10 to +9"
+        },
+        {
+          "indent_level": 1,
+          "note": "Energy Charge Health/Mana Restored per charge increased from 15 to 17"
+        },
+        {
+          "indent_level": 1,
+          "note": "Energy Charge Base Charge Restore Time decreased from 10s to 8s"
+        }
+      ]
+    },
+    {
+      "ability_id": 123,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Ultimate Orb (2800), Perseverance (1400) and a 600g recipe. Total cost increased from 4600 to 4800"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +10 Damage"
+        }
+      ]
+    },
+    {
+      "ability_id": 166,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now also requires Gloves of Haste (450). Total cost increased from 2700 to 2950"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +25 Attack Speed"
+        },
+        {
+          "indent_level": 1,
+          "note": "Damage bonus increased from +24 to +25"
+        },
+        {
+          "indent_level": 1,
+          "note": "Chain Lightning damage decreased from 135 to 120"
+        }
+      ]
+    },
+    {
+      "ability_id": 598,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Total cost increased from 2500 to 2625 (due to Oblivion Staff changes)"
+        },
+        {
+          "indent_level": 1,
+          "note": "Attack Speed bonus increased from +20 to +45"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +20 Damage"
+        },
+        {
+          "indent_level": 1,
+          "note": "Mage Slayer debuff now also deals 20 damage per second"
+        }
+      ]
+    },
+    {
+      "ability_id": 147,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Yasha (2050), Diadem (1000) and a 1550g recipe. Total cost unchanged"
+        }
+      ]
+    },
+    {
+      "ability_id": 172,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Morbid Mask (900) and Broadsword (1000). Total cost increased from 1775 to 1900"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +10 Attack Speed"
+        },
+        {
+          "indent_level": 1,
+          "note": "Damage bonus increased from +10 to +20"
+        }
+      ]
+    },
+    {
+      "ability_id": 187,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item removed from the game"
+        }
+      ]
+    },
+    {
+      "ability_id": 223,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Crown (450), Kaya (2050) and a 800g recipe. Total cost increased from 2400 to 3300"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides neither +6.5 Health Regen nor +2.5 Mana Regen"
+        },
+        {
+          "indent_level": 1,
+          "note": "Intelligence bonus increased from +8 to +24"
+        },
+        {
+          "indent_level": 1,
+          "note": "Agility and Strength bonuses decreased from +8 to +6"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +10% Spell Amplification, +24% Lifesteal Spell Amplification and +75% Mana Regen Amplification"
+        },
+        {
+          "indent_level": 1,
+          "note": "Meteor Hammer Damage Over Time for both Units and Buildings decreased from 60 to 50"
+        },
+        {
+          "indent_level": 1,
+          "note": "Meteor Hammer Building Impact Damage decreased from 95 to 90"
+        },
+        {
+          "indent_level": 1,
+          "note": "Meteor Hammer Unit Impact Damage decreased from 150 to 130"
+        }
+      ]
+    },
+    {
+      "ability_id": 158,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe cost decreased from 800 to 550. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "Attack Speed bonus increased from +70 to +90"
+        }
+      ]
+    },
+    {
+      "ability_id": 135,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe cost increased from 600 to 800 (total cost unchanged)"
+        }
+      ]
+    },
+    {
+      "ability_id": 67,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Blitz Knuckles (1000), Sage's Mask (175) and Robe of the Magi (450). Total cost increased from 1500 to 1625"
+        },
+        {
+          "indent_level": 1,
+          "note": "Attack Speed bonus increased from +10 to +35"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +15 Damage"
+        }
+      ]
+    },
+    {
+      "ability_id": 235,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Tiara of Selemene (1800) and Soul Booster (3000). Total cost increased from 4600 to 4800"
+        },
+        {
+          "indent_level": 1,
+          "note": "Mana Regen bonus increased from +5 to +6"
+        }
+      ]
+    },
+    {
+      "ability_id": 569,
+      "postfix_lines": 1,
+      "title": "<span class=\"Reworked\">Item Reworked</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Recipe changed. Now requires Orb of Venom (275), Ring of Protection (175) and Gloves of Haste (450). Total cost decreased from 925 to 900"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +3 Armor and +25 Attack Speed"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Corrosion. Attacks on enemies apply a debuff that deals 5 damage per second, slows enemies by 13/4% if the equipped hero is melee/ranged and decreases health they gain from healing, regeneration, lifesteal and spell lifesteal by 20%. Duration: 3s. Damage over time affects buildings"
+        }
+      ]
+    },
+    {
+      "ability_id": 98,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Oblivion Staff (1625), Cornucopia (1200) and a 650g recipe. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "Mana Regen bonus increased from +2.5 to +3.5"
+        }
+      ]
+    },
+    {
+      "ability_id": 1128,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Energy Booster (800), Ring of Protection (175), Fluffy Hat (250) and a 175g recipe. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +2.5 Mana Regen"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +250 Mana"
+        }
+      ]
+    },
+    {
+      "ability_id": 1107,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires a 200g recipe instead of a Sage's Mask (175). Total cost increased from 2375 to 2400"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +0.7 Mana Regen"
+        }
+      ]
+    },
+    {
+      "ability_id": 90,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Cloak (800), Headdress (425), Ring of Tarrasque (1800) and a 700g recipe. Total cost increased from 3375 to 3725"
+        },
+        {
+          "indent_level": 1,
+          "note": "Health Regen bonus increased from +6 to +14"
+        }
+      ]
+    },
+    {
+      "ability_id": 110,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Cornucopia (1200), Ring of Tarrasque (1800), Tiara of Selemene (1800) and a 200g recipe. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "Health Regen bonus increased from +12 to +18"
+        },
+        {
+          "indent_level": 1,
+          "note": "Mana Regen bonus increased from +6 to +8"
+        },
+        {
+          "indent_level": 1,
+          "note": "Damage bonus decreased from +20 to +10"
+        }
+      ]
+    },
+    {
+      "ability_id": 911,
+      "postfix_lines": 1,
+      "title": "<span class=\"Reworked\">Item Reworked</span>",
+      "ability_notes": [
+        {
+          "indent_level": 2,
+          "note": "Recipe changed. Now requires Sacred Relic (3400), Voodoo Mask (700) and a 800g recipe. Total cost decreased from 6200 to 4900"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +70 Damage and +20% Spell Lifesteal"
+        },
+        {
+          "indent_level": 2,
+          "note": "Toggle: Phantom Province. Activate to make your attacks cost 75 mana and deal magical damage. Allows to hit Ethereal units"
+        }
+      ]
+    },
+    {
+      "ability_id": 96,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Mystic Staff (2800), Tiara of Selemene (1800) and a 600g recipe. Total cost decreased from 5550 to 5200"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides neither +10 Strength nor +10 Agility"
+        },
+        {
+          "indent_level": 1,
+          "note": "Intelligence bonus decreased from +35 to +30"
+        }
+      ]
+    },
+    {
+      "ability_id": 119,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Veil of Discord (1725), Platemail (1400) and a 1700g recipe. Total cost decreased from 4850 to 4825"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +8 Strength, +8 Agility and +8 Health Regen"
+        },
+        {
+          "indent_level": 1,
+          "note": "Intelligence bonus decreased from +30 to +8"
+        },
+        {
+          "indent_level": 1,
+          "note": "Armor bonus increased from +15 to +20"
+        },
+        {
+          "indent_level": 1,
+          "note": "Arctic Blast now also causes enemies to take 15% more damage from spells for 16s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Arctic Blast mana cost decreased from 100 to 75"
+        }
+      ]
+    },
+    {
+      "ability_id": 249,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Shadow Blade (3000), Demon Edge (2200) and a 250g recipe. Total cost unchanged"
+        },
+        {
+          "indent_level": 1,
+          "note": "Damage bonus increased from +52 to +60"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides critical hits neither passively nor from Shadow Walk"
+        },
+        {
+          "indent_level": 1,
+          "note": "Shadow Walk bonus damage increased from 175 to 300"
+        },
+        {
+          "indent_level": 1,
+          "note": "Shadow Walk Break duration increased from 4s to 5s"
+        }
+      ]
+    },
+    {
+      "ability_id": 229,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Pavise (1400), Crown (450), Wind Lace (250) and a 600g recipe. Total cost increased from 2425 to 2700"
+        },
+        {
+          "indent_level": 1,
+          "note": "No longer provides +1.75 Mana Regen"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +200 Health and +300 Mana"
+        },
+        {
+          "indent_level": 1,
+          "note": "Shine now additionally grants a 400 HP barrier. Can be applied on self but does not grant bonus armor in that case"
+        },
+        {
+          "indent_level": 1,
+          "note": "Shine can no longer be cast on enemies"
+        }
+      ]
+    },
+    {
+      "ability_id": 190,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Helm of Iron Will (975), Crown (450) and a 300g recipe. Total cost increased from 1525 to 1725"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now also provides +5 Health Regen and +6 Armor"
+        },
+        {
+          "indent_level": 1,
+          "note": "Magic Weakness Spell Damage Amplification decreased from +18% to +10%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Magic Weakness is now untargetable, applying a debuff to all enemies within 900 radius from caster"
+        }
+      ]
+    },
+    {
+      "ability_id": 534,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe changed. Now requires Oblivion Staff (1625), Chainmail (550) and a 600g recipe. Total cost increased from 2600 to 2775"
+        },
+        {
+          "indent_level": 1,
+          "note": "Attack Speed bonus increased from +35 to +40"
+        },
+        {
+          "indent_level": 1,
+          "note": "Now provides +1.5 Mana Regen"
+        }
+      ]
+    }
+  ],
+  "neutral_items": [
+    {
+      "ability_id": 1157,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 1 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +5 Health Regen"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Bubbled Up. Grants a 100 HP barrier. The barrier fully restores after not receiving any damage for 5 seconds"
+        }
+      ]
+    },
+    {
+      "ability_id": 305,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">Returning Reworked Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "Reworked Tier 1 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +50 Health and +50 Mana"
+        },
+        {
+          "indent_level": 2,
+          "note": "Active: Consume. Consumes all charges of Jelly and grants a target allied unit a buff that provides +2 Health Regen and +1 Mana Regen per charge for 10s. If the target takes damage from Roshan or an enemy hero, the effect is lost. Max Charges: 10. Charge Restore Time: 8s. Cooldown: 12s"
+        }
+      ]
+    },
+    {
+      "ability_id": 840,
+      "postfix_lines": 2,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    },
+    {
+      "ability_id": 1167,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 2 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +10% Movement Speed"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Unclouded. Provides wearer with +6 Health Regen during the day and +3 Mana Regen during the night. If the wearer is not within 200 radius of a tree, these bonuses are doubled"
+        },
+        {
+          "indent_level": 2,
+          "note": "Active: Lightbreak. Produces a flash of light that destroys trees in a 325 radius around the wearer. Cooldown: 30s."
+        }
+      ]
+    },
+    {
+      "ability_id": 1158,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 2 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +150 Mana"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Tunnel Vision. Grants +10% spell damage but decreases the wearer's daytime vision by 15%"
+        }
+      ]
+    },
+    {
+      "ability_id": 212,
+      "postfix_lines": 2,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    },
+    {
+      "ability_id": 1803,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 3 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +5 Health Regen and +2.5 Mana Regen"
+        },
+        {
+          "indent_level": 2,
+          "note": "Toggle: Flip. Converts 20% of your Max Health to Max Mana, or convert 20% of your Max Mana to Max Health. Cooldown: 5s"
+        }
+      ]
+    },
+    {
+      "ability_id": 1159,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 3 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +35 Damage"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Glass Cannon. The wearer takes 8% more damage from all sources"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Glassify. Wearer's attacks apply a debuff on enemy targets that increases all damage taken by them by 12%. Debuff duration: 5s. Only one enemy can have this debuff at the same time"
+        }
+      ]
+    },
+    {
+      "ability_id": 298,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">Returning Reworked Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "Returning Tier 3 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Armor bonus decreased from 12 to 6"
+        },
+        {
+          "indent_level": 2,
+          "note": "No longer decreases Attack Speed by 35"
+        },
+        {
+          "indent_level": 2,
+          "note": "Active: Toughen Up. Increases armor by an additional 12 at the cost of -30 movement speed. Duration: 8s. Cooldown: 12s"
+        }
+      ]
+    },
+    {
+      "ability_id": 289,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    },
+    {
+      "ability_id": 381,
+      "postfix_lines": 2,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    },
+    {
+      "ability_id": 1156,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 4 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +50 Damage"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Ancient Power. Grants additional +50 damage if the wearer is within 2000 range from an Ancient"
+        }
+      ]
+    },
+    {
+      "ability_id": 1160,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 4 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +25% Evasion and +30 Movement Speed"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Free Bird. When below 30% health, wearer gains flying movement (not flying vision)"
+        }
+      ]
+    },
+    {
+      "ability_id": 1168,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 4 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +12 Armor"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Reverberate. After taking 180 damage from any source, the wearer fires a projectile at up to 2 random nearby enemies, within a 600 radius, prioritizing heroes, that deal 125 physical damage and slow the targets' movement and attack speed by 100% for 0.2s"
+        }
+      ]
+    },
+    {
+      "ability_id": 638,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    },
+    {
+      "ability_id": 311,
+      "postfix_lines": 2,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    },
+    {
+      "ability_id": 1161,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">New Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "New Tier 5 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Provides +95% Magic Resistance"
+        },
+        {
+          "indent_level": 2,
+          "note": "Passive: Unwavering. Wearer's Max Health is set to 1500 and can't be altered by other effects or attributes"
+        }
+      ]
+    },
+    {
+      "ability_id": 365,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "<span class=\"New\">Returning Item</span>"
+        },
+        {
+          "indent_level": 2,
+          "note": "Now is a Tier 5 Neutral item"
+        },
+        {
+          "indent_level": 2,
+          "note": "Rejuvenate Heal increased from 300 to 1000"
+        }
+      ]
+    },
+    {
+      "ability_id": 374,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    },
+    {
+      "ability_id": 371,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Item cycled out"
+        }
+      ]
+    }
+  ],
+  "heroes": [
+    {
+      "hero_id": 1,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Max Mana Mana Burn increased from +0.6% to +1%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Mana Void Damage Multiplier increased from +0.15 to +0.2"
+        }
+      ]
+    },
+    {
+      "hero_id": 2,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Armor increased by 1"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +10 Berserker's Call Armor replaced with +4s Culling Blade Speed Bonus Duration"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5007,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Armor decreased from 25 to 16/19/22/25"
+            }
+          ]
+        },
+        {
+          "ability_id": 5010,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Temporary boost on kill no longer provides +20/30/40 Attack Speed"
+            },
+            {
+              "indent_level": 1,
+              "note": "Temporary boost on kill now provides +20/25/30 Armor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 3,
+      "abilities": [
+        {
+          "ability_id": 5011,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Heal/Damage increased from 75/150/225/300 to 90/160/230/300"
+            },
+            {
+              "indent_level": 1,
+              "note": "Mana Cost rescaled from 100/120/140/160 to 120/130/140/150"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard now also decreases cooldown by 3s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5014,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Range increased from 425/500/575/650 to 500/550/600/650"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 4,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Bloodrage Spell Amplification increased from +8% to +10%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Blood Rite Damage increased from +85 to +120"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5015,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max Health Damage per second decreased from 1.8% to 1.5%"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Damage/Lifesteal rescaled from 1.8% of target's Max HP to flat 30 pure damage/heal"
+            }
+          ]
+        },
+        {
+          "ability_id": 5016,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage type changed from Pure to Magical"
+            },
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 90/140/190/240 to 110/180/250/320"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 5,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Crystal Nova Cooldown Reduction increased from 3s to 4s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Crystal Nova Damage increased from +240 to +300"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5128,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Self Mana Regen Multiplier increased from 6x to 7x"
+            }
+          ]
+        },
+        {
+          "ability_id": 953,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Clone can now be destroyed by Crystal Maiden's own AoE spells (Crystal Nova and Freezing Field)"
+            },
+            {
+              "indent_level": 1,
+              "note": "Radius increased from 400 to 450"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 6,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Gust Reveals Invisible Units replaced with +20% Lifesteal"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5632,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now reveals invisible units"
+            }
+          ]
+        },
+        {
+          "ability_id": 1121,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now does not interrupt Multishot on cast"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 7,
+      "abilities": [
+        {
+          "ability_id": 5026,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Echo Damage increased from 85/105/125 to 90/110/130"
+            },
+            {
+              "indent_level": 1,
+              "note": "Mana Cost rescaled from 145/205/265 to 150/200/250"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 8,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +100 Blade Fury Radius replaced with +150 Healing Ward Radius"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +5 All Stats replaced with +10% Blade Dance Crit Damage"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent +100 Blade Fury DPS replaced with +30 Movement Speed During Blade Fury"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5028,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage tick rate rescaled from permanent 0.2s to Juggernaut's attack rate at current Attack Speed multiplied by 2"
+            },
+            {
+              "indent_level": 1,
+              "note": "Damage rescaled from 90/115/140/165 per second to 35/40/45/50 damage per tick"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard reworked. Now increases Blade Fury Radius by 100 and slows enemies movement speed by 35%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 9,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Intelligence gain increased from 1.2 to 1.4"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +45 Damage replaced with +20% Critical Strike (200% Damage)"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5051,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Radius increased from 650 to 675"
+            }
+          ]
+        },
+        {
+          "ability_id": 5050,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard now guarantees a secondary Starstorm strike on all enemies affected by the slow, if Starstorm is cast"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 11,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Damage decreased by 5"
+        },
+        {
+          "indent_level": 1,
+          "note": "Base Agility increased from 20 to 25"
+        }
+      ]
+    },
+    {
+      "hero_id": 12,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Intelligence gain decreased from 2.0 to 1.8"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +8 Strength replaced with +10 Phantom Rush Agility"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Spirit Lance Cooldown Reduction decreased from 1.5s to 1s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5065,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter no longer increases movement slow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 13,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Waning Rift Silence Duration increased from +0.75s to +1s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Initial/Break Dream Coil Damage increased from +150 to +175"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5069,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 12/11/10/9s to 11/10/9/8s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 14,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Armor increased from +4 to +5"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Meat Hook Damage increased from +120 to +140"
+        }
+      ]
+    },
+    {
+      "hero_id": 15,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +14 Agility replaced with +10% Spell Lifesteal"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent +14 Strength replaced with Static Link Steal 1 Armor per Second"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5083,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage Drain Rate decreased from 7/12/17/22 to 5/10/15/20"
+            },
+            {
+              "indent_level": 1,
+              "note": "Link Duration increased from 5/6/7/8s to 10s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5084,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage rescaled from 45/80/115/150 to 40/80/120/160"
+            },
+            {
+              "indent_level": 1,
+              "note": "Movement Slow increased from 20/25/30/35% to 25/30/35/40%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 16,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Intelligence decreased from 19 to 17"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Sand Storm Damage Per Second decreased from +20 to +15"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5102,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage rescaled from 80/130/200/260 to 80/140/200/260"
+            }
+          ]
+        },
+        {
+          "ability_id": 5104,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Base Damage decreased from 70/90/110/130 to 50/70/90/110"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 17,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +20 Attack Speed replaced with +150 Attack Range when Overloaded"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5098,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Remnant Activation Time decreased from 1.0s to 0.75s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 18,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Intelligence gain increased from 1.3 to 1.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Warcry Duration increased from +3s to +4s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +8% Warcry Movement Speed replaced with +20% God's Strength Slow Resistance"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5094,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter now increases damage by 180 if Sven travels with the Storm Hammer"
+            }
+          ]
+        },
+        {
+          "ability_id": 5096,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard passive aura now also provides a +3% movement speed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 19,
+      "abilities": [
+        {
+          "ability_id": 5108,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Base Damage increased from 20 to 20/25/30/35"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 22/19/16/13s to 16/15/14/13s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard now increases damage of thrown trees by 100"
+            }
+          ]
+        },
+        {
+          "ability_id": 5109,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Toss Bonus Damage increased from 100/200/300 to 100/250/400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 20,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Wave of Terror Armor Reduction increased from 4 to 5"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent -15s Nether Swap Cooldown replaced with Wave of Terror Steals 20% of Reduced Damage and Armor"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent +40% Nether Swap Damage Reduction replaced with -18s Nether Swap Cooldown"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5125,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 50 to 150/300/450"
+            },
+            {
+              "indent_level": 1,
+              "note": "No longer reduces damage taken"
+            },
+            {
+              "indent_level": 1,
+              "note": "Now gives Vengeful Spirit and allied targets now gain a damage barrier for 10s. Barrier health is equal to the spell's Damage value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 21,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +225 Windrun Radius replaced with +20% Powershot Slow"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5131,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now slows the target for up to 15/20/25/30%, decreasing based on time charged and enemies already hit, similarly to damage dealt. Slow Duration: 4s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Mana Cost rescaled from 90/100/110/120 to 100"
+            }
+          ]
+        },
+        {
+          "ability_id": 5132,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer slows enemies. Corresponding Aghanim's Scepter effect was also removed"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter Damage Reduction increased from 35% to 45%"
+            }
+          ]
+        },
+        {
+          "ability_id": 652,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Duration increased from 3s to 3.5s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 22,
+      "abilities": [
+        {
+          "ability_id": 5111,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now deals 2x damage to creeps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 23,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +65 Torrent AoE replaced with -4s Torrent Cooldown"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 319,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost increased from 250 to 275"
+            },
+            {
+              "indent_level": 1,
+              "note": "Minimum spawn distance decreased from 300 to 115"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 25,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +11% Spell Amplification replaced with +5 Laguna Blade Supercharge Stacks"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Laguna Blade damage is Pure replaced with +150% Crit On Targets Affected By Dragon Slave (only affects Lina's attacks)"
+        }
+      ]
+    },
+    {
+      "hero_id": 26,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Health Regen increased from 0.25 to 0.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Mana Drain Deals Damage replaced with +100% Mana Drain Damage"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5046,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now damages enemies for 100% of the mana drained"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 27,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Armor increased by 1"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent -2s Hex Cooldown replaced with +10% Hex Damage Amplification"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5080,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Serpent Wards Duration decreased from 7s to 6s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 28,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Slithereen Crush Damage decreased from +150 to +125"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Slithereen Crush Cooldown Reduction decreased from 4s to 3s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5115,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Radius decreased from 350 to 325"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 29,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Anchor Smash Damage Reduction increased from +25% to +30%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5118,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 100/105/110/115 to 100"
+            }
+          ]
+        },
+        {
+          "ability_id": 5407,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Attacks to Destroy decreased from 5 to 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 30,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent +1.5% Max Health Voodoo Restoration Heal/Damage replaced with +2% Max Health Voodoo Restoration Heal"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5139,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer deals damage"
+            },
+            {
+              "indent_level": 1,
+              "note": "Heal increased from 10/22/34/46 to 20/30/40/50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 31,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Frost Blast Radius and Damage decreased from +150 to +125"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7325,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Drain per second increased from 10% to 12%"
+            }
+          ]
+        },
+        {
+          "ability_id": 8028,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Movement Slow decreased from 30% to 25%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 32,
+      "abilities": [
+        {
+          "ability_id": 5145,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost rescaled from 55 to 45/55/65/75"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 33,
+      "abilities": [
+        {
+          "ability_id": 5147,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Eidolons' health is increased by 4% of Enigma's current health"
+            },
+            {
+              "indent_level": 1,
+              "note": "Eidolons now preserve their commanded attack target when they split"
+            }
+          ]
+        },
+        {
+          "ability_id": 5148,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also deals 5/10/15/20 base damage"
+            },
+            {
+              "indent_level": 1,
+              "note": "Current Health as Damage decreased from 5/7/9/11% to 4/6/8/10%"
+            },
+            {
+              "indent_level": 1,
+              "note": "Radius decreased from 650 to 600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 34,
+      "abilities": [
+        {
+          "ability_id": 5150,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Range decreased from 600 to 450"
+            }
+          ]
+        },
+        {
+          "ability_id": 5151,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Range decreased from 2000 to 1500"
+            }
+          ]
+        },
+        {
+          "ability_id": 5153,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now grants +15/20/25% Magic Resistance for 4s"
+            }
+          ]
+        },
+        {
+          "ability_id": 909,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also applies a root"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 36,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Heartstopper Regen Reduction decreased from +30% to +25%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5158,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost increased from 100/120/140/160 to 115/130/145/160"
+            }
+          ]
+        },
+        {
+          "ability_id": 5159,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter Health Regen to Decay decreased from 55% to 50%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 37,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Strength decreased from 24 to 22"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5162,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost increased from 110/120/130/140 to 120/130/140/150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 38,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Damage increased by 2"
+        },
+        {
+          "indent_level": 1,
+          "note": "Agility gain increased from 1.4 to 1.6"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +35 Boar Attack Damage replaced with +30 Boar and Hawk Damage"
+        }
+      ]
+    },
+    {
+      "hero_id": 39,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +8 Strength replaced with +10 Shadow Strike Heal Per Tick"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Damage increased from +15 to +20"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Sonic Wave Cooldown Reduction increased from 40s to 45s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Sonic Wave Damage increased from +200 to +250"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5173,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter Radius decreased from 400 to 375"
+            }
+          ]
+        },
+        {
+          "ability_id": 5175,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost rescaled from 100/110/120/130 to 120"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 40,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Poison Sting Slow decreased from +8% to +6%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5180,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Ward Damage rescaled from 13/22/31/40 to 14/22/30/38"
+            }
+          ]
+        },
+        {
+          "ability_id": 1105,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Initial Damage increased from 150/250/350 to 200/300/400"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 120/100/80s to 100/90/80s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 41,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength gain increased from 2.4 to 2.6"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Time Dilation DPS per cooldown increased from +6 to +7"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Time Dilation Slow per Cooldown increased from +10% to +12%"
+        }
+      ]
+    },
+    {
+      "hero_id": 42,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Skeletons Attack Damage decreased from +26 to +23"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Minimum Skeletons Spawned decreased from +6 to +5"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Cleave increased from +25% to +35%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5089,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown increased from 180/140/100s to 180/150/120s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Additional Skeletons decreased from +3 to +2"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter Cooldown Reduction decreased from 30s to 15s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 43,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Crypt Swarm applies 50% slow for 1s replaced with +15% Silence Move Speed Slow"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5091,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also slows enemy movement speed by 10/15/20/25%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 44,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Intelligence gain increased from 1.4 to 1.7"
+        },
+        {
+          "indent_level": 1,
+          "note": "Base Movement Speed increased from 305 to 310"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5191,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer provides lifesteal"
+            },
+            {
+              "indent_level": 1,
+              "note": "Duration increased from 2s to 2.5s"
+            }
+          ]
+        },
+        {
+          "ability_id": 662,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage type changed from Pure to Physical"
+            },
+            {
+              "indent_level": 1,
+              "note": "Max Health Damage increased from 16% to 25%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 45,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Agility decreased from 24 to 21"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +20 Movement Speed replaced with +10% Decrepify Movement Speed To Allies"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5188,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown increased from 35s to 40s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 46,
+      "abilities": [
+        {
+          "ability_id": 7853,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now deals 200 damage instantly upon arrival and activates the trap as if is was fully charged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 47,
+      "abilities": [
+        {
+          "ability_id": 5219,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer applies Break"
+            },
+            {
+              "indent_level": 1,
+              "note": "Now slows attack speed by 30/40/50/60"
+            }
+          ]
+        },
+        {
+          "ability_id": 5221,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also applies Break"
+            },
+            {
+              "indent_level": 1,
+              "note": "Movement Slow increased from 40/60/80% to 60/70/80%"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cast Point improved from 0.3s to 0.2s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 49,
+      "abilities": [
+        {
+          "ability_id": 5226,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now applies the corresponding Corrosive Breath and Frost Breath debuffs from his current level of Elder Dragon Form even in human form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 50,
+      "abilities": [
+        {
+          "ability_id": 5233,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now allows affected heroes to be denied if they fall below 25% health"
+            }
+          ]
+        },
+        {
+          "ability_id": 7304,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer affects item cooldowns"
+            },
+            {
+              "indent_level": 1,
+              "note": "Health Cost Increase per cast decreased from 50% to 40%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 51,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength gain increased from 2.8 to 3.1"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 321,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer self stuns after duration. Instead it slows Clockwerk's movement and attack speed by 100%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 52,
+      "abilities": [
+        {
+          "ability_id": 5242,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 7/14/21/28 to 9/16/23/30"
+            }
+          ]
+        },
+        {
+          "ability_id": 5243,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also slows attack speed by 50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 53,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Agility gain decreased from 3.4 to 3.2"
+        },
+        {
+          "indent_level": 1,
+          "note": "Base Mana Regen decreased from 0.75 to 0"
+        }
+      ]
+    },
+    {
+      "hero_id": 54,
+      "abilities": [
+        {
+          "ability_id": 5249,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Movement Speed bonus decreased from 15/16/17/18% to 9/12/15/18%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 55,
+      "abilities": [
+        {
+          "ability_id": 5256,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 110/120/130/140 to 100/110/120/130"
+            }
+          ]
+        },
+        {
+          "ability_id": 5258,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "The wall now deals 25/40/55 damage to the enemy when an illusion of them is created"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 56,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Agility gain increased from 2.5 to 2.7"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Death Pact Bonus Health increased from +300 to +350"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Strafe Cooldown Reduction increased from 8s to 9s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5259,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 45 to 40"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 22s to 17s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 57,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent -30s Guardian Angel Cooldown replaced with -15s Guardian Angel Charge Restore Time"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5266,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Ability reworked"
+            },
+            {
+              "indent_level": 2,
+              "note": "Now a single target ability with a 900 Cast Range"
+            },
+            {
+              "indent_level": 2,
+              "note": "Mana Cost decreased from 150/200/250 to 100/150/200"
+            },
+            {
+              "indent_level": 2,
+              "note": "160/140/120s Cooldown replaced with 2 Charges. Charge Restore Time: 80/70/60s"
+            },
+            {
+              "indent_level": 2,
+              "note": "Aghanim's Scepter reworked. Now grants an additional charge, increased cast range to global and always casts Guardian Angel on Omniknight as well as the target"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 58,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +8% Magic Resistance replaced with +10 Enchanted Creep Armor"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5268,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now deals 20/30/40/50 damage per second when used on enemy heroes"
+            },
+            {
+              "indent_level": 1,
+              "note": "No longer provides 0/3/6/9 armor to enchanted creeps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 60,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Mana Regen increased from 0 to 0.25"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Dark Ascension Damage decreased from +35 to +30"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5275,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 90/100/110/110 to 90/95/100/105"
+            }
+          ]
+        },
+        {
+          "ability_id": 5277,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Max Health Restore decreased from 35% to 30%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 62,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Half Track Bonus Speed to Allies replaced with to +45 Track Gold"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent +250 Track Gold replaced with No Cooldown on Jinada"
+        }
+      ]
+    },
+    {
+      "hero_id": 63,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Strength decreased from +9 to +8"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent +1 Geminate Attack no longer applies to attacks made via Shukuchi with Aghanim's Shard"
+        }
+      ]
+    },
+    {
+      "hero_id": 64,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Attack Range decreased from +250 to +200"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5297,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Start Radius decreased from 225 to 150. End Radius is unchanged"
+            },
+            {
+              "indent_level": 1,
+              "note": "Movement Slow decreased from 28/32/36/40% to 25/30/35/40%"
+            },
+            {
+              "indent_level": 1,
+              "note": "Attack Slow decreased from 28/32/36/40 to 25/30/35/40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 65,
+      "abilities": [
+        {
+          "ability_id": 5321,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Movement Slow increased from 10/15/20/25% to 15/20/25/30%"
+            },
+            {
+              "indent_level": 1,
+              "note": "Projectile Speed increased from 1200 to 1400"
+            }
+          ]
+        },
+        {
+          "ability_id": 5322,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 52/46/40/34s to 45/40/35/30s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5323,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Added AoE indicator for secondary grab targets with Aghanim's Scepter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 66,
+      "abilities": [
+        {
+          "ability_id": 5328,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Attack Range bonus is now applied to all ranged units under Chen's control"
+            }
+          ]
+        },
+        {
+          "ability_id": 5330,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Can no longer be used to teleport controlled units to Chen"
+            }
+          ]
+        },
+        {
+          "ability_id": 7306,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Ability reworked"
+            },
+            {
+              "indent_level": 2,
+              "note": "Passively provides an aura that increases Health Regen by 1/2/3/4 to all allied units within 1200 range. Can be cast on any ally within aura to provide them with 12/16/20/24 armor and increase any healing they receive by 20%. Effect duration: 6s. Self-casting also teleports any units under Chen's control to him after a 6 second delay. If a controlled unit takes damage from an enemy hero, its teleportation is canceled. Cooldown: 20/18/16/14s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5331,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Initial Heal reduced from 200/300/400 to 150/250/350"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 67,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Health Regen decreased from 2.0 to 1.0"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +5 All Attributes replaced with -100 Desolate Ally Radius"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5336,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Minimum Radius decreased from 400 to 300"
+            }
+          ]
+        },
+        {
+          "ability_id": 5338,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now only triggers one cast of Spectral Dagger per illusion"
+            }
+          ]
+        },
+        {
+          "ability_id": 5337,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 180s to 160s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 68,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +4s Ice Vortex Duration replaced with +5s Ice Blast Frostbitten Duration"
+        }
+      ]
+    },
+    {
+      "hero_id": 69,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Movement Speed increased from 285 to 290"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Infernal Blade Max HP as Damage increased from +1.8% to +2%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5339,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Neutral abilities now level up automatically at the time when neutral abilities would scale"
+            }
+          ]
+        },
+        {
+          "ability_id": 5341,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 16/12/8/4s to 13/10/7/4s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5342,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer makes a hero deniable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 70,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Health Regen increased from 0.5 to 1.0"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5358,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Slow Resistance increased from 10/15/20/25% to 15/20/25/30%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5359,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage per attack increased from 10/19/28/37 to 13/21/29/37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 71,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +25% Greater Bash Damage replaced with +17% Greater Bash Chance"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent 200 Charge of Darkness Bonus Speed replaced with Bulldoze Grants 400 All Damage Barrier"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent +20% Greater Bash Chance replaced with +25% Greater Bash Damage"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Bulldoze 500 All Damage Barrier replaced with +200 Charge of Darkness Bonus Speed"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7301,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Movement Speed bonus decreased from 10/15/20/25% to 8/12/16/20%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 72,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent 3x Call Down replaced with -30s Call Down Cooldown and Global Range"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5364,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Ability reworked"
+            },
+            {
+              "indent_level": 2,
+              "note": "Now always shoots 3 missile strikes in the vector targeted direction, but with a single missile per strike"
+            },
+            {
+              "indent_level": 2,
+              "note": "Each missile deals 250/400/550 damage and slows enemy movement by 50% for 4s"
+            },
+            {
+              "indent_level": 2,
+              "note": "Delay between strikes increased from 0.75s to 1s"
+            },
+            {
+              "indent_level": 2,
+              "note": "Strike Radius decreased from 600 to 400"
+            },
+            {
+              "indent_level": 2,
+              "note": "Mana Cost increased from 125 to 150/200/250"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 73,
+      "abilities": [
+        {
+          "ability_id": 5365,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 120 to 110"
+            }
+          ]
+        },
+        {
+          "ability_id": 1116,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Debuff Duration increased from 3.5s to 4s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 74,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Damage decreased by 1"
+        },
+        {
+          "indent_level": 1,
+          "note": "Strength gain increased from 2.4 to 2.6"
+        }
+      ]
+    },
+    {
+      "hero_id": 75,
+      "abilities": [
+        {
+          "ability_id": 5378,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now deals Magic Damage that doesn't pierce Debuff Immunity. This makes its damage affect Debuff Immune enemies, but it will be reduced by their Magic Resistance"
+            },
+            {
+              "indent_level": 1,
+              "note": "Intelligence to Damage increased from 15/35/55/75% to 20/40/60/80%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 76,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +20 Strength replaced with +20% Spell Lifesteal"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5394,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Radius increased from 400/500/600 to 450/525/600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 78,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Attack Speed increased from +80 to +90"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5403,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Earth Brewling's Demolish Bonus Building Damage decreased from 90/180/270 to 90/170/250"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 79,
+      "abilities": [
+        {
+          "ability_id": 5421,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Illusion Damage decreased from 30/45/60/75% to 20/30/40/50%"
+            },
+            {
+              "indent_level": 1,
+              "note": "Illusions now also have 40/50/60/70 bonus base damage (decreased by outgoing damage reduction)"
+            }
+          ]
+        },
+        {
+          "ability_id": 5423,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Projectile Speed increased from 1000 to 1200"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 80,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength gain decreased from 2.0 to 1.8"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Spirit Bear Armor decreased from +8 to +7"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Savage Roar Cooldown Reduction decreased from 8s to 7s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5412,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bear Armor decreased from 3/4/5/6 to 0/2/4/6"
+            },
+            {
+              "indent_level": 1,
+              "note": "Fetch Duration increased from 2.25s to 2.5s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Fetch no longer slows the bear"
+            }
+          ]
+        },
+        {
+          "ability_id": 5414,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Radius decreased from 375 to 350"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 81,
+      "abilities": [
+        {
+          "ability_id": 5428,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Critical Lifesteal decreased from 30/40/50/60% to 24/36/48/60%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 82,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Poof Damage increased from +30 to +50"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5431,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage type changed from Pure to Magical"
+            },
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 40/60/80/100 to 60/90/120/150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 83,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Nature's Grasp Cooldown Reduction decreased from 5s to 4s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5434,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Movement Speed bonus decreased from +15% to +8%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5436,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Heal per second decreased from 3/4/5/6 to 2/3/4/5"
+            },
+            {
+              "indent_level": 1,
+              "note": "Mana Cost increased from 50 to 55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 84,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Ignite DPS decreased from +16 to +15"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent +250 Health replaced with +2/0.01 Dumb Luck Max Mana/Mana Regen Per Strength"
+        }
+      ]
+    },
+    {
+      "hero_id": 85,
+      "abilities": [
+        {
+          "ability_id": 5443,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now takes Undying into account when counting nearby units"
+            },
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 110 to 100"
+            }
+          ]
+        },
+        {
+          "ability_id": 5444,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Stun Duration on Tombstone's destruction decreased from 3s to 2s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5447,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Slow Duration decreased from 6s to 4s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 86,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Intelligence gain increased from 3.1 to 3.7"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +240 Telekinesis Land Distance replaced with -4s Telekinesis Cooldown"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent -12s Telekinesis Cooldown replaced with +400 Telekinesis Land Distance"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5448,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 28/26/24/22s to 24/21/18/15s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Throw Distance decreased from +50% to +35%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5452,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Projectile Speed increased from 1200 to 1500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 87,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Glimpse Max Damage increased from +250 to +275"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Thunder Strike Slow Duration increased from +0.4s to +0.5s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5458,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard dormant duration increased from 5s to 7s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5461,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Radius increased from 500 to 550"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 88,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +6% Spell Amplification replaced with +75 Vendetta Damage"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5666,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer requires Nyx Assassin to face a direction when casting spells"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 89,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength gain decreased from 2.6 to 2.4"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Rip Tide Damage decreased from +30 to +25"
+        }
+      ]
+    },
+    {
+      "hero_id": 90,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Blinding Light Miss increased from +30% to +40%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Chakra Magic Dispels replaced with +1.5s Solar Bind Stun when target is fully slowed"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Illuminate Damage increased from +180 to +200"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent +1.2s Blinding Light Stun replaced with Chakra Magic Strong Dispels"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7316,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Ignis Fatuus now also deals 75 damage per flicker"
+            }
+          ]
+        },
+        {
+          "ability_id": 5475,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also casts Chakra Magic on both Keeper of the Light and ally upon teleporting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 91,
+      "abilities": [
+        {
+          "ability_id": 5485,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now deals 10/20/30/40 damage per second to enemies caught in the tether. Tick rate: 0.5s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 92,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Soul Assumption Targets increased from 2 to 3"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5481,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage is now calculated before reductions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 93,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength gain increased from 1.9 to 2.1"
+        },
+        {
+          "indent_level": 1,
+          "note": "Intelligence gain increased from 1.7 to 1.9"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Shadow Dance Regen increased from +40 to +50"
+        }
+      ]
+    },
+    {
+      "hero_id": 94,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Agility gain increased from 3.4 to 3.6"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Stone Gaze Bonus Physical Damage increased from +5% to +8%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Mystic Snake Bounces increased from +2 to +3"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5504,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Outgoing Damage increased from 35/50/65/80% to 40/55/70/85%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 95,
+      "abilities": [
+        {
+          "ability_id": 5511,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Chance of Extra Attack per stack increased from 3% to 4%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5512,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now allows Troll Warlord to receive movement orders if there are no valid targets within range"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 96,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Double Edge Strength Damage decreased from +40% to +35%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5514,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Stomp Damage decreased from 120/180/240/300 to 90/160/230/300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 97,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent All Stats per hero hit with Reverse Polarity increased from +8 to +10"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5520,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now additionally deals 6/9/12/15% of distance traveled as damage"
+            },
+            {
+              "indent_level": 1,
+              "note": "Damage decreased from 90/180/270/360 to 70/140/210/280"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 98,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Strength increased from 25 to 27"
+        },
+        {
+          "indent_level": 1,
+          "note": "Strength gain increased from 3.2 to 3.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +200 Health replaced with +0.2 Reactive Armor Regeneration Per Stack"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent +6 Reactive Armor Stacks and Duration replaced with +6 Max / +1 Hero Attack Reactive Armor Stacks"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5526,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max Stacks increased from 10/20/30/40 to 15/24/33/42"
+            },
+            {
+              "indent_level": 1,
+              "note": "Stacks per Hero Attack increased from 2 to 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 99,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +20 Damage replaced with +25 Attack Speed"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5548,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Stack Limit decreased from 7 to 6"
+            }
+          ]
+        },
+        {
+          "ability_id": 5550,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter Cooldown increased from 20s to 24s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 100,
+      "abilities": [
+        {
+          "ability_id": 5568,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also deals 50 bonus damage which is affected by crit multiplier"
+            },
+            {
+              "indent_level": 1,
+              "note": "Critical Damage decreased from 250/325/400% to 200/275/350%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 102,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Armor increased by 1"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +7 Strength replaced with Aphotic Shield provides +15 HP Regen"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent +55 Damage replaced with +80 Curse of Avernus DPS"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5587,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now deals 30/40/50/60 damage per second to the target when it procs for the duration of the curse. Damage interval: 0.5s. Damage to buildings is reduced by 70%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 103,
+      "abilities": [
+        {
+          "ability_id": 5594,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max HP as Damage increased from 30/40/50% to 34/42/50%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 104,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +8 Duel Bonus Damage replaced with +8% Press The Attack Movement Speed"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5595,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard no longer provides bonus armor or duration"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard now increases Overwhelming Odds AoE by 250 when cast during a Duel"
+            }
+          ]
+        },
+        {
+          "ability_id": 5598,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard now provides +8 damage per duel won. Applies retroactively"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 105,
+      "abilities": [
+        {
+          "ability_id": 5601,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Current HP Self Damage decreased from 35/30/25/20% to 20%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 106,
+      "abilities": [
+        {
+          "ability_id": 5603,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Unit Count increased from 2 to 3"
+            }
+          ]
+        },
+        {
+          "ability_id": 5604,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Hero Damage increased from 45/80/115/150 to 45/85/125/165"
+            }
+          ]
+        },
+        {
+          "ability_id": 5605,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Radius increased from 450 to 500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 108,
+      "abilities": [
+        {
+          "ability_id": 5614,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now deals 20/30/40/50 damage upon rooting a unit"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cast Point improved from 0.35s to 0.25s"
+            }
+          ]
+        },
+        {
+          "ability_id": 865,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Point improved from 0.45s to 0.2s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 109,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Reflection Cooldown Reduction increased from 3s to 4s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent +275 Health replaced with -20s Metamorphosis Cooldown"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 699,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now applies to Reflection illusions with 50% effectiveness"
+            }
+          ]
+        },
+        {
+          "ability_id": 425,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Wave effect now follows Terrorblade and disappears if he is killed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 110,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +6% Spell Amplification replaced with +20 Icarus Dive Damage Per Second"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5625,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Projectile Speed increased from 900 to 1000"
+            }
+          ]
+        },
+        {
+          "ability_id": 5626,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Movement Speed Slow decreased from 12% to 10%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 111,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent +80 Fortune's End Damage replaced with +60 Enemy Damage/Ally Heal Per Effect Dispelled by Fortune's End"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5639,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Point improved from 0.15s to 0.10s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5640,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Range decreased from 700/850/1000 to 700/800/900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 112,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Mana Regen increased from 0.25 to 0.5"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5654,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Range increased from 700/750/800 to 800"
+            },
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 250 to 200/225/250"
+            },
+            {
+              "indent_level": 1,
+              "note": "Now provides vision over the affected unit and their surroundings"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 113,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Magnetic Field Attack Speed/Bonus Damage decreased from +25 to +20"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Tempest Double Duration decreased from +12s to +10s"
+        }
+      ]
+    },
+    {
+      "hero_id": 114,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +0.2s Mischief Invulnerability Duration replaced with +75 Primal Spring Max Damage"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Additional Wukong's Command Ring now also increases cast range by +350"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5716,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 100 to 85/90/95/100"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Primal Spring effect power from 50% to 60% (of Max Channeling Duration)"
+            }
+          ]
+        },
+        {
+          "ability_id": 5721,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Distance decreased from 1000 to 800"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 1.45/1.3/1.15/1s to 1.4/1.2/1.0/0.8s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5725,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 110/95/80s to 100/90/80s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cast Range increased from 550 to 625"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 119,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Cursed Crown Stun Duration increased from +0.4s to +0.5s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Shadow Realm Duration decreased from +2s to +1.5s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 6341,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Duration Until Max Damage decreased from 3.5s to 3s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 120,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Health Regen increased from 0.25 to 0.75"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent 3s Shield Crash CD in Ball replaced with +80 Shield Crash Barrier Per Hero"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent +100 Shield Crash Barrier Per Hero replaced with +125 Shield Crash Radius"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 6461,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage type changed from Magical to Physical"
+            },
+            {
+              "indent_level": 1,
+              "note": "Cooldown in Ball form is now always decreased to 9/6/3s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 121,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Ink Swell Cooldown Reduction decreased from 5s to 4s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Ink Swell Movement Speed bonus decreased from +14% to +12%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Stroke of Fate Damage increased from +60% to +75%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 8007,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Damage/Heal bonus decreased from 40% to 30%"
+            }
+          ]
+        },
+        {
+          "ability_id": 6491,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown increased from 70/60/50s to 70/65/60s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 123,
+      "abilities": [
+        {
+          "ability_id": 8429,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Damage increased from 50/80/110/140 to 55/90/125/160"
+            }
+          ]
+        },
+        {
+          "ability_id": 8158,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Total Damage increased from 90/160/230/300 to 90/180/270/360"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 126,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Intelligence gain increased from 2.3 to 2.5"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Mana Regen increased from +1.5 to +1.75"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7710,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Barrier per hero hit increased from 30/50/70/90 to 40/60/80/100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 128,
+      "abilities": [
+        {
+          "ability_id": 6488,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 25/50/75/100 to 30/55/80/105"
+            }
+          ]
+        },
+        {
+          "ability_id": 6482,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Impact Damage increased from 160/240/320 to 180/270/360"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 129,
+      "abilities": [
+        {
+          "ability_id": 6583,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Backswing decreased from 1.03s to 0.15s"
+            },
+            {
+              "indent_level": 1,
+              "note": "No longer toggles off Bulwark if cast while Bulwark is active"
+            }
+          ]
+        },
+        {
+          "ability_id": 6495,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Critical Damage increased from 150/190/230/270% to 150/200/250/300%"
+            }
+          ]
+        },
+        {
+          "ability_id": 6582,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Active now grants Mars phased movement"
+            },
+            {
+              "indent_level": 1,
+              "note": "Active projectile redirection now also protects allies that are up to 200 range in front of Mars"
+            }
+          ]
+        },
+        {
+          "ability_id": 6598,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Formation Time decreased from 0.3s to 0.1s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 135,
+      "abilities": [
+        {
+          "ability_id": 7914,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Fire Trail Duration increased from 2.5s to 2.5/3/3.5/4s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 136,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Dispose Damage increased from +70 to +90"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 8235,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Impact Damage rescaled from 75/150/225/300 to 70/150/230/310"
+            }
+          ]
+        },
+        {
+          "ability_id": 8198,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 100/80/60 to 90/75/60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 137,
+      "abilities": [
+        {
+          "ability_id": 7739,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max Travel Time decreased from 1.7s to 1.5s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Fragment Flight Distance decreased from 600 to 525"
+            },
+            {
+              "indent_level": 1,
+              "note": "Fragment Flight Time decreased from 0.6s to 0.5s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Fragment Impact Radius increased from 150 to 185"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 138,
+      "abilities": [
+        {
+          "ability_id": 5753,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Is now toggleable and no longer prioritizes heroes"
+            }
+          ]
+        },
+        {
+          "ability_id": 5754,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Attack Damage decreased from 70/110/150 to 70/100/130"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "success": true
+}
