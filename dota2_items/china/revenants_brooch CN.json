@@ -8,18 +8,18 @@
             "id": 911,
             "name": "item_revenants_brooch",
             "name_loc": "英灵胸针",
-            "desc_loc": "<h1>主动：幻影之域</h1>接下来%number_of_attacks%次攻击具有克敌机先，并且造成魔法伤害，攻击会施加一个负面效果，降低%active_mres_reduction%%%魔法抗性。%active_duration%秒后效果消失。<br><br>可以攻击虚无状态下的单位。\n\n<h1>被动：巫师之刃</h1>使下次攻击施加毒素，持续%slow_duration%秒，减缓%slow%%%移动速度，并且每秒造成%int_damage_multiplier%倍智力值的伤害。每%passive_cooldown%秒只会触发一次。",
+            "desc_loc": "<h1>切换：幻影之域</h1>开启后攻击会消耗%manacost_per_hit%点魔法，并造成魔法伤害。",
             "lore_loc": "这枚受到诅咒的胸针属于一位堕落的卫士，她永远都在生死之界徘徊。",
             "notes_loc": [],
             "shard_loc": "",
             "scepter_loc": "",
             "type": 0,
-            "behavior": "4194308",
+            "behavior": "4194820",
             "target_team": 0,
             "target_type": 0,
             "flags": 0,
             "damage": 0,
-            "immunity": 0,
+            "immunity": 4,
             "dispellable": 0,
             "max_level": 0,
             "cast_ranges": [
@@ -32,7 +32,7 @@
               0
             ],
             "cooldowns": [
-              25
+              0
             ],
             "durations": [
               0
@@ -44,169 +44,37 @@
               0
             ],
             "mana_costs": [
-              300
+              0
             ],
             "gold_costs": [],
             "health_costs": [],
             "special_values": [
               {
-                "name": "bonus_intellect",
+                "name": "bonus_damage",
                 "values_float": [
-                  45
+                  70
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$int",
+                "heading_loc": "+$damage",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": []
               },
               {
-                "name": "bonus_attack_speed",
-                "values_float": [
-                  40
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$attack",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "bonus_armor",
-                "values_float": [
-                  8
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$armor",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "projectile_speed",
-                "values_float": [
-                  300
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$projectile_speed",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "int_damage_multiplier",
-                "values_float": [
-                  1
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "slow",
-                "values_float": [
-                  25
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "slow_duration",
-                "values_float": [
-                  4
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "mana_cost",
-                "values_float": [
-                  100
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "damage_penalty",
-                "values_float": [
-                  0
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "passive_cooldown",
-                "values_float": [
-                  9
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "number_of_attacks",
-                "values_float": [
-                  5
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "active_duration",
-                "values_float": [
-                  15
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "active_attack_speed",
-                "values_float": [
-                  0
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "active_mres_reduction",
+                "name": "spell_lifesteal",
                 "values_float": [
                   20
                 ],
                 "is_percentage": false,
-                "heading_loc": "",
+                "heading_loc": "+$spell_lifesteal",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": []
               },
               {
-                "name": "spell_amp_duration",
+                "name": "manacost_per_hit",
                 "values_float": [
-                  3
+                  75
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -283,7 +151,7 @@
               {
                 "name": "AbilityManaCost",
                 "values_float": [
-                  300
+                  0
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -294,7 +162,7 @@
               {
                 "name": "AbilityCooldown",
                 "values_float": [
-                  25
+                  0
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -308,7 +176,7 @@
             "ability_has_shard": false,
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
-            "item_cost": 6200,
+            "item_cost": 4900,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

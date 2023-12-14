@@ -8,7 +8,7 @@
             "id": 231,
             "name": "item_guardian_greaves",
             "name_loc": "卫士胫甲",
-            "desc_loc": "<h1>主动：修复</h1>使周围友军回复%replenish_health%点生命和%replenish_mana%点魔法，并移除施法者身上大部分的负面效果。<br><br>作用范围：%replenish_radius%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：卫士光环</h1> 为周围友军提供%aura_health_regen%点/秒额外生命恢复和%aura_armor%点护甲。如果友方英雄的生命值低于%aura_bonus_threshold%%%，光环效果将提升至%aura_health_regen_bonus%点/秒额外生命恢复和%aura_armor_bonus%点额外护甲。<br><br>作用范围：%aura_radius%\n多个鞋类物品提供的移动速度加成不叠加。",
+            "desc_loc": "<h1>主动：修复</h1>使周围友军回复%replenish_health%点生命和%replenish_mana%点魔法，并移除施法者身上大部分的负面效果。<br><br>作用范围：%replenish_radius%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：卫士光环</h1> 为周围友军提供%aura_health_regen%点/秒生命恢复，%aura_mana_regen%点/秒魔法恢复和%aura_armor%点护甲。如果友方英雄的生命值低于%aura_bonus_threshold%%%，光环效果将提升至%aura_health_regen_bonus%点/秒生命恢复，%aura_mana_regen_bonus%点/秒魔法恢复和%aura_armor_bonus%点护甲。<br><br>作用范围：%aura_radius%\n多个鞋类物品提供的移动速度加成不叠加。",
             "lore_loc": "为了向全能之神致敬所打造的众多圣器之一。",
             "notes_loc": [
               "光环效果仅对英雄有效。",
@@ -64,23 +64,23 @@
                 "values_scepter": []
               },
               {
-                "name": "bonus_mana",
-                "values_float": [
-                  250
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$mana",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
                 "name": "bonus_armor",
                 "values_float": [
                   4
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$armor",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "mana_regen",
+                "values_float": [
+                  1.5
+                ],
+                "is_percentage": false,
+                "heading_loc": "+$mana_regen",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": []
@@ -108,9 +108,42 @@
                 "values_scepter": []
               },
               {
+                "name": "aura_mana_regen",
+                "values_float": [
+                  1.5
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "aura_radius",
+                "values_float": [
+                  1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
                 "name": "aura_health_regen_bonus",
                 "values_float": [
                   14.5
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "aura_mana_regen_bonus",
+                "values_float": [
+                  5
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -133,17 +166,6 @@
                 "name": "aura_bonus_threshold",
                 "values_float": [
                   25
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
-                "name": "aura_radius",
-                "values_float": [
-                  1200
                 ],
                 "is_percentage": false,
                 "heading_loc": "",

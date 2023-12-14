@@ -8,7 +8,7 @@
             "id": 250,
             "name": "item_bloodthorn",
             "name_loc": "血棘",
-            "desc_loc": "<h1>主动：灵魂撕裂</h1>使目标沉默%silence_duration%秒，沉默结束后其间所受伤害的%silence_damage_percent%%%将以额外魔法伤害的形式结算。<br><br>所有对目标发动的攻击均不会落空。<br><br>施法距离：%abilitycastrange%\n\n<h1>被动：法师克星</h1>攻击敌人时施加一个负面效果，使目标造成的技能伤害降低%spell_amp_debuff%%%，持续%duration%秒。",
+            "desc_loc": "<h1>主动：灵魂撕裂</h1>使目标沉默%silence_duration%秒，沉默结束后其间所受伤害的%silence_damage_percent%%%将以额外魔法伤害的形式结算。<br><br>所有对目标发动的攻击会额外造成%proc_damage%点伤害，并且拥有克敌机先效果。<br><br>施法距离：%abilitycastrange%\n\n<h1>被动：穿刺</h1>每次攻击有%proc_chance%%%几率无视闪避并造成额外%proc_damage%点魔法伤害。",
             "lore_loc": "一把亵渎之刃，受害者临死前的每次挣扎都会使其砍得更深。",
             "notes_loc": [],
             "shard_loc": "",
@@ -18,7 +18,7 @@
             "target_team": 2,
             "target_type": 19,
             "flags": 0,
-            "damage": 0,
+            "damage": 2,
             "immunity": 0,
             "dispellable": 2,
             "max_level": 0,
@@ -52,7 +52,7 @@
               {
                 "name": "bonus_intellect",
                 "values_float": [
-                  32
+                  15
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$int",
@@ -63,7 +63,7 @@
               {
                 "name": "bonus_attack_speed",
                 "values_float": [
-                  60
+                  100
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$attack",
@@ -72,20 +72,9 @@
                 "values_scepter": []
               },
               {
-                "name": "bonus_damage",
-                "values_float": [
-                  35
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$damage",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
                 "name": "bonus_mana_regen",
                 "values_float": [
-                  5
+                  3
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$mana_regen",
@@ -94,20 +83,9 @@
                 "values_scepter": []
               },
               {
-                "name": "bonus_magic_resist",
-                "values_float": [
-                  25
-                ],
-                "is_percentage": true,
-                "heading_loc": "+$spell_resist",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
                 "name": "bonus_health_regen",
                 "values_float": [
-                  6.25
+                  6.5
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$hp_regen",
@@ -138,6 +116,17 @@
                 "values_scepter": []
               },
               {
+                "name": "bonus_damage",
+                "values_float": [
+                  10
+                ],
+                "is_percentage": false,
+                "heading_loc": "+$damage",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
                 "name": "duration",
                 "values_float": [
                   6
@@ -152,6 +141,28 @@
                 "name": "spell_amp_debuff",
                 "values_float": [
                   35
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "proc_damage",
+                "values_float": [
+                  60
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "proc_chance",
+                "values_float": [
+                  40
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -253,7 +264,7 @@
             "ability_has_shard": false,
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
-            "item_cost": 6800,
+            "item_cost": 6825,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

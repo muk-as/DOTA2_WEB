@@ -8,7 +8,7 @@
             "id": 692,
             "name": "item_eternal_shroud",
             "name_loc": "永世法衣",
-            "desc_loc": "<h1>被动：法衣</h1> 受到敌人法术伤害的%mana_restore_pct%%%会转化为自身的魔法。",
+            "desc_loc": "<h1>被动：法衣</h1>受到敌人的法术伤害在减免前的%mana_restore_pct%%%会转化为自身的魔法。\n\n<h1>被动：永世耐力</h1>装备的英雄每受到%stack_threshold%点法术伤害，就会获得一层持续%stack_duration%秒叠加效果，最多为%max_stacks%层。每层效果会使永世法衣的基础魔法抗性提升%stack_resist%%%。",
             "lore_loc": "崭新的兜帽，以斗争为能量加强它的主人。",
             "notes_loc": [],
             "shard_loc": "",
@@ -52,7 +52,7 @@
               {
                 "name": "bonus_spell_resist",
                 "values_float": [
-                  35
+                  25
                 ],
                 "is_percentage": true,
                 "heading_loc": "+$spell_resist",
@@ -72,12 +72,45 @@
                 "values_scepter": []
               },
               {
-                "name": "bonus_health_regen",
+                "name": "bonus_health",
                 "values_float": [
-                  7
+                  300
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$hp_regen",
+                "heading_loc": "+$health",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "stack_threshold",
+                "values_float": [
+                  300
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "stack_duration",
+                "values_float": [
+                  8
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "stack_resist",
+                "values_float": [
+                  4
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": []
@@ -85,7 +118,18 @@
               {
                 "name": "mana_restore_pct",
                 "values_float": [
-                  30
+                  20
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "max_stacks",
+                "values_float": [
+                  6
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -187,7 +231,7 @@
             "ability_has_shard": false,
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
-            "item_cost": 3100,
+            "item_cost": 3600,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

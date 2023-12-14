@@ -8,7 +8,7 @@
             "id": 569,
             "name": "item_orb_of_corrosion",
             "name_loc": "腐蚀之球",
-            "desc_loc": "<h1>被动：腐蚀</h1>造成每秒%damage%点伤害，降低%armor%点护甲，装备的英雄为近战将减缓%slow_melee%%%移动速度，装备的英雄为远程将减缓%slow_range%%%移动速度。<br><br>持续%duration%秒。",
+            "desc_loc": "<h1>被动：腐蚀</h1>造成每秒%damage%点伤害，治疗、生命恢复、吸血和技能吸血降低%heal_reduction%%%，装备的英雄为近战将减缓%slow_melee%%%移动速度，装备的英雄为远程将减缓%slow_range%%%移动速度。<br><br>持续%duration%秒。",
             "lore_loc": "凶残的屠杀战役过后，从战士之神的伤口渗出的液体被封进一个秘术师的宝珠内。",
             "notes_loc": [],
             "shard_loc": "",
@@ -55,7 +55,7 @@
                   3
                 ],
                 "is_percentage": false,
-                "heading_loc": "",
+                "heading_loc": "+$armor",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": []
@@ -85,7 +85,7 @@
               {
                 "name": "damage",
                 "values_float": [
-                  3
+                  5
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -105,12 +105,23 @@
                 "values_scepter": []
               },
               {
-                "name": "health_bonus",
+                "name": "attack_speed",
                 "values_float": [
-                  150
+                  25
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$health",
+                "heading_loc": "+$attack",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": []
+              },
+              {
+                "name": "heal_reduction",
+                "values_float": [
+                  20
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": []
@@ -209,7 +220,7 @@
             "ability_has_shard": false,
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
-            "item_cost": 925,
+            "item_cost": 900,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,
