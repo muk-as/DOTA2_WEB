@@ -6,7 +6,7 @@
           "id": 231,
           "name": "item_guardian_greaves",
           "name_loc": "Guardian Greaves",
-          "desc_loc": "<h1>Active: Mend</h1>Restores %replenish_health% health and %replenish_mana% mana to nearby allies, and removes most negative effects from the caster.<br><br>Radius: %replenish_radius%<br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>\n\n<h1>Passive: Guardian Aura</h1> Grants %aura_health_regen% health regeneration and %aura_armor% armor to allied units. If an allied hero's health falls below %aura_bonus_threshold%%%, this is increased to %aura_health_regen_bonus% health regeneration and %aura_armor_bonus% armor. <br><br>Radius: %aura_radius% \nMovement speed bonuses from multiple pairs of boots do not stack.",
+          "desc_loc": "<h1>Active: Mend</h1>Restores %replenish_health% health and %replenish_mana% mana to nearby allies, and removes most negative effects from the caster.<br><br>Radius: %replenish_radius%<br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>\n\n<h1>Passive: Guardian Aura</h1> Grants %aura_health_regen% health regeneration, %aura_mana_regen% mana regeneration and %aura_armor% armor to allied units. If an allied hero's health falls below %aura_bonus_threshold%%%, this is increased to %aura_health_regen_bonus% health regeneration, %aura_mana_regen_bonus% mana regeneration and %aura_armor_bonus% armor. <br><br>Radius: %aura_radius% \nMovement speed bonuses from multiple pairs of boots do not stack.",
           "lore_loc": "One of many holy instruments constructed to honor the Omniscience.",
           "notes_loc": [
             "The aura boost only applies to heroes.",
@@ -62,23 +62,23 @@
               "values_scepter": []
             },
             {
-              "name": "bonus_mana",
-              "values_float": [
-                250
-              ],
-              "is_percentage": false,
-              "heading_loc": "+$mana",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "bonus_armor",
               "values_float": [
                 4
               ],
               "is_percentage": false,
               "heading_loc": "+$armor",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "mana_regen",
+              "values_float": [
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$mana_regen",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -106,9 +106,42 @@
               "values_scepter": []
             },
             {
+              "name": "aura_mana_regen",
+              "values_float": [
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "aura_radius",
+              "values_float": [
+                1200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "aura_health_regen_bonus",
               "values_float": [
                 14.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "aura_mana_regen_bonus",
+              "values_float": [
+                5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -131,17 +164,6 @@
               "name": "aura_bonus_threshold",
               "values_float": [
                 25
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "aura_radius",
-              "values_float": [
-                1200
               ],
               "is_percentage": false,
               "heading_loc": "",

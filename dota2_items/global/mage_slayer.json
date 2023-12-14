@@ -6,7 +6,7 @@
           "id": 598,
           "name": "item_mage_slayer",
           "name_loc": "Mage Slayer",
-          "desc_loc": "<h1>Passive: Mage Slayer</h1>Places a debuff when you attack enemies, causing them to do %spell_amp_debuff%%% less spell damage for %duration% seconds.",
+          "desc_loc": "<h1>Passive: Mage Slayer</h1>Places a debuff when you attack enemies, dealing %dps% damage per second and causing them to do %spell_amp_debuff%%% less spell damage for %duration% seconds.",
           "lore_loc": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
           "notes_loc": [],
           "shard_loc": "",
@@ -16,7 +16,7 @@
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
-          "damage": 0,
+          "damage": 2,
           "immunity": 0,
           "dispellable": 2,
           "max_level": 0,
@@ -61,21 +61,10 @@
             {
               "name": "bonus_attack_speed",
               "values_float": [
-                20
+                45
               ],
               "is_percentage": false,
               "heading_loc": "+$attack",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "bonus_damage",
-              "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "+$damage",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -120,6 +109,17 @@
               ],
               "is_percentage": false,
               "heading_loc": "+$int",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "dps",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -218,7 +218,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "item_cost": 2500,
+          "item_cost": 2625,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

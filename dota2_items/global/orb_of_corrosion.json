@@ -6,7 +6,7 @@
           "id": 569,
           "name": "item_orb_of_corrosion",
           "name_loc": "Orb of Corrosion",
-          "desc_loc": "<h1>Passive: Corrosion</h1>Dealing %damage% damage per second, reducing armor by %armor%, and slowing movement by %slow_melee%%% if the equipped hero is melee, or by %slow_range%%% if they are ranged.<br><br>Lasts for %duration% seconds.",
+          "desc_loc": "<h1>Passive: Corrosion</h1>Dealing %damage% damage per second, and slowing movement by %slow_melee%%% if the equipped hero is melee, or by %slow_range%%% if they are ranged and reduces heals, health regeneration, lifesteal and spell lifesteal by %heal_reduction%%% . Affects Buildings<br><br>Lasts for %duration% seconds.",
           "lore_loc": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter.",
           "notes_loc": [],
           "shard_loc": "",
@@ -53,7 +53,7 @@
                 3
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "+$armor",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -83,7 +83,7 @@
             {
               "name": "damage",
               "values_float": [
-                3
+                5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -103,12 +103,23 @@
               "values_scepter": []
             },
             {
-              "name": "health_bonus",
+              "name": "attack_speed",
               "values_float": [
-                150
+                25
               ],
               "is_percentage": false,
-              "heading_loc": "+$health",
+              "heading_loc": "+$attack",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "heal_reduction",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -207,7 +218,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "item_cost": 925,
+          "item_cost": 900,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

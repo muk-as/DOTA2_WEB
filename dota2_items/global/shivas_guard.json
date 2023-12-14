@@ -6,7 +6,7 @@
           "id": 119,
           "name": "item_shivas_guard",
           "name_loc": "Shiva's Guard",
-          "desc_loc": "<h1>Active: Arctic Blast</h1> Emits a freezing wave that deals %blast_damage% magical damage to enemies and slows their movement by %blast_movement_speed%%% for %blast_debuff_duration% seconds. Deals %illusion_multiplier_pct%%% damage to illusions.<br><br>Radius: %blast_radius%\n\n<h1>Passive: Freezing Aura</h1> Reduces the attack speed of all enemies by %aura_attack_speed% and all heals, regeneration and lifesteal by %hp_regen_degen_aura%%%. <br><br>Radius: %aura_radius%",
+          "desc_loc": "<h1>Active: Arctic Blast</h1> Emits a freezing wave that causes enemies to take %spell_amp%%% more damage from spells for %resist_debuff_duration% seconds, deals %blast_damage% magical damage and slows their movement by %blast_movement_speed%%% for %blast_debuff_duration% seconds. Deals %illusion_multiplier_pct%%% damage to illusions.<br><br>Radius: %blast_radius%\n\n<h1>Passive: Freezing Aura</h1> Reduces the attack speed of all enemies by %aura_attack_speed% and all heals, regeneration and lifesteal by %hp_regen_degen_aura%%%. <br><br>Radius: %aura_radius%",
           "lore_loc": "Said to have belonged to a goddess, today it retains much of its former power.",
           "notes_loc": [
             "The wave extends at a speed of %blast_speed% to a max size of %blast_radius%.",
@@ -46,7 +46,7 @@
             0
           ],
           "mana_costs": [
-            100
+            75
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -54,7 +54,7 @@
             {
               "name": "bonus_intellect",
               "values_float": [
-                30
+                8
               ],
               "is_percentage": false,
               "heading_loc": "+$int",
@@ -63,9 +63,42 @@
               "values_scepter": []
             },
             {
+              "name": "bonus_strength",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$str",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "bonus_agility",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$agi",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "bonus_hp_regen",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$hp_regen",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "bonus_armor",
               "values_float": [
-                15
+                20
               ],
               "is_percentage": false,
               "heading_loc": "+$armor",
@@ -173,6 +206,28 @@
               "values_scepter": []
             },
             {
+              "name": "spell_amp",
+              "values_float": [
+                15
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "resist_debuff_duration",
+              "values_float": [
+                16
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -241,7 +296,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -266,7 +321,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "item_cost": 4850,
+          "item_cost": 4825,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,
