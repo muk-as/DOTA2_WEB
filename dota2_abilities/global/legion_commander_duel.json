@@ -12,7 +12,7 @@
             "Duels will end if the units are pushed 2000 units apart.",
             "Winning a Duel automatically casts Press the Attack on yourself."
           ],
-          "shard_loc": "",
+          "shard_loc": "Increases Duel damage by %shard_duel_damage_bonus% per win. Applies retroactively.",
           "scepter_loc": "Increases Duel duration and reduces cooldown.  Legion Commander and her opponent take reduced damage from other sources.",
           "type": 1,
           "behavior": "8",
@@ -95,7 +95,9 @@
               "is_percentage": false,
               "heading_loc": "BONUS DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                8
+              ],
               "values_scepter": []
             },
             {
@@ -116,6 +118,17 @@
               ],
               "is_percentage": true,
               "heading_loc": "DAMAGE REDUCTION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "shard_duel_damage_bonus",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -217,7 +230,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": true,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "item_cost": 0,

@@ -6,7 +6,7 @@
           "id": 5148,
           "name": "enigma_midnight_pulse",
           "name_loc": "Midnight Pulse",
-          "desc_loc": "Steeps an area in dark resonance, damaging enemy units based on their current HP.",
+          "desc_loc": "Steeps an area in dark resonance, dealing %base_damage% + a percentage of the enemies current HP as damage.",
           "lore_loc": "A section of the world slowly descends into the void.",
           "notes_loc": [
             "This ability destroys trees in its area.",
@@ -59,7 +59,7 @@
             {
               "name": "radius",
               "values_float": [
-                650
+                600
               ],
               "is_percentage": false,
               "heading_loc": "RADIUS:",
@@ -76,13 +76,13 @@
             {
               "name": "damage_percent",
               "values_float": [
-                5,
-                7,
-                9,
-                11
+                4,
+                6,
+                8,
+                10
               ],
               "is_percentage": true,
-              "heading_loc": "DAMAGE PER SECOND:",
+              "heading_loc": "CURRENT HEALTH AS DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -104,6 +104,20 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "base_damage",
+              "values_float": [
+                5,
+                10,
+                15,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },

@@ -6,7 +6,7 @@
           "id": 5614,
           "name": "abyssal_underlord_pit_of_malice",
           "name_loc": "Pit of Malice",
-          "desc_loc": "A deadly pit is conjured at the target location; any unit that enters will be rooted. Each enemy unit within the pit are affected every %pit_interval% seconds.",
+          "desc_loc": "A deadly pit is conjured at the target location; any unit that enters will be damaged and rooted. Each enemy unit within the pit are affected by the root only every %pit_interval% seconds.",
           "lore_loc": "Twisting into the seams of reality itself, Vrogros' manifest hatred paralyzes those who defy his will.",
           "notes_loc": [],
           "shard_loc": "",
@@ -24,7 +24,7 @@
             675
           ],
           "cast_points": [
-            0.35
+            0.25
           ],
           "channel_times": [
             0
@@ -95,10 +95,13 @@
             {
               "name": "pit_damage",
               "values_float": [
-                0
+                20,
+                30,
+                40,
+                50
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "ENSNARE DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -172,7 +175,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.35
+                0.25
               ],
               "is_percentage": false,
               "heading_loc": "",

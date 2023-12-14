@@ -6,7 +6,7 @@
           "id": 5227,
           "name": "dragon_knight_dragon_tail",
           "name_loc": "Dragon Tail",
-          "desc_loc": "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing minor damage.  When in Elder Dragon Form, the cast range increases to %dragon_cast_range%.",
+          "desc_loc": "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing damage based on their enemy max HP.  When in Elder Dragon Form, the cast range increases to %dragon_cast_range%.",
           "lore_loc": "Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat.",
           "notes_loc": [],
           "shard_loc": "",
@@ -42,10 +42,10 @@
             0
           ],
           "damages": [
-            70,
-            100,
-            130,
-            160
+            0,
+            0,
+            0,
+            0
           ],
           "mana_costs": [
             70,
@@ -66,6 +66,37 @@
               ],
               "is_percentage": false,
               "heading_loc": "STUN DURATION:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_2",
+                  "value": 0.4,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "damage",
+              "values_float": [
+                70,
+                100,
+                130,
+                160
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -93,16 +124,19 @@
               "values_scepter": []
             },
             {
-              "name": "#AbilityDamage",
+              "name": "dragon_aoe",
               "values_float": [
-                70,
-                100,
-                130,
-                160
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_8",
+                  "value": 400,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },

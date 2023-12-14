@@ -6,7 +6,7 @@
           "id": 5010,
           "name": "axe_culling_blade",
           "name_loc": "Culling Blade",
-          "desc_loc": "Axe spots a weakness and strikes, dealing pure damage. When an enemy hero is killed with Culling Blade, its cooldown is reset, Axe gains bonus armor permanently and all nearby allied units gain bonus movement speed. ",
+          "desc_loc": "Axe spots a weakness and strikes, dealing pure damage. When an enemy hero is killed with Culling Blade, its cooldown is reset, Axe gains bonus armor permanently and all nearby allied units gain bonus movement speed and armor.",
           "lore_loc": "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat.",
           "notes_loc": [
             "Culling Blade death cannot be prevented with other abilities like Shallow Grave."
@@ -86,14 +86,14 @@
               "values_scepter": []
             },
             {
-              "name": "atk_speed_bonus",
+              "name": "armor_bonus",
               "values_float": [
                 20,
-                30,
-                40
+                25,
+                30
               ],
               "is_percentage": false,
-              "heading_loc": "KILL ATTACK SPEED BONUS:",
+              "heading_loc": "ARMOR BONUS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -105,7 +105,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "KILL SPEED DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_axe_culling_blade_speed_duration",
+                  "value": 4,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },

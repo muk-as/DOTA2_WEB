@@ -6,7 +6,7 @@
           "id": 5587,
           "name": "abaddon_frostmourne",
           "name_loc": "Curse of Avernus",
-          "desc_loc": "Abaddon strikes an enemy, slowing the target's movement speed. If the target gets hit %hit_count% times, they become affected by a chilling curse causing them to be silenced and slowed, and all attacks against them gain an attack speed boost.",
+          "desc_loc": "Abaddon strikes an enemy, slowing the target's movement speed. If the target gets hit %hit_count% times, they become affected by a chilling curse causing them to take damage over time, be silenced and slowed, and all attacks against them gain an attack speed boost. Damage over time component to buildings is reduced by %tower_dps_pct%%%.",
           "lore_loc": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated.",
           "notes_loc": [],
           "shard_loc": "Causes Mist Coil to deal Abaddon's attack damage on impact. Increases Curse of Avernus base slow.",
@@ -16,7 +16,7 @@
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 0,
+          "damage": 2,
           "immunity": 4,
           "dispellable": 2,
           "max_level": 4,
@@ -132,6 +132,48 @@
               ],
               "is_percentage": false,
               "heading_loc": "CURSE ATTACK SPEED:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "curse_dps",
+              "values_float": [
+                30,
+                40,
+                50,
+                60
+              ],
+              "is_percentage": false,
+              "heading_loc": "CURSE DPS:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_abaddon_5",
+                  "value": 80,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "tower_dps_pct",
+              "values_float": [
+                70
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "curse_interval",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []

@@ -6,7 +6,7 @@
           "id": 5364,
           "name": "gyrocopter_call_down",
           "name_loc": "Call Down",
-          "desc_loc": "Call down an aerial missile strike on enemy units in a target area. After %missile_delay_tooltip% seconds, two missiles arrive in succession, with %missile_delay_tooltip% seconds between them.",
+          "desc_loc": "Call down %total_strikes% aerial missile strikes that slow and damage enemy units in a target area. Each strike is %strike_separation% distance from the previous one and is delayed by %strike_delay%s",
           "lore_loc": "'Bombs Away!'",
           "notes_loc": [
             "The visual indicator is visible to allies only."
@@ -48,79 +48,44 @@
             0
           ],
           "mana_costs": [
-            125,
-            125,
-            125
+            150,
+            200,
+            250
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "slow_duration_first",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "slow_duration_second",
+              "name": "slow_duration",
               "values_float": [
                 4
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "SLOW DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },
             {
-              "name": "damage_first",
+              "name": "slow",
               "values_float": [
-                150,
-                250,
-                350
-              ],
-              "is_percentage": false,
-              "heading_loc": "MISSILE ONE DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "damage_second",
-              "values_float": [
-                250,
-                325,
-                400
-              ],
-              "is_percentage": false,
-              "heading_loc": "MISSILE TWO DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "slow_first",
-              "values_float": [
-                30
+                50
               ],
               "is_percentage": true,
-              "heading_loc": "MISSILE ONE SLOW:",
+              "heading_loc": "MISSILE SLOW:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },
             {
-              "name": "slow_second",
+              "name": "damage",
               "values_float": [
-                60
+                250,
+                400,
+                550
               ],
-              "is_percentage": true,
-              "heading_loc": "MISSILE TWO SLOW:",
+              "is_percentage": false,
+              "heading_loc": "MISSILE DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -128,34 +93,10 @@
             {
               "name": "radius",
               "values_float": [
-                600
+                400
               ],
               "is_percentage": false,
               "heading_loc": "RADIUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "range_scepter",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "damage_second_scepter",
-              "values_float": [
-                175,
-                225,
-                275
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -172,13 +113,52 @@
               "values_scepter": []
             },
             {
+              "name": "strike_delay",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "total_strikes",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "strike_separation",
+              "values_float": [
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 1000
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_gyrocopter_5",
+                  "value": 0,
+                  "operation": 5
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -240,7 +220,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                125
+                150,
+                200,
+                250
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -257,7 +239,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_gyrocopter_5",
+                  "value": 30,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             }

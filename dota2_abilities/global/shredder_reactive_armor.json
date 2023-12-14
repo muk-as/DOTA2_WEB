@@ -6,7 +6,7 @@
           "id": 5526,
           "name": "shredder_reactive_armor",
           "name_loc": "Reactive Armor",
-          "desc_loc": "Each time Timbersaw is attacked, he gains increased health regen and armor. Heroes grant double the amount.",
+          "desc_loc": "Each time Timbersaw is attacked, he gains increased health regen and armor. Hero attacks are counted as %stacks_per_hero_attack%x the amount.",
           "lore_loc": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
           "notes_loc": [],
           "shard_loc": "",
@@ -71,21 +71,33 @@
               ],
               "is_percentage": false,
               "heading_loc": "BONUS HP REGEN:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_timbersaw_reactive_armor_regen_per_stack",
+                  "value": 0.2,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
             {
               "name": "stack_limit",
               "values_float": [
-                10,
-                20,
-                30,
-                40
+                15,
+                24,
+                33,
+                42
               ],
               "is_percentage": false,
               "heading_loc": "MAX STACKS:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_timbersaw_2",
+                  "value": 6,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -100,6 +112,23 @@
               "is_percentage": false,
               "heading_loc": "STACK DURATION:",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "stacks_per_hero_attack",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_timbersaw_2",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },

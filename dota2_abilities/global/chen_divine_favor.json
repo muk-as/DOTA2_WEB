@@ -6,13 +6,13 @@
           "id": 7306,
           "name": "chen_divine_favor",
           "name_loc": "Divine Favor",
-          "desc_loc": "Passively provides an aura that grants increased health regeneration and armor.",
+          "desc_loc": "Passively provides an aura that grants increased health regeneration. Can be cast on allies to provide them with bonus armor and increasing the healing they receive.\n\nIf cast on Chen, all units controlled by Chen will be teleported to him. Taking damage from enemy heroes will cancel the teleport.",
           "lore_loc": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "type": 0,
-          "behavior": "2",
+          "behavior": "8",
           "target_team": 1,
           "target_type": 19,
           "flags": 32,
@@ -30,7 +30,10 @@
             0
           ],
           "cooldowns": [
-            0
+            20,
+            18,
+            16,
+            14
           ],
           "durations": [
             0
@@ -50,13 +53,10 @@
             {
               "name": "armor",
               "values_float": [
-                1,
-                2,
-                3,
-                4
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "ARMOR:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -92,18 +92,32 @@
                 6
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },
             {
-              "name": "creep_bonus",
+              "name": "bonus_armor",
               "values_float": [
-                1
+                12,
+                16,
+                20,
+                24
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "ARMOR:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "heal_amp",
+              "values_float": [
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "HEAL AMPLIFICATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -188,7 +202,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0
+                20,
+                18,
+                16,
+                14
               ],
               "is_percentage": false,
               "heading_loc": "",

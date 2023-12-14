@@ -11,7 +11,7 @@
           "notes_loc": [
             "Faceless Void is invulnerable while using Time Walk."
           ],
-          "shard_loc": "Increases range by %shard_bonus_range%.",
+          "shard_loc": "Increases range",
           "scepter_loc": "Applies a Time Lock to all units at the landing destination.",
           "type": 0,
           "behavior": "525328",
@@ -74,7 +74,9 @@
               "is_percentage": false,
               "heading_loc": "RANGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                150
+              ],
               "values_scepter": []
             },
             {
@@ -84,31 +86,28 @@
               ],
               "is_percentage": false,
               "heading_loc": "BACKTRACK DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_faceless_void_7",
+                  "value": 0.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
             {
-              "name": "radius_scepter",
+              "name": "radius",
               "values_float": [
-                400
+                0
               ],
               "is_percentage": false,
               "heading_loc": "TIME LOCK RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "shard_bonus_range",
-              "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [
+                400
+              ]
             },
             {
               "name": "AbilityCastRange",
@@ -197,7 +196,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_faceless_void_5",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             }

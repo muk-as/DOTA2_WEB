@@ -6,7 +6,7 @@
           "id": 5131,
           "name": "windrunner_powershot",
           "name_loc": "Powershot",
-          "desc_loc": "CHANNELED - Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced.",
+          "desc_loc": "CHANNELED - Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which slows and deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage and slow power is reduced.",
           "lore_loc": "During her early years of training, Lyralei learned to fire powerful arrows that cleaved even trees to reach their targets.",
           "notes_loc": [
             "Powershot will destroy trees in its area of effect."
@@ -47,10 +47,7 @@
             0
           ],
           "mana_costs": [
-            90,
-            100,
-            110,
-            120
+            100
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -65,6 +62,37 @@
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "slow",
+              "values_float": [
+                15,
+                20,
+                25,
+                30
+              ],
+              "is_percentage": true,
+              "heading_loc": "SLOW:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_windranger_powershot_slow",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "slow_duration",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "SLOW DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -122,7 +150,7 @@
             {
               "name": "tree_width",
               "values_float": [
-                75
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -221,10 +249,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                90,
-                100,
-                110,
-                120
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",

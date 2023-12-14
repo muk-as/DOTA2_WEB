@@ -6,7 +6,7 @@
           "id": 5520,
           "name": "magnataur_skewer",
           "name_loc": "Skewer",
-          "desc_loc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed.",
+          "desc_loc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed. The damage is increased based on distance traveled.",
           "lore_loc": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants.",
           "notes_loc": [],
           "shard_loc": "",
@@ -120,10 +120,10 @@
             {
               "name": "skewer_damage",
               "values_float": [
-                90,
-                180,
-                270,
-                360
+                70,
+                140,
+                210,
+                280
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
@@ -157,23 +157,15 @@
               "values_scepter": []
             },
             {
-              "name": "skewer_cooldown",
+              "name": "damage_distance_pct",
               "values_float": [
-                6
+                6,
+                9,
+                12,
+                15
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "skewer_manacost",
-              "values_float": [
-                40
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "DISTANCE AS DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
