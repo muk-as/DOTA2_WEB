@@ -301,7 +301,7 @@
               "id": 5330,
               "name": "chen_holy_persuasion",
               "name_loc": "Holy Persuasion",
-              "desc_loc": "Chen takes control of an enemy or neutral creep and receives gold equal to its bounty. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage. \n\nCan be cast on converted creeps to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage will dispel the buff.",
+              "desc_loc": "Chen takes control of an enemy or neutral creep and receives gold equal to its bounty. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage.",
               "lore_loc": "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted.",
               "notes_loc": [
                 "Persuading a new creep above max unit count causes the oldest persuaded creep to die.",
@@ -441,7 +441,7 @@
                     6
                   ],
                   "is_percentage": false,
-                  "heading_loc": "TELEPORT DELAY:",
+                  "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_chen_3",
@@ -586,13 +586,13 @@
               "id": 7306,
               "name": "chen_divine_favor",
               "name_loc": "Divine Favor",
-              "desc_loc": "Passively provides an aura that grants increased health regeneration and armor.",
+              "desc_loc": "Passively provides an aura that grants increased health regeneration. Can be cast on allies to provide them with bonus armor and increasing the healing they receive.\n\nIf cast on Chen, all units controlled by Chen will be teleported to him. Taking damage from enemy heroes will cancel the teleport.",
               "lore_loc": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "type": 0,
-              "behavior": "2",
+              "behavior": "8",
               "target_team": 1,
               "target_type": 19,
               "flags": 32,
@@ -610,7 +610,10 @@
                 0
               ],
               "cooldowns": [
-                0
+                20,
+                18,
+                16,
+                14
               ],
               "durations": [
                 0
@@ -630,13 +633,10 @@
                 {
                   "name": "armor",
                   "values_float": [
-                    1,
-                    2,
-                    3,
-                    4
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ARMOR:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -672,18 +672,32 @@
                     6
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
                 },
                 {
-                  "name": "creep_bonus",
+                  "name": "bonus_armor",
                   "values_float": [
-                    1
+                    12,
+                    16,
+                    20,
+                    24
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "ARMOR:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "heal_amp",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "HEAL AMPLIFICATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -768,7 +782,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    0
+                    20,
+                    18,
+                    16,
+                    14
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -845,9 +862,9 @@
                 {
                   "name": "heal_amount",
                   "values_float": [
-                    200,
-                    300,
-                    400
+                    150,
+                    250,
+                    350
                   ],
                   "is_percentage": false,
                   "heading_loc": "INITIAL HEAL:",

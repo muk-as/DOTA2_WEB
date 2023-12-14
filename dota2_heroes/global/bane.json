@@ -312,7 +312,7 @@
               "desc_loc": "Feasts on the vital energies of an enemy unit, healing Bane and dealing damage.",
               "lore_loc": "Atropos finds no greater pleasure than to harvest the fear he creates.",
               "notes_loc": [],
-              "shard_loc": "Causes Brain Sap to become a %shard_radius% AoE spell. Secondary targets only heal for %shard_secondary_target_heal_pct%%%.",
+              "shard_loc": "Reduces cooldown by %bonus_AbilityCooldown%. Causes Brain Sap to become a %shard_radius% AoE spell. Secondary targets only heal for %shard_secondary_target_heal_pct%%%.",
               "scepter_loc": "",
               "type": 0,
               "behavior": "8",
@@ -348,10 +348,10 @@
                 0
               ],
               "mana_costs": [
-                100,
                 120,
+                130,
                 140,
-                160
+                150
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -359,9 +359,9 @@
                 {
                   "name": "brain_sap_damage",
                   "values_float": [
-                    75,
-                    150,
-                    225,
+                    90,
+                    160,
+                    230,
                     300
                   ],
                   "is_percentage": false,
@@ -471,10 +471,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    100,
                     120,
+                    130,
                     140,
-                    160
+                    150
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -499,7 +499,9 @@
                       "operation": 2
                     }
                   ],
-                  "values_shard": [],
+                  "values_shard": [
+                    3
+                  ],
                   "values_scepter": []
                 }
               ],
@@ -538,9 +540,9 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                425,
                 500,
-                575,
+                550,
+                600,
                 650
               ],
               "cast_points": [
@@ -629,9 +631,9 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    425,
                     500,
-                    575,
+                    550,
+                    600,
                     650
                   ],
                   "is_percentage": false,

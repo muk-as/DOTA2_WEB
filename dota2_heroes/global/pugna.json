@@ -12,7 +12,7 @@
           "npe_desc_loc": "Drains enemy life to heal himself",
           "str_base": 19,
           "str_gain": 2,
-          "agi_base": 24,
+          "agi_base": 21,
           "agi_gain": 1.3,
           "int_base": 26,
           "int_gain": 5.2,
@@ -35,7 +35,7 @@
           "attack_rate": 1.7,
           "attack_range": 630,
           "projectile_speed": 900,
-          "armor": 4,
+          "armor": 3.5,
           "magic_resistance": 25,
           "movement_speed": 330,
           "turn_rate": 0.6,
@@ -329,7 +329,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_pugna_decrepify_ally_movespeed",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -509,10 +515,7 @@
                 0
               ],
               "cooldowns": [
-                35,
-                35,
-                35,
-                35
+                40
               ],
               "durations": [
                 18,
@@ -701,7 +704,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    35
+                    40
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1033,9 +1036,9 @@
           ],
           "talents": [
             {
-              "id": 5918,
-              "name": "special_bonus_movement_speed_20",
-              "name_loc": "+{s:value} Movement Speed",
+              "id": 1191,
+              "name": "special_bonus_unique_pugna_decrepify_ally_movespeed",
+              "name_loc": "+{s:bonus_bonus_movement_speed_allies}% Decrepify Movement Speed To Allies",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1077,17 +1080,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

@@ -42,7 +42,7 @@
           "sight_range_day": 1800,
           "sight_range_night": 800,
           "max_health": 538,
-          "health_regen": 2.15,
+          "health_regen": 2.65,
           "max_mana": 267,
           "mana_regen": 0.8,
           "abilities": [
@@ -311,7 +311,7 @@
               "id": 6461,
               "name": "pangolier_shield_crash",
               "name_loc": "Shield Crash",
-              "desc_loc": "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging and slowing all enemies in a radius. For each enemy hero hit, he gains an all damage shield for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
+              "desc_loc": "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging and slowing all enemies in a radius. For each enemy hero hit, he gains an all damage shield for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.\n\n Shield Crash cooldown during Rolling Thunder is decreased.",
               "lore_loc": "Only in the midst of his enemies does the Pangolier truly thrive.",
               "notes_loc": [],
               "shard_loc": "",
@@ -321,7 +321,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 2,
+              "damage": 1,
               "immunity": 4,
               "dispellable": 2,
               "max_level": 4,
@@ -399,7 +399,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-                      "value": 100,
+                      "value": 80,
                       "operation": 0
                     }
                   ],
@@ -424,7 +424,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_pangolier_shield_crash_radius",
+                      "value": 125,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -480,23 +486,6 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
-                {
-                  "name": "rolling_thunder_cooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_pangolier_2",
-                      "value": 3,
-                      "operation": 0
-                    }
-                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -1132,7 +1121,7 @@
               "id": 6343,
               "name": "pangolier_gyroshell",
               "name_loc": "Rolling Thunder",
-              "desc_loc": "Pangolier curls into a debuff immune ball with 50%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Pangolier curls into a debuff immune ball with 50%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\n During Rolling Thunder, Shield Crash cooldown is reduced.\n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
               "notes_loc": [
                 "Enemies can be stunned multiple times per use, but cannot be affected a subsequent time until the previous stun duration ends.",
@@ -1309,6 +1298,19 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "shield_crash_cooldown",
+                  "values_float": [
+                    9,
+                    6,
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SHIELD CRASH COOLDOWN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -1737,9 +1739,9 @@
               "item_quality": 0
             },
             {
-              "id": 6463,
-              "name": "special_bonus_unique_pangolier_2",
-              "name_loc": "{s:bonus_rolling_thunder_cooldown}s Shield Crash CD in Ball",
+              "id": 9135,
+              "name": "special_bonus_unique_pangolier_6",
+              "name_loc": "+{s:value}s Rolling Thunder Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1781,6 +1783,17 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -1883,9 +1896,9 @@
               "item_quality": 0
             },
             {
-              "id": 9135,
-              "name": "special_bonus_unique_pangolier_6",
-              "name_loc": "+{s:value}s Rolling Thunder Duration",
+              "id": 1053,
+              "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
+              "name_loc": "+{s:bonus_hero_shield} Shield Crash Barrier Per Hero",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1927,17 +1940,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2197,9 +2199,9 @@
               "item_quality": 0
             },
             {
-              "id": 1053,
-              "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-              "name_loc": "+{s:bonus_hero_shield} Shield Crash Barrier Per Hero",
+              "id": 1196,
+              "name": "special_bonus_unique_pangolier_shield_crash_radius",
+              "name_loc": "+{s:bonus_radius} Shield Crash Radius",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

@@ -348,7 +348,7 @@
               "id": 5632,
               "name": "drow_ranger_wave_of_silence",
               "name_loc": "Gust",
-              "desc_loc": "Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to Drow. Drow Gains Movement Speed for the same duration.",
+              "desc_loc": "Releases a wave that silences and knocks back and reveals invisible enemy units. Knockback distance is relative to how close they are to Drow. Drow Gains Movement Speed for the same duration.",
               "lore_loc": "Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi.",
               "notes_loc": [],
               "shard_loc": "",
@@ -521,7 +521,7 @@
                 {
                   "name": "gust_reveals_invis",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -933,7 +933,7 @@
               "id": 1121,
               "name": "drow_ranger_glacier",
               "name_loc": "Glacier",
-              "desc_loc": "Drow Ranger creates a hill of ice beneath her. While standing on the hill, attackers gain bonus attack range and high ground advantage - they cannot miss and gain flying vision. Drow Ranger additionally gets bonus Multishot arrows per wave while on the hill. The front of the hill obscures vision and cannot be moved through except by Drow Ranger.",
+              "desc_loc": "Drow Ranger creates a hill of ice beneath her. While standing on the hill, attackers gain bonus attack range and high ground advantage - they cannot miss and gain flying vision. Drow Ranger additionally gets bonus Multishot arrows per wave while on the hill. The front of the hill obscures vision and cannot be moved through except by Drow Ranger. Does not interrupt Multishot when cast",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1810,10 +1810,10 @@
               "item_quality": 0
             },
             {
-              "id": 1087,
-              "name": "special_bonus_unique_drow_ranger_gust_invis",
-              "name_loc": "Gust Reveals Invisible Units",
-              "desc_loc": "Does not reveal Wards",
+              "id": 6078,
+              "name": "special_bonus_lifesteal_20",
+              "name_loc": "+{s:value}% Lifesteal",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1854,6 +1854,17 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

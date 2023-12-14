@@ -435,9 +435,9 @@
                   "name": "crit_mult",
                   "values_float": [
                     150,
-                    190,
-                    230,
-                    270
+                    200,
+                    250,
+                    300
                   ],
                   "is_percentage": true,
                   "heading_loc": "CRITICAL DAMAGE:",
@@ -668,7 +668,7 @@
               "id": 6582,
               "name": "mars_bulwark",
               "name_loc": "Bulwark",
-              "desc_loc": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides.<br><br> Can be toggled, removing Mars's ability to attack, and locking the direction he is facing. When active, reduces movement speed and re-directs %redirect_chance%%% of the attack projectiles aimed at Mars's allies towards Mars instead.",
+              "desc_loc": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides.<br><br> Can be toggled, granting phased movement, removing Mars's ability to attack, and locking the direction he is facing. When active, reduces movement speed and re-directs %redirect_chance%%% of the attack projectiles aimed at Mars's allies towards Mars instead.",
               "lore_loc": "Only the very foolish dare to fight fair with the god of war.",
               "notes_loc": [
                 "Redirect only works if the projectile targets are in a cone behind Mars or within 100 range of him."
@@ -821,7 +821,18 @@
                 {
                   "name": "redirect_close_range",
                   "values_float": [
-                    100
+                    200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "attack_redirection_grace_distance",
+                  "values_float": [
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1116,7 +1127,7 @@
                 {
                   "name": "formation_time",
                   "values_float": [
-                    0.3
+                    0.1
                   ],
                   "is_percentage": false,
                   "heading_loc": "FORMATION TIME:",

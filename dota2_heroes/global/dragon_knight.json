@@ -50,11 +50,9 @@
               "id": 5226,
               "name": "dragon_knight_breathe_fire",
               "name_loc": "Breathe Fire",
-              "desc_loc": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.<br><br>While in Dragon Form, applies the corresponding debuff from Corrosive Breath and Frost Breath when in those forms.",
+              "desc_loc": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.<br><br>Applies the debuff from Corrosive Breath and Frost Breath Dragon Form is of the corresponding level.",
               "lore_loc": "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp.",
-              "notes_loc": [
-                "Hits units up to 900 away."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "type": 0,
@@ -313,7 +311,7 @@
               "id": 5227,
               "name": "dragon_knight_dragon_tail",
               "name_loc": "Dragon Tail",
-              "desc_loc": "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing minor damage.  When in Elder Dragon Form, the cast range increases to %dragon_cast_range%.",
+              "desc_loc": "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing damage based on their enemy max HP.  When in Elder Dragon Form, the cast range increases to %dragon_cast_range%.",
               "lore_loc": "Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat.",
               "notes_loc": [],
               "shard_loc": "",
@@ -349,10 +347,10 @@
                 0
               ],
               "damages": [
-                70,
-                100,
-                130,
-                160
+                0,
+                0,
+                0,
+                0
               ],
               "mana_costs": [
                 70,
@@ -373,6 +371,37 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN DURATION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dragon_knight_2",
+                      "value": 0.4,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "damage",
+                  "values_float": [
+                    70,
+                    100,
+                    130,
+                    160
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -400,16 +429,19 @@
                   "values_scepter": []
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "dragon_aoe",
                   "values_float": [
-                    70,
-                    100,
-                    130,
-                    160
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dragon_knight_8",
+                      "value": 400,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -1067,8 +1099,8 @@
                 {
                   "name": "frost_bonus_movement_speed",
                   "values_float": [
-                    -40,
-                    -40,
+                    0,
+                    0,
                     -40,
                     -60
                   ],
@@ -1081,8 +1113,8 @@
                 {
                   "name": "frost_bonus_attack_speed",
                   "values_float": [
-                    -40,
-                    -40,
+                    0,
+                    0,
                     -40,
                     -60
                   ],
@@ -1095,6 +1127,9 @@
                 {
                   "name": "frost_duration",
                   "values_float": [
+                    0,
+                    0,
+                    3,
                     3
                   ],
                   "is_percentage": false,
@@ -1106,7 +1141,7 @@
                 {
                   "name": "frost_aoe",
                   "values_float": [
-                    300
+                    350
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1562,7 +1597,7 @@
             {
               "id": 6635,
               "name": "special_bonus_unique_dragon_knight_2",
-              "name_loc": "+{s:value}s Dragon Tail Stun",
+              "name_loc": "+{s:bonus_stun_duration}s Dragon Tail Stun",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1604,17 +1639,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    0.4
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2336,7 +2360,7 @@
             {
               "id": 742,
               "name": "special_bonus_unique_dragon_knight_8",
-              "name_loc": "+{s:value} AoE Dragon Tail During Elder Dragon Form",
+              "name_loc": "+{s:bonus_dragon_aoe} AoE Dragon Tail During Elder Dragon Form",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2378,17 +2402,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    400
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

@@ -50,7 +50,7 @@
               "id": 5421,
               "name": "shadow_demon_disruption",
               "name_loc": "Disruption",
-              "desc_loc": "Banishes the targeted unit from the battlefield for a short duration.  Upon returning, two illusions of the banished unit are created under Shadow Demon's control.",
+              "desc_loc": "Banishes the targeted unit from the battlefield for a short duration.  Upon returning, two illusions of the banished unit with bonus base damage are created under Shadow Demon's control.",
               "lore_loc": "The pain of deception comes not while it happens, but when it is revealed.",
               "notes_loc": [],
               "shard_loc": "",
@@ -128,10 +128,10 @@
                 {
                   "name": "illusion_outgoing_damage",
                   "values_float": [
+                    -80,
                     -70,
-                    -55,
-                    -40,
-                    -25
+                    -60,
+                    -50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -142,13 +142,27 @@
                 {
                   "name": "illusion_outgoing_tooltip",
                   "values_float": [
+                    20,
                     30,
-                    45,
-                    60,
-                    75
+                    40,
+                    50
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "illusion_flat_damage",
+                  "values_float": [
+                    40,
+                    50,
+                    60,
+                    70
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS BASE DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -234,17 +248,6 @@
                   "name": "AbilityCastPoint",
                   "values_float": [
                     0.3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -601,7 +604,7 @@
                 {
                   "name": "speed",
                   "values_float": [
-                    1000
+                    1200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

@@ -35,7 +35,7 @@
           "attack_rate": 1.5,
           "attack_range": 150,
           "projectile_speed": 900,
-          "armor": 2.8333335,
+          "armor": 3.8333335,
           "magic_resistance": 25,
           "movement_speed": 325,
           "turn_rate": 0.6,
@@ -415,6 +415,23 @@
                   "values_scepter": []
                 },
                 {
+                  "name": "regen",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_7",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     550
@@ -525,7 +542,7 @@
               "id": 5587,
               "name": "abaddon_frostmourne",
               "name_loc": "Curse of Avernus",
-              "desc_loc": "Abaddon strikes an enemy, slowing the target's movement speed. If the target gets hit %hit_count% times, they become affected by a chilling curse causing them to be silenced and slowed, and all attacks against them gain an attack speed boost.",
+              "desc_loc": "Abaddon strikes an enemy, slowing the target's movement speed. If the target gets hit %hit_count% times, they become affected by a chilling curse causing them to take damage over time, be silenced and slowed, and all attacks against them gain an attack speed boost. Damage over time component to buildings is reduced by %tower_dps_pct%%%.",
               "lore_loc": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated.",
               "notes_loc": [],
               "shard_loc": "Causes Mist Coil to deal Abaddon's attack damage on impact. Increases Curse of Avernus base slow.",
@@ -535,7 +552,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
+              "damage": 2,
               "immunity": 4,
               "dispellable": 2,
               "max_level": 4,
@@ -651,6 +668,48 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "CURSE ATTACK SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "curse_dps",
+                  "values_float": [
+                    30,
+                    40,
+                    50,
+                    60
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CURSE DPS:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_5",
+                      "value": 80,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "tower_dps_pct",
+                  "values_float": [
+                    70
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "curse_interval",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -1164,9 +1223,9 @@
               "item_quality": 0
             },
             {
-              "id": 6115,
-              "name": "special_bonus_strength_7",
-              "name_loc": "+{s:value} Strength",
+              "id": 1165,
+              "name": "special_bonus_unique_abaddon_7",
+              "name_loc": "Aphotic Shield provides +{s:bonus_regen}HP Regen",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1208,17 +1267,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    7
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -1321,9 +1369,9 @@
               "item_quality": 0
             },
             {
-              "id": 6396,
-              "name": "special_bonus_attack_damage_55",
-              "name_loc": "+{s:value} Damage",
+              "id": 7340,
+              "name": "special_bonus_unique_abaddon_5",
+              "name_loc": "+{s:bonus_curse_dps} Curse of Avernus DPS",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1365,17 +1413,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    55
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

@@ -10,8 +10,8 @@
           "bio_loc": "Rizzrack could still hear the screams in his mind.  He worked, frantically turning wrenches, twisting screws, building and carving and forging.  Sleep eluded him; he only built.  Months had passed since he had shut himself in his uncle's workshop, and his deliverance was nearly complete.  He rubbed his back as his eyes drifted shut, and saw a blanket of flowers floating on the placid waves of Augury Bay before exploding into a cloud of pollen that silenced lives as it seized the lungs.  He woke with a choking start.  For hours the rhythmic sound of a whetstone filled the shop as he sharpened a set of massive blades, his mind filled with images of strangling vines garroting neighbors, enwrapping homes.  The flooding of Augury Bay had been nothing compared to the violent horrors the waters left to take root beyond the city walls.\r\n\t\t\t\t<br><br>But the saw-suit would make him strong and safe he thought, allowing himself this sliver of hope before the full might of his fear crashed into his fading mind.  Branches and bark and blood.  When the city fell, Rizzrack fled trees that walked, and fought, and killed.  Trees had shattered the gates and swarmed into the city.  Trees had crushed and thrashed and stomped the last that Augury Bay could muster in defense, and stalked the few fleeing refugees.  In addled silence Rizzrack unspooled the thick chain from the suit's arm, his hands quaking as he inspected each link and ran a trembling finger along the claw attached at its end.  The saw-suit was ready.\r\n\t\t\t\t<br><br>With his hand trembling he sparked the bladed machine to life.  Terror drove him, terror of what awaited him and of what he would have to face to have any hope of calming his mind.  As the saw-suit shuddered to life he knew he must face this fear, and he knew he wouldn't like it one bit.",
           "hype_loc": "Elusive and unpredictable, Timbersaw <b>chops through the forest</b> to face his foes. Unleashing an arsenal of <b>saw blades</b> to cut enemies to pieces, he rides his chain into nearby trees and batters foes along the way.",
           "npe_desc_loc": "Chops through the forest to face his foes",
-          "str_base": 25,
-          "str_gain": 3.2,
+          "str_base": 27,
+          "str_gain": 3.5,
           "agi_base": 16,
           "agi_gain": 1.3,
           "int_base": 23,
@@ -41,8 +41,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 670,
-          "health_regen": 2.75,
+          "max_health": 714,
+          "health_regen": 2.95,
           "max_mana": 351,
           "mana_regen": 1.65,
           "abilities": [
@@ -530,7 +530,7 @@
               "id": 5526,
               "name": "shredder_reactive_armor",
               "name_loc": "Reactive Armor",
-              "desc_loc": "Each time Timbersaw is attacked, he gains increased health regen and armor. Heroes grant double the amount.",
+              "desc_loc": "Each time Timbersaw is attacked, he gains increased health regen and armor. Hero attacks are counted as %stacks_per_hero_attack%x the amount.",
               "lore_loc": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
               "notes_loc": [],
               "shard_loc": "",
@@ -595,21 +595,33 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS HP REGEN:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_timbersaw_reactive_armor_regen_per_stack",
+                      "value": 0.2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
                 {
                   "name": "stack_limit",
                   "values_float": [
-                    10,
-                    20,
-                    30,
-                    40
+                    15,
+                    24,
+                    33,
+                    42
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX STACKS:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_timbersaw_2",
+                      "value": 6,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -624,6 +636,23 @@
                   "is_percentage": false,
                   "heading_loc": "STACK DURATION:",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "stacks_per_hero_attack",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_timbersaw_2",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -1645,9 +1674,9 @@
           ],
           "talents": [
             {
-              "id": 5959,
-              "name": "special_bonus_hp_200",
-              "name_loc": "+{s:value} Health",
+              "id": 1185,
+              "name": "special_bonus_unique_timbersaw_reactive_armor_regen_per_stack",
+              "name_loc": "+{s:bonus_bonus_hp_regen} Reactive Armor Regeneration Per Stack",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1689,17 +1718,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2107,7 +2125,7 @@
             {
               "id": 6948,
               "name": "special_bonus_unique_timbersaw_2",
-              "name_loc": "+{s:value} Reactive Armor Stacks and Duration",
+              "name_loc": "+{s:bonus_stack_limit} Max / +{s:bonus_stacks_per_hero_attack} Hero Attack Reactive Armor Stacks",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2149,17 +2167,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

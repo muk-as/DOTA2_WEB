@@ -42,7 +42,7 @@
           "sight_range_day": 1800,
           "sight_range_night": 800,
           "max_health": 582,
-          "health_regen": 4.1000004,
+          "health_regen": 3.1000001,
           "max_mana": 267,
           "mana_regen": 0.8,
           "abilities": [
@@ -383,7 +383,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_spectre_2",
+                      "value": 12,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -394,7 +400,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_spectre_desolate_radius",
+                      "value": 100,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -510,7 +522,7 @@
                 "Illusions don't get this ability.",
                 "Damage is reflected before reductions, and is returned as the same damage type."
               ],
-              "shard_loc": "Dispersion can be activated to increase damage reflected by %activation_bonus_pct%%% for %activation_duration%s. Cooldown %activation_cooldown%. Manacost %activation_manacost%.",
+              "shard_loc": "Dispersion can be activated to increase damage dealt by reflection by %activation_bonus_pct%%% for %activation_duration%s. Cooldown %activation_cooldown%. Manacost %activation_manacost%.",
               "scepter_loc": "",
               "type": 0,
               "behavior": "2",
@@ -571,7 +583,7 @@
                 {
                   "name": "min_radius",
                   "values_float": [
-                    400
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "MIN RADIUS:",
@@ -771,7 +783,7 @@
                 0
               ],
               "cooldowns": [
-                180
+                160
               ],
               "durations": [
                 0
@@ -934,7 +946,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    180
+                    160
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1339,9 +1351,9 @@
               "item_quality": 0
             },
             {
-              "id": 5921,
-              "name": "special_bonus_all_stats_5",
-              "name_loc": "+{s:value} All Stats",
+              "id": 1184,
+              "name": "special_bonus_unique_spectre_desolate_radius",
+              "name_loc": "-{s:bonus_radius} Desolate Ally Radius",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1383,17 +1395,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -1498,7 +1499,7 @@
             {
               "id": 6900,
               "name": "special_bonus_unique_spectre_2",
-              "name_loc": "+{s:value} Desolate Damage",
+              "name_loc": "+{s:bonus_bonus_damage} Desolate Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1540,17 +1541,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    12
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

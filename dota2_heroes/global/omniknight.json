@@ -693,22 +693,22 @@
               "id": 5266,
               "name": "omniknight_guardian_angel",
               "name_loc": "Guardian Angel",
-              "desc_loc": "Omniknight calls upon a Guardian Angel that grants allies immunity from physical damage.",
+              "desc_loc": "Omniknight calls upon a Guardian Angel that grants a target ally immunity from physical damage.",
               "lore_loc": "The All Seeing One casts down his protection over those that Purist calls friend.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Increases duration, provides Status Resist, radius becomes global and affects buildings.",
+              "scepter_loc": "Grants one extra charge and global cast range. Always casts a Guardian Angel on self as well as the selected target",
               "type": 1,
-              "behavior": "4",
-              "target_team": 0,
-              "target_type": 0,
+              "behavior": "8",
+              "target_team": 1,
+              "target_type": 1,
               "flags": 0,
               "damage": 0,
               "immunity": 1,
               "dispellable": 2,
               "max_level": 3,
               "cast_ranges": [
-                0
+                900
               ],
               "cast_points": [
                 0.4
@@ -717,9 +717,7 @@
                 0
               ],
               "cooldowns": [
-                160,
-                140,
-                120
+                0.5
               ],
               "durations": [
                 0
@@ -731,9 +729,9 @@
                 0
               ],
               "mana_costs": [
+                100,
                 150,
-                200,
-                250
+                200
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -752,50 +750,17 @@
                   "values_scepter": []
                 },
                 {
-                  "name": "radius",
-                  "values_float": [
-                    1200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
-                {
-                  "name": "duration_scepter",
-                  "values_float": [
-                    6,
-                    7,
-                    8
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
-                {
-                  "name": "scepter_status_resist",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "STATUS RESIST:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    0
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": []
+                  "values_scepter": [
+                    0
+                  ]
                 },
                 {
                   "name": "AbilityChannelTime",
@@ -833,31 +798,41 @@
                 {
                   "name": "AbilityCharges",
                   "values_float": [
-                    0
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": []
+                  "values_scepter": [
+                    1
+                  ]
                 },
                 {
                   "name": "AbilityChargeRestoreTime",
                   "values_float": [
-                    0
+                    80,
+                    70,
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_omniknight_7",
+                      "value": 15,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
+                    100,
                     150,
-                    200,
-                    250
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -868,9 +843,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    160,
-                    140,
-                    120
+                    0.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1367,7 +1340,7 @@
             {
               "id": 501,
               "name": "special_bonus_unique_omniknight_7",
-              "name_loc": "-{s:value}s Guardian Angel Cooldown",
+              "name_loc": "-{s:bonus_AbilityChargeRestoreTime}s Guardian Angel Charge Restore Time",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1409,17 +1382,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    30
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

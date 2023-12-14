@@ -35,7 +35,7 @@
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
-          "armor": 2.3333335,
+          "armor": 3.3333335,
           "magic_resistance": 25,
           "movement_speed": 315,
           "turn_rate": 0.6,
@@ -117,6 +117,9 @@
                 {
                   "name": "bonus_armor",
                   "values_float": [
+                    16,
+                    19,
+                    22,
                     25
                   ],
                   "is_percentage": false,
@@ -788,7 +791,7 @@
               "id": 5010,
               "name": "axe_culling_blade",
               "name_loc": "Culling Blade",
-              "desc_loc": "Axe spots a weakness and strikes, dealing pure damage. When an enemy hero is killed with Culling Blade, its cooldown is reset, Axe gains bonus armor permanently and all nearby allied units gain bonus movement speed. ",
+              "desc_loc": "Axe spots a weakness and strikes, dealing pure damage. When an enemy hero is killed with Culling Blade, its cooldown is reset, Axe gains bonus armor permanently and all nearby allied units gain bonus movement speed and armor.",
               "lore_loc": "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat.",
               "notes_loc": [
                 "Culling Blade death cannot be prevented with other abilities like Shallow Grave."
@@ -868,14 +871,14 @@
                   "values_scepter": []
                 },
                 {
-                  "name": "atk_speed_bonus",
+                  "name": "armor_bonus",
                   "values_float": [
                     20,
-                    30,
-                    40
+                    25,
+                    30
                   ],
                   "is_percentage": false,
-                  "heading_loc": "KILL ATTACK SPEED BONUS:",
+                  "heading_loc": "ARMOR BONUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -887,7 +890,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "KILL SPEED DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_axe_culling_blade_speed_duration",
+                      "value": 4,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -1040,9 +1049,9 @@
           ],
           "talents": [
             {
-              "id": 974,
-              "name": "special_bonus_unique_axe_7",
-              "name_loc": "+{s:bonus_bonus_armor} Berserker's Call Armor",
+              "id": 1189,
+              "name": "special_bonus_unique_axe_culling_blade_speed_duration",
+              "name_loc": "+{s:bonus_speed_duration}s Culling Blade Speed Bonus Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

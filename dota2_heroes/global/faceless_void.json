@@ -11,7 +11,7 @@
           "hype_loc": "Time is everything to Faceless Void. He speeds time to <b>dash between locations</b>, manipulates it to <b>dodge attacks</b>, stops it in a large area to devastate his foes, and given enough of it to gather resources, he can make himself unbelievably powerful.",
           "npe_desc_loc": "Can freeze his enemies in time",
           "str_base": 20,
-          "str_gain": 2.4,
+          "str_gain": 2.6,
           "agi_base": 19,
           "agi_gain": 3,
           "int_base": 15,
@@ -55,7 +55,7 @@
               "notes_loc": [
                 "Faceless Void is invulnerable while using Time Walk."
               ],
-              "shard_loc": "Increases range by %shard_bonus_range%.",
+              "shard_loc": "Increases range",
               "scepter_loc": "Applies a Time Lock to all units at the landing destination.",
               "type": 0,
               "behavior": "525328",
@@ -118,7 +118,9 @@
                   "is_percentage": false,
                   "heading_loc": "RANGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    150
+                  ],
                   "values_scepter": []
                 },
                 {
@@ -128,31 +130,28 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BACKTRACK DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_faceless_void_7",
+                      "value": 0.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
                 {
-                  "name": "radius_scepter",
+                  "name": "radius",
                   "values_float": [
-                    400
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "TIME LOCK RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": []
-                },
-                {
-                  "name": "shard_bonus_range",
-                  "values_float": [
-                    150
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
+                  "values_scepter": [
+                    400
+                  ]
                 },
                 {
                   "name": "AbilityCastRange",
@@ -241,7 +240,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_faceless_void_5",
+                      "value": 1,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 }
@@ -346,7 +351,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_faceless_void_8",
-                      "value": 10,
+                      "value": 12,
                       "operation": 0
                     }
                   ],
@@ -388,7 +393,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_faceless_void_6",
-                      "value": 6,
+                      "value": 7,
                       "operation": 0
                     }
                   ],
@@ -1087,7 +1092,7 @@
             {
               "id": 856,
               "name": "special_bonus_unique_faceless_void_6",
-              "name_loc": "+{s:bonus_damage_per_stack} Time Dilation DPS per cooldown",
+              "name_loc": "+{s:bonus_damage_per_stack} Time Dilation DPS Per Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1233,7 +1238,7 @@
             {
               "id": 867,
               "name": "special_bonus_unique_faceless_void_7",
-              "name_loc": "+{s:value}s Time Walk Backtrack Duration",
+              "name_loc": "+{s:bonus_backtrack_duration}s Time Walk Backtrack Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1275,17 +1280,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    0.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -1850,7 +1844,7 @@
             {
               "id": 7388,
               "name": "special_bonus_unique_faceless_void_5",
-              "name_loc": "-{s:value}s Time Walk Cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Time Walk Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1892,17 +1886,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

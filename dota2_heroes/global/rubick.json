@@ -15,7 +15,7 @@
           "agi_base": 23,
           "agi_gain": 2.5,
           "int_base": 25,
-          "int_gain": 3.1,
+          "int_gain": 3.7,
           "primary_attr": 2,
           "complexity": 3,
           "attack_capability": 2,
@@ -83,10 +83,10 @@
                 0
               ],
               "cooldowns": [
-                28,
-                26,
                 24,
-                22
+                21,
+                18,
+                15
               ],
               "durations": [
                 0
@@ -164,7 +164,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX THROW DISTANCE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_rubick",
+                      "value": 400,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -182,7 +188,7 @@
                 {
                   "name": "shard_max_land_distance_bonus_pct",
                   "values_float": [
-                    50
+                    35
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -295,14 +301,20 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    28,
-                    26,
                     24,
-                    22
+                    21,
+                    18,
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_rubick_4",
+                      "value": 4,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 }
@@ -802,7 +814,7 @@
                 {
                   "name": "projectile_speed",
                   "values_float": [
-                    1200
+                    1500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1714,9 +1726,9 @@
               "item_quality": 0
             },
             {
-              "id": 6041,
-              "name": "special_bonus_unique_rubick",
-              "name_loc": "+{s:value} Telekinesis Land Distance",
+              "id": 6864,
+              "name": "special_bonus_unique_rubick_4",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Telekinesis Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1758,17 +1770,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    240
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -1871,9 +1872,9 @@
               "item_quality": 0
             },
             {
-              "id": 6864,
-              "name": "special_bonus_unique_rubick_4",
-              "name_loc": "-{s:value}s Telekinesis Cooldown",
+              "id": 6041,
+              "name": "special_bonus_unique_rubick",
+              "name_loc": "+{s:bonus_max_land_distance} Telekinesis Land Distance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1915,17 +1916,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    12
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

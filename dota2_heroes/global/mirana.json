@@ -15,7 +15,7 @@
           "agi_base": 24,
           "agi_gain": 2.5,
           "int_base": 22,
-          "int_gain": 1.2,
+          "int_gain": 1.4,
           "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 2,
@@ -107,7 +107,7 @@
                 {
                   "name": "starfall_radius",
                   "values_float": [
-                    650
+                    675
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -435,6 +435,40 @@
                   "values_scepter": []
                 },
                 {
+                  "name": "extra_arrows",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_2",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "extra_arrows_angle",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_2",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
                   "name": "#AbilityDamage",
                   "values_float": [
                     60,
@@ -559,7 +593,7 @@
               "desc_loc": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts %leap_bonus_duration% seconds.",
               "lore_loc": "None can fail to recognize Mirana's iconic white beast in the heat of battle.",
               "notes_loc": [],
-              "shard_loc": "Upon landing, launches a projectile along Sagan's leap path, dealing damage and slowing units affected. Leap does not break Moonlight Shadow invisibility.<br><br> Can be put on alt-cast to choose the distance and facing direction of the jump. <br><br>Grants %shard_bonus_charges% bonus charge(s).",
+              "shard_loc": "Upon landing, launches a projectile along Sagan's leap path, dealing damage and slowing units affected and guarantees them to be hit with a secondary Starstorm if that spell is cast. Leap does not break Moonlight Shadow invisibility.<br><br> Can be put on alt-cast to choose the distance and facing direction of the jump. <br><br>Grants %shard_bonus_charges% bonus charge(s).",
               "scepter_loc": "",
               "type": 0,
               "behavior": "134742016",
@@ -1852,9 +1886,9 @@
               "item_quality": 0
             },
             {
-              "id": 6253,
-              "name": "special_bonus_attack_damage_45",
-              "name_loc": "+{s:value} Damage",
+              "id": 1194,
+              "name": "special_bonus_20_crit_2",
+              "name_loc": "+{s:crit_chance}% Critical Strike ({s:crit_multiplier}%)",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1897,9 +1931,20 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "value",
+                  "name": "crit_chance",
                   "values_float": [
-                    45
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "crit_multiplier",
+                  "values_float": [
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2011,8 +2056,8 @@
             {
               "id": 6242,
               "name": "special_bonus_unique_mirana_2",
-              "name_loc": "+{s:value} Multishot Sacred Arrows",
-              "desc_loc": "The extra arrows are launched in a cone shape, 30 degrees to the left and right of the original arrow, and cannot hit the same target.",
+              "name_loc": "+{s:bonus_extra_arrows} Multishot Sacred Arrows",
+              "desc_loc": "The extra arrows are launched in a cone shape, {s:bonus_extra_arrows_angle} degrees to the left and right of the original arrow, and cannot hit the same target.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

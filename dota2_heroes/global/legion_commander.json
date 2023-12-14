@@ -53,7 +53,7 @@
               "desc_loc": "Turns the enemies' numbers against them, dealing damage per unit or per hero and granting you bonus attack speed . Deals bonus damage to illusions and summoned units as a percent of their current health. Can be cast during Duel.",
               "lore_loc": "The archers of Stonehall are ready at Tresdin's command.",
               "notes_loc": [],
-              "shard_loc": "Overwhelming Odds now grants armor for every unit hit and has increased duration.",
+              "shard_loc": "Gives %duel_radius_bonus% bonus radius when cast during Duel.",
               "scepter_loc": "",
               "type": 0,
               "behavior": "134217764",
@@ -215,7 +215,7 @@
                     1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ARMOR PER CREEP:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -226,7 +226,7 @@
                     5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ARMOR PER HERO:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -237,9 +237,22 @@
                     8
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DURATION:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "duel_radius_bonus",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    250
+                  ],
                   "values_scepter": []
                 },
                 {
@@ -421,7 +434,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS MOVE SPEED:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_pta_movespeed",
+                      "value": 8,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -435,7 +454,30 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "HP REGEN:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_6",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_5",
+                      "value": 250,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -747,7 +789,7 @@
                 "Duels will end if the units are pushed 2000 units apart.",
                 "Winning a Duel automatically casts Press the Attack on yourself."
               ],
-              "shard_loc": "",
+              "shard_loc": "Increases Duel damage by %shard_duel_damage_bonus% per win. Applies retroactively.",
               "scepter_loc": "Increases Duel duration and reduces cooldown.  Legion Commander and her opponent take reduced damage from other sources.",
               "type": 1,
               "behavior": "8",
@@ -830,7 +872,9 @@
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    8
+                  ],
                   "values_scepter": []
                 },
                 {
@@ -851,6 +895,17 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "shard_duel_damage_bonus",
+                  "values_float": [
+                    8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -952,7 +1007,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": true,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "item_cost": 0,
@@ -1111,9 +1166,9 @@
               "item_quality": 0
             },
             {
-              "id": 6218,
-              "name": "special_bonus_unique_legion_commander",
-              "name_loc": "+{s:value} Duel Bonus Damage",
+              "id": 1176,
+              "name": "special_bonus_unique_legion_commander_pta_movespeed",
+              "name_loc": "+{s:bonus_move_speed}% Press The Attack Movement Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1155,17 +1210,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    8
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -1270,7 +1314,7 @@
             {
               "id": 463,
               "name": "special_bonus_unique_legion_commander_6",
-              "name_loc": "+{s:value} Press The Attack HP Regen",
+              "name_loc": "+{s:bonus_hp_regen} Press The Attack HP Regen",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1312,17 +1356,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    30
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -1573,7 +1606,7 @@
             {
               "id": 7395,
               "name": "special_bonus_unique_legion_commander_5",
-              "name_loc": "{s:value} AoE Press The Attack",
+              "name_loc": "{s:bonus_radius} AoE Press The Attack",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1615,17 +1648,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    250
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

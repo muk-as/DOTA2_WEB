@@ -309,10 +309,10 @@
                 8
               ],
               "damages": [
-                85,
-                100,
-                115,
-                130
+                0,
+                0,
+                0,
+                0
               ],
               "mana_costs": [
                 40
@@ -320,6 +320,20 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "damage",
+                  "values_float": [
+                    85,
+                    100,
+                    115,
+                    130
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
                 {
                   "name": "wave_speed",
                   "values_float": [
@@ -393,16 +407,19 @@
                   "values_scepter": []
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "steal_pct",
                   "values_float": [
-                    85,
-                    100,
-                    115,
-                    130
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -718,7 +735,7 @@
               "id": 5125,
               "name": "vengefulspirit_nether_swap",
               "name_loc": "Nether Swap",
-              "desc_loc": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target. Enemy Swapped units take damage. Allied swapped units receive less damage for a short duration.",
+              "desc_loc": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target. Enemy Swapped units take damage. Vengeful Spirit and allied swapped units gain a barrier equal to the damage dealt.",
               "lore_loc": "Martyrdom is a small price to pay for vengeance.",
               "notes_loc": [
                 "Works on Spell Immune units.",
@@ -772,16 +789,14 @@
                 {
                   "name": "damage_reduction",
                   "values_float": [
-                    30,
-                    40,
-                    50
+                    0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "DAMAGE REDUCTION:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_vengeful_spirit_swap_damage_reduction",
-                      "value": 40,
+                      "value": 60,
                       "operation": 0
                     }
                   ],
@@ -791,10 +806,10 @@
                 {
                   "name": "damage_reduction_duration",
                   "values_float": [
-                    3
+                    10
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE REDUCTION DURATION:",
+                  "heading_loc": "SHIELD DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -802,10 +817,12 @@
                 {
                   "name": "damage",
                   "values_float": [
-                    50
+                    150,
+                    300,
+                    450
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE:",
+                  "heading_loc": "DAMAGE/SHIELD:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_vengeful_spirit_swap_damage",
@@ -1265,7 +1282,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    -4
+                    -5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1689,9 +1706,9 @@
               "item_quality": 0
             },
             {
-              "id": 790,
-              "name": "special_bonus_unique_vengeful_spirit_9",
-              "name_loc": "-{s:value}s Nether Swap Cooldown",
+              "id": 1197,
+              "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
+              "name_loc": "Wave Of Terror Steals {s:bonus_steal_pct}% Of Reduced Damage And Armor",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1733,17 +1750,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    15
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2003,9 +2009,9 @@
               "item_quality": 0
             },
             {
-              "id": 1233,
-              "name": "special_bonus_unique_vengeful_spirit_swap_damage_reduction",
-              "name_loc": "+{s:bonus_damage_reduction}% Nether Swap Damage Reduction",
+              "id": 790,
+              "name": "special_bonus_unique_vengeful_spirit_9",
+              "name_loc": "-{s:value}s Nether Swap Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2047,6 +2053,17 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    18
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

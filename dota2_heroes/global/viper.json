@@ -331,7 +331,7 @@
               "id": 5219,
               "name": "viper_nethertoxin",
               "name_loc": "Nethertoxin",
-              "desc_loc": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage over time based on how long they remain in it. Disables passives of affected units.",
+              "desc_loc": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage over time based on how long they remain in it. Units in it have their attack speed slowed.",
               "lore_loc": "Poison from the Nether Reaches turns wounds into fatalities, and fatigue into death.",
               "notes_loc": [],
               "shard_loc": "",
@@ -418,6 +418,20 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "attack_slow",
+                  "values_float": [
+                    30,
+                    40,
+                    50,
+                    60
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ATTACK SPEED SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -661,7 +675,7 @@
                   "values_scepter": []
                 },
                 {
-                  "name": "max_range_tooltip",
+                  "name": "max_range",
                   "values_float": [
                     1400
                   ],
@@ -1023,7 +1037,7 @@
               "id": 5221,
               "name": "viper_viper_strike",
               "name_loc": "Viper Strike",
-              "desc_loc": "Viper slows the targeted enemy unit's movement and attack speed while also dealing poison damage over time.  The slowing effect reduces over the duration of the poison.",
+              "desc_loc": "Viper slows the targeted enemy unit's movement and attack speed while also disabling their passives and dealing poison damage over time.  The slowing effect reduces over the duration of the poison.",
               "lore_loc": "Once used to slay his sadistic summoner, the most powerful of Netherdrake infections spreads through the veins of those foolish enough to cross Viper.",
               "notes_loc": [],
               "shard_loc": "",
@@ -1043,7 +1057,7 @@
                 900
               ],
               "cast_points": [
-                0.3
+                0.2
               ],
               "channel_times": [
                 0
@@ -1103,8 +1117,8 @@
                 {
                   "name": "bonus_movement_speed",
                   "values_float": [
-                    -40,
                     -60,
+                    -70,
                     -80
                   ],
                   "is_percentage": true,
@@ -1197,7 +1211,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0.3
+                    0.2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

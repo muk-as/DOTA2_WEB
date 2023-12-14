@@ -295,7 +295,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_terrorblade_2",
-                      "value": 3,
+                      "value": 4,
                       "operation": 2
                     }
                   ],
@@ -605,7 +605,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_terrorblade_3",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 },
@@ -779,7 +785,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_terrorblade_metamorphosis_cooldown",
+                      "value": 20,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": []
                 }
@@ -800,7 +812,7 @@
               "id": 699,
               "name": "terrorblade_demon_zeal",
               "name_loc": "Demon Zeal",
-              "desc_loc": "Costs part of Terrorblade's current HP to cast, providing Terrorblade and nearby illusions bonus movement and attack speed.  Can't be cast while in Metamorphosis and Metamorphosis will remove Demon Zeal",
+              "desc_loc": "Costs part of Terrorblade's current HP to cast, providing Terrorblade and nearby illusions bonus movement and attack speed. Reflection illusions gain %reflection_pct%%% of the bonuses. Can't be cast while in Metamorphosis and Metamorphosis will remove Demon Zeal",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -881,6 +893,17 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "CURRENT HEALTH COST:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": []
+                },
+                {
+                  "name": "reflection_pct",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": []
@@ -1651,9 +1674,9 @@
               "item_quality": 0
             },
             {
-              "id": 6311,
-              "name": "special_bonus_hp_275",
-              "name_loc": "+{s:value} Health",
+              "id": 1186,
+              "name": "special_bonus_unique_terrorblade_metamorphosis_cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Metamorphosis Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1695,17 +1718,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    275
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2416,7 +2428,7 @@
             {
               "id": 6943,
               "name": "special_bonus_unique_terrorblade_3",
-              "name_loc": "+{s:value}s Metamorphosis Duration",
+              "name_loc": "+{s:bonus_duration}s Metamorphosis Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2458,17 +2470,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": []
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
