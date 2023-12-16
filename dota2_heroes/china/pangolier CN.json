@@ -42,7 +42,7 @@
       "sight_range_day": 1800,
       "sight_range_night": 800,
       "max_health": 538,
-      "health_regen": 2.15,
+      "health_regen": 2.65,
       "max_mana": 267,
       "mana_regen": 0.8,
       "abilities": [
@@ -315,7 +315,7 @@
           "id": 6461,
           "name": "pangolier_shield_crash",
           "name_loc": "甲盾冲击",
-          "desc_loc": "石鳞剑士跃入空中，再落向当前位置的前方地面造成冲击，对范围内所有敌人造成伤害和减速。冲击时每击中一名敌方英雄，他就能在短时间内获得一定数值的全伤害护盾。\n\n地雷滚滚过程中使用甲盾冲击将会保持前进，并且可以使地雷滚滚跨过地形障碍。",
+          "desc_loc": "石鳞剑士跃入空中，再落向当前位置的前方地面造成冲击，对范围内所有敌人造成伤害和减速。冲击时每击中一名敌方英雄，他就能在短时间内获得一定数值的全伤害护盾。\n\n地雷滚滚过程中使用甲盾冲击将会保持前进，并且可以使地雷滚滚跨过地形障碍。\n\n地雷滚滚期间甲盾冲击的冷却时间会有所减少。",
           "lore_loc": "只有被敌人层层包围，石鳞剑士才能真正地一展雄风。",
           "notes_loc": [],
           "shard_loc": "",
@@ -325,7 +325,7 @@
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 2,
+          "damage": 1,
           "immunity": 4,
           "dispellable": 2,
           "max_level": 4,
@@ -403,7 +403,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-                  "value": 100,
+                  "value": 80,
                   "operation": 0
                 }
               ],
@@ -428,7 +428,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_pangolier_shield_crash_radius",
+                  "value": 125,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -484,23 +490,6 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "rolling_thunder_cooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_pangolier_2",
-                  "value": 3,
-                  "operation": 0
-                }
-              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -1154,7 +1143,7 @@
           "id": 6343,
           "name": "pangolier_gyroshell",
           "name_loc": "地雷滚滚",
-          "desc_loc": "石鳞剑士卷成一个减益免疫状态的圆球，拥有50%%魔法抗性加成，隆隆地向前滚去。滚动时移动速度提升，可以碾过树木，但是转身速率降低。敌人被击中后会被击退，然后受到伤害和眩晕。\n\n与地形障碍相撞后会暂时停止滚动，并且滚动方向变反。\n\n驱散类型：弱驱散",
+          "desc_loc": "石鳞剑士卷成一个减益免疫状态的圆球，拥有50%%魔法抗性加成，隆隆地向前滚去。滚动时移动速度提升，可以碾过树木，但是转身速率降低。敌人被击中后会被击退，然后受到伤害和眩晕。\n\n与地形障碍相撞后会暂时停止滚动，并且滚动方向变反。\n\n地雷滚滚期间，甲盾冲击的冷却时间会有所减少。\n\n驱散类型：弱驱散",
           "lore_loc": "他的祖先只能找到安全感的地方，石鳞剑士却看见了机遇……",
           "notes_loc": [
             "敌人在技能期间可以多次被眩晕，但是只有上一次眩晕结束后才会再次被眩晕。",
@@ -1331,6 +1320,19 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "shield_crash_cooldown",
+              "values_float": [
+                9,
+                6,
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "甲盾冲击冷却时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -1763,9 +1765,9 @@
           "item_quality": 0
         },
         {
-          "id": 6463,
-          "name": "special_bonus_unique_pangolier_2",
-          "name_loc": "滚动时甲盾冲击{s:bonus_rolling_thunder_cooldown}秒冷却",
+          "id": 9135,
+          "name": "special_bonus_unique_pangolier_6",
+          "name_loc": "+{s:value}秒 地雷滚滚持续时间",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1807,6 +1809,17 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -1909,9 +1922,9 @@
           "item_quality": 0
         },
         {
-          "id": 9135,
-          "name": "special_bonus_unique_pangolier_6",
-          "name_loc": "+{s:value}秒 地雷滚滚持续时间",
+          "id": 1053,
+          "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
+          "name_loc": "+{s:bonus_hero_shield} 甲盾冲击护盾",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1953,17 +1966,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2223,9 +2225,9 @@
           "item_quality": 0
         },
         {
-          "id": 1053,
-          "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-          "name_loc": "+{s:bonus_hero_shield} 甲盾冲击护盾",
+          "id": 1196,
+          "name": "special_bonus_unique_pangolier_shield_crash_radius",
+          "name_loc": "+{s:bonus_radius} 甲盾冲击作用范围",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2687,7 +2689,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_pangolier.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_pangolier/npc_dota_hero_pangolier.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_pangolier/npc_dota_hero_pangolier.webm",
-      "update_time": 1700064276,
+      "update_time": 1702742677,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_pangolier.png",
       "left_hero_info": {
         "id": 72,

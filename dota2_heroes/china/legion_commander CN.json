@@ -53,7 +53,7 @@
           "desc_loc": "用敌人的数量反制他们，造成伤害并提升军团指挥官的攻击速度。根据作用单位和英雄的数量决定造成的伤害数值。对幻象和召唤单位额外造成相当于其当前生命值一定百分比的伤害。可以在决斗期间施放。",
           "lore_loc": "石堂城的弓箭手就等特蕾丝汀一声令下。",
           "notes_loc": [],
-          "shard_loc": "压倒性优势现在每击中一个单位都会获得护甲加成，并且提升持续时间。",
+          "shard_loc": "决斗期间施放会获得%duel_radius_bonus%作用范围加成。",
           "scepter_loc": "",
           "type": 0,
           "behavior": "134217764",
@@ -215,7 +215,7 @@
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "每个小兵提供护甲：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -226,7 +226,7 @@
                 5
               ],
               "is_percentage": false,
-              "heading_loc": "每个英雄提供护甲：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -237,9 +237,22 @@
                 8
               ],
               "is_percentage": false,
-              "heading_loc": "持续时间：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "duel_radius_bonus",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                250
+              ],
               "values_scepter": []
             },
             {
@@ -428,7 +441,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "移动速度加成：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_legion_commander_pta_movespeed",
+                  "value": 8,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -442,7 +461,30 @@
               ],
               "is_percentage": false,
               "heading_loc": "生命恢复：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_legion_commander_6",
+                  "value": 30,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_legion_commander_5",
+                  "value": 250,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -762,7 +804,7 @@
             "如果双方距离超过2000，决斗也会结束。",
             "决斗获胜后自动对自身施放强攻。"
           ],
-          "shard_loc": "",
+          "shard_loc": "每次决斗获胜的攻击力提升%shard_duel_damage_bonus%点。具有追溯效果。",
           "scepter_loc": "提升决斗的持续时间，并降低冷却时间。军团指挥官和她对手受到其他来源的伤害有所降低。",
           "type": 1,
           "behavior": "8",
@@ -845,7 +887,9 @@
               "is_percentage": false,
               "heading_loc": "攻击力奖励：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                8
+              ],
               "values_scepter": []
             },
             {
@@ -866,6 +910,17 @@
               ],
               "is_percentage": true,
               "heading_loc": "伤害降低：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "shard_duel_damage_bonus",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -967,7 +1022,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": true,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "item_cost": 0,
@@ -980,6 +1035,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_legion_commander/legion_commander_duel.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_legion_commander/legion_commander_duel.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_legion_commander/legion_commander_duel.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_legion_commander/legion_commander_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_legion_commander/legion_commander_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_legion_commander/legion_commander_aghanims_shard.webm",
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/file/e8b7e96d-d273-494e-8fa7-56eb1b006791.png",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/file/3094967d-7fbd-47af-b6f6-716002512317.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/file/f523eac3-4aa5-475e-8368-62f1727b3b0f.webm"
@@ -1133,9 +1191,9 @@
           "item_quality": 0
         },
         {
-          "id": 6218,
-          "name": "special_bonus_unique_legion_commander",
-          "name_loc": "+{s:value} 决斗攻击力加成",
+          "id": 1176,
+          "name": "special_bonus_unique_legion_commander_pta_movespeed",
+          "name_loc": "+{s:bonus_move_speed}% 强攻移动速度",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1177,17 +1235,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                8
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -1292,7 +1339,7 @@
         {
           "id": 463,
           "name": "special_bonus_unique_legion_commander_6",
-          "name_loc": "+{s:value} 强攻生命恢复",
+          "name_loc": "+{s:bonus_hp_regen} 强攻生命恢复",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1334,17 +1381,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                30
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -1595,7 +1631,7 @@
         {
           "id": 7395,
           "name": "special_bonus_unique_legion_commander_5",
-          "name_loc": "{s:value} 范围型强攻",
+          "name_loc": "{s:bonus_radius} 范围型强攻",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1637,17 +1673,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                250
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2214,7 +2239,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_legion_commander.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_legion_commander/npc_dota_hero_legion_commander.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_legion_commander/npc_dota_hero_legion_commander.webm",
-      "update_time": 1700064246,
+      "update_time": 1702742654,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_legion_commander.png",
       "left_hero_info": {
         "id": 38,
