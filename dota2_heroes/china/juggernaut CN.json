@@ -50,13 +50,13 @@
           "id": 5028,
           "name": "juggernaut_blade_fury",
           "name_loc": "剑刃风暴",
-          "desc_loc": "舞起具有破坏性力量的剑刃风暴，使主宰获得减益免疫状态，魔法抗性提升80%%，并且对主宰周围的敌方单位造成伤害。\n\n驱散类型：弱驱散",
+          "desc_loc": "舞起具有破坏性力量的剑刃风暴，使主宰获得减益免疫状态，魔法抗性提升80%%，并且对主宰周围的敌方单位造成伤害。主宰造成伤害的间隔为自身攻击速度的%blade_fury_aspd_multiplier%倍。\n\n驱散类型：弱驱散",
           "lore_loc": "无论是战士还是法师，都害怕尤涅若的武士刀剑技。",
           "notes_loc": [
             "剑刃风暴期间可以使用物品。",
             "主宰在施放剑刃风暴的过程中依然可以进行物理攻击。但是只有不受剑刃风暴伤害的单位，如守卫和建筑才会受到这些物理伤害。"
           ],
-          "shard_loc": "剑刃风暴期间移动速度提升，并且对附近随机敌方单位发动攻击，造成较低伤害。",
+          "shard_loc": "提升剑刃风暴作用范围，并且减缓敌人%bonus_movement_slow%%%移动速度。",
           "scepter_loc": "",
           "type": 0,
           "behavior": "4196356",
@@ -104,9 +104,9 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "blade_fury_damage_tick",
+              "name": "blade_fury_aspd_multiplier",
               "values_float": [
-                0.2
+                2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -128,26 +128,22 @@
                   "operation": 0
                 }
               ],
-              "values_shard": [],
+              "values_shard": [
+                100
+              ],
               "values_scepter": []
             },
             {
-              "name": "blade_fury_damage",
+              "name": "blade_fury_damage_per_tick",
               "values_float": [
-                90,
-                115,
-                140,
-                165
+                35,
+                40,
+                45,
+                50
               ],
               "is_percentage": false,
-              "heading_loc": "伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_juggernaut_3",
-                  "value": 100,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "每次伤害：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },
@@ -158,10 +154,21 @@
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "bonus_movespeed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_juggernaut_4",
-                  "value": 1.5,
+                  "name": "special_bonus_unique_juggernaut_blade_fury_movespeed",
+                  "value": 30,
                   "operation": 0
                 }
               ],
@@ -169,36 +176,16 @@
               "values_scepter": []
             },
             {
-              "name": "shard_bonus_move_speed",
+              "name": "movement_slow",
               "values_float": [
-                75
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "移动速度加成：",
+              "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "shard_attack_rate",
-              "values_float": [
-                1.4
+              "values_shard": [
+                35
               ],
-              "is_percentage": false,
-              "heading_loc": "攻击间隔：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "shard_damage_pct",
-              "values_float": [
-                75
-              ],
-              "is_percentage": true,
-              "heading_loc": "攻击伤害：",
-              "bonuses": [],
-              "values_shard": [],
               "values_scepter": []
             },
             {
@@ -399,7 +386,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_juggernaut_3",
+                  "value": 150,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -622,7 +615,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "致命一击伤害：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_juggernaut_4",
+                  "value": 10,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -1160,9 +1159,9 @@
       ],
       "talents": [
         {
-          "id": 5921,
-          "name": "special_bonus_all_stats_5",
-          "name_loc": "+{s:value} 全属性",
+          "id": 7394,
+          "name": "special_bonus_unique_juggernaut_4",
+          "name_loc": "+{s:bonus_blade_dance_crit_mult}% 剑舞致命一击伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1204,17 +1203,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -1317,9 +1305,9 @@
           "item_quality": 0
         },
         {
-          "id": 6105,
-          "name": "special_bonus_unique_juggernaut",
-          "name_loc": "+{s:bonus_blade_fury_radius} 剑刃风暴作用范围",
+          "id": 7021,
+          "name": "special_bonus_unique_juggernaut_3",
+          "name_loc": "+{s:bonus_healing_ward_aura_radius} 治疗守卫作用范围",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1620,9 +1608,9 @@
           "item_quality": 0
         },
         {
-          "id": 7021,
-          "name": "special_bonus_unique_juggernaut_3",
-          "name_loc": "+{s:bonus_blade_fury_damage} 剑刃风暴每秒伤害",
+          "id": 1192,
+          "name": "special_bonus_unique_juggernaut_blade_fury_movespeed",
+          "name_loc": "+{s:bonus_bonus_movespeed} 剑刃风暴期间移动速度",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2354,7 +2342,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_juggernaut.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_juggernaut/npc_dota_hero_juggernaut.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_juggernaut/npc_dota_hero_juggernaut.webm",
-      "update_time": 1700582431,
+      "update_time": 1702742421,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_juggernaut.png",
       "left_hero_info": {
         "id": 85,

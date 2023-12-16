@@ -255,7 +255,7 @@
           "id": 5268,
           "name": "enchantress_enchant",
           "name_loc": "魅惑",
-          "desc_loc": "魅惑魔女诱惑一个敌人。如果目标是英雄，其移动速度将会被减缓。如果目标是普通单位，其将会被魅惑魔女控制，并且攻击力和最大生命值得到提升。\n\n驱散类型：弱驱散",
+          "desc_loc": "魅惑魔女诱惑一个敌人。如果目标是英雄，其移动速度将会被减缓，并且受到伤害，持续%slow_duration%秒。\n\n如果目标是非英雄单位，魅惑魔女会将其控制，并且攻击力和最大生命值得到提升。魅惑魔女同一时间可以控制%max_creeps%个非英雄单位，最多持续%dominate_duration%秒。\n\n驱散类型：弱驱散",
           "lore_loc": "作为森林真正的管家，无论是卑贱的巨魔还是强大的半人马，爱由莎都会和他们成为朋友。",
           "notes_loc": [
             "可以转化幻象。"
@@ -311,6 +311,45 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "slow_movement_speed",
+              "values_float": [
+                -30,
+                -40,
+                -50,
+                -60
+              ],
+              "is_percentage": true,
+              "heading_loc": "移动速度减缓（对英雄）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "slow_duration",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "damage",
+              "values_float": [
+                20,
+                30,
+                40,
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "每秒伤害（对英雄）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "dominate_duration",
               "values_float": [
                 30,
@@ -319,7 +358,7 @@
                 120
               ],
               "is_percentage": false,
-              "heading_loc": "魅惑持续时间（对普通单位）：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -347,14 +386,17 @@
             {
               "name": "enchant_armor",
               "values_float": [
-                0,
-                3,
-                6,
-                9
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "护甲加成（对普通单位）：",
-              "bonuses": [],
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_enchantress_enchant_armor",
+                  "value": 10,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -379,31 +421,6 @@
               "values_scepter": []
             },
             {
-              "name": "slow_movement_speed",
-              "values_float": [
-                -30,
-                -40,
-                -50,
-                -60
-              ],
-              "is_percentage": true,
-              "heading_loc": "移动速度减缓（对英雄）：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "slow_duration",
-              "values_float": [
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "减速持续时间（对英雄）：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "level_req",
               "values_float": [
                 4,
@@ -423,7 +440,7 @@
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "最大魅惑单位数量：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [
@@ -1390,9 +1407,9 @@
       ],
       "talents": [
         {
-          "id": 5936,
-          "name": "special_bonus_magic_resistance_8",
-          "name_loc": "+{s:value}% 魔法抗性",
+          "id": 1174,
+          "name": "special_bonus_unique_enchantress_enchant_armor",
+          "name_loc": "+{s:bonus_enchant_armor} 魅惑单位护甲",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1434,17 +1451,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                8
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2617,7 +2623,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_enchantress.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_enchantress/npc_dota_hero_enchantress.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_enchantress/npc_dota_hero_enchantress.webm",
-      "update_time": 1700064138,
+      "update_time": 1702742537,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_enchantress.png",
       "left_hero_info": {
         "id": 97,

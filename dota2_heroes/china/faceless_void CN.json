@@ -13,7 +13,7 @@
       "hype_loc": "时间就是虚空假面的一切。时间经他加速可以<b>缩短两地之间的行程</b>，由他篡改可以<b>消弭伤害</b>，他还可以强行停下一片区域内的时间，毁灭他的敌人。只要给他充足的时间，他就能迎来自己的辉煌时代。",
       "npe_desc_loc": "可以将敌人冻结在时间里",
       "str_base": 20,
-      "str_gain": 2.4,
+      "str_gain": 2.6,
       "agi_base": 19,
       "agi_gain": 3,
       "int_base": 15,
@@ -55,7 +55,7 @@
           "notes_loc": [
             "虚空假面在时间漫游过程中为无敌状态。"
           ],
-          "shard_loc": "施法距离提升%shard_bonus_range%。",
+          "shard_loc": "提升距离。",
           "scepter_loc": "在落地点对所有单位施加一次时间锁定。",
           "type": 0,
           "behavior": "525328",
@@ -118,7 +118,9 @@
               "is_percentage": false,
               "heading_loc": "距离：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                150
+              ],
               "values_scepter": []
             },
             {
@@ -128,31 +130,28 @@
               ],
               "is_percentage": false,
               "heading_loc": "回溯有效时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_faceless_void_7",
+                  "value": 0.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
             {
-              "name": "radius_scepter",
+              "name": "radius",
               "values_float": [
-                400
+                0
               ],
               "is_percentage": false,
               "heading_loc": "时间锁定作用范围：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "shard_bonus_range",
-              "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [
+                400
+              ]
             },
             {
               "name": "AbilityCastRange",
@@ -241,7 +240,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_faceless_void_5",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             }
@@ -356,7 +361,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_faceless_void_8",
-                  "value": 10,
+                  "value": 12,
                   "operation": 0
                 }
               ],
@@ -398,7 +403,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_faceless_void_6",
-                  "value": 6,
+                  "value": 7,
                   "operation": 0
                 }
               ],
@@ -1262,7 +1267,7 @@
         {
           "id": 867,
           "name": "special_bonus_unique_faceless_void_7",
-          "name_loc": "+{s:value}秒 时间漫游回溯时间",
+          "name_loc": "+{s:bonus_backtrack_duration}秒 时间漫游回溯时间",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1304,17 +1309,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                0.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -1879,7 +1873,7 @@
         {
           "id": 7388,
           "name": "special_bonus_unique_faceless_void_5",
-          "name_loc": "-{s:value}秒 时间漫游冷却",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 时间漫游冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1921,17 +1915,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2352,7 +2335,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_faceless_void.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_faceless_void/npc_dota_hero_faceless_void.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_faceless_void/npc_dota_hero_faceless_void.webm",
-      "update_time": 1700064100,
+      "update_time": 1702742501,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_faceless_void.png",
       "left_hero_info": {
         "id": 126,

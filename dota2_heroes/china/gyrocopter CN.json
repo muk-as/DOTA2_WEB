@@ -861,7 +861,7 @@
           "id": 5364,
           "name": "gyrocopter_call_down",
           "name_loc": "召唤飞弹",
-          "desc_loc": "在目标区域召唤防空导弹打击敌方单位。经过%missile_delay_tooltip%秒延迟后，两颗导弹将接连到达，期间相隔%missile_delay_tooltip%秒。",
+          "desc_loc": "召唤%total_strikes%波防空导弹，对目标区域内的敌方单位造成减速和伤害。每次打击与上一次间隔%strike_separation%距离和%strike_delay%秒延迟。",
           "lore_loc": "“开始轰炸！”",
           "notes_loc": [
             "视觉指示范围仅对队友可见。"
@@ -911,71 +911,36 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "slow_duration_first",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "slow_duration_second",
+              "name": "slow_duration",
               "values_float": [
                 4
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "减速持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },
             {
-              "name": "damage_first",
+              "name": "slow",
               "values_float": [
-                150,
-                250,
-                350
-              ],
-              "is_percentage": false,
-              "heading_loc": "第一发导弹伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "damage_second",
-              "values_float": [
-                250,
-                325,
-                400
-              ],
-              "is_percentage": false,
-              "heading_loc": "第二发导弹伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "slow_first",
-              "values_float": [
-                30
+                50
               ],
               "is_percentage": true,
-              "heading_loc": "第一发导弹减速：",
+              "heading_loc": "导弹减速：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },
             {
-              "name": "slow_second",
+              "name": "damage",
               "values_float": [
-                60
+                250,
+                400,
+                550
               ],
-              "is_percentage": true,
-              "heading_loc": "第二发导弹减速：",
+              "is_percentage": false,
+              "heading_loc": "导弹伤害：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -983,34 +948,10 @@
             {
               "name": "radius",
               "values_float": [
-                600
+                400
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "range_scepter",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "damage_second_scepter",
-              "values_float": [
-                175,
-                225,
-                275
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -1027,13 +968,52 @@
               "values_scepter": []
             },
             {
+              "name": "strike_delay",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "total_strikes",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "strike_separation",
+              "values_float": [
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 1000
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_gyrocopter_5",
+                  "value": 0,
+                  "operation": 5
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -1095,7 +1075,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                125
+                150,
+                200,
+                250
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1112,7 +1094,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_gyrocopter_5",
+                  "value": 30,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             }
@@ -2204,8 +2192,8 @@
         {
           "id": 6654,
           "name": "special_bonus_unique_gyrocopter_5",
-          "name_loc": "3连召唤飞弹",
-          "desc_loc": "沿指定方向发动3次召唤飞弹的攻击，每次相隔距离为500。后两次召唤飞弹造成50%伤害",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 召唤飞弹冷却且全地图施放",
+          "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -2363,7 +2351,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_gyrocopter.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_gyrocopter/npc_dota_hero_gyrocopter.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_gyrocopter/npc_dota_hero_gyrocopter.webm",
-      "update_time": 1700582601,
+      "update_time": 1702742569,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_gyrocopter.png",
       "left_hero_info": {
         "id": 36,

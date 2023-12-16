@@ -35,7 +35,7 @@
       "attack_rate": 1.7,
       "attack_range": 150,
       "projectile_speed": 900,
-      "armor": 2.3333335,
+      "armor": 3.3333335,
       "magic_resistance": 25,
       "movement_speed": 315,
       "turn_rate": 0.6,
@@ -117,6 +117,9 @@
             {
               "name": "bonus_armor",
               "values_float": [
+                16,
+                19,
+                22,
                 25
               ],
               "is_percentage": false,
@@ -809,7 +812,7 @@
           "id": 5010,
           "name": "axe_culling_blade",
           "name_loc": "淘汰之刃",
-          "desc_loc": "斧王洞察到弱点并出击，造成纯粹伤害。淘汰之刃击杀敌方英雄时将重置冷却时间，并且斧王永久获得护甲加成，而附近所有友军单位获得移动速度加成。",
+          "desc_loc": "斧王洞察到弱点并出击，造成纯粹伤害。淘汰之刃击杀敌方英雄时将重置冷却时间，并且斧王永久获得护甲加成，而附近所有友军单位获得移动速度和护甲加成。",
           "lore_loc": "蒙哥可汗是战斗与狂怒的化身，胆敢与斧王为敌者只有死路一条。",
           "notes_loc": [
             "淘汰之刃的斩杀效果无法被薄葬等技能阻止。"
@@ -889,14 +892,14 @@
               "values_scepter": []
             },
             {
-              "name": "atk_speed_bonus",
+              "name": "armor_bonus",
               "values_float": [
                 20,
-                30,
-                40
+                25,
+                30
               ],
               "is_percentage": false,
-              "heading_loc": "斩杀后攻击速度加成：",
+              "heading_loc": "护甲加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -908,7 +911,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "斩杀加速持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_axe_culling_blade_speed_duration",
+                  "value": 4,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -1065,9 +1074,9 @@
       ],
       "talents": [
         {
-          "id": 974,
-          "name": "special_bonus_unique_axe_7",
-          "name_loc": "+{s:bonus_bonus_armor} 狂战士之吼护甲",
+          "id": 1189,
+          "name": "special_bonus_unique_axe_culling_blade_speed_duration",
+          "name_loc": "+{s:bonus_speed_duration}秒 淘汰之刃加速时间",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2237,7 +2246,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_axe.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_axe/npc_dota_hero_axe.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_axe/npc_dota_hero_axe.webm",
-      "update_time": 1700064009,
+      "update_time": 1702742406,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_axe.png",
       "left_hero_info": {
         "id": 1,

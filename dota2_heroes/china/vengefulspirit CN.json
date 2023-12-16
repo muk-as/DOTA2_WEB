@@ -328,6 +328,20 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "damage",
+              "values_float": [
+                85,
+                100,
+                115,
+                130
+              ],
+              "is_percentage": false,
+              "heading_loc": "伤害：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "wave_speed",
               "values_float": [
                 2000
@@ -400,16 +414,19 @@
               "values_scepter": []
             },
             {
-              "name": "#AbilityDamage",
+              "name": "steal_pct",
               "values_float": [
-                85,
-                100,
-                115,
-                130
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -736,7 +753,7 @@
           "id": 5125,
           "name": "vengefulspirit_nether_swap",
           "name_loc": "移形换位",
-          "desc_loc": "与一个目标英雄瞬间交换位置，不论敌我。移形换位会打断目标的持续施法。敌方英雄被交换后受到伤害。友方英雄被交换后短时间内受到的伤害降低。",
+          "desc_loc": "与一个目标英雄瞬间交换位置，不论敌我。移形换位会打断目标的持续施法。敌方英雄被交换后受到伤害。复仇之魂和被交换的友方英雄都会获得等同于造成伤害的护盾。",
           "lore_loc": "牺牲只是为了复仇付出的小小代价。",
           "notes_loc": [
             "对减益免疫单位有效。",
@@ -790,16 +807,14 @@
             {
               "name": "damage_reduction",
               "values_float": [
-                30,
-                40,
-                50
+                0
               ],
-              "is_percentage": true,
-              "heading_loc": "伤害降低：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_vengeful_spirit_swap_damage_reduction",
-                  "value": 40,
+                  "value": 60,
                   "operation": 0
                 }
               ],
@@ -809,10 +824,10 @@
             {
               "name": "damage_reduction_duration",
               "values_float": [
-                3
+                10
               ],
               "is_percentage": false,
-              "heading_loc": "伤害降低持续时间：",
+              "heading_loc": "护盾持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -820,10 +835,12 @@
             {
               "name": "damage",
               "values_float": [
-                50
+                150,
+                300,
+                450
               ],
               "is_percentage": false,
-              "heading_loc": "伤害：",
+              "heading_loc": "伤害/护盾：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_vengeful_spirit_swap_damage",
@@ -1287,7 +1304,7 @@
             {
               "name": "value",
               "values_float": [
-                -4
+                -5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1711,9 +1728,9 @@
           "item_quality": 0
         },
         {
-          "id": 790,
-          "name": "special_bonus_unique_vengeful_spirit_9",
-          "name_loc": "-{s:value}秒 移形换位冷却",
+          "id": 1197,
+          "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
+          "name_loc": "恐怖波动窃取{s:bonus_steal_pct}%降低的攻击力和护甲",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1755,17 +1772,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                15
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2025,9 +2031,9 @@
           "item_quality": 0
         },
         {
-          "id": 1233,
-          "name": "special_bonus_unique_vengeful_spirit_swap_damage_reduction",
-          "name_loc": "+{s:bonus_damage_reduction}% 移形换位伤害降低",
+          "id": 790,
+          "name": "special_bonus_unique_vengeful_spirit_9",
+          "name_loc": "-{s:value}秒 移形换位冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2069,6 +2075,17 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                18
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2175,7 +2192,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_vengefulspirit.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_vengefulspirit/npc_dota_hero_vengefulspirit.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_vengefulspirit/npc_dota_hero_vengefulspirit.webm",
-      "update_time": 1701187296,
+      "update_time": 1702742457,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_vengefulspirit.png",
       "left_hero_info": {
         "id": 46,

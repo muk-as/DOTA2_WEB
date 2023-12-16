@@ -295,7 +295,7 @@
           "id": 5147,
           "name": "enigma_demonic_conversion",
           "name_loc": "恶魔召唤",
-          "desc_loc": "以生命为代价召唤三个谜团自身的碎片。这些虚灵都由谜团控制，在反复经过几次成功的攻击后，虚灵会再次分裂，并完全回复生命值。",
+          "desc_loc": "以生命为代价召唤三个谜团自身的碎片。虚灵的生命值会有所增加，数值为谜团当前生命值的%current_health_pct%%%。这些虚灵都由谜团控制，在反复经过几次成功的攻击后，虚灵会再次分裂，并完全回复生命值。",
           "lore_loc": "谜团具备将自身的形体吸入另一个维度的能力——随之产生的就是三个追猎肉体位面的暗黑虚灵。",
           "notes_loc": [],
           "shard_loc": "",
@@ -555,6 +555,17 @@
               "values_scepter": []
             },
             {
+              "name": "current_health_pct",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 400
@@ -683,7 +694,7 @@
           "id": 5148,
           "name": "enigma_midnight_pulse",
           "name_loc": "午夜凋零",
-          "desc_loc": "使一块区域浸入暗共振中，对敌方单位造成他们基于当前生命值的伤害。",
+          "desc_loc": "使一块区域浸入暗共振中，对敌方单位造成他们%base_damage% + 基于敌人当前生命值的伤害。",
           "lore_loc": "世界的一部分缓缓跌入虚空。",
           "notes_loc": [
             "此技能将摧毁范围内的树木。",
@@ -736,7 +747,7 @@
             {
               "name": "radius",
               "values_float": [
-                650
+                600
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -753,13 +764,13 @@
             {
               "name": "damage_percent",
               "values_float": [
-                5,
-                7,
-                9,
-                11
+                4,
+                6,
+                8,
+                10
               ],
               "is_percentage": true,
-              "heading_loc": "每秒伤害：",
+              "heading_loc": "当前生命值伤害：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -781,6 +792,20 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "base_damage",
+              "values_float": [
+                5,
+                10,
+                15,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": []
             },
@@ -2417,7 +2442,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_enigma.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_enigma/npc_dota_hero_enigma.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_enigma/npc_dota_hero_enigma.webm",
-      "update_time": 1700582503,
+      "update_time": 1702742485,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_enigma.png",
       "left_hero_info": {
         "id": 71,

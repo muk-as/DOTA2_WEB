@@ -50,11 +50,9 @@
           "id": 5226,
           "name": "dragon_knight_breathe_fire",
           "name_loc": "火焰气息",
-          "desc_loc": "向龙骑士的前方喷射出一团火焰，烧灼碰到的敌人，并使其攻击力降低。<br><br>古龙形态下会施加相应形态的腐蚀吐息和冰霜吐息的负面状态。",
+          "desc_loc": "向龙骑士的前方喷射出一团火焰，烧灼碰到的敌人，并使其攻击力降低。<br><br>会施加当前等级的古龙形态下相应的腐蚀吐息和冰霜吐息的负面状态。",
           "lore_loc": "龙骑士达维安的气息已经变成了斯莱瑞克的古龙之息，人们还记得它将无数骑士烧成了焦炭。",
-          "notes_loc": [
-            "最远能伤害900距离外的单位。"
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "type": 0,
@@ -317,7 +315,7 @@
           "id": 5227,
           "name": "dragon_knight_dragon_tail",
           "name_loc": "神龙摆尾",
-          "desc_loc": "龙骑士用盾对身边的一个敌方单位进行打击，造成眩晕和少量伤害。在古龙形态下施法距离提高到%dragon_cast_range%。",
+          "desc_loc": "龙骑士用盾对身边的一个敌方单位进行打击，造成眩晕和基于敌人最大生命值的伤害。在古龙形态下施法距离提高到%dragon_cast_range%。",
           "lore_loc": "达维安将神龙的天赋和骑士的技艺完美结合，使他在近身肉搏中无比勇猛。",
           "notes_loc": [],
           "shard_loc": "",
@@ -377,6 +375,37 @@
               ],
               "is_percentage": false,
               "heading_loc": "眩晕时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_2",
+                  "value": 0.4,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "damage",
+              "values_float": [
+                70,
+                100,
+                130,
+                160
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -404,16 +433,19 @@
               "values_scepter": []
             },
             {
-              "name": "#AbilityDamage",
+              "name": "dragon_aoe",
               "values_float": [
-                70,
-                100,
-                130,
-                160
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_8",
+                  "value": 400,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -1086,8 +1118,8 @@
             {
               "name": "frost_bonus_movement_speed",
               "values_float": [
-                -40,
-                -40,
+                0,
+                0,
                 -40,
                 -60
               ],
@@ -1100,8 +1132,8 @@
             {
               "name": "frost_bonus_attack_speed",
               "values_float": [
-                -40,
-                -40,
+                0,
+                0,
                 -40,
                 -60
               ],
@@ -1114,6 +1146,9 @@
             {
               "name": "frost_duration",
               "values_float": [
+                0,
+                0,
+                3,
                 3
               ],
               "is_percentage": false,
@@ -1125,7 +1160,7 @@
             {
               "name": "frost_aoe",
               "values_float": [
-                300
+                350
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1588,7 +1623,7 @@
         {
           "id": 6635,
           "name": "special_bonus_unique_dragon_knight_2",
-          "name_loc": "+{s:value}秒 神龙摆尾眩晕",
+          "name_loc": "+{s:bonus_stun_duration}秒 神龙摆尾眩晕",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1630,17 +1665,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                0.4
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2362,7 +2386,7 @@
         {
           "id": 742,
           "name": "special_bonus_unique_dragon_knight_8",
-          "name_loc": "+{s:value} 古龙形态下范围型神龙摆尾",
+          "name_loc": "+{s:bonus_dragon_aoe} 古龙形态下范围型神龙摆尾",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2404,17 +2428,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                400
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2521,7 +2534,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_dragon_knight.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_dragon_knight/npc_dota_hero_dragon_knight.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_dragon_knight/npc_dota_hero_dragon_knight.webm",
-      "update_time": 1700064120,
+      "update_time": 1702742518,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_dragon_knight.png",
       "left_hero_info": {
         "id": 114,

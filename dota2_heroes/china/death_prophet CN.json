@@ -306,7 +306,7 @@
           "id": 5091,
           "name": "death_prophet_silence",
           "name_loc": "沉默魔法",
-          "desc_loc": "放出一个弹道，阻止目标区域内的敌人施放魔法。",
+          "desc_loc": "放出一个弹道，减缓目标区域内敌人的移动速度，并且阻止他们施放技能。",
           "lore_loc": "透过她敌人的命运之纱，克萝贝露丝看到的是沉默的未来。",
           "notes_loc": [
             "不能阻止使用物品。"
@@ -391,6 +391,26 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "movement_slow",
+              "values_float": [
+                10,
+                15,
+                20,
+                25
+              ],
+              "is_percentage": true,
+              "heading_loc": "移动速度减缓：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_death_prophet_silence_slow",
+                  "value": 15,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -1733,9 +1753,9 @@
           "item_quality": 0
         },
         {
-          "id": 1151,
-          "name": "special_bonus_unique_death_prophet_crypt_swarm_slow",
-          "name_loc": "地穴虫群施加{s:bonus_slow_duration}秒{s:bonus_slow_percent}%减速",
+          "id": 1170,
+          "name": "special_bonus_unique_death_prophet_silence_slow",
+          "name_loc": "-{s:bonus_movement_slow}% 沉默魔法减速",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2343,7 +2363,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_death_prophet.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_death_prophet/npc_dota_hero_death_prophet.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_death_prophet/npc_dota_hero_death_prophet.webm",
-      "update_time": 1700064105,
+      "update_time": 1702742505,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_death_prophet.png",
       "left_hero_info": {
         "id": 123,

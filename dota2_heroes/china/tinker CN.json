@@ -65,7 +65,7 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            650
+            450
           ],
           "cast_points": [
             0.4
@@ -211,7 +211,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                650
+                450
               ],
               "is_percentage": false,
               "heading_loc": "施法距离：",
@@ -341,7 +341,7 @@
           "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
-            2000
+            1500
           ],
           "cast_points": [
             0,
@@ -390,7 +390,7 @@
             {
               "name": "radius",
               "values_float": [
-                2000
+                1500
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -445,7 +445,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                2000
+                1500
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -772,7 +772,7 @@
           "id": 909,
           "name": "tinker_warp_grenade",
           "name_loc": "折跃耀光",
-          "desc_loc": "向一个敌人扔出一枚光弹，造成伤害，将其向远离修补匠的方向传送，并且降低施法和攻击距离，持续%debuff_duration%秒。",
+          "desc_loc": "向一个敌人扔出一枚光弹，造成伤害，将其向远离修补匠的方向传送并且缠绕，同时降低施法和攻击距离，持续%debuff_duration%秒。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1169,7 +1169,7 @@
           "id": 5153,
           "name": "tinker_rearm",
           "name_loc": "再装填",
-          "desc_loc": "持续施法 - 重置修补匠的大多数物品和技能的冷却时间。",
+          "desc_loc": "持续施法 - 重置修补匠的大多数物品和技能的冷却时间，并且获得魔法抗性加成，持续%armor_duration%秒。",
           "lore_loc": "这儿换块新电池，那儿塞几枚火箭弹，鲍什不断改进现有的技术。",
           "notes_loc": [
             "再装填不能刷新的物品有永恒之盘、奥术鞋、黑皇杖、迈达斯之手、林肯法球、陨星锤、支配头盔、统御头盔、洞察烟斗、刷新球、英灵胸针（被动技能）及所有中立物品。"
@@ -1218,6 +1218,30 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "magic_resistance",
+              "values_float": [
+                15,
+                20,
+                25
+              ],
+              "is_percentage": true,
+              "heading_loc": "魔法抗性加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "armor_duration",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2573,7 +2597,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_tinker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_tinker/npc_dota_hero_tinker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_tinker/npc_dota_hero_tinker.webm",
-      "update_time": 1701187326,
+      "update_time": 1702742488,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_tinker.png",
       "left_hero_info": {
         "id": 98,
