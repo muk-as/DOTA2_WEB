@@ -86,19 +86,19 @@
         TextColorGreenGlow: "bppurchasebutton_TextColorGreenGlow_3azYF",
       };
     },
-    68653: (e, t, r) => {
+    68653: (e, r, t) => {
       "use strict";
-      r.d(t, { Li: () => C, cg: () => a, sR: () => o });
+      t.d(r, { Li: () => C, cg: () => a, sR: () => o });
       var a,
         o,
-        l = r(89526),
-        s = r(19028),
-        m = r.n(s),
-        n = r(22396),
-        c = r(3646),
-        i = r(54013),
-        u = r(58638),
-        _ = r(32290);
+        l = t(89526),
+        s = t(19028),
+        m = t.n(s),
+        n = t(22396),
+        c = t(3646),
+        i = t(54013),
+        u = t(58638),
+        _ = t(32290);
       !(function (e) {
         (e[(e.Normal = 0)] = "Normal"),
           (e[(e.Rare = 1)] = "Rare"),
@@ -122,8 +122,8 @@
       }
       const C = ({
           strContentDir: e,
-          strPrimaryColor: t,
-          strSecondaryColor: r,
+          strPrimaryColor: r,
+          strSecondaryColor: t,
           strTertiaryColor: a,
           arrImmortalTreasures: s,
         }) => {
@@ -131,8 +131,8 @@
             [d, C] = (0, l.useState)(0),
             E = {
               strContentDir: e,
-              strPrimaryColor: t,
-              strSecondaryColor: r,
+              strPrimaryColor: r,
+              strSecondaryColor: t,
               strTertiaryColor: a,
             };
           return l.createElement(
@@ -171,7 +171,7 @@
                     l.createElement("div", {
                       className: m().TreasureBorder,
                       style: {
-                        backgroundImage: `linear-gradient( black, black ), linear-gradient( to right, ${t}, ${r} )`,
+                        backgroundImage: `linear-gradient( black, black ), linear-gradient( to right, ${r}, ${t} )`,
                       },
                     }),
                     l.createElement(
@@ -181,21 +181,21 @@
                           m().TextStyleOverline,
                           m().TreasureName,
                         ),
-                        style: { color: t },
+                        style: { color: r },
                       },
                       (0, c.Jr)(`#${e}_immortals_treasure_${o + 1}`),
                     ),
                   ),
                 ),
               ),
-              s.map((t, r) =>
+              s.map((r, t) =>
                 l.createElement(
                   "div",
                   {
-                    key: `carousel_${r}`,
+                    key: `carousel_${t}`,
                     className: (0, n.Z)(
                       m().CarouselContainer,
-                      _ == r && m().ShowCarousel,
+                      _ == t && m().ShowCarousel,
                     ),
                   },
                   l.createElement(
@@ -204,21 +204,21 @@
                       className: m().ImmortalCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 37,
-                      totalSlides: t.arrImmortals.length,
+                      totalSlides: r.arrImmortals.length,
                     },
                     l.createElement(
                       u.iR,
                       null,
-                      t.arrImmortals.map((e, t) =>
+                      r.arrImmortals.map((e, r) =>
                         l.createElement(
                           u.Mi,
                           {
-                            key: `im_${r}_${t}`,
-                            index: t,
-                            onFocus: () => C(t),
+                            key: `im_${t}_${r}`,
+                            index: r,
+                            onFocus: () => C(r),
                           },
                           l.createElement(h, {
-                            nIndex: t,
+                            nIndex: r,
                             strVideo: e.strHeroName,
                             bHeroLeft: e.eImageLoc == o.Left,
                             bHeroRight: e.eImageLoc == o.Right,
@@ -231,13 +231,13 @@
                     l.createElement(
                       "div",
                       { className: m().CarouselDots },
-                      t.arrImmortals.map((e, t) => {
+                      r.arrImmortals.map((e, r) => {
                         var a;
                         return l.createElement(
                           u.oT,
                           {
-                            key: `dot_${r}_${t}`,
-                            slide: t,
+                            key: `dot_${t}_${r}`,
+                            slide: r,
                             "data-tip":
                               (null ===
                                 (a = null == e ? void 0 : e.strTooltip) ||
@@ -250,7 +250,7 @@
                           l.createElement(y, {
                             strHeroName: e.strHeroName,
                             eRarity: e.eRarity,
-                            bSelected: t == d,
+                            bSelected: r == d,
                           }),
                         );
                       }),
@@ -272,7 +272,7 @@
                         className: m().ArrowImage,
                       }),
                     ),
-                    l.createElement(T, { nTreasureIndex: r }),
+                    l.createElement(T, { nTreasureIndex: t }),
                   ),
                   l.createElement(
                     "div",
@@ -282,7 +282,7 @@
                         m().TreasureLevels,
                       ),
                     },
-                    (0, c.Jr)(`#${e}_immortals_levels_${r}_desc`),
+                    (0, c.Jr)(`#${e}_immortals_levels_${t}_desc`),
                   ),
                 ),
               ),
@@ -314,8 +314,8 @@
         },
         h = ({
           nIndex: e,
-          strVideo: t,
-          bHeroLeft: r,
+          strVideo: r,
+          bHeroLeft: t,
           bHeroRight: a,
           bGold: o,
         }) => {
@@ -324,10 +324,10 @@
             _ = (0, l.useRef)();
           return (
             (0, l.useEffect)(() => {
-              function t() {
+              function r() {
                 _.current && s.state.currentSlide == e && _.current.load();
               }
-              return s.subscribe(t), () => s.unsubscribe(t);
+              return s.subscribe(r), () => s.unsubscribe(r);
             }, [s, e]),
             l.createElement(
               "div",
@@ -335,10 +335,10 @@
               l.createElement(
                 "div",
                 { className: m().VideoContainer },
-                r &&
+                t &&
                   l.createElement("img", {
                     className: (0, n.Z)(m().HeroImage, m().Left),
-                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${t}${
+                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${
                       o ? "_gold" : ""
                     }.png`,
                   }),
@@ -352,17 +352,17 @@
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${i.Y.IMG_URL}${c.strContentDir}/immortals/${t}.jpg`,
+                    poster: `${i.Y.IMG_URL}${c.strContentDir}/immortals/${r}.jpg`,
                   },
                   l.createElement("source", {
                     type: "video/webm",
-                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${t}${
+                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
                       o ? "_gold" : ""
                     }.webm`,
                   }),
                   l.createElement("source", {
                     type: "video/mp4",
-                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${t}${
+                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
                       o ? "_gold" : ""
                     }.mp4`,
                   }),
@@ -370,7 +370,7 @@
                 a &&
                   l.createElement("img", {
                     className: (0, n.Z)(m().HeroImage, m().Right),
-                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${t}${
+                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${
                       o ? "_gold" : ""
                     }.png`,
                   }),
@@ -379,16 +379,16 @@
           );
         },
         T = ({ nTreasureIndex: e }) => {
-          const t = (0, l.useContext)(u.ro),
-            r = d(),
-            [a, o] = (0, l.useState)(t.state.currentSlide);
+          const r = (0, l.useContext)(u.ro),
+            t = d(),
+            [a, o] = (0, l.useState)(r.state.currentSlide);
           return (
             (0, l.useEffect)(() => {
               function e() {
-                o(t.state.currentSlide);
+                o(r.state.currentSlide);
               }
-              return t.subscribe(e), () => t.unsubscribe(e);
-            }, [t]),
+              return r.subscribe(e), () => r.unsubscribe(e);
+            }, [r]),
             l.createElement(
               "div",
               { className: m().NameAndDesc },
@@ -399,19 +399,19 @@
                     m().TextStyleSmallHeading,
                     m().ImmortalName,
                   ),
-                  style: { color: r.strPrimaryColor },
+                  style: { color: t.strPrimaryColor },
                 },
-                (0, c.Jr)(`#${r.strContentDir}_immortal_${e}_${a + 1}_name`),
+                (0, c.Jr)(`#${t.strContentDir}_immortal_${e}_${a + 1}_name`),
               ),
               l.createElement(
                 "div",
                 { className: (0, n.Z)(m().TextStyleBody, m().ImmortalDesc) },
-                (0, c.Jr)(`#${r.strContentDir}_immortal_${e}_${a + 1}_desc`),
+                (0, c.Jr)(`#${t.strContentDir}_immortal_${e}_${a + 1}_desc`),
               ),
             )
           );
         },
-        y = ({ strHeroName: e, eRarity: t, bSelected: r }) => {
+        y = ({ strHeroName: e, eRarity: r, bSelected: t }) => {
           const o = d(),
             s = "emblem" == e ? "emblem" : e;
           return l.createElement(
@@ -419,10 +419,10 @@
             {
               className: (0, n.Z)(
                 m().ImmortalDot,
-                t == a.Rare && m().Rare,
-                t == a.Very && m().VeryRare,
-                t == a.Ultra && m().UltraRare,
-                t == a.Cosmic && m().CosmicallyRare,
+                r == a.Rare && m().Rare,
+                r == a.Very && m().VeryRare,
+                r == a.Ultra && m().UltraRare,
+                r == a.Cosmic && m().CosmicallyRare,
               ),
               style: { borderBottomColor: o.strSecondaryColor },
             },
@@ -433,20 +433,20 @@
           );
         };
     },
-    82297: (e, t, r) => {
+    82297: (e, r, t) => {
       "use strict";
-      r.d(t, { VJ: () => u, Y$: () => i });
-      var a = r(89526),
-        o = r(83346),
-        l = r.n(o),
-        s = r(22396),
-        m = r(3646),
-        n = r(54013),
-        c = r(78562);
+      t.d(r, { VJ: () => u, Y$: () => i });
+      var a = t(89526),
+        o = t(83346),
+        l = t.n(o),
+        s = t(22396),
+        m = t(3646),
+        n = t(54013),
+        c = t(78562);
       const i = ({
           colorTopEdge: e,
-          colorTop: t,
-          colorMiddle: r,
+          colorTop: r,
+          colorMiddle: t,
           colorBottom: o,
           level: i,
           discountPct: u,
@@ -460,7 +460,7 @@
               className: l().BuyBattlePassCapsule,
               style: {
                 borderTop: `2px solid ${e}`,
-                backgroundImage: `linear-gradient( ${t}, ${o} )`,
+                backgroundImage: `linear-gradient( ${r}, ${o} )`,
               },
             },
             a.createElement("img", {
@@ -528,8 +528,8 @@
             e.capsuleImageLocation &&
               a.createElement("img", {
                 className: l().CapsuleTitle,
-                onError: (t) =>
-                  (t.target.src = `${n.Y.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                onError: (r) =>
+                  (r.target.src = `${n.Y.IMG_URL}${e.capsuleImageOnErrorLocation}`),
                 src: `${n.Y.IMG_URL}${e.capsuleImageLocation}${n.Y.LANGUAGE}.png`,
               }),
             a.createElement(
@@ -648,27 +648,6 @@
             ),
             a.createElement(
               "div",
-              {
-                className: (0, s.Z)(
-                  l().TextStyleButton,
-                  l().TextColorWhite,
-                  l().CapsulePurchaseButton,
-                ),
-                style: {
-                  borderTop: e.colorButtonOverride
-                    ? `1px solid ${e.colorButtonOverride}`
-                    : `1px solid ${e.colorTopEdge}`,
-                  backgroundImage: e.colorButtonOverride
-                    ? `linear-gradient( ${e.colorButtonOverride}, ${e.colorButtonOverride} )`
-                    : `linear-gradient( ${e.colorTopEdge}, ${e.colorTopEdge} )`,
-                },
-                onClick: () =>
-                  c.P.PurchaseOnSteamStore(e.itemid, 1, window.location.href),
-              },
-              (0, m.Jr)("#battlepass_purchase_label", c.P.GetBPPrice(e.itemid)),
-            ),
-            a.createElement(
-              "div",
               { className: l().BoostersFootnoteContainer },
               !e.isUpgraded &&
                 a.createElement(
@@ -681,21 +660,6 @@
                   "div",
                   { className: (0, s.Z)(l().BoostersFootnote) },
                   (0, m.Jr)("#compendium_purchase_upgraded_boosters_footnote"),
-                ),
-            ),
-            a.createElement(
-              "div",
-              {
-                className: (0, s.Z)(
-                  l().TextStyleFootnote,
-                  l().TextColorGreenGlow,
-                  l().CapsuleDiscount,
-                ),
-              },
-              c.P.GetBPDiscount(e.eventid, e.itemid) &&
-                (0, m.Jr)(
-                  "#compendium_purchase_discount",
-                  c.P.GetBPDiscount(e.eventid, e.itemid),
                 ),
             ),
           );
