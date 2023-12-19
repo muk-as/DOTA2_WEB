@@ -6,7 +6,7 @@
           "id": 7306,
           "name": "chen_divine_favor",
           "name_loc": "Divine Favor",
-          "desc_loc": "Passively provides an aura that grants increased health regeneration. Can be cast on allies to provide them with bonus armor and increasing the healing they receive.\n\nIf cast on Chen, all units controlled by Chen will be teleported to him. Taking damage from enemy heroes will cancel the teleport.",
+          "desc_loc": "Passively provides an aura that grants increased health regeneration. Can be cast on allies to provide them with bonus armor and increasing the healing they receive.\n\nIf cast on Chen, all units controlled by Chen will be teleported to him. Taking damage from enemy heroes or their units will cancel the teleport.",
           "lore_loc": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side.",
           "notes_loc": [],
           "shard_loc": "",
@@ -87,13 +87,30 @@
               "values_scepter": []
             },
             {
-              "name": "teleport_delay",
+              "name": "duration",
               "values_float": [
                 6
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "teleport_delay",
+              "values_float": [
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "TELEPORT DELAY:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_chen_3",
+                  "value": 2,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": []
             },
@@ -118,6 +135,17 @@
               ],
               "is_percentage": true,
               "heading_loc": "HEAL AMPLIFICATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "creep_bonus",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
