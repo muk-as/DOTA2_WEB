@@ -3,7 +3,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [1510],
   {
-    33916: (e) => {
+    90515: (e) => {
       e.exports = {
         Tooltip: "personadetails_Tooltip_3OELh",
         CarouselFade: "personadetails_CarouselFade_31I4l",
@@ -80,7 +80,7 @@
         TextUppercase: "personadetails_TextUppercase_1zyxl",
       };
     },
-    37233: (e) => {
+    68410: (e) => {
       e.exports = {
         Tooltip: "teamdetails_Tooltip_31hC1",
         CarouselFade: "teamdetails_CarouselFade_2UcOF",
@@ -115,34 +115,34 @@
         SmoothLine: "teamdetails_SmoothLine_3YaqJ",
       };
     },
-    21600: (e, t, a) => {
+    73322: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => ge });
-      var n = a(33940),
-        l = a(52868),
+      var n = a(22970),
+        l = a(61674),
         r = a.n(l),
-        o = a(59934),
-        i = a(89526),
-        c = a(61011),
-        s = a(36105),
+        o = a(15905),
+        i = a(66204),
+        c = a(62175),
+        s = a(88787),
         m = a.n(s),
-        d = a(30310),
-        u = a(79534),
-        p = a(42333),
-        E = a(23007),
-        _ = a(58104),
-        y = a(57317),
-        g = a(54650),
-        v = a(52339),
-        f = a(5605),
-        A = a(54013),
-        h = a(22396),
-        k = a(29706),
-        T = a(70894),
-        N = a(36250),
-        R = a(17697),
-        I = a(79585),
-        O = a(39375);
+        d = a(18788),
+        u = a(56060),
+        p = a(88575),
+        E = a(55816),
+        _ = a(10345),
+        y = a(55758),
+        g = a(80480),
+        v = a(74903),
+        f = a(15939),
+        A = a(98142),
+        h = a(5062),
+        k = a(31444),
+        T = a(37196),
+        N = a(79735),
+        R = a(73806),
+        I = a(81823),
+        O = a(95068);
       function D(e) {
         return 570 === e ? "public" : "beta";
       }
@@ -308,8 +308,8 @@
             return "Unknown";
         }
       }
-      var $ = a(49213),
-        w = a(33916),
+      var $ = a(88036),
+        w = a(90515),
         P = a.n(w);
       const U = "red",
         Y = "orange",
@@ -358,11 +358,7 @@
             displayName: "Guild",
             formatFunction: (e = {}, t = "") => {
               var a, n;
-              const l = `${t}${
-                  null === (a = null == e ? void 0 : e.guild) || void 0 === a
-                    ? void 0
-                    : a.guild_id
-                }`,
+              const l = `${t}${null === (a = null == e ? void 0 : e.guild) || void 0 === a ? void 0 : a.guild_id}`,
                 r =
                   (null === (n = null == e ? void 0 : e.guild) || void 0 === n
                     ? void 0
@@ -398,11 +394,7 @@
                   `+/- ${t}`,
                   i.createElement("img", {
                     className: P().RankedBadgeIcon,
-                    src: `${
-                      A.Y.CDN_URL
-                    }/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(
-                      a / 10,
-                    )}.png`,
+                    src: `${A.Y.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(a / 10)}.png`,
                   }),
                 ),
               ),
@@ -1224,9 +1216,7 @@
                     "a",
                     {
                       key: e,
-                      href: `${A.Y.BASE_URL}matches/match/${e}?u=${D(
-                        A.Y.DOTA_APP_ID,
-                      )}&appid=${A.Y.DOTA_APP_ID}&highlight=${t}`,
+                      href: `${A.Y.BASE_URL}matches/match/${e}?u=${D(A.Y.DOTA_APP_ID)}&appid=${A.Y.DOTA_APP_ID}&highlight=${t}`,
                     },
                     a || e,
                   ))(e.cellData, e.columnData.strAccountId),
@@ -1529,17 +1519,7 @@
                       : a.assists,
                   )
                   ? " - / - / - "
-                  : `${e.cellData}/${
-                      null === (n = null == e ? void 0 : e.rowData) ||
-                      void 0 === n
-                        ? void 0
-                        : n.deaths
-                    }/${
-                      null === (l = null == e ? void 0 : e.rowData) ||
-                      void 0 === l
-                        ? void 0
-                        : l.assists
-                    }`;
+                  : `${e.cellData}/${null === (n = null == e ? void 0 : e.rowData) || void 0 === n ? void 0 : n.deaths}/${null === (l = null == e ? void 0 : e.rowData) || void 0 === l ? void 0 : l.assists}`;
               },
             },
             {
@@ -2616,9 +2596,7 @@
                             {
                               target: "_blank",
                               rel: "noopener noreferrer",
-                              href: `${A.Y.BASE_URL}${N._.personadetails(
-                                je,
-                              ).substr(1)}`,
+                              href: `${A.Y.BASE_URL}${N._.personadetails(je).substr(1)}`,
                             },
                             je,
                           ),
@@ -2961,22 +2939,22 @@
         }
       }
     },
-    88900: (e, t, a) => {
+    12680: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => b });
-      var n = a(33940),
-        l = a(52868),
+      var n = a(22970),
+        l = a(61674),
         r = a.n(l),
-        o = a(54013),
-        i = a(59934),
-        c = a(89526),
-        s = a(61011),
-        m = a(22396),
-        d = a(29706),
-        u = a(70894),
-        p = a(36250),
-        E = a(39375),
-        _ = a(37233),
+        o = a(98142),
+        i = a(15905),
+        c = a(66204),
+        s = a(62175),
+        m = a(5062),
+        d = a(31444),
+        u = a(37196),
+        p = a(79735),
+        E = a(95068),
+        _ = a(68410),
         y = a.n(_);
       const g = "public",
         v = 5e3,
@@ -3880,9 +3858,7 @@
               c.createElement(
                 "h1",
                 { className: y().Header },
-                `Team Details for ${null == k ? void 0 : k.name} (${
-                  k.team_id
-                })`,
+                `Team Details for ${null == k ? void 0 : k.name} (${k.team_id})`,
               ),
               c.createElement(
                 "div",
