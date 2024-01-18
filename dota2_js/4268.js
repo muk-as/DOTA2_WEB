@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [4711],
+  [4268],
   {
-    19028: (e) => {
+    57355: (e) => {
       e.exports = {
         Tooltip: "bpimmortalcarousel_Tooltip_1rogB",
         CarouselFade: "bpimmortalcarousel_CarouselFade_dt-ti",
@@ -53,7 +53,7 @@
         TextStyleFootnote: "bpimmortalcarousel_TextStyleFootnote_3ASKu",
       };
     },
-    83346: (e) => {
+    6574: (e) => {
       e.exports = {
         Tooltip: "bppurchasebutton_Tooltip_3SWNc",
         CarouselFade: "bppurchasebutton_CarouselFade_492j9",
@@ -86,19 +86,19 @@
         TextColorGreenGlow: "bppurchasebutton_TextColorGreenGlow_3azYF",
       };
     },
-    68653: (e, r, t) => {
+    38109: (e, r, t) => {
       "use strict";
       t.d(r, { Li: () => C, cg: () => a, sR: () => o });
       var a,
         o,
-        l = t(89526),
-        s = t(19028),
+        l = t(66204),
+        s = t(57355),
         m = t.n(s),
-        n = t(22396),
-        c = t(3646),
-        i = t(54013),
-        u = t(58638),
-        _ = t(32290);
+        n = t(5062),
+        c = t(2580),
+        i = t(98142),
+        u = t(78752),
+        _ = t(83097);
       !(function (e) {
         (e[(e.Normal = 0)] = "Normal"),
           (e[(e.Rare = 1)] = "Rare"),
@@ -338,9 +338,7 @@
                 t &&
                   l.createElement("img", {
                     className: (0, n.Z)(m().HeroImage, m().Left),
-                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${
-                      o ? "_gold" : ""
-                    }.png`,
+                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${o ? "_gold" : ""}.png`,
                   }),
                 l.createElement(
                   "video",
@@ -356,23 +354,17 @@
                   },
                   l.createElement("source", {
                     type: "video/webm",
-                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
-                      o ? "_gold" : ""
-                    }.webm`,
+                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${o ? "_gold" : ""}.webm`,
                   }),
                   l.createElement("source", {
                     type: "video/mp4",
-                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
-                      o ? "_gold" : ""
-                    }.mp4`,
+                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${o ? "_gold" : ""}.mp4`,
                   }),
                 ),
                 a &&
                   l.createElement("img", {
                     className: (0, n.Z)(m().HeroImage, m().Right),
-                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${
-                      o ? "_gold" : ""
-                    }.png`,
+                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${o ? "_gold" : ""}.png`,
                   }),
               ),
             )
@@ -433,16 +425,16 @@
           );
         };
     },
-    82297: (e, r, t) => {
+    63118: (e, r, t) => {
       "use strict";
       t.d(r, { VJ: () => u, Y$: () => i });
-      var a = t(89526),
-        o = t(83346),
+      var a = t(66204),
+        o = t(6574),
         l = t.n(o),
-        s = t(22396),
-        m = t(3646),
-        n = t(54013),
-        c = t(78562);
+        s = t(5062),
+        m = t(2580),
+        n = t(98142),
+        c = t(11360);
       const i = ({
           colorTopEdge: e,
           colorTop: r,

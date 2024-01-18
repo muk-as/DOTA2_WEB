@@ -1,17 +1,17 @@
-// 3324.js
+// 2402.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [3324],
+  [2402],
   {
-    88859: (e) => {
+    6747: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    40486: (e) => {
+    65043: (e) => {
       e.exports = {
         ComparisonImage: "comparisonimage_ComparisonImage_3SX3h",
         ImageLabel: "comparisonimage_ImageLabel_3bKKQ",
@@ -24,7 +24,7 @@
         TabContentContainer: "comparisonimage_TabContentContainer_2tKRo",
       };
     },
-    42570: (e) => {
+    86089: (e) => {
       e.exports = {
         Tooltip: "dawnbreaker_Tooltip_OauU7",
         CarouselFade: "dawnbreaker_CarouselFade_3ZZDo",
@@ -93,41 +93,41 @@
         rotate: "dawnbreaker_rotate_2ZiKU",
       };
     },
-    72210: (e, a, t) => {
+    47506: (e, a, t) => {
       "use strict";
       t.d(a, { U: () => m });
-      var r = t(89526),
-        n = t(88859),
+      var r = t(66204),
+        n = t(6747),
         l = t.n(n),
-        i = t(54013);
+        i = t(98142);
       const m = () =>
         r.createElement("div", {
           className: l().RightArrow,
           style: { backgroundImage: `url( ${i.Y.IMG_URL}/arrow_left.png )` },
         });
     },
-    83324: (e, a, t) => {
+    62402: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => L });
-      var r = t(33940),
-        n = t(54013),
-        l = t(89526),
-        i = t(565),
-        m = t(42570),
+      var r = t(22970),
+        n = t(98142),
+        l = t(66204),
+        i = t(28763),
+        m = t(86089),
         c = t.n(m),
-        _ = t(22396),
-        d = t(78562),
-        s = t(88464),
-        o = t(36250),
-        p = t(3646),
-        b = t(29706),
-        w = t(70894),
-        g = t(61011),
-        E = t(59481),
-        k = t(58638),
-        h = t(63738),
-        v = t(72210),
-        N = t(40486),
+        _ = t(5062),
+        d = t(11360),
+        s = t(80846),
+        o = t(79735),
+        p = t(2580),
+        b = t(31444),
+        w = t(37196),
+        g = t(62175),
+        E = t(95974),
+        k = t(78752),
+        h = t(87214),
+        v = t(47506),
+        N = t(65043),
         y = t.n(N);
       const u = ({ image: e, is_new: a }) =>
           l.createElement(

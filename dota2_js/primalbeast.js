@@ -1,17 +1,17 @@
-// 104.js
+// 8046.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [104],
+  [8046],
   {
-    88859: (e) => {
+    6747: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    58782: (e) => {
+    49369: (e) => {
       e.exports = {
         Tooltip: "primalbeast_Tooltip_2FBKv",
         CarouselFade: "primalbeast_CarouselFade_3qj-r",
@@ -88,40 +88,40 @@
         rotate: "primalbeast_rotate_22ADA",
       };
     },
-    72210: (e, a, t) => {
+    47506: (e, a, t) => {
       "use strict";
       t.d(a, { U: () => m });
-      var l = t(89526),
-        i = t(88859),
+      var l = t(66204),
+        i = t(6747),
         s = t.n(i),
-        r = t(54013);
+        r = t(98142);
       const m = () =>
         l.createElement("div", {
           className: s().RightArrow,
           style: { backgroundImage: `url( ${r.Y.IMG_URL}/arrow_left.png )` },
         });
     },
-    20104: (e, a, t) => {
+    38046: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => T });
-      var l = t(33940),
-        i = t(54013),
-        s = t(36250),
-        r = t(3646),
-        m = t(88464),
-        c = t(58638),
-        p = t(89526),
-        n = t(61011),
-        _ = t(565),
-        o = t(22396),
-        b = t(78562),
-        d = t(29706),
-        E = t(70894),
-        h = t(58782),
+      var l = t(22970),
+        i = t(98142),
+        s = t(79735),
+        r = t(2580),
+        m = t(80846),
+        c = t(78752),
+        p = t(66204),
+        n = t(62175),
+        _ = t(28763),
+        o = t(5062),
+        b = t(11360),
+        d = t(31444),
+        E = t(37196),
+        h = t(49369),
         v = t.n(h),
-        N = t(59481),
-        y = t(72210),
-        g = t(68121);
+        N = t(95974),
+        y = t(47506),
+        g = t(68399);
       let u = class extends p.Component {
         render() {
           const e = b.P.getPatchNotes("7.31", i.Y.LANGUAGE);

@@ -1,11 +1,11 @@
-// 6247.js
+// 5804.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [6247],
+  [5804],
   {
-    83346: (e) => {
+    6574: (e) => {
       e.exports = {
         Tooltip: "bppurchasebutton_Tooltip_3SWNc",
         CarouselFade: "bppurchasebutton_CarouselFade_492j9",
@@ -38,7 +38,7 @@
         TextColorGreenGlow: "bppurchasebutton_TextColorGreenGlow_3azYF",
       };
     },
-    47596: (e) => {
+    65618: (e) => {
       e.exports = {
         Tooltip: "international2023_Tooltip_1taT2",
         CarouselFade: "international2023_CarouselFade_8BZdP",
@@ -123,16 +123,16 @@
         ShowcaseVideo: "international2023_ShowcaseVideo_8_Trg",
       };
     },
-    82297: (e, t, a) => {
+    63118: (e, t, a) => {
       "use strict";
       a.d(t, { VJ: () => _, Y$: () => m });
-      var n = a(89526),
-        i = a(83346),
+      var n = a(66204),
+        i = a(6574),
         r = a.n(i),
-        l = a(22396),
-        o = a(3646),
-        s = a(54013),
-        c = a(78562);
+        l = a(5062),
+        o = a(2580),
+        s = a(98142),
+        c = a(11360);
       const m = ({
           colorTopEdge: e,
           colorTop: t,
@@ -354,25 +354,25 @@
             ),
           );
     },
-    76247: (e, t, a) => {
+    5804: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => J });
-      var n = a(33940),
-        i = a(54013),
-        r = a(3646),
-        l = a(88464),
-        o = a(89526),
-        s = a(61011),
-        c = a(22396),
-        m = a(29706),
-        _ = a(70894),
-        d = a(47596),
+      var n = a(22970),
+        i = a(98142),
+        r = a(2580),
+        l = a(80846),
+        o = a(66204),
+        s = a(62175),
+        c = a(5062),
+        m = a(31444),
+        _ = a(37196),
+        d = a(65618),
         p = a.n(d),
-        u = a(59934),
-        g = a(43083),
-        E = a(82297),
-        h = a(58638);
-      const { detect: S } = a(68843),
+        u = a(15905),
+        g = a(8908),
+        E = a(63118),
+        h = a(78752);
+      const { detect: S } = a(68359),
         w = (S(), "International2023Page"),
         C = ({ children: e }) => {
           const { hash: t } = (0, u.TH)();

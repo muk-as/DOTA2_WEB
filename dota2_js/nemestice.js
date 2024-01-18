@@ -1,11 +1,11 @@
-// 6063.js
+// 3657.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [6063],
+  [3657],
   {
-    13480: (e) => {
+    80707: (e) => {
       e.exports = {
         Tooltip: "nemestice_Tooltip_2h7lS",
         CarouselFade: "nemestice_CarouselFade_HKaWh",
@@ -103,22 +103,22 @@
         LoreSection: "nemestice_LoreSection_qvGKq",
       };
     },
-    66063: (e, a, t) => {
+    33657: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => g });
-      var s = t(54013),
-        c = t(89526),
-        r = t(13480),
+      var s = t(98142),
+        c = t(66204),
+        r = t(80707),
         l = t.n(r),
-        n = t(22396),
-        m = t(78562),
-        i = t(88464),
-        o = t(3646),
-        _ = t(29706),
-        d = t(70894),
-        p = t(82297),
-        E = t(68653),
-        v = t(61011);
+        n = t(5062),
+        m = t(11360),
+        i = t(80846),
+        o = t(2580),
+        _ = t(31444),
+        d = t(37196),
+        p = t(63118),
+        E = t(38109),
+        v = t(62175);
       const g = (0, i.Pi)(() => {
         m.P.RequestBPPrices([18695, 18696, 18697]);
         const e = [

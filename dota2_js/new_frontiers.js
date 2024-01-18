@@ -1,11 +1,11 @@
-// 7256.js
+// 9254.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [7256],
+  [9254],
   {
-    24471: (e) => {
+    75291: (e) => {
       e.exports = {
         Tooltip: "new_frontiers_Tooltip_2gy5M",
         CarouselFade: "new_frontiers_CarouselFade_3cu9a",
@@ -145,31 +145,31 @@
         MapFeatureTooltip: "new_frontiers_MapFeatureTooltip_2N4jM",
       };
     },
-    97256: (e, t, a) => {
+    39254: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => F });
-      var r = a(33940),
-        n = a(11701),
+      var r = a(22970),
+        n = a(43356),
         i = a.n(n),
-        s = a(54013),
-        o = a(17697),
-        _ = a(3646),
-        l = a(88464),
-        c = a(89526),
-        m = a(61011),
-        d = a(14202),
-        p = a(49213),
-        h = a(22396),
-        u = a(78562),
-        w = a(29706),
-        f = a(70894),
-        g = a(77108),
-        v = a(24471),
+        s = a(98142),
+        o = a(73806),
+        _ = a(2580),
+        l = a(80846),
+        c = a(66204),
+        m = a(62175),
+        d = a(53332),
+        p = a(88036),
+        h = a(5062),
+        u = a(11360),
+        w = a(31444),
+        f = a(37196),
+        g = a(90775),
+        v = a(75291),
         E = a.n(v),
-        N = a(59481),
-        R = a(59934),
-        I = a(43083),
-        C = a(57589);
+        N = a(95974),
+        R = a(15905),
+        I = a(8908),
+        C = a(38964);
       const M = "NewFrontiersPage",
         b = ({ children: e }) => {
           const { hash: t } = (0, R.TH)();
@@ -619,11 +619,7 @@
             (this.gameplayRef = c.createRef()),
             (this.handleScroll = (e) => {
               const t = this.mapRef.current.getBoundingClientRect().top;
-              (this.navbarRef.current.style.opacity = `${this.clamp(
-                this.remapValue(t, 0, -100, 0, 1),
-                0,
-                1,
-              )}`),
+              (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(t, 0, -100, 0, 1), 0, 1)}`),
                 (this.navbarRef.current.style.visibility =
                   t > 0 ? "hidden" : "visible"),
                 this.NewMapVideoContainerRef.current.getBoundingClientRect()

@@ -1,11 +1,11 @@
-// 7929.js
+// 1141.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [7929],
+  [1141],
   {
-    67594: (e) => {
+    61362: (e) => {
       e.exports = {
         Tooltip: "juneupdate22_Tooltip_2AeNN",
         CarouselFade: "juneupdate22_CarouselFade_2342Q",
@@ -39,21 +39,21 @@
         MainTitlePatch: "juneupdate22_MainTitlePatch_3jgyA",
       };
     },
-    47929: (e, t, a) => {
+    31141: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => g });
-      var n = a(78562),
-        i = a(54013),
-        l = a(3646),
-        c = a(89526),
-        r = a(61011),
-        s = a(29706),
-        d = a(70894),
-        _ = a(39375),
-        u = a(67594),
+      var n = a(11360),
+        i = a(98142),
+        l = a(2580),
+        c = a(66204),
+        r = a(62175),
+        s = a(31444),
+        d = a(37196),
+        _ = a(95068),
+        u = a(61362),
         m = a.n(u),
-        o = a(59481),
-        p = a(88464);
+        o = a(95974),
+        p = a(80846);
       const j = (e) =>
           c.createElement(
             "div",

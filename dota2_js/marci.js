@@ -1,17 +1,17 @@
-// 1669.js
+// 646.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [1669],
+  [646],
   {
-    88859: (e) => {
+    6747: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    3471: (e) => {
+    77588: (e) => {
       e.exports = {
         Tooltip: "traileroverlay_Tooltip_vPqso",
         CarouselFade: "traileroverlay_CarouselFade_hAvyI",
@@ -40,7 +40,7 @@
         LogoRight: "traileroverlay_LogoRight_20t2E",
       };
     },
-    59197: (e) => {
+    4489: (e) => {
       e.exports = {
         Tooltip: "marci_Tooltip_1h1rl",
         CarouselFade: "marci_CarouselFade_2v-4q",
@@ -91,30 +91,30 @@
         rotate: "marci_rotate_1p9Cl",
       };
     },
-    72210: (e, a, r) => {
+    47506: (e, a, r) => {
       "use strict";
       r.d(a, { U: () => c });
-      var l = r(89526),
-        t = r(88859),
+      var l = r(66204),
+        t = r(6747),
         i = r.n(t),
-        o = r(54013);
+        o = r(98142);
       const c = () =>
         l.createElement("div", {
           className: i().RightArrow,
           style: { backgroundImage: `url( ${o.Y.IMG_URL}/arrow_left.png )` },
         });
     },
-    6541: (e, a, r) => {
+    43516: (e, a, r) => {
       "use strict";
       r.d(a, { F: () => l, y: () => _ });
       var l,
-        t = r(89526),
-        i = r(3471),
+        t = r(66204),
+        i = r(77588),
         o = r.n(i),
-        c = r(54013),
-        m = r(3646),
-        s = r(22396),
-        n = r(38614);
+        c = r(98142),
+        m = r(2580),
+        s = r(5062),
+        n = r(72830);
       !(function (e) {
         (e[(e.TOP = 0)] = "TOP"),
           (e[(e.BOTTOM = 1)] = "BOTTOM"),
@@ -130,9 +130,7 @@
           ".LabelStyleHack { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; ";
         e.labelColors &&
           (e.labelColors.length > 1
-            ? (E += `background-image: -webkit-linear-gradient( left, ${e.labelColors.join(
-                ", ",
-              )} ); `)
+            ? (E += `background-image: -webkit-linear-gradient( left, ${e.labelColors.join(", ")} ); `)
             : (E += `background-image: -webkit-linear-gradient( left, ${e.labelColors[0]}, ${e.labelColors[0]} ); `));
         const u =
           null === (a = e.glowDetails) || void 0 === a
@@ -140,12 +138,8 @@
             : a.sort((e, a) => e.size - a.size);
         return (
           u &&
-            ((E += `-webkit-filter: ${u
-              .map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`)
-              .join(" ")}; `),
-            (E += `filter: ${u
-              .map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`)
-              .join(" ")}; `)),
+            ((E += `-webkit-filter: ${u.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `),
+            (E += `filter: ${u.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `)),
           t.createElement(
             "div",
             { className: o().TrailerOverlay },
@@ -264,27 +258,27 @@
         );
       };
     },
-    91669: (e, a, r) => {
+    50646: (e, a, r) => {
       "use strict";
       r.r(a), r.d(a, { default: () => I });
-      var l = r(33940),
-        t = r(54013),
-        i = r(36250),
-        o = r(3646),
-        c = r(88464),
-        m = r(58638),
-        s = r(89526),
-        n = r(61011),
-        _ = r(565),
-        p = r(22396),
-        d = r(78562),
-        E = r(29706),
-        u = r(70894),
-        g = r(59197),
+      var l = r(22970),
+        t = r(98142),
+        i = r(79735),
+        o = r(2580),
+        c = r(80846),
+        m = r(78752),
+        s = r(66204),
+        n = r(62175),
+        _ = r(28763),
+        p = r(5062),
+        d = r(11360),
+        E = r(31444),
+        u = r(37196),
+        g = r(4489),
         y = r.n(g),
-        v = r(72210),
-        b = r(6541),
-        N = r(68121);
+        v = r(47506),
+        b = r(43516),
+        N = r(68399);
       let L = class extends s.Component {
         render() {
           d.P.getPatchNotes("7.29", t.Y.LANGUAGE);

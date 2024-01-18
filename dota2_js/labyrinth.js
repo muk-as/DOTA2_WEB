@@ -1,11 +1,11 @@
-// 9431.js
+// 2686.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [9431],
+  [2686],
   {
-    3471: (e) => {
+    77588: (e) => {
       e.exports = {
         Tooltip: "traileroverlay_Tooltip_vPqso",
         CarouselFade: "traileroverlay_CarouselFade_hAvyI",
@@ -34,7 +34,7 @@
         LogoRight: "traileroverlay_LogoRight_20t2E",
       };
     },
-    50447: (e) => {
+    6682: (e) => {
       e.exports = {
         Tooltip: "labyrinth_Tooltip_mbsiX",
         CarouselFade: "labyrinth_CarouselFade_2LPkM",
@@ -137,17 +137,17 @@
         rotate: "labyrinth_rotate_1rFNe",
       };
     },
-    6541: (e, a, t) => {
+    43516: (e, a, t) => {
       "use strict";
       t.d(a, { F: () => r, y: () => m });
       var r,
-        l = t(89526),
-        o = t(3471),
+        l = t(66204),
+        o = t(77588),
         n = t.n(o),
-        s = t(54013),
-        i = t(3646),
-        c = t(22396),
-        _ = t(38614);
+        s = t(98142),
+        i = t(2580),
+        c = t(5062),
+        _ = t(72830);
       !(function (e) {
         (e[(e.TOP = 0)] = "TOP"),
           (e[(e.BOTTOM = 1)] = "BOTTOM"),
@@ -163,9 +163,7 @@
           ".LabelStyleHack { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; ";
         e.labelColors &&
           (e.labelColors.length > 1
-            ? (y += `background-image: -webkit-linear-gradient( left, ${e.labelColors.join(
-                ", ",
-              )} ); `)
+            ? (y += `background-image: -webkit-linear-gradient( left, ${e.labelColors.join(", ")} ); `)
             : (y += `background-image: -webkit-linear-gradient( left, ${e.labelColors[0]}, ${e.labelColors[0]} ); `));
         const p =
           null === (a = e.glowDetails) || void 0 === a
@@ -173,12 +171,8 @@
             : a.sort((e, a) => e.size - a.size);
         return (
           p &&
-            ((y += `-webkit-filter: ${p
-              .map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`)
-              .join(" ")}; `),
-            (y += `filter: ${p
-              .map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`)
-              .join(" ")}; `)),
+            ((y += `-webkit-filter: ${p.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `),
+            (y += `filter: ${p.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `)),
           l.createElement(
             "div",
             { className: n().TrailerOverlay },
@@ -297,23 +291,23 @@
         );
       };
     },
-    99431: (e, a, t) => {
+    2686: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => h });
-      var r = t(54013),
-        l = t(89526),
-        o = t(50447),
+      var r = t(98142),
+        l = t(66204),
+        o = t(6682),
         n = t.n(o),
-        s = t(22396),
-        i = t(78562),
-        c = t(88464),
-        _ = t(3646),
-        m = t(29706),
-        d = t(70894),
-        b = t(82297),
-        y = t(68653),
-        p = t(61011),
-        g = t(6541);
+        s = t(5062),
+        i = t(11360),
+        c = t(80846),
+        _ = t(2580),
+        m = t(31444),
+        d = t(37196),
+        b = t(63118),
+        y = t(38109),
+        p = t(62175),
+        g = t(43516);
       const h = (0, c.Pi)(() => {
         i.P.RequestBPPrices([17707, 17708, 17709]);
         const e = [
@@ -1073,9 +1067,7 @@
                     l.createElement(
                       "a",
                       {
-                        href: `${r.Y.IMG_URL}labyrinth/wallpapers/wallpaper_1_${
-                          "schinese" == r.Y.LANGUAGE ? "schinese" : "en"
-                        }.jpg`,
+                        href: `${r.Y.IMG_URL}labyrinth/wallpapers/wallpaper_1_${"schinese" == r.Y.LANGUAGE ? "schinese" : "en"}.jpg`,
                       },
                       l.createElement(
                         "div",
@@ -1091,9 +1083,7 @@
                     l.createElement(
                       "a",
                       {
-                        href: `${r.Y.IMG_URL}labyrinth/wallpapers/mobile_1_${
-                          "schinese" == r.Y.LANGUAGE ? "schinese" : "en"
-                        }.jpg`,
+                        href: `${r.Y.IMG_URL}labyrinth/wallpapers/mobile_1_${"schinese" == r.Y.LANGUAGE ? "schinese" : "en"}.jpg`,
                       },
                       l.createElement(
                         "div",

@@ -1,17 +1,17 @@
-// 7164.js
+// 767.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [7164],
+  [767],
   {
-    88859: (e) => {
+    6747: (e) => {
       e.exports = {
         RightArrow: "arrows_RightArrow_1aWAc",
         UpRightArrow: "arrows_UpRightArrow_3KCtp",
       };
     },
-    66117: (e) => {
+    82702: (e) => {
       e.exports = {
         Tooltip: "muerta_Tooltip_2KOuf",
         CarouselFade: "muerta_CarouselFade_1uXpQ",
@@ -156,40 +156,40 @@
         rotate: "muerta_rotate_3g5Cw",
       };
     },
-    72210: (e, a, t) => {
+    47506: (e, a, t) => {
       "use strict";
       t.d(a, { U: () => m });
-      var r = t(89526),
-        l = t(88859),
+      var r = t(66204),
+        l = t(6747),
         i = t.n(l),
-        s = t(54013);
+        s = t(98142);
       const m = () =>
         r.createElement("div", {
           className: i().RightArrow,
           style: { backgroundImage: `url( ${s.Y.IMG_URL}/arrow_left.png )` },
         });
     },
-    7164: (e, a, t) => {
+    30767: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => L });
-      var r = t(33940),
-        l = t(54013),
-        i = t(36250),
-        s = t(3646),
-        m = t(88464),
-        n = t(58638),
-        c = t(89526),
-        o = t(61011),
-        d = t(565),
-        _ = t(22396),
-        u = t(78562),
-        N = t(29706),
-        E = t(70894),
-        v = t(66117),
+      var r = t(22970),
+        l = t(98142),
+        i = t(79735),
+        s = t(2580),
+        m = t(80846),
+        n = t(78752),
+        c = t(66204),
+        o = t(62175),
+        d = t(28763),
+        _ = t(5062),
+        u = t(11360),
+        N = t(31444),
+        E = t(37196),
+        v = t(82702),
         g = t.n(v),
-        p = t(59481),
-        h = t(72210),
-        b = t(14202);
+        p = t(95974),
+        h = t(47506),
+        b = t(53332);
       const S = (0, m.Pi)((e) => {
         const a =
           ((t = e.nItemDefID),
@@ -201,7 +201,7 @@
         var t, r;
         return (0, s.Jr)(e.strLocString, a);
       });
-      var I = t(11701),
+      var I = t(43356),
         y = t.n(I);
       const T = [
           {
@@ -291,11 +291,7 @@
             (this.layer1Ref = c.createRef()),
             (this.handleScroll = (e) => {
               const a = this.layer1Ref.current.getBoundingClientRect().top;
-              (this.navbarRef.current.style.opacity = `${this.clamp(
-                this.remapValue(a, 0, -100, 0, 1),
-                0,
-                1,
-              )}`),
+              (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(a, 0, -100, 0, 1), 0, 1)}`),
                 (this.navbarRef.current.style.visibility =
                   a > 0 ? "hidden" : "visible"),
                 y().refresh();
@@ -708,11 +704,7 @@
                               slide: a,
                               className: g().AbilitySelector,
                               style: {
-                                backgroundImage: `url( ${l.Y.IMG_URL}/${
-                                  e.dotBackgroundImage
-                                    ? e.dotBackgroundImage
-                                    : e.imgSrc
-                                } )`,
+                                backgroundImage: `url( ${l.Y.IMG_URL}/${e.dotBackgroundImage ? e.dotBackgroundImage : e.imgSrc} )`,
                                 backgroundSize: "cover",
                               },
                             },
@@ -806,11 +798,7 @@
                               slide: a,
                               className: g().AbilitySelector,
                               style: {
-                                backgroundImage: `url( ${l.Y.IMG_URL}/${
-                                  e.dotBackgroundImage
-                                    ? e.dotBackgroundImage
-                                    : e.imgSrc
-                                } )`,
+                                backgroundImage: `url( ${l.Y.IMG_URL}/${e.dotBackgroundImage ? e.dotBackgroundImage : e.imgSrc} )`,
                                 backgroundSize: "cover",
                               },
                             },

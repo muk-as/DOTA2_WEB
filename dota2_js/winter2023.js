@@ -1,11 +1,11 @@
-// 3641.js
+// 1511.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [3641],
+  [1511],
   {
-    51898: (e) => {
+    92047: (e) => {
       e.exports = {
         Tooltip: "winter2023_Tooltip_zIgQQ",
         CarouselFade: "winter2023_CarouselFade_2GYRS",
@@ -137,26 +137,26 @@
         BalanceChanges: "winter2023_BalanceChanges_EHed0",
       };
     },
-    63641: (e, t, a) => {
+    31511: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => x });
-      var r = a(33940),
-        i = a(54013),
-        n = a(17697),
-        s = a(3646),
-        l = a(88464),
-        o = a(89526),
-        c = a(61011),
-        _ = a(22396),
-        m = a(78562),
-        d = a(29706),
-        u = a(70894),
-        w = a(51898),
+      var r = a(22970),
+        i = a(98142),
+        n = a(73806),
+        s = a(2580),
+        l = a(80846),
+        o = a(66204),
+        c = a(62175),
+        _ = a(5062),
+        m = a(11360),
+        d = a(31444),
+        u = a(37196),
+        w = a(92047),
         p = a.n(w),
-        N = a(59481),
-        E = a(58638),
-        g = a(57589),
-        v = a(11701),
+        N = a(95974),
+        E = a(78752),
+        g = a(38964),
+        v = a(43356),
         h = a.n(v);
       const S = (e) =>
           o.createElement(
