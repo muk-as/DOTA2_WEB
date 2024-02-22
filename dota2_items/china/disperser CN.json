@@ -8,7 +8,7 @@
             "id": 1097,
             "name": "item_disperser",
             "name_loc": "散魂剑",
-            "desc_loc": "<h1>主动：抑制</h1>影响目标附近%radius%范围内所有单位。目标附近所有敌人被减速，持续%enemy_effect_duration%秒。<br><br>目标附近所有友军获得弱驱散效果，并且提升移动速度，无法被减速，持续%ally_effect_duration%秒。<br><br>移动速度减缓和提升效果在状态持续时间内初始均为%phase_movement_speed%%%，并且逐渐减少至0。<br><br>施法距离：%abilitycastrange%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：破法</h1>每次攻击将燃烧目标%feedback_mana_burn%点魔法，而且每燃烧一点魔法都会造成%damage_per_burn%点物理伤害。<br><br>近战英雄的幻象每次攻击将燃烧%feedback_mana_burn_illusion_melee%点魔法。远程英雄的幻象每次攻击将燃烧%feedback_mana_burn_illusion_ranged%点魔法。",
+            "desc_loc": "<h1>主动：抑制</h1>若目标是敌军，会被减速%enemy_effect_duration%秒，若目标是友军则会提升移动速度，施加弱驱散效果并且无法被减速，持续%ally_effect_duration%秒。施法者总是会获得友军的加成效果。<br><br>移动速度减缓和提升效果在状态持续时间内初始均为%phase_movement_speed%%%，并且逐渐减少至0。<br><br>施法距离：%abilitycastrange%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：破法</h1>每次攻击将燃烧目标%feedback_mana_burn%点魔法，而且每燃烧一点魔法都会造成%damage_per_burn%点物理伤害。<br><br>近战英雄的幻象每次攻击将燃烧%feedback_mana_burn_illusion_melee%点魔法。远程英雄的幻象每次攻击将燃烧%feedback_mana_burn_illusion_ranged%点魔法。",
             "lore_loc": "",
             "notes_loc": [],
             "shard_loc": "",
@@ -160,17 +160,6 @@
                 "values_scepter": []
               },
               {
-                "name": "radius",
-                "values_float": [
-                  350
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": []
-              },
-              {
                 "name": "movement_speed_buff_rate",
                 "values_float": [
                   5
@@ -286,7 +275,7 @@
             "ability_has_shard": false,
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
-            "item_cost": 5700,
+            "item_cost": 6100,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,
