@@ -47,7 +47,7 @@
     "valve_access_log": [
       {
         "strSteamID": "76561199113010392",
-        "rtUpdated": 1709684505
+        "rtUpdated": 1709686550
       },
       {
         "strSteamID": "76561198042665686",
@@ -59,7 +59,7 @@
       },
       {
         "strSteamID": "76561198166130601",
-        "rtUpdated": 1709677787
+        "rtUpdated": 1709751795
       }
     ]
   },
@@ -69,7 +69,7 @@
     "posterid": "0",
     "headline": "Mezi linkami: Jak odepřít odpírání služeb",
     "posttime": 1709684506,
-    "updatetime": 1709684506,
+    "updatetime": 1709751795,
     "body": [
       "[img]{STEAM_CLAN_IMAGE}/3703047/4d7209c869530f3e0f737e28a1156e7017314660.jpg[/img]",
       "[i]Vítejte u dalšího příspěvku z rubriky Mezi linkami, v níž se s Vámi členové vývojářského týmu detailně podělí o nástrahy, problémy a občasné nehody s dobrým koncem, které jsou denním chlebem při práci na tak unikátní hře, jakou Dota 2 bezpochyby je.[/i]",
@@ -81,46 +81,51 @@
       "V srpnu téhož roku byl DDoS útoky narušen náš šampionát The International, a přestože profesionálů se to netýkalo, komentátoři se více než dvě hodiny nemohli připojit na servery a dělat svoji práci. Z minuty na minutu byl znehodnocen celý přenos a hráči bojovali v naprosté tichosti. Profesionální herní událost s miliony diváků po celém světě a miliony dolarů pro vítěze byla narušena internetovými vandaly se softwarem za pár korun. Problém už nešlo dále přehlížet.",
       "[img]{STEAM_CLAN_IMAGE}/3703047/c63292d66774594361f081935573b7567dbfe7b6.jpg[/img]",
       "Funkční řešení DDoS útoků se však ukázalo být tuhým oříškem. Jako první nás napadlo filtrovat síťový provoz prostřednictvím výkonného přepínače, jenže takové filtrování je v případě herního provozu zákonitě ještě složitější než jinde, neboť herní servery přes protokol UDP („User Datagram Protocol“) běžně přijímají nevyžádaný provoz od náhodných IP adres. Pro zjednodušení si představte, že by pro Vás byla zřízena pobočka pošty, která by hlídala, aby Vám chodily pouze legitimní dopisy. Ale co kdybyste zrovna pracovali jako novináři a denně Vám cizí lidé posílali tuny dopisů s tím, co se u nich děje a o čem máte napsat? Pošta by nepoznala, kdo je legitimní a kdo ne. A přesně tak to vidí herní servery. Co víc, v UDP paketech není zabezpečena zdrojová IP adresa a lze ji snadno zfalšovat, takže pracovníci pošty by se při třídění nemohli orientovat ani podle zpáteční adresy, která může, ale nemusí být opravdová.",
-      "Služba Steam doručuje svým uživatelům velké množství herního obsahu a má pro to zřízenou adekvátní síť.  Už tehdy jsme ostatně této sítě využívali pro řízení herního provozu po vyhrazených linkách, pro dosažení dobrého peerování nebo obecně pro zajištění toho, že jsou implementovány co nejlepší metody síťování. Hráči tedy měli nízký ping, ale neexistovala žádná ochrana proti DDoS útokům. Jinými slovy jsme měli svoji vlastní síť, akorát nebyl soukromá.",
+      "Služba Steam doručuje svým uživatelům velké množství herního obsahu a má pro to zřízenou adekvátní síť.  Už tehdy jsme ostatně této sítě využívali pro řízení herního provozu po vyhrazených linkách, pro dosažení dobrého peerování nebo obecně pro zajištění toho, že jsou implementovány co nejlepší metody síťování. Hráči tedy měli nízký ping, ale neexistovala žádná ochrana proti DDoS útokům. Jinými slovy jsme měli svoji vlastní síť, akorát nebyla soukromá.",
       "Abychom byli schopni zabránit útokům na naše servery skrze naši vlastní síť, potřebovali jsme mít dohled nad všemi vchody, čehož bylo dosaženo vytvořením proxy serverů pro herní provoz, které směrovaly jednotlivé pakety dat sítí přes naše relé. Když tak nově chtěl klient komunikovat s herním serverem, musel jít přes relé, které ho zároveň ověřilo a zároveň maskovalo provoz pokračující na server, takže IP adresa serveru byla neustále skrytá a potenciální útočníci neměli ponětí, kde udeřit.",
       "Vrátit se k naší zastaralé poštovní metafoře, spammeři už jednoduše neměli adresu, na kterou by posílali nevyžádané dopisy. Ano, mohli poslat dopisy na každou pobočku v okolí a požádat o jejich doručení, jenže bez ověření je zaměstnanci ignorovali. A i kdyby neignorovali, jistě by se podivili, proč se někdo snaží poslat jednomu člověku 100 000 dopisů.",
       "[img]{STEAM_CLAN_IMAGE}/3703047/d4e0ef987a9df51ac53309c6a1483cfcdd6749fd.jpg[/img]",
       "Ptáte se, jestli nešlo zaútočit rovnou na relé? Technicky vzato šlo. Ale takových relé jsme měli v podstatě neomezený počet a všechna byla vytvořena právě jako návnady. „Relé“ je totiž jen jiný název pro počítač se spuštěným softwarem – můžete na něj zaútočit nebo ho dokonce shodit, nicméně protokol s tím předběžně počítá, takže když klient hraje hru a ztratí spojení s jedním relé, bez přemýšlení přepne na jiné. Relé jsou prostě jako stovky pěšáků rozmístěné po světě s jediným úkolem bránit herní server. A mimochodem, shodit relé je obtížnější, než se zdá. Každé je dobře navržené a umístěné v konkrétní části sítě, takže ač byla všechna vytvořena, aby je někdo shodil, ještě se to nikomu nepovedlo.",
       "Tohle řešení bylo přímočaré, ale účinné. Když chtěl někdo dříve narušit hru, stačilo mu zahltit jeden herní server (velmi snadný terč). Nově se musel záškodník postavit prakticky celému datovému centru (o dost těžší terč). Existují způsoby, jak něčeho takového dosáhnout? Samozřejmě. Jsou to způsoby, které si může každý koupit na internetu za pár babek? Ani náhodou. DDoS útoky se oficiálně staly cenově nedostupnými pro většinu lidí.",
       "Po zavedení nového systému jsme také došli prozření: kdybychom měli k dispozici soukromou síť, nebyli bychom závislí na fungování běžného internetu a mohli bychom svým zákazníkům poskytovat ještě lepší služby. Když třeba na běžném internetu pošlete paket z jedné IP adresy na jinou, použitá trasa je určena směrovacím protokolem BGP („Border Gateway Protocol“) a Vy o ní nemůžete nijak rozhodnout.",
-      "Zato ve virtuální soukromé síti složené ze stovek globálních relé a datových center by si mohl každý klient bez přehánění vysekat vlastní trasu na herní server, častěji ještě rychlejší, než jaká je mu nabízena jako výchozí. Pokud využíváte síť Steam Datagram Relay (SDR), můžete se o optimalizaci přesvědčit sami, jelikož vidíte svoji odezvu a poskytovanou trasu.",
+      "Zato ve virtuální soukromé síti složené ze stovek globálních relé a datových center by si mohl každý klient bez přehánění vysekat vlastní trasu na herní server, častěji ještě rychlejší, než jaká je mu nabízena jako výchozí. Pokud využíváte síť Steam Datagram Relay (SDR), můžete se o optimalizaci přesvědčit sami v překrytí služby Steam, jelikož vidíte svoji odezvu a poskytovanou trasu.",
       "[img]{STEAM_CLAN_IMAGE}/3703047/82554298cf9ed002daf92613c81d19d6072ef09c.jpg[/img]",
       "A tady to máte. Funkce, která se zrodila jako způsob ochrany herních serverů, vyrostla do nečekaných rozměrů. Řečí čísel SDR běžně doručuje až 140 milionů paketů rychlostí 550 gigabitů za sekundu. Relé máme rozmístěná v 31 datových centrech s celkovou kapacitou přesahující 5 terabitů. To, čemu dnes říkáme Steam Datagram Relay, nejen chrání před DDoS útoky, ale také zlepšuje konektivitu a snižuje odezvu pro všechny hráče hry Dota 2. A nejen ty – naší sítě může využít každá hra ve službě Steam!",
       "Snad Vás i dnešní nakouknutí mezi linky bavilo a něco jste si z něj odnesli. Děkujeme za Váš čas (pokud tu ještě někdo přes všechny ty technické podrobnosti zůstal), a jestli máte návrh na nějaké budoucí téma do této rubriky, dejte nám vědět."
     ],
-    "commentcount": 0,
-    "tags": [],
+    "commentcount": 192,
+    "tags": [
+      "mod_reviewed",
+      "ModAct_1415588329_1709686042_0",
+      "ModAct_1415588329_1709693712_4",
+      "mod_require_rereview"
+    ],
     "language": 19,
     "hidden": 0,
     "forum_topic_id": "4288061352804807411",
     "event_gid": "4115798034511159059",
-    "voteupcount": 0,
-    "votedowncount": 0,
+    "voteupcount": 2610,
+    "votedowncount": 118,
     "ban_check_result": 0,
     "banned": 0
   },
   "published": 1,
   "hidden": 0,
-  "rtime32_visibility_start": 0,
+  "rtime32_visibility_start": 1709684460,
   "rtime32_visibility_end": 0,
   "broadcaster_accountid": 0,
   "follower_count": 0,
   "ignore_count": 0,
   "forum_topic_id": "4288061352804807411",
-  "rtime32_last_modified": 1709684506,
+  "rtime32_last_modified": 1709751796,
   "news_post_gid": "0",
-  "rtime_mod_reviewed": 0,
+  "rtime_mod_reviewed": 1709693712,
   "featured_app_tagid": 0,
   "referenced_appids": [],
   "build_id": 0,
   "build_branch": "",
-  "votes_up": 0,
-  "votes_down": 0,
+  "votes_up": 2604,
+  "votes_down": 118,
   "comment_type": "ForumTopic",
   "gidfeature": "1636418037459185108",
   "gidfeature2": "4288061352804807411",

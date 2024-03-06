@@ -47,7 +47,7 @@
     "valve_access_log": [
       {
         "strSteamID": "76561199113010392",
-        "rtUpdated": 1709684505
+        "rtUpdated": 1709686550
       },
       {
         "strSteamID": "76561198042665686",
@@ -59,7 +59,7 @@
       },
       {
         "strSteamID": "76561198166130601",
-        "rtUpdated": 1709677787
+        "rtUpdated": 1709751795
       }
     ]
   },
@@ -69,7 +69,7 @@
     "posterid": "0",
     "headline": "Giữa làn đạn: Từ chối cái từ chối dịch vụ",
     "posttime": 1709684506,
-    "updatetime": 1709684506,
+    "updatetime": 1709751795,
     "body": [
       "[img]{STEAM_CLAN_IMAGE}/3703047/4d7209c869530f3e0f737e28a1156e7017314660.jpg[/img]",
       "[i]Chào mừng bạn trở lại Giữa làn đạn, loạt bài blog tiêu điểm mà các thành viên đội phát triển trình bày những thử thách, lỗi sửa, và đôi khi vài tình huống cười chảy nước mắt trong chặng đường phát triển một trò chơi độc đáo như Dota.[/i]",
@@ -88,39 +88,44 @@
       "Nhưng nếu thế thì chỉ cần tấn công relay là được phải không? Về mặt kỹ thuật thì được. Nhưng chúng tôi đã thủ sẵn gần như vô hạn các relay, được thiết kế rất chịu đòn. “Relay” là từ ngữ khác để chỉ một máy tính chạy phần mềm. Bạn có thể tấn công hoặc làm sập, nhưng giao thức đã được thiết kế với giả định này. Nếu một máy khách tìm cách chơi một trận đấu và mất liên hệ với relay, thì chỉ cần chuyển qua một relay khác. Relay như hàng trăm con tốt thí dàn trải khắp mọi nơi trên thế giới với mục đích bảo vệ máy chủ trò chơi. (Trùng hợp thay, muốn hạ relay thì nói dễ hơn làm. Chúng được thiết kế tinh vi và đặt tại một nơi cụ thể của hệ thống mạng, vậy nên dù được phát triển để bị đánh sập, chúng tôi đến giờ vẫn chưa mất relay nào).",
       "Giải pháp đơn giản mà hiệu nghiệm. Trước đây, nếu có kẻ nào muốn phá bĩnh, chúng chỉ việc chế ngự một máy chủ duy nhất (gì mà đơn giản như đang giỡn). Giờ, về cơ bản, chúng phải chế ngự cả trung tâm dữ liệu - rất, rất chi là không giỡn mặt được. Liệu còn thủ thuật tấn công nào triệt phá được điều này? Có chứ sao không. Còn kiểu tấn công mà ai online bỏ ra 5 đô cũng có thể làm được nữa không? Không nhé. Một cuộc tấn công tinh vi vậy chính thức nằm ngoài hầu bao của cơ số người đấy.",
       "Với hệ thống mới đã thượng đài và xung trận, chúng tôi chợt ngộ ra: Nếu kiểm soát riêng hệ thống mạng, thì không còn phụ thuộc vào cách Internet thông thường hoạt động. Chúng tôi có thể dùng hệ thống để cải thiện hơn nữa trải nghiệm của khách hàng. Với mạng Internet thông thường, khi bạn gửi một gói từ địa chỉ IP này tới địa chỉ IP khác, tuyến đường gửi tới sẽ xác định bởi Border Gateway Protocol (BGP - Giao thức cổng đường biên). Đó là thuật toán định tuyến quyết định cách gói của bạn sẽ di chuyển ra sao trong mạng lưới, và bạn không thể quyết định tuyến đường được chọn.",
-      "Nhưng với một mạng ảo bao gồm hàng trăm relay và trạm dữ liệu trên toàn cầu, chúng tôi cơ bản có thể định tuyến theo cách riêng từ máy khách tới máy chủ trò chơi—và thường là đường tắt nhanh hơn so với cách thông thường. Nếu đang sử dụng Steam Datagram Relay (SDR), chúng tôi hiển thị thời gian ping và đường định tuyến được chọn cho bạn, vì thế bạn có thể thấy mọi thứ tối ưu ra sao.",
+      "Nhưng với một mạng ảo bao gồm hàng trăm relay và trạm dữ liệu trên toàn cầu, chúng tôi cơ bản có thể định tuyến theo cách riêng từ máy khách tới máy chủ trò chơi—và thường là đường tắt nhanh hơn so với cách thông thường. Nếu đang sử dụng Steam Datagram Relay (SDR), lớp phủ Steam sẽ hiển thị thời gian ping và đường định tuyến được chọn cho bạn, vì thế bạn có thể thấy mọi thứ tối ưu ra sao.",
       "[img]{STEAM_CLAN_IMAGE}/3703047/82554298cf9ed002daf92613c81d19d6072ef09c.jpg[/img]",
       "Tính năng bắt đầu như một phương pháp để bảo vệ máy chủ Dota đã phát triển vượt xa hơn những gì mong đợi. Mạng lưới SDR định kỳ cung cấp tới 140 triệu gói mạng và 550 GBit dữ liệu mỗi giây. Chúng tôi có relay ở 31 trung tâm dữ liệu với công suất hơn 5 TBit. Hệ thống mang tên Steam Datagram Relay không chỉ bảo vệ khỏi các cuộc tấn công DDoS, mà còn cải thiện kết nối và giảm ping cho từng khách hàng Dota. Không phải mỗi Dota được hàng thơm đâu, mà bất kỳ trò chơi nào trên Steam cũng đều có thể tận dụng nếu muốn.",
       "Hy vọng các đồng đạo ngó qua ngó lại giữa làn đường Dota thật vui. Quả là một vấn đề nặng tính kỹ thuật, cảm ơn vì đã kiên nhẫn! Thoải mái cho chúng tôi biết đề tài bạn muốn chúng tôi đề cập tiếp theo nhé."
     ],
-    "commentcount": 0,
-    "tags": [],
+    "commentcount": 192,
+    "tags": [
+      "mod_reviewed",
+      "ModAct_1415588329_1709686042_0",
+      "ModAct_1415588329_1709693712_4",
+      "mod_require_rereview"
+    ],
     "language": 28,
     "hidden": 0,
     "forum_topic_id": "4288061352804807411",
     "event_gid": "4115798034511159059",
-    "voteupcount": 0,
-    "votedowncount": 0,
+    "voteupcount": 2611,
+    "votedowncount": 118,
     "ban_check_result": 0,
     "banned": 0
   },
   "published": 1,
   "hidden": 0,
-  "rtime32_visibility_start": 0,
+  "rtime32_visibility_start": 1709684460,
   "rtime32_visibility_end": 0,
   "broadcaster_accountid": 0,
   "follower_count": 0,
   "ignore_count": 0,
   "forum_topic_id": "4288061352804807411",
-  "rtime32_last_modified": 1709684506,
+  "rtime32_last_modified": 1709751799,
   "news_post_gid": "0",
-  "rtime_mod_reviewed": 0,
+  "rtime_mod_reviewed": 1709693712,
   "featured_app_tagid": 0,
   "referenced_appids": [],
   "build_id": 0,
   "build_branch": "",
-  "votes_up": 0,
-  "votes_down": 0,
+  "votes_up": 2604,
+  "votes_down": 118,
   "comment_type": "ForumTopic",
   "gidfeature": "1636418037459185108",
   "gidfeature2": "4288061352804807411",

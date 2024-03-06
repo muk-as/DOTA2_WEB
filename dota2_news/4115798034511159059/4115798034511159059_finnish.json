@@ -47,7 +47,7 @@
     "valve_access_log": [
       {
         "strSteamID": "76561199113010392",
-        "rtUpdated": 1709684505
+        "rtUpdated": 1709686550
       },
       {
         "strSteamID": "76561198042665686",
@@ -59,7 +59,7 @@
       },
       {
         "strSteamID": "76561198166130601",
-        "rtUpdated": 1709677787
+        "rtUpdated": 1709751795
       }
     ]
   },
@@ -69,7 +69,7 @@
     "posterid": "0",
     "headline": "Linjoilla: palveluneston estäminen",
     "posttime": 1709684506,
-    "updatetime": 1709684506,
+    "updatetime": 1709751795,
     "body": [
       "[img]{STEAM_CLAN_IMAGE}/3703047/4d7209c869530f3e0f737e28a1156e7017314660.jpg[/img]",
       "[i]Tervetuloa takaisin Linjoilla-blogisarjaan, jossa kehitystiimiläiset kertovat siitä, millaisia haasteita, bugeja ja välillä myös onnenkantamoisia tulee eteen Dotan kaltaisessa, ainutlaatuisessa pelissä.[/i]",
@@ -85,42 +85,47 @@
       "Meidän piti valvoa ja suojata kaikkia verkon sisäänkäyntejä, jotta hyökkääjät eivät voineet käyttää verkkoamme hyökätäkseen palvelimillemme. Se mahdollistettiin luomalla välityspalvelimia peliliikenteelle ja reitittämällä jokainen datapaketti verkkovälittäjien kautta. Jos asiakasohjelma halusi kommunikoida pelipalvelimen kanssa, sen piti yhdistää pelipalvelimeen välityspalvelimella, joka sekä todensi että ohjasi liikenteen pelipalvelimelle. Tämä tarkoitti sitä, että palvelimen IP-osoite pysyi piilossa: hyökkääjä ei voinut tietää, minne hyökätä.",
       "Postitoimistoesimerkin roskapostittajalla ei enää ollut osoitetta, johon lähettää postia. Hän voi lähettää postinsa alueen jokaiseen postitoimistoon ja pyytää ohjaamaan sen eteenpäin, mutta ilman lupaa se ei etene minnekään. (Lisäksi postitoimistossa heräisi epäilyksiä, jos joku yrittäisi lähettää jollekulle satatuhatta kirjettä.)",
       "[img]{STEAM_CLAN_IMAGE}/3703047/d4e0ef987a9df51ac53309c6a1483cfcdd6749fd.jpg[/img]",
-      "Mutta eikö hyökkäystä voisi kohdistaa lähetyspalvelimelle? Teoriassa voisi. Mutta käytännössä niitä on loputtomasti, ja ne ovat kuin luotuja hyökättäviksi. \"Välityspalvelin\" on tässä tapauksessa vain ylimääräinen ohjelmistoa käyttävä tietokone. Siihen voi hyökätä ja sen voi kaataa. Protokolla oli luotu tätä silmällä pitäen. Jos asiakas yrittää pelata peliä ja menettää yhteyden välityspalvelimeen, se vain yhdistää toiseen samanlaiseen. Välityspalvelimet ovat kuin satoja vartijoita, joiden ainoa tehtävä on seistä ympäri maailmaa ja vartioida pelipalvelinta. (Lisämaininta: välityspalvelimen kaataminen on vaikeampaa kuin uskoisi. Vaikka ne on suunniteltu kaadettaviksi ja hajautettu tiettyihin verkon osiin, yksikään ei ole vielä kaatunut.)",
+      "Mutta eikö hyökkäystä voisi kohdistaa lähetyspalvelimelle? Teoriassa voisi. Mutta käytännössä niitä on loputtomasti, ja ne ovat kuin luotuja hyökättäviksi. \"Välityspalvelin\" on tässä tapauksessa vain ylimääräinen ohjelmistoa käyttävä tietokone. Siihen voi hyökätä ja sen voi kaataa. Protokolla oli luotu tätä silmällä pitäen. Jos asiakas yrittää pelata peliä ja menettää yhteyden välityspalvelimeen, se vain yhdistää toiseen samanlaiseen. Välityspalvelimet ovat kuin satoja vartijoita, joiden ainoa tehtävä on seistä ympäri maailmaa ja vartioida pelipalvelinta. (Lisämaininta: Välityspalvelimen kaataminen on vaikeampaa kuin uskoisi. Vaikka ne on suunniteltu kaadettaviksi ja hajautettu tiettyihin verkon osiin, yksikään ei ole vielä kaatunut.)",
       "Ratkaisu oli yksinkertainen, mutta tehokas. Aikaisemmin pelin häiritseminen vaati vain yhden pelipalvelimen ylikuormittamisen (mikä ei ollut vaikeaa). Nyt ylikuormittamista vaatii kokonainen datakeskus, mikä on todella paljon vaikeampaa. Onko olemassa hyökkäystä, joka voisi saavuttaa tämän? Totta kai. Onko olemassa tällaista hyökkäystä, jonka kuka tahansa voisi ostaa viidellä taalalla? Ei. Näin hienostunut hyökkäys on virallisesti useimpien henkilöiden lompakoiden saavuttamattomissa.",
-      "Uuden järjestelmän myötä oivalsimme, että jos hallinnoisimme yksityistä verkkoa, emme olisi internetistä riippuvaisia.  Voisimme tarjota pelaajille entistä paremman kokemuksen. Internetin datapaketin lähetys IP-osoitteesta toiseen määräytyy BGD-protokollan (Border Gateway Protocol) avulla. BGP on reititysalgoritmi, joka määrittää datapaketin verkkoreitin, eikä sen valitsemaan reittiin voi vaikuttaa.",
-      "Sadoista maailmanlaajuisista välityspalvelimista ja datakeskuksista muodostuvalla virtuaalisella yksityisverkolla olisi mahdollista luoda oma (usein nopeampi) reitti asiakasohjelmasta pelipalvelimelle. Kun käytät Steam Datagram Relaytä (SDR), näet viiveaikasi ja tarjoamamme reitin, joten näet optimoinnin itse.",
+      "Uuden järjestelmän myötä oivalsimme, että jos hallinnoisimme yksityistä verkkoa, emme olisi internetistä riippuvaisia.  Voisimme tarjota pelaajille entistä paremman kokemuksen. Internetin datapaketin lähetys IP-osoitteesta toiseen määräytyy BGP-protokollan (Border Gateway Protocol) avulla. BGP on reititysalgoritmi, joka määrittää datapaketin verkkoreitin, eikä sen valitsemaan reittiin voi vaikuttaa.",
+      "Sadoista maailmanlaajuisista välityspalvelimista ja datakeskuksista muodostuvalla virtuaalisella yksityisverkolla olisi mahdollista luoda oma (usein nopeampi) reitti asiakasohjelmasta pelipalvelimelle. Kun käytät Steam Datagram Relaytä (SDR), Steamin yhteisönäkymä näyttää viiveaikasi ja tarjotun reitin, joten näet optimoinnin itse.",
       "[img]{STEAM_CLAN_IMAGE}/3703047/82554298cf9ed002daf92613c81d19d6072ef09c.jpg[/img]",
       "Dotan pelipalvelimien suojeluun luodusta ominaisuudesta kasvoi jotain, jonka kokoluokkaa ei kukaan osannut kuvitella. SDR-verkkomme toimittaa rutiininomaisesti jopa 140 miljoonaa pakettia ja 550 gigabittiä sekunnissa. Meillä on välityspalvelimia 31 datakeskuksessa, joiden kapasiteetti ylittää jopa 5 terabittiä. Nykyisin Steam Datagram Relay -palvelu ei pelkästään suojele palvelimia DDoS-hyökkäyksiltä, vaan lisäksi se parantaa Dota-pelaajien yhteyksiä ja laskee heidän verkkoviiveitään. Eikä se tee sitä pelkästään Dotalle, vaan jokaiselle Steamissä olevalle pelille, joka haluaa hyödyntää sitä.",
       "Toivottavasti Linjoilla-blogin uudesta kurkistuksesta oli iloa. Tällä kertaa perehdyimme tekniseen puoleen. Kiitos, että jaksoit lukea loppuun asti! Kerro toki, mistä aiheesta haluaisit lukea seuraavaksi."
     ],
-    "commentcount": 4,
-    "tags": [],
+    "commentcount": 192,
+    "tags": [
+      "mod_reviewed",
+      "ModAct_1415588329_1709686042_0",
+      "ModAct_1415588329_1709693712_4",
+      "mod_require_rereview"
+    ],
     "language": 15,
     "hidden": 0,
     "forum_topic_id": "4288061352804807411",
     "event_gid": "4115798034511159059",
-    "voteupcount": 2,
-    "votedowncount": 0,
+    "voteupcount": 2611,
+    "votedowncount": 118,
     "ban_check_result": 0,
     "banned": 0
   },
   "published": 1,
   "hidden": 0,
-  "rtime32_visibility_start": 0,
+  "rtime32_visibility_start": 1709684460,
   "rtime32_visibility_end": 0,
   "broadcaster_accountid": 0,
   "follower_count": 0,
   "ignore_count": 0,
   "forum_topic_id": "4288061352804807411",
-  "rtime32_last_modified": 1709684560,
+  "rtime32_last_modified": 1709751799,
   "news_post_gid": "0",
-  "rtime_mod_reviewed": 0,
+  "rtime_mod_reviewed": 1709693712,
   "featured_app_tagid": 0,
   "referenced_appids": [],
   "build_id": 0,
   "build_branch": "",
-  "votes_up": 0,
-  "votes_down": 0,
+  "votes_up": 2604,
+  "votes_down": 118,
   "comment_type": "ForumTopic",
   "gidfeature": "1636418037459185108",
   "gidfeature2": "4288061352804807411",
