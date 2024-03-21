@@ -6,7 +6,7 @@
           "id": 133,
           "name": "item_rapier",
           "name_loc": "Divine Rapier",
-          "desc_loc": "<h1>Passive: Everlasting</h1> <font color='#e03e2e'>Dropped on death, and cannot be destroyed.</font> <br><br>Becomes unusable if picked up by an ally of its owner until it is returned to its owner. It is immediately usable by anybody if an enemy of the owner picks it up and is killed. A dropped Rapier cannot be picked up by a courier.",
+          "desc_loc": "<h1>Toggle: Transmute</h1> Toggle to gain either %bonus_spell_amp%%% bonus spell amplification or %bonus_damage% bonus attack damage.\n\n<h1>Passive: Everlasting</h1> <font color='#e03e2e'>Dropped on death, and cannot be destroyed.</font> <br><br>Becomes unusable if picked up by an ally of its owner until it is returned to its owner. It is immediately usable by anybody if an enemy of the owner picks it up and is killed. A dropped Rapier cannot be picked up by a courier.",
           "lore_loc": "So powerful, it cannot have a single owner.",
           "notes_loc": [
             "If Divine Rapier is dropped and picked up by an enemy of its original owner, it cannot be dropped again except by death."
@@ -14,7 +14,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "type": 0,
-          "behavior": "2",
+          "behavior": "512",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -32,7 +32,7 @@
             0
           ],
           "cooldowns": [
-            0
+            6
           ],
           "durations": [
             0
@@ -54,8 +54,8 @@
               "values_float": [
                 25
               ],
-              "is_percentage": true,
-              "heading_loc": "+Spell Amplification",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": []
@@ -63,7 +63,18 @@
             {
               "name": "bonus_damage",
               "values_float": [
-                350
+                250
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": []
+            },
+            {
+              "name": "bonus_damage_base",
+              "values_float": [
+                100
               ],
               "is_percentage": false,
               "heading_loc": "+$damage",
@@ -151,7 +162,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0
+                6
               ],
               "is_percentage": false,
               "heading_loc": "",
