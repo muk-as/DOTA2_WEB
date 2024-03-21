@@ -8,7 +8,7 @@
             "id": 1167,
             "name": "item_light_collector",
             "name_loc": "集光器",
-            "desc_loc": "<h1>主动：变光</h1>闪现一道强光，摧毁%tree_destruction_radius%范围内的树木。\n\n<h1>被动：明朗</h1>白天为佩戴者提供生命恢复，夜间提供魔法恢复。%radius%距离内存在树木时，生命和魔法恢复减半。",
+            "desc_loc": "<h1>主动：变光</h1>闪现一道强光，摧毁%tree_destruction_radius%范围内的树木。\n\n<h1>被动：明朗</h1>白天为佩戴者提供生命恢复，夜间提供魔法恢复。%radius%距离内存在树木时，生命和魔法恢复减少%penalty%%%。",
             "lore_loc": "",
             "notes_loc": [],
             "shard_loc": "",
@@ -74,7 +74,7 @@
               {
                 "name": "penalty",
                 "values_float": [
-                  0.5
+                  75
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -85,10 +85,10 @@
               {
                 "name": "movespeed_pct",
                 "values_float": [
-                  10
+                  5
                 ],
                 "is_percentage": true,
-                "heading_loc": "移动速度：",
+                "heading_loc": "+$move_speed",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": []
