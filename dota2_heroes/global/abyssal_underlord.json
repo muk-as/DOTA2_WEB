@@ -375,7 +375,7 @@
               "lore_loc": "Twisting into the seams of reality itself, Vrogros' manifest hatred paralyzes those who defy his will.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Slows enemy movement speed in the Pit of Malice.",
+              "scepter_loc": "Increases radius of the Pit of Malice.",
               "type": 0,
               "behavior": "48",
               "target_team": 0,
@@ -425,15 +425,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_underlord_6",
-                      "value": 75,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": []
+                  "values_scepter": [
+                    100
+                  ]
                 },
                 {
                   "name": "pit_duration",
@@ -498,11 +494,15 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SLOW:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_underlord_6",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
-                  "values_scepter": [
-                    40
-                  ]
+                  "values_scepter": []
                 },
                 {
                   "name": "AbilityCastRange",
@@ -690,10 +690,10 @@
                 {
                   "name": "bonus_damage_from_creep",
                   "values_float": [
-                    2,
-                    4,
-                    6,
-                    8
+                    3,
+                    5,
+                    7,
+                    9
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE(CREEP):",
@@ -1384,7 +1384,7 @@
             {
               "id": 557,
               "name": "special_bonus_unique_underlord_6",
-              "name_loc": "+{s:bonus_radius} Pit of Malice AoE",
+              "name_loc": "Pit of Malice Slows by {s:bonus_speed_bonus}%",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

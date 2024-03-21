@@ -534,7 +534,7 @@
                 "Issuing any action will cancel Phase Shift.",
                 "Puck is invulnerable during Phase Shift."
               ],
-              "shard_loc": "Puck's attacks deal bonus magic damage. Puck attacks all enemies within its attack range + %shard_attack_range_bonus% every time it phase shifts.",
+              "shard_loc": "Puck's attacks deal bonus magic damage. Puck attacks all enemies within its attack range every time it phase shifts.",
               "scepter_loc": "",
               "type": 0,
               "behavior": "33816708",
@@ -601,7 +601,7 @@
                 {
                   "name": "shard_attack_range_bonus",
                   "values_float": [
-                    200
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -735,7 +735,7 @@
               "lore_loc": "The Faerie Dragon sows confusion by forcing its enemies to vividly dream about their own mortality.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "All enemies affected by Dream Coil are attacked based on Puck's attack rate. The attacks continue while the target is stunned if they break the Dream Coil.",
+              "scepter_loc": "All enemies affected by Dream Coil are attacked at a rate equal to %attack_rate_pct%%% of Puck's attack rate. The attacks continue while the target is stunned if they break the Dream Coil.",
               "type": 1,
               "behavior": "48",
               "target_team": 0,
@@ -901,6 +901,19 @@
                   "values_shard": [],
                   "values_scepter": [
                     150
+                  ]
+                },
+                {
+                  "name": "attack_rate_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    90
                   ]
                 },
                 {
