@@ -5,100 +5,97 @@
   {
     57355: (e) => {
       e.exports = {
-        Tooltip: "bpimmortalcarousel_Tooltip_1rogB",
-        CarouselFade: "bpimmortalcarousel_CarouselFade_dt-ti",
-        StandardButton: "bpimmortalcarousel_StandardButton_Bj27A",
-        ButtonText: "bpimmortalcarousel_ButtonText_1Db7s",
-        Icon: "bpimmortalcarousel_Icon_12HYR",
-        Play: "bpimmortalcarousel_Play_2-CwD",
-        SteamLogo: "bpimmortalcarousel_SteamLogo_2cw5e",
-        ToolTip: "bpimmortalcarousel_ToolTip_31OYX",
-        PlayerReportTooltip: "bpimmortalcarousel_PlayerReportTooltip_3JT4c",
-        BattlePassImmortalCarousel:
-          "bpimmortalcarousel_BattlePassImmortalCarousel_fwQjh",
-        SingleTreasure: "bpimmortalcarousel_SingleTreasure_Z9UBp",
-        TreasureList: "bpimmortalcarousel_TreasureList_aAVRs",
-        CarouselContainer: "bpimmortalcarousel_CarouselContainer_1N_kX",
-        Treasure: "bpimmortalcarousel_Treasure_zEclo",
-        Enabled: "bpimmortalcarousel_Enabled_2WcnE",
-        TreasureIcon: "bpimmortalcarousel_TreasureIcon_2Aict",
-        TreasureBorder: "bpimmortalcarousel_TreasureBorder_1fDAg",
-        TreasureName: "bpimmortalcarousel_TreasureName_9lWPd",
-        Selected: "bpimmortalcarousel_Selected_2Pndj",
-        ShowCarousel: "bpimmortalcarousel_ShowCarousel_CuBTS",
-        ImmortalCarousel: "bpimmortalcarousel_ImmortalCarousel_3xbPf",
-        ImmortalTreasureSet: "bpimmortalcarousel_ImmortalTreasureSet_T2scW",
-        VideoContainer: "bpimmortalcarousel_VideoContainer_2Dq1N",
-        HeroImage: "bpimmortalcarousel_HeroImage_21CJ5",
-        Left: "bpimmortalcarousel_Left_1s2Qo",
-        Right: "bpimmortalcarousel_Right_2YOpK",
-        CarouselArrow: "bpimmortalcarousel_CarouselArrow_-rG2S",
-        CarouselDots: "bpimmortalcarousel_CarouselDots_2IhEh",
-        NameAndDesc: "bpimmortalcarousel_NameAndDesc_22RBG",
-        ImmortalName: "bpimmortalcarousel_ImmortalName_3tyYo",
-        ImmortalDesc: "bpimmortalcarousel_ImmortalDesc_-2DzM",
-        ImmortalDot: "bpimmortalcarousel_ImmortalDot_2rMsb",
-        Rare: "bpimmortalcarousel_Rare_xwUa_",
-        VeryRare: "bpimmortalcarousel_VeryRare_29im6",
-        UltraRare: "bpimmortalcarousel_UltraRare_1fkHu",
-        CosmicallyRare: "bpimmortalcarousel_CosmicallyRare_2Qs8l",
-        BPHeroImage: "bpimmortalcarousel_BPHeroImage_35ORv",
-        TreasureLevels: "bpimmortalcarousel_TreasureLevels_35fB1",
-        ImmortalsFootnote: "bpimmortalcarousel_ImmortalsFootnote_3JzNI",
-        Dot: "bpimmortalcarousel_Dot_CNBg1",
-        ArrowImage: "bpimmortalcarousel_ArrowImage_1sM-h",
-        TextStyleSmallHeading: "bpimmortalcarousel_TextStyleSmallHeading_5zpSz",
-        TextStyleBody: "bpimmortalcarousel_TextStyleBody_2MpGH",
-        TextStyleCaption: "bpimmortalcarousel_TextStyleCaption_2BPU_",
-        TextStyleFootnote: "bpimmortalcarousel_TextStyleFootnote_3ASKu",
+        Tooltip: "_1rogBaZTsNK3R6gYwGvQGD",
+        CarouselFade: "dt-tioQwR4mWwIMczo_-x",
+        StandardButton: "Bj27AzkTaAZ2cBgpeF5HF",
+        ButtonText: "_1Db7sPPYXNR74M64y-pt8Q",
+        Icon: "_12HYRzLUbknUcSWBZd1fx5",
+        Play: "_2-CwDOnjZvBrB5KsSEiIPt",
+        SteamLogo: "_2cw5e5G8_MXhAKOb6o5Qxj",
+        ToolTip: "_31OYXcRI4IYeZz1rAd5Rtl",
+        PlayerReportTooltip: "_3JT4c5C9H8YPX9lD0Qu2Cf",
+        BattlePassImmortalCarousel: "fwQjheqFyu_-UTOt2BM6D",
+        SingleTreasure: "Z9UBpYJnuii0Rx1QUjIhg",
+        TreasureList: "aAVRsjdMoVDtpErconVLl",
+        CarouselContainer: "_1N_kXQUTcUUPvmaqfLs41Y",
+        Treasure: "zEcloXtq7Ci1a5Ei1spPZ",
+        Enabled: "_2WcnEQ_TiLU9bwfhiKNEbD",
+        TreasureIcon: "_2AictqEsGeFkFQce9iHAPu",
+        TreasureBorder: "_1fDAgDjzGartO3wHV9KwIg",
+        TreasureName: "_9lWPdQPSs8k3M4E6ak4Mf",
+        Selected: "_2PndjuuWERMqcU4rBriVCt",
+        ShowCarousel: "CuBTS4Yf0KF1tQwi-q9Ud",
+        ImmortalCarousel: "_3xbPfcrGXz9Y--JETQ5-Du",
+        ImmortalTreasureSet: "T2scWpwh3oFJX4GyL8eir",
+        VideoContainer: "_2Dq1Ne_9vDxkAHjtAF3yeY",
+        HeroImage: "_21CJ59ri_cCRwrkleUEwTK",
+        Left: "_1s2Qogee7wDGhkwMBPuNm-",
+        Right: "_2YOpK5rwkHieGL-0hhSr9u",
+        CarouselArrow: "-rG2S5aX5rgAUk5vGHin2",
+        CarouselDots: "_2IhEhhPKquhYABQBTiOtZO",
+        NameAndDesc: "_22RBGL7z_G8B4PEGIuuA3",
+        ImmortalName: "_3tyYog7Uzzn27TPI5ve76c",
+        ImmortalDesc: "_-2DzMtS3TfthuhoEkoYbA",
+        ImmortalDot: "_2rMsb2wvEbKpNSJL1MHRH0",
+        Rare: "xwUa_CC8Hxv0_RmEAMFOV",
+        VeryRare: "_29im6BZ28HRdEz2g1jsiwL",
+        UltraRare: "_1fkHu2XsbiZHdG_HJOdu-Z",
+        CosmicallyRare: "_2Qs8l941SD1la79xPuGdhD",
+        BPHeroImage: "_35ORvZmLoMKjG22m5K5q2B",
+        TreasureLevels: "_35fB1hSVVGSNIuQfbPIhai",
+        ImmortalsFootnote: "_3JzNIW2K-qZiq0UsrbCx0j",
+        Dot: "CNBg1zuF61ILDuXROBqZD",
+        ArrowImage: "_1sM-hTxaXPduE1CkVvJ48",
+        TextStyleSmallHeading: "_5zpSzIIv0MIyppc9mUJgS",
+        TextStyleBody: "_2MpGHowr9z-4VBxtQA46la",
+        TextStyleCaption: "_2BPU_Ca4-eypkwXzFNqW7-",
+        TextStyleFootnote: "_3ASKuRk-ALdIsSVs-GHBnn",
       };
     },
     6574: (e) => {
       e.exports = {
-        Tooltip: "bppurchasebutton_Tooltip_3SWNc",
-        CarouselFade: "bppurchasebutton_CarouselFade_492j9",
-        StandardButton: "bppurchasebutton_StandardButton_3MfYY",
-        ButtonText: "bppurchasebutton_ButtonText_3vI_e",
-        Icon: "bppurchasebutton_Icon_o-07v",
-        Play: "bppurchasebutton_Play_2lUpt",
-        SteamLogo: "bppurchasebutton_SteamLogo_2NMxA",
-        ToolTip: "bppurchasebutton_ToolTip_1qbLW",
-        PlayerReportTooltip: "bppurchasebutton_PlayerReportTooltip_3XOHk",
-        BuyBattlePassCapsule: "bppurchasebutton_BuyBattlePassCapsule_dhurO",
-        BuyCompendiumCapsule: "bppurchasebutton_BuyCompendiumCapsule_aFLC0",
-        BuyCompendiumCapsule2023:
-          "bppurchasebutton_BuyCompendiumCapsule2023_1Zreh",
-        CapsuleTitle: "bppurchasebutton_CapsuleTitle_1WgVx",
-        CapsuleLevelBundle: "bppurchasebutton_CapsuleLevelBundle_3KVDY",
-        CapsuleDiscount: "bppurchasebutton_CapsuleDiscount_v8xLJ",
-        CapsulePurchaseButton: "bppurchasebutton_CapsulePurchaseButton_3SnG2",
-        CompendiumLevels: "bppurchasebutton_CompendiumLevels_1j-SG",
-        BoosterLevels: "bppurchasebutton_BoosterLevels_3MS1B",
-        EarnTheFollowing: "bppurchasebutton_EarnTheFollowing_NTGBF",
-        OtherRewards: "bppurchasebutton_OtherRewards_3ng7Y",
-        SmoothLine: "bppurchasebutton_SmoothLine_5ddUu",
-        TextStyleOverline: "bppurchasebutton_TextStyleOverline_ZZPNh",
-        TextStyleButton: "bppurchasebutton_TextStyleButton_29RUH",
-        TextStyleFootnote: "bppurchasebutton_TextStyleFootnote_YY9MW",
-        BoostersFootnoteContainer:
-          "bppurchasebutton_BoostersFootnoteContainer_2N4yU",
-        BoostersFootnote: "bppurchasebutton_BoostersFootnote_3sKCu",
-        TextColorGreenGlow: "bppurchasebutton_TextColorGreenGlow_3azYF",
+        Tooltip: "_3SWNcmwV0oP-ROKDVg1iXe",
+        CarouselFade: "_492j9xDU1ExfjVLCzFhpY",
+        StandardButton: "_3MfYYTBQIPtnzB-znQhbti",
+        ButtonText: "_3vI_elRv1cIrOu2_N5VQQf",
+        Icon: "o-07vXaikfMXAqA-RNcK3",
+        Play: "_2lUptAc5bTBML114g6cL9I",
+        SteamLogo: "_2NMxAQfq2uZwmoT3JMyOU5",
+        ToolTip: "_1qbLWciZLqOyJibOuft1PJ",
+        PlayerReportTooltip: "_3XOHkln8JxO7R3AvDe075q",
+        BuyBattlePassCapsule: "dhurOK2NNcUIvBf3mkJg9",
+        BuyCompendiumCapsule: "aFLC0zJWG4rx8hQ1A1sne",
+        BuyCompendiumCapsule2023: "_1ZrehM_Da84hVA0fVsF-Ox",
+        CapsuleTitle: "_1WgVxOffsEmu9AnEgh2Hx8",
+        CapsuleLevelBundle: "_3KVDYyP9tD2DiKZytyEJZi",
+        CapsuleDiscount: "v8xLJfzAUd1wUn2T0b55I",
+        CapsulePurchaseButton: "_3SnG2_lnAO-Vsh1ifKtmgB",
+        CompendiumLevels: "_1j-SGTrqobUmcsMR2SyxlD",
+        BoosterLevels: "_3MS1BbIPRZzzrAWojHwo-g",
+        EarnTheFollowing: "NTGBF2gHEmBRi3nxrcOHa",
+        OtherRewards: "_3ng7YVyin9eviFhG7nKqKf",
+        SmoothLine: "_5ddUuvHuifvwOsveGS3oy",
+        TextStyleOverline: "ZZPNhSonYWEiGiZGb8pa",
+        TextStyleButton: "_29RUHlFmf7bp8MDmii0cwy",
+        TextStyleFootnote: "YY9MWNYBw5TGBzz6dnkwu",
+        BoostersFootnoteContainer: "_2N4yUqQVX0n5LIdiQmcNh",
+        BoostersFootnote: "_3sKCu_Th-JNQ9l8WALWag5",
+        TextColorGreenGlow: "_3azYFNjOXo-0ulw3D2CM3B",
       };
     },
     38109: (e, r, t) => {
       "use strict";
-      t.d(r, { Li: () => C, cg: () => a, sR: () => o });
+      t.d(r, { Li: () => E, cg: () => a, sR: () => o });
       var a,
         o,
         l = t(66204),
         s = t(57355),
-        m = t.n(s),
-        n = t(5062),
+        n = t.n(s),
+        m = t(5062),
         c = t(2580),
         i = t(98142),
         u = t(78752),
-        _ = t(83097);
+        d = t(91347);
       !(function (e) {
         (e[(e.Normal = 0)] = "Normal"),
           (e[(e.Rare = 1)] = "Rare"),
@@ -111,25 +108,25 @@
             (e[(e.Left = 1)] = "Left"),
             (e[(e.Right = 2)] = "Right");
         })(o || (o = {}));
-      const p = (0, l.createContext)(null),
-        d = () => (0, l.useContext)(p);
-      function b(e) {
+      const _ = (0, l.createContext)(null),
+        p = () => (0, l.useContext)(_);
+      function g(e) {
         return l.createElement(
-          p.Provider,
+          _.Provider,
           { value: e.immortalCarouselContext },
           e.children,
         );
       }
-      const C = ({
+      const E = ({
           strContentDir: e,
           strPrimaryColor: r,
           strSecondaryColor: t,
           strTertiaryColor: a,
           arrImmortalTreasures: s,
         }) => {
-          const [_, p] = (0, l.useState)(0),
-            [d, C] = (0, l.useState)(0),
-            E = {
+          const [d, _] = (0, l.useState)(0),
+            [p, E] = (0, l.useState)(0),
+            T = {
               strContentDir: e,
               strPrimaryColor: r,
               strSecondaryColor: t,
@@ -138,38 +135,38 @@
           return l.createElement(
             "div",
             {
-              className: (0, n.Z)(
-                m().BattlePassImmortalCarousel,
-                1 == s.length && m().SingleTreasure,
+              className: (0, m.Z)(
+                n().BattlePassImmortalCarousel,
+                1 == s.length && n().SingleTreasure,
               ),
               style: {
                 backgroundImage: `url( ${i.Y.IMG_URL}${e}/backgrounds/immortal_background.jpg )`,
               },
             },
             l.createElement(
-              b,
-              { immortalCarouselContext: E },
+              g,
+              { immortalCarouselContext: T },
               l.createElement(
                 "div",
-                { className: m().TreasureList },
+                { className: n().TreasureList },
                 s.map((a, o) =>
                   l.createElement(
                     "div",
                     {
                       key: `title_${o}`,
-                      className: (0, n.Z)(
-                        m().Treasure,
-                        a.bEnabled && m().Enabled,
-                        _ == o && m().Selected,
+                      className: (0, m.Z)(
+                        n().Treasure,
+                        a.bEnabled && n().Enabled,
+                        d == o && n().Selected,
                       ),
-                      onClick: () => p(o),
+                      onClick: () => _(o),
                     },
                     l.createElement("img", {
-                      className: m().TreasureIcon,
+                      className: n().TreasureIcon,
                       src: `${i.Y.IMG_URL}${e}/immortal_treasure_${o + 1}.png`,
                     }),
                     l.createElement("div", {
-                      className: m().TreasureBorder,
+                      className: n().TreasureBorder,
                       style: {
                         backgroundImage: `linear-gradient( black, black ), linear-gradient( to right, ${r}, ${t} )`,
                       },
@@ -177,9 +174,9 @@
                     l.createElement(
                       "div",
                       {
-                        className: (0, n.Z)(
-                          m().TextStyleOverline,
-                          m().TreasureName,
+                        className: (0, m.Z)(
+                          n().TextStyleOverline,
+                          n().TreasureName,
                         ),
                         style: { color: r },
                       },
@@ -193,15 +190,15 @@
                   "div",
                   {
                     key: `carousel_${t}`,
-                    className: (0, n.Z)(
-                      m().CarouselContainer,
-                      _ == t && m().ShowCarousel,
+                    className: (0, m.Z)(
+                      n().CarouselContainer,
+                      d == t && n().ShowCarousel,
                     ),
                   },
                   l.createElement(
                     u.sj,
                     {
-                      className: m().ImmortalCarousel,
+                      className: n().ImmortalCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 37,
                       totalSlides: r.arrImmortals.length,
@@ -215,7 +212,7 @@
                           {
                             key: `im_${t}_${r}`,
                             index: r,
-                            onFocus: () => C(r),
+                            onFocus: () => E(r),
                           },
                           l.createElement(h, {
                             nIndex: r,
@@ -230,7 +227,7 @@
                     ),
                     l.createElement(
                       "div",
-                      { className: m().CarouselDots },
+                      { className: n().CarouselDots },
                       r.arrImmortals.map((e, r) => {
                         var a;
                         return l.createElement(
@@ -250,36 +247,36 @@
                           l.createElement(y, {
                             strHeroName: e.strHeroName,
                             eRarity: e.eRarity,
-                            bSelected: r == d,
+                            bSelected: r == p,
                           }),
                         );
                       }),
-                      l.createElement(g, null),
+                      l.createElement(C, null),
                     ),
                     l.createElement(
                       u.jp,
-                      { className: (0, n.Z)(m().CarouselArrow, m().Left) },
+                      { className: (0, m.Z)(n().CarouselArrow, n().Left) },
                       l.createElement("img", {
                         src: `${i.Y.IMG_URL}${e}/arrow_left.png`,
-                        className: m().ArrowImage,
+                        className: n().ArrowImage,
                       }),
                     ),
                     l.createElement(
                       u.P1,
-                      { className: (0, n.Z)(m().CarouselArrow, m().Right) },
+                      { className: (0, m.Z)(n().CarouselArrow, n().Right) },
                       l.createElement("img", {
                         src: `${i.Y.IMG_URL}${e}/arrow_left.png`,
-                        className: m().ArrowImage,
+                        className: n().ArrowImage,
                       }),
                     ),
-                    l.createElement(T, { nTreasureIndex: t }),
+                    l.createElement(N, { nTreasureIndex: t }),
                   ),
                   l.createElement(
                     "div",
                     {
-                      className: (0, n.Z)(
-                        m().TextStyleCaption,
-                        m().TreasureLevels,
+                      className: (0, m.Z)(
+                        n().TextStyleCaption,
+                        n().TreasureLevels,
                       ),
                     },
                     (0, c.Jr)(`#${e}_immortals_levels_${t}_desc`),
@@ -289,9 +286,9 @@
               l.createElement(
                 "div",
                 {
-                  className: (0, n.Z)(
-                    m().TextStyleFootnote,
-                    m().ImmortalsFootnote,
+                  className: (0, m.Z)(
+                    n().TextStyleFootnote,
+                    n().ImmortalsFootnote,
                   ),
                   style: { color: a },
                 },
@@ -300,16 +297,16 @@
             ),
           );
         },
-        g = () => {
-          const e = d();
-          return l.createElement(_.Z, {
+        C = () => {
+          const e = p();
+          return l.createElement(d.Z, {
             effect: "solid",
             borderColor: e.strSecondaryColor,
             arrowColor: e.strTertiaryColor,
             backgroundColor: e.strTertiaryColor,
             textColor: e.strPrimaryColor,
             border: !0,
-            className: m().Tooltip,
+            className: n().Tooltip,
           });
         },
         h = ({
@@ -320,31 +317,31 @@
           bGold: o,
         }) => {
           const s = (0, l.useContext)(u.ro),
-            c = d(),
-            _ = (0, l.useRef)();
+            c = p(),
+            d = (0, l.useRef)();
           return (
             (0, l.useEffect)(() => {
               function r() {
-                _.current && s.state.currentSlide == e && _.current.load();
+                d.current && s.state.currentSlide == e && d.current.load();
               }
               return s.subscribe(r), () => s.unsubscribe(r);
             }, [s, e]),
             l.createElement(
               "div",
-              { className: m().ImmortalTreasureSet },
+              { className: n().ImmortalTreasureSet },
               l.createElement(
                 "div",
-                { className: m().VideoContainer },
+                { className: n().VideoContainer },
                 t &&
                   l.createElement("img", {
-                    className: (0, n.Z)(m().HeroImage, m().Left),
+                    className: (0, m.Z)(n().HeroImage, n().Left),
                     src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${o ? "_gold" : ""}.png`,
                   }),
                 l.createElement(
                   "video",
                   {
-                    ref: _,
-                    className: m().ImmortalVideo,
+                    ref: d,
+                    className: n().ImmortalVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -363,16 +360,16 @@
                 ),
                 a &&
                   l.createElement("img", {
-                    className: (0, n.Z)(m().HeroImage, m().Right),
+                    className: (0, m.Z)(n().HeroImage, n().Right),
                     src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${o ? "_gold" : ""}.png`,
                   }),
               ),
             )
           );
         },
-        T = ({ nTreasureIndex: e }) => {
+        N = ({ nTreasureIndex: e }) => {
           const r = (0, l.useContext)(u.ro),
-            t = d(),
+            t = p(),
             [a, o] = (0, l.useState)(r.state.currentSlide);
           return (
             (0, l.useEffect)(() => {
@@ -383,13 +380,13 @@
             }, [r]),
             l.createElement(
               "div",
-              { className: m().NameAndDesc },
+              { className: n().NameAndDesc },
               l.createElement(
                 "div",
                 {
-                  className: (0, n.Z)(
-                    m().TextStyleSmallHeading,
-                    m().ImmortalName,
+                  className: (0, m.Z)(
+                    n().TextStyleSmallHeading,
+                    n().ImmortalName,
                   ),
                   style: { color: t.strPrimaryColor },
                 },
@@ -397,29 +394,29 @@
               ),
               l.createElement(
                 "div",
-                { className: (0, n.Z)(m().TextStyleBody, m().ImmortalDesc) },
+                { className: (0, m.Z)(n().TextStyleBody, n().ImmortalDesc) },
                 (0, c.Jr)(`#${t.strContentDir}_immortal_${e}_${a + 1}_desc`),
               ),
             )
           );
         },
         y = ({ strHeroName: e, eRarity: r, bSelected: t }) => {
-          const o = d(),
+          const o = p(),
             s = "emblem" == e ? "emblem" : e;
           return l.createElement(
             "div",
             {
-              className: (0, n.Z)(
-                m().ImmortalDot,
-                r == a.Rare && m().Rare,
-                r == a.Very && m().VeryRare,
-                r == a.Ultra && m().UltraRare,
-                r == a.Cosmic && m().CosmicallyRare,
+              className: (0, m.Z)(
+                n().ImmortalDot,
+                r == a.Rare && n().Rare,
+                r == a.Very && n().VeryRare,
+                r == a.Ultra && n().UltraRare,
+                r == a.Cosmic && n().CosmicallyRare,
               ),
               style: { borderBottomColor: o.strSecondaryColor },
             },
             l.createElement("img", {
-              className: m().BPHeroImage,
+              className: n().BPHeroImage,
               src: `${i.Y.IMG_URL}heroes/wide/${s}.png`,
             }),
           );
@@ -432,9 +429,9 @@
         o = t(6574),
         l = t.n(o),
         s = t(5062),
-        m = t(2580),
-        n = t(98142),
-        c = t(11360);
+        n = t(2580),
+        m = t(98142),
+        c = t(46792);
       const i = ({
           colorTopEdge: e,
           colorTop: r,
@@ -442,9 +439,9 @@
           colorBottom: o,
           level: i,
           discountPct: u,
-          itemid: _,
-          capsuleImageLocation: p = "labyrinth/bp_logo_",
-          capsuleImageOnErrorLocation: d = "labyrinth/bp_logo_en.png",
+          itemid: d,
+          capsuleImageLocation: _ = "labyrinth/bp_logo_",
+          capsuleImageOnErrorLocation: p = "labyrinth/bp_logo_en.png",
         }) =>
           a.createElement(
             "div",
@@ -457,18 +454,18 @@
             },
             a.createElement("img", {
               className: l().CapsuleTitle,
-              onError: (e) => (e.target.src = `${n.Y.IMG_URL}${d}`),
-              src: `${n.Y.IMG_URL}${p}${n.Y.LANGUAGE}.png`,
+              onError: (e) => (e.target.src = `${m.Y.IMG_URL}${p}`),
+              src: `${m.Y.IMG_URL}${_}${m.Y.LANGUAGE}.png`,
             }),
             a.createElement(
               "div",
               { className: (0, s.Z)(l().TextStyleOverline) },
-              (0, m.Jr)("#battlepass_purchase_level", i),
+              (0, n.Jr)("#battlepass_purchase_level", i),
             ),
             a.createElement(
               "a",
               {
-                href: `${n.Y.BASE_URL}store/itemdetails/${_}`,
+                href: `${m.Y.BASE_URL}store/itemdetails/${d}`,
                 className: (0, s.Z)(
                   l().TextStyleButton,
                   l().TextColorWhite,
@@ -479,7 +476,7 @@
                   backgroundImage: `linear-gradient( ${e}, ${e} )`,
                 },
               },
-              (0, m.Jr)("#battlepass_purchase_label", c.P.GetBPPrice(_)),
+              (0, n.Jr)("#battlepass_purchase_label", c.P.GetBPPrice(d)),
             ),
             a.createElement(
               "div",
@@ -490,7 +487,7 @@
                   l().CapsuleDiscount,
                 ),
               },
-              u && (0, m.Jr)("#battlepass_purchase_discount", u, i),
+              u && (0, n.Jr)("#battlepass_purchase_discount", u, i),
             ),
           ),
         u = (e) =>
@@ -515,30 +512,30 @@
                     backgroundImage: "linear-gradient( to bottom, #FFF, #FFF",
                   },
                 },
-                (0, m.Jr)(e.title),
+                (0, n.Jr)(e.title),
               ),
             e.capsuleImageLocation &&
               a.createElement("img", {
                 className: l().CapsuleTitle,
                 onError: (r) =>
-                  (r.target.src = `${n.Y.IMG_URL}${e.capsuleImageOnErrorLocation}`),
-                src: `${n.Y.IMG_URL}${e.capsuleImageLocation}${n.Y.LANGUAGE}.png`,
+                  (r.target.src = `${m.Y.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                src: `${m.Y.IMG_URL}${e.capsuleImageLocation}${m.Y.LANGUAGE}.png`,
               }),
             a.createElement(
               "div",
               { className: (0, s.Z)(l().CompendiumLevels) },
-              (0, m.Jr)("#compendium_purchase_levels", e.level),
+              (0, n.Jr)("#compendium_purchase_levels", e.level),
             ),
             a.createElement(
               "div",
               { className: (0, s.Z)(l().BoosterLevels) },
-              (0, m.Jr)("#compendium_purchase_booster_levels", e.booster_level),
+              (0, n.Jr)("#compendium_purchase_booster_levels", e.booster_level),
             ),
             a.createElement("div", { className: l().SmoothLine }),
             a.createElement(
               "div",
               { className: (0, s.Z)(l().EarnTheFollowing) },
-              (0, m.Jr)("#compendium_purchase_earn_the_following"),
+              (0, n.Jr)("#compendium_purchase_earn_the_following"),
             ),
             a.createElement(
               "ul",
@@ -546,17 +543,17 @@
               a.createElement(
                 "li",
                 { className: (0, s.Z)(l().OtherRewards) },
-                (0, m.Jr)("#compendium_purchase_all_access"),
+                (0, n.Jr)("#compendium_purchase_all_access"),
               ),
               a.createElement(
                 "li",
                 { className: (0, s.Z)(l().OtherRewards) },
-                (0, m.Jr)("#compendium_purchase_aegis_emoticon"),
+                (0, n.Jr)("#compendium_purchase_aegis_emoticon"),
               ),
               a.createElement(
                 "li",
                 { className: (0, s.Z)(l().OtherRewards) },
-                (0, m.Jr)(
+                (0, n.Jr)(
                   "#compendium_purchase_rtti_culling_blades",
                   e.cullingBlades,
                 ),
@@ -564,7 +561,7 @@
               a.createElement(
                 "li",
                 { className: (0, s.Z)(l().OtherRewards) },
-                (0, m.Jr)(
+                (0, n.Jr)(
                   "#compendium_purchase_rtti_reroll_tokens",
                   e.rerollTokens,
                 ),
@@ -572,7 +569,7 @@
               a.createElement(
                 "li",
                 { className: (0, s.Z)(l().OtherRewards) },
-                (0, m.Jr)(
+                (0, n.Jr)(
                   "#compendium_purchase_fantasy_tokens",
                   e.fantasyTokens,
                 ),
@@ -581,25 +578,25 @@
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)("#compendium_purchase_one_random_voiceline"),
+                  (0, n.Jr)("#compendium_purchase_one_random_voiceline"),
                 ),
               e.voicelines > 1 &&
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)("#compendium_purchase_voicelines", e.voicelines),
+                  (0, n.Jr)("#compendium_purchase_voicelines", e.voicelines),
                 ),
               1 == e.playerStickers &&
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)("#compendium_purchase_one_player_sticker"),
+                  (0, n.Jr)("#compendium_purchase_one_player_sticker"),
                 ),
               e.playerStickers > 1 &&
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)(
+                  (0, n.Jr)(
                     "#compendium_purchase_player_stickers",
                     e.playerStickers,
                   ),
@@ -608,7 +605,7 @@
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)(
+                  (0, n.Jr)(
                     "#compendium_purchase_team_stickers",
                     e.teamStickers,
                   ),
@@ -617,7 +614,7 @@
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)(
+                  (0, n.Jr)(
                     "#compendium_purchase_team_loading_screens",
                     e.teamLoadingScreens,
                   ),
@@ -626,7 +623,7 @@
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)(
+                  (0, n.Jr)(
                     "#compendium_purchase_ti_loading_screens",
                     e.tiLoadingScreens,
                   ),
@@ -635,7 +632,7 @@
                 a.createElement(
                   "li",
                   { className: (0, s.Z)(l().OtherRewards) },
-                  (0, m.Jr)("#compendium_purchase_tp_fx"),
+                  (0, n.Jr)("#compendium_purchase_tp_fx"),
                 ),
             ),
             a.createElement(
@@ -645,13 +642,13 @@
                 a.createElement(
                   "div",
                   { className: (0, s.Z)(l().BoostersFootnote) },
-                  (0, m.Jr)("#compendium_purchase_boosters_footnote"),
+                  (0, n.Jr)("#compendium_purchase_boosters_footnote"),
                 ),
               e.isUpgraded &&
                 a.createElement(
                   "div",
                   { className: (0, s.Z)(l().BoostersFootnote) },
-                  (0, m.Jr)("#compendium_purchase_upgraded_boosters_footnote"),
+                  (0, n.Jr)("#compendium_purchase_upgraded_boosters_footnote"),
                 ),
             ),
           );

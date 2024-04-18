@@ -7,95 +7,95 @@
   {
     6747: (e) => {
       e.exports = {
-        RightArrow: "arrows_RightArrow_1aWAc",
-        UpRightArrow: "arrows_UpRightArrow_3KCtp",
+        RightArrow: "_1aWAcVv4khhRKQHKyqIDl5",
+        UpRightArrow: "_3KCtpfqeVGR0eaqc5YB4iF",
       };
     },
     49369: (e) => {
       e.exports = {
-        Tooltip: "primalbeast_Tooltip_2FBKv",
-        CarouselFade: "primalbeast_CarouselFade_3qj-r",
-        StandardButton: "primalbeast_StandardButton_AABmq",
-        ButtonText: "primalbeast_ButtonText_fdxoH",
-        Icon: "primalbeast_Icon_34Wav",
-        Play: "primalbeast_Play_2JCY1",
-        SteamLogo: "primalbeast_SteamLogo_1vJld",
-        ToolTip: "primalbeast_ToolTip_exPNn",
-        PlayerReportTooltip: "primalbeast_PlayerReportTooltip_N7XaJ",
-        PrimalBeastPage: "primalbeast_PrimalBeastPage_1loT6",
-        HeaderSection: "primalbeast_HeaderSection_35jV5",
-        BottomFade: "primalbeast_BottomFade_1Qst_",
-        BackgroundVideoContainer: "primalbeast_BackgroundVideoContainer_3SEla",
-        LeavesLeft: "primalbeast_LeavesLeft_349MY",
-        LeavesRight: "primalbeast_LeavesRight_31uj6",
-        TitleContainer: "primalbeast_TitleContainer_2fKTO",
-        TitleIntro: "primalbeast_TitleIntro_3Ypgx",
-        HeroName: "primalbeast_HeroName_3wAMj",
-        HeroLogo: "primalbeast_HeroLogo_UdiMm",
-        Complexity: "primalbeast_Complexity_17y_0",
-        Roles: "primalbeast_Roles_88lTj",
-        HeroRole: "primalbeast_HeroRole_8DJKv",
-        HeroIntro: "primalbeast_HeroIntro_2cS0o",
-        LoreSection: "primalbeast_LoreSection_mnIkJ",
-        LoreHeader: "primalbeast_LoreHeader_1z6s0",
-        LoreText: "primalbeast_LoreText_1IfTt",
-        AbilitySection: "primalbeast_AbilitySection_2yK1C",
-        SlideContainer: "primalbeast_SlideContainer_2apDu",
-        CarouselDots: "primalbeast_CarouselDots_3BQj6",
-        AbilitySelector: "primalbeast_AbilitySelector_2D9KZ",
-        Slide0: "primalbeast_Slide0_2TxMd",
-        Slide1: "primalbeast_Slide1_12Wwr",
-        Slide2: "primalbeast_Slide2_2pomp",
-        Slide3: "primalbeast_Slide3_3zX2B",
-        SlideAbilityContainer: "primalbeast_SlideAbilityContainer_1GE-x",
-        SlideAbilityIcon: "primalbeast_SlideAbilityIcon_39XW0",
-        AbilityName: "primalbeast_AbilityName_3uADO",
-        AbilityDesc: "primalbeast_AbilityDesc_1dyzF",
-        HeropediaSection: "primalbeast_HeropediaSection_33H2U",
-        HeropediaImage: "primalbeast_HeropediaImage_2kyS3",
-        HeropediaHeader: "primalbeast_HeropediaHeader_1Nx4-",
-        HeropediaText: "primalbeast_HeropediaText_13tEB",
-        WallpaperSection: "primalbeast_WallpaperSection_Fi9K-",
-        WallpaperTitle: "primalbeast_WallpaperTitle_2SyKf",
-        Wallpapers: "primalbeast_Wallpapers_B3Geh",
-        WallpaperGroup: "primalbeast_WallpaperGroup_3Ehrq",
-        Wallpaper: "primalbeast_Wallpaper_1hsc3",
-        PatchSection: "primalbeast_PatchSection_1VHhm",
-        Divider: "primalbeast_Divider_JCYR8",
-        PatchTitle: "primalbeast_PatchTitle_5txd6",
-        PatchImage: "primalbeast_PatchImage_3GGOr",
-        ShowcaseVideo: "primalbeast_ShowcaseVideo_O5eiP",
-        CreepsSection: "primalbeast_CreepsSection_2xsXR",
-        PatchContainer: "primalbeast_PatchContainer_2WmfK",
-        HeaderLabel: "primalbeast_HeaderLabel_3puUP",
-        PatchContent: "primalbeast_PatchContent_J7JEA",
-        CreepChangeDescription: "primalbeast_CreepChangeDescription_2Ok6H",
-        PatchCreepsImage: "primalbeast_PatchCreepsImage_1DH4N",
-        TechiesChangeDescription: "primalbeast_TechiesChangeDescription_3Ym0E",
-        PatchTechiesImage: "primalbeast_PatchTechiesImage_32S9_",
-        ItemChangeDescription: "primalbeast_ItemChangeDescription_13Akm",
-        PatchItemsImage: "primalbeast_PatchItemsImage_VFg98",
-        LowerPatch: "primalbeast_LowerPatch_KhTWp",
-        TechiesAbilitiesTitle: "primalbeast_TechiesAbilitiesTitle_l3mk4",
-        TechiesAbilities: "primalbeast_TechiesAbilities_1vjVZ",
-        TechiesAbility: "primalbeast_TechiesAbility_pXMMr",
-        TechiesAbilityImage: "primalbeast_TechiesAbilityImage_3h0kk",
-        TechiesAbilityContent: "primalbeast_TechiesAbilityContent_TFKgh",
-        TechiesAbilityTitle: "primalbeast_TechiesAbilityTitle_32KTy",
-        NewAbilityLabel: "primalbeast_NewAbilityLabel_3gTPJ",
-        TechiesAbilityDesc: "primalbeast_TechiesAbilityDesc_kNIsa",
-        TechiesSection: "primalbeast_TechiesSection_1VVnN",
-        rotate: "primalbeast_rotate_22ADA",
+        Tooltip: "_2FBKvDaa7o3ZdxnBhsjEVV",
+        CarouselFade: "_3qj-rjgAD4epxDQflyLDH4",
+        StandardButton: "AABmqSJ4FUaokDGqK7LuB",
+        ButtonText: "fdxoHZ-1eDumWkX7EZQwr",
+        Icon: "_34WavVBFTL3Z4ralXsTEbE",
+        Play: "_2JCY1vDw4X8fkMh6QFjAPA",
+        SteamLogo: "_1vJld-1iabfWUbjbJTsMJn",
+        ToolTip: "exPNn7WfC7bF1L4yvq1ak",
+        PlayerReportTooltip: "N7XaJDWnz2KlNDtQqQ66l",
+        PrimalBeastPage: "_1loT6zyNYv-rZF5WMeNJK2",
+        HeaderSection: "_35jV5inDRoRJ5SAFgVYIwu",
+        BottomFade: "_1Qst_1DhoOllkcotTRPytU",
+        BackgroundVideoContainer: "_3SElaec3we-7T4OAiFAgnW",
+        LeavesLeft: "_349MYJGNpBksxoirH6gjfW",
+        LeavesRight: "_31uj63dymD-vB-p0SNzCUh",
+        TitleContainer: "_2fKTOGR2qCLx0lidyQIAbM",
+        TitleIntro: "_3YpgxoT6jYbZ8nRKtk0i8",
+        HeroName: "_3wAMjxTBvuueBKgafHZH61",
+        HeroLogo: "UdiMmmOseDcelVTiqN0y5",
+        Complexity: "_17y_03-b448Kze05qKLRkW",
+        Roles: "_88lTj-Jv1GvQmw4fJ6yPj",
+        HeroRole: "_8DJKvKNbe8tbZIngmfYAp",
+        HeroIntro: "_2cS0otL1l_E9_pCkH4Y36U",
+        LoreSection: "mnIkJXGIM3thIWa778tgm",
+        LoreHeader: "_1z6s08nk2n7RRmzAsFfQ4",
+        LoreText: "_1IfTtfrAF_1lqdyCL9DWRz",
+        AbilitySection: "_2yK1CPDC7H4ZS_IneiRMWP",
+        SlideContainer: "_2apDuhWEjCzlWdaKyvwTpJ",
+        CarouselDots: "_3BQj6zTscB3QmbSpYndaxF",
+        AbilitySelector: "_2D9KZne1xmoWFZ94murK55",
+        Slide0: "_2TxMdzw0js2aNFNDySu1lS",
+        Slide1: "_12WwrcFa02xHni8mQHhx9x",
+        Slide2: "_2pompVlS7210hC1hles2bN",
+        Slide3: "_3zX2BEiHvWBIx_Fu8bRX6p",
+        SlideAbilityContainer: "_1GE-xcMnkRXd3e_V3ohNkz",
+        SlideAbilityIcon: "_39XW0xAzlUEOfYCn0Xljf3",
+        AbilityName: "_3uADOXmx19M-aoW8a8nl_P",
+        AbilityDesc: "_1dyzFz3P0l-qeHlC9MuRBN",
+        HeropediaSection: "_33H2Ukxk1SUfyf618S0R7W",
+        HeropediaImage: "_2kyS3FDVMSU7Q7JKgJ9j5-",
+        HeropediaHeader: "_1Nx4-DeVsx70QTWOFUsU-Z",
+        HeropediaText: "_13tEBJCAIESb7EjzP67zwO",
+        WallpaperSection: "Fi9K-0nmBrmb35Vj7x5Uz",
+        WallpaperTitle: "_2SyKfvkFTsTBZT_WhfZ0hX",
+        Wallpapers: "B3Gehg7azqA6lTGbDp6UR",
+        WallpaperGroup: "_3EhrquEGZJQ7ebJ7tlZ2lQ",
+        Wallpaper: "_1hsc3wziuYBvrY1u5edOBB",
+        PatchSection: "_1VHhmOCzAJNmiM9NqTX35s",
+        Divider: "JCYR8OL3buX1mfGavphGF",
+        PatchTitle: "_5txd6KwUdgraw9fGcYsq0",
+        PatchImage: "_3GGOrHExMB37neYtgSmita",
+        ShowcaseVideo: "O5eiPr7DeEo0qgVWwGTy3",
+        CreepsSection: "_2xsXR9RWXrviko4TFo69qp",
+        PatchContainer: "_2WmfKO9mIvQ5DAF1mAwdA4",
+        HeaderLabel: "_3puUPYiEod_pk6OnTHBWHE",
+        PatchContent: "J7JEAIPGweJXHvwegmlAa",
+        CreepChangeDescription: "_2Ok6HI5IiCl_kUmGAGzML3",
+        PatchCreepsImage: "_1DH4NxfJCmQWvGDqtw5les",
+        TechiesChangeDescription: "_3Ym0EOBQENAVfrdnpsCV2s",
+        PatchTechiesImage: "_32S9_oZwS618iy8ZsGkLEN",
+        ItemChangeDescription: "_13AkmrBoF0FMEs_1NWw3Xf",
+        PatchItemsImage: "VFg98CXd9X3Vo6iHDn-fA",
+        LowerPatch: "KhTWpjl1r7GnIp_tyhR5C",
+        TechiesAbilitiesTitle: "l3mk4VuLymUam1oH_xZJY",
+        TechiesAbilities: "_1vjVZz-J_t36NiXujOZzMr",
+        TechiesAbility: "pXMMrZKWTQifa2uIX_2UI",
+        TechiesAbilityImage: "_3h0kkNuvyR7TFC1b73i1Ae",
+        TechiesAbilityContent: "TFKgh29Eybe25OBZbXTrK",
+        TechiesAbilityTitle: "_32KTypEj6QLpDkboV4lwb4",
+        NewAbilityLabel: "_3gTPJW3TNAtFeBby7vPOL2",
+        TechiesAbilityDesc: "kNIsaYVZ-ZM2UZiqu4I0I",
+        TechiesSection: "_1VVnNIxh6oZP1ETsertgr3",
+        rotate: "_22ADA2u6XiD_C9JefALU4u",
       };
     },
     47506: (e, a, t) => {
       "use strict";
-      t.d(a, { U: () => m });
+      t.d(a, { U: () => c });
       var l = t(66204),
         i = t(6747),
         s = t.n(i),
         r = t(98142);
-      const m = () =>
+      const c = () =>
         l.createElement("div", {
           className: s().RightArrow,
           style: { backgroundImage: `url( ${r.Y.IMG_URL}/arrow_left.png )` },
@@ -103,44 +103,44 @@
     },
     38046: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => T });
+      t.r(a), t.d(a, { default: () => A });
       var l = t(22970),
         i = t(98142),
         s = t(79735),
         r = t(2580),
-        m = t(80846),
-        c = t(78752),
-        p = t(66204),
-        n = t(62175),
-        _ = t(28763),
-        o = t(5062),
-        b = t(11360),
-        d = t(31444),
+        c = t(80846),
+        m = t(78752),
+        n = t(66204),
+        p = t(62175),
+        o = t(28763),
+        _ = t(5062),
+        d = t(46792),
+        b = t(31444),
         E = t(37196),
         h = t(49369),
         v = t.n(h),
         N = t(95974),
         y = t(47506),
         g = t(68399);
-      let u = class extends p.Component {
+      let u = class extends n.Component {
         render() {
-          const e = b.P.getPatchNotes("7.31", i.Y.LANGUAGE);
-          return p.createElement(
+          const e = d.P.getPatchNotes("7.31", i.Y.LANGUAGE);
+          return n.createElement(
             "div",
             { className: v().PrimalBeastPage },
-            p.createElement(d.j, { bOverlapping: !0 }),
-            p.createElement(
-              n.ql,
+            n.createElement(b.j, { bOverlapping: !0 }),
+            n.createElement(
+              p.ql,
               null,
-              p.createElement("title", null, (0, r.Jr)("#primalbeast_title")),
+              n.createElement("title", null, (0, r.Jr)("#primalbeast_title")),
             ),
-            p.createElement(
+            n.createElement(
               "div",
               { className: v().HeaderSection },
-              p.createElement(
+              n.createElement(
                 "div",
                 { className: v().BackgroundVideoContainer },
-                p.createElement(
+                n.createElement(
                   "video",
                   {
                     className: v().BackgroundVideo,
@@ -151,23 +151,23 @@
                     playsInline: !0,
                     poster: `${i.Y.IMG_URL}pb_header_loop.jpg`,
                   },
-                  p.createElement("source", {
+                  n.createElement("source", {
                     type: "video/webm",
                     src: `${i.Y.VIDEO_URL}pb_header_loop.webm`,
                   }),
-                  p.createElement("source", {
+                  n.createElement("source", {
                     type: "video/mp4",
                     src: `${i.Y.VIDEO_URL}pb_header_loop.mp4`,
                   }),
                 ),
-                p.createElement("img", {
+                n.createElement("img", {
                   className: v().LeavesLeft,
                   "data-aos": "fade-left",
                   "data-aos-delay": "300",
                   "data-aos-duration": "2000",
                   src: `${i.Y.IMG_URL}/primalbeast/leaves_left.png`,
                 }),
-                p.createElement("img", {
+                n.createElement("img", {
                   className: v().LeavesRight,
                   "data-aos": "fade-right",
                   "data-aos-delay": "300",
@@ -175,10 +175,10 @@
                   src: `${i.Y.IMG_URL}/primalbeast/leaves_right.png`,
                 }),
               ),
-              p.createElement(
+              n.createElement(
                 "div",
                 { className: v().TitleContainer },
-                p.createElement(
+                n.createElement(
                   "div",
                   {
                     className: v().TitleContainer,
@@ -186,67 +186,67 @@
                     "data-aos-delay": "200",
                     "data-aos-duration": "2000",
                   },
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().TitleIntro },
                     (0, r.Jr)("#primalbeast_intro_title"),
                   ),
-                  p.createElement("img", {
+                  n.createElement("img", {
                     className: v().HeroLogo,
                     onError: (e) =>
                       (e.target.src = `${i.Y.IMG_URL}/primalbeast/pb_logo_en.png`),
                     src: `${i.Y.IMG_URL}/primalbeast/pb_logo_${i.Y.LANGUAGE}.png`,
                   }),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().Complexity },
-                    p.createElement("img", {
+                    n.createElement("img", {
                       src: `${i.Y.IMG_URL}/primalbeast/difficulty.png`,
                     }),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().Roles },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().HeroRole },
                       (0, r.Jr)("#primalbeast_role1"),
                     ),
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().HeroRole },
                       (0, r.Jr)("#primalbeast_role2"),
                     ),
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().HeroRole },
                       (0, r.Jr)("#primalbeast_role3"),
                     ),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().HeroIntro },
                     (0, r.Jr)("#primalbeast_intro"),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().LoreSection },
-                    p.createElement("div", { className: v().Divider }),
-                    p.createElement("div", { className: v().DividerBottom }),
-                    p.createElement(
+                    n.createElement("div", { className: v().Divider }),
+                    n.createElement("div", { className: v().DividerBottom }),
+                    n.createElement(
                       "div",
                       { className: v().Quote },
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().LoreHeader },
                         (0, r.Jr)("#primalbeast_lore_title"),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().LoreText },
                         (0, r.Jr)("#primalbeast_lore_desc"),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().LoreText },
                         (0, r.Jr)("#primalbeast_lore_desc2"),
@@ -256,27 +256,27 @@
                 ),
               ),
             ),
-            p.createElement(
+            n.createElement(
               "div",
               { className: v().AbilitySection },
-              p.createElement(
-                c.sj,
+              n.createElement(
+                m.sj,
                 {
                   className: v().AbilityCarousel,
                   naturalSlideWidth: 100,
                   naturalSlideHeight: 56.25,
                   totalSlides: 4,
                 },
-                p.createElement(
-                  c.iR,
+                n.createElement(
+                  m.iR,
                   null,
-                  p.createElement(
-                    c.Mi,
+                  n.createElement(
+                    m.Mi,
                     { index: 0 },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().SlideContainer },
-                      p.createElement(
+                      n.createElement(
                         "video",
                         {
                           className: v().AbilityVideo,
@@ -287,31 +287,31 @@
                           playsInline: !0,
                           poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.jpg`,
                         },
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/webm",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.webm`,
                         }),
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/mp4",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.mp4`,
                         }),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().SlideAbilityContainer },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().SlideAbilityIcon,
                           src: `${i.Y.IMG_URL}/primalbeast/primal_beast_onslaught_point.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().AbilityText },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityName },
                             (0, r.Jr)("#primalbeast_ability1_title"),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityDesc },
                             (0, r.Jr)("#primalbeast_ability1_desc"),
@@ -320,13 +320,13 @@
                       ),
                     ),
                   ),
-                  p.createElement(
-                    c.Mi,
+                  n.createElement(
+                    m.Mi,
                     { index: 1 },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().SlideContainer },
-                      p.createElement(
+                      n.createElement(
                         "video",
                         {
                           className: v().AbilityVideo,
@@ -337,31 +337,31 @@
                           playsInline: !0,
                           poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.jpg`,
                         },
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/webm",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.webm`,
                         }),
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/mp4",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.mp4`,
                         }),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().SlideAbilityContainer },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().SlideAbilityIcon,
                           src: `${i.Y.IMG_URL}/primalbeast/primal_beast_heavysteps.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().AbilityText },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityName },
                             (0, r.Jr)("#primalbeast_ability2_title"),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityDesc },
                             (0, r.Jr)("#primalbeast_ability2_desc"),
@@ -370,13 +370,13 @@
                       ),
                     ),
                   ),
-                  p.createElement(
-                    c.Mi,
+                  n.createElement(
+                    m.Mi,
                     { index: 2 },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().SlideContainer },
-                      p.createElement(
+                      n.createElement(
                         "video",
                         {
                           className: v().AbilityVideo,
@@ -387,31 +387,31 @@
                           playsInline: !0,
                           poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.jpg`,
                         },
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/webm",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.webm`,
                         }),
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/mp4",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.mp4`,
                         }),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().SlideAbilityContainer },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().SlideAbilityIcon,
                           src: `${i.Y.IMG_URL}/primalbeast/primal_beast_inhibition.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().AbilityText },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityName },
                             (0, r.Jr)("#primalbeast_ability3_title"),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityDesc },
                             (0, r.Jr)("#primalbeast_ability3_desc"),
@@ -420,13 +420,13 @@
                       ),
                     ),
                   ),
-                  p.createElement(
-                    c.Mi,
+                  n.createElement(
+                    m.Mi,
                     { index: 3 },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().SlideContainer },
-                      p.createElement(
+                      n.createElement(
                         "video",
                         {
                           className: v().AbilityVideo,
@@ -437,45 +437,45 @@
                           playsInline: !0,
                           poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.jpg`,
                         },
-                        p.createElement(g.p, {
+                        n.createElement(g.p, {
                           left: !0,
                           color: "#000000",
                           startPct: 50,
                           midPct: 75,
                           endPct: 100,
                         }),
-                        p.createElement(g.p, {
+                        n.createElement(g.p, {
                           right: !0,
                           color: "#000000",
                           startPct: 90,
                           midPct: 100,
                           endPct: 90,
                         }),
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/webm",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.webm`,
                         }),
-                        p.createElement("source", {
+                        n.createElement("source", {
                           type: "video/mp4",
                           src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.mp4`,
                         }),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().SlideAbilityContainer },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().SlideAbilityIcon,
                           src: `${i.Y.IMG_URL}/primalbeast/primal_beast_pummel.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().AbilityText },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityName },
                             (0, r.Jr)("#primalbeast_ability4_title"),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().AbilityDesc },
                             (0, r.Jr)("#primalbeast_ability4_desc"),
@@ -485,144 +485,144 @@
                     ),
                   ),
                 ),
-                p.createElement(
+                n.createElement(
                   "div",
                   { className: v().CarouselDots },
-                  p.createElement(
-                    c.oT,
+                  n.createElement(
+                    m.oT,
                     {
-                      className: (0, o.Z)(v().AbilitySelector, v().Slide0),
+                      className: (0, _.Z)(v().AbilitySelector, v().Slide0),
                       slide: 0,
                     },
-                    p.createElement("div", null),
+                    n.createElement("div", null),
                   ),
-                  p.createElement(
-                    c.oT,
+                  n.createElement(
+                    m.oT,
                     {
-                      className: (0, o.Z)(v().AbilitySelector, v().Slide1),
+                      className: (0, _.Z)(v().AbilitySelector, v().Slide1),
                       slide: 1,
                     },
-                    p.createElement("div", null),
+                    n.createElement("div", null),
                   ),
-                  p.createElement(
-                    c.oT,
+                  n.createElement(
+                    m.oT,
                     {
-                      className: (0, o.Z)(v().AbilitySelector, v().Slide2),
+                      className: (0, _.Z)(v().AbilitySelector, v().Slide2),
                       slide: 2,
                     },
-                    p.createElement("div", null),
+                    n.createElement("div", null),
                   ),
-                  p.createElement(
-                    c.oT,
+                  n.createElement(
+                    m.oT,
                     {
-                      className: (0, o.Z)(v().AbilitySelector, v().Slide3),
+                      className: (0, _.Z)(v().AbilitySelector, v().Slide3),
                       slide: 3,
                     },
-                    p.createElement("div", null),
+                    n.createElement("div", null),
                   ),
                 ),
               ),
             ),
-            p.createElement(
+            n.createElement(
               "div",
               { className: v().HeropediaSection },
-              p.createElement(
+              n.createElement(
                 "div",
                 { className: v().HeropediaText },
                 (0, r.Jr)("#primalbeast_heroes_title"),
-                p.createElement(
-                  _.rU,
+                n.createElement(
+                  o.rU,
                   { to: s._.hero("primalbeast") },
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().StandardButton },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().ButtonText },
                       (0, r.Jr)("#primalbeast_heroes_btn"),
                     ),
-                    p.createElement(y.U, null),
+                    n.createElement(y.U, null),
                   ),
                 ),
               ),
-              p.createElement(
+              n.createElement(
                 "div",
                 null,
-                p.createElement("img", {
+                n.createElement("img", {
                   className: v().HeropediaImage,
                   src: `${i.Y.IMG_URL}/heroes/crops/primal_beast.png`,
                 }),
               ),
             ),
-            p.createElement(
+            n.createElement(
               "div",
               { className: v().WallpaperSection },
-              p.createElement(
+              n.createElement(
                 "div",
                 { className: v().WallpaperTitle },
                 (0, r.Jr)("#primalbeast_wallpaper"),
               ),
-              p.createElement(
+              n.createElement(
                 "div",
                 { className: v().Wallpapers },
-                p.createElement(
+                n.createElement(
                   "div",
                   { className: v().WallpaperGroup },
-                  p.createElement(
+                  n.createElement(
                     "a",
                     {
                       href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper.jpg`,
                     },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().Wallpaper },
-                      p.createElement("img", {
+                      n.createElement("img", {
                         className: v().WallpaperImgDesktop,
                         src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_thumb.jpg`,
                       }),
                     ),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "a",
                     {
                       href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper_mobile.jpg`,
                     },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().Wallpaper },
-                      p.createElement("img", {
+                      n.createElement("img", {
                         className: v().WallpaperImgDesktop,
                         src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_mobile_thumb.jpg`,
                       }),
                     ),
                   ),
                 ),
-                p.createElement(
+                n.createElement(
                   "div",
                   { className: v().WallpaperGroup },
-                  p.createElement(
+                  n.createElement(
                     "a",
                     {
                       href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper_02.jpg`,
                     },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().Wallpaper },
-                      p.createElement("img", {
+                      n.createElement("img", {
                         className: v().WallpaperImgDesktop,
                         src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_02_thumb.jpg`,
                       }),
                     ),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "a",
                     {
                       href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper_02_mobile.jpg`,
                     },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().Wallpaper },
-                      p.createElement("img", {
+                      n.createElement("img", {
                         className: v().WallpaperImgDesktop,
                         src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_mobile_02_thumb.jpg`,
                       }),
@@ -631,39 +631,39 @@
                 ),
               ),
             ),
-            p.createElement(
+            n.createElement(
               "div",
               { className: v().PatchSection },
-              p.createElement("div", { className: v().Divider }),
-              p.createElement(
+              n.createElement("div", { className: v().Divider }),
+              n.createElement(
                 "div",
                 { className: v().PatchTitle },
                 (0, r.Jr)("#731_patch_title"),
               ),
-              p.createElement(
+              n.createElement(
                 "div",
                 { className: v().PatchContainer },
-                p.createElement(
+                n.createElement(
                   "div",
                   { className: v().CreepsSection },
-                  p.createElement("img", {
+                  n.createElement("img", {
                     className: v().PatchImage,
                     src: `${i.Y.IMG_URL}/primalbeast/new_creeps.png`,
                   }),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().HeaderLabel },
                     (0, r.Jr)("#731_patch_creeps_title"),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().PatchContent },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().CreepChangeDescription },
                       (0, r.Jr)("#731_patch_creeps_changes_desc"),
                     ),
-                    p.createElement(
+                    n.createElement(
                       "video",
                       {
                         className: v().ShowcaseVideo,
@@ -674,137 +674,137 @@
                         playsInline: !0,
                         poster: `${i.Y.VIDEO_URL}primalbeast/creeps_731.jpg`,
                       },
-                      p.createElement("source", {
+                      n.createElement("source", {
                         type: "video/webm",
                         src: `${i.Y.VIDEO_URL}primalbeast/creeps_731.webm`,
                       }),
-                      p.createElement("source", {
+                      n.createElement("source", {
                         type: "video/mp4",
                         src: `${i.Y.VIDEO_URL}primalbeast/creeps_731.webm`,
                       }),
                     ),
                   ),
                 ),
-                p.createElement(
+                n.createElement(
                   "div",
                   { className: v().TechiesSection },
-                  p.createElement("img", {
+                  n.createElement("img", {
                     className: v().PatchImage,
                     src: `${i.Y.IMG_URL}/primalbeast/techies_spot_short.png`,
                   }),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().HeaderLabel },
                     (0, r.Jr)("#731_patch_techies_title"),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().PatchContent },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().TechiesChangeDescription },
                       (0, r.Jr)("#731_patch_techies_changes_desc"),
                     ),
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().TechiesAbilitiesTitle },
                       (0, r.Jr)("#731_patch_techies_abilities_title"),
                     ),
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().TechiesAbilities },
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().TechiesAbility },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().TechiesAbilityImage,
                           src: `${i.Y.IMG_URL}/primalbeast/techies_sticky_bomb.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().TechiesAbilityContent },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityTitle },
                             (0, r.Jr)("#731_patch_techies_ability1_title"),
-                            p.createElement(
+                            n.createElement(
                               "div",
                               { className: v().NewAbilityLabel },
                               (0, r.Jr)("#731_patch_techies_abilities_label"),
                             ),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityDesc },
                             (0, r.Jr)("#731_patch_techies_ability1_desc"),
                           ),
                         ),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().TechiesAbility },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().TechiesAbilityImage,
                           src: `${i.Y.IMG_URL}/primalbeast/techies_reactive_taser.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().TechiesAbilityContent },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityTitle },
                             (0, r.Jr)("#731_patch_techies_ability2_title"),
-                            p.createElement(
+                            n.createElement(
                               "div",
                               { className: v().NewAbilityLabel },
                               (0, r.Jr)("#731_patch_techies_abilities_label"),
                             ),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityDesc },
                             (0, r.Jr)("#731_patch_techies_ability2_desc"),
                           ),
                         ),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().TechiesAbility },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().TechiesAbilityImage,
                           src: `${i.Y.IMG_URL}/primalbeast/techies_blast_off.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().TechiesAbilityContent },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityTitle },
                             (0, r.Jr)("#731_patch_techies_ability3_title"),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityDesc },
                             (0, r.Jr)("#731_patch_techies_ability3_desc"),
                           ),
                         ),
                       ),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().TechiesAbility },
-                        p.createElement("img", {
+                        n.createElement("img", {
                           className: v().TechiesAbilityImage,
                           src: `${i.Y.IMG_URL}/primalbeast/techies_land_mines.png`,
                         }),
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().TechiesAbilityContent },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityTitle },
                             (0, r.Jr)("#731_patch_techies_ability4_title"),
                           ),
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().TechiesAbilityDesc },
                             (0, r.Jr)("#731_patch_techies_ability4_desc"),
@@ -813,79 +813,79 @@
                       ),
                     ),
                   ),
-                  p.createElement(
+                  n.createElement(
                     "div",
                     { className: v().HeropediaSection },
-                    p.createElement(
+                    n.createElement(
                       "div",
                       { className: v().HeropediaText },
                       (0, r.Jr)("#731_patch_techies_details_header"),
-                      p.createElement(
-                        _.rU,
+                      n.createElement(
+                        o.rU,
                         { to: s._.hero("techies") },
-                        p.createElement(
+                        n.createElement(
                           "div",
                           { className: v().StandardButton },
-                          p.createElement(
+                          n.createElement(
                             "div",
                             { className: v().ButtonText },
                             (0, r.Jr)("#primalbeast_heroes_btn"),
                           ),
-                          p.createElement(y.U, null),
+                          n.createElement(y.U, null),
                         ),
                       ),
                     ),
-                    p.createElement(
+                    n.createElement(
                       "div",
                       null,
-                      p.createElement("img", {
+                      n.createElement("img", {
                         className: v().HeropediaImage,
                         src: `${i.Y.IMG_URL}/heroes/crops/techies.png`,
                       }),
                     ),
                   ),
                 ),
-                p.createElement(
+                n.createElement(
                   "div",
                   { className: v().LowerPatch },
-                  p.createElement(N.on, {
+                  n.createElement(N.on, {
                     patchnotes: null == e ? void 0 : e.generic,
                   }),
-                  p.createElement(N.k8, {
+                  n.createElement(N.k8, {
                     patchnotes: null == e ? void 0 : e.neutral_creeps,
                   }),
-                  p.createElement(N.bn, {
+                  n.createElement(N.bn, {
                     patchnotes: null == e ? void 0 : e.items,
-                    header: p.createElement(
+                    header: n.createElement(
                       "div",
                       { className: v().ItemsSection },
-                      p.createElement("img", {
+                      n.createElement("img", {
                         className: v().PatchImage,
                         src: `${i.Y.IMG_URL}/primalbeast/items.png`,
                       }),
-                      p.createElement(
+                      n.createElement(
                         "div",
                         { className: v().ItemChangeDescription },
                         (0, r.Jr)("#731_patch_items_changes_desc"),
                       ),
                     ),
                   }),
-                  p.createElement(N.bn, {
+                  n.createElement(N.bn, {
                     patchnotes: null == e ? void 0 : e.neutral_items,
                     is_neutrals: !0,
                   }),
-                  p.createElement(N.MC, {
+                  n.createElement(N.MC, {
                     patchnotes: null == e ? void 0 : e.heroes,
                   }),
                 ),
               ),
             ),
-            p.createElement(E.U, null),
+            n.createElement(E.U, null),
           );
         }
       };
-      u = (0, l.gn)([m.Pi], u);
-      const T = u;
+      u = (0, l.gn)([c.Pi], u);
+      const A = u;
     },
   },
 ]);

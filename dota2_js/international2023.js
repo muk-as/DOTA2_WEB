@@ -7,120 +7,113 @@
   {
     6574: (e) => {
       e.exports = {
-        Tooltip: "bppurchasebutton_Tooltip_3SWNc",
-        CarouselFade: "bppurchasebutton_CarouselFade_492j9",
-        StandardButton: "bppurchasebutton_StandardButton_3MfYY",
-        ButtonText: "bppurchasebutton_ButtonText_3vI_e",
-        Icon: "bppurchasebutton_Icon_o-07v",
-        Play: "bppurchasebutton_Play_2lUpt",
-        SteamLogo: "bppurchasebutton_SteamLogo_2NMxA",
-        ToolTip: "bppurchasebutton_ToolTip_1qbLW",
-        PlayerReportTooltip: "bppurchasebutton_PlayerReportTooltip_3XOHk",
-        BuyBattlePassCapsule: "bppurchasebutton_BuyBattlePassCapsule_dhurO",
-        BuyCompendiumCapsule: "bppurchasebutton_BuyCompendiumCapsule_aFLC0",
-        BuyCompendiumCapsule2023:
-          "bppurchasebutton_BuyCompendiumCapsule2023_1Zreh",
-        CapsuleTitle: "bppurchasebutton_CapsuleTitle_1WgVx",
-        CapsuleLevelBundle: "bppurchasebutton_CapsuleLevelBundle_3KVDY",
-        CapsuleDiscount: "bppurchasebutton_CapsuleDiscount_v8xLJ",
-        CapsulePurchaseButton: "bppurchasebutton_CapsulePurchaseButton_3SnG2",
-        CompendiumLevels: "bppurchasebutton_CompendiumLevels_1j-SG",
-        BoosterLevels: "bppurchasebutton_BoosterLevels_3MS1B",
-        EarnTheFollowing: "bppurchasebutton_EarnTheFollowing_NTGBF",
-        OtherRewards: "bppurchasebutton_OtherRewards_3ng7Y",
-        SmoothLine: "bppurchasebutton_SmoothLine_5ddUu",
-        TextStyleOverline: "bppurchasebutton_TextStyleOverline_ZZPNh",
-        TextStyleButton: "bppurchasebutton_TextStyleButton_29RUH",
-        TextStyleFootnote: "bppurchasebutton_TextStyleFootnote_YY9MW",
-        BoostersFootnoteContainer:
-          "bppurchasebutton_BoostersFootnoteContainer_2N4yU",
-        BoostersFootnote: "bppurchasebutton_BoostersFootnote_3sKCu",
-        TextColorGreenGlow: "bppurchasebutton_TextColorGreenGlow_3azYF",
+        Tooltip: "_3SWNcmwV0oP-ROKDVg1iXe",
+        CarouselFade: "_492j9xDU1ExfjVLCzFhpY",
+        StandardButton: "_3MfYYTBQIPtnzB-znQhbti",
+        ButtonText: "_3vI_elRv1cIrOu2_N5VQQf",
+        Icon: "o-07vXaikfMXAqA-RNcK3",
+        Play: "_2lUptAc5bTBML114g6cL9I",
+        SteamLogo: "_2NMxAQfq2uZwmoT3JMyOU5",
+        ToolTip: "_1qbLWciZLqOyJibOuft1PJ",
+        PlayerReportTooltip: "_3XOHkln8JxO7R3AvDe075q",
+        BuyBattlePassCapsule: "dhurOK2NNcUIvBf3mkJg9",
+        BuyCompendiumCapsule: "aFLC0zJWG4rx8hQ1A1sne",
+        BuyCompendiumCapsule2023: "_1ZrehM_Da84hVA0fVsF-Ox",
+        CapsuleTitle: "_1WgVxOffsEmu9AnEgh2Hx8",
+        CapsuleLevelBundle: "_3KVDYyP9tD2DiKZytyEJZi",
+        CapsuleDiscount: "v8xLJfzAUd1wUn2T0b55I",
+        CapsulePurchaseButton: "_3SnG2_lnAO-Vsh1ifKtmgB",
+        CompendiumLevels: "_1j-SGTrqobUmcsMR2SyxlD",
+        BoosterLevels: "_3MS1BbIPRZzzrAWojHwo-g",
+        EarnTheFollowing: "NTGBF2gHEmBRi3nxrcOHa",
+        OtherRewards: "_3ng7YVyin9eviFhG7nKqKf",
+        SmoothLine: "_5ddUuvHuifvwOsveGS3oy",
+        TextStyleOverline: "ZZPNhSonYWEiGiZGb8pa",
+        TextStyleButton: "_29RUHlFmf7bp8MDmii0cwy",
+        TextStyleFootnote: "YY9MWNYBw5TGBzz6dnkwu",
+        BoostersFootnoteContainer: "_2N4yUqQVX0n5LIdiQmcNh",
+        BoostersFootnote: "_3sKCu_Th-JNQ9l8WALWag5",
+        TextColorGreenGlow: "_3azYFNjOXo-0ulw3D2CM3B",
       };
     },
     65618: (e) => {
       e.exports = {
-        Tooltip: "international2023_Tooltip_1taT2",
-        CarouselFade: "international2023_CarouselFade_8BZdP",
-        StandardButton: "international2023_StandardButton_Nmltu",
-        ButtonText: "international2023_ButtonText_3aVnl",
-        Icon: "international2023_Icon_1FIMo",
-        Play: "international2023_Play_1Cnj4",
-        SteamLogo: "international2023_SteamLogo_2HQZM",
-        ToolTip: "international2023_ToolTip_2b3dG",
-        PlayerReportTooltip: "international2023_PlayerReportTooltip_2dJwj",
-        International2023Page: "international2023_International2023Page_wtEKn",
-        PageContainer: "international2023_PageContainer_1n5Wc",
-        Hidden: "international2023_Hidden_qURCe",
-        SectionDivider: "international2023_SectionDivider_BqL4Z",
-        Compendium: "international2023_Compendium_2Lid0",
-        Flipped: "international2023_Flipped_10Lsc",
-        PurchaseSection: "international2023_PurchaseSection_1FuLz",
-        BuyCompendiumButtons: "international2023_BuyCompendiumButtons_aATJj",
-        PrizePoolContribution: "international2023_PrizePoolContribution_1cm1m",
-        TournamentLearnMore: "international2023_TournamentLearnMore_1ky3C",
-        HeaderSection: "international2023_HeaderSection_2n1Tz",
-        Title: "international2023_Title_YLOHA",
-        Subtitle: "international2023_Subtitle_3DvYf",
-        Spacer: "international2023_Spacer_2AKJk",
-        BodyText: "international2023_BodyText_1zDRc",
-        WebsiteSection: "international2023_WebsiteSection_1VcEN",
-        CompendiumDark: "international2023_CompendiumDark_2bw8A",
-        CompendiumIntro: "international2023_CompendiumIntro_3_BN6",
-        CompendiumLogo: "international2023_CompendiumLogo_2U38o",
-        CompendiumLogoText: "international2023_CompendiumLogoText_2NQCB",
-        CompendiumStars: "international2023_CompendiumStars_E3hc8",
-        FooterSection: "international2023_FooterSection_3F3NW",
-        FeatureCapsule: "international2023_FeatureCapsule_1Xw2N",
-        Text: "international2023_Text_353Dl",
-        Headline: "international2023_Headline_uFJUd",
-        SmallRewardsCapsule: "international2023_SmallRewardsCapsule_2hp9Q",
-        RewardsText: "international2023_RewardsText_1S7Z_",
-        Dota: "international2023_Dota_3tQlG",
-        HeaderPaddingBottom: "international2023_HeaderPaddingBottom_6782p",
-        Introduction: "international2023_Introduction_vFKv1",
-        ExplainerMovie: "international2023_ExplainerMovie_3mtmA",
-        ExplainerVideo: "international2023_ExplainerVideo_ZaZGA",
-        Description: "international2023_Description_2hxLW",
-        Image: "international2023_Image_2M5MF",
-        TranslateImageUp: "international2023_TranslateImageUp_1sXlU",
-        Image85Percent: "international2023_Image85Percent_2AFu5",
-        Image75Percent: "international2023_Image75Percent_3XEBB",
-        Image70Percent: "international2023_Image70Percent_3kLoV",
-        Image65Percent: "international2023_Image65Percent_10Add",
-        Image60Percent: "international2023_Image60Percent_2vf34",
-        Image55Percent: "international2023_Image55Percent_23aKD",
-        Image50Percent: "international2023_Image50Percent_yQcoO",
-        FeatureCapsuleSwapOrder:
-          "international2023_FeatureCapsuleSwapOrder_13Ndi",
-        SmallRewardsTextContainer:
-          "international2023_SmallRewardsTextContainer_jQc8x",
-        SmallRewardsImageContainer:
-          "international2023_SmallRewardsImageContainer_1OKKi",
-        FeatureImage: "international2023_FeatureImage_15oH1",
-        BottomBorder: "international2023_BottomBorder_2ozeJ",
-        FeatureText: "international2023_FeatureText_1eFcw",
-        FeatureRow: "international2023_FeatureRow_2C5mZ",
-        HeaderContainer: "international2023_HeaderContainer_3vFPa",
-        SmallFeatureCapsule: "international2023_SmallFeatureCapsule_2RIre",
-        SpaceBetween: "international2023_SpaceBetween_3scKV",
-        CenterText: "international2023_CenterText_AUxQc",
-        SmallCapsuleImageFixedHeight:
-          "international2023_SmallCapsuleImageFixedHeight_14pXG",
-        FeatureRowDiffPadding: "international2023_FeatureRowDiffPadding_UV_0Y",
-        LevelsBoostersContainer:
-          "international2023_LevelsBoostersContainer_guX93",
-        ComingSoonCapsule: "international2023_ComingSoonCapsule_23EWM",
-        Contents: "international2023_Contents_223vq",
-        Header: "international2023_Header_3ga_t",
-        ShowcaseCarousel: "international2023_ShowcaseCarousel_1cXX2",
-        CarouselArrow: "international2023_CarouselArrow_1T3hF",
-        ArrowImage: "international2023_ArrowImage_3II4x",
-        Left: "international2023_Left_2cQND",
-        Right: "international2023_Right_x992E",
-        CarouselDots: "international2023_CarouselDots__0Ils",
-        Dot: "international2023_Dot_2vXVp",
-        ShowcaseVideo: "international2023_ShowcaseVideo_8_Trg",
+        Tooltip: "_1taT2Pj1o-3-iILLlowgbY",
+        CarouselFade: "_8BZdPwFWQCUV6FW9izhWa",
+        StandardButton: "NmltuRNbHFTf4riudR25e",
+        ButtonText: "_3aVnlb9YrmvgZghlwoOwQP",
+        Icon: "_1FIMoHdSL5noTKumIgECnL",
+        Play: "_1Cnj4Y-iqxwdDqz6cA_GVy",
+        SteamLogo: "_2HQZMwWdErU0rOd94RRw0q",
+        ToolTip: "_2b3dGWoCAFxVxStW_Aeg_P",
+        PlayerReportTooltip: "_2dJwjMCuUVCwoh2BbITpCv",
+        International2023Page: "wtEKn34WWRrDo6BTUyGVA",
+        PageContainer: "_1n5WcE5kGTuwm7JnK9bNwL",
+        Hidden: "qURCeWFI2TpvwGk0K_B_5",
+        SectionDivider: "BqL4ZptUKqAQF0MEQZVN3",
+        Compendium: "_2Lid0fc0XcIcrlmkDJzW5w",
+        Flipped: "_10LscA88NTmzvB1SFRz6Y1",
+        PurchaseSection: "_1FuLz8Ck4nX16K1sWEsIYd",
+        BuyCompendiumButtons: "aATJjQeMHdJWKP5RdlcOk",
+        PrizePoolContribution: "_1cm1mBK5YKegLZxTZeSmJ6",
+        TournamentLearnMore: "_1ky3CnW0tiAbVfJhU361R4",
+        HeaderSection: "_2n1TzRobry7vZd0Htu1Kzs",
+        Title: "YLOHA_V0bR97fbgJiW4bq",
+        Subtitle: "_3DvYf0jwaTTiCe_Vuw5vpW",
+        Spacer: "_2AKJkRRIWTjg45RcFbkJvT",
+        BodyText: "_1zDRcGPGSzNcoiC55LaExO",
+        WebsiteSection: "_1VcENtcO9yBblZLAcvneAL",
+        CompendiumDark: "_2bw8AJKNiL5lTA7jab3IAj",
+        CompendiumIntro: "_3_BN6kyzxy_cksA46pWJdB",
+        CompendiumLogo: "_2U38o8jhBYNgV1V3QDiCjj",
+        CompendiumLogoText: "_2NQCBIC1icTpoc22vzJ3PP",
+        CompendiumStars: "E3hc8tMD5j9NfFAPe0eNv",
+        FooterSection: "_3F3NWBqM1gXlZLroQIvPxH",
+        FeatureCapsule: "_1Xw2Nbr_ZpFP_xdeCtLjKa",
+        Text: "_353DlS2EKPMxqGcTSAgUhu",
+        Headline: "uFJUdr_o4BUqB6_na7IbG",
+        SmallRewardsCapsule: "_2hp9QaujE7M3BYcnNGUBHT",
+        RewardsText: "_1S7Z_FnmUyDksgzL65xqJV",
+        Dota: "_3tQlGV75G8A5T5yDOVRrGQ",
+        HeaderPaddingBottom: "_6782p6Sukl-RqZc1jkR2C",
+        Introduction: "vFKv1QCTO4zEBURmw_A6g",
+        ExplainerMovie: "_3mtmA3lXjOeCOExjfCbqZw",
+        ExplainerVideo: "ZaZGAvN4TqQZeIsVSFCXq",
+        Description: "_2hxLWlYv48ABuqoIVn8bHl",
+        Image: "_2M5MFEgxdm29KTxSvwLzLM",
+        TranslateImageUp: "_1sXlUZw7eTGynYZ8iXWXx2",
+        Image85Percent: "_2AFu5JnWtwhNyhAnTVuBpj",
+        Image75Percent: "_3XEBBH7GdhzvFiinint1Nf",
+        Image70Percent: "_3kLoVkbodSFNitqLCEtzPA",
+        Image65Percent: "_10Add0Lv_3rd1tp3ttKN_h",
+        Image60Percent: "_2vf34vCwvEUbJ-O2ujnQY-",
+        Image55Percent: "_23aKDZMXiyKDCRd0Pu_fbb",
+        Image50Percent: "yQcoOW5iv2hKn67KsmqIa",
+        FeatureCapsuleSwapOrder: "_13Ndi4c6WzbfH4yaJH2zWo",
+        SmallRewardsTextContainer: "jQc8xZSm2nkyYB-rKzMrP",
+        SmallRewardsImageContainer: "_1OKKiU0vapuVfkl61VW36m",
+        FeatureImage: "_15oH1msvxpmAeD1XjlUdwr",
+        BottomBorder: "_2ozeJFPh9Z-p-wMG4alr9V",
+        FeatureText: "_1eFcwwUnIgTEbxxanSgfvH",
+        FeatureRow: "_2C5mZKSp7egyoVWFJLm6IO",
+        HeaderContainer: "_3vFPaMB8oknGs5alLTwNqC",
+        SmallFeatureCapsule: "_2RIre3xnSpBnhwZNFjvHu7",
+        SpaceBetween: "_3scKVfULh4xkMK1CYvjfFq",
+        CenterText: "AUxQcGOq_qYQnDVHPrP_",
+        SmallCapsuleImageFixedHeight: "_14pXG0GJ_3yZPP-uxenrku",
+        FeatureRowDiffPadding: "UV_0YoyRxSdV1MfB-o30o",
+        LevelsBoostersContainer: "guX93o2dOPakz3Sbl30ze",
+        ComingSoonCapsule: "_23EWMceZWxJ8aK1BkaOKTS",
+        Contents: "_223vqFyVBBTEFgJx5AVd5-",
+        Header: "_3ga_t8WIEAWpTsz3742f5N",
+        ShowcaseCarousel: "_1cXX2Rnm9zs9Zp5xpM_bLo",
+        CarouselArrow: "_1T3hF3PL5Jp55xFBIFpaPu",
+        ArrowImage: "_3II4xyLtJtII8Ivvjw3oSW",
+        Left: "_2cQNDA0O_JuyyoPVNxOp53",
+        Right: "x992Ef_DOQ5Yza9Tuvc2Z",
+        CarouselDots: "_0IlsD1NuerBVG8bP0-Tb",
+        Dot: "_2vXVpWGhf8K6DSm7oQwi0x",
+        ShowcaseVideo: "_8_Trg4do9Tx6h-iD6TnWg",
       };
     },
     63118: (e, t, a) => {
@@ -130,9 +123,9 @@
         i = a(6574),
         r = a.n(i),
         l = a(5062),
-        o = a(2580),
-        s = a(98142),
-        c = a(11360);
+        s = a(2580),
+        o = a(98142),
+        c = a(46792);
       const m = ({
           colorTopEdge: e,
           colorTop: t,
@@ -155,18 +148,18 @@
             },
             n.createElement("img", {
               className: r().CapsuleTitle,
-              onError: (e) => (e.target.src = `${s.Y.IMG_URL}${u}`),
-              src: `${s.Y.IMG_URL}${p}${s.Y.LANGUAGE}.png`,
+              onError: (e) => (e.target.src = `${o.Y.IMG_URL}${u}`),
+              src: `${o.Y.IMG_URL}${p}${o.Y.LANGUAGE}.png`,
             }),
             n.createElement(
               "div",
               { className: (0, l.Z)(r().TextStyleOverline) },
-              (0, o.Jr)("#battlepass_purchase_level", m),
+              (0, s.Jr)("#battlepass_purchase_level", m),
             ),
             n.createElement(
               "a",
               {
-                href: `${s.Y.BASE_URL}store/itemdetails/${d}`,
+                href: `${o.Y.BASE_URL}store/itemdetails/${d}`,
                 className: (0, l.Z)(
                   r().TextStyleButton,
                   r().TextColorWhite,
@@ -177,7 +170,7 @@
                   backgroundImage: `linear-gradient( ${e}, ${e} )`,
                 },
               },
-              (0, o.Jr)("#battlepass_purchase_label", c.P.GetBPPrice(d)),
+              (0, s.Jr)("#battlepass_purchase_label", c.P.GetBPPrice(d)),
             ),
             n.createElement(
               "div",
@@ -188,7 +181,7 @@
                   r().CapsuleDiscount,
                 ),
               },
-              _ && (0, o.Jr)("#battlepass_purchase_discount", _, m),
+              _ && (0, s.Jr)("#battlepass_purchase_discount", _, m),
             ),
           ),
         _ = (e) =>
@@ -213,30 +206,30 @@
                     backgroundImage: "linear-gradient( to bottom, #FFF, #FFF",
                   },
                 },
-                (0, o.Jr)(e.title),
+                (0, s.Jr)(e.title),
               ),
             e.capsuleImageLocation &&
               n.createElement("img", {
                 className: r().CapsuleTitle,
                 onError: (t) =>
-                  (t.target.src = `${s.Y.IMG_URL}${e.capsuleImageOnErrorLocation}`),
-                src: `${s.Y.IMG_URL}${e.capsuleImageLocation}${s.Y.LANGUAGE}.png`,
+                  (t.target.src = `${o.Y.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                src: `${o.Y.IMG_URL}${e.capsuleImageLocation}${o.Y.LANGUAGE}.png`,
               }),
             n.createElement(
               "div",
               { className: (0, l.Z)(r().CompendiumLevels) },
-              (0, o.Jr)("#compendium_purchase_levels", e.level),
+              (0, s.Jr)("#compendium_purchase_levels", e.level),
             ),
             n.createElement(
               "div",
               { className: (0, l.Z)(r().BoosterLevels) },
-              (0, o.Jr)("#compendium_purchase_booster_levels", e.booster_level),
+              (0, s.Jr)("#compendium_purchase_booster_levels", e.booster_level),
             ),
             n.createElement("div", { className: r().SmoothLine }),
             n.createElement(
               "div",
               { className: (0, l.Z)(r().EarnTheFollowing) },
-              (0, o.Jr)("#compendium_purchase_earn_the_following"),
+              (0, s.Jr)("#compendium_purchase_earn_the_following"),
             ),
             n.createElement(
               "ul",
@@ -244,17 +237,17 @@
               n.createElement(
                 "li",
                 { className: (0, l.Z)(r().OtherRewards) },
-                (0, o.Jr)("#compendium_purchase_all_access"),
+                (0, s.Jr)("#compendium_purchase_all_access"),
               ),
               n.createElement(
                 "li",
                 { className: (0, l.Z)(r().OtherRewards) },
-                (0, o.Jr)("#compendium_purchase_aegis_emoticon"),
+                (0, s.Jr)("#compendium_purchase_aegis_emoticon"),
               ),
               n.createElement(
                 "li",
                 { className: (0, l.Z)(r().OtherRewards) },
-                (0, o.Jr)(
+                (0, s.Jr)(
                   "#compendium_purchase_rtti_culling_blades",
                   e.cullingBlades,
                 ),
@@ -262,7 +255,7 @@
               n.createElement(
                 "li",
                 { className: (0, l.Z)(r().OtherRewards) },
-                (0, o.Jr)(
+                (0, s.Jr)(
                   "#compendium_purchase_rtti_reroll_tokens",
                   e.rerollTokens,
                 ),
@@ -270,7 +263,7 @@
               n.createElement(
                 "li",
                 { className: (0, l.Z)(r().OtherRewards) },
-                (0, o.Jr)(
+                (0, s.Jr)(
                   "#compendium_purchase_fantasy_tokens",
                   e.fantasyTokens,
                 ),
@@ -279,25 +272,25 @@
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)("#compendium_purchase_one_random_voiceline"),
+                  (0, s.Jr)("#compendium_purchase_one_random_voiceline"),
                 ),
               e.voicelines > 1 &&
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)("#compendium_purchase_voicelines", e.voicelines),
+                  (0, s.Jr)("#compendium_purchase_voicelines", e.voicelines),
                 ),
               1 == e.playerStickers &&
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)("#compendium_purchase_one_player_sticker"),
+                  (0, s.Jr)("#compendium_purchase_one_player_sticker"),
                 ),
               e.playerStickers > 1 &&
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)(
+                  (0, s.Jr)(
                     "#compendium_purchase_player_stickers",
                     e.playerStickers,
                   ),
@@ -306,7 +299,7 @@
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)(
+                  (0, s.Jr)(
                     "#compendium_purchase_team_stickers",
                     e.teamStickers,
                   ),
@@ -315,7 +308,7 @@
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)(
+                  (0, s.Jr)(
                     "#compendium_purchase_team_loading_screens",
                     e.teamLoadingScreens,
                   ),
@@ -324,7 +317,7 @@
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)(
+                  (0, s.Jr)(
                     "#compendium_purchase_ti_loading_screens",
                     e.tiLoadingScreens,
                   ),
@@ -333,7 +326,7 @@
                 n.createElement(
                   "li",
                   { className: (0, l.Z)(r().OtherRewards) },
-                  (0, o.Jr)("#compendium_purchase_tp_fx"),
+                  (0, s.Jr)("#compendium_purchase_tp_fx"),
                 ),
             ),
             n.createElement(
@@ -343,26 +336,26 @@
                 n.createElement(
                   "div",
                   { className: (0, l.Z)(r().BoostersFootnote) },
-                  (0, o.Jr)("#compendium_purchase_boosters_footnote"),
+                  (0, s.Jr)("#compendium_purchase_boosters_footnote"),
                 ),
               e.isUpgraded &&
                 n.createElement(
                   "div",
                   { className: (0, l.Z)(r().BoostersFootnote) },
-                  (0, o.Jr)("#compendium_purchase_upgraded_boosters_footnote"),
+                  (0, s.Jr)("#compendium_purchase_upgraded_boosters_footnote"),
                 ),
             ),
           );
     },
     5804: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => J });
+      a.r(t), a.d(t, { default: () => L });
       var n = a(22970),
         i = a(98142),
         r = a(2580),
         l = a(80846),
-        o = a(66204),
-        s = a(62175),
+        s = a(66204),
+        o = a(62175),
         c = a(5062),
         m = a(31444),
         _ = a(37196),
@@ -371,43 +364,43 @@
         u = a(15905),
         g = a(8908),
         E = a(63118),
-        h = a(78752);
-      const { detect: S } = a(68359),
-        w = (S(), "International2023Page"),
-        C = ({ children: e }) => {
+        w = a(78752);
+      const { detect: v } = a(68359),
+        S = (v(), "International2023Page"),
+        h = ({ children: e }) => {
           const { hash: t } = (0, u.TH)();
           return (
-            (0, o.useEffect)(() => {
+            (0, s.useEffect)(() => {
               t &&
                 setTimeout(() => {
                   const e = t.replace("#", "");
-                  (0, g.Z)(e, w);
+                  (0, g.Z)(e, S);
                 }, 500);
             }, [t]),
             null
           );
         },
-        v = (e) =>
-          o.createElement(
+        N = (e) =>
+          s.createElement(
             "div",
             { className: p().Text },
-            o.createElement(
+            s.createElement(
               "div",
               { className: p().HeaderContainer },
               e.icon &&
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Icon },
-                  o.createElement("img", { src: `${i.Y.IMG_URL}/` + e.icon }),
+                  s.createElement("img", { src: `${i.Y.IMG_URL}/` + e.icon }),
                 ),
-              o.createElement(
+              s.createElement(
                 "div",
                 { className: p().Headline },
                 (0, r.Jr)(e.title),
               ),
             ),
             e.description &&
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   className: (0, c.Z)(
@@ -418,7 +411,49 @@
                 (0, r.Jr)(e.description),
               ),
             e.contents &&
-              o.createElement(
+              s.createElement(
+                "div",
+                {
+                  className: (0, c.Z)(
+                    p().Description,
+                    e.bCenterText ? p().CenterText : "",
+                  ),
+                },
+                e.contents,
+              ),
+          ),
+        C = (e) =>
+          s.createElement(
+            "div",
+            { className: p().RewardsText },
+            s.createElement(
+              "div",
+              { className: p().HeaderContainer },
+              e.icon &&
+                s.createElement(
+                  "div",
+                  { className: p().Icon },
+                  s.createElement("img", { src: `${i.Y.IMG_URL}/` + e.icon }),
+                ),
+              s.createElement(
+                "div",
+                { className: p().Headline },
+                (0, r.Jr)(e.title),
+              ),
+            ),
+            e.description &&
+              s.createElement(
+                "div",
+                {
+                  className: (0, c.Z)(
+                    p().Description,
+                    e.bCenterText ? p().CenterText : "",
+                  ),
+                },
+                (0, r.Jr)(e.description),
+              ),
+            e.contents &&
+              s.createElement(
                 "div",
                 {
                   className: (0, c.Z)(
@@ -430,49 +465,7 @@
               ),
           ),
         b = (e) =>
-          o.createElement(
-            "div",
-            { className: p().RewardsText },
-            o.createElement(
-              "div",
-              { className: p().HeaderContainer },
-              e.icon &&
-                o.createElement(
-                  "div",
-                  { className: p().Icon },
-                  o.createElement("img", { src: `${i.Y.IMG_URL}/` + e.icon }),
-                ),
-              o.createElement(
-                "div",
-                { className: p().Headline },
-                (0, r.Jr)(e.title),
-              ),
-            ),
-            e.description &&
-              o.createElement(
-                "div",
-                {
-                  className: (0, c.Z)(
-                    p().Description,
-                    e.bCenterText ? p().CenterText : "",
-                  ),
-                },
-                (0, r.Jr)(e.description),
-              ),
-            e.contents &&
-              o.createElement(
-                "div",
-                {
-                  className: (0, c.Z)(
-                    p().Description,
-                    e.bCenterText ? p().CenterText : "",
-                  ),
-                },
-                e.contents,
-              ),
-          ),
-        N = (e) =>
-          o.createElement(
+          s.createElement(
             "div",
             {
               className: (0, c.Z)(
@@ -483,13 +476,13 @@
               "data-aos-delay": "100",
               "data-aos-duration": "1000",
             },
-            o.createElement(v, {
+            s.createElement(N, {
               title: e.title,
               description: e.description,
               contents: e.contents,
             }),
             e.image &&
-              o.createElement("img", {
+              s.createElement("img", {
                 className: (0, c.Z)(
                   p().Image,
                   e.bTranslateImageUp ? p().TranslateImageUp : "",
@@ -499,7 +492,7 @@
               }),
           ),
         I = (e) =>
-          o.createElement(
+          s.createElement(
             "div",
             {
               className: (0, c.Z)(
@@ -510,14 +503,14 @@
               "data-aos-delay": "100",
               "data-aos-duration": "1000",
             },
-            o.createElement(b, {
+            s.createElement(C, {
               title: e.title,
               description: e.description,
               contents: e.contents,
             }),
           ),
         T = (e) =>
-          o.createElement(
+          s.createElement(
             "div",
             {
               className: (0, c.Z)(
@@ -528,11 +521,11 @@
               "data-aos-delay": "100",
               "data-aos-duration": "1000",
             },
-            o.createElement("img", {
+            s.createElement("img", {
               className: (0, c.Z)(p().Image, e.imageStyle ? e.imageStyle : ""),
               src: `${i.Y.IMG_URL}/` + e.image,
             }),
-            o.createElement(v, {
+            s.createElement(N, {
               title: e.title,
               description: e.description,
               contents: e.contents,
@@ -540,7 +533,7 @@
             }),
           ),
         y = (e) =>
-          o.createElement(
+          s.createElement(
             "div",
             {
               className: (0, c.Z)(
@@ -551,20 +544,20 @@
               "data-aos-delay": "100",
               "data-aos-duration": "1000",
             },
-            o.createElement(
+            s.createElement(
               "div",
               { className: p().SmallRewardsTextContainer },
-              o.createElement(v, {
+              s.createElement(N, {
                 title: e.title,
                 description: e.description,
                 contents: e.contents,
               }),
             ),
-            o.createElement(
+            s.createElement(
               "div",
               { className: p().SmallRewardsImageContainer },
               e.image &&
-                o.createElement("img", {
+                s.createElement("img", {
                   className: (0, c.Z)(
                     p().Image,
                     e.bTranslateImageUp ? p().TranslateImageUp : "",
@@ -574,33 +567,33 @@
                 }),
             ),
           ),
-        B = (e) =>
-          o.createElement(
+        x = (e) =>
+          s.createElement(
             "div",
             { className: p().ComingSoonCapsule },
-            o.createElement(
+            s.createElement(
               "div",
               { className: p().Contents },
-              o.createElement(
+              s.createElement(
                 "div",
                 { className: p().Header },
                 (0, r.Jr)("#international2023_coming_soon"),
               ),
-              o.createElement(
+              s.createElement(
                 "div",
                 { className: p().Description },
                 (0, r.Jr)(e.description),
               ),
             ),
           ),
-        x = () =>
-          o.createElement(
+        B = () =>
+          s.createElement(
             "div",
             { className: p().PurchaseSection },
-            o.createElement(
+            s.createElement(
               "div",
               { className: p().BuyCompendiumButtons },
-              o.createElement(E.VJ, {
+              s.createElement(E.VJ, {
                 colorTopEdge: "#237EA5",
                 colorTop: "#00172C ",
                 colorMiddle: "#010E1A",
@@ -609,14 +602,14 @@
                 level: 6,
                 booster_level: 6,
                 itemid: 22507,
-                eventid: f,
+                eventid: Z,
                 cullingBlades: 4,
                 rerollTokens: 6,
                 fantasyTokens: 36,
                 voicelines: 1,
                 playerStickers: 1,
               }),
-              o.createElement(E.VJ, {
+              s.createElement(E.VJ, {
                 colorTopEdge: "#BDB099",
                 colorTop: "#175F8A ",
                 colorMiddle: "#002948",
@@ -626,7 +619,7 @@
                 level: 50,
                 booster_level: 28,
                 itemid: 24173,
-                eventid: f,
+                eventid: Z,
                 cullingBlades: 13,
                 rerollTokens: 15,
                 fantasyTokens: 78,
@@ -639,7 +632,7 @@
                 isUpgraded: !0,
               }),
             ),
-            o.createElement(
+            s.createElement(
               "a",
               {
                 className: p().TournamentLearnMore,
@@ -648,20 +641,20 @@
               (0, r.Jr)("#international2023_tournament_learn_more"),
             ),
           ),
-        F = ({ nIndex: e, strVideo: t }) => {
-          const a = (0, o.useContext)(h.ro),
-            n = (0, o.useRef)();
+        f = ({ nIndex: e, strVideo: t }) => {
+          const a = (0, s.useContext)(w.ro),
+            n = (0, s.useRef)();
           return (
-            (0, o.useEffect)(() => {
+            (0, s.useEffect)(() => {
               function t() {
                 n.current && a.state.currentSlide == e && n.current.load();
               }
               return a.subscribe(t), () => a.unsubscribe(t);
             }, [a, e]),
-            o.createElement(
+            s.createElement(
               "div",
               { className: p().VideoContainer },
-              o.createElement(
+              s.createElement(
                 "video",
                 {
                   ref: n,
@@ -672,7 +665,7 @@
                   loop: !0,
                   playsInline: !0,
                 },
-                o.createElement("source", {
+                s.createElement("source", {
                   type: "video/webm",
                   src: `${i.Y.VIDEO_URL}international2023/${t}.webm`,
                 }),
@@ -680,7 +673,7 @@
             )
           );
         },
-        P = [
+        J = [
           { strVideo: "showcase_ti" },
           { strVideo: "showcase_windranger" },
           { strVideo: "showcase_pro_team" },
@@ -688,8 +681,8 @@
           { strVideo: "showcase_sniper" },
           { strVideo: "showcase_cliff" },
         ],
-        f = 45;
-      let L = class extends o.Component {
+        Z = 45;
+      let F = class extends s.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -697,233 +690,233 @@
           e.current.scrollIntoView({ behavior: "smooth" });
         }
         render() {
-          return o.createElement(
+          return s.createElement(
             "div",
-            { id: w, className: p().International2023Page },
-            o.createElement(
-              s.ql,
+            { id: S, className: p().International2023Page },
+            s.createElement(
+              o.ql,
               null,
-              o.createElement(
+              s.createElement(
                 "title",
                 null,
                 (0, r.Jr)("#international2023_update_title"),
               ),
             ),
-            o.createElement(
+            s.createElement(
               "div",
               { className: (0, c.Z)(p().PageContainer) },
-              o.createElement(m.j, { bOverlapping: !1 }),
-              o.createElement("div", {
+              s.createElement(m.j, { bOverlapping: !1 }),
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 { className: p().HeaderSection },
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Title },
                   (0, r.Jr)("#international2023_update_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_update_subtitle"),
                 ),
-                o.createElement("div", { className: p().Spacer }),
-                o.createElement(
+                s.createElement("div", { className: p().Spacer }),
+                s.createElement(
                   "div",
                   { className: p().BodyText },
                   (0, r.Jr)("#international2023_update_body"),
                 ),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(
                   p().SectionDivider,
                   p().Compendium,
                   p().Flipped,
                 ),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "ProfileShowcase",
                   className: (0, c.Z)(p().WebsiteSection, p().Dota),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_showcase_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_showcase_subtitle"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_showcase_intro"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().WebsiteSubSection },
-                  o.createElement(
+                  s.createElement(
                     "h2",
                     null,
                     (0, r.Jr)("#international2023_showcase_carousel_title"),
                   ),
-                  o.createElement(
-                    h.sj,
+                  s.createElement(
+                    w.sj,
                     {
                       className: p().ShowcaseCarousel,
                       naturalSlideWidth: 2,
                       naturalSlideHeight: 1,
-                      totalSlides: P.length,
+                      totalSlides: J.length,
                       isPlaying: !0,
                       infinite: !0,
                     },
-                    o.createElement(
-                      h.iR,
+                    s.createElement(
+                      w.iR,
                       null,
-                      P.map((e, t) =>
-                        o.createElement(
-                          h.Mi,
+                      J.map((e, t) =>
+                        s.createElement(
+                          w.Mi,
                           { key: `ShowcaseSlide-${t}`, index: t },
-                          o.createElement(F, {
+                          s.createElement(f, {
                             nIndex: t,
                             strVideo: e.strVideo,
                           }),
                         ),
                       ),
                     ),
-                    o.createElement(
-                      h.jp,
+                    s.createElement(
+                      w.jp,
                       { className: (0, c.Z)(p().CarouselArrow, p().Left) },
-                      o.createElement("img", {
+                      s.createElement("img", {
                         src: `${i.Y.IMG_URL}international2023/icons/arrow_left.png`,
                         className: p().ArrowImage,
                       }),
                     ),
-                    o.createElement(
-                      h.P1,
+                    s.createElement(
+                      w.P1,
                       { className: (0, c.Z)(p().CarouselArrow, p().Right) },
-                      o.createElement("img", {
+                      s.createElement("img", {
                         src: `${i.Y.IMG_URL}international2023/icons/arrow_right.png`,
                         className: p().ArrowImage,
                       }),
                     ),
-                    o.createElement(
+                    s.createElement(
                       "div",
                       { className: p().CarouselDots },
-                      P.map((e, t) =>
-                        o.createElement(
-                          h.oT,
+                      J.map((e, t) =>
+                        s.createElement(
+                          w.oT,
                           {
                             key: `ShowcaseDot-${t}`,
                             className: p().Dot,
                             slide: t,
                           },
-                          o.createElement("div", null),
+                          s.createElement("div", null),
                         ),
                       ),
                     ),
                   ),
                 ),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_showcase_profile_title",
                   description: "#international2023_showcase_profile_desc",
                   image: "international2023/ti2023_profile_updated_profile.png",
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_showcase_mini_profile_title",
                   description: "#international2023_showcase_mini_profile_desc",
                   image: "international2023/ti2023_profile_mini_profile.png",
                   bTranslateImageUp: !0,
                   imageStyle: p().Image70Percent,
                 }),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().WebsiteSubSection },
-                  o.createElement(
+                  s.createElement(
                     "h2",
                     { className: p().HeaderPaddingBottom },
                     (0, r.Jr)("#international2023_showcase_items_title"),
                   ),
-                  o.createElement(
+                  s.createElement(
                     "div",
                     { className: p().Introduction },
                     (0, r.Jr)("#international2023_showcase_items_desc"),
                   ),
-                  o.createElement(
+                  s.createElement(
                     "div",
                     { className: p().FeatureRow },
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_heroes_title",
                       image: "international2023/ti2023_showcase_heroes.png",
                     }),
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title:
                         "#international2023_showcase_item_loading_screens_title",
                       image:
                         "international2023/ti2023_showcase_loading_screen.png",
                     }),
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_stickers_title",
                       image: "international2023/ti2023_showcase_stickers.png",
                     }),
                   ),
-                  o.createElement(
+                  s.createElement(
                     "div",
                     { className: p().FeatureRow },
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_trophies_title",
                       image: "international2023/ti2023_showcase_trophies.png",
                     }),
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title:
                         "#international2023_showcase_item_chat_wheels_title",
                       image: "international2023/ti2023_showcase_voicelines.png",
                     }),
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_sprays_title",
                       image: "international2023/ti2023_showcase_sprays.png",
                     }),
                   ),
-                  o.createElement(
+                  s.createElement(
                     "div",
                     { className: p().FeatureRow },
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_items_title",
                       image:
                         "international2023/ti2023_showcase_armory_items.png",
                     }),
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_emoticons_title",
                       image: "international2023/ti2023_showcase_emoticons.png",
                     }),
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_stats_title",
                       image: "international2023/ti2023_showcase_stats.png",
                     }),
                   ),
-                  o.createElement(
+                  s.createElement(
                     "div",
                     { className: p().FeatureRow },
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_couriers_title",
                       image: "international2023/ti2023_showcase_couriers.png",
                     }),
-                    o.createElement(T, {
+                    s.createElement(T, {
                       title: "#international2023_showcase_item_wards_title",
                       image: "international2023/ti2023_showcase_wards.png",
                     }),
                   ),
                 ),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "Compendium",
@@ -933,58 +926,58 @@
                     p().CompendiumIntro,
                   ),
                 },
-                o.createElement("img", {
+                s.createElement("img", {
                   className: p().CompendiumLogo,
                   src: `${i.Y.IMG_URL}international2023/ti_logo_color.png`,
                 }),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().CompendiumLogoText },
                   (0, r.Jr)("#international2023_compendium"),
                 ),
-                o.createElement("img", {
+                s.createElement("img", {
                   className: p().CompendiumStars,
                   src: `${i.Y.IMG_URL}international2023/stars.png`,
                 }),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_compendium_intro"),
                 ),
-                o.createElement(x, null),
+                s.createElement(B, null),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "Quests",
                   className: (0, c.Z)(p().WebsiteSection, p().CompendiumDark),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_quests_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_compendium_activity"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_quests_intro"),
                 ),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_quests_match_title",
                   description: "#international2023_quests_match_desc",
                   image:
                     "international2023/ti2023_road_to_ti_challenge_match.png",
                   imageStyle: p().Image85Percent,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_quests_pro_title",
                   description: "#international2023_quests_pro_desc",
                   image:
@@ -992,37 +985,37 @@
                   imageStyle: p().Image85Percent,
                 }),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "Fantasy",
                   className: (0, c.Z)(p().WebsiteSection, p().CompendiumDark),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_fantasy_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_compendium_activity"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_fantasy_intro"),
                 ),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_fantasy_players_title",
                   description: "#international2023_fantasy_players_desc",
                   image: "international2023/ti2023_fantasy_draft.png",
                   bSwapImageSide: !0,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_fantasy_craft_title",
                   description: "#international2023_fantasy_craft_desc",
                   image: "international2023/ti2023_fantasy_craft_ui.png",
@@ -1030,7 +1023,7 @@
                   imageStyle: p().Image75Percent,
                   bTranslateImageUp: !0,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_fantasy_compete_title",
                   description: "#international2023_fantasy_compete_desc",
                   image: "international2023/ti2023_fantasy_reward.png",
@@ -1038,68 +1031,68 @@
                   imageStyle: p().Image65Percent,
                 }),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "Bingo",
                   className: (0, c.Z)(p().WebsiteSection, p().CompendiumDark),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_bingo_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_compendium_activity"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_bingo_intro"),
                 ),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_bingo_cards_title",
                   description: "#international2023_bingo_cards_desc",
                   image: "international2023/ti2023_bingo_card.png",
                   imageStyle: p().Image70Percent,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_bingo_rewards_title",
                   description: "#international2023_bingo_rewards_desc",
                   image: "international2023/ti2023_bingo_reward.png",
                   imageStyle: p().Image85Percent,
                 }),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "Predictions",
                   className: (0, c.Z)(p().WebsiteSection, p().CompendiumDark),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_predictions_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_compendium_activity"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_predictions_intro"),
                 ),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_predictions_group_stage_title",
                   description:
                     "#international2023_predictions_group_stage_desc",
@@ -1107,7 +1100,7 @@
                     "international2023/ti2023_oracles_challenge_predict_group_stage.png",
                   bSwapImageSide: !0,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_predictions_ingame_title",
                   description: "#international2023_predictions_ingame_desc",
                   image:
@@ -1116,55 +1109,55 @@
                   bTranslateImageUp: !0,
                 }),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "Rewards",
                   className: (0, c.Z)(p().WebsiteSection, p().CompendiumDark),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_rewards_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_rewards_intro"),
                 ),
-                o.createElement(I, {
+                s.createElement(I, {
                   title: "#international2023_rewards_Types_title",
                   description: "#international2023_rewards_Types_desc",
                   image: "notinuse",
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_rewards_physical_aegis_title",
                   description: "#international2023_rewards_physical_aegis_desc",
                   image: "international2023/ti2023_rewards_aegis.png",
                   imageStyle: p().Image65Percent,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_rewards_chat_wheels_title",
                   description: "#international2023_rewards_chat_wheels_desc",
                   image:
                     "international2023/ti2023_rewards_permenent_chatwheels.png",
                   imageStyle: p().Image55Percent,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_rewards_stickers_title",
                   description: "#international2023_rewards_stickers_desc",
                   image: "international2023/ti2023_team_player_stickers.png",
                   imageStyle: p().Image55Percent,
                 }),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_rewards_hud_title",
                   description: "#international2023_rewards_hud_desc",
                   image: "international2023/ti2023_rewards_hud.png",
                 }),
-                o.createElement(
+                s.createElement(
                   "div",
                   {
                     className: (0, c.Z)(
@@ -1172,7 +1165,7 @@
                       p().FeatureRowDiffPadding,
                     ),
                   },
-                  o.createElement(T, {
+                  s.createElement(T, {
                     title: "#international2023_rewards_materials_title",
                     description: "#international2023_rewards_materials_desc",
                     image: "international2023/ti2023_fantasy_craft.png",
@@ -1180,7 +1173,7 @@
                     bUseFlexSpaceBetween: !0,
                     bCenterText: !0,
                   }),
-                  o.createElement(T, {
+                  s.createElement(T, {
                     title: "#international2023_rewards_teleport_fx_title",
                     description: "#international2023_rewards_teleport_fx_desc",
                     image: "international2023/ti2023_rewards_teleports.png",
@@ -1188,7 +1181,7 @@
                     bUseFlexSpaceBetween: !0,
                     bCenterText: !0,
                   }),
-                  o.createElement(T, {
+                  s.createElement(T, {
                     title: "#international2023_rewards_loading_screens_title",
                     description:
                       "#international2023_rewards_loading_screens_desc",
@@ -1199,16 +1192,16 @@
                     bCenterText: !0,
                   }),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().LevelsBoostersContainer },
-                  o.createElement(y, {
+                  s.createElement(y, {
                     title: "#international2023_rewards_Levels_title",
                     description: "#international2023_rewards_Levels_desc",
                     image: "international2023/ti2023_rewards_levels.png",
                     bSwapImageSide: !0,
                   }),
-                  o.createElement(y, {
+                  s.createElement(y, {
                     title: "#international2023_rewards_Boosters_title",
                     description: "#international2023_rewards_Boosters_desc",
                     image: "international2023/ti2023_rewards_boost.png",
@@ -1216,75 +1209,75 @@
                   }),
                 ),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "SupportersClubs",
                   className: (0, c.Z)(p().WebsiteSection, p().CompendiumDark),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_supporters_clubs_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_supporters_clubs_subtitle"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_supporters_clubs_intro"),
                 ),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_supporters_clubs_tiers_title",
                   description: "#international2023_supporters_clubs_tiers_desc",
                   image: "international2023/ti2023_supporters_club.png",
                   imageStyle: p().Image70Percent,
                 }),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "TalentStickers",
                   className: (0, c.Z)(p().WebsiteSection, p().CompendiumDark),
                 },
-                o.createElement(
+                s.createElement(
                   "h1",
                   null,
                   (0, r.Jr)("#international2023_talent_title"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Subtitle },
                   (0, r.Jr)("#international2023_talent_subtitle"),
                 ),
-                o.createElement(
+                s.createElement(
                   "div",
                   { className: p().Introduction },
                   (0, r.Jr)("#international2023_talent_intro"),
                 ),
-                o.createElement(N, {
+                s.createElement(b, {
                   title: "#international2023_talent_tiers_title",
                   description: "#international2023_talent_tiers_desc",
                   image: "international2023/ti2023_talent_stickers.png",
                   imageStyle: p().Image65Percent,
                 }),
-                o.createElement(B, {
+                s.createElement(x, {
                   description: "#international2023_talent_coming_soon",
                 }),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
-              o.createElement(
+              s.createElement(
                 "div",
                 {
                   id: "Footer",
@@ -1294,19 +1287,19 @@
                     p().FooterSection,
                   ),
                 },
-                o.createElement(x, null),
+                s.createElement(B, null),
               ),
-              o.createElement("div", {
+              s.createElement("div", {
                 className: (0, c.Z)(p().SectionDivider, p().Compendium),
               }),
             ),
-            o.createElement(C, null),
-            o.createElement(_.U, null),
+            s.createElement(h, null),
+            s.createElement(_.U, null),
           );
         }
       };
-      L = (0, n.gn)([l.Pi], L);
-      const J = L;
+      F = (0, n.gn)([l.Pi], F);
+      const L = F;
     },
   },
 ]);
