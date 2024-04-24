@@ -107,7 +107,7 @@
         })(),
         E = Array.from({ length: 119 }, (e, n) => n).map((e) => {
           const n = e.toString().padStart(3, "0");
-          return `${a.De.IMG_URL}crownfall/comic_part1/${_}/${n}.webp?part=1`;
+          return `${a.De.IMG_URL}crownfall/comic_part1/${_}/${n}.webp?v=2`;
         });
       let v = Array.from({ length: E.length }, () => new Image());
       const k = ({ onIndexChanged: e }) => {
