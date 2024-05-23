@@ -3,14 +3,15 @@
     "data": {
       "abilities": [
         {
-          "id": 5285,
+          "id": 1314,
           "name": "bounty_hunter_shuriken_toss",
           "name_loc": "Shuriken Toss",
-          "desc_loc": "Hurls a deadly shuriken at an enemy unit, dealing damage and briefly slowing the target.  The shuriken will bounce to any Tracked units who are within a %bounce_aoe% radius of each other.  Deals bonus damage to Tracked targets.",
+          "desc_loc": "Hurls a deadly shuriken at an enemy unit, dealing damage and briefly slowing the target's Movement Speed by %slow%%% for %slow_duration%s.  The shuriken will bounce to any Tracked units who are within a %bounce_aoe% radius of each other.",
           "lore_loc": "While the shuriken may be small, Gondar's precise aim can cause critical damage.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "Increases cast range and applies Jinada on hit.",
+          "facets_loc": [],
           "type": 0,
           "behavior": "8",
           "target_team": 2,
@@ -48,9 +49,9 @@
             0
           ],
           "mana_costs": [
-            50,
-            60,
+            65,
             70,
+            75,
             80
           ],
           "gold_costs": [],
@@ -60,21 +61,27 @@
               "name": "bonus_damage",
               "values_float": [
                 100,
-                150,
-                200,
-                250
+                170,
+                240,
+                310
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_bounty_hunter_2",
-                  "value": 50,
+                  "value": 275,
                   "operation": 0
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "speed",
@@ -85,7 +92,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bounce_aoe",
@@ -93,10 +106,16 @@
                 1200
               ],
               "is_percentage": false,
-              "heading_loc": "TRACK BOUNCE RANGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "slow_duration",
@@ -104,7 +123,7 @@
                 0.35
               ],
               "is_percentage": false,
-              "heading_loc": "SLOW DURATION:",
+              "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_bounty_hunter_5",
@@ -113,7 +132,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "scepter_cast_range",
@@ -124,7 +149,13 @@
               "heading_loc": "CAST RANGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "scepter_cooldown",
@@ -135,7 +166,47 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "passthrough_damage",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "passthrough_width",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "cast_range",
@@ -149,29 +220,30 @@
               "heading_loc": "CAST RANGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "slow",
               "values_float": [
                 100
               ],
-              "is_percentage": true,
-              "heading_loc": "MOVEMENT SLOW:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "attack_slow",
-              "values_float": [
-                100
-              ],
               "is_percentage": false,
-              "heading_loc": "ATTACK SLOW:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -185,7 +257,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -196,7 +274,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -207,7 +291,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -218,7 +308,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -229,7 +325,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -240,21 +342,33 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
-                50,
-                60,
+                65,
                 70,
+                75,
                 80
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -265,7 +379,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -273,6 +393,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

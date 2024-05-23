@@ -3,40 +3,38 @@
     "data": {
       "abilities": [
         {
-          "id": 5021,
+          "id": 1205,
           "name": "drow_ranger_trueshot",
           "name_loc": "Precision Aura",
-          "desc_loc": "Adds bonus damage to the physical attack of allied, ranged Hero units based on a percentage of Drow's agility.  Affects creeps for 30 seconds when cast.",
+          "desc_loc": "Grants Drow and nearby ranged heroes with bonus agility based on Drow's current agility and level.",
           "lore_loc": "Traxex' time spent alone in the forests of her Drow home has allowed her to teach other archers how to improve their bow skills.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
-          "behavior": "2052",
-          "target_team": 1,
+          "behavior": "2",
+          "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
           "cast_points": [
-            0,
-            0,
-            0,
             0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            100
+            0
           ],
           "durations": [
-            30
+            0
           ],
           "damages": [
             0,
@@ -51,18 +49,55 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "trueshot_ranged_damage",
+              "name": "trueshot_agi_bonus_self",
               "values_float": [
-                10,
-                20,
-                30,
-                40
+                2
               ],
               "is_percentage": true,
-              "heading_loc": "RANGE DAMAGE BONUS:",
+              "heading_loc": "SELF AGILITY BONUS PER LEVEL:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "trueshot_agi_bonus_allies",
+              "values_float": [
+                1
+              ],
+              "is_percentage": true,
+              "heading_loc": "ALLIES AGILITY BONUS PER LEVEL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "trueshot_aspd_bonus_creeps",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "radius",
@@ -73,7 +108,13 @@
               "heading_loc": "RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -84,7 +125,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -95,18 +142,30 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
               "values_float": [
-                30
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -117,7 +176,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -128,7 +193,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -139,7 +210,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -150,18 +227,30 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
-                100
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -169,6 +258,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

@@ -3,23 +3,24 @@
     "data": {
       "abilities": [
         {
-          "id": 553,
+          "id": 1317,
           "name": "jakiro_liquid_ice",
           "name_loc": "Liquid Frost",
-          "desc_loc": "Jakiro adds a frost effect to his attack. Enemies hit are slowed for %duration% seconds and are damaged for a percent of their max health plus a base amount every %tick_rate% second for %duration% seconds.",
+          "desc_loc": "Jakiro's attacks chill his enemies, slowing movement for %duration% seconds and increasing damage taken from Jakiro's attacks and abilities. This effect does not apply to buildings.",
           "lore_loc": "",
           "notes_loc": [],
-          "shard_loc": "",
+          "shard_loc": "Jakiro's Liquid Frost attack also deals %pct_health_damage%%% of the enemy unit's max health as damage per second.",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
-          "behavior": "8590069769",
+          "behavior": "135176",
           "target_team": 2,
-          "target_type": 23,
+          "target_type": 19,
           "flags": 8,
           "damage": 2,
           "immunity": 4,
           "dispellable": 2,
-          "max_level": 1,
+          "max_level": 4,
           "cast_ranges": [
             600
           ],
@@ -33,7 +34,10 @@
             0
           ],
           "cooldowns": [
-            12
+            16,
+            12,
+            8,
+            4
           ],
           "durations": [
             0
@@ -53,35 +57,87 @@
             {
               "name": "movement_slow",
               "values_float": [
-                20
+                15,
+                20,
+                25,
+                30
               ],
               "is_percentage": true,
               "heading_loc": "MOVEMENT SLOW:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "base_damage",
+              "name": "damage",
               "values_float": [
-                20
+                20,
+                30,
+                40,
+                50
               ],
               "is_percentage": false,
-              "heading_loc": "BASE DAMAGE:",
+              "heading_loc": "IMPACT DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_instance_damage_from_other_abilities",
+              "values_float": [
+                10,
+                15,
+                20,
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_jakiro_4",
+                  "value": 10,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "pct_health_damage",
               "values_float": [
-                2
+                0
               ],
-              "is_percentage": true,
-              "heading_loc": "MAX HEALTH DAMAGE:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                2.5
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "duration",
@@ -92,29 +148,47 @@
               "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "radius",
               "values_float": [
-                300
+                0
               ],
               "is_percentage": false,
               "heading_loc": "RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "tick_rate",
               "values_float": [
-                1
+                0.5
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -122,10 +196,16 @@
                 600
               ],
               "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -136,7 +216,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -147,7 +233,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -158,7 +250,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -169,7 +267,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -180,7 +284,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -191,25 +301,41 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
-                12
+                16,
+                12,
+                8,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": true,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
