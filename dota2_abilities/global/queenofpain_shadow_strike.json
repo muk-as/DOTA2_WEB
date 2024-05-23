@@ -6,7 +6,7 @@
           "id": 5173,
           "name": "queenofpain_shadow_strike",
           "name_loc": "Shadow Strike",
-          "desc_loc": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for %duration% seconds.  An instance of damage is dealt every %damage_interval% seconds. Queen of Pain relishes in the pain inflicted, healing every time the enemy takes damage. Creeps heal for half the damage only.",
+          "desc_loc": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for %duration% seconds.  An instance of damage is dealt every %damage_interval% seconds.",
           "lore_loc": "Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims.",
           "notes_loc": [
             "The affected unit slowly regains its original movement speed every second during the duration.",
@@ -14,6 +14,7 @@
           ],
           "shard_loc": "",
           "scepter_loc": "Causes Shadow Strike to become a %aoe_radius% AoE Spell, and have increased initial damage. When Shadow Strike ends or is re-applied to an enemy Hero, the target emits a Scream of Pain, hitting any nearby enemies.",
+          "facets_loc": [],
           "type": 0,
           "behavior": "8",
           "target_team": 2,
@@ -52,9 +53,9 @@
           ],
           "mana_costs": [
             125,
+            130,
             135,
-            145,
-            155
+            140
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -73,7 +74,13 @@
               "values_shard": [],
               "values_scepter": [
                 50
-              ]
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "duration_damage",
@@ -87,7 +94,13 @@
               "heading_loc": "DAMAGE PER TICK:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "movement_slow",
@@ -101,7 +114,13 @@
               "heading_loc": "MOVEMENT SLOW:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "projectile_speed",
@@ -112,7 +131,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "damage_interval",
@@ -124,32 +149,35 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_queen_of_pain_4",
-                  "value": 0.7,
+                  "value": 1,
                   "operation": 2
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "duration_heal",
               "values_float": [
-                10,
-                20,
-                30,
-                40
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "HEAL PER TICK:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_queen_of_pain_strike_heal",
-                  "value": 10,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "generate_scream",
@@ -162,7 +190,13 @@
               "values_shard": [],
               "values_scepter": [
                 1
-              ]
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "aoe_radius",
@@ -175,18 +209,30 @@
               "values_shard": [],
               "values_scepter": [
                 375
-              ]
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "duration",
               "values_float": [
-                15
+                16
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -197,10 +243,16 @@
                 600
               ],
               "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -211,7 +263,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -222,7 +280,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -233,7 +297,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -244,7 +314,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -255,21 +331,33 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
                 125,
+                130,
                 135,
-                145,
-                155
+                140
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -283,7 +371,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -291,6 +385,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

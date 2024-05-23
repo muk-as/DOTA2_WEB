@@ -7,14 +7,14 @@
           "name": "winter_wyvern_winters_curse",
           "name_loc": "Winter's Curse",
           "desc_loc": "Winter Wyvern dispells then freezes an enemy in place while striking those nearby with a maddening curse which causes them to attack their frozen ally with increased attack speed. The frozen ally and those cursed to attack their ally are immune to all damage from their enemies with the exception of magic damage from Winter Wyvern or her controlled units, that is amplified.",
-          "lore_loc": "The oldest of the bookwurm’s spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still.",
+          "lore_loc": "The oldest of the bookwurm's spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still.",
           "notes_loc": [
             "If the target dies to its allies, Winter Wyvern will receive credit for the kill.",
-            "Will only pierce the spell immunity of the primary target, not the target's surrounding allies.",
-            "If there are no allies within range of the Cursed enemy for %early_out_timer% seconds the effect will end early."
+            "Will only pierce the spell immunity of the primary target, not the target's surrounding allies."
           ],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 1,
           "behavior": "40",
           "target_team": 2,
@@ -51,8 +51,8 @@
             0
           ],
           "mana_costs": [
+            150,
             200,
-            225,
             250
           ],
           "gold_costs": [],
@@ -67,7 +67,13 @@
               "heading_loc": "CURSE RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "damage_reduction",
@@ -78,7 +84,13 @@
               "heading_loc": "CURSE DAMAGE REDUCTION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "damage_amplification",
@@ -89,7 +101,13 @@
               "heading_loc": "CURSE WYVERN MAGIC DAMAGE AMP:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bonus_attack_speed",
@@ -98,33 +116,91 @@
               ],
               "is_percentage": false,
               "heading_loc": "CURSE ATTACK SPEED:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_winter_wyvern_3",
+                  "value": 55,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "duration",
               "values_float": [
-                4.5,
-                5,
-                5.5
+                2
               ],
               "is_percentage": false,
-              "heading_loc": "CURSE DURATION:",
+              "heading_loc": "CURSE MINIMUM DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "early_out_timer",
+              "name": "max_duration",
               "values_float": [
-                2.5
+                4,
+                5.5,
+                7
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "CURSE MAXIMUM DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_duration_per_hero",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "CURSE BONUS DURATION PER HERO:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_duration_per_creep",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "CURSE BONUS DURATION PER CREEP:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -135,7 +211,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -146,7 +228,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -157,7 +245,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -168,7 +262,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -179,7 +279,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -190,20 +296,32 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
+                150,
                 200,
-                225,
                 250
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -216,7 +334,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -224,6 +348,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

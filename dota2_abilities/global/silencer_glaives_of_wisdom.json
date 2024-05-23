@@ -6,14 +6,15 @@
           "id": 5378,
           "name": "silencer_glaives_of_wisdom",
           "name_loc": "Glaives of Wisdom",
-          "desc_loc": "Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily steals his target's Intelligence with each hit. If Silencer kills an enemy hero, he permanently steals %permanent_int_steal_amount% Intelligence.",
+          "desc_loc": "Silencer enchants his glaives with his wisdom, stealing his target's Intelligence with each hit and dealing additional damage based on his Intelligence. After %stacks_for_silence% attacks on the same target, that enemy will be silenced for %silence_duration% seconds.",
           "lore_loc": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat.",
           "notes_loc": [
-            "To permanently steal Intelligence, Silencer doesn't need to land the killing blow, as long as the enemy hero is killed within %permanent_int_steal_range% range of Silencer.",
-            "The enemy does not need to have the Glaives of Wisdom debuff for Silencer to permanently steal Intelligence."
+            "Stacks reset after %debuff_linger_duration% seconds.",
+            "Stacks cannot be gained for the duration of Glaives of Wisdom's Silence."
           ],
-          "shard_loc": "Every %stacks_for_silence% attacks, Glaives silence the enemy hit for %silence_duration% seconds. Additionally, it increases the Intelligence stolen per attack by 2 and per kill to %permanent_int_steal_amount%.",
+          "shard_loc": "Increases Stolen Intelligence per hit and steal duration.",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "135176",
           "target_team": 2,
@@ -71,7 +72,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "int_steal",
@@ -85,9 +92,15 @@
               "heading_loc": "INT STEAL:",
               "bonuses": [],
               "values_shard": [
-                2
+                1
               ],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "int_steal_duration",
@@ -100,8 +113,16 @@
               "is_percentage": false,
               "heading_loc": "INT STEAL DURATION:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                50
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bounce_range",
@@ -118,7 +139,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bounce_count",
@@ -135,57 +162,67 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "permanent_int_steal_range",
+              "name": "stacks_for_silence",
               "values_float": [
-                925
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "permanent_int_steal_amount",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                2
-              ],
-              "values_scepter": []
-            },
-            {
-              "name": "stacks_for_silence",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                4
-              ],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "silence_duration",
               "values_float": [
-                0
+                2.5
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                1.75
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "debuff_linger_duration",
+              "values_float": [
+                3,
+                4,
+                5,
+                6
               ],
-              "values_scepter": []
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -196,7 +233,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -207,7 +250,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -218,7 +267,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -229,7 +284,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -240,7 +301,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -251,7 +318,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -262,7 +335,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -273,7 +352,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -281,6 +366,7 @@
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

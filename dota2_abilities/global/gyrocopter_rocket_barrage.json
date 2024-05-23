@@ -6,13 +6,15 @@
           "id": 5361,
           "name": "gyrocopter_rocket_barrage",
           "name_loc": "Rocket Barrage",
-          "desc_loc": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter. Gyrocopter has increased resistance to slows during this time.  Lasts %abilityduration% seconds.",
+          "desc_loc": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter. Lasts %barrage_duration% seconds.",
           "lore_loc": "Aurel's new craft has an increased payload for rockets, enhancing their rapid-fire capabilities.",
           "notes_loc": [
-            "Rocket Barrage can't hit units Gyrocopter has no vision over."
+            "Rocket Barrage can't hit units Gyrocopter has no vision over.",
+            "Rocket Barrage fired from Homing Missiles do not trigger Afterburner."
           ],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "2052",
           "target_team": 0,
@@ -38,7 +40,7 @@
             5.5
           ],
           "durations": [
-            3
+            0
           ],
           "damages": [
             0,
@@ -64,7 +66,13 @@
               "heading_loc": "RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "rockets_per_second",
@@ -75,7 +83,47 @@
               "heading_loc": "ROCKETS PER SECOND:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rocket_interval",
+              "values_float": [
+                0.1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "barrage_duration",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "rocket_damage",
@@ -87,40 +135,58 @@
               ],
               "is_percentage": false,
               "heading_loc": "ROCKET DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "bonus_movement_speed",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_gyrocopter_4",
-                  "value": 30,
+                  "name": "special_bonus_unique_gyrocopter_3",
+                  "value": 14,
                   "operation": 0
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "slow_resistance",
+              "name": "bonus_movespeed_duration",
               "values_float": [
-                20,
-                30,
-                40,
-                50
+                0
               ],
-              "is_percentage": true,
-              "heading_loc": "SLOW RESISTANCE:",
+              "is_percentage": false,
+              "heading_loc": "MOVESPEED DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_movement_speed_per_hit",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "MOVESPEED PER HIT:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -131,7 +197,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -142,18 +214,30 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
               "values_float": [
-                3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -164,7 +248,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -175,7 +265,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -186,7 +282,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -200,7 +302,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -214,7 +322,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -222,6 +336,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

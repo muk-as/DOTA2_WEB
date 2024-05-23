@@ -12,8 +12,9 @@
             "The stun duration and damage values dealt are inversely related.",
             "Nearby illusions will mimic the cast animation."
           ],
-          "shard_loc": "Increases  the cast range of Chaos Bolt, and causes it to create a Phantasm illusion to attack the target.",
+          "shard_loc": "Causes Chaos Bolt to create a Phantasm illusion to attack the target. This illusion deals %illusion_damage_reduction_pct%%% less damage.",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "8",
           "target_team": 2,
@@ -65,7 +66,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "stun_min",
@@ -77,9 +84,21 @@
               ],
               "is_percentage": false,
               "heading_loc": "MINIMUM STUN:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_chaos_knight_3",
+                  "value": 0.6,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "stun_max",
@@ -91,9 +110,21 @@
               ],
               "is_percentage": false,
               "heading_loc": "MAXIMUM STUN:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_chaos_knight_3",
+                  "value": 0.6,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "damage_min",
@@ -107,21 +138,33 @@
               "heading_loc": "MINIMUM DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "damage_max",
               "values_float": [
                 150,
-                210,
-                270,
-                330
+                230,
+                310,
+                390
               ],
               "is_percentage": false,
               "heading_loc": "MAXIMUM DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "fake_bolt_distance",
@@ -132,29 +175,51 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "shard_bonus_cast_range",
+              "name": "illusion_duration",
               "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS CAST RANGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "shard_illusion_duration",
-              "values_float": [
-                6
+                0
               ],
               "is_percentage": false,
               "heading_loc": "ILLUSION DURATION:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                6
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "illusion_damage_reduction_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "ILLUSION DAMAGE REDUCTION:",
+              "bonuses": [],
+              "values_shard": [
+                30
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -164,8 +229,16 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                0
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -176,7 +249,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -187,7 +266,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -198,7 +283,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -209,7 +300,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -220,7 +317,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -231,7 +334,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -243,9 +352,21 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_chaos_knight_8",
+                  "value": 3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -253,6 +374,7 @@
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

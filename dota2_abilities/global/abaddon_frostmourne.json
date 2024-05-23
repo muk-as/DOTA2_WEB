@@ -6,11 +6,12 @@
           "id": 5587,
           "name": "abaddon_frostmourne",
           "name_loc": "Curse of Avernus",
-          "desc_loc": "Abaddon strikes an enemy, slowing the target's movement speed. If the target gets hit %hit_count% times, they become affected by a chilling curse causing them to take damage over time, be silenced and slowed, and all attacks against them gain an attack speed boost. Damage over time component to buildings is reduced by %tower_dps_pct%%%.",
+          "desc_loc": "Abaddon strikes an enemy, affecting them by a chilling curse, slowing them, causing them to take damage over time, and all attacks against them gain an attack speed boost. Damage over time component to buildings is reduced by %tower_dps_pct%%%.",
           "lore_loc": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated.",
           "notes_loc": [],
-          "shard_loc": "Causes Mist Coil to deal Abaddon's attack damage on impact. Increases Curse of Avernus base slow.",
+          "shard_loc": "Increases Curse of Avernus slow.",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "2",
           "target_team": 0,
@@ -50,16 +51,73 @@
             {
               "name": "slow_duration",
               "values_float": [
-                5
+                2
               ],
               "is_percentage": false,
-              "heading_loc": "BASIC DURATION:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "movement_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "hit_count",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "curse_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "curse_slow",
               "values_float": [
                 10,
                 15,
@@ -67,94 +125,74 @@
                 25
               ],
               "is_percentage": true,
-              "heading_loc": "BASIC SLOW:",
-              "bonuses": [],
-              "values_shard": [
-                5
-              ],
-              "values_scepter": []
-            },
-            {
-              "name": "hit_count",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "SLOW:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_abaddon_3",
-                  "value": 1,
-                  "operation": 2
+                  "name": "special_bonus_unique_abaddon_6",
+                  "value": 10,
+                  "operation": 0
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "curse_duration",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "CURSE DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "curse_slow",
+              "name": "curse_attack_speed",
               "values_float": [
                 15,
                 30,
                 45,
                 60
               ],
-              "is_percentage": true,
-              "heading_loc": "CURSE SLOW:",
+              "is_percentage": false,
+              "heading_loc": "ATTACK SPEED:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_abaddon_6",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "curse_attack_speed",
-              "values_float": [
-                60,
-                80,
-                100,
-                120
-              ],
-              "is_percentage": false,
-              "heading_loc": "CURSE ATTACK SPEED:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "curse_dps",
-              "values_float": [
-                20,
-                30,
-                40,
-                50
-              ],
-              "is_percentage": false,
-              "heading_loc": "CURSE DPS:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_abaddon_5",
+                  "name": "special_bonus_unique_abaddon_3",
                   "value": 80,
                   "operation": 0
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "curse_dps",
+              "values_float": [
+                10,
+                20,
+                30,
+                40
+              ],
+              "is_percentage": false,
+              "heading_loc": "DPS:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_abaddon_5",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "tower_dps_pct",
@@ -165,7 +203,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "curse_interval",
@@ -176,7 +220,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -187,7 +237,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -198,7 +254,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -209,7 +271,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -220,7 +288,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -231,7 +305,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -242,7 +322,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -253,7 +339,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -264,14 +356,21 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

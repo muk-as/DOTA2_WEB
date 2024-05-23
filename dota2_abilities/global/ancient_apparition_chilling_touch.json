@@ -6,11 +6,12 @@
           "id": 5347,
           "name": "ancient_apparition_chilling_touch",
           "name_loc": "Chilling Touch",
-          "desc_loc": "Enhances Ancient Apparition's attack with increased range, heavy magic damage, and movement slow.",
+          "desc_loc": "Enhances Ancient Apparition's attack with increased range and heavy magic damage. Applies Death Rime Stacks that last for %duration% seconds. Additionally applies a %slow%%% slow for %slow_duration% seconds.",
           "lore_loc": "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "Removes cooldown and reduces manacost by %bonus_AbilityManaCost%%%.",
+          "facets_loc": [],
           "type": 0,
           "behavior": "135176",
           "target_team": 2,
@@ -45,9 +46,9 @@
             0
           ],
           "mana_costs": [
-            30,
-            40,
+            45,
             50,
+            55,
             60
           ],
           "gold_costs": [],
@@ -56,10 +57,10 @@
             {
               "name": "damage",
               "values_float": [
-                40,
-                80,
-                120,
-                160
+                30,
+                60,
+                90,
+                120
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
@@ -71,21 +72,67 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "frost_stacks",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "DEATH RIME STACKS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "slow",
               "values_float": [
                 100
               ],
-              "is_percentage": true,
-              "heading_loc": "MOVEMENT SLOW:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "duration",
+              "name": "slow_duration",
               "values_float": [
                 0.7,
                 0.8,
@@ -93,10 +140,16 @@
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "SLOW DURATION:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "attack_range_bonus",
@@ -116,7 +169,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -127,7 +186,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -138,7 +203,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -149,7 +220,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -160,7 +237,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -171,7 +254,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -182,14 +271,20 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
-                30,
-                40,
+                45,
                 50,
+                55,
                 60
               ],
               "is_percentage": false,
@@ -198,7 +293,13 @@
               "values_shard": [],
               "values_scepter": [
                 50
-              ]
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -214,7 +315,13 @@
               "values_shard": [],
               "values_scepter": [
                 100
-              ]
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -222,6 +329,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

@@ -6,13 +6,14 @@
           "id": 5678,
           "name": "arc_warden_magnetic_field",
           "name_loc": "Magnetic Field",
-          "desc_loc": "<h2>Arc Warden:</h2> Generates a circular distortion field of magnetic energy that grants bonus attack speed and protects allied heroes and buildings within it by evading attacks coming from outside the field. <br><br><h2>Tempest Double:</h2> Allies gain bonus attack range and deal bonus damage with their attacks. Duration is increased.",
+          "desc_loc": "Arc Warden Generates a circular distortion field of magnetic energy around themself.",
           "lore_loc": "Time and space are of little consequence to one as old as Zet.",
           "notes_loc": [],
-          "shard_loc": "Magnetic Field pushes enemies out of the area when cast and slows them while they are in it. Also provides allies inside with magic resistance.",
+          "shard_loc": "Magnetic Field slows enemies and enemy attack projectiles while they are in it. Also provides allies inside with increased attack projectile speed. Increases the radius by %bonus_radius%.",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
-          "behavior": "134217776",
+          "behavior": "134217764",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -61,19 +62,35 @@
               "is_percentage": false,
               "heading_loc": "RADIUS:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                75
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "shard_magic_resist",
+              "name": "projectile_slow",
               "values_float": [
-                40
+                0
               ],
               "is_percentage": true,
-              "heading_loc": "MAGIC RESISTANCE:",
+              "heading_loc": "ATTACK PROJECTILE SPEED:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                75
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "shard_slow_pct",
@@ -84,7 +101,13 @@
               "heading_loc": "MOVEMENT SLOW:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "duration",
@@ -95,10 +118,16 @@
                 6.5
               ],
               "is_percentage": false,
-              "heading_loc": "ARC DURATION:",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "attack_speed_bonus",
@@ -109,7 +138,7 @@
                 80
               ],
               "is_percentage": false,
-              "heading_loc": "ARC ATTACK SPEED BONUS:",
+              "heading_loc": "ATTACK SPEED BONUS:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_arc_warden_3",
@@ -118,7 +147,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "evasion_chance",
@@ -126,10 +161,16 @@
                 100
               ],
               "is_percentage": true,
-              "heading_loc": "ARC EVASION BONUS:",
+              "heading_loc": "EVASION BONUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "tempest_duration",
@@ -140,10 +181,16 @@
                 8
               ],
               "is_percentage": false,
-              "heading_loc": "TEMPEST DURATION:",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "attack_range_bonus",
@@ -151,10 +198,16 @@
                 150
               ],
               "is_percentage": false,
-              "heading_loc": "TEMPEST BONUS ATTACK RANGE:",
+              "heading_loc": "BONUS ATTACK RANGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "attack_damage_bonus",
@@ -165,7 +218,7 @@
                 80
               ],
               "is_percentage": false,
-              "heading_loc": "TEMPEST BONUS ATTACK DAMAGE:",
+              "heading_loc": "BONUS ATTACK DAMAGE:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_arc_warden_3",
@@ -174,7 +227,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "attack_magic_damage",
@@ -194,7 +253,36 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "affects_buildings",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_arc_warden_7",
+                  "value": 1,
+                  "operation": 5
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -205,7 +293,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -216,7 +310,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -227,7 +327,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -238,7 +344,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -249,7 +361,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -260,7 +378,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -274,7 +398,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -294,7 +424,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -302,6 +438,7 @@
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

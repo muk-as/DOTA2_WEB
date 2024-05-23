@@ -6,7 +6,7 @@
           "id": 5330,
           "name": "chen_holy_persuasion",
           "name_loc": "Holy Persuasion",
-          "desc_loc": "Chen takes control of an enemy or neutral creep and receives gold equal to its bounty. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage.",
+          "desc_loc": "Chen takes control of an enemy or neutral creep and receives a percentage of its bounty. Its maximum health is set to %health_min% + %bonus_health_per_level% per Chen Level. Converted creeps will have increased movement speed and bonus damage.",
           "lore_loc": "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted.",
           "notes_loc": [
             "Persuading a new creep above max unit count causes the oldest persuaded creep to die.",
@@ -16,6 +16,7 @@
           ],
           "shard_loc": "Allows Holy Persuasion to target Ancient creeps. Can control up to 1/2/3 Ancient creeps based on Hand of God's level. Additionally levels up some abilities of creeps by 1 level.",
           "scepter_loc": "Grants persuaded creeps Martyrdom ability. Sacrifice the life of this unit to heal an ally or damage an enemy with the current level of Hand of God.",
+          "facets_loc": [],
           "type": 0,
           "behavior": "33554440",
           "target_team": 0,
@@ -29,9 +30,6 @@
             600
           ],
           "cast_points": [
-            0.3,
-            0.3,
-            0.3,
             0.3
           ],
           "channel_times": [
@@ -50,10 +48,10 @@
             0
           ],
           "mana_costs": [
-            90,
             110,
             130,
-            150
+            150,
+            170
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -70,7 +68,13 @@
               "heading_loc": "MAX UNITS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "level_req",
@@ -84,15 +88,18 @@
               "heading_loc": "CREEP MAX LEVEL:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "health_min",
               "values_float": [
-                700,
-                800,
-                900,
-                1000
+                400
               ],
               "is_percentage": false,
               "heading_loc": "HEALTH MINIMUM:",
@@ -104,29 +111,78 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_health_per_level",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gold_pct",
+              "values_float": [
+                25,
+                50,
+                75,
+                100
+              ],
+              "is_percentage": true,
+              "heading_loc": "PERCENTAGE OF BOUNTY:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "movement_speed_bonus",
               "values_float": [
+                5,
                 10,
                 20,
-                30,
-                40
+                30
               ],
               "is_percentage": false,
               "heading_loc": "MOVE SPEED BONUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "damage_bonus",
               "values_float": [
-                4,
-                10,
-                16,
-                22
+                2,
+                7,
+                11,
+                15
               ],
               "is_percentage": false,
               "heading_loc": "BONUS DAMAGE:",
@@ -138,7 +194,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "is_martyr",
@@ -151,7 +213,13 @@
               "values_shard": [],
               "values_scepter": [
                 1
-              ]
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "creep_ability_level",
@@ -164,7 +232,13 @@
               "values_shard": [
                 2
               ],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -175,7 +249,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -186,7 +266,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -197,7 +283,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -208,7 +300,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -219,7 +317,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -230,21 +334,33 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
-                90,
                 110,
                 130,
-                150
+                150,
+                170
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -255,7 +371,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -263,6 +385,7 @@
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

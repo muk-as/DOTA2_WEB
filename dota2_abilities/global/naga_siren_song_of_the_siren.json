@@ -6,15 +6,16 @@
           "id": 5470,
           "name": "naga_siren_song_of_the_siren",
           "name_loc": "Song of the Siren",
-          "desc_loc": "All enemies in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked. Using Song of the Siren again will end the duration early.",
+          "desc_loc": "All enemies in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked. Allies in range recover a percentage of their health per second. Using Song of the Siren again will end the duration early.",
           "lore_loc": "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need.",
           "notes_loc": [
             "Units affected by Song of the Siren are invulnerable and cannot take damage from any source.",
             "Doesn't affect Debuff Immune units.",
             "The area of the song follows Naga, so if she moves far enough away from affected units, they will wake up."
           ],
-          "shard_loc": "Increases duration. Song of the Siren heals allies by %heal_pct%%% of their Max HP per second for its duration.",
+          "shard_loc": "Increases Song of the Siren's regen and adds mana regeneration for allies.",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 1,
           "behavior": "4",
           "target_team": 0,
@@ -37,8 +38,8 @@
           ],
           "cooldowns": [
             180,
-            130,
-            80
+            140,
+            100
           ],
           "durations": [
             0
@@ -51,8 +52,8 @@
           ],
           "mana_costs": [
             150,
-            175,
-            200
+            250,
+            350
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -68,7 +69,13 @@
               "heading_loc": "RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "duration",
@@ -78,10 +85,14 @@
               "is_percentage": false,
               "heading_loc": "DURATION:",
               "bonuses": [],
-              "values_shard": [
-                1
-              ],
-              "values_scepter": []
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "animation_rate",
@@ -92,20 +103,53 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "heal_pct",
               "values_float": [
-                0
+                2,
+                4,
+                6
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "MAX HP REGEN PER SECOND:",
               "bonuses": [],
               "values_shard": [
-                5
+                4
               ],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mana_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MAX MANA REGEN PER SECOND:",
+              "bonuses": [],
+              "values_shard": [
+                4
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -118,7 +162,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -129,7 +179,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -140,7 +196,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -151,7 +213,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -162,7 +230,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -173,27 +247,39 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
                 150,
-                175,
-                200
+                250,
+                350
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
                 180,
-                130,
-                80
+                140,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -205,7 +291,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -213,6 +305,7 @@
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

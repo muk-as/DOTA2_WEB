@@ -6,21 +6,22 @@
           "id": 5229,
           "name": "dragon_knight_elder_dragon_form",
           "name_loc": "Elder Dragon Form",
-          "desc_loc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed and Dragon Tail's range, while granting him new powers.\n<font color=\"#9acd32\">LEVEL 1 Green Dragon</font> - Corrosive Breath: attacks deal %corrosive_breath_damage% poison damage per second for %corrosive_breath_duration% seconds. Works on structures.\n<font color=\"#ff0000\">LEVEL 2 Red Dragon</font> - Splash Attack: attacks damage all enemy units in a %splash_radius% radius for %splash_damage_percent%%% damage, with Corrosive Breath added to the targets.\n<font color=\"#87ceeb\">LEVEL 3 Blue Dragon</font> - Frost Breath: slows movement speed by %frost_bonus_movement_speed%%% and attack speed by %frost_bonus_attack_speed% of enemy units in Splash Attack range for %frost_duration% seconds, with Corrosive Breath added to the targets.",
+          "desc_loc": "Dragon Knight takes the form of one of three powerful elder dragons. Increased movement speed and attack damage, with Dragon's Blood on-hit effects applying to all enemies near the target. Increased Dragon Tail range. Increased health regeneration and armor bonuses from Dragon Blood. ",
           "lore_loc": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm.",
           "notes_loc": [
             "Corrosive Breath poison damage is lethal.",
             "Cooldowns of items that are different for ranged and melee units will be based on which form Dragon Knight was in when the item was used."
           ],
           "shard_loc": "Grants Elder Dragon Form the Fireball ability.",
-          "scepter_loc": "Increases the level of Dragon Knight's ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage and Slow amount, 25% increased Magic Resistance and free pathing.",
+          "scepter_loc": "Increases the level of Dragon Form by adding a Level 4 Black Dragon, that increases damage, and effectiveness of the Wyrm's Wrath attacks.",
+          "facets_loc": [],
           "type": 1,
           "behavior": "4",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 2,
-          "immunity": 5,
+          "damage": 1,
+          "immunity": 0,
           "dispellable": 3,
           "max_level": 3,
           "cast_ranges": [
@@ -61,7 +62,13 @@
               "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bonus_movement_speed",
@@ -75,7 +82,13 @@
               "heading_loc": "BONUS MOVE SPEED:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bonus_attack_range",
@@ -84,12 +97,44 @@
               ],
               "is_percentage": false,
               "heading_loc": "BONUS ATTACK RANGE:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_7",
+                  "value": 150,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bonus_attack_damage",
+              "values_float": [
+                20,
+                60,
+                100,
+                140
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS ATTACK DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "magic_resistance",
               "values_float": [
                 0
               ],
@@ -97,138 +142,162 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "corrosive_breath_damage",
+              "name": "model_scale",
               "values_float": [
-                25,
-                25,
-                25,
-                35
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "corrosive_breath_duration",
-              "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "splash_radius",
-              "values_float": [
-                350
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "splash_damage_percent",
-              "values_float": [
-                75,
-                75,
-                75,
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "frost_bonus_movement_speed",
-              "values_float": [
-                0,
-                0,
-                -30,
-                -45
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "frost_bonus_attack_speed",
-              "values_float": [
-                0,
-                0,
-                -30,
-                -45
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "frost_duration",
-              "values_float": [
-                0,
-                0,
-                3,
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "frost_aoe",
-              "values_float": [
-                350
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "magic_resistance",
-              "values_float": [
-                0,
-                0,
-                0,
+                10,
+                15,
                 20
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [
+                10
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "model_scale",
+              "name": "is_green_dragon",
               "values_float": [
-                0,
-                0,
-                0,
-                30
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "is_red_dragon",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "is_blue_dragon",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ranged_splash_radius",
+              "values_float": [
+                350
+              ],
+              "is_percentage": false,
+              "heading_loc": "EFFECT SPLASH RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "frost_breath_effect_bonus",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "FROST BREATH EFFECT BONUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "corrosive_breath_effect_bonus",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "CORROSIVE BREATH EFFECT BONUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fire_breath_effect_bonus",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "SPLASH DAMAGE EFFECT BONUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -239,7 +308,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -250,7 +325,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -261,7 +342,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -272,7 +359,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -283,7 +376,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -294,7 +393,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -305,7 +410,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -316,7 +427,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -324,6 +441,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

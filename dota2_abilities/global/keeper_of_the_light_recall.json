@@ -6,7 +6,7 @@
           "id": 5475,
           "name": "keeper_of_the_light_recall",
           "name_loc": "Recall",
-          "desc_loc": "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted. Chakra Magic is applied to both Keeper of the Light and Ally upon teleporting",
+          "desc_loc": "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted. When cast, the teleport target's movement speed is increased. Upon teleporting, Chakra Magic and the increased movement speed buff are applied to both Keeper of the Light and the teleport target.<br><br> If alt-cast, teleports Keeper of the Light to the target Ally instead. <br><br> Ability Level increases with levels of Spirit Form.",
           "lore_loc": "Walk towards the light.",
           "notes_loc": [
             "If Keeper of the Light dies, the spell effect is interrupted.",
@@ -14,17 +14,18 @@
             "You can disable help to prevent Keeper from casting this spell on you.",
             "Can be cast through the minimap, choosing the nearest friendly hero."
           ],
-          "shard_loc": "",
+          "shard_loc": "Grants %AbilityCharges% ability charges",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
-          "behavior": "8623489245",
+          "behavior": "1108135116893",
           "target_team": 1,
           "target_type": 128,
           "flags": 64,
           "damage": 0,
           "immunity": 1,
           "dispellable": 2,
-          "max_level": 1,
+          "max_level": 3,
           "cast_ranges": [
             0
           ],
@@ -37,6 +38,8 @@
             0
           ],
           "cooldowns": [
+            21,
+            18,
             15
           ],
           "durations": [
@@ -57,13 +60,57 @@
             {
               "name": "teleport_delay",
               "values_float": [
+                6,
+                5,
                 4
               ],
               "is_percentage": false,
               "heading_loc": "TELEPORT DELAY:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_duration",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_movespeed_pct",
+              "values_float": [
+                12,
+                16,
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "MOVESPEED BONUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -74,7 +121,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -85,7 +138,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -96,7 +155,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -107,7 +172,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -117,8 +188,16 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                2
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -128,8 +207,18 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                21,
+                18,
+                15
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -140,25 +229,42 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
+                21,
+                18,
                 15
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_shard": [
+                0
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": true,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

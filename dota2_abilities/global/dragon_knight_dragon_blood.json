@@ -5,12 +5,13 @@
         {
           "id": 5228,
           "name": "dragon_knight_dragon_blood",
-          "name_loc": "Dragon Blood",
-          "desc_loc": "The life blood of the Dragon improves health regeneration and strengthens armor.",
+          "name_loc": "Wyrm's Wrath",
+          "desc_loc": "The life blood of the Dragon improves Dragon Knight's attacks. When in Dragon form, these attack effects are stronger.",
           "lore_loc": "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "2",
           "target_team": 0,
@@ -48,32 +49,280 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_health_regen",
+              "name": "is_green_dragon",
               "values_float": [
-                4,
-                7,
-                10,
-                13
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "HEALTH REGEN:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "bonus_armor",
+              "name": "corrosive_breath_damage",
               "values_float": [
-                4,
-                7,
                 10,
-                13
+                15,
+                20,
+                25
               ],
               "is_percentage": false,
-              "heading_loc": "ARMOR:",
+              "heading_loc": "CORROSIVE BREATH DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "corrosive_breath_duration",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "CORROSIVE BREATH DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "corrosive_breath_armor_reduction",
+              "values_float": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "CORROSIVE BREATH ARMOR REDUCTION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "is_red_dragon",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cleave_starting_width",
+              "values_float": [
+                150
+              ],
+              "is_percentage": false,
+              "heading_loc": "CLEAVE STARTING WIDTH:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cleave_ending_width",
+              "values_float": [
+                260
+              ],
+              "is_percentage": false,
+              "heading_loc": "CLEAVE ENDING WIDTH:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cleave_distance",
+              "values_float": [
+                450
+              ],
+              "is_percentage": false,
+              "heading_loc": "CLEAVE DISTANCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cleave_damage",
+              "values_float": [
+                20,
+                30,
+                40,
+                50
+              ],
+              "is_percentage": true,
+              "heading_loc": "CLEAVE DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ranged_splash_damage_percent",
+              "values_float": [
+                50,
+                60,
+                70,
+                80
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "is_blue_dragon",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "frost_bonus_movement_speed",
+              "values_float": [
+                -14,
+                -21,
+                -28,
+                -35
+              ],
+              "is_percentage": true,
+              "heading_loc": "FROST BREATH MOVESPEED SLOW:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "frost_bonus_attack_speed",
+              "values_float": [
+                -14,
+                -21,
+                -28,
+                -35
+              ],
+              "is_percentage": false,
+              "heading_loc": "FROST BREATH ATTACK SPEED SLOW:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "frost_duration",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "FROST BREATH DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "frost_healing_reduction",
+              "values_float": [
+                14,
+                21,
+                28,
+                35
+              ],
+              "is_percentage": true,
+              "heading_loc": "FROST BREATH HEALING REDUCTION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -84,7 +333,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -95,7 +350,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -106,7 +367,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -117,7 +384,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -128,7 +401,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -139,7 +418,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -150,7 +435,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -161,7 +452,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -169,6 +466,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

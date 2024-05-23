@@ -6,7 +6,7 @@
           "id": 5246,
           "name": "furion_teleportation",
           "name_loc": "Teleportation",
-          "desc_loc": "Teleports to any point on the map. After teleporting, Nature's Prophet gains stacks of bonus attack damage. Every attack consumes a stack of bonus damage to increase Nature Prophet's armor.",
+          "desc_loc": "Teleports to any point on the map. Gains a shield after arriving to its destination",
           "lore_loc": "The Prophet keeps his sentinel over the forest, protecting it when in need.",
           "notes_loc": [
             "Mana and cooldown take effect when the cast is completed.  Nature's Prophet will not use any mana or waste the cooldown if the spell is interrupted while casting.",
@@ -14,6 +14,7 @@
           ],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "67633200",
           "target_team": 0,
@@ -36,10 +37,10 @@
             0
           ],
           "cooldowns": [
-            75,
-            60,
-            45,
-            30
+            65,
+            50,
+            35,
+            20
           ],
           "durations": [
             0
@@ -60,24 +61,30 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "max_stacks",
+              "name": "barrier",
               "values_float": [
-                6,
-                8,
-                10,
-                12
+                50,
+                100,
+                150,
+                200
               ],
               "is_percentage": false,
-              "heading_loc": "MAX STACKS:",
+              "heading_loc": "SHIELD:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_furion_teleportation_max_stacks",
-                  "value": 4,
+                  "name": "special_bonus_unique_furion_teleportation_barrier",
+                  "value": 100,
                   "operation": 0
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "buff_duration",
@@ -85,32 +92,16 @@
                 15
               ],
               "is_percentage": false,
-              "heading_loc": "BUFF DURATION:",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "damage_per_stack",
-              "values_float": [
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "DAMAGE PER STACK:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "armor_per_stack",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "ARMOR PER STACK:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -121,7 +112,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -132,7 +129,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -143,7 +146,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -154,7 +163,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -165,7 +180,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -176,7 +197,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -190,21 +217,39 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
-                75,
-                60,
-                45,
-                30
+                65,
+                50,
+                35,
+                20
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_furion_3",
+                  "value": 100,
+                  "operation": 4
+                }
+              ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -212,6 +257,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

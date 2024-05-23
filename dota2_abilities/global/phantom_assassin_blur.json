@@ -6,13 +6,14 @@
           "id": 5192,
           "name": "phantom_assassin_blur",
           "name_loc": "Blur",
-          "desc_loc": "Phantom Assassin focuses inward, increasing her ability to evade enemy attacks. Can be activated to blur her body, causing her to be impossible to see until near enemy heroes, towers, or outposts.\n\nStacks diminishingly with other sources of Evasion.",
+          "desc_loc": "Phantom Assassin blurs her body, causing her to be impossible to see until she attacks or comes near enemy heroes, towers, or outposts.",
           "lore_loc": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat.",
           "notes_loc": [
             "Attacking Roshan with a regular attack will dispel Blur."
           ],
           "shard_loc": "Increases your movement speed by 40% while in Blur's active.",
           "scepter_loc": "Causes Blur to have instant cast time and applies a dispel. Any time Phantom Assassin gets a hero kill, her abilities are refreshed. Reduces cooldown.",
+          "facets_loc": [],
           "type": 0,
           "behavior": "4",
           "target_team": 1,
@@ -23,7 +24,7 @@
           "dispellable": 3,
           "max_level": 4,
           "cast_ranges": [
-            400
+            500
           ],
           "cast_points": [
             0.4
@@ -53,20 +54,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_evasion",
-              "values_float": [
-                20,
-                30,
-                40,
-                50
-              ],
-              "is_percentage": true,
-              "heading_loc": "EVASION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "duration",
               "values_float": [
                 30
@@ -75,29 +62,53 @@
               "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "radius",
               "values_float": [
-                500
+                625,
+                550,
+                475,
+                400
               ],
               "is_percentage": false,
               "heading_loc": "VANISH RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "fade_duration",
               "values_float": [
-                0.5
+                0.4,
+                0.6,
+                0.8,
+                1
               ],
               "is_percentage": false,
               "heading_loc": "VANISH BUFFER:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "scepter_cooldown",
@@ -108,7 +119,13 @@
               "heading_loc": "COOLDOWN REDUCTION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "scepter_fade_duration",
@@ -119,18 +136,98 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "AbilityCastRange",
+              "name": "break_on_attack",
               "values_float": [
-                400
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "manacost_reduction_during_blur_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MANA COST REDUCTION DURING BLUR:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "buff_duration_after_break",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "BUFF DURATION AFTER BLUR:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "manacost_reduction_after_blur_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MANA COST REDUCTION AFTER BLUR:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -141,7 +238,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -152,7 +255,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -163,7 +272,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -174,7 +289,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -185,7 +306,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -196,7 +323,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -210,7 +343,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -218,6 +357,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

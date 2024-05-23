@@ -6,36 +6,34 @@
           "id": 5062,
           "name": "nevermore_necromastery",
           "name_loc": "Necromastery",
-          "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases %soul_release_tooltip%%% of them from bondage.",
+          "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases %soul_release_tooltip%%% of them from bondage. Every hero kill increases max souls by 1 until Shadow Fiend dies.",
           "lore_loc": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
           "notes_loc": [
             "Denies and neutral creeps also provide bonus damage through Necromastery."
           ],
           "shard_loc": "Shadow Fiend gains an extra soul per kill. Shadow Fiend can consume a soul per attack to deal critical damage and fear the target.",
           "scepter_loc": "Increases max souls.",
+          "facets_loc": [],
           "type": 0,
-          "behavior": "2",
-          "target_team": 2,
-          "target_type": 19,
+          "behavior": "66",
+          "target_team": 0,
+          "target_type": 0,
           "flags": 0,
-          "damage": 1,
-          "immunity": 4,
+          "damage": 0,
+          "immunity": 0,
           "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
-            625
+            0
           ],
           "cast_points": [
-            0,
-            0,
-            0,
             0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            3
+            0
           ],
           "durations": [
             0
@@ -56,29 +54,63 @@
               "name": "necromastery_damage_per_soul",
               "values_float": [
                 1,
-                2,
                 3,
-                4
+                4,
+                5
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SOUL:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_nevermore_1",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "necromastery_max_souls",
               "values_float": [
-                11,
-                14,
-                17,
                 20
               ],
               "is_percentage": false,
               "heading_loc": "MAX SOULS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [
+                5
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "souls_per_kill",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "necromastery_soul_release",
@@ -89,18 +121,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "necromastery_max_souls_scepter",
-              "values_float": [
-                25
-              ],
-              "is_percentage": false,
-              "heading_loc": "MAX SOULS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "attack_range_bonus",
@@ -111,7 +138,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "shard_souls_per_kill",
@@ -122,7 +155,13 @@
               "heading_loc": "SOULS PER KILL:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "shard_crit_pct",
@@ -133,7 +172,13 @@
               "heading_loc": "CRITICAL DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "shard_fear_duration",
@@ -144,7 +189,13 @@
               "heading_loc": "FEAR DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "soul_release_tooltip",
@@ -155,18 +206,30 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
               "values_float": [
-                625
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -177,7 +240,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -188,7 +257,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -199,7 +274,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -210,7 +291,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -221,7 +308,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -232,25 +325,38 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
-                3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
           "ability_has_scepter": true,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

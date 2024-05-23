@@ -6,7 +6,7 @@
           "id": 5017,
           "name": "bloodseeker_thirst",
           "name_loc": "Thirst",
-          "desc_loc": "Bloodseeker is invigorated by the wounds of his enemies, restoring some life when he kills a unit. Restores for half values when denying, or if an ally kills a nearby enemy hero. Also gains bonus movement speed when an enemy hero's health falls below %min_bonus_pct%%%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below %invis_threshold_pct%%%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker.",
+          "desc_loc": "Bloodseeker is invigorated by the wounds of his enemies, gaining bonus movement speed when an enemy hero's health falls below %min_bonus_pct%%%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below %invis_threshold_pct%%%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker.",
           "lore_loc": "Strygwyr becomes frenzied when blood is spilled.",
           "notes_loc": [
             "Not triggered by Illusions.",
@@ -15,6 +15,7 @@
           ],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "2",
           "target_team": 0,
@@ -28,13 +29,13 @@
             0
           ],
           "cast_points": [
-            0
+            0.3
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            0
+            15
           ],
           "durations": [
             0
@@ -46,7 +47,7 @@
             0
           ],
           "mana_costs": [
-            0
+            50
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -54,20 +55,26 @@
             {
               "name": "min_bonus_pct",
               "values_float": [
-                80
+                100
               ],
               "is_percentage": true,
               "heading_loc": "THIRST HEALTH THRESHOLD:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "bonus_movement_speed",
               "values_float": [
-                16,
-                24,
-                32,
+                10,
+                20,
+                30,
                 40
               ],
               "is_percentage": true,
@@ -80,46 +87,67 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "hero_kill_heal",
+              "name": "active_movement_speed",
               "values_float": [
-                10,
-                15,
-                20,
-                25
+                0,
+                0,
+                0,
+                0
               ],
               "is_percentage": true,
-              "heading_loc": "MAX HEALTH HEAL HEROES:",
+              "heading_loc": "ACTIVE BONUS MOVE SPEED:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "creep_kill_heal",
+              "name": "active_duration",
               "values_float": [
-                8,
-                12,
-                16,
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "MAX HEALTH HEAL CREEPS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "half_bonus_aoe",
-              "values_float": [
-                300
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "HALF HEAL RADIUS:",
+              "heading_loc": "ACTIVE DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "creep_lifesteal_reduction_pct",
+              "values_float": [
+                40
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "max_bonus_pct",
@@ -130,7 +158,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "visibility_threshold_pct",
@@ -141,7 +175,13 @@
               "heading_loc": "VISIBILITY HEALTH THRESHOLD:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "invis_threshold_pct",
@@ -152,7 +192,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "linger_duration",
@@ -163,7 +209,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -174,7 +226,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -185,7 +243,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -196,18 +260,30 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0
+                0.3
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -218,7 +294,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -229,29 +311,47 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
-                0
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0
+                15
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -259,6 +359,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

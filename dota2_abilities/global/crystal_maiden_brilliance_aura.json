@@ -6,11 +6,12 @@
           "id": 5128,
           "name": "crystal_maiden_brilliance_aura",
           "name_loc": "Arcane Aura",
-          "desc_loc": "Gives additional mana regeneration to all friendly units on the map. Allies within a %proximity_bonus_radius% radius of Crystal Maiden receive %proximity_bonus_factor%x the mana regeneration. Crystal Maiden herself receives %self_factor%x the bonus.",
+          "desc_loc": "Gives additional mana regeneration to all friendly units on the map. Allies within a %proximity_bonus_radius% radius of Crystal Maiden receive %proximity_bonus_factor%x the mana regeneration.",
           "lore_loc": "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "2",
           "target_team": 1,
@@ -57,15 +58,15 @@
               ],
               "is_percentage": false,
               "heading_loc": "MANA REGEN:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_crystal_maiden_4",
-                  "value": 0.5,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "proximity_mana_regen_tooltip",
@@ -77,46 +78,15 @@
               ],
               "is_percentage": false,
               "heading_loc": "CLOSE MANA REGEN:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_crystal_maiden_4",
-                  "value": 1.5,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "self_mana_regen_tooltip",
-              "values_float": [
-                2.8,
-                4.2,
-                5.6,
-                7
-              ],
-              "is_percentage": false,
-              "heading_loc": "SELF MANA REGEN:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_crystal_maiden_4",
-                  "value": 3,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "self_factor",
-              "values_float": [
-                7
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "proximity_bonus_factor",
@@ -127,7 +97,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "proximity_bonus_radius",
@@ -135,10 +111,76 @@
                 1200
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_cast_range_bonus",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "SELF CAST RANGE BONUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "aoe_bonus",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "SELF AOE BONUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mana_battery_mana_pct",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MANA SPENT GRANTED:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -149,7 +191,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -160,7 +208,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -171,7 +225,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -182,7 +242,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -193,7 +259,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -204,7 +276,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -215,7 +293,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -226,7 +310,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -234,6 +324,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

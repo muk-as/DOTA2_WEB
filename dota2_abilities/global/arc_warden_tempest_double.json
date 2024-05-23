@@ -6,13 +6,14 @@
           "id": 5683,
           "name": "arc_warden_tempest_double",
           "name_loc": "Tempest Double",
-          "desc_loc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.  The Tempest Double gives bounty gold to enemies when killed. The Tempest Double loses its sense of self if he is too far away from Arc Warden and deals less attack damage.",
+          "desc_loc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.<br><br>If killed by the enemy, the Tempest Double gives bounty gold to enemies, and the ability's cooldown is restarted.<br><br>The Tempest Double loses its sense of self if he is too far away from Arc Warden and takes more damage.",
           "lore_loc": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
           "notes_loc": [
             "Tempest Double and Refresher Orb cannot be used by the duplicate."
           ],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [],
           "type": 1,
           "behavior": "16",
           "target_team": 0,
@@ -32,9 +33,9 @@
             0
           ],
           "cooldowns": [
-            70,
-            60,
-            50
+            100,
+            90,
+            80
           ],
           "durations": [
             0
@@ -52,25 +53,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "duration",
-              "values_float": [
-                18,
-                22,
-                26
-              ],
-              "is_percentage": false,
-              "heading_loc": "DURATION:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_arc_warden_6",
-                  "value": 10,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "bounty",
               "values_float": [
                 180,
@@ -81,7 +63,30 @@
               "heading_loc": "BOUNTY GOLD:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                60
+              ],
+              "is_percentage": false,
+              "heading_loc": "DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "penalty_distance",
@@ -92,7 +97,13 @@
               "heading_loc": "PENALTY DISTANCE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "ignore_penalty_distance",
@@ -109,35 +120,30 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "attack_damage_penalty",
+              "name": "incoming_damage_penalty",
               "values_float": [
-                50
+                75
               ],
               "is_percentage": true,
-              "heading_loc": "ATTACK DAMAGE PENALTY:",
+              "heading_loc": "PENALTY INCREASED DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "tempest_double_cooldown_reduction",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_arc_warden_7",
-                  "value": 40,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -148,7 +154,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -159,7 +171,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -170,7 +188,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -181,7 +205,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -192,7 +222,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -203,7 +239,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -214,20 +256,32 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
               "values_float": [
-                70,
-                60,
-                50
+                100,
+                90,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -235,6 +289,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

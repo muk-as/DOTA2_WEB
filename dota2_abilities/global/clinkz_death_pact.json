@@ -6,7 +6,7 @@
           "id": 5262,
           "name": "clinkz_death_pact",
           "name_loc": "Death Pact",
-          "desc_loc": "Clinkz consumes the target enemy creep or friendly skeleton and creates a Burning Skeleton Archer in their place, healing and gaining max health. Does not take Clinkz out of Skeleton Walk. <br><br>Archers are immobile and die within several attacks from a hero. Skeletons deal a percentage of Clinkz' damage. Attack range is equal to Clinkz's attack range. Only one archer can be summoned from Death Pact at a time.<br><br> Skeletons deal %skeleton_building_damage_reduction%%% less damage to buildings",
+          "desc_loc": "Clinkz consumes the target enemy creep or friendly Skeleton Archer and creates a Skeleton Archer in their place, healing and gaining max health. Does not take Clinkz out of Skeleton Walk. <br><br>Only one archer can be summoned from Death Pact at a time.",
           "lore_loc": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings.",
           "notes_loc": [
             "If the target is an enemy, Clinkz will gain the correct experience and gold.",
@@ -14,7 +14,8 @@
             "When the duration ends, max HP returns to normal, but current HP stays the same."
           ],
           "shard_loc": "",
-          "scepter_loc": "Increases Skeleton Archer Hits to Kill.",
+          "scepter_loc": "",
+          "facets_loc": [],
           "type": 0,
           "behavior": "33554440",
           "target_team": 0,
@@ -25,7 +26,7 @@
           "dispellable": 3,
           "max_level": 4,
           "cast_ranges": [
-            900
+            700
           ],
           "cast_points": [
             0.2
@@ -60,7 +61,13 @@
               "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "health_gain",
@@ -80,77 +87,47 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "skeleton_duration",
+              "name": "skeletons_spawned",
               "values_float": [
-                45
-              ],
-              "is_percentage": false,
-              "heading_loc": "SKELETON ARCHER DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "skeleton_health",
-              "values_float": [
-                8
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                4
-              ]
-            },
-            {
-              "name": "skeleton_health_tooltip",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "SKELETON HITS TO KILL:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
                 1
-              ]
-            },
-            {
-              "name": "skeleton_building_damage_reduction",
-              "values_float": [
-                25
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "attack_rate",
+              "name": "spawn_skeleton_on_origin",
               "values_float": [
-                1.6
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
-            },
-            {
-              "name": "damage_percent",
-              "values_float": [
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "SKELETON DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "creep_level",
@@ -164,18 +141,30 @@
               "heading_loc": "CREEP MAX LEVEL:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
               "values_float": [
-                900
+                700
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -186,7 +175,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -197,7 +192,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -208,7 +209,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -228,7 +235,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -239,7 +252,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -250,7 +269,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -261,7 +286,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -269,6 +300,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

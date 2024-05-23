@@ -6,13 +6,14 @@
           "id": 5268,
           "name": "enchantress_enchant",
           "name_loc": "Enchant",
-          "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed and damaged for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control, increasing its attack damage and max health. Enchantress can control up to %max_creeps% creeps at a time for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
+          "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty, and a Neutral Token, if it is available.  Enchantress can control up to %max_creeps% creeps at a time for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
           "lore_loc": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
           "notes_loc": [
             "Illusions can be converted."
           ],
           "shard_loc": "",
           "scepter_loc": "Enchantress can control multiple creeps at a time.",
+          "facets_loc": [],
           "type": 0,
           "behavior": "8",
           "target_team": 2,
@@ -73,7 +74,13 @@
               "heading_loc": "HERO MOVE SLOW:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "slow_duration",
@@ -84,21 +91,33 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
-              "name": "damage",
+              "name": "attack_range_bonus",
               "values_float": [
-                20,
-                30,
-                40,
-                50
+                0,
+                0,
+                0,
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "HERO DAMAGE PER SECOND:",
+              "heading_loc": "ATTACK RANGE BONUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "dominate_duration",
@@ -112,27 +131,39 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "enchant_health",
               "values_float": [
-                200,
-                300,
-                400,
-                500
+                150,
+                250,
+                350,
+                450
               ],
               "is_percentage": false,
               "heading_loc": "CREEP MAX HEALTH BONUS:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                  "value": 30,
-                  "operation": 3
+                  "value": 150,
+                  "operation": 0
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "enchant_armor",
@@ -149,7 +180,13 @@
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "enchant_damage",
@@ -164,12 +201,35 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                  "value": 30,
-                  "operation": 3
+                  "value": 25,
+                  "operation": 0
                 }
               ],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "xp_gain_pct",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "level_req",
@@ -183,7 +243,13 @@
               "heading_loc": "CREEP MAX LEVEL:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "max_creeps",
@@ -196,7 +262,13 @@
               "values_shard": [],
               "values_scepter": [
                 1
-              ]
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -210,7 +282,13 @@
               "heading_loc": "CAST RANGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -221,7 +299,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -232,7 +316,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -243,7 +333,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -254,7 +350,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -265,7 +367,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -279,7 +387,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -293,7 +407,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -301,6 +421,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
