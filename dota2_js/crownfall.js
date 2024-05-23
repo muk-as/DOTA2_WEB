@@ -1194,7 +1194,7 @@
                     o.createElement(
                       "p",
                       { className: h().Action },
-                      (0, c.Jr)("#crownfall_footer_act_unlocks_mid_may"),
+                      (0, c.Jr)("#crownfall_footer_act_play"),
                     ),
                   ),
                   o.createElement(
