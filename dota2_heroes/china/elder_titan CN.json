@@ -2374,6 +2374,501 @@
           "gradient_id": 0
         }
       ],
+      "new_abilities": {
+        "id": 1392,
+        "name": "elder_titan_ancestral_spirit",
+        "name_loc": "灵体游魂",
+        "desc_loc": "上古巨神放出他的灵体游魂，灵魂对任何经过的单位都会造成伤害。当它与巨神合体时，它每伤害过一个单位都会给予若干攻击力、护甲和移动速度加成。\n\n灵体游魂拥有回音重踏，回归和自然秩序三个技能。",
+        "lore_loc": "就像四大基本法则，上古巨神在所有位面同时存在，可以在需要协助的时候将其他位面的自己拖入。",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "游魂每碰到一名英雄就能使上古巨神在游魂回归后获得%scepter_magic_immune_per_hero%秒减益免疫状态和50%%魔法抗性提升。",
+        "facets_loc": [
+          "",
+          ""
+        ],
+        "type": 0,
+        "behavior": "134217776",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 3,
+        "dispellable": 2,
+        "max_level": 5,
+        "cast_ranges": [
+          1200
+        ],
+        "cast_points": [
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ],
+        "channel_times": [
+          0
+        ],
+        "cooldowns": [
+          25,
+          23,
+          21,
+          19,
+          17
+        ],
+        "durations": [
+          0
+        ],
+        "damages": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mana_costs": [
+          70,
+          80,
+          90,
+          100,
+          110
+        ],
+        "gold_costs": [],
+        "health_costs": [],
+        "special_values": [
+          {
+            "name": "radius",
+            "values_float": [
+              275
+            ],
+            "is_percentage": false,
+            "heading_loc": "作用范围：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "pass_damage",
+            "values_float": [
+              50
+            ],
+            "is_percentage": false,
+            "heading_loc": "伤害：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "spirit_duration",
+            "values_float": [
+              10
+            ],
+            "is_percentage": false,
+            "heading_loc": "灵体持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "buff_duration",
+            "values_float": [
+              10
+            ],
+            "is_percentage": false,
+            "heading_loc": "加成持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "speed",
+            "values_float": [
+              900
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "controllable",
+            "values_float": [
+              1
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "move_pct_creeps",
+            "values_float": [
+              1.5
+            ],
+            "is_percentage": true,
+            "heading_loc": "移动速度加成（非英雄）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "move_pct_heroes",
+            "values_float": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "is_percentage": true,
+            "heading_loc": "移动速度加成（英雄）：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_elder_titan_bonus_spirit_speed",
+                "value": 2,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "damage_creeps",
+            "values_float": [
+              3,
+              3,
+              7,
+              11,
+              15
+            ],
+            "is_percentage": false,
+            "heading_loc": "攻击力加成（非英雄）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "damage_heroes",
+            "values_float": [
+              10,
+              17,
+              38,
+              59,
+              80
+            ],
+            "is_percentage": false,
+            "heading_loc": "攻击力加成（英雄）：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_elder_titan",
+                "value": 25,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "armor_creeps",
+            "values_float": [
+              0.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "护甲加成（非英雄）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "armor_heroes",
+            "values_float": [
+              1,
+              1.5,
+              3,
+              4.5,
+              6
+            ],
+            "is_percentage": false,
+            "heading_loc": "护甲加成（英雄）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "move_pct_cap",
+            "values_float": [
+              40
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "scepter_magic_immune_per_hero",
+            "values_float": [
+              2
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastRange",
+            "values_float": [
+              1200
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChannelTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityDuration",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastPoint",
+            "values_float": [
+              0.4
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCharges",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChargeRestoreTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              70,
+              80,
+              90,
+              100,
+              110
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCooldown",
+            "values_float": [
+              25,
+              23,
+              21,
+              19,
+              17
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "ability_is_innate": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0,
+        "img": "",
+        "video_jpg": "",
+        "video_mp4": "",
+        "video_webm": "",
+        "video_shard_jpg": "",
+        "video_shard_mp4": "",
+        "video_shard_webm": "",
+        "video_scepter_jpg": "",
+        "video_scepter_mp4": "",
+        "video_scepter_web": ""
+      },
       "left_hero_info": {
         "id": 49,
         "name": "dragon_knight",

@@ -2337,6 +2337,454 @@
           "gradient_id": 1
         }
       ],
+      "new_abilities": {
+        "id": 1342,
+        "name": "lone_druid_spirit_bear",
+        "name_loc": "熊灵伙伴",
+        "desc_loc": "召唤一只可以装备物品的熊灵伙伴。若熊灵与德鲁伊的距离超过1100，则不能攻击。如果熊灵死亡，德鲁伊会受到自身最大生命值的%backlash_damage%%%作为反冲伤害。\n熊灵拥有回归、缠绕之爪和粉碎击技能。",
+        "lore_loc": "悉拉终生的伙伴与他的魂和心共生，在他需要时随时前来相助。",
+        "notes_loc": [
+          "熊灵受到的大多数技能效果与英雄相同。",
+          "熊灵的基础属性为0，并且升级时不会获得属性。熊灵装备的物品或享受的加成效果拥有的属性对熊灵的加成效果与全才英雄类似。",
+          "熊灵无法获得经验。随着德鲁伊升级，熊灵相应地提升90点生命值和5点攻击力。",
+          "熊灵拥有自己的阿哈利姆神杖和魔晶升级效果。"
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "facets_loc": [
+          "",
+          ""
+        ],
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 5,
+        "cast_ranges": [
+          0
+        ],
+        "cast_points": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "channel_times": [
+          0
+        ],
+        "cooldowns": [
+          160,
+          150,
+          140,
+          130,
+          120
+        ],
+        "durations": [
+          0
+        ],
+        "damages": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mana_costs": [
+          75,
+          75,
+          75,
+          75,
+          75
+        ],
+        "gold_costs": [],
+        "health_costs": [],
+        "special_values": [
+          {
+            "name": "bear_hp",
+            "values_float": [
+              800,
+              1100,
+              1400,
+              1700,
+              2000
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵生命值：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_regen_tooltip",
+            "values_float": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵每秒生命恢复：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_bat",
+            "values_float": [
+              1.85,
+              1.75,
+              1.65,
+              1.55,
+              1.45
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵基础攻击间隔：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_armor",
+            "values_float": [
+              0,
+              0,
+              2,
+              4,
+              6
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵护甲：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "backlash_damage",
+            "values_float": [
+              20
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_movespeed",
+            "values_float": [
+              300,
+              300,
+              330,
+              360,
+              390
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵移动速度：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_lone_druid_11",
+                "value": 25,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_magic_resistance",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_bear_hp",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_bear_armor",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_lone_druid_2",
+                "value": 7,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "damage_gain_per_druid_level",
+            "values_float": [
+              5
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "hp_gain_per_druid_level",
+            "values_float": [
+              90
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastRange",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChannelTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityDuration",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastPoint",
+            "values_float": [
+              0.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCharges",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChargeRestoreTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              75
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCooldown",
+            "values_float": [
+              160,
+              150,
+              140,
+              130,
+              120
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "ability_is_innate": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0,
+        "img": "",
+        "video_jpg": "",
+        "video_mp4": "",
+        "video_webm": "",
+        "video_shard_jpg": "",
+        "video_shard_mp4": "",
+        "video_shard_webm": "",
+        "video_scepter_jpg": "",
+        "video_scepter_mp4": "",
+        "video_scepter_web": ""
+      },
       "left_hero_info": {
         "id": 11,
         "name": "nevermore",

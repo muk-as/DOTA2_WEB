@@ -2374,6 +2374,396 @@
           "gradient_id": 0
         }
       ],
+      "new_abilities": {
+        "id": 1224,
+        "name": "razor_storm_surge",
+        "name_loc": "风暴涌动",
+        "desc_loc": "被攻击时拥有几率、每次受到指向性技能时都会释放一道叉状闪电，击中目标和附近其他敌人，优先打击与目标类型相同的单位，造成伤害并减缓移动速度。",
+        "lore_loc": "仅仅是靠近闪电幽魂就会体验免费的电击疗法。",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "facets_loc": [
+          "风暴之眼开启时，打击几率为%eye_of_the_storm_chance_multiplier%倍，而且闪电会打击风暴之眼范围内所有敌人。单次伤害不会对同个敌人施加两次。",
+          ""
+        ],
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+          0
+        ],
+        "cast_points": [
+          0
+        ],
+        "channel_times": [
+          0
+        ],
+        "cooldowns": [
+          0
+        ],
+        "durations": [
+          0
+        ],
+        "damages": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mana_costs": [
+          0
+        ],
+        "gold_costs": [],
+        "health_costs": [],
+        "special_values": [
+          {
+            "name": "strike_pct_chance",
+            "values_float": [
+              18
+            ],
+            "is_percentage": true,
+            "heading_loc": "打击概率：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "strike_target_count",
+            "values_float": [
+              3
+            ],
+            "is_percentage": false,
+            "heading_loc": "电击目标数量：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "strike_damage",
+            "values_float": [
+              40,
+              80,
+              120,
+              160
+            ],
+            "is_percentage": false,
+            "heading_loc": "伤害：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_razor_storm_surge_damage_and_slow",
+                "value": 25,
+                "operation": 3
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "strike_move_slow_pct",
+            "values_float": [
+              25,
+              30,
+              35,
+              40
+            ],
+            "is_percentage": true,
+            "heading_loc": "移动速度减缓：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_razor_storm_surge_damage_and_slow",
+                "value": 25,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "strike_slow_duration",
+            "values_float": [
+              1
+            ],
+            "is_percentage": false,
+            "heading_loc": "减速持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "strike_search_radius",
+            "values_float": [
+              700
+            ],
+            "is_percentage": false,
+            "heading_loc": "打击搜索范围：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "strike_internal_cd",
+            "values_float": [
+              3
+            ],
+            "is_percentage": false,
+            "heading_loc": "打击冷却时间：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_razor_3",
+                "value": 1,
+                "operation": 2
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "hit_targets_inside_eye_of_the_storm",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "razor_thunderhead",
+              "values": [
+                1
+              ],
+              "operation": 5
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "eye_of_the_storm_chance_multiplier",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "razor_thunderhead",
+              "values": [
+                2
+              ],
+              "operation": 5
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastRange",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChannelTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityDuration",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastPoint",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCharges",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChargeRestoreTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCooldown",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "ability_is_innate": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0,
+        "img": "",
+        "video_jpg": "",
+        "video_mp4": "",
+        "video_webm": "",
+        "video_shard_jpg": "",
+        "video_shard_mp4": "",
+        "video_shard_webm": "",
+        "video_scepter_jpg": "",
+        "video_scepter_mp4": "",
+        "video_scepter_web": ""
+      },
       "left_hero_info": {
         "id": 66,
         "name": "chen",
