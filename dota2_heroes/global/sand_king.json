@@ -452,7 +452,7 @@
               "scepter_loc": "Every %damage_tick_rate%s, %scepter_explosions_per_pulse% Burrowstrike spines are created at random locations, each measuring %scepter_explosion_radius_pct%%% of the Sand Storm's current radius, that apply Burrowstrike damage and stun to enemies hit.",
               "facets_loc": [
                 "Sand Storm has increased radius and grants Sand King Invisibility while in it.",
-                "Sand Storm follows Sand King at a rate of %sand_storm_move_speed_pct%%% of his movement speed. Sand Storm moves to the location of Burrowstrike when cast."
+                "Sand Storm follows Sand King at a rate of %sand_storm_move_speed_pct%%% of his movement speed and is still active at a distance of up to %sand_storm_max_distance_from_caster% units away from Sand King. Sand Storm moves to the location of Burrowstrike when cast."
               ],
               "type": 0,
               "behavior": "33554436",
@@ -597,6 +597,44 @@
                     "name": "sand_king_dust_devil",
                     "values": [
                       70
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "sand_storm_max_distance_from_caster",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "sand_king_dust_devil",
+                    "values": [
+                      2500
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "sand_storm_move_speed_bonus_when_outside_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "sand_king_dust_devil",
+                    "values": [
+                      60
                     ],
                     "operation": 0
                   },

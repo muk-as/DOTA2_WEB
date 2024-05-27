@@ -134,7 +134,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_crystal_maiden_6",
-                      "value": 125,
+                      "value": 100,
                       "operation": 0
                     }
                   ],
@@ -495,11 +495,11 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "HERO DURATION:",
+                  "heading_loc": "DURATION:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_crystal_maiden_1",
-                      "value": 1.25,
+                      "value": 1,
                       "operation": 0
                     }
                   ],
@@ -556,7 +556,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_crystal_maiden_frostbite_castrange",
-                      "value": 125,
+                      "value": 100,
                       "operation": 0
                     }
                   ],
@@ -718,7 +718,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Arcane Aura increases Crystal Maiden's cast range and area of effect.",
+                "",
                 "Every time Crystal Maiden casts a spell, allies close to her receive mana equal to a percentage of the spell's mana cost."
               ],
               "type": 0,
@@ -830,56 +830,6 @@
                       1200
                     ],
                     "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "self_cast_range_bonus",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SELF CAST RANGE BONUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "crystal_maiden_frozen_expanse",
-                    "values": [
-                      50,
-                      75,
-                      100,
-                      125
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "aoe_bonus",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SELF AOE BONUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "crystal_maiden_frozen_expanse",
-                    "values": [
-                      7,
-                      8,
-                      9,
-                      10
-                    ],
-                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -1588,7 +1538,7 @@
               "shard_loc": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move %shard_self_movement_speed_slow_pct%%% slower during this.<br><br>Increases total number of explosions by %shard_bonus_explosion%%%.",
               "scepter_loc": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move %shard_self_movement_speed_slow_pct%%% slower during this. Increases total number of explosions by %shard_bonus_explosion%%%. Applies Frostbite to any unit that has been standing in the Freezing Field for over %frostbite_delay%s.",
               "facets_loc": [
-                "",
+                "Freezing Field also passively increases Crystal Maiden's cast range and area of effect.",
                 ""
               ],
               "type": 1,
@@ -1871,6 +1821,52 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "self_cast_range_bonus",
+                  "values_float": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CAST RANGE BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_frozen_expanse",
+                    "values": [
+                      75,
+                      100,
+                      125
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "aoe_bonus",
+                  "values_float": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "AOE BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_frozen_expanse",
+                    "values": [
+                      6,
+                      8,
+                      10
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     0
@@ -2027,8 +2023,8 @@
           ],
           "talents": [
             {
-              "id": 5903,
-              "name": "special_bonus_hp_250",
+              "id": 5959,
+              "name": "special_bonus_hp_200",
               "name_loc": "+{s:value} Health",
               "desc_loc": "",
               "lore_loc": "",
@@ -2078,7 +2074,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    250
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

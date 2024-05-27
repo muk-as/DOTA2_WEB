@@ -48,8 +48,8 @@
             0,
             0
           ],
-          "damage_min": 33,
-          "damage_max": 42,
+          "damage_min": 36,
+          "damage_max": 45,
           "attack_rate": 1.5,
           "attack_range": 350,
           "projectile_speed": 1300,
@@ -68,9 +68,11 @@
               "id": 5052,
               "name": "morphling_waveform",
               "name_loc": "Waveform",
-              "desc_loc": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path.  Morphling is invulnerable during Waveform.",
+              "desc_loc": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path.  Morphling is invulnerable during Waveform and attacks all enemies it goes through with a penalty.",
               "lore_loc": "A torrential flood takes enemies by force.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Attack does not apply on hit effects without the talent."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -114,7 +116,7 @@
                 300
               ],
               "mana_costs": [
-                130
+                115
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -144,6 +146,52 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "pct_damage",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ATTACK DAMAGE PERCENTAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_morphling_4",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "process_procs",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_morphling_4",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -287,7 +335,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    130
+                    115
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1083,10 +1131,10 @@
                 {
                   "name": "morph_rate_tooltip",
                   "values_float": [
-                    5,
                     10,
                     15,
-                    20
+                    20,
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "SHIFT RATE:",
@@ -1389,10 +1437,10 @@
                 {
                   "name": "morph_rate_tooltip",
                   "values_float": [
-                    5,
                     10,
                     15,
-                    20
+                    20,
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "SHIFT RATE:",
@@ -3057,8 +3105,8 @@
             {
               "id": 6840,
               "name": "special_bonus_unique_morphling_4",
-              "name_loc": "Waveform Attacks Targets",
-              "desc_loc": "Enemies hit by Waveform are also instantly attacked by Morphling.",
+              "name_loc": "+50% Waveform Attack Damage And Applies On Hit Effects",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
