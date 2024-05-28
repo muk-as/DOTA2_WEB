@@ -382,6 +382,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_searing_chains.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_searing_chains.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_searing_chains.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             "束缚的敌人数量增加。施放炎阳索时，每个残焰周围也会施放炎阳索。单个目标不会同时被多个来源的炎阳索击中。"
@@ -728,6 +730,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_sleight_of_fist.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_sleight_of_fist.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_sleight_of_fist.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "无影拳击中的敌人超过%min_enemies_for_double_sleight%个时，距离灰烬之灵最近的敌人会再次受到攻击。第二次攻击的伤害减少%second_attack_damage_penalty%%%。",
             ""
@@ -1143,6 +1147,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_flame_guard.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_flame_guard.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_flame_guard.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -1487,6 +1493,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_activate_fire_remnant.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_activate_fire_remnant.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_ember_spirit/ember_spirit_activate_fire_remnant.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -1875,6 +1883,8 @@
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_ember_spirit/ember_spirit_aghanims_scepter.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_ember_spirit/ember_spirit_aghanims_scepter.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_ember_spirit/ember_spirit_aghanims_scepter.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -3130,6 +3140,429 @@
           "gradient_id": 1
         }
       ],
+      "new_abilities": {
+        "id": 5605,
+        "name": "ember_spirit_flame_guard",
+        "name_loc": "烈火罩",
+        "desc_loc": "灰烬之灵用火焰之环将自己包裹起来，持续对灰烬之灵周围造成每秒伤害。主动开启后，烈火罩的作用范围和伤害增加，并且会吸收一定百分比的魔法伤害。如果护盾被摧毁，增加的伤害和作用范围也会消失。",
+        "lore_loc": "近身之敌，自讨苦吃。",
+        "notes_loc": [
+          "魔法伤害的吸收伤害值计算先于任何伤害减免效果。",
+          "伤害在施加后会额外粘滞%linger_duration%秒。"
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "facets_loc": [
+          "",
+          ""
+        ],
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 5,
+        "cast_ranges": [
+          400
+        ],
+        "cast_points": [
+          0
+        ],
+        "channel_times": [
+          0
+        ],
+        "cooldowns": [
+          35
+        ],
+        "durations": [
+          0
+        ],
+        "damages": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mana_costs": [
+          65,
+          80,
+          95,
+          110
+        ],
+        "gold_costs": [],
+        "health_costs": [],
+        "special_values": [
+          {
+            "name": "duration",
+            "values_float": [
+              10,
+              12,
+              14,
+              16,
+              18
+            ],
+            "is_percentage": false,
+            "heading_loc": "持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "passive_radius",
+            "values_float": [
+              150
+            ],
+            "is_percentage": false,
+            "heading_loc": "被动作用范围：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "tick_interval",
+            "values_float": [
+              0.2
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "passive_damage_per_second",
+            "values_float": [
+              10,
+              15,
+              20,
+              25,
+              30
+            ],
+            "is_percentage": false,
+            "heading_loc": "被动伤害：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_ember_spirit_3",
+                "value": 100,
+                "operation": 3
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "blind_pct",
+            "values_float": [
+              50
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "linger_duration",
+            "values_float": [
+              0.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "active_radius",
+            "values_float": [
+              500
+            ],
+            "is_percentage": false,
+            "heading_loc": "开启后作用范围：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "active_damage_per_second",
+            "values_float": [
+              15,
+              25,
+              35,
+              45,
+              55
+            ],
+            "is_percentage": false,
+            "heading_loc": "开启后伤害：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_ember_spirit_3",
+                "value": 100,
+                "operation": 3
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "shield_pct_absorb",
+            "values_float": [
+              70
+            ],
+            "is_percentage": true,
+            "heading_loc": "吸收百分比：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "absorb_amount",
+            "values_float": [
+              30,
+              60,
+              135,
+              210,
+              285
+            ],
+            "is_percentage": false,
+            "heading_loc": "魔法护盾：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_ember_spirit_1",
+                "value": 200,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastRange",
+            "values_float": [
+              400
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChannelTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityDuration",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastPoint",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCharges",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChargeRestoreTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              65,
+              80,
+              95,
+              110
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCooldown",
+            "values_float": [
+              35
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "ability_is_innate": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0,
+        "img": "",
+        "video_jpg": "",
+        "video_mp4": "",
+        "video_webm": "",
+        "video_shard_jpg": "",
+        "video_shard_mp4": "",
+        "video_shard_webm": "",
+        "video_scepter_jpg": "",
+        "video_scepter_mp4": "",
+        "video_scepter_web": "",
+        "is_inborn": 1
+      },
       "facet_abilities": [
         {
           "abilities": []

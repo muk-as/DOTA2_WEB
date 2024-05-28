@@ -465,6 +465,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/nevermore_shadowraze1.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/nevermore_shadowraze1.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/nevermore_shadowraze1.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             "对击中的敌人施加可叠加的%movement_speed_debuff%%%移动速度和%attack_speed_debuff%攻击速度降低的负面效果。"
@@ -842,6 +844,8 @@
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_nevermore/nevermore_aghanims_scepter.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_nevermore/nevermore_aghanims_scepter.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_nevermore/nevermore_aghanims_scepter.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -1121,6 +1125,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/nevermore_dark_lord.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/nevermore_dark_lord.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/nevermore_dark_lord.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "魔王降临在附近敌方英雄阵亡后降低护甲效果将会提升。",
             ""
@@ -1579,6 +1585,8 @@
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_nevermore/nevermore_aghanims_scepter.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_nevermore/nevermore_aghanims_scepter.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_nevermore/nevermore_aghanims_scepter.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -2846,28 +2854,28 @@
         }
       ],
       "new_abilities": {
-        "id": 1216,
-        "name": "nevermore_frenzy",
-        "name_loc": "灵魂盛宴",
-        "desc_loc": "影魔获得攻击速度加成，持续%duration%秒。在效果结束后，影魔失去若干个灵魂。",
-        "lore_loc": "",
+        "id": 5062,
+        "name": "nevermore_necromastery",
+        "name_loc": "支配死灵",
+        "desc_loc": "影魔每杀死一个单位都会窃取其灵魂，获得额外攻击力。影魔死亡时%soul_release_tooltip%%%的灵魂将逃离他的束缚。每次击杀英雄会使灵魂上限增加1个，直到影魔阵亡。",
+        "lore_loc": "被收割的亡魂在魂渊内外盘旋，增加了影魔的力量，也方便他扩大自己的灵魂收藏。",
         "notes_loc": [
-          "无法施放，除非影魔有足够的灵魂作为代价。"
+          "反补、杀死中立生物也能收集到灵魂。"
         ],
-        "shard_loc": "",
-        "scepter_loc": "",
+        "shard_loc": "影魔每次击杀都会额外获得1个灵魂。影魔每次攻击可以消耗1个灵魂，造成致命一击伤害，并使目标恐惧。",
+        "scepter_loc": "提高灵魂数量上限。",
         "facets_loc": [
           "",
           ""
         ],
         "type": 0,
-        "behavior": "2052",
+        "behavior": "66",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
         "immunity": 0,
-        "dispellable": 2,
+        "dispellable": 0,
         "max_level": 4,
         "cast_ranges": [
           0
@@ -2879,7 +2887,7 @@
           0
         ],
         "cooldowns": [
-          16
+          0
         ],
         "durations": [
           0
@@ -2891,25 +2899,25 @@
           0
         ],
         "mana_costs": [
-          75
+          0
         ],
         "gold_costs": [],
         "health_costs": [],
         "special_values": [
           {
-            "name": "bonus_attack_speed",
+            "name": "necromastery_damage_per_soul",
             "values_float": [
-              40,
-              50,
-              60,
-              70
+              1,
+              3,
+              4,
+              5
             ],
             "is_percentage": false,
-            "heading_loc": "攻击速度加成：",
+            "heading_loc": "攻击力加成/灵魂：",
             "bonuses": [
               {
-                "name": "special_bonus_unique_nevermore_4",
-                "value": 30,
+                "name": "special_bonus_unique_nevermore_1",
+                "value": 2,
                 "operation": 0
               }
             ],
@@ -2923,21 +2931,17 @@
             "required_facet": ""
           },
           {
-            "name": "cast_speed_pct",
+            "name": "necromastery_max_souls",
             "values_float": [
-              100
+              20
             ],
             "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_nevermore_frenzy_castspeed",
-                "value": 40,
-                "operation": 0
-              }
-            ],
+            "heading_loc": "灵魂上限：",
+            "bonuses": [],
             "values_shard": [],
-            "values_scepter": [],
+            "values_scepter": [
+              5
+            ],
             "facet_bonus": {
               "name": "",
               "values": [],
@@ -2946,32 +2950,9 @@
             "required_facet": ""
           },
           {
-            "name": "cast_speed_pct_tooltip",
+            "name": "souls_per_kill",
             "values_float": [
-              0
-            ],
-            "is_percentage": true,
-            "heading_loc": "施法速度：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_nevermore_frenzy_castspeed",
-                "value": 140,
-                "operation": 5
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "duration",
-            "values_float": [
-              8
+              1
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -2986,12 +2967,97 @@
             "required_facet": ""
           },
           {
-            "name": "soul_cost",
+            "name": "necromastery_soul_release",
             "values_float": [
-              5
+              0.7
             ],
             "is_percentage": false,
-            "heading_loc": "灵魂损失：",
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "attack_range_bonus",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "shard_souls_per_kill",
+            "values_float": [
+              2
+            ],
+            "is_percentage": false,
+            "heading_loc": "每次击杀收获灵魂：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "shard_crit_pct",
+            "values_float": [
+              190
+            ],
+            "is_percentage": true,
+            "heading_loc": "致命一击伤害：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "shard_fear_duration",
+            "values_float": [
+              0.4
+            ],
+            "is_percentage": false,
+            "heading_loc": "恐惧持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "soul_release_tooltip",
+            "values_float": [
+              30
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3107,7 +3173,7 @@
           {
             "name": "AbilityManaCost",
             "values_float": [
-              75
+              0
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3124,7 +3190,7 @@
           {
             "name": "AbilityCooldown",
             "values_float": [
-              16
+              0
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3140,11 +3206,11 @@
           }
         ],
         "is_item": false,
-        "ability_has_scepter": false,
+        "ability_has_scepter": true,
         "ability_has_shard": false,
         "ability_is_granted_by_scepter": false,
         "ability_is_granted_by_shard": false,
-        "ability_is_innate": false,
+        "ability_is_innate": true,
         "item_cost": 0,
         "item_initial_charges": 0,
         "item_neutral_tier": 4294967295,
@@ -3160,7 +3226,8 @@
         "video_shard_webm": "",
         "video_scepter_jpg": "",
         "video_scepter_mp4": "",
-        "video_scepter_web": ""
+        "video_scepter_web": "",
+        "is_inborn": 1
       },
       "facet_abilities": [
         {

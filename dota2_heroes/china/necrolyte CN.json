@@ -343,6 +343,8 @@
           "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_necrolyte/necrolyte_aghanims_shard.jpg",
           "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_necrolyte/necrolyte_aghanims_shard.mp4",
           "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_necrolyte/necrolyte_aghanims_shard.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -667,6 +669,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_necrolyte/necrolyte_sadist.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_necrolyte/necrolyte_sadist.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_necrolyte/necrolyte_sadist.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "施虐之心在每次击杀后还会使瘟疫法师的范围型技能和物品获得作用范围加成。",
             ""
@@ -960,6 +964,8 @@
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_necrolyte/necrolyte_aghanims_scepter.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_necrolyte/necrolyte_aghanims_scepter.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_necrolyte/necrolyte_aghanims_scepter.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -1216,6 +1222,8 @@
           "video_shard_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/necrolyte/necrolyte_aghanims_shard.jpg",
           "video_shard_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/necrolyte/necrolyte_aghanims_shard.mp4",
           "video_shard_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/necrolyte/necrolyte_aghanims_shard.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -1504,6 +1512,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_necrolyte/necrolyte_reapers_scythe.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_necrolyte/necrolyte_reapers_scythe.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_necrolyte/necrolyte_reapers_scythe.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -2738,26 +2748,26 @@
         }
       ],
       "new_abilities": {
-        "id": 1270,
-        "name": "necrolyte_ghost_shroud",
-        "name_loc": "幽魂护罩",
-        "desc_loc": "瘟疫法师步入将生者与死者相隔的领域。散发出一片灵气，减缓周围敌人的移动速度。在这个形态下，瘟疫法师无法攻击或被攻击，受到的魔法伤害增加，但是生命/魔法恢复效果加强。",
-        "lore_loc": "罗坦德吉利利用手中的亡者灵魂搭建出从生到死的桥梁。",
+        "id": 5160,
+        "name": "necrolyte_sadist",
+        "name_loc": "施虐之心",
+        "desc_loc": "瘟疫法师每次击杀单位都将获得恢复效果，持续%regen_duration%秒。击杀英雄后获得数倍的效果。",
+        "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
-        "scepter_loc": "降低幽魂护罩的冷却时间。",
+        "scepter_loc": "",
         "facets_loc": [
-          "",
-          "瘟疫法师获得移动速度加成，数值等于%movement_transfer%%%敌人损失移速。"
+          "施虐之心在每次击杀后还会使瘟疫法师的范围型技能和物品获得作用范围加成。",
+          ""
         ],
         "type": 0,
-        "behavior": "2052",
+        "behavior": "66",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
-        "immunity": 4,
-        "dispellable": 2,
+        "immunity": 0,
+        "dispellable": 0,
         "max_level": 4,
         "cast_ranges": [
           0
@@ -2769,10 +2779,7 @@
           0
         ],
         "cooldowns": [
-          28,
-          24,
-          20,
-          16
+          0
         ],
         "durations": [
           0
@@ -2784,21 +2791,21 @@
           0
         ],
         "mana_costs": [
-          75
+          0
         ],
         "gold_costs": [],
         "health_costs": [],
         "special_values": [
           {
-            "name": "duration",
+            "name": "health_regen",
             "values_float": [
-              3,
-              3.5,
               4,
-              4.5
+              5,
+              6,
+              7
             ],
             "is_percentage": false,
-            "heading_loc": "持续时间：",
+            "heading_loc": "每次击杀提供生命恢复：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -2810,22 +2817,16 @@
             "required_facet": ""
           },
           {
-            "name": "heal_bonus",
+            "name": "mana_regen",
             "values_float": [
-              45,
-              55,
-              65,
-              75
+              4,
+              5,
+              6,
+              7
             ],
-            "is_percentage": true,
-            "heading_loc": "恢复效果增强：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_necrophos_sadist_heal_bonus",
-                "value": 15,
-                "operation": 0
-              }
-            ],
+            "is_percentage": false,
+            "heading_loc": "每次击杀提供魔法恢复：",
+            "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -2836,33 +2837,26 @@
             "required_facet": ""
           },
           {
-            "name": "movement_speed",
+            "name": "bonus_aoe",
             "values_float": [
-              10,
-              15,
-              20,
-              25
+              0
             ],
-            "is_percentage": true,
-            "heading_loc": "移动速度减缓：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_necrophos_3",
-                "value": 20,
-                "operation": 0
-              }
-            ],
+            "is_percentage": false,
+            "heading_loc": "每次击杀提供作用范围：",
+            "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "",
-              "values": [],
+              "name": "necrolyte_profane_potency",
+              "values": [
+                40
+              ],
               "operation": 0
             },
             "required_facet": ""
           },
           {
-            "name": "movement_transfer",
+            "name": "bonus_spell_amp",
             "values_float": [
               0
             ],
@@ -2872,21 +2866,19 @@
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "necrolyte_rapid_decay",
-              "values": [
-                25
-              ],
+              "name": "",
+              "values": [],
               "operation": 0
             },
             "required_facet": ""
           },
           {
-            "name": "slow_aoe",
+            "name": "hero_multiplier",
             "values_float": [
-              750
+              6
             ],
             "is_percentage": false,
-            "heading_loc": "减速作用范围：",
+            "heading_loc": "英雄击杀提供倍数：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -2898,13 +2890,22 @@
             "required_facet": ""
           },
           {
-            "name": "bonus_damage",
+            "name": "regen_duration",
             "values_float": [
-              -25
+              7,
+              8,
+              9,
+              10
             ],
-            "is_percentage": true,
-            "heading_loc": "魔法伤害加深：",
-            "bonuses": [],
+            "is_percentage": false,
+            "heading_loc": "持续时间：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_necrophos_heartstopper_regen_duration",
+                "value": 3,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -3019,7 +3020,7 @@
           {
             "name": "AbilityManaCost",
             "values_float": [
-              75
+              0
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3036,10 +3037,7 @@
           {
             "name": "AbilityCooldown",
             "values_float": [
-              28,
-              24,
-              20,
-              16
+              0
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3059,7 +3057,7 @@
         "ability_has_shard": false,
         "ability_is_granted_by_scepter": false,
         "ability_is_granted_by_shard": false,
-        "ability_is_innate": false,
+        "ability_is_innate": true,
         "item_cost": 0,
         "item_initial_charges": 0,
         "item_neutral_tier": 4294967295,
@@ -3075,7 +3073,8 @@
         "video_shard_webm": "",
         "video_scepter_jpg": "",
         "video_scepter_mp4": "",
-        "video_scepter_web": ""
+        "video_scepter_web": "",
+        "is_inborn": 1
       },
       "facet_abilities": [
         {

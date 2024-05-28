@@ -481,6 +481,8 @@
           "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_abyssal_underlord/abyssal_underlord_aghanims_shard.jpg",
           "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_abyssal_underlord/abyssal_underlord_aghanims_shard.mp4",
           "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_abyssal_underlord/abyssal_underlord_aghanims_shard.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -820,6 +822,8 @@
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/file/ba160793-dec8-4006-8639-978551b5f2dd.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/file/e8e784f0-2a9c-4536-a50f-88814298a29a.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/file/8c8a70c6-1a40-4857-85fb-68ae9b4006b0.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             ""
@@ -1253,6 +1257,8 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_abyssal_underlord/abyssal_underlord_atrophy_aura.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_abyssal_underlord/abyssal_underlord_atrophy_aura.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_abyssal_underlord/abyssal_underlord_atrophy_aura.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "孽主在拥有衰退光环的攻击力加成时攻击具有分裂效果。",
             ""
@@ -1639,6 +1645,8 @@
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/file/225ad72a-09fc-4496-81d5-222af9850434.png",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/file/cb45d7f3-7374-48bb-9b95-6a0c1bea1a93.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/file/6a621d0a-2579-4431-b1ec-45463a4bb215.webm",
+          "is_inborn": 0,
+          "ability_is_innate": 0,
           "facets_loc": [
             "",
             "孽主穿过恶魔之扉后会召唤不可控的恶魔战士和射手，攻击附近敌人。这些单位对建筑造成%underling_building_damage_reduction_tooltip%%%伤害。"
@@ -2850,6 +2858,447 @@
           "gradient_id": 3
         }
       ],
+      "new_abilities": {
+        "id": 5615,
+        "name": "abyssal_underlord_atrophy_aura",
+        "name_loc": "衰退光环",
+        "desc_loc": "周围所有敌方单位遭到了削弱，损失部分基础攻击力。如果敌方英雄在光环范围内死亡，孽主将获得临时的额外攻击力加成。",
+        "lore_loc": "光是站在孽主面前就能感受到自己的战意从灵魂里被榨干。",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "facets_loc": [
+          "孽主在拥有衰退光环的攻击力加成时攻击具有分裂效果。",
+          ""
+        ],
+        "type": 0,
+        "behavior": "65538",
+        "target_team": 2,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 5,
+        "dispellable": 3,
+        "max_level": 5,
+        "cast_ranges": [
+          0
+        ],
+        "cast_points": [
+          0
+        ],
+        "channel_times": [
+          0
+        ],
+        "cooldowns": [
+          0
+        ],
+        "durations": [
+          0
+        ],
+        "damages": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mana_costs": [
+          0
+        ],
+        "gold_costs": [],
+        "health_costs": [],
+        "special_values": [
+          {
+            "name": "radius",
+            "values_float": [
+              900
+            ],
+            "is_percentage": false,
+            "heading_loc": "作用范围：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "damage_reduction_pct",
+            "values_float": [
+              0,
+              6,
+              14,
+              22,
+              30
+            ],
+            "is_percentage": true,
+            "heading_loc": "基础攻击力降低：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_underlord_3",
+                "value": 10,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_damage_from_creep",
+            "values_float": [
+              1,
+              3,
+              5,
+              7,
+              9
+            ],
+            "is_percentage": false,
+            "heading_loc": "额外攻击力（小兵死亡）：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_underlord_3",
+                "value": 10,
+                "operation": 3
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_damage_from_hero",
+            "values_float": [
+              25,
+              30,
+              35,
+              40,
+              45
+            ],
+            "is_percentage": false,
+            "heading_loc": "额外攻击力（英雄死亡）：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_underlord_3",
+                "value": 10,
+                "operation": 3
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_damage_duration",
+            "values_float": [
+              25,
+              35,
+              45,
+              55,
+              65
+            ],
+            "is_percentage": false,
+            "heading_loc": "持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_shared_by_allies_pct",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "cleave_damage_pct",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "分裂伤害：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "abyssal_underlord_demons_reach",
+              "values": [
+                35
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "cleave_starting_width",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "abyssal_underlord_demons_reach",
+              "values": [
+                150
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "cleave_angle",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "abyssal_underlord_demons_reach",
+              "values": [
+                75
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "cleave_distance_base",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "分裂距离（基础）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "abyssal_underlord_demons_reach",
+              "values": [
+                100
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "cleave_distance_per_stack",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "分裂距离（每层叠加）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "abyssal_underlord_demons_reach",
+              "values": [
+                5
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastRange",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChannelTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityDuration",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastPoint",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCharges",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChargeRestoreTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCooldown",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "ability_is_innate": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0,
+        "img": "",
+        "video_jpg": "",
+        "video_mp4": "",
+        "video_webm": "",
+        "video_shard_jpg": "",
+        "video_shard_mp4": "",
+        "video_shard_webm": "",
+        "video_scepter_jpg": "",
+        "video_scepter_mp4": "",
+        "video_scepter_web": "",
+        "is_inborn": 1
+      },
       "facet_abilities": [
         {
           "abilities": []
