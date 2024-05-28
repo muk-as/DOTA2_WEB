@@ -55,6 +55,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 0,
           "behavior": "134217752",
           "target_team": 3,
@@ -424,6 +428,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -433,7 +438,8 @@
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_boulder_smash.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_boulder_smash.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_boulder_smash.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_boulder_smash.webm"
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_boulder_smash.webm",
+          "is_inborn": 0
         },
         {
           "id": 5609,
@@ -447,6 +453,10 @@
           ],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "残岩在翻滚时经过不会被摧毁。"
+          ],
           "type": 0,
           "behavior": "134742032",
           "target_team": 0,
@@ -844,6 +854,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -853,7 +864,8 @@
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_rolling_boulder.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_rolling_boulder.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_rolling_boulder.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_rolling_boulder.webm"
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_rolling_boulder.webm",
+          "is_inborn": 0
         },
         {
           "id": 5610,
@@ -867,6 +879,10 @@
           ],
           "shard_loc": "可以抓取友军。",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 0,
           "behavior": "134217752",
           "target_team": 1,
@@ -877,7 +893,10 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            1100
+            1000,
+            1100,
+            1200,
+            1300
           ],
           "cast_points": [
             0.1
@@ -1179,6 +1198,7 @@
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1191,10 +1211,11 @@
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_geomagnetic_grip.webm",
           "video_shard_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/earth_spirit/earth_spirit_aghanims_shard.jpg",
           "video_shard_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/earth_spirit/earth_spirit_aghanims_shard.mp4",
-          "video_shard_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/earth_spirit/earth_spirit_aghanims_shard.webm"
+          "video_shard_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/earth_spirit/earth_spirit_aghanims_shard.webm",
+          "is_inborn": 0
         },
         {
-          "id": 5611,
+          "id": 1395,
           "name": "earth_spirit_stone_caller",
           "name_loc": "残岩",
           "desc_loc": "在指定位置召唤一块残岩。残岩没有视野，为无敌状态，可以加强大地之灵的技能效果。召唤残岩需要消耗一点能量点数。英雄每升%hero_level_increment%级都会额外获得能量点数。",
@@ -1202,6 +1223,10 @@
           "notes_loc": [],
           "shard_loc": "残岩提供地面视野。残岩的最大能量点数增加%shard_tooltip%点。",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "拥有固定的冷却时间，而不是能量点数。"
+          ],
           "type": 0,
           "behavior": "8724152400",
           "target_team": 0,
@@ -1237,12 +1262,276 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": null,
+          "special_values": [
+            {
+              "name": "duration",
+              "values_float": [
+                60
+              ],
+              "is_percentage": false,
+              "heading_loc": "持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_stepping_stone",
+                "values": [
+                  20
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "polarization_distance",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vision_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rolling_offset_distance",
+              "values_float": [
+                150
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "hero_level_increment",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "is_stepping_stone",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_stepping_stone",
+                "values": [
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                1100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_stepping_stone",
+                "values": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                18
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_stepping_stone",
+                "values": [
+                  4
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_stepping_stone",
+                "values": [
+                  0
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_stepping_stone",
+                "values": [
+                  4
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            }
+          ],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1252,7 +1541,8 @@
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_stone_caller.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_stone_caller.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_stone_caller.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_stone_caller.webm"
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_stone_caller.webm",
+          "is_inborn": 1
         },
         {
           "id": 5648,
@@ -1265,6 +1555,10 @@
           ],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 0,
           "behavior": "8589934601",
           "target_team": 4,
@@ -1511,6 +1805,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": true,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1523,7 +1818,8 @@
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_petrify.webm",
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_earth_spirit/earth_spirit_aghanims_scepter.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_earth_spirit/earth_spirit_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_earth_spirit/earth_spirit_aghanims_scepter.webm"
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_earth_spirit/earth_spirit_aghanims_scepter.webm",
+          "is_inborn": 0
         },
         {
           "id": 5612,
@@ -1534,6 +1830,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "磁化一个残岩会让大地之灵获得攻击力加成，持续%magnetized_rocks_buff_self_duration%秒。不会叠加。",
+            ""
+          ],
           "type": 1,
           "behavior": "134217732",
           "target_team": 0,
@@ -1944,6 +2244,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1953,19 +2254,24 @@
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_magnetize.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_magnetize.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_magnetize.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_magnetize.webm"
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/earth_spirit_magnetize.webm",
+          "is_inborn": 0
         }
       ],
       "talents": [
         {
           "id": 324,
           "name": "special_bonus_unique_earth_spirit_4",
-          "name_loc": "+{s:value} 巨石翻滚距离",
+          "name_loc": "+{s:bonus_distance} 巨石翻滚距离",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2003,17 +2309,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "value",
-              "values_float": [
-                200
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -2022,7 +2317,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2033,7 +2334,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2044,7 +2351,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2055,7 +2368,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2066,7 +2385,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2077,7 +2402,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2088,7 +2419,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2099,7 +2436,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2107,6 +2450,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2123,6 +2467,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2168,7 +2516,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -2179,7 +2533,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2190,7 +2550,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2201,7 +2567,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2212,7 +2584,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2223,7 +2601,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2234,7 +2618,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2245,7 +2635,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2256,7 +2652,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2264,6 +2666,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2280,6 +2683,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2325,7 +2732,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2336,7 +2749,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2347,7 +2766,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2358,7 +2783,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2369,7 +2800,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2380,7 +2817,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2391,7 +2834,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2402,7 +2851,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2410,6 +2865,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2420,12 +2876,16 @@
         {
           "id": 6203,
           "name": "special_bonus_unique_earth_spirit",
-          "name_loc": "+{s:value} 巨石翻滚伤害",
+          "name_loc": "+{s:bonus_damage} 巨石翻滚伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2463,17 +2923,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "value",
-              "values_float": [
-                110
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -2482,7 +2931,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2493,7 +2948,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2504,7 +2965,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2515,7 +2982,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2526,7 +2999,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2537,7 +3016,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2548,7 +3033,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2559,7 +3050,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2567,6 +3064,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2583,6 +3081,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2628,7 +3130,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2639,7 +3147,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2650,7 +3164,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2661,7 +3181,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2672,7 +3198,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2683,7 +3215,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2694,7 +3232,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2705,7 +3249,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2713,6 +3263,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2729,6 +3280,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2774,7 +3329,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2785,7 +3346,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2796,7 +3363,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2807,7 +3380,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2818,7 +3397,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2829,7 +3414,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2840,7 +3431,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2851,7 +3448,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2859,6 +3462,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2875,6 +3479,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2920,7 +3528,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2931,7 +3545,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2942,7 +3562,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2953,7 +3579,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2964,7 +3596,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2975,7 +3613,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2986,7 +3630,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2997,7 +3647,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -3005,6 +3661,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -3015,12 +3672,16 @@
         {
           "id": 6640,
           "name": "special_bonus_unique_earth_spirit_3",
-          "name_loc": "+{s:value}秒 巨石翻滚眩晕",
+          "name_loc": "+{s:bonus_stun_duration}秒 巨石翻滚眩晕",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -3058,17 +3719,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "value",
-              "values_float": [
-                0.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -3077,7 +3727,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -3088,7 +3744,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -3099,7 +3761,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -3110,7 +3778,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -3121,7 +3795,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -3132,7 +3812,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -3143,7 +3829,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -3154,7 +3846,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -3162,6 +3860,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -3174,7 +3873,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_earth_spirit.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/npc_dota_hero_earth_spirit.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/npc_dota_hero_earth_spirit.webm",
-      "update_time": 1706756581,
+      "update_time": 1716890553,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_earth_spirit.png",
       "facets": [
         {
@@ -3331,6 +4030,25 @@
             "required_facet": ""
           },
           {
+            "name": "is_stepping_stone",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "earth_spirit_stepping_stone",
+              "values": [
+                1
+              ],
+              "operation": 5
+            },
+            "required_facet": ""
+          },
+          {
             "name": "AbilityCastRange",
             "values_float": [
               1100
@@ -3461,7 +4179,7 @@
             "facet_bonus": {
               "name": "earth_spirit_stepping_stone",
               "values": [
-                15
+                0
               ],
               "operation": 0
             },
@@ -3508,7 +4226,8 @@
         "video_shard_webm": "",
         "video_scepter_jpg": "",
         "video_scepter_mp4": "",
-        "video_scepter_web": ""
+        "video_scepter_web": "",
+        "is_inborn": 1
       },
       "facet_abilities": [
         {

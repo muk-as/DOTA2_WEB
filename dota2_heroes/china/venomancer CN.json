@@ -16,7 +16,7 @@
       "str_gain": 2,
       "agi_base": 24,
       "agi_gain": 2,
-      "int_base": 1,
+      "int_base": 19,
       "int_gain": 1.4,
       "attack_capability": 2,
       "role_levels": [
@@ -53,12 +53,16 @@
           "desc_loc": "沿直线射出一个毒液球，碰到的敌人受到初始伤害和持续伤害，并受到减速效果影响。瘴气在持续时间内每3秒造成一次持续伤害。",
           "lore_loc": "一种由基迪岛丛林里搜集的各种毒针、毒液和毒素混合而成的药剂，几乎没有人能在沾到它后存活下来。",
           "notes_loc": [
-            "瘴气可以致死。受到瘴气作用的单位在生命值低于最大值25%的时候可以被反补。",
+            "瘴气可以致死。",
             "技能持续时间内每%tick_interval%秒造成一次伤害。",
             "初始减速效果为%movement_slow%%%，减速效果将逐渐降低。"
           ],
-          "shard_loc": "提升行进距离，并且瘴气击中敌方英雄时在其身旁召唤瘟疫守卫。",
+          "shard_loc": "如果瘴气被任意方式驱散，目标都将受到%explosion_damage%点伤害并被眩晕%explosion_stun_duration%秒。",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 0,
           "behavior": "48",
           "target_team": 0,
@@ -441,9 +445,10 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -453,7 +458,11 @@
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_venomous_gale.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_venomous_gale.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_venomous_gale.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_venomous_gale.webm"
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_venomous_gale.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_venomancer/venomancer_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_venomancer/venomancer_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_venomancer/venomancer_aghanims_shard.webm",
+          "is_inborn": 0
         },
         {
           "id": 5179,
@@ -466,7 +475,11 @@
             "毒刺造成的持续性伤害不会打断物品的回复效果，也不能使闪烁匕首进行冷却状态。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "目标身上拥有剧毒术士的负面状态时，每个负面状态都会使剧毒术士的攻击拥有额外基础伤害。不会与瘟疫守卫的攻击叠加。",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 0,
           "behavior": "2",
           "target_team": 0,
@@ -475,7 +488,7 @@
           "damage": 2,
           "immunity": 4,
           "dispellable": 2,
-          "max_level": 4,
+          "max_level": 5,
           "cast_ranges": [
             0
           ],
@@ -752,10 +765,11 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -765,7 +779,11 @@
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_sting.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_sting.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_sting.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_sting.webm"
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_sting.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_venomancer/venomancer_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_venomancer/venomancer_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_venomancer/venomancer_aghanims_scepter.webm",
+          "is_inborn": 1
         },
         {
           "id": 5180,
@@ -776,10 +794,14 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "瘟疫守卫可以附着在友军身上。"
+          ],
           "type": 0,
           "behavior": "16",
-          "target_team": 0,
-          "target_type": 0,
+          "target_team": 1,
+          "target_type": 1,
           "flags": 0,
           "damage": 1,
           "immunity": 3,
@@ -855,6 +877,52 @@
               "required_facet": ""
             },
             {
+              "name": "ward_multiplier",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_venomancer",
+                  "value": 2.5,
+                  "operation": 1
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ward_model_scale",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_venomancer",
+                  "value": 1.5,
+                  "operation": 1
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "ward_hp_tooltip",
               "values_float": [
                 120,
@@ -883,10 +951,10 @@
             {
               "name": "ward_damage_tooltip",
               "values_float": [
-                120,
-                230,
-                340,
-                450
+                14,
+                22,
+                30,
+                38
               ],
               "is_percentage": false,
               "heading_loc": "守卫攻击力：",
@@ -897,46 +965,6 @@
                   "operation": 1
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ward_hp",
-              "values_float": [
-                240,
-                460,
-                680,
-                900
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ward_damage",
-              "values_float": [
-                26,
-                44,
-                62,
-                80
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1117,6 +1145,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1126,135 +1155,8 @@
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_plague_ward.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_plague_ward.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_plague_ward.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_plague_ward.webm"
-        },
-        {
-          "id": 986,
-          "name": "venomancer_latent_poison",
-          "name_loc": "蛰毒",
-          "desc_loc": "对目标施加一个弱毒素，造成小幅减速和伤害。如果该毒素被任意方式驱散，目标都将受到高额伤害并被眩晕。",
-          "lore_loc": "随着剧毒术士的本源得到稳固，基迪岛上最为骇人的毒物露出真面目也只是时间问题。",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "type": 0,
-          "behavior": "8589934601",
-          "target_team": 2,
-          "target_type": 1,
-          "flags": 0,
-          "damage": 2,
-          "immunity": 3,
-          "dispellable": 2,
-          "max_level": 1,
-          "cast_ranges": [
-            800
-          ],
-          "cast_points": [
-            0.2
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            20
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            75
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": null,
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": true,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/venomancer_latent_poison.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.webm",
-          "video_shard_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_aghanims_shard.jpg",
-          "video_shard_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_aghanims_shard.mp4",
-          "video_shard_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_aghanims_shard.webm"
-        },
-        {
-          "id": 5181,
-          "name": "venomancer_poison_nova",
-          "name_loc": "剧毒新星",
-          "desc_loc": "每当剧毒术士阵亡或瘴气效果在一名敌方英雄身上提前结束就会爆出一个剧毒之环。被剧毒击中的敌人会持续受到不致死的魔法伤害，并且魔法抗性降低。这个效果每%trigger_cd%秒触发一次，无法被刷新。",
-          "lore_loc": "浓酸丛林中的生物通常会对攻击者释放毒性瘴气来保命；而剧毒术士却将这种瘟疫扩散出基迪岛。",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "type": 0,
-          "behavior": "8589934595",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 2,
-          "immunity": 4,
-          "dispellable": 3,
-          "max_level": 1,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": null,
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.webm",
-          "video_scepter_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_aghanims_scepter.webm"
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_plague_ward.webm",
+          "is_inborn": 0
         },
         {
           "id": 1105,
@@ -1265,6 +1167,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "恶性瘟疫可以扩散%spread_count%次。第一次之后的扩散的即时伤害减少%impact_damage_reduce%%%。",
+            ""
+          ],
           "type": 1,
           "behavior": "33554440",
           "target_team": 2,
@@ -1624,16 +1530,18 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/venomancer_noxious_plague.png",
-          "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_noxious_plague.jpg",
-          "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_noxious_plague.mp4",
-          "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/venomancer/venomancer_noxious_plague.webm"
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/venomancer_latent_poison.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/venomancer_poison_nova.webm",
+          "is_inborn": 0
         }
       ],
       "talents": [
@@ -1646,6 +1554,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -1691,7 +1603,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -1702,7 +1620,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -1713,7 +1637,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -1724,7 +1654,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -1735,7 +1671,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -1746,7 +1688,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -1757,7 +1705,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -1768,7 +1722,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -1776,6 +1736,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1792,6 +1753,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -1837,7 +1802,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -1848,7 +1819,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -1859,7 +1836,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -1870,7 +1853,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -1881,7 +1870,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -1892,7 +1887,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -1903,7 +1904,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -1914,7 +1921,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -1922,6 +1935,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1938,6 +1952,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -1983,7 +2001,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -1994,7 +2018,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2005,7 +2035,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2016,7 +2052,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2027,7 +2069,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2038,7 +2086,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2049,7 +2103,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2060,7 +2120,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2071,7 +2137,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2079,6 +2151,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2095,6 +2168,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2140,7 +2217,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2151,7 +2234,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2162,7 +2251,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2173,7 +2268,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2184,7 +2285,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2195,7 +2302,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2206,7 +2319,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2217,7 +2336,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2225,6 +2350,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2235,12 +2361,16 @@
         {
           "id": 6980,
           "name": "special_bonus_unique_venomancer_4",
-          "name_loc": "+{s:bonus_health_damage}% 恶性瘟疫最大生命值伤害",
+          "name_loc": "+{s:bonus_health_damage}% 恶性瘟疫最大生命伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2286,7 +2416,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2297,7 +2433,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2308,7 +2450,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2319,7 +2467,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2330,7 +2484,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2341,7 +2501,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2352,7 +2518,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2363,7 +2535,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2371,6 +2549,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2387,6 +2566,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2432,7 +2615,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2443,7 +2632,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2454,7 +2649,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2465,7 +2666,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2476,7 +2683,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2487,7 +2700,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2498,7 +2717,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2509,7 +2734,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2517,6 +2748,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2533,6 +2765,10 @@
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2578,7 +2814,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -2589,7 +2831,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2600,7 +2848,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2611,7 +2865,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2622,7 +2882,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2633,7 +2899,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2644,7 +2916,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2655,7 +2933,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2666,7 +2950,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2674,6 +2964,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2684,12 +2975,16 @@
         {
           "id": 6058,
           "name": "special_bonus_unique_venomancer",
-          "name_loc": "{s:value}倍 瘟疫守卫生命/攻击力",
+          "name_loc": "{s:bonus_ward_hp_tooltip}倍 瘟疫守卫生命/攻击力",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
           "type": 2,
           "behavior": "2",
           "target_team": 0,
@@ -2727,17 +3022,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "value",
-              "values_float": [
-                2.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": []
-            },
-            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -2746,7 +3030,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChannelTime",
@@ -2757,7 +3047,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityDuration",
@@ -2768,7 +3064,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -2779,7 +3081,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCharges",
@@ -2790,7 +3098,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityChargeRestoreTime",
@@ -2801,7 +3115,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -2812,7 +3132,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCooldown",
@@ -2823,7 +3149,13 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": []
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
@@ -2831,6 +3163,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -2843,7 +3176,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_venomancer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/npc_dota_hero_venomancer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/npc_dota_hero_venomancer.webm",
-      "update_time": 1711959498,
+      "update_time": 1716890468,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_venomancer.png",
       "facets": [
         {
@@ -2863,6 +3196,330 @@
           "gradient_id": 0
         }
       ],
+      "new_abilities": {
+        "id": 5179,
+        "name": "venomancer_poison_sting",
+        "name_loc": "毒刺",
+        "desc_loc": "在剧毒术士的普通攻击中加入毒性伤害，可以减缓敌人的移动速度。",
+        "lore_loc": "造成他变异的生物身上的麻痹毒刺，现在属于剧毒术士了。",
+        "notes_loc": [
+          "毒刺的伤害可以致死。",
+          "毒刺造成的持续性伤害不会打断物品的回复效果，也不能使闪烁匕首进行冷却状态。"
+        ],
+        "shard_loc": "",
+        "scepter_loc": "目标身上拥有剧毒术士的负面状态时，每个负面状态都会使剧毒术士的攻击拥有额外基础伤害。不会与瘟疫守卫的攻击叠加。",
+        "facets_loc": [
+          "",
+          ""
+        ],
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 5,
+        "cast_ranges": [
+          0
+        ],
+        "cast_points": [
+          0
+        ],
+        "channel_times": [
+          0
+        ],
+        "cooldowns": [
+          0
+        ],
+        "durations": [
+          0
+        ],
+        "damages": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mana_costs": [
+          0
+        ],
+        "gold_costs": [],
+        "health_costs": [],
+        "special_values": [
+          {
+            "name": "duration",
+            "values_float": [
+              3,
+              6,
+              9,
+              12,
+              15
+            ],
+            "is_percentage": false,
+            "heading_loc": "持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "damage",
+            "values_float": [
+              2,
+              6,
+              14,
+              22,
+              30
+            ],
+            "is_percentage": false,
+            "heading_loc": "每秒伤害：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "movement_speed",
+            "values_float": [
+              -3,
+              -6,
+              -9,
+              -12,
+              -15
+            ],
+            "is_percentage": true,
+            "heading_loc": "移动速度减缓：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_venomancer_2",
+                "value": 5,
+                "operation": 2
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "hp_regen_reduction",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_venomancer_poisonsting_regen_reduction",
+                "value": 15,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_dmg_per_debuff_pct",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "每个负面效果基础伤害：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [
+              15
+            ],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastRange",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChannelTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityDuration",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastPoint",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCharges",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityChargeRestoreTime",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCooldown",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "ability_is_innate": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0,
+        "img": "",
+        "video_jpg": "",
+        "video_mp4": "",
+        "video_webm": "",
+        "video_shard_jpg": "",
+        "video_shard_mp4": "",
+        "video_shard_webm": "",
+        "video_scepter_jpg": "",
+        "video_scepter_mp4": "",
+        "video_scepter_web": "",
+        "is_inborn": 1
+      },
       "facet_abilities": [
         {
           "abilities": []
