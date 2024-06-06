@@ -1,0 +1,3363 @@
+{
+  "patch_number": "7.36b",
+  "patch_name": "7.36b",
+  "patch_timestamp": 1717657200,
+  "generic": [
+    {
+      "indent_level": 1,
+      "hide_dot": true,
+      "note": "<span class=\"Subtitle\">Vision Sharing</span>"
+    },
+    {
+      "indent_level": 1,
+      "note": "Updated how vision sharing functions with non player controlled units",
+      "info": "Affects the Mars facet \"Blood Sport\" and the Night Stalker facet \"Blinding Void\""
+    },
+    {
+      "indent_level": 2,
+      "note": "Dire/Radiant buildings and creeps can now be affected by vision sharing. While their individual vision is unlinked, they do not provide any shared vision"
+    },
+    {
+      "indent_level": 1,
+      "note": "Rules for how player controlled units share vision is unchanged"
+    },
+    {
+      "indent_level": 2,
+      "note": "Observer and Sentry Wards always use the team's vision regardless of the status of who placed them"
+    },
+    {
+      "indent_level": 2,
+      "note": "Other controlled units use the vision status of the player's hero"
+    },
+    {
+      "indent_level": 1,
+      "postfix_lines": 1,
+      "hide_dot": true,
+      "note": "<br>"
+    },
+    {
+      "indent_level": 1,
+      "hide_dot": true,
+      "note": "<span class=\"Subtitle\">Forced Movement & Knockback</span>"
+    },
+    {
+      "indent_level": 1,
+      "note": "Forced Movement is any effect that forcibly moves a unit"
+    },
+    {
+      "indent_level": 1,
+      "note": "Knockback is any effect that pushes or pulls a unit a fixed distance over a short period of time"
+    },
+    {
+      "indent_level": 2,
+      "note": "Does not apply to constant applications of movement speed",
+      "info": "Example: Windranger's Gale Force"
+    },
+    {
+      "indent_level": 2,
+      "note": "Does not apply to effects that move units to a fixed point",
+      "info": "Example: Dark Seer's Vacuum"
+    },
+    {
+      "indent_level": 1,
+      "note": "The following abilities are considered Knockback"
+    },
+    {
+      "indent_level": 2,
+      "note": "Arc Warden's Magnetic Field"
+    },
+    {
+      "indent_level": 2,
+      "note": "Batrider's Flame Break"
+    },
+    {
+      "indent_level": 2,
+      "note": "Beastmaster's Primal Roar"
+    },
+    {
+      "indent_level": 2,
+      "note": "Bloodseeker's Rupture with Arterial Spray"
+    },
+    {
+      "indent_level": 2,
+      "note": "Clockwerk's Power Cogs"
+    },
+    {
+      "indent_level": 2,
+      "note": "Disruptor's Electromagnetic Repulsion"
+    },
+    {
+      "indent_level": 2,
+      "note": "Drow Ranger's Gust"
+    },
+    {
+      "indent_level": 2,
+      "note": "Earth Spirit's Boulder Smash"
+    },
+    {
+      "indent_level": 2,
+      "note": "Invoker's Defeaning Blast"
+    },
+    {
+      "indent_level": 2,
+      "note": "Keeper of the Light's Blinding Light"
+    },
+    {
+      "indent_level": 2,
+      "note": "Magnus' Shockwave"
+    },
+    {
+      "indent_level": 2,
+      "note": "Magnus' Reverse Reverse Polarity"
+    },
+    {
+      "indent_level": 2,
+      "note": "Mars' God's Rebuke"
+    },
+    {
+      "indent_level": 2,
+      "note": "Morphling's Adaptive Strike"
+    },
+    {
+      "indent_level": 2,
+      "note": "Puck's Jostling Rift"
+    },
+    {
+      "indent_level": 2,
+      "note": "Roshan's Walk"
+    },
+    {
+      "indent_level": 2,
+      "note": "Queen of Pain's Sonic Wave"
+    },
+    {
+      "indent_level": 2,
+      "note": "Sniper's Headshot"
+    },
+    {
+      "indent_level": 2,
+      "note": "Spirit Breaker's Greater Bash"
+    },
+    {
+      "indent_level": 2,
+      "note": "Tusk's Walrus Kick"
+    },
+    {
+      "indent_level": 2,
+      "note": "Force Staff"
+    },
+    {
+      "indent_level": 2,
+      "note": "Hurricane Pike"
+    },
+    {
+      "indent_level": 2,
+      "note": "Havoc Hammer"
+    }
+  ],
+  "items": [
+    {
+      "ability_id": 151,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Unholy Strength no longer provides slow resistance"
+        }
+      ]
+    },
+    {
+      "ability_id": 127,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe cost increased from 550 to 750 (Total cost increased from 2100 to 2300)"
+        }
+      ]
+    },
+    {
+      "ability_id": 121,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Health bonus decreased from +500 to +450"
+        },
+        {
+          "indent_level": 1,
+          "note": "Mana bonus decreased from +500 to +450"
+        }
+      ]
+    },
+    {
+      "ability_id": 242,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Guard Damage Block now equals to 70 + 2.5% of the caster's max health, instead of Strength"
+        }
+      ]
+    },
+    {
+      "ability_id": 692,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength bonus decreased from +14 to +10"
+        },
+        {
+          "indent_level": 1,
+          "note": "Eternal Endurance Stack Duration decreased from 6s to 5s"
+        }
+      ]
+    },
+    {
+      "ability_id": 164,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Dominate now provides the experience bounty of the dominated creep"
+        }
+      ]
+    },
+    {
+      "ability_id": 635,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Dominate now provides the experience bounty of the dominated creep"
+        }
+      ]
+    },
+    {
+      "ability_id": 269,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Recipe cost decreased from 900 to 800 (Total cost decreased from 2350 to 2250)"
+        }
+      ]
+    },
+    {
+      "ability_id": 225,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Nullify Duration decreased from 5s to 4s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Nullify Now also slows the target by 10% for its duration"
+        }
+      ]
+    },
+    {
+      "ability_id": 235,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Health bonus decreased from 550 to 500"
+        },
+        {
+          "indent_level": 1,
+          "note": "Mana bonus decreased from 550 to 500"
+        }
+      ]
+    },
+    {
+      "ability_id": 190,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Magic Weakness can now be cast without interrupting channels"
+        }
+      ]
+    },
+    {
+      "ability_id": 610,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Cyclone Movement Speed decreased from 360 to 300"
+        }
+      ]
+    }
+  ],
+  "neutral_items": [
+    {
+      "ability_id": 349,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Replenish Mana mana restored decreased from 75 to 65"
+        }
+      ]
+    },
+    {
+      "ability_id": 946,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Hound damage increased from 15 to 20"
+        }
+      ]
+    },
+    {
+      "ability_id": 1158,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Tunnel Vision Spell amp decreased from 10% to 8%"
+        }
+      ]
+    },
+    {
+      "ability_id": 1167,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Day HP Regen bonus decreased from +12 to +10"
+        }
+      ]
+    },
+    {
+      "ability_id": 378,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Slow duration increased from 4s to 5s"
+        }
+      ]
+    },
+    {
+      "ability_id": 376,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Greater Healing healing amp decreased from 14% to 12%"
+        }
+      ]
+    },
+    {
+      "ability_id": 950,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Armor bonus decreased from +7 to +6"
+        }
+      ]
+    },
+    {
+      "ability_id": 825,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Health bonus decreased from 250 to 225"
+        },
+        {
+          "indent_level": 1,
+          "note": "Health Regen bonus decreased from +20 to +18"
+        }
+      ]
+    },
+    {
+      "ability_id": 364,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength bonus decreased from +16 to +14"
+        }
+      ]
+    },
+    {
+      "ability_id": 1168,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Armor bonus decreased from 12 to 10"
+        }
+      ]
+    },
+    {
+      "ability_id": 585,
+      "postfix_lines": 1,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Bottled Lightning strike interval increased from 3s to 3.5s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Bottled Lightning strike interval no longer decreases with cooldown reduction"
+        }
+      ]
+    },
+    {
+      "ability_id": 2192,
+      "ability_notes": [
+        {
+          "indent_level": 1,
+          "note": "Health Regen bonus increased from +5 to +7"
+        }
+      ]
+    }
+  ],
+  "heroes": [
+    {
+      "hero_id": 1,
+      "subsections": [
+        {
+          "title": "Magebane's Mirror",
+          "style": "hero_facet",
+          "facet": "antimage_magebanes_mirror",
+          "facet_icon": "ricochet",
+          "facet_color": "Purple1",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Reflected spells now have a 20% spell amp ",
+              "info": "Affects both Counterspell and Counterspell Ally"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 2,
+      "subsections": [
+        {
+          "title": "One Man Army",
+          "style": "hero_facet",
+          "facet": "axe_one_man_army",
+          "facet_icon": "strength",
+          "facet_color": "Red0",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonuses now start fading immediately after approaching an ally, over the 5s linger duration"
+            },
+            {
+              "indent_level": 1,
+              "note": "Radius increased from 600 to 700"
+            },
+            {
+              "indent_level": 1,
+              "note": "Bonus Strength can now be broken"
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Counter Helix Damage decreased from +30 to +20"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Culling Blade Damage decreased from +150 to +125"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1201,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Armor per kill decreased from 0.4/0.6/0.8/1.0 to 0.2/0.3/0.4/0.5"
+            },
+            {
+              "indent_level": 1,
+              "note": "Culling Blade multiplier increased from 2x to 3x"
+            }
+          ]
+        },
+        {
+          "ability_id": 5007,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Armor decreased from 14/16/18/20 to 12/13/14/15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 4,
+      "abilities": [
+        {
+          "ability_id": 1203,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max HP as heal increased from 1% per level to 1.5% per level"
+            }
+          ]
+        },
+        {
+          "ability_id": 5015,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max Health Damage per second decreased from 1.5% to 1.4%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5016,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 110/180/250/320 to 115/190/265/340"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 6,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "fix multishot being canceled by shard-cast"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5022,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Chance increased from 20/30/40% to 30/35/40%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 7,
+      "subsections": [
+        {
+          "title": "Slugger",
+          "style": "hero_facet",
+          "facet": "earthshaker_slugger",
+          "facet_icon": "movement",
+          "facet_color": "Yellow1",
+          "abilities": [
+            {
+              "ability_id": 5024,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Kill Knockback Max Health as Damage increased from 5% to 7%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 8,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength gain decreased from 2.2 to 2.0"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5028,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost increased from 100 to 105/110/115/120"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 9,
+      "subsections": [
+        {
+          "title": "Solar Flare",
+          "style": "hero_facet",
+          "facet": "mirana_sunlight",
+          "facet_icon": "sun",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 1214,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Attack Speed and Damage Increase Rate increased from 8/12/16 to 10/15/20"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 10,
+      "subsections": [
+        {
+          "title": "Flow",
+          "style": "hero_facet",
+          "facet": "morphling_str",
+          "facet_icon": "strength",
+          "facet_color": "Red0",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Maximum cooldown reduction increased from 50% to 60%"
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Adaptive Strike Stun Duration increased from +0.8s to +1.0s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Waveform Attack Damage increased from +50% to +75%"
+        }
+      ]
+    },
+    {
+      "hero_id": 11,
+      "subsections": [
+        {
+          "title": "Lasting Presence",
+          "style": "hero_facet",
+          "facet": "nevermore_lasting_presence",
+          "facet_icon": "armor_broken",
+          "facet_color": "Gray0",
+          "abilities": [
+            {
+              "ability_id": 5063,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Hero Reduction Duration increased from 60s to 70s"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Shadowmire",
+          "style": "hero_facet",
+          "facet": "nevermore_shadowmire",
+          "facet_icon": "slow",
+          "facet_color": "Red0",
+          "abilities": [
+            {
+              "ability_id": 5059,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Movement speed slow decreased from 10% to 8%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 12,
+      "subsections": [
+        {
+          "title": "Divergence",
+          "style": "hero_facet",
+          "facet": "phantom_lancer_divergence",
+          "facet_icon": "summons",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 5067,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Illusion Damage decreased from 24/26/28% to 22/24/26%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 13,
+      "abilities": [
+        {
+          "ability_id": 1222,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Spell dodge multiplier increased from 3x to 4x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 14,
+      "subsections": [
+        {
+          "title": "Flayer's Hook",
+          "style": "hero_facet",
+          "facet": "pudge_flayers_hook",
+          "facet_icon": "pudge_hook",
+          "facet_color": "Red0",
+          "abilities": [
+            {
+              "ability_id": 5075,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Projectile Speed and Cast Range increased by 15%"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Damage increased from 75/110/145/180 to 80/120/160/200"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Meat Hook Damage increased from +140 to +150"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Dismember Damage/Heal decreased from 1.8x to 1.5x"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5074,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost increased from 35/50/65/80 to 50/60/70/80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 16,
+      "subsections": [
+        {
+          "title": "Dust Devil",
+          "style": "hero_facet",
+          "facet": "sand_king_dust_devil",
+          "facet_icon": "speed",
+          "facet_color": "Yellow1",
+          "abilities": [
+            {
+              "ability_id": 5103,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Radius decreased from 425/500/575/650 to 300/350/400/450"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "No longer centers on Sand King after Burrowstrike"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sandshroud",
+          "style": "hero_facet",
+          "facet": "sand_king_sandshroud",
+          "facet_icon": "vision",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 5103,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Radius increased from 550/625/700/775 to 575/650/725/800"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Burrowstrike Stun decreased from 0.4s to 0.3s"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Sand Storm Damage Per Second decreased from 15 to 10"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1226,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max Health Damage rescaled from 8/10/12/14% to 6/9/12/15%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5103,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter damage and stun duration are now 70% of Burrowstrike's current damage and stun"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter spine interval increased from 0.2s to 0.4s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter spines per interval increased from 2 to 3"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter spines no longer appear if Sand King is outside the Sand Storm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 17,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Mana Regen decreased from 0.2 to 0"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5098,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage decreased from 120/180/240/300 to 100/160/220/280"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 18,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Attack Speed increased from +15 to +20"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Warcry Duration increased from +4s to +5s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1232,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Damage to stunned targets increased from 15% to 17%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 19,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Movement Speed decreased by 10"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Strength decreased from +10 to +8"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Grow Attack Speed Reduction decreased from 10% to 8%"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Tree Grab Base Damage decreased from +70 to +60"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5108,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Building Damage decreased from 40/55/70/85% to 30/40/50/60%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 22,
+      "subsections": [
+        {
+          "title": "Livewire",
+          "style": "hero_facet",
+          "facet": "zuus_livewire",
+          "facet_icon": "range",
+          "facet_color": "Blue1",
+          "abilities": [
+            {
+              "ability_id": 5112,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Now scales with Thundergod's Wrath"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Max Damage rescaled from 7% to 4/5/6/7%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Health decreased from +250 to +200"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Movement Speed after Heavenly Jump decreased from +30 to +25"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5112,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now scales with Thundergod's Wrath"
+            },
+            {
+              "indent_level": 1,
+              "note": "Current Health as Damage rescaled from 4% to 2.5/3/3.5/4%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5110,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Range decreased from 850 to 800"
+            }
+          ]
+        },
+        {
+          "ability_id": 5111,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer deals bonus damage to creeps"
+            }
+          ]
+        },
+        {
+          "ability_id": 5113,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown increased from 120s to 130s"
+            }
+          ]
+        },
+        {
+          "ability_id": 1110,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer applied by Illusions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 25,
+      "abilities": [
+        {
+          "ability_id": 5042,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Move Speed Bonus increased from 0.5/1/1.5/2/2.5% to 1/1.5/2/2.5/3%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 27,
+      "subsections": [
+        {
+          "title": "Cluster Cluck",
+          "style": "hero_facet",
+          "facet": "shadow_shaman_cluster_cluck",
+          "facet_icon": "chicken",
+          "facet_color": "Yellow1",
+          "abilities": [
+            {
+              "ability_id": 5079,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "No longer provides bonus movement speed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Strength decreased from 23 to 20"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent +10 Hex Damage Amplification replaced with +1.75 Mana Regen"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5079,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer provides damage amplification"
+            }
+          ]
+        },
+        {
+          "ability_id": 5080,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Serpent Wards now linger for 1.5s after the Shackles end instead of always lasting 6s"
+            }
+          ]
+        },
+        {
+          "ability_id": 1250,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "No longer provides bonus movement speed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 28,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Agility gain decreased from 2.4 to 2.1"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Bash of the Deep Damage decreased from +50 to +40"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Health decreased from +325 to +275"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5114,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Move Speed decreased from 25/30/35/40% to 10/20/30/40%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 29,
+      "subsections": [
+        {
+          "title": "Krill Eater",
+          "style": "hero_facet",
+          "facet": "tidehunter_sizescale",
+          "facet_icon": "overshadow",
+          "facet_color": "Green0",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Strength gain increased from 4.0 to 4.1"
+            }
+          ]
+        }
+      ],
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Strength gain increased from 3.5 to 3.6"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Gush Slow increased from +10% to +15%"
+        }
+      ]
+    },
+    {
+      "hero_id": 30,
+      "subsections": [
+        {
+          "title": "Headhunter",
+          "style": "hero_facet",
+          "facet": "witch_doctor_headhunter",
+          "facet_icon": "ricochet",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 5138,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Bonus Damage per bounce decreased from 35 to 30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Voodoo Festeration",
+          "style": "hero_facet",
+          "facet": "witch_doctor_voodoo_festeration",
+          "facet_icon": "nuke",
+          "facet_color": "Red2",
+          "abilities": [
+            {
+              "ability_id": 5139,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Now also heals Witch Doctor for half the value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cleft Death",
+          "style": "hero_facet",
+          "facet": "witch_doctor_cleft_death",
+          "facet_icon": "death_ward",
+          "facet_color": "Purple0",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 42/66.5/91 to 45/70/95"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 32,
+      "subsections": [
+        {
+          "title": "Exterminator",
+          "style": "hero_facet",
+          "facet": "riki_exterminator",
+          "facet_icon": "agility",
+          "facet_color": "Purple2",
+          "abilities": [
+            {
+              "ability_id": 5145,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Agility Multiplier increased from 3x to 4x"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5145,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Agility Bonus increased from 30/50/70/90 to 40/60/80/100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 34,
+      "subsections": [
+        {
+          "title": "Repair Bots",
+          "style": "hero_facet",
+          "facet": "tinker_repair_bots",
+          "facet_icon": "healing",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 5152,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Heal per second increased from 8/12/16/20 to 15/20/25/30"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5150,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 22/20/18/16s to 19/18/17/16s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5152,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 35s to 35/33/31/29s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5153,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 8/7/6s to 7/6/5s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 35,
+      "subsections": [
+        {
+          "title": "Scattershot",
+          "style": "hero_facet",
+          "facet": "sniper_scattershot",
+          "facet_icon": "nuke",
+          "facet_color": "Red0",
+          "abilities": [
+            {
+              "ability_id": 5154,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Damage delay decreased from 1.2s to 0.8s"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Shrapnel Charge Restore Time Reduction increased from 25s to 30s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1268,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Attack Range Bonus increased from 100/200/300/400 to 160/240/320/400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 36,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Sadist Stack Duration decreased from +3s to +2s"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5160,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Duration rescaled from 7/8/9/10s to 8s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Health Regen per kill rescaled from 4/5/6/7 to 3/4.5/6/7.5"
+            },
+            {
+              "indent_level": 1,
+              "note": "Mana Regen per kill increased from 4/5/6/7 to 3/4.5/6/7.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 37,
+      "abilities": [
+        {
+          "ability_id": 5162,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Duration decreased from 19/21/23/25s to 18s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 38,
+      "subsections": [
+        {
+          "title": "Beast Mode",
+          "style": "hero_facet",
+          "facet": "beastmaster_beast_mode",
+          "facet_icon": "damage",
+          "facet_color": "Yellow1",
+          "abilities": [
+            {
+              "ability_id": 5172,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Active Bonus Attack Speed increased from 8/16/24/32/40 to 10/20/30/40/50"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 7230,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Boar Attack Damage increased from 20/35/50/65 to 25/40/55/70"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 39,
+      "subsections": [
+        {
+          "title": "Masochist",
+          "style": "hero_facet",
+          "facet": "queenofpain_selfdmg",
+          "facet_icon": "nuke",
+          "facet_color": "Red0",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Outgoing Spell Damage Reflected decreased from 22% to 20%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 40,
+      "subsections": [
+        {
+          "title": "Plague Carrier",
+          "style": "hero_facet",
+          "facet": "venomancer_plague_carrier",
+          "facet_icon": "summons",
+          "facet_color": "Yellow0",
+          "abilities": [
+            {
+              "ability_id": 5180,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Wards attached to allies now yield 20% of the gold bounty"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Now has 3 charges"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1105,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max HP as Damage decreased from 4/5/6% to 3/4/5%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 41,
+      "subsections": [
+        {
+          "title": "Time Zone",
+          "style": "hero_facet",
+          "facet": "faceless_void_time_zone",
+          "facet_icon": "chrono_cube",
+          "facet_color": "Purple1",
+          "abilities": [
+            {
+              "ability_id": 1281,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Now pierces debuff immunity"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Turn Speed Manipulation increased from 30/40/50% to 40/50/60%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1280,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Attack Projectile Slow increased from 25/30/35/40% to 35/40/45/50%"
+            },
+            {
+              "indent_level": 1,
+              "note": "Radius increased from 500 to 600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 42,
+      "abilities": [
+        {
+          "ability_id": 1283,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Attack Speed in Wraith form decreased from 75 to 30/45/60/75"
+            },
+            {
+              "indent_level": 1,
+              "note": "Bonus Movement Speed in Wraith form decreased from 25% to 10/15/20/25%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5088,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown increased from 5.5/5.0/4.5/4.0s to 6/5.5/5.0/4.5s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Damage bonus decreased from 150% to 50%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5089,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown is now frozen while Wraith King is in Wraith form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 43,
+      "subsections": [
+        {
+          "title": "Spirit Collector",
+          "style": "hero_facet",
+          "facet": "death_prophet_ghosts",
+          "facet_icon": "spirit",
+          "facet_color": "Green1",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now scales with Exorcism"
+            }
+          ],
+          "abilities": [
+            {
+              "ability_id": 5093,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Hero Spirit Damage rescaled from 75-80/88-93/101-106 to 84-90/92-98/101-106"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5092,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Movement Speed per level increased from 0.5% to 0.75%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 44,
+      "subsections": [
+        {
+          "title": "Methodical",
+          "style": "hero_facet",
+          "facet": "phantom_assassin_methodical",
+          "facet_icon": "damage",
+          "facet_color": "Gray0",
+          "abilities": [
+            {
+              "ability_id": 5193,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Critical Damage increased from 300/425/550% to 325/450/575%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5192,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now also provides 3/6/9/12% bonus movement speed while active"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 46,
+      "abilities": [
+        {
+          "ability_id": 5194,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus damage decreased from 25/45/65/85 to 20/40/60/80"
+            }
+          ]
+        },
+        {
+          "ability_id": 5197,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Min Silence Duration decreased from 1.5s to 1.0s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Max Silence Duration decreased from 3.5s to 3.0s"
+            },
+            {
+              "indent_level": 1,
+              "note": "Bonus Damage decreased from 275/325/375 to 225/300/375"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 47,
+      "abilities": [
+        {
+          "ability_id": 5218,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max Stacks increased from 5 to 6"
+            }
+          ]
+        },
+        {
+          "ability_id": 5219,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Projectile Speed increased from 2000 to 2400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 49,
+      "subsections": [
+        {
+          "title": "Corrosive Dragon",
+          "style": "hero_facet",
+          "facet": "dragon_knight_corrosive_dragon",
+          "facet_icon": "dragon_poison",
+          "facet_color": "Green0",
+          "abilities": [
+            {
+              "ability_id": 5229,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Corrosive Breath Effect Bonus decreased from 30/40/50/60% to 20/30/40/50%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Frost Dragon",
+          "style": "hero_facet",
+          "facet": "dragon_knight_frost_dragon",
+          "facet_icon": "dragon_frost",
+          "facet_color": "Blue0",
+          "abilities": [
+            {
+              "ability_id": 5229,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Frost Breath Effect Bonus decreased from 30/40/50/60% to 20/30/40/50%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1292,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Health Regen decreased from 4 to 2"
+            }
+          ]
+        },
+        {
+          "ability_id": 5227,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage decreased from 70/100/130/160 to 60/90/120/150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 51,
+      "subsections": [
+        {
+          "title": "Hookup",
+          "style": "hero_facet",
+          "facet": "rattletrap_hookup",
+          "facet_icon": "cooldown",
+          "facet_color": "Gray2",
+          "abilities": [
+            {
+              "ability_id": 5240,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Now grants allies hit a physical barrier equal to Hookshot damage. Duration: 4s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 52,
+      "abilities": [
+        {
+          "ability_id": 1297,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "AoE per intelligence decreased from 0.5 to 0.4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 53,
+      "subsections": [
+        {
+          "title": "Ironwood Treant",
+          "style": "hero_facet",
+          "facet": "furion_ironwood_treant",
+          "facet_icon": "siege",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 1298,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Multiplier increased from 3 to 2/3/4/5"
+                }
+              ]
+            },
+            {
+              "ability_id": 5247,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Treant Health increased from 750/950/1150/1350 to 800/1050/1300/1550"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Sprout Damage increased from +160 to +170"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Treant movement speed increased from +45 to +50"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5246,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Barrier increased from 50/100/150/200 to 100/150/200/250"
+            }
+          ]
+        },
+        {
+          "ability_id": 5247,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown rescaled from 37/35/33/31s to 45/40/35/30s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 54,
+      "subsections": [
+        {
+          "title": "Unfettered",
+          "style": "hero_facet",
+          "facet": "life_stealer_rage_dispell",
+          "facet_icon": "broken_chain",
+          "facet_color": "Red0",
+          "abilities": [
+            {
+              "ability_id": 1301,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Duration increased from 3/4/5/6 to 4/5/6/7"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Rage/Unfettered Duration decreased from +1.5 to +1.0"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Feast Lifesteal and Damage decreased from +1.2% to +1.0%"
+        }
+      ]
+    },
+    {
+      "hero_id": 57,
+      "subsections": [
+        {
+          "title": "Omnipresent",
+          "style": "hero_facet",
+          "facet": "omniknight_omnipresent",
+          "facet_icon": "damage",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 5265,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Damage increase interval decreased from 0.5s to 0.4s"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Damage stacks now decay at the same rate when the enemy is out of AoE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 58,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Mana Regen increased by 0.5"
+        }
+      ]
+    },
+    {
+      "hero_id": 59,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Berserker's Blood Regen increased from +25% to +30%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5273,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "HP for Max Bonus increased from 10% to 12%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 61,
+      "subsections": [
+        {
+          "title": "Necrotic Webs",
+          "style": "hero_facet",
+          "facet": "broodmother_necrotic_webs",
+          "facet_icon": "debuff",
+          "facet_color": "Gray0",
+          "abilities": [
+            {
+              "ability_id": 5280,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Enemy Regen Reduction increased from 10/15/20/25% to 15/20/25/30%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1313,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Heal interval decreased from 1s to 0.5s (total amount remains the same)"
+            }
+          ]
+        },
+        {
+          "ability_id": 5280,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Range increased from 1000 to 1200"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 64,
+      "subsections": [
+        {
+          "title": "Liquid Frost",
+          "style": "hero_facet",
+          "facet": "jakiro_ice",
+          "facet_icon": "snowflake",
+          "facet_color": "Blue1",
+          "abilities": [
+            {
+              "ability_id": 1317,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Cooldown decreased from 16/12/8/4s to 13/10/7/4s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 65,
+      "subsections": [
+        {
+          "title": "Arsonist",
+          "style": "hero_facet",
+          "facet": "batrider_arsonist",
+          "facet_icon": "siege",
+          "facet_color": "Red0",
+          "abilities": [
+            {
+              "ability_id": 5320,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Building Damage increased from 25% to 35%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5320,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Mana Cost decreased from 25 to 22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 66,
+      "abilities": [
+        {
+          "ability_id": 7306,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Regen per sec increased from 1/2/3/4 to 1.5/3/4.5/6"
+            }
+          ]
+        },
+        {
+          "ability_id": 5331,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Initial Heal increased from 150/250/350 to 200/300/400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 67,
+      "subsections": [
+        {
+          "title": "Forsaken",
+          "style": "hero_facet",
+          "facet": "spectre_forsaken",
+          "facet_icon": "spectre",
+          "facet_color": "Gray0",
+          "abilities": [
+            {
+              "ability_id": 5335,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Damage when non-hero units are nearby increased from 50% to 60%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent -100 Desolate Ally Radius replaced with +4 Health Regeneration"
+        }
+      ]
+    },
+    {
+      "hero_id": 68,
+      "subsections": [
+        {
+          "title": "Exposure",
+          "style": "hero_facet",
+          "facet": "ancient_apparition_exposure",
+          "facet_icon": "area_of_effect",
+          "facet_color": "Blue0",
+          "abilities": [
+            {
+              "ability_id": 5345,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Now scales with Ice Blast"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Now applies its effects in a 0/150/300/450 radius"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 69,
+      "abilities": [
+        {
+          "ability_id": 1324,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage bonus now always applies when Doom is level 30"
+            },
+            {
+              "indent_level": 1,
+              "note": "Bonus damage increased from 10% to 15%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 70,
+      "abilities": [
+        {
+          "ability_id": 5357,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown increased from 14/12/10/8s to 15/13/11/9s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 71,
+      "subsections": [
+        {
+          "title": "Bull Rush",
+          "style": "hero_facet",
+          "facet": "spirit_breaker_bull_rush",
+          "facet_icon": "speed",
+          "facet_color": "Red1",
+          "abilities": [
+            {
+              "ability_id": 5353,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Max Linger duration decreased from 3s to 2.5s"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Imbalanced",
+          "style": "hero_facet",
+          "facet": "spirit_breaker_imbalanced",
+          "facet_icon": "movement",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 5356,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Now amplifies knockback effects instead of forced movement"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 74,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Damage increased by 2"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1334,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Deny experience increased from 15% to 25%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 76,
+      "subsections": [
+        {
+          "title": "Obsidian Decimator",
+          "style": "hero_facet",
+          "facet": "obsidian_destroyer_obsidian_decimator",
+          "facet_icon": "mana",
+          "facet_color": "Blue0",
+          "abilities": [
+            {
+              "ability_id": 5684,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Mana Increase Duration increased from 7s to 10s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 77,
+      "subsections": [
+        {
+          "title": "Spirit Wolves",
+          "style": "hero_facet",
+          "facet": "lycan_spirit_wolves",
+          "facet_icon": "spirit",
+          "facet_color": "Red0",
+          "abilities": [
+            {
+              "ability_id": 5395,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Bonus Damage per wolf is now a base damage increase"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Bonus Damage per wolf decreased from 8/14/20/26 to 6/12/18/24"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Summon Wolves Damage Per Wolf decreased from +8 to +6"
+        }
+      ]
+    },
+    {
+      "hero_id": 80,
+      "subsections": [
+        {
+          "title": "Unbearable",
+          "style": "hero_facet",
+          "facet": "lone_druid_unbearable",
+          "facet_icon": "overshadow",
+          "facet_color": "Yellow1",
+          "abilities": [
+            {
+              "ability_id": 5415,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Now grants Spirit Bear +10% attack speed, instead of -0.1s BAT"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Spirit Bear's Demolish is now increased from 10/20/30/40% to 15/30/45/60%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Spirit Bear Movement Speed increased from +25 to +30"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent -50s True Form Cooldown replaced with +150 Savage Roar Radius"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent +150 Savage Roar Radius replaced with -50s True Form Cooldown"
+        }
+      ]
+    },
+    {
+      "hero_id": 81,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Chaos Strike Lifesteal decreased from +35% to +30%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5429,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Phantasm Damage Taken increased from 325% to 350%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 82,
+      "subsections": [
+        {
+          "title": "More Meepo",
+          "style": "hero_facet",
+          "facet": "meepo_more_meepo",
+          "facet_icon": "summons",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 5433,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Clones now get 85% of main Meepo's stats"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5431,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage decreased from 60/90/120/150 to 50/80/110/140"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 84,
+      "subsections": [
+        {
+          "title": "Fat Chance",
+          "style": "hero_facet",
+          "facet": "ogre_magi_fat_chance",
+          "facet_icon": "rng",
+          "facet_color": "Red0",
+          "abilities": [
+            {
+              "ability_id": 5441,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Chance per strength increased from 0.05% to 0.06%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 85,
+      "abilities": [
+        {
+          "ability_id": 5442,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Steal Duration decreased from 40s to 35s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 86,
+      "subsections": [
+        {
+          "title": "Frugal Filch",
+          "style": "hero_facet",
+          "facet": "rubick_frugal_filch",
+          "facet_icon": "mana",
+          "facet_color": "Purple2",
+          "abilities": [
+            {
+              "ability_id": 5452,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Stolen Manacost Reduction increased from 30/45/60% to 40/50/60%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1361,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Magic Resistance per level increased from 0.5% to 0.75%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 88,
+      "subsections": [
+        {
+          "title": "Scuttle",
+          "style": "hero_facet",
+          "facet": "nyx_assassin_scuttle",
+          "facet_icon": "speed",
+          "facet_color": "Red2",
+          "abilities": [
+            {
+              "ability_id": 5465,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Haste duration increased from 10s to 15s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 89,
+      "subsections": [
+        {
+          "title": "Deluge",
+          "style": "hero_facet",
+          "facet": "naga_siren_active_riptide",
+          "facet_icon": "nuke",
+          "facet_color": "Green2",
+          "abilities": [
+            {
+              "ability_id": 1369,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Mana Cost decreased from 70/80/90/100 to 45/50/55/60"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Damage increased from 80/130/180/230 to 80/140/200/260"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Status Resistance Reduction increased from 11/14/17/20% to 20%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 91,
+      "subsections": [
+        {
+          "title": "Medigun",
+          "style": "hero_facet",
+          "facet": "wisp_medigun",
+          "facet_icon": "armor",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 5487,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Armor increased from 3/6/9/12 to 4/7/10/13"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Magic Resistance increased from 10/15/20/25% to 12/18/24/30%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 92,
+      "subsections": [
+        {
+          "title": "Faithful Followers",
+          "style": "hero_facet",
+          "facet": "visage_faithful_followers",
+          "facet_icon": "summons",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 5483,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Familiar gold bounty decreased from 100 to 70"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Familiar attack range increased from 180 to 350"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 93,
+      "subsections": [
+        {
+          "title": "Dark Reef Renegade",
+          "style": "hero_facet",
+          "facet": "slark_dark_reef_renegade",
+          "facet_icon": "cooldown",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 1375,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Linger Search Radius decreased from 1200 to 1000"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1375,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Health Gained per second increased from 10/60/90/120 to 10/70/100/130"
+            }
+          ]
+        },
+        {
+          "ability_id": 5497,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 60/50/40s to 50/40/30s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 94,
+      "subsections": [
+        {
+          "title": "Mana Pact",
+          "style": "hero_facet",
+          "facet": "medusa_mana_pact",
+          "facet_icon": "mana",
+          "facet_color": "Blue1",
+          "abilities": [
+            {
+              "ability_id": 5506,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Mana Drain per second decreased from 4% to 3%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 95,
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent changed from +50% Battle Trance Slow Resistance to +1.5s Battle Trance Duration"
+        }
+      ]
+    },
+    {
+      "hero_id": 96,
+      "subsections": [
+        {
+          "title": "Horsepower",
+          "style": "hero_facet",
+          "facet": "centaur_horsepower",
+          "facet_icon": "speed",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 1379,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Strength to movement speed decreased from 40% to 35%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Strength decreased from +15 to +12"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Double Edge Strength Damage decreased from +35% to +30%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1380,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Max health gain decreased from +40 to +35"
+            }
+          ]
+        },
+        {
+          "ability_id": 5515,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Bonus Strength decreased from +15% to +12%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 97,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Intelligence increased from 19 to 20"
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent All Stats per hero hit with Reverse Polarity increased from +10 to +12"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1382,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Now reduces knockback effects instead of forced movement"
+            }
+          ]
+        },
+        {
+          "ability_id": 5520,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Damage increased from 70/140/210/280 to 75/150/225/300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 99,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Viscous Nasal: Goo Duration increased from 5s to 6s"
+        }
+      ]
+    },
+    {
+      "hero_id": 100,
+      "subsections": [
+        {
+          "title": "Tag Team",
+          "style": "hero_facet",
+          "facet": "tusk_facet_tag_team",
+          "facet_icon": "damage",
+          "facet_color": "Blue3",
+          "abilities": [
+            {
+              "ability_id": 7322,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Buff Duration increased from 5s to 6s"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Drinking Buddies",
+          "style": "hero_facet",
+          "facet": "tusk_facet_fist_bump",
+          "facet_icon": "movement",
+          "facet_color": "Yellow0",
+          "abilities": [
+            {
+              "ability_id": 1385,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Buff Duration increased from 5s to 6s"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1386,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Attack Speed Slow increased from 10/20/30/40/50 to 20/30/40/50/60"
+            }
+          ]
+        },
+        {
+          "ability_id": 5565,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Damage per second increased from 60 to 85"
+            },
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Move Slow increased from 40% to 50%"
+            }
+          ]
+        },
+        {
+          "ability_id": 5568,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cooldown decreased from 20/15/10s to 16/13/10s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 104,
+      "subsections": [
+        {
+          "title": "Stonehall Plate",
+          "style": "hero_facet",
+          "facet": "legion_commander_stonehall_plate",
+          "facet_icon": "armor",
+          "facet_color": "Yellow1",
+          "abilities": [
+            {
+              "ability_id": 5595,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Damage to Barrier decreased from 50% to 40%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Overwhelming Odds Damage per Hero decreased from +40 to +35"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5595,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard Radius Bonus in Duel decreased from +200 to +150"
+            }
+          ]
+        },
+        {
+          "ability_id": 5598,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter no longer reduces Duel cooldown"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 105,
+      "hero_notes": [
+        {
+          "indent_level": 1,
+          "note": "Base Attack Range increased by 50"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5644,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Cast Point decreased from 2.0s to 1.5s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 107,
+      "subsections": [
+        {
+          "title": "Stepping Stone",
+          "style": "hero_facet",
+          "facet": "earth_spirit_stepping_stone",
+          "facet_icon": "cooldown",
+          "facet_color": "Gray2",
+          "abilities": [
+            {
+              "ability_id": 5609,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "No longer creates a Stone Remnant in front of Earth Spirit. Instead, it refreshes Stone Remnant, if it is on cooldown"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 108,
+      "subsections": [
+        {
+          "title": "Abyssal Horde",
+          "style": "hero_facet",
+          "facet": "abyssal_underlord_summons",
+          "facet_icon": "summons",
+          "facet_color": "Yellow3",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Archer Aura Move Speed decreased from 5/7/9% to 5%"
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 865,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter Cooldown Reduction decreased from 20s to 10s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 109,
+      "subsections": [
+        {
+          "title": "Soul Fragment",
+          "style": "hero_facet",
+          "facet": "terrorblade_soul_fragment",
+          "facet_icon": "illusion",
+          "facet_color": "Blue2",
+          "abilities": [
+            {
+              "ability_id": 5620,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Mana Cost decreased from 55/65/75/85 to 0"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 25 Talent Metamorphosis Duration increased from +20s to +30s"
+        }
+      ]
+    },
+    {
+      "hero_id": 110,
+      "subsections": [
+        {
+          "title": "Dying Light",
+          "style": "hero_facet",
+          "facet": "phoenix_facet_immolate",
+          "facet_icon": "barrier",
+          "facet_color": "Red2",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Effects are no longer applied by illusions"
+            },
+            {
+              "indent_level": 1,
+              "note": "Percentage of missing health as damage decreased from 6% to 4.5%"
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1398,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Duration decreased from 5s to 4s"
+            }
+          ]
+        },
+        {
+          "ability_id": 5625,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Attack Speed Slow decreased from 65/90/115/140 to 50/80/110/140"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 111,
+      "subsections": [
+        {
+          "title": "Clairvoyant Curse",
+          "style": "hero_facet",
+          "facet": "oracle_facet_dmg",
+          "facet_icon": "nuke",
+          "facet_color": "Red2",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Spell amplification per level increased from 0.5% to 0.75%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 112,
+      "abilities": [
+        {
+          "ability_id": 5651,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Bonus Attack Range decreased from 300/325/350/375 to 275/300/325/350"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 113,
+      "subsections": [
+        {
+          "title": "Order",
+          "style": "hero_facet",
+          "facet": "arc_warden_order",
+          "facet_icon": "arc_warden",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 5678,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Attack Speed bonus rescaled from 50/60/70/80 to 30/60/90/120"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Duration increased from 3.5/4.5/5.5/6.5s to 4/5/6/7s"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Disorder",
+          "style": "hero_facet",
+          "facet": "arc_warden_disorder",
+          "facet_icon": "arc_warden_alt",
+          "facet_color": "Gray0",
+          "abilities": [
+            {
+              "ability_id": 5678,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Duration decreased from 5/6/7/8s to 4/5/6/7s"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Flux Cast Range increased from +175 to +200"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 15 Talent Flux Duration increased from +1.5s to +2.0s"
+        }
+      ]
+    },
+    {
+      "hero_id": 114,
+      "subsections": [
+        {
+          "title": "Simian Stride",
+          "style": "hero_facet",
+          "facet": "monkey_king_simian_stride",
+          "facet_icon": "tree",
+          "facet_color": "Green4",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Health Threshold decreased from 100% to 90%"
+            }
+          ]
+        }
+      ],
+      "talent_notes": [
+        {
+          "indent_level": 1,
+          "note": "Level 10 Talent Primal Spring Max Damage increased from +75 to +100"
+        },
+        {
+          "indent_level": 1,
+          "note": "Level 20 Talent Boundless Strike Critical Damage increased from +55% to +60%"
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 5716,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Shard now applies the bonus damage and slow to all enemies affected by Boundless Strike, even if Monkey King did not leap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 119,
+      "subsections": [
+        {
+          "title": "Throwing Shade",
+          "style": "hero_facet",
+          "facet": "dark_willow_throwing_shade",
+          "facet_icon": "damage",
+          "facet_color": "Purple1",
+          "abilities": [
+            {
+              "ability_id": 6341,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Max damage increased from 25% to 30%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Thorny Thicket",
+          "style": "hero_facet",
+          "facet": "dark_willow_thorny_thicket",
+          "facet_icon": "area_of_effect",
+          "facet_color": "Green4",
+          "abilities": [
+            {
+              "ability_id": 6339,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Additional brambles duration decreased from 7.5s to 6s"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 120,
+      "subsections": [
+        {
+          "title": "Double Jump",
+          "style": "hero_facet",
+          "facet": "pangolier_double_jump",
+          "facet_icon": "double_bounce",
+          "facet_color": "Red1",
+          "abilities": [
+            {
+              "ability_id": 6461,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Min Damage Increase increased from 0% to 25%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 6343,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Magic Resistance increased from 50% to 60%"
+            }
+          ]
+        },
+        {
+          "ability_id": 6344,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Swashbuckle width increased from 140 to 155"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 126,
+      "subsections": [
+        {
+          "title": "Sanctuary",
+          "style": "hero_facet",
+          "facet": "void_spirit_sanctuary",
+          "facet_icon": "armor",
+          "facet_color": "Purple1",
+          "abilities": [
+            {
+              "ability_id": 7710,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Base Damage Barrier decreased from 30/60/90/120 to 25/50/75/100"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1420,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Secondary bonuses decreased from 33% to 25%"
+            }
+          ]
+        },
+        {
+          "ability_id": 7710,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Aghanim's Scepter Base Charge Restore Time increased from 15s to 18s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 128,
+      "subsections": [
+        {
+          "title": "Ricochet II",
+          "style": "hero_facet",
+          "facet": "snapfire_ricochet_ii",
+          "facet_icon": "ricochet",
+          "facet_color": "Gray3",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "Ricochet attacks now proc attack modifiers on secondary targets"
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 1421,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Glancing shot damage increased from 50% to 60%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 129,
+      "abilities": [
+        {
+          "ability_id": 1415,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "HP Regen per extra enemy increased from 25% to 30%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 136,
+      "subsections": [
+        {
+          "title": "Sidekick",
+          "style": "hero_facet",
+          "facet": "marci_sidekick",
+          "facet_icon": "healing",
+          "facet_color": "Gray3",
+          "abilities": [
+            {
+              "ability_id": 1426,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Lifesteal increased from 10/15/20/25% to 12/18/24/30%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Bodyguard",
+          "style": "hero_facet",
+          "facet": "marci_bodyguard",
+          "facet_icon": "ricochet",
+          "facet_color": "Blue1",
+          "abilities": [
+            {
+              "ability_id": 1427,
+              "ability_notes": [
+                {
+                  "indent_level": 1,
+                  "note": "Lifesteal increased from 10/15/20/25% to 12/18/24/30%"
+                },
+                {
+                  "indent_level": 1,
+                  "note": "Bonus Armor increased from 4/6/8/10 to 4/7/10/13"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "ability_id": 8192,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Impact Damage increased from 70/140/210/280 to 75/150/225/300"
+            }
+          ]
+        },
+        {
+          "ability_id": 8235,
+          "ability_notes": [
+            {
+              "indent_level": 1,
+              "note": "Impact Damage increased from 70/150/230/310 to 80/160/240/320"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero_id": 138,
+      "subsections": [
+        {
+          "title": "Ofrenda",
+          "style": "hero_facet",
+          "facet": "muerta_ofrenda",
+          "facet_icon": "teleport",
+          "facet_color": "Yellow0",
+          "general_notes": [
+            {
+              "indent_level": 1,
+              "note": "When respawning, Muerta gains the effect of Pierce the Veil for 3/3.5/4s, if it has been leveled"
+            },
+            {
+              "indent_level": 1,
+              "note": "Respawning with Ofrenda now refills Bottle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "success": true
+}
