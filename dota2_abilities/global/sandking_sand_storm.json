@@ -13,7 +13,7 @@
             "Sand King briefly becomes visible upon attacking or using spells while in Sand Storm. Sand King will become invisible again in %fade_delay% seconds."
           ],
           "shard_loc": "",
-          "scepter_loc": "Every %damage_tick_rate%s, %scepter_explosions_per_pulse% Burrowstrike spines are created at random locations, each measuring %scepter_explosion_radius_pct%%% of the Sand Storm's current radius, that apply Burrowstrike damage and stun to enemies hit.",
+          "scepter_loc": "Every %spine_tick_rate%s, %scepter_explosions_per_pulse% Burrowstrike spines are created at random locations, each measuring %scepter_explosion_radius_pct%%% of the Sand Storm's current radius, that apply %spine_damage_pct%%% of Burrowstrike damage and stun to enemies hit. Spines do not appear if Sand King is outside of Sand Storm.",
           "facets_loc": [],
           "type": 0,
           "behavior": "33554436",
@@ -80,10 +80,10 @@
             {
               "name": "sand_storm_radius",
               "values_float": [
-                425,
-                500,
-                575,
-                650
+                300,
+                350,
+                400,
+                450
               ],
               "is_percentage": false,
               "heading_loc": "RADIUS:",
@@ -110,7 +110,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_sand_king_2",
-                  "value": 15,
+                  "value": 10,
                   "operation": 0
                 }
               ],
@@ -239,7 +239,45 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [
-                2
+                3
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "spine_tick_rate",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                0.4
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "spine_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                70
               ],
               "facet_bonus": {
                 "name": "",
