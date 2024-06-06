@@ -450,10 +450,10 @@
                 {
                   "name": "poof_damage",
                   "values_float": [
-                    60,
-                    90,
-                    120,
-                    150
+                    50,
+                    80,
+                    110,
+                    140
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -1457,7 +1457,7 @@
               "shard_loc": "Divided We Stand can be cast as long as there's a Meepo within %fling_radius% radius of yourself. Causes that Meepo to fling you towards a target within a %AbilityCastRange% range, dealing damage and slowing their movement speed. Mana Cost: %AbilityManaCost%",
               "scepter_loc": "",
               "facets_loc": [
-                "Can now be upgraded at level %required_level% and every %bonus_levels_between_upgrades% levels afterwards to a max level of %max_level%.",
+                "Can now be upgraded at level %required_level% and every %bonus_levels_between_upgrades% levels afterwards to a max level of %max_level%. Duplicate Meepos receive %main_meepo_stats_pct%%% of the main Meepo's bonus attributes.",
                 ""
               ],
               "type": 1,
@@ -1716,6 +1716,25 @@
                     "name": "meepo_more_meepo",
                     "values": [
                       4
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "main_meepo_stats_pct",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "meepo_more_meepo",
+                    "values": [
+                      85
                     ],
                     "operation": 5
                   },

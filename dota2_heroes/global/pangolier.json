@@ -14,7 +14,7 @@
             {
               "color": 0,
               "title_loc": "Double Jump",
-              "description_loc": "",
+              "description_loc": "Pangolier can double jump with Shield Crash dealing more damage and gaining more barrier.",
               "name": "pangolier_double_jump",
               "icon": "double_bounce",
               "gradient_id": 1
@@ -22,7 +22,7 @@
             {
               "color": 1,
               "title_loc": "Thunderbolt",
-              "description_loc": "",
+              "description_loc": "Rolling Thunder movement and turn speed increased, but duration is decreased.",
               "name": "pangolier_thunderbolt",
               "icon": "speed",
               "gradient_id": 1
@@ -245,7 +245,7 @@
                 {
                   "name": "start_radius",
                   "values_float": [
-                    140
+                    155
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLASH WIDTH:",
@@ -262,7 +262,7 @@
                 {
                   "name": "end_radius",
                   "values_float": [
-                    140
+                    155
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -485,7 +485,7 @@
               "shard_loc": "",
               "scepter_loc": "Causes Shield Crash to cast a 2-attack Swashbuckle every 90 degrees around your hero.",
               "facets_loc": [
-                "Pangolier can double jump with Shield Crash dealing more damage and gaining more barrier.",
+                "Pangolier can cast Shield Crash a second time mid-flight, dealing more damage and gaining more barrier.",
                 ""
               ],
               "type": 0,
@@ -675,6 +675,25 @@
                     "name": "pangolier_double_jump",
                     "values": [
                       50
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "min_damage_increase_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MIN DAMAGE INCREASE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "pangolier_double_jump",
+                    "values": [
+                      25
                     ],
                     "operation": 5
                   },
@@ -1575,7 +1594,7 @@
               "id": 8027,
               "name": "pangolier_rollup",
               "name_loc": "Roll Up",
-              "desc_loc": "Pangolier curls into an immobile protective ball, gaining debuff immunity, 50%% magic resistance, and allowing him to turn. Can be cast during Rolling Thunder to temporarily hit the brakes. Can cast Rolling Thunder and Shield Crash during Roll Up. If enemies attack Pangolier during this, he will roll away from the attacker, applying Rolling Thunder damage/stun if there are enemies in the way.",
+              "desc_loc": "Pangolier curls into an immobile protective ball, gaining debuff immunity, %magic_resistance%%% magic resistance, and allowing him to turn. Can be cast during Rolling Thunder to temporarily hit the brakes. Can cast Rolling Thunder and Shield Crash during Roll Up. If enemies attack Pangolier during this, he will roll away from the attacker, applying Rolling Thunder damage/stun if there are enemies in the way.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1844,6 +1863,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "magic_resistance",
+                  "values_float": [
+                    60
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     0
@@ -1997,7 +2033,7 @@
               "id": 6343,
               "name": "pangolier_gyroshell",
               "name_loc": "Rolling Thunder",
-              "desc_loc": "Pangolier curls into a debuff immune ball with 50%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage proportional to his attack damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\n During Rolling Thunder, Shield Crash cooldown is reduced.\n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Pangolier curls into a debuff immune ball with %magic_resistance%%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage proportional to his attack damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\n During Rolling Thunder, Shield Crash cooldown is reduced.\n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
               "notes_loc": [
                 "Enemies can be stunned multiple times per use, but cannot be affected a subsequent time until the previous stun duration ends.",
@@ -2294,6 +2330,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SHIELD CRASH COOLDOWN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "magic_resistance",
+                  "values_float": [
+                    60
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],

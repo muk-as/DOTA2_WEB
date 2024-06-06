@@ -22,13 +22,13 @@
             {
               "color": 0,
               "title_loc": "Massive Serpent Ward",
-              "description_loc": "",
+              "description_loc": "Summons a single massive Serpent Ward with {s:bonus_mega_ward_multiplier_tooltip}x damage and bounty values and {s:bonus_mega_ward_health_tooltip}x health.",
               "name": "shadow_shaman_massive_serpent_ward",
               "icon": "snake",
               "gradient_id": 1
             }
           ],
-          "str_base": 23,
+          "str_base": 20,
           "str_gain": 2.3,
           "agi_base": 16,
           "agi_gain": 1.6,
@@ -59,8 +59,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 626,
-          "health_regen": 3.3,
+          "max_health": 560,
+          "health_regen": 3,
           "max_mana": 375,
           "mana_regen": 1.25,
           "abilities": [
@@ -381,7 +381,7 @@
               "id": 5079,
               "name": "shadow_shaman_voodoo",
               "name_loc": "Hex",
-              "desc_loc": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities and amplifying the damage they receive.",
+              "desc_loc": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities.",
               "lore_loc": "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared.",
               "notes_loc": [
                 "Instantly destroys illusions.",
@@ -390,7 +390,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Can be cast on allies to apply a basic dispel and make them invulnerable for %ally_invuln_duration% seconds before turning into a chicken with increased movement speed. Creates additional uncontrollable chicken illusions.",
+                "Can be cast on allies to apply a basic dispel and make them invulnerable for %ally_invuln_duration% seconds before turning into a chicken. Creates additional uncontrollable chicken illusions.",
                 ""
               ],
               "type": 0,
@@ -478,17 +478,14 @@
                 {
                   "name": "damage_amp",
                   "values_float": [
-                    10,
-                    15,
-                    20,
-                    25
+                    0
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE AMPLIFICATION:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_shadow_shaman_hex_damage_amp",
-                      "value": 10,
+                      "value": 0,
                       "operation": 0
                     }
                   ],
@@ -626,10 +623,8 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "shadow_shaman_cluster_cluck",
-                    "values": [
-                      10
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -816,7 +811,7 @@
               "desc_loc": "CHANNELED - Magically binds an enemy unit so that it cannot move or attack, absorbing their life energy over time.",
               "lore_loc": "A self-defense incantation, Rhasta developed shackles after his master was slain in the Bleeding Hills.",
               "notes_loc": [],
-              "shard_loc": "Shackles creates %shard_ward_count% Serpent Wards attacking the target. Increases Shackles cast range by %shard_bonus_cast_range%. Serpent wards lasts %shard_ward_duration% seconds.",
+              "shard_loc": "Shackles creates %shard_ward_count% Serpent Wards attacking the target. Increases Shackles cast range by %shard_bonus_cast_range%. Serpent wards lasts %ward_linger_duration% seconds after Shackles end.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -999,6 +994,25 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "ward_linger_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1.5
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1306,7 +1320,7 @@
                 {
                   "name": "movespeed_bonus_pct",
                   "values_float": [
-                    10
+                    0
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVESPEED BONUS:",
@@ -2143,9 +2157,9 @@
               "item_quality": 0
             },
             {
-              "id": 1183,
-              "name": "special_bonus_unique_shadow_shaman_hex_damage_amp",
-              "name_loc": "+{s:bonus_damage_amp} Hex Damage Amplification",
+              "id": 6926,
+              "name": "special_bonus_mp_regen_175",
+              "name_loc": "+{s:value} Mana Regen",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2191,6 +2205,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    1.75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

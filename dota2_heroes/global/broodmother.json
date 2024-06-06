@@ -14,7 +14,7 @@
             {
               "color": 5,
               "title_loc": "Necrotic Webs",
-              "description_loc": "",
+              "description_loc": "Reduces health regeneration of enemies on webs.",
               "name": "broodmother_necrotic_webs",
               "icon": "debuff",
               "gradient_id": 0
@@ -22,7 +22,7 @@
             {
               "color": 0,
               "title_loc": "Feeding Frenzy",
-              "description_loc": "",
+              "description_loc": "Insatiable Hunger also applies to nearby Spiderlings.",
               "name": "broodmother_feeding_frenzy",
               "icon": "summons",
               "gradient_id": 0
@@ -456,7 +456,7 @@
               "dispellable": 3,
               "max_level": 4,
               "cast_ranges": [
-                1000
+                1200
               ],
               "cast_points": [
                 0.4
@@ -595,10 +595,10 @@
                   "facet_bonus": {
                     "name": "broodmother_necrotic_webs",
                     "values": [
-                      10,
                       15,
                       20,
-                      25
+                      25,
+                      30
                     ],
                     "operation": 5
                   },
@@ -607,7 +607,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    1000
+                    1200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1347,7 +1347,7 @@
               "id": 1313,
               "name": "broodmother_spiders_milk",
               "name_loc": "Spider's Milk",
-              "desc_loc": "Whenever Broodmother kills a unit, she and all units under her control in a %kill_heal_aoe% radius receive a buff that heals them for a percentage of the victims health each second. Healing from creeps is reduced by %kill_creeps_penalty%%%.",
+              "desc_loc": "Whenever Broodmother kills a unit, she and all units under her control in a %kill_heal_aoe% radius receive a buff that heals them for a percentage of the victims health every %tick_rate% seconds. Healing from creeps is reduced by %kill_creeps_penalty%%%.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1395,7 +1395,7 @@
                 {
                   "name": "kill_heal_heroes",
                   "values_float": [
-                    4
+                    2
                   ],
                   "is_percentage": true,
                   "heading_loc": "HERO HEALTH AS HEAL:",
@@ -1463,7 +1463,7 @@
                 {
                   "name": "tick_rate",
                   "values_float": [
-                    1
+                    0.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

@@ -14,7 +14,7 @@
             {
               "color": 3,
               "title_loc": "Insensitive",
-              "description_loc": "",
+              "description_loc": "Fervor grants armor per stack while in melee form.",
               "name": "troll_warlord_insensitive",
               "icon": "armor",
               "gradient_id": 2
@@ -22,7 +22,7 @@
             {
               "color": 0,
               "title_loc": "Bad Influence",
-              "description_loc": "",
+              "description_loc": "Battle Trance grants allied heroes {s:bonus_attack_speed_share_percent}% of the attack speed bonus.",
               "name": "troll_warlord_bad_influence",
               "icon": "damage",
               "gradient_id": 1
@@ -1520,7 +1520,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "TRANCE DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_troll_warlord_battle_trance_movespeed",
+                      "value": 1.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1597,27 +1603,6 @@
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SPEED:",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "slow_resistance",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_troll_warlord_battle_trance_movespeed",
-                      "value": 50,
-                      "operation": 0
-                    }
-                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2597,7 +2582,7 @@
             {
               "id": 1011,
               "name": "special_bonus_unique_troll_warlord_battle_trance_movespeed",
-              "name_loc": "+{s:bonus_slow_resistance}% Battle Trance Slow Resistance",
+              "name_loc": "+{s:bonus_trance_duration}s Battle Trance Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

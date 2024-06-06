@@ -22,7 +22,7 @@
             {
               "color": 1,
               "title_loc": "Plague Carrier",
-              "description_loc": "",
+              "description_loc": "Plague Wards can be attached to allies and have extra charges.",
               "name": "venomancer_plague_carrier",
               "icon": "summons",
               "gradient_id": 0
@@ -798,7 +798,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Plague Wards can be attached to allies."
+                "Plague Wards can be attached to allies and have %max_charges% charges. Attached wards give only %gold_bounty_pct%%% of their gold bounty when killed."
               ],
               "type": 0,
               "behavior": "16",
@@ -856,6 +856,44 @@
                     "name": "venomancer_plague_carrier",
                     "values": [
                       1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "gold_bounty_pct",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "venomancer_plague_carrier",
+                    "values": [
+                      20
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_charges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "venomancer_plague_carrier",
+                    "values": [
+                      3
                     ],
                     "operation": 5
                   },
@@ -1131,7 +1169,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_venomancer_8",
+                      "value": 1,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1247,9 +1291,9 @@
                 {
                   "name": "health_damage",
                   "values_float": [
+                    3,
                     4,
-                    5,
-                    6
+                    5
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAX HP AS DAMAGE:",
@@ -1938,7 +1982,7 @@
             {
               "id": 811,
               "name": "special_bonus_unique_venomancer_8",
-              "name_loc": "-{s:value}s Plague Ward Cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Plague Ward Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1984,23 +2028,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

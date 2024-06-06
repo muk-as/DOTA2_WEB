@@ -14,7 +14,7 @@
             {
               "color": 3,
               "title_loc": "Veiled One",
-              "description_loc": "",
+              "description_loc": "Blur is no longer dispelled when attacking and reduces mana costs during and after Blur.",
               "name": "phantom_assassin_veiled_one",
               "icon": "mana",
               "gradient_id": 3
@@ -22,7 +22,7 @@
             {
               "color": 5,
               "title_loc": "Methodical",
-              "description_loc": "",
+              "description_loc": "Coup de Grace procs every {s:bonus_attacks_to_proc} attacks on the same hero or {s:bonus_attacks_to_proc_creeps} attacks on non hero units.",
               "name": "phantom_assassin_methodical",
               "icon": "damage",
               "gradient_id": 0
@@ -695,7 +695,7 @@
               "id": 5192,
               "name": "phantom_assassin_blur",
               "name_loc": "Blur",
-              "desc_loc": "Phantom Assassin blurs her body, causing her to be impossible to see until she attacks or comes near enemy heroes, towers, or outposts.",
+              "desc_loc": "Phantom Assassin blurs her body, increasing her movement speed, causing her to be impossible to see until she attacks or comes near enemy heroes, towers, or outposts.",
               "lore_loc": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat.",
               "notes_loc": [
                 "Attacking Roshan with a regular attack will dispel Blur."
@@ -908,6 +908,26 @@
                     "values": [
                       100
                     ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "active_movespeed_bonus",
+                  "values_float": [
+                    3,
+                    6,
+                    9,
+                    12
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ACTIVE MOVEMENT SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1736,7 +1756,7 @@
                   "facet_bonus": {
                     "name": "phantom_assassin_methodical",
                     "values": [
-                      100
+                      125
                     ],
                     "operation": 0
                   },
