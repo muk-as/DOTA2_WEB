@@ -521,8 +521,31 @@
               "required_facet": ""
             },
             {
+              "name": "slow_step_pct_of_max",
+              "values_float": [
+                70,
+                80,
+                90,
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "slow_tooltip",
               "values_float": [
+                35,
+                40,
+                45,
                 50
               ],
               "is_percentage": true,
@@ -3232,12 +3255,12 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_life_stealer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/npc_dota_hero_life_stealer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/npc_dota_hero_life_stealer.webm",
-      "update_time": 1717639296,
+      "update_time": 1719273691,
       "facets": [
         {
           "color": 1,
           "title_loc": "噬尸鬼",
-          "description_loc": "噬魂鬼每击杀一个单位就会获得%bonus_hp%点生命上限。",
+          "description_loc": "噬魂鬼每击杀一个非英雄单位就会获得%bonus_hp_per_creep%点生命上限，每击杀一名英雄就会获得%bonus_hp_per_hero%点生命上限。",
           "name": "life_stealer_maxhp_gain",
           "icon": "armor",
           "gradient_id": 3
@@ -3258,7 +3281,7 @@
               "id": 1302,
               "name": "life_stealer_corpse_eater",
               "name_loc": "噬尸鬼",
-              "desc_loc": "噬魂鬼每击杀一个单位就会获得%bonus_hp%点生命上限。",
+              "desc_loc": "噬魂鬼每击杀一个非英雄单位就会获得%bonus_hp_per_creep%点生命上限，每击杀一名英雄就会获得%bonus_hp_per_hero%点生命上限。",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -3304,9 +3327,26 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_hp",
+                  "name": "bonus_hp_per_hero",
                   "values_float": [
-                    2
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_hp_per_creep",
+                  "values_float": [
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
