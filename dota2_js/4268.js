@@ -431,7 +431,7 @@
         s = t(5062),
         n = t(2580),
         m = t(98142),
-        c = t(46792);
+        c = t(4572);
       const i = ({
           colorTopEdge: e,
           colorTop: r,

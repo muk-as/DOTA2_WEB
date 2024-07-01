@@ -125,7 +125,7 @@
         l = a(5062),
         s = a(2580),
         o = a(98142),
-        c = a(46792);
+        c = a(4572);
       const m = ({
           colorTopEdge: e,
           colorTop: t,
