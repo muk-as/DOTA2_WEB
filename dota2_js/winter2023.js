@@ -1,11 +1,11 @@
-// 1511.js
+// 4848.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [1511],
+  [4848],
   {
-    92047: (e) => {
+    63279: (e) => {
       e.exports = {
         Tooltip: "zIgQQsExodZ4dUHWl7-Vj",
         CarouselFade: "_2GYRSFEbsUCoLDOGW67kMO",
@@ -134,27 +134,27 @@
         BalanceChanges: "EHed0ZNpbB7ptETzCFPho",
       };
     },
-    31511: (e, t, a) => {
+    94848: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => P });
-      var r = a(22970),
-        i = a(98142),
-        n = a(73806),
-        s = a(2580),
-        l = a(80846),
-        o = a(66204),
-        c = a(62175),
-        m = a(5062),
-        _ = a(4572),
-        d = a(31444),
-        u = a(37196),
-        p = a(92047),
+      var r = a(85608),
+        n = a(89506),
+        i = a(33706),
+        s = a(27866),
+        l = a(68446),
+        o = a(7552),
+        c = a(83640),
+        m = a(21384),
+        _ = a(23634),
+        d = a(47202),
+        u = a(36305),
+        p = a(63279),
         E = a.n(p),
-        N = a(95974),
-        v = a(78752),
-        w = a(38964),
-        g = a(43356),
-        h = a.n(g);
+        N = a(61840),
+        w = a(32389),
+        g = a(54159),
+        v = a(85286),
+        h = a.n(v);
       const f = (e) =>
           o.createElement(
             "div",
@@ -166,19 +166,19 @@
                 o.createElement(
                   "div",
                   { className: E().Icon },
-                  o.createElement("img", { src: `${i.Y.IMG_URL}/` + e.icon }),
+                  o.createElement("img", { src: `${n.r.IMG_URL}/` + e.icon }),
                 ),
               o.createElement(
                 "div",
                 { className: E().Headline },
-                (0, s.Jr)(e.title),
+                (0, s.Wn)(e.title),
               ),
             ),
             e.description &&
               o.createElement(
                 "div",
                 { className: E().Description },
-                (0, s.Jr)(e.description),
+                (0, s.Wn)(e.description),
               ),
             e.contents &&
               o.createElement(
@@ -192,7 +192,7 @@
           return o.createElement(
             "div",
             {
-              className: (0, m.Z)(
+              className: (0, m.A)(
                 E().SmallFeatureCapsule,
                 e.horizontal ? E().Horizontal : null,
               ),
@@ -203,7 +203,7 @@
             e.image &&
               o.createElement("img", {
                 className: E().Image,
-                src: `${i.Y.IMG_URL}/` + e.image,
+                src: `${n.r.IMG_URL}/` + e.image,
               }),
             e.video &&
               o.createElement(
@@ -216,11 +216,11 @@
                   preload: "auto",
                   loop: !0,
                   playsInline: !0,
-                  poster: `${i.Y.IMG_URL}/winter2023/${e.video}.jpg`,
+                  poster: `${n.r.IMG_URL}/winter2023/${e.video}.jpg`,
                 },
                 o.createElement("source", {
                   type: "video/webm",
-                  src: `${i.Y.VIDEO_URL}/winter2023/${e.video}.webm`,
+                  src: `${n.r.VIDEO_URL}/winter2023/${e.video}.webm`,
                 }),
               ),
             o.createElement(f, {
@@ -236,7 +236,7 @@
               o.createElement(
                 "span",
                 { key: t, className: E().SingleValue },
-                (0, w.L)(e),
+                (0, g.F)(e),
               ),
             ),
             a = !1,
@@ -253,53 +253,51 @@
                   "+ ",
                   t,
                   " ",
-                  (0, s.Jr)(r),
+                  (0, s.Wn)(r),
                 )
               : o.createElement(
                   "div",
                   { className: E().Stat },
-                  (0, s.Jr)(r),
+                  (0, s.Wn)(r),
                   " ",
                   t,
                 )
           );
         },
-        I = (0, l.Pi)(({ name: e, components: t, recipeCost: a }) => {
-          var r;
-          const l = n.L.Get().getItemList(),
-            c = null == l ? void 0 : l.itemabilities.find((t) => t.name == e),
-            _ = n.L.Get().getItemData(null == c ? void 0 : c.id);
-          if (!_) return null;
-          let d = _.desc_loc;
-          _.special_values.forEach((e) => {
+        I = (0, l.PA)(({ name: e, components: t, recipeCost: a }) => {
+          const r = i.B5.Get().getItemList(),
+            l = r?.itemabilities.find((t) => t.name == e),
+            c = i.B5.Get().getItemData(l?.id);
+          if (!c) return null;
+          let _ = c.desc_loc;
+          c.special_values.forEach((e) => {
             let t =
-              e.values_float.length > 0 ? (0, w.L)(e.values_float[0]) : "0";
-            (d = d.replace("%" + e.name + "%", t)),
-              (d = d.replace("%" + e.name.toLowerCase() + "%", t));
+              e.values_float.length > 0 ? (0, g.F)(e.values_float[0]) : "0";
+            (_ = _.replace("%" + e.name + "%", t)),
+              (_ = _.replace("%" + e.name.toLowerCase() + "%", t));
           }),
-            (d = d.replace(/\%\%/g, "%"));
-          let u =
-              null === (r = _.special_values) || void 0 === r
-                ? void 0
-                : r.map((e, t) => o.createElement(y, { key: t, special: e })),
-            p = _.name.replace("item_", ""),
-            N = _.item_cost,
-            v =
-              _.item_neutral_tier >= 0 && _.item_neutral_tier < 5
-                ? _.item_neutral_tier + 1
+            (_ = _.replace(/\%\%/g, "%"));
+          let d = c.special_values?.map((e, t) =>
+              o.createElement(y, { key: t, special: e }),
+            ),
+            u = c.name.replace("item_", ""),
+            p = c.item_cost,
+            N =
+              c.item_neutral_tier >= 0 && c.item_neutral_tier < 5
+                ? c.item_neutral_tier + 1
                 : -1,
-            g = E()["Tier" + v],
-            h = _.cooldowns.reduce((e, t) => e + t) > 0,
-            f = _.mana_costs.reduce((e, t) => e + t) > 0,
-            S =
-              !!(_.health_costs && _.health_costs.length > 0) &&
-              _.health_costs.reduce((e, t) => e + t) > 0,
-            I = t
+            w = E()["Tier" + N],
+            v = c.cooldowns.reduce((e, t) => e + t) > 0,
+            h = c.mana_costs.reduce((e, t) => e + t) > 0,
+            f =
+              !!(c.health_costs && c.health_costs.length > 0) &&
+              c.health_costs.reduce((e, t) => e + t) > 0,
+            S = t
               ? t.map((e, t) =>
                   o.createElement("img", {
                     key: t,
                     className: E().RecipeComponentImage,
-                    src: `${i.Y.IMG_URL}/items/${e}.png`,
+                    src: `${n.r.IMG_URL}/items/${e}.png`,
                   }),
                 )
               : [];
@@ -311,47 +309,47 @@
               { className: E().Header },
               o.createElement("img", {
                 className: E().ItemImage,
-                src: `${i.Y.IMG_URL}/items/${p}.png`,
+                src: `${n.r.IMG_URL}/items/${u}.png`,
               }),
               o.createElement(
                 "div",
                 { className: E().HeaderText },
-                o.createElement("div", { className: E().ItemName }, _.name_loc),
-                N > 0 &&
+                o.createElement("div", { className: E().ItemName }, c.name_loc),
+                p > 0 &&
                   o.createElement(
                     "div",
                     { className: E().GoldPrice },
                     o.createElement("img", {
                       className: E().GoldIcon,
-                      src: `${i.Y.IMG_URL}/icons/gold.png`,
+                      src: `${n.r.IMG_URL}/icons/gold.png`,
                     }),
-                    N,
+                    p,
                   ),
-                v > 0 &&
+                N > 0 &&
                   o.createElement(
                     "div",
-                    { className: (0, m.Z)(E().NeutralItemTier, g) },
-                    (0, s.Jr)("#neutral_item_tier", v),
+                    { className: (0, m.A)(E().NeutralItemTier, w) },
+                    (0, s.Wn)("#neutral_item_tier", N),
                   ),
               ),
             ),
             o.createElement(
               "div",
               { className: E().Body },
-              o.createElement("div", { className: E().Stats }, u),
-              d &&
+              o.createElement("div", { className: E().Stats }, d),
+              _ &&
                 o.createElement(
                   "div",
                   { className: E().DescriptionContainer },
                   o.createElement("div", {
                     className: E().Description,
-                    dangerouslySetInnerHTML: { __html: d },
+                    dangerouslySetInnerHTML: { __html: _ },
                   }),
-                  (h || f || S) &&
+                  (v || h || f) &&
                     o.createElement(
                       "div",
-                      { className: (0, m.Z)(E().DescriptionHeader) },
-                      f &&
+                      { className: (0, m.A)(E().DescriptionHeader) },
+                      h &&
                         o.createElement(
                           "div",
                           { className: E().ManaContainer },
@@ -359,12 +357,12 @@
                           o.createElement(
                             "div",
                             { className: E().ManaText },
-                            _.mana_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, w.L)(e),
+                            c.mana_costs.map(
+                              (e, t) => (t > 0 ? " / " : "") + (0, g.F)(e),
                             ),
                           ),
                         ),
-                      S &&
+                      f &&
                         o.createElement(
                           "div",
                           { className: E().HealthContainer },
@@ -372,33 +370,33 @@
                           o.createElement(
                             "div",
                             { className: E().HealthText },
-                            _.health_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, w.L)(e),
+                            c.health_costs.map(
+                              (e, t) => (t > 0 ? " / " : "") + (0, g.F)(e),
                             ),
                           ),
                         ),
-                      h &&
+                      v &&
                         o.createElement(
                           "div",
                           { className: E().CooldownContainer },
                           o.createElement("div", {
                             className: E().CooldownIcon,
                             style: {
-                              backgroundImage: `url( ${i.Y.IMG_URL}icons/cooldown.png )`,
+                              backgroundImage: `url( ${n.r.IMG_URL}icons/cooldown.png )`,
                             },
                           }),
                           o.createElement(
                             "div",
                             { className: E().CooldownText },
-                            _.cooldowns.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, w.L)(e),
+                            c.cooldowns.map(
+                              (e, t) => (t > 0 ? " / " : "") + (0, g.F)(e),
                             ),
                           ),
                         ),
                     ),
                 ),
             ),
-            I.length > 0 &&
+            S.length > 0 &&
               o.createElement(
                 "div",
                 { className: E().Recipe },
@@ -406,10 +404,10 @@
                   "div",
                   { className: E().RecipeLabel },
                   " ",
-                  (0, s.Jr)("#winter2023_recipe"),
+                  (0, s.Wn)("#winter2023_recipe"),
                   " ",
                 ),
-                I,
+                S,
                 a &&
                   a > 0 &&
                   o.createElement(
@@ -423,7 +421,7 @@
                   a > 0 &&
                   o.createElement("img", {
                     className: E().RecipeComponentImage,
-                    src: `${i.Y.IMG_URL}/items/recipe.png`,
+                    src: `${n.r.IMG_URL}/items/recipe.png`,
                   }),
               ),
           );
@@ -433,10 +431,10 @@
           video: t,
           name: a,
           heroname: r,
-          autoplay: n,
+          autoplay: i,
           onSlideIn: s,
         }) => {
-          const l = (0, o.useContext)(v.ro),
+          const l = (0, o.useContext)(w.Yc),
             c = (0, o.useRef)(),
             m =
               -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
@@ -457,7 +455,7 @@
               m
                 ? o.createElement("img", {
                     className: E().TreasureVideo,
-                    src: `${i.Y.VIDEO_URL}/winter2023/treasure/${t}.png`,
+                    src: `${n.r.VIDEO_URL}/winter2023/treasure/${t}.png`,
                   })
                 : o.createElement(
                     "video",
@@ -465,15 +463,15 @@
                       ref: c,
                       className: E().TreasureVideo,
                       muted: !0,
-                      autoPlay: n,
+                      autoPlay: i,
                       preload: "auto",
                       loop: !0,
                       playsInline: !0,
-                      poster: `${i.Y.VIDEO_URL}/winter2023/treasure/${t}.png`,
+                      poster: `${n.r.VIDEO_URL}/winter2023/treasure/${t}.png`,
                     },
                     o.createElement("source", {
                       type: "video/webm",
-                      src: `${i.Y.VIDEO_URL}/winter2023/treasure/${t}.webm`,
+                      src: `${n.r.VIDEO_URL}/winter2023/treasure/${t}.webm`,
                     }),
                   ),
             )
@@ -484,13 +482,13 @@
             "div",
             {
               className: e
-                ? (0, m.Z)(E().SectionDivider, e)
-                : (0, m.Z)(E().SectionDivider),
+                ? (0, m.A)(E().SectionDivider, e)
+                : (0, m.A)(E().SectionDivider),
             },
             o.createElement("div", { className: E().SectionDividerMiddle }),
             o.createElement("img", {
               className: E().SectionDividerImage,
-              src: `${i.Y.IMG_URL}/winter2023/snowflake_2.png`,
+              src: `${n.r.IMG_URL}/winter2023/snowflake_2.png`,
             }),
           ),
         L = () =>
@@ -500,24 +498,24 @@
             o.createElement("div", { className: E().SubsectionDividerBorder }),
             o.createElement("img", {
               className: E().SubsectionDividerImage,
-              src: `${i.Y.IMG_URL}/winter2023/snowflake_1.png`,
+              src: `${n.r.IMG_URL}/winter2023/snowflake_1.png`,
             }),
           );
       let b = class extends o.Component {
+        bIsMacSafariBrowser =
+          -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
+          -1 != navigator.userAgent.toLowerCase().indexOf("macintosh");
+        parallaxContainerRef = o.createRef();
         constructor(e) {
           super(e),
-            (this.bIsMacSafariBrowser =
-              -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
-              -1 != navigator.userAgent.toLowerCase().indexOf("macintosh")),
-            (this.parallaxContainerRef = o.createRef()),
-            (this.handleScroll = (e) => {
-              h().refresh();
-            }),
             (this.state = {
               treasureName: "#frosty_treasure_treasure_name_9",
               heroName: "#frosty_treasure_hero_name_9",
             });
         }
+        handleScroll = (e) => {
+          h().refresh();
+        };
         componentDidMount() {
           this.parallaxContainerRef.current.addEventListener(
             "scroll",
@@ -532,41 +530,41 @@
           );
         }
         render() {
-          const e = _.P.getPatchNotes("7.35", i.Y.LANGUAGE);
+          const e = _.o.getPatchNotes("7.35", n.r.LANGUAGE);
           let t = "frostivus_2023_logo_en";
           return (
-            "schinese" == i.Y.LANGUAGE && (t = "frostivus_2023_logo_cn"),
+            "schinese" == n.r.LANGUAGE && (t = "frostivus_2023_logo_cn"),
             o.createElement(
               "div",
               { id: "Winter2023Page", className: E().Winter2023Page },
-              o.createElement(c.ql, null),
+              o.createElement(c.mg, null),
               o.createElement(
                 "div",
                 {
                   ref: this.parallaxContainerRef,
-                  className: (0, m.Z)(E().PageContainer, E().Parallax),
+                  className: (0, m.A)(E().PageContainer, E().Parallax),
                 },
-                o.createElement(d.j, { bOverlapping: !0 }),
+                o.createElement(d.A, { bOverlapping: !0 }),
                 o.createElement("div", {
-                  className: (0, m.Z)(E().PageBackground, E().ParallaxLayer),
+                  className: (0, m.A)(E().PageBackground, E().ParallaxLayer),
                 }),
                 o.createElement("div", {
-                  className: (0, m.Z)(E().PageForeground, E().ParallaxLayer),
+                  className: (0, m.A)(E().PageForeground, E().ParallaxLayer),
                 }),
                 o.createElement(
                   "div",
-                  { className: (0, m.Z)(E().HeaderSection) },
+                  { className: (0, m.A)(E().HeaderSection) },
                   o.createElement(
                     "div",
-                    { className: (0, m.Z)(E().TitleContainer) },
+                    { className: (0, m.A)(E().TitleContainer) },
                     o.createElement("img", {
                       className: E().TitleImage,
-                      src: `${i.Y.IMG_URL}/winter2023/${t}.png`,
+                      src: `${n.r.IMG_URL}/winter2023/${t}.png`,
                     }),
                     this.bIsMacSafariBrowser
                       ? o.createElement("img", {
                           className: E().TitleSnowImage,
-                          src: `${i.Y.IMG_URL}/winter2023/frostivus_2023_header_snowfall.png`,
+                          src: `${n.r.IMG_URL}/winter2023/frostivus_2023_header_snowfall.png`,
                         })
                       : o.createElement(
                           "video",
@@ -577,23 +575,23 @@
                             preload: "auto",
                             loop: !0,
                             playsInline: !0,
-                            poster: `${i.Y.IMG_URL}/winter2023/frostivus_2023_header_snowfall.png`,
+                            poster: `${n.r.IMG_URL}/winter2023/frostivus_2023_header_snowfall.png`,
                           },
                           o.createElement("source", {
                             type: "video/webm",
-                            src: `${i.Y.VIDEO_URL}/winter2023/snowflakes.webm`,
+                            src: `${n.r.VIDEO_URL}/winter2023/snowflakes.webm`,
                           }),
                         ),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Subtitle },
-                    (0, s.Jr)("#winter2023_subtitle"),
+                    (0, s.Wn)("#winter2023_subtitle"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Paragraph },
-                    (0, s.Jr)("#winter2023_section_introduction"),
+                    (0, s.Wn)("#winter2023_section_introduction"),
                   ),
                 ),
                 T(),
@@ -601,7 +599,7 @@
                   "div",
                   {
                     id: "MobileOnlySection",
-                    className: (0, m.Z)(
+                    className: (0, m.A)(
                       E().WebsiteSection,
                       E().MobileOnlySection,
                     ),
@@ -609,7 +607,7 @@
                   o.createElement(
                     "div",
                     { className: E().Paragraph },
-                    (0, s.Jr)("#winter2023_section_introduction"),
+                    (0, s.Wn)("#winter2023_section_introduction"),
                   ),
                 ),
                 T(E().MobileOnly),
@@ -617,27 +615,27 @@
                   "div",
                   {
                     id: "Frostivus",
-                    className: (0, m.Z)(E().WebsiteSection, E().Frostivus),
+                    className: (0, m.A)(E().WebsiteSection, E().Frostivus),
                   },
                   o.createElement(
                     "h1",
                     null,
-                    (0, s.Jr)("#winter2023_frostivus_section_title"),
+                    (0, s.Wn)("#winter2023_frostivus_section_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().DateText },
-                    (0, s.Jr)("#winter2023_frostivus_section_date"),
+                    (0, s.Wn)("#winter2023_frostivus_section_date"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_frostivus_section_introduction"),
+                    (0, s.Wn)("#winter2023_frostivus_section_introduction"),
                   ),
                   o.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         E().FeatureRow,
                         E().TwoColumn,
                         E().TheEvent,
@@ -660,12 +658,12 @@
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_frostivus_section_event_title"),
+                    (0, s.Wn)("#winter2023_frostivus_section_event_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)(
+                    (0, s.Wn)(
                       "#winter2023_frostivus_section_event_introduction",
                     ),
                   ),
@@ -673,7 +671,7 @@
                     "div",
                     { className: E().FrostivusTreasureSection },
                     o.createElement(
-                      v.sj,
+                      w.gi,
                       {
                         className: E().TreasureCarousel,
                         naturalSlideWidth: 600,
@@ -685,10 +683,10 @@
                         dragEnabled: !1,
                       },
                       o.createElement(
-                        v.iR,
+                        w.Ap,
                         { className: E().TreasureSlider },
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 0,
                             className: E().TreasureSlide,
@@ -707,7 +705,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 1,
                             className: E().TreasureSlide,
@@ -726,7 +724,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 2,
                             className: E().TreasureSlide,
@@ -745,7 +743,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 3,
                             className: E().TreasureSlide,
@@ -764,7 +762,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 4,
                             className: E().TreasureSlide,
@@ -783,7 +781,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 5,
                             className: E().TreasureSlide,
@@ -802,7 +800,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 6,
                             className: E().TreasureSlide,
@@ -821,7 +819,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 7,
                             className: E().TreasureSlide,
@@ -840,7 +838,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 8,
                             className: E().TreasureSlide,
@@ -859,7 +857,7 @@
                           }),
                         ),
                         o.createElement(
-                          v.Mi,
+                          w.q7,
                           {
                             index: 9,
                             className: E().TreasureSlide,
@@ -881,20 +879,20 @@
                       o.createElement(
                         "div",
                         { className: E().HeroName },
-                        (0, s.Jr)(this.state.heroName),
+                        (0, s.Wn)(this.state.heroName),
                       ),
                       o.createElement(
                         "div",
                         { className: E().TreasureName },
-                        (0, s.Jr)(this.state.treasureName),
+                        (0, s.Wn)(this.state.treasureName),
                       ),
                       o.createElement(
                         "div",
                         { className: E().CarouselDots },
                         o.createElement(
-                          v.jp,
+                          w._X,
                           {
-                            className: (0, m.Z)(
+                            className: (0, m.A)(
                               E().TreasurePaginationButton,
                               E().Prev,
                             ),
@@ -902,59 +900,59 @@
                           o.createElement("div", { className: E().PrevArrow }),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 0 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 1 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 2 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 3 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 4 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 5 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 6 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 7 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 8 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.oT,
+                          w.cL,
                           { className: E().TreasureSelector, slide: 9 },
                           o.createElement("div", null),
                         ),
                         o.createElement(
-                          v.P1,
+                          w.CC,
                           {
-                            className: (0, m.Z)(
+                            className: (0, m.A)(
                               E().TreasurePaginationButton,
                               E().Next,
                             ),
@@ -980,7 +978,7 @@
                         this.bIsMacSafariBrowser
                           ? o.createElement("img", {
                               className: E().BonusItemVideo,
-                              src: `${i.Y.IMG_URL}/winter2023/fullset_example.png`,
+                              src: `${n.r.IMG_URL}/winter2023/fullset_example.png`,
                             })
                           : o.createElement(
                               "video",
@@ -991,28 +989,28 @@
                                 preload: "auto",
                                 loop: !0,
                                 playsInline: !0,
-                                poster: `${i.Y.IMG_URL}/winter2023/fullset_example.png`,
+                                poster: `${n.r.IMG_URL}/winter2023/fullset_example.png`,
                               },
                               o.createElement("source", {
                                 type: "video/webm",
-                                src: `${i.Y.VIDEO_URL}/winter2023/fullset_example.webm`,
+                                src: `${n.r.VIDEO_URL}/winter2023/fullset_example.webm`,
                               }),
                             ),
                         o.createElement(
                           "p",
                           { className: E().Header },
-                          (0, s.Jr)("#winter2023_bonus_item_fullset"),
+                          (0, s.Wn)("#winter2023_bonus_item_fullset"),
                         ),
                       ),
                       o.createElement(
                         "div",
                         {
-                          className: (0, m.Z)(E().VisualContainer, E().Unusual),
+                          className: (0, m.A)(E().VisualContainer, E().Unusual),
                         },
                         this.bIsMacSafariBrowser
                           ? o.createElement("img", {
                               className: E().BonusItemVideo,
-                              src: `${i.Y.IMG_URL}/winter2023/unusual_example.png`,
+                              src: `${n.r.IMG_URL}/winter2023/unusual_example.png`,
                             })
                           : o.createElement(
                               "video",
@@ -1023,17 +1021,17 @@
                                 preload: "auto",
                                 loop: !0,
                                 playsInline: !0,
-                                poster: `${i.Y.IMG_URL}/winter2023/unusual_example.png`,
+                                poster: `${n.r.IMG_URL}/winter2023/unusual_example.png`,
                               },
                               o.createElement("source", {
                                 type: "video/webm",
-                                src: `${i.Y.VIDEO_URL}/winter2023/unusual_example.webm`,
+                                src: `${n.r.VIDEO_URL}/winter2023/unusual_example.webm`,
                               }),
                             ),
                         o.createElement(
                           "p",
                           { className: E().Header },
-                          (0, s.Jr)("#winter2023_bonus_item_unusual"),
+                          (0, s.Wn)("#winter2023_bonus_item_unusual"),
                         ),
                       ),
                     ),
@@ -1042,17 +1040,17 @@
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_stocking_stuffer_title"),
+                    (0, s.Wn)("#winter2023_stocking_stuffer_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_stocking_stuffer_desc"),
+                    (0, s.Wn)("#winter2023_stocking_stuffer_desc"),
                   ),
                   o.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         E().FeatureRow,
                         E().ThreeColumn,
                         E().StockingStuffers,
@@ -1078,18 +1076,18 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, m.Z)(E().EventPopoutSection) },
+                    { className: (0, m.A)(E().EventPopoutSection) },
                     o.createElement("div", {
                       className: E().EventPopoutBorder,
                     }),
                     o.createElement(
                       "h4",
                       null,
-                      (0, s.Jr)("#winter2023_naughty_or_nice_section_title"),
+                      (0, s.Wn)("#winter2023_naughty_or_nice_section_title"),
                     ),
                     o.createElement(
                       "div",
-                      { className: (0, m.Z)(E().NaughtyOrNice) },
+                      { className: (0, m.A)(E().NaughtyOrNice) },
                       o.createElement(
                         "div",
                         { className: E().NaughtyOrNiceSection },
@@ -1110,7 +1108,7 @@
                         }),
                         o.createElement("img", {
                           className: E().NaughtOrNiceSnowflake,
-                          src: `${i.Y.IMG_URL}/winter2023/snowflake_2_gold.png`,
+                          src: `${n.r.IMG_URL}/winter2023/snowflake_2_gold.png`,
                         }),
                         o.createElement("div", {
                           className: E().NaughtOrNiceVerticalLineBottom,
@@ -1127,7 +1125,7 @@
                           "div",
                           { className: E().NaughtyOrNiceImageContainer },
                           o.createElement("img", {
-                            src: `${i.Y.IMG_URL}/winter2023/frostivus_2023_gift_nice.png`,
+                            src: `${n.r.IMG_URL}/winter2023/frostivus_2023_gift_nice.png`,
                           }),
                         ),
                       ),
@@ -1139,12 +1137,12 @@
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_frostivus_festive_items_title"),
+                    (0, s.Wn)("#winter2023_frostivus_festive_items_title"),
                   ),
                   o.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         E().FeatureRow,
                         E().ThreeColumn,
                         E().FestiveItems,
@@ -1175,32 +1173,32 @@
                   "div",
                   {
                     id: "ClientUpdates",
-                    className: (0, m.Z)(E().WebsiteSection, E().ClientUpdates),
+                    className: (0, m.A)(E().WebsiteSection, E().ClientUpdates),
                   },
                   o.createElement(
                     "h1",
                     null,
-                    (0, s.Jr)("#winter2023_clientupdate_section_title"),
+                    (0, s.Wn)("#winter2023_clientupdate_section_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_clientupdate_introduction"),
+                    (0, s.Wn)("#winter2023_clientupdate_introduction"),
                   ),
                   L(),
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_qol_section_title"),
+                    (0, s.Wn)("#winter2023_qol_section_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_qol_introduction"),
+                    (0, s.Wn)("#winter2023_qol_introduction"),
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, m.Z)(E().FeatureRow, E().ThreeColumn) },
+                    { className: (0, m.A)(E().FeatureRow, E().ThreeColumn) },
                     o.createElement(S, {
                       title: "#winter2023_qol_tower_range_indicator_title",
                       description: "#winter2023_qol_tower_range_indicator_desc",
@@ -1260,17 +1258,17 @@
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_profileshowcase_section_title"),
+                    (0, s.Wn)("#winter2023_profileshowcase_section_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_profileshowcase_introduction"),
+                    (0, s.Wn)("#winter2023_profileshowcase_introduction"),
                   ),
                   o.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         E().LargeFeatureSection,
                         E().ProfileShowcase,
                       ),
@@ -1324,11 +1322,11 @@
                         preload: "auto",
                         loop: !0,
                         playsInline: !0,
-                        poster: `${i.Y.IMG_URL}/winter2023/profile_showcase_updates.jpg`,
+                        poster: `${n.r.IMG_URL}/winter2023/profile_showcase_updates.jpg`,
                       },
                       o.createElement("source", {
                         type: "video/webm",
-                        src: `${i.Y.VIDEO_URL}/winter2023/profile_showcase_updates.webm`,
+                        src: `${n.r.VIDEO_URL}/winter2023/profile_showcase_updates.webm`,
                       }),
                     ),
                   ),
@@ -1336,17 +1334,17 @@
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_armory_section_title"),
+                    (0, s.Wn)("#winter2023_armory_section_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_armory_introduction"),
+                    (0, s.Wn)("#winter2023_armory_introduction"),
                   ),
                   o.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(E().LargeFeatureSection, E().Armory),
+                      className: (0, m.A)(E().LargeFeatureSection, E().Armory),
                     },
                     o.createElement(
                       "div",
@@ -1371,24 +1369,24 @@
                     ),
                     o.createElement("img", {
                       className: E().FeatureImage,
-                      src: `${i.Y.IMG_URL}/winter2023/armory_updates.jpg`,
+                      src: `${n.r.IMG_URL}/winter2023/armory_updates.jpg`,
                     }),
                   ),
                   L(),
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_dotaplus_section_title"),
+                    (0, s.Wn)("#winter2023_dotaplus_section_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_dotaplus_introduction"),
+                    (0, s.Wn)("#winter2023_dotaplus_introduction"),
                   ),
                   o.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         E().LargeFeatureSection,
                         E().DotaPlus,
                       ),
@@ -1418,7 +1416,7 @@
                     this.bIsMacSafariBrowser
                       ? o.createElement("img", {
                           className: E().FeatureImage,
-                          src: `${i.Y.IMG_URL}/winter2023/frostivus_2023_dotaplus_premium_sets.png`,
+                          src: `${n.r.IMG_URL}/winter2023/frostivus_2023_dotaplus_premium_sets.png`,
                         })
                       : o.createElement(
                           "video",
@@ -1429,11 +1427,11 @@
                             preload: "auto",
                             loop: !0,
                             playsInline: !0,
-                            poster: `${i.Y.IMG_URL}/winter2023/frostivus_2023_dotaplus_premium_sets.png`,
+                            poster: `${n.r.IMG_URL}/winter2023/frostivus_2023_dotaplus_premium_sets.png`,
                           },
                           o.createElement("source", {
                             type: "video/webm",
-                            src: `${i.Y.VIDEO_URL}/winter2023/frostivus_2023_dotaplus_premium_sets.webm`,
+                            src: `${n.r.VIDEO_URL}/winter2023/frostivus_2023_dotaplus_premium_sets.webm`,
                           }),
                         ),
                   ),
@@ -1443,23 +1441,23 @@
                   "div",
                   {
                     id: "BalanceChanges",
-                    className: (0, m.Z)(E().WebsiteSection, E().BalanceChanges),
+                    className: (0, m.A)(E().WebsiteSection, E().BalanceChanges),
                   },
                   o.createElement(
                     "h1",
                     null,
-                    (0, s.Jr)("#winter2023_patchnotes_section_title"),
+                    (0, s.Wn)("#winter2023_patchnotes_section_title"),
                   ),
                   L(),
                   o.createElement(
                     "h2",
                     null,
-                    (0, s.Jr)("#winter2023_patchnotes_new_items_title"),
+                    (0, s.Wn)("#winter2023_patchnotes_new_items_title"),
                   ),
                   o.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, s.Jr)("#winter2023_patchnotes_new_items_introduction"),
+                    (0, s.Wn)("#winter2023_patchnotes_new_items_introduction"),
                   ),
                   o.createElement(
                     "div",
@@ -1524,41 +1522,41 @@
                   o.createElement(
                     "div",
                     { className: E().GameplayUpdate },
-                    o.createElement(N.on, {
-                      patchnotes: null == e ? void 0 : e.generic,
+                    o.createElement(N.fs, {
+                      patchnotes: e?.generic,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    o.createElement(N.k8, {
-                      patchnotes: null == e ? void 0 : e.neutral_creeps,
+                    o.createElement(N.wL, {
+                      patchnotes: e?.neutral_creeps,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    o.createElement(N.bn, {
-                      patchnotes: null == e ? void 0 : e.items,
+                    o.createElement(N.ZV, {
+                      patchnotes: e?.items,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    o.createElement(N.bn, {
-                      patchnotes: null == e ? void 0 : e.neutral_items,
+                    o.createElement(N.ZV, {
+                      patchnotes: e?.neutral_items,
                       is_neutrals: !0,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    o.createElement(N.MC, {
-                      patchnotes: null == e ? void 0 : e.heroes,
+                    o.createElement(N.ob, {
+                      patchnotes: e?.heroes,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
                   ),
                 ),
-                o.createElement(u.U, null),
+                o.createElement(u.K, null),
               ),
             )
           );
         }
       };
-      b = (0, r.gn)([l.Pi], b);
+      b = (0, r.Cg)([l.PA], b);
       const P = b;
     },
   },

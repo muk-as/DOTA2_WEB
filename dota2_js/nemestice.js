@@ -1,11 +1,11 @@
-// 3657.js
+// 9863.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [3657],
+  [9863],
   {
-    80707: (e) => {
+    19890: (e) => {
       e.exports = {
         Tooltip: "_2h7lSR0tx1SxTgh_Xsoscz",
         CarouselFade: "HKaWhJwG4O1eT4dgejPo9",
@@ -103,89 +103,89 @@
         LoreSection: "qvGKqawIBTzZC-sH-9Wu-",
       };
     },
-    33657: (e, a, t) => {
+    69863: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => g });
-      var s = t(98142),
-        r = t(66204),
-        c = t(80707),
+      var s = t(89506),
+        r = t(7552),
+        c = t(19890),
         l = t.n(c),
-        m = t(5062),
-        i = t(4572),
-        n = t(80846),
-        o = t(2580),
-        _ = t(31444),
-        d = t(37196),
-        p = t(63118),
-        E = t(38109),
-        v = t(62175);
-      const g = (0, n.Pi)(() => {
-        i.P.RequestBPPrices([18695, 18696, 18697]);
+        n = t(21384),
+        m = t(23634),
+        i = t(68446),
+        o = t(27866),
+        _ = t(47202),
+        d = t(36305),
+        p = t(24953),
+        E = t(20373),
+        v = t(83640);
+      const g = (0, i.PA)(() => {
+        m.o.RequestBPPrices([18695, 18696, 18697]);
         const e = [
           {
             bEnabled: !0,
             arrImmortals: [
               {
                 strHeroName: "beastmaster",
-                eRarity: E.cg.Normal,
-                eImageLoc: E.sR.Left,
+                eRarity: E.yP.Normal,
+                eImageLoc: E.gv.Left,
               },
               {
                 strHeroName: "dark_willow",
-                eRarity: E.cg.Normal,
-                eImageLoc: E.sR.Right,
+                eRarity: E.yP.Normal,
+                eImageLoc: E.gv.Right,
               },
               {
                 strHeroName: "elder_titan",
-                eRarity: E.cg.Normal,
-                eImageLoc: E.sR.Right,
+                eRarity: E.yP.Normal,
+                eImageLoc: E.gv.Right,
               },
               {
                 strHeroName: "enchantress",
-                eRarity: E.cg.Normal,
-                eImageLoc: E.sR.Left,
+                eRarity: E.yP.Normal,
+                eImageLoc: E.gv.Left,
               },
               {
                 strHeroName: "mirana",
-                eRarity: E.cg.Normal,
-                eImageLoc: E.sR.Right,
+                eRarity: E.yP.Normal,
+                eImageLoc: E.gv.Right,
               },
               {
                 strHeroName: "tidehunter",
-                eRarity: E.cg.Normal,
-                eImageLoc: E.sR.Left,
+                eRarity: E.yP.Normal,
+                eImageLoc: E.gv.Left,
               },
               {
                 strHeroName: "ancient_apparition",
                 strTooltip: "#battlepass_tooltip_rare",
-                eRarity: E.cg.Rare,
-                eImageLoc: E.sR.Right,
+                eRarity: E.yP.Rare,
+                eImageLoc: E.gv.Right,
               },
               {
                 strHeroName: "tidehunter",
                 strTooltip: "#battlepass_tooltip_very_rare",
-                eRarity: E.cg.Very,
-                eImageLoc: E.sR.Right,
+                eRarity: E.yP.Very,
+                eImageLoc: E.gv.Right,
                 bGold: !0,
               },
               {
                 strHeroName: "mirana",
                 strTooltip: "#battlepass_tooltip_very_rare",
-                eRarity: E.cg.Very,
-                eImageLoc: E.sR.Left,
+                eRarity: E.yP.Very,
+                eImageLoc: E.gv.Left,
                 bGold: !0,
               },
               {
                 strHeroName: "void_spirit",
                 strTooltip: "#battlepass_tooltip_ultra_rare",
-                eRarity: E.cg.Ultra,
-                eImageLoc: E.sR.Left,
+                eRarity: E.yP.Ultra,
+                eImageLoc: E.gv.Left,
               },
               {
                 strHeroName: "emblem",
                 strTooltip: "#battlepass_tooltip_cosmically_rare",
-                eRarity: E.cg.Cosmic,
-                eImageLoc: E.sR.None,
+                eRarity: E.yP.Cosmic,
+                eImageLoc: E.gv.None,
                 bEmblem: !0,
               },
             ],
@@ -194,11 +194,11 @@
         return r.createElement(
           "div",
           { className: l().HomePage },
-          r.createElement(_.j, { bOverlapping: !0 }),
+          r.createElement(_.A, { bOverlapping: !0 }),
           r.createElement(
-            v.ql,
+            v.mg,
             null,
-            r.createElement("title", null, (0, o.Jr)("#nemestice_title")),
+            r.createElement("title", null, (0, o.Wn)("#nemestice_title")),
           ),
           r.createElement(
             "div",
@@ -215,19 +215,19 @@
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
-                  poster: `${s.Y.IMG_URL}/nemestice/header2_english.jpg`,
+                  poster: `${s.r.IMG_URL}/nemestice/header2_english.jpg`,
                 },
                 r.createElement("source", {
                   type: "video/webm",
                   onError: (e) =>
-                    (e.target.src = `${s.Y.VIDEO_URL}/nemestice/header2_english.webm`),
-                  src: `${s.Y.VIDEO_URL}/nemestice/header2_${s.Y.LANGUAGE}.webm`,
+                    (e.target.src = `${s.r.VIDEO_URL}/nemestice/header2_english.webm`),
+                  src: `${s.r.VIDEO_URL}/nemestice/header2_${s.r.LANGUAGE}.webm`,
                 }),
                 r.createElement("source", {
                   type: "video/mp4",
                   onError: (e) =>
-                    (e.target.src = `${s.Y.VIDEO_URL}/nemestice/header2_english.mp4`),
-                  src: `${s.Y.VIDEO_URL}/nemestice/header2_${s.Y.LANGUAGE}.mp4`,
+                    (e.target.src = `${s.r.VIDEO_URL}/nemestice/header2_english.mp4`),
+                  src: `${s.r.VIDEO_URL}/nemestice/header2_${s.r.LANGUAGE}.mp4`,
                 }),
               ),
             ),
@@ -242,12 +242,12 @@
                   { className: l().PlayContainer },
                   r.createElement("img", {
                     className: l().PlayButton,
-                    src: `${s.Y.IMG_URL}/nemestice/play_button.png`,
+                    src: `${s.r.IMG_URL}/nemestice/play_button.png`,
                   }),
                   r.createElement(
                     "div",
                     { className: l().PlayLabel },
-                    (0, o.Jr)("#nemestice_trailer"),
+                    (0, o.Wn)("#nemestice_trailer"),
                   ),
                 ),
               ),
@@ -259,12 +259,12 @@
             r.createElement(
               "div",
               { className: l().Headline },
-              (0, o.Jr)("#battlepass_buy_battlepass"),
+              (0, o.Wn)("#battlepass_buy_battlepass"),
             ),
             r.createElement(
               "div",
               { className: l().ButtonRow },
-              r.createElement(p.Y$, {
+              r.createElement(p.$x, {
                 colorTopEdge: "#8491B0",
                 colorTop: "#404772 ",
                 colorMiddle: "#2D304F",
@@ -274,7 +274,7 @@
                 capsuleImageLocation: "labyrinth/bp_logo_",
                 capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
               }),
-              r.createElement(p.Y$, {
+              r.createElement(p.$x, {
                 colorTopEdge: "#8EBBDC",
                 colorTop: "#2E369E ",
                 colorMiddle: "#2B3493",
@@ -285,7 +285,7 @@
                 capsuleImageLocation: "labyrinth/bp_logo_",
                 capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
               }),
-              r.createElement(p.Y$, {
+              r.createElement(p.$x, {
                 colorTopEdge: "#DF6BCC",
                 colorTop: "#5943A5 ",
                 colorMiddle: "#4E3692",
@@ -305,12 +305,12 @@
             r.createElement(
               "div",
               { className: l().Headline },
-              (0, o.Jr)("#nemestice_lore_title"),
+              (0, o.Wn)("#nemestice_lore_title"),
             ),
             r.createElement(
               "div",
               { className: l().Description },
-              (0, o.Jr)("#nemestice_lore_desc"),
+              (0, o.Wn)("#nemestice_lore_desc"),
             ),
           ),
           r.createElement(
@@ -319,33 +319,33 @@
             r.createElement(
               "div",
               { className: l().Subhead },
-              (0, o.Jr)("#nemestice_event_label"),
+              (0, o.Wn)("#nemestice_event_label"),
             ),
             r.createElement("img", {
               className: l().Logo,
               onError: (e) =>
-                (e.target.src = `${s.Y.IMG_URL}/nemestice/nemestice_logo_nobp_en.png`),
-              src: `${s.Y.IMG_URL}/nemestice/nemestice_logo_nobp_${s.Y.LANGUAGE}.png`,
+                (e.target.src = `${s.r.IMG_URL}/nemestice/nemestice_logo_nobp_en.png`),
+              src: `${s.r.IMG_URL}/nemestice/nemestice_logo_nobp_${s.r.LANGUAGE}.png`,
             }),
             r.createElement(
               "div",
               { className: l().Headline },
-              (0, o.Jr)("#nemestice_event_game"),
+              (0, o.Wn)("#nemestice_event_game"),
             ),
             r.createElement(
               "div",
               { className: l().EventIntro },
-              (0, o.Jr)("#nemestice_event_title"),
+              (0, o.Wn)("#nemestice_event_title"),
             ),
             r.createElement(
               "div",
               { className: l().Description },
-              (0, o.Jr)("#nemestice_event_desc"),
+              (0, o.Wn)("#nemestice_event_desc"),
             ),
             r.createElement(
               "div",
               {
-                className: (0, m.Z)(l().HowToPlayRow, l().HowToPlay1),
+                className: (0, n.A)(l().HowToPlayRow, l().HowToPlay1),
                 "data-aos": "fade-left",
                 "data-aos-duration": "1500",
               },
@@ -355,29 +355,29 @@
                 r.createElement(
                   "div",
                   { className: l().Headline },
-                  (0, o.Jr)("#nemestice_event_howtoplay1_title"),
+                  (0, o.Wn)("#nemestice_event_howtoplay1_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().Description },
-                  (0, o.Jr)("#nemestice_event_howtoplay1_desc"),
+                  (0, o.Wn)("#nemestice_event_howtoplay1_desc"),
                 ),
               ),
               r.createElement("img", {
                 className: l().HowToPlayImg,
-                src: `${s.Y.IMG_URL}/nemestice/howtoplay-1.png`,
+                src: `${s.r.IMG_URL}/nemestice/howtoplay-1.png`,
               }),
             ),
             r.createElement(
               "div",
               {
-                className: (0, m.Z)(l().HowToPlayRow, l().HowToPlay2),
+                className: (0, n.A)(l().HowToPlayRow, l().HowToPlay2),
                 "data-aos": "fade-right",
                 "data-aos-duration": "1500",
               },
               r.createElement("img", {
                 className: l().HowToPlayImg,
-                src: `${s.Y.IMG_URL}/nemestice/howtoplay-2.png`,
+                src: `${s.r.IMG_URL}/nemestice/howtoplay-2.png`,
               }),
               r.createElement(
                 "div",
@@ -385,19 +385,19 @@
                 r.createElement(
                   "div",
                   { className: l().Headline },
-                  (0, o.Jr)("#nemestice_event_howtoplay2_title"),
+                  (0, o.Wn)("#nemestice_event_howtoplay2_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().Description },
-                  (0, o.Jr)("#nemestice_event_howtoplay2_desc"),
+                  (0, o.Wn)("#nemestice_event_howtoplay2_desc"),
                 ),
               ),
             ),
             r.createElement(
               "div",
               {
-                className: (0, m.Z)(l().HowToPlayRow, l().HowToPlay3),
+                className: (0, n.A)(l().HowToPlayRow, l().HowToPlay3),
                 "data-aos": "fade-left",
                 "data-aos-duration": "1500",
               },
@@ -407,17 +407,17 @@
                 r.createElement(
                   "div",
                   { className: l().Headline },
-                  (0, o.Jr)("#nemestice_event_howtoplay3_title"),
+                  (0, o.Wn)("#nemestice_event_howtoplay3_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().Description },
-                  (0, o.Jr)("#nemestice_event_howtoplay3_desc"),
+                  (0, o.Wn)("#nemestice_event_howtoplay3_desc"),
                 ),
               ),
               r.createElement("img", {
                 className: l().HowToPlayImg,
-                src: `${s.Y.IMG_URL}/nemestice/howtoplay-3.png`,
+                src: `${s.r.IMG_URL}/nemestice/howtoplay-3.png`,
               }),
             ),
             r.createElement("div", { className: l().DividerBottom }),
@@ -432,17 +432,17 @@
                 className: l().Img,
                 "data-aos": "fade-up",
                 "data-aos-duration": "2000",
-                src: `${s.Y.IMG_URL}/nemestice/battlepass.png`,
+                src: `${s.r.IMG_URL}/nemestice/battlepass.png`,
               }),
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_intro_title"),
+                (0, o.Wn)("#nemestice_bp_intro_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_intro_desc"),
+                (0, o.Wn)("#nemestice_bp_intro_desc"),
               ),
             ),
             r.createElement(
@@ -450,23 +450,23 @@
               { className: l().CavernCrawl },
               r.createElement("img", {
                 className: l().Img,
-                src: `${s.Y.IMG_URL}/nemestice/rewards/crawl_sets.png`,
+                src: `${s.r.IMG_URL}/nemestice/rewards/crawl_sets.png`,
               }),
               r.createElement("img", {
                 className: l().Logo,
                 onError: (e) =>
-                  (e.target.src = `${s.Y.IMG_URL}/nemestice/nemestice_logo_nobp_en.png`),
-                src: `${s.Y.IMG_URL}/nemestice/nemestice_logo_nobp_${s.Y.LANGUAGE}.png`,
+                  (e.target.src = `${s.r.IMG_URL}/nemestice/nemestice_logo_nobp_en.png`),
+                src: `${s.r.IMG_URL}/nemestice/nemestice_logo_nobp_${s.r.LANGUAGE}.png`,
               }),
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_cavern_title"),
+                (0, o.Wn)("#nemestice_bp_cavern_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_cavern_desc"),
+                (0, o.Wn)("#nemestice_bp_cavern_desc"),
               ),
             ),
             r.createElement(
@@ -477,7 +477,7 @@
                 "data-aos": "fade-right",
                 "data-aos-delay": "200",
                 "data-aos-duration": "2000",
-                src: `${s.Y.IMG_URL}/nemestice/weekly_quests.png`,
+                src: `${s.r.IMG_URL}/nemestice/weekly_quests.png`,
               }),
               r.createElement(
                 "div",
@@ -485,12 +485,12 @@
                 r.createElement(
                   "div",
                   { className: l().Headline },
-                  (0, o.Jr)("#nemestice_bp_quests_title"),
+                  (0, o.Wn)("#nemestice_bp_quests_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().Description },
-                  (0, o.Jr)("#nemestice_bp_quests_desc"),
+                  (0, o.Wn)("#nemestice_bp_quests_desc"),
                 ),
               ),
             ),
@@ -500,17 +500,17 @@
               r.createElement(
                 "div",
                 { className: l().Subhead },
-                (0, o.Jr)("#nemestice_eventname"),
+                (0, o.Wn)("#nemestice_eventname"),
               ),
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_assistant_title"),
+                (0, o.Wn)("#nemestice_bp_assistant_title"),
               ),
               r.createElement(
                 "div",
                 {
-                  className: (0, m.Z)(l().HowToPlayRow, l().HowToPlay1),
+                  className: (0, n.A)(l().HowToPlayRow, l().HowToPlay1),
                   "data-aos": "fade-left",
                   "data-aos-duration": "1500",
                 },
@@ -520,23 +520,23 @@
                   r.createElement(
                     "div",
                     { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_assistant_feat1_title"),
+                    (0, o.Wn)("#nemestice_bp_assistant_feat1_title"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_assistant_feat1_desc"),
+                    (0, o.Wn)("#nemestice_bp_assistant_feat1_desc"),
                   ),
                 ),
                 r.createElement("img", {
                   className: l().AssistantImg,
-                  src: `${s.Y.IMG_URL}/nemestice/assistant_timers.png`,
+                  src: `${s.r.IMG_URL}/nemestice/assistant_timers.png`,
                 }),
               ),
               r.createElement(
                 "div",
                 {
-                  className: (0, m.Z)(l().HowToPlayRow, l().HowToPlay2),
+                  className: (0, n.A)(l().HowToPlayRow, l().HowToPlay2),
                   "data-aos": "fade-right",
                   "data-aos-duration": "1500",
                 },
@@ -546,23 +546,23 @@
                   r.createElement(
                     "div",
                     { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_assistant_feat2_title"),
+                    (0, o.Wn)("#nemestice_bp_assistant_feat2_title"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_assistant_feat2_desc"),
+                    (0, o.Wn)("#nemestice_bp_assistant_feat2_desc"),
                   ),
                 ),
                 r.createElement("img", {
                   className: l().AssistantImg,
-                  src: `${s.Y.IMG_URL}/nemestice/assistant_quickbuy.jpg`,
+                  src: `${s.r.IMG_URL}/nemestice/assistant_quickbuy.jpg`,
                 }),
               ),
               r.createElement(
                 "div",
                 {
-                  className: (0, m.Z)(l().HowToPlayRow, l().HowToPlay3),
+                  className: (0, n.A)(l().HowToPlayRow, l().HowToPlay3),
                   "data-aos": "fade-left",
                   "data-aos-duration": "1500",
                 },
@@ -572,17 +572,17 @@
                   r.createElement(
                     "div",
                     { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_assistant_feat3_title"),
+                    (0, o.Wn)("#nemestice_bp_assistant_feat3_title"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_assistant_feat3_desc"),
+                    (0, o.Wn)("#nemestice_bp_assistant_feat3_desc"),
                   ),
                 ),
                 r.createElement("img", {
                   className: l().AssistantImg,
-                  src: `${s.Y.IMG_URL}/nemestice/assistant_neutrals.png`,
+                  src: `${s.r.IMG_URL}/nemestice/assistant_neutrals.png`,
                 }),
               ),
             ),
@@ -592,12 +592,12 @@
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_rewards_title"),
+                (0, o.Wn)("#nemestice_bp_rewards_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_rewards_desc"),
+                (0, o.Wn)("#nemestice_bp_rewards_desc"),
               ),
             ),
             r.createElement(
@@ -613,12 +613,12 @@
                 },
                 r.createElement("img", {
                   className: l().BPShieldSmall,
-                  src: `${s.Y.IMG_URL}nemestice/bp_level_shield_gold.png`,
+                  src: `${s.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().LevelLabel },
-                  (0, o.Jr)("#nemestice_bp_spectre_label"),
+                  (0, o.Wn)("#nemestice_bp_spectre_label"),
                 ),
               ),
               r.createElement(
@@ -630,34 +630,34 @@
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
-                  poster: `${s.Y.IMG_URL}/nemestice/rewards/spectre_arcana.jpg`,
+                  poster: `${s.r.IMG_URL}/nemestice/rewards/spectre_arcana.jpg`,
                 },
                 r.createElement("source", {
                   type: "video/webm",
-                  src: `${s.Y.VIDEO_URL}nemestice/rewards/spectre_arcana_loop.webm`,
+                  src: `${s.r.VIDEO_URL}nemestice/rewards/spectre_arcana_loop.webm`,
                 }),
                 r.createElement("source", {
                   type: "video/mp4",
-                  src: `${s.Y.VIDEO_URL}nemestice/rewards/spectre_arcana_loop.mp4`,
+                  src: `${s.r.VIDEO_URL}nemestice/rewards/spectre_arcana_loop.mp4`,
                 }),
               ),
               r.createElement("img", {
                 className: l().Logo,
                 onError: (e) =>
-                  (e.target.src = `${s.Y.IMG_URL}/nemestice/rewards/spectre_logo_en.png`),
-                src: `${s.Y.IMG_URL}/nemestice/rewards/spectre_logo_${s.Y.LANGUAGE}.png`,
+                  (e.target.src = `${s.r.IMG_URL}/nemestice/rewards/spectre_logo_en.png`),
+                src: `${s.r.IMG_URL}/nemestice/rewards/spectre_logo_${s.r.LANGUAGE}.png`,
                 "data-aos": "fade-up",
                 "data-aos-duration": "2000",
               }),
               r.createElement(
                 "div",
                 { className: l().Subhead },
-                (0, o.Jr)("#nemestice_bp_spectre_title"),
+                (0, o.Wn)("#nemestice_bp_spectre_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_spectre_desc"),
+                (0, o.Wn)("#nemestice_bp_spectre_desc"),
               ),
               r.createElement(
                 "video",
@@ -668,15 +668,15 @@
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
-                  poster: `${s.Y.VIDEO_URL}nemestice/spectre_arcana.jpg`,
+                  poster: `${s.r.VIDEO_URL}nemestice/spectre_arcana.jpg`,
                 },
                 r.createElement("source", {
                   type: "video/webm",
-                  src: `${s.Y.VIDEO_URL}nemestice/spectre_arcana.webm`,
+                  src: `${s.r.VIDEO_URL}nemestice/spectre_arcana.webm`,
                 }),
                 r.createElement("source", {
                   type: "video/mp4",
-                  src: `${s.Y.VIDEO_URL}nemestice/spectre_arcana.webm`,
+                  src: `${s.r.VIDEO_URL}nemestice/spectre_arcana.webm`,
                 }),
               ),
               r.createElement(
@@ -684,7 +684,7 @@
                 { className: l().Minigame },
                 r.createElement("img", {
                   className: l().MinigameArt,
-                  src: `${s.Y.IMG_URL}/nemestice/rewards/unlock_ui.png`,
+                  src: `${s.r.IMG_URL}/nemestice/rewards/unlock_ui.png`,
                 }),
                 r.createElement(
                   "div",
@@ -692,17 +692,17 @@
                   r.createElement(
                     "div",
                     { className: l().Intro },
-                    (0, o.Jr)("#nemestice_bp_spectre_minigame_label"),
+                    (0, o.Wn)("#nemestice_bp_spectre_minigame_label"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_spectre_minigame_title"),
+                    (0, o.Wn)("#nemestice_bp_spectre_minigame_title"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_spectre_minigame_desc"),
+                    (0, o.Wn)("#nemestice_bp_spectre_minigame_desc"),
                   ),
                 ),
               ),
@@ -715,22 +715,22 @@
                   r.createElement(
                     "div",
                     { className: l().Intro },
-                    (0, o.Jr)("#nemestice_bp_spectre_style_label"),
+                    (0, o.Wn)("#nemestice_bp_spectre_style_label"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_spectre_style_title"),
+                    (0, o.Wn)("#nemestice_bp_spectre_style_title"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_spectre_style_desc"),
+                    (0, o.Wn)("#nemestice_bp_spectre_style_desc"),
                   ),
                 ),
                 r.createElement("img", {
                   className: l().SecondStyleArt,
-                  src: `${s.Y.IMG_URL}/nemestice/rewards/spec_style2.png`,
+                  src: `${s.r.IMG_URL}/nemestice/rewards/spec_style2.png`,
                 }),
               ),
             ),
@@ -746,15 +746,15 @@
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
-                  poster: `${s.Y.VIDEO_URL}nemestice/spectre_loadout.jpg`,
+                  poster: `${s.r.VIDEO_URL}nemestice/spectre_loadout.jpg`,
                 },
                 r.createElement("source", {
                   type: "video/webm",
-                  src: `${s.Y.VIDEO_URL}nemestice/spectre_loadout.webm`,
+                  src: `${s.r.VIDEO_URL}nemestice/spectre_loadout.webm`,
                 }),
                 r.createElement("source", {
                   type: "video/mp4",
-                  src: `${s.Y.VIDEO_URL}nemestice/spectre_loadout.mp4`,
+                  src: `${s.r.VIDEO_URL}nemestice/spectre_loadout.mp4`,
                 }),
               ),
               r.createElement(
@@ -763,71 +763,71 @@
                 r.createElement(
                   "div",
                   { className: l().Header },
-                  (0, o.Jr)("#nemestice_bp_spectre_includes"),
+                  (0, o.Wn)("#nemestice_bp_spectre_includes"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureTitle },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat1_title"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat1_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureDesc },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat1_desc"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat1_desc"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureTitle },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat2_title"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat2_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureDesc },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat2_desc"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat2_desc"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureTitle },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat3_title"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat3_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureDesc },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat3_desc"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat3_desc"),
                 ),
                 r.createElement("img", {
                   className: l().FeatureImgs,
-                  src: `${s.Y.IMG_URL}/nemestice/rewards/spectre_iconsx.png`,
+                  src: `${s.r.IMG_URL}/nemestice/rewards/spectre_iconsx.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().FeatureTitle },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat4_title"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat4_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureDesc },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat4_desc"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat4_desc"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureTitle },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat5_title"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat5_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureDesc },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat5_desc"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat5_desc"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureTitle },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat6_title"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat6_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().FeatureDesc },
-                  (0, o.Jr)("#nemestice_bp_spectre_feat6_desc"),
+                  (0, o.Wn)("#nemestice_bp_spectre_feat6_desc"),
                 ),
               ),
             ),
@@ -844,12 +844,12 @@
                 },
                 r.createElement("img", {
                   className: l().BPShieldSmall,
-                  src: `${s.Y.IMG_URL}nemestice/bp_level_shield_silver.png`,
+                  src: `${s.r.IMG_URL}nemestice/bp_level_shield_silver.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().LevelLabel },
-                  (0, o.Jr)("#nemestice_bp_dk_label"),
+                  (0, o.Wn)("#nemestice_bp_dk_label"),
                 ),
               ),
               r.createElement(
@@ -861,34 +861,34 @@
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
-                  poster: `${s.Y.IMG_URL}/nemestice/rewards/dk_persona.jpg`,
+                  poster: `${s.r.IMG_URL}/nemestice/rewards/dk_persona.jpg`,
                 },
                 r.createElement("source", {
                   type: "video/webm",
-                  src: `${s.Y.VIDEO_URL}nemestice/rewards/dragon_knight_persona_loop.webm`,
+                  src: `${s.r.VIDEO_URL}nemestice/rewards/dragon_knight_persona_loop.webm`,
                 }),
                 r.createElement("source", {
                   type: "video/mp4",
-                  src: `${s.Y.VIDEO_URL}nemestice/rewards/dragon_knight_persona_loop.mp4`,
+                  src: `${s.r.VIDEO_URL}nemestice/rewards/dragon_knight_persona_loop.mp4`,
                 }),
               ),
               r.createElement("img", {
                 className: l().Logo,
                 onError: (e) =>
-                  (e.target.src = `${s.Y.IMG_URL}/nemestice/rewards/dragon_knight_logo_english.png`),
-                src: `${s.Y.IMG_URL}/nemestice/rewards/dragon_knight_logo_${s.Y.LANGUAGE}.png`,
+                  (e.target.src = `${s.r.IMG_URL}/nemestice/rewards/dragon_knight_logo_english.png`),
+                src: `${s.r.IMG_URL}/nemestice/rewards/dragon_knight_logo_${s.r.LANGUAGE}.png`,
                 "data-aos": "fade-up",
                 "data-aos-duration": "2000",
               }),
               r.createElement(
                 "div",
                 { className: l().Subhead },
-                (0, o.Jr)("#nemestice_bp_dk_title"),
+                (0, o.Wn)("#nemestice_bp_dk_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_dk_desc"),
+                (0, o.Wn)("#nemestice_bp_dk_desc"),
               ),
               r.createElement(
                 "video",
@@ -899,15 +899,15 @@
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
-                  poster: `${s.Y.VIDEO_URL}nemestice/dragon_knight_persona.jpg`,
+                  poster: `${s.r.VIDEO_URL}nemestice/dragon_knight_persona.jpg`,
                 },
                 r.createElement("source", {
                   type: "video/webm",
-                  src: `${s.Y.VIDEO_URL}nemestice/dragon_knight_persona.webm`,
+                  src: `${s.r.VIDEO_URL}nemestice/dragon_knight_persona.webm`,
                 }),
                 r.createElement("source", {
                   type: "video/mp4",
-                  src: `${s.Y.VIDEO_URL}nemestice/dragon_knight_persona.webm`,
+                  src: `${s.r.VIDEO_URL}nemestice/dragon_knight_persona.webm`,
                 }),
               ),
               r.createElement(
@@ -918,7 +918,7 @@
                   { className: l().Accessory },
                   r.createElement("img", {
                     className: l().Image,
-                    src: `${s.Y.IMG_URL}nemestice/rewards/dk_sword.png`,
+                    src: `${s.r.IMG_URL}nemestice/rewards/dk_sword.png`,
                   }),
                   r.createElement(
                     "div",
@@ -926,22 +926,22 @@
                     r.createElement(
                       "div",
                       { className: l().Subhead },
-                      (0, o.Jr)("#nemestice_bp_dk_sword_level"),
+                      (0, o.Wn)("#nemestice_bp_dk_sword_level"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Title },
-                      (0, o.Jr)("#nemestice_bp_dk_sword_title"),
+                      (0, o.Wn)("#nemestice_bp_dk_sword_title"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Label },
-                      (0, o.Jr)("#nemestice_bp_dk_sword_label"),
+                      (0, o.Wn)("#nemestice_bp_dk_sword_label"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Description },
-                      (0, o.Jr)("#nemestice_bp_dk_sword_desc"),
+                      (0, o.Wn)("#nemestice_bp_dk_sword_desc"),
                     ),
                   ),
                 ),
@@ -950,7 +950,7 @@
                   { className: l().Accessory },
                   r.createElement("img", {
                     className: l().Image,
-                    src: `${s.Y.IMG_URL}nemestice/rewards/dk_pauldrons.png`,
+                    src: `${s.r.IMG_URL}nemestice/rewards/dk_pauldrons.png`,
                   }),
                   r.createElement(
                     "div",
@@ -958,22 +958,22 @@
                     r.createElement(
                       "div",
                       { className: l().Subhead },
-                      (0, o.Jr)("#nemestice_bp_dk_pauldrons_level"),
+                      (0, o.Wn)("#nemestice_bp_dk_pauldrons_level"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Title },
-                      (0, o.Jr)("#nemestice_bp_dk_pauldrons_title"),
+                      (0, o.Wn)("#nemestice_bp_dk_pauldrons_title"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Label },
-                      (0, o.Jr)("#nemestice_bp_dk_pauldrons_label"),
+                      (0, o.Wn)("#nemestice_bp_dk_pauldrons_label"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Description },
-                      (0, o.Jr)("#nemestice_bp_dk_pauldrons_desc"),
+                      (0, o.Wn)("#nemestice_bp_dk_pauldrons_desc"),
                     ),
                   ),
                 ),
@@ -982,7 +982,7 @@
                   { className: l().Accessory },
                   r.createElement("img", {
                     className: l().Image,
-                    src: `${s.Y.IMG_URL}nemestice/rewards/dk_helmet.png`,
+                    src: `${s.r.IMG_URL}nemestice/rewards/dk_helmet.png`,
                   }),
                   r.createElement(
                     "div",
@@ -990,22 +990,22 @@
                     r.createElement(
                       "div",
                       { className: l().Subhead },
-                      (0, o.Jr)("#nemestice_bp_dk_helmet_level"),
+                      (0, o.Wn)("#nemestice_bp_dk_helmet_level"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Title },
-                      (0, o.Jr)("#nemestice_bp_dk_helmet_title"),
+                      (0, o.Wn)("#nemestice_bp_dk_helmet_title"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Label },
-                      (0, o.Jr)("#nemestice_bp_dk_helmet_label"),
+                      (0, o.Wn)("#nemestice_bp_dk_helmet_label"),
                     ),
                     r.createElement(
                       "div",
                       { className: l().Description },
-                      (0, o.Jr)("#nemestice_bp_dk_helmet_desc"),
+                      (0, o.Wn)("#nemestice_bp_dk_helmet_desc"),
                     ),
                   ),
                 ),
@@ -1024,28 +1024,28 @@
                 },
                 r.createElement("img", {
                   className: l().BPShieldSmall,
-                  src: `${s.Y.IMG_URL}nemestice/bp_level_shield_gold.png`,
+                  src: `${s.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().LevelLabel },
-                  (0, o.Jr)("#nemestice_bp_invoker_level"),
+                  (0, o.Wn)("#nemestice_bp_invoker_level"),
                 ),
               ),
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_invoker_title"),
+                (0, o.Wn)("#nemestice_bp_invoker_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Subhead },
-                (0, o.Jr)("#nemestice_bp_invoker_label"),
+                (0, o.Wn)("#nemestice_bp_invoker_label"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_invoker_desc"),
+                (0, o.Wn)("#nemestice_bp_invoker_desc"),
               ),
               r.createElement(
                 "div",
@@ -1054,13 +1054,13 @@
                   className: l().Image,
                   "data-aos": "fade-right",
                   "data-aos-duration": "1500",
-                  src: `${s.Y.IMG_URL}nemestice/rewards/invoker_frame.png`,
+                  src: `${s.r.IMG_URL}nemestice/rewards/invoker_frame.png`,
                 }),
                 r.createElement("img", {
                   className: l().Image2,
                   "data-aos": "fade-left",
                   "data-aos-duration": "1500",
-                  src: `${s.Y.IMG_URL}nemestice/rewards/invoker_frame2.png`,
+                  src: `${s.r.IMG_URL}nemestice/rewards/invoker_frame2.png`,
                 }),
                 r.createElement(
                   "video",
@@ -1071,32 +1071,32 @@
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${s.Y.VIDEO_URL}nemestice/rewards/invoker_kid.jpg`,
+                    poster: `${s.r.VIDEO_URL}nemestice/rewards/invoker_kid.jpg`,
                   },
                   r.createElement("source", {
                     type: "video/webm",
-                    src: `${s.Y.VIDEO_URL}nemestice/rewards/invoker_kid.webm`,
+                    src: `${s.r.VIDEO_URL}nemestice/rewards/invoker_kid.webm`,
                   }),
                   r.createElement("source", {
                     type: "video/mp4",
-                    src: `${s.Y.VIDEO_URL}nemestice/rewards/invoker_kid.mp4`,
+                    src: `${s.r.VIDEO_URL}nemestice/rewards/invoker_kid.mp4`,
                   }),
                 ),
               ),
               r.createElement(
                 "div",
                 { className: l().Note1 },
-                (0, o.Jr)("#nemestice_bp_invoker_note1"),
+                (0, o.Wn)("#nemestice_bp_invoker_note1"),
               ),
               r.createElement(
                 "div",
                 { className: l().Note2 },
-                (0, o.Jr)("#nemestice_bp_invoker_note2"),
+                (0, o.Wn)("#nemestice_bp_invoker_note2"),
               ),
               r.createElement(
                 "div",
                 { className: l().Note3 },
-                (0, o.Jr)("#nemestice_bp_invoker_note3"),
+                (0, o.Wn)("#nemestice_bp_invoker_note3"),
               ),
             ),
             r.createElement(
@@ -1112,35 +1112,35 @@
                 },
                 r.createElement("img", {
                   className: l().BPShieldSmall,
-                  src: `${s.Y.IMG_URL}nemestice/bp_level_shield_gold.png`,
+                  src: `${s.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().LevelLabel },
-                  (0, o.Jr)("#nemestice_bp_attackfx_level"),
+                  (0, o.Wn)("#nemestice_bp_attackfx_level"),
                 ),
               ),
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_attackfx_title"),
+                (0, o.Wn)("#nemestice_bp_attackfx_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Subhead },
-                (0, o.Jr)("#nemestice_bp_attackfx_label"),
+                (0, o.Wn)("#nemestice_bp_attackfx_label"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_attackfx_desc"),
+                (0, o.Wn)("#nemestice_bp_attackfx_desc"),
               ),
               r.createElement(
                 "div",
                 { className: l().VideoContainer },
                 r.createElement("img", {
                   className: l().Image,
-                  src: `${s.Y.IMG_URL}nemestice/rewards/attack_fx.png`,
+                  src: `${s.r.IMG_URL}nemestice/rewards/attack_fx.png`,
                 }),
                 r.createElement(
                   "video",
@@ -1151,15 +1151,15 @@
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${s.Y.VIDEO_URL}nemestice/rewards/attack_modifier.jpg`,
+                    poster: `${s.r.VIDEO_URL}nemestice/rewards/attack_modifier.jpg`,
                   },
                   r.createElement("source", {
                     type: "video/webm",
-                    src: `${s.Y.VIDEO_URL}nemestice/rewards/attack_modifier.webm`,
+                    src: `${s.r.VIDEO_URL}nemestice/rewards/attack_modifier.webm`,
                   }),
                   r.createElement("source", {
                     type: "video/mp4",
-                    src: `${s.Y.VIDEO_URL}nemestice/rewards/attack_modifier.mp4`,
+                    src: `${s.r.VIDEO_URL}nemestice/rewards/attack_modifier.mp4`,
                   }),
                 ),
               ),
@@ -1170,14 +1170,14 @@
               r.createElement(
                 "div",
                 { className: l().Subhead },
-                (0, o.Jr)("#nemestice_eventname"),
+                (0, o.Wn)("#nemestice_eventname"),
               ),
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_immortals_title"),
+                (0, o.Wn)("#nemestice_bp_immortals_title"),
               ),
-              r.createElement(E.Li, {
+              r.createElement(E.Zk, {
                 strContentDir: "nemestice",
                 strPrimaryColor: "#edd3ff",
                 strSecondaryColor: "#da69e4",
@@ -1198,32 +1198,32 @@
                 },
                 r.createElement("img", {
                   className: l().BPShieldSmall,
-                  src: `${s.Y.IMG_URL}nemestice/bp_level_shield_silver.png`,
+                  src: `${s.r.IMG_URL}nemestice/bp_level_shield_silver.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().LevelLabel },
-                  (0, o.Jr)("#nemestice_bp_creeps_level"),
+                  (0, o.Wn)("#nemestice_bp_creeps_level"),
                 ),
               ),
               r.createElement("img", {
                 className: l().Img,
-                src: `${s.Y.IMG_URL}nemestice/rewards/creeps.png`,
+                src: `${s.r.IMG_URL}nemestice/rewards/creeps.png`,
               }),
               r.createElement(
                 "div",
                 { className: l().Headline },
-                (0, o.Jr)("#nemestice_bp_creeps_title"),
+                (0, o.Wn)("#nemestice_bp_creeps_title"),
               ),
               r.createElement(
                 "div",
                 { className: l().Subhead },
-                (0, o.Jr)("#nemestice_bp_creeps_label"),
+                (0, o.Wn)("#nemestice_bp_creeps_label"),
               ),
               r.createElement(
                 "div",
                 { className: l().Description },
-                (0, o.Jr)("#nemestice_bp_creeps_desc"),
+                (0, o.Wn)("#nemestice_bp_creeps_desc"),
               ),
             ),
             r.createElement(
@@ -1239,104 +1239,104 @@
                 },
                 r.createElement("img", {
                   className: l().BPShieldSmall,
-                  src: `${s.Y.IMG_URL}nemestice/bp_level_shield_bronze.png`,
+                  src: `${s.r.IMG_URL}nemestice/bp_level_shield_bronze.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().LevelLabel },
-                  (0, o.Jr)("#nemestice_bp_courier_level"),
+                  (0, o.Wn)("#nemestice_bp_courier_level"),
                 ),
               ),
               r.createElement(
                 "div",
                 {
-                  className: (0, m.Z)(l().MoreRewardsRow, l().MoreRewardsRow1),
+                  className: (0, n.A)(l().MoreRewardsRow, l().MoreRewardsRow1),
                   "data-aos": "fade-up",
                   "data-aos-duration": "2000",
                 },
                 r.createElement(
                   "div",
-                  { className: (0, m.Z)(l().RewardItem, l().RewardItem1) },
+                  { className: (0, n.A)(l().RewardItem, l().RewardItem1) },
                   r.createElement("img", {
                     className: l().Img,
-                    src: `${s.Y.IMG_URL}/nemestice/rewards/wards.png`,
+                    src: `${s.r.IMG_URL}/nemestice/rewards/wards.png`,
                   }),
                   r.createElement(
                     "div",
                     { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_wards_title"),
+                    (0, o.Wn)("#nemestice_bp_wards_title"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Label },
-                    (0, o.Jr)("#nemestice_bp_wards_label"),
+                    (0, o.Wn)("#nemestice_bp_wards_label"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_wards_desc"),
-                  ),
-                ),
-              ),
-              r.createElement(
-                "div",
-                {
-                  className: (0, m.Z)(l().MoreRewardsRow, l().MoreRewardsRow2),
-                  "data-aos": "fade-up",
-                  "data-aos-duration": "2000",
-                },
-                r.createElement(
-                  "div",
-                  { className: (0, m.Z)(l().RewardItem, l().RewardItem2) },
-                  r.createElement("img", {
-                    className: l().Img,
-                    src: `${s.Y.IMG_URL}/nemestice/rewards/courier.png`,
-                  }),
-                  r.createElement(
-                    "div",
-                    { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_courier_title"),
-                  ),
-                  r.createElement(
-                    "div",
-                    { className: l().Label },
-                    (0, o.Jr)("#nemestice_bp_courier_label"),
-                  ),
-                  r.createElement(
-                    "div",
-                    { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_courier_desc"),
+                    (0, o.Wn)("#nemestice_bp_wards_desc"),
                   ),
                 ),
               ),
               r.createElement(
                 "div",
                 {
-                  className: (0, m.Z)(l().MoreRewardsRow, l().MoreRewardsRow3),
+                  className: (0, n.A)(l().MoreRewardsRow, l().MoreRewardsRow2),
                   "data-aos": "fade-up",
                   "data-aos-duration": "2000",
                 },
                 r.createElement(
                   "div",
-                  { className: (0, m.Z)(l().RewardItem, l().RewardItem3) },
+                  { className: (0, n.A)(l().RewardItem, l().RewardItem2) },
                   r.createElement("img", {
                     className: l().Img,
-                    src: `${s.Y.IMG_URL}/nemestice/rewards/music_pack.png`,
+                    src: `${s.r.IMG_URL}/nemestice/rewards/courier.png`,
                   }),
                   r.createElement(
                     "div",
                     { className: l().Headline },
-                    (0, o.Jr)("#nemestice_bp_music_title"),
+                    (0, o.Wn)("#nemestice_bp_courier_title"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Label },
-                    (0, o.Jr)("#nemestice_bp_music_label"),
+                    (0, o.Wn)("#nemestice_bp_courier_label"),
                   ),
                   r.createElement(
                     "div",
                     { className: l().Description },
-                    (0, o.Jr)("#nemestice_bp_music_desc"),
+                    (0, o.Wn)("#nemestice_bp_courier_desc"),
+                  ),
+                ),
+              ),
+              r.createElement(
+                "div",
+                {
+                  className: (0, n.A)(l().MoreRewardsRow, l().MoreRewardsRow3),
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "2000",
+                },
+                r.createElement(
+                  "div",
+                  { className: (0, n.A)(l().RewardItem, l().RewardItem3) },
+                  r.createElement("img", {
+                    className: l().Img,
+                    src: `${s.r.IMG_URL}/nemestice/rewards/music_pack.png`,
+                  }),
+                  r.createElement(
+                    "div",
+                    { className: l().Headline },
+                    (0, o.Wn)("#nemestice_bp_music_title"),
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().Label },
+                    (0, o.Wn)("#nemestice_bp_music_label"),
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().Description },
+                    (0, o.Wn)("#nemestice_bp_music_desc"),
                   ),
                 ),
               ),
@@ -1346,17 +1346,17 @@
                 { className: l().RewardsMontage },
                 r.createElement("img", {
                   className: l().MontageImg,
-                  src: `${s.Y.IMG_URL}/nemestice/rewards/montage.png`,
+                  src: `${s.r.IMG_URL}/nemestice/rewards/montage.png`,
                 }),
                 r.createElement(
                   "div",
                   { className: l().Headline },
-                  (0, o.Jr)("#nemestice_bp_montage_title"),
+                  (0, o.Wn)("#nemestice_bp_montage_title"),
                 ),
                 r.createElement(
                   "div",
                   { className: l().Description },
-                  (0, o.Jr)("#nemestice_bp_montage_desc"),
+                  (0, o.Wn)("#nemestice_bp_montage_desc"),
                 ),
               ),
             ),
@@ -1364,17 +1364,17 @@
           r.createElement(
             "div",
             {
-              className: (0, m.Z)(l().PurchaseBanner, l().LowerPurchaseBanner),
+              className: (0, n.A)(l().PurchaseBanner, l().LowerPurchaseBanner),
             },
             r.createElement(
               "div",
               { className: l().Headline },
-              (0, o.Jr)("Purchase Battle Pass"),
+              (0, o.Wn)("Purchase Battle Pass"),
             ),
             r.createElement(
               "div",
               { className: l().ButtonRow },
-              r.createElement(p.Y$, {
+              r.createElement(p.$x, {
                 colorTopEdge: "#8491B0",
                 colorTop: "#404772 ",
                 colorMiddle: "#2D304F",
@@ -1384,7 +1384,7 @@
                 capsuleImageLocation: "labyrinth/bp_logo_",
                 capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
               }),
-              r.createElement(p.Y$, {
+              r.createElement(p.$x, {
                 colorTopEdge: "#8EBBDC",
                 colorTop: "#2E369E ",
                 colorMiddle: "#2B3493",
@@ -1395,7 +1395,7 @@
                 capsuleImageLocation: "labyrinth/bp_logo_",
                 capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
               }),
-              r.createElement(p.Y$, {
+              r.createElement(p.$x, {
                 colorTopEdge: "#DF6BCC",
                 colorTop: "#5943A5 ",
                 colorMiddle: "#4E3692",
@@ -1409,7 +1409,7 @@
             ),
             r.createElement("div", { className: l().GrassLayer }),
           ),
-          r.createElement(d.U, null),
+          r.createElement(d.K, null),
         );
       });
     },

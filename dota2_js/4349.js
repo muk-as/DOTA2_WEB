@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [4268],
+  [4349],
   {
-    57355: (e) => {
+    68544: (e) => {
       e.exports = {
         Tooltip: "_1rogBaZTsNK3R6gYwGvQGD",
         CarouselFade: "dt-tioQwR4mWwIMczo_-x",
@@ -52,7 +52,7 @@
         TextStyleFootnote: "_3ASKuRk-ALdIsSVs-GHBnn",
       };
     },
-    6574: (e) => {
+    32484: (e) => {
       e.exports = {
         Tooltip: "_3SWNcmwV0oP-ROKDVg1iXe",
         CarouselFade: "_492j9xDU1ExfjVLCzFhpY",
@@ -83,19 +83,19 @@
         TextColorGreenGlow: "_3azYFNjOXo-0ulw3D2CM3B",
       };
     },
-    38109: (e, r, t) => {
+    20373: (e, t, r) => {
       "use strict";
-      t.d(r, { Li: () => E, cg: () => a, sR: () => o });
+      r.d(t, { Zk: () => E, gv: () => o, yP: () => a });
       var a,
         o,
-        l = t(66204),
-        s = t(57355),
-        n = t.n(s),
-        m = t(5062),
-        c = t(2580),
-        i = t(98142),
-        u = t(78752),
-        d = t(91347);
+        l = r(7552),
+        s = r(68544),
+        n = r.n(s),
+        m = r(21384),
+        c = r(27866),
+        i = r(89506),
+        u = r(32389),
+        d = r(18804);
       !(function (e) {
         (e[(e.Normal = 0)] = "Normal"),
           (e[(e.Rare = 1)] = "Rare"),
@@ -119,8 +119,8 @@
       }
       const E = ({
           strContentDir: e,
-          strPrimaryColor: r,
-          strSecondaryColor: t,
+          strPrimaryColor: t,
+          strSecondaryColor: r,
           strTertiaryColor: a,
           arrImmortalTreasures: s,
         }) => {
@@ -128,19 +128,19 @@
             [p, E] = (0, l.useState)(0),
             T = {
               strContentDir: e,
-              strPrimaryColor: r,
-              strSecondaryColor: t,
+              strPrimaryColor: t,
+              strSecondaryColor: r,
               strTertiaryColor: a,
             };
           return l.createElement(
             "div",
             {
-              className: (0, m.Z)(
+              className: (0, m.A)(
                 n().BattlePassImmortalCarousel,
                 1 == s.length && n().SingleTreasure,
               ),
               style: {
-                backgroundImage: `url( ${i.Y.IMG_URL}${e}/backgrounds/immortal_background.jpg )`,
+                backgroundImage: `url( ${i.r.IMG_URL}${e}/backgrounds/immortal_background.jpg )`,
               },
             },
             l.createElement(
@@ -154,7 +154,7 @@
                     "div",
                     {
                       key: `title_${o}`,
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         n().Treasure,
                         a.bEnabled && n().Enabled,
                         d == o && n().Selected,
@@ -163,59 +163,59 @@
                     },
                     l.createElement("img", {
                       className: n().TreasureIcon,
-                      src: `${i.Y.IMG_URL}${e}/immortal_treasure_${o + 1}.png`,
+                      src: `${i.r.IMG_URL}${e}/immortal_treasure_${o + 1}.png`,
                     }),
                     l.createElement("div", {
                       className: n().TreasureBorder,
                       style: {
-                        backgroundImage: `linear-gradient( black, black ), linear-gradient( to right, ${r}, ${t} )`,
+                        backgroundImage: `linear-gradient( black, black ), linear-gradient( to right, ${t}, ${r} )`,
                       },
                     }),
                     l.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(
+                        className: (0, m.A)(
                           n().TextStyleOverline,
                           n().TreasureName,
                         ),
-                        style: { color: r },
+                        style: { color: t },
                       },
-                      (0, c.Jr)(`#${e}_immortals_treasure_${o + 1}`),
+                      (0, c.Wn)(`#${e}_immortals_treasure_${o + 1}`),
                     ),
                   ),
                 ),
               ),
-              s.map((r, t) =>
+              s.map((t, r) =>
                 l.createElement(
                   "div",
                   {
-                    key: `carousel_${t}`,
-                    className: (0, m.Z)(
+                    key: `carousel_${r}`,
+                    className: (0, m.A)(
                       n().CarouselContainer,
-                      d == t && n().ShowCarousel,
+                      d == r && n().ShowCarousel,
                     ),
                   },
                   l.createElement(
-                    u.sj,
+                    u.gi,
                     {
                       className: n().ImmortalCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 37,
-                      totalSlides: r.arrImmortals.length,
+                      totalSlides: t.arrImmortals.length,
                     },
                     l.createElement(
-                      u.iR,
+                      u.Ap,
                       null,
-                      r.arrImmortals.map((e, r) =>
+                      t.arrImmortals.map((e, t) =>
                         l.createElement(
-                          u.Mi,
+                          u.q7,
                           {
-                            key: `im_${t}_${r}`,
-                            index: r,
-                            onFocus: () => E(r),
+                            key: `im_${r}_${t}`,
+                            index: t,
+                            onFocus: () => E(t),
                           },
                           l.createElement(h, {
-                            nIndex: r,
+                            nIndex: t,
                             strVideo: e.strHeroName,
                             bHeroLeft: e.eImageLoc == o.Left,
                             bHeroRight: e.eImageLoc == o.Right,
@@ -228,78 +228,73 @@
                     l.createElement(
                       "div",
                       { className: n().CarouselDots },
-                      r.arrImmortals.map((e, r) => {
-                        var a;
-                        return l.createElement(
-                          u.oT,
+                      t.arrImmortals.map((e, t) =>
+                        l.createElement(
+                          u.cL,
                           {
-                            key: `dot_${t}_${r}`,
-                            slide: r,
+                            key: `dot_${r}_${t}`,
+                            slide: t,
                             "data-tip":
-                              (null ===
-                                (a = null == e ? void 0 : e.strTooltip) ||
-                              void 0 === a
-                                ? void 0
-                                : a.length) > 0
-                                ? (0, c.Jr)(e.strTooltip)
+                              e?.strTooltip?.length > 0
+                                ? (0, c.Wn)(e.strTooltip)
                                 : "",
                           },
-                          l.createElement(y, {
+                          l.createElement(N, {
                             strHeroName: e.strHeroName,
                             eRarity: e.eRarity,
-                            bSelected: r == p,
+                            bSelected: t == p,
                           }),
-                        );
-                      }),
+                        ),
+                      ),
                       l.createElement(C, null),
                     ),
                     l.createElement(
-                      u.jp,
-                      { className: (0, m.Z)(n().CarouselArrow, n().Left) },
+                      u._X,
+                      { className: (0, m.A)(n().CarouselArrow, n().Left) },
                       l.createElement("img", {
-                        src: `${i.Y.IMG_URL}${e}/arrow_left.png`,
+                        src: `${i.r.IMG_URL}${e}/arrow_left.png`,
                         className: n().ArrowImage,
                       }),
                     ),
                     l.createElement(
-                      u.P1,
-                      { className: (0, m.Z)(n().CarouselArrow, n().Right) },
+                      u.CC,
+                      { className: (0, m.A)(n().CarouselArrow, n().Right) },
                       l.createElement("img", {
-                        src: `${i.Y.IMG_URL}${e}/arrow_left.png`,
+                        src: `${i.r.IMG_URL}${e}/arrow_left.png`,
                         className: n().ArrowImage,
                       }),
                     ),
-                    l.createElement(N, { nTreasureIndex: t }),
+                    l.createElement(y, { nTreasureIndex: r }),
                   ),
                   l.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         n().TextStyleCaption,
                         n().TreasureLevels,
                       ),
                     },
-                    (0, c.Jr)(`#${e}_immortals_levels_${t}_desc`),
+                    (0, c.Wn)(`#${e}_immortals_levels_${r}_desc`),
                   ),
                 ),
               ),
               l.createElement(
                 "div",
                 {
-                  className: (0, m.Z)(
+                  className: (0, m.A)(
                     n().TextStyleFootnote,
                     n().ImmortalsFootnote,
                   ),
                   style: { color: a },
                 },
-                (0, c.Jr)(`#${e}_immortals_footnote`),
+                (0, c.Wn)(`#${e}_immortals_footnote`),
               ),
             ),
           );
         },
         C = () => {
           const e = p();
-          return l.createElement(d.Z, {
+          return l.createElement(d.A, {
             effect: "solid",
             borderColor: e.strSecondaryColor,
             arrowColor: e.strTertiaryColor,
@@ -311,20 +306,20 @@
         },
         h = ({
           nIndex: e,
-          strVideo: r,
-          bHeroLeft: t,
+          strVideo: t,
+          bHeroLeft: r,
           bHeroRight: a,
           bGold: o,
         }) => {
-          const s = (0, l.useContext)(u.ro),
+          const s = (0, l.useContext)(u.Yc),
             c = p(),
             d = (0, l.useRef)();
           return (
             (0, l.useEffect)(() => {
-              function r() {
+              function t() {
                 d.current && s.state.currentSlide == e && d.current.load();
               }
-              return s.subscribe(r), () => s.unsubscribe(r);
+              return s.subscribe(t), () => s.unsubscribe(t);
             }, [s, e]),
             l.createElement(
               "div",
@@ -332,10 +327,10 @@
               l.createElement(
                 "div",
                 { className: n().VideoContainer },
-                t &&
+                r &&
                   l.createElement("img", {
-                    className: (0, m.Z)(n().HeroImage, n().Left),
-                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${o ? "_gold" : ""}.png`,
+                    className: (0, m.A)(n().HeroImage, n().Left),
+                    src: `${i.r.IMG_URL}${c.strContentDir}/immortals/art/${t}${o ? "_gold" : ""}.png`,
                   }),
                 l.createElement(
                   "video",
@@ -347,95 +342,95 @@
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${i.Y.IMG_URL}${c.strContentDir}/immortals/${r}.jpg`,
+                    poster: `${i.r.IMG_URL}${c.strContentDir}/immortals/${t}.jpg`,
                   },
                   l.createElement("source", {
                     type: "video/webm",
-                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${o ? "_gold" : ""}.webm`,
+                    src: `${i.r.VIDEO_URL}${c.strContentDir}/immortals/${t}${o ? "_gold" : ""}.webm`,
                   }),
                   l.createElement("source", {
                     type: "video/mp4",
-                    src: `${i.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${o ? "_gold" : ""}.mp4`,
+                    src: `${i.r.VIDEO_URL}${c.strContentDir}/immortals/${t}${o ? "_gold" : ""}.mp4`,
                   }),
                 ),
                 a &&
                   l.createElement("img", {
-                    className: (0, m.Z)(n().HeroImage, n().Right),
-                    src: `${i.Y.IMG_URL}${c.strContentDir}/immortals/art/${r}${o ? "_gold" : ""}.png`,
+                    className: (0, m.A)(n().HeroImage, n().Right),
+                    src: `${i.r.IMG_URL}${c.strContentDir}/immortals/art/${t}${o ? "_gold" : ""}.png`,
                   }),
               ),
             )
           );
         },
-        N = ({ nTreasureIndex: e }) => {
-          const r = (0, l.useContext)(u.ro),
-            t = p(),
-            [a, o] = (0, l.useState)(r.state.currentSlide);
+        y = ({ nTreasureIndex: e }) => {
+          const t = (0, l.useContext)(u.Yc),
+            r = p(),
+            [a, o] = (0, l.useState)(t.state.currentSlide);
           return (
             (0, l.useEffect)(() => {
               function e() {
-                o(r.state.currentSlide);
+                o(t.state.currentSlide);
               }
-              return r.subscribe(e), () => r.unsubscribe(e);
-            }, [r]),
+              return t.subscribe(e), () => t.unsubscribe(e);
+            }, [t]),
             l.createElement(
               "div",
               { className: n().NameAndDesc },
               l.createElement(
                 "div",
                 {
-                  className: (0, m.Z)(
+                  className: (0, m.A)(
                     n().TextStyleSmallHeading,
                     n().ImmortalName,
                   ),
-                  style: { color: t.strPrimaryColor },
+                  style: { color: r.strPrimaryColor },
                 },
-                (0, c.Jr)(`#${t.strContentDir}_immortal_${e}_${a + 1}_name`),
+                (0, c.Wn)(`#${r.strContentDir}_immortal_${e}_${a + 1}_name`),
               ),
               l.createElement(
                 "div",
-                { className: (0, m.Z)(n().TextStyleBody, n().ImmortalDesc) },
-                (0, c.Jr)(`#${t.strContentDir}_immortal_${e}_${a + 1}_desc`),
+                { className: (0, m.A)(n().TextStyleBody, n().ImmortalDesc) },
+                (0, c.Wn)(`#${r.strContentDir}_immortal_${e}_${a + 1}_desc`),
               ),
             )
           );
         },
-        y = ({ strHeroName: e, eRarity: r, bSelected: t }) => {
+        N = ({ strHeroName: e, eRarity: t, bSelected: r }) => {
           const o = p(),
             s = "emblem" == e ? "emblem" : e;
           return l.createElement(
             "div",
             {
-              className: (0, m.Z)(
+              className: (0, m.A)(
                 n().ImmortalDot,
-                r == a.Rare && n().Rare,
-                r == a.Very && n().VeryRare,
-                r == a.Ultra && n().UltraRare,
-                r == a.Cosmic && n().CosmicallyRare,
+                t == a.Rare && n().Rare,
+                t == a.Very && n().VeryRare,
+                t == a.Ultra && n().UltraRare,
+                t == a.Cosmic && n().CosmicallyRare,
               ),
               style: { borderBottomColor: o.strSecondaryColor },
             },
             l.createElement("img", {
               className: n().BPHeroImage,
-              src: `${i.Y.IMG_URL}heroes/wide/${s}.png`,
+              src: `${i.r.IMG_URL}heroes/wide/${s}.png`,
             }),
           );
         };
     },
-    63118: (e, r, t) => {
+    24953: (e, t, r) => {
       "use strict";
-      t.d(r, { VJ: () => u, Y$: () => i });
-      var a = t(66204),
-        o = t(6574),
-        l = t.n(o),
-        s = t(5062),
-        n = t(2580),
-        m = t(98142),
-        c = t(4572);
+      r.d(t, { $x: () => i, c: () => u });
+      var a = r(7552),
+        o = r(32484),
+        l = r.n(o),
+        s = r(21384),
+        n = r(27866),
+        m = r(89506),
+        c = r(23634);
       const i = ({
           colorTopEdge: e,
-          colorTop: r,
-          colorMiddle: t,
+          colorTop: t,
+          colorMiddle: r,
           colorBottom: o,
           level: i,
           discountPct: u,
@@ -449,24 +444,24 @@
               className: l().BuyBattlePassCapsule,
               style: {
                 borderTop: `2px solid ${e}`,
-                backgroundImage: `linear-gradient( ${r}, ${o} )`,
+                backgroundImage: `linear-gradient( ${t}, ${o} )`,
               },
             },
             a.createElement("img", {
               className: l().CapsuleTitle,
-              onError: (e) => (e.target.src = `${m.Y.IMG_URL}${p}`),
-              src: `${m.Y.IMG_URL}${_}${m.Y.LANGUAGE}.png`,
+              onError: (e) => (e.target.src = `${m.r.IMG_URL}${p}`),
+              src: `${m.r.IMG_URL}${_}${m.r.LANGUAGE}.png`,
             }),
             a.createElement(
               "div",
-              { className: (0, s.Z)(l().TextStyleOverline) },
-              (0, n.Jr)("#battlepass_purchase_level", i),
+              { className: (0, s.A)(l().TextStyleOverline) },
+              (0, n.Wn)("#battlepass_purchase_level", i),
             ),
             a.createElement(
               "a",
               {
-                href: `${m.Y.BASE_URL}store/itemdetails/${d}`,
-                className: (0, s.Z)(
+                href: `${m.r.BASE_URL}store/itemdetails/${d}`,
+                className: (0, s.A)(
                   l().TextStyleButton,
                   l().TextColorWhite,
                   l().CapsulePurchaseButton,
@@ -476,25 +471,25 @@
                   backgroundImage: `linear-gradient( ${e}, ${e} )`,
                 },
               },
-              (0, n.Jr)("#battlepass_purchase_label", c.P.GetBPPrice(d)),
+              (0, n.Wn)("#battlepass_purchase_label", c.o.GetBPPrice(d)),
             ),
             a.createElement(
               "div",
               {
-                className: (0, s.Z)(
+                className: (0, s.A)(
                   l().TextStyleFootnote,
                   l().TextColorGreenGlow,
                   l().CapsuleDiscount,
                 ),
               },
-              u && (0, n.Jr)("#battlepass_purchase_discount", u, i),
+              u && (0, n.Wn)("#battlepass_purchase_discount", u, i),
             ),
           ),
         u = (e) =>
           a.createElement(
             "div",
             {
-              className: (0, s.Z)(
+              className: (0, s.A)(
                 l().BuyCompendiumCapsule,
                 l().BuyCompendiumCapsule2023,
               ),
@@ -512,64 +507,64 @@
                     backgroundImage: "linear-gradient( to bottom, #FFF, #FFF",
                   },
                 },
-                (0, n.Jr)(e.title),
+                (0, n.Wn)(e.title),
               ),
             e.capsuleImageLocation &&
               a.createElement("img", {
                 className: l().CapsuleTitle,
-                onError: (r) =>
-                  (r.target.src = `${m.Y.IMG_URL}${e.capsuleImageOnErrorLocation}`),
-                src: `${m.Y.IMG_URL}${e.capsuleImageLocation}${m.Y.LANGUAGE}.png`,
+                onError: (t) =>
+                  (t.target.src = `${m.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                src: `${m.r.IMG_URL}${e.capsuleImageLocation}${m.r.LANGUAGE}.png`,
               }),
             a.createElement(
               "div",
-              { className: (0, s.Z)(l().CompendiumLevels) },
-              (0, n.Jr)("#compendium_purchase_levels", e.level),
+              { className: (0, s.A)(l().CompendiumLevels) },
+              (0, n.Wn)("#compendium_purchase_levels", e.level),
             ),
             a.createElement(
               "div",
-              { className: (0, s.Z)(l().BoosterLevels) },
-              (0, n.Jr)("#compendium_purchase_booster_levels", e.booster_level),
+              { className: (0, s.A)(l().BoosterLevels) },
+              (0, n.Wn)("#compendium_purchase_booster_levels", e.booster_level),
             ),
             a.createElement("div", { className: l().SmoothLine }),
             a.createElement(
               "div",
-              { className: (0, s.Z)(l().EarnTheFollowing) },
-              (0, n.Jr)("#compendium_purchase_earn_the_following"),
+              { className: (0, s.A)(l().EarnTheFollowing) },
+              (0, n.Wn)("#compendium_purchase_earn_the_following"),
             ),
             a.createElement(
               "ul",
               null,
               a.createElement(
                 "li",
-                { className: (0, s.Z)(l().OtherRewards) },
-                (0, n.Jr)("#compendium_purchase_all_access"),
+                { className: (0, s.A)(l().OtherRewards) },
+                (0, n.Wn)("#compendium_purchase_all_access"),
               ),
               a.createElement(
                 "li",
-                { className: (0, s.Z)(l().OtherRewards) },
-                (0, n.Jr)("#compendium_purchase_aegis_emoticon"),
+                { className: (0, s.A)(l().OtherRewards) },
+                (0, n.Wn)("#compendium_purchase_aegis_emoticon"),
               ),
               a.createElement(
                 "li",
-                { className: (0, s.Z)(l().OtherRewards) },
-                (0, n.Jr)(
+                { className: (0, s.A)(l().OtherRewards) },
+                (0, n.Wn)(
                   "#compendium_purchase_rtti_culling_blades",
                   e.cullingBlades,
                 ),
               ),
               a.createElement(
                 "li",
-                { className: (0, s.Z)(l().OtherRewards) },
-                (0, n.Jr)(
+                { className: (0, s.A)(l().OtherRewards) },
+                (0, n.Wn)(
                   "#compendium_purchase_rtti_reroll_tokens",
                   e.rerollTokens,
                 ),
               ),
               a.createElement(
                 "li",
-                { className: (0, s.Z)(l().OtherRewards) },
-                (0, n.Jr)(
+                { className: (0, s.A)(l().OtherRewards) },
+                (0, n.Wn)(
                   "#compendium_purchase_fantasy_tokens",
                   e.fantasyTokens,
                 ),
@@ -577,26 +572,26 @@
               1 == e.voicelines &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)("#compendium_purchase_one_random_voiceline"),
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)("#compendium_purchase_one_random_voiceline"),
                 ),
               e.voicelines > 1 &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)("#compendium_purchase_voicelines", e.voicelines),
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)("#compendium_purchase_voicelines", e.voicelines),
                 ),
               1 == e.playerStickers &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)("#compendium_purchase_one_player_sticker"),
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)("#compendium_purchase_one_player_sticker"),
                 ),
               e.playerStickers > 1 &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)(
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)(
                     "#compendium_purchase_player_stickers",
                     e.playerStickers,
                   ),
@@ -604,8 +599,8 @@
               e.teamStickers &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)(
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)(
                     "#compendium_purchase_team_stickers",
                     e.teamStickers,
                   ),
@@ -613,8 +608,8 @@
               e.teamLoadingScreens &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)(
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)(
                     "#compendium_purchase_team_loading_screens",
                     e.teamLoadingScreens,
                   ),
@@ -622,8 +617,8 @@
               e.tiLoadingScreens &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)(
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)(
                     "#compendium_purchase_ti_loading_screens",
                     e.tiLoadingScreens,
                   ),
@@ -631,8 +626,8 @@
               e.tpFX &&
                 a.createElement(
                   "li",
-                  { className: (0, s.Z)(l().OtherRewards) },
-                  (0, n.Jr)("#compendium_purchase_tp_fx"),
+                  { className: (0, s.A)(l().OtherRewards) },
+                  (0, n.Wn)("#compendium_purchase_tp_fx"),
                 ),
             ),
             a.createElement(
@@ -641,14 +636,14 @@
               !e.isUpgraded &&
                 a.createElement(
                   "div",
-                  { className: (0, s.Z)(l().BoostersFootnote) },
-                  (0, n.Jr)("#compendium_purchase_boosters_footnote"),
+                  { className: (0, s.A)(l().BoostersFootnote) },
+                  (0, n.Wn)("#compendium_purchase_boosters_footnote"),
                 ),
               e.isUpgraded &&
                 a.createElement(
                   "div",
-                  { className: (0, s.Z)(l().BoostersFootnote) },
-                  (0, n.Jr)("#compendium_purchase_upgraded_boosters_footnote"),
+                  { className: (0, s.A)(l().BoostersFootnote) },
+                  (0, n.Wn)("#compendium_purchase_upgraded_boosters_footnote"),
                 ),
             ),
           );

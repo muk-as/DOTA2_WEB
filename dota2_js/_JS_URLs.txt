@@ -8,7 +8,10 @@ battlereport                            /battlereport
 controllerfaq                           /controllerfaq
 crownfall                               /crownfall
 crownfall_comic                         /crownfall/comic
+crownfall_comic2                        /crownfall/comic2
+crownfall_comic3                        /crownfall/comic3
 dawnbreaker                             /dawnbreaker
+dotaplustester                          /dotaplustester/${}
 dpc_about                               dpc_event_root()/about
 dpc_event_root                          dpc_root()/${}
 dpc_root                                /esports
@@ -240,7 +243,7 @@ COMMUNITY_CDN_URL/g
 COMMUNITY_CDN_URL/public/shared/images/responsive/youtube_16x9_placeholder.gif
 COMMUNITY_URL/app/${DOTA_APP_ID}/guides
 COMMUNITY_URL/app/570/guides
-COMMUNITY_URL/broadcast/watchnew/${null==X?void0:stream_url.replace(https:/steamcommunity.com/broadcast/watch/,)}?origin=https
+COMMUNITY_URL/broadcast/watchnew/${X?.stream_url.replace(https:/steamcommunity.com/broadcast/watch/,)}?origin=https
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${X}
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${pathname.substr(1)}
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${proregistration_autographs().substr(1)}
@@ -305,6 +308,7 @@ IMG_URL/backgrounds/slate_bg_01.jpg
 IMG_URL/close.png
 IMG_URL/crownfall/${X}_alternate_style.png
 IMG_URL/crownfall/${image}
+IMG_URL/crownfall/${url}/${X}/${X}.webp?v=2
 IMG_URL/crownfall/comic_part1/${COMIC_LANGUAGE}/000.webp
 IMG_URL/crownfall/comic_part1/${X}/${X}.webp?v=2
 IMG_URL/crownfall/explorer_pack.png
@@ -346,7 +350,7 @@ IMG_URL/dpc/dpc_about_tournaments.jpg
 IMG_URL/dpc/dpc_about_tours.jpg
 IMG_URL/dpc/dpc_flowchart.png
 IMG_URL/dpc/dpc_logo.png
-IMG_URL/dpc/headers/dpc_header_event_${(0,X)(X)}.jpg
+IMG_URL/dpc/headers/dpc_header_event_${(0,$X$)(X)}.jpg
 IMG_URL/dpc/light_gray_bg.jpg
 IMG_URL/dpc/logo_lc_quals.png
 IMG_URL/dpc/portrait_guidelines/${imageName}
@@ -367,6 +371,7 @@ IMG_URL/dpc/ti11/predictions.png
 IMG_URL/dpc/ti11/supporters_club.png
 IMG_URL/dpc/top_block.jpg
 IMG_URL/g
+IMG_URL/heroes/${X?.name.replace(npc_dota_hero_,)}.png
 IMG_URL/heroes/${X}.png
 IMG_URL/heroes/${name.replace(npc_dota_hero_,)}.png
 IMG_URL/heroes/crops/${name.replace(npc_dota_hero_,)}.png
@@ -686,8 +691,8 @@ IMG_URL/international2023/icons/social_yt.png
 IMG_URL/international2023/stars.png
 IMG_URL/international2023/ti_logo_color.png
 IMG_URL/international2023/ti_logo_full_color.png
+IMG_URL/items/${X?.name.replace(item_,)}.png
 IMG_URL/items/${X}.png
-IMG_URL/items/${null==X?void0:name.replace(item_,)}.png
 IMG_URL/items/recipe.png
 IMG_URL/juneupdate22/avoid_players_sc.png
 IMG_URL/juneupdate22/bg_repeat.jpg

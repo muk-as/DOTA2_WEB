@@ -1,11 +1,11 @@
-// 9254.js
+// 1831.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [9254],
+  [1831],
   {
-    75291: (e) => {
+    89642: (e) => {
       e.exports = {
         Tooltip: "_2gy5MNnkE_WaaXBg8AwM5n",
         CarouselFade: "_3cu9aSnepOTk1ZabfWqlPM",
@@ -144,57 +144,57 @@
         MapFeatureTooltip: "_2N4jMn3-Q14nSdBOz-AEuI",
       };
     },
-    39254: (e, t, a) => {
+    71831: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => j });
-      var r = a(22970),
-        n = a(43356),
-        s = a.n(n),
-        i = a(98142),
-        o = a(73806),
-        l = a(2580),
-        c = a(80846),
-        _ = a(66204),
-        m = a(62175),
-        d = a(53332),
-        p = a(88036),
-        h = a(5062),
-        u = a(4572),
-        v = a(31444),
-        g = a(37196),
-        f = a(90775),
-        w = a(75291),
+      a.r(t), a.d(t, { default: () => A });
+      var n = a(85608),
+        r = a(85286),
+        s = a.n(r),
+        i = a(89506),
+        o = a(33706),
+        l = a(27866),
+        c = a(68446),
+        _ = a(7552),
+        m = a(83640),
+        d = a(35927),
+        p = a(92225),
+        h = a(21384),
+        u = a(23634),
+        g = a(47202),
+        v = a(36305),
+        f = a(82101),
+        w = a(89642),
         E = a.n(w),
-        N = a(95974),
-        R = a(15905),
-        I = a(8908),
-        M = a(38964);
-      const C = "NewFrontiersPage",
+        N = a(61840),
+        R = a(88351),
+        I = a(92444),
+        C = a(54159);
+      const M = "NewFrontiersPage",
         b = ({ children: e }) => {
-          const { hash: t } = (0, R.TH)();
+          const { hash: t } = (0, R.zy)();
           return (
             (0, _.useEffect)(() => {
               t &&
                 setTimeout(() => {
                   const e = t.replace("#", "");
-                  (0, I.Z)(e, C);
+                  (0, I.A)(e, M);
                 }, 500);
             }, [t]),
             null
           );
         };
-      function y(e) {
+      function W(e) {
         let t = "",
           a = !0;
-        for (let r = 0; r < e.length; ++r)
-          "_" != e[r]
+        for (let n = 0; n < e.length; ++n)
+          "_" != e[n]
             ? a
-              ? ((t += e[r].toUpperCase()), (a = !1))
-              : (t += e[r])
+              ? ((t += e[n].toUpperCase()), (a = !1))
+              : (t += e[n])
             : (a = !0);
         return t;
       }
-      const P = (e) =>
+      const y = (e) =>
           _.createElement(
             "div",
             { className: E().Text },
@@ -205,19 +205,19 @@
                 _.createElement(
                   "div",
                   { className: E().Icon },
-                  _.createElement("img", { src: `${i.Y.IMG_URL}/` + e.icon }),
+                  _.createElement("img", { src: `${i.r.IMG_URL}/` + e.icon }),
                 ),
               _.createElement(
                 "div",
                 { className: E().Headline },
-                (0, l.Jr)(e.title),
+                (0, l.Wn)(e.title),
               ),
             ),
             e.description &&
               _.createElement(
                 "div",
                 { className: E().Description },
-                (0, l.Jr)(e.description),
+                (0, l.Wn)(e.description),
               ),
             e.contents &&
               _.createElement(
@@ -226,7 +226,7 @@
                 e.contents,
               ),
           ),
-        T = (e) =>
+        P = (e) =>
           _.createElement(
             "div",
             {
@@ -235,17 +235,17 @@
               "data-aos-delay": "100",
               "data-aos-duration": "1000",
             },
-            _.createElement(P, {
+            _.createElement(y, {
               title: e.title,
               description: e.description,
               contents: e.contents,
             }),
             _.createElement("img", {
               className: E().Image,
-              src: `${i.Y.IMG_URL}/` + e.image,
+              src: `${i.r.IMG_URL}/` + e.image,
             }),
           ),
-        S = (e) =>
+        T = (e) =>
           _.createElement(
             "div",
             {
@@ -256,15 +256,15 @@
             },
             _.createElement("img", {
               className: E().Image,
-              src: `${i.Y.IMG_URL}/` + e.image,
+              src: `${i.r.IMG_URL}/` + e.image,
             }),
-            _.createElement(P, {
+            _.createElement(y, {
               title: e.title,
               description: e.description,
               contents: e.contents,
             }),
           );
-      let k = {
+      let S = {
         roshan: {
           title: "#new_frontiers_map_roshan_title",
           description: "#new_frontiers_map_roshan_desc",
@@ -336,8 +336,8 @@
           poster: "outpost_poster.jpg",
         },
       };
-      const D = (e) => {
-          let t = k[e.feature_id];
+      const k = (e) => {
+          let t = S[e.feature_id];
           return t
             ? _.createElement(
                 "div",
@@ -354,11 +354,11 @@
                     controls: !1,
                   },
                   _.createElement("source", {
-                    src: `${i.Y.IMG_URL}new_frontiers/interactive-map/videos/${t.video}.webm`,
+                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${t.video}.webm`,
                     type: "video/webm",
                   }),
                   _.createElement("source", {
-                    src: `${i.Y.IMG_URL}new_frontiers/interactive-map/videos/${t.video}.mp4`,
+                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${t.video}.mp4`,
                     type: "video/mp4",
                   }),
                 ),
@@ -368,64 +368,61 @@
                   _.createElement(
                     "div",
                     { className: E().Title },
-                    (0, l.Jr)(t.title),
+                    (0, l.Wn)(t.title),
                   ),
                   _.createElement(
                     "div",
                     { className: E().Description },
-                    (0, l.Jr)(t.description),
+                    (0, l.Wn)(t.description),
                   ),
                 ),
               )
             : null;
         },
-        L = (e) =>
-          k[e.feature_id]
+        D = (e) =>
+          S[e.feature_id]
             ? _.createElement(
-                p.HP,
+                p.he,
                 {
                   toolTipContent: e.revealed
-                    ? _.createElement(D, { feature_id: e.feature_id })
+                    ? _.createElement(k, { feature_id: e.feature_id })
                     : null,
                   strTooltipClassname: E().MapFeatureTooltipContainer,
-                  className: (0, h.Z)(E().MapFeature, e.featureClass),
+                  className: (0, h.A)(E().MapFeature, e.featureClass),
                 },
                 _.createElement("img", {
-                  className: (0, h.Z)(
+                  className: (0, h.A)(
                     E().MapFeatureImage,
                     e.revealed && E().Revealed,
                   ),
-                  src: `${i.Y.IMG_URL}/new_frontiers/interactive-map/${e.image}`,
+                  src: `${i.r.IMG_URL}/new_frontiers/interactive-map/${e.image}`,
                 }),
               )
             : null,
-        H = (0, c.Pi)(({ patchnotes: e, heroname: t }) => {
-          const a = o.L.Get().getHeroList(),
-            r =
-              null == a
-                ? void 0
-                : a.heroes.find(
-                    (e) => e.name.replace("npc_dota_hero_", "") == t,
-                  );
-          return r
+        L = (0, c.PA)(({ patchnotes: e, heroname: t }) => {
+          const a = o.B5.Get().getHeroList(),
+            n = a?.heroes.find(
+              (e) => e.name.replace("npc_dota_hero_", "") == t,
+            );
+          return n
             ? _.createElement(
                 "div",
-                { className: (0, h.Z)(E().HeroRework, E()[y(t)]) },
+                { className: (0, h.A)(E().HeroRework, E()[W(t)]) },
                 _.createElement(
                   "div",
                   { className: E().HeroName },
-                  (0, l.Jr)(r.name_loc),
+                  (0, l.Wn)(n.name_loc),
                 ),
                 _.createElement(
                   "div",
                   { className: E().ReworkDescription },
-                  (0, l.Jr)("#new_frontiers_major_gameplay_hero_rework_" + t),
+                  (0, l.Wn)("#new_frontiers_major_gameplay_hero_rework_" + t),
                 ),
                 _.createElement(
                   "div",
                   { className: E().HeroImageContainer },
                   _.createElement("div", { className: E().HeroShadow }),
-                  _.createElement(f.Z, {
+                  _.createElement(f.s, {
                     heroname: t,
                     portraitClassName: E().HeroReworkPortrait,
                     videoClassName: E().HeroReworkPortraitVideo,
@@ -434,7 +431,7 @@
                 _.createElement(
                   "div",
                   { className: E().HeroReworkPatchNotes },
-                  _.createElement(N.Ok, {
+                  _.createElement(N.fX, {
                     patchnotes: e,
                     heroname: t,
                     heroClassName: E().HeroReworkPatchNotesInner,
@@ -443,22 +440,22 @@
               )
             : null;
         }),
-        J = (e) => {
+        H = (e) => {
           if (!e.special.heading_loc) return null;
           let t = e.special.values_float.map((e, t) =>
               _.createElement(
                 "span",
                 { key: t, className: E().SingleValue },
-                (0, M.L)(e),
+                (0, C.F)(e),
               ),
             ),
             a = !1,
-            r = null;
+            n = null;
           return (
             "+" == e.special.heading_loc[0]
-              ? ((r = e.special.heading_loc.slice(1)), (a = !0))
-              : (r = e.special.heading_loc),
-            "$" == r[0] && (r = "#dota_ability_variable_" + r.slice(1)),
+              ? ((n = e.special.heading_loc.slice(1)), (a = !0))
+              : (n = e.special.heading_loc),
+            "$" == n[0] && (n = "#dota_ability_variable_" + n.slice(1)),
             a
               ? _.createElement(
                   "div",
@@ -466,45 +463,43 @@
                   "+ ",
                   t,
                   " ",
-                  (0, l.Jr)(r),
+                  (0, l.Wn)(n),
                 )
               : _.createElement(
                   "div",
                   { className: E().Stat },
-                  (0, l.Jr)(r),
+                  (0, l.Wn)(n),
                   " ",
                   t,
                 )
           );
         },
-        W = (0, c.Pi)(({ name: e }) => {
-          var t;
-          const a = o.L.Get().getItemList(),
-            r = null == a ? void 0 : a.itemabilities.find((t) => t.name == e),
-            n = o.L.Get().getItemData(null == r ? void 0 : r.id);
+        G = (0, c.PA)(({ name: e }) => {
+          const t = o.B5.Get().getItemList(),
+            a = t?.itemabilities.find((t) => t.name == e),
+            n = o.B5.Get().getItemData(a?.id);
           if (!n) return null;
-          let s = n.desc_loc;
+          let r = n.desc_loc;
           n.special_values.forEach((e) => {
             let t =
-              e.values_float.length > 0 ? (0, M.L)(e.values_float[0]) : "0";
-            (s = s.replace("%" + e.name + "%", t)),
-              (s = s.replace("%" + e.name.toLowerCase() + "%", t));
+              e.values_float.length > 0 ? (0, C.F)(e.values_float[0]) : "0";
+            (r = r.replace("%" + e.name + "%", t)),
+              (r = r.replace("%" + e.name.toLowerCase() + "%", t));
           }),
-            (s = s.replace(/\%\%/g, "%"));
-          let c =
-              null === (t = n.special_values) || void 0 === t
-                ? void 0
-                : t.map((e, t) => _.createElement(J, { key: t, special: e })),
-            m = n.name.replace("item_", ""),
-            d = n.item_cost,
-            p =
+            (r = r.replace(/\%\%/g, "%"));
+          let s = n.special_values?.map((e, t) =>
+              _.createElement(H, { key: t, special: e }),
+            ),
+            c = n.name.replace("item_", ""),
+            m = n.item_cost,
+            d =
               n.item_neutral_tier >= 0 && n.item_neutral_tier < 5
                 ? n.item_neutral_tier + 1
                 : -1,
-            u = E()["Tier" + p],
-            v = n.cooldowns.reduce((e, t) => e + t) > 0,
+            p = E()["Tier" + d],
+            u = n.cooldowns.reduce((e, t) => e + t) > 0,
             g = n.mana_costs.reduce((e, t) => e + t) > 0,
-            f =
+            v =
               !!(n.health_costs && n.health_costs.length > 0) &&
               n.health_costs.reduce((e, t) => e + t) > 0;
           return _.createElement(
@@ -515,46 +510,46 @@
               { className: E().Header },
               _.createElement("img", {
                 className: E().ItemImage,
-                src: `${i.Y.IMG_URL}/items/${m}.png`,
+                src: `${i.r.IMG_URL}/items/${c}.png`,
               }),
               _.createElement(
                 "div",
                 { className: E().HeaderText },
                 _.createElement("div", { className: E().ItemName }, n.name_loc),
-                d > 0 &&
+                m > 0 &&
                   _.createElement(
                     "div",
                     { className: E().GoldPrice },
                     _.createElement("img", {
                       className: E().GoldIcon,
-                      src: `${i.Y.IMG_URL}/icons/gold.png`,
+                      src: `${i.r.IMG_URL}/icons/gold.png`,
                     }),
-                    d,
+                    m,
                   ),
-                p > 0 &&
+                d > 0 &&
                   _.createElement(
                     "div",
-                    { className: (0, h.Z)(E().NeutralItemTier, u) },
-                    (0, l.Jr)("#neutral_item_tier", p),
+                    { className: (0, h.A)(E().NeutralItemTier, p) },
+                    (0, l.Wn)("#neutral_item_tier", d),
                   ),
               ),
             ),
             _.createElement(
               "div",
               { className: E().Body },
-              _.createElement("div", { className: E().Stats }, c),
-              s &&
+              _.createElement("div", { className: E().Stats }, s),
+              r &&
                 _.createElement(
                   "div",
                   { className: E().DescriptionContainer },
                   _.createElement("div", {
                     className: E().Description,
-                    dangerouslySetInnerHTML: { __html: s },
+                    dangerouslySetInnerHTML: { __html: r },
                   }),
-                  (v || g || f) &&
+                  (u || g || v) &&
                     _.createElement(
                       "div",
-                      { className: (0, h.Z)(E().DescriptionHeader) },
+                      { className: (0, h.A)(E().DescriptionHeader) },
                       g &&
                         _.createElement(
                           "div",
@@ -564,11 +559,11 @@
                             "div",
                             { className: E().ManaText },
                             n.mana_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, M.L)(e),
+                              (e, t) => (t > 0 ? " / " : "") + (0, C.F)(e),
                             ),
                           ),
                         ),
-                      f &&
+                      v &&
                         _.createElement(
                           "div",
                           { className: E().HealthContainer },
@@ -577,25 +572,25 @@
                             "div",
                             { className: E().HealthText },
                             n.health_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, M.L)(e),
+                              (e, t) => (t > 0 ? " / " : "") + (0, C.F)(e),
                             ),
                           ),
                         ),
-                      v &&
+                      u &&
                         _.createElement(
                           "div",
                           { className: E().CooldownContainer },
                           _.createElement("div", {
                             className: E().CooldownIcon,
                             style: {
-                              backgroundImage: `url( ${i.Y.IMG_URL}icons/cooldown.png )`,
+                              backgroundImage: `url( ${i.r.IMG_URL}icons/cooldown.png )`,
                             },
                           }),
                           _.createElement(
                             "div",
                             { className: E().CooldownText },
                             n.cooldowns.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, M.L)(e),
+                              (e, t) => (t > 0 ? " / " : "") + (0, C.F)(e),
                             ),
                           ),
                         ),
@@ -604,59 +599,19 @@
             ),
           );
         });
-      let G = class extends _.Component {
+      let j = class extends _.Component {
+        videoRef = _.createRef();
+        NewMapVideoRef = _.createRef();
+        NewMapVideoContainerRef = _.createRef();
+        navbarRef = _.createRef();
+        mapRef = _.createRef();
+        majorGameplayRef = _.createRef();
+        matchmakingRef = _.createRef();
+        uiRef = _.createRef();
+        gameplayRef = _.createRef();
+        interactiveMapHighlightIndex;
         constructor(e) {
           super(e),
-            (this.videoRef = _.createRef()),
-            (this.NewMapVideoRef = _.createRef()),
-            (this.NewMapVideoContainerRef = _.createRef()),
-            (this.navbarRef = _.createRef()),
-            (this.mapRef = _.createRef()),
-            (this.majorGameplayRef = _.createRef()),
-            (this.matchmakingRef = _.createRef()),
-            (this.uiRef = _.createRef()),
-            (this.gameplayRef = _.createRef()),
-            (this.handleScroll = (e) => {
-              const t = this.mapRef.current.getBoundingClientRect().top;
-              (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(t, 0, -100, 0, 1), 0, 1)}`),
-                (this.navbarRef.current.style.visibility =
-                  t > 0 ? "hidden" : "visible"),
-                this.NewMapVideoContainerRef.current.getBoundingClientRect()
-                  .top < 400 &&
-                  !this.state.bMapVideoHasPlayed &&
-                  (this.NewMapVideoRef.current.play(),
-                  this.setState({ bMapVideoHasPlayed: !0 }),
-                  setTimeout(
-                    () => this.setState({ nMapIconRevealPhase: 1 }),
-                    1e3,
-                  ),
-                  setTimeout(
-                    () => this.setState({ nMapIconRevealPhase: 2 }),
-                    1300,
-                  ),
-                  setTimeout(
-                    () => this.setState({ nMapIconRevealPhase: 3 }),
-                    1600,
-                  ),
-                  setTimeout(
-                    () => this.setState({ nMapIconRevealPhase: 4 }),
-                    1900,
-                  ),
-                  setTimeout(
-                    () => this.setState({ nMapIconRevealPhase: 5 }),
-                    2200,
-                  ),
-                  setTimeout(
-                    () => this.setState({ nMapIconRevealPhase: 6 }),
-                    2500,
-                  ),
-                  setTimeout(
-                    () => this.setState({ nMapIconRevealPhase: 7 }),
-                    2800,
-                  )),
-                s().refresh();
-            }),
-            (this.clamp = (e, t, a) => Math.min(Math.max(e, t), a)),
             (this.state = {
               bPlayingVideo: !1,
               bMapVideoSeeking: !1,
@@ -671,12 +626,35 @@
         scrollToTarget(e) {
           e.current.scrollIntoView({ behavior: "smooth" });
         }
-        remapValue(e, t, a, r, n) {
-          return r + ((n - r) * (e - t)) / (a - t);
+        handleScroll = (e) => {
+          const t = this.mapRef.current.getBoundingClientRect().top;
+          (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(t, 0, -100, 0, 1), 0, 1)}`),
+            (this.navbarRef.current.style.visibility =
+              t > 0 ? "hidden" : "visible"),
+            this.NewMapVideoContainerRef.current.getBoundingClientRect().top <
+              400 &&
+              !this.state.bMapVideoHasPlayed &&
+              (this.NewMapVideoRef.current.play(),
+              this.setState({ bMapVideoHasPlayed: !0 }),
+              setTimeout(() => this.setState({ nMapIconRevealPhase: 1 }), 1e3),
+              setTimeout(() => this.setState({ nMapIconRevealPhase: 2 }), 1300),
+              setTimeout(() => this.setState({ nMapIconRevealPhase: 3 }), 1600),
+              setTimeout(() => this.setState({ nMapIconRevealPhase: 4 }), 1900),
+              setTimeout(() => this.setState({ nMapIconRevealPhase: 5 }), 2200),
+              setTimeout(() => this.setState({ nMapIconRevealPhase: 6 }), 2500),
+              setTimeout(
+                () => this.setState({ nMapIconRevealPhase: 7 }),
+                2800,
+              )),
+            s().refresh();
+        };
+        remapValue(e, t, a, n, r) {
+          return n + ((r - n) * (e - t)) / (a - t);
         }
-        remapValueClamped(e, t, a, r, n) {
-          return Math.max(r, Math.min(n, this.remapValue(e, t, a, r, n)));
+        remapValueClamped(e, t, a, n, r) {
+          return Math.max(n, Math.min(r, this.remapValue(e, t, a, n, r)));
         }
+        clamp = (e, t, a) => Math.min(Math.max(e, t), a);
         componentDidMount() {
           window.addEventListener("scroll", this.handleScroll),
             this.handleScroll(void 0);
@@ -685,10 +663,10 @@
           window.removeEventListener("scroll", this.handleScroll);
         }
         render() {
-          const e = u.P.getPatchNotes("7.33", i.Y.LANGUAGE);
+          const e = u.o.getPatchNotes("7.33", i.r.LANGUAGE);
           let t = [];
-          for (let e in k) {
-            let a = k[e];
+          for (let e in S) {
+            let a = S[e];
             t.push(
               _.createElement(
                 "div",
@@ -703,14 +681,14 @@
                     loop: !0,
                     playsInline: !1,
                     controls: !1,
-                    poster: `${i.Y.IMG_URL}new_frontiers/interactive-map/videos/${a.poster}`,
+                    poster: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${a.poster}`,
                   },
                   _.createElement("source", {
-                    src: `${i.Y.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.webm`,
+                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.webm`,
                     type: "video/webm",
                   }),
                   _.createElement("source", {
-                    src: `${i.Y.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.mp4`,
+                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.mp4`,
                     type: "video/mp4",
                   }),
                 ),
@@ -724,46 +702,46 @@
                       "div",
                       { className: E().Icon },
                       _.createElement("img", {
-                        src: `${i.Y.IMG_URL}new_frontiers/interactive-map/icons/${a.icon}`,
+                        src: `${i.r.IMG_URL}new_frontiers/interactive-map/icons/${a.icon}`,
                       }),
                     ),
                     _.createElement(
                       "div",
                       { className: E().Title },
-                      (0, l.Jr)(a.title),
+                      (0, l.Wn)(a.title),
                     ),
                   ),
                   _.createElement("div", { className: E().Dash }),
                   _.createElement(
                     "div",
                     { className: E().Description },
-                    (0, l.Jr)(a.description),
+                    (0, l.Wn)(a.description),
                   ),
                 ),
               ),
             );
           }
-          let a = (0, d.dt)((0, d.jM)(i.Y.LANGUAGE));
+          let a = (0, d.ww)((0, d.sf)(i.r.LANGUAGE));
           return (
             "zh-cn" === a ? (a = "zh-Hans") : "zh-tw" === a && (a = "zh-Hant"),
             _.createElement(
               "div",
-              { id: C, className: E().NewFrontiersPage },
+              { id: M, className: E().NewFrontiersPage },
               _.createElement(
-                m.ql,
+                m.mg,
                 null,
                 _.createElement(
                   "title",
                   null,
-                  (0, l.Jr)("#new_frontiers_title"),
+                  (0, l.Wn)("#new_frontiers_title"),
                   " - ",
-                  (0, l.Jr)("#new_frontiers_gameplay_number"),
+                  (0, l.Wn)("#new_frontiers_gameplay_number"),
                 ),
               ),
               _.createElement(
                 "div",
                 {
-                  className: (0, h.Z)(
+                  className: (0, h.A)(
                     E().TrailerContainer,
                     this.state.bPlayingVideo ? null : E().Hidden,
                   ),
@@ -772,23 +750,23 @@
                   "video",
                   {
                     ref: this.videoRef,
-                    className: (0, h.Z)(E().TrailerVideo),
+                    className: (0, h.A)(E().TrailerVideo),
                     autoPlay: !1,
                     preload: "none",
                     muted: !1,
                     loop: !1,
                     playsInline: !1,
                     controls: !0,
-                    poster: `${i.Y.VIDEO_URL}new_frontiers/new_frontiers_trailer_poster.jpg`,
+                    poster: `${i.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_poster.jpg`,
                     crossOrigin: "anonymous",
                   },
                   _.createElement("source", {
                     type: "video/webm",
-                    src: `${i.Y.VIDEO_URL}new_frontiers/new_frontiers_trailer_${i.Y.LANGUAGE}.webm`,
+                    src: `${i.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_${i.r.LANGUAGE}.webm`,
                   }),
                   _.createElement("source", {
                     type: "video/webm",
-                    src: `${i.Y.VIDEO_URL}new_frontiers/new_frontiers_trailer_english.webm`,
+                    src: `${i.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_english.webm`,
                   }),
                 ),
                 _.createElement(
@@ -799,19 +777,19 @@
                   },
                   _.createElement("img", {
                     className: E().CloseButtonImage,
-                    src: `${i.Y.IMG_URL}/close.png`,
+                    src: `${i.r.IMG_URL}/close.png`,
                   }),
                 ),
               ),
               _.createElement(
                 "div",
                 {
-                  className: (0, h.Z)(
+                  className: (0, h.A)(
                     E().PageContainer,
                     this.state.bPlayingVideo ? E().Hidden : null,
                   ),
                 },
-                _.createElement(v.j, { bOverlapping: !0 }),
+                _.createElement(g.A, { bOverlapping: !0 }),
                 _.createElement(
                   "div",
                   { className: E().HeaderSection },
@@ -825,21 +803,21 @@
                       _.createElement(
                         "div",
                         { className: E().The },
-                        (0, l.Jr)("#new_frontiers_gameplay_number"),
+                        (0, l.Wn)("#new_frontiers_gameplay_number"),
                       ),
                       _.createElement("div", { className: E().Dash }),
                     ),
                     _.createElement(
                       "div",
                       { className: E().Title },
-                      (0, l.Jr)("#new_frontiers_title_short"),
+                      (0, l.Wn)("#new_frontiers_title_short"),
                     ),
                   ),
                   _.createElement("div", { className: E().Dash }),
                   _.createElement(
                     "div",
                     { className: E().Subtitle },
-                    (0, l.Jr)("#new_frontiers_subtitle"),
+                    (0, l.Wn)("#new_frontiers_subtitle"),
                   ),
                   _.createElement(
                     "div",
@@ -851,12 +829,12 @@
                         onClick: () => this.setPlayingVideo(!0),
                       },
                       _.createElement("div", {
-                        className: (0, h.Z)(E().Icon, E().Play),
+                        className: (0, h.A)(E().Icon, E().Play),
                       }),
                       _.createElement(
                         "div",
                         { className: E().ButtonText },
-                        (0, l.Jr)("#new_frontiers_play_trailer"),
+                        (0, l.Wn)("#new_frontiers_play_trailer"),
                       ),
                     ),
                   ),
@@ -868,7 +846,7 @@
                   _.createElement(
                     "p",
                     { className: E().Body },
-                    (0, l.Jr)("#new_frontiers_dota_team_intro"),
+                    (0, l.Wn)("#new_frontiers_dota_team_intro"),
                   ),
                 ),
                 _.createElement("div", { className: E().SectionDivider }),
@@ -881,7 +859,7 @@
                       className: E().AnchorLink,
                       onClick: () => this.scrollToTarget(this.mapRef),
                     },
-                    (0, l.Jr)("#new_frontiers_section_title_map"),
+                    (0, l.Wn)("#new_frontiers_section_title_map"),
                   ),
                   _.createElement(
                     "div",
@@ -889,7 +867,7 @@
                       className: E().AnchorLink,
                       onClick: () => this.scrollToTarget(this.majorGameplayRef),
                     },
-                    (0, l.Jr)("#new_frontiers_section_title_major_gameplay"),
+                    (0, l.Wn)("#new_frontiers_section_title_major_gameplay"),
                   ),
                   _.createElement(
                     "div",
@@ -897,7 +875,7 @@
                       className: E().AnchorLink,
                       onClick: () => this.scrollToTarget(this.matchmakingRef),
                     },
-                    (0, l.Jr)("#new_frontiers_section_title_matchmaking"),
+                    (0, l.Wn)("#new_frontiers_section_title_matchmaking"),
                   ),
                   _.createElement(
                     "div",
@@ -905,7 +883,7 @@
                       className: E().AnchorLink,
                       onClick: () => this.scrollToTarget(this.uiRef),
                     },
-                    (0, l.Jr)("#new_frontiers_section_title_ui"),
+                    (0, l.Wn)("#new_frontiers_section_title_ui"),
                   ),
                   _.createElement(
                     "div",
@@ -913,7 +891,7 @@
                       className: E().AnchorLink,
                       onClick: () => this.scrollToTarget(this.gameplayRef),
                     },
-                    (0, l.Jr)("#new_frontiers_section_title_gameplay_update"),
+                    (0, l.Wn)("#new_frontiers_section_title_gameplay_update"),
                   ),
                 ),
                 _.createElement(
@@ -921,17 +899,17 @@
                   {
                     id: "Map",
                     ref: this.mapRef,
-                    className: (0, h.Z)(E().WebsiteSection, E().NewMap),
+                    className: (0, h.A)(E().WebsiteSection, E().NewMap),
                   },
                   _.createElement(
                     "h1",
                     null,
-                    (0, l.Jr)("#new_frontiers_section_title_map"),
+                    (0, l.Wn)("#new_frontiers_section_title_map"),
                   ),
                   _.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, l.Jr)("#new_frontiers_map_introduction"),
+                    (0, l.Wn)("#new_frontiers_map_introduction"),
                   ),
                   _.createElement(
                     "div",
@@ -955,167 +933,167 @@
                             muted: !0,
                             loop: !1,
                             playsInline: !0,
-                            poster: `${i.Y.VIDEO_URL}/new_frontiers/map_update_2023_embiggening_poster.jpg`,
+                            poster: `${i.r.VIDEO_URL}/new_frontiers/map_update_2023_embiggening_poster.jpg`,
                           },
                           _.createElement("source", {
                             type: "video/webm",
-                            src: `${i.Y.VIDEO_URL}/new_frontiers/map_update_2023_embiggening.webm`,
+                            src: `${i.r.VIDEO_URL}/new_frontiers/map_update_2023_embiggening.webm`,
                           }),
                         ),
                         _.createElement(
                           "div",
                           { className: E().MapOverlay },
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "roshan",
                             image: "dashboard_map_room_roshan_icon.png",
                             featureClass: E().RoshanNorthwest,
                             revealed: this.state.nMapIconRevealPhase >= 1,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "roshan",
                             image: "dashboard_map_room_roshan_icon.png",
                             featureClass: E().RoshanSoutheast,
                             revealed: this.state.nMapIconRevealPhase >= 1,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "lotus_pools",
                             image: "dashboard_map_room_orchard_icon.png",
                             featureClass: E().LotusPoolsNorthwest,
                             revealed: this.state.nMapIconRevealPhase >= 2,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "lotus_pools",
                             image: "dashboard_map_room_orchard_icon.png",
                             featureClass: E().LotusPoolsSoutheast,
                             revealed: this.state.nMapIconRevealPhase >= 2,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "tormentors",
                             image: "dashboard_map_room_sentinel_icon.png",
                             featureClass: E().TormentorsRadiant,
                             revealed: this.state.nMapIconRevealPhase >= 3,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "tormentors",
                             image: "dashboard_map_room_sentinel_icon.png",
                             featureClass: E().TormentorsDire,
                             revealed: this.state.nMapIconRevealPhase >= 3,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant1,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant2,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant3,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherRadiant4,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire1,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire2,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire3,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "watchers",
                             image: "dashboard_map_room_watcher_icon.png",
                             featureClass: E().WatcherDire4,
                             revealed: this.state.nMapIconRevealPhase >= 4,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "wisdom_runes",
                             image: "dashboard_map_room_rune_icon.png",
                             featureClass: E().WisdomRuneRadiant,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "wisdom_runes",
                             image: "dashboard_map_room_rune_icon.png",
                             featureClass: E().WisdomRuneDire,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "shield_runes",
                             image: "dashboard_map_room_shield_rune_icon.png",
                             featureClass: E().ShieldRuneNorthWest,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "shield_runes",
                             image: "dashboard_map_room_shield_rune_icon.png",
                             featureClass: E().ShieldRuneSouthEast,
                             revealed: this.state.nMapIconRevealPhase >= 5,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "twin_gates",
                             image: "dashboard_map_room_portal_icon.png",
                             featureClass: E().TwinGatesNorthwest,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "twin_gates",
                             image: "dashboard_map_room_portal_icon.png",
                             featureClass: E().TwinGatesSoutheast,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "barriers",
                             image: "defenders_gates_radiant.png",
                             featureClass: E().DefendersGatesRadiant,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "barriers",
                             image: "defenders_gates_dire.png",
                             featureClass: E().DefendersGatesDire,
                             revealed: this.state.nMapIconRevealPhase >= 6,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostRadiant1,
                             revealed: this.state.nMapIconRevealPhase >= 7,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostRadiant2,
                             revealed: this.state.nMapIconRevealPhase >= 7,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostDire1,
                             revealed: this.state.nMapIconRevealPhase >= 7,
                           }),
-                          _.createElement(L, {
+                          _.createElement(D, {
                             feature_id: "outpost",
                             image: "dashboard_map_room_outpost_icon.png",
                             featureClass: E().OutpostDire2,
@@ -1128,7 +1106,7 @@
                           _.createElement(
                             "div",
                             { className: E().Title },
-                            (0, l.Jr)("#new_frontiers_map_subtitle"),
+                            (0, l.Wn)("#new_frontiers_map_subtitle"),
                           ),
                           _.createElement("div", { className: E().Dash }),
                         ),
@@ -1143,31 +1121,31 @@
                   {
                     id: "MajorGameplay",
                     ref: this.majorGameplayRef,
-                    className: (0, h.Z)(E().WebsiteSection, E().Main),
+                    className: (0, h.A)(E().WebsiteSection, E().Main),
                   },
                   _.createElement(
                     "h1",
                     null,
-                    (0, l.Jr)("#new_frontiers_section_title_major_gameplay"),
+                    (0, l.Wn)("#new_frontiers_section_title_major_gameplay"),
                   ),
                   _.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, l.Jr)("#new_frontiers_major_gameplay_features_desc"),
+                    (0, l.Wn)("#new_frontiers_major_gameplay_features_desc"),
                   ),
-                  _.createElement(T, {
+                  _.createElement(P, {
                     title:
                       "#new_frontiers_major_gameplay_all_stat_heroes_title",
                     description:
                       "#new_frontiers_major_gameplay_all_stat_heroes_desc",
                     image: "new_frontiers/balance_heroes.png",
                   }),
-                  _.createElement(T, {
+                  _.createElement(P, {
                     title: "#new_frontiers_major_gameplay_bkb_title",
                     description: "#new_frontiers_major_gameplay_bkb_desc",
                     image: "new_frontiers/bkb_changes.png",
                   }),
-                  _.createElement(T, {
+                  _.createElement(P, {
                     title:
                       "#new_frontiers_major_gameplay_neutral_item_token_title",
                     description:
@@ -1177,20 +1155,20 @@
                   _.createElement(
                     "div",
                     { className: E().FeatureRow },
-                    _.createElement(S, {
+                    _.createElement(T, {
                       title:
                         "#new_frontiers_major_gameplay_neutral_creep_scaling_title",
                       description:
                         "#new_frontiers_major_gameplay_neutral_creep_scaling_desc",
                       image: "new_frontiers/neutral_creep_scaling.png",
                     }),
-                    _.createElement(S, {
+                    _.createElement(T, {
                       title: "#new_frontiers_major_gameplay_kill_formula_title",
                       description:
                         "#new_frontiers_major_gameplay_kill_formula_desc",
                       image: "new_frontiers/kill_formula.png",
                     }),
-                    _.createElement(S, {
+                    _.createElement(T, {
                       title:
                         "#new_frontiers_major_gameplay_unstunning_stuns_title",
                       description:
@@ -1204,42 +1182,42 @@
                     _.createElement(
                       "h2",
                       null,
-                      (0, l.Jr)(
+                      (0, l.Wn)(
                         "#new_frontiers_major_gameplay_hero_reworks_title",
                       ),
                     ),
                     _.createElement(
                       "div",
                       { className: E().Introduction },
-                      (0, l.Jr)(
+                      (0, l.Wn)(
                         "#new_frontiers_major_gameplay_hero_reworks_desc",
                       ),
                     ),
                     _.createElement(
                       "div",
                       { className: E().HeroReworkContainer },
-                      _.createElement(H, {
-                        patchnotes: null == e ? void 0 : e.heroes,
+                      _.createElement(L, {
+                        patchnotes: e?.heroes,
                         heroname: "muerta",
                       }),
-                      _.createElement(H, {
-                        patchnotes: null == e ? void 0 : e.heroes,
+                      _.createElement(L, {
+                        patchnotes: e?.heroes,
                         heroname: "clinkz",
                       }),
-                      _.createElement(H, {
-                        patchnotes: null == e ? void 0 : e.heroes,
+                      _.createElement(L, {
+                        patchnotes: e?.heroes,
                         heroname: "arc_warden",
                       }),
-                      _.createElement(H, {
-                        patchnotes: null == e ? void 0 : e.heroes,
+                      _.createElement(L, {
+                        patchnotes: e?.heroes,
                         heroname: "ogre_magi",
                       }),
-                      _.createElement(H, {
-                        patchnotes: null == e ? void 0 : e.heroes,
+                      _.createElement(L, {
+                        patchnotes: e?.heroes,
                         heroname: "medusa",
                       }),
-                      _.createElement(H, {
-                        patchnotes: null == e ? void 0 : e.heroes,
+                      _.createElement(L, {
+                        patchnotes: e?.heroes,
                         heroname: "alchemist",
                       }),
                     ),
@@ -1250,25 +1228,25 @@
                     _.createElement(
                       "h2",
                       null,
-                      (0, l.Jr)(
+                      (0, l.Wn)(
                         "#new_frontiers_major_gameplay_new_items_title",
                       ),
                     ),
                     _.createElement(
                       "div",
                       { className: E().Introduction },
-                      (0, l.Jr)("#new_frontiers_major_gameplay_new_items_desc"),
+                      (0, l.Wn)("#new_frontiers_major_gameplay_new_items_desc"),
                     ),
                     _.createElement(
                       "div",
                       { className: E().ItemsContainer },
-                      _.createElement(W, { name: "item_blood_grenade" }),
-                      _.createElement(W, { name: "item_diadem" }),
-                      _.createElement(W, { name: "item_cornucopia" }),
-                      _.createElement(W, { name: "item_pavise" }),
-                      _.createElement(W, { name: "item_phylactery" }),
-                      _.createElement(W, { name: "item_harpoon" }),
-                      _.createElement(W, { name: "item_disperser" }),
+                      _.createElement(G, { name: "item_blood_grenade" }),
+                      _.createElement(G, { name: "item_diadem" }),
+                      _.createElement(G, { name: "item_cornucopia" }),
+                      _.createElement(G, { name: "item_pavise" }),
+                      _.createElement(G, { name: "item_phylactery" }),
+                      _.createElement(G, { name: "item_harpoon" }),
+                      _.createElement(G, { name: "item_disperser" }),
                     ),
                   ),
                   _.createElement(
@@ -1277,27 +1255,27 @@
                     _.createElement(
                       "h2",
                       null,
-                      (0, l.Jr)(
+                      (0, l.Wn)(
                         "#new_frontiers_major_gameplay_new_neutral_items_title",
                       ),
                     ),
                     _.createElement(
                       "div",
                       { className: E().Introduction },
-                      (0, l.Jr)(
+                      (0, l.Wn)(
                         "#new_frontiers_major_gameplay_new_neutral_items_desc",
                       ),
                     ),
                     _.createElement(
                       "div",
                       { className: E().ItemsContainer },
-                      _.createElement(W, { name: "item_duelist_gloves" }),
-                      _.createElement(W, { name: "item_spark_of_courage" }),
-                      _.createElement(W, { name: "item_gossamer_cape" }),
-                      _.createElement(W, { name: "item_defiant_shell" }),
-                      _.createElement(W, { name: "item_vindicators_axe" }),
-                      _.createElement(W, { name: "item_dandelion_amulet" }),
-                      _.createElement(W, { name: "item_martyrs_plate" }),
+                      _.createElement(G, { name: "item_duelist_gloves" }),
+                      _.createElement(G, { name: "item_spark_of_courage" }),
+                      _.createElement(G, { name: "item_gossamer_cape" }),
+                      _.createElement(G, { name: "item_defiant_shell" }),
+                      _.createElement(G, { name: "item_vindicators_axe" }),
+                      _.createElement(G, { name: "item_dandelion_amulet" }),
+                      _.createElement(G, { name: "item_martyrs_plate" }),
                     ),
                   ),
                   _.createElement("div", { className: E().WebsiteSubSection }),
@@ -1308,21 +1286,21 @@
                   {
                     id: "Matchmaking",
                     ref: this.matchmakingRef,
-                    className: (0, h.Z)(E().WebsiteSection, E().MatchMaking),
+                    className: (0, h.A)(E().WebsiteSection, E().MatchMaking),
                   },
                   _.createElement(
                     "h1",
                     null,
-                    (0, l.Jr)("#new_frontiers_section_title_matchmaking"),
+                    (0, l.Wn)("#new_frontiers_section_title_matchmaking"),
                   ),
                   _.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, l.Jr)("#new_frontiers_matchmaking_desc"),
+                    (0, l.Wn)("#new_frontiers_matchmaking_desc"),
                   ),
                   _.createElement("img", {
-                    className: (0, h.Z)(E().FeatureImage, E().BottomBorder),
-                    src: `${i.Y.IMG_URL}/new_frontiers/matchmaking.png`,
+                    className: (0, h.A)(E().FeatureImage, E().BottomBorder),
+                    src: `${i.r.IMG_URL}/new_frontiers/matchmaking.png`,
                   }),
                   _.createElement(
                     "div",
@@ -1330,23 +1308,23 @@
                     _.createElement(
                       "h2",
                       null,
-                      (0, l.Jr)("#new_frontiers_matchmaking_intro_title"),
+                      (0, l.Wn)("#new_frontiers_matchmaking_intro_title"),
                     ),
-                    (0, l.Jr)("#new_frontiers_matchmaking_intro_desc"),
+                    (0, l.Wn)("#new_frontiers_matchmaking_intro_desc"),
                     _.createElement(
                       "h2",
                       null,
-                      (0, l.Jr)("#new_frontiers_matchmaking_details_old_title"),
+                      (0, l.Wn)("#new_frontiers_matchmaking_details_old_title"),
                     ),
-                    (0, l.Jr)("#new_frontiers_matchmaking_details_old_desc"),
+                    (0, l.Wn)("#new_frontiers_matchmaking_details_old_desc"),
                     _.createElement(
                       "h2",
                       null,
-                      (0, l.Jr)("#new_frontiers_matchmaking_details_new_title"),
+                      (0, l.Wn)("#new_frontiers_matchmaking_details_new_title"),
                     ),
-                    (0, l.Jr)("#new_frontiers_matchmaking_details_new_desc"),
+                    (0, l.Wn)("#new_frontiers_matchmaking_details_new_desc"),
                   ),
-                  _.createElement(T, {
+                  _.createElement(P, {
                     title: "#new_frontiers_matchmaking_immortals_title",
                     description: "#new_frontiers_matchmaking_immortals_desc",
                     image: "new_frontiers/immortal_matchmaking_ui.png",
@@ -1363,27 +1341,27 @@
                   _.createElement(
                     "h1",
                     null,
-                    (0, l.Jr)("#new_frontiers_section_title_ui"),
+                    (0, l.Wn)("#new_frontiers_section_title_ui"),
                   ),
                   _.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, l.Jr)("#new_frontiers_ui_desc"),
+                    (0, l.Wn)("#new_frontiers_ui_desc"),
                   ),
                   _.createElement(
                     "div",
                     { className: E().FeatureRow },
-                    _.createElement(S, {
+                    _.createElement(T, {
                       title: "#new_frontiers_ui_shields_title",
                       description: "#new_frontiers_ui_shields_desc",
                       image: "new_frontiers/health_bar_shields.png",
                     }),
-                    _.createElement(S, {
+                    _.createElement(T, {
                       title: "#new_frontiers_ui_health_pips_title",
                       description: "#new_frontiers_ui_health_pips_desc",
                       image: "new_frontiers/health_bar_pips.png",
                     }),
-                    _.createElement(S, {
+                    _.createElement(T, {
                       title: "#new_frontiers_ui_health_cost_title",
                       description: "#new_frontiers_ui_health_cost_desc",
                       image: "new_frontiers/health_cost_abilities.png",
@@ -1396,44 +1374,44 @@
                   {
                     id: "BalanceChanges",
                     ref: this.gameplayRef,
-                    className: (0, h.Z)(E().WebsiteSection, E().BalanceChanges),
+                    className: (0, h.A)(E().WebsiteSection, E().BalanceChanges),
                   },
                   _.createElement(
                     "h1",
                     null,
-                    (0, l.Jr)("#new_frontiers_section_title_gameplay_update"),
+                    (0, l.Wn)("#new_frontiers_section_title_gameplay_update"),
                   ),
                   _.createElement(
                     "div",
                     { className: E().Introduction },
-                    (0, l.Jr)("#new_frontiers_gameplay_update_desc"),
+                    (0, l.Wn)("#new_frontiers_gameplay_update_desc"),
                   ),
                   _.createElement(
                     "div",
                     { className: E().GameplayUpdate },
-                    _.createElement(N.on, {
-                      patchnotes: null == e ? void 0 : e.generic,
+                    _.createElement(N.fs, {
+                      patchnotes: e?.generic,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    _.createElement(N.k8, {
-                      patchnotes: null == e ? void 0 : e.neutral_creeps,
+                    _.createElement(N.wL, {
+                      patchnotes: e?.neutral_creeps,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    _.createElement(N.bn, {
-                      patchnotes: null == e ? void 0 : e.items,
+                    _.createElement(N.ZV, {
+                      patchnotes: e?.items,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    _.createElement(N.bn, {
-                      patchnotes: null == e ? void 0 : e.neutral_items,
+                    _.createElement(N.ZV, {
+                      patchnotes: e?.neutral_items,
                       is_neutrals: !0,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
-                    _.createElement(N.MC, {
-                      patchnotes: null == e ? void 0 : e.heroes,
+                    _.createElement(N.ob, {
+                      patchnotes: e?.heroes,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),
@@ -1443,7 +1421,7 @@
                       _.createElement(
                         "h1",
                         null,
-                        (0, l.Jr)("#new_frontiers_misc_title"),
+                        (0, l.Wn)("#new_frontiers_misc_title"),
                       ),
                       _.createElement(
                         "ul",
@@ -1451,36 +1429,36 @@
                         _.createElement(
                           "li",
                           null,
-                          (0, l.Jr)("#new_frontiers_misc_role_tokens"),
+                          (0, l.Wn)("#new_frontiers_misc_role_tokens"),
                         ),
                         _.createElement(
                           "li",
                           null,
-                          (0, l.Jr)("#new_frontiers_misc_removed_roles"),
+                          (0, l.Wn)("#new_frontiers_misc_removed_roles"),
                         ),
                         _.createElement(
                           "li",
                           null,
-                          (0, l.Jr)("#new_frontiers_misc_model_editor"),
+                          (0, l.Wn)("#new_frontiers_misc_model_editor"),
                         ),
                         _.createElement(
                           "li",
                           null,
-                          (0, l.Jr)("#new_frontiers_misc_hold_animation"),
+                          (0, l.Wn)("#new_frontiers_misc_hold_animation"),
                         ),
                       ),
                     ),
                   ),
                 ),
                 _.createElement(b, null),
-                _.createElement(g.U, null),
+                _.createElement(v.K, null),
               ),
             )
           );
         }
       };
-      G = (0, r.gn)([c.Pi], G);
-      const j = G;
+      j = (0, n.Cg)([c.PA], j);
+      const A = j;
     },
   },
 ]);

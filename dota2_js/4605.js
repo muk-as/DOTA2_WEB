@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [1733],
+  [4605],
   {
-    1479: (e) => {
+    74704: (e) => {
       e.exports = {
         Tooltip: "_3gVGJQbscPm-epaMHgL4-g",
         CarouselFade: "_1ScZDq76_Jqcq38VrybDGa",
@@ -33,31 +33,31 @@
         ThePatch: "_2nksf-LCV41Ii_ATXqhre2",
       };
     },
-    41733: (e, a, t) => {
+    44605: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => m });
-      var s = t(98142),
-        n = t(66204),
-        c = t(52472),
-        r = t(1479),
+      var s = t(89506),
+        n = t(7552),
+        c = t(68613),
+        r = t(74704),
         l = t.n(r),
-        _ = t(5062),
-        i = t(2580);
+        _ = t(21384),
+        i = t(27866);
       const m = () =>
         n.createElement(
           "div",
           { className: l().Root },
           n.createElement(
             "div",
-            { className: (0, _.Z)(l().KeyArt) },
+            { className: (0, _.A)(l().KeyArt) },
             n.createElement(
               "div",
               { className: l().HeaderTitleContainer },
-              n.createElement("h2", null, (0, c.Xx)("#736_patch_header")),
+              n.createElement("h2", null, (0, c.we)("#736_patch_header")),
               n.createElement(
                 "h1",
                 null,
-                (0, c.Xx)("#736_patch_header_number"),
+                (0, c.we)("#736_patch_header_number"),
               ),
             ),
             n.createElement(
@@ -72,19 +72,19 @@
               },
               n.createElement("source", {
                 type: "video/mp4",
-                src: `${s.Y.VIDEO_URL}seventhreesix/teaser.mp4?v=1`,
+                src: `${s.r.VIDEO_URL}seventhreesix/teaser.mp4?v=1`,
               }),
             ),
           ),
           n.createElement(
             "div",
-            { className: (0, _.Z)(l().Section, l().Innates) },
+            { className: (0, _.A)(l().Section, l().Innates) },
             n.createElement("div", {
               className: l().SectionBackgroundGradient,
             }),
             n.createElement("img", {
               className: l().SectionBackgroundImage,
-              src: `${s.Y.IMG_URL}seventhreesix/innates_header.png`,
+              src: `${s.r.IMG_URL}seventhreesix/innates_header.png`,
             }),
             n.createElement(
               "div",
@@ -92,17 +92,17 @@
               n.createElement(
                 "span",
                 { className: l().PreHeader },
-                (0, c.Xx)("#736_patch_innates_preheader"),
+                (0, c.we)("#736_patch_innates_preheader"),
               ),
               n.createElement(
                 "h2",
                 null,
-                (0, c.Xx)("#736_patch_innates_header"),
+                (0, c.we)("#736_patch_innates_header"),
               ),
               n.createElement(
                 "p",
                 { className: l().Description },
-                (0, i.Jr)("#736_patch_innates_description"),
+                (0, i.Wn)("#736_patch_innates_description"),
               ),
               n.createElement(
                 "div",
@@ -110,47 +110,47 @@
                 n.createElement(
                   "div",
                   null,
-                  "russian" == s.Y.LANGUAGE
+                  "russian" == s.r.LANGUAGE
                     ? n.createElement("img", {
                         className: l().Screenshot,
-                        src: `${s.Y.IMG_URL}seventhreesix/innate_example_a_russian.png?v=5`,
+                        src: `${s.r.IMG_URL}seventhreesix/innate_example_a_russian.png?v=5`,
                       })
-                    : "schinese" == s.Y.LANGUAGE
+                    : "schinese" == s.r.LANGUAGE
                       ? n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/innate_example_a_schinese.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/innate_example_a_schinese.png?v=5`,
                         })
                       : n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/innate_example_a.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/innate_example_a.png?v=5`,
                         }),
                   n.createElement(
                     "p",
                     null,
-                    (0, i.Jr)("#736_patch_innates_example_a_description"),
+                    (0, i.Wn)("#736_patch_innates_example_a_description"),
                   ),
                 ),
                 n.createElement(
                   "div",
                   null,
-                  "russian" == s.Y.LANGUAGE
+                  "russian" == s.r.LANGUAGE
                     ? n.createElement("img", {
                         className: l().Screenshot,
-                        src: `${s.Y.IMG_URL}seventhreesix/innate_example_b_russian.png?v=5`,
+                        src: `${s.r.IMG_URL}seventhreesix/innate_example_b_russian.png?v=5`,
                       })
-                    : "schinese" == s.Y.LANGUAGE
+                    : "schinese" == s.r.LANGUAGE
                       ? n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/innate_example_b_schinese.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/innate_example_b_schinese.png?v=5`,
                         })
                       : n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/innate_example_b.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/innate_example_b.png?v=5`,
                         }),
                   n.createElement(
                     "p",
                     null,
-                    (0, i.Jr)("#736_patch_innates_example_b_description"),
+                    (0, i.Wn)("#736_patch_innates_example_b_description"),
                   ),
                 ),
               ),
@@ -158,13 +158,13 @@
           ),
           n.createElement(
             "div",
-            { className: (0, _.Z)(l().Section, l().Facets) },
+            { className: (0, _.A)(l().Section, l().Facets) },
             n.createElement("div", {
               className: l().SectionBackgroundGradient,
             }),
             n.createElement("img", {
               className: l().SectionBackgroundImage,
-              src: `${s.Y.IMG_URL}seventhreesix/facets_header.png`,
+              src: `${s.r.IMG_URL}seventhreesix/facets_header.png`,
             }),
             n.createElement(
               "div",
@@ -172,17 +172,17 @@
               n.createElement(
                 "span",
                 { className: l().PreHeader },
-                (0, c.Xx)("#736_patch_facets_preheader"),
+                (0, c.we)("#736_patch_facets_preheader"),
               ),
               n.createElement(
                 "h2",
                 null,
-                (0, c.Xx)("#736_patch_facets_header"),
+                (0, c.we)("#736_patch_facets_header"),
               ),
               n.createElement(
                 "p",
                 { className: l().Description },
-                (0, i.Jr)("#736_patch_facets_description"),
+                (0, i.Wn)("#736_patch_facets_description"),
               ),
               n.createElement(
                 "div",
@@ -190,47 +190,47 @@
                 n.createElement(
                   "div",
                   null,
-                  "russian" == s.Y.LANGUAGE
+                  "russian" == s.r.LANGUAGE
                     ? n.createElement("img", {
                         className: l().Screenshot,
-                        src: `${s.Y.IMG_URL}seventhreesix/facet_example_a_russian.png?v=5`,
+                        src: `${s.r.IMG_URL}seventhreesix/facet_example_a_russian.png?v=5`,
                       })
-                    : "schinese" == s.Y.LANGUAGE
+                    : "schinese" == s.r.LANGUAGE
                       ? n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/facet_example_a_schinese.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/facet_example_a_schinese.png?v=5`,
                         })
                       : n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/facet_example_a.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/facet_example_a.png?v=5`,
                         }),
                   n.createElement(
                     "p",
                     null,
-                    (0, i.Jr)("#736_patch_facets_example_a_description"),
+                    (0, i.Wn)("#736_patch_facets_example_a_description"),
                   ),
                 ),
                 n.createElement(
                   "div",
                   null,
-                  "russian" == s.Y.LANGUAGE
+                  "russian" == s.r.LANGUAGE
                     ? n.createElement("img", {
                         className: l().Screenshot,
-                        src: `${s.Y.IMG_URL}seventhreesix/facet_example_b_russian.png?v=5`,
+                        src: `${s.r.IMG_URL}seventhreesix/facet_example_b_russian.png?v=5`,
                       })
-                    : "schinese" == s.Y.LANGUAGE
+                    : "schinese" == s.r.LANGUAGE
                       ? n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/facet_example_b_schinese.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/facet_example_b_schinese.png?v=5`,
                         })
                       : n.createElement("img", {
                           className: l().Screenshot,
-                          src: `${s.Y.IMG_URL}seventhreesix/facet_example_b.png?v=5`,
+                          src: `${s.r.IMG_URL}seventhreesix/facet_example_b.png?v=5`,
                         }),
                   n.createElement(
                     "p",
                     null,
-                    (0, i.Jr)("#736_patch_facets_example_b_description"),
+                    (0, i.Wn)("#736_patch_facets_example_b_description"),
                   ),
                 ),
               ),
@@ -238,8 +238,8 @@
           ),
           n.createElement(
             "div",
-            { className: (0, _.Z)(l().Section, l().ThePatch) },
-            n.createElement("h2", null, (0, c.Xx)("#736_patch_thepatch")),
+            { className: (0, _.A)(l().Section, l().ThePatch) },
+            n.createElement("h2", null, (0, c.we)("#736_patch_thepatch")),
           ),
         );
     },

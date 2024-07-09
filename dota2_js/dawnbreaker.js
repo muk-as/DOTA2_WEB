@@ -1,17 +1,17 @@
-// 2402.js
+// 2653.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [2402],
+  [2653],
   {
-    6747: (e) => {
+    11417: (e) => {
       e.exports = {
         RightArrow: "_1aWAcVv4khhRKQHKyqIDl5",
         UpRightArrow: "_3KCtpfqeVGR0eaqc5YB4iF",
       };
     },
-    65043: (e) => {
+    85655: (e) => {
       e.exports = {
         ComparisonImage: "_3SX3hhAHRpb7bRPg9YLyR2",
         ImageLabel: "_3bKKQTvBpbxJ08XrDQJ4xn",
@@ -24,7 +24,7 @@
         TabContentContainer: "_2tKRoICKxcJBUHYRH5k9JZ",
       };
     },
-    86089: (e) => {
+    51031: (e) => {
       e.exports = {
         Tooltip: "OauU7XYnGjhMEFNUgTX4v",
         CarouselFade: "_3ZZDoW4_Y9J9fXmuQTnx-6",
@@ -93,84 +93,84 @@
         rotate: "_2ZiKU9xDpeOtVDgiB6hkgn",
       };
     },
-    47506: (e, a, t) => {
+    722: (e, a, t) => {
       "use strict";
       t.d(a, { U: () => m });
-      var r = t(66204),
-        l = t(6747),
-        n = t.n(l),
-        i = t(98142);
+      var r = t(7552),
+        n = t(11417),
+        l = t.n(n),
+        i = t(89506);
       const m = () =>
         r.createElement("div", {
-          className: n().RightArrow,
-          style: { backgroundImage: `url( ${i.Y.IMG_URL}/arrow_left.png )` },
+          className: l().RightArrow,
+          style: { backgroundImage: `url( ${i.r.IMG_URL}/arrow_left.png )` },
         });
     },
-    62402: (e, a, t) => {
+    52653: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => T });
-      var r = t(22970),
-        l = t(98142),
-        n = t(66204),
-        i = t(28763),
-        m = t(86089),
+      t.r(a), t.d(a, { default: () => A });
+      var r = t(85608),
+        n = t(89506),
+        l = t(7552),
+        i = t(45237),
+        m = t(51031),
         c = t.n(m),
-        s = t(5062),
-        _ = t(4572),
-        d = t(80846),
-        p = t(79735),
-        o = t(2580),
-        b = t(31444),
-        w = t(37196),
-        E = t(62175),
-        g = t(95974),
-        h = t(78752),
-        v = t(87214),
-        k = t(47506),
-        N = t(65043),
-        u = t.n(N);
-      const y = ({ image: e, is_new: a }) =>
-          n.createElement(
+        s = t(21384),
+        _ = t(23634),
+        d = t(68446),
+        p = t(55651),
+        o = t(27866),
+        b = t(47202),
+        w = t(36305),
+        E = t(83640),
+        g = t(61840),
+        h = t(32389),
+        k = t(4665),
+        N = t(722),
+        v = t(85655),
+        y = t.n(v);
+      const u = ({ image: e, is_new: a }) =>
+          l.createElement(
             "div",
-            { className: u().ComparisonImage },
-            n.createElement(
+            { className: y().ComparisonImage },
+            l.createElement(
               "div",
-              { className: (0, s.Z)(u().ImageLabel, a && u().IsNew) },
-              (0, o.Jr)(a ? "#729_new_image" : "#729_old_image"),
+              { className: (0, s.A)(y().ImageLabel, a && y().IsNew) },
+              (0, o.Wn)(a ? "#729_new_image" : "#729_old_image"),
             ),
-            n.createElement("img", { src: `${l.Y.IMG_URL}${e}` }),
+            l.createElement("img", { src: `${n.r.IMG_URL}${e}` }),
           ),
         I = (e) => {
-          const [a, t] = (0, n.useState)(0);
-          return n.createElement(
+          const [a, t] = (0, l.useState)(0);
+          return l.createElement(
             "div",
-            { className: u().TabbedMapComparison },
-            n.createElement(
+            { className: y().TabbedMapComparison },
+            l.createElement(
               "div",
-              { className: u().TabHeader },
+              { className: y().TabHeader },
               e.labels.map((e, r) =>
-                n.createElement(
+                l.createElement(
                   "div",
                   {
                     key: "tab_" + r,
-                    className: (0, s.Z)(u().Tab, a == r && u().Active),
+                    className: (0, s.A)(y().Tab, a == r && y().Active),
                     onClick: () => t(r),
                   },
-                  (0, o.Jr)(e),
+                  (0, o.Wn)(e),
                 ),
               ),
             ),
-            n.createElement(
+            l.createElement(
               "div",
-              { className: u().TabContents },
-              n.Children.map(e.children, (e, t) =>
-                n.createElement(
+              { className: y().TabContents },
+              l.Children.map(e.children, (e, t) =>
+                l.createElement(
                   "div",
                   {
                     key: "tabelement_" + t,
-                    className: (0, s.Z)(
-                      u().TabContentContainer,
-                      t == a && u().Active,
+                    className: (0, s.A)(
+                      y().TabContentContainer,
+                      t == a && y().Active,
                     ),
                   },
                   e,
@@ -179,25 +179,25 @@
             ),
           );
         };
-      let S = class extends n.Component {
+      let L = class extends l.Component {
         render() {
-          const e = _.P.getPatchNotes("7.29", l.Y.LANGUAGE);
-          return n.createElement(
+          const e = _.o.getPatchNotes("7.29", n.r.LANGUAGE);
+          return l.createElement(
             "div",
             { className: c().DawnbreakerPage },
-            n.createElement(b.j, { bOverlapping: !0 }),
-            n.createElement(
-              E.ql,
+            l.createElement(b.A, { bOverlapping: !0 }),
+            l.createElement(
+              E.mg,
               null,
-              n.createElement("title", null, (0, o.Jr)("#dawnbreaker_title")),
+              l.createElement("title", null, (0, o.Wn)("#dawnbreaker_title")),
             ),
-            n.createElement(
+            l.createElement(
               "div",
               { className: c().HeaderSection },
-              n.createElement(
+              l.createElement(
                 "div",
                 { className: c().BackgroundVideoContainer },
-                n.createElement(
+                l.createElement(
                   "video",
                   {
                     className: c().BackgroundVideo,
@@ -206,19 +206,19 @@
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${l.Y.IMG_URL}dawnbreaker/dawnbreaker_sfm.jpg`,
+                    poster: `${n.r.IMG_URL}dawnbreaker/dawnbreaker_sfm.jpg`,
                   },
-                  n.createElement("source", {
+                  l.createElement("source", {
                     type: "video/webm",
-                    src: `${l.Y.VIDEO_URL}dawnbreaker/dawnbreaker_sfm.webm`,
+                    src: `${n.r.VIDEO_URL}dawnbreaker/dawnbreaker_sfm.webm`,
                   }),
-                  n.createElement("source", {
+                  l.createElement("source", {
                     type: "video/mp4",
-                    src: `${l.Y.VIDEO_URL}dawnbreaker/dawnbreaker_sfm.mp4`,
+                    src: `${n.r.VIDEO_URL}dawnbreaker/dawnbreaker_sfm.mp4`,
                   }),
                 ),
               ),
-              n.createElement(
+              l.createElement(
                 "div",
                 {
                   className: c().TitleContainer,
@@ -226,96 +226,96 @@
                   "data-aos-delay": "200",
                   "data-aos-duration": "2000",
                 },
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().TitleIntro },
-                  (0, o.Jr)("Introducing"),
+                  (0, o.Wn)("Introducing"),
                 ),
-                n.createElement("img", {
-                  className: (0, s.Z)(c().HeroLogo, c().Img1),
+                l.createElement("img", {
+                  className: (0, s.A)(c().HeroLogo, c().Img1),
                   onError: (e) =>
-                    (e.target.src = `${l.Y.IMG_URL}/dawnbreaker/dawnbreaker_logo_english.png`),
-                  src: `${l.Y.IMG_URL}/dawnbreaker/dawnbreaker_logo_${l.Y.LANGUAGE}.png`,
+                    (e.target.src = `${n.r.IMG_URL}/dawnbreaker/dawnbreaker_logo_english.png`),
+                  src: `${n.r.IMG_URL}/dawnbreaker/dawnbreaker_logo_${n.r.LANGUAGE}.png`,
                 }),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().Complexity },
-                  n.createElement("img", {
-                    src: `${l.Y.IMG_URL}/dawnbreaker/difficulty.png`,
+                  l.createElement("img", {
+                    src: `${n.r.IMG_URL}/dawnbreaker/difficulty.png`,
                   }),
                 ),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().Roles },
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().HeroRole },
-                    (0, o.Jr)("#dawnbreaker_role1"),
+                    (0, o.Wn)("#dawnbreaker_role1"),
                   ),
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().HeroRole },
-                    (0, o.Jr)("#dawnbreaker_role2"),
+                    (0, o.Wn)("#dawnbreaker_role2"),
                   ),
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().HeroRole },
-                    (0, o.Jr)("#dawnbreaker_role3"),
+                    (0, o.Wn)("#dawnbreaker_role3"),
                   ),
                 ),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().HeroHype },
-                  (0, o.Jr)("#dawnbreaker_hype"),
+                  (0, o.Wn)("#dawnbreaker_hype"),
                 ),
               ),
             ),
-            n.createElement(
+            l.createElement(
               "div",
               { className: c().LoreSection },
-              n.createElement("div", { className: c().Divider }),
-              n.createElement("div", { className: c().DividerBottom }),
-              n.createElement(
+              l.createElement("div", { className: c().Divider }),
+              l.createElement("div", { className: c().DividerBottom }),
+              l.createElement(
                 "div",
                 { className: c().Quote },
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().LoreHeader },
-                  (0, o.Jr)("#dawnbreaker_lore_title"),
+                  (0, o.Wn)("#dawnbreaker_lore_title"),
                 ),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().LoreText },
-                  (0, o.Jr)("#dawnbreaker_lore_desc"),
+                  (0, o.Wn)("#dawnbreaker_lore_desc"),
                 ),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().LoreText },
-                  (0, o.Jr)("#dawnbreaker_lore_desc2"),
+                  (0, o.Wn)("#dawnbreaker_lore_desc2"),
                 ),
               ),
             ),
-            n.createElement(
+            l.createElement(
               "div",
               { className: c().AbilitySection },
-              n.createElement(
-                h.sj,
+              l.createElement(
+                h.gi,
                 {
                   className: c().AbilityCarousel,
                   naturalSlideWidth: 100,
                   naturalSlideHeight: 56.25,
                   totalSlides: 4,
                 },
-                n.createElement(
-                  h.iR,
+                l.createElement(
+                  h.Ap,
                   null,
-                  n.createElement(
-                    h.Mi,
+                  l.createElement(
+                    h.q7,
                     { index: 0 },
-                    n.createElement(
+                    l.createElement(
                       "div",
                       { className: c().SlideContainer },
-                      n.createElement(
+                      l.createElement(
                         "video",
                         {
                           className: c().AbilityVideo,
@@ -324,48 +324,48 @@
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_fire_wreath.jpg`,
+                          poster: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_fire_wreath.jpg`,
                         },
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/webm",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_fire_wreath.webm`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_fire_wreath.webm`,
                         }),
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/mp4",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_fire_wreath.mp4`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_fire_wreath.mp4`,
                         }),
                       ),
-                      n.createElement(
+                      l.createElement(
                         "div",
                         { className: c().SlideAbilityContainer },
-                        n.createElement("img", {
+                        l.createElement("img", {
                           className: c().SlideAbilityIcon,
-                          src: `${l.Y.IMG_URL}/dawnbreaker/dawnbreaker_fire_wreath.png`,
+                          src: `${n.r.IMG_URL}/dawnbreaker/dawnbreaker_fire_wreath.png`,
                         }),
-                        n.createElement(
+                        l.createElement(
                           "div",
                           { className: c().AbilityText },
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityName },
-                            (0, o.Jr)("#dawnbreaker_ability1_title"),
+                            (0, o.Wn)("#dawnbreaker_ability1_title"),
                           ),
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityDesc },
-                            (0, o.Jr)("#dawnbreaker_ability1_desc"),
+                            (0, o.Wn)("#dawnbreaker_ability1_desc"),
                           ),
                         ),
                       ),
                     ),
                   ),
-                  n.createElement(
-                    h.Mi,
+                  l.createElement(
+                    h.q7,
                     { index: 1 },
-                    n.createElement(
+                    l.createElement(
                       "div",
                       { className: c().SlideContainer },
-                      n.createElement(
+                      l.createElement(
                         "video",
                         {
                           className: c().AbilityVideo,
@@ -374,48 +374,48 @@
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_celestial_hammer.jpg`,
+                          poster: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_celestial_hammer.jpg`,
                         },
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/webm",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_celestial_hammer.webm`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_celestial_hammer.webm`,
                         }),
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/mp4",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_celestial_hammer.mp4`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_celestial_hammer.mp4`,
                         }),
                       ),
-                      n.createElement(
+                      l.createElement(
                         "div",
                         { className: c().SlideAbilityContainer },
-                        n.createElement("img", {
+                        l.createElement("img", {
                           className: c().SlideAbilityIcon,
-                          src: `${l.Y.IMG_URL}/dawnbreaker/dawnbreaker_celestial_hammer.png`,
+                          src: `${n.r.IMG_URL}/dawnbreaker/dawnbreaker_celestial_hammer.png`,
                         }),
-                        n.createElement(
+                        l.createElement(
                           "div",
                           { className: c().AbilityText },
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityName },
-                            (0, o.Jr)("#dawnbreaker_ability2_title"),
+                            (0, o.Wn)("#dawnbreaker_ability2_title"),
                           ),
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityDesc },
-                            (0, o.Jr)("#dawnbreaker_ability2_desc"),
+                            (0, o.Wn)("#dawnbreaker_ability2_desc"),
                           ),
                         ),
                       ),
                     ),
                   ),
-                  n.createElement(
-                    h.Mi,
+                  l.createElement(
+                    h.q7,
                     { index: 2 },
-                    n.createElement(
+                    l.createElement(
                       "div",
                       { className: c().SlideContainer },
-                      n.createElement(
+                      l.createElement(
                         "video",
                         {
                           className: c().AbilityVideo,
@@ -424,48 +424,48 @@
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_luminosity.jpg`,
+                          poster: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_luminosity.jpg`,
                         },
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/webm",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_luminosity.webm`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_luminosity.webm`,
                         }),
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/mp4",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_luminosity.mp4`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_luminosity.mp4`,
                         }),
                       ),
-                      n.createElement(
+                      l.createElement(
                         "div",
                         { className: c().SlideAbilityContainer },
-                        n.createElement("img", {
+                        l.createElement("img", {
                           className: c().SlideAbilityIcon,
-                          src: `${l.Y.IMG_URL}/dawnbreaker/dawnbreaker_luminosity.png`,
+                          src: `${n.r.IMG_URL}/dawnbreaker/dawnbreaker_luminosity.png`,
                         }),
-                        n.createElement(
+                        l.createElement(
                           "div",
                           { className: c().AbilityText },
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityName },
-                            (0, o.Jr)("#dawnbreaker_ability3_title"),
+                            (0, o.Wn)("#dawnbreaker_ability3_title"),
                           ),
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityDesc },
-                            (0, o.Jr)("#dawnbreaker_ability3_desc"),
+                            (0, o.Wn)("#dawnbreaker_ability3_desc"),
                           ),
                         ),
                       ),
                     ),
                   ),
-                  n.createElement(
-                    h.Mi,
+                  l.createElement(
+                    h.q7,
                     { index: 3 },
-                    n.createElement(
+                    l.createElement(
                       "div",
                       { className: c().SlideContainer },
-                      n.createElement(
+                      l.createElement(
                         "video",
                         {
                           className: c().AbilityVideo,
@@ -474,213 +474,213 @@
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_solar_guardian.jpg`,
+                          poster: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_solar_guardian.jpg`,
                         },
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/webm",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_solar_guardian.webm`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_solar_guardian.webm`,
                         }),
-                        n.createElement("source", {
+                        l.createElement("source", {
                           type: "video/mp4",
-                          src: `${l.Y.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_solar_guardian.mp4`,
+                          src: `${n.r.VIDEO_URL}/abilities/dawnbreaker/dawnbreaker_solar_guardian.mp4`,
                         }),
                       ),
-                      n.createElement(
+                      l.createElement(
                         "div",
                         { className: c().SlideAbilityContainer },
-                        n.createElement("img", {
+                        l.createElement("img", {
                           className: c().SlideAbilityIcon,
-                          src: `${l.Y.IMG_URL}/dawnbreaker/dawnbreaker_solar_flare.png`,
+                          src: `${n.r.IMG_URL}/dawnbreaker/dawnbreaker_solar_flare.png`,
                         }),
-                        n.createElement(
+                        l.createElement(
                           "div",
                           { className: c().AbilityText },
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityName },
-                            (0, o.Jr)("#dawnbreaker_ability4_title"),
+                            (0, o.Wn)("#dawnbreaker_ability4_title"),
                           ),
-                          n.createElement(
+                          l.createElement(
                             "div",
                             { className: c().AbilityDesc },
-                            (0, o.Jr)("#dawnbreaker_ability4_desc"),
+                            (0, o.Wn)("#dawnbreaker_ability4_desc"),
                           ),
                         ),
                       ),
                     ),
                   ),
                 ),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().CarouselDots },
-                  n.createElement(
-                    h.oT,
+                  l.createElement(
+                    h.cL,
                     {
-                      className: (0, s.Z)(c().AbilitySelector, c().Slide0),
+                      className: (0, s.A)(c().AbilitySelector, c().Slide0),
                       slide: 0,
                     },
-                    n.createElement("div", null),
+                    l.createElement("div", null),
                   ),
-                  n.createElement(
-                    h.oT,
+                  l.createElement(
+                    h.cL,
                     {
-                      className: (0, s.Z)(c().AbilitySelector, c().Slide1),
+                      className: (0, s.A)(c().AbilitySelector, c().Slide1),
                       slide: 1,
                     },
-                    n.createElement("div", null),
+                    l.createElement("div", null),
                   ),
-                  n.createElement(
-                    h.oT,
+                  l.createElement(
+                    h.cL,
                     {
-                      className: (0, s.Z)(c().AbilitySelector, c().Slide2),
+                      className: (0, s.A)(c().AbilitySelector, c().Slide2),
                       slide: 2,
                     },
-                    n.createElement("div", null),
+                    l.createElement("div", null),
                   ),
-                  n.createElement(
-                    h.oT,
+                  l.createElement(
+                    h.cL,
                     {
-                      className: (0, s.Z)(c().AbilitySelector, c().Slide3),
+                      className: (0, s.A)(c().AbilitySelector, c().Slide3),
                       slide: 3,
                     },
-                    n.createElement("div", null),
+                    l.createElement("div", null),
                   ),
                 ),
               ),
             ),
-            n.createElement(
+            l.createElement(
               "div",
               { className: c().HeropediaSection },
-              n.createElement(
+              l.createElement(
                 "div",
                 { className: c().HeropediaText },
-                (0, o.Jr)("#dawnbreaker_heroes_title"),
-                n.createElement(
-                  i.rU,
-                  { to: p._.hero("dawnbreaker") },
-                  n.createElement(
+                (0, o.Wn)("#dawnbreaker_heroes_title"),
+                l.createElement(
+                  i.N_,
+                  { to: p.J.hero("dawnbreaker") },
+                  l.createElement(
                     "div",
                     { className: c().StandardButton },
-                    n.createElement(
+                    l.createElement(
                       "div",
                       { className: c().ButtonText },
-                      (0, o.Jr)("#dawnbreaker_heroes_btn"),
+                      (0, o.Wn)("#dawnbreaker_heroes_btn"),
                     ),
-                    n.createElement(k.U, null),
+                    l.createElement(N.U, null),
                   ),
                 ),
               ),
-              n.createElement(
+              l.createElement(
                 "div",
                 null,
-                n.createElement("img", {
+                l.createElement("img", {
                   className: c().HeropediaImage,
-                  src: `${l.Y.IMG_URL}/heroes/crops/dawnbreaker.png`,
+                  src: `${n.r.IMG_URL}/heroes/crops/dawnbreaker.png`,
                 }),
               ),
             ),
-            n.createElement(
+            l.createElement(
               "div",
               { className: c().WallpaperSection },
-              n.createElement(
+              l.createElement(
                 "div",
                 { className: c().WallpaperTitle },
-                (0, o.Jr)("#dawnbreaker_wallpapers"),
+                (0, o.Wn)("#dawnbreaker_wallpapers"),
               ),
-              n.createElement(
+              l.createElement(
                 "div",
                 { className: c().Wallpapers },
-                n.createElement(
+                l.createElement(
                   "a",
                   {
-                    href: `${l.Y.IMG_URL}dawnbreaker/wallpapers/dota_db_wallpaper.png`,
+                    href: `${n.r.IMG_URL}dawnbreaker/wallpapers/dota_db_wallpaper.png`,
                   },
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().Wallpaper },
-                    n.createElement("img", {
+                    l.createElement("img", {
                       className: c().WallpaperImgDesktop,
-                      src: `${l.Y.IMG_URL}/dawnbreaker/wallpapers/dota_db_wallpaper_thumb.jpg`,
+                      src: `${n.r.IMG_URL}/dawnbreaker/wallpapers/dota_db_wallpaper_thumb.jpg`,
                     }),
                   ),
                 ),
-                n.createElement(
+                l.createElement(
                   "a",
                   {
-                    href: `${l.Y.IMG_URL}dawnbreaker/wallpapers/dota_db_wallpaper_mobile.png`,
+                    href: `${n.r.IMG_URL}dawnbreaker/wallpapers/dota_db_wallpaper_mobile.png`,
                   },
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().Wallpaper },
-                    n.createElement("img", {
+                    l.createElement("img", {
                       className: c().WallpaperImgDesktop,
-                      src: `${l.Y.IMG_URL}/dawnbreaker/wallpapers/dota_db_wallpaper_mobile_thumb.jpg`,
+                      src: `${n.r.IMG_URL}/dawnbreaker/wallpapers/dota_db_wallpaper_mobile_thumb.jpg`,
                     }),
                   ),
                 ),
-                n.createElement(
+                l.createElement(
                   "a",
                   {
-                    href: `${l.Y.IMG_URL}dawnbreaker/wallpapers/dota_stars_wallpaper.jpg`,
+                    href: `${n.r.IMG_URL}dawnbreaker/wallpapers/dota_stars_wallpaper.jpg`,
                   },
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().Wallpaper },
-                    n.createElement("img", {
+                    l.createElement("img", {
                       className: c().WallpaperImgDesktop,
-                      src: `${l.Y.IMG_URL}/dawnbreaker/wallpapers/dota_stars_wallpaper_thumb.jpg`,
+                      src: `${n.r.IMG_URL}/dawnbreaker/wallpapers/dota_stars_wallpaper_thumb.jpg`,
                     }),
                   ),
                 ),
-                n.createElement(
+                l.createElement(
                   "a",
                   {
-                    href: `${l.Y.IMG_URL}dawnbreaker/wallpapers/dota_stars_mobile.jpg`,
+                    href: `${n.r.IMG_URL}dawnbreaker/wallpapers/dota_stars_mobile.jpg`,
                   },
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().Wallpaper },
-                    n.createElement("img", {
+                    l.createElement("img", {
                       className: c().WallpaperImgDesktop,
-                      src: `${l.Y.IMG_URL}/dawnbreaker/wallpapers/dota_stars_mobile_thumb.jpg`,
+                      src: `${n.r.IMG_URL}/dawnbreaker/wallpapers/dota_stars_mobile_thumb.jpg`,
                     }),
                   ),
                 ),
               ),
             ),
-            n.createElement(
+            l.createElement(
               "div",
               { className: c().PatchSection },
-              n.createElement("div", { className: c().Divider }),
-              n.createElement(
+              l.createElement("div", { className: c().Divider }),
+              l.createElement(
                 "div",
                 { className: c().PatchTitle },
-                (0, o.Jr)("#729_patch_title"),
+                (0, o.Wn)("#729_patch_title"),
               ),
-              n.createElement(
+              l.createElement(
                 "div",
                 { className: c().PatchContainer },
-                n.createElement("img", {
+                l.createElement("img", {
                   className: c().PatchImage,
-                  src: `${l.Y.IMG_URL}/dawnbreaker/patch/patch_maps.png`,
+                  src: `${n.r.IMG_URL}/dawnbreaker/patch/patch_maps.png`,
                 }),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().MapSection },
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().HeaderLabel },
-                    (0, o.Jr)("#729_patch_map_title"),
+                    (0, o.Wn)("#729_patch_map_title"),
                   ),
-                  n.createElement(
+                  l.createElement(
                     "div",
                     { className: c().PatchContent },
-                    n.createElement(
+                    l.createElement(
                       "div",
                       { className: c().MapNote },
-                      (0, o.Jr)("#729_patch_map_changes_desc"),
+                      (0, o.Wn)("#729_patch_map_changes_desc"),
                     ),
-                    n.createElement(
+                    l.createElement(
                       I,
                       {
                         labels: [
@@ -695,135 +695,135 @@
                           "#729_patch_map_change17_title",
                         ],
                       },
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/radiant_mid_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/radiant_mid_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_safelane_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_safelane_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_primary_jungle_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_primary_jungle_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/dire_primary_jungle_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/dire_primary_jungle_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_triangle_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_triangle_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_safelane_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_safelane_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_secret_shop_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_secret_shop_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_ward_spot_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_ward_spot_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/dire_bot_ward_spot_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/dire_bot_ward_spot_new.png",
                         }),
                       }),
                     ),
-                    n.createElement("div", { className: c().MapDivider }),
-                    n.createElement(
+                    l.createElement("div", { className: c().MapDivider }),
+                    l.createElement(
                       "div",
                       { className: c().MapHeader },
-                      n.createElement("div", {
+                      l.createElement("div", {
                         className: c().MapImage,
                         style: {
-                          backgroundImage: `url( ${l.Y.IMG_URL}dawnbreaker/patch/map_icon.png )`,
+                          backgroundImage: `url( ${n.r.IMG_URL}dawnbreaker/patch/map_icon.png )`,
                         },
                       }),
-                      n.createElement(
+                      l.createElement(
                         "div",
                         { className: c().RightSection },
-                        n.createElement(
+                        l.createElement(
                           "div",
                           { className: c().HeroName },
-                          (0, o.Jr)("#729_patch_map_grids_title"),
+                          (0, o.Wn)("#729_patch_map_grids_title"),
                         ),
-                        n.createElement(
+                        l.createElement(
                           "div",
                           { className: c().UpdateSubtitle },
-                          (0, o.Jr)("#729_patch_map_label"),
+                          (0, o.Wn)("#729_patch_map_label"),
                         ),
                       ),
                     ),
-                    n.createElement(
+                    l.createElement(
                       I,
                       {
                         labels: [
@@ -836,78 +836,78 @@
                           "#729_patch_map_change15_title",
                         ],
                       },
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_top_red_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_top_red_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_mid_t2_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_mid_t2_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_t2_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_t2_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_top_t2_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_top_t2_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_mid_t2_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_mid_t2_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_bot_t2_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_bot_t2_new.png",
                         }),
                       }),
-                      n.createElement(v.vx, {
-                        itemOne: n.createElement(y, {
+                      l.createElement(k.EW, {
+                        itemOne: l.createElement(u, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_mid_t1_old.png",
                         }),
-                        itemTwo: n.createElement(y, {
+                        itemTwo: l.createElement(u, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_mid_t1_new.png",
                         }),
@@ -915,35 +915,29 @@
                     ),
                   ),
                 ),
-                n.createElement(
+                l.createElement(
                   "div",
                   { className: c().LowerPatch },
-                  n.createElement("img", {
+                  l.createElement("img", {
                     className: c().PatchImage,
-                    src: `${l.Y.IMG_URL}/dawnbreaker/patch/patch_general.png`,
+                    src: `${n.r.IMG_URL}/dawnbreaker/patch/patch_general.png`,
                   }),
-                  n.createElement(g.on, {
-                    patchnotes: null == e ? void 0 : e.generic,
-                  }),
-                  n.createElement(g.bn, {
-                    patchnotes: null == e ? void 0 : e.items,
-                  }),
-                  n.createElement(g.bn, {
-                    patchnotes: null == e ? void 0 : e.neutral_items,
+                  l.createElement(g.fs, { patchnotes: e?.generic }),
+                  l.createElement(g.ZV, { patchnotes: e?.items }),
+                  l.createElement(g.ZV, {
+                    patchnotes: e?.neutral_items,
                     is_neutrals: !0,
                   }),
-                  n.createElement(g.MC, {
-                    patchnotes: null == e ? void 0 : e.heroes,
-                  }),
+                  l.createElement(g.ob, { patchnotes: e?.heroes }),
                 ),
               ),
             ),
-            n.createElement(w.U, null),
+            l.createElement(w.K, null),
           );
         }
       };
-      S = (0, r.gn)([d.Pi], S);
-      const T = S;
+      L = (0, r.Cg)([d.PA], L);
+      const A = L;
     },
   },
 ]);

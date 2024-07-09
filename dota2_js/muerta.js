@@ -1,17 +1,17 @@
-// 767.js
+// 9467.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [767],
+  [9467],
   {
-    6747: (e) => {
+    11417: (e) => {
       e.exports = {
         RightArrow: "_1aWAcVv4khhRKQHKyqIDl5",
         UpRightArrow: "_3KCtpfqeVGR0eaqc5YB4iF",
       };
     },
-    82702: (e) => {
+    42313: (e) => {
       e.exports = {
         Tooltip: "_2KOufCWr8cpHhxkqlofQFy",
         CarouselFade: "_1uXpQjAd2g8qwSMDu0SoXs",
@@ -153,52 +153,52 @@
         rotate: "_3g5CwGaDrttoGuI6ckOMnf",
       };
     },
-    47506: (e, a, t) => {
+    722: (e, a, t) => {
       "use strict";
-      t.d(a, { U: () => n });
-      var l = t(66204),
-        r = t(6747),
-        s = t.n(r),
-        i = t(98142);
-      const n = () =>
+      t.d(a, { U: () => i });
+      var l = t(7552),
+        s = t(11417),
+        r = t.n(s),
+        n = t(89506);
+      const i = () =>
         l.createElement("div", {
-          className: s().RightArrow,
-          style: { backgroundImage: `url( ${i.Y.IMG_URL}/arrow_left.png )` },
+          className: r().RightArrow,
+          style: { backgroundImage: `url( ${n.r.IMG_URL}/arrow_left.png )` },
         });
     },
-    30767: (e, a, t) => {
+    69467: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => T });
-      var l = t(22970),
-        r = t(98142),
-        s = t(79735),
-        i = t(2580),
-        n = t(80846),
-        m = t(78752),
-        c = t(66204),
-        o = t(62175),
-        d = t(28763),
-        _ = t(5062),
-        N = t(4572),
-        E = t(31444),
-        u = t(37196),
-        v = t(82702),
+      t.r(a), t.d(a, { default: () => f });
+      var l = t(85608),
+        s = t(89506),
+        r = t(55651),
+        n = t(27866),
+        i = t(68446),
+        m = t(32389),
+        c = t(7552),
+        o = t(83640),
+        d = t(45237),
+        _ = t(21384),
+        N = t(23634),
+        E = t(47202),
+        u = t(36305),
+        v = t(42313),
         g = t.n(v),
-        p = t(95974),
-        h = t(47506),
-        b = t(53332);
-      const S = (0, n.Pi)((e) => {
+        p = t(61840),
+        h = t(722),
+        b = t(35927);
+      const S = (0, i.PA)((e) => {
         const a =
           ((t = e.nItemDefID),
           (l = e.strDefaultPrice),
           (0, c.useEffect)(() => {
-            N.P.RequestBPPrices([t]);
+            N.o.RequestBPPrices([t]);
           }, [t]),
-          N.P.GetBPPrice(t) || l);
+          N.o.GetBPPrice(t) || l);
         var t, l;
-        return (0, i.Jr)(e.strLocString, a);
+        return (0, n.Wn)(e.strLocString, a);
       });
-      var I = t(43356),
+      var I = t(85286),
         y = t.n(I);
       const D = [
           {
@@ -230,70 +230,63 @@
             abilityDesc: "#muerta_ability4_desc",
           },
         ],
-        R = ({ index: e, video: a, name: t, onSlideIn: l }) => {
-          const s = (0, c.useContext)(m.ro),
-            i = (0, c.useRef)(),
-            n =
+        W = ({ index: e, video: a, name: t, onSlideIn: l }) => {
+          const r = (0, c.useContext)(m.Yc),
+            n = (0, c.useRef)(),
+            i =
               -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
               -1 != navigator.userAgent.toLowerCase().indexOf("macintosh");
           return (
             (0, c.useEffect)(() => {
               function a() {
-                i &&
-                  i.current &&
-                  s.state.currentSlide == e &&
-                  (i.current.play(), l(t));
+                n &&
+                  n.current &&
+                  r.state.currentSlide == e &&
+                  (n.current.play(), l(t));
               }
-              return s.subscribe(a), () => s.unsubscribe(a);
-            }, [s, e, t, l]),
+              return r.subscribe(a), () => r.unsubscribe(a);
+            }, [r, e, t, l]),
             c.createElement(
               "div",
               { className: g().SlideContainer },
               "$",
-              n
+              i
                 ? c.createElement("img", {
                     className: g().TreasureVideo,
-                    src: `${r.Y.VIDEO_URL}/muerta/${a}.png`,
+                    src: `${s.r.VIDEO_URL}/muerta/${a}.png`,
                   })
                 : c.createElement(
                     "video",
                     {
-                      ref: i,
+                      ref: n,
                       className: g().TreasureVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
                       loop: !0,
                       playsInline: !0,
-                      poster: `${r.Y.VIDEO_URL}/muerta/${a}.png`,
+                      poster: `${s.r.VIDEO_URL}/muerta/${a}.png`,
                     },
                     c.createElement("source", {
                       type: "video/webm",
-                      src: `${r.Y.VIDEO_URL}/muerta/${a}.webm`,
+                      src: `${s.r.VIDEO_URL}/muerta/${a}.webm`,
                     }),
                   ),
             )
           );
         };
-      let f = class extends c.Component {
+      let L = class extends c.Component {
+        videoRef = c.createRef();
+        navbarRef = c.createRef();
+        introRef = c.createRef();
+        eventRef = c.createRef();
+        janitorsCornerRef = c.createRef();
+        gameplayPatchRef = c.createRef();
+        parallaxContainerRef = c.createRef();
+        layer1Ref = c.createRef();
+        bIsMacSafariBrowser;
         constructor(e) {
           super(e),
-            (this.videoRef = c.createRef()),
-            (this.navbarRef = c.createRef()),
-            (this.introRef = c.createRef()),
-            (this.eventRef = c.createRef()),
-            (this.janitorsCornerRef = c.createRef()),
-            (this.gameplayPatchRef = c.createRef()),
-            (this.parallaxContainerRef = c.createRef()),
-            (this.layer1Ref = c.createRef()),
-            (this.handleScroll = (e) => {
-              const a = this.layer1Ref.current.getBoundingClientRect().top;
-              (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(a, 0, -100, 0, 1), 0, 1)}`),
-                (this.navbarRef.current.style.visibility =
-                  a > 0 ? "hidden" : "visible"),
-                y().refresh();
-            }),
-            (this.clamp = (e, a, t) => Math.min(Math.max(e, a), t)),
             (this.state = {
               bPlayingVideo: !1,
               treasureName: "#muerta_minigame_treasure_name3",
@@ -316,9 +309,17 @@
               }))
             : e.current.scrollIntoView({ behavior: "smooth" });
         }
-        remapValue(e, a, t, l, r) {
-          return l + ((r - l) * (e - a)) / (t - a);
+        handleScroll = (e) => {
+          const a = this.layer1Ref.current.getBoundingClientRect().top;
+          (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(a, 0, -100, 0, 1), 0, 1)}`),
+            (this.navbarRef.current.style.visibility =
+              a > 0 ? "hidden" : "visible"),
+            y().refresh();
+        };
+        remapValue(e, a, t, l, s) {
+          return l + ((s - l) * (e - a)) / (t - a);
         }
+        clamp = (e, a, t) => Math.min(Math.max(e, a), t);
         componentDidMount() {
           this.parallaxContainerRef.current.addEventListener(
             "scroll",
@@ -333,8 +334,8 @@
           );
         }
         render() {
-          const e = N.P.getPatchNotes("7.32e", r.Y.LANGUAGE);
-          let a = (0, b.dt)((0, b.jM)(r.Y.LANGUAGE));
+          const e = N.o.getPatchNotes("7.32e", s.r.LANGUAGE);
+          let a = (0, b.ww)((0, b.sf)(s.r.LANGUAGE));
           return (
             "zh-cn" === a ? (a = "zh-Hans") : "zh-tw" === a && (a = "zh-Hant"),
             c.createElement(
@@ -343,7 +344,7 @@
               c.createElement(
                 "div",
                 {
-                  className: (0, _.Z)(
+                  className: (0, _.A)(
                     g().TrailerContainer,
                     this.state.bPlayingVideo ? null : g().Hidden,
                   ),
@@ -352,29 +353,29 @@
                   "video",
                   {
                     ref: this.videoRef,
-                    className: (0, _.Z)(g().TrailerVideo),
+                    className: (0, _.A)(g().TrailerVideo),
                     autoPlay: !1,
                     preload: "none",
                     muted: !1,
                     loop: !1,
                     playsInline: !1,
                     controls: !0,
-                    poster: `${r.Y.IMG_URL}/muerta/muerta_trailer.jpg`,
+                    poster: `${s.r.IMG_URL}/muerta/muerta_trailer.jpg`,
                     crossOrigin: "anonymous",
                   },
                   c.createElement("source", {
                     type: "video/mp4",
-                    src: `${r.Y.VIDEO_URL}/muerta/muerta_trailer_${r.Y.LANGUAGE}.mp4?reload1`,
+                    src: `${s.r.VIDEO_URL}/muerta/muerta_trailer_${s.r.LANGUAGE}.mp4?reload1`,
                   }),
                   c.createElement("source", {
                     type: "video/mp4",
-                    src: `${r.Y.VIDEO_URL}/muerta/muerta_trailer_english.mp4`,
+                    src: `${s.r.VIDEO_URL}/muerta/muerta_trailer_english.mp4`,
                   }),
                   c.createElement("track", {
-                    label: `${r.Y.LANGUAGE}`,
+                    label: `${s.r.LANGUAGE}`,
                     kind: "captions",
                     srcLang: a,
-                    src: `${r.Y.VIDEO_URL}/muerta/Muerta_${r.Y.LANGUAGE}.vtt`,
+                    src: `${s.r.VIDEO_URL}/muerta/Muerta_${s.r.LANGUAGE}.vtt`,
                     default: !0,
                   }),
                 ),
@@ -386,7 +387,7 @@
                   },
                   c.createElement("img", {
                     className: g().CloseButtonImage,
-                    src: `${r.Y.IMG_URL}/close.png`,
+                    src: `${s.r.IMG_URL}/close.png`,
                   }),
                 ),
               ),
@@ -394,7 +395,7 @@
                 "div",
                 {
                   ref: this.navbarRef,
-                  className: (0, _.Z)(g().AnchorNavigation),
+                  className: (0, _.A)(g().AnchorNavigation),
                 },
                 c.createElement(
                   "div",
@@ -402,7 +403,7 @@
                     className: g().AnchorLink,
                     onClick: () => this.scrollToTarget(this.introRef),
                   },
-                  (0, i.Jr)("#muerta_navigation_intro"),
+                  (0, n.Wn)("#muerta_navigation_intro"),
                 ),
                 c.createElement(
                   "div",
@@ -410,7 +411,7 @@
                     className: g().AnchorLink,
                     onClick: () => this.scrollToTarget(this.eventRef),
                   },
-                  (0, i.Jr)("#muerta_navigation_event"),
+                  (0, n.Wn)("#muerta_navigation_event"),
                 ),
                 c.createElement(
                   "div",
@@ -418,7 +419,7 @@
                     className: g().AnchorLink,
                     onClick: () => this.scrollToTarget(this.janitorsCornerRef),
                   },
-                  (0, i.Jr)("#muerta_navigation_janitor"),
+                  (0, n.Wn)("#muerta_navigation_janitor"),
                 ),
                 c.createElement(
                   "div",
@@ -426,7 +427,7 @@
                     className: g().AnchorLink,
                     onClick: () => this.scrollToTarget(this.gameplayPatchRef),
                   },
-                  (0, i.Jr)("#muerta_navigation_gameplay"),
+                  (0, n.Wn)("#muerta_navigation_gameplay"),
                 ),
               ),
               c.createElement(
@@ -437,12 +438,12 @@
                 },
                 c.createElement(
                   "div",
-                  { className: (0, _.Z)(g().ParallaxLayer, g().Layer2) },
-                  c.createElement(E.j, { bOverlapping: !0 }),
+                  { className: (0, _.A)(g().ParallaxLayer, g().Layer2) },
+                  c.createElement(E.A, { bOverlapping: !0 }),
                   c.createElement(
-                    o.ql,
+                    o.mg,
                     null,
-                    c.createElement("title", null, (0, i.Jr)("#muerta_title")),
+                    c.createElement("title", null, (0, n.Wn)("#muerta_title")),
                   ),
                   c.createElement(
                     "div",
@@ -453,24 +454,24 @@
                     c.createElement(
                       "video",
                       {
-                        className: (0, _.Z)(g().ForegroundVideo),
+                        className: (0, _.A)(g().ForegroundVideo),
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
                         loop: !0,
                         playsInline: !0,
                         controls: !1,
-                        poster: `${r.Y.IMG_URL}/muerta/muerta_loop.png`,
+                        poster: `${s.r.IMG_URL}/muerta/muerta_loop.png`,
                       },
                       c.createElement("source", {
                         type: "video/mp4",
-                        src: `${r.Y.VIDEO_URL}/muerta/muerta_loop.mp4`,
+                        src: `${s.r.VIDEO_URL}/muerta/muerta_loop.mp4`,
                       }),
                     ),
                     c.createElement(
                       "div",
                       {
-                        className: (0, _.Z)(
+                        className: (0, _.A)(
                           g().TitleContainer,
                           this.state.bPlayingVideo && g().Hide,
                         ),
@@ -478,7 +479,7 @@
                       c.createElement(
                         "div",
                         { className: g().TitleIntro1 },
-                        (0, i.Jr)("#muerta_title_pre"),
+                        (0, n.Wn)("#muerta_title_pre"),
                       ),
                       c.createElement(
                         "video",
@@ -490,25 +491,25 @@
                           loop: !0,
                           playsInline: !0,
                           controls: !1,
-                          poster: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_${r.Y.LANGUAGE}.png`,
+                          poster: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_${s.r.LANGUAGE}.png`,
                         },
                         c.createElement("source", {
                           type: 'video/mp4; codecs="hvc1"',
-                          src: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_${r.Y.LANGUAGE}.mov`,
+                          src: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_${s.r.LANGUAGE}.mov`,
                         }),
                         c.createElement("source", {
                           type: "video/webm",
-                          src: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_${r.Y.LANGUAGE}.webm`,
+                          src: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_${s.r.LANGUAGE}.webm`,
                         }),
                         c.createElement("source", {
                           type: "video/webm",
-                          src: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_english.webm`,
+                          src: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_english.webm`,
                         }),
                       ),
                       c.createElement(
                         "div",
                         { className: g().TitleIntro2 },
-                        (0, i.Jr)("#muerta_title_post"),
+                        (0, n.Wn)("#muerta_title_post"),
                       ),
                     ),
                   ),
@@ -517,14 +518,14 @@
                   "div",
                   {
                     ref: this.layer1Ref,
-                    className: (0, _.Z)(g().ParallaxLayer, g().Layer1),
+                    className: (0, _.A)(g().ParallaxLayer, g().Layer1),
                   },
                   c.createElement(
                     "div",
                     { className: g().HeroInfoContainer },
                     c.createElement(
                       "div",
-                      { className: (0, _.Z)(g().HeroInfoSection) },
+                      { className: (0, _.A)(g().HeroInfoSection) },
                       c.createElement(
                         "video",
                         {
@@ -535,31 +536,31 @@
                           loop: !0,
                           playsInline: !0,
                           controls: !1,
-                          poster: `${r.Y.VIDEO_URL}/muerta/muerta_logo_${r.Y.LANGUAGE}.png`,
+                          poster: `${s.r.VIDEO_URL}/muerta/muerta_logo_${s.r.LANGUAGE}.png`,
                         },
                         c.createElement("source", {
                           type: 'video/mp4; codecs="hvc1"',
-                          src: `${r.Y.VIDEO_URL}/muerta/muerta_logo_${r.Y.LANGUAGE}.mov`,
+                          src: `${s.r.VIDEO_URL}/muerta/muerta_logo_${s.r.LANGUAGE}.mov`,
                         }),
                         c.createElement("source", {
                           type: "video/webm",
-                          src: `${r.Y.VIDEO_URL}/muerta/muerta_logo_${r.Y.LANGUAGE}.webm`,
+                          src: `${s.r.VIDEO_URL}/muerta/muerta_logo_${s.r.LANGUAGE}.webm`,
                         }),
                         c.createElement("source", {
                           type: "video/webm",
-                          src: `${r.Y.VIDEO_URL}/muerta/muerta_logo_english.webm`,
+                          src: `${s.r.VIDEO_URL}/muerta/muerta_logo_english.webm`,
                         }),
                       ),
                       c.createElement(
                         "div",
                         { className: g().HeroIntroTitle },
-                        (0, i.Jr)("#new_hero_tag"),
+                        (0, n.Wn)("#new_hero_tag"),
                       ),
                       c.createElement(
                         "div",
                         { className: g().Complexity },
                         c.createElement("img", {
-                          src: `${r.Y.IMG_URL}/muerta/difficulty.png`,
+                          src: `${s.r.IMG_URL}/muerta/difficulty.png`,
                         }),
                       ),
                       c.createElement(
@@ -568,42 +569,42 @@
                         c.createElement(
                           "div",
                           { className: g().HeroRole },
-                          (0, i.Jr)("#muerta_role1"),
+                          (0, n.Wn)("#muerta_role1"),
                         ),
                         c.createElement(
                           "div",
                           { className: g().HeroRole },
-                          (0, i.Jr)("#muerta_role2"),
+                          (0, n.Wn)("#muerta_role2"),
                         ),
                         c.createElement(
                           "div",
                           { className: g().HeroRole },
-                          (0, i.Jr)("#muerta_role3"),
+                          (0, n.Wn)("#muerta_role3"),
                         ),
                         c.createElement(
                           "div",
                           { className: g().HeroRole },
-                          (0, i.Jr)("#muerta_role4"),
+                          (0, n.Wn)("#muerta_role4"),
                         ),
                       ),
                       c.createElement(
                         "div",
                         { className: g().HeroIntro },
-                        (0, i.Jr)("#muerta_intro"),
+                        (0, n.Wn)("#muerta_intro"),
                       ),
                       c.createElement(
                         "div",
                         { className: g().ButtonsSection },
                         c.createElement(
-                          d.rU,
-                          { to: s._.hero("muerta") },
+                          d.N_,
+                          { to: r.J.hero("muerta") },
                           c.createElement(
                             "div",
                             { className: g().StandardButton },
                             c.createElement(
                               "div",
                               { className: g().ButtonText },
-                              (0, i.Jr)("#muerta_heroes_btn"),
+                              (0, n.Wn)("#muerta_heroes_btn"),
                             ),
                             c.createElement(h.U, null),
                           ),
@@ -617,7 +618,7 @@
                           c.createElement(
                             "div",
                             { className: g().ButtonText },
-                            (0, i.Jr)("#muerta_play_trailer"),
+                            (0, n.Wn)("#muerta_play_trailer"),
                           ),
                           c.createElement(h.U, null),
                         ),
@@ -629,7 +630,7 @@
                     "div",
                     { className: g().AbilitySection },
                     c.createElement(
-                      m.sj,
+                      m.gi,
                       {
                         className: g().AbilityCarousel,
                         naturalSlideWidth: 100,
@@ -637,11 +638,11 @@
                         totalSlides: D.length,
                       },
                       c.createElement(
-                        m.iR,
+                        m.Ap,
                         { className: g().AbilitySlider },
                         D.map((e, a) =>
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             { key: `HeroAbilitySlide-${a}`, index: a },
                             c.createElement(
                               "video",
@@ -652,17 +653,17 @@
                                 muted: !0,
                                 loop: !0,
                                 playsInline: !0,
-                                poster: `${r.Y.VIDEO_URL}/${e.posterDir}`,
+                                poster: `${s.r.VIDEO_URL}/${e.posterDir}`,
                               },
                               e.videoSrcWebm &&
                                 c.createElement("source", {
                                   type: "video/webm",
-                                  src: `${r.Y.VIDEO_URL}/${e.videoSrcWebm}`,
+                                  src: `${s.r.VIDEO_URL}/${e.videoSrcWebm}`,
                                 }),
                               e.videoSrcMp4 &&
                                 c.createElement("source", {
                                   type: "video/mp4",
-                                  src: `${r.Y.VIDEO_URL}/${e.videoSrcMp4}`,
+                                  src: `${s.r.VIDEO_URL}/${e.videoSrcMp4}`,
                                 }),
                             ),
                             c.createElement(
@@ -670,7 +671,7 @@
                               { className: g().SlideAbilityContainer },
                               c.createElement("img", {
                                 className: g().SlideAbilityIcon,
-                                src: `${r.Y.IMG_URL}/${e.imgSrc}`,
+                                src: `${s.r.IMG_URL}/${e.imgSrc}`,
                               }),
                               c.createElement(
                                 "div",
@@ -678,12 +679,12 @@
                                 c.createElement(
                                   "div",
                                   { className: g().AbilityName },
-                                  (0, i.Jr)(`${e.abilityName}`),
+                                  (0, n.Wn)(`${e.abilityName}`),
                                 ),
                                 c.createElement(
                                   "div",
                                   { className: g().AbilityDesc },
-                                  (0, i.Jr)(`${e.abilityDesc}`),
+                                  (0, n.Wn)(`${e.abilityDesc}`),
                                 ),
                               ),
                             ),
@@ -695,13 +696,13 @@
                         { className: g().CarouselDots },
                         D.map((e, a) =>
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             {
                               key: `HeroAbilityDot-${a}`,
                               slide: a,
                               className: g().AbilitySelector,
                               style: {
-                                backgroundImage: `url( ${r.Y.IMG_URL}/${e.dotBackgroundImage ? e.dotBackgroundImage : e.imgSrc} )`,
+                                backgroundImage: `url( ${s.r.IMG_URL}/${e.dotBackgroundImage ? e.dotBackgroundImage : e.imgSrc} )`,
                                 backgroundSize: "cover",
                               },
                             },
@@ -715,7 +716,7 @@
                     "div",
                     { className: g().AbilitySectionMobileView },
                     c.createElement(
-                      m.sj,
+                      m.gi,
                       {
                         className: g().AbilityCarousel,
                         naturalSlideWidth: 100,
@@ -723,11 +724,11 @@
                         totalSlides: D.length,
                       },
                       c.createElement(
-                        m.iR,
+                        m.Ap,
                         { className: g().AbilitySlider },
                         D.map((e, a) =>
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             { key: `HeroAbilitySlide-${a}`, index: a },
                             c.createElement(
                               "div",
@@ -744,17 +745,17 @@
                                     muted: !0,
                                     loop: !0,
                                     playsInline: !0,
-                                    poster: `${r.Y.VIDEO_URL}/${e.posterDir}`,
+                                    poster: `${s.r.VIDEO_URL}/${e.posterDir}`,
                                   },
                                   e.videoSrcWebm &&
                                     c.createElement("source", {
                                       type: "video/webm",
-                                      src: `${r.Y.VIDEO_URL}/${e.videoSrcWebm}`,
+                                      src: `${s.r.VIDEO_URL}/${e.videoSrcWebm}`,
                                     }),
                                   e.videoSrcMp4 &&
                                     c.createElement("source", {
                                       type: "video/mp4",
-                                      src: `${r.Y.VIDEO_URL}/${e.videoSrcMp4}`,
+                                      src: `${s.r.VIDEO_URL}/${e.videoSrcMp4}`,
                                     }),
                                 ),
                               ),
@@ -763,7 +764,7 @@
                                 { className: g().SlideAbilityContainer },
                                 c.createElement("img", {
                                   className: g().SlideAbilityIcon,
-                                  src: `${r.Y.IMG_URL}/${e.imgSrc}`,
+                                  src: `${s.r.IMG_URL}/${e.imgSrc}`,
                                 }),
                                 c.createElement(
                                   "div",
@@ -771,12 +772,12 @@
                                   c.createElement(
                                     "div",
                                     { className: g().AbilityName },
-                                    (0, i.Jr)(`${e.abilityName}`),
+                                    (0, n.Wn)(`${e.abilityName}`),
                                   ),
                                   c.createElement(
                                     "div",
                                     { className: g().AbilityDesc },
-                                    (0, i.Jr)(`${e.abilityDesc}`),
+                                    (0, n.Wn)(`${e.abilityDesc}`),
                                   ),
                                 ),
                               ),
@@ -789,13 +790,13 @@
                         { className: g().CarouselDotsMobile },
                         D.map((e, a) =>
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             {
                               key: `HeroAbilityDot-${a}`,
                               slide: a,
                               className: g().AbilitySelector,
                               style: {
-                                backgroundImage: `url( ${r.Y.IMG_URL}/${e.dotBackgroundImage ? e.dotBackgroundImage : e.imgSrc} )`,
+                                backgroundImage: `url( ${s.r.IMG_URL}/${e.dotBackgroundImage ? e.dotBackgroundImage : e.imgSrc} )`,
                                 backgroundSize: "cover",
                               },
                             },
@@ -821,37 +822,37 @@
                           loop: !0,
                           playsInline: !0,
                           controls: !1,
-                          poster: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_${r.Y.LANGUAGE}.png`,
+                          poster: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_${s.r.LANGUAGE}.png`,
                         },
                         c.createElement("source", {
                           type: 'video/mp4; codecs="hvc1"',
-                          src: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_${r.Y.LANGUAGE}.mov`,
+                          src: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_${s.r.LANGUAGE}.mov`,
                         }),
                         c.createElement("source", {
                           type: "video/webm",
-                          src: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_${r.Y.LANGUAGE}.webm`,
+                          src: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_${s.r.LANGUAGE}.webm`,
                         }),
                         c.createElement("source", {
                           type: "video/webm",
-                          src: `${r.Y.VIDEO_URL}/muerta/dead_reckoning_logo_english.webm`,
+                          src: `${s.r.VIDEO_URL}/muerta/dead_reckoning_logo_english.webm`,
                         }),
                       ),
                       c.createElement(
                         "div",
                         { className: g().MinigameText },
-                        (0, i.Jr)("#muerta_minigame_title"),
+                        (0, n.Wn)("#muerta_minigame_title"),
                       ),
                       c.createElement(
                         "div",
                         { className: g().MinigameDate },
-                        (0, i.Jr)("#muerta_title_date"),
+                        (0, n.Wn)("#muerta_title_date"),
                       ),
                       c.createElement(
                         "div",
                         { className: g().EventHype },
                         c.createElement("img", {
-                          className: (0, _.Z)(g().EventSplash, g().Left),
-                          src: `${r.Y.IMG_URL}/muerta/minigame_sniper.png`,
+                          className: (0, _.A)(g().EventSplash, g().Left),
+                          src: `${s.r.IMG_URL}/muerta/minigame_sniper.png`,
                         }),
                         c.createElement(
                           "div",
@@ -859,25 +860,25 @@
                           c.createElement(
                             "div",
                             { className: g().MinigameFlairTitle },
-                            (0, i.Jr)("#muerta_minigame_subtitle"),
+                            (0, n.Wn)("#muerta_minigame_subtitle"),
                           ),
                           c.createElement(
                             "div",
                             { className: g().MinigameFlairDesc },
-                            (0, i.Jr)("#muerta_minigame_subtitle2"),
+                            (0, n.Wn)("#muerta_minigame_subtitle2"),
                           ),
                           c.createElement("img", {
                             className: g().MinigameFlairMark,
-                            src: `${r.Y.IMG_URL}/muerta/paper_mark.png`,
+                            src: `${s.r.IMG_URL}/muerta/paper_mark.png`,
                           }),
                           c.createElement("img", {
                             className: g().MinigameFlairCandles,
-                            src: `${r.Y.IMG_URL}/muerta/minigame_text_candles_bg.png`,
+                            src: `${s.r.IMG_URL}/muerta/minigame_text_candles_bg.png`,
                           }),
                         ),
                         c.createElement("img", {
-                          className: (0, _.Z)(g().EventSplash, g().Right),
-                          src: `${r.Y.IMG_URL}/muerta/minigame_am.png`,
+                          className: (0, _.A)(g().EventSplash, g().Right),
+                          src: `${s.r.IMG_URL}/muerta/minigame_am.png`,
                         }),
                       ),
                       c.createElement(
@@ -886,20 +887,20 @@
                         c.createElement(
                           "div",
                           { className: g().MinigameFlairTitle },
-                          (0, i.Jr)("#muerta_minigame_subtitle"),
+                          (0, n.Wn)("#muerta_minigame_subtitle"),
                         ),
                         c.createElement(
                           "div",
                           { className: g().MinigameFlairDesc },
-                          (0, i.Jr)("#muerta_minigame_subtitle2"),
+                          (0, n.Wn)("#muerta_minigame_subtitle2"),
                         ),
                         c.createElement("img", {
                           className: g().MinigameFlairMark,
-                          src: `${r.Y.IMG_URL}/muerta/paper_mark.png`,
+                          src: `${s.r.IMG_URL}/muerta/paper_mark.png`,
                         }),
                         c.createElement("img", {
                           className: g().MinigameFlairCandles,
-                          src: `${r.Y.IMG_URL}/muerta/minigame_text_candles_bg.png`,
+                          src: `${s.r.IMG_URL}/muerta/minigame_text_candles_bg.png`,
                         }),
                       ),
                     ),
@@ -910,7 +911,7 @@
                         "div",
                         { className: g().RulesColumn },
                         c.createElement("div", {
-                          className: (0, _.Z)(
+                          className: (0, _.A)(
                             g().MinigameImageContainer,
                             g().MinigameImage1,
                           ),
@@ -925,12 +926,12 @@
                           c.createElement(
                             "div",
                             { className: g().MinigameRulesTitle },
-                            (0, i.Jr)("#muerta_minigame_rules_title"),
+                            (0, n.Wn)("#muerta_minigame_rules_title"),
                           ),
                           c.createElement(
                             "div",
                             { className: g().MinigameRulesDesc },
-                            (0, i.Jr)("#muerta_minigame_rules_desc"),
+                            (0, n.Wn)("#muerta_minigame_rules_desc"),
                           ),
                         ),
                       ),
@@ -938,7 +939,7 @@
                         "div",
                         { className: g().RulesColumnReverseMarginForMobile },
                         c.createElement("div", {
-                          className: (0, _.Z)(
+                          className: (0, _.A)(
                             g().MinigameImageContainer,
                             g().MinigameImage2,
                           ),
@@ -953,12 +954,12 @@
                           c.createElement(
                             "div",
                             { className: g().MinigameRulesTitle },
-                            (0, i.Jr)("#muerta_minigame_rules_title2"),
+                            (0, n.Wn)("#muerta_minigame_rules_title2"),
                           ),
                           c.createElement(
                             "div",
                             { className: g().MinigameRulesDesc },
-                            (0, i.Jr)("#muerta_minigame_rules_desc2"),
+                            (0, n.Wn)("#muerta_minigame_rules_desc2"),
                           ),
                         ),
                       ),
@@ -966,7 +967,7 @@
                         "div",
                         { className: g().RulesColumn },
                         c.createElement("div", {
-                          className: (0, _.Z)(
+                          className: (0, _.A)(
                             g().MinigameImageContainer,
                             g().MinigameImage3,
                           ),
@@ -981,7 +982,7 @@
                           c.createElement(
                             "div",
                             { className: g().MinigameRulesTitle },
-                            (0, i.Jr)("#muerta_minigame_rules_title3"),
+                            (0, n.Wn)("#muerta_minigame_rules_title3"),
                           ),
                           c.createElement(
                             "div",
@@ -1002,15 +1003,15 @@
                       c.createElement(
                         "div",
                         { className: g().TreasureTitle },
-                        (0, i.Jr)("#muerta_treasure_title"),
+                        (0, n.Wn)("#muerta_treasure_title"),
                       ),
                       c.createElement(
                         "div",
                         { className: g().TreasureSubtitle },
-                        (0, i.Jr)("#muerta_treasure_content_desc"),
+                        (0, n.Wn)("#muerta_treasure_content_desc"),
                       ),
                       c.createElement(
-                        m.sj,
+                        m.gi,
                         {
                           className: g().TreasureCarousel,
                           naturalSlideWidth: 540,
@@ -1022,17 +1023,17 @@
                           dragEnabled: !1,
                         },
                         c.createElement(
-                          m.iR,
+                          m.Ap,
                           { className: g().TreasureSlider },
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 0,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 0,
                               video: "treasure_antimage",
                               name: "#muerta_minigame_treasure_name1",
@@ -1042,14 +1043,14 @@
                             }),
                           ),
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 1,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 1,
                               video: "treasure_dawnbreaker",
                               name: "#muerta_minigame_treasure_name2",
@@ -1059,14 +1060,14 @@
                             }),
                           ),
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 2,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 2,
                               video: "treasure_io",
                               name: "#muerta_minigame_treasure_name3",
@@ -1076,14 +1077,14 @@
                             }),
                           ),
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 3,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 3,
                               video: "treasure_lina",
                               name: "#muerta_minigame_treasure_name4",
@@ -1093,14 +1094,14 @@
                             }),
                           ),
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 4,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 4,
                               video: "treasure_medusa",
                               name: "#muerta_minigame_treasure_name5",
@@ -1110,14 +1111,14 @@
                             }),
                           ),
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 5,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 5,
                               video: "treasure_pudge",
                               name: "#muerta_minigame_treasure_name6",
@@ -1127,14 +1128,14 @@
                             }),
                           ),
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 6,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 6,
                               video: "treasure_sniper",
                               name: "#muerta_minigame_treasure_name7",
@@ -1144,14 +1145,14 @@
                             }),
                           ),
                           c.createElement(
-                            m.Mi,
+                            m.q7,
                             {
                               index: 7,
                               className: g().TreasureSlide,
                               innerClassName: g().TreasureInnerSlide,
                               classNameHidden: g().TreasureSlideHidden,
                             },
-                            c.createElement(R, {
+                            c.createElement(W, {
                               index: 7,
                               video: "treasure_viper",
                               name: "#muerta_minigame_treasure_name8",
@@ -1164,58 +1165,58 @@
                         c.createElement(
                           "div",
                           { className: g().TreasureName },
-                          (0, i.Jr)(this.state.treasureName),
+                          (0, n.Wn)(this.state.treasureName),
                         ),
                         c.createElement(
                           "div",
                           { className: g().CarouselDots },
                           c.createElement(
-                            m.jp,
+                            m._X,
                             { className: g().TreasureBack },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 0 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 1 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 2 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 3 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 4 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 5 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 6 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.oT,
+                            m.cL,
                             { className: g().TreasureSelector, slide: 7 },
                             c.createElement("div", null),
                           ),
                           c.createElement(
-                            m.P1,
+                            m.CC,
                             { className: g().TreasureNext },
                             c.createElement("div", null),
                           ),
@@ -1229,7 +1230,7 @@
                     c.createElement(
                       "div",
                       { className: g().WallpaperTitle },
-                      (0, i.Jr)("#muerta_wallpaper"),
+                      (0, n.Wn)("#muerta_wallpaper"),
                     ),
                     c.createElement(
                       "div",
@@ -1239,53 +1240,25 @@
                         { className: g().WallpaperGroup },
                         c.createElement(
                           "a",
-                          { href: `${r.Y.IMG_URL}/muerta/wallpaper1.png` },
+                          { href: `${s.r.IMG_URL}/muerta/wallpaper1.png` },
                           c.createElement(
                             "div",
                             { className: g().Wallpaper },
                             c.createElement("img", {
                               className: g().WallpaperImgDesktop,
-                              src: `${r.Y.IMG_URL}/muerta/wallpaper_thumbnail1.png`,
+                              src: `${s.r.IMG_URL}/muerta/wallpaper_thumbnail1.png`,
                             }),
                           ),
                         ),
                         c.createElement(
                           "a",
-                          { href: `${r.Y.IMG_URL}/muerta/wallpaper2.png` },
+                          { href: `${s.r.IMG_URL}/muerta/wallpaper2.png` },
                           c.createElement(
                             "div",
                             { className: g().Wallpaper },
                             c.createElement("img", {
                               className: g().WallpaperImgDesktop,
-                              src: `${r.Y.IMG_URL}/muerta/wallpaper_thumbnail2.png`,
-                            }),
-                          ),
-                        ),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().WallpaperGroup },
-                        c.createElement(
-                          "a",
-                          { href: `${r.Y.IMG_URL}/muerta/wallpaper3.png` },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              className: g().WallpaperImgDesktop,
-                              src: `${r.Y.IMG_URL}/muerta/wallpaper_thumbnail3.png`,
-                            }),
-                          ),
-                        ),
-                        c.createElement(
-                          "a",
-                          { href: `${r.Y.IMG_URL}/muerta/wallpaper4.png` },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              className: g().WallpaperImgDesktop,
-                              src: `${r.Y.IMG_URL}/muerta/wallpaper_thumbnail4.png`,
+                              src: `${s.r.IMG_URL}/muerta/wallpaper_thumbnail2.png`,
                             }),
                           ),
                         ),
@@ -1295,25 +1268,53 @@
                         { className: g().WallpaperGroup },
                         c.createElement(
                           "a",
-                          { href: `${r.Y.IMG_URL}/muerta/wallpaper5.png` },
+                          { href: `${s.r.IMG_URL}/muerta/wallpaper3.png` },
                           c.createElement(
                             "div",
                             { className: g().Wallpaper },
                             c.createElement("img", {
                               className: g().WallpaperImgDesktop,
-                              src: `${r.Y.IMG_URL}/muerta/wallpaper_thumbnail5.png`,
+                              src: `${s.r.IMG_URL}/muerta/wallpaper_thumbnail3.png`,
                             }),
                           ),
                         ),
                         c.createElement(
                           "a",
-                          { href: `${r.Y.IMG_URL}/muerta/wallpaper6.png` },
+                          { href: `${s.r.IMG_URL}/muerta/wallpaper4.png` },
                           c.createElement(
                             "div",
                             { className: g().Wallpaper },
                             c.createElement("img", {
                               className: g().WallpaperImgDesktop,
-                              src: `${r.Y.IMG_URL}/muerta/wallpaper_thumbnail6.png`,
+                              src: `${s.r.IMG_URL}/muerta/wallpaper_thumbnail4.png`,
+                            }),
+                          ),
+                        ),
+                      ),
+                      c.createElement(
+                        "div",
+                        { className: g().WallpaperGroup },
+                        c.createElement(
+                          "a",
+                          { href: `${s.r.IMG_URL}/muerta/wallpaper5.png` },
+                          c.createElement(
+                            "div",
+                            { className: g().Wallpaper },
+                            c.createElement("img", {
+                              className: g().WallpaperImgDesktop,
+                              src: `${s.r.IMG_URL}/muerta/wallpaper_thumbnail5.png`,
+                            }),
+                          ),
+                        ),
+                        c.createElement(
+                          "a",
+                          { href: `${s.r.IMG_URL}/muerta/wallpaper6.png` },
+                          c.createElement(
+                            "div",
+                            { className: g().Wallpaper },
+                            c.createElement("img", {
+                              className: g().WallpaperImgDesktop,
+                              src: `${s.r.IMG_URL}/muerta/wallpaper_thumbnail6.png`,
                             }),
                           ),
                         ),
@@ -1331,12 +1332,12 @@
                       { className: g().PatchContainer },
                       c.createElement("img", {
                         className: g().SplashImage,
-                        src: `${r.Y.IMG_URL}/muerta/janitors_corner_splash.png`,
+                        src: `${s.r.IMG_URL}/muerta/janitors_corner_splash.png`,
                       }),
                       c.createElement(
                         "div",
                         { className: g().PatchTitle },
-                        (0, i.Jr)("#janitors_corner_title"),
+                        (0, n.Wn)("#janitors_corner_title"),
                       ),
                       c.createElement(
                         "div",
@@ -1344,7 +1345,7 @@
                         c.createElement(
                           "div",
                           { className: g().HeaderLabel },
-                          (0, i.Jr)("#732e_patch_dotaplus_advancedstats_title"),
+                          (0, n.Wn)("#732e_patch_dotaplus_advancedstats_title"),
                         ),
                         c.createElement(
                           "div",
@@ -1355,28 +1356,28 @@
                             c.createElement(
                               "div",
                               { className: g().AdvancedStatsChangeSubtitle },
-                              (0, i.Jr)(
+                              (0, n.Wn)(
                                 "#732e_patch_dotaplus_advancedstats_subtitle",
                               ),
                             ),
                             c.createElement(
                               "div",
                               { className: g().AdvancedStatsChangeDescription },
-                              (0, i.Jr)(
+                              (0, n.Wn)(
                                 "#732e_patch_dotaplus_advancedstats_desc",
                               ),
                             ),
                             c.createElement(
                               "div",
                               { className: g().AdvancedStatsChangeDescription },
-                              (0, i.Jr)(
+                              (0, n.Wn)(
                                 "#732e_patch_dotaplus_advancedstats_desc2",
                               ),
                             ),
                           ),
                           c.createElement("img", {
                             className: g().PatchImage,
-                            src: `${r.Y.IMG_URL}/muerta/advancedstats_sneakpeak.png`,
+                            src: `${s.r.IMG_URL}/muerta/advancedstats_sneakpeak.png`,
                           }),
                         ),
                       ),
@@ -1386,14 +1387,14 @@
                         c.createElement(
                           "div",
                           { className: g().HeaderLabel },
-                          (0, i.Jr)("#732e_patch_quickkeys_title"),
+                          (0, n.Wn)("#732e_patch_quickkeys_title"),
                         ),
                         c.createElement(
                           "div",
                           { className: g().PatchContent },
                           c.createElement("img", {
                             className: g().PatchImage,
-                            src: `${r.Y.IMG_URL}/muerta/quickkeys_sneakpeak.png`,
+                            src: `${s.r.IMG_URL}/muerta/quickkeys_sneakpeak.png`,
                           }),
                           c.createElement(
                             "div",
@@ -1401,12 +1402,12 @@
                             c.createElement(
                               "div",
                               { className: g().QuickKeysChangeSubtitle },
-                              (0, i.Jr)("#732e_patch_quickkeys_subtitle"),
+                              (0, n.Wn)("#732e_patch_quickkeys_subtitle"),
                             ),
                             c.createElement(
                               "div",
                               { className: g().QuickKeysChangeDescription },
-                              (0, i.Jr)("#732e_patch_quickkeys_desc"),
+                              (0, n.Wn)("#732e_patch_quickkeys_desc"),
                             ),
                           ),
                         ),
@@ -1417,7 +1418,7 @@
                         c.createElement(
                           "div",
                           { className: g().HeaderLabel },
-                          (0, i.Jr)("#732e_patch_friendslist_title"),
+                          (0, n.Wn)("#732e_patch_friendslist_title"),
                         ),
                         c.createElement(
                           "div",
@@ -1428,17 +1429,17 @@
                             c.createElement(
                               "div",
                               { className: g().FriendsListChangeSubtitle },
-                              (0, i.Jr)("#732e_patch_friendslist_subtitle"),
+                              (0, n.Wn)("#732e_patch_friendslist_subtitle"),
                             ),
                             c.createElement(
                               "div",
                               { className: g().FriendsListChangeDescription },
-                              (0, i.Jr)("#732e_patch_friendslist_desc"),
+                              (0, n.Wn)("#732e_patch_friendslist_desc"),
                             ),
                           ),
                           c.createElement("img", {
                             className: g().PatchImage,
-                            src: `${r.Y.IMG_URL}/muerta/friendslist_sneakpeak.png`,
+                            src: `${s.r.IMG_URL}/muerta/friendslist_sneakpeak.png`,
                           }),
                         ),
                       ),
@@ -1455,12 +1456,12 @@
                       c.createElement(
                         "div",
                         { className: g().PatchTitle },
-                        (0, i.Jr)("#732e_patch_title"),
+                        (0, n.Wn)("#732e_patch_title"),
                       ),
                       c.createElement(
                         "div",
                         { className: g().PatchSubtitle },
-                        (0, i.Jr)("#732e_patch_subtitle"),
+                        (0, n.Wn)("#732e_patch_subtitle"),
                       ),
                       c.createElement(
                         "div",
@@ -1468,7 +1469,7 @@
                         c.createElement(
                           "div",
                           { className: g().PatchNotesHeaderLabel },
-                          (0, i.Jr)("#732e_patch_turbo_title"),
+                          (0, n.Wn)("#732e_patch_turbo_title"),
                         ),
                         c.createElement(
                           "div",
@@ -1476,7 +1477,7 @@
                           c.createElement(
                             "div",
                             { className: g().PatchNotesDesc },
-                            (0, i.Jr)("#732e_patch_turbo_intro"),
+                            (0, n.Wn)("#732e_patch_turbo_intro"),
                           ),
                           c.createElement(
                             "div",
@@ -1485,17 +1486,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes1"),
-                            ),
-                          ),
-                          c.createElement(
-                            "div",
-                            { className: g().NoteElement },
-                            c.createElement("div", { className: g().Dot }),
-                            c.createElement(
-                              "div",
-                              { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes2"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes1"),
                             ),
                           ),
                           c.createElement(
@@ -1505,7 +1496,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes3"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes2"),
                             ),
                           ),
                           c.createElement(
@@ -1515,7 +1506,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes4"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes3"),
                             ),
                           ),
                           c.createElement(
@@ -1525,7 +1516,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes5"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes4"),
                             ),
                           ),
                           c.createElement(
@@ -1535,7 +1526,17 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes15"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes5"),
+                            ),
+                          ),
+                          c.createElement(
+                            "div",
+                            { className: g().NoteElement },
+                            c.createElement("div", { className: g().Dot }),
+                            c.createElement(
+                              "div",
+                              { className: g().Note },
+                              (0, n.Wn)("#732e_patch_turbo_change_notes15"),
                             ),
                           ),
                           c.createElement(
@@ -1545,7 +1546,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes7"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes7"),
                             ),
                           ),
                           c.createElement(
@@ -1555,7 +1556,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes8"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes8"),
                             ),
                           ),
                           c.createElement(
@@ -1565,7 +1566,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes6"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes6"),
                             ),
                           ),
                           c.createElement(
@@ -1575,7 +1576,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes10"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes10"),
                             ),
                           ),
                           c.createElement(
@@ -1585,7 +1586,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes14"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes14"),
                             ),
                           ),
                           c.createElement(
@@ -1595,7 +1596,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes13"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes13"),
                             ),
                           ),
                           c.createElement(
@@ -1605,7 +1606,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes12"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes12"),
                             ),
                           ),
                           c.createElement(
@@ -1615,7 +1616,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes9"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes9"),
                             ),
                           ),
                           c.createElement(
@@ -1625,34 +1626,34 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_patch_turbo_change_notes11"),
+                              (0, n.Wn)("#732e_patch_turbo_change_notes11"),
                             ),
                           ),
                         ),
                       ),
-                      c.createElement(p.on, {
-                        patchnotes: null == e ? void 0 : e.generic,
+                      c.createElement(p.fs, {
+                        patchnotes: e?.generic,
                         headerClassName: g().PatchNotesHeaderLabel,
                         notesListClassName: g().PatchNotesList,
                       }),
-                      c.createElement(p.k8, {
-                        patchnotes: null == e ? void 0 : e.neutral_creeps,
+                      c.createElement(p.wL, {
+                        patchnotes: e?.neutral_creeps,
                         headerClassName: g().PatchNotesHeaderLabel,
                         notesListClassName: g().PatchNotesList,
                       }),
-                      c.createElement(p.bn, {
-                        patchnotes: null == e ? void 0 : e.items,
+                      c.createElement(p.ZV, {
+                        patchnotes: e?.items,
                         headerClassName: g().PatchNotesHeaderLabel,
                         notesListClassName: g().PatchNotesList,
                       }),
-                      c.createElement(p.bn, {
-                        patchnotes: null == e ? void 0 : e.neutral_items,
+                      c.createElement(p.ZV, {
+                        patchnotes: e?.neutral_items,
                         is_neutrals: !0,
                         headerClassName: g().PatchNotesHeaderLabel,
                         notesListClassName: g().PatchNotesList,
                       }),
-                      c.createElement(p.MC, {
-                        patchnotes: null == e ? void 0 : e.heroes,
+                      c.createElement(p.ob, {
+                        patchnotes: e?.heroes,
                         headerClassName: g().PatchNotesHeaderLabel,
                         notesListClassName: g().PatchNotesList,
                       }),
@@ -1662,7 +1663,7 @@
                         c.createElement(
                           "div",
                           { className: g().PatchNotesHeaderLabel },
-                          (0, i.Jr)("#732e_bug_fixes_title"),
+                          (0, n.Wn)("#732e_bug_fixes_title"),
                         ),
                         c.createElement(
                           "div",
@@ -1674,7 +1675,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes40"),
+                              (0, n.Wn)("#732e_bug_fixes_notes40"),
                             ),
                           ),
                           c.createElement(
@@ -1684,7 +1685,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes41"),
+                              (0, n.Wn)("#732e_bug_fixes_notes41"),
                             ),
                           ),
                           c.createElement(
@@ -1694,7 +1695,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes42"),
+                              (0, n.Wn)("#732e_bug_fixes_notes42"),
                             ),
                           ),
                           c.createElement(
@@ -1704,7 +1705,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes1"),
+                              (0, n.Wn)("#732e_bug_fixes_notes1"),
                             ),
                           ),
                           c.createElement(
@@ -1714,7 +1715,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes2"),
+                              (0, n.Wn)("#732e_bug_fixes_notes2"),
                             ),
                           ),
                           c.createElement(
@@ -1724,7 +1725,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes3"),
+                              (0, n.Wn)("#732e_bug_fixes_notes3"),
                             ),
                           ),
                           c.createElement(
@@ -1734,7 +1735,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes4"),
+                              (0, n.Wn)("#732e_bug_fixes_notes4"),
                             ),
                           ),
                           c.createElement(
@@ -1744,7 +1745,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes5"),
+                              (0, n.Wn)("#732e_bug_fixes_notes5"),
                             ),
                           ),
                           c.createElement(
@@ -1754,7 +1755,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes6"),
+                              (0, n.Wn)("#732e_bug_fixes_notes6"),
                             ),
                           ),
                           c.createElement(
@@ -1764,7 +1765,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes7"),
+                              (0, n.Wn)("#732e_bug_fixes_notes7"),
                             ),
                           ),
                           c.createElement(
@@ -1774,7 +1775,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes8"),
+                              (0, n.Wn)("#732e_bug_fixes_notes8"),
                             ),
                           ),
                           c.createElement(
@@ -1784,7 +1785,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes9"),
+                              (0, n.Wn)("#732e_bug_fixes_notes9"),
                             ),
                           ),
                           c.createElement(
@@ -1794,7 +1795,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes10"),
+                              (0, n.Wn)("#732e_bug_fixes_notes10"),
                             ),
                           ),
                           c.createElement(
@@ -1804,7 +1805,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes11"),
+                              (0, n.Wn)("#732e_bug_fixes_notes11"),
                             ),
                           ),
                           c.createElement(
@@ -1814,7 +1815,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes12"),
+                              (0, n.Wn)("#732e_bug_fixes_notes12"),
                             ),
                           ),
                           c.createElement(
@@ -1824,7 +1825,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes13"),
+                              (0, n.Wn)("#732e_bug_fixes_notes13"),
                             ),
                           ),
                           c.createElement(
@@ -1834,7 +1835,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes14"),
+                              (0, n.Wn)("#732e_bug_fixes_notes14"),
                             ),
                           ),
                           c.createElement(
@@ -1844,7 +1845,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes15"),
+                              (0, n.Wn)("#732e_bug_fixes_notes15"),
                             ),
                           ),
                           c.createElement(
@@ -1854,7 +1855,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes16"),
+                              (0, n.Wn)("#732e_bug_fixes_notes16"),
                             ),
                           ),
                           c.createElement(
@@ -1864,7 +1865,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes17"),
+                              (0, n.Wn)("#732e_bug_fixes_notes17"),
                             ),
                           ),
                           c.createElement(
@@ -1874,7 +1875,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes18"),
+                              (0, n.Wn)("#732e_bug_fixes_notes18"),
                             ),
                           ),
                           c.createElement(
@@ -1884,7 +1885,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes19"),
+                              (0, n.Wn)("#732e_bug_fixes_notes19"),
                             ),
                           ),
                           c.createElement(
@@ -1894,7 +1895,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes20"),
+                              (0, n.Wn)("#732e_bug_fixes_notes20"),
                             ),
                           ),
                           c.createElement(
@@ -1904,7 +1905,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes21"),
+                              (0, n.Wn)("#732e_bug_fixes_notes21"),
                             ),
                           ),
                           c.createElement(
@@ -1914,7 +1915,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes22"),
+                              (0, n.Wn)("#732e_bug_fixes_notes22"),
                             ),
                           ),
                           c.createElement(
@@ -1924,7 +1925,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes38"),
+                              (0, n.Wn)("#732e_bug_fixes_notes38"),
                             ),
                           ),
                           c.createElement(
@@ -1934,7 +1935,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes39"),
+                              (0, n.Wn)("#732e_bug_fixes_notes39"),
                             ),
                           ),
                           c.createElement(
@@ -1944,7 +1945,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes23"),
+                              (0, n.Wn)("#732e_bug_fixes_notes23"),
                             ),
                           ),
                           c.createElement(
@@ -1954,7 +1955,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes24"),
+                              (0, n.Wn)("#732e_bug_fixes_notes24"),
                             ),
                           ),
                           c.createElement(
@@ -1964,7 +1965,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes25"),
+                              (0, n.Wn)("#732e_bug_fixes_notes25"),
                             ),
                           ),
                           c.createElement(
@@ -1974,7 +1975,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes26"),
+                              (0, n.Wn)("#732e_bug_fixes_notes26"),
                             ),
                           ),
                           c.createElement(
@@ -1984,7 +1985,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes27"),
+                              (0, n.Wn)("#732e_bug_fixes_notes27"),
                             ),
                           ),
                           c.createElement(
@@ -1994,7 +1995,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes28"),
+                              (0, n.Wn)("#732e_bug_fixes_notes28"),
                             ),
                           ),
                           c.createElement(
@@ -2004,7 +2005,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes29"),
+                              (0, n.Wn)("#732e_bug_fixes_notes29"),
                             ),
                           ),
                           c.createElement(
@@ -2014,7 +2015,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes30"),
+                              (0, n.Wn)("#732e_bug_fixes_notes30"),
                             ),
                           ),
                           c.createElement(
@@ -2024,7 +2025,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes31"),
+                              (0, n.Wn)("#732e_bug_fixes_notes31"),
                             ),
                           ),
                           c.createElement(
@@ -2034,7 +2035,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes32"),
+                              (0, n.Wn)("#732e_bug_fixes_notes32"),
                             ),
                           ),
                           c.createElement(
@@ -2044,7 +2045,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes33"),
+                              (0, n.Wn)("#732e_bug_fixes_notes33"),
                             ),
                           ),
                           c.createElement(
@@ -2054,7 +2055,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes34"),
+                              (0, n.Wn)("#732e_bug_fixes_notes34"),
                             ),
                           ),
                           c.createElement(
@@ -2064,7 +2065,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes35"),
+                              (0, n.Wn)("#732e_bug_fixes_notes35"),
                             ),
                           ),
                           c.createElement(
@@ -2074,7 +2075,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes36"),
+                              (0, n.Wn)("#732e_bug_fixes_notes36"),
                             ),
                           ),
                           c.createElement(
@@ -2084,7 +2085,7 @@
                             c.createElement(
                               "div",
                               { className: g().Note },
-                              (0, i.Jr)("#732e_bug_fixes_notes37"),
+                              (0, n.Wn)("#732e_bug_fixes_notes37"),
                             ),
                           ),
                         ),
@@ -2092,15 +2093,15 @@
                     ),
                   ),
                   c.createElement("div", { className: g().ThickBorder }),
-                  c.createElement(u.U, null),
+                  c.createElement(u.K, null),
                 ),
               ),
             )
           );
         }
       };
-      f = (0, l.gn)([n.Pi], f);
-      const T = f;
+      L = (0, l.Cg)([i.PA], L);
+      const f = L;
     },
   },
 ]);

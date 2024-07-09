@@ -1,17 +1,17 @@
-// 8046.js
+// 5046.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [8046],
+  [5046],
   {
-    6747: (e) => {
+    11417: (e) => {
       e.exports = {
         RightArrow: "_1aWAcVv4khhRKQHKyqIDl5",
         UpRightArrow: "_3KCtpfqeVGR0eaqc5YB4iF",
       };
     },
-    49369: (e) => {
+    60901: (e) => {
       e.exports = {
         Tooltip: "_2FBKvDaa7o3ZdxnBhsjEVV",
         CarouselFade: "_3qj-rjgAD4epxDQflyLDH4",
@@ -88,168 +88,168 @@
         rotate: "_22ADA2u6XiD_C9JefALU4u",
       };
     },
-    47506: (e, a, t) => {
+    722: (e, a, t) => {
       "use strict";
       t.d(a, { U: () => c });
-      var l = t(66204),
-        i = t(6747),
+      var l = t(7552),
+        i = t(11417),
         s = t.n(i),
-        r = t(98142);
+        r = t(89506);
       const c = () =>
         l.createElement("div", {
           className: s().RightArrow,
-          style: { backgroundImage: `url( ${r.Y.IMG_URL}/arrow_left.png )` },
+          style: { backgroundImage: `url( ${r.r.IMG_URL}/arrow_left.png )` },
         });
     },
-    38046: (e, a, t) => {
+    65046: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => A });
-      var l = t(22970),
-        i = t(98142),
-        s = t(79735),
-        r = t(2580),
-        c = t(80846),
-        m = t(78752),
-        n = t(66204),
-        p = t(62175),
-        o = t(28763),
-        _ = t(5062),
-        d = t(4572),
-        b = t(31444),
-        E = t(37196),
-        h = t(49369),
-        v = t.n(h),
-        N = t(95974),
-        y = t(47506),
-        g = t(68399);
-      let u = class extends n.Component {
+      t.r(a), t.d(a, { default: () => u });
+      var l = t(85608),
+        i = t(89506),
+        s = t(55651),
+        r = t(27866),
+        c = t(68446),
+        m = t(32389),
+        n = t(7552),
+        p = t(83640),
+        o = t(45237),
+        _ = t(21384),
+        d = t(23634),
+        b = t(47202),
+        E = t(36305),
+        h = t(60901),
+        N = t.n(h),
+        v = t(61840),
+        y = t(722),
+        g = t(90622);
+      let A = class extends n.Component {
         render() {
-          const e = d.P.getPatchNotes("7.31", i.Y.LANGUAGE);
+          const e = d.o.getPatchNotes("7.31", i.r.LANGUAGE);
           return n.createElement(
             "div",
-            { className: v().PrimalBeastPage },
-            n.createElement(b.j, { bOverlapping: !0 }),
+            { className: N().PrimalBeastPage },
+            n.createElement(b.A, { bOverlapping: !0 }),
             n.createElement(
-              p.ql,
+              p.mg,
               null,
-              n.createElement("title", null, (0, r.Jr)("#primalbeast_title")),
+              n.createElement("title", null, (0, r.Wn)("#primalbeast_title")),
             ),
             n.createElement(
               "div",
-              { className: v().HeaderSection },
+              { className: N().HeaderSection },
               n.createElement(
                 "div",
-                { className: v().BackgroundVideoContainer },
+                { className: N().BackgroundVideoContainer },
                 n.createElement(
                   "video",
                   {
-                    className: v().BackgroundVideo,
+                    className: N().BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${i.Y.IMG_URL}pb_header_loop.jpg`,
+                    poster: `${i.r.IMG_URL}pb_header_loop.jpg`,
                   },
                   n.createElement("source", {
                     type: "video/webm",
-                    src: `${i.Y.VIDEO_URL}pb_header_loop.webm`,
+                    src: `${i.r.VIDEO_URL}pb_header_loop.webm`,
                   }),
                   n.createElement("source", {
                     type: "video/mp4",
-                    src: `${i.Y.VIDEO_URL}pb_header_loop.mp4`,
+                    src: `${i.r.VIDEO_URL}pb_header_loop.mp4`,
                   }),
                 ),
                 n.createElement("img", {
-                  className: v().LeavesLeft,
+                  className: N().LeavesLeft,
                   "data-aos": "fade-left",
                   "data-aos-delay": "300",
                   "data-aos-duration": "2000",
-                  src: `${i.Y.IMG_URL}/primalbeast/leaves_left.png`,
+                  src: `${i.r.IMG_URL}/primalbeast/leaves_left.png`,
                 }),
                 n.createElement("img", {
-                  className: v().LeavesRight,
+                  className: N().LeavesRight,
                   "data-aos": "fade-right",
                   "data-aos-delay": "300",
                   "data-aos-duration": "2000",
-                  src: `${i.Y.IMG_URL}/primalbeast/leaves_right.png`,
+                  src: `${i.r.IMG_URL}/primalbeast/leaves_right.png`,
                 }),
               ),
               n.createElement(
                 "div",
-                { className: v().TitleContainer },
+                { className: N().TitleContainer },
                 n.createElement(
                   "div",
                   {
-                    className: v().TitleContainer,
+                    className: N().TitleContainer,
                     "data-aos": "fade-up",
                     "data-aos-delay": "200",
                     "data-aos-duration": "2000",
                   },
                   n.createElement(
                     "div",
-                    { className: v().TitleIntro },
-                    (0, r.Jr)("#primalbeast_intro_title"),
+                    { className: N().TitleIntro },
+                    (0, r.Wn)("#primalbeast_intro_title"),
                   ),
                   n.createElement("img", {
-                    className: v().HeroLogo,
+                    className: N().HeroLogo,
                     onError: (e) =>
-                      (e.target.src = `${i.Y.IMG_URL}/primalbeast/pb_logo_en.png`),
-                    src: `${i.Y.IMG_URL}/primalbeast/pb_logo_${i.Y.LANGUAGE}.png`,
+                      (e.target.src = `${i.r.IMG_URL}/primalbeast/pb_logo_en.png`),
+                    src: `${i.r.IMG_URL}/primalbeast/pb_logo_${i.r.LANGUAGE}.png`,
                   }),
                   n.createElement(
                     "div",
-                    { className: v().Complexity },
+                    { className: N().Complexity },
                     n.createElement("img", {
-                      src: `${i.Y.IMG_URL}/primalbeast/difficulty.png`,
+                      src: `${i.r.IMG_URL}/primalbeast/difficulty.png`,
                     }),
                   ),
                   n.createElement(
                     "div",
-                    { className: v().Roles },
+                    { className: N().Roles },
                     n.createElement(
                       "div",
-                      { className: v().HeroRole },
-                      (0, r.Jr)("#primalbeast_role1"),
+                      { className: N().HeroRole },
+                      (0, r.Wn)("#primalbeast_role1"),
                     ),
                     n.createElement(
                       "div",
-                      { className: v().HeroRole },
-                      (0, r.Jr)("#primalbeast_role2"),
+                      { className: N().HeroRole },
+                      (0, r.Wn)("#primalbeast_role2"),
                     ),
                     n.createElement(
                       "div",
-                      { className: v().HeroRole },
-                      (0, r.Jr)("#primalbeast_role3"),
+                      { className: N().HeroRole },
+                      (0, r.Wn)("#primalbeast_role3"),
                     ),
                   ),
                   n.createElement(
                     "div",
-                    { className: v().HeroIntro },
-                    (0, r.Jr)("#primalbeast_intro"),
+                    { className: N().HeroIntro },
+                    (0, r.Wn)("#primalbeast_intro"),
                   ),
                   n.createElement(
                     "div",
-                    { className: v().LoreSection },
-                    n.createElement("div", { className: v().Divider }),
-                    n.createElement("div", { className: v().DividerBottom }),
+                    { className: N().LoreSection },
+                    n.createElement("div", { className: N().Divider }),
+                    n.createElement("div", { className: N().DividerBottom }),
                     n.createElement(
                       "div",
-                      { className: v().Quote },
+                      { className: N().Quote },
                       n.createElement(
                         "div",
-                        { className: v().LoreHeader },
-                        (0, r.Jr)("#primalbeast_lore_title"),
+                        { className: N().LoreHeader },
+                        (0, r.Wn)("#primalbeast_lore_title"),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().LoreText },
-                        (0, r.Jr)("#primalbeast_lore_desc"),
+                        { className: N().LoreText },
+                        (0, r.Wn)("#primalbeast_lore_desc"),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().LoreText },
-                        (0, r.Jr)("#primalbeast_lore_desc2"),
+                        { className: N().LoreText },
+                        (0, r.Wn)("#primalbeast_lore_desc2"),
                       ),
                     ),
                   ),
@@ -258,193 +258,193 @@
             ),
             n.createElement(
               "div",
-              { className: v().AbilitySection },
+              { className: N().AbilitySection },
               n.createElement(
-                m.sj,
+                m.gi,
                 {
-                  className: v().AbilityCarousel,
+                  className: N().AbilityCarousel,
                   naturalSlideWidth: 100,
                   naturalSlideHeight: 56.25,
                   totalSlides: 4,
                 },
                 n.createElement(
-                  m.iR,
+                  m.Ap,
                   null,
                   n.createElement(
-                    m.Mi,
+                    m.q7,
                     { index: 0 },
                     n.createElement(
                       "div",
-                      { className: v().SlideContainer },
+                      { className: N().SlideContainer },
                       n.createElement(
                         "video",
                         {
-                          className: v().AbilityVideo,
+                          className: N().AbilityVideo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.jpg`,
+                          poster: `${i.r.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.jpg`,
                         },
                         n.createElement("source", {
                           type: "video/webm",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.webm`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.webm`,
                         }),
                         n.createElement("source", {
                           type: "video/mp4",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.mp4`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primal_beast_onslaught_point.mp4`,
                         }),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().SlideAbilityContainer },
+                        { className: N().SlideAbilityContainer },
                         n.createElement("img", {
-                          className: v().SlideAbilityIcon,
-                          src: `${i.Y.IMG_URL}/primalbeast/primal_beast_onslaught_point.png`,
+                          className: N().SlideAbilityIcon,
+                          src: `${i.r.IMG_URL}/primalbeast/primal_beast_onslaught_point.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().AbilityText },
+                          { className: N().AbilityText },
                           n.createElement(
                             "div",
-                            { className: v().AbilityName },
-                            (0, r.Jr)("#primalbeast_ability1_title"),
+                            { className: N().AbilityName },
+                            (0, r.Wn)("#primalbeast_ability1_title"),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().AbilityDesc },
-                            (0, r.Jr)("#primalbeast_ability1_desc"),
+                            { className: N().AbilityDesc },
+                            (0, r.Wn)("#primalbeast_ability1_desc"),
                           ),
                         ),
                       ),
                     ),
                   ),
                   n.createElement(
-                    m.Mi,
+                    m.q7,
                     { index: 1 },
                     n.createElement(
                       "div",
-                      { className: v().SlideContainer },
+                      { className: N().SlideContainer },
                       n.createElement(
                         "video",
                         {
-                          className: v().AbilityVideo,
+                          className: N().AbilityVideo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.jpg`,
+                          poster: `${i.r.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.jpg`,
                         },
                         n.createElement("source", {
                           type: "video/webm",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.webm`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.webm`,
                         }),
                         n.createElement("source", {
                           type: "video/mp4",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.mp4`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primalbeast_heavysteps.mp4`,
                         }),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().SlideAbilityContainer },
+                        { className: N().SlideAbilityContainer },
                         n.createElement("img", {
-                          className: v().SlideAbilityIcon,
-                          src: `${i.Y.IMG_URL}/primalbeast/primal_beast_heavysteps.png`,
+                          className: N().SlideAbilityIcon,
+                          src: `${i.r.IMG_URL}/primalbeast/primal_beast_heavysteps.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().AbilityText },
+                          { className: N().AbilityText },
                           n.createElement(
                             "div",
-                            { className: v().AbilityName },
-                            (0, r.Jr)("#primalbeast_ability2_title"),
+                            { className: N().AbilityName },
+                            (0, r.Wn)("#primalbeast_ability2_title"),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().AbilityDesc },
-                            (0, r.Jr)("#primalbeast_ability2_desc"),
+                            { className: N().AbilityDesc },
+                            (0, r.Wn)("#primalbeast_ability2_desc"),
                           ),
                         ),
                       ),
                     ),
                   ),
                   n.createElement(
-                    m.Mi,
+                    m.q7,
                     { index: 2 },
                     n.createElement(
                       "div",
-                      { className: v().SlideContainer },
+                      { className: N().SlideContainer },
                       n.createElement(
                         "video",
                         {
-                          className: v().AbilityVideo,
+                          className: N().AbilityVideo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.jpg`,
+                          poster: `${i.r.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.jpg`,
                         },
                         n.createElement("source", {
                           type: "video/webm",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.webm`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.webm`,
                         }),
                         n.createElement("source", {
                           type: "video/mp4",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.mp4`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primal_beast_inhibition.mp4`,
                         }),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().SlideAbilityContainer },
+                        { className: N().SlideAbilityContainer },
                         n.createElement("img", {
-                          className: v().SlideAbilityIcon,
-                          src: `${i.Y.IMG_URL}/primalbeast/primal_beast_inhibition.png`,
+                          className: N().SlideAbilityIcon,
+                          src: `${i.r.IMG_URL}/primalbeast/primal_beast_inhibition.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().AbilityText },
+                          { className: N().AbilityText },
                           n.createElement(
                             "div",
-                            { className: v().AbilityName },
-                            (0, r.Jr)("#primalbeast_ability3_title"),
+                            { className: N().AbilityName },
+                            (0, r.Wn)("#primalbeast_ability3_title"),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().AbilityDesc },
-                            (0, r.Jr)("#primalbeast_ability3_desc"),
+                            { className: N().AbilityDesc },
+                            (0, r.Wn)("#primalbeast_ability3_desc"),
                           ),
                         ),
                       ),
                     ),
                   ),
                   n.createElement(
-                    m.Mi,
+                    m.q7,
                     { index: 3 },
                     n.createElement(
                       "div",
-                      { className: v().SlideContainer },
+                      { className: N().SlideContainer },
                       n.createElement(
                         "video",
                         {
-                          className: v().AbilityVideo,
+                          className: N().AbilityVideo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          poster: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.jpg`,
+                          poster: `${i.r.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.jpg`,
                         },
-                        n.createElement(g.p, {
+                        n.createElement(g.z, {
                           left: !0,
                           color: "#000000",
                           startPct: 50,
                           midPct: 75,
                           endPct: 100,
                         }),
-                        n.createElement(g.p, {
+                        n.createElement(g.z, {
                           right: !0,
                           color: "#000000",
                           startPct: 90,
@@ -453,32 +453,32 @@
                         }),
                         n.createElement("source", {
                           type: "video/webm",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.webm`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.webm`,
                         }),
                         n.createElement("source", {
                           type: "video/mp4",
-                          src: `${i.Y.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.mp4`,
+                          src: `${i.r.VIDEO_URL}/abilities/primal_beast/primalbeast_pummel.mp4`,
                         }),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().SlideAbilityContainer },
+                        { className: N().SlideAbilityContainer },
                         n.createElement("img", {
-                          className: v().SlideAbilityIcon,
-                          src: `${i.Y.IMG_URL}/primalbeast/primal_beast_pummel.png`,
+                          className: N().SlideAbilityIcon,
+                          src: `${i.r.IMG_URL}/primalbeast/primal_beast_pummel.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().AbilityText },
+                          { className: N().AbilityText },
                           n.createElement(
                             "div",
-                            { className: v().AbilityName },
-                            (0, r.Jr)("#primalbeast_ability4_title"),
+                            { className: N().AbilityName },
+                            (0, r.Wn)("#primalbeast_ability4_title"),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().AbilityDesc },
-                            (0, r.Jr)("#primalbeast_ability4_desc"),
+                            { className: N().AbilityDesc },
+                            (0, r.Wn)("#primalbeast_ability4_desc"),
                           ),
                         ),
                       ),
@@ -487,35 +487,35 @@
                 ),
                 n.createElement(
                   "div",
-                  { className: v().CarouselDots },
+                  { className: N().CarouselDots },
                   n.createElement(
-                    m.oT,
+                    m.cL,
                     {
-                      className: (0, _.Z)(v().AbilitySelector, v().Slide0),
+                      className: (0, _.A)(N().AbilitySelector, N().Slide0),
                       slide: 0,
                     },
                     n.createElement("div", null),
                   ),
                   n.createElement(
-                    m.oT,
+                    m.cL,
                     {
-                      className: (0, _.Z)(v().AbilitySelector, v().Slide1),
+                      className: (0, _.A)(N().AbilitySelector, N().Slide1),
                       slide: 1,
                     },
                     n.createElement("div", null),
                   ),
                   n.createElement(
-                    m.oT,
+                    m.cL,
                     {
-                      className: (0, _.Z)(v().AbilitySelector, v().Slide2),
+                      className: (0, _.A)(N().AbilitySelector, N().Slide2),
                       slide: 2,
                     },
                     n.createElement("div", null),
                   ),
                   n.createElement(
-                    m.oT,
+                    m.cL,
                     {
-                      className: (0, _.Z)(v().AbilitySelector, v().Slide3),
+                      className: (0, _.A)(N().AbilitySelector, N().Slide3),
                       slide: 3,
                     },
                     n.createElement("div", null),
@@ -525,21 +525,21 @@
             ),
             n.createElement(
               "div",
-              { className: v().HeropediaSection },
+              { className: N().HeropediaSection },
               n.createElement(
                 "div",
-                { className: v().HeropediaText },
-                (0, r.Jr)("#primalbeast_heroes_title"),
+                { className: N().HeropediaText },
+                (0, r.Wn)("#primalbeast_heroes_title"),
                 n.createElement(
-                  o.rU,
-                  { to: s._.hero("primalbeast") },
+                  o.N_,
+                  { to: s.J.hero("primalbeast") },
                   n.createElement(
                     "div",
-                    { className: v().StandardButton },
+                    { className: N().StandardButton },
                     n.createElement(
                       "div",
-                      { className: v().ButtonText },
-                      (0, r.Jr)("#primalbeast_heroes_btn"),
+                      { className: N().ButtonText },
+                      (0, r.Wn)("#primalbeast_heroes_btn"),
                     ),
                     n.createElement(y.U, null),
                   ),
@@ -549,82 +549,82 @@
                 "div",
                 null,
                 n.createElement("img", {
-                  className: v().HeropediaImage,
-                  src: `${i.Y.IMG_URL}/heroes/crops/primal_beast.png`,
+                  className: N().HeropediaImage,
+                  src: `${i.r.IMG_URL}/heroes/crops/primal_beast.png`,
                 }),
               ),
             ),
             n.createElement(
               "div",
-              { className: v().WallpaperSection },
+              { className: N().WallpaperSection },
               n.createElement(
                 "div",
-                { className: v().WallpaperTitle },
-                (0, r.Jr)("#primalbeast_wallpaper"),
+                { className: N().WallpaperTitle },
+                (0, r.Wn)("#primalbeast_wallpaper"),
               ),
               n.createElement(
                 "div",
-                { className: v().Wallpapers },
+                { className: N().Wallpapers },
                 n.createElement(
                   "div",
-                  { className: v().WallpaperGroup },
+                  { className: N().WallpaperGroup },
                   n.createElement(
                     "a",
                     {
-                      href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper.jpg`,
+                      href: `${i.r.IMG_URL}primalbeast/wallpapers/pb_wallpaper.jpg`,
                     },
                     n.createElement(
                       "div",
-                      { className: v().Wallpaper },
+                      { className: N().Wallpaper },
                       n.createElement("img", {
-                        className: v().WallpaperImgDesktop,
-                        src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_thumb.jpg`,
+                        className: N().WallpaperImgDesktop,
+                        src: `${i.r.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_thumb.jpg`,
                       }),
                     ),
                   ),
                   n.createElement(
                     "a",
                     {
-                      href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper_mobile.jpg`,
+                      href: `${i.r.IMG_URL}primalbeast/wallpapers/pb_wallpaper_mobile.jpg`,
                     },
                     n.createElement(
                       "div",
-                      { className: v().Wallpaper },
+                      { className: N().Wallpaper },
                       n.createElement("img", {
-                        className: v().WallpaperImgDesktop,
-                        src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_mobile_thumb.jpg`,
+                        className: N().WallpaperImgDesktop,
+                        src: `${i.r.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_mobile_thumb.jpg`,
                       }),
                     ),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: v().WallpaperGroup },
+                  { className: N().WallpaperGroup },
                   n.createElement(
                     "a",
                     {
-                      href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper_02.jpg`,
+                      href: `${i.r.IMG_URL}primalbeast/wallpapers/pb_wallpaper_02.jpg`,
                     },
                     n.createElement(
                       "div",
-                      { className: v().Wallpaper },
+                      { className: N().Wallpaper },
                       n.createElement("img", {
-                        className: v().WallpaperImgDesktop,
-                        src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_02_thumb.jpg`,
+                        className: N().WallpaperImgDesktop,
+                        src: `${i.r.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_02_thumb.jpg`,
                       }),
                     ),
                   ),
                   n.createElement(
                     "a",
                     {
-                      href: `${i.Y.IMG_URL}primalbeast/wallpapers/pb_wallpaper_02_mobile.jpg`,
+                      href: `${i.r.IMG_URL}primalbeast/wallpapers/pb_wallpaper_02_mobile.jpg`,
                     },
                     n.createElement(
                       "div",
-                      { className: v().Wallpaper },
+                      { className: N().Wallpaper },
                       n.createElement("img", {
-                        className: v().WallpaperImgDesktop,
-                        src: `${i.Y.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_mobile_02_thumb.jpg`,
+                        className: N().WallpaperImgDesktop,
+                        src: `${i.r.IMG_URL}/primalbeast/wallpapers/pb_wallpaper_mobile_02_thumb.jpg`,
                       }),
                     ),
                   ),
@@ -633,181 +633,181 @@
             ),
             n.createElement(
               "div",
-              { className: v().PatchSection },
-              n.createElement("div", { className: v().Divider }),
+              { className: N().PatchSection },
+              n.createElement("div", { className: N().Divider }),
               n.createElement(
                 "div",
-                { className: v().PatchTitle },
-                (0, r.Jr)("#731_patch_title"),
+                { className: N().PatchTitle },
+                (0, r.Wn)("#731_patch_title"),
               ),
               n.createElement(
                 "div",
-                { className: v().PatchContainer },
+                { className: N().PatchContainer },
                 n.createElement(
                   "div",
-                  { className: v().CreepsSection },
+                  { className: N().CreepsSection },
                   n.createElement("img", {
-                    className: v().PatchImage,
-                    src: `${i.Y.IMG_URL}/primalbeast/new_creeps.png`,
+                    className: N().PatchImage,
+                    src: `${i.r.IMG_URL}/primalbeast/new_creeps.png`,
                   }),
                   n.createElement(
                     "div",
-                    { className: v().HeaderLabel },
-                    (0, r.Jr)("#731_patch_creeps_title"),
+                    { className: N().HeaderLabel },
+                    (0, r.Wn)("#731_patch_creeps_title"),
                   ),
                   n.createElement(
                     "div",
-                    { className: v().PatchContent },
+                    { className: N().PatchContent },
                     n.createElement(
                       "div",
-                      { className: v().CreepChangeDescription },
-                      (0, r.Jr)("#731_patch_creeps_changes_desc"),
+                      { className: N().CreepChangeDescription },
+                      (0, r.Wn)("#731_patch_creeps_changes_desc"),
                     ),
                     n.createElement(
                       "video",
                       {
-                        className: v().ShowcaseVideo,
+                        className: N().ShowcaseVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
                         loop: !0,
                         playsInline: !0,
-                        poster: `${i.Y.VIDEO_URL}primalbeast/creeps_731.jpg`,
+                        poster: `${i.r.VIDEO_URL}primalbeast/creeps_731.jpg`,
                       },
                       n.createElement("source", {
                         type: "video/webm",
-                        src: `${i.Y.VIDEO_URL}primalbeast/creeps_731.webm`,
+                        src: `${i.r.VIDEO_URL}primalbeast/creeps_731.webm`,
                       }),
                       n.createElement("source", {
                         type: "video/mp4",
-                        src: `${i.Y.VIDEO_URL}primalbeast/creeps_731.webm`,
+                        src: `${i.r.VIDEO_URL}primalbeast/creeps_731.webm`,
                       }),
                     ),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: v().TechiesSection },
+                  { className: N().TechiesSection },
                   n.createElement("img", {
-                    className: v().PatchImage,
-                    src: `${i.Y.IMG_URL}/primalbeast/techies_spot_short.png`,
+                    className: N().PatchImage,
+                    src: `${i.r.IMG_URL}/primalbeast/techies_spot_short.png`,
                   }),
                   n.createElement(
                     "div",
-                    { className: v().HeaderLabel },
-                    (0, r.Jr)("#731_patch_techies_title"),
+                    { className: N().HeaderLabel },
+                    (0, r.Wn)("#731_patch_techies_title"),
                   ),
                   n.createElement(
                     "div",
-                    { className: v().PatchContent },
+                    { className: N().PatchContent },
                     n.createElement(
                       "div",
-                      { className: v().TechiesChangeDescription },
-                      (0, r.Jr)("#731_patch_techies_changes_desc"),
+                      { className: N().TechiesChangeDescription },
+                      (0, r.Wn)("#731_patch_techies_changes_desc"),
                     ),
                     n.createElement(
                       "div",
-                      { className: v().TechiesAbilitiesTitle },
-                      (0, r.Jr)("#731_patch_techies_abilities_title"),
+                      { className: N().TechiesAbilitiesTitle },
+                      (0, r.Wn)("#731_patch_techies_abilities_title"),
                     ),
                     n.createElement(
                       "div",
-                      { className: v().TechiesAbilities },
+                      { className: N().TechiesAbilities },
                       n.createElement(
                         "div",
-                        { className: v().TechiesAbility },
+                        { className: N().TechiesAbility },
                         n.createElement("img", {
-                          className: v().TechiesAbilityImage,
-                          src: `${i.Y.IMG_URL}/primalbeast/techies_sticky_bomb.png`,
+                          className: N().TechiesAbilityImage,
+                          src: `${i.r.IMG_URL}/primalbeast/techies_sticky_bomb.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().TechiesAbilityContent },
+                          { className: N().TechiesAbilityContent },
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityTitle },
-                            (0, r.Jr)("#731_patch_techies_ability1_title"),
+                            { className: N().TechiesAbilityTitle },
+                            (0, r.Wn)("#731_patch_techies_ability1_title"),
                             n.createElement(
                               "div",
-                              { className: v().NewAbilityLabel },
-                              (0, r.Jr)("#731_patch_techies_abilities_label"),
+                              { className: N().NewAbilityLabel },
+                              (0, r.Wn)("#731_patch_techies_abilities_label"),
                             ),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityDesc },
-                            (0, r.Jr)("#731_patch_techies_ability1_desc"),
+                            { className: N().TechiesAbilityDesc },
+                            (0, r.Wn)("#731_patch_techies_ability1_desc"),
                           ),
                         ),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().TechiesAbility },
+                        { className: N().TechiesAbility },
                         n.createElement("img", {
-                          className: v().TechiesAbilityImage,
-                          src: `${i.Y.IMG_URL}/primalbeast/techies_reactive_taser.png`,
+                          className: N().TechiesAbilityImage,
+                          src: `${i.r.IMG_URL}/primalbeast/techies_reactive_taser.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().TechiesAbilityContent },
+                          { className: N().TechiesAbilityContent },
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityTitle },
-                            (0, r.Jr)("#731_patch_techies_ability2_title"),
+                            { className: N().TechiesAbilityTitle },
+                            (0, r.Wn)("#731_patch_techies_ability2_title"),
                             n.createElement(
                               "div",
-                              { className: v().NewAbilityLabel },
-                              (0, r.Jr)("#731_patch_techies_abilities_label"),
+                              { className: N().NewAbilityLabel },
+                              (0, r.Wn)("#731_patch_techies_abilities_label"),
                             ),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityDesc },
-                            (0, r.Jr)("#731_patch_techies_ability2_desc"),
+                            { className: N().TechiesAbilityDesc },
+                            (0, r.Wn)("#731_patch_techies_ability2_desc"),
                           ),
                         ),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().TechiesAbility },
+                        { className: N().TechiesAbility },
                         n.createElement("img", {
-                          className: v().TechiesAbilityImage,
-                          src: `${i.Y.IMG_URL}/primalbeast/techies_blast_off.png`,
+                          className: N().TechiesAbilityImage,
+                          src: `${i.r.IMG_URL}/primalbeast/techies_blast_off.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().TechiesAbilityContent },
+                          { className: N().TechiesAbilityContent },
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityTitle },
-                            (0, r.Jr)("#731_patch_techies_ability3_title"),
+                            { className: N().TechiesAbilityTitle },
+                            (0, r.Wn)("#731_patch_techies_ability3_title"),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityDesc },
-                            (0, r.Jr)("#731_patch_techies_ability3_desc"),
+                            { className: N().TechiesAbilityDesc },
+                            (0, r.Wn)("#731_patch_techies_ability3_desc"),
                           ),
                         ),
                       ),
                       n.createElement(
                         "div",
-                        { className: v().TechiesAbility },
+                        { className: N().TechiesAbility },
                         n.createElement("img", {
-                          className: v().TechiesAbilityImage,
-                          src: `${i.Y.IMG_URL}/primalbeast/techies_land_mines.png`,
+                          className: N().TechiesAbilityImage,
+                          src: `${i.r.IMG_URL}/primalbeast/techies_land_mines.png`,
                         }),
                         n.createElement(
                           "div",
-                          { className: v().TechiesAbilityContent },
+                          { className: N().TechiesAbilityContent },
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityTitle },
-                            (0, r.Jr)("#731_patch_techies_ability4_title"),
+                            { className: N().TechiesAbilityTitle },
+                            (0, r.Wn)("#731_patch_techies_ability4_title"),
                           ),
                           n.createElement(
                             "div",
-                            { className: v().TechiesAbilityDesc },
-                            (0, r.Jr)("#731_patch_techies_ability4_desc"),
+                            { className: N().TechiesAbilityDesc },
+                            (0, r.Wn)("#731_patch_techies_ability4_desc"),
                           ),
                         ),
                       ),
@@ -815,21 +815,21 @@
                   ),
                   n.createElement(
                     "div",
-                    { className: v().HeropediaSection },
+                    { className: N().HeropediaSection },
                     n.createElement(
                       "div",
-                      { className: v().HeropediaText },
-                      (0, r.Jr)("#731_patch_techies_details_header"),
+                      { className: N().HeropediaText },
+                      (0, r.Wn)("#731_patch_techies_details_header"),
                       n.createElement(
-                        o.rU,
-                        { to: s._.hero("techies") },
+                        o.N_,
+                        { to: s.J.hero("techies") },
                         n.createElement(
                           "div",
-                          { className: v().StandardButton },
+                          { className: N().StandardButton },
                           n.createElement(
                             "div",
-                            { className: v().ButtonText },
-                            (0, r.Jr)("#primalbeast_heroes_btn"),
+                            { className: N().ButtonText },
+                            (0, r.Wn)("#primalbeast_heroes_btn"),
                           ),
                           n.createElement(y.U, null),
                         ),
@@ -839,53 +839,47 @@
                       "div",
                       null,
                       n.createElement("img", {
-                        className: v().HeropediaImage,
-                        src: `${i.Y.IMG_URL}/heroes/crops/techies.png`,
+                        className: N().HeropediaImage,
+                        src: `${i.r.IMG_URL}/heroes/crops/techies.png`,
                       }),
                     ),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: v().LowerPatch },
-                  n.createElement(N.on, {
-                    patchnotes: null == e ? void 0 : e.generic,
-                  }),
-                  n.createElement(N.k8, {
-                    patchnotes: null == e ? void 0 : e.neutral_creeps,
-                  }),
-                  n.createElement(N.bn, {
-                    patchnotes: null == e ? void 0 : e.items,
+                  { className: N().LowerPatch },
+                  n.createElement(v.fs, { patchnotes: e?.generic }),
+                  n.createElement(v.wL, { patchnotes: e?.neutral_creeps }),
+                  n.createElement(v.ZV, {
+                    patchnotes: e?.items,
                     header: n.createElement(
                       "div",
-                      { className: v().ItemsSection },
+                      { className: N().ItemsSection },
                       n.createElement("img", {
-                        className: v().PatchImage,
-                        src: `${i.Y.IMG_URL}/primalbeast/items.png`,
+                        className: N().PatchImage,
+                        src: `${i.r.IMG_URL}/primalbeast/items.png`,
                       }),
                       n.createElement(
                         "div",
-                        { className: v().ItemChangeDescription },
-                        (0, r.Jr)("#731_patch_items_changes_desc"),
+                        { className: N().ItemChangeDescription },
+                        (0, r.Wn)("#731_patch_items_changes_desc"),
                       ),
                     ),
                   }),
-                  n.createElement(N.bn, {
-                    patchnotes: null == e ? void 0 : e.neutral_items,
+                  n.createElement(v.ZV, {
+                    patchnotes: e?.neutral_items,
                     is_neutrals: !0,
                   }),
-                  n.createElement(N.MC, {
-                    patchnotes: null == e ? void 0 : e.heroes,
-                  }),
+                  n.createElement(v.ob, { patchnotes: e?.heroes }),
                 ),
               ),
             ),
-            n.createElement(E.U, null),
+            n.createElement(E.K, null),
           );
         }
       };
-      u = (0, l.gn)([c.Pi], u);
-      const A = u;
+      A = (0, l.Cg)([c.PA], A);
+      const u = A;
     },
   },
 ]);
