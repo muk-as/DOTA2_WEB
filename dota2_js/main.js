@@ -83394,6 +83394,7 @@
               E(!1);
             }, []),
           },
+          stateHandlers: { setTarget: b, setHovered: E },
           tooltipProps: {
             active: h && !n,
             target: v,
