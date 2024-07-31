@@ -8,7 +8,7 @@
             "id": 250,
             "name": "item_bloodthorn",
             "name_loc": "血棘",
-            "desc_loc": "<h1>主动：灵魂撕裂</h1>使目标沉默%silence_duration%秒，沉默结束后其间所受伤害的%silence_damage_percent%%%将以额外魔法伤害的形式结算。<br><br>所有对目标发动的攻击会额外造成%proc_damage%点伤害，并且拥有克敌机先效果。\n\n<h1>被动：穿刺</h1>每次攻击有%proc_chance%%%几率无视闪避并造成额外%passive_proc_damage%点魔法伤害。",
+            "desc_loc": "<h1>主动：灵魂撕裂</h1>使目标沉默%silence_duration%秒，沉默结束后其间所受伤害的%silence_damage_percent%%%将以额外魔法伤害的形式结算。<br><br>所有对目标发动的攻击会拥有克敌机先效果，攻击者为英雄时额外造成%proc_damage_heroes%点伤害，攻击者为非英雄时额外造成%proc_damage_creeps%点伤害。\n\n<h1>被动：穿刺</h1>每次攻击有%proc_chance%%%几率无视闪避并造成额外%passive_proc_damage%点魔法伤害。",
             "lore_loc": "一把亵渎之刃，受害者临死前的每次挣扎都会使其砍得更深。",
             "notes_loc": [],
             "shard_loc": "",
@@ -204,9 +204,26 @@
                 "required_facet": ""
               },
               {
-                "name": "proc_damage",
+                "name": "proc_damage_heroes",
                 "values_float": [
                   50
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "proc_damage_creeps",
+                "values_float": [
+                  25
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
