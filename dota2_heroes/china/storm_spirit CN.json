@@ -435,7 +435,7 @@
           "shard_loc": "",
           "scepter_loc": "电子涡流变成范围型技能，可以作用于风暴之灵周围所有敌人。",
           "facets_loc": [
-            "电子涡流会向敌人施加一个负面效果，持续%enemy_overload_duration%秒，敌人攻击时会触发一次超负荷。",
+            "电子涡流会对敌人施加%enemy_overload_duration%秒的负面效果，使敌人下次攻击会以自身为目标，并触发一次超负荷。",
             ""
           ],
           "type": 0,
@@ -640,7 +640,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_storm_spirit",
-                  "value": 0.3,
+                  "value": 0.2,
                   "operation": 0
                 }
               ],
@@ -879,7 +879,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_storm_spirit_overload_aspd",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -998,13 +1004,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_storm_spirit_overload_aspd",
-                  "value": 150,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3570,7 +3570,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_storm_spirit.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_storm_spirit/npc_dota_hero_storm_spirit.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_storm_spirit/npc_dota_hero_storm_spirit.webm",
-      "update_time": 1719270026,
+      "update_time": 1722466830,
       "facets": [
         {
           "color": 3,
@@ -3604,7 +3604,9 @@
         "name_loc": "通电",
         "desc_loc": "风暴之灵每次击杀都会获得一点提供%mp_per_kill%魔法恢复的能量。每次阵亡会损失%charges_per_death%点能量。升级球状闪电会获得%charges_per_ult%点额外能量。另外每次获得一点能量时他还会永久获得%perma_mp_per_kill%点/秒魔法恢复。",
         "lore_loc": "",
-        "notes_loc": [],
+        "notes_loc": [
+          "破坏会使技能无法通过击杀获得新的叠加效果。"
+        ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [

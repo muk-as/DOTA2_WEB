@@ -120,7 +120,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_silencer",
-                  "value": 10,
+                  "value": 15,
                   "operation": 0
                 }
               ],
@@ -157,7 +157,36 @@
               ],
               "is_percentage": false,
               "heading_loc": "基础持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "silence_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "沉默持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -201,23 +230,6 @@
                   "operation": 0
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "silence_duration",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -724,6 +736,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
+                14,
+                16,
+                18,
                 20
               ],
               "is_percentage": false,
@@ -835,17 +850,17 @@
             {
               "name": "damage_per_silence",
               "values_float": [
-                20,
                 30,
                 40,
-                50
+                50,
+                60
               ],
               "is_percentage": false,
               "heading_loc": "每个沉默效果伤害：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_silencer_4",
-                  "value": 20,
+                  "value": 35,
                   "operation": 0
                 }
               ],
@@ -1127,7 +1142,7 @@
             {
               "name": "permanent_int_steal_amount",
               "values_float": [
-                2
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3260,7 +3275,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_silencer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_silencer/npc_dota_hero_silencer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_silencer/npc_dota_hero_silencer.webm",
-      "update_time": 1719270108,
+      "update_time": 1722466895,
       "facets": [
         {
           "color": 4,
@@ -3495,7 +3510,7 @@
         "desc_loc": "如果沉默术士击杀了敌方英雄，他将永久窃取%permanent_int_steal_amount%点智力。",
         "lore_loc": "",
         "notes_loc": [
-          "沉默术士无需完成击杀就能永久智力，只要敌方英雄在沉默术士附近%permanent_int_steal_range%范围内阵亡即可。"
+          "沉默术士无需完成击杀就能永久智力，只要敌方英雄在沉默术士附近%permanent_int_steal_range%范围内阵亡或者死亡时带有沉默术士的负面效果即可。"
         ],
         "shard_loc": "每次击杀窃取的智力值提升至%permanent_int_steal_amount%点。",
         "scepter_loc": "",
@@ -3559,7 +3574,7 @@
           {
             "name": "permanent_int_steal_amount",
             "values_float": [
-              2
+              1
             ],
             "is_percentage": false,
             "heading_loc": "",
