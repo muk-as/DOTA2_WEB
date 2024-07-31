@@ -8,7 +8,9 @@
           "name_loc": "Atrophy Aura",
           "desc_loc": "Nearby enemy units are weakened, losing a portion of their base damage. If an enemy dies while under this effect, Underlord gains temporary bonus damage.",
           "lore_loc": "To merely stand in the presence of the Underlord is to feel the conviction of battle sapped from one's soul.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Break disables the Attack Damage Reduction aura and prevents Underlord from gaining new stacks."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -20,7 +22,7 @@
           "damage": 1,
           "immunity": 5,
           "dispellable": 3,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             0
           ],
@@ -68,7 +70,6 @@
             {
               "name": "damage_reduction_pct",
               "values_float": [
-                0,
                 6,
                 14,
                 22,
@@ -95,11 +96,10 @@
             {
               "name": "bonus_damage_from_creep",
               "values_float": [
-                1,
-                3,
-                5,
-                7,
-                9
+                2,
+                4,
+                6,
+                8
               ],
               "is_percentage": false,
               "heading_loc": "BONUS DAMAGE(CREEP):",
@@ -122,7 +122,6 @@
             {
               "name": "bonus_damage_from_hero",
               "values_float": [
-                25,
                 30,
                 35,
                 40,
@@ -149,7 +148,6 @@
             {
               "name": "bonus_damage_duration",
               "values_float": [
-                25,
                 35,
                 45,
                 55,
@@ -411,7 +409,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

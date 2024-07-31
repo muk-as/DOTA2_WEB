@@ -6,9 +6,11 @@
           "id": 909,
           "name": "tinker_warp_grenade",
           "name_loc": "Warp Flare",
-          "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, rooting them and reducing their Cast and Attack Range for %debuff_duration% seconds.",
+          "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, rooting them and reducing their Cast and Attack Range for %debuff_duration% seconds.<br><br> The teleport location is always the ability's current cast range + %bonus_distance% from Tinker's position when he threw the flare.",
           "lore_loc": "",
-          "notes_loc": [],
+          "notes_loc": [
+            "Will not teleport enemies if the distance is over %max_distance% units away."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -66,12 +68,29 @@
               "required_facet": ""
             },
             {
-              "name": "knockback_distance",
+              "name": "bonus_distance",
               "values_float": [
-                600
+                100
               ],
               "is_percentage": false,
-              "heading_loc": "TELEPORT DISTANCE:",
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_distance",
+              "values_float": [
+                2000
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

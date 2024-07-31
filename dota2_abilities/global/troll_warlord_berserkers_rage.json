@@ -6,7 +6,7 @@
           "id": 5508,
           "name": "troll_warlord_berserkers_rage",
           "name_loc": "Berserker's Rage",
-          "desc_loc": "While active, Troll Warlord swaps from using ranged to melee attacks. Melee attacks have a chance to ensnare, preventing the target from moving or using mobility spells. Berserker's Rage also grants additional movement speed, armor, and decreases base attack time.\n\nWhirling Axes has different functionality while Berserker's Rage is active.",
+          "desc_loc": "While in melee form, Troll Warlord's attacks have a chance to ensnare, preventing the target from moving or using mobility spells and has additional movement speed and armor.<br><br>When in ranged form, Troll Warlord's attacks have a chance to Maim the target, dealing bonus damage, and slowing the target's movement and attack speed.",
           "lore_loc": "Like his anger, Troll Warlord's supply of axes is infinite.",
           "notes_loc": [
             "Cooldowns of items that are different for ranged and melee units will be based on which form Troll Warlord was in when the item was used."
@@ -15,23 +15,19 @@
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2564",
+          "behavior": "2",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 0,
+          "damage": 1,
           "immunity": 3,
           "dispellable": 0,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             0
           ],
           "cast_points": [
-            0.2,
-            0.2,
-            0.2,
-            0.2,
-            0.2
+            0
           ],
           "channel_times": [
             0
@@ -55,26 +51,8 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_hp",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "bonus_move_speed",
               "values_float": [
-                5,
                 15,
                 25,
                 35,
@@ -101,7 +79,6 @@
             {
               "name": "bonus_armor",
               "values_float": [
-                1,
                 2,
                 3,
                 4,
@@ -148,7 +125,7 @@
                 1.4
               ],
               "is_percentage": false,
-              "heading_loc": "MELEE BASE ATTACK TIME:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -179,7 +156,6 @@
             {
               "name": "ensnare_duration",
               "values_float": [
-                0.4,
                 0.8,
                 1.2,
                 1.6,
@@ -187,6 +163,103 @@
               ],
               "is_percentage": false,
               "heading_loc": "ENSNARE DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_chance",
+              "values_float": [
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "MAIM CHANCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_duration",
+              "values_float": [
+                0.8,
+                1.2,
+                1.6,
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAIM DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_slow",
+              "values_float": [
+                8,
+                16,
+                24,
+                32
+              ],
+              "is_percentage": true,
+              "heading_loc": "MAIM MOVE SLOW:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_attack_slow",
+              "values_float": [
+                8,
+                16,
+                24,
+                32
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAIM ATTACK SLOW:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_damage",
+              "values_float": [
+                5,
+                10,
+                15,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAIM DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -251,7 +324,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.2
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -339,7 +412,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

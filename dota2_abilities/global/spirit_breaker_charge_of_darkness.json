@@ -6,7 +6,7 @@
           "id": 5353,
           "name": "spirit_breaker_charge_of_darkness",
           "name_loc": "Charge of Darkness",
-          "desc_loc": "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects.  All enemy units passed through and the targeted unit will be hit by a Greater Bash.  If the targeted unit dies, Spirit Breaker will change his target to the nearest enemy unit to that location.",
+          "desc_loc": "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects, starting at %min_movespeed_bonus_pct%%% of the bonus speed and reaching his max speed after %windup_time%s.<br><br>All enemy units passed through and the targeted unit will be hit by a Greater Bash.  If the targeted unit dies, Spirit Breaker will change his target to the nearest enemy unit to that location.",
           "lore_loc": "Barathrum erupts from the darkness with unwieldy force.",
           "notes_loc": [
             "Spirit Breaker passes through trees, cliffs, and units.",
@@ -205,7 +205,24 @@
             {
               "name": "windup_time",
               "values_float": [
-                0
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "min_movespeed_bonus_pct",
+              "values_float": [
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",

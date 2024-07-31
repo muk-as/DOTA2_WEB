@@ -6,7 +6,7 @@
           "id": 5605,
           "name": "ember_spirit_flame_guard",
           "name_loc": "Flame Guard",
-          "desc_loc": "Ember Spirit surrounds himself with a ring of fire that deals damage per second around Ember Spirit at all times. When active, Flame Guard increases its radius, damage, and consumes incoming magic damage, absorbing a percentage of the damage taken. If the shield is broken, the increased damage and radius is also lost.",
+          "desc_loc": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, absorbing a percentage of the damage taken. Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active. If the shield is broken, the damage is also lost.",
           "lore_loc": "An enemy should never be allowed to approach without difficulty.",
           "notes_loc": [
             "Magic damage reduction is calculated before any reductions.",
@@ -23,7 +23,7 @@
           "damage": 2,
           "immunity": 4,
           "dispellable": 2,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             400
           ],
@@ -57,7 +57,6 @@
             {
               "name": "duration",
               "values_float": [
-                10,
                 12,
                 14,
                 16,
@@ -81,7 +80,7 @@
                 150
               ],
               "is_percentage": false,
-              "heading_loc": "PASSIVE RADIUS:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -110,16 +109,15 @@
               "required_facet": ""
             },
             {
-              "name": "passive_damage_per_second",
+              "name": "damage_per_second",
               "values_float": [
-                10,
-                15,
                 20,
-                25,
-                30
+                30,
+                40,
+                50
               ],
               "is_percentage": false,
-              "heading_loc": "PASSIVE DAMAGE:",
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_ember_spirit_3",
@@ -127,23 +125,6 @@
                   "operation": 3
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "blind_pct",
-              "values_float": [
-                50
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -171,40 +152,13 @@
               "required_facet": ""
             },
             {
-              "name": "active_radius",
+              "name": "radius",
               "values_float": [
                 500
               ],
               "is_percentage": false,
-              "heading_loc": "ACTIVE RADIUS:",
+              "heading_loc": "RADIUS:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "active_damage_per_second",
-              "values_float": [
-                15,
-                25,
-                35,
-                45,
-                55
-              ],
-              "is_percentage": false,
-              "heading_loc": "ACTIVE DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_ember_spirit_3",
-                  "value": 100,
-                  "operation": 3
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -234,7 +188,6 @@
             {
               "name": "absorb_amount",
               "values_float": [
-                30,
                 60,
                 135,
                 210,
@@ -403,7 +356,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

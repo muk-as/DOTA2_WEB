@@ -6,23 +6,23 @@
           "id": 5266,
           "name": "omniknight_guardian_angel",
           "name_loc": "Guardian Angel",
-          "desc_loc": "Omniknight calls upon a Guardian Angel that grants a target ally immunity from physical damage.",
+          "desc_loc": "Omniknight calls upon a Guardian Angel that grants immunity from physical damage to allied units in an area.",
           "lore_loc": "The All Seeing One casts down his protection over those that Purist calls friend.",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Grants one extra charge and global cast range. Always casts a Guardian Angel on self as well as the selected target",
+          "scepter_loc": "Guardian Angel has global cast range, increased radius, and affects buildings. Amplifies health regeneration and incoming heals for the duration.",
           "facets_loc": [],
           "type": 1,
-          "behavior": "8",
+          "behavior": "48",
           "target_team": 1,
-          "target_type": 1,
+          "target_type": 19,
           "flags": 0,
           "damage": 0,
           "immunity": 1,
           "dispellable": 2,
           "max_level": 3,
           "cast_ranges": [
-            900
+            600
           ],
           "cast_points": [
             0.4
@@ -31,7 +31,9 @@
             0
           ],
           "cooldowns": [
-            0.5
+            110,
+            100,
+            90
           ],
           "durations": [
             0
@@ -43,9 +45,9 @@
             0
           ],
           "mana_costs": [
-            100,
-            150,
-            200
+            125,
+            175,
+            225
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -59,7 +61,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_omniknight_guardian_angel_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -70,15 +78,55 @@
               "required_facet": ""
             },
             {
-              "name": "scepter_max_charges",
+              "name": "radius",
               "values_float": [
-                3
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                300
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "affects_buildings",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "heal_and_regen_amp",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "HP REGEN / HEAL AMP:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                100
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -89,7 +137,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                900
+                600
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -159,7 +207,7 @@
             {
               "name": "AbilityCharges",
               "values_float": [
-                2
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -176,19 +224,11 @@
             {
               "name": "AbilityChargeRestoreTime",
               "values_float": [
-                70,
-                60,
-                50
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_omniknight_7",
-                  "value": 15,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -201,9 +241,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100,
-                150,
-                200
+                125,
+                175,
+                225
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -220,11 +260,19 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0.5
+                110,
+                100,
+                90
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_omniknight_7",
+                  "value": 20,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

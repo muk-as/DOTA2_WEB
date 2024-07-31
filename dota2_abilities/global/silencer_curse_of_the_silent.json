@@ -6,7 +6,7 @@
           "id": 5377,
           "name": "silencer_curse_of_the_silent",
           "name_loc": "Arcane Curse",
-          "desc_loc": "Curses the target area, causing enemy heroes to take damage over time and slowing their movement speed. If a target casts a spell, they are silenced for %silence_duration% seconds. The duration is paused as long as the target is silenced.",
+          "desc_loc": "Curses the target area, causing enemy heroes to take damage over time and slowing their movement speed. If a target casts a spell, they are silenced for a short period. The duration is paused as long as the target is silenced.",
           "lore_loc": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
           "notes_loc": [
             "Affects creeps.",
@@ -73,7 +73,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_silencer",
-                  "value": 10,
+                  "value": 15,
                   "operation": 0
                 }
               ],
@@ -110,7 +110,36 @@
               ],
               "is_percentage": false,
               "heading_loc": "BASE DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "silence_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "SILENCE DURATION:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -154,23 +183,6 @@
                   "operation": 0
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "silence_duration",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

@@ -6,7 +6,7 @@
           "id": 5506,
           "name": "medusa_mana_shield",
           "name_loc": "Mana Shield",
-          "desc_loc": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana. Illusions absorb less damage per point of mana.",
+          "desc_loc": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana that increases with each level of Medusa. Illusions absorb %illusion_percentage%%% less damage per point of mana.",
           "lore_loc": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
           "notes_loc": [
             "Absorbs damage before any damage reduction takes place, meaning that armor will not reduce the amount of mana needed to absorb damage."
@@ -15,14 +15,14 @@
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "6",
+          "behavior": "8796093022278",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 0,
           "dispellable": 3,
-          "max_level": 5,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -53,21 +53,11 @@
             {
               "name": "damage_per_mana",
               "values_float": [
-                2,
-                2.4,
-                2.8,
-                3.2,
-                3.6
+                2.4
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE PER MANA:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_medusa_6",
-                  "value": 1.9,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "BASE DAMAGE PER MANA:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -78,23 +68,30 @@
               "required_facet": ""
             },
             {
-              "name": "illusion_damage_per_mana",
+              "name": "damage_per_mana_per_level",
               "values_float": [
-                1,
-                1.4,
-                1.8,
-                2.2,
-                2.6
+                0.1
               ],
               "is_percentage": false,
-              "heading_loc": "ILLUSION DAMAGE PER MANA:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_medusa_6",
-                  "value": 1,
-                  "operation": 0
-                }
+              "heading_loc": "DAMAGE PER MANA PER LEVEL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "illusion_percentage",
+              "values_float": [
+                60
               ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -111,6 +108,23 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_per_mana_total",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "TOTAL DAMAGE PER MANA:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

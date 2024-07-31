@@ -8,7 +8,10 @@
           "name_loc": "Uproar",
           "desc_loc": "The Beast's temper passively provides bonus damage. Additionally, for every instance of %damage_limit% damage or more Primal Beast takes from enemy heroes, he accumulates stacks of Uproar. \n\n When activated, Primal Beast releases a roar that slows surrounding enemies and grants the Beast additional attack damage and armor for %roar_duration% seconds based on his current stacks of Uproar.",
           "lore_loc": "Already draped in a broken patchwork of barding and chains upon appearing in the mistwoods, the Beast tolerates no further attempts at subjugation.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Break disables the passive bonus attack damage.",
+            "Break disables the gaining of new stacks."
+          ],
           "shard_loc": "",
           "scepter_loc": "When Primal Beast activates Uproar, he releases %projectile_waves% waves of %projectiles_per_stack% projectiles per stack of uproar each in a circle around him. Projectiles deal damage and Break enemies hit. After a short delay, each projectile splinters in two.",
           "facets_loc": [],
@@ -142,6 +145,9 @@
             {
               "name": "move_slow_per_stack",
               "values_float": [
+                5,
+                6,
+                7,
                 8
               ],
               "is_percentage": true,
@@ -258,23 +264,6 @@
                   "operation": 0
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "roared_bonus_aoe_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

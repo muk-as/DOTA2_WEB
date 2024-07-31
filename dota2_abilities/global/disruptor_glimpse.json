@@ -6,7 +6,7 @@
           "id": 5459,
           "name": "disruptor_glimpse",
           "name_loc": "Glimpse",
-          "desc_loc": "Teleports the target hero back to where it was 4 seconds ago.  Instantly kills illusions. Deals damage based on distance glimpsed, with max damage dealt at %max_distance% distance.",
+          "desc_loc": "Teleports the target hero back to where it was %backtrack_time% seconds ago.  Instantly kills illusions. Deals damage equal to a percentage of the distance glimpsed, that cannot go over a damage maximum.",
           "lore_loc": "Playing with electricity can have unexpected results.",
           "notes_loc": [
             "The travel time is a function of the distance the target will travel."
@@ -88,7 +88,7 @@
                 1800
               ],
               "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -146,7 +146,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_disruptor_9",
-                  "value": 275,
+                  "value": 280,
                   "operation": 0
                 }
               ],
@@ -160,13 +160,22 @@
               "required_facet": ""
             },
             {
-              "name": "max_distance",
+              "name": "damage_to_distance_pct",
               "values_float": [
-                1400
+                20,
+                25,
+                30,
+                35
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
+              "is_percentage": true,
+              "heading_loc": "GLIMPSE DISTANCE TO DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_disruptor_9",
+                  "value": 10,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

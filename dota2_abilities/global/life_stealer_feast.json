@@ -6,12 +6,14 @@
           "id": 5250,
           "name": "life_stealer_feast",
           "name_loc": "Feast",
-          "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. Allows Lifestealer to attack allied creeps at 75% health.",
+          "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. Allows Lifestealer to attack allied creeps at %creep_deny_percent%%% health. Lifestealer gains permanent max HP whenever he kill a creep or hero.",
           "lore_loc": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path.",
           "notes_loc": [
             "Works on allies and enemies. Does not affect Roshan.",
             "The heal is independent of the damage.",
-            "Stacks additively with other sources of Lifesteal."
+            "Stacks additively with other sources of Lifesteal.",
+            "Break disables the gaining of new stacks.",
+            "Break does not disable the bonuses from existing stacks."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -23,7 +25,7 @@
           "flags": 0,
           "damage": 1,
           "immunity": 3,
-          "dispellable": 0,
+          "dispellable": 3,
           "max_level": 4,
           "cast_ranges": [
             0
@@ -105,12 +107,63 @@
               "required_facet": ""
             },
             {
+              "name": "bonus_hp_per_hero",
+              "values_float": [
+                15
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX HP PER HERO KILL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_hp_per_creep",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX HP PER CREEP KILL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "creep_deny_percent",
               "values_float": [
                 75
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_hp_total",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "PERMANENT MAX HP:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
