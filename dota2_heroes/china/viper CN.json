@@ -895,11 +895,10 @@
             {
               "name": "bonus_attack_speed",
               "values_float": [
-                3,
-                6,
-                14,
-                22,
-                30
+                8,
+                16,
+                24,
+                32
               ],
               "is_percentage": false,
               "heading_loc": "攻击速度降低：",
@@ -922,7 +921,6 @@
             {
               "name": "bonus_magic_resistance",
               "values_float": [
-                5,
                 10,
                 15,
                 20,
@@ -943,11 +941,10 @@
             {
               "name": "damage",
               "values_float": [
-                3,
-                6,
-                14,
-                22,
-                30
+                8,
+                16,
+                24,
+                32
               ],
               "is_percentage": false,
               "heading_loc": "每秒伤害：",
@@ -3534,7 +3531,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_viper.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_viper/npc_dota_hero_viper.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_viper/npc_dota_hero_viper.webm",
-      "update_time": 1717711279,
+      "update_time": 1722466865,
       "facets": [
         {
           "color": 2,
@@ -3563,29 +3560,27 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_viper.png",
       "new_abilities": {
-        "id": 5220,
-        "name": "viper_corrosive_skin",
-        "name_loc": "腐蚀皮肤",
-        "desc_loc": "蝮蛇分泌出感染性的毒素，%max_range%范围内任何伤害它的敌人都将受到伤害，同时攻击速度也被降低。这种酸性分泌物还能提高蝮蛇的魔法抗性。",
-        "lore_loc": "对冥界亚龙出击后，手中的刀剑和盾牌会遭到腐蚀并不稀奇。",
-        "notes_loc": [
-          "与其他提升魔法抗性的物品和技能叠加。"
-        ],
+        "id": 1461,
+        "name": "viper_predator",
+        "name_loc": "掠食",
+        "desc_loc": "冥界亚龙的攻击会根据目标英雄缺失的生命百分比额外造成一次物理伤害，数值为%damage_base% + %damage_per_level% * 冥界亚龙等级。",
+        "lore_loc": "",
+        "notes_loc": [],
         "shard_loc": "",
-        "scepter_loc": "腐蚀皮肤对冥界亚龙附近%effect_multiplier_distance%范围内敌人施加%effect_multiplier%倍攻击速度降低效果。",
+        "scepter_loc": "",
         "facets_loc": [
           "",
-          "冥界亚龙处于幽冥剧毒内时，腐蚀皮肤的效果会逐渐增强。"
+          ""
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "8796093022210",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
-        "damage": 2,
+        "damage": 1,
         "immunity": 4,
         "dispellable": 2,
-        "max_level": 5,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -3614,118 +3609,9 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "duration",
+            "name": "damage_base",
             "values_float": [
-              4
-            ],
-            "is_percentage": false,
-            "heading_loc": "持续时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "bonus_attack_speed",
-            "values_float": [
-              3,
-              6,
-              14,
-              22,
-              30
-            ],
-            "is_percentage": false,
-            "heading_loc": "攻击速度降低：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_viper_6",
-                "value": 20,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "bonus_magic_resistance",
-            "values_float": [
-              5,
-              10,
-              15,
-              20,
-              25
-            ],
-            "is_percentage": true,
-            "heading_loc": "魔法抗性提升：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "damage",
-            "values_float": [
-              3,
-              6,
-              14,
-              22,
-              30
-            ],
-            "is_percentage": false,
-            "heading_loc": "每秒伤害：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_viper_1",
-                "value": 20,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "max_range",
-            "values_float": [
-              1200
-            ],
-            "is_percentage": false,
-            "heading_loc": "最大作用范围：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "effect_multiplier_distance",
-            "values_float": [
-              500
+              0.25
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3740,9 +3626,9 @@
             "required_facet": ""
           },
           {
-            "name": "effect_multiplier",
+            "name": "damage_per_level",
             "values_float": [
-              4
+              0.05
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3757,40 +3643,19 @@
             "required_facet": ""
           },
           {
-            "name": "nethertoxin_bonus_pct",
+            "name": "total_damage_per_missing_health",
             "values_float": [
               0
             ],
             "is_percentage": true,
-            "heading_loc": "最大加成：",
+            "heading_loc": "损失生命值造成伤害：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "viper_caustic_bath",
-              "values": [
-                100
-              ],
-              "operation": 5
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "nethertoxin_bonus_pct_max_duration_tooltip",
-            "values_float": [
-              0
-            ],
-            "is_percentage": true,
-            "heading_loc": "最大加成所需时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "viper_caustic_bath",
-              "values": [
-                4
-              ],
-              "operation": 5
+              "name": "",
+              "values": [],
+              "operation": 0
             },
             "required_facet": ""
           },
@@ -3932,7 +3797,7 @@
           }
         ],
         "is_item": false,
-        "ability_has_scepter": true,
+        "ability_has_scepter": false,
         "ability_has_shard": false,
         "ability_is_granted_by_scepter": false,
         "ability_is_granted_by_shard": false,
