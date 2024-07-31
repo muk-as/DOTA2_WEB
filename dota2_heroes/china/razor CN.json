@@ -214,7 +214,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "最高减速：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_razor_plasmafield_max_slow",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -867,7 +873,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "风暴之眼开启时，打击几率为%eye_of_the_storm_chance_multiplier%倍，而且闪电会打击风暴之眼范围内所有敌人。单次伤害不会对同个敌人施加两次。",
+            "风暴之眼开启时，打击几率为%eye_of_the_storm_chance_multiplier%倍，打击冷却时间减少%strike_cd_reduction_during_storm%秒，而且闪电会打击风暴之眼范围内所有敌人。单次伤害不会对同个敌人施加两次。",
             ""
           ],
           "type": 0,
@@ -1033,19 +1039,32 @@
               ],
               "is_percentage": false,
               "heading_loc": "打击冷却时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_razor_3",
-                  "value": 1,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
                 "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "strike_cd_reduction_during_storm",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "razor_thunderhead",
+                "values": [
+                  2.5
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -1298,6 +1317,23 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movement_speed_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "移动速度加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -3427,12 +3463,12 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_razor.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_razor/npc_dota_hero_razor.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_razor/npc_dota_hero_razor.webm",
-      "update_time": 1719270024,
+      "update_time": 1722466827,
       "facets": [
         {
           "color": 5,
           "title_loc": "雷暴云",
-          "description_loc": "风暴之眼开启后，搜索范围内的所有单位会被风暴涌动电击。",
+          "description_loc": "风暴之眼开启后，风暴涌动电击间隔更短，而且搜索范围内的所有单位会被风暴涌动电击。",
           "name": "razor_thunderhead",
           "icon": "barrier",
           "gradient_id": 0
@@ -3525,6 +3561,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "total_spell_amp",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "攻击力提供技能增强加成：",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -3745,6 +3798,23 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "movement_speed_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "移动速度加成：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
