@@ -519,7 +519,6 @@
             {
               "name": "duration",
               "values_float": [
-                3,
                 6,
                 9,
                 12,
@@ -540,11 +539,10 @@
             {
               "name": "damage",
               "values_float": [
-                2,
-                6,
-                14,
-                22,
-                30
+                8,
+                16,
+                24,
+                32
               ],
               "is_percentage": false,
               "heading_loc": "每秒伤害：",
@@ -561,11 +559,10 @@
             {
               "name": "movement_speed",
               "values_float": [
-                -3,
-                -6,
-                -9,
+                -8,
+                -10,
                 -12,
-                -15
+                -14
               ],
               "is_percentage": true,
               "heading_loc": "移动速度减缓：",
@@ -601,25 +598,6 @@
               ],
               "values_shard": [],
               "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_dmg_per_debuff_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "每个负面效果基础伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                15
-              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -796,7 +774,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "瘟疫守卫可以附着在友军身上，并且拥有%max_charges%点能量点数。附着的守卫被摧毁时只会提供%gold_bounty_pct%%%击杀金钱。"
+            "瘟疫守卫可以附着在友军身上，并且拥有%max_charges%点能量点数。附着守卫的生命值取决于携带者的最大生命值，被摧毁时只会提供%gold_bounty_pct%%%击杀金钱。"
           ],
           "type": 0,
           "behavior": "16",
@@ -1021,7 +999,7 @@
                 250
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "附着守卫生命值：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_venomancer",
@@ -1036,7 +1014,33 @@
                 "values": [],
                 "operation": 0
               },
-              "required_facet": ""
+              "required_facet": "venomancer_plague_carrier"
+            },
+            {
+              "name": "threshold_max_hp_pct",
+              "values_float": [
+                1,
+                1.5,
+                2,
+                2.5
+              ],
+              "is_percentage": true,
+              "heading_loc": "来自携带者的守卫生命值：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_venomancer",
+                  "value": 2.5,
+                  "operation": 1
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "venomancer_plague_carrier"
             },
             {
               "name": "AbilityCastRange",
@@ -1143,9 +1147,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                21,
                 24,
-                27,
+                26,
+                28,
                 30
               ],
               "is_percentage": false,
@@ -3203,7 +3207,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_venomancer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/npc_dota_hero_venomancer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/npc_dota_hero_venomancer.webm",
-      "update_time": 1718413267,
+      "update_time": 1722466858,
       "facets": [
         {
           "color": 2,
@@ -3232,30 +3236,29 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_venomancer.png",
       "new_abilities": {
-        "id": 5179,
-        "name": "venomancer_poison_sting",
-        "name_loc": "毒刺",
-        "desc_loc": "在剧毒术士的普通攻击中加入毒性伤害，可以减缓敌人的移动速度。",
-        "lore_loc": "造成他变异的生物身上的麻痹毒刺，现在属于剧毒术士了。",
+        "id": 1457,
+        "name": "venomancer_sepsis",
+        "name_loc": "脓毒休克",
+        "desc_loc": "剧毒术士的攻击会根据目标身上拥有的负面效果数量造成额外伤害。额外伤害为魔法伤害。只会计算来自剧毒术士或他的瘟疫守卫的负面效果。",
+        "lore_loc": "",
         "notes_loc": [
-          "毒刺的伤害可以致死。",
-          "毒刺造成的持续性伤害不会打断物品的回复效果，也不能使闪烁匕首进行冷却状态。"
+          "破坏只会使剧毒术士攻击的额外伤害失效。"
         ],
         "shard_loc": "",
-        "scepter_loc": "目标身上拥有剧毒术士的负面状态时，每个负面状态都会使剧毒术士的攻击拥有额外基础伤害。不会与瘟疫守卫的攻击叠加。",
+        "scepter_loc": "提升每个负面效果提供的基础伤害。瘟疫守卫也会根据他们的攻击力造成脓毒休克伤害。",
         "facets_loc": [
           "",
           ""
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "66",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 2,
         "immunity": 4,
         "dispellable": 2,
-        "max_level": 5,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -3284,108 +3287,35 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "duration",
-            "values_float": [
-              3,
-              6,
-              9,
-              12,
-              15
-            ],
-            "is_percentage": false,
-            "heading_loc": "持续时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "damage",
-            "values_float": [
-              2,
-              6,
-              14,
-              22,
-              30
-            ],
-            "is_percentage": false,
-            "heading_loc": "每秒伤害：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "movement_speed",
-            "values_float": [
-              -3,
-              -6,
-              -9,
-              -12,
-              -15
-            ],
-            "is_percentage": true,
-            "heading_loc": "移动速度减缓：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_venomancer_2",
-                "value": 5,
-                "operation": 2
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "hp_regen_reduction",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_venomancer_poisonsting_regen_reduction",
-                "value": 15,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
             "name": "bonus_dmg_per_debuff_pct",
             "values_float": [
-              0
+              10
             ],
             "is_percentage": true,
             "heading_loc": "每个负面效果基础伤害：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [
-              15
+              10
+            ],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "apply_from_ward_attacks",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [
+              1
             ],
             "facet_bonus": {
               "name": "",

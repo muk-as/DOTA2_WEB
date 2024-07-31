@@ -61,6 +61,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -389,6 +390,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -793,6 +795,7 @@
           "scepter_loc": "风行使承受的物理伤害减少%physical_damage_pct%%%，并且自身获得隐身状态，攻击或施法都不会脱离隐身。",
           "facets_loc": [
             "风行会使风行者和附近友军获得额外移动速度加成。",
+            "",
             ""
           ],
           "type": 0,
@@ -1183,6 +1186,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1444,7 +1448,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "集中火力不再需要施法目标，而是对风行者攻击距离内的随机敌人随机发动攻击。每秒发动固定次数的攻击，并且每4箭才会击中一次同个敌人。以英雄优先。"
+            "",
+            "集中火力不再需要施法目标，而是对风行者攻击距离 + %bonus_range%范围内的随机敌人发动攻击。每秒发动固定次数的攻击，并且每4箭才会击中一次同个敌人。以英雄优先。"
           ],
           "type": 1,
           "behavior": "134217736",
@@ -1652,7 +1657,26 @@
                 "values": [],
                 "operation": 0
               },
-              "required_facet": "windrunner_tailwind"
+              "required_facet": "windrunner_focusfire"
+            },
+            {
+              "name": "bonus_range",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "攻击距离加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "windrunner_whirlwind",
+                "values": [
+                  150
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "unfocused_cancel_initial_cooldown",
@@ -1718,7 +1742,7 @@
               "facet_bonus": {
                 "name": "windrunner_whirlwind",
                 "values": [
-                  8
+                  9
                 ],
                 "operation": 5
               },
@@ -1842,6 +1866,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3720,14 +3745,14 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_windrunner.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_windrunner/npc_dota_hero_windrunner.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_windrunner/npc_dota_hero_windrunner.webm",
-      "update_time": 1718406034,
+      "update_time": 1722466836,
       "facets": [
         {
           "color": 1,
-          "title_loc": "一路顺风",
-          "description_loc": "风行会使风行者和附近友军获得额外移动速度加成。",
-          "name": "windrunner_tailwind",
-          "icon": "speed",
+          "title_loc": "集中火力",
+          "description_loc": "集中火力快速攻击单个目标。",
+          "name": "windrunner_focusfire",
+          "icon": "focus_fire",
           "gradient_id": 2
         },
         {
@@ -3758,6 +3783,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],

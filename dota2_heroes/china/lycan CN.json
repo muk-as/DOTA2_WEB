@@ -56,8 +56,9 @@
           "shard_loc": "每波兵中其中一条兵线上会混有一头不可控制的精灵狼。另外兵线产生的精灵狼的致残对防御塔有效。",
           "scepter_loc": "",
           "facets_loc": [
-            "3-4级精灵狼拥有永久隐身，4级精灵狼还拥有致残技能，20%几率使目标残废，造成每秒8点伤害，并失去60攻击速度，持续4秒。",
-            "召唤的狼为不可控的无敌幽灵，不会攻击，但会为狼人提供生命和攻击力加成。"
+            "",
+            "召唤的狼为不可控的无敌幽灵，不会攻击，但会为狼人提供生命和攻击力加成。",
+            "最高等级可升至%max_level%级。5级精灵狼获得断筋，使他们的攻击可以缠绕敌人，并且使敌人被攻击时承受更多物理伤害。6级精灵狼拥有健步如飞，主动开启后精灵狼获得相位移动状态、闪避、移动速度和攻击速度。"
           ],
           "type": 0,
           "behavior": "4",
@@ -110,7 +111,9 @@
                 1,
                 2,
                 3,
-                4
+                4,
+                5,
+                6
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -149,6 +152,8 @@
                 1.2,
                 1.1,
                 1,
+                0.9,
+                0.9,
                 0.9
               ],
               "is_percentage": false,
@@ -157,11 +162,18 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "lycan_spirit_wolves",
+                "values": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "operation": 5
               },
-              "required_facet": "lycan_pack_leader"
+              "required_facet": ""
             },
             {
               "name": "wolf_damage",
@@ -169,7 +181,9 @@
                 23,
                 29,
                 35,
-                41
+                41,
+                47,
+                53
               ],
               "is_percentage": false,
               "heading_loc": "攻击力：",
@@ -183,11 +197,18 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "lycan_spirit_wolves",
+                "values": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "operation": 5
               },
-              "required_facet": "lycan_pack_leader"
+              "required_facet": ""
             },
             {
               "name": "wolf_hp",
@@ -195,7 +216,9 @@
                 325,
                 375,
                 425,
-                475
+                475,
+                525,
+                575
               ],
               "is_percentage": false,
               "heading_loc": "生命值：",
@@ -209,11 +232,18 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "lycan_spirit_wolves",
+                "values": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "operation": 5
               },
-              "required_facet": "lycan_pack_leader"
+              "required_facet": ""
             },
             {
               "name": "bonus_health",
@@ -252,6 +282,28 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_armor",
+              "values_float": [
+                0,
+                0,
+                0,
+                0,
+                5,
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "护甲：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -485,6 +537,25 @@
               "required_facet": ""
             },
             {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "lycan_alpha_wolves",
+                "values": [
+                  2
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -592,6 +663,8 @@
                 115,
                 120,
                 125,
+                130,
+                130,
                 130
               ],
               "is_percentage": false,
@@ -658,7 +731,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "最高等级减少至%max_level%级。"
           ],
           "type": 0,
           "behavior": "134217732",
@@ -819,6 +893,25 @@
                 "name": "",
                 "values": [],
                 "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "lycan_alpha_wolves",
+                "values": [
+                  1
+                ],
+                "operation": 2
               },
               "required_facet": ""
             },
@@ -991,7 +1084,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "最高等级减少至%max_level%级。"
           ],
           "type": 0,
           "behavior": "2",
@@ -1072,6 +1166,25 @@
                 "name": "",
                 "values": [],
                 "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "lycan_alpha_wolves",
+                "values": [
+                  1
+                ],
+                "operation": 2
               },
               "required_facet": ""
             },
@@ -1242,6 +1355,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1525,6 +1639,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1570,6 +1685,23 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "extra_damage_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "额外伤害：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1749,6 +1881,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "移动速度和致命一击加成效果也会施加给狼人控制下的所有单位。狼人或他的单位击杀敌方英雄后会使变身的持续时间延长%kill_duration_extension%秒。",
+            "",
             ""
           ],
           "type": 1,
@@ -3729,14 +3862,14 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_lycan.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lycan/npc_dota_hero_lycan.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lycan/npc_dota_hero_lycan.webm",
-      "update_time": 1717711318,
+      "update_time": 1722466897,
       "facets": [
         {
           "color": 5,
           "title_loc": "狼群头领",
           "description_loc": "狼人或他的单位击杀敌方英雄都能延长变身的持续时间。",
           "name": "lycan_pack_leader",
-          "icon": "wolf",
+          "icon": "summons",
           "gradient_id": 1
         },
         {
@@ -3746,9 +3879,20 @@
           "name": "lycan_spirit_wolves",
           "icon": "spirit",
           "gradient_id": 0
+        },
+        {
+          "color": 2,
+          "title_loc": "领头狼",
+          "description_loc": "提升召狼的最高等级，但降低嗥叫和野性驱使的最高等级。",
+          "name": "lycan_alpha_wolves",
+          "icon": "wolf",
+          "gradient_id": 2
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3767,6 +3911,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
@@ -3813,6 +3958,23 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "extra_damage_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "额外伤害：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

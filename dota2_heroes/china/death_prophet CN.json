@@ -59,6 +59,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -166,7 +167,7 @@
             {
               "name": "range",
               "values_float": [
-                810
+                900
               ],
               "is_percentage": false,
               "heading_loc": "施法距离：",
@@ -234,7 +235,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                600
+                900
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -411,6 +412,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "被沉默的敌人也会被减速。",
+            "",
             ""
           ],
           "type": 0,
@@ -465,7 +467,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_death_prophet_silence_aoe",
+                  "value": 75,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -727,6 +735,7 @@
           "shard_loc": "吸魂巫术的能量点数提升%shard_bonus_charges%点，敌人连续%shard_consecutive_siphon_duration%秒受到吸魂巫术作用后会被恐惧%shard_fear_duration%秒。",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1072,6 +1081,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1134,6 +1144,40 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movement_speed_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "移动速度加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cooldown_reduction_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "冷却时间减少：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1312,6 +1356,7 @@
           "shard_loc": "",
           "scepter_loc": "敌人受到死亡先知的技能作用，或被死亡先知攻击时，会有一只恶灵飞出攻击敌人，造成减速和高出平常的伤害，再返回使自身回复生命。",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3493,7 +3538,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_death_prophet.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_death_prophet/npc_dota_hero_death_prophet.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_death_prophet/npc_dota_hero_death_prophet.webm",
-      "update_time": 1717711273,
+      "update_time": 1722466860,
       "facets": [
         {
           "color": 4,
@@ -3506,9 +3551,17 @@
         {
           "color": 2,
           "title_loc": "灵魂收集",
-          "description_loc": "其他英雄的死亡会使下次驱使恶灵的威力增加。",
+          "description_loc": "英雄的死亡会使下次驱使恶灵的威力增加。",
           "name": "death_prophet_ghosts",
           "icon": "spirit",
+          "gradient_id": 1
+        },
+        {
+          "color": 0,
+          "title_loc": "哀悼仪式",
+          "description_loc": "死亡先知延缓承受一定百分比的伤害，短时间内每隔一段时间受到伤害。",
+          "name": "death_prophet_delayed_damage",
+          "icon": "healing",
           "gradient_id": 1
         }
       ],
@@ -3522,14 +3575,16 @@
               "id": 1285,
               "name": "death_prophet_spirit_collector",
               "name_loc": "灵魂收集",
-              "desc_loc": "其他英雄的死亡会使下次驱使恶灵的威力增加。",
+              "desc_loc": "英雄的死亡会使下次驱使恶灵的威力增加。",
               "lore_loc": "",
               "notes_loc": [
-                "每当英雄阵亡，死亡先知都会俘获他们的灵魂以备后用。她施放驱使恶灵后，每个被俘获的英雄灵魂都会取代标准的恶灵。英雄灵魂造成的伤害比标准恶灵更高。<br><br>驱使恶灵开启时有英雄阵亡的话，也会在可能的情况下让英雄灵魂取代标准恶灵。"
+                "每当英雄阵亡，死亡先知都会俘获他们的灵魂以备后用。她施放驱使恶灵后，每个被俘获的英雄灵魂都会取代标准的恶灵。英雄灵魂造成的伤害比标准恶灵更高。<br><br>驱使恶灵开启时有英雄阵亡的话，也会在可能的情况下让英雄灵魂取代标准恶灵。",
+                "包括死亡先知自己的死亡。"
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3720,6 +3775,266 @@
               "item_quality": 0
             }
           ]
+        },
+        {
+          "abilities": [
+            {
+              "id": 1459,
+              "name": "death_prophet_mourning_ritual",
+              "name_loc": "哀悼仪式",
+              "desc_loc": "死亡先知延缓承受一定百分比的伤害，短时间内每隔一段时间受到伤害。",
+              "lore_loc": "",
+              "notes_loc": [
+                "延缓的伤害与初始伤害的类型相同，并且无视护甲、魔法抗性和伤害格挡。"
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "67",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "delay_pct",
+                  "values_float": [
+                    20,
+                    30,
+                    40,
+                    50
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "延后结算伤害：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "delay_time",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "延后时间：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_interval",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "伤害间隔：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": true,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            }
+          ]
         }
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_death_prophet.png",
@@ -3733,6 +4048,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
@@ -3796,6 +4112,40 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "movement_speed_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "移动速度加成：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "cooldown_reduction_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "冷却时间减少：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
