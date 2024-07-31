@@ -6,7 +6,7 @@
           "id": 215,
           "name": "item_shadow_amulet",
           "name_loc": "Shadow Amulet",
-          "desc_loc": "<h1>Active: Fade</h1>Grants invisibility to you or a target allied hero as long as the target unit remains still for up to %fade_duration%s.  <br><br>Has a %fade_time% second fade time, and breaks instantly upon moving. <br><br>There is no cooldown when using this item on yourself.",
+          "desc_loc": "<h1>Active: Fade</h1>Grants invisibility to you or a target allied hero for up to %fade_duration%s. Movement speed during the invisibility is reduced by %movement_speed_reduction%%%",
           "lore_loc": "A small talisman that clouds the senses of one's enemies when held perfectly still.",
           "notes_loc": [],
           "shard_loc": "",
@@ -19,7 +19,7 @@
           "flags": 0,
           "damage": 0,
           "immunity": 0,
-          "dispellable": 0,
+          "dispellable": 2,
           "max_level": 0,
           "cast_ranges": [
             600
@@ -31,7 +31,7 @@
             0
           ],
           "cooldowns": [
-            7
+            18
           ],
           "durations": [
             0
@@ -54,6 +54,23 @@
                 1.25
               ],
               "is_percentage": false,
+              "heading_loc": "FADE TIME:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movement_speed_reduction",
+              "values_float": [
+                35
+              ],
+              "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
@@ -68,7 +85,7 @@
             {
               "name": "fade_duration",
               "values_float": [
-                15
+                3.5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -204,7 +221,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                7
+                18
               ],
               "is_percentage": false,
               "heading_loc": "",

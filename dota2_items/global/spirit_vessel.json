@@ -8,12 +8,14 @@
           "name_loc": "Spirit Vessel",
           "desc_loc": "<h1>Active: Soul Release</h1> When used against enemies, it reduces health by %enemy_hp_drain%%% of current health per second, and reduces HP regeneration, healing, lifesteal and spell lifesteal by %hp_regen_reduction_enemy%%%. Deals %soul_damage_amount% damage per second. <br><br>When used on allies, it provides %soul_heal_amount% health regeneration per second. <br><br>Lasts %duration% seconds.  <br><br>Gains charges every time an enemy hero dies within %soul_radius% units.  Only the closest Spirit Vessel to the dying hero will gain a charge. ",
           "lore_loc": "Forged by a god to entrap the soul of another.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Does not trigger spell block or spell reflect."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8",
+          "behavior": "35184372088840",
           "target_team": 3,
           "target_type": 1,
           "flags": 0,
@@ -31,7 +33,7 @@
             0
           ],
           "cooldowns": [
-            7
+            10
           ],
           "durations": [
             0
@@ -68,10 +70,10 @@
             {
               "name": "bonus_all_stats",
               "values_float": [
-                6
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "+$all",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -102,7 +104,7 @@
             {
               "name": "bonus_health",
               "values_float": [
-                125
+                375
               ],
               "is_percentage": false,
               "heading_loc": "+$health",
@@ -187,7 +189,7 @@
             {
               "name": "soul_damage_amount",
               "values_float": [
-                35
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -221,7 +223,7 @@
             {
               "name": "hp_regen_reduction_enemy",
               "values_float": [
-                45
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -374,7 +376,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                7
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
