@@ -787,7 +787,10 @@
               "name_loc": "Arcane Supremacy",
               "desc_loc": "Rubick's mastery of the arcane allows him to have a larger cast range and increased potency.",
               "lore_loc": "Not every magus can be a Grand Magus...",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the gaining of new Arcane Accumulation stacks.",
+                "Break does not disable the bonuses from existing Arcane Accumulation stacks."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -853,9 +856,9 @@
                 {
                   "name": "spell_amp",
                   "values_float": [
-                    14,
-                    18,
-                    22,
+                    11,
+                    16,
+                    21,
                     26
                   ],
                   "is_percentage": true,
@@ -1066,7 +1069,8 @@
               "lore_loc": "...but even their lesser magics can be a source of much utility.",
               "notes_loc": [
                 "Cannot steal item abilities.",
-                "Rubick will steal the Aghanim's Shard version of the ability, if he himself has an Aghanim's Shard."
+                "Rubick will steal the Aghanim's Shard version of the ability, if he himself has an Aghanim's Shard.",
+                "Does not trigger spell reflect."
               ],
               "shard_loc": "",
               "scepter_loc": "Increases the number of spells that can be stolen to 2. Increases cast range, and upgrades spells to their Scepter version.",
@@ -1369,7 +1373,7 @@
               "id": 1361,
               "name": "rubick_might_and_magus",
               "name_loc": "Might and Magus",
-              "desc_loc": "Each 1% Spell Amplification also increases Rubick's attack damage by %bonus_damage_pct_tooltip%%% and Magic Resistance by %magic_resist_pct_tooltip%%%.",
+              "desc_loc": "Each %one_tooltip%%% Spell Amplification also increases Rubick's attack damage by %bonus_damage_pct_tooltip%%% and Magic Resistance by %magic_resist_pct_tooltip%%%.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1415,9 +1419,26 @@
               "health_costs": [],
               "special_values": [
                 {
+                  "name": "one_tooltip",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "bonus_damage_pct",
                   "values_float": [
-                    100
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1434,7 +1455,7 @@
                 {
                   "name": "bonus_damage_pct_tooltip",
                   "values_float": [
-                    1
+                    0.75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

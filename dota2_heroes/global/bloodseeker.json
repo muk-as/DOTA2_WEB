@@ -174,7 +174,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_bloodseeker_6",
-                      "value": 10,
+                      "value": 15,
                       "operation": 0
                     }
                   ],
@@ -481,7 +481,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_bloodseeker_2",
-                      "value": 120,
+                      "value": 135,
                       "operation": 0
                     }
                   ],
@@ -858,23 +858,6 @@
                     "values": [
                       5
                     ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_lifesteal_reduction_pct",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1387,7 +1370,7 @@
               "id": 1203,
               "name": "bloodseeker_sanguivore",
               "name_loc": "Sanguivore",
-              "desc_loc": "Bloodseeker restores some life when he kills a unit, equal to %heal_hp_pct_per_level%%% of the units max health per Bloodseeker's Level plus a base of %base_heal%.<br><br>Restores for half values when denying, or if an ally kills a nearby enemy hero.",
+              "desc_loc": "Bloodseeker restores some life when he kills a unit, equal to %heal_hp_pct_per_level%%% of the units max health per Bloodseeker's Level plus a base of %base_heal%.<br><br>Restores for half values if an ally kills a nearby enemy hero.",
               "lore_loc": "",
               "notes_loc": [
                 "Creeps lifesteal is reduced by %creep_lifesteal_reduction_pct%%%."
@@ -1486,12 +1469,46 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "deny_lifesteal_reduction_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "half_bonus_aoe",
                   "values_float": [
                     300
                   ],
                   "is_percentage": false,
                   "heading_loc": "HALF HEAL RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_hp_percent_heal_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX HP HEAL:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],

@@ -22,9 +22,17 @@
             {
               "color": 2,
               "title_loc": "Spirit Collector",
-              "description_loc": "Other heroes' deaths empower your next Exorcism.",
+              "description_loc": "Hero deaths empower your next Exorcism.",
               "name": "death_prophet_ghosts",
               "icon": "spirit",
+              "gradient_id": 1
+            },
+            {
+              "color": 0,
+              "title_loc": "Mourning Ritual",
+              "description_loc": "Death Prophet delays a percentage of incoming damage, taking the damage in even intervals over a short duration.",
+              "name": "death_prophet_delayed_damage",
+              "icon": "healing",
               "gradient_id": 1
             }
           ],
@@ -71,11 +79,13 @@
               "desc_loc": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
               "lore_loc": "Krobelus' many trips to the grave gather a flock of the damned.",
               "notes_loc": [
-                "Can hit units up to 1110 range away."
+                "Can hit units up to 1110 range away.",
+                "Does not trigger spell block or spell reflect."
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -89,7 +99,7 @@
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                600
+                900
               ],
               "cast_points": [
                 0.2
@@ -184,7 +194,7 @@
                 {
                   "name": "range",
                   "values_float": [
-                    810
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "CAST RANGE:",
@@ -252,7 +262,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    600
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -424,6 +434,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Silenced enemies are also slowed.",
+                "",
                 ""
               ],
               "type": 0,
@@ -478,7 +489,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_death_prophet_silence_aoe",
+                      "value": 75,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -735,6 +752,7 @@
               "shard_loc": "Increases Spirit Siphon charges by %shard_bonus_charges% and causes enemies to be feared for %shard_fear_duration% seconds if they are siphoned for %shard_consecutive_siphon_duration% seconds consecutively.",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1072,6 +1090,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1134,6 +1153,40 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_speed_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cooldown_reduction_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "COOLDOWN REDUCTION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1307,6 +1360,7 @@
               "shard_loc": "",
               "scepter_loc": "Whenever an enemy is affected by Death Prophet's spells or when she attacks an enemy, a ghost will fly out, slow and hit the enemy for an increased bonus of its usual damage then return to her with life.",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1826,6 +1880,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2042,6 +2097,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2248,15 +2304,16 @@
               "item_quality": 0
             },
             {
-              "id": 5903,
-              "name": "special_bonus_hp_250",
-              "name_loc": "+{s:value} Health",
+              "id": 1458,
+              "name": "special_bonus_unique_death_prophet_silence_aoe",
+              "name_loc": "+{s:bonus_radius} Silence AoE",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2296,23 +2353,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    250
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2474,204 +2514,6 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 1284,
-              "name": "special_bonus_unique_death_prophet_crypt_swarm_damage",
-              "name_loc": "+{s:bonus_damage} Crypt Swarm Damage",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
                 "",
                 ""
               ],
@@ -2862,6 +2704,223 @@
               "item_quality": 0
             },
             {
+              "id": 5976,
+              "name": "special_bonus_hp_400",
+              "name_loc": "+{s:value} Health",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    400
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
               "id": 6628,
               "name": "special_bonus_unique_death_prophet_3",
               "name_loc": "+{s:bonus_damage} Spirit Siphon Damage/Heal",
@@ -2871,6 +2930,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3070,6 +3130,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3287,6 +3348,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3486,14 +3548,16 @@
                   "id": 1285,
                   "name": "death_prophet_spirit_collector",
                   "name_loc": "Spirit Collector",
-                  "desc_loc": "Other heroes' deaths empower your next Exorcism.",
+                  "desc_loc": "Hero deaths empower your next Exorcism.",
                   "lore_loc": "",
                   "notes_loc": [
-                    "Whenever a hero dies, Death Prophet traps their spirit for later use. When she casts Exorcism, each trapped hero spirit will replace a standard spirit. Hero spirits deal more damage than standard spirits.<br><br>When a hero is killed while Exorcism is active a standard spirit will be replaced with a hero spirit if possible."
+                    "Whenever a hero dies, Death Prophet traps their spirit for later use. When she casts Exorcism, each trapped hero spirit will replace a standard spirit. Hero spirits deal more damage than standard spirits.<br><br>When a hero is killed while Exorcism is active a standard spirit will be replaced with a hero spirit if possible.",
+                    "Includes Death Prophet's own death."
                   ],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
+                    "",
                     "",
                     ""
                   ],
@@ -3676,6 +3740,266 @@
                   "ability_is_granted_by_scepter": false,
                   "ability_is_granted_by_shard": false,
                   "ability_is_innate": false,
+                  "item_cost": 0,
+                  "item_initial_charges": 0,
+                  "item_neutral_tier": 4294967295,
+                  "item_stock_max": 0,
+                  "item_stock_time": 0,
+                  "item_quality": 0
+                }
+              ]
+            },
+            {
+              "abilities": [
+                {
+                  "id": 1459,
+                  "name": "death_prophet_mourning_ritual",
+                  "name_loc": "Mourning Ritual",
+                  "desc_loc": "Death Prophet delays a percentage of incoming damage, taking the damage in even intervals over a short duration.",
+                  "lore_loc": "",
+                  "notes_loc": [
+                    "Delayed damage matches the damage type of the initial damage and bypasses armor, magic resistance, and damage block."
+                  ],
+                  "shard_loc": "",
+                  "scepter_loc": "",
+                  "facets_loc": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "type": 0,
+                  "behavior": "67",
+                  "target_team": 0,
+                  "target_type": 0,
+                  "flags": 0,
+                  "damage": 0,
+                  "immunity": 0,
+                  "dispellable": 0,
+                  "max_level": 4,
+                  "cast_ranges": [
+                    0
+                  ],
+                  "cast_points": [
+                    0
+                  ],
+                  "channel_times": [
+                    0
+                  ],
+                  "cooldowns": [
+                    0
+                  ],
+                  "durations": [
+                    0
+                  ],
+                  "damages": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "mana_costs": [
+                    0
+                  ],
+                  "gold_costs": [],
+                  "health_costs": [],
+                  "special_values": [
+                    {
+                      "name": "delay_pct",
+                      "values_float": [
+                        20,
+                        30,
+                        40,
+                        50
+                      ],
+                      "is_percentage": true,
+                      "heading_loc": "DAMAGE DELAYED:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "delay_time",
+                      "values_float": [
+                        5
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "DELAY DURATION:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "damage_interval",
+                      "values_float": [
+                        1
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "DAMAGE INTERVAL:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCastRange",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityChannelTime",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityDuration",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCastPoint",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCharges",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityChargeRestoreTime",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityManaCost",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCooldown",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    }
+                  ],
+                  "is_item": false,
+                  "ability_has_scepter": false,
+                  "ability_has_shard": false,
+                  "ability_is_granted_by_scepter": false,
+                  "ability_is_granted_by_shard": false,
+                  "ability_is_innate": true,
                   "item_cost": 0,
                   "item_initial_charges": 0,
                   "item_neutral_tier": 4294967295,

@@ -340,7 +340,7 @@
               "id": 5268,
               "name": "enchantress_enchant",
               "name_loc": "Enchant",
-              "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty, and a Neutral Token, if it is available.  Enchantress can control up to %max_creeps% creeps at a time for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty.  Enchantress can control up to %max_creeps% creeps at a time for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
               "notes_loc": [
                 "Illusions can be converted."
@@ -783,7 +783,8 @@
               "desc_loc": "A cloud of wisps heals Enchantress and any friendly units nearby.",
               "lore_loc": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers.",
               "notes_loc": [
-                "Units with full HP will not be selected for the heal."
+                "Units with full HP will not be selected for the heal.",
+                "Break disables Overprotective Wisps."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -2048,12 +2049,14 @@
               "item_quality": 0
             },
             {
-              "id": 1308,
-              "name": "enchantress_forest_freebie",
-              "name_loc": "Forest Freebie",
-              "desc_loc": "When a neutral token drops, %additional_neutral_tokens% additional token will drop, if available.",
+              "id": 1464,
+              "name": "enchantress_rabblerouser",
+              "name_loc": "Rabble-Rouser",
+              "desc_loc": "All neutral camps deal more damage to enemy heroes. Damage increase is %base_damage_amp%%% + %damage_amp_per_level%%% per Enchantress's hero level.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Does not affect converted neutrals, Tormentor, or Roshan."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -2061,12 +2064,12 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8796093022210",
-              "target_team": 0,
+              "behavior": "4398046576643",
+              "target_team": 2,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
-              "immunity": 0,
+              "immunity": 3,
               "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
@@ -2097,12 +2100,46 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "additional_neutral_tokens",
+                  "name": "base_damage_amp",
                   "values_float": [
-                    1
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_amp_per_level",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_increase_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "DAMAGE INCREASE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],

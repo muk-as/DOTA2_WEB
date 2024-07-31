@@ -495,7 +495,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_abaddon",
-                      "value": 100,
+                      "value": 80,
                       "operation": 0
                     }
                   ],
@@ -1095,10 +1095,10 @@
               "item_quality": 0
             },
             {
-              "id": 1390,
-              "name": "abaddon_font_of_avernus",
-              "name_loc": "Font of Avernus",
-              "desc_loc": "Abaddon's respawn time is reduced by %respawn_reduction%%%.",
+              "id": 1481,
+              "name": "abaddon_withering_mist",
+              "name_loc": "Withering Mist",
+              "desc_loc": "Damaging enemies applies the Withering Mist debuff for %duration%s. Affected enemies have their HP regeneration, healing, lifesteal and spell lifesteal reduced by %heal_reduction_pct%%% if they are below %hp_threshold_pct%%% HP.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1144,9 +1144,43 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "respawn_reduction",
+                  "name": "hp_threshold_pct",
                   "values_float": [
-                    10
+                    40
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "heal_reduction_pct",
+                  "values_float": [
+                    35
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "duration",
+                  "values_float": [
+                    5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1318,7 +1352,8 @@
               "lore_loc": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding.  What should hurt, instead heals; and what should kill gives strength anew.",
               "notes_loc": [
                 "Borrowed Time can be manually activated while Abaddon is disabled, but not while silenced.  The passive activation can still occur while silenced.",
-                "Aphotic Shield does not block any damage to Abaddon when Borrowed Time is active, allowing him to heal."
+                "Aphotic Shield does not block any damage to Abaddon when Borrowed Time is active, allowing him to heal.",
+                "Break prevents Borrowed Time from automatically activating."
               ],
               "shard_loc": "",
               "scepter_loc": "Increases duration. While Borrowed Time is active, anytime an ally takes more than %ally_threshold_scepter% damage while within %redirect_range_scepter% range of Abaddon, an individual Mist Coil will automatically fire towards that ally.",
@@ -1345,9 +1380,9 @@
                 0
               ],
               "cooldowns": [
+                90,
                 80,
-                70,
-                60
+                70
               ],
               "durations": [
                 0
@@ -1640,9 +1675,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
+                    90,
                     80,
-                    70,
-                    60
+                    70
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

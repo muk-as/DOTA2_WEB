@@ -174,14 +174,20 @@
                 {
                   "name": "shrapnel_damage",
                   "values_float": [
-                    25,
-                    40,
-                    55,
-                    70
+                    30,
+                    45,
+                    60,
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_sniper_shrapnel_damage",
+                      "value": 30,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -412,9 +418,7 @@
               "name_loc": "Headshot",
               "desc_loc": "Sniper increases his accuracy, giving him a chance to deal extra damage and knock back his enemies. Knockback distance increases based on how close the enemy is to Sniper. Headshots briefly slow enemy movement and attack speed by %slow%%%.",
               "lore_loc": "Taking potshots at steepstalkers in his childhood has been thoroughly refined into perfect leads on enemy combatants.",
-              "notes_loc": [
-                "Works on allied creeps."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1456,9 +1460,9 @@
                   "name": "bonus_range",
                   "values_float": [
                     160,
-                    240,
-                    320,
-                    400
+                    260,
+                    360,
+                    460
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK RANGE BONUS:",
@@ -3007,9 +3011,9 @@
               "item_quality": 0
             },
             {
-              "id": 5943,
-              "name": "special_bonus_attack_range_100",
-              "name_loc": "+{s:value} Attack Range",
+              "id": 1455,
+              "name": "special_bonus_unique_sniper_shrapnel_damage",
+              "name_loc": "+{s:bonus_shrapnel_damage}% Shrapnel Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3055,23 +3059,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    100
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

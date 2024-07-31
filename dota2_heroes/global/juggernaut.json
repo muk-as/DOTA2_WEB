@@ -208,7 +208,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_juggernaut_blade_fury_movespeed",
-                      "value": 30,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -459,9 +459,6 @@
                 0
               ],
               "cooldowns": [
-                60,
-                60,
-                60,
                 60
               ],
               "durations": [
@@ -492,7 +489,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAX HEALTH PER SECOND:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_juggernaut_healing_ward_heal",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -509,13 +512,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_juggernaut_3",
-                      "value": 150,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -717,7 +714,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_juggernaut_5",
+                      "value": 10,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1297,7 +1300,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_juggernaut_3",
+                      "value": 4,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1779,9 +1788,9 @@
           ],
           "talents": [
             {
-              "id": 7394,
-              "name": "special_bonus_unique_juggernaut_4",
-              "name_loc": "+{s:bonus_blade_dance_crit_mult}% Blade Dance Crit Damage",
+              "id": 628,
+              "name": "special_bonus_unique_juggernaut_5",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Healing Ward Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1980,7 +1989,7 @@
             {
               "id": 7021,
               "name": "special_bonus_unique_juggernaut_3",
-              "name_loc": "+{s:bonus_healing_ward_aura_radius} Healing Ward Radius",
+              "name_loc": "+{s:bonus_front_damage_increase}% Duelist Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2177,9 +2186,9 @@
               "item_quality": 0
             },
             {
-              "id": 628,
-              "name": "special_bonus_unique_juggernaut_5",
-              "name_loc": "-{s:value}s Healing Ward Cooldown",
+              "id": 1489,
+              "name": "special_bonus_unique_juggernaut_healing_ward_heal",
+              "name_loc": "+{s:bonus_healing_ward_heal_amount}% Healing Ward Heal",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2225,23 +2234,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3401,7 +3393,9 @@
                   "desc_loc": "Juggernaut gains Agility and Movement Speed as long as he's not taking damage.",
                   "lore_loc": "",
                   "notes_loc": [
-                    "Grants a stack of Bladeform every %stack_gain_time%s that Juggernaut does not take damage. Each stack grants %agi_bonus_pct_per_stack%%% base agility bonus and %movement_speed_pct_per_stack%%% movement speed with a max of %max_stacks% stacks. Stacks fade after %linger_duration%s upon taking any damage."
+                    "Grants a stack of Bladeform every %stack_gain_time%s that Juggernaut does not take damage. Each stack grants %agi_bonus_pct_per_stack%%% base agility bonus and %movement_speed_pct_per_stack%%% movement speed with a max of %max_stacks% stacks. Stacks fade after %linger_duration%s upon taking any damage.",
+                    "Break disables the gaining of new stacks.",
+                    "Break does not disable the bonuses from existing stacks."
                   ],
                   "shard_loc": "",
                   "scepter_loc": "",

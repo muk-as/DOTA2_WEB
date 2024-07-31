@@ -13,10 +13,10 @@
           "facets": [
             {
               "color": 1,
-              "title_loc": "Tailwind",
-              "description_loc": "Windrun grants additional bonus movement speed to Windranger and nearby allies.",
-              "name": "windrunner_tailwind",
-              "icon": "speed",
+              "title_loc": "Focus Fire",
+              "description_loc": "Focus Fire rapidly attacks a single target.",
+              "name": "windrunner_focusfire",
+              "icon": "focus_fire",
               "gradient_id": 2
             },
             {
@@ -78,6 +78,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -402,6 +403,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -798,6 +800,7 @@
               "scepter_loc": "Windrun reduces physical damage taken by %physical_damage_pct%%%, and grants invisibility that is not broken by attacking or casting spells.",
               "facets_loc": [
                 "Windrun grants additional bonus movement speed to Windranger and nearby allies.",
+                "",
                 ""
               ],
               "type": 0,
@@ -1180,6 +1183,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1433,7 +1437,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Focus Fire no longer requires a target, instead firing at random enemies within Windranger's attack range. Fires a fixed number of attacks per second, and can only hit the same enemy every 4 shots. Prioritizes Heroes."
+                "",
+                "Focus Fire no longer requires a target, instead firing at random enemies within Windranger's attack range + %bonus_range%. Fires a fixed number of attacks per second, and can only hit the same enemy every 4 shots. Prioritizes Heroes."
               ],
               "type": 1,
               "behavior": "134217736",
@@ -1641,7 +1646,26 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "windrunner_tailwind"
+                  "required_facet": "windrunner_focusfire"
+                },
+                {
+                  "name": "bonus_range",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS ATTACK RANGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "windrunner_whirlwind",
+                    "values": [
+                      150
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "unfocused_cancel_initial_cooldown",
@@ -1707,7 +1731,7 @@
                   "facet_bonus": {
                     "name": "windrunner_whirlwind",
                     "values": [
-                      8
+                      9
                     ],
                     "operation": 5
                   },
@@ -1826,6 +1850,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2062,6 +2087,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2260,6 +2286,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2477,6 +2504,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2693,6 +2721,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2891,6 +2920,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3091,6 +3121,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3290,6 +3321,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3488,6 +3520,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "Whirlwind Kills extend duration by {s:bonus_duration_increase_per_kill}s"
               ],

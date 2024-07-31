@@ -26,6 +26,14 @@
               "name": "doom_bringer_boost_selling",
               "icon": "gold",
               "gradient_id": 0
+            },
+            {
+              "color": 5,
+              "title_loc": "Impending Doom",
+              "description_loc": "Every {s:bonus_upgrade_interval} minutes, Doom's duration is increased by {s:bonus_upgrade_amount}s. Doom DPS decreased.",
+              "name": "doom_bringer_impending_doom",
+              "icon": "cooldown",
+              "gradient_id": 0
             }
           ],
           "str_base": 24,
@@ -78,6 +86,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Devour now has %AbilityCharges% charges and stolen creep abilities are upgraded by one level.",
+                "",
                 ""
               ],
               "type": 0,
@@ -314,17 +323,19 @@
                 {
                   "name": "AbilityChargeRestoreTime",
                   "values_float": [
-                    90
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "BASE CHARGE RESTORE TIME:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "doom_bringer_gluttony",
+                    "values": [
+                      90
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -393,6 +404,7 @@
               "shard_loc": "Heals Doom and his controlled units for %heal_pct%%% of the damage dealt.",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -720,6 +732,7 @@
               "shard_loc": "Infernal Blade stun duration is increased. If the enemy's level is a multiple of 3, or above level 24, they will be stunned for a longer duration and take bonus damage.",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1060,7 +1073,8 @@
               "scepter_loc": "Allies in a %scepter_aura_radius% radius around the doomed target also suffer the effects of Doom. Allows Doom to be self-cast to affect enemies around himself with Doom.",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Every %upgrade_interval% minutes, Doom's duration is increased by %upgrade_amount%s. Doom DPS decreased."
               ],
               "type": 1,
               "behavior": "8",
@@ -1115,8 +1129,10 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "doom_bringer_impending_doom",
+                    "values": [
+                      0
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1134,9 +1150,13 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "doom_bringer_impending_doom",
+                    "values": [
+                      30,
+                      45,
+                      60
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -1237,6 +1257,44 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "upgrade_interval",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "doom_bringer_impending_doom",
+                    "values": [
+                      6.66
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "upgrade_amount",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "doom_bringer_impending_doom",
+                    "values": [
+                      0.66
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1407,6 +1465,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1626,6 +1685,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1824,6 +1884,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2024,6 +2085,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2222,6 +2284,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2439,6 +2502,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2655,6 +2719,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2854,6 +2919,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3052,6 +3118,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3258,6 +3325,7 @@
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
+                    "",
                     "",
                     ""
                   ],
@@ -3482,6 +3550,9 @@
                   "item_quality": 0
                 }
               ]
+            },
+            {
+              "abilities": []
             }
           ]
         }

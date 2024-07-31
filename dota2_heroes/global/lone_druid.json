@@ -22,9 +22,17 @@
             {
               "color": 1,
               "title_loc": "Unbearable",
-              "description_loc": "True Form transforms the Spirit Bear instead of Lone Druid.",
+              "description_loc": "True Form transforms the Spirit Bear instead of Lone Druid. Increases the distance from Lone Druid at which the Spirit Bear can attack.",
               "name": "lone_druid_unbearable",
               "icon": "overshadow",
+              "gradient_id": 1
+            },
+            {
+              "color": 5,
+              "title_loc": "Bear Necessities",
+              "description_loc": "Lone Druid's items are more powerful and his inventory is smaller.",
+              "name": "lone_druid_bear_necessities",
+              "icon": "item",
               "gradient_id": 1
             }
           ],
@@ -68,7 +76,7 @@
               "id": 1342,
               "name": "lone_druid_spirit_bear",
               "name_loc": "Summon Spirit Bear",
-              "desc_loc": "Summons a powerful Spirit Bear companion that can equip items.  If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers %backlash_damage%%% of his max health as backlash damage if the Spirit Bear dies.\nSpirit Bear has the Return, Demolish and Entangling Claws abilities.",
+              "desc_loc": "Summons a powerful Spirit Bear companion that can equip items. Neutral Items are copied from, and share a cooldown with, Lone Druid's own Neutral Items.<br><br>If the bear moves %bear_attack_leash_range% distance away from the Lone Druid, it cannot attack.  Lone Druid suffers %backlash_damage%%% of his max health as backlash damage if the Spirit Bear dies.\nSpirit Bear has the Return, Demolish and Entangling Claws abilities.",
               "lore_loc": "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need.",
               "notes_loc": [
                 "Most spells interact with the Spirit Bear in the same way as they do with heroes.",
@@ -80,6 +88,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "Increases the distance from Lone Druid at which the Spirit Bear can attack.",
                 ""
               ],
               "type": 0,
@@ -90,7 +99,7 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 5,
+              "max_level": 4,
               "cast_ranges": [
                 0
               ],
@@ -104,7 +113,6 @@
                 0
               ],
               "cooldowns": [
-                160,
                 150,
                 140,
                 130,
@@ -123,7 +131,6 @@
                 75,
                 75,
                 75,
-                75,
                 75
               ],
               "gold_costs": [],
@@ -132,7 +139,6 @@
                 {
                   "name": "bear_hp",
                   "values_float": [
-                    800,
                     1100,
                     1400,
                     1700,
@@ -153,7 +159,6 @@
                 {
                   "name": "bear_regen_tooltip",
                   "values_float": [
-                    4,
                     5,
                     6,
                     7,
@@ -174,7 +179,6 @@
                 {
                   "name": "bear_bat",
                   "values_float": [
-                    1.85,
                     1.75,
                     1.65,
                     1.55,
@@ -195,7 +199,6 @@
                 {
                   "name": "bear_armor",
                   "values_float": [
-                    0,
                     0,
                     2,
                     4,
@@ -233,7 +236,6 @@
                 {
                   "name": "bear_movespeed",
                   "values_float": [
-                    300,
                     300,
                     330,
                     360,
@@ -344,6 +346,25 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bear_attack_leash_range",
+                  "values_float": [
+                    1100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "lone_druid_unbearable",
+                    "values": [
+                      500
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -470,7 +491,6 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    160,
                     150,
                     140,
                     130,
@@ -494,7 +514,7 @@
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
+              "ability_is_innate": false,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -508,12 +528,15 @@
               "name_loc": "Spirit Link",
               "desc_loc": "Links Lone Druid and the Spirit Bear, increasing their attack speed as well as sharing a percentage of their armor and lifesteal with each other.",
               "lore_loc": "Sylla is emboldened by the presence of his companion, his vitality replenished with each swipe of the Spirit Bear's claws.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the shared lifesteal."
+              ],
               "shard_loc": "",
               "scepter_loc": "Lone Druid severs his link to his Spirit Bear, and connects to the target allied hero, sharing the Spirit Link bonuses with them for %duration%s. Armor sharing and attack speed are increased by %active_bonus%%%. Damage done by the ally heals Lone Druid, as well as the other way around.<br><br> The Spirit Bear is feared for the duration of the transformation, unless he has his own Aghanim's Scepter.",
               "facets_loc": [
                 "Shared Armor increased. Damage dealt by either the Spirit Bear or Lone Druid will heal the other.",
-                "Only damage dealt by Spirit Bear heals Lone Druid."
+                "Only damage dealt by Spirit Bear heals Lone Druid.",
+                ""
               ],
               "type": 0,
               "behavior": "2",
@@ -839,6 +862,7 @@
               "shard_loc": "Applies a basic dispel and grants allies in an area around the caster bonus movement and attack speed. Replicates between Lone Druid and Spirit Bear regardless of castability on the other.<br><br>DISPEL TYPE: Basic Dispel",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1186,6 +1210,223 @@
               "item_quality": 0
             },
             {
+              "id": 1472,
+              "name": "lone_druid_gift_bearer",
+              "name_loc": "Gift Bearer",
+              "desc_loc": "Lone Druid can re-roll his Neutral Token once per tier.",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8796093022210",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "reroll",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": true,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
               "id": 5415,
               "name": "lone_druid_true_form",
               "name_loc": "True Form",
@@ -1198,7 +1439,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Lone Druid morphs himself into a raging bear, losing his ranged advantage, but gaining increased bonus armor, more health, and improved versions of Entangling Claws and Demolish.",
-                "Lone Druid morphs his Spirit Bear into an enraged form that gains bonus armor, attack speed, demolish damage, and a %entangling_claws_cooldown_reduction_pct%%% cooldown on Entangling Claws."
+                "Lone Druid morphs his Spirit Bear into an enraged form that gains bonus armor, attack speed, demolish damage, and a %entangling_claws_cooldown_reduction_pct%%% cooldown on Entangling Claws.",
+                ""
               ],
               "type": 1,
               "behavior": "4",
@@ -1538,6 +1780,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1754,6 +1997,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1952,6 +2196,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2152,6 +2397,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2350,6 +2596,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2550,6 +2797,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2748,6 +2996,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2948,6 +3197,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3143,6 +3393,249 @@
             },
             {
               "abilities": []
+            },
+            {
+              "abilities": [
+                {
+                  "id": 1473,
+                  "name": "lone_druid_bear_necessities",
+                  "name_loc": "Bear Necessities",
+                  "desc_loc": "Lone Druid can only use the first %item_slots% items in his inventory. These items' passive bonuses are more powerful. Other item slots do not provide any bonuses. Neutral slot is unaffected.",
+                  "lore_loc": "",
+                  "notes_loc": [
+                    "The following attributes can be increased:<br>* Intelligence, Strength and Agility<br>* Health, Mana and Evasion<br>* Attack Speed and Bonus Damage<br>* Health and Mana Regen"
+                  ],
+                  "shard_loc": "",
+                  "scepter_loc": "",
+                  "facets_loc": [
+                    "",
+                    "",
+                    ""
+                  ],
+                  "type": 0,
+                  "behavior": "13194139533315",
+                  "target_team": 0,
+                  "target_type": 0,
+                  "flags": 0,
+                  "damage": 0,
+                  "immunity": 0,
+                  "dispellable": 0,
+                  "max_level": 4,
+                  "cast_ranges": [
+                    0
+                  ],
+                  "cast_points": [
+                    0
+                  ],
+                  "channel_times": [
+                    0
+                  ],
+                  "cooldowns": [
+                    0
+                  ],
+                  "durations": [
+                    0
+                  ],
+                  "damages": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "mana_costs": [
+                    0
+                  ],
+                  "gold_costs": [],
+                  "health_costs": [],
+                  "special_values": [
+                    {
+                      "name": "item_slots",
+                      "values_float": [
+                        3
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "bonus_stat_percent",
+                      "values_float": [
+                        50,
+                        60,
+                        70,
+                        80
+                      ],
+                      "is_percentage": true,
+                      "heading_loc": "STAT BONUS:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCastRange",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityChannelTime",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityDuration",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCastPoint",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCharges",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityChargeRestoreTime",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityManaCost",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "AbilityCooldown",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    }
+                  ],
+                  "is_item": false,
+                  "ability_has_scepter": false,
+                  "ability_has_shard": false,
+                  "ability_is_granted_by_scepter": false,
+                  "ability_is_granted_by_shard": false,
+                  "ability_is_innate": false,
+                  "item_cost": 0,
+                  "item_initial_charges": 0,
+                  "item_neutral_tier": 4294967295,
+                  "item_stock_max": 0,
+                  "item_stock_time": 0,
+                  "item_quality": 0
+                }
+              ]
             }
           ]
         }

@@ -68,7 +68,7 @@
               "id": 5377,
               "name": "silencer_curse_of_the_silent",
               "name_loc": "Arcane Curse",
-              "desc_loc": "Curses the target area, causing enemy heroes to take damage over time and slowing their movement speed. If a target casts a spell, they are silenced for %silence_duration% seconds. The duration is paused as long as the target is silenced.",
+              "desc_loc": "Curses the target area, causing enemy heroes to take damage over time and slowing their movement speed. If a target casts a spell, they are silenced for a short period. The duration is paused as long as the target is silenced.",
               "lore_loc": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
               "notes_loc": [
                 "Affects creeps.",
@@ -138,7 +138,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_silencer",
-                      "value": 10,
+                      "value": 15,
                       "operation": 0
                     }
                   ],
@@ -175,7 +175,36 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "silence_duration",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SILENCE DURATION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -219,23 +248,6 @@
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "silence_duration",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -457,6 +469,9 @@
                 0
               ],
               "mana_costs": [
+                14,
+                16,
+                18,
                 20
               ],
               "gold_costs": [],
@@ -737,6 +752,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
+                    14,
+                    16,
+                    18,
                     20
                   ],
                   "is_percentage": false,
@@ -834,17 +852,17 @@
                 {
                   "name": "damage_per_silence",
                   "values_float": [
-                    20,
                     30,
                     40,
-                    50
+                    50,
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER SILENCE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_silencer_4",
-                      "value": 20,
+                      "value": 35,
                       "operation": 0
                     }
                   ],
@@ -1057,7 +1075,7 @@
               "desc_loc": "If Silencer kills an enemy hero, he permanently steals %permanent_int_steal_amount% Intelligence.",
               "lore_loc": "",
               "notes_loc": [
-                "To permanently steal Intelligence, Silencer doesn't need to land the killing blow, as long as the enemy hero is killed within %permanent_int_steal_range% range of Silencer."
+                "To permanently steal Intelligence, Silencer doesn't need to land the killing blow, as long as the enemy hero is killed within %permanent_int_steal_range% range of Silencer or was debuffed by Silencer at the time of death."
               ],
               "shard_loc": "Increases the Intelligence stolen per kill to %permanent_int_steal_amount%.",
               "scepter_loc": "",
@@ -1121,7 +1139,7 @@
                 {
                   "name": "permanent_int_steal_amount",
                   "values_float": [
-                    2
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2222,9 +2240,9 @@
               "item_quality": 0
             },
             {
-              "id": 6880,
-              "name": "special_bonus_unique_silencer_4",
-              "name_loc": "+{s:bonus_damage_per_silence}/{s:bonus_slow_per_silence}% Last Word Damage/Slow",
+              "id": 1467,
+              "name": "special_bonus_unique_silencer_arcane_curse_duration",
+              "name_loc": "+{s:bonus_duration}/{s:bonus_silence_duration}s Arcane Curse Base/Silence Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2270,23 +2288,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    0.8
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2637,9 +2638,9 @@
               "item_quality": 0
             },
             {
-              "id": 8247,
-              "name": "special_bonus_unique_silencer_arcane_curse_undispellable",
-              "name_loc": "Arcane Curse Undispellable",
+              "id": 6880,
+              "name": "special_bonus_unique_silencer_4",
+              "name_loc": "+{s:bonus_damage_per_silence}/{s:bonus_slow_per_silence}% Last Word Damage/Slow",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2685,6 +2686,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    0.8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

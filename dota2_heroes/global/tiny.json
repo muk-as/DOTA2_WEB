@@ -68,7 +68,7 @@
               "id": 5106,
               "name": "tiny_avalanche",
               "name_loc": "Avalanche",
-              "desc_loc": "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units. Avalanche does %toss_damage_bonus_pct%%% bonus damage to units being tossed.",
+              "desc_loc": "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units. Avalanche does %toss_damage_bonus_pct%%% bonus damage to units being tossed",
               "lore_loc": "Inanimate rock becomes animate when called by the Stone Giant.",
               "notes_loc": [],
               "shard_loc": "",
@@ -240,7 +240,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_tiny",
-                      "value": 80,
+                      "value": 70,
                       "operation": 0
                     }
                   ],
@@ -455,7 +455,7 @@
               "target_type": 128,
               "flags": 0,
               "damage": 2,
-              "immunity": 3,
+              "immunity": 0,
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
@@ -544,7 +544,7 @@
                   "facet_bonus": {
                     "name": "tiny_crash_landing",
                     "values": [
-                      450
+                      400
                     ],
                     "operation": 5
                   },
@@ -653,10 +653,10 @@
                   "facet_bonus": {
                     "name": "tiny_crash_landing",
                     "values": [
+                      20,
                       25,
                       30,
-                      35,
-                      40
+                      35
                     ],
                     "operation": 0
                   },
@@ -1511,7 +1511,10 @@
               "name_loc": "Craggy Exterior",
               "desc_loc": "Enemies that attack Tiny receive a stacking debuff that lowers their attack damage with each stack.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the application of new stacks.",
+                "Break does not disable the effects of existing stacks."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1888,9 +1891,9 @@
                 {
                   "name": "toss_bonus_damage",
                   "values_float": [
-                    100,
-                    250,
-                    400
+                    50,
+                    175,
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "TOSS BONUS DAMAGE:",

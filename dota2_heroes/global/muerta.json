@@ -22,7 +22,7 @@
             {
               "color": 1,
               "title_loc": "Ofrenda",
-              "description_loc": "Muerta can place an Ofrenda on the map to respawn there instead of the fountain.",
+              "description_loc": "Muerta can place a beneficial Ofrenda on the map to respawn there instead of the fountain.",
               "name": "muerta_ofrenda",
               "icon": "teleport",
               "gradient_id": 0
@@ -1010,7 +1010,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "2199023258116",
+              "behavior": "2564",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -3817,7 +3817,7 @@
                   "id": 1435,
                   "name": "muerta_ofrenda",
                   "name_loc": "Ofrenda",
-                  "desc_loc": "Muerta places a sacred altar at the targeted location. When respawning, Muerta will gain the benefits of Pierce The Veil's corporeal form for %pierce_the_veil_duration_pct%%% of the duration, spawn at the Ofrenda and destroy it, putting the ability on cooldown.<br><br>Muerta can select the Ofrenda and force it to destroy itself. Only one Ofrenda can exist at a time.",
+                  "desc_loc": "Muerta places a sacred altar at the targeted location that increases her attack speed when she is near it.<br><br>When respawning, Muerta will gain the benefits of Pierce The Veil's corporeal form for %pierce_the_veil_duration_pct%%% of the duration and respawn at the Ofrenda.<br><br>Muerta can select the Ofrenda and force it to destroy itself. Only one Ofrenda can exist at a time.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
@@ -3827,14 +3827,14 @@
                     ""
                   ],
                   "type": 0,
-                  "behavior": "16",
+                  "behavior": "80",
                   "target_team": 0,
                   "target_type": 0,
                   "flags": 0,
                   "damage": 0,
                   "immunity": 0,
                   "dispellable": 0,
-                  "max_level": 1,
+                  "max_level": 4,
                   "cast_ranges": [
                     300
                   ],
@@ -3869,6 +3869,43 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "attackspeed_bonus",
+                      "values_float": [
+                        15,
+                        25,
+                        35,
+                        45
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "ATTACK SPEED:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "effect_radius",
+                      "values_float": [
+                        450
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "EFFECT RADIUS:",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],

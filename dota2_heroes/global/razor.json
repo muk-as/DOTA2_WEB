@@ -14,7 +14,7 @@
             {
               "color": 5,
               "title_loc": "Thunderhead",
-              "description_loc": "Storm Surge lightning hits all units within Eye of the Storm's area of effect when it is active.",
+              "description_loc": "Storm Surge lightning strikes more often and hits all units within Eye of the Storm's area of effect when it is active.",
               "name": "razor_thunderhead",
               "icon": "barrier",
               "gradient_id": 0
@@ -232,7 +232,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "SLOW MAX:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_razor_plasmafield_max_slow",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -872,7 +878,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "While Eye of the Storm is active, strike chance is %eye_of_the_storm_chance_multiplier%x as high and Lightning strikes all enemies within Eye of the Storm's radius. Does not apply to the same enemy twice from a single instance.",
+                "While Eye of the Storm is active, strike chance is %eye_of_the_storm_chance_multiplier%x as high, strike cooldown is reduced by %strike_cd_reduction_during_storm%s, and Lightning strikes all enemies within Eye of the Storm's radius. Does not apply to the same enemy twice from a single instance.",
                 ""
               ],
               "type": 0,
@@ -1038,19 +1044,32 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "STRIKE COOLDOWN:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_razor_3",
-                      "value": 1,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
                     "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "strike_cd_reduction_during_storm",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "razor_thunderhead",
+                    "values": [
+                      2.5
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -1298,6 +1317,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_speed_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2398,9 +2434,9 @@
               "item_quality": 0
             },
             {
-              "id": 6860,
-              "name": "special_bonus_unique_razor_3",
-              "name_loc": "-{s:bonus_strike_internal_cd}s Storm Surge Strike Cooldown",
+              "id": 5928,
+              "name": "special_bonus_strength_12",
+              "name_loc": "+{s:value} Strength",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2449,7 +2485,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    6
+                    12
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3489,6 +3525,23 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "total_spell_amp",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": true,
+                      "heading_loc": "SPELL AMP PER BONUS ATTACK DAMAGE:",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],

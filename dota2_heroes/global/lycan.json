@@ -16,7 +16,7 @@
               "title_loc": "Pack Leader",
               "description_loc": "Enemy heroes killed by Lycan or his units extend Shapeshift duration.",
               "name": "lycan_pack_leader",
-              "icon": "wolf",
+              "icon": "summons",
               "gradient_id": 1
             },
             {
@@ -26,6 +26,14 @@
               "name": "lycan_spirit_wolves",
               "icon": "spirit",
               "gradient_id": 0
+            },
+            {
+              "color": 2,
+              "title_loc": "Alpha Wolves",
+              "description_loc": "Increases the max level of Summon Wolves while lowering the max level of Howl and Feral Impulse.",
+              "name": "lycan_alpha_wolves",
+              "icon": "wolf",
+              "gradient_id": 2
             }
           ],
           "str_base": 26,
@@ -68,14 +76,15 @@
               "id": 5395,
               "name": "lycan_summon_wolves",
               "name_loc": "Summon Wolves",
-              "desc_loc": "Summons %wolf_count% wolves to aid Lycan in battle",
+              "desc_loc": "Summons %wolf_count% wolves to aid Lycan in battle. At level 3, wolves gain Permanent Invisibility, and at level 4 wolves gain Cripple that gives 20% chance to cripple the target, causing 8 damage per second and lose 60 attack speed for 4 seconds.",
               "lore_loc": "The very enchantment that twisted his being also summons canine familiars.",
               "notes_loc": [],
               "shard_loc": "Causes one of your creep waves to include one uncontrollable wolf that moves with the wave. Additionally, wolves spawned this way may Cripple towers.",
               "scepter_loc": "",
               "facets_loc": [
-                "Level 3-4 wolves have Permanent Invisibility, and level 4 wolves have Cripple that gives 20% chance to cripple the target, causing 8 damage per second and lose 60 attack speed for 4 seconds.",
-                "Summoned Wolves are invulnerable and uncontrollable spirits that do not attack, but provide health and damage bonuses to Lycan."
+                "",
+                "Summoned Wolves are invulnerable and uncontrollable spirits that do not attack, but provide health and damage bonuses to Lycan.",
+                "Max Level increased to %max_level%. Level 5 wolves gain Hamstring, which empowers their attacks to root enemies and cause them to take more physical damage on attacks. Level 6 wolves have Hightail, an active ability that gives wolves phased movement, evasion, movespeed, and attack speed."
               ],
               "type": 0,
               "behavior": "4",
@@ -117,6 +126,8 @@
                 115,
                 120,
                 125,
+                130,
+                130,
                 130
               ],
               "gold_costs": [],
@@ -128,7 +139,9 @@
                     1,
                     2,
                     3,
-                    4
+                    4,
+                    5,
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -167,6 +180,8 @@
                     1.2,
                     1.1,
                     1,
+                    0.9,
+                    0.9,
                     0.9
                   ],
                   "is_percentage": false,
@@ -175,11 +190,18 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "lycan_spirit_wolves",
+                    "values": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "operation": 5
                   },
-                  "required_facet": "lycan_pack_leader"
+                  "required_facet": ""
                 },
                 {
                   "name": "wolf_damage",
@@ -187,7 +209,9 @@
                     23,
                     29,
                     35,
-                    41
+                    41,
+                    47,
+                    53
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -201,11 +225,18 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "lycan_spirit_wolves",
+                    "values": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "operation": 5
                   },
-                  "required_facet": "lycan_pack_leader"
+                  "required_facet": ""
                 },
                 {
                   "name": "wolf_hp",
@@ -213,7 +244,9 @@
                     325,
                     375,
                     425,
-                    475
+                    475,
+                    525,
+                    575
                   ],
                   "is_percentage": false,
                   "heading_loc": "HP:",
@@ -227,11 +260,18 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "lycan_spirit_wolves",
+                    "values": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "operation": 5
                   },
-                  "required_facet": "lycan_pack_leader"
+                  "required_facet": ""
                 },
                 {
                   "name": "bonus_health",
@@ -270,6 +310,28 @@
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_armor",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    5,
+                    10
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -503,6 +565,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "lycan_alpha_wolves",
+                    "values": [
+                      2
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     0
@@ -610,6 +691,8 @@
                     115,
                     120,
                     125,
+                    130,
+                    130,
                     130
                   ],
                   "is_percentage": false,
@@ -668,7 +751,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Max level decreased to %max_level%."
               ],
               "type": 0,
               "behavior": "134217732",
@@ -829,6 +913,25 @@
                     "name": "",
                     "values": [],
                     "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "lycan_alpha_wolves",
+                    "values": [
+                      1
+                    ],
+                    "operation": 2
                   },
                   "required_facet": ""
                 },
@@ -996,7 +1099,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Max level decreased to %max_level%."
               ],
               "type": 0,
               "behavior": "2",
@@ -1077,6 +1181,25 @@
                     "name": "",
                     "values": [],
                     "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "lycan_alpha_wolves",
+                    "values": [
+                      1
+                    ],
+                    "operation": 2
                   },
                   "required_facet": ""
                 },
@@ -1242,6 +1365,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1517,6 +1641,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1562,6 +1687,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "extra_damage_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "EXTRA DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1736,6 +1878,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Movement and critical strike bonuses are also applied to all units under Lycan's control. Enemy heroes killed by Lycan or his units extends Shapeshift duration by %kill_duration_extension%s.",
+                "",
                 ""
               ],
               "type": 1,
@@ -2108,6 +2251,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2307,7 +2451,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "+{s:bonus_damage_per_wolf} Summon Wolves Damage Per Wolf"
+                "+{s:bonus_damage_per_wolf} Summon Wolves Damage Per Wolf",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -2506,7 +2651,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "+{s:bonus_health_per_wolf} Summon Wolves Health Per Wolf"
+                "+{s:bonus_health_per_wolf} Summon Wolves Health Per Wolf",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -2704,6 +2850,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2921,6 +3068,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3119,6 +3267,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3319,6 +3468,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3518,6 +3668,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3708,6 +3859,9 @@
             }
           ],
           "facet_abilities": [
+            {
+              "abilities": []
+            },
             {
               "abilities": []
             },

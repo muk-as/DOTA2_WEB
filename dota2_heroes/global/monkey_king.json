@@ -14,7 +14,7 @@
             {
               "color": 0,
               "title_loc": "Wukong's Faithful",
-              "description_loc": "Monkey King's soldiers do not disperse unless he spends more than {s:bonus_leadership_time_buffer} seconds outside the area.",
+              "description_loc": "Monkey King's soldiers last longer and do not disperse unless he spends more than {s:bonus_leadership_time_buffer} seconds outside the area.",
               "name": "monkey_king_wukongs_faithful",
               "icon": "summons",
               "gradient_id": 2
@@ -134,7 +134,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_monkey_king_9",
-                      "value": 0.3,
+                      "value": 0.2,
                       "operation": 0
                     }
                   ],
@@ -506,7 +506,7 @@
               "id": 5721,
               "name": "monkey_king_tree_dance",
               "name_loc": "Tree Dance",
-              "desc_loc": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage from player controlled units or Roshan while on the ground puts Tree Dance on cooldown.",
+              "desc_loc": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage while on the ground puts Tree Dance on cooldown.",
               "lore_loc": "Sun Wukong dances nimbly along the treetop canopy, always just out of arm's reach.",
               "notes_loc": [
                 "Tree Dance cooldown starts upon landing.",
@@ -560,7 +560,7 @@
                 {
                   "name": "leap_speed",
                   "values_float": [
-                    800
+                    700
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -995,7 +995,9 @@
                 "Hitting an enemy with Boundless Strike adds to the hit counter.",
                 "Repeatedly hitting an enemy refreshes the Jingu Mastery debuff duration.",
                 "Hit charges on enemies cannot be dispelled.",
-                "Jingu Mastery buff on self can be dispelled."
+                "Jingu Mastery buff on self can be dispelled.",
+                "Break disables the gaining of new stacks.",
+                "Break does not disable the bonuses from existing stacks."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1578,7 +1580,7 @@
               "shard_loc": "",
               "scepter_loc": "Spawns a monkey soldier near Monkey King at regular intervals. Soldiers do not spawn while invisible or on trees. Soldiers only attack buildings when Monkey King himself is nearby. Soldiers can now gain Jingu Mastery charges independently.",
               "facets_loc": [
-                "Monkey King's soldiers do not disperse unless he spends more than %leadership_time_buffer% seconds outside the area.",
+                "Monkey King's soldiers last longer and do not disperse unless he spends more than %leadership_time_buffer% seconds outside the area.",
                 ""
               ],
               "type": 1,
@@ -1605,7 +1607,7 @@
                 80
               ],
               "durations": [
-                13
+                0
               ],
               "damages": [
                 0,
@@ -1751,8 +1753,10 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "monkey_king_wukongs_faithful",
+                    "values": [
+                      3
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1923,7 +1927,7 @@
                 {
                   "name": "AbilityDuration",
                   "values_float": [
-                    13
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

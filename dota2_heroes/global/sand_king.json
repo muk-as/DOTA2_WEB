@@ -70,7 +70,9 @@
               "name_loc": "Burrowstrike",
               "desc_loc": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces. Adds Caustic Finale poison to heroes hit<br><br> Can be put on alt-cast to immediately cast in the desired direction, without walking towards the targeted location.",
               "lore_loc": "Crixalis often lies in wait, burrowing under the surface to ambush his adversaries.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Does not trigger spell block or spell reflect."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -283,7 +285,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_sand_king_8",
+                      "value": 150,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -449,7 +457,7 @@
                 "Sand King briefly becomes visible upon attacking or using spells while in Sand Storm. Sand King will become invisible again in %fade_delay% seconds."
               ],
               "shard_loc": "",
-              "scepter_loc": "Every %spine_tick_rate%s, %scepter_explosions_per_pulse% Burrowstrike spines are created at random locations, each measuring %scepter_explosion_radius_pct%%% of the Sand Storm's current radius, that apply %spine_damage_pct%%% of Burrowstrike damage and stun to enemies hit. Spines do not appear if Sand King is outside of Sand Storm.",
+              "scepter_loc": "",
               "facets_loc": [
                 "Sand Storm has increased radius and grants Sand King Invisibility while in it.",
                 "Sand Storm follows Sand King at a rate of %sand_storm_move_speed_pct%%% of his movement speed and is still active at a distance of up to %sand_storm_max_distance_from_caster% units away from Sand King."
@@ -519,10 +527,10 @@
                 {
                   "name": "sand_storm_radius",
                   "values_float": [
-                    300,
-                    350,
-                    400,
-                    450
+                    450,
+                    500,
+                    550,
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -554,7 +562,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_sand_king_2",
-                      "value": 10,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -639,101 +647,6 @@
                     "values": [
                       55
                     ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_explosion_radius_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    10
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_explosion_min_dist",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    90
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_explosions_per_pulse",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    3
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spine_tick_rate",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    0.4
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spine_damage_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    70
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -882,7 +795,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -898,7 +811,7 @@
               "id": 1229,
               "name": "sandking_scorpion_strike",
               "name_loc": "Stinger",
-              "desc_loc": "Sand King strikes an area, performing an attack with bonus damage on all enemies in the area of effect. Enemies within an innermost radius of %inner_radius% take %inner_radius_bonus_damage_pct%%% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
+              "desc_loc": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing extra damage to each. Enemies within an innermost radius of %inner_radius% take %inner_radius_bonus_damage_pct%%% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -926,10 +839,10 @@
                 0
               ],
               "cooldowns": [
-                14,
-                11,
-                8,
-                5
+                15,
+                12,
+                9,
+                6
               ],
               "durations": [
                 0
@@ -941,7 +854,10 @@
                 0
               ],
               "mana_costs": [
-                30
+                35,
+                40,
+                45,
+                50
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1003,17 +919,17 @@
                 {
                   "name": "attack_damage",
                   "values_float": [
-                    40,
-                    80,
-                    120,
-                    160
+                    35,
+                    70,
+                    105,
+                    140
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS ATTACK DAMAGE:",
+                  "heading_loc": "BONUS DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_sand_king_scorpion_strike_damage",
-                      "value": 50,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -1059,7 +975,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_sand_king_3",
-                      "value": 12,
+                      "value": 8,
                       "operation": 0
                     }
                   ],
@@ -1177,7 +1093,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    30
+                    35,
+                    40,
+                    45,
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1194,10 +1113,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    14,
-                    11,
-                    8,
-                    5
+                    15,
+                    12,
+                    9,
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1314,10 +1233,10 @@
                 {
                   "name": "caustic_finale_damage_pct",
                   "values_float": [
-                    6,
-                    9,
+                    4,
+                    8,
                     12,
-                    15
+                    16
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAX HEALTH DAMAGE:",
@@ -1334,10 +1253,13 @@
                 {
                   "name": "caustic_finale_duration",
                   "values_float": [
+                    4.5,
+                    5,
+                    5.5,
                     6
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1507,8 +1429,8 @@
               "notes_loc": [
                 "The pulses are centered on Sand King, not where he first cast the spell."
               ],
-              "shard_loc": "Increases Epicenter Pulse damage, and every %shard_interval%s causes a small single Epicenter Pulse around Sand King.",
-              "scepter_loc": "",
+              "shard_loc": "Increases Epicenter damage per pulse. Every %shard_interval%s causes a small single Epicenter Pulse around Sand King.",
+              "scepter_loc": "When the pulses start, %scepter_explosions_per_pulse% Stinger attack areas are created every %spine_tick_rate%s at random locations, each measuring %scepter_explosion_radius_pct%%% of the Epicenter's current radius, that apply %spine_damage_pct%%% of Stinger damage to enemies hit. Shard pulses cause %shard_explosions_per_pulse% attacks.",
               "facets_loc": [
                 "",
                 ""
@@ -1741,6 +1663,120 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "scepter_explosion_radius_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    15
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_explosion_min_dist",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    120
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_explosions_per_pulse",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    3
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spine_tick_rate",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.5
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spine_damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    50
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shard_explosions_per_pulse",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     0
@@ -1882,7 +1918,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1897,9 +1933,9 @@
           ],
           "talents": [
             {
-              "id": 6409,
-              "name": "special_bonus_unique_sand_king_2",
-              "name_loc": "+{s:bonus_sand_storm_damage} Sand Storm Damage Per Second",
+              "id": 6530,
+              "name": "special_bonus_unique_sand_king_3",
+              "name_loc": "+{s:bonus_strike_slow}% Stinger Slow",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2295,9 +2331,9 @@
               "item_quality": 0
             },
             {
-              "id": 6530,
-              "name": "special_bonus_unique_sand_king_3",
-              "name_loc": "+{s:bonus_strike_slow}% Stinger Slow",
+              "id": 6409,
+              "name": "special_bonus_unique_sand_king_2",
+              "name_loc": "+{s:bonus_sand_storm_damage} Sand Storm Damage Per Second",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2494,9 +2530,9 @@
               "item_quality": 0
             },
             {
-              "id": 1230,
-              "name": "special_bonus_unique_sand_king_scorpion_strike_damage",
-              "name_loc": "+{s:bonus_attack_damage} Stinger Damage",
+              "id": 890,
+              "name": "special_bonus_unique_sand_king_8",
+              "name_loc": "+{s:bonus_AbilityCastRange} Burrowstrike Cast Range",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

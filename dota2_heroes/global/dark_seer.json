@@ -28,7 +28,7 @@
               "gradient_id": 2
             }
           ],
-          "str_base": 22,
+          "str_base": 20,
           "str_gain": 2.6,
           "agi_base": 19,
           "agi_gain": 1.8,
@@ -59,8 +59,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 604,
-          "health_regen": 3.2,
+          "max_health": 560,
+          "health_regen": 3,
           "max_mana": 327,
           "mana_regen": 1.0500001,
           "abilities": [
@@ -139,7 +139,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_dark_seer_2",
-                      "value": 100,
+                      "value": 75,
                       "operation": 0
                     }
                   ],
@@ -1350,10 +1350,10 @@
               "id": 1305,
               "name": "dark_seer_mental_fortitude",
               "name_loc": "Mental Fortitude",
-              "desc_loc": "Dark Seer's Intelligence cannot be lower than either his Strength or Agility.",
+              "desc_loc": "Dark Seer's Intelligence cannot be lower than the average of his Strength and Agility.",
               "lore_loc": "",
               "notes_loc": [
-                "If his Strength or Agility are higher, he gains Bonus Intelligence to match them."
+                "If the average between his Strength and Agility is higher, he gains Bonus Intelligence to match them."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1397,6 +1397,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "str_agi_average_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MIN INTELLIGENCE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

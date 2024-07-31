@@ -212,7 +212,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_wraith_king_3",
-                      "value": 20,
+                      "value": 25,
                       "operation": 3
                     }
                   ],
@@ -238,7 +238,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_wraith_king_3",
-                      "value": 20,
+                      "value": 25,
                       "operation": 3
                     }
                   ],
@@ -677,10 +677,12 @@
               "notes_loc": [
                 "Credit for allies whose death was delayed will go to whoever struck the original killing blow.",
                 "Does not affect Reincarnate deaths.",
-                "Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%."
+                "Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.",
+                "Break only disables the passive lifesteal component.",
+                "Respawn timer is reduced by Wraith duration."
               ],
               "shard_loc": "",
-              "scepter_loc": "Turns Vampiric Spirit into an aura, allowing allied heroes to turn into wraiths when slain. Extends wraith duration. Heroes who die this way respawn at a faster rate.",
+              "scepter_loc": "Turns Vampiric Spirit into an aura, allowing allied heroes to turn into wraiths when slain. Extends wraith duration.",
               "facets_loc": [
                 "",
                 ""
@@ -724,9 +726,9 @@
                 {
                   "name": "vampiric_aura",
                   "values_float": [
-                    20,
-                    30,
-                    40,
+                    26,
+                    34,
+                    42,
                     50
                   ],
                   "is_percentage": true,
@@ -819,25 +821,6 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_respawn_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "RESPAWN TIME REDUCTION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    10
-                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -3041,7 +3024,9 @@
                   "name_loc": "Bone Guard",
                   "desc_loc": "Gains a Charge for every 2 units killed. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
                   "lore_loc": "Wraith King's blade drains his enemy's essence to feed his aura.",
-                  "notes_loc": [],
+                  "notes_loc": [
+                    "Break disables the gaining of new stacks."
+                  ],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [

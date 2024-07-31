@@ -22,7 +22,7 @@
             {
               "color": 3,
               "title_loc": "Cold Comfort",
-              "description_loc": "Crystal Maiden restores her allies' Mana when casting spells.",
+              "description_loc": "Crystal Maiden restores her allies' Mana when casting spells. Increases innate Mana Regen Amplification.",
               "name": "crystal_maiden_cold_comfort",
               "icon": "mana",
               "gradient_id": 2
@@ -1320,7 +1320,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "Increases Mana Regeneration Amplification to %mana_regen_multiplier%%%."
               ],
               "type": 0,
               "behavior": "13194139533315",
@@ -1369,8 +1369,10 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "crystal_maiden_cold_comfort",
+                    "values": [
+                      25
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1533,7 +1535,8 @@
               "lore_loc": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught.",
               "notes_loc": [
                 "The slow is applied on all enemies in the radius, even if they aren't hit by an explosion (lasts %slow_duration% second).",
-                "Explosions occur every %explosion_interval% seconds."
+                "Explosions occur every %explosion_interval% seconds.",
+                "Break disables the passive effects of Frozen Expanse."
               ],
               "shard_loc": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move %shard_self_movement_speed_slow_pct%%% slower during this.<br><br>Increases total number of explosions by %shard_bonus_explosion%%%.",
               "scepter_loc": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move %shard_self_movement_speed_slow_pct%%% slower during this. Increases total number of explosions by %shard_bonus_explosion%%%. Applies Frostbite to any unit that has been standing in the Freezing Field for over %frostbite_delay%s.",

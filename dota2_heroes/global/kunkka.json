@@ -22,7 +22,7 @@
             {
               "color": 1,
               "title_loc": "Grog Blossom",
-              "description_loc": "When X Marks the Spot returns its target, nearby allies gain Ghostship's Damage Delay buff.",
+              "description_loc": "When X Marks the Spot returns its target, nearby allies gain Ghostship's improved Admiral's Rum buff.",
               "name": "kunkka_grog",
               "icon": "armor",
               "gradient_id": 2
@@ -48,7 +48,7 @@
             0,
             2
           ],
-          "damage_min": 50,
+          "damage_min": 54,
           "damage_max": 60,
           "attack_rate": 1.7,
           "attack_range": 150,
@@ -114,7 +114,7 @@
                 0
               ],
               "mana_costs": [
-                100
+                90
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -122,7 +122,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    225
+                    250
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -378,7 +378,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    100
+                    90
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -420,7 +420,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -440,25 +440,24 @@
               "lore_loc": "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Tidebringer consumes a percentage of damage delayed with Admiral's Rum to increase it's damage by the same amount.",
               "facets_loc": [
                 "Tidebringer cooldown is reduced per enemy hero it hits.",
                 ""
               ],
               "type": 0,
-              "behavior": "2199023390728",
+              "behavior": "135176",
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
               "damage": 1,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 5,
+              "max_level": 4,
               "cast_ranges": [
                 150
               ],
               "cast_points": [
-                0,
                 0,
                 0,
                 0,
@@ -468,7 +467,6 @@
                 0
               ],
               "cooldowns": [
-                16,
                 13,
                 10,
                 7,
@@ -509,7 +507,6 @@
                 {
                   "name": "cleave_ending_width",
                   "values_float": [
-                    450,
                     500,
                     550,
                     600,
@@ -530,7 +527,6 @@
                 {
                   "name": "cleave_distance",
                   "values_float": [
-                    500,
                     650,
                     800,
                     950,
@@ -551,7 +547,6 @@
                 {
                   "name": "damage_bonus",
                   "values_float": [
-                    10,
                     30,
                     60,
                     90,
@@ -785,7 +780,6 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    16,
                     13,
                     10,
                     7,
@@ -809,7 +803,7 @@
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
+              "ability_is_innate": false,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -1218,12 +1212,14 @@
               "item_quality": 0
             },
             {
-              "id": 319,
-              "name": "kunkka_torrent_storm",
-              "name_loc": "Torrent Storm",
-              "desc_loc": "Releases a visible Torrent in a random area within %torrent_max_distance% range of the target position once every %torrent_interval% for %torrent_duration% seconds.",
-              "lore_loc": "A hundred leagues of dry land couldn't keep these seas at bay.",
-              "notes_loc": [],
+              "id": 1452,
+              "name": "kunkka_admirals_rum",
+              "name_loc": "Admiral's Rum",
+              "desc_loc": "Damage from enemy heroes, buildings, or Roshan that would reduce Kunkka below a threshold causes him to douse himself with The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
+              "lore_loc": "",
+              "notes_loc": [
+                "Stacks additively with other sources of Admiral's Rum"
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1231,25 +1227,25 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8589934641",
+              "behavior": "66",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 2,
-              "immunity": 4,
-              "dispellable": 3,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
-                900
+                0
               ],
               "cast_points": [
-                0.4
+                0
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                75
+                60
               ],
               "durations": [
                 0
@@ -1261,18 +1257,18 @@
                 0
               ],
               "mana_costs": [
-                275
+                0
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "torrent_interval",
+                  "name": "damage_threshold",
                   "values_float": [
-                    0.25
+                    65
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "HEALTH THRESHOLD:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1284,12 +1280,35 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "torrent_duration",
+                  "name": "ghostship_absorb",
                   "values_float": [
-                    4
+                    20
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "DAMAGE DELAYED:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kunkka_rum",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "buff_duration",
+                  "values_float": [
+                    10
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "RUM DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1301,29 +1320,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "torrent_min_distance",
+                  "name": "movespeed_bonus",
                   "values_float": [
-                    115
+                    10
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "torrent_max_distance",
-                  "values_float": [
-                    1100
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "RUM BONUS SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1337,7 +1339,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    900
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1388,7 +1390,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0.4
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1439,7 +1441,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    275
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1456,7 +1458,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    75
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1472,11 +1474,11 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
-              "ability_is_granted_by_scepter": true,
+              "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
+              "ability_is_innate": true,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -1772,7 +1774,7 @@
               "id": 5035,
               "name": "kunkka_ghostship",
               "name_loc": "Ghostship",
-              "desc_loc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
+              "desc_loc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a strong swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
               "lore_loc": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral.",
               "notes_loc": [
                 "Damage dealt after Rum wears off is non-lethal and can never kill a hero.",
@@ -1780,7 +1782,7 @@
                 "The boat has a movement speed of %ghostship_speed%."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Ghostship creates a fleet of %fleet_count% ships at the target point on a %fleet_interval% second interval. Each ship now also fires %num_cannon_volleys% waves of cannonballs from the port and starboard side that deal %cannon_ball_damage_pct%%% of Ghostship's damage as they pass through enemies.",
               "facets_loc": [
                 "",
                 ""
@@ -1967,6 +1969,262 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "fleet_interval",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    2.5
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "fleet_count",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    2
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "fire_cannons",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cannon_ball_damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    40
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cannon_ball_distance",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1200
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cannon_ball_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1400
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cannon_count",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    4
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cannon_ball_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    100
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "num_cannon_volleys",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cannon_fire_interval",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.78
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "base_cannon_rotation",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "rotation_per_cannon",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "initial_cannon_offset",
+                  "values_float": [
+                    -150
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "distance_between_cannons",
+                  "values_float": [
+                    75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "#AbilityDamage",
                   "values_float": [
                     400,
@@ -2127,7 +2385,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -3336,10 +3594,10 @@
               "item_quality": 0
             },
             {
-              "id": 6666,
-              "name": "special_bonus_unique_kunkka_3",
-              "name_loc": "Ghostship Fleet",
-              "desc_loc": "Spawns 3 Ghostships, {s:value} seconds apart, towards the target location.",
+              "id": 1446,
+              "name": "special_bonus_spell_aoe_100",
+              "name_loc": "+{s:value} Spell AoE",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -3387,7 +3645,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    3.5
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

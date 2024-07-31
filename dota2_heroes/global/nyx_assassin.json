@@ -14,7 +14,7 @@
             {
               "color": 3,
               "title_loc": "Mana Burn",
-              "description_loc": "Nyx's damage from spells and items burns enemies' mana.",
+              "description_loc": "Nyx Assassin's ability damage burns enemies' mana.",
               "name": "nyx_assassin_burn_mana",
               "icon": "nuke",
               "gradient_id": 3
@@ -212,7 +212,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nyx_2",
-                      "value": 120,
+                      "value": 100,
                       "operation": 0
                     }
                   ],
@@ -385,7 +385,7 @@
               "id": 1104,
               "name": "nyx_assassin_jolt",
               "name_loc": "Mind Flare",
-              "desc_loc": "Deals damages to the enemy equal to a percentage of its Max Mana. Additionally deals damage equal to a percentage of damage the target received from Nyx Assassin in the past %damage_echo_duration%s.",
+              "desc_loc": "Deals damages to the enemy equal to a percentage of its Max Mana. Additionally deals damage equal to a percentage of damage the target received from Nyx Assassin in the past %damage_echo_duration%s. Instantly kills non-ancient creeps.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1266,7 +1266,7 @@
               "id": 1365,
               "name": "nyx_assassin_nyxth_sense",
               "name_loc": "Nyxth Sense",
-              "desc_loc": "Nyx Assassin can detect invisible heroes within %radius% units of himself.",
+              "desc_loc": "Nyx Assassin can detect heroes within %radius% units of himself.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1314,7 +1314,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    400
+                    350
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1486,9 +1486,10 @@
               "lore_loc": "The scarab kills for the glory of his queen.",
               "notes_loc": [
                 "Has a %fade_time% second fadetime.",
-                "If a spell is used to break the invisibility, or the invisibility expires, the bonus damage is lost."
+                "If a spell is used to break the invisibility, or the invisibility expires, the bonus damage is lost.",
+                "With Aghanim's Shard, the Break is applied before the bonus damage."
               ],
-              "shard_loc": "Successful Vendetta attacks now increases the target's spell damage taken.",
+              "shard_loc": "Vendetta applies Break on attack.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1599,7 +1600,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nyx_vendetta_damage",
-                      "value": 50,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -1648,51 +1649,15 @@
                 },
                 {
                   "name": "break_duration",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_nyx_vendetta_cd_manacost",
-                      "value": 5,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_debuff_duration",
                   "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BREAK DURATION:",
+                  "bonuses": [],
+                  "values_shard": [
                     4
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "DEBUFF DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_magic_resist_reduction",
-                  "values_float": [
-                    17
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAGIC RESIST REDUCTION:",
-                  "bonuses": [],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -3357,10 +3322,10 @@
               "item_quality": 0
             },
             {
-              "id": 1367,
-              "name": "special_bonus_unique_nyx_vendetta_cd_manacost",
-              "name_loc": "Vendetta Applies Break",
-              "desc_loc": "Lasts for {s:bonus_break_duration} seconds.",
+              "id": 435,
+              "name": "special_bonus_agility_80",
+              "name_loc": "+{s:value} Agility",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -3405,6 +3370,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    80
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3563,11 +3545,9 @@
                   "id": 1366,
                   "name": "nyx_assassin_innate_mana_burn",
                   "name_loc": "Mana Burn",
-                  "desc_loc": "Nyx's damage from spells and items burns enemies' mana.",
+                  "desc_loc": "Nyx Assassin's ability damage burns enemies' mana.",
                   "lore_loc": "",
-                  "notes_loc": [
-                    "Only instances of %damage_threshold% or more damage will trigger Mana Burn."
-                  ],
+                  "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
@@ -3613,30 +3593,10 @@
                     {
                       "name": "mana_pct",
                       "values_float": [
-                        15,
-                        20,
-                        25,
-                        30
+                        15
                       ],
                       "is_percentage": true,
                       "heading_loc": "PERCENTAGE OF CURRENT MANA BURNED:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "damage_threshold",
-                      "values_float": [
-                        100
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],

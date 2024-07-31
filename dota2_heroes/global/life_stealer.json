@@ -13,16 +13,16 @@
           "facets": [
             {
               "color": 1,
-              "title_loc": "Corpse Eater",
-              "description_loc": "Lifestealer gains %bonus_hp_per_creep% HP whenever he kills a creep, and %bonus_hp_per_hero% whenever he kills a hero.",
-              "name": "life_stealer_maxhp_gain",
-              "icon": "armor",
+              "title_loc": "Rage",
+              "description_loc": "Lifestealer can cast <b color='white'>Rage</b>, becoming Debuff Immune and increasing magic resistance.",
+              "name": "life_stealer_rage",
+              "icon": "lifestealer_rage",
               "gradient_id": 3
             },
             {
               "color": 0,
               "title_loc": "Unfettered",
-              "description_loc": "Rage gets replaced by an ability allowing Lifestealer to dispel himself and become more resilient even when stunned.",
+              "description_loc": "Lifestealer can cast <b color='white'>Unfettered</b> to dispel himself and become more resilient. Can cast while stunned.",
               "name": "life_stealer_rage_dispell",
               "icon": "broken_chain",
               "gradient_id": 0
@@ -65,313 +65,6 @@
           "mana_regen": 0.75,
           "abilities": [
             {
-              "id": 5249,
-              "name": "life_stealer_rage",
-              "name_loc": "Rage",
-              "desc_loc": "Launch into a maddened rage, becoming Debuff Immune and increasing magic resistance.\n\nDISPEL TYPE: Basic Dispel",
-              "lore_loc": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat.",
-              "notes_loc": [
-                "Upon casting, many buffs and debuffs will be removed."
-              ],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "2052",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 3,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                20,
-                19,
-                18,
-                17
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                80,
-                100,
-                120,
-                140
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "duration",
-                  "values_float": [
-                    3,
-                    4,
-                    5,
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lifestealer",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "magic_resist",
-                  "values_float": [
-                    80
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAGIC RESISTANCE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "status_resist",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "STATUS RESISTANCE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "debuff_immunity",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_armor",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    80,
-                    100,
-                    120,
-                    140
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    20,
-                    19,
-                    18,
-                    17
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
               "id": 5251,
               "name": "life_stealer_open_wounds",
               "name_loc": "Open Wounds",
@@ -384,6 +77,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -749,6 +443,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -993,16 +688,19 @@
               "id": 5250,
               "name": "life_stealer_feast",
               "name_loc": "Feast",
-              "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. Allows Lifestealer to attack allied creeps at 75% health.",
+              "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. Allows Lifestealer to attack allied creeps at %creep_deny_percent%%% health. Lifestealer gains permanent max HP whenever he kill a creep or hero.",
               "lore_loc": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path.",
               "notes_loc": [
                 "Works on allies and enemies. Does not affect Roshan.",
                 "The heal is independent of the damage.",
-                "Stacks additively with other sources of Lifesteal."
+                "Stacks additively with other sources of Lifesteal.",
+                "Break disables the gaining of new stacks.",
+                "Break does not disable the bonuses from existing stacks."
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1013,7 +711,7 @@
               "flags": 0,
               "damage": 1,
               "immunity": 3,
-              "dispellable": 0,
+              "dispellable": 3,
               "max_level": 4,
               "cast_ranges": [
                 0
@@ -1095,12 +793,63 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "bonus_hp_per_hero",
+                  "values_float": [
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX HP PER HERO KILL:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_hp_per_creep",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX HP PER CREEP KILL:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "creep_deny_percent",
                   "values_float": [
                     75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_hp_total",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "PERMANENT MAX HP:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1270,11 +1019,13 @@
               "notes_loc": [
                 "Lifestealer gains experience while under the effects of Infest.",
                 "Creeps that are controlled while Infested gain Infest's movement speed bonus.",
-                "Infest Level 2 and 3 can be used on Ancient creeps."
+                "Infest Level 2 and 3 can be used on Ancient creeps.",
+                "Does not trigger spell reflect."
               ],
               "shard_loc": "Infest explosion applies a %bonus_open_wounds_duration_pct%%% duration Open Wounds to enemies in the damage radius.",
               "scepter_loc": "Increases cast range and reduces cooldown to %bonus_AbilityCooldown%s.  Infest may target enemy heroes for a short duration, disarming them and attacking them from the inside while increasing Lifestealer's regeneration rate.",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1659,6 +1410,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1857,6 +1609,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2057,6 +1810,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2255,6 +2009,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2455,6 +2210,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2653,6 +2409,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2853,6 +2610,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3052,6 +2810,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 "+{s:bonus_duration}s Unfettered Duration"
               ],
               "type": 2,
@@ -3245,27 +3004,28 @@
             {
               "abilities": [
                 {
-                  "id": 1302,
-                  "name": "life_stealer_corpse_eater",
-                  "name_loc": "Corpse Eater",
-                  "desc_loc": "Lifestealer gains %bonus_hp_per_creep% HP whenever he kills a creep, and %bonus_hp_per_hero% whenever he kills a hero.",
-                  "lore_loc": "",
+                  "id": 5249,
+                  "name": "life_stealer_rage",
+                  "name_loc": "Rage",
+                  "desc_loc": "Launch into a maddened rage, becoming Debuff Immune and increasing magic resistance.\n\nDISPEL TYPE: Basic Dispel",
+                  "lore_loc": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat.",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
                     "",
+                    "",
                     ""
                   ],
                   "type": 0,
-                  "behavior": "3",
+                  "behavior": "2052",
                   "target_team": 0,
                   "target_type": 0,
                   "flags": 0,
                   "damage": 0,
                   "immunity": 0,
                   "dispellable": 3,
-                  "max_level": 1,
+                  "max_level": 4,
                   "cast_ranges": [
                     0
                   ],
@@ -3276,7 +3036,10 @@
                     0
                   ],
                   "cooldowns": [
-                    0
+                    20,
+                    19,
+                    18,
+                    17
                   ],
                   "durations": [
                     0
@@ -3288,15 +3051,78 @@
                     0
                   ],
                   "mana_costs": [
-                    0
+                    80,
+                    100,
+                    120,
+                    140
                   ],
                   "gold_costs": [],
                   "health_costs": [],
                   "special_values": [
                     {
-                      "name": "bonus_hp_per_hero",
+                      "name": "duration",
                       "values_float": [
-                        5
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "DURATION:",
+                      "bonuses": [
+                        {
+                          "name": "special_bonus_unique_lifestealer",
+                          "value": 1,
+                          "operation": 0
+                        }
+                      ],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "magic_resist",
+                      "values_float": [
+                        80
+                      ],
+                      "is_percentage": true,
+                      "heading_loc": "MAGIC RESISTANCE:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "status_resist",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": true,
+                      "heading_loc": "STATUS RESISTANCE:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "debuff_immunity",
+                      "values_float": [
+                        1
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3311,9 +3137,9 @@
                       "required_facet": ""
                     },
                     {
-                      "name": "bonus_hp_per_creep",
+                      "name": "bonus_armor",
                       "values_float": [
-                        1
+                        0
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3432,7 +3258,10 @@
                     {
                       "name": "AbilityManaCost",
                       "values_float": [
-                        0
+                        80,
+                        100,
+                        120,
+                        140
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3449,7 +3278,10 @@
                     {
                       "name": "AbilityCooldown",
                       "values_float": [
-                        0
+                        20,
+                        19,
+                        18,
+                        17
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3485,12 +3317,13 @@
                   "id": 1301,
                   "name": "life_stealer_unfettered",
                   "name_loc": "Unfettered",
-                  "desc_loc": "Descend into a violent fury, gaining increased status and magic resistance. Applies a Strong Dispel and can be cast while disabled.",
+                  "desc_loc": "Descend into a violent fury, gaining increased status and magic resistance. Applies a dispel and can be cast while disabled.\n\nDISPEL TYPE: Strong Dispel",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
+                    "",
                     "",
                     ""
                   ],

@@ -32,7 +32,7 @@
           "str_gain": 3.6,
           "agi_base": 15,
           "agi_gain": 1.5,
-          "int_base": 18,
+          "int_base": 20,
           "int_gain": 1.7,
           "primary_attr": 0,
           "complexity": 1,
@@ -61,8 +61,8 @@
           "sight_range_night": 800,
           "max_health": 714,
           "health_regen": 2.95,
-          "max_mana": 291,
-          "mana_regen": 1.4000001,
+          "max_mana": 315,
+          "mana_regen": 1.5,
           "abilities": [
             {
               "id": 5118,
@@ -432,7 +432,10 @@
               "name_loc": "Kraken Shell",
               "desc_loc": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage.\n\nDoes not stack with items that provide Damage Block.",
               "lore_loc": "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the gaining of new Kraken Swell stacks.",
+                "Break does not disable the bonuses from existing Kraken Swell stacks."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1328,8 +1331,8 @@
               ],
               "cooldowns": [
                 150,
-                150,
-                150
+                145,
+                140
               ],
               "durations": [
                 0
@@ -1549,7 +1552,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    150
+                    150,
+                    145,
+                    140
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3640,6 +3645,40 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "STRENGTH GAIN:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "attack_range_tooltip",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "ATTACK RANGE:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "anchor_smash_range_tooltip",
+                      "values_float": [
+                        0
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "ANCHOR SMASH RANGE:",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],

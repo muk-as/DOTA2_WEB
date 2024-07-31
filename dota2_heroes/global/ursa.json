@@ -22,7 +22,7 @@
             {
               "color": 3,
               "title_loc": "Bear Down",
-              "description_loc": "Debuffs inflicted by Ursa last %debuff_amp%%% longer.",
+              "description_loc": "Debuffs inflicted by Ursa last longer.",
               "name": "ursa_debuff_reduce",
               "icon": "cooldown",
               "gradient_id": 0
@@ -724,7 +724,10 @@
               "name_loc": "Fury Swipes",
               "desc_loc": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage.  If the same target is not attacked after %bonus_reset_time% seconds, the bonus damage is lost.",
               "lore_loc": "In nature, the wounded rarely survive the attacks of hungry predators.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the application of new stacks.",
+                "Break does not disable the effects of existing stacks."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -3242,7 +3245,7 @@
                   "id": 1328,
                   "name": "ursa_bear_down",
                   "name_loc": "Bear Down",
-                  "desc_loc": "Debuffs inflicted by Ursa last %debuff_amp%%% longer.",
+                  "desc_loc": "Debuffs inflicted by Ursa last longer.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
@@ -3259,7 +3262,7 @@
                   "damage": 0,
                   "immunity": 0,
                   "dispellable": 3,
-                  "max_level": 1,
+                  "max_level": 4,
                   "cast_ranges": [
                     0
                   ],
@@ -3290,10 +3293,13 @@
                     {
                       "name": "debuff_amp",
                       "values_float": [
+                        14,
+                        16,
+                        18,
                         20
                       ],
-                      "is_percentage": false,
-                      "heading_loc": "",
+                      "is_percentage": true,
+                      "heading_loc": "DURATION BONUS:",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],

@@ -448,7 +448,7 @@
               "shard_loc": "",
               "scepter_loc": "Electric Vortex affects all enemies within a radius around Storm Spirit.",
               "facets_loc": [
-                "Electric Vortex applies a debuff to the enemy that lasts for %enemy_overload_duration%s that triggers an Overload Charge if they attack.",
+                "Electric Vortex applies a debuff to the enemy that lasts for %enemy_overload_duration%s making their next attack target themself and trigger an Overload Charge.",
                 ""
               ],
               "type": 0,
@@ -653,7 +653,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_storm_spirit",
-                      "value": 0.3,
+                      "value": 0.2,
                       "operation": 0
                     }
                   ],
@@ -884,7 +884,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_storm_spirit_overload_aspd",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1003,13 +1009,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_storm_spirit_overload_aspd",
-                      "value": 150,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1595,7 +1595,9 @@
               "name_loc": "Galvanized",
               "desc_loc": "Storm Spirit gains a charge of %mp_per_kill% mana regeneration per kill. Loses %charges_per_death% charges per death. Leveling Ball Lightning gives Storm Spirit %charges_per_ult% bonus charges. Additionally every time he gains a charge he also gains %perma_mp_per_kill% Mana Regen permanently.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the gaining of new stacks from kills."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1878,7 +1880,7 @@
             {
               "id": 1187,
               "name": "special_bonus_unique_storm_spirit_overload_aspd",
-              "name_loc": "+{s:bonus_overload_cast_range} Attack Range when Overloaded",
+              "name_loc": "+{s:bonus_overload_damage} Overload Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3388,7 +3390,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    500
+                    450
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

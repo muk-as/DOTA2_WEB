@@ -14,7 +14,7 @@
             {
               "color": 5,
               "title_loc": "Lasting Presence",
-              "description_loc": "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed.",
+              "description_loc": "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed. Every hero kill increases Necromastery's max souls by {s:bonus_max_soul_increase_on_hero_kill} until Shadow Fiend dies.",
               "name": "nevermore_lasting_presence",
               "icon": "armor_broken",
               "gradient_id": 0
@@ -110,7 +110,7 @@
                 0
               ],
               "mana_costs": [
-                75
+                80
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -221,7 +221,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    8
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "STACK DURATION:",
@@ -449,7 +449,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    75
+                    80
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1192,14 +1192,14 @@
                 {
                   "name": "requiem_slow_duration",
                   "values_float": [
-                    0.7
+                    0.6
                   ],
                   "is_percentage": false,
                   "heading_loc": "FEAR DURATION PER SOUL HIT:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nevermore_6",
-                      "value": 0.25,
+                      "value": 0.2,
                       "operation": 0
                     }
                   ],
@@ -1222,7 +1222,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nevermore_6",
-                      "value": 0.95,
+                      "value": 0.45,
                       "operation": 0
                     }
                   ],
@@ -1272,7 +1272,7 @@
                 {
                   "name": "requiem_line_width_end",
                   "values_float": [
-                    350
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1533,15 +1533,17 @@
               "id": 5062,
               "name": "nevermore_necromastery",
               "name_loc": "Necromastery",
-              "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases %soul_release_tooltip%%% of them from bondage. Every hero kill increases max souls by 1 until Shadow Fiend dies.",
+              "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases %soul_release_tooltip%%% of them from bondage.",
               "lore_loc": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
               "notes_loc": [
-                "Denies and neutral creeps also provide bonus damage through Necromastery."
+                "Denies and neutral creeps also provide bonus damage through Necromastery.",
+                "Break disables the gaining of new stacks.",
+                "Break does not disable the bonuses from existing stacks."
               ],
               "shard_loc": "Shadow Fiend gains an extra soul per kill. Shadow Fiend can consume a soul per attack to deal critical damage and fear the target.",
               "scepter_loc": "Increases max souls.",
               "facets_loc": [
-                "",
+                "Every hero kill increases max souls by %max_soul_increase_on_hero_kill% until Shadow Fiend dies.",
                 ""
               ],
               "type": 0,
@@ -1740,6 +1742,25 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_soul_increase_on_hero_kill",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "nevermore_lasting_presence",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -2912,7 +2933,7 @@
               "id": 815,
               "name": "special_bonus_unique_nevermore_6",
               "name_loc": "+{s:bonus_requiem_slow_duration}s Requiem Fear per line",
-              "desc_loc": "",
+              "desc_loc": "Max Fear duration increased by +{s:bonus_requiem_slow_duration_max}s",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

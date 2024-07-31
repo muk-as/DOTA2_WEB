@@ -26,6 +26,14 @@
               "name": "huskar_nothl_transfusion",
               "icon": "healing",
               "gradient_id": 2
+            },
+            {
+              "color": 1,
+              "title_loc": "Incendiary",
+              "description_loc": "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health. Reduces burn duration.",
+              "name": "huskar_nothl_conflagration",
+              "icon": "damage",
+              "gradient_id": 0
             }
           ],
           "str_base": 23,
@@ -74,6 +82,7 @@
               "shard_loc": "Lowers Inner Fire cooldown and causes it to apply a movement speed slow and heal Huskar for a percentage of the damage dealt to enemies.",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -459,7 +468,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health. Reduces burn duration."
               ],
               "type": 0,
               "behavior": "135176",
@@ -512,14 +522,35 @@
                     4
                   ],
                   "is_percentage": true,
-                  "heading_loc": "HEALTH COST:",
+                  "heading_loc": "CURRENT HEALTH COST:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "huskar_nothl_conflagration",
+                    "values": [
+                      0
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_health_cost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX HEALTH COST:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_nothl_conflagration",
+                    "values": [
+                      4
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -550,6 +581,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "burn_damage_max_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX HEALTH BURN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_nothl_conflagration",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "duration",
                   "values_float": [
                     9
@@ -566,11 +616,38 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "huskar_nothl_conflagration",
+                    "values": [
+                      0
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "duration_for_nothl_conflagration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DURATION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_huskar_5",
+                      "value": 4,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_nothl_conflagration",
+                    "values": [
+                      6
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "huskar_nothl_conflagration"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -735,6 +812,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -810,6 +888,40 @@
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "aura_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "aura_effectiveness",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1019,6 +1131,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1222,7 +1335,8 @@
               "scepter_loc": "Forces the enemy target to attack Huskar and increases cast range.",
               "facets_loc": [
                 "Life Break also slows enemies in a radius around the target.",
-                "Life Break also heals friendly units in a radius around the target."
+                "Life Break also heals friendly units in a radius around the target.",
+                ""
               ],
               "type": 1,
               "behavior": "8",
@@ -1504,7 +1618,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": "huskar_nothl_transfusion"
+                  "required_facet": ""
                 },
                 {
                   "name": "life_break_heal_pct",
@@ -1517,13 +1631,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_nothl_transfusion",
-                    "values": [
-                      0
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "huskar_nothl_transfusion"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1691,6 +1803,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1908,6 +2021,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2099,13 +2213,14 @@
             {
               "id": 6380,
               "name": "special_bonus_unique_huskar_2",
-              "name_loc": "+{s:bonus_burn_damage} Burning Spears DPS",
+              "name_loc": "+{s:bonus_burn_damage} Burning Spears Burn Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2305,6 +2420,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2522,6 +2638,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2720,6 +2837,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2937,6 +3055,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3129,14 +3248,15 @@
               "id": 7143,
               "name": "special_bonus_unique_huskar_5",
               "name_loc": "+{s:bonus_duration}s Burning Spears Duration",
-              "desc_loc": "Pierces Spell Immunity.",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "+{s:bonus_duration_for_nothl_conflagration}s Burning Spears Duration"
               ],
               "type": 2,
               "behavior": "2",
@@ -3326,6 +3446,9 @@
             }
           ],
           "facet_abilities": [
+            {
+              "abilities": []
+            },
             {
               "abilities": []
             },
