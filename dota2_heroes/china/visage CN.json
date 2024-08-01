@@ -61,6 +61,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "黄泉颤抖还会作用于目标周围的单位。",
+            "",
             ""
           ],
           "type": 0,
@@ -400,7 +401,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "灵魂超度击杀时每点灵魂能量会提供%bonus_soul_charge_gold%金，最高为%bonus_gold_max_tooltip%金。击杀非英雄时获得的金钱有所减少。灵魂超度作用于敌方英雄后%gold_grace_period_hero%秒内英雄阵亡也会获得金钱。"
           ],
           "type": 0,
           "behavior": "8",
@@ -494,6 +496,88 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "soul_charge_gold",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "击杀时每点能量额外金钱：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "visage_gold_assumption",
+                "values": [
+                  35
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gold_creep_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "非英雄单位金钱：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "visage_gold_assumption",
+                "values": [
+                  15
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gold_grace_period_hero",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "visage_gold_assumption",
+                "values": [
+                  3
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gold_max_tooltip",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "visage_gold_assumption",
+                "values": [
+                  105,
+                  140,
+                  175,
+                  210
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -766,11 +850,14 @@
           "lore_loc": "维萨吉坚硬的鳞片同时具有鬼魂和石像的属性，刀剑和魔法的突袭对他来说不痛不痒。",
           "notes_loc": [
             "每次维萨吉受到来自其他玩家的伤害超过最小伤害时，保护层就会移除一层。",
-            "佣兽在维萨吉周围%radius%范围内将获得当前陵卫斗篷的伤害降低效果。"
+            "佣兽在维萨吉周围%radius%范围内将获得当前陵卫斗篷的伤害降低效果。",
+            "破坏会使技能无法获得新的叠加效果。",
+            "破坏不会使现有叠加效果提供的加成失效。"
           ],
           "shard_loc": "维萨吉可以主动施放陵卫斗篷。恢复最多%shard_hp_restoration_pct%%%自身生命值。",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -782,7 +869,7 @@
           "damage": 0,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             0
           ],
@@ -830,7 +917,6 @@
             {
               "name": "damage_reduction",
               "values_float": [
-                4,
                 8,
                 12,
                 16,
@@ -854,8 +940,7 @@
                 7,
                 6,
                 5,
-                4,
-                3
+                4
               ],
               "is_percentage": false,
               "heading_loc": "每层恢复时间：",
@@ -1113,7 +1198,7 @@
           "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1127,7 +1212,7 @@
           "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_visage/visage_aghanims_shard.jpg",
           "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_visage/visage_aghanims_shard.mp4",
           "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_visage/visage_aghanims_shard.webm",
-          "is_inborn": 1
+          "is_inborn": 0
         },
         {
           "id": 683,
@@ -1139,6 +1224,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1198,7 +1284,7 @@
             {
               "name": "bonus_damage",
               "values_float": [
-                25
+                20
               ],
               "is_percentage": true,
               "heading_loc": "伤害加成：",
@@ -1215,7 +1301,7 @@
             {
               "name": "invis_duration",
               "values_float": [
-                35
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1351,7 +1437,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100
+                115
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1418,7 +1504,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "技能可以设为多样施法，在%recall_duration%秒后召回维萨吉的佣兽，期间他们无法攻击或行动。",
-            "佣兽会攻击维萨吉最后尝试攻击的目标，如果目标超出了维萨吉的攻击距离，或者维萨吉下达了取消当前动作或固守原地的命令后，佣兽会返回。<br><br>技能可以设为自动施法，命令佣兽回到维萨吉身旁，在技能关闭前不会离开。"
+            "佣兽会攻击维萨吉最后尝试攻击的目标，如果目标超出了维萨吉的攻击距离，或者维萨吉下达了取消当前动作或固守原地的命令后，佣兽会返回。<br><br>技能可以设为自动施法，命令佣兽回到维萨吉身旁，在技能关闭前不会离开。",
+            ""
           ],
           "type": 1,
           "behavior": "2052",
@@ -1979,6 +2066,283 @@
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/visage_summon_familiars.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/visage_summon_familiars.webm",
           "is_inborn": 0
+        },
+        {
+          "id": 1474,
+          "name": "visage_lurker",
+          "name_loc": "潜伏",
+          "desc_loc": "只要维萨吉没有受到伤害，他的技能冷却时间就会缩短。<br><br>维萨吉每%stack_gain_time%秒没有受到伤害就会获得一层叠加效果。每层叠加效果提供%cooldown_speed_per_stack%%%冷却时间减少，最多为%max_stacks%层。叠加效果会在受到任意伤害%linger_duration%秒后消失。",
+          "lore_loc": "",
+          "notes_loc": [
+            "破坏会使技能无法获得新的叠加效果。",
+            "破坏不会使现有叠加效果提供的加成失效。",
+            "影响维萨吉的技能冷却时间，包括正在冷却的技能。"
+          ],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "8796093022210",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "max_stacks",
+              "values_float": [
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stack_gain_time",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cooldown_speed_per_stack",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "linger_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/visage_lurker.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/visage_lurker.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/visage_lurker.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/visage_lurker.webm",
+          "is_inborn": 1
         }
       ],
       "talents": [
@@ -1992,6 +2356,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2192,6 +2557,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2391,6 +2757,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2589,6 +2956,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2806,6 +3174,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3005,6 +3374,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3203,6 +3573,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3420,6 +3791,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3613,7 +3985,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_visage.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/npc_dota_hero_visage.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_visage/npc_dota_hero_visage.webm",
-      "update_time": 1719270156,
+      "update_time": 1722470520,
       "facets": [
         {
           "color": 5,
@@ -3630,9 +4002,20 @@
           "name": "visage_faithful_followers",
           "icon": "summons",
           "gradient_id": 2
+        },
+        {
+          "color": 1,
+          "title_loc": "死亡代价",
+          "description_loc": "灵魂超度击杀时会提供最多{s:bonus_gold_max_tooltip}额外金钱。",
+          "name": "visage_gold_assumption",
+          "icon": "gold",
+          "gradient_id": 0
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3642,30 +4025,32 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_visage.png",
       "new_abilities": {
-        "id": 5482,
-        "name": "visage_gravekeepers_cloak",
-        "name_loc": "陵卫斗篷",
-        "desc_loc": "维萨吉产生数层屏障来保护他，降低受到的伤害。每当他受到来自玩家的伤害，就会失去一层屏障，失去的屏障需要一定时间才能恢复。",
-        "lore_loc": "维萨吉坚硬的鳞片同时具有鬼魂和石像的属性，刀剑和魔法的突袭对他来说不痛不痒。",
+        "id": 1474,
+        "name": "visage_lurker",
+        "name_loc": "潜伏",
+        "desc_loc": "只要维萨吉没有受到伤害，他的技能冷却时间就会缩短。<br><br>维萨吉每%stack_gain_time%秒没有受到伤害就会获得一层叠加效果。每层叠加效果提供%cooldown_speed_per_stack%%%冷却时间减少，最多为%max_stacks%层。叠加效果会在受到任意伤害%linger_duration%秒后消失。",
+        "lore_loc": "",
         "notes_loc": [
-          "每次维萨吉受到来自其他玩家的伤害超过最小伤害时，保护层就会移除一层。",
-          "佣兽在维萨吉周围%radius%范围内将获得当前陵卫斗篷的伤害降低效果。"
+          "破坏会使技能无法获得新的叠加效果。",
+          "破坏不会使现有叠加效果提供的加成失效。",
+          "影响维萨吉的技能冷却时间，包括正在冷却的技能。"
         ],
-        "shard_loc": "维萨吉可以主动施放陵卫斗篷。恢复最多%shard_hp_restoration_pct%%%自身生命值。",
+        "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "8796093022210",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
         "immunity": 0,
         "dispellable": 0,
-        "max_level": 5,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -3694,85 +4079,9 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "max_layers",
+            "name": "max_stacks",
             "values_float": [
-              4
-            ],
-            "is_percentage": false,
-            "heading_loc": "最大层数：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "damage_reduction",
-            "values_float": [
-              4,
-              8,
-              12,
-              16,
-              20
-            ],
-            "is_percentage": true,
-            "heading_loc": "每层减少伤害：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "recovery_time",
-            "values_float": [
-              7,
-              6,
-              5,
-              4,
-              3
-            ],
-            "is_percentage": false,
-            "heading_loc": "每层恢复时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "minimum_damage",
-            "values_float": [
-              40
-            ],
-            "is_percentage": false,
-            "heading_loc": "最低伤害：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "radius",
-            "values_float": [
-              900
+              10
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3787,26 +4096,9 @@
             "required_facet": ""
           },
           {
-            "name": "max_damage_reduction",
+            "name": "stack_gain_time",
             "values_float": [
-              80
-            ],
-            "is_percentage": true,
-            "heading_loc": "最高伤害降低：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "shard_hp_restoration_pct",
-            "values_float": [
-              25
+              2
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3821,12 +4113,12 @@
             "required_facet": ""
           },
           {
-            "name": "shard_cooldown",
+            "name": "cooldown_speed_per_stack",
             "values_float": [
-              65
+              2
             ],
             "is_percentage": false,
-            "heading_loc": "冷却时间：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3838,12 +4130,12 @@
             "required_facet": ""
           },
           {
-            "name": "shard_manacost",
+            "name": "linger_duration",
             "values_float": [
-              125
+              2
             ],
             "is_percentage": false,
-            "heading_loc": "魔法消耗：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3993,7 +4285,7 @@
         ],
         "is_item": false,
         "ability_has_scepter": false,
-        "ability_has_shard": true,
+        "ability_has_shard": false,
         "ability_is_granted_by_scepter": false,
         "ability_is_granted_by_shard": false,
         "ability_is_innate": true,
