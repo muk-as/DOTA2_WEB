@@ -47,14 +47,12 @@
       "mana_regen": 0.65000004,
       "abilities": [
         {
-          "id": 5508,
-          "name": "troll_warlord_berserkers_rage",
-          "name_loc": "狂战士之怒",
-          "desc_loc": "激活后巨魔战将从远程形态变成近战进行攻击。近战攻击时将有几率触发诱捕，阻止目标移动或使用移动类技能。狂战士之怒还将提供额外的移动速度，护甲，并且降低攻击间隔。\n\n狂战士之怒激活后会改变旋风飞斧的作用机制。",
-          "lore_loc": "跟巨魔战将的怒火一样，他的斧头也是源源不断。",
-          "notes_loc": [
-            "近战或远程物品的冷却时间不同时将根据巨魔战将在使用物品时处于远程或近战形态而定。"
-          ],
+          "id": 1478,
+          "name": "troll_warlord_switch_stance",
+          "name_loc": "战斗姿态",
+          "desc_loc": "巨魔战将从使用远程攻击切换为近战攻击。近战攻击的基础攻击间隔更短。",
+          "lore_loc": "",
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
@@ -69,15 +67,11 @@
           "damage": 0,
           "immunity": 3,
           "dispellable": 0,
-          "max_level": 5,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
           "cast_points": [
-            0.2,
-            0.2,
-            0.2,
-            0.2,
             0.2
           ],
           "channel_times": [
@@ -102,77 +96,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_hp",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_move_speed",
-              "values_float": [
-                5,
-                15,
-                25,
-                35,
-                45
-              ],
-              "is_percentage": false,
-              "heading_loc": "移动速度加成：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_troll_warlord_2",
-                  "value": 25,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_armor",
-              "values_float": [
-                1,
-                2,
-                3,
-                4,
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "护甲加成：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_troll_warlord",
-                  "value": 8,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "bonus_range",
               "values_float": [
                 350
@@ -195,45 +118,7 @@
                 1.4
               ],
               "is_percentage": false,
-              "heading_loc": "基础攻击间隔（近战）：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ensnare_chance",
-              "values_float": [
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "诱捕概率：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ensnare_duration",
-              "values_float": [
-                0.4,
-                0.8,
-                1.2,
-                1.6,
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "诱捕持续时间：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -406,7 +291,8 @@
           "desc_loc": "巨魔战将掷出手中的五把飞斧，减速并伤害前方%axe_range%范围锥形区域内的敌方单位。",
           "lore_loc": "只有注入了憎恨的斧头旋转起来才会如此致命。",
           "notes_loc": [
-            "无法作用于肉山。"
+            "无法作用于肉山。",
+            "不会触发法术抵抗或法术反弹。"
           ],
           "shard_loc": "",
           "scepter_loc": "旋风飞斧（远程）可以驱散敌人。降低冷却时间和魔法消耗。<br><br>驱散类型：弱驱散",
@@ -507,10 +393,10 @@
             {
               "name": "axe_damage",
               "values_float": [
+                60,
                 80,
                 100,
-                120,
-                140
+                120
               ],
               "is_percentage": false,
               "heading_loc": "飞斧伤害：",
@@ -1168,7 +1054,10 @@
           "name_loc": "热血战魂",
           "desc_loc": "当巨魔战将持续攻击同一个目标时，他会攻击得越来越快。如果改变目标，则额外的攻速加成清零。",
           "lore_loc": "如果第一下没成功，那就接着出招呗。",
-          "notes_loc": [],
+          "notes_loc": [
+            "破坏会使技能无法获得新的叠加效果。",
+            "破坏会使阿哈利姆魔晶的几率触发失效。"
+          ],
           "shard_loc": "热血战魂的叠加上限提升%bonus_max_stacks%次，并且巨魔有%base_chance%%% + 热血战魂叠加次数*%extra_attack_chance_per_stack%%%的几率对远程攻击距离 + %range_buffer%范围内任意单位发动一次额外的远程攻击。",
           "scepter_loc": "",
           "facets_loc": [
@@ -1259,7 +1148,7 @@
             {
               "name": "extra_attack_chance_per_stack",
               "values_float": [
-                4
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1276,7 +1165,7 @@
             {
               "name": "base_chance",
               "values_float": [
-                18
+                16
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1484,6 +1373,432 @@
           "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_troll_warlord/troll_warlord_aghanims_shard.jpg",
           "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_troll_warlord/troll_warlord_aghanims_shard.mp4",
           "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_troll_warlord/troll_warlord_aghanims_shard.webm",
+          "is_inborn": 0
+        },
+        {
+          "id": 5508,
+          "name": "troll_warlord_berserkers_rage",
+          "name_loc": "狂战士之怒",
+          "desc_loc": "近战形态下巨魔战将的攻击有几率触发诱捕，阻止目标移动或使用位移类技能。另外近战形态下还拥有额外移动速度和护甲。<br><br>远程形态下巨魔战将的攻击有几率使目标残废，造成额外伤害，并且降低目标的移动和攻击速度。",
+          "lore_loc": "跟巨魔战将的怒火一样，他的斧头也是源源不断。",
+          "notes_loc": [
+            "近战或远程物品的冷却时间不同时将根据巨魔战将在使用物品时处于远程或近战形态而定。"
+          ],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 1,
+          "immunity": 3,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "bonus_move_speed",
+              "values_float": [
+                15,
+                25,
+                35,
+                45
+              ],
+              "is_percentage": false,
+              "heading_loc": "移动速度加成：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_troll_warlord_2",
+                  "value": 25,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_armor",
+              "values_float": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "护甲加成：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_troll_warlord",
+                  "value": 8,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_range",
+              "values_float": [
+                350
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_attack_time",
+              "values_float": [
+                1.4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ensnare_chance",
+              "values_float": [
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "诱捕概率：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ensnare_duration",
+              "values_float": [
+                0.8,
+                1.2,
+                1.6,
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "诱捕持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_chance",
+              "values_float": [
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "残废几率：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_duration",
+              "values_float": [
+                0.8,
+                1.2,
+                1.6,
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "残废持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_slow",
+              "values_float": [
+                8,
+                16,
+                24,
+                32
+              ],
+              "is_percentage": true,
+              "heading_loc": "残废移动速度减缓：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_attack_slow",
+              "values_float": [
+                8,
+                16,
+                24,
+                32
+              ],
+              "is_percentage": false,
+              "heading_loc": "残废攻击速度降低：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "maim_damage",
+              "values_float": [
+                5,
+                10,
+                15,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "残废伤害：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/troll_warlord_battle_trance.png",
+          "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/troll_warlord/troll_warlord_battle_trance.jpg",
+          "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/troll_warlord/troll_warlord_battle_trance.mp4",
+          "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/troll_warlord/troll_warlord_battle_trance.webm",
           "is_inborn": 0
         },
         {
@@ -1810,10 +2125,10 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/troll_warlord_battle_trance.png",
-          "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/troll_warlord/troll_warlord_battle_trance.jpg",
-          "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/troll_warlord/troll_warlord_battle_trance.mp4",
-          "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/troll_warlord/troll_warlord_battle_trance.webm",
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_troll_warlord/troll_warlord_battle_trance.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_troll_warlord/troll_warlord_battle_trance.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_troll_warlord/troll_warlord_battle_trance.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_troll_warlord/troll_warlord_battle_trance.webm",
           "is_inborn": 0
         }
       ],
@@ -3432,7 +3747,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_troll_warlord.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_troll_warlord/npc_dota_hero_troll_warlord.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_troll_warlord/npc_dota_hero_troll_warlord.webm",
-      "update_time": 1719428554,
+      "update_time": 1722470523,
       "facets": [
         {
           "color": 3,
@@ -3461,14 +3776,12 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_troll_warlord.png",
       "new_abilities": {
-        "id": 5508,
-        "name": "troll_warlord_berserkers_rage",
-        "name_loc": "狂战士之怒",
-        "desc_loc": "激活后巨魔战将从远程形态变成近战进行攻击。近战攻击时将有几率触发诱捕，阻止目标移动或使用移动类技能。狂战士之怒还将提供额外的移动速度，护甲，并且降低攻击间隔。\n\n狂战士之怒激活后会改变旋风飞斧的作用机制。",
-        "lore_loc": "跟巨魔战将的怒火一样，他的斧头也是源源不断。",
-        "notes_loc": [
-          "近战或远程物品的冷却时间不同时将根据巨魔战将在使用物品时处于远程或近战形态而定。"
-        ],
+        "id": 1478,
+        "name": "troll_warlord_switch_stance",
+        "name_loc": "战斗姿态",
+        "desc_loc": "巨魔战将从使用远程攻击切换为近战攻击。近战攻击的基础攻击间隔更短。",
+        "lore_loc": "",
+        "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
@@ -3483,15 +3796,11 @@
         "damage": 0,
         "immunity": 3,
         "dispellable": 0,
-        "max_level": 5,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
         "cast_points": [
-          0.2,
-          0.2,
-          0.2,
-          0.2,
           0.2
         ],
         "channel_times": [
@@ -3516,77 +3825,6 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "bonus_hp",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "bonus_move_speed",
-            "values_float": [
-              5,
-              15,
-              25,
-              35,
-              45
-            ],
-            "is_percentage": false,
-            "heading_loc": "移动速度加成：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_troll_warlord_2",
-                "value": 25,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "bonus_armor",
-            "values_float": [
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "is_percentage": false,
-            "heading_loc": "护甲加成：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_troll_warlord",
-                "value": 8,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
             "name": "bonus_range",
             "values_float": [
               350
@@ -3609,45 +3847,7 @@
               1.4
             ],
             "is_percentage": false,
-            "heading_loc": "基础攻击间隔（近战）：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "ensnare_chance",
-            "values_float": [
-              20
-            ],
-            "is_percentage": true,
-            "heading_loc": "诱捕概率：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "ensnare_duration",
-            "values_float": [
-              0.4,
-              0.8,
-              1.2,
-              1.6,
-              2
-            ],
-            "is_percentage": false,
-            "heading_loc": "诱捕持续时间：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

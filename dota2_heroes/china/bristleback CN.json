@@ -30,8 +30,8 @@
         0,
         1
       ],
-      "damage_min": 47,
-      "damage_max": 53,
+      "damage_min": 53,
+      "damage_max": 59,
       "attack_rate": 1.8,
       "attack_range": 150,
       "projectile_speed": 900,
@@ -57,7 +57,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "提升了最大叠加层数和每层护甲降低。"
+            "提升了最大叠加层数和每层护甲降低。",
+            ""
           ],
           "type": 0,
           "behavior": "134217736",
@@ -424,6 +425,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -751,7 +753,8 @@
           "scepter_loc": "钢毛后背增加主动效果。钢背兽将背部转向目标方向，%activation_delay%秒后以%activation_spray_interval%秒间隔朝背部前方的锥形范围强行连续喷出%activation_num_quill_sprays%次刺针扫射。钢背兽在这段时间内面朝方向被锁定，被缴械，并且移动速度减缓%activation_movement_speed_pct%%%。",
           "facets_loc": [
             "",
-            "他受到伤害时不再释放刺针扫射，而是对附近所有敌人发射当前等级的粘稠鼻液。"
+            "他受到伤害时不再释放刺针扫射，而是对附近所有敌人发射当前等级的粘稠鼻液。",
+            ""
           ],
           "type": 0,
           "behavior": "2",
@@ -985,7 +988,7 @@
             {
               "name": "activation_num_quill_sprays",
               "values_float": [
-                6
+                5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1304,6 +1307,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1576,13 +1580,16 @@
           "lore_loc": "“别没事就发火”，他母亲总是这样训斥他。但是在战斗中，火冒三丈将有非凡效果。",
           "notes_loc": [
             "钢背兽的幻象也能继承加成效果。",
-            "使用物品不会触发战意。"
+            "使用物品不会触发战意。",
+            "破坏会使技能无法获得新的叠加效果。",
+            "破坏不会使现有叠加效果提供的加成失效。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "战意提供攻击速度加成，而不只有攻击力。",
-            ""
+            "",
+            "战意可以主动开启，获得攻击力和移动速度加成，持续较短时间。红光满面期间，钢背兽的视野减少至狭窄的锥形，并且不会与他的友军共享视野。"
           ],
           "type": 1,
           "behavior": "2",
@@ -1592,7 +1599,7 @@
           "damage": 0,
           "immunity": 0,
           "dispellable": 3,
-          "max_level": 4,
+          "max_level": 3,
           "cast_ranges": [
             0
           ],
@@ -1603,7 +1610,7 @@
             0
           ],
           "cooldowns": [
-            0
+            45
           ],
           "durations": [
             10,
@@ -1617,7 +1624,9 @@
             0
           ],
           "mana_costs": [
-            0
+            55,
+            65,
+            75
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -1625,7 +1634,6 @@
             {
               "name": "damage_per_stack",
               "values_float": [
-                5,
                 15,
                 20,
                 25
@@ -1655,7 +1663,6 @@
               "values_float": [
                 0,
                 0,
-                0,
                 0
               ],
               "is_percentage": false,
@@ -1666,7 +1673,6 @@
               "facet_bonus": {
                 "name": "bristleback_berserk",
                 "values": [
-                  5,
                   10,
                   15,
                   20
@@ -1678,7 +1684,6 @@
             {
               "name": "move_speed_per_stack",
               "values_float": [
-                0,
                 2,
                 3,
                 4
@@ -1698,7 +1703,6 @@
             {
               "name": "stack_duration",
               "values_float": [
-                12,
                 16,
                 18,
                 20
@@ -1718,13 +1722,333 @@
             {
               "name": "max_stacks",
               "values_float": [
-                4,
                 8,
                 10,
                 12
               ],
               "is_percentage": false,
               "heading_loc": "最大叠加次数：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "active_bonus_attack_percent",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "开启后每层叠加攻击力加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "bristleback_seeing_red",
+                "values": [
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "active_bonus_movement_percent",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "开启后每层叠加移动速度加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "bristleback_seeing_red",
+                "values": [
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "active_duration",
+              "values_float": [
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "bristleback_seeing_red",
+                "values": [
+                  4,
+                  5,
+                  6
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "active_view_angle_restriction",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "bristleback_seeing_red",
+                "values": [
+                  90
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                55,
+                65,
+                75
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                45
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.webm",
+          "is_inborn": 0
+        },
+        {
+          "id": 1479,
+          "name": "bristleback_prickly",
+          "name_loc": "尖刺在背",
+          "desc_loc": "钢背兽攻击身后的敌方英雄时拥有%amp_pct%%%伤害和负面效果持续时间增强。",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "8796093022210",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 1,
+          "immunity": 4,
+          "dispellable": 2,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "amp_pct",
+              "values_float": [
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "angle",
+              "values_float": [
+                110
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1772,7 +2096,7 @@
             {
               "name": "AbilityDuration",
               "values_float": [
-                10
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1884,10 +2208,10 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_warpath.webm",
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_prickly.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_prickly.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_prickly.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/bristleback_prickly.webm",
           "is_inborn": 1
         }
       ],
@@ -1902,6 +2226,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2119,6 +2444,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2335,6 +2661,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2534,6 +2861,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2732,6 +3060,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2949,6 +3278,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3147,6 +3477,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3364,6 +3695,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3557,10 +3889,10 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_bristleback.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/npc_dota_hero_bristleback.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/npc_dota_hero_bristleback.webm",
-      "update_time": 1717711341,
+      "update_time": 1722470529,
       "facets": [
         {
-          "color": 0,
+          "color": 1,
           "title_loc": "失控",
           "description_loc": "战意提供攻击速度加成，而不只有攻击力。",
           "name": "bristleback_berserk",
@@ -3573,10 +3905,21 @@
           "description_loc": "钢毛后背达到伤害临界值后发射粘稠鼻液，而不是刺针扫射。粘稠鼻液效果更加强大。",
           "name": "bristleback_snot_rocket",
           "icon": "snot",
-          "gradient_id": 3
+          "gradient_id": 0
+        },
+        {
+          "color": 0,
+          "title_loc": "红光满面",
+          "description_loc": "战意可以主动开启来获得额外加成。红光满面期间钢背兽的视野受限，并且不与友军共享视野。",
+          "name": "bristleback_seeing_red",
+          "icon": "no_vision",
+          "gradient_id": 0
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3586,30 +3929,28 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_bristleback.png",
       "new_abilities": {
-        "id": 5551,
-        "name": "bristleback_warpath",
-        "name_loc": "战意",
-        "desc_loc": "钢背兽每次使用技能时都会进入狂暴状态，移动速度和攻击力都将提升。",
-        "lore_loc": "“别没事就发火”，他母亲总是这样训斥他。但是在战斗中，火冒三丈将有非凡效果。",
-        "notes_loc": [
-          "钢背兽的幻象也能继承加成效果。",
-          "使用物品不会触发战意。"
-        ],
+        "id": 1479,
+        "name": "bristleback_prickly",
+        "name_loc": "尖刺在背",
+        "desc_loc": "钢背兽攻击身后的敌方英雄时拥有%amp_pct%%%伤害和负面效果持续时间增强。",
+        "lore_loc": "",
+        "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
-          "战意提供攻击速度加成，而不只有攻击力。",
+          "",
+          "",
           ""
         ],
-        "type": 1,
-        "behavior": "2",
+        "type": 0,
+        "behavior": "8796093022210",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
-        "damage": 0,
-        "immunity": 0,
-        "dispellable": 3,
-        "max_level": 4,
+        "damage": 1,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -3623,9 +3964,7 @@
           0
         ],
         "durations": [
-          10,
-          10,
-          10
+          0
         ],
         "damages": [
           0,
@@ -3640,68 +3979,12 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "damage_per_stack",
+            "name": "amp_pct",
             "values_float": [
-              5,
-              15,
-              20,
-              25
+              10
             ],
             "is_percentage": false,
-            "heading_loc": "每次叠加提升攻击力：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_bristleback_3",
-                "value": 18,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "bristleback_berserk",
-              "values": [
-                5
-              ],
-              "operation": 5
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "aspd_per_stack",
-            "values_float": [
-              0,
-              0,
-              0,
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "每层效果攻速加成：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "bristleback_berserk",
-              "values": [
-                5,
-                10,
-                15,
-                20
-              ],
-              "operation": 5
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "move_speed_per_stack",
-            "values_float": [
-              0,
-              2,
-              3,
-              4
-            ],
-            "is_percentage": true,
-            "heading_loc": "每次叠加提升移动速度：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3713,35 +3996,12 @@
             "required_facet": ""
           },
           {
-            "name": "stack_duration",
+            "name": "angle",
             "values_float": [
-              12,
-              16,
-              18,
-              20
+              110
             ],
             "is_percentage": false,
-            "heading_loc": "战意叠加持续时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "max_stacks",
-            "values_float": [
-              4,
-              8,
-              10,
-              12
-            ],
-            "is_percentage": false,
-            "heading_loc": "最大叠加次数：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3789,7 +4049,7 @@
           {
             "name": "AbilityDuration",
             "values_float": [
-              10
+              0
             ],
             "is_percentage": false,
             "heading_loc": "",
