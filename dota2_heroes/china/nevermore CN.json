@@ -206,7 +206,7 @@
             {
               "name": "duration",
               "values_float": [
-                8
+                7
               ],
               "is_percentage": false,
               "heading_loc": "叠加持续时间：",
@@ -434,7 +434,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                75
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1195,14 +1195,14 @@
             {
               "name": "requiem_slow_duration",
               "values_float": [
-                0.7
+                0.6
               ],
               "is_percentage": false,
               "heading_loc": "每道魔能恐惧时间：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_nevermore_6",
-                  "value": 0.25,
+                  "value": 0.2,
                   "operation": 0
                 }
               ],
@@ -1225,7 +1225,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_nevermore_6",
-                  "value": 0.95,
+                  "value": 0.45,
                   "operation": 0
                 }
               ],
@@ -1275,7 +1275,7 @@
             {
               "name": "requiem_line_width_end",
               "values_float": [
-                350
+                300
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1544,15 +1544,17 @@
           "id": 5062,
           "name": "nevermore_necromastery",
           "name_loc": "支配死灵",
-          "desc_loc": "影魔每杀死一个单位都会窃取其灵魂，获得额外攻击力。影魔死亡时%soul_release_tooltip%%%的灵魂将逃离他的束缚。每次击杀英雄会使灵魂上限增加1个，直到影魔阵亡。",
+          "desc_loc": "影魔每杀死一个单位都会窃取其灵魂，获得额外攻击力。影魔死亡时%soul_release_tooltip%%%的灵魂将逃离他的束缚。",
           "lore_loc": "被收割的亡魂在魂渊内外盘旋，增加了影魔的力量，也方便他扩大自己的灵魂收藏。",
           "notes_loc": [
-            "反补、杀死中立生物也能收集到灵魂。"
+            "反补、杀死中立生物也能收集到灵魂。",
+            "破坏会使技能无法获得新的叠加效果。",
+            "破坏不会使现有叠加效果提供的加成失效。"
           ],
           "shard_loc": "影魔每次击杀都会额外获得1个灵魂。影魔每次攻击可以消耗1个灵魂，造成致命一击伤害，并使目标恐惧。",
           "scepter_loc": "提高灵魂数量上限。",
           "facets_loc": [
-            "",
+            "每次击杀英雄会使灵魂上限增加%max_soul_increase_on_hero_kill%个，直到影魔阵亡。",
             ""
           ],
           "type": 0,
@@ -1751,6 +1753,25 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_soul_increase_on_hero_kill",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "nevermore_lasting_presence",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -2931,7 +2952,7 @@
           "id": 815,
           "name": "special_bonus_unique_nevermore_6",
           "name_loc": "+{s:bonus_requiem_slow_duration}秒 魂之挽歌每道恐惧",
-          "desc_loc": "",
+          "desc_loc": "最长恐惧持续时间提升+{s:bonus_requiem_slow_duration_max}秒",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -3529,12 +3550,12 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_nevermore.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/npc_dota_hero_nevermore.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/npc_dota_hero_nevermore.webm",
-      "update_time": 1719270016,
+      "update_time": 1722470420,
       "facets": [
         {
           "color": 5,
           "title_loc": "经久不衰",
-          "description_loc": "在附近敌方英雄阵亡后魔王降临的降低护甲效果将会暂时提升。",
+          "description_loc": "在附近敌方英雄阵亡后魔王降临的降低护甲效果将会暂时提升。每次击杀英雄会使支配死灵的灵魂上限增加{s:bonus_max_soul_increase_on_hero_kill}个，直到影魔阵亡。",
           "name": "nevermore_lasting_presence",
           "icon": "armor_broken",
           "gradient_id": 0
@@ -3561,15 +3582,17 @@
         "id": 5062,
         "name": "nevermore_necromastery",
         "name_loc": "支配死灵",
-        "desc_loc": "影魔每杀死一个单位都会窃取其灵魂，获得额外攻击力。影魔死亡时%soul_release_tooltip%%%的灵魂将逃离他的束缚。每次击杀英雄会使灵魂上限增加1个，直到影魔阵亡。",
+        "desc_loc": "影魔每杀死一个单位都会窃取其灵魂，获得额外攻击力。影魔死亡时%soul_release_tooltip%%%的灵魂将逃离他的束缚。",
         "lore_loc": "被收割的亡魂在魂渊内外盘旋，增加了影魔的力量，也方便他扩大自己的灵魂收藏。",
         "notes_loc": [
-          "反补、杀死中立生物也能收集到灵魂。"
+          "反补、杀死中立生物也能收集到灵魂。",
+          "破坏会使技能无法获得新的叠加效果。",
+          "破坏不会使现有叠加效果提供的加成失效。"
         ],
         "shard_loc": "影魔每次击杀都会额外获得1个灵魂。影魔每次攻击可以消耗1个灵魂，造成致命一击伤害，并使目标恐惧。",
         "scepter_loc": "提高灵魂数量上限。",
         "facets_loc": [
-          "",
+          "每次击杀英雄会使灵魂上限增加%max_soul_increase_on_hero_kill%个，直到影魔阵亡。",
           ""
         ],
         "type": 0,
@@ -3773,6 +3796,25 @@
             "required_facet": ""
           },
           {
+            "name": "max_soul_increase_on_hero_kill",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "nevermore_lasting_presence",
+              "values": [
+                1
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
             "name": "AbilityCastRange",
             "values_float": [
               0
@@ -3943,13 +3985,13 @@
         "complexity": 2
       },
       "next_hero_info": {
-        "id": 80,
-        "name": "lone_druid",
-        "name_loc": "德鲁伊",
-        "attack_capability": 2,
-        "img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_lone_druid.png",
-        "primary_attr": 3,
-        "complexity": 3
+        "id": 109,
+        "name": "terrorblade",
+        "name_loc": "恐怖利刃",
+        "attack_capability": 1,
+        "img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_terrorblade.png",
+        "primary_attr": 1,
+        "complexity": 2
       }
     }
   }

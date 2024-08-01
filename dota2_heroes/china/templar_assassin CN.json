@@ -420,7 +420,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
+            "隐匿的额外伤害和护甲降低效果会施加给灵能之刃飞溅距离内所有敌人。",
             ""
           ],
           "type": 0,
@@ -451,7 +451,7 @@
             5
           ],
           "durations": [
-            12
+            6
           ],
           "damages": [
             0,
@@ -515,6 +515,29 @@
               "required_facet": ""
             },
             {
+              "name": "bash_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_templar_assassin_7",
+                  "value": 1,
+                  "operation": 5
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -551,7 +574,7 @@
             {
               "name": "AbilityDuration",
               "values_float": [
-                12
+                6
               ],
               "is_percentage": false,
               "heading_loc": "护甲降低持续时间：",
@@ -688,7 +711,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "被灵能之刃的飞溅伤害击中的敌人会被减速。",
+            "",
             ""
           ],
           "type": 0,
@@ -699,7 +722,7 @@
           "damage": 4,
           "immunity": 3,
           "dispellable": 0,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             0
           ],
@@ -730,7 +753,6 @@
             {
               "name": "bonus_attack_range",
               "values_float": [
-                0,
                 50,
                 100,
                 150,
@@ -757,7 +779,6 @@
             {
               "name": "attack_spill_range",
               "values_float": [
-                350,
                 550,
                 600,
                 650,
@@ -801,7 +822,6 @@
             {
               "name": "attack_spill_pct",
               "values_float": [
-                80,
                 85,
                 90,
                 95,
@@ -820,6 +840,25 @@
               "required_facet": ""
             },
             {
+              "name": "meld_strike_spills",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "templar_assassin_voidblades",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "spill_slow_duration",
               "values_float": [
                 0
@@ -830,37 +869,8 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "templar_assassin_voidblades",
-                "values": [
-                  3
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spill_movement_slow_pct",
-              "values_float": [
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "飞溅减速：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "templar_assassin_voidblades",
-                "values": [
-                  5,
-                  10,
-                  15,
-                  20,
-                  25
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -1007,7 +1017,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1018,7 +1028,7 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/templar_assassin_psi_blades.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/templar_assassin_psi_blades.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/templar_assassin_psi_blades.webm",
-          "is_inborn": 1
+          "is_inborn": 0
         },
         {
           "id": 7853,
@@ -1252,7 +1262,7 @@
           "lore_loc": "召来隐之圣堂的力量后，无人能逃脱圣堂刺客的追杀。",
           "notes_loc": [
             "陷阱没有时间限制。",
-            "陷阱在放置后%trap_fade_time%秒内逐渐进入隐形，对技能免疫，拥有100点生命值。",
+            "他们拥有隐形效果，渐隐时间为%trap_fade_time%秒，还拥有技能免疫状态。他们可以承受2次远程英雄的攻击，1次近战英雄的攻击，或4次非英雄单位的攻击。",
             "陷阱的视野是400/400，不能阻止中立生物刷新。"
           ],
           "shard_loc": "提升最大陷阱数量和陷阱视野范围。陷阱引爆还会沉默敌人。",
@@ -1727,6 +1737,210 @@
           "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_templar_assassin/templar_assassin_aghanims_shard.mp4",
           "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_templar_assassin/templar_assassin_aghanims_shard.webm",
           "is_inborn": 0
+        },
+        {
+          "id": 1460,
+          "name": "templar_assassin_third_eye",
+          "name_loc": "第三只眼",
+          "desc_loc": "圣堂刺客和她的队友可以看到肉山的复活倒计时。",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "8796093022210",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 3,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/templar_assassin_third_eye.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/templar_assassin_third_eye.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/templar_assassin_third_eye.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/templar_assassin_third_eye.webm",
+          "is_inborn": 1
         }
       ],
       "talents": [
@@ -2961,7 +3175,7 @@
         {
           "id": 7371,
           "name": "special_bonus_unique_templar_assassin_7",
-          "name_loc": "{s:value}秒 隐匿造成击晕",
+          "name_loc": "{s:bonus_bash_duration}秒 隐匿造成击晕",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -3007,23 +3221,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -3378,14 +3575,14 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_templar_assassin.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/npc_dota_hero_templar_assassin.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_templar_assassin/npc_dota_hero_templar_assassin.webm",
-      "update_time": 1719270062,
+      "update_time": 1722470462,
       "facets": [
         {
           "color": 5,
           "title_loc": "太虚之刃",
-          "description_loc": "被灵能之刃的飞溅伤害击中的敌人会被减速。",
+          "description_loc": "隐匿攻击目标时还会对灵能之刃击中的所有敌人施加额外伤害和负面效果",
           "name": "templar_assassin_voidblades",
-          "icon": "slow",
+          "icon": "ricochet",
           "gradient_id": 3
         },
         {
@@ -3407,30 +3604,27 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_templar_assassin.png",
       "new_abilities": {
-        "id": 5196,
-        "name": "templar_assassin_psi_blades",
-        "name_loc": "灵能之刃",
-        "desc_loc": "圣堂刺客锋利的灵能之刃可以穿透敌人，对其正后方的敌方单位造成伤害，并且攻击距离得到提升。每对一个单位造成伤害后，飞溅伤害都会减少一定百分比。",
-        "lore_loc": "她的灵刃刺进了他人的皮肤，也刺进了他们的心智，使她对现实这一奥秘有了更深的理解。",
-        "notes_loc": [
-          "飞溅伤害可以伤害隐身单位。",
-          "重击等攻击特效只对主目标有效。"
-        ],
+        "id": 1460,
+        "name": "templar_assassin_third_eye",
+        "name_loc": "第三只眼",
+        "desc_loc": "圣堂刺客和她的队友可以看到肉山的复活倒计时。",
+        "lore_loc": "",
+        "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
-          "被灵能之刃的飞溅伤害击中的敌人会被减速。",
+          "",
           ""
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "8796093022210",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
-        "damage": 4,
-        "immunity": 3,
-        "dispellable": 0,
-        "max_level": 5,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -3458,144 +3652,6 @@
         "gold_costs": [],
         "health_costs": [],
         "special_values": [
-          {
-            "name": "bonus_attack_range",
-            "values_float": [
-              0,
-              50,
-              100,
-              150,
-              200
-            ],
-            "is_percentage": false,
-            "heading_loc": "攻击距离提升：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_templar_assassin_8",
-                "value": 100,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "attack_spill_range",
-            "values_float": [
-              350,
-              550,
-              600,
-              650,
-              700
-            ],
-            "is_percentage": false,
-            "heading_loc": "灵能之刃距离：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_templar_assassin_8",
-                "value": 100,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "attack_spill_width",
-            "values_float": [
-              90
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "attack_spill_pct",
-            "values_float": [
-              80,
-              85,
-              90,
-              95,
-              100
-            ],
-            "is_percentage": true,
-            "heading_loc": "飞溅伤害：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "spill_slow_duration",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "飞溅减速时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "templar_assassin_voidblades",
-              "values": [
-                3
-              ],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "spill_movement_slow_pct",
-            "values_float": [
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
-            "is_percentage": true,
-            "heading_loc": "飞溅减速：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "templar_assassin_voidblades",
-              "values": [
-                5,
-                10,
-                15,
-                20,
-                25
-              ],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
           {
             "name": "AbilityCastRange",
             "values_float": [

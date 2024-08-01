@@ -30,7 +30,7 @@
         0,
         2
       ],
-      "damage_min": 50,
+      "damage_min": 54,
       "damage_max": 60,
       "attack_rate": 1.7,
       "attack_range": 150,
@@ -104,7 +104,7 @@
             {
               "name": "radius",
               "values_float": [
-                225
+                250
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -360,7 +360,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100
+                90
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -402,7 +402,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -417,9 +417,6 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_torrent.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_torrent.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_torrent.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -430,25 +427,24 @@
           "lore_loc": "迷失的铁帆海军灵魂依附在昆卡信赖的宝剑——潮汐使者之中，助它消灭洪流恶魔。",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "潮汐使者消耗掉统帅朗姆酒延后伤害的一定百分比，并且攻击力提升相同数值。",
           "facets_loc": [
             "潮汐使者每击中一名英雄，冷却时间都会减少。",
             ""
           ],
           "type": 0,
-          "behavior": "2199023390728",
+          "behavior": "135176",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
           "damage": 1,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             150
           ],
           "cast_points": [
-            0,
             0,
             0,
             0,
@@ -498,7 +494,6 @@
             {
               "name": "cleave_ending_width",
               "values_float": [
-                450,
                 500,
                 550,
                 600,
@@ -519,7 +514,6 @@
             {
               "name": "cleave_distance",
               "values_float": [
-                500,
                 650,
                 800,
                 950,
@@ -540,7 +534,6 @@
             {
               "name": "damage_bonus",
               "values_float": [
-                10,
                 30,
                 60,
                 90,
@@ -774,7 +767,6 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                16,
                 13,
                 10,
                 7,
@@ -798,7 +790,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -809,7 +801,7 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_tidebringer.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_tidebringer.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_tidebringer.webm",
-          "is_inborn": 1
+          "is_inborn": 0
         },
         {
           "id": 5033,
@@ -1217,12 +1209,14 @@
           "is_inborn": 0
         },
         {
-          "id": 319,
-          "name": "kunkka_torrent_storm",
-          "name_loc": "洪流浪潮",
-          "desc_loc": "在目标地点的%torrent_max_distance%范围内每%torrent_interval%秒在一个随机区域释放一个可见的洪流，持续%torrent_duration%秒。",
-          "lore_loc": "一百个陆地的联盟也牵制不了这些滔天海浪。",
-          "notes_loc": [],
+          "id": 1452,
+          "name": "kunkka_admirals_rum",
+          "name_loc": "统帅朗姆酒",
+          "desc_loc": "如果昆卡受到来自敌方英雄、建筑或肉山的伤害会使他的生命低于临界值，那么他会沉浸在统帅朗姆酒中，获得移动速度加成，并且延后承受即将受到的伤害。",
+          "lore_loc": "",
+          "notes_loc": [
+            "与其他来源的统帅朗姆酒完全叠加。"
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
@@ -1230,25 +1224,25 @@
             ""
           ],
           "type": 0,
-          "behavior": "8589934641",
+          "behavior": "66",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 2,
-          "immunity": 4,
-          "dispellable": 3,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
-            900
+            0
           ],
           "cast_points": [
-            0.4
+            0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            70
+            60
           ],
           "durations": [
             0
@@ -1260,18 +1254,18 @@
             0
           ],
           "mana_costs": [
-            250
+            0
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "torrent_interval",
+              "name": "damage_threshold",
               "values_float": [
-                0.25
+                65
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "生命临界值：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1283,12 +1277,35 @@
               "required_facet": ""
             },
             {
-              "name": "torrent_duration",
+              "name": "ghostship_absorb",
               "values_float": [
-                4
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "延后结算伤害：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kunkka_rum",
+                  "value": 15,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "buff_duration",
+              "values_float": [
+                10
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "朗姆酒持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1300,29 +1317,12 @@
               "required_facet": ""
             },
             {
-              "name": "torrent_min_distance",
+              "name": "movespeed_bonus",
               "values_float": [
-                115
+                10
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "torrent_max_distance",
-              "values_float": [
-                1100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "朗姆酒移动速度提升：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1336,7 +1336,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                900
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1387,7 +1387,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.4
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1438,7 +1438,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                275
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1455,7 +1455,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                75
+                60
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1471,11 +1471,11 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
+          "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1486,10 +1486,7 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_torrent_storm.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_torrent_storm.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_torrent_storm.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.webm",
-          "is_inborn": 0
+          "is_inborn": 1
         },
         {
           "id": 605,
@@ -1787,7 +1784,7 @@
           "id": 5035,
           "name": "kunkka_ghostship",
           "name_loc": "幽灵船",
-          "desc_loc": "召唤一艘幽灵船驶过战场，直到撞成粉碎，残骸周围的敌人将会因撞击受到伤害并眩晕。友军被泡在舰队统帅的朗姆酒中，移动速度提升并对受到的伤害反应麻木，一定百分比的伤害将会延后到持续时间结束时结算。",
+          "desc_loc": "召唤一艘幽灵船驶过战场，直到撞成粉碎，残骸周围的敌人将会因撞击受到伤害并眩晕。友军被泡在统帅朗姆酒中，移动速度提升并对受到的伤害反应麻木，一定百分比的伤害将会延后到持续时间结束时结算。",
           "lore_loc": "铁帆舰队最后的战舰虽然只是个幻影，但它给昆卡的敌人带来的死亡却是完全真实的。",
           "notes_loc": [
             "在朗姆酒效果消失后造成的伤害不能致死，而且不能杀死英雄。",
@@ -1795,7 +1792,7 @@
             "幽灵船的移动速度为%ghostship_speed%。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "幽灵船在目标地点以%fleet_interval%秒的间隔产生%fleet_count%艘船组成的舰队。每艘船现在还会从左舷和右舷发射%num_cannon_volleys%波炮弹，穿过敌人时造成%cannon_ball_damage_pct%%%幽灵船伤害。",
           "facets_loc": [
             "",
             ""
@@ -1982,6 +1979,262 @@
               "required_facet": ""
             },
             {
+              "name": "fleet_interval",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                2.5
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fleet_count",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                2
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fire_cannons",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cannon_ball_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                40
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cannon_ball_distance",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1200
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cannon_ball_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1400
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cannon_count",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                4
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cannon_ball_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                100
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "num_cannon_volleys",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cannon_fire_interval",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                0.78
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_cannon_rotation",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rotation_per_cannon",
+              "values_float": [
+                12
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "initial_cannon_offset",
+              "values_float": [
+                -150
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "distance_between_cannons",
+              "values_float": [
+                75
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "#AbilityDamage",
               "values_float": [
                 400,
@@ -2142,7 +2395,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -2157,6 +2410,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_ghostship.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_ghostship.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/kunkka_ghostship.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_kunkka/kunkka_aghanims_scepter.webm",
           "is_inborn": 0
         }
       ],
@@ -3356,10 +3612,10 @@
           "item_quality": 0
         },
         {
-          "id": 6666,
-          "name": "special_bonus_unique_kunkka_3",
-          "name_loc": "幽灵船舰队",
-          "desc_loc": "产生3艘幽灵船，间隔{s:value}秒，陆续向目标地点驶去。",
+          "id": 1446,
+          "name": "special_bonus_spell_aoe_100",
+          "name_loc": "+{s:value} 技能作用范围",
+          "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -3407,7 +3663,7 @@
             {
               "name": "value",
               "values_float": [
-                3.5
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3792,7 +4048,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_kunkka.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/npc_dota_hero_kunkka.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_kunkka/npc_dota_hero_kunkka.webm",
-      "update_time": 1717711242,
+      "update_time": 1722470437,
       "facets": [
         {
           "color": 3,
@@ -3805,7 +4061,7 @@
         {
           "color": 1,
           "title_loc": "喷洒烈酒",
-          "description_loc": "X标记送回目标后，附近友军都会获得幽灵船的伤害延迟效果。",
+          "description_loc": "X标记送回目标后，附近友军都会获得幽灵船的统帅朗姆酒效果。",
           "name": "kunkka_grog",
           "icon": "armor",
           "gradient_id": 2
@@ -3821,46 +4077,40 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_kunkka.png",
       "new_abilities": {
-        "id": 5032,
-        "name": "kunkka_tidebringer",
-        "name_loc": "潮汐使者",
-        "desc_loc": "昆卡的传奇之剑使他的下一次攻击附加额外的攻击力并在前方造成大范围的分裂攻击伤害。",
-        "lore_loc": "迷失的铁帆海军灵魂依附在昆卡信赖的宝剑——潮汐使者之中，助它消灭洪流恶魔。",
-        "notes_loc": [],
+        "id": 1452,
+        "name": "kunkka_admirals_rum",
+        "name_loc": "统帅朗姆酒",
+        "desc_loc": "如果昆卡受到来自敌方英雄、建筑或肉山的伤害会使他的生命低于临界值，那么他会沉浸在统帅朗姆酒中，获得移动速度加成，并且延后承受即将受到的伤害。",
+        "lore_loc": "",
+        "notes_loc": [
+          "与其他来源的统帅朗姆酒完全叠加。"
+        ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
-          "潮汐使者每击中一名英雄，冷却时间都会减少。",
+          "",
           ""
         ],
         "type": 0,
-        "behavior": "2199023390728",
-        "target_team": 2,
-        "target_type": 19,
+        "behavior": "66",
+        "target_team": 0,
+        "target_type": 0,
         "flags": 0,
-        "damage": 1,
+        "damage": 0,
         "immunity": 0,
         "dispellable": 0,
-        "max_level": 5,
+        "max_level": 1,
         "cast_ranges": [
-          150
+          0
         ],
         "cast_points": [
-          0,
-          0,
-          0,
-          0,
           0
         ],
         "channel_times": [
           0
         ],
         "cooldowns": [
-          16,
-          13,
-          10,
-          7,
-          4
+          60
         ],
         "durations": [
           0
@@ -3878,175 +4128,75 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "cleave_starting_width",
+            "name": "damage_threshold",
             "values_float": [
-              150
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "cleave_ending_width",
-            "values_float": [
-              450,
-              500,
-              550,
-              600,
-              650
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "cleave_distance",
-            "values_float": [
-              500,
-              650,
-              800,
-              950,
-              1100
-            ],
-            "is_percentage": false,
-            "heading_loc": "分裂距离：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "damage_bonus",
-            "values_float": [
-              10,
-              30,
-              60,
-              90,
-              120
-            ],
-            "is_percentage": false,
-            "heading_loc": "攻击力加成：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_kunkka_2",
-                "value": 60,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "cleave_damage",
-            "values_float": [
-              150
+              65
             ],
             "is_percentage": true,
-            "heading_loc": "分裂伤害：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_kunkka_4",
-                "value": 100,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "movespeed_slow",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_kunkka_tidebringer_slow",
-                "value": 60,
-                "operation": 2
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "movespeed_slow_duration",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_kunkka_tidebringer_slow",
-                "value": 1,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "cooldown_reduction_per_hero_hit",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "击中英雄减少冷却时间：",
+            "heading_loc": "生命临界值：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "kunkka_high_tide",
-              "values": [
-                0.8
-              ],
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "ghostship_absorb",
+            "values_float": [
+              20
+            ],
+            "is_percentage": true,
+            "heading_loc": "延后结算伤害：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_kunkka_rum",
+                "value": 15,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "buff_duration",
+            "values_float": [
+              10
+            ],
+            "is_percentage": false,
+            "heading_loc": "朗姆酒持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "movespeed_bonus",
+            "values_float": [
+              10
+            ],
+            "is_percentage": true,
+            "heading_loc": "朗姆酒移动速度提升：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
               "operation": 0
             },
             "required_facet": ""
@@ -4054,7 +4204,7 @@
           {
             "name": "AbilityCastRange",
             "values_float": [
-              150
+              0
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -4173,11 +4323,7 @@
           {
             "name": "AbilityCooldown",
             "values_float": [
-              16,
-              13,
-              10,
-              7,
-              4
+              60
             ],
             "is_percentage": false,
             "heading_loc": "",

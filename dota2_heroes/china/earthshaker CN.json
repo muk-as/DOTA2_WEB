@@ -466,7 +466,7 @@
           "scepter_loc": "强化图腾可以对地施放，施放后会跳至半空中再降落至目标地点，在目标地点施放强化图腾。双击技能会按原技能施放，不会跳跃。强化图腾拥有分裂效果。",
           "facets_loc": [
             "",
-            "利用强化图腾的攻击击杀敌人后会把尸体击飞，对击中的敌人造成伤害。"
+            "利用强化图腾的攻击或撼地者的其他技能击杀敌人后都会把尸体击飞，对击中的敌人造成伤害。"
           ],
           "type": 0,
           "behavior": "4",
@@ -1112,7 +1112,7 @@
           "damage": 2,
           "immunity": 4,
           "dispellable": 1,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             0
           ],
@@ -1126,7 +1126,6 @@
             0
           ],
           "durations": [
-            0.5,
             1,
             1.1,
             1.2,
@@ -1164,7 +1163,6 @@
             {
               "name": "aftershock_damage",
               "values_float": [
-                35,
                 70,
                 100,
                 130,
@@ -1263,7 +1261,6 @@
             {
               "name": "AbilityDuration",
               "values_float": [
-                0.5,
                 1,
                 1.1,
                 1.2,
@@ -1372,7 +1369,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1383,7 +1380,7 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_aftershock.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_aftershock.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_aftershock.webm",
-          "is_inborn": 1
+          "is_inborn": 0
         },
         {
           "id": 5026,
@@ -1700,6 +1697,227 @@
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_echo_slam.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_echo_slam.webm",
           "is_inborn": 0
+        },
+        {
+          "id": 1448,
+          "name": "earthshaker_spirit_cairn",
+          "name_loc": "灵魂石冢",
+          "desc_loc": "撼地者死亡时会在他阵亡的地点产生一道%fissure_radius%范围的沟壑。这道沟壑会阻碍移动，并且使撼地者持续获得周围的经验。沟壑会一直持续到撼地者复活。",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "8796093022210",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 4,
+          "dispellable": 0,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "fissure_radius",
+              "values_float": [
+                75
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_spirit_cairn.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_spirit_cairn.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_spirit_cairn.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/earthshaker_spirit_cairn.webm",
+          "is_inborn": 1
         }
       ],
       "talents": [
@@ -3317,7 +3535,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_earthshaker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/npc_dota_hero_earthshaker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earthshaker/npc_dota_hero_earthshaker.webm",
-      "update_time": 1718416814,
+      "update_time": 1722470415,
       "facets": [
         {
           "color": 0,
@@ -3330,7 +3548,7 @@
         {
           "color": 1,
           "title_loc": "强击图腾",
-          "description_loc": "利用强化图腾的攻击击杀敌人后会把尸体击飞，对击中的敌人造成伤害。",
+          "description_loc": "利用强化图腾的攻击或撼地者的其他技能击杀敌人后都会把尸体击飞，对击中的敌人造成伤害。",
           "name": "earthshaker_slugger",
           "icon": "movement",
           "gradient_id": 1
@@ -3346,29 +3564,27 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_earthshaker.png",
       "new_abilities": {
-        "id": 5025,
-        "name": "earthshaker_aftershock",
-        "name_loc": "余震",
-        "desc_loc": "撼地者施放技能时会引起脚下的大地震动，眩晕附近的敌方单位并造成额外伤害。",
-        "lore_loc": "大地在瑞格强有力的步伐下颤抖。",
-        "notes_loc": [
-          "使用物品不会触发余震。"
-        ],
+        "id": 1448,
+        "name": "earthshaker_spirit_cairn",
+        "name_loc": "灵魂石冢",
+        "desc_loc": "撼地者死亡时会在他阵亡的地点产生一道%fissure_radius%范围的沟壑。这道沟壑会阻碍移动，并且使撼地者持续获得周围的经验。沟壑会一直持续到撼地者复活。",
+        "lore_loc": "",
+        "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
-          "英雄每升%aftershock_range_level_interval%级，余震的作用范围提升%aftershock_range_increase_per_level_interval%。",
+          "",
           ""
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "8796093022210",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
-        "damage": 2,
+        "damage": 0,
         "immunity": 4,
-        "dispellable": 1,
-        "max_level": 5,
+        "dispellable": 0,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -3382,11 +3598,7 @@
           0
         ],
         "durations": [
-          0.5,
-          1,
-          1.1,
-          1.2,
-          1.3
+          0
         ],
         "damages": [
           0,
@@ -3401,53 +3613,9 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "aftershock_range",
+            "name": "fissure_radius",
             "values_float": [
-              350
-            ],
-            "is_percentage": false,
-            "heading_loc": "作用范围：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "aftershock_damage",
-            "values_float": [
-              35,
-              70,
-              100,
-              130,
-              160
-            ],
-            "is_percentage": false,
-            "heading_loc": "伤害：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_earthshaker_6",
-                "value": 50,
-                "operation": 0
-              }
-            ],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "aftershock_range_increase_per_level_interval",
-            "values_float": [
-              0
+              75
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3455,29 +3623,8 @@
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "earthshaker_tectonic_buildup",
-              "values": [
-                50
-              ],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "aftershock_range_level_interval",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "earthshaker_tectonic_buildup",
-              "values": [
-                10
-              ],
+              "name": "",
+              "values": [],
               "operation": 0
             },
             "required_facet": ""
@@ -3519,14 +3666,10 @@
           {
             "name": "AbilityDuration",
             "values_float": [
-              0.5,
-              1,
-              1.1,
-              1.2,
-              1.3
+              0
             ],
             "is_percentage": false,
-            "heading_loc": "持续时间：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

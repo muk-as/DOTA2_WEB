@@ -57,6 +57,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             "每次一名敌方英雄被月光击中时，露娜都会获得一个攻击力加成的状态效果。月蚀的月光提供%damage_buff_from_eclipse_pct%%%数值。"
           ],
           "type": 0,
@@ -448,28 +449,27 @@
           "is_inborn": 0
         },
         {
-          "id": 5223,
-          "name": "luna_moon_glaive",
-          "name_loc": "月刃",
-          "desc_loc": "强化露娜的月刃，使攻击可以在敌方单位之间弹跳。每次弹跳造成的伤害都会减少。<br><br>月刃可以主动开启，产生%rotating_glaives%把月刃在露娜身边旋转，持续%rotating_glaives_duration%秒。如果月刃撞到敌方单位，会造成一定百分比的露娜攻击伤害。",
-          "lore_loc": "露娜精心打磨过的回旋镖型武器可以从大群敌人中杀出一条血路。",
-          "notes_loc": [
-            "月刃不会触发致命一击以外的任何攻击特效。"
-          ],
-          "shard_loc": "旋转月刃的数量提升%bonus_rotating_glaives%把，碰撞伤害提升%bonus_rotating_glaives_collision_damage%%%。",
+          "id": 1462,
+          "name": "luna_lunar_orbit",
+          "name_loc": "环月",
+          "desc_loc": "产生%rotating_glaives%个月刃在露娜身旁%rotating_glaives_movement_radius%范围内旋转。任何碰到月刃的敌方单位都会受到露娜攻击伤害的一定百分比。",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "提升碰撞伤害。月刃旋转速度提升%rotating_glaives_shard_speed_bonus_tooltip%%%。",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "旋转的月刃在开启时提供伤害降低效果。",
             ""
           ],
           "type": 0,
-          "behavior": "2",
+          "behavior": "8390660",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 3,
-          "dispellable": 0,
+          "dispellable": 3,
           "max_level": 4,
           "cast_ranges": [
             0
@@ -481,7 +481,10 @@
             0
           ],
           "cooldowns": [
-            30
+            40,
+            35,
+            30,
+            25
           ],
           "durations": [
             0
@@ -493,81 +496,24 @@
             0
           ],
           "mana_costs": [
-            75
+            65,
+            70,
+            75,
+            80
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "range",
-              "values_float": [
-                500
-              ],
-              "is_percentage": false,
-              "heading_loc": "弹跳范围：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bounces",
-              "values_float": [
-                2,
-                3,
-                4,
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "弹跳次数：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "damage_reduction_percent",
-              "values_float": [
-                50,
-                45,
-                40,
-                35
-              ],
-              "is_percentage": true,
-              "heading_loc": "弹跳伤害衰减：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_luna_7",
-                  "value": 8,
-                  "operation": 2
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "rotating_glaives_duration",
               "values_float": [
-                7
+                5,
+                6,
+                7,
+                8
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -581,70 +527,7 @@
             {
               "name": "rotating_glaives",
               "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                1
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "rotating_glaives_collision_damage",
-              "values_float": [
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "旋转月刃伤害：",
-              "bonuses": [],
-              "values_shard": [
-                20
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "rotating_glaives_damage_reduction",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "旋转月刃伤害降低：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "luna_lunar_orbit",
-                "values": [
-                  10,
-                  15,
-                  20,
-                  25
-                ],
-                "operation": 0
-              },
-              "required_facet": "luna_lunar_orbit"
-            },
-            {
-              "name": "rotating_glaives_hit_radius",
-              "values_float": [
-                115
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -661,10 +544,10 @@
             {
               "name": "rotating_glaives_movement_radius",
               "values_float": [
-                175
+                250
               ],
               "is_percentage": false,
-              "heading_loc": "旋转月刃范围：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -673,7 +556,46 @@
                 "values": [],
                 "operation": 0
               },
-              "required_facet": "luna_lunar_orbit"
+              "required_facet": ""
+            },
+            {
+              "name": "rotating_glaives_hit_radius",
+              "values_float": [
+                150
+              ],
+              "is_percentage": false,
+              "heading_loc": "碰撞范围：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rotating_glaives_collision_damage",
+              "values_float": [
+                20,
+                25,
+                30,
+                35
+              ],
+              "is_percentage": true,
+              "heading_loc": "碰撞伤害：",
+              "bonuses": [],
+              "values_shard": [
+                15
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "unclamp_max_radius",
@@ -700,11 +622,57 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rotating_glaives_shard_speed_bonus_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                50
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rotating_glaives_damage_reduction",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "伤害降低：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "luna_moonshield",
+                "values": [
+                  10,
+                  15,
+                  20,
+                  25
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -814,7 +782,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                75
+                65,
+                70,
+                75,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -831,7 +802,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                30
+                40,
+                35,
+                30,
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -868,15 +842,18 @@
           "is_inborn": 0
         },
         {
-          "id": 5224,
-          "name": "luna_lunar_blessing",
-          "name_loc": "月之祝福",
-          "desc_loc": "提升露娜和附近友方英雄的攻击力，露娜获得的攻击力为友军获得的%self_increase_pct%%%。夜晚期间月之祝福为全地图生效，并且露娜受到福佑后夜间视野得到提升。",
-          "lore_loc": "月之女神对她的族人微笑。",
-          "notes_loc": [],
-          "shard_loc": "月之祝福可以主动施放，使800范围内友方英雄获得诡计之雾的效果。夜晚期间脱离开雾的距离更近，移动速度加成更高。另外月蚀的夜晚时间增加10秒",
+          "id": 5223,
+          "name": "luna_moon_glaive",
+          "name_loc": "月刃",
+          "desc_loc": "强化露娜的月刃，使攻击可以在敌方单位之间弹跳。每次弹跳造成的伤害都会减少。",
+          "lore_loc": "露娜精心打磨过的回旋镖型武器可以从大群敌人中杀出一条血路。",
+          "notes_loc": [
+            "月刃不会触发致命一击以外的任何攻击特效。"
+          ],
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -886,7 +863,7 @@
           "target_type": 0,
           "flags": 0,
           "damage": 0,
-          "immunity": 1,
+          "immunity": 3,
           "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
@@ -917,12 +894,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "radius",
+              "name": "range",
               "values_float": [
-                1200
+                500
               ],
               "is_percentage": false,
-              "heading_loc": "福佑作用范围：",
+              "heading_loc": "弹跳范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -934,59 +911,42 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_damage",
+              "name": "bounces",
               "values_float": [
                 3,
-                9,
-                15,
-                21
+                4,
+                5,
+                6
               ],
               "is_percentage": false,
-              "heading_loc": "攻击力加成（友军）：",
+              "heading_loc": "弹跳次数：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_reduction_percent",
+              "values_float": [
+                50,
+                45,
+                40,
+                35
+              ],
+              "is_percentage": true,
+              "heading_loc": "弹跳伤害衰减：",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_luna_3",
-                  "value": 20,
-                  "operation": 0
+                  "name": "special_bonus_unique_luna_7",
+                  "value": 8,
+                  "operation": 2
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "self_increase_pct",
-              "values_float": [
-                200
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_night_vision",
-              "values_float": [
-                400,
-                600,
-                800,
-                1000
-              ],
-              "is_percentage": false,
-              "heading_loc": "夜晚视野：",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1152,6 +1112,359 @@
           "is_inborn": 0
         },
         {
+          "id": 5224,
+          "name": "luna_lunar_blessing",
+          "name_loc": "月之祝福",
+          "desc_loc": "每级提升露娜和附近友方英雄%bonus_damage_per_level%点攻击力，露娜获得双倍的攻击力加成。夜晚期间月之祝福为全地图生效，并且露娜受到福佑后夜间视野提升%bonus_night_vision_self% + %bonus_night_vision_per_level% * 英雄等级。",
+          "lore_loc": "月之女神对她的族人微笑。",
+          "notes_loc": [],
+          "shard_loc": "月之祝福可以主动施放，使800范围内友方英雄获得诡计之雾的效果。夜晚期间脱离开雾的距离更近，移动速度加成更高。另外月蚀的夜晚时间增加10秒",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "4398046576643",
+          "target_team": 1,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 1,
+          "dispellable": 0,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "radius",
+              "values_float": [
+                1200
+              ],
+              "is_percentage": false,
+              "heading_loc": "福佑作用范围：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_night_vision_self",
+              "values_float": [
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_night_vision_per_level",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_damage_per_level",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_luna_3",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "allied_bonus_damage_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "攻击力加成（友军）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_bonus_damage_per_level",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_luna_3",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_bonus_damage_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "攻击力加成（露娜）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_bonus_night_vision_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "额外夜间视野：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.webm",
+          "is_inborn": 1
+        },
+        {
           "id": 5225,
           "name": "luna_eclipse",
           "name_loc": "月蚀",
@@ -1166,6 +1479,7 @@
           "shard_loc": "",
           "scepter_loc": "露娜可以对友方单位或自身施放月蚀，使月蚀的效果跟随目标，或者对一片区域施放。增加月光数量，减少月蚀持续时间，并且移除单体打击次数上限，月光的产生间隔缩短一半。",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1486,235 +1800,14 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_eclipse.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_luna/luna_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_luna/luna_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_luna/luna_aghanims_scepter.webm",
-          "is_inborn": 0
-        },
-        {
-          "id": 1291,
-          "name": "luna_selemenes_favor",
-          "name_loc": "赛利蒙妮的恩泽",
-          "desc_loc": "在夜间露娜获得%night_cast_range_pct%%%施法距离加成。",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "8796093022210",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 1,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "night_cast_range_pct",
-              "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastRange",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChannelTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityDuration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChargeRestoreTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
           "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_selemenes_favor.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_selemenes_favor.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_selemenes_favor.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/luna_selemenes_favor.webm",
-          "is_inborn": 1
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_luna/luna_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_luna/luna_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_luna/luna_aghanims_scepter.webm",
+          "is_inborn": 0
         }
       ],
       "talents": [
@@ -1728,6 +1821,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1928,6 +2022,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2126,6 +2221,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2326,6 +2422,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2524,6 +2621,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2724,6 +2822,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2915,13 +3014,14 @@
         {
           "id": 6682,
           "name": "special_bonus_unique_luna_3",
-          "name_loc": "+{s:bonus_bonus_damage} 月之祝福攻击力",
+          "name_loc": "+{s:bonus_bonus_damage_per_level} 每级月之祝福攻击力",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3122,6 +3222,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3315,13 +3416,13 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_luna.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/npc_dota_hero_luna.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_luna/npc_dota_hero_luna.webm",
-      "update_time": 1716984084,
+      "update_time": 1722470464,
       "facets": [
         {
           "color": 5,
-          "title_loc": "环月轨道",
-          "description_loc": "旋转的月刃会吸收伤害。",
-          "name": "luna_lunar_orbit",
+          "title_loc": "月盾",
+          "description_loc": "环月在开启时提供伤害降低效果。",
+          "name": "luna_moonshield",
           "icon": "armor",
           "gradient_id": 3
         },
@@ -3344,25 +3445,26 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_luna.png",
       "new_abilities": {
-        "id": 1291,
-        "name": "luna_selemenes_favor",
-        "name_loc": "赛利蒙妮的恩泽",
-        "desc_loc": "在夜间露娜获得%night_cast_range_pct%%%施法距离加成。",
-        "lore_loc": "",
+        "id": 5224,
+        "name": "luna_lunar_blessing",
+        "name_loc": "月之祝福",
+        "desc_loc": "每级提升露娜和附近友方英雄%bonus_damage_per_level%点攻击力，露娜获得双倍的攻击力加成。夜晚期间月之祝福为全地图生效，并且露娜受到福佑后夜间视野提升%bonus_night_vision_self% + %bonus_night_vision_per_level% * 英雄等级。",
+        "lore_loc": "月之女神对她的族人微笑。",
         "notes_loc": [],
-        "shard_loc": "",
+        "shard_loc": "月之祝福可以主动施放，使800范围内友方英雄获得诡计之雾的效果。夜晚期间脱离开雾的距离更近，移动速度加成更高。另外月蚀的夜晚时间增加10秒",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
         "type": 0,
-        "behavior": "8796093022210",
-        "target_team": 0,
+        "behavior": "4398046576643",
+        "target_team": 1,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
-        "immunity": 0,
+        "immunity": 1,
         "dispellable": 0,
         "max_level": 1,
         "cast_ranges": [
@@ -3393,12 +3495,143 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "night_cast_range_pct",
+            "name": "radius",
+            "values_float": [
+              1200
+            ],
+            "is_percentage": false,
+            "heading_loc": "福佑作用范围：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_night_vision_self",
+            "values_float": [
+              400
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_night_vision_per_level",
             "values_float": [
               20
             ],
             "is_percentage": false,
             "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_damage_per_level",
+            "values_float": [
+              1
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_luna_3",
+                "value": 1,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "allied_bonus_damage_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "攻击力加成（友军）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "self_bonus_damage_per_level",
+            "values_float": [
+              2
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_luna_3",
+                "value": 2,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "self_bonus_damage_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "攻击力加成（露娜）：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "self_bonus_night_vision_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "额外夜间视野：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

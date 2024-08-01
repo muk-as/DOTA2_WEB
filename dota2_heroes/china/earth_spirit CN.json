@@ -57,6 +57,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -455,7 +456,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "残岩在翻滚时经过不会被摧毁，而且翻滚结束后残岩的冷却时间会重置。"
+            "残岩在翻滚时经过不会被摧毁，而且翻滚结束后残岩的冷却时间会重置。",
+            "滚过一名友方英雄后会使该友方英雄获得%allied_bonus_movespeed%%%移动速度加成，持续%allied_bonus_movespeed_duration%秒。而且滚过友方英雄时，大地之灵滚动的距离变远，速度变快，眩晕敌人的时间也变长。"
           ],
           "type": 0,
           "behavior": "134742032",
@@ -548,6 +550,25 @@
               "required_facet": ""
             },
             {
+              "name": "allied_hero_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "速度（经过友方英雄）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_ready_to_roll",
+                "values": [
+                  1900
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "distance",
               "values_float": [
                 750
@@ -588,6 +609,25 @@
               "required_facet": ""
             },
             {
+              "name": "allied_hero_multiplier",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "距离倍数（经过友方英雄）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_ready_to_roll",
+                "values": [
+                  2.5
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "delay",
               "values_float": [
                 0.6
@@ -607,7 +647,10 @@
             {
               "name": "damage",
               "values_float": [
-                60
+                60,
+                70,
+                80,
+                90
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
@@ -706,6 +749,94 @@
                   0
                 ],
                 "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "can_roll_over_allied_heroes",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_ready_to_roll",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "allied_bonus_movespeed",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_ready_to_roll",
+                "values": [
+                  15,
+                  20,
+                  25,
+                  30
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "allied_bonus_movespeed_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_ready_to_roll",
+                "values": [
+                  4
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "allied_bonus_stun_duration",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "经过友方英雄额外眩晕时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "earth_spirit_ready_to_roll",
+                "values": [
+                  0.3,
+                  0.5,
+                  0.7,
+                  0.9
+                ],
+                "operation": 0
               },
               "required_facet": ""
             },
@@ -880,6 +1011,7 @@
           "shard_loc": "可以抓取友军。",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1225,7 +1357,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "拥有固定的冷却时间，而不是能量点数。"
+            "拥有固定的冷却时间，而不是能量点数。",
+            ""
           ],
           "type": 0,
           "behavior": "8724152400",
@@ -1557,6 +1690,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1832,6 +1966,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "磁化一个残岩会让大地之灵获得攻击力加成，持续%magnetized_rocks_buff_self_duration%秒。不会叠加。",
+            "",
             ""
           ],
           "type": 1,
@@ -1892,9 +2027,9 @@
             {
               "name": "damage_per_second",
               "values_float": [
-                40,
-                80,
-                120
+                45,
+                85,
+                125
               ],
               "is_percentage": false,
               "heading_loc": "每秒伤害：",
@@ -2270,6 +2405,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2468,6 +2604,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2685,6 +2822,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2883,6 +3021,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3083,6 +3222,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3281,6 +3421,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3481,6 +3622,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3680,6 +3822,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3873,7 +4016,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_earth_spirit.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/npc_dota_hero_earth_spirit.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/npc_dota_hero_earth_spirit.webm",
-      "update_time": 1717808582,
+      "update_time": 1722470544,
       "facets": [
         {
           "color": 2,
@@ -3890,9 +4033,20 @@
           "name": "earth_spirit_stepping_stone",
           "icon": "cooldown",
           "gradient_id": 2
+        },
+        {
+          "color": 1,
+          "title_loc": "地灵人杰",
+          "description_loc": "巨石翻滚经过友方英雄时会获得额外加成效果。",
+          "name": "earth_spirit_ready_to_roll",
+          "icon": "spinning",
+          "gradient_id": 1
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3912,7 +4066,8 @@
         "scepter_loc": "",
         "facets_loc": [
           "",
-          "拥有固定的冷却时间，而不是能量点数。"
+          "拥有固定的冷却时间，而不是能量点数。",
+          ""
         ],
         "type": 0,
         "behavior": "8724152400",

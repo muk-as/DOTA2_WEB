@@ -42,7 +42,7 @@
       "sight_range_day": 1800,
       "sight_range_night": 800,
       "max_health": 538,
-      "health_regen": 2.65,
+      "health_regen": 2.9,
       "max_mana": 219,
       "mana_regen": 0.6,
       "abilities": [
@@ -69,7 +69,7 @@
           "damage": 1,
           "immunity": 4,
           "dispellable": 0,
-          "max_level": 5,
+          "max_level": 4,
           "cast_ranges": [
             0
           ],
@@ -117,11 +117,10 @@
             {
               "name": "mana_per_hit",
               "values_float": [
-                16,
-                23,
+                25,
                 30,
-                37,
-                44
+                35,
+                40
               ],
               "is_percentage": false,
               "heading_loc": "每次攻击损毁魔法：",
@@ -138,7 +137,6 @@
             {
               "name": "mana_per_hit_pct",
               "values_float": [
-                0.8,
                 1.6,
                 2.4,
                 3.2,
@@ -180,21 +178,17 @@
               "required_facet": ""
             },
             {
-              "name": "move_slow",
+              "name": "empowered_max_burn_pct",
               "values_float": [
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "魔法耗尽时减速：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_antimage_5",
-                  "value": 40,
-                  "operation": 0
-                }
-              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                20
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -203,21 +197,17 @@
               "required_facet": ""
             },
             {
-              "name": "slow_duration",
+              "name": "empowered_mana_break_debuff_duration",
               "values_float": [
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "减速持续时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_antimage_5",
-                  "value": 0.75,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                6
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -367,7 +357,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -378,7 +368,7 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_break.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_break.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_break.webm",
-          "is_inborn": 1
+          "is_inborn": 0
         },
         {
           "id": 5004,
@@ -390,7 +380,7 @@
             "闪烁可以躲避多种飞行过程中的攻击和技能弹道。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "施放闪烁后，%empowered_mana_break_duration%秒内的法力损毁将额外燃烧%empowered_max_burn_pct_tooltip%%%最大魔法值，并且阻止目标在短时间内恢复或获得魔法。这个负面效果无法驱散。闪烁的冷却时间减少%bonus_AbilityCooldown%秒。",
           "facets_loc": [
             "",
             ""
@@ -450,6 +440,63 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "empowered_mana_break_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                5
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "empowered_max_burn_pct_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                20
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "empowered_mana_break_debuff_duration_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "负面状态持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                6
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -595,15 +642,11 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_antimage",
-                  "value": 1,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                1
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -613,7 +656,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -628,6 +671,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_blink.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_blink.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_blink.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -636,7 +682,9 @@
           "name_loc": "法术反制",
           "desc_loc": "被动提升魔法抗性。可以主动开启法术反制，创造一个环绕敌法师的反魔法外壳，抵挡所有指向性技能。",
           "lore_loc": "经过潜心的专注后，敌法师将内在的韧性转为精心的报复。",
-          "notes_loc": [],
+          "notes_loc": [
+            "破坏会使被动魔法抗性失效。"
+          ],
           "shard_loc": "法术反制被动提供光环，降低敌人的技能伤害。降低效果对近距离的敌人更强。",
           "scepter_loc": "",
           "facets_loc": [
@@ -993,264 +1041,6 @@
           "is_inborn": 0
         },
         {
-          "id": 543,
-          "name": "antimage_mana_overload",
-          "name_loc": "闪烁碎片",
-          "desc_loc": "使一个幻象闪烁至敌方目标或地点，对其发动攻击，持续一段较短的时间。施放法术反制时碎片幻象也有效果。",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "8589934617",
-          "target_team": 2,
-          "target_type": 19,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 4,
-          "dispellable": 0,
-          "max_level": 1,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0.2
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            45
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "duration",
-              "values_float": [
-                7
-              ],
-              "is_percentage": false,
-              "heading_loc": "幻象持续时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "outgoing_damage",
-              "values_float": [
-                -25
-              ],
-              "is_percentage": true,
-              "heading_loc": "幻象攻击力减少：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "incoming_damage",
-              "values_float": [
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastRange",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChannelTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityDuration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0.2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChargeRestoreTime",
-              "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                50
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": true,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_scepter.webm",
-          "is_inborn": 0
-        },
-        {
           "id": 1143,
           "name": "antimage_counterspell_ally",
           "name_loc": "友军法术反制",
@@ -1574,14 +1364,323 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/file/9f1c2c56-2213-4778-a181-51d869bd12d8.jpeg",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_void.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_void.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_void.webm",
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_overload.webm",
           "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_shard.jpg",
           "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_shard.mp4",
           "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_antimage/antimage_aghanims_shard.webm",
           "is_inborn": 0
+        },
+        {
+          "id": 1447,
+          "name": "antimage_persectur",
+          "name_loc": "绝人之路",
+          "desc_loc": "攻击会根据敌人缺失的魔法值造成减速。%mana_threshold%%%魔法时造成最低减速，%zero_tooltip%%%魔法时造成最高减速。敌人高于%mana_threshold%%%魔法时没有效果。",
+          "lore_loc": "",
+          "notes_loc": [
+            "幻象造成全额效果。"
+          ],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "8796093022274",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 4,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "move_slow_min",
+              "values_float": [
+                12.5,
+                15,
+                17.5,
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "最低移动速度减缓：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_antimage_5",
+                  "value": 5,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "move_slow_max",
+              "values_float": [
+                25,
+                30,
+                35,
+                40
+              ],
+              "is_percentage": true,
+              "heading_loc": "最高移动速度减缓：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_antimage_5",
+                  "value": 10,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mana_threshold",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "slow_duration",
+              "values_float": [
+                0.75
+              ],
+              "is_percentage": false,
+              "heading_loc": "减速持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "zero_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/file/9f1c2c56-2213-4778-a181-51d869bd12d8.jpeg",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_void.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_void.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/antimage_mana_void.webm",
+          "is_inborn": 1
         },
         {
           "id": 5006,
@@ -1590,7 +1689,8 @@
           "desc_loc": "根据目标损失的魔法值，对目标和其周围的敌人造成伤害。所有受到伤害的单位都会被短暂眩晕。",
           "lore_loc": "敌人倒下之后，将因使用奥术而受到敌法师的惩戒。",
           "notes_loc": [
-            "伤害的计算根据主目标失去的魔法，但是对作用范围内所有敌人均有效。"
+            "伤害的计算根据主目标失去的魔法，但是对作用范围内所有敌人均有效。",
+            "破坏会使法力渴望的视野和攻击力加成失效。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1671,7 +1771,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "眩晕时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_antimage_8",
+                  "value": 0.7,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -2600,8 +2706,8 @@
         {
           "id": 6800,
           "name": "special_bonus_unique_antimage_5",
-          "name_loc": "对空蓝目标减速{s:bonus_move_slow}%",
-          "desc_loc": "攻击没有魔法值的敌人时施加减速效果，持续 {s:bonus_slow_duration}秒。",
+          "name_loc": "+{s:bonus_move_slow_max}% 绝人之路最高减速",
+          "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -2996,9 +3102,9 @@
           "item_quality": 0
         },
         {
-          "id": 6012,
-          "name": "special_bonus_unique_antimage",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 闪烁冷却",
+          "id": 735,
+          "name": "special_bonus_unique_antimage_8",
+          "name_loc": "+{s:bonus_mana_void_ministun}秒 法力虚空眩晕",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -3597,7 +3703,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_antimage.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/npc_dota_hero_antimage.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_antimage/npc_dota_hero_antimage.webm",
-      "update_time": 1718877607,
+      "update_time": 1722470404,
       "facets": [
         {
           "color": 4,
@@ -3626,13 +3732,13 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_antimage.png",
       "new_abilities": {
-        "id": 5003,
-        "name": "antimage_mana_break",
-        "name_loc": "法力损毁",
-        "desc_loc": "每次攻击损毁目标魔法值，并造成相当于损毁魔法值一定百分比的伤害。",
-        "lore_loc": "一种格斗技巧，改良自星隐寺僧侣们的温和招式，可以让魔法能量反噬其拥有者。",
+        "id": 1447,
+        "name": "antimage_persectur",
+        "name_loc": "绝人之路",
+        "desc_loc": "攻击会根据敌人缺失的魔法值造成减速。%mana_threshold%%%魔法时造成最低减速，%zero_tooltip%%%魔法时造成最高减速。敌人高于%mana_threshold%%%魔法时没有效果。",
+        "lore_loc": "",
         "notes_loc": [
-          "幻象继承的法力损毁效果为%illusion_percentage%%%。"
+          "幻象造成全额效果。"
         ],
         "shard_loc": "",
         "scepter_loc": "",
@@ -3641,14 +3747,14 @@
           ""
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "8796093022274",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
-        "damage": 1,
+        "damage": 0,
         "immunity": 4,
         "dispellable": 0,
-        "max_level": 5,
+        "max_level": 4,
         "cast_ranges": [
           0
         ],
@@ -3677,58 +3783,19 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "percent_damage_per_burn",
+            "name": "move_slow_min",
             "values_float": [
-              50
+              12.5,
+              15,
+              17.5,
+              20
             ],
             "is_percentage": true,
-            "heading_loc": "损毁魔法值伤害系数：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "mana_per_hit",
-            "values_float": [
-              16,
-              23,
-              30,
-              37,
-              44
-            ],
-            "is_percentage": false,
-            "heading_loc": "每次攻击损毁魔法：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "mana_per_hit_pct",
-            "values_float": [
-              0.8,
-              1.6,
-              2.4,
-              3.2,
-              4
-            ],
-            "is_percentage": true,
-            "heading_loc": "每次攻击损毁最大魔法值：",
+            "heading_loc": "最低移动速度减缓：",
             "bonuses": [
               {
-                "name": "special_bonus_unique_antimage_7",
-                "value": 1,
+                "name": "special_bonus_unique_antimage_5",
+                "value": 5,
                 "operation": 0
               }
             ],
@@ -3742,7 +3809,33 @@
             "required_facet": ""
           },
           {
-            "name": "illusion_percentage",
+            "name": "move_slow_max",
+            "values_float": [
+              25,
+              30,
+              35,
+              40
+            ],
+            "is_percentage": true,
+            "heading_loc": "最高移动速度减缓：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_antimage_5",
+                "value": 10,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "mana_threshold",
             "values_float": [
               50
             ],
@@ -3759,19 +3852,13 @@
             "required_facet": ""
           },
           {
-            "name": "move_slow",
+            "name": "slow_duration",
             "values_float": [
-              0
+              0.75
             ],
-            "is_percentage": true,
-            "heading_loc": "魔法耗尽时减速：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_antimage_5",
-                "value": 40,
-                "operation": 0
-              }
-            ],
+            "is_percentage": false,
+            "heading_loc": "减速持续时间：",
+            "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -3782,19 +3869,13 @@
             "required_facet": ""
           },
           {
-            "name": "slow_duration",
+            "name": "zero_tooltip",
             "values_float": [
               0
             ],
             "is_percentage": false,
-            "heading_loc": "减速持续时间：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_antimage_5",
-                "value": 0.75,
-                "operation": 0
-              }
-            ],
+            "heading_loc": "",
+            "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {

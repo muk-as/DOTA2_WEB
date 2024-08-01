@@ -327,7 +327,7 @@
           "id": 5268,
           "name": "enchantress_enchant",
           "name_loc": "魅惑",
-          "desc_loc": "魅惑魔女诱惑一个敌人。如果目标是英雄，将被驱散，其移动速度也会被减缓，持续%slow_duration%秒。\n\n如果目标是非英雄单位，魅惑魔女会将其控制，并获得%xp_gain_pct%%%相应的击杀经验，在可能的情况下还有一枚中立代币。魅惑魔女同一时间可以控制%max_creeps%个非英雄单位，最多持续%dominate_duration%秒。\n\n驱散类型：弱驱散",
+          "desc_loc": "魅惑魔女诱惑一个敌人。如果目标是英雄，将被驱散，其移动速度也会被减缓，持续%slow_duration%秒。\n\n如果目标是非英雄单位，魅惑魔女会将其控制，并获得%xp_gain_pct%%%相应的击杀经验。魅惑魔女同一时间可以控制%max_creeps%个非英雄单位，最多持续%dominate_duration%秒。\n\n驱散类型：弱驱散",
           "lore_loc": "作为森林真正的管家，无论是卑贱的巨魔还是强大的半人马，爱由莎都会和他们成为朋友。",
           "notes_loc": [
             "可以转化幻象。"
@@ -778,7 +778,8 @@
           "desc_loc": "召唤一群小精灵治疗魅惑魔女以及身边的友方单位。",
           "lore_loc": "古怪的森林小精灵拥有的疗伤之力虽然微弱，但可以用数量弥补。",
           "notes_loc": [
-            "不会选择满血单位进行治疗。"
+            "不会选择满血单位进行治疗。",
+            "破坏会使过度保护的小精灵失效。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1205,7 +1206,7 @@
           "id": 320,
           "name": "enchantress_bunny_hop",
           "name_loc": "跃动",
-          "desc_loc": "向后跳跃，躲避正在中途的弹道，并向魅惑魔女的攻击距离+%bonus_attack_range%范围内最远的%attack_targets%个敌方单位发动一次附有推进的攻击。",
+          "desc_loc": "向后跳跃，躲避多种飞行过程中的攻击和技能弹道，并向魅惑魔女的攻击距离+%bonus_attack_range%范围内最远的%attack_targets%个敌方单位发动一次附有推进的攻击。",
           "lore_loc": "跃动就是活跃灵动。",
           "notes_loc": [],
           "shard_loc": "",
@@ -2069,12 +2070,14 @@
           "is_inborn": 0
         },
         {
-          "id": 1308,
-          "name": "enchantress_forest_freebie",
-          "name_loc": "丛林赠品",
-          "desc_loc": "中立物品代币掉落时，在可能的情况下会额外掉落%additional_neutral_tokens%枚代币。",
+          "id": 1464,
+          "name": "enchantress_rabblerouser",
+          "name_loc": "煽动野怪",
+          "desc_loc": "所有中立生物对敌方英雄造成更多的伤害。增加的伤害为%base_damage_amp%%% + %damage_amp_per_level%%% * 魅惑魔女的英雄等级。",
           "lore_loc": "",
-          "notes_loc": [],
+          "notes_loc": [
+            "不会影响劝化的中立生物、痛苦魔方和肉山。"
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
@@ -2082,12 +2085,12 @@
             ""
           ],
           "type": 0,
-          "behavior": "8796093022210",
-          "target_team": 0,
+          "behavior": "4398046576643",
+          "target_team": 2,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
-          "immunity": 0,
+          "immunity": 3,
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
@@ -2118,12 +2121,46 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "additional_neutral_tokens",
+              "name": "base_damage_amp",
               "values_float": [
-                1
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_amp_per_level",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_increase_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "伤害增加：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -3905,7 +3942,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_enchantress.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_enchantress/npc_dota_hero_enchantress.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_enchantress/npc_dota_hero_enchantress.webm",
-      "update_time": 1717642894,
+      "update_time": 1722470475,
       "facets": [
         {
           "color": 2,
@@ -3934,12 +3971,14 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_enchantress.png",
       "new_abilities": {
-        "id": 1308,
-        "name": "enchantress_forest_freebie",
-        "name_loc": "丛林赠品",
-        "desc_loc": "中立物品代币掉落时，在可能的情况下会额外掉落%additional_neutral_tokens%枚代币。",
+        "id": 1464,
+        "name": "enchantress_rabblerouser",
+        "name_loc": "煽动野怪",
+        "desc_loc": "所有中立生物对敌方英雄造成更多的伤害。增加的伤害为%base_damage_amp%%% + %damage_amp_per_level%%% * 魅惑魔女的英雄等级。",
         "lore_loc": "",
-        "notes_loc": [],
+        "notes_loc": [
+          "不会影响劝化的中立生物、痛苦魔方和肉山。"
+        ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
@@ -3947,12 +3986,12 @@
           ""
         ],
         "type": 0,
-        "behavior": "8796093022210",
-        "target_team": 0,
+        "behavior": "4398046576643",
+        "target_team": 2,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
-        "immunity": 0,
+        "immunity": 3,
         "dispellable": 0,
         "max_level": 1,
         "cast_ranges": [
@@ -3983,12 +4022,46 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "additional_neutral_tokens",
+            "name": "base_damage_amp",
             "values_float": [
-              1
+              10
             ],
             "is_percentage": false,
             "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "damage_amp_per_level",
+            "values_float": [
+              3
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "damage_increase_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "伤害增加：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
