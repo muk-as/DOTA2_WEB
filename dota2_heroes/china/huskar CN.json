@@ -57,6 +57,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -452,7 +453,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "沸血之矛还会燃烧敌人一定百分比的最大生命值。会消耗最大生命值，而不是当前生命值。烧灼时间减少。"
           ],
           "type": 0,
           "behavior": "135176",
@@ -505,14 +507,35 @@
                 4
               ],
               "is_percentage": true,
-              "heading_loc": "生命损失：",
+              "heading_loc": "当前生命值消耗：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "huskar_nothl_conflagration",
+                "values": [
+                  0
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_health_cost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "最大生命值消耗：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_nothl_conflagration",
+                "values": [
+                  4
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -543,6 +566,25 @@
               "required_facet": ""
             },
             {
+              "name": "burn_damage_max_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "最大生命值烧灼：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_nothl_conflagration",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "duration",
               "values_float": [
                 9
@@ -559,11 +601,38 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "huskar_nothl_conflagration",
+                "values": [
+                  0
+                ],
+                "operation": 5
               },
               "required_facet": ""
+            },
+            {
+              "name": "duration_for_nothl_conflagration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_huskar_5",
+                  "value": 4,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_nothl_conflagration",
+                "values": [
+                  6
+                ],
+                "operation": 5
+              },
+              "required_facet": "huskar_nothl_conflagration"
             },
             {
               "name": "AbilityCastRange",
@@ -733,6 +802,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -808,6 +878,40 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "aura_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "aura_effectiveness",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1022,6 +1126,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1230,7 +1335,8 @@
           "scepter_loc": "强迫敌方目标攻击哈斯卡，并提升施法距离。",
           "facets_loc": [
             "牺牲还会使目标附近的敌人减速。",
-            "牺牲还会治疗目标附近的友方单位。"
+            "牺牲还会治疗目标附近的友方单位。",
+            ""
           ],
           "type": 1,
           "behavior": "8",
@@ -1512,7 +1618,7 @@
                 ],
                 "operation": 5
               },
-              "required_facet": "huskar_nothl_transfusion"
+              "required_facet": ""
             },
             {
               "name": "life_break_heal_pct",
@@ -1525,13 +1631,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "huskar_nothl_transfusion",
-                "values": [
-                  0
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
-              "required_facet": "huskar_nothl_transfusion"
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -3370,9 +3474,20 @@
           "name": "huskar_nothl_transfusion",
           "icon": "healing",
           "gradient_id": 2
+        },
+        {
+          "color": 1,
+          "title_loc": "炙矛可热",
+          "description_loc": "沸血之矛还会燃烧敌人一定百分比的最大生命值。会消耗最大生命值，而不是当前生命值。烧灼时间减少。",
+          "name": "huskar_nothl_conflagration",
+          "icon": "damage",
+          "gradient_id": 0
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3393,6 +3508,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],

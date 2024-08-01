@@ -151,6 +151,44 @@
               "required_facet": ""
             },
             {
+              "name": "recast_delay",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                3
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "recast_effectiveness_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                75
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 600
@@ -282,7 +320,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_omniknight_6",
+                  "value": 3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -461,14 +505,12 @@
             {
               "name": "magic_resist",
               "values_float": [
-                0
+                60
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                60
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -602,10 +644,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
+                55,
+                50,
                 45,
-                40,
-                35,
-                30
+                40
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -697,9 +739,9 @@
               "name": "base_damage",
               "values_float": [
                 55,
-                80,
-                105,
-                130
+                70,
+                85,
+                100
               ],
               "is_percentage": true,
               "heading_loc": "基础攻击力额外伤害：",
@@ -722,10 +764,10 @@
             {
               "name": "bonus_damage",
               "values_float": [
-                55,
-                80,
-                105,
-                130
+                50,
+                70,
+                90,
+                110
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
@@ -879,9 +921,9 @@
               "name": "AbilityManaCost",
               "values_float": [
                 30,
+                35,
                 40,
-                50,
-                60
+                45
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -899,19 +941,13 @@
               "name": "AbilityCooldown",
               "values_float": [
                 16,
-                14,
                 12,
-                10
+                8,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_omniknight_3",
-                  "value": 5,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1014,7 +1050,7 @@
             {
               "name": "radius",
               "values_float": [
-                300
+                325
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -1319,7 +1355,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_omniknight_guardian_angel_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1330,15 +1372,55 @@
               "required_facet": ""
             },
             {
-              "name": "scepter_max_charges",
+              "name": "radius",
               "values_float": [
-                3
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "作用范围：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                300
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "affects_buildings",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "heal_and_regen_amp",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "生命恢复/治疗增强：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                100
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1349,7 +1431,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                900
+                600
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1419,7 +1501,7 @@
             {
               "name": "AbilityCharges",
               "values_float": [
-                2
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1436,19 +1518,11 @@
             {
               "name": "AbilityChargeRestoreTime",
               "values_float": [
-                70,
-                60,
-                50
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_omniknight_7",
-                  "value": 15,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1461,9 +1535,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100,
-                150,
-                200
+                125,
+                175,
+                225
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1480,11 +1554,19 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0.5
+                110,
+                100,
+                90
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_omniknight_7",
+                  "value": 20,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3468,7 +3550,7 @@
           {
             "name": "radius",
             "values_float": [
-              300
+              325
             ],
             "is_percentage": false,
             "heading_loc": "作用范围：",

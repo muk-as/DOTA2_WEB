@@ -485,7 +485,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_abaddon",
-                  "value": 100,
+                  "value": 80,
                   "operation": 0
                 }
               ],
@@ -1095,10 +1095,10 @@
           "is_inborn": 0
         },
         {
-          "id": 1390,
-          "name": "abaddon_font_of_avernus",
-          "name_loc": "魔霭圣池",
-          "desc_loc": "亚巴顿的复活时间减少%respawn_reduction%%%。",
+          "id": 1481,
+          "name": "abaddon_withering_mist",
+          "name_loc": "凋零迷雾",
+          "desc_loc": "对敌人造成伤害时会施加凋零迷雾的负面效果，持续%duration%秒。受作用敌人如果血量低于%hp_threshold_pct%%%，那么生命恢复、治疗、吸血和技能吸血会降低%heal_reduction_pct%%%。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1144,9 +1144,43 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "respawn_reduction",
+              "name": "hp_threshold_pct",
               "values_float": [
-                10
+                40
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "heal_reduction_pct",
+              "values_float": [
+                35
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1323,7 +1357,8 @@
           "lore_loc": "魔霭圣池中最为扭曲的馈赠，凡人对死亡的认知在此力量前显得异常可笑。敌之尖刀，我之伤药；死地后生，回光返照。",
           "notes_loc": [
             "在亚巴顿受到眩晕作用时依然可以手动开启回光返照，但是受到沉默作用时不可以。不过被沉默时被动效果依然能生效。",
-            "无光之盾在回光返照生效期间不会吸收伤害，因此也不会影响治疗效果。"
+            "无光之盾在回光返照生效期间不会吸收伤害，因此也不会影响治疗效果。",
+            "破坏会使回光返照无法自动触发。"
           ],
           "shard_loc": "",
           "scepter_loc": "提升持续时间。启动回光返照后，亚巴顿附近%redirect_range_scepter%范围内友方英雄受到的伤害超过%ally_threshold_scepter%点时亚巴顿就会自动对其施放迷雾缠绕。",
@@ -1645,9 +1680,9 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
+                90,
                 80,
-                70,
-                60
+                70
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3282,7 +3317,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_abaddon.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_abaddon/npc_dota_hero_abaddon.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_abaddon/npc_dota_hero_abaddon.webm",
-      "update_time": 1719273763,
+      "update_time": 1722470532,
       "facets": [
         {
           "color": 5,
@@ -3564,10 +3599,10 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_abaddon.png",
       "new_abilities": {
-        "id": 1390,
-        "name": "abaddon_font_of_avernus",
-        "name_loc": "魔霭圣池",
-        "desc_loc": "亚巴顿的复活时间减少%respawn_reduction%%%。",
+        "id": 1481,
+        "name": "abaddon_withering_mist",
+        "name_loc": "凋零迷雾",
+        "desc_loc": "对敌人造成伤害时会施加凋零迷雾的负面效果，持续%duration%秒。受作用敌人如果血量低于%hp_threshold_pct%%%，那么生命恢复、治疗、吸血和技能吸血会降低%heal_reduction_pct%%%。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
@@ -3613,9 +3648,43 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "respawn_reduction",
+            "name": "hp_threshold_pct",
             "values_float": [
-              10
+              40
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "heal_reduction_pct",
+            "values_float": [
+              35
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "duration",
+            "values_float": [
+              5
             ],
             "is_percentage": false,
             "heading_loc": "",
