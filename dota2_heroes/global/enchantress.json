@@ -349,7 +349,7 @@
               "scepter_loc": "Enchantress can control multiple creeps at a time.",
               "facets_loc": [
                 "",
-                "Cast Range of Enchant is increased. If the enemy is a hero, Enchantress has increased attack range against the target."
+                "Cast Range of Enchant is increased. If the enemy is a hero, Enchantress and units she controlls have increased attack range against the target."
               ],
               "type": 0,
               "behavior": "8",
@@ -491,13 +491,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "CREEP MAX HEALTH BONUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                      "value": 150,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -540,13 +534,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "CREEP ATTACK DAMAGE BONUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                      "value": 25,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -605,6 +593,75 @@
                   "values_scepter": [
                     1
                   ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_health",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_enchantress_enchant_health_damage",
+                      "value": 150,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_damage",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_enchantress_enchant_health_damage",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_attackspeed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_enchantress_enchant_attackspeed",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -2701,9 +2758,9 @@
               "item_quality": 0
             },
             {
-              "id": 6253,
-              "name": "special_bonus_attack_damage_45",
-              "name_loc": "+{s:value} Damage",
+              "id": 1541,
+              "name": "special_bonus_unique_enchantress_enchant_attackspeed",
+              "name_loc": "+{s:bonus_bonus_attackspeed} Attack Speed for Enchantress and her units",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2749,23 +2806,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    45
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3317,7 +3357,7 @@
             {
               "id": 1130,
               "name": "special_bonus_unique_enchantress_enchant_health_damage",
-              "name_loc": "+{s:bonus_enchant_health} Health / +{s:bonus_enchant_damage} Damage for Enchanted Creeps",
+              "name_loc": "+{s:bonus_bonus_health} Health / +{s:bonus_bonus_damage} Damage  for Enchantress and her units",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
