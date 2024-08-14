@@ -6,7 +6,7 @@
           "id": 1222,
           "name": "puck_puckish",
           "name_loc": "Puckish",
-          "desc_loc": "Whenever Puck disjoints an attack, it restores %mana_restore_pct%%% of its max mana and %hp_restore_pct%%% of its max health. Dodging a targeted spell projectile restores %dodged_spell_multiplier%x that amount.",
+          "desc_loc": "Whenever Puck disjoints an attack, it restores %mana_restore_base% + %mana_restore_pct%%% of its max mana and %hp_restore_base% + %hp_restore_pct%%% of its max health. Dodging a targeted spell projectile restores %dodged_spell_multiplier%x that amount.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -48,6 +48,40 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "mana_restore_base",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "hp_restore_base",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
             {
               "name": "mana_restore_pct",
               "values_float": [
