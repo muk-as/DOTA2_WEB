@@ -3,46 +3,41 @@
     "data": {
       "abilities": [
         {
-          "id": 5268,
-          "name": "enchantress_enchant",
-          "name_loc": "Enchant",
-          "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty.  Enchantress can control creeps for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
-          "lore_loc": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
-          "notes_loc": [
-            "Illusions can be converted."
-          ],
+          "id": 352,
+          "name": "ringmaster_tame_the_beasts",
+          "name_loc": "Tame the Beasts",
+          "desc_loc": "CHANNELED - Ringmaster twirls his whip for up to %abilitychanneltime% second then cracks it. Whipped enemies are damaged and flee in fear from Ringmaster. Channel time exponentially increases damage and extends the fear duration, but reduces the radius.",
+          "lore_loc": "From unhappy crowds to unruly acts, nothing persuades a pack of animals quite like the crack of the Ringmaster's whip.",
+          "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Enchantress can control multiple creeps at a time.",
+          "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8",
-          "target_team": 2,
-          "target_type": 19,
+          "behavior": "176",
+          "target_team": 0,
+          "target_type": 0,
           "flags": 0,
-          "damage": 0,
+          "damage": 2,
           "immunity": 4,
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            500,
-            550,
-            600,
-            650
+            700,
+            750,
+            800,
+            850
           ],
           "cast_points": [
-            0.3,
-            0.3,
-            0.3,
-            0.3
-          ],
-          "channel_times": [
             0
           ],
+          "channel_times": [
+            1
+          ],
           "cooldowns": [
-            30,
-            24,
-            18,
-            12
+            16,
+            14,
+            12,
+            10
           ],
           "durations": [
             0
@@ -54,122 +49,25 @@
             0
           ],
           "mana_costs": [
-            40,
-            50,
-            60,
-            70
+            90,
+            105,
+            120,
+            135
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "slow_movement_speed",
+              "name": "start_width",
               "values_float": [
-                -30,
-                -40,
-                -50,
-                -60
-              ],
-              "is_percentage": true,
-              "heading_loc": "HERO MOVE SLOW:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "slow_duration",
-              "values_float": [
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_range_bonus",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "ATTACK RANGE BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "dominate_duration",
-              "values_float": [
-                30,
-                60,
-                90,
-                120
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "enchant_health",
-              "values_float": [
-                150,
-                250,
-                350,
                 450
               ],
               "is_percentage": false,
-              "heading_loc": "CREEP MAX HEALTH BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "enchant_armor",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "RADIUS START:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_enchantress_enchant_armor",
-                  "value": 10,
+                  "name": "special_bonus_unique_ringmaster_whip_radius",
+                  "value": 75,
                   "operation": 0
                 }
               ],
@@ -183,92 +81,16 @@
               "required_facet": ""
             },
             {
-              "name": "enchant_damage",
+              "name": "end_width",
               "values_float": [
-                0,
-                25,
-                50,
-                75
+                200
               ],
               "is_percentage": false,
-              "heading_loc": "CREEP ATTACK DAMAGE BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "xp_gain_pct",
-              "values_float": [
-                50
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "level_req",
-              "values_float": [
-                4,
-                5,
-                6,
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "CREEP MAX LEVEL:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "max_creeps",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "MAX ENCHANTED CREEPS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                1
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_health",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "RADIUS END:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                  "value": 150,
+                  "name": "special_bonus_unique_ringmaster_whip_radius",
+                  "value": 75,
                   "operation": 0
                 }
               ],
@@ -282,16 +104,19 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_damage",
+              "name": "damage_min",
               "values_float": [
-                0
+                45,
+                70,
+                95,
+                120
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "MIN DAMAGE:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                  "value": 25,
+                  "name": "special_bonus_unique_ringmaster_whip_damage",
+                  "value": 75,
                   "operation": 0
                 }
               ],
@@ -305,7 +130,101 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_attackspeed",
+              "name": "damage_max",
+              "values_float": [
+                180,
+                280,
+                380,
+                480
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_ringmaster_whip_damage",
+                  "value": 300,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "crack_duration",
+              "values_float": [
+                0.2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_multiplier",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "whip_channel_reduction",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "whip_cooldown_reduction",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "magic_resist",
               "values_float": [
                 0
               ],
@@ -313,11 +232,74 @@
               "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_enchantress_enchant_attackspeed",
-                  "value": 30,
+                  "name": "special_bonus_unique_ringmaster_whip_debuff_immunity",
+                  "value": 50,
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "has_debuff_immunity",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_ringmaster_whip_debuff_immunity",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fear_duration_min",
+              "values_float": [
+                0.1,
+                0.2,
+                0.3,
+                0.4
+              ],
+              "is_percentage": false,
+              "heading_loc": "MIN FEAR DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fear_duration_max",
+              "values_float": [
+                0.6,
+                0.8,
+                1,
+                1.2
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX FEAR DURATION:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -330,13 +312,13 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                500,
-                550,
-                600,
-                650
+                700,
+                750,
+                800,
+                850
               ],
               "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -350,7 +332,7 @@
             {
               "name": "AbilityChannelTime",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -384,7 +366,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -435,10 +417,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40,
-                50,
-                60,
-                70
+                90,
+                105,
+                120,
+                135
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -455,10 +437,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                30,
-                24,
-                18,
-                12
+                16,
+                14,
+                12,
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -474,7 +456,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

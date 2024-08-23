@@ -3,46 +3,35 @@
     "data": {
       "abilities": [
         {
-          "id": 5268,
-          "name": "enchantress_enchant",
-          "name_loc": "Enchant",
-          "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty.  Enchantress can control creeps for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
-          "lore_loc": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
-          "notes_loc": [
-            "Illusions can be converted."
-          ],
+          "id": 386,
+          "name": "ringmaster_impalement",
+          "name_loc": "Impalement Arts",
+          "desc_loc": "Ringmaster throws one of his daggers to a precise point of his choosing. If he strikes an enemy, the dagger deals impact damage, briefly slows the unit hit, and causes them to bleed. The bleeding deals a percentage of the victim's maximum health in damage every second to heroes and flat damage per second to creeps.",
+          "lore_loc": "Passed down through generations, it simply wouldn't be a Kettle Circus without the Great Cogliostro's signature trick.",
+          "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Enchantress can control multiple creeps at a time.",
+          "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8",
-          "target_team": 2,
-          "target_type": 19,
+          "behavior": "16",
+          "target_team": 0,
+          "target_type": 0,
           "flags": 0,
-          "damage": 0,
+          "damage": 2,
           "immunity": 4,
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            500,
-            550,
-            600,
-            650
+            2400
           ],
           "cast_points": [
-            0.3,
-            0.3,
-            0.3,
             0.3
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            30,
-            24,
-            18,
-            12
+            1
           ],
           "durations": [
             0
@@ -54,24 +43,95 @@
             0
           ],
           "mana_costs": [
-            40,
-            50,
-            60,
-            70
+            80
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "slow_movement_speed",
+              "name": "damage_impact",
               "values_float": [
-                -30,
-                -40,
-                -50,
-                -60
+                75
+              ],
+              "is_percentage": false,
+              "heading_loc": "IMPACT DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bleed_health_pct",
+              "values_float": [
+                3.5,
+                4,
+                4.5,
+                5
               ],
               "is_percentage": true,
-              "heading_loc": "HERO MOVE SLOW:",
+              "heading_loc": "MAX HEALTH DAMAGE PER SECOND (HEROES):",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bleed_creep_dps",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE PER SECOND (CREEPS):",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bleed_duration",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "DURATION:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_ringmaster_dagger_bleed_and_slow_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "slow_percent",
+              "values_float": [
+                100
+              ],
+              "is_percentage": true,
+              "heading_loc": "MOVEMENT SLOW:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -85,91 +145,14 @@
             {
               "name": "slow_duration",
               "values_float": [
-                5
+                0.8
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_range_bonus",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "ATTACK RANGE BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "dominate_duration",
-              "values_float": [
-                30,
-                60,
-                90,
-                120
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "enchant_health",
-              "values_float": [
-                150,
-                250,
-                350,
-                450
-              ],
-              "is_percentage": false,
-              "heading_loc": "CREEP MAX HEALTH BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "enchant_armor",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "SLOW DURATION:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_enchantress_enchant_armor",
-                  "value": 10,
+                  "name": "special_bonus_unique_ringmaster_dagger_bleed_and_slow_duration",
+                  "value": 1,
                   "operation": 0
                 }
               ],
@@ -183,29 +166,9 @@
               "required_facet": ""
             },
             {
-              "name": "enchant_damage",
+              "name": "dagger_speed",
               "values_float": [
-                0,
-                25,
-                50,
-                75
-              ],
-              "is_percentage": false,
-              "heading_loc": "CREEP ATTACK DAMAGE BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "xp_gain_pct",
-              "values_float": [
-                50
+                1350
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -220,15 +183,12 @@
               "required_facet": ""
             },
             {
-              "name": "level_req",
+              "name": "dagger_width",
               "values_float": [
-                4,
-                5,
-                6,
-                6
+                130
               ],
               "is_percentage": false,
-              "heading_loc": "CREEP MAX LEVEL:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -240,39 +200,48 @@
               "required_facet": ""
             },
             {
-              "name": "max_creeps",
+              "name": "dagger_range",
+              "values_float": [
+                2400
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dagger_vision",
+              "values_float": [
+                200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "tick_interval",
               "values_float": [
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "MAX ENCHANTED CREEPS:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                1
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_health",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                  "value": 150,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -282,7 +251,7 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_damage",
+              "name": "dagger_pass_through",
               "values_float": [
                 0
               ],
@@ -290,31 +259,8 @@
               "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_enchantress_enchant_health_damage",
-                  "value": 25,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_attackspeed",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_enchantress_enchant_attackspeed",
-                  "value": 30,
+                  "name": "special_bonus_unique_ringmaster_dagger_penetrates",
+                  "value": 1,
                   "operation": 0
                 }
               ],
@@ -330,13 +276,10 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                500,
-                550,
-                600,
-                650
+                2400
               ],
               "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -401,7 +344,10 @@
             {
               "name": "AbilityCharges",
               "values_float": [
-                0
+                1,
+                2,
+                3,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -418,7 +364,7 @@
             {
               "name": "AbilityChargeRestoreTime",
               "values_float": [
-                0
+                17
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -435,10 +381,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40,
-                50,
-                60,
-                70
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -455,10 +398,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                30,
-                24,
-                18,
-                12
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -474,7 +414,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
