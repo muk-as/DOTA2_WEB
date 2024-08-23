@@ -18,6 +18,7 @@
         PlayerReportTooltip: "_3XOHkln8JxO7R3AvDe075q",
         BuyBattlePassCapsule: "dhurOK2NNcUIvBf3mkJg9",
         BuyCompendiumCapsule: "aFLC0zJWG4rx8hQ1A1sne",
+        BuyCompendiumCapsule2024: "_3lBIug3KJ9NBxaQbOIfVrP",
         BuyCompendiumCapsule2023: "_1ZrehM_Da84hVA0fVsF-Ox",
         CapsuleTitle: "_1WgVxOffsEmu9AnEgh2Hx8",
         CapsuleLevelBundle: "_3KVDYyP9tD2DiKZytyEJZi",
@@ -28,6 +29,7 @@
         EarnTheFollowing: "NTGBF2gHEmBRi3nxrcOHa",
         OtherRewards: "_3ng7YVyin9eviFhG7nKqKf",
         SmoothLine: "_5ddUuvHuifvwOsveGS3oy",
+        FlourishContainer: "_1Z-Qqb_FGDk8tRMdNzYnqr",
         TextStyleOverline: "ZZPNhSonYWEiGiZGb8pa",
         TextStyleButton: "_29RUHlFmf7bp8MDmii0cwy",
         TextStyleFootnote: "YY9MWNYBw5TGBzz6dnkwu",
@@ -118,22 +120,22 @@
     },
     24953: (e, t, a) => {
       "use strict";
-      a.d(t, { $x: () => m, c: () => _ });
+      a.d(t, { $x: () => m, Jh: () => _, c: () => d });
       var n = a(7552),
         i = a(32484),
         r = a.n(i),
         l = a(21384),
         s = a(27866),
         o = a(89506),
-        c = a(23634);
+        c = a(79962);
       const m = ({
           colorTopEdge: e,
           colorTop: t,
           colorMiddle: a,
           colorBottom: i,
           level: m,
-          discountPct: _,
-          itemid: d,
+          discountPct: d,
+          itemid: _,
           capsuleImageLocation: p = "labyrinth/bp_logo_",
           capsuleImageOnErrorLocation: u = "labyrinth/bp_logo_en.png",
         }) =>
@@ -159,7 +161,7 @@
             n.createElement(
               "a",
               {
-                href: `${o.r.BASE_URL}store/itemdetails/${d}`,
+                href: `${o.r.BASE_URL}store/itemdetails/${_}`,
                 className: (0, l.A)(
                   r().TextStyleButton,
                   r().TextColorWhite,
@@ -170,7 +172,7 @@
                   backgroundImage: `linear-gradient( ${e}, ${e} )`,
                 },
               },
-              (0, s.Wn)("#battlepass_purchase_label", c.o.GetBPPrice(d)),
+              (0, s.Wn)("#battlepass_purchase_label", c.o.GetBPPrice(_)),
             ),
             n.createElement(
               "div",
@@ -181,10 +183,10 @@
                   r().CapsuleDiscount,
                 ),
               },
-              _ && (0, s.Wn)("#battlepass_purchase_discount", _, m),
+              d && (0, s.Wn)("#battlepass_purchase_discount", d, m),
             ),
           ),
-        _ = (e) =>
+        d = (e) =>
           n.createElement(
             "div",
             {
@@ -345,6 +347,226 @@
                   (0, s.Wn)("#compendium_purchase_upgraded_boosters_footnote"),
                 ),
             ),
+          ),
+        _ = (e) =>
+          n.createElement(
+            "div",
+            {
+              className: (0, l.A)(
+                r().BuyCompendiumCapsule,
+                r().BuyCompendiumCapsule2024,
+              ),
+              style: {
+                backgroundImage: e.isUpgraded
+                  ? `url( ${o.r.IMG_URL}/international2024/compendium/panel_upgraded_compendium.jpg )`
+                  : `url( ${o.r.IMG_URL}/international2024/compendium/panel_standard_compendium.jpg )`,
+              },
+            },
+            n.createElement(
+              "div",
+              { className: r().FlourishContainer },
+              n.createElement("img", {
+                src: e.isUpgraded
+                  ? `${o.r.IMG_URL}international2024/dividers_and_flourishes/flourish_upgraded_compendium.png`
+                  : `${o.r.IMG_URL}international2024/dividers_and_flourishes/flourish_standard_compendium.png`,
+              }),
+            ),
+            e.title &&
+              n.createElement(
+                "div",
+                {
+                  className: r().CapsuleTitle,
+                  style: {
+                    backgroundImage: e.isUpgraded
+                      ? "linear-gradient( to bottom, #E1CC9A, #E1CC9A"
+                      : "linear-gradient( to bottom, #FFF, #FFF",
+                  },
+                },
+                (0, s.Wn)(e.title),
+              ),
+            e.capsuleImageLocation &&
+              n.createElement("img", {
+                className: r().CapsuleTitle,
+                onError: (t) =>
+                  (t.target.src = `${o.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                src: `${o.r.IMG_URL}${e.capsuleImageLocation}${o.r.LANGUAGE}.png`,
+              }),
+            n.createElement(
+              "div",
+              {
+                className: (0, l.A)(r().CompendiumLevels),
+                style: {
+                  backgroundImage: e.isUpgraded
+                    ? "linear-gradient( to bottom, #E1CC9A, #E1CC9A"
+                    : "linear-gradient( to bottom, #FFF, #FFF",
+                },
+              },
+              (0, s.Wn)("#ti13_compendium_purchase_levels", e.level),
+            ),
+            n.createElement(
+              "div",
+              {
+                className: (0, l.A)(r().BoosterLevels),
+                style: {
+                  backgroundImage: e.isUpgraded
+                    ? "linear-gradient( to bottom, #E1CC9A, #E1CC9A"
+                    : "linear-gradient( to bottom, #FFF, #FFF",
+                },
+              },
+              (0, s.Wn)(
+                "#ti13_compendium_purchase_booster_levels",
+                e.booster_level,
+              ),
+            ),
+            n.createElement("div", { className: r().SmoothLine }),
+            n.createElement(
+              "div",
+              { className: (0, l.A)(r().EarnTheFollowing) },
+              (0, s.Wn)("#ti13_compendium_purchase_earn_the_following"),
+            ),
+            n.createElement(
+              "ul",
+              null,
+              n.createElement(
+                "li",
+                { className: (0, l.A)(r().OtherRewards) },
+                e.isUpgraded
+                  ? (0, s.Wn)("#ti13_compendium_upgraded_subtitle")
+                  : (0, s.Wn)("#ti13_compendium_standard_subtitle"),
+              ),
+              n.createElement(
+                "li",
+                { className: (0, l.A)(r().OtherRewards) },
+                (0, s.Wn)("#ti13_compendium_purchase_aegis_emoticon"),
+              ),
+              n.createElement(
+                "li",
+                { className: (0, l.A)(r().OtherRewards) },
+                (0, s.Wn)(
+                  "#ti13_compendium_purchase_bingo_tokens",
+                  e.bingoTokens,
+                ),
+              ),
+              n.createElement(
+                "li",
+                { className: (0, l.A)(r().OtherRewards) },
+                (0, s.Wn)(
+                  "#ti13_compendium_purchase_fantasy_tokens",
+                  e.fantasyTokens,
+                ),
+              ),
+              1 == e.playerStickers &&
+                n.createElement(
+                  "li",
+                  { className: (0, l.A)(r().OtherRewards) },
+                  (0, s.Wn)("#ti13_compendium_purchase_one_player_sticker"),
+                ),
+              e.playerStickers > 1 &&
+                n.createElement(
+                  "li",
+                  { className: (0, l.A)(r().OtherRewards) },
+                  (0, s.Wn)(
+                    "#ti13_compendium_purchase_player_stickers",
+                    e.playerStickers,
+                  ),
+                ),
+              e.teamStickers &&
+                n.createElement(
+                  "li",
+                  { className: (0, l.A)(r().OtherRewards) },
+                  (0, s.Wn)(
+                    "#ti13_compendium_purchase_team_stickers",
+                    e.teamStickers,
+                  ),
+                ),
+              e.teamLoadingScreens &&
+                n.createElement(
+                  "li",
+                  { className: (0, l.A)(r().OtherRewards) },
+                  (0, s.Wn)(
+                    "#ti13_compendium_purchase_team_loading_screens",
+                    e.teamLoadingScreens,
+                  ),
+                ),
+              e.tiLoadingScreens &&
+                n.createElement(
+                  "li",
+                  { className: (0, l.A)(r().OtherRewards) },
+                  (0, s.Wn)(
+                    "#ti13_compendium_purchase_ti_loading_screens",
+                    e.tiLoadingScreens,
+                  ),
+                ),
+              e.effigyBlocks &&
+                n.createElement(
+                  "li",
+                  { className: (0, l.A)(r().OtherRewards) },
+                  (0, s.Wn)(
+                    "#ti13_compendium_purchase_effigy_blocks",
+                    e.effigyBlocks,
+                  ),
+                ),
+              e.tpFX &&
+                n.createElement(
+                  "li",
+                  { className: (0, l.A)(r().OtherRewards) },
+                  (0, s.Wn)("#ti13_compendium_purchase_tp_fx"),
+                ),
+            ),
+            n.createElement(
+              "div",
+              {
+                className: (0, l.A)(
+                  r().TextStyleButton,
+                  r().TextColorWhite,
+                  r().CapsulePurchaseButton,
+                ),
+                style: {
+                  borderTop: e.colorButtonOverride
+                    ? `1px solid ${e.colorButtonOverride}`
+                    : `1px solid ${e.colorTopEdge}`,
+                  backgroundImage: e.colorButtonOverride
+                    ? `linear-gradient( ${e.colorButtonOverride}, ${e.colorButtonOverride} )`
+                    : `linear-gradient( ${e.colorTopEdge}, ${e.colorTopEdge} )`,
+                },
+                onClick: () =>
+                  c.o.PurchaseOnSteamStore(e.itemid, 1, window.location.href),
+              },
+              (0, s.Wn)("#battlepass_purchase_label", c.o.GetBPPrice(e.itemid)),
+            ),
+            n.createElement(
+              "div",
+              { className: r().BoostersFootnoteContainer },
+              !e.isUpgraded &&
+                n.createElement(
+                  "div",
+                  { className: (0, l.A)(r().BoostersFootnote) },
+                  (0, s.Wn)("#ti13_compendium_purchase_boosters_footnote"),
+                ),
+              e.isUpgraded &&
+                n.createElement(
+                  "div",
+                  { className: (0, l.A)(r().BoostersFootnote) },
+                  (0, s.Wn)(
+                    "#ti13_compendium_purchase_upgraded_boosters_footnote",
+                  ),
+                ),
+            ),
+            n.createElement(
+              "div",
+              {
+                className: (0, l.A)(
+                  r().TextStyleFootnote,
+                  r().TextColorGreenGlow,
+                  r().CapsuleDiscount,
+                ),
+              },
+              c.o.GetBPDiscount(e.eventid, e.itemid) &&
+                (0, s.Wn)(
+                  "#ti13_compendium_purchase_discount",
+                  c.o.GetBPDiscount(e.eventid, e.itemid),
+                ),
+            ),
           );
     },
     85665: (e, t, a) => {
@@ -358,23 +580,23 @@
         o = a(83640),
         c = a(21384),
         m = a(47202),
-        _ = a(36305),
-        d = a(73868),
-        p = a.n(d),
+        d = a(36305),
+        _ = a(73868),
+        p = a.n(_),
         u = a(88351),
         g = a(92444),
         E = a(24953),
-        w = a(32389);
+        h = a(32389);
       const { detect: v } = a(51744),
-        S = (v(), "International2023Page"),
-        h = ({ children: e }) => {
+        w = (v(), "International2023Page"),
+        S = ({ children: e }) => {
           const { hash: t } = (0, u.zy)();
           return (
             (0, s.useEffect)(() => {
               t &&
                 setTimeout(() => {
                   const e = t.replace("#", "");
-                  (0, g.A)(e, S);
+                  (0, g.A)(e, w);
                 }, 500);
             }, [t]),
             null
@@ -491,7 +713,7 @@
                 src: `${i.r.IMG_URL}/` + e.image,
               }),
           ),
-        I = (e) =>
+        A = (e) =>
           s.createElement(
             "div",
             {
@@ -532,7 +754,7 @@
               bCenterText: e.bCenterText,
             }),
           ),
-        T = (e) =>
+        I = (e) =>
           s.createElement(
             "div",
             {
@@ -567,7 +789,7 @@
                 }),
             ),
           ),
-        A = (e) =>
+        T = (e) =>
           s.createElement(
             "div",
             { className: p().ComingSoonCapsule },
@@ -641,8 +863,8 @@
               (0, r.Wn)("#international2023_tournament_learn_more"),
             ),
           ),
-        x = ({ nIndex: e, strVideo: t }) => {
-          const a = (0, s.useContext)(w.Yc),
+        B = ({ nIndex: e, strVideo: t }) => {
+          const a = (0, s.useContext)(h.Yc),
             n = (0, s.useRef)();
           return (
             (0, s.useEffect)(() => {
@@ -673,7 +895,7 @@
             )
           );
         },
-        B = [
+        F = [
           { strVideo: "showcase_ti" },
           { strVideo: "showcase_windranger" },
           { strVideo: "showcase_pro_team" },
@@ -682,7 +904,7 @@
           { strVideo: "showcase_cliff" },
         ],
         f = 45;
-      let F = class extends s.Component {
+      let x = class extends s.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -692,7 +914,7 @@
         render() {
           return s.createElement(
             "div",
-            { id: S, className: p().International2023Page },
+            { id: w, className: p().International2023Page },
             s.createElement(
               o.mg,
               null,
@@ -766,23 +988,23 @@
                     (0, r.Wn)("#international2023_showcase_carousel_title"),
                   ),
                   s.createElement(
-                    w.gi,
+                    h.gi,
                     {
                       className: p().ShowcaseCarousel,
                       naturalSlideWidth: 2,
                       naturalSlideHeight: 1,
-                      totalSlides: B.length,
+                      totalSlides: F.length,
                       isPlaying: !0,
                       infinite: !0,
                     },
                     s.createElement(
-                      w.Ap,
+                      h.Ap,
                       null,
-                      B.map((e, t) =>
+                      F.map((e, t) =>
                         s.createElement(
-                          w.q7,
+                          h.q7,
                           { key: `ShowcaseSlide-${t}`, index: t },
-                          s.createElement(x, {
+                          s.createElement(B, {
                             nIndex: t,
                             strVideo: e.strVideo,
                           }),
@@ -790,7 +1012,7 @@
                       ),
                     ),
                     s.createElement(
-                      w._X,
+                      h._X,
                       { className: (0, c.A)(p().CarouselArrow, p().Left) },
                       s.createElement("img", {
                         src: `${i.r.IMG_URL}international2023/icons/arrow_left.png`,
@@ -798,7 +1020,7 @@
                       }),
                     ),
                     s.createElement(
-                      w.CC,
+                      h.CC,
                       { className: (0, c.A)(p().CarouselArrow, p().Right) },
                       s.createElement("img", {
                         src: `${i.r.IMG_URL}international2023/icons/arrow_right.png`,
@@ -808,9 +1030,9 @@
                     s.createElement(
                       "div",
                       { className: p().CarouselDots },
-                      B.map((e, t) =>
+                      F.map((e, t) =>
                         s.createElement(
-                          w.cL,
+                          h.cL,
                           {
                             key: `ShowcaseDot-${t}`,
                             className: p().Dot,
@@ -1128,7 +1350,7 @@
                   { className: p().Introduction },
                   (0, r.Wn)("#international2023_rewards_intro"),
                 ),
-                s.createElement(I, {
+                s.createElement(A, {
                   title: "#international2023_rewards_Types_title",
                   description: "#international2023_rewards_Types_desc",
                   image: "notinuse",
@@ -1195,13 +1417,13 @@
                 s.createElement(
                   "div",
                   { className: p().LevelsBoostersContainer },
-                  s.createElement(T, {
+                  s.createElement(I, {
                     title: "#international2023_rewards_Levels_title",
                     description: "#international2023_rewards_Levels_desc",
                     image: "international2023/ti2023_rewards_levels.png",
                     bSwapImageSide: !0,
                   }),
-                  s.createElement(T, {
+                  s.createElement(I, {
                     title: "#international2023_rewards_Boosters_title",
                     description: "#international2023_rewards_Boosters_desc",
                     image: "international2023/ti2023_rewards_boost.png",
@@ -1270,7 +1492,7 @@
                   image: "international2023/ti2023_talent_stickers.png",
                   imageStyle: p().Image65Percent,
                 }),
-                s.createElement(A, {
+                s.createElement(T, {
                   description: "#international2023_talent_coming_soon",
                 }),
               ),
@@ -1293,13 +1515,13 @@
                 className: (0, c.A)(p().SectionDivider, p().Compendium),
               }),
             ),
-            s.createElement(h, null),
-            s.createElement(_.K, null),
+            s.createElement(S, null),
+            s.createElement(d.K, null),
           );
         }
       };
-      F = (0, n.Cg)([l.PA], F);
-      const L = F;
+      x = (0, n.Cg)([l.PA], x);
+      const L = x;
     },
   },
 ]);

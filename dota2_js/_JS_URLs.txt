@@ -11,7 +11,7 @@ crownfall_comic                         /crownfall/comic
 crownfall_comic2                        /crownfall/comic2
 crownfall_comic3                        /crownfall/comic3
 dawnbreaker                             /dawnbreaker
-dotaplustester                          /dotaplustester/${}
+dotaplustester                          /dotaplustester/${}/${}
 dpc_about                               dpc_event_root()/about
 dpc_event_root                          dpc_root()/${}
 dpc_root                                /esports
@@ -30,6 +30,7 @@ herogrid                                /heroes
 home                                    /home
 international2023                       /international2023
 international2023alt                    /international23
+international2024                       /international2024
 item                                    /item_react/${}
 labyrinth                               /labyrinth
 marci                                   /marci
@@ -53,6 +54,8 @@ proregistration_rosters                 /proregistration/rosters
 proregistration_signup                  /proregistration/signup
 proregistration_submitautograph         /proregistration/submitautograph
 react                                   ${base}/react/${}
+ringmaster                              /ringmaster
+ringmaster_comic                        /ringmastercomic
 root                                    /
 shortfilm                               /filmcontest
 springcleaning                          /springcleaning
@@ -137,7 +140,7 @@ AUDIO_URL/international2020/${X[X]}.wav
 AUDIO_URL/international2022/${X[X]}.wav
 BASE_URL/${autographguidelines().substr(1)}
 BASE_URL/${patch_website}
-BASE_URL/${personadetails(X).substr(1)}
+BASE_URL/${personadetails($X).substr(1)}
 BASE_URL/${teamdetails(X).substr(1)}
 BASE_URL/blog
 BASE_URL/datafeed/abilitydata,{params:{language:LANGUAGE,ability_id:X}}
@@ -151,9 +154,11 @@ BASE_URL/datafeed/patchnoteslist,{params:{language:X}}
 BASE_URL/eminenceofristul
 BASE_URL/esports/ti11/schedule
 BASE_URL/esports/ti12/watch
+BASE_URL/esports/ti13/watch
 BASE_URL/heroes
 BASE_URL/ingest
 BASE_URL/international2023
+BASE_URL/international2024
 BASE_URL/items
 BASE_URL/matches/match/${X}?u=${X(DOTA_APP_ID)}&appid=${DOTA_APP_ID}&highlight=${X}
 BASE_URL/matches/match/${X}?u=${X}&appid=${DOTA_APP_ID}
@@ -173,6 +178,7 @@ BASE_URL/react/getfavoriteteams,{}
 BASE_URL/react/getlivestreams,{params:{league_ids:X}}
 BASE_URL/react/getspoilerblock,{}
 BASE_URL/react/getwatchedgames,{params:{league_ids:X}}
+BASE_URL/react/inference,{input_json:JSON.stringify(X),project_id:project_id}
 BASE_URL/react/setspoilerblock,{params:{block:X,sessionid:SESSION_ID}}
 BASE_URL/react/setwatchedgame,{params:{league_id:X,node_id:X,game:X,sessionid:SESSION_ID}}
 BASE_URL/react/togglefavoriteteam,{params:{team_id:X,sessionid:SESSION_ID}}
@@ -306,6 +312,7 @@ IMG_URL/backgrounds/grey_painterly_wide.png
 IMG_URL/backgrounds/greyfade.jpg
 IMG_URL/backgrounds/slate_bg_01.jpg
 IMG_URL/close.png
+IMG_URL/comics/ringmaster/${X}/${X}.webp
 IMG_URL/crownfall/${X}_alternate_style.png
 IMG_URL/crownfall/${image}
 IMG_URL/crownfall/${url}/${X}/${X}.webp?v=2
@@ -350,7 +357,8 @@ IMG_URL/dpc/dpc_about_tournaments.jpg
 IMG_URL/dpc/dpc_about_tours.jpg
 IMG_URL/dpc/dpc_flowchart.png
 IMG_URL/dpc/dpc_logo.png
-IMG_URL/dpc/headers/dpc_header_event_${(0,$X$)(X)}.jpg
+IMG_URL/dpc/headers/dpc_header_event_${(0,X$)(X)}.jpg
+IMG_URL/dpc/headers/dpc_header_event_${(0,X$)(X)}.png
 IMG_URL/dpc/light_gray_bg.jpg
 IMG_URL/dpc/logo_lc_quals.png
 IMG_URL/dpc/portrait_guidelines/${imageName}
@@ -691,8 +699,23 @@ IMG_URL/international2023/icons/social_yt.png
 IMG_URL/international2023/stars.png
 IMG_URL/international2023/ti_logo_color.png
 IMG_URL/international2023/ti_logo_full_color.png
+IMG_URL/international2024/compendium/${X}.png
+IMG_URL/international2024/compendium/5hero_lockup.png
+IMG_URL/international2024/compendium/panel_standard_compendium.jpg
+IMG_URL/international2024/compendium/panel_upgraded_compendium.jpg
+IMG_URL/international2024/dividers_and_flourishes/flourish_standard_compendium.png
+IMG_URL/international2024/dividers_and_flourishes/flourish_upgraded_compendium.png
+IMG_URL/international2024/esports_site/footer_bg01.png
+IMG_URL/international2024/esports_site/logo_ti_gold.png
+IMG_URL/international2024/ringmaster/${X}.png
+IMG_URL/international2024/ringmaster/flourish_bottom.png
+IMG_URL/international2024/ringmaster/flourish_top.png
+IMG_URL/international2024/ringmaster/ringmaster_poster.png
+IMG_URL/international2024/ringmaster/thumb_ringmaster_thepuppet.jpg
 IMG_URL/items/${X?.name.replace(item_,)}.png
+IMG_URL/items/${X?.name?.replace(item_,)}.png
 IMG_URL/items/${X}.png
+IMG_URL/items/${name.replace(item_,)}.png
 IMG_URL/items/recipe.png
 IMG_URL/juneupdate22/avoid_players_sc.png
 IMG_URL/juneupdate22/bg_repeat.jpg
@@ -1067,9 +1090,10 @@ VIDEO_URL/crownfall/logo_${schinese==LANGUAGE?schinese:english}.mov
 VIDEO_URL/crownfall/logo_${schinese==LANGUAGE?schinese:english}.webm
 VIDEO_URL/dawnbreaker/dawnbreaker_sfm.mp4
 VIDEO_URL/dawnbreaker/dawnbreaker_sfm.webm
-VIDEO_URL/heroes/renders/${X}.mov
+VIDEO_URL/heroes/renders/${X}.mov${has(X)?`?${get(X)}`:}
 VIDEO_URL/heroes/renders/${X}.png
 VIDEO_URL/heroes/renders/${X}.webm
+VIDEO_URL/heroes/renders/${X}.webm${null!=has(X)?`?${get(X)}`:}
 VIDEO_URL/homepage/dota_montage_02.mp4
 VIDEO_URL/homepage/dota_montage_webm.webm
 VIDEO_URL/international2020/${X}.mp4
@@ -1147,6 +1171,10 @@ VIDEO_URL/international2022/taunts/${X}_taunt.webm
 VIDEO_URL/international2022/truesight_logo.mp4
 VIDEO_URL/international2022/truesight_logo.webm
 VIDEO_URL/international2023/${X}.webm
+VIDEO_URL/international2024/${X}.mp4
+VIDEO_URL/international2024/ringmaster_debut_anim.mov?v5
+VIDEO_URL/international2024/ringmaster_debut_anim.webm
+VIDEO_URL/international2024/ringmaster_trailer_english.mp4
 VIDEO_URL/labyrinth/drow_loadout.jpg
 VIDEO_URL/labyrinth/drow_loadout.mp4
 VIDEO_URL/labyrinth/drow_loadout.webm
