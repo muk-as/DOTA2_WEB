@@ -1,49 +1,51 @@
+// 3038.js
+
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [1649],
+  [3038],
   {
-    77220: (e) => {
+    91908: (e) => {
       e.exports = {
-        Tooltip: "_3ftodS94U4BSByQqA6yPM3",
-        CarouselFade: "_5Hvih9I3kDofNxu3dwmb",
-        StandardButton: "XFpgiinpM6e9jeM3pSV8K",
-        ButtonText: "_1FcqQ3tFKfmg4rZB5GCB9N",
-        Icon: "_3SZ8HH83eYehib6V_lce_X",
-        Play: "_3Z7BIEtGP_9tSMXv6BDYYt",
-        SteamLogo: "_13r-O33AAKoLcUd0VkUvX-",
-        ToolTip: "_77_o2bQQk4-IraBsX08qB",
-        PlayerReportTooltip: "_3GKHMMUjyXW8myTN9NzpRb",
-        CrownfallComic: "_2E4vTOY3IlTSIHuJT6aviH",
-        ComicContainer: "_1vwVUO8OsR9NCJcEiq7fmp",
-        ComicViewer: "_2-8uM-aRrxU0gCuJZE1w6A",
-        ComicViewerHelpText: "oXazI0zD1bMxapi3SqMD1",
-        Disabled: "_3iEFtpTgUj-wuPaEnjZ5QM",
-        ReturnLink: "_3X6mBfDQxYcx_aIgdi4OK8",
+        Tooltip: "YVj4h4Jtr0fRFpKcRDodc",
+        CarouselFade: "_1N43OtXbgYVI0gwWayTPFU",
+        StandardButton: "kHhdGG3ZGAhoCVy8mlidA",
+        ButtonText: "_11CjSf6nOri2lYo5NAxvJy",
+        Icon: "TBhgqgdyRcePSx7L2RZvt",
+        Play: "_2hhUXoarysOkhLT8X-Kmxj",
+        SteamLogo: "q3oe5AQCSCKN6oGo-Mjo0",
+        ToolTip: "_3uboyUUCPnxmXzF3bI9J6k",
+        PlayerReportTooltip: "_2t0lY22PqTvUzMHntnyEQI",
+        RingmasterComic: "_1eHZoWL24mw8T36a36K4Xs",
+        ComicContainer: "_2EhkXLctTK3G833QoebLOh",
+        ComicViewer: "_3HfL7RtdnYIVyb4bGqgI39",
+        ComicViewerHelpText: "_1oB_-Af2MUEP-9xPDO3PsM",
+        Disabled: "epVOy9piJ1QcRbiSkTyI",
+        ReturnLink: "VEVvxQIiK5yjZUsYyHIZ5",
       };
     },
-    11649: (e, t, a) => {
+    40657: (e, t, n) => {
       "use strict";
-      a.r(t), a.d(t, { COMIC_LANGUAGE: () => C, default: () => k });
-      var n = a(85608),
-        r = a(4248),
-        c = a(89506),
-        s = a(68613),
-        i = a(68446),
-        o = a(7552),
-        l = a(83640),
-        u = a(21384),
-        m = a(88351),
-        A = a(47202),
-        h = a(36305),
-        d = a(45237),
-        g = a(55651),
-        p = a(77220),
-        w = a.n(p),
-        _ = a(85286),
-        f = a.n(_);
-      const C = (() => {
-          switch (c.r.LANGUAGE) {
+      n.r(t), n.d(t, { COMIC_LANGUAGE: () => E, default: () => v });
+      var r = n(85608),
+        a = n(4248),
+        s = n(89506),
+        i = n(68613),
+        c = n(68446),
+        o = n(7552),
+        l = n(83640),
+        u = n(21384),
+        m = n(88351),
+        A = n(47202),
+        h = n(36305),
+        g = n(45237),
+        d = n(55651),
+        p = n(91908),
+        C = n.n(p),
+        w = n(85286),
+        f = n.n(w);
+      const E = (() => {
+          switch (s.r.LANGUAGE) {
             case "brazilian":
               return "brazilian";
             case "bulgarian":
@@ -72,7 +74,7 @@
             case "japanese":
               return "japanese";
             case "koreana":
-              return "koreana";
+              return "korean";
             case "latam":
               return "latam";
             case "norwegian":
@@ -103,17 +105,17 @@
               return "vietnamese";
           }
         })(),
-        E = ({ onIndexChanged: e, comicImageURLs: t }) => {
-          const [a, n] = (0, o.useState)(void 0),
-            [r, c] = (0, o.useState)(
+        k = ({ onIndexChanged: e, comicImageURLs: t }) => {
+          const [n, r] = (0, o.useState)(void 0),
+            [a, s] = (0, o.useState)(
               Array.from({ length: t.length }, () => new Image()),
             ),
-            i = (0, m.zy)(),
+            c = (0, m.zy)(),
             l = (0, o.useCallback)(() => {
-              n((e) => {
+              r((e) => {
                 if ((void 0 === e && (e = 0), e + 1 >= t.length)) return e;
-                const a = e + 1;
-                return window.history.pushState({}, "", `#p=${a}`), a;
+                const n = e + 1;
+                return window.history.pushState({}, "", `#p=${n}`), n;
               });
             }, [t]);
           (0, o.useEffect)(() => {
@@ -128,33 +130,33 @@
           }, [l]),
             (0, o.useEffect)(() => {
               let e = 0;
-              const t = new URLSearchParams(i.hash.substring(1)).get("p");
-              null !== t && (e = parseInt(t)), n(e);
-            }, [i]),
+              const t = new URLSearchParams(c.hash.substring(1)).get("p");
+              null !== t && (e = parseInt(t)), r(e);
+            }, [c]),
             (0, o.useEffect)(() => {
-              if (void 0 === a) return;
+              if (void 0 === n) return;
               for (let e = 1; e <= 5; e++) {
-                const n = a + e;
-                if (n >= t.length) break;
-                let s = r;
-                s[n].src || ((s[n].src = t[n]), c(s));
+                const r = n + e;
+                if (r >= t.length) break;
+                let i = a;
+                i[r].src || ((i[r].src = t[r]), s(i));
               }
-            }, [a, r, t]),
+            }, [n, a, t]),
             (0, o.useEffect)(() => {
-              e?.(a);
-            }, [e, a]);
-          const A = !a,
-            h = a + 1 >= t.length;
+              e?.(n);
+            }, [e, n]);
+          const A = !n,
+            h = n + 1 >= t.length;
           return o.createElement(
             o.Fragment,
             null,
             o.createElement(
               "div",
-              { className: w().ComicViewer },
+              { className: C().ComicViewer },
               o.createElement("img", {
                 src:
-                  void 0 !== a
-                    ? t[a]
+                  void 0 !== n
+                    ? t[n]
                     : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
                 onClick: (e) => {
                   e.preventDefault(), l();
@@ -167,34 +169,28 @@
             o.createElement(
               "div",
               {
-                className: (0, u.A)(w().ComicViewerHelpText, h && w().Disabled),
+                className: (0, u.A)(C().ComicViewerHelpText, h && C().Disabled),
               },
-              (0, s.we)("#crownfallcomic_help_text"),
+              (0, i.we)("#ringmastercomic_help_text"),
             ),
             o.createElement(
-              d.N_,
+              g.N_,
               {
-                className: (0, u.A)(w().ReturnLink, A && w().Disabled),
-                to: g.J.crownfall_comic(),
+                className: (0, u.A)(C().ReturnLink, A && C().Disabled),
+                to: d.J.ringmaster_comic(),
               },
-              (0, s.we)("#crownfallcomic_return_button"),
+              (0, i.we)("#ringmastercomic_return_button"),
             ),
           );
         };
-      let v = class extends o.Component {
+      let b = class extends o.Component {
         constructor(e) {
           super(e);
-          const t = new Map([
-              ["act1_intro", { url: "comic_part1", pageCount: 119 }],
-              ["act2_intro", { url: "act2_intro", pageCount: 33 }],
-              ["act3_intro", { url: "act3_intro", pageCount: 29 }],
-            ]),
-            a = t.get(e.comic_id) || t.get("act1_intro");
           this.state = {
-            pageTitlePattern: `#crownfallcomic_${e.comic_id}_title`,
-            comicImageURLs: Array.from(Array(a.pageCount).keys()).map((e) => {
+            pageTitlePattern: "#ringmastercomic_title",
+            comicImageURLs: Array.from(Array(53).keys()).map((e) => {
               const t = e.toString().padStart(3, "0");
-              return `${r.TS.IMG_URL}crownfall/${a.url}/${C}/${t}.webp?v=2`;
+              return `${a.TS.IMG_URL}comics/ringmaster/${E}/${t}.webp`;
             }),
           };
         }
@@ -207,20 +203,20 @@
         render() {
           return o.createElement(
             "div",
-            { id: "CrownfallComic", className: w().CrownfallComic },
+            { id: "RingmasterComic", className: C().RingmasterComic },
             o.createElement(l.mg, null),
             o.createElement(
               "div",
-              { className: (0, u.A)(w().PageContainer) },
+              { className: (0, u.A)(C().PageContainer) },
               o.createElement(A.A, { bOverlapping: !0 }),
               o.createElement(
                 "div",
-                { className: (0, u.A)(w().ComicContainer) },
-                o.createElement(E, {
+                { className: (0, u.A)(C().ComicContainer) },
+                o.createElement(k, {
                   onIndexChanged: (e) => {
                     document.title = e
-                      ? (0, s.we)(this.state.pageTitlePattern, e)
-                      : (0, s.we)(`${this.state.pageTitlePattern}_cover`);
+                      ? (0, i.we)(this.state.pageTitlePattern, e)
+                      : (0, i.we)(`${this.state.pageTitlePattern}_cover`);
                   },
                   comicImageURLs: this.state.comicImageURLs,
                 }),
@@ -230,8 +226,8 @@
           );
         }
       };
-      v = (0, n.Cg)([i.PA], v);
-      const k = v;
+      b = (0, r.Cg)([c.PA], b);
+      const v = b;
     },
   },
 ]);
