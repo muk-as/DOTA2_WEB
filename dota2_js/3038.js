@@ -24,55 +24,99 @@
     },
     40657: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { COMIC_LANGUAGE: () => f, default: () => v });
-      var a = n(85608),
-        r = n(4248),
+      n.r(t), n.d(t, { COMIC_LANGUAGE: () => E, default: () => v });
+      var r = n(85608),
+        a = n(4248),
         s = n(89506),
         i = n(68613),
-        o = n(68446),
-        c = n(7552),
+        c = n(68446),
+        o = n(7552),
         l = n(83640),
-        A = n(21384),
+        u = n(21384),
         m = n(88351),
-        u = n(47202),
-        d = n(36305),
+        A = n(47202),
+        h = n(36305),
         g = n(45237),
-        h = n(55651),
+        d = n(55651),
         p = n(91908),
         C = n.n(p),
-        E = n(85286),
-        w = n.n(E);
-      const f = (() => {
+        w = n(85286),
+        f = n.n(w);
+      const E = (() => {
           switch (s.r.LANGUAGE) {
             case "brazilian":
               return "brazilian";
+            case "bulgarian":
+              return "bulgarian";
+            case "czech":
+              return "czech";
+            case "danish":
+              return "danish";
+            case "dutch":
+              return "dutch";
             case "english":
             default:
               return "english";
+            case "finnish":
+              return "finnish";
+            case "french":
+              return "french";
+            case "german":
+              return "german";
+            case "greek":
+              return "greek";
+            case "hungarian":
+              return "hungarian";
+            case "italian":
+              return "italian";
+            case "japanese":
+              return "japanese";
+            case "koreana":
+              return "korean";
             case "latam":
               return "latam";
+            case "norwegian":
+              return "norwegian";
+            case "polish":
+              return "polish";
+            case "portuguese":
+              return "portuguese";
+            case "romanian":
+              return "romanian";
             case "russian":
               return "russian";
             case "schinese":
               return "schinese";
             case "spanish":
               return "spanish";
+            case "swedish":
+              return "swedish";
+            case "tchinese":
+              return "tchinese";
+            case "thai":
+              return "thai";
+            case "turkish":
+              return "turkish";
+            case "ukrainian":
+              return "ukrainian";
+            case "vietnamese":
+              return "vietnamese";
           }
         })(),
-        I = ({ onIndexChanged: e, comicImageURLs: t }) => {
-          const [n, a] = (0, c.useState)(void 0),
-            [r, s] = (0, c.useState)(
+        k = ({ onIndexChanged: e, comicImageURLs: t }) => {
+          const [n, r] = (0, o.useState)(void 0),
+            [a, s] = (0, o.useState)(
               Array.from({ length: t.length }, () => new Image()),
             ),
-            o = (0, m.zy)(),
-            l = (0, c.useCallback)(() => {
-              a((e) => {
+            c = (0, m.zy)(),
+            l = (0, o.useCallback)(() => {
+              r((e) => {
                 if ((void 0 === e && (e = 0), e + 1 >= t.length)) return e;
                 const n = e + 1;
                 return window.history.pushState({}, "", `#p=${n}`), n;
               });
             }, [t]);
-          (0, c.useEffect)(() => {
+          (0, o.useEffect)(() => {
             const e = (e) => {
               ("Space" !== e.code && " " !== e.key) ||
                 (e.preventDefault(), l());
@@ -82,32 +126,32 @@
               () => window.removeEventListener("keydown", e)
             );
           }, [l]),
-            (0, c.useEffect)(() => {
+            (0, o.useEffect)(() => {
               let e = 0;
-              const t = new URLSearchParams(o.hash.substring(1)).get("p");
-              null !== t && (e = parseInt(t)), a(e);
-            }, [o]),
-            (0, c.useEffect)(() => {
+              const t = new URLSearchParams(c.hash.substring(1)).get("p");
+              null !== t && (e = parseInt(t)), r(e);
+            }, [c]),
+            (0, o.useEffect)(() => {
               if (void 0 === n) return;
               for (let e = 1; e <= 5; e++) {
-                const a = n + e;
-                if (a >= t.length) break;
-                let i = r;
-                i[a].src || ((i[a].src = t[a]), s(i));
+                const r = n + e;
+                if (r >= t.length) break;
+                let i = a;
+                i[r].src || ((i[r].src = t[r]), s(i));
               }
-            }, [n, r, t]),
-            (0, c.useEffect)(() => {
+            }, [n, a, t]),
+            (0, o.useEffect)(() => {
               e?.(n);
             }, [e, n]);
-          const u = !n,
-            d = n + 1 >= t.length;
-          return c.createElement(
-            c.Fragment,
+          const A = !n,
+            h = n + 1 >= t.length;
+          return o.createElement(
+            o.Fragment,
             null,
-            c.createElement(
+            o.createElement(
               "div",
               { className: C().ComicViewer },
-              c.createElement("img", {
+              o.createElement("img", {
                 src:
                   void 0 !== n
                     ? t[n]
@@ -120,53 +164,53 @@
                 },
               }),
             ),
-            c.createElement(
+            o.createElement(
               "div",
               {
-                className: (0, A.A)(C().ComicViewerHelpText, d && C().Disabled),
+                className: (0, u.A)(C().ComicViewerHelpText, h && C().Disabled),
               },
               (0, i.we)("#ringmastercomic_help_text"),
             ),
-            c.createElement(
+            o.createElement(
               g.N_,
               {
-                className: (0, A.A)(C().ReturnLink, u && C().Disabled),
-                to: h.J.ringmaster_comic(),
+                className: (0, u.A)(C().ReturnLink, A && C().Disabled),
+                to: d.J.ringmaster_comic(),
               },
               (0, i.we)("#ringmastercomic_return_button"),
             ),
           );
         };
-      let b = class extends c.Component {
+      let b = class extends o.Component {
         constructor(e) {
           super(e);
           this.state = {
             pageTitlePattern: "#ringmastercomic_title",
             comicImageURLs: Array.from(Array(53).keys()).map((e) => {
               const t = e.toString().padStart(3, "0");
-              return `${r.TS.IMG_URL}comics/ringmaster/${f}/${t}.webp`;
+              return `${a.TS.IMG_URL}comics/ringmaster/${E}/${t}.webp`;
             }),
           };
         }
         handleScroll = (e) => {
-          w().refresh();
+          f().refresh();
         };
         componentDidMount() {
           this.handleScroll(void 0);
         }
         render() {
-          return c.createElement(
+          return o.createElement(
             "div",
             { id: "RingmasterComic", className: C().RingmasterComic },
-            c.createElement(l.mg, null),
-            c.createElement(
+            o.createElement(l.mg, null),
+            o.createElement(
               "div",
-              { className: (0, A.A)(C().PageContainer) },
-              c.createElement(u.A, { bOverlapping: !0 }),
-              c.createElement(
+              { className: (0, u.A)(C().PageContainer) },
+              o.createElement(A.A, { bOverlapping: !0 }),
+              o.createElement(
                 "div",
-                { className: (0, A.A)(C().ComicContainer) },
-                c.createElement(I, {
+                { className: (0, u.A)(C().ComicContainer) },
+                o.createElement(k, {
                   onIndexChanged: (e) => {
                     document.title = e
                       ? (0, i.we)(this.state.pageTitlePattern, e)
@@ -175,12 +219,12 @@
                   comicImageURLs: this.state.comicImageURLs,
                 }),
               ),
-              c.createElement(d.K, null),
+              o.createElement(h.K, null),
             ),
           );
         }
       };
-      b = (0, a.Cg)([o.PA], b);
+      b = (0, r.Cg)([c.PA], b);
       const v = b;
     },
   },
