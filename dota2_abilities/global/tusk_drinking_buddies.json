@@ -6,7 +6,7 @@
           "id": 1385,
           "name": "tusk_drinking_buddies",
           "name_loc": "Drinking Buddies",
-          "desc_loc": "Tusk reaches out to tag an allied unit, pulling them closer. Once tagged, both Tusk and his tagged ally gain movement speed and attack damage. Can be put on alt-cast to only pull Tusk towards his ally.",
+          "desc_loc": "Tusk reaches out to tag an allied unit, pulling them closer. Once tagged, both Tusk and his tagged ally gain movement speed and attack damage. Can be put on alt-cast to only pull Tusk towards his ally with %alt_cast_castrange_pct%%% reduced cast range.",
           "lore_loc": "",
           "notes_loc": [
             "Doesn't pull Tusk or targeted ally if they are within %min_distance% range of each other.",
@@ -57,6 +57,23 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "alt_cast_castrange_pct",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
             {
               "name": "buff_duration",
               "values_float": [
@@ -128,6 +145,9 @@
             {
               "name": "movespeed_bonus",
               "values_float": [
+                10,
+                15,
+                20,
                 25
               ],
               "is_percentage": true,
