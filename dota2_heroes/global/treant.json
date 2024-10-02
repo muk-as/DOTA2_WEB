@@ -424,7 +424,7 @@
               "id": 5435,
               "name": "treant_leech_seed",
               "name_loc": "Leech Seed",
-              "desc_loc": "Treant plants a life-sapping seed in an enemy unit, draining its health, while simultaneously slowing it. The seed heals friendly units around it.",
+              "desc_loc": "Treant plants a life-sapping seed in an enemy unit, draining its health, while simultaneously slowing it. The seed heals friendly units around it. Healing to creeps is reduced by %creep_heal_reduction_pct%%%.",
               "lore_loc": "Rooftrellen nurtures the beings under his stewardship, sustained by the lifeforce of trespassers into his sacred ground.",
               "notes_loc": [],
               "shard_loc": "",
@@ -498,10 +498,10 @@
                 {
                   "name": "leech_damage",
                   "values_float": [
-                    20,
-                    35,
-                    50,
-                    65
+                    15,
+                    30,
+                    45,
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE/HEAL PER SECOND:",
@@ -633,6 +633,23 @@
                       50
                     ],
                     "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "creep_heal_reduction_pct",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -1498,7 +1515,7 @@
                 {
                   "name": "movement_bonus",
                   "values_float": [
-                    12
+                    10
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SPEED:",
