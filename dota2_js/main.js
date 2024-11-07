@@ -5943,7 +5943,7 @@
     },
     79962: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => yo });
+      a.d(t, { o: () => So });
       var r = a(89506),
         n = a(85608),
         i = a(35927),
@@ -7193,7 +7193,7 @@
               "div",
               {
                 onClick: () =>
-                  yo.PurchaseOnSteamStore(c, 1, window.location.href),
+                  So.PurchaseOnSteamStore(c, 1, window.location.href),
                 className: (0, N.A)(
                   w().TextStyleButton,
                   w().TextColorWhite,
@@ -7287,7 +7287,7 @@
           this.setState({ nImmortalTreasureSelected: e });
         }
         render() {
-          const e = yo.getPrizePool();
+          const e = So.getPrizePool();
           return s.createElement(
             "div",
             { className: w().BattlepassPage },
@@ -12702,10 +12702,10 @@
                       qe().CapsuleDiscount,
                     ),
                   },
-                  yo.GetBPDiscount(36, l) &&
+                  So.GetBPDiscount(36, l) &&
                     (0, B.Wn)(
                       "#battlepass_purchase_discount",
-                      yo.GetBPDiscount(36, l),
+                      So.GetBPDiscount(36, l),
                       o,
                     ),
                 ),
@@ -12713,7 +12713,7 @@
                   "div",
                   {
                     onClick: () =>
-                      yo.PurchaseOnSteamStore(l, 1, window.location.href),
+                      So.PurchaseOnSteamStore(l, 1, window.location.href),
                     className: (0, N.A)(
                       qe().TextStyleButton,
                       qe().TextColorWhite,
@@ -12726,7 +12726,7 @@
                   },
                   (0, B.Wn)(
                     "#battlepass_purchase_label",
-                    "undefined" !== yo.GetBPPrice(l) ? yo.GetBPPrice(l) : "",
+                    "undefined" !== So.GetBPPrice(l) ? So.GetBPPrice(l) : "",
                   ),
                 ),
               ),
@@ -12802,7 +12802,7 @@
                 "div",
                 {
                   onClick: () =>
-                    yo.PurchaseOnSteamStore(l, 1, window.location.href),
+                    So.PurchaseOnSteamStore(l, 1, window.location.href),
                   className: (0, N.A)(
                     qe().TextStyleButton,
                     qe().TextColorWhite,
@@ -12815,7 +12815,7 @@
                 },
                 (0, B.Wn)(
                   "#battlepass_purchase_label",
-                  "undefined" !== yo.GetBPPrice(l) ? yo.GetBPPrice(l) : "",
+                  "undefined" !== So.GetBPPrice(l) ? So.GetBPPrice(l) : "",
                 ),
               ),
             ),
@@ -13190,7 +13190,7 @@
           super(e);
         }
         render() {
-          const e = yo.getPrizePool(),
+          const e = So.getPrizePool(),
             t = Ue(Ze);
           return s.createElement(
             "div",
@@ -35338,7 +35338,7 @@
         },
         ks = (0, f.PA)(() => {
           const [e, t] = s.useState("#aug23_cc_treasure_name3");
-          yo.getPatchNotes("7.34", r.r.LANGUAGE);
+          So.getPatchNotes("7.34", r.r.LANGUAGE);
           return s.createElement(
             "div",
             { className: Ms().Aug2023Page },
@@ -35633,7 +35633,7 @@
                     "div",
                     {
                       onClick: () =>
-                        yo.PurchaseOnSteamStore(24613, 1, window.location.href),
+                        So.PurchaseOnSteamStore(24613, 1, window.location.href),
                       className: (0, N.A)(
                         Ms().CCBtn,
                         Ms().TextStyleButton,
@@ -35643,8 +35643,8 @@
                     },
                     (0, B.Wn)(
                       "#aug23_cc_btn",
-                      "undefined" !== yo.GetBPPrice(24613)
-                        ? yo.GetBPPrice(24613)
+                      "undefined" !== So.GetBPPrice(24613)
+                        ? So.GetBPPrice(24613)
                         : "",
                     ),
                   ),
@@ -36417,7 +36417,7 @@
           super(e), (this.state = { bPopupVisible: !1 });
         }
         handleClick = (e) => {
-          if (yo.getShortFilmOwnership()) {
+          if (So.getShortFilmOwnership()) {
             const e =
               r.r.BASE_URL +
               b.J.shortfilm() +
@@ -36426,14 +36426,14 @@
           } else this.setState({ bPopupVisible: e });
         };
         handleAccepted = () => {
-          yo.grantShortFilmAppIDOwnership();
+          So.grantShortFilmAppIDOwnership();
           const e =
             r.r.BASE_URL +
             b.J.shortfilm() +
             "/redirecttosteamcommunityshortfilm/";
           history.pushState("", "", e), history.go();
         };
-        BGetOwnsApp = () => yo.getShortFilmOwnership();
+        BGetOwnsApp = () => So.getShortFilmOwnership();
         render() {
           return (
             this.BGetOwnsApp(),
@@ -37007,20 +37007,21 @@
           Promise.all([a.e(6745), a.e(4398)]).then(a.bind(a, 84398)),
         ),
         io = s.lazy(() => a.e(3038).then(a.bind(a, 40657))),
-        so = s.lazy(() =>
+        so = s.lazy(() => a.e(2805).then(a.bind(a, 32805))),
+        oo = s.lazy(() =>
           Promise.all([a.e(189), a.e(7084)]).then(a.bind(a, 4533)),
         ),
-        oo = s.lazy(() =>
+        lo = s.lazy(() =>
           Promise.all([a.e(189), a.e(7084)]).then(a.bind(a, 54302)),
         ),
-        lo = s.lazy(() =>
+        co = s.lazy(() =>
           Promise.all([a.e(189), a.e(7084)]).then(a.bind(a, 77671)),
         );
-      const co = new Hs.E({
+      const mo = new Hs.E({
           defaultOptions: { queries: { gcTime: 864e5, staleTime: 1 / 0 } },
         }),
-        mo = (0, Vs.s)({ storage: window.localStorage });
-      let uo = class extends s.Component {
+        uo = (0, Vs.s)({ storage: window.localStorage });
+      let _o = class extends s.Component {
         componentDidMount() {
           v().init({
             disable: !1,
@@ -37050,9 +37051,9 @@
               s.createElement(
                 js.t,
                 {
-                  client: co,
+                  client: mo,
                   persistOptions: {
-                    persister: mo,
+                    persister: uo,
                     buster: "v1",
                     dehydrateOptions: {
                       shouldDehydrateQuery: (e) => e.meta?.persist,
@@ -37230,19 +37231,23 @@
                           render: () => s.createElement(io, null),
                         }),
                         s.createElement(La, {
-                          path: b.J.teamdetails(":id"),
+                          path: b.J.kez_comic(),
                           component: so,
                         }),
                         s.createElement(La, {
-                          path: b.J.personadetails(":id"),
+                          path: b.J.teamdetails(":id"),
                           component: oo,
+                        }),
+                        s.createElement(La, {
+                          path: b.J.personadetails(":id"),
+                          component: lo,
                         }),
                         s.createElement(La, {
                           path: b.J.dotaplustester(
                             ":strFeature?",
                             ":strConfig?",
                           ),
-                          component: lo,
+                          component: co,
                         }),
                         s.createElement(La, {
                           path: b.J.other(":page"),
@@ -37258,23 +37263,23 @@
           );
         }
       };
-      uo = (0, n.Cg)([f.PA], uo);
-      const _o = uo;
-      var po = a(42489),
-        go = a(81886),
-        ho = a(57034),
-        Eo = a(2593),
-        vo = a(4248);
-      class bo {
-        m_asyncPrizePool = new Eo.N();
-        m_asyncPatchNotesListData = new Eo.N();
-        m_asyncPatchNotesData = new Eo.L();
-        m_asyncBPPrice = new Eo.L();
-        m_asyncBPDiscount = new Eo.L();
+      _o = (0, n.Cg)([f.PA], _o);
+      const po = _o;
+      var go = a(42489),
+        ho = a(81886),
+        Eo = a(57034),
+        vo = a(2593),
+        bo = a(4248);
+      class fo {
+        m_asyncPrizePool = new vo.N();
+        m_asyncPatchNotesListData = new vo.N();
+        m_asyncPatchNotesData = new vo.L();
+        m_asyncBPPrice = new vo.L();
+        m_asyncBPDiscount = new vo.L();
         m_nSelectedAbilityIndex = 0;
-        m_asyncShortFilmOwnership = new Eo.N();
+        m_asyncShortFilmOwnership = new vo.N();
         m_BBCodeDictionary = new Map([
-          ...Array.from(ho.W4.entries()),
+          ...Array.from(Eo.W4.entries()),
           ["color", { Constructor: B.Fl, autocloses: !1 }],
           ["block", { Constructor: B.x4, autocloses: !1 }],
           ["spoiler", { Constructor: B.qd, autocloses: !1 }],
@@ -37291,14 +37296,14 @@
         m_BBCodeParser = new p(
           this.m_BBCodeDictionary,
           this.BBCodeAccumulator,
-          vo.TS.LANGUAGE,
+          bo.TS.LANGUAGE,
         );
         constructor() {
-          (0, po.Gn)(this);
+          (0, go.Gn)(this);
         }
         Init() {
-          go.H(document.getElementById("dota_react_root")).render(
-            s.createElement(_o, { app: this }),
+          ho.H(document.getElementById("dota_react_root")).render(
+            s.createElement(po, { app: this }),
           );
         }
         getPrizePool() {
@@ -37338,7 +37343,7 @@
             h()
               .get(b.J.react("getbpprices"), { params: { item_defs: a } })
               .then((t) => {
-                (0, po.h5)(() => {
+                (0, go.h5)(() => {
                   const a = Object.entries(t?.data);
                   if (a.length == e.length)
                     for (const [e, t] of a)
@@ -37382,7 +37387,7 @@
                 params: { event_id: e, itemdefs: r },
               })
               .then((e) => {
-                (0, po.h5)(() => {
+                (0, go.h5)(() => {
                   t.forEach((e, t) => {
                     this.m_asyncBPDiscount.getAsyncDataWrapper(e).clearData();
                   });
@@ -37447,14 +37452,14 @@
           });
         }
       }
-      (0, n.Cg)([po.sH], bo.prototype, "m_nSelectedAbilityIndex", void 0);
-      var fo = a(49773);
+      (0, n.Cg)([go.sH], fo.prototype, "m_nSelectedAbilityIndex", void 0);
+      var yo = a(49773);
       a(5090);
       new Map();
       a(14106);
-      let yo = new bo();
-      (0, po.jK)({ enforceActions: "never" });
-      const So = [
+      let So = new fo();
+      (0, go.jK)({ enforceActions: "never" });
+      const Io = [
         "main",
         "springcleaning22",
         "juneupdate22",
@@ -37467,12 +37472,12 @@
         "international2024",
       ];
       document.addEventListener("DOMContentLoaded", async function () {
-        (0, fo.XJ)("application_config"),
+        (0, yo.XJ)("application_config"),
           (0, r.p)(),
           await (async function (e) {
             const t = await Promise.all([
               a(59568)(`./shared_${e}.json`),
-              ...So.map((t) => a(59483)(`./${t}_${e}.json`)),
+              ...Io.map((t) => a(59483)(`./${t}_${e}.json`)),
             ]);
             let r = {};
             for (const e of t) r = { ...r, ...e };
@@ -37480,14 +37485,14 @@
             if (n !== e) {
               const e = await Promise.all([
                 a(59568)(`./shared_${n}.json`),
-                ...So.map((e) => a(59483)(`./${e}_${n}.json`)),
+                ...Io.map((e) => a(59483)(`./${e}_${n}.json`)),
               ]);
               let i = {};
               for (const t of e) i = { ...i, ...t };
               ga.pf.InitFromObjects(r, i, t[0].default, e[0].default);
             } else ga.pf.InitFromObjects(r, null, t[0].default, null);
           })(r.r.LANGUAGE),
-          yo.Init();
+          So.Init();
       });
     },
     33706: (e, t, a) => {
@@ -39067,6 +39072,7 @@
         international2024: () => "/international2024",
         ringmaster: () => "/ringmaster",
         ringmaster_comic: () => "/ringmastercomic",
+        kez_comic: () => "/kezcomic",
         dotaplustester: (e, t) => `/dotaplustester/${e}/${t}`,
       };
       function o(e, t) {
