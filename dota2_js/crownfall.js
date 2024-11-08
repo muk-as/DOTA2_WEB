@@ -1359,6 +1359,7 @@
               ["act1_intro", { url: "comic_part1", pageCount: 119 }],
               ["act2_intro", { url: "act2_intro", pageCount: 33 }],
               ["act3_intro", { url: "act3_intro", pageCount: 29 }],
+              ["act4_intro", { url: "act4_intro", pageCount: 29 }],
             ]),
             t = a.get(e.comic_id) || a.get("act1_intro");
           this.state = {

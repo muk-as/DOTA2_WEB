@@ -1537,7 +1537,7 @@
                           c.createElement(
                             "div",
                             { className: g().ButtonText },
-                            (0, n.Wn)("#templatepage_hero_detail_button"),
+                            (0, n.Wn)("#kez_hero_detail_button"),
                           ),
                           c.createElement(h.U, null),
                         ),

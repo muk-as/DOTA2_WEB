@@ -30,16 +30,16 @@
       var n = a(85608),
         r = a(4248),
         c = a(89506),
-        s = a(68613),
-        i = a(68446),
+        i = a(68613),
+        s = a(68446),
         o = a(7552),
         l = a(83640),
         u = a(21384),
         m = a(88351),
         A = a(47202),
-        h = a(36305),
-        d = a(45237),
-        g = a(55651),
+        g = a(36305),
+        h = a(45237),
+        d = a(55651),
         p = a(77220),
         w = a.n(p),
         _ = a(85286),
@@ -110,7 +110,7 @@
             [r, c] = (0, o.useState)(
               Array.from({ length: t.length }, () => new Image()),
             ),
-            i = (0, m.zy)(),
+            s = (0, m.zy)(),
             l = (0, o.useCallback)(() => {
               n((e) => {
                 if ((void 0 === e && (e = 0), e + 1 >= t.length)) return e;
@@ -130,23 +130,23 @@
           }, [l]),
             (0, o.useEffect)(() => {
               let e = 0;
-              const t = new URLSearchParams(i.hash.substring(1)).get("p");
+              const t = new URLSearchParams(s.hash.substring(1)).get("p");
               null !== t && (e = parseInt(t)), n(e);
-            }, [i]),
+            }, [s]),
             (0, o.useEffect)(() => {
               if (void 0 === a) return;
               for (let e = 1; e <= 5; e++) {
                 const n = a + e;
                 if (n >= t.length) break;
-                let s = r;
-                s[n].src || ((s[n].src = t[n]), c(s));
+                let i = r;
+                i[n].src || ((i[n].src = t[n]), c(i));
               }
             }, [a, r, t]),
             (0, o.useEffect)(() => {
               e?.(a);
             }, [e, a]);
           const A = !a,
-            h = a + 1 >= t.length;
+            g = a + 1 >= t.length;
           return o.createElement(
             o.Fragment,
             null,
@@ -169,17 +169,17 @@
             o.createElement(
               "div",
               {
-                className: (0, u.A)(w().ComicViewerHelpText, h && w().Disabled),
+                className: (0, u.A)(w().ComicViewerHelpText, g && w().Disabled),
               },
-              (0, s.we)("#crownfallcomic_help_text"),
+              (0, i.we)("#crownfallcomic_help_text"),
             ),
             o.createElement(
-              d.N_,
+              h.N_,
               {
                 className: (0, u.A)(w().ReturnLink, A && w().Disabled),
-                to: g.J.crownfall_comic(),
+                to: d.J.crownfall_comic(),
               },
-              (0, s.we)("#crownfallcomic_return_button"),
+              (0, i.we)("#crownfallcomic_return_button"),
             ),
           );
         };
@@ -190,6 +190,7 @@
               ["act1_intro", { url: "comic_part1", pageCount: 119 }],
               ["act2_intro", { url: "act2_intro", pageCount: 33 }],
               ["act3_intro", { url: "act3_intro", pageCount: 29 }],
+              ["act4_intro", { url: "act4_intro", pageCount: 29 }],
             ]),
             a = t.get(e.comic_id) || t.get("act1_intro");
           this.state = {
@@ -221,18 +222,18 @@
                 o.createElement(E, {
                   onIndexChanged: (e) => {
                     document.title = e
-                      ? (0, s.we)(this.state.pageTitlePattern, e)
-                      : (0, s.we)(`${this.state.pageTitlePattern}_cover`);
+                      ? (0, i.we)(this.state.pageTitlePattern, e)
+                      : (0, i.we)(`${this.state.pageTitlePattern}_cover`);
                   },
                   comicImageURLs: this.state.comicImageURLs,
                 }),
               ),
-              o.createElement(h.K, null),
+              o.createElement(g.K, null),
             ),
           );
         }
       };
-      v = (0, n.Cg)([i.PA], v);
+      v = (0, n.Cg)([s.PA], v);
       const k = v;
     },
   },

@@ -37300,6 +37300,11 @@
                             s.createElement(ao, { comic_id: "act3_intro" }),
                         }),
                         s.createElement(La, {
+                          path: v.J.crownfall_comic4(),
+                          render: () =>
+                            s.createElement(ao, { comic_id: "act4_intro" }),
+                        }),
+                        s.createElement(La, {
                           path: v.J.crownfall(),
                           component: ro,
                         }),
@@ -39200,6 +39205,7 @@
         international2023: () => "/international2023",
         international2023alt: () => "/international23",
         winter2023: () => "/frostivus2023",
+        crownfall_comic4: () => "/crownfall/comic4",
         crownfall_comic3: () => "/crownfall/comic3",
         crownfall_comic2: () => "/crownfall/comic2",
         crownfall_comic: () => "/crownfall/comic",
