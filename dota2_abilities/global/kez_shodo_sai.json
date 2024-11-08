@@ -3,44 +3,38 @@
     "data": {
       "abilities": [
         {
-          "id": 5339,
-          "name": "doom_bringer_devour",
-          "name_loc": "Devour",
-          "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
-          "lore_loc": "Lucifer's appetite and greed are never sated.",
-          "notes_loc": [
-            "Gives Doom the original bounty of the creep, along with the bonus gold.",
-            "If you devour a creep without abilities, you'll keep the abilities you had previously."
-          ],
-          "shard_loc": "Allows Devour to be cast on enemy heroes, reducing their maximum health by 15%  for the duration of the devour and provides Doom with a passive basic ability they have.",
+          "id": 1504,
+          "name": "kez_shodo_sai",
+          "name_loc": "Shodo Sai",
+          "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. Marked enemies are slowed, and the next attack or ability damage from Kez gains True Strike and will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and Marked, taking additional critical strike and stun when the debuff is triggered.<br><br>The sub-ability may be used to cancel the blocking early.",
+          "lore_loc": "The Shodo may have lost their way, but Kez and the Kazurai can still use Shodo knowledge for the good of the people.",
+          "notes_loc": [],
+          "shard_loc": "Passively grants %shard_base_movement_speed% movement speed, and an additional %shard_vuln_movement_speed% movement speed per Marked enemy.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "1099545182216",
-          "target_team": 4,
-          "target_type": 128,
-          "flags": 131072,
+          "behavior": "8732542993",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
           "damage": 0,
-          "immunity": 0,
-          "dispellable": 3,
+          "immunity": 3,
+          "dispellable": 1,
           "max_level": 4,
           "cast_ranges": [
-            300,
-            300,
-            300,
-            300
+            0
           ],
           "cast_points": [
-            0.3,
-            0.3,
-            0.3,
-            0.3
+            0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            70
+            20,
+            15,
+            10,
+            5
           ],
           "durations": [
             0
@@ -52,58 +46,18 @@
             0
           ],
           "mana_costs": [
-            40,
-            50,
-            60,
-            70
+            30,
+            20,
+            10,
+            0
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_gold",
+              "name": "sai_attack_range",
               "values_float": [
-                40,
-                80,
-                120,
-                160
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS GOLD:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "creep_level",
-              "values_float": [
-                4,
-                5,
-                6,
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "CREEP MAX LEVEL:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ability_bonus_level",
-              "values_float": [
-                0
+                150
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -118,9 +72,9 @@
               "required_facet": ""
             },
             {
-              "name": "hero_ability_steal_time",
+              "name": "sai_base_attack_time",
               "values_float": [
-                99999
+                1.5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -135,16 +89,70 @@
               "required_facet": ""
             },
             {
-              "name": "magic_resist",
+              "name": "sai_proc_vuln_chance",
               "values_float": [
-                0
+                17
+              ],
+              "is_percentage": true,
+              "heading_loc": "CHANCE TO MARK:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vuln_slow",
+              "values_float": [
+                10
+              ],
+              "is_percentage": true,
+              "heading_loc": "MARKED MOVE SLOW:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vuln_duration",
+              "values_float": [
+                8
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "MARKED DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_crit_pct",
+              "values_float": [
+                140,
+                160,
+                180,
+                200
+              ],
+              "is_percentage": true,
+              "heading_loc": "MARKED CRITICAL STRIKE:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_doom_3",
-                  "value": 15,
+                  "name": "special_bonus_unique_kez_mark_damage",
+                  "value": 75,
                   "operation": 0
                 }
               ],
@@ -158,17 +166,139 @@
               "required_facet": ""
             },
             {
-              "name": "can_target_ancient",
-              "values_float": [],
+              "name": "stun_duration",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "MARKED STUN DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "shard_base_movement_speed",
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_doom_2",
-                  "value": 1,
-                  "operation": 5
-                }
+              "bonuses": [],
+              "values_shard": [
+                10
               ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "shard_vuln_movement_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                10
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "forward_angle",
+              "values_float": [
+                180
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "speed_penalty",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "parry_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "parry_bonus_crit",
+              "values_float": [
+                25,
+                50,
+                75,
+                100
+              ],
+              "is_percentage": true,
+              "heading_loc": "PARRY BONUS CRITICAL STRIKE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "parry_stun_duration",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "PARRY BONUS STUN DURATION:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -181,7 +311,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                300
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -232,7 +362,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -269,7 +399,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "BASE CHARGE RESTORE TIME:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -283,10 +413,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40,
-                50,
-                60,
-                70
+                30,
+                20,
+                10,
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -303,7 +433,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                70
+                20,
+                15,
+                10,
+                5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -320,7 +453,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

@@ -3,44 +3,38 @@
     "data": {
       "abilities": [
         {
-          "id": 5339,
-          "name": "doom_bringer_devour",
-          "name_loc": "Devour",
-          "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
-          "lore_loc": "Lucifer's appetite and greed are never sated.",
-          "notes_loc": [
-            "Gives Doom the original bounty of the creep, along with the bonus gold.",
-            "If you devour a creep without abilities, you'll keep the abilities you had previously."
-          ],
-          "shard_loc": "Allows Devour to be cast on enemy heroes, reducing their maximum health by 15%  for the duration of the devour and provides Doom with a passive basic ability they have.",
+          "id": 1503,
+          "name": "kez_talon_toss",
+          "name_loc": "Talon Toss",
+          "desc_loc": "Kez throws a Sai at the target unit. The Sai detonates when it hits, dealing damage and applying silence to all enemies in the area.",
+          "lore_loc": "The Shodo learned to rely upon distance and disorientation to survive against much stronger opposition.",
+          "notes_loc": [],
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "1099545182216",
-          "target_team": 4,
-          "target_type": 128,
-          "flags": 131072,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 3,
+          "behavior": "8724152361",
+          "target_team": 2,
+          "target_type": 19,
+          "flags": 0,
+          "damage": 2,
+          "immunity": 4,
+          "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
-            300,
-            300,
-            300,
-            300
+            1200
           ],
           "cast_points": [
-            0.3,
-            0.3,
-            0.3,
-            0.3
+            0.2
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            70
+            15,
+            12,
+            9,
+            6
           ],
           "durations": [
             0
@@ -52,24 +46,18 @@
             0
           ],
           "mana_costs": [
-            40,
-            50,
-            60,
-            70
+            75
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_gold",
+              "name": "radius",
               "values_float": [
-                40,
-                80,
-                120,
-                160
+                275
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS GOLD:",
+              "heading_loc": "RADIUS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -81,15 +69,15 @@
               "required_facet": ""
             },
             {
-              "name": "creep_level",
+              "name": "damage",
               "values_float": [
-                4,
-                5,
-                6,
-                6
+                75,
+                125,
+                175,
+                225
               ],
               "is_percentage": false,
-              "heading_loc": "CREEP MAX LEVEL:",
+              "heading_loc": "DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -101,9 +89,9 @@
               "required_facet": ""
             },
             {
-              "name": "ability_bonus_level",
+              "name": "speed",
               "values_float": [
-                0
+                2000
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -118,57 +106,16 @@
               "required_facet": ""
             },
             {
-              "name": "hero_ability_steal_time",
+              "name": "silence_duration",
               "values_float": [
-                99999
+                1.75,
+                2,
+                2.25,
+                2.5
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "SILENCE DURATION:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "magic_resist",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_doom_3",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "can_target_ancient",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_doom_2",
-                  "value": 1,
-                  "operation": 5
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -181,7 +128,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                300
+                1200
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -232,7 +179,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.3
+                0.2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -269,7 +216,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "BASE CHARGE RESTORE TIME:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -283,10 +230,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40,
-                50,
-                60,
-                70
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -303,7 +247,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                70
+                15,
+                12,
+                9,
+                6
               ],
               "is_percentage": false,
               "heading_loc": "",

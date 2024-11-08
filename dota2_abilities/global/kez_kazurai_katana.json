@@ -3,44 +3,35 @@
     "data": {
       "abilities": [
         {
-          "id": 5339,
-          "name": "doom_bringer_devour",
-          "name_loc": "Devour",
-          "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
-          "lore_loc": "Lucifer's appetite and greed are never sated.",
-          "notes_loc": [
-            "Gives Doom the original bounty of the creep, along with the bonus gold.",
-            "If you devour a creep without abilities, you'll keep the abilities you had previously."
-          ],
-          "shard_loc": "Allows Devour to be cast on enemy heroes, reducing their maximum health by 15%  for the duration of the devour and provides Doom with a passive basic ability they have.",
+          "id": 1500,
+          "name": "kez_kazurai_katana",
+          "name_loc": "Kazurai Katana",
+          "desc_loc": "Katana attacks and abilities apply a stacking damage over time to enemies that deals a percentage of the original attack's damage as additional damage over time. Affected enemies have non-stacking reduced health regeneration.",
+          "lore_loc": "To fight back against the reach of Imperia and her Queensguard, the Kazurai had to become skilled in the ways of attrition.",
+          "notes_loc": [],
+          "shard_loc": "Kez may activate the ability to impale the target with his attack, briefly stunning himself and the target in place. The target's debuff bursts, removing it and causing the attack to deal bonus damage based on the stack amount.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "1099545182216",
-          "target_team": 4,
-          "target_type": 128,
-          "flags": 131072,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 3,
+          "behavior": "2",
+          "target_team": 2,
+          "target_type": 19,
+          "flags": 0,
+          "damage": 1,
+          "immunity": 3,
+          "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            300,
-            300,
-            300,
-            300
+            150
           ],
           "cast_points": [
-            0.3,
-            0.3,
-            0.3,
-            0.3
+            0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            70
+            0
           ],
           "durations": [
             0
@@ -52,24 +43,18 @@
             0
           ],
           "mana_costs": [
-            40,
-            50,
-            60,
-            70
+            0
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_gold",
+              "name": "katana_attack_range",
               "values_float": [
-                40,
-                80,
-                120,
-                160
+                225
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS GOLD:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -81,15 +66,49 @@
               "required_facet": ""
             },
             {
-              "name": "creep_level",
+              "name": "katana_base_attack_time",
               "values_float": [
-                4,
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "katana_bonus_damage",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "katana_bleed_duration",
+              "values_float": [
                 5,
                 6,
-                6
+                7,
+                8
               ],
               "is_percentage": false,
-              "heading_loc": "CREEP MAX LEVEL:",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -101,50 +120,19 @@
               "required_facet": ""
             },
             {
-              "name": "ability_bonus_level",
+              "name": "katana_bleed_attack_damage_pct",
               "values_float": [
-                0
+                7,
+                8,
+                9,
+                10
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "hero_ability_steal_time",
-              "values_float": [
-                99999
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "magic_resist",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_doom_3",
-                  "value": 15,
+                  "name": "special_bonus_unique_kez_kazura_katana_bleed_damage",
+                  "value": 5,
                   "operation": 0
                 }
               ],
@@ -158,18 +146,55 @@
               "required_facet": ""
             },
             {
-              "name": "can_target_ancient",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_doom_2",
-                  "value": 1,
-                  "operation": 5
-                }
+              "name": "heal_reduction_pct",
+              "values_float": [
+                20,
+                25,
+                30,
+                35
               ],
+              "is_percentage": true,
+              "heading_loc": "REGEN REDUCTION:",
+              "bonuses": [],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stun_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "IMPALE DURATION:",
+              "bonuses": [],
+              "values_shard": [
+                0.6
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bleed_as_rupture_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "STACKS AS BURST DAMAGE:",
+              "bonuses": [],
+              "values_shard": [
+                100
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -181,7 +206,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                300
+                150
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -232,7 +257,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -269,7 +294,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "BASE CHARGE RESTORE TIME:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -283,15 +308,14 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40,
-                50,
-                60,
-                70
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -303,12 +327,14 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                70
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                5
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -320,7 +346,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
