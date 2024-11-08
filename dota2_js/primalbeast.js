@@ -98,7 +98,9 @@
       const c = () =>
         l.createElement("div", {
           className: s().RightArrow,
-          style: { backgroundImage: `url( ${r.r.IMG_URL}/arrow_left.png )` },
+          style: {
+            backgroundImage: `url( ${r.r.IMG_URL}/icons/arrow_right.svg )`,
+          },
         });
     },
     65046: (e, a, t) => {
@@ -114,7 +116,7 @@
         p = t(83640),
         o = t(45237),
         _ = t(21384),
-        d = t(79962),
+        d = t(76489),
         b = t(47202),
         E = t(36305),
         h = t(60901),

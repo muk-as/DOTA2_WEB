@@ -159,7 +159,7 @@
         d = a(35927),
         p = a(92225),
         h = a(21384),
-        u = a(79962),
+        u = a(76489),
         g = a(47202),
         v = a(36305),
         f = a(82101),
@@ -422,7 +422,7 @@
                   "div",
                   { className: E().HeroImageContainer },
                   _.createElement("div", { className: E().HeroShadow }),
-                  _.createElement(f.s, {
+                  _.createElement(f.sG, {
                     heroname: t,
                     portraitClassName: E().HeroReworkPortrait,
                     videoClassName: E().HeroReworkPortraitVideo,

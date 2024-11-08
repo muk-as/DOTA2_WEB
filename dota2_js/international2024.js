@@ -213,7 +213,9 @@
       const s = () =>
         i.createElement("div", {
           className: r().RightArrow,
-          style: { backgroundImage: `url( ${l.r.IMG_URL}/arrow_left.png )` },
+          style: {
+            backgroundImage: `url( ${l.r.IMG_URL}/icons/arrow_right.svg )`,
+          },
         });
     },
     24953: (e, t, a) => {
@@ -225,7 +227,7 @@
         l = a(21384),
         s = a(27866),
         o = a(89506),
-        m = a(79962);
+        m = a(76489);
       const c = ({
           colorTopEdge: e,
           colorTop: t,
@@ -679,7 +681,7 @@
         m = a(83640),
         c = a(35927),
         d = a(21384),
-        _ = a(79962),
+        _ = a(76489),
         p = a(47202),
         u = a(36305),
         g = a(45237),
