@@ -6,7 +6,7 @@
           "id": 1506,
           "name": "kez_ravens_veil",
           "name_loc": "Raven's Veil",
-          "desc_loc": "Kez releases a wave of smoke that applies his Mark with Parry bonus to nearby enemies, briefly reducing their vision. Kez receives a basic dispel and gains bonus movement speed and invisibility until he attacks or casts a spell.",
+          "desc_loc": "Kez releases a wave of smoke that applies his Mark to nearby enemies, briefly reducing their vision. Kez receives a basic dispel and gains bonus movement speed and invisibility until he attacks or casts a spell.",
           "lore_loc": "Eying either threat or opportunity, Shodo masters slip instantly into shadow to reset the terms of any engagement in their own favor.",
           "notes_loc": [],
           "shard_loc": "",
@@ -178,11 +178,17 @@
             {
               "name": "apply_parry_bonus",
               "values_float": [
-                1
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kez_ravens_veil_mark_parry_bonus",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
