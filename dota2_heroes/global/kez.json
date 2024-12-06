@@ -78,7 +78,7 @@
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                800
+                0
               ],
               "cast_points": [
                 0.2
@@ -202,7 +202,7 @@
                     200
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "SLASH RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -219,7 +219,7 @@
                     800
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DISTANCE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -284,7 +284,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    800
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -441,7 +441,7 @@
               "id": 1499,
               "name": "kez_grappling_claw",
               "name_loc": "Grappling Claw",
-              "desc_loc": "Kez swings on a grappling hook towards the target unit or tree.  When the grappling hook collides with the target, that unit has slowed movement speed until Kez arrives. Upon landing, he attacks with %lifesteal_pct%%% lifesteal plus a flat bonus if the target is a Hero.",
+              "desc_loc": "Kez swings on a grappling hook towards the target unit or tree.  When the grappling hook collides with the target, that unit has slowed movement speed until Kez arrives. Upon landing, he attacks with %lifesteal_pct%%% lifesteal, and heals a flat bonus amount if the target is a Hero.",
               "lore_loc": "The Kazurai have the speed and reach to drag even the highest flyers from the skies.",
               "notes_loc": [],
               "shard_loc": "",
@@ -471,10 +471,10 @@
                 0
               ],
               "cooldowns": [
-                15,
-                12,
-                9,
-                6
+                16,
+                13,
+                10,
+                7
               ],
               "durations": [
                 0
@@ -562,13 +562,13 @@
                 {
                   "name": "bonus_flat_lifesteal",
                   "values_float": [
-                    40,
-                    80,
-                    120,
-                    160
+                    30,
+                    60,
+                    90,
+                    120
                   ],
                   "is_percentage": false,
-                  "heading_loc": "HERO BONUS LIFESTEAL:",
+                  "heading_loc": "HERO BONUS HEAL:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -755,10 +755,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    15,
-                    12,
-                    9,
-                    6
+                    16,
+                    13,
+                    10,
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1899,7 +1899,7 @@
                 {
                   "name": "rush_range",
                   "values_float": [
-                    650
+                    575
                   ],
                   "is_percentage": false,
                   "heading_loc": "RUSH RANGE:",
@@ -2234,10 +2234,10 @@
                 0
               ],
               "cooldowns": [
-                15,
-                12,
-                9,
-                6
+                16,
+                13,
+                10,
+                7
               ],
               "durations": [
                 0
@@ -2450,10 +2450,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    15,
-                    12,
-                    9,
-                    6
+                    16,
+                    13,
+                    10,
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2949,7 +2949,7 @@
               "id": 1506,
               "name": "kez_ravens_veil",
               "name_loc": "Raven's Veil",
-              "desc_loc": "Kez releases a wave of smoke that applies his Mark with Parry bonus to nearby enemies, briefly reducing their vision. Kez receives a basic dispel and gains bonus movement speed and invisibility until he attacks or casts a spell.",
+              "desc_loc": "Kez releases a wave of smoke that applies his Mark to nearby enemies, briefly reducing their vision. Kez receives a basic dispel and gains bonus movement speed and invisibility until he attacks or casts a spell.",
               "lore_loc": "Eying either threat or opportunity, Shodo masters slip instantly into shadow to reset the terms of any engagement in their own favor.",
               "notes_loc": [],
               "shard_loc": "",
@@ -3123,11 +3123,17 @@
                 {
                   "name": "apply_parry_bonus",
                   "values_float": [
-                    1
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kez_ravens_veil_mark_parry_bonus",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -3928,9 +3934,9 @@
               "item_quality": 0
             },
             {
-              "id": 1509,
-              "name": "special_bonus_unique_kez_raptor_dance_radius",
-              "name_loc": "+{s:bonus_radius} Raptor Dance Radius",
+              "id": 1521,
+              "name": "special_bonus_unique_kez_ravens_veil_mark_parry_bonus",
+              "name_loc": "Raven's Veil Mark Applies Parry Bonus",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
