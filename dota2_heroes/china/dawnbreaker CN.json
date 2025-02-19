@@ -63,6 +63,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "在星破天惊结束后每次破晓辰星挥击和锤击敌方英雄都会使%movespeed_bonus_radius%范围内她和所有友军获得攻击速度加成，持续%movespeed_bonus_duration%秒。",
             ""
           ],
           "type": 0,
@@ -389,12 +391,100 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [
-                25
+                35
               ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dawnbreaker_blaze",
+                "values": [
+                  700
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_self_max",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "每次挥击的攻击速度加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dawnbreaker_blaze",
+                "values": [
+                  15,
+                  21,
+                  27,
+                  33
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_ally_max",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "每次挥击的攻击速度加成（友军）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dawnbreaker_blaze",
+                "values": [
+                  9,
+                  12,
+                  15,
+                  18
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dawnbreaker_blaze",
+                "values": [
+                  4
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -531,7 +621,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_dawnbreaker_fire_wreath_cooldown",
-                  "value": 5,
+                  "value": 4,
                   "operation": 2
                 }
               ],
@@ -581,7 +671,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "上界重锤停在地面时，会产生天光现世的治疗和伤害效果，数值减少%hammer_solar_guardian_effectiveness_pct%%%，作用于重锤附近%hammer_solar_guardian_radius%范围。重锤的停留时间提升至%pause_duration%秒。"
+            "上界重锤停在地面时，会产生天光现世的治疗和伤害效果，数值减少%hammer_solar_guardian_effectiveness_pct%%%，作用于重锤附近%hammer_solar_guardian_radius%范围。重锤的停留时间提升至%pause_duration%秒。",
+            "",
+            "友方英雄在上界重锤的炽烈之径上行走会获得移动速度加成。"
           ],
           "type": 0,
           "behavior": "16",
@@ -792,14 +884,18 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dawnbreaker_gleaming_hammer",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "dawnbreaker_gleaming_hammer",
-                "values": [
-                  2
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -888,14 +984,18 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dawnbreaker_gleaming_hammer",
+                  "value": 200,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "dawnbreaker_gleaming_hammer",
-                "values": [
-                  200
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -907,13 +1007,42 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dawnbreaker_gleaming_hammer",
+                  "value": 40,
+                  "operation": 5
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fire_trail_health_regen",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "炽烈之径移动速度加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "dawnbreaker_gleaming_hammer",
+                "name": "dawnbreaker_hearthfire",
                 "values": [
-                  50
+                  10,
+                  15,
+                  20,
+                  25
                 ],
                 "operation": 5
               },
@@ -1094,6 +1223,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "只要破晓辰星击中目标时触发了熠熠生辉的强化攻击，她所有技能的冷却时间都会减少。",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -1225,7 +1356,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_dawnbreaker_luminosity_crit",
-                  "value": 50,
+                  "value": 40,
                   "operation": 0
                 }
               ],
@@ -1292,7 +1423,7 @@
               "required_facet": ""
             },
             {
-              "name": "attackspeed_bonus_max",
+              "name": "triggered_by_celestial_hammer",
               "values_float": [
                 0
               ],
@@ -1304,26 +1435,7 @@
               "facet_bonus": {
                 "name": "",
                 "values": [
-                  50
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "movespeed_bonus_max",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  20
+                  1
                 ],
                 "operation": 0
               },
@@ -1494,6 +1606,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -1788,6 +1902,8 @@
           "scepter_loc": "天光现世的脉冲效果现在落地后会粘滞%scepter_aura_duration%秒，并且跟随破晓辰星。天光现世的每次脉冲治疗量提升。持续施法和升空时间减少。",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 1,
@@ -1834,15 +1950,55 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "airtime_duration",
+              "name": "scepter_aura_duration",
               "values_float": [
-                0.8
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "miss_rate",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "闪避几率：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_heal",
+              "values_float": [
+                45,
+                70,
+                95
+              ],
+              "is_percentage": false,
+              "heading_loc": "每次脉冲治疗：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                10,
+                15,
+                20
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1885,29 +2041,6 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "base_heal",
-              "values_float": [
-                45,
-                70,
-                95
-              ],
-              "is_percentage": false,
-              "heading_loc": "每次脉冲治疗：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                15,
-                20,
-                25
-              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1993,7 +2126,7 @@
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "持续施法时间：",
+              "heading_loc": "神杖升级持续施法时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -2010,24 +2143,7 @@
                 3.5
               ],
               "is_percentage": false,
-              "heading_loc": "额外升空时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "miss_rate",
-              "values_float": [
-                60
-              ],
-              "is_percentage": true,
-              "heading_loc": "闪避几率：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -2048,6 +2164,25 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "airtime_duration",
+              "values_float": [
+                0.8
+              ],
+              "is_percentage": false,
+              "heading_loc": "滞空时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                0.5
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -3866,15 +4001,26 @@
           "gradient_id": 3
         },
         {
+          "color": 0,
+          "title_loc": "星光汹涌",
+          "description_loc": "在星破天惊结束后每次破晓辰星挥击和锤击敌方英雄都会使范围内她和附近友军获得攻击速度加成。",
+          "name": "dawnbreaker_blaze",
+          "icon": "fist",
+          "gradient_id": 1
+        },
+        {
           "color": 1,
-          "title_loc": "闪光之锤",
-          "description_loc": "上界重锤在地面上会治疗友军，并对敌人造成伤害。",
-          "name": "dawnbreaker_gleaming_hammer",
-          "icon": "dawnbreaker_hammer",
+          "title_loc": "开路先锋",
+          "description_loc": "在上界重锤的炽烈之径上行走会获得移动速度加成。",
+          "name": "dawnbreaker_hearthfire",
+          "icon": "speed",
           "gradient_id": 1
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3887,12 +4033,14 @@
         "id": 1424,
         "name": "dawnbreaker_break_of_dawn",
         "name_loc": "辰星破晓",
-        "desc_loc": "只要太阳出来，破晓辰星就会对友军显示全地图，持续5秒。",
+        "desc_loc": "只要太阳出来，破晓辰星就会对友军显示全地图，持续%reveal_duration%秒。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
+          "",
           "",
           ""
         ],

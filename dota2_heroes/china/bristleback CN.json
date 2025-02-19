@@ -954,7 +954,7 @@
             {
               "name": "activation_manacost",
               "values_float": [
-                100
+                125
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1519,7 +1519,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40
+                60
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1589,7 +1589,7 @@
           "facets_loc": [
             "战意提供攻击速度加成，而不只有攻击力。",
             "",
-            "战意可以主动开启，获得额外的攻击力和移动速度加成，持续较短时间。红光满面期间，钢背兽的视野减少至狭窄的锥形，并且不会与他的友军共享视野。"
+            "战意可以主动开启，获得额外的攻击力和移动速度加成，持续较短时间。红光满面期间，钢背兽的视野减少至狭窄的锥形，并且不会获得友军的视野。"
           ],
           "type": 1,
           "behavior": "2",
@@ -1683,8 +1683,8 @@
               "name": "move_speed_per_stack",
               "values_float": [
                 2,
-                3,
-                4
+                2.5,
+                3
               ],
               "is_percentage": true,
               "heading_loc": "每层叠加移速加成：",
@@ -1921,9 +1921,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                55,
-                65,
-                75
+                0,
+                0,
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1931,8 +1931,12 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "bristleback_seeing_red",
+                "values": [
+                  55,
+                  65,
+                  75
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -3890,14 +3894,6 @@
       "update_time": 1739926989,
       "facets": [
         {
-          "color": 1,
-          "title_loc": "失控",
-          "description_loc": "战意提供攻击速度加成，而不只有攻击力。",
-          "name": "bristleback_berserk",
-          "icon": "damage",
-          "gradient_id": 0
-        },
-        {
           "color": 2,
           "title_loc": "鼻涕火箭",
           "description_loc": "钢毛后背达到伤害临界值后发射粘稠鼻液，而不是刺针扫射。粘稠鼻液效果更加强大。",
@@ -3908,16 +3904,13 @@
         {
           "color": 0,
           "title_loc": "红光满面",
-          "description_loc": "战意可以主动开启来获得额外加成。红光满面期间钢背兽的视野受限，并且不与友军共享视野。",
+          "description_loc": "战意可以主动开启来获得额外加成。红光满面期间钢背兽的视野受限，并且不会获得友军的视野。",
           "name": "bristleback_seeing_red",
           "icon": "no_vision",
           "gradient_id": 0
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         },
