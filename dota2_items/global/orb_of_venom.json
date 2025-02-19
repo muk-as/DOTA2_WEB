@@ -6,7 +6,7 @@
           "id": 181,
           "name": "item_orb_of_venom",
           "name_loc": "Orb of Venom",
-          "desc_loc": "<h1>Passive: Poison Attack</h1>Poisons the target, dealing %poison_damage_melee% magical damage per second and slowing movement by %poison_movement_speed_melee%%% if the equipped hero is melee, or by %poison_movement_speed_range%%% if they are ranged. Lasts for %poison_duration% seconds.",
+          "desc_loc": "<h1>Passive: Poison Attack</h1>Poisons the target, dealing %damage% magical damage per second. Lasts for %poison_duration% seconds.",
           "lore_loc": "Envenoms your veapon with the venom of a venomous viper.",
           "notes_loc": [
             "Does not stack with its upgrades."
@@ -33,7 +33,7 @@
             0
           ],
           "cooldowns": [
-            0
+            9
           ],
           "durations": [
             0
@@ -51,9 +51,9 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "poison_damage_melee",
+              "name": "damage",
               "values_float": [
-                2
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -68,43 +68,9 @@
               "required_facet": ""
             },
             {
-              "name": "poison_damage_range",
+              "name": "tick_interval",
               "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "poison_movement_speed_melee",
-              "values_float": [
-                -13
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "poison_movement_speed_range",
-              "values_float": [
-                -4
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -121,7 +87,7 @@
             {
               "name": "poison_duration",
               "values_float": [
-                2
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -257,7 +223,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0
+                9
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -278,7 +244,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 250,
+          "item_cost": 350,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

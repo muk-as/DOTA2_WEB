@@ -6,9 +6,11 @@
           "id": 81,
           "name": "item_vladmir",
           "name_loc": "Vladmir's Offering",
-          "desc_loc": "<h1>Passive: Vladmir's Aura</h1>Grants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies. Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.<br><br>Radius: %aura_radius%",
+          "desc_loc": "<h1>Passive: Vladmir's Aura</h1>Grants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies.<br><br>Radius: %aura_radius%",
           "lore_loc": "An eerie mask that is haunted with the malice of a fallen vampire.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Lifesteal on attacks against creeps is reduced to %lifesteal_creeps_tooltip%%%."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -134,23 +136,6 @@
               "required_facet": ""
             },
             {
-              "name": "creep_lifesteal_reduction_pct",
-              "values_float": [
-                40
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "damage_aura",
               "values_float": [
                 18
@@ -168,9 +153,60 @@
               "required_facet": ""
             },
             {
+              "name": "lifesteal_self",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_self",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "aura_radius",
               "values_float": [
                 1200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "lifesteal_creeps_tooltip",
+              "values_float": [
+                12
               ],
               "is_percentage": false,
               "heading_loc": "",

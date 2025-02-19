@@ -6,14 +6,14 @@
           "id": 372,
           "name": "item_pirate_hat",
           "name_loc": "Pirate Hat",
-          "desc_loc": "<h1>Active: Dig</h1> Channel for %abilitychanneltime% second. <br>Always finds a Bounty Rune!",
+          "desc_loc": "<h1>Passive: Plunder</h1> Steals %gold_steal_base% gold from enemy heroes that die within %gold_steal_range% units. If the wearer is the killer, there is no range limit and an additional %gold_steal_kill% gold is stolen.\n<h1>Passive: Buried Treasure</h1> Gold loss on death reduced by %gold_loss_reduction%%%.",
           "lore_loc": "A salty skulltopper cursed with endless good fortune.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "134217872",
+          "behavior": "2",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -22,16 +22,16 @@
           "dispellable": 0,
           "max_level": 0,
           "cast_ranges": [
-            250
+            0
           ],
           "cast_points": [
-            0.1
+            0
           ],
           "channel_times": [
-            1
+            0
           ],
           "cooldowns": [
-            40
+            0
           ],
           "durations": [
             0
@@ -49,12 +49,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_attack_speed",
+              "name": "gold_steal_base",
               "values_float": [
                 150
               ],
               "is_percentage": false,
-              "heading_loc": "+$attack",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -66,12 +66,46 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_ms",
+              "name": "gold_steal_kill",
               "values_float": [
-                15
+                150
               ],
               "is_percentage": false,
-              "heading_loc": "+$move_speed",
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gold_steal_range",
+              "values_float": [
+                1200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gold_loss_reduction",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -85,7 +119,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                250
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -102,7 +136,7 @@
             {
               "name": "AbilityChannelTime",
               "values_float": [
-                1
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -136,7 +170,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.1
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -204,7 +238,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                40
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",

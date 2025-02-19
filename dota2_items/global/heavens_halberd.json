@@ -6,7 +6,7 @@
           "id": 210,
           "name": "item_heavens_halberd",
           "name_loc": "Heaven's Halberd",
-          "desc_loc": "<h1>Active: Disarm</h1>Prevents a target from attacking for %disarm_melee% seconds on melee targets, and %disarm_range% seconds on ranged targets.",
+          "desc_loc": "<h1>Active: Disarm</h1>Prevents a target from attacking for %disarm_melee% seconds on melee targets, and %disarm_range% seconds on ranged targets.\n\n <h1>Passive: Damage Block</h1> Grants a %block_chance%%% chance to block %block_damage_melee% damage from incoming attacks on melee heroes, and %block_damage_ranged% damage on ranged.",
           "lore_loc": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
           "notes_loc": [],
           "shard_loc": "",
@@ -43,18 +43,18 @@
             0
           ],
           "mana_costs": [
-            75
+            25
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_evasion",
+              "name": "bonus_health",
               "values_float": [
-                25
+                275
               ],
-              "is_percentage": true,
-              "heading_loc": "+$evasion",
+              "is_percentage": false,
+              "heading_loc": "+$health",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -66,12 +66,80 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_strength",
+              "name": "bonus_health_regen",
               "values_float": [
-                20
+                6
               ],
               "is_percentage": false,
-              "heading_loc": "+$str",
+              "heading_loc": "+$hp_regen",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "block_damage_melee",
+              "values_float": [
+                60
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "block_damage_ranged",
+              "values_float": [
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "block_chance",
+              "values_float": [
+                60
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_all_stats",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$all",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -85,7 +153,7 @@
             {
               "name": "disarm_range",
               "values_float": [
-                5
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -106,40 +174,6 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "slow_resistance",
-              "values_float": [
-                25
-              ],
-              "is_percentage": true,
-              "heading_loc": "+Slow Resistance",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "hp_regen_amp",
-              "values_float": [
-                25
-              ],
-              "is_percentage": true,
-              "heading_loc": "+Health Regen and Lifesteal Amp",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -255,7 +289,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                75
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -293,7 +327,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 3500,
+          "item_cost": 2600,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

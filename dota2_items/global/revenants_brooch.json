@@ -6,14 +6,17 @@
           "id": 911,
           "name": "item_revenants_brooch",
           "name_loc": "Revenant's Brooch",
-          "desc_loc": "<h1>Toggle: Phantom Province</h1>When enabled, attacks cost %manacost_per_hit% mana, deal magical damage, and can hit ethereal units, but cannot crit.",
+          "desc_loc": "<h1>Passive: Phantom Critical</h1>Grants each attack a %crit_chance%%% chance to deal an additional %crit_multiplier%%% of the attack's damage as bonus magic damage.",
           "lore_loc": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Counts as a Critical Strike for purposes of stacking with other sources of Critical Strike.",
+            "Phantom Critical does not work against buildings."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "4194820",
+          "behavior": "2",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -51,7 +54,7 @@
             {
               "name": "bonus_damage",
               "values_float": [
-                70
+                35
               ],
               "is_percentage": false,
               "heading_loc": "+$damage",
@@ -68,7 +71,7 @@
             {
               "name": "spell_lifesteal",
               "values_float": [
-                20
+                16
               ],
               "is_percentage": true,
               "heading_loc": "+$spell_lifesteal",
@@ -83,9 +86,26 @@
               "required_facet": ""
             },
             {
-              "name": "manacost_per_hit",
+              "name": "crit_chance",
               "values_float": [
-                50
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "crit_multiplier",
+              "values_float": [
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -242,7 +262,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 4900,
+          "item_cost": 3300,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

@@ -6,7 +6,7 @@
           "id": 377,
           "name": "item_minotaur_horn",
           "name_loc": "Minotaur Horn",
-          "desc_loc": "<h1>Active: Lesser Avatar</h1> Grants Spell Immunity for %duration% seconds.",
+          "desc_loc": "<h1>Active: Lesser Avatar</h1>Applies a basic dispel. Grants %magic_resist%%% Magic resistance and immunity to pure and reflected damage for %duration%s. For the duration of the effect, any negative effect from enemy spells has no effect.<br><br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>",
           "lore_loc": "The trophy from a mighty beast ambushed and slain in the recesses of its own home.",
           "notes_loc": [],
           "shard_loc": "",
@@ -49,12 +49,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_strength",
+              "name": "duration",
               "values_float": [
-                20
+                2
               ],
               "is_percentage": false,
-              "heading_loc": "+$str",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -66,9 +66,26 @@
               "required_facet": ""
             },
             {
-              "name": "duration",
+              "name": "magic_resist",
               "values_float": [
-                2
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "model_scale",
+              "values_float": [
+                40
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -227,7 +244,7 @@
           "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
+          "item_neutral_tier": 4,
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 1

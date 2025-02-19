@@ -6,9 +6,11 @@
           "id": 569,
           "name": "item_orb_of_corrosion",
           "name_loc": "Orb of Corrosion",
-          "desc_loc": "<h1>Passive: Corrosion</h1>Dealing %damage% damage per second, and slowing movement by %slow_melee%%% if the equipped hero is melee, or by %slow_range%%% if they are ranged and reduces heals, health regeneration, lifesteal and spell lifesteal by %heal_reduction%%% . Affects Buildings<br><br>Lasts for %duration% seconds.",
+          "desc_loc": "<h1>Passive: Corrosion</h1> Your attacks reduce the target's armor by %corruption_armor%, slows their movement by %slow_ranged%%% (%slow_melee%%% against melee targets), and reduces heals, health regeneration, lifesteal and Spell lifesteal by %heal_reduction%%% for %duration% seconds.",
           "lore_loc": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Armor reduction does not stack with its components, Desolator, or Stygian Desolator."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -19,7 +21,7 @@
           "flags": 0,
           "damage": 0,
           "immunity": 0,
-          "dispellable": 0,
+          "dispellable": 2,
           "max_level": 0,
           "cast_ranges": [
             0
@@ -49,12 +51,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "armor",
+              "name": "corruption_armor",
               "values_float": [
-                3
+                -3
               ],
               "is_percentage": false,
-              "heading_loc": "+$armor",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -68,7 +70,7 @@
             {
               "name": "slow_melee",
               "values_float": [
-                13
+                -6
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -83,9 +85,9 @@
               "required_facet": ""
             },
             {
-              "name": "slow_range",
+              "name": "slow_ranged",
               "values_float": [
-                4
+                -16
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -100,9 +102,9 @@
               "required_facet": ""
             },
             {
-              "name": "damage",
+              "name": "heal_reduction",
               "values_float": [
-                5
+                16
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -134,29 +136,12 @@
               "required_facet": ""
             },
             {
-              "name": "attack_speed",
+              "name": "bonus_agility",
               "values_float": [
-                25
+                8
               ],
               "is_percentage": false,
-              "heading_loc": "+$attack",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "heal_reduction",
-              "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "+$agi",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -310,7 +295,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 875,
+          "item_cost": 1000,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,
