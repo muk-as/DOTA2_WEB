@@ -54,6 +54,10 @@
         TextSection: "_2TiGvUo3I0FlIIhd42rWkw",
         SubsectionDivider: "_2vbb_v-nF9HeX4yv9zRAOa",
         SectionDivider: "_1U0VNRUobDoOSZxQmEXhIm",
+        Pattern: "_1kNvYKuER3MyMAYedL9lwj",
+        Overlay: "_1FSKvx3M5boWbmjMOreIMz",
+        TopDash: "_1ZhQ7ojSq5YZrljqFiElSt",
+        BottomDash: "_3ajP6jV_xUE-tZhcYQ6wdB",
         ButtonsSection: "SzGQ107u9vsQCgKe2Iw2v",
         Grid_4: "_1DKNidKUBYxnQXRRjvgmDs",
         Grid_3: "_283mZ7ONkwykOkV7TfXWG0",
@@ -66,6 +70,18 @@
         WideImage: "_2RF9AIz6vBTJ52qEA-Qs1Z",
         ActionTextImageBlock: "_2mB8NO-5-N-2sJ6C18lOcy",
         ActionImage: "_1Im854RYNMqQayy09kbURE",
+        HeroReworkContainer: "_1bXU8ZiubuIMHZ43NJ5iPK",
+        HeroRework: "_35ZOXRyuCyKReLpRtY7PZz",
+        HeroName: "_2HhV7zfVJvscYFMgHcWQGm",
+        ReworkDescription: "AtKVBJ67wdGMyYF4v4CIU",
+        HeroImageContainer: "_1BVaEXoamV2NOJ8L0uYdpm",
+        HeroShadow: "is7qzxTRgHZB5V3EEzeyr",
+        HeroReworkPortrait: "_1OLY6jVeIftPnxlg4mPjj8",
+        HeroReworkPortraitVideo: "_1mha4u9NK3D6f6K7TlCpJx",
+        HeroReworkPatchNotes: "_2kDFiS3UgRmgerWwegao8t",
+        Muerta: "_1-OIZZNwUmnnfO_ERTZ-kT",
+        Clinkz: "_3nBYVK_pBTHudBcnp3HQpY",
+        ArcWarden: "YZHc9k8ziJQvHWjVZeETW",
         ImmersiveTextImageBlock: "_3pdJP8itgSszY3ntJsj72w",
         BasicComponentsSection: "_38h-gRWU2RQXLFobftBj90",
         DashedSectionSubHeader: "_3MtjJTT-5w8sgrZ0nBOkLw",
@@ -74,9 +90,8 @@
         DashRight: "_1yZ6qojXWKqyDEkfVIM3yg",
         AbilityImageContainer: "_14Hr3esKqmRXdsBsxxJptD",
         AbilityImage: "_1NO7OQ5RqjRZaBce_V26L6",
-        Active: "_2HRdRpIAlwABdcFBJtjmoC",
-        Passive: "_3YG24lqE5YcYljNBExf0Km",
         AbilityHotKey: "Dyp8jUXYgKywAXDOZYhXZ",
+        Active: "_2HRdRpIAlwABdcFBJtjmoC",
         HeaderSection: "_3KpyyIz5BM3xSiumWzJTLF",
         LogoContainer: "_1dnwSCPty0_1gz6lUSvaiE",
         LogoImage: "_2_u-Qo63s-M-RfEUZNV53X",
@@ -85,7 +100,6 @@
         HowItWorksSection: "_3GsTe2fNwxV5h6kL4mMZ0C",
         HeroDetailsSection: "n-fr9nYuJWYjSLu4_Tebj",
         HeroDetailsSectionInner: "_17tQTlYOfFT03--Jjubev0",
-        HeroImageContainer: "_1BVaEXoamV2NOJ8L0uYdpm",
         HeroImage: "C13X_fDhQwWoOUHQ8hONw",
         TreasureSection: "_9IBC_Tr3c8BiAcTjItZOT",
         TreasureCarousel: "-CmW26JdBwFACegg-QN5G",
@@ -94,7 +108,6 @@
         SlideContainer: "_3ZJWnLG6iU9VpE1EI-ThB6",
         TreasureSlideHidden: "eaQRrTBbuym0fYzKpMdRL",
         TreasureName: "IURaOIWSNQvcJ8ur6zgzv",
-        HeroName: "_2HhV7zfVJvscYFMgHcWQGm",
         CarouselDots: "_3mk2V0asn2NrNxBiapRCXv",
         TreasureSelector: "_1AL3LRtAtgvysTufCGO02C",
         TreasurePaginationButton: "_1HPkitKQdCuSX0H1-zkjwJ",
@@ -114,7 +127,8 @@
         CarouselDotsSection: "Of0OFm6f39oprULDbmAHH",
         CarouselDotsContainer: "_1ompR9rDwzgPkvmH4chfPZ",
         CarouselDotsHeading: "_1KMslKsqlUCHRubf9dm-_p",
-        AbilitySelector: "_1hZNvV6ctV7sWQ7W_jG7d1",
+        AbilitySelectorDot: "_3IvIAx1JiS-WBpCNnixs3V",
+        HeroesAbility: "_3m2RXh7FgzX8CSeMoYb5gF",
         GameplayUpdateContainer: "_2Od53Rl3JUlO5RHB2Ry75f",
         GameItemsContainer: "_2kG8xU-aSbZAgynUa0COQz",
         GameItemDetails: "_2aUp-BLzJyYJ-z0que4rKY",
@@ -187,63 +201,158 @@
       t.d(a, { U: () => s });
       var l = t(7552),
         r = t(11417),
-        i = t.n(r),
-        n = t(89506);
+        n = t.n(r),
+        i = t(89506);
       const s = () =>
         l.createElement("div", {
-          className: i().RightArrow,
+          className: n().RightArrow,
           style: {
-            backgroundImage: `url( ${n.r.IMG_URL}/icons/arrow_right.svg )`,
+            backgroundImage: `url( ${i.r.IMG_URL}/icons/arrow_right.svg )`,
           },
         });
     },
     33903: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => G });
+      t.r(a),
+        t.d(a, {
+          DownloadIcon: () => I,
+          InnateIconSmall: () => W,
+          PlayIcon: () => A,
+          default: () => U,
+        });
       var l = t(85608),
         r = t(89506),
-        i = t(33706),
-        n = t(27866),
+        n = t(33706),
+        i = t(27866),
         s = t(68446),
         m = t(7552),
         c = t(83640),
         o = t(35927),
         p = t(21384),
-        _ = t(76489),
-        d = t(47202),
+        d = t(76489),
+        _ = t(47202),
         g = t(36305),
         E = t(55730),
         N = t.n(E),
         u = t(61840),
         y = t(32389),
         b = t(54159),
-        T = t(45237),
-        h = t(722),
-        v = t(55651),
+        h = t(45237),
+        v = t(722),
+        T = t(55651),
+        S = t(82101),
         L = t(85286),
-        S = t.n(L);
-      const x = (e) => {
-          const a = (0, m.useRef)();
-          return e.video
+        x = t.n(L);
+      const A = () =>
+          m.createElement("div", {
+            className: N().ControlIcon,
+            style: { backgroundImage: `url( ${r.r.IMG_URL}/icons/play.svg )` },
+          }),
+        I = () =>
+          m.createElement("div", {
+            className: N().ControlIcon,
+            style: {
+              backgroundImage: `url( ${r.r.IMG_URL}/icons/download.svg )`,
+            },
+          }),
+        W = () =>
+          m.createElement("div", {
+            className: (0, p.A)(N().InnateIconSmall, N().ControlIcon),
+            style: {
+              backgroundImage: `url( ${r.r.IMG_URL}/icons/innate_icon_small.svg )`,
+            },
+          });
+      const B = (e) => {
+        const a = (0, m.useRef)();
+        return e.video
+          ? m.createElement(
+              "video",
+              {
+                className: (0, p.A)(e.additionalClassName),
+                ref: a,
+                muted: !0,
+                autoPlay: !0,
+                preload: "auto",
+                loop: !0,
+                playsInline: !0,
+                poster: `${r.r.IMG_URL}${e.image}`,
+              },
+              m.createElement("source", {
+                type: "video/webm",
+                src: `${r.r.VIDEO_URL}${e.video}`,
+              }),
+            )
+          : m.createElement("img", {
+              className: (0, p.A)(e.additionalClassName),
+              src: `${r.r.IMG_URL}/` + e.image,
+            });
+      };
+      function k(e) {
+        let a = "",
+          t = !0;
+        for (let l = 0; l < e.length; ++l)
+          "_" != e[l]
+            ? t
+              ? ((a += e[l].toUpperCase()), (t = !1))
+              : (a += e[l])
+            : (t = !0);
+        return a;
+      }
+      const C = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
+          const t = n.B5.Get().getHeroList(),
+            l = t?.heroes.find(
+              (e) => e.name.replace("npc_dota_hero_", "") == a,
+            );
+          return l
             ? m.createElement(
-                "video",
-                {
-                  ref: a,
-                  muted: !0,
-                  autoPlay: !0,
-                  preload: "auto",
-                  loop: !0,
-                  playsInline: !0,
-                  poster: `${r.r.IMG_URL}${e.image}`,
-                },
-                m.createElement("source", {
-                  type: "video/webm",
-                  src: `${r.r.VIDEO_URL}${e.video}`,
-                }),
+                "div",
+                { className: (0, p.A)(N().HeroRework, N()[k(a)]) },
+                m.createElement(
+                  "div",
+                  {
+                    className: (0, p.A)(
+                      N().HeroName,
+                      N().TitleFont,
+                      N().TitleSmall,
+                    ),
+                  },
+                  (0, i.Wn)(l.name_loc),
+                ),
+                m.createElement(
+                  "div",
+                  {
+                    className: (0, p.A)(
+                      N().ReworkDescription,
+                      N().DisplayFont,
+                      N().DisplayExtraSmall,
+                      N().LightGrayText,
+                    ),
+                  },
+                  (0, i.Wn)("#new_frontiers_major_gameplay_hero_rework_" + a),
+                ),
+                m.createElement(
+                  "div",
+                  { className: N().HeroImageContainer },
+                  m.createElement("div", { className: N().HeroShadow }),
+                  m.createElement(S.sG, {
+                    heroname: a,
+                    portraitClassName: N().HeroReworkPortrait,
+                    videoClassName: N().HeroReworkPortraitVideo,
+                  }),
+                ),
+                m.createElement(
+                  "div",
+                  { className: N().HeroReworkPatchNotes },
+                  m.createElement(u.fX, {
+                    patchnotes: e,
+                    heroname: a,
+                    heroClassName: N().HeroReworkPatchNotesInner,
+                  }),
+                ),
               )
-            : m.createElement("img", { src: `${r.r.IMG_URL}/` + e.image });
-        },
-        A = (e) => {
+            : null;
+        }),
+        D = (e) => {
           if (!e.special.heading_loc) return null;
           let a = e.special.values_float.map((e, a) =>
               m.createElement(
@@ -266,21 +375,21 @@
                   "+ ",
                   a,
                   " ",
-                  (0, n.Wn)(l),
+                  (0, i.Wn)(l),
                 )
               : m.createElement(
                   "div",
                   { className: N().Stat },
-                  (0, n.Wn)(l),
+                  (0, i.Wn)(l),
                   " ",
                   a,
                 )
           );
         },
-        I = (0, s.PA)(({ name: e, components: a, recipeCost: t }) => {
-          const l = i.B5.Get().getItemList(),
+        H = (0, s.PA)(({ name: e, components: a, recipeCost: t }) => {
+          const l = n.B5.Get().getItemList(),
             s = l?.itemabilities.find((a) => a.name == e),
-            c = i.B5.Get().getItemData(s?.id);
+            c = n.B5.Get().getItemData(s?.id);
           if (!c) return null;
           let o = c.desc_loc;
           c.special_values.forEach((e) => {
@@ -290,10 +399,10 @@
               (o = o.replace("%" + e.name.toLowerCase() + "%", a));
           }),
             (o = o.replace(/\%\%/g, "%"));
-          let _ = c.special_values?.map((e, a) =>
-              m.createElement(A, { key: a, special: e }),
+          let d = c.special_values?.map((e, a) =>
+              m.createElement(D, { key: a, special: e }),
             ),
-            d = c.name.replace("item_", ""),
+            _ = c.name.replace("item_", ""),
             g = c.item_cost,
             E =
               c.item_neutral_tier >= 0 && c.item_neutral_tier < 5
@@ -301,11 +410,11 @@
                 : -1,
             u = N()["Tier" + E],
             y = c.cooldowns.reduce((e, a) => e + a) > 0,
-            T = c.mana_costs.reduce((e, a) => e + a) > 0,
-            h =
+            h = c.mana_costs.reduce((e, a) => e + a) > 0,
+            v =
               !!(c.health_costs && c.health_costs.length > 0) &&
               c.health_costs.reduce((e, a) => e + a) > 0,
-            v = a
+            T = a
               ? a.map((e, a) =>
                   m.createElement("img", {
                     key: a,
@@ -322,7 +431,7 @@
               { className: N().Header },
               m.createElement("img", {
                 className: N().ItemImage,
-                src: `${r.r.IMG_URL}/items/${d}.png`,
+                src: `${r.r.IMG_URL}/items/${_}.png`,
               }),
               m.createElement(
                 "div",
@@ -358,14 +467,14 @@
                   m.createElement(
                     "div",
                     { className: (0, p.A)(N().NeutralItemTier, u) },
-                    (0, n.Wn)("#neutral_item_tier", E),
+                    (0, i.Wn)("#neutral_item_tier", E),
                   ),
               ),
             ),
             m.createElement(
               "div",
               { className: N().Body },
-              m.createElement("div", { className: N().Stats }, _),
+              m.createElement("div", { className: N().Stats }, d),
               o &&
                 m.createElement(
                   "div",
@@ -374,11 +483,11 @@
                     className: N().Description,
                     dangerouslySetInnerHTML: { __html: o },
                   }),
-                  (y || T || h) &&
+                  (y || h || v) &&
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().DescriptionHeader) },
-                      T &&
+                      h &&
                         m.createElement(
                           "div",
                           { className: N().ManaContainer },
@@ -391,7 +500,7 @@
                             ),
                           ),
                         ),
-                      h &&
+                      v &&
                         m.createElement(
                           "div",
                           { className: N().HealthContainer },
@@ -425,7 +534,7 @@
                     ),
                 ),
             ),
-            v.length > 0 &&
+            T.length > 0 &&
               m.createElement(
                 "div",
                 { className: N().Recipe },
@@ -440,13 +549,13 @@
                     ),
                   },
                   " ",
-                  (0, n.Wn)("#templatepage_recipe"),
+                  (0, i.Wn)("#templatepage_recipe"),
                   " ",
                 ),
                 m.createElement(
                   "div",
                   { className: N().RecipeImagesContainer },
-                  v,
+                  T,
                   t &&
                     t > 0 &&
                     m.createElement(
@@ -466,13 +575,13 @@
               ),
           );
         }),
-        B = ({
+        w = ({
           index: e,
           video: a,
           name: t,
           heroname: l,
-          autoplay: i,
-          onSlideIn: n,
+          autoplay: n,
+          onSlideIn: i,
         }) => {
           const s = (0, m.useContext)(y.Yc),
             c = (0, m.useRef)();
@@ -482,10 +591,10 @@
                 c && c.current && s.state.currentSlide == e
                   ? c.current.play()
                   : c && c.current && c.current.pause(),
-                  s.state.currentSlide == e && n(t, l);
+                  s.state.currentSlide == e && i(t, l);
               }
               return s.subscribe(a), () => s.unsubscribe(a);
-            }, [s, e, t, l, n]),
+            }, [s, e, t, l, i]),
             m.createElement(
               "div",
               { className: N().SlideContainer },
@@ -495,7 +604,7 @@
                   ref: c,
                   className: N().TreasureVideo,
                   muted: !0,
-                  autoPlay: i,
+                  autoPlay: n,
                   preload: "auto",
                   loop: !0,
                   playsInline: !0,
@@ -509,14 +618,21 @@
             )
           );
         },
-        W = (e) =>
-          m.createElement("div", {
-            className: e
-              ? (0, p.A)(N().SectionDivider, e)
-              : (0, p.A)(N().SectionDivider),
-          }),
-        k = () => m.createElement("div", { className: N().SubsectionDivider }),
-        D = (e) =>
+        R = (e) =>
+          m.createElement(
+            "div",
+            {
+              className: e
+                ? (0, p.A)(N().SectionDivider, e)
+                : (0, p.A)(N().SectionDivider),
+            },
+            m.createElement("div", { className: N().Pattern }),
+            m.createElement("div", { className: N().Overlay }),
+            m.createElement("div", { className: N().TopDash }),
+            m.createElement("div", { className: N().BottomDash }),
+          ),
+        f = () => m.createElement("div", { className: N().SubsectionDivider }),
+        F = (e) =>
           m.createElement(
             "div",
             { className: N().DashedSectionSubHeader },
@@ -530,45 +646,44 @@
             ),
             m.createElement("div", { className: N().DashRight }),
           ),
-        C = [
+        G = [
           {
+            abilityId: 352,
             posterDir: "abilities/ringmaster/ringmaster_tame_the_beasts.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_tame_the_beasts.mp4",
-            imgSrc: "abilities/ringmaster_tame_the_beasts.png",
-            abilityName: "#ringmaster_ability_tame_the_beasts",
-            abilityDesc: "#ringmaster_ability_tame_the_beasts_Description",
+            videoSrcWebm: "abilities/ringmaster/ringmaster_tame_the_beasts.mp4",
+            hotKey: "Q",
           },
           {
+            abilityId: 383,
             posterDir: "abilities/ringmaster/ringmaster_the_box.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_the_box.mp4",
-            imgSrc: "abilities/ringmaster_the_box.png",
-            abilityName: "#ringmaster_ability_the_box",
-            abilityDesc: "#ringmaster_ability_the_box_Description",
+            videoSrcWebm: "abilities/ringmaster/ringmaster_the_box.mp4",
+            hotKey: "W",
           },
           {
+            abilityId: 386,
             posterDir: "abilities/ringmaster/ringmaster_impalement.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_impalement.mp4",
-            imgSrc: "abilities/ringmaster_impalement.png",
-            abilityName: "#ringmaster_ability_impalement",
-            abilityDesc: "#ringmaster_ability_impalement_Description",
+            videoSrcWebm: "abilities/ringmaster/ringmaster_impalement.mp4",
+            hotKey: "E",
           },
           {
+            abilityId: 385,
             posterDir: "abilities/ringmaster/ringmaster_wheel.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_wheel.mp4",
-            imgSrc: "abilities/ringmaster_wheel.png",
-            abilityName: "#ringmaster_ability_wheel",
-            abilityDesc: "#ringmaster_ability_wheel_Description",
+            videoSrcWebm: "abilities/ringmaster/ringmaster_wheel.mp4",
+            hotKey: "R",
           },
           {
+            abilityId: 195,
             posterDir: "abilities/ringmaster/ringmaster_spotlight.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_spotlight.mp4",
-            imgSrc: "abilities/ringmaster_spotlight.png",
-            abilityName: "#ringmaster_ability_spotlight",
-            abilityDesc: "#ringmaster_ability_spotlight_Description",
+            videoSrcWebm: "abilities/ringmaster/ringmaster_spotlight.mp4",
             bIsShard: !0,
           },
         ];
-      let H = class extends m.Component {
+      let M = class extends m.Component {
         parallaxContainerRef = m.createRef();
         videoRef = m.createRef();
         constructor(e) {
@@ -584,7 +699,7 @@
             e ? this.videoRef.current.play() : this.videoRef.current.pause();
         }
         handleScroll = (e) => {
-          S().refresh();
+          x().refresh();
         };
         componentDidMount() {
           this.parallaxContainerRef.current.addEventListener(
@@ -599,17 +714,36 @@
             this.handleScroll,
           );
         }
+        convertAbilityDesc(e) {
+          if (!e) return null;
+          let a = e.desc_loc;
+          return (
+            e.special_values.forEach((e) => {
+              let t =
+                e.values_float.length > 0 ? (0, b.F)(e.values_float[0]) : "0";
+              (a = a.replace("%" + e.name + "%", t)),
+                (a = a.replace("%" + e.name.toLowerCase() + "%", t));
+            }),
+            (a = a.replace(/\%\%/g, "%")),
+            (a = a.replace(/<h2>/g, "<b>")),
+            (a = a.replace(/<\/h2>/g, "</b>")),
+            (a = a.replace(/<h1>/g, "<b>")),
+            (a = a.replace(/<\/h1>/g, "</b>\n\n")),
+            (0, i.Wn)(a)
+          );
+        }
         render() {
-          const e = _.o.getPatchNotes("7.35", r.r.LANGUAGE),
+          const e = d.o.getPatchNotes("7.35", r.r.LANGUAGE),
             a =
               "schinese" == r.r.LANGUAGE || "tchinese" == r.r.LANGUAGE
                 ? "ringmaster_trailer_schinese"
-                : "ringmaster_trailer_english";
-          let t = (0, o.ww)((0, o.sf)(r.r.LANGUAGE));
-          "zh-cn" === t ? (t = "zh-Hans") : "zh-tw" === t && (t = "zh-Hant");
-          let l = "templatepage_logo_en";
+                : "ringmaster_trailer_english",
+            t = n.B5.Get().getHeroData(131);
+          let l = (0, o.ww)((0, o.sf)(r.r.LANGUAGE));
+          "zh-cn" === l ? (l = "zh-Hans") : "zh-tw" === l && (l = "zh-Hant");
+          let s = "templatepage_logo_en";
           return (
-            "schinese" == r.r.LANGUAGE && (l = "templatepage_logo_cn"),
+            "schinese" == r.r.LANGUAGE && (s = "templatepage_logo_cn"),
             m.createElement(
               "div",
               { id: "TemplatePage", className: N().TemplatePage },
@@ -645,7 +779,7 @@
                   m.createElement("track", {
                     label: `${r.r.LANGUAGE}`,
                     kind: "captions",
-                    srcLang: t,
+                    srcLang: l,
                     src: `${r.r.VIDEO_URL}/international2024/ringmaster_${r.r.LANGUAGE}.vtt`,
                     default: !0,
                   }),
@@ -668,7 +802,7 @@
                 m.createElement(
                   "title",
                   null,
-                  (0, n.Wn)("#templatepage_website_title"),
+                  (0, i.Wn)("#templatepage_website_title"),
                 ),
               ),
               m.createElement(
@@ -677,7 +811,7 @@
                   ref: this.parallaxContainerRef,
                   className: (0, p.A)(N().PageContainer, N().Parallax),
                 },
-                m.createElement(d.A, { bOverlapping: !0 }),
+                m.createElement(_.A, { bOverlapping: !0 }),
                 m.createElement(
                   "div",
                   { className: (0, p.A)(N().HeaderSection) },
@@ -686,7 +820,7 @@
                     { className: (0, p.A)(N().LogoContainer) },
                     m.createElement("img", {
                       className: N().LogoImage,
-                      src: `${r.r.IMG_URL}/templatepage/${l}.png`,
+                      src: `${r.r.IMG_URL}/templatepage/${s}.png`,
                     }),
                   ),
                   m.createElement(
@@ -701,7 +835,7 @@
                           N().TitleExtraLarge,
                         ),
                       },
-                      (0, n.Wn)("#templatepage_website_title"),
+                      (0, i.Wn)("#templatepage_website_title"),
                     ),
                     m.createElement(
                       "p",
@@ -712,11 +846,11 @@
                           N().DisplayMedium,
                         ),
                       },
-                      (0, n.Wn)("#templatepage_website_introduction"),
+                      (0, i.Wn)("#templatepage_website_introduction"),
                     ),
                   ),
                 ),
-                W(),
+                R(),
                 m.createElement(
                   "div",
                   {
@@ -741,7 +875,7 @@
                             N().TitleMedium,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_howitworks_section_title"),
+                        (0, i.Wn)("#templatepage_howitworks_section_title"),
                       ),
                       m.createElement(
                         "p",
@@ -753,83 +887,30 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_howitworks_section_introduction",
                         ),
                       ),
                       m.createElement(
-                        "ol",
-                        null,
-                        m.createElement(
-                          "li",
-                          {
-                            className: (0, p.A)(
-                              N().BodyFont,
-                              N().BodyMedium,
-                              N().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#templatepage_howitworks_section_filelist_li1",
+                        "a",
+                        {
+                          href: "https://confluence.valve.org/display/DOTA/Making+a+new+Dota+webpage",
+                          target: "blank",
+                          className: (0, p.A)(
+                            N().WebsiteDescription,
+                            N().DisplayFont,
+                            N().DisplaySmall,
+                            N().LightGrayText,
                           ),
-                        ),
-                        m.createElement(
-                          "li",
-                          {
-                            className: (0, p.A)(
-                              N().BodyFont,
-                              N().BodyMedium,
-                              N().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#templatepage_howitworks_section_filelist_li2",
-                          ),
-                        ),
-                        m.createElement(
-                          "li",
-                          {
-                            className: (0, p.A)(
-                              N().BodyFont,
-                              N().BodyMedium,
-                              N().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#templatepage_howitworks_section_filelist_li3",
-                          ),
-                        ),
-                        m.createElement(
-                          "li",
-                          {
-                            className: (0, p.A)(
-                              N().BodyFont,
-                              N().BodyMedium,
-                              N().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#templatepage_howitworks_section_filelist_li4",
-                          ),
-                        ),
-                        m.createElement(
-                          "li",
-                          {
-                            className: (0, p.A)(
-                              N().BodyFont,
-                              N().BodyMedium,
-                              N().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#templatepage_howitworks_section_filelist_li5",
-                          ),
+                        },
+                        (0, i.Wn)(
+                          "#templatepage_howitworks_section_introduction_link",
                         ),
                       ),
                     ),
                   ),
                 ),
-                W(),
+                R(),
                 m.createElement(
                   "div",
                   {
@@ -853,13 +934,13 @@
                           N().LightGrayText,
                         ),
                       },
-                      (0, n.Wn)(
+                      (0, i.Wn)(
                         "#templatepage_website_mobileonly_introduction",
                       ),
                     ),
                   ),
                 ),
-                W(N().MobileOnly),
+                R(N().MobileOnly),
                 m.createElement(
                   "div",
                   {
@@ -885,7 +966,7 @@
                             N().GrayText,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_section_subheader"),
+                        (0, i.Wn)("#templatepage_section_subheader"),
                       ),
                       m.createElement(
                         "h2",
@@ -896,7 +977,7 @@
                             N().TitleExtraLarge,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_components_section_title"),
+                        (0, i.Wn)("#templatepage_components_section_title"),
                       ),
                       m.createElement(
                         "p",
@@ -908,7 +989,7 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_components_section_introduction",
                         ),
                       ),
@@ -919,7 +1000,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(x, {
+                        m.createElement(B, {
                           image: "templatepage/image_1_1.png",
                           video: "templatepage/video_1_1.mp4",
                         }),
@@ -935,7 +1016,7 @@
                                 N().LabelExtraLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical",
                             ),
                           ),
@@ -949,7 +1030,7 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical_description",
                             ),
                           ),
@@ -958,7 +1039,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(x, {
+                        m.createElement(B, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -973,7 +1054,7 @@
                                 N().LabelExtraLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical",
                             ),
                           ),
@@ -987,7 +1068,7 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical_description",
                             ),
                           ),
@@ -996,7 +1077,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(x, {
+                        m.createElement(B, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1011,7 +1092,7 @@
                                 N().LabelExtraLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical",
                             ),
                           ),
@@ -1025,21 +1106,21 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical_description",
                             ),
                           ),
                         ),
                       ),
                     ),
-                    k(),
+                    f(),
                     m.createElement(
                       "div",
                       { className: N().Grid_2 },
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(x, {
+                        m.createElement(B, {
                           image: "templatepage/image_3_2.png",
                         }),
                         m.createElement(
@@ -1054,7 +1135,7 @@
                                 N().LabelExtraLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical",
                             ),
                           ),
@@ -1068,7 +1149,7 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical_larger_description",
                             ),
                           ),
@@ -1077,7 +1158,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(x, {
+                        m.createElement(B, {
                           image: "templatepage/image_3_2.png",
                           video: "templatepage/video_3_2.mp4",
                         }),
@@ -1093,7 +1174,7 @@
                                 N().LabelExtraLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical",
                             ),
                           ),
@@ -1107,14 +1188,14 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical_larger_description",
                             ),
                           ),
                         ),
                       ),
                     ),
-                    k(),
+                    f(),
                     m.createElement(
                       "div",
                       {
@@ -1123,7 +1204,7 @@
                           N().WideImage,
                         ),
                       },
-                      m.createElement(x, {
+                      m.createElement(B, {
                         image: "templatepage/image_3_2.png",
                       }),
                       m.createElement(
@@ -1138,7 +1219,7 @@
                               N().TitleMedium,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_horizontal",
                           ),
                         ),
@@ -1152,7 +1233,7 @@
                               N().LightGrayText,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_horizontal_description",
                           ),
                         ),
@@ -1167,7 +1248,7 @@
                           N().WideImage,
                         ),
                       },
-                      m.createElement(x, {
+                      m.createElement(B, {
                         image: "templatepage/image_3_2.png",
                         video: "templatepage/video_3_2.mp4",
                       }),
@@ -1183,7 +1264,7 @@
                               N().TitleMedium,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_horizontal_flipped",
                           ),
                         ),
@@ -1197,13 +1278,13 @@
                               N().LightGrayText,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_horizontal_description",
                           ),
                         ),
                       ),
                     ),
-                    k(),
+                    f(),
                     m.createElement(
                       "div",
                       { className: N().Grid_2 },
@@ -1215,7 +1296,7 @@
                             N().NarrowImage,
                           ),
                         },
-                        m.createElement(x, {
+                        m.createElement(B, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1230,7 +1311,7 @@
                                 N().LabelExtraLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_horizontal",
                             ),
                           ),
@@ -1244,7 +1325,7 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_horizontal_small_description",
                             ),
                           ),
@@ -1258,7 +1339,7 @@
                             N().NarrowImage,
                           ),
                         },
-                        m.createElement(x, {
+                        m.createElement(B, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1273,7 +1354,7 @@
                                 N().LabelExtraLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_horizontal",
                             ),
                           ),
@@ -1287,14 +1368,14 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_components_textimageblock_horizontal_small_description",
                             ),
                           ),
                         ),
                       ),
                     ),
-                    k(),
+                    f(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1307,7 +1388,7 @@
                             N().TitleLarge,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_components_text_section_title",
                         ),
                       ),
@@ -1321,7 +1402,7 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_components_text_section_description",
                         ),
                       ),
@@ -1329,7 +1410,7 @@
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().ImmersiveTextImageBlock) },
-                      m.createElement(x, {
+                      m.createElement(B, {
                         image: "templatepage/image_21_9.png",
                         video: "templatepage/video_21_9.mp4",
                       }),
@@ -1345,7 +1426,7 @@
                               N().TitleMedium,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_immersive",
                           ),
                         ),
@@ -1359,7 +1440,7 @@
                               N().LightGrayText,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_immersize_description",
                           ),
                         ),
@@ -1368,7 +1449,7 @@
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().ActionTextImageBlock) },
-                      m.createElement(x, {
+                      m.createElement(B, {
                         image: "templatepage/image_16_9.png",
                       }),
                       m.createElement(
@@ -1383,7 +1464,7 @@
                               N().LabelExtraLarge,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_actionable",
                           ),
                         ),
@@ -1397,7 +1478,7 @@
                               N().LightGrayText,
                             ),
                           },
-                          (0, n.Wn)(
+                          (0, i.Wn)(
                             "#templatepage_components_textimageblock_actionable_description",
                           ),
                         ),
@@ -1410,15 +1491,61 @@
                           m.createElement(
                             "div",
                             { className: N().ButtonText },
-                            (0, n.Wn)("Button action"),
+                            (0, i.Wn)("Button action"),
                           ),
-                          m.createElement(h.U, null),
+                          m.createElement(v.U, null),
                         ),
                       ),
                     ),
+                    f(),
+                    m.createElement(
+                      "div",
+                      { className: N().TextSection },
+                      m.createElement(
+                        "p",
+                        {
+                          className: (0, p.A)(
+                            N().BlockTitle,
+                            N().TitleFont,
+                            N().TitleLarge,
+                          ),
+                        },
+                        (0, i.Wn)("Hero reworks"),
+                      ),
+                      m.createElement(
+                        "p",
+                        {
+                          className: (0, p.A)(
+                            N().BlockDescription,
+                            N().DisplayFont,
+                            N().DisplaySmall,
+                            N().LightGrayText,
+                          ),
+                        },
+                        (0, i.Wn)(
+                          "Use these to call out nothworthy hero reworks",
+                        ),
+                      ),
+                    ),
+                    m.createElement(
+                      "div",
+                      { className: N().HeroReworkContainer },
+                      m.createElement(C, {
+                        patchnotes: e?.heroes,
+                        heroname: "muerta",
+                      }),
+                      m.createElement(C, {
+                        patchnotes: e?.heroes,
+                        heroname: "clinkz",
+                      }),
+                      m.createElement(C, {
+                        patchnotes: e?.heroes,
+                        heroname: "arc_warden",
+                      }),
+                    ),
                   ),
                 ),
-                W(),
+                R(),
                 m.createElement(
                   "div",
                   {
@@ -1441,7 +1568,7 @@
                             N().GrayText,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_newhero_section_subheader"),
+                        (0, i.Wn)("#templatepage_newhero_section_subheader"),
                       ),
                       m.createElement(
                         "h2",
@@ -1452,7 +1579,7 @@
                             N().TitleExtraLarge,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_newhero_section_title"),
+                        (0, i.Wn)("#templatepage_newhero_section_title"),
                       ),
                       m.createElement(
                         "p",
@@ -1464,10 +1591,10 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_newhero_introduction"),
+                        (0, i.Wn)("#templatepage_newhero_introduction"),
                       ),
                     ),
-                    k(),
+                    f(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1508,7 +1635,7 @@
                               N().TitleSmall,
                             ),
                           },
-                          (0, n.Wn)("#hero_attack_type_ranged"),
+                          (0, i.Wn)("#hero_attack_type_ranged"),
                         ),
                         m.createElement(
                           "p",
@@ -1519,7 +1646,7 @@
                               N().TitleSmall,
                             ),
                           },
-                          (0, n.Wn)("#hero_support"),
+                          (0, i.Wn)("#hero_support"),
                         ),
                         m.createElement(
                           "p",
@@ -1530,7 +1657,7 @@
                               N().TitleSmall,
                             ),
                           },
-                          (0, n.Wn)("#hero_disabler"),
+                          (0, i.Wn)("#hero_disabler"),
                         ),
                         m.createElement(
                           "p",
@@ -1541,7 +1668,7 @@
                               N().TitleSmall,
                             ),
                           },
-                          (0, n.Wn)("#hero_escape"),
+                          (0, i.Wn)("#hero_escape"),
                         ),
                       ),
                       m.createElement(
@@ -1554,23 +1681,23 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_newhero_description"),
+                        (0, i.Wn)("#templatepage_newhero_description"),
                       ),
                       m.createElement(
                         "div",
                         { className: N().ButtonsSection },
                         m.createElement(
-                          T.N_,
-                          { to: v.J.hero("ringmaster") },
+                          h.N_,
+                          { to: T.J.hero("ringmaster") },
                           m.createElement(
                             "div",
                             { className: N().StandardButton },
                             m.createElement(
                               "div",
                               { className: N().ButtonText },
-                              (0, n.Wn)("#templatepage_hero_detail_button"),
+                              (0, i.Wn)("#templatepage_hero_detail_button"),
                             ),
-                            m.createElement(h.U, null),
+                            m.createElement(v.U, null),
                           ),
                         ),
                         m.createElement(
@@ -1582,9 +1709,9 @@
                           m.createElement(
                             "div",
                             { className: N().ButtonText },
-                            (0, n.Wn)("#templatepage_play_trailer_button"),
+                            (0, i.Wn)("#templatepage_play_trailer_button"),
                           ),
-                          m.createElement(h.U, null),
+                          m.createElement(v.U, null),
                         ),
                       ),
                     ),
@@ -1599,12 +1726,12 @@
                       className: N().AbilityCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 56.25,
-                      totalSlides: C.length,
+                      totalSlides: G.length,
                     },
                     m.createElement(
                       y.Ap,
                       { className: N().AbilitySlider },
-                      C.map((e, a) =>
+                      G.map((e, a) =>
                         m.createElement(
                           y.q7,
                           {
@@ -1637,10 +1764,6 @@
                           m.createElement(
                             "div",
                             { className: N().SlideAbilityInfoContainer },
-                            m.createElement("img", {
-                              className: N().SlideAbilityIcon,
-                              src: `${r.r.IMG_URL}/${e.imgSrc}`,
-                            }),
                             m.createElement(
                               "div",
                               { className: N().AbilityText },
@@ -1649,11 +1772,12 @@
                                 {
                                   className: (0, p.A)(
                                     N().AbilityName,
-                                    N().LabelFont,
-                                    N().LabelMedium,
+                                    N().TitleFont,
+                                    N().TitleSmall,
                                   ),
                                 },
-                                (0, n.Wn)(`${e.abilityName}`),
+                                t?.abilities.find((a) => a.id == e.abilityId)
+                                  .name_loc,
                               ),
                               m.createElement(
                                 "div",
@@ -1664,7 +1788,9 @@
                                     N().BodyMedium,
                                   ),
                                 },
-                                (0, n.Wn)(`${e.abilityDesc}`),
+                                this.convertAbilityDesc(
+                                  t?.abilities.find((a) => a.id == e.abilityId),
+                                ),
                               ),
                             ),
                           ),
@@ -1686,28 +1812,29 @@
                               N().LabelLarge,
                             ),
                           },
-                          (0, n.Wn)("#templatepage_abilities_heading"),
+                          (0, i.Wn)("#templatepage_abilities_heading"),
                         ),
                         m.createElement(
                           "div",
                           { className: (0, p.A)(N().CarouselDots) },
-                          C.map((e, a) =>
+                          G.map((e, a) =>
                             m.createElement(
                               y.cL,
                               {
                                 key: `HeroAbilityDot-${a}`,
                                 slide: a,
-                                className: N().AbilitySelector,
-                                style: {
-                                  backgroundImage: e.bIsShard
-                                    ? `url(${r.r.IMG_URL}heroes/stats/aghs_shard.png ), url( ${r.r.IMG_URL}/${e.imgSrc} )`
-                                    : `url( ${r.r.IMG_URL}/${e.imgSrc} )`,
-                                  backgroundSize: e.bIsShard
-                                    ? "cover, cover"
-                                    : "cover",
-                                },
+                                className: N().AbilitySelectorDot,
                               },
-                              m.createElement("div", null),
+                              m.createElement(S.cT, {
+                                heroData: t,
+                                abilityData: t?.abilities.find(
+                                  (a) => a.id == e.abilityId,
+                                ),
+                                bShowVideo: !1,
+                                abilityHotKey: e.hotKey,
+                                additionalClassName: N().HeroesAbility,
+                                abilityType: N().Active,
+                              }),
                             ),
                           ),
                         ),
@@ -1729,11 +1856,11 @@
                     m.createElement(
                       "div",
                       { className: N().WebsiteSectionHeader },
-                      m.createElement(D, { subHeader: "Hero name" }),
+                      m.createElement(F, { subHeader: "Hero name" }),
                       m.createElement(
                         "h2",
                         { className: (0, p.A)(N().TitleFont, N().TitleMedium) },
-                        (0, n.Wn)("#templatepage_wallpapers"),
+                        (0, i.Wn)("#templatepage_wallpapers"),
                       ),
                     ),
                     m.createElement(
@@ -1751,6 +1878,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail1.png`,
                             }),
+                            m.createElement(I, null),
                           ),
                         ),
                         m.createElement(
@@ -1762,6 +1890,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail2.png`,
                             }),
+                            m.createElement(I, null),
                           ),
                         ),
                       ),
@@ -1777,6 +1906,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail3.png`,
                             }),
+                            m.createElement(I, null),
                           ),
                         ),
                         m.createElement(
@@ -1788,6 +1918,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail4.png`,
                             }),
+                            m.createElement(I, null),
                           ),
                         ),
                       ),
@@ -1803,6 +1934,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail5.png`,
                             }),
+                            m.createElement(I, null),
                           ),
                         ),
                         m.createElement(
@@ -1814,6 +1946,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail6.png`,
                             }),
+                            m.createElement(I, null),
                           ),
                         ),
                       ),
@@ -1841,22 +1974,22 @@
                             N().TitleSmall,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_herodetails_section_subheader",
                         ),
                       ),
                       m.createElement(
-                        T.N_,
-                        { to: v.J.hero("ringmaster") },
+                        h.N_,
+                        { to: T.J.hero("ringmaster") },
                         m.createElement(
                           "div",
                           { className: N().StandardButton },
                           m.createElement(
                             "div",
                             { className: N().ButtonText },
-                            (0, n.Wn)("#templatepage_hero_detail_button"),
+                            (0, i.Wn)("#templatepage_hero_detail_button"),
                           ),
-                          m.createElement(h.U, null),
+                          m.createElement(v.U, null),
                         ),
                       ),
                     ),
@@ -1870,7 +2003,7 @@
                     ),
                   ),
                 ),
-                W(),
+                R(),
                 m.createElement(
                   "div",
                   {
@@ -1895,7 +2028,7 @@
                             N().TitleExtraLarge,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_treasure_section_title"),
+                        (0, i.Wn)("#templatepage_treasure_section_title"),
                       ),
                       m.createElement(
                         "p",
@@ -1907,7 +2040,7 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_treasure_section_introduction",
                         ),
                       ),
@@ -1921,7 +2054,7 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_treasure_section_description"),
+                        (0, i.Wn)("#templatepage_treasure_section_description"),
                       ),
                     ),
                     m.createElement(
@@ -1947,7 +2080,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 0,
                             video: "set_ancientapparation",
                             name: "#frosty_treasure_treasure_name_1",
@@ -1966,7 +2099,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 1,
                             video: "set_snapfire",
                             name: "#frosty_treasure_treasure_name_2",
@@ -1985,7 +2118,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 2,
                             video: "set_alchemist",
                             name: "#frosty_treasure_treasure_name_3",
@@ -2004,7 +2137,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 3,
                             video: "set_arcwarden",
                             name: "#frosty_treasure_treasure_name_4",
@@ -2023,7 +2156,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 4,
                             video: "set_pudge",
                             name: "#frosty_treasure_treasure_name_5",
@@ -2042,7 +2175,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 5,
                             video: "set_tusk",
                             name: "#frosty_treasure_treasure_name_6",
@@ -2061,7 +2194,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 6,
                             video: "set_primalbeast",
                             name: "#frosty_treasure_treasure_name_7",
@@ -2080,7 +2213,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 7,
                             video: "set_crystalmaiden",
                             name: "#frosty_treasure_treasure_name_8",
@@ -2099,7 +2232,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 8,
                             video: "set_wraithking",
                             name: "#frosty_treasure_treasure_name_9",
@@ -2118,7 +2251,7 @@
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(B, {
+                          m.createElement(w, {
                             index: 9,
                             video: "set_roshan",
                             name: "#frosty_treasure_treasure_name_10",
@@ -2139,7 +2272,7 @@
                             N().LabelSmall,
                           ),
                         },
-                        (0, n.Wn)(this.state.heroName),
+                        (0, i.Wn)(this.state.heroName),
                       ),
                       m.createElement(
                         "p",
@@ -2150,7 +2283,7 @@
                             N().DisplaySmall,
                           ),
                         },
-                        (0, n.Wn)(this.state.treasureName),
+                        (0, i.Wn)(this.state.treasureName),
                       ),
                       m.createElement(
                         "div",
@@ -2227,11 +2360,11 @@
                         ),
                       ),
                     ),
-                    k(),
+                    f(),
                     m.createElement(
                       "p",
                       { className: (0, p.A)(N().TitleFont, N().TitleSmall) },
-                      (0, n.Wn)("#templatepage_treasure_section_treasureinfo"),
+                      (0, i.Wn)("#templatepage_treasure_section_treasureinfo"),
                     ),
                     m.createElement(
                       "div",
@@ -2259,7 +2392,7 @@
                                 N().LabelLarge,
                               ),
                             },
-                            (0, n.Wn)(
+                            (0, i.Wn)(
                               "#templatepage_treasure_section_chestname",
                             ),
                           ),
@@ -2273,7 +2406,7 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)("#templatepage_lipsum_medium"),
+                            (0, i.Wn)("#templatepage_lipsum_medium"),
                           ),
                         ),
                       ),
@@ -2300,7 +2433,7 @@
                                 N().LabelLarge,
                               ),
                             },
-                            (0, n.Wn)("#templatepage_treasure_section_keyname"),
+                            (0, i.Wn)("#templatepage_treasure_section_keyname"),
                           ),
                           m.createElement(
                             "p",
@@ -2312,14 +2445,14 @@
                                 N().LightGrayText,
                               ),
                             },
-                            (0, n.Wn)("#templatepage_lipsum_medium"),
+                            (0, i.Wn)("#templatepage_lipsum_medium"),
                           ),
                         ),
                       ),
                     ),
                   ),
                 ),
-                W(),
+                R(),
                 m.createElement(
                   "div",
                   {
@@ -2344,7 +2477,7 @@
                             N().TitleExtraLarge,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_typography_section_title"),
+                        (0, i.Wn)("#templatepage_typography_section_title"),
                       ),
                       m.createElement(
                         "p",
@@ -2356,19 +2489,19 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_typography_section_introduction",
                         ),
                       ),
                     ),
-                    k(),
+                    f(),
                     m.createElement(
                       "div",
                       { className: N().TextWaterfallExampleBlock },
                       m.createElement(
                         "p",
                         { className: N().TextWaterfallExampleBlockTitle },
-                        (0, n.Wn)("Title"),
+                        (0, i.Wn)("Title"),
                       ),
                       m.createElement(
                         "p",
@@ -2378,22 +2511,22 @@
                             N().TitleFont,
                           ),
                         },
-                        (0, n.Wn)("Title Extra Large"),
+                        (0, i.Wn)("Title Extra Large"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().TitleLarge, N().TitleFont) },
-                        (0, n.Wn)("Title Large"),
+                        (0, i.Wn)("Title Large"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().TitleMedium, N().TitleFont) },
-                        (0, n.Wn)("Title Medium"),
+                        (0, i.Wn)("Title Medium"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().TitleSmall, N().TitleFont) },
-                        (0, n.Wn)("Title Small"),
+                        (0, i.Wn)("Title Small"),
                       ),
                       m.createElement(
                         "p",
@@ -2403,7 +2536,7 @@
                             N().TitleFont,
                           ),
                         },
-                        (0, n.Wn)("Title Extra Small"),
+                        (0, i.Wn)("Title Extra Small"),
                       ),
                     ),
                     m.createElement(
@@ -2412,7 +2545,7 @@
                       m.createElement(
                         "p",
                         { className: N().TextWaterfallExampleBlockTitle },
-                        (0, n.Wn)("Display"),
+                        (0, i.Wn)("Display"),
                       ),
                       m.createElement(
                         "p",
@@ -2422,7 +2555,7 @@
                             N().DisplayFont,
                           ),
                         },
-                        (0, n.Wn)("Display Extra Large"),
+                        (0, i.Wn)("Display Extra Large"),
                       ),
                       m.createElement(
                         "p",
@@ -2432,7 +2565,7 @@
                             N().DisplayFont,
                           ),
                         },
-                        (0, n.Wn)("Display Large"),
+                        (0, i.Wn)("Display Large"),
                       ),
                       m.createElement(
                         "p",
@@ -2442,7 +2575,7 @@
                             N().DisplayFont,
                           ),
                         },
-                        (0, n.Wn)("Display Medium"),
+                        (0, i.Wn)("Display Medium"),
                       ),
                       m.createElement(
                         "p",
@@ -2452,7 +2585,7 @@
                             N().DisplayFont,
                           ),
                         },
-                        (0, n.Wn)("Display Small"),
+                        (0, i.Wn)("Display Small"),
                       ),
                     ),
                     m.createElement(
@@ -2461,29 +2594,29 @@
                       m.createElement(
                         "p",
                         { className: N().TextWaterfallExampleBlockTitle },
-                        (0, n.Wn)("Body"),
+                        (0, i.Wn)("Body"),
                       ),
                       m.createElement(
                         "p",
                         {
                           className: (0, p.A)(N().BodyExtraLarge, N().BodyFont),
                         },
-                        (0, n.Wn)("Body Extra Large"),
+                        (0, i.Wn)("Body Extra Large"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().BodyLarge, N().BodyFont) },
-                        (0, n.Wn)("Body Large"),
+                        (0, i.Wn)("Body Large"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().BodyMedium, N().BodyFont) },
-                        (0, n.Wn)("Body Medium"),
+                        (0, i.Wn)("Body Medium"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().BodySmall, N().BodyFont) },
-                        (0, n.Wn)("Body Small"),
+                        (0, i.Wn)("Body Small"),
                       ),
                     ),
                     m.createElement(
@@ -2492,7 +2625,7 @@
                       m.createElement(
                         "p",
                         { className: N().TextWaterfallExampleBlockTitle },
-                        (0, n.Wn)("Label"),
+                        (0, i.Wn)("Label"),
                       ),
                       m.createElement(
                         "p",
@@ -2502,27 +2635,27 @@
                             N().LabelFont,
                           ),
                         },
-                        (0, n.Wn)("Label Extra Large"),
+                        (0, i.Wn)("Label Extra Large"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().LabelLarge, N().LabelFont) },
-                        (0, n.Wn)("Label Large"),
+                        (0, i.Wn)("Label Large"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().LabelMedium, N().LabelFont) },
-                        (0, n.Wn)("Label Medium"),
+                        (0, i.Wn)("Label Medium"),
                       ),
                       m.createElement(
                         "p",
                         { className: (0, p.A)(N().LabelSmall, N().LabelFont) },
-                        (0, n.Wn)("Label Small"),
+                        (0, i.Wn)("Label Small"),
                       ),
                     ),
                   ),
                 ),
-                W(),
+                R(),
                 m.createElement(
                   "div",
                   {
@@ -2547,7 +2680,7 @@
                             N().LabelMedium,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_gameplay_section_subtitle"),
+                        (0, i.Wn)("#templatepage_gameplay_section_subtitle"),
                       ),
                       m.createElement(
                         "h2",
@@ -2558,7 +2691,7 @@
                             N().TitleExtraLarge,
                           ),
                         },
-                        (0, n.Wn)("#templatepage_gameplay_section_title"),
+                        (0, i.Wn)("#templatepage_gameplay_section_title"),
                       ),
                       m.createElement(
                         "p",
@@ -2570,7 +2703,7 @@
                             N().LightGrayText,
                           ),
                         },
-                        (0, n.Wn)(
+                        (0, i.Wn)(
                           "#templatepage_patchnotes_new_items_introduction",
                         ),
                       ),
@@ -2578,37 +2711,37 @@
                     m.createElement(
                       "div",
                       { className: N().GameItemsContainer },
-                      m.createElement(I, {
+                      m.createElement(H, {
                         name: "item_angels_demise",
                         components: ["phylactery", "lesser_crit"],
                         recipeCost: 600,
                       }),
-                      m.createElement(I, {
+                      m.createElement(H, {
                         name: "item_devastator",
                         components: ["witch_blade", "mystic_staff"],
                       }),
-                      m.createElement(I, {
+                      m.createElement(H, {
                         name: "item_arcane_boots",
                         components: ["boots", "ring_of_basilius"],
                         recipeCost: 375,
                       }),
-                      m.createElement(I, {
+                      m.createElement(H, {
                         name: "item_bloodthorn",
                         components: ["orchid", "javelin", "hyperstone"],
                         recipeCost: 450,
                       }),
-                      m.createElement(I, { name: "item_safety_bubble" }),
-                      m.createElement(I, { name: "item_light_collector" }),
-                      m.createElement(I, { name: "item_doubloon" }),
-                      m.createElement(I, { name: "item_ancient_guardian" }),
-                      m.createElement(I, { name: "item_unwavering_condition" }),
-                      m.createElement(I, { name: "item_panic_button" }),
+                      m.createElement(H, { name: "item_safety_bubble" }),
+                      m.createElement(H, { name: "item_light_collector" }),
+                      m.createElement(H, { name: "item_doubloon" }),
+                      m.createElement(H, { name: "item_ancient_guardian" }),
+                      m.createElement(H, { name: "item_unwavering_condition" }),
+                      m.createElement(H, { name: "item_panic_button" }),
                     ),
                     m.createElement(
                       "div",
                       { className: N().PatchnotesContainer },
                       m.createElement(u.fs, {
-                        patchnotes: e?.generic,
+                        patchnotes: e?.general_notes,
                         headerClassName: N().PatchNotesHeaderLabel,
                         notesListClassName: N().PatchNotesList,
                       }),
@@ -2642,8 +2775,8 @@
           );
         }
       };
-      H = (0, l.Cg)([s.PA], H);
-      const G = H;
+      M = (0, l.Cg)([s.PA], M);
+      const U = M;
     },
   },
 ]);

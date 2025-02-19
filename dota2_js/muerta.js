@@ -1634,7 +1634,7 @@
                         ),
                       ),
                       c.createElement(p.fs, {
-                        patchnotes: e?.generic,
+                        patchnotes: e?.general_notes,
                         headerClassName: g().PatchNotesHeaderLabel,
                         notesListClassName: g().PatchNotesList,
                       }),

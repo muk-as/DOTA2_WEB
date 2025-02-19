@@ -1523,7 +1523,7 @@
                     "div",
                     { className: E().GameplayUpdate },
                     o.createElement(N.fs, {
-                      patchnotes: e?.generic,
+                      patchnotes: e?.general_notes,
                       headerClassName: E().PatchNotesHeaderLabel,
                       notesListClassName: E().PatchNotesList,
                     }),

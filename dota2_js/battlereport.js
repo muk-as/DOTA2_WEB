@@ -44,80 +44,80 @@
       a.r(t), a.d(t, { default: () => g });
       var n = a(76489),
         c = a(89506),
-        i = a(27866),
-        l = a(7552),
+        l = a(27866),
+        i = a(7552),
         s = a(83640),
         r = a(47202),
-        d = a(36305),
-        _ = a(94610),
+        _ = a(36305),
+        d = a(94610),
         m = a(46994),
         o = a.n(m),
         u = a(61840),
         p = a(68446);
       const E = (e) =>
-          l.createElement(
+          i.createElement(
             "div",
             { className: o().Text },
-            l.createElement(
+            i.createElement(
               "div",
               { className: o().Headline },
-              (0, i.Wn)(e.title),
+              (0, l.Wn)(e.title),
             ),
-            l.createElement(
+            i.createElement(
               "div",
               { className: o().Description },
-              (0, i.Wn)(e.description),
+              (0, l.Wn)(e.description),
             ),
           ),
         j = (e) =>
-          l.createElement(
+          i.createElement(
             "div",
             { className: o().SectionContent },
-            l.createElement(E, { title: e.title, description: e.description }),
-            l.createElement("img", {
+            i.createElement(E, { title: e.title, description: e.description }),
+            i.createElement("img", {
               className: o().Image,
               src: `${c.r.IMG_URL}/` + e.image,
             }),
           ),
         g = (0, p.PA)(() => {
           const e = n.o.getPatchNotes("7.31d", c.r.LANGUAGE);
-          return l.createElement(
+          return i.createElement(
             "div",
             { className: o().BattleReportPage },
-            l.createElement(
+            i.createElement(
               s.mg,
               null,
-              l.createElement("title", null, (0, i.Wn)("#june22_title")),
+              i.createElement("title", null, (0, l.Wn)("#june22_title")),
             ),
-            l.createElement(r.A, { bOverlapping: !0 }),
-            l.createElement(_.A, null),
-            l.createElement("div", {
+            i.createElement(r.A, { bOverlapping: !0 }),
+            i.createElement(d.A, null),
+            i.createElement("div", {
               className: o().HeaderImage,
               style: {
                 backgroundImage: `url( ${c.r.IMG_URL}juneupdate22/keyart.jpg )`,
               },
             }),
-            l.createElement(
+            i.createElement(
               "div",
               { className: o().HeaderText },
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().MainTitle },
-                (0, i.Wn)("#june22_title"),
+                (0, l.Wn)("#june22_title"),
               ),
-              l.createElement("div", { className: o().MainTitleDivider }),
-              l.createElement(
+              i.createElement("div", { className: o().MainTitleDivider }),
+              i.createElement(
                 "div",
                 { className: o().MainSubtitle },
-                (0, i.Wn)("#june22_subtitle"),
+                (0, l.Wn)("#june22_subtitle"),
               ),
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().MainDesc },
-                (0, i.Wn)("#june22_desc"),
+                (0, l.Wn)("#june22_desc"),
               ),
             ),
-            l.createElement(
+            i.createElement(
               "div",
               {
                 className: o().Sections,
@@ -125,274 +125,274 @@
                   backgroundImage: `url( ${c.r.IMG_URL}juneupdate22/bg_repeat.jpg )`,
                 },
               },
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().SectionContainer },
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionTitlePrefix },
-                  (0, i.Wn)("#new_feature"),
+                  (0, l.Wn)("#new_feature"),
                 ),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionGradHeader },
-                  l.createElement(
+                  i.createElement(
                     "div",
                     { className: o().SectionTitle },
-                    (0, i.Wn)("#june22_battle_report_title"),
+                    (0, l.Wn)("#june22_battle_report_title"),
                   ),
                 ),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_battle_report_head01",
                   description: "#june22_battle_report_desc01",
                   image: "juneupdate22/br_featured_stats2.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_battle_report_head02",
                   description: "#june22_battle_report_desc02",
                   image: "juneupdate22/br_highlights.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_battle_report_head03",
                   description: "#june22_battle_report_desc03",
                   image: "juneupdate22/br_analysis.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_battle_report_head04",
                   description: "#june22_battle_report_desc04",
                   image: "juneupdate22/br_summary.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_battle_report_head05",
                   description: "#june22_battle_report_desc05",
                   image: "juneupdate22/br_exclusive.jpg",
                 }),
               ),
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().SectionContainer },
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionTitlePrefix },
-                  (0, i.Wn)("#new_feature"),
+                  (0, l.Wn)("#new_feature"),
                 ),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionGradHeader },
-                  l.createElement(
+                  i.createElement(
                     "div",
                     { className: o().SectionTitle },
-                    (0, i.Wn)("#june22_featured_game_mode_title"),
+                    (0, l.Wn)("#june22_featured_game_mode_title"),
                   ),
                 ),
-                l.createElement("img", {
+                i.createElement("img", {
                   className: o().DescRowImage,
                   src: `${c.r.IMG_URL}/juneupdate22/weekly_spotlight.png`,
                 }),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().DescRow },
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_featured_game_mode_head01",
                     description: "#june22_featured_game_mode_desc01",
                   }),
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_featured_game_mode_head02",
                     description: "#june22_featured_game_mode_desc02",
                   }),
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_featured_game_mode_head03",
                     description: "#june22_featured_game_mode_desc03",
                   }),
                 ),
               ),
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().SectionContainer },
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionTitlePrefix },
-                  (0, i.Wn)("#new_feature"),
+                  (0, l.Wn)("#new_feature"),
                 ),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionGradHeader },
-                  l.createElement(
+                  i.createElement(
                     "div",
                     { className: o().SectionTitle },
-                    (0, i.Wn)("#june22_immortal_fx_title"),
+                    (0, l.Wn)("#june22_immortal_fx_title"),
                   ),
                 ),
-                l.createElement("img", {
+                i.createElement("img", {
                   className: o().DescRowImage,
                   src: `${c.r.IMG_URL}/juneupdate22/immortal_fx.png`,
                 }),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().DescRow },
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_immortal_fx_head01",
                     description: "#june22_immortal_fx_desc01",
                   }),
                 ),
               ),
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().SectionContainer },
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionTitlePrefix },
-                  (0, i.Wn)("#new_feature"),
+                  (0, l.Wn)("#new_feature"),
                 ),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionGradHeader },
-                  l.createElement(
+                  i.createElement(
                     "div",
                     { className: o().SectionTitle },
-                    (0, i.Wn)("#june22_match_clips_title"),
+                    (0, l.Wn)("#june22_match_clips_title"),
                   ),
                 ),
-                l.createElement("img", {
+                i.createElement("img", {
                   className: o().DescRowImage,
                   src: `${c.r.IMG_URL}/juneupdate22/clip_builder_sc.jpg`,
                 }),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().DescRow },
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_match_clips_head01",
                     description: "#june22_match_clips_desc01",
                   }),
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_match_clips_head02",
                     description: "#june22_match_clips_desc02",
                   }),
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_match_clips_head03",
                     description: "#june22_match_clips_desc03",
                   }),
                 ),
               ),
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().SectionContainer },
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionTitlePrefix },
-                  (0, i.Wn)("#updated_feature"),
+                  (0, l.Wn)("#updated_feature"),
                 ),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionGradHeader },
-                  l.createElement(
+                  i.createElement(
                     "div",
                     { className: o().SectionTitle },
-                    (0, i.Wn)("#june22_avoid_player_title"),
+                    (0, l.Wn)("#june22_avoid_player_title"),
                   ),
                 ),
-                l.createElement("img", {
+                i.createElement("img", {
                   className: o().DescRowImage,
                   src: `${c.r.IMG_URL}/juneupdate22/avoid_players_sc.png`,
                 }),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().DescRow },
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_avoid_player_head01",
                     description: "#june22_avoid_player_desc01",
                   }),
-                  l.createElement(E, {
+                  i.createElement(E, {
                     title: "#june22_avoid_player_head02",
                     description: "#june22_avoid_player_desc02",
                   }),
                 ),
               ),
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().SectionContainer },
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionTitlePrefix },
-                  (0, i.Wn)("#now_available"),
+                  (0, l.Wn)("#now_available"),
                 ),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionGradHeader },
-                  l.createElement(
+                  i.createElement(
                     "div",
                     { className: o().SectionTitle },
-                    (0, i.Wn)("#june22_shards_title"),
+                    (0, l.Wn)("#june22_shards_title"),
                   ),
                 ),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_shards_head01",
                   description: "#june22_shards_desc01",
                   image: "juneupdate22/killstreak_sc.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_shards_head02",
                   description: "#june22_shards_desc02",
                   image: "juneupdate22/seasonal_chest.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_shards_head03",
                   description: "#june22_shards_desc03",
                   image: "juneupdate22/seasonal_sets_sc.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_shards_head04",
                   description: "#june22_shards_desc04",
                   image: "juneupdate22/relics_sc.png",
                 }),
               ),
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().SectionContainer },
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionTitlePrefix },
                   " ",
                 ),
-                l.createElement(
+                i.createElement(
                   "div",
                   { className: o().SectionGradHeader },
-                  l.createElement(
+                  i.createElement(
                     "div",
                     { className: o().SectionTitle },
-                    (0, i.Wn)("#june22_plus_update_title"),
+                    (0, l.Wn)("#june22_plus_update_title"),
                   ),
                 ),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_plus_update_head01",
                   description: "#june22_plus_update_desc01",
                   image: "juneupdate22/quests_sc.png",
                 }),
-                l.createElement(j, {
+                i.createElement(j, {
                   title: "#june22_plus_update_head02",
                   description: "#june22_plus_update_desc02",
                   image: "juneupdate22/guild_rewards_sc.png",
                 }),
               ),
             ),
-            l.createElement(
+            i.createElement(
               "div",
               { className: o().LowerPatch },
-              l.createElement(
+              i.createElement(
                 "div",
                 { className: o().MainTitlePatch },
-                (0, i.Wn)("#june22_gameplay_title"),
+                (0, l.Wn)("#june22_gameplay_title"),
               ),
-              l.createElement(u.fs, { patchnotes: e?.generic }),
-              l.createElement(u.wL, { patchnotes: e?.neutral_creeps }),
-              l.createElement(u.ZV, { patchnotes: e?.items }),
-              l.createElement(u.ZV, {
+              i.createElement(u.fs, { patchnotes: e?.general_notes }),
+              i.createElement(u.wL, { patchnotes: e?.neutral_creeps }),
+              i.createElement(u.ZV, { patchnotes: e?.items }),
+              i.createElement(u.ZV, {
                 patchnotes: e?.neutral_items,
                 is_neutrals: !0,
               }),
-              l.createElement(u.ob, { patchnotes: e?.heroes }),
+              i.createElement(u.ob, { patchnotes: e?.heroes }),
             ),
-            l.createElement(d.K, null),
+            i.createElement(_.K, null),
           );
         });
     },

@@ -1,9 +1,9 @@
-// 2653.js
+// 1448.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [2653],
+  [1448],
   {
     11417: (e) => {
       e.exports = {
@@ -13,6 +13,15 @@
     },
     85655: (e) => {
       e.exports = {
+        Tooltip: "_19T9N3UHHbAODE9sxxoLtb",
+        CarouselFade: "_D1I4Yzr_NSlA70n0WMzr",
+        StandardButton: "mgvs9cPEYOJ3Q9r1J6Xvv",
+        ButtonText: "_2MUkIuEbGuL6NdEm21Eoz9",
+        Icon: "_2dDXk1s2V92ElJmDhv4kOC",
+        Play: "_1ZhvqFTdNClE1GSKe9lIwC",
+        SteamLogo: "_2GSNhjmGVrkHS1HRhAYMiS",
+        ToolTip: "S2816E7lw3xwpK0fpEU9j",
+        PlayerReportTooltip: "_3UgI1sTrl6KyLY4GdZpwRz",
         ComparisonImage: "_3SX3hhAHRpb7bRPg9YLyR2",
         ImageLabel: "_3bKKQTvBpbxJ08XrDQJ4xn",
         IsNew: "S0b_nhi5aY46bpyCNasDF",
@@ -108,9 +117,69 @@
           },
         });
     },
-    52653: (e, a, t) => {
+    95224: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => A });
+      t.d(a, { U: () => _, v: () => s });
+      var r = t(7552),
+        n = t(85655),
+        l = t.n(n),
+        i = t(21384),
+        m = t(89506),
+        c = t(27866);
+      const s = ({ image: e, is_new: a }) =>
+          r.createElement(
+            "div",
+            { className: l().ComparisonImage },
+            r.createElement(
+              "div",
+              { className: (0, i.A)(l().ImageLabel, a && l().IsNew) },
+              (0, c.Wn)(a ? "#729_new_image" : "#729_old_image"),
+            ),
+            r.createElement("img", { src: `${m.r.IMG_URL}${e}` }),
+          ),
+        _ = (e) => {
+          const [a, t] = (0, r.useState)(0);
+          return r.createElement(
+            "div",
+            { className: l().TabbedMapComparison },
+            r.createElement(
+              "div",
+              { className: l().TabHeader },
+              e.labels.map((e, n) =>
+                r.createElement(
+                  "div",
+                  {
+                    key: "tab_" + n,
+                    className: (0, i.A)(l().Tab, a == n && l().Active),
+                    onClick: () => t(n),
+                  },
+                  (0, c.Wn)(e),
+                ),
+              ),
+            ),
+            r.createElement(
+              "div",
+              { className: l().TabContents },
+              r.Children.map(e.children, (e, t) =>
+                r.createElement(
+                  "div",
+                  {
+                    key: "tabelement_" + t,
+                    className: (0, i.A)(
+                      l().TabContentContainer,
+                      t == a && l().Active,
+                    ),
+                  },
+                  e,
+                ),
+              ),
+            ),
+          );
+        };
+    },
+    41448: (e, a, t) => {
+      "use strict";
+      t.r(a), t.d(a, { default: () => u });
       var r = t(85608),
         n = t(89506),
         l = t(7552),
@@ -123,65 +192,14 @@
         p = t(55651),
         o = t(27866),
         b = t(47202),
-        w = t(36305),
-        E = t(83640),
+        E = t(36305),
+        w = t(83640),
         g = t(61840),
-        h = t(32389),
-        k = t(4665),
-        N = t(722),
-        v = t(85655),
-        y = t.n(v);
-      const u = ({ image: e, is_new: a }) =>
-          l.createElement(
-            "div",
-            { className: y().ComparisonImage },
-            l.createElement(
-              "div",
-              { className: (0, s.A)(y().ImageLabel, a && y().IsNew) },
-              (0, o.Wn)(a ? "#729_new_image" : "#729_old_image"),
-            ),
-            l.createElement("img", { src: `${n.r.IMG_URL}${e}` }),
-          ),
-        I = (e) => {
-          const [a, t] = (0, l.useState)(0);
-          return l.createElement(
-            "div",
-            { className: y().TabbedMapComparison },
-            l.createElement(
-              "div",
-              { className: y().TabHeader },
-              e.labels.map((e, r) =>
-                l.createElement(
-                  "div",
-                  {
-                    key: "tab_" + r,
-                    className: (0, s.A)(y().Tab, a == r && y().Active),
-                    onClick: () => t(r),
-                  },
-                  (0, o.Wn)(e),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: y().TabContents },
-              l.Children.map(e.children, (e, t) =>
-                l.createElement(
-                  "div",
-                  {
-                    key: "tabelement_" + t,
-                    className: (0, s.A)(
-                      y().TabContentContainer,
-                      t == a && y().Active,
-                    ),
-                  },
-                  e,
-                ),
-              ),
-            ),
-          );
-        };
-      let L = class extends l.Component {
+        v = t(32389),
+        h = t(4665),
+        k = t(722),
+        N = t(95224);
+      let y = class extends l.Component {
         render() {
           const e = _.o.getPatchNotes("7.29", n.r.LANGUAGE);
           return l.createElement(
@@ -189,7 +207,7 @@
             { className: c().DawnbreakerPage },
             l.createElement(b.A, { bOverlapping: !0 }),
             l.createElement(
-              E.mg,
+              w.mg,
               null,
               l.createElement("title", null, (0, o.Wn)("#dawnbreaker_title")),
             ),
@@ -301,7 +319,7 @@
               "div",
               { className: c().AbilitySection },
               l.createElement(
-                h.gi,
+                v.gi,
                 {
                   className: c().AbilityCarousel,
                   naturalSlideWidth: 100,
@@ -309,10 +327,10 @@
                   totalSlides: 4,
                 },
                 l.createElement(
-                  h.Ap,
+                  v.Ap,
                   null,
                   l.createElement(
-                    h.q7,
+                    v.q7,
                     { index: 0 },
                     l.createElement(
                       "div",
@@ -362,7 +380,7 @@
                     ),
                   ),
                   l.createElement(
-                    h.q7,
+                    v.q7,
                     { index: 1 },
                     l.createElement(
                       "div",
@@ -412,7 +430,7 @@
                     ),
                   ),
                   l.createElement(
-                    h.q7,
+                    v.q7,
                     { index: 2 },
                     l.createElement(
                       "div",
@@ -462,7 +480,7 @@
                     ),
                   ),
                   l.createElement(
-                    h.q7,
+                    v.q7,
                     { index: 3 },
                     l.createElement(
                       "div",
@@ -516,7 +534,7 @@
                   "div",
                   { className: c().CarouselDots },
                   l.createElement(
-                    h.cL,
+                    v.cL,
                     {
                       className: (0, s.A)(c().AbilitySelector, c().Slide0),
                       slide: 0,
@@ -524,7 +542,7 @@
                     l.createElement("div", null),
                   ),
                   l.createElement(
-                    h.cL,
+                    v.cL,
                     {
                       className: (0, s.A)(c().AbilitySelector, c().Slide1),
                       slide: 1,
@@ -532,7 +550,7 @@
                     l.createElement("div", null),
                   ),
                   l.createElement(
-                    h.cL,
+                    v.cL,
                     {
                       className: (0, s.A)(c().AbilitySelector, c().Slide2),
                       slide: 2,
@@ -540,7 +558,7 @@
                     l.createElement("div", null),
                   ),
                   l.createElement(
-                    h.cL,
+                    v.cL,
                     {
                       className: (0, s.A)(c().AbilitySelector, c().Slide3),
                       slide: 3,
@@ -568,7 +586,7 @@
                       { className: c().ButtonText },
                       (0, o.Wn)("#dawnbreaker_heroes_btn"),
                     ),
-                    l.createElement(N.U, null),
+                    l.createElement(k.U, null),
                   ),
                 ),
               ),
@@ -683,7 +701,7 @@
                       (0, o.Wn)("#729_patch_map_changes_desc"),
                     ),
                     l.createElement(
-                      I,
+                      N.U,
                       {
                         labels: [
                           "#729_patch_map_change4_title",
@@ -697,103 +715,103 @@
                           "#729_patch_map_change17_title",
                         ],
                       },
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/radiant_mid_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/radiant_mid_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_safelane_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_safelane_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_primary_jungle_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_primary_jungle_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/dire_primary_jungle_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/dire_primary_jungle_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_triangle_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_triangle_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_safelane_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_safelane_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_secret_shop_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_secret_shop_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_ward_spot_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_ward_spot_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/dire_bot_ward_spot_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/dire_bot_ward_spot_new.png",
@@ -826,7 +844,7 @@
                       ),
                     ),
                     l.createElement(
-                      I,
+                      N.U,
                       {
                         labels: [
                           "#729_patch_map_change9_title",
@@ -838,78 +856,78 @@
                           "#729_patch_map_change15_title",
                         ],
                       },
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_top_red_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_top_red_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_mid_t2_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_mid_t2_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_t2_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image:
                             "dawnbreaker/patch/maps/radiant_bot_t2_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_top_t2_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_top_t2_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_mid_t2_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_mid_t2_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_bot_t2_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_bot_t2_new.png",
                         }),
                       }),
-                      l.createElement(k.EW, {
-                        itemOne: l.createElement(u, {
+                      l.createElement(h.EW, {
+                        itemOne: l.createElement(N.v, {
                           is_new: !0,
                           image: "dawnbreaker/patch/maps/dire_mid_t1_old.png",
                         }),
-                        itemTwo: l.createElement(u, {
+                        itemTwo: l.createElement(N.v, {
                           is_new: !1,
                           image: "dawnbreaker/patch/maps/dire_mid_t1_new.png",
                         }),
@@ -924,7 +942,7 @@
                     className: c().PatchImage,
                     src: `${n.r.IMG_URL}/dawnbreaker/patch/patch_general.png`,
                   }),
-                  l.createElement(g.fs, { patchnotes: e?.generic }),
+                  l.createElement(g.fs, { patchnotes: e?.general_notes }),
                   l.createElement(g.ZV, { patchnotes: e?.items }),
                   l.createElement(g.ZV, {
                     patchnotes: e?.neutral_items,
@@ -934,12 +952,12 @@
                 ),
               ),
             ),
-            l.createElement(w.K, null),
+            l.createElement(E.K, null),
           );
         }
       };
-      L = (0, r.Cg)([d.PA], L);
-      const A = L;
+      y = (0, r.Cg)([d.PA], y);
+      const u = y;
     },
   },
 ]);

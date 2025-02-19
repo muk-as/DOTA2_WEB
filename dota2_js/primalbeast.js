@@ -850,7 +850,7 @@
                 n.createElement(
                   "div",
                   { className: N().LowerPatch },
-                  n.createElement(v.fs, { patchnotes: e?.generic }),
+                  n.createElement(v.fs, { patchnotes: e?.general_notes }),
                   n.createElement(v.wL, { patchnotes: e?.neutral_creeps }),
                   n.createElement(v.ZV, {
                     patchnotes: e?.items,

@@ -44,6 +44,7 @@ news                                    /news/()
 newsentry                               /newsentry/${}
 other                                   /
 pastupdates                             /pastupdates
+patch738                                /wanderingwaters
 patchnotes                              /patches/()
 personadetails                          /personadetails/${}
 portraitguidelines                      /portraitguidelines
@@ -100,6 +101,7 @@ http://www.dota2.com/thebetaisover/
 http://www.dota2.com/threespirits/
 http://www.dota2.com/winter2016
 http://www.dota2.com/wraithnight/
+https://confluence.valve.org/display/DOTA/Making+a+new+Dota+webpage
 https://facebook.com/dota2/
 https://instagram.com/dota2
 https://steamcommunity.com/dota2shortfilm/
@@ -285,6 +287,7 @@ IMG_URL/${strContentDir}/immortals/art/${X}${X?_gold:}.png
 IMG_URL/${strPlayButton}
 IMG_URL/abilities/${X}.png
 IMG_URL/abilities/${abilityData.name}.png
+IMG_URL/abilities/${has(name)?get(name):name}.png
 IMG_URL/abilities/${name}.png
 IMG_URL/arrow_left.png
 IMG_URL/arrow_over.png
@@ -385,8 +388,8 @@ IMG_URL/dpc/ti11/supporters_club.png
 IMG_URL/dpc/top_block.jpg
 IMG_URL/g
 IMG_URL/heroes/${X?.name.replace(npc_dota_hero_,)}.png
-IMG_URL/heroes/${X}.png
 IMG_URL/heroes/${name.replace(npc_dota_hero_,)}.png
+IMG_URL/heroes/+X+.png
 IMG_URL/heroes/crops/${name.replace(npc_dota_hero_,)}.png
 IMG_URL/heroes/crops/dawnbreaker.png
 IMG_URL/heroes/crops/kez.png
@@ -425,6 +428,7 @@ IMG_URL/icons/${X?star_gold:star_black}.png
 IMG_URL/icons/${X}.svg
 IMG_URL/icons/arrow_right.svg
 IMG_URL/icons/cooldown.png
+IMG_URL/icons/dota_plus.png
 IMG_URL/icons/download.svg
 IMG_URL/icons/dpc.svg
 IMG_URL/icons/external_arrow.png
@@ -936,6 +940,8 @@ IMG_URL/pastupdates/winterbp_social.jpg
 IMG_URL/pastupdates/wk_social.jpg
 IMG_URL/pastupdates/wr_social.png
 IMG_URL/pastupdates/wraith_social.jpg
+IMG_URL/patch738/map_updates/map_icons/
+IMG_URL/patch738/map_updates/map_icons/hotspot_arrow.svg
 IMG_URL/pb_header_loop.jpg
 IMG_URL/player_unknown.png
 IMG_URL/primalbeast/difficulty.png
@@ -1002,6 +1008,7 @@ LOGIN_BASE_URL/jwt/checkdevice/${this.m_steamid}
 LOGIN_BASE_URL/jwt/finalizelogin
 MEDIA_CDN_COMMUNITY_URL/g
 MEDIA_CDN_COMMUNITY_URL/images/apps/${X}/${community_icon()}.jpg
+MEDIA_CDN_COMMUNITY_URL/images/apps/${X}/${community_icon()}_full.jpg
 MEDIA_CDN_URL/g
 MEDIA_CDN_URL/steam/
 PARTNER_BASE_URL/${X}
@@ -1052,6 +1059,7 @@ STORE_BASE_URL/tags/+((0,X)()||X)+/+tagid
 STORE_BASE_URL/this.m_strStoreURLPath
 STORE_BASE_URL/updated/ajaxgetmyappsraw
 STORE_BASE_URL/updated/ajaxrateupdate/+AnnouncementGID
+STORE_CDN_URL/images/storepagebackground/${page_background_path()}
 STORE_ICON_BASE_URL/X+/header.jpg
 STORE_URL/app/${DOTA_APP_ID}/Dota_2/
 STORE_URL/app/570/Dota_2/
