@@ -59,7 +59,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "幽鬼之刃会施加一次荒芜的伤害。",
+            "",
             ""
           ],
           "type": 0,
@@ -306,11 +306,9 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "spectre_forsaken",
-                "values": [
-                  1
-                ],
-                "operation": 5
+                "name": "",
+                "values": [],
+                "operation": 0
               },
               "required_facet": ""
             },
@@ -488,7 +486,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "敌人的附近只有非英雄友军时会受到%only_creep_allies_damage_pct%%%荒芜伤害。",
+            "幽鬼自身的荒芜造成%bonus_damage_multiplier_tooltip%倍伤害，但是幽鬼的幻象不再触发荒芜。",
             ""
           ],
           "type": 0,
@@ -547,8 +545,29 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "spectre_forsaken",
+                "values": [
+                  1.75
+                ],
+                "operation": 1
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_damage_multiplier_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "spectre_forsaken",
+                "values": [
+                  1.75
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -560,13 +579,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "范围：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_spectre_desolate_radius",
-                  "value": 100,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -587,11 +600,28 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "illusions_can_apply",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
                 "name": "spectre_forsaken",
                 "values": [
-                  60
+                  0
                 ],
-                "operation": 0
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -806,10 +836,10 @@
             {
               "name": "damage_reflection_pct",
               "values_float": [
+                7,
                 11,
-                14,
-                17,
-                20
+                15,
+                19
               ],
               "is_percentage": true,
               "heading_loc": "折射伤害：",
@@ -1108,7 +1138,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "鬼影重重的目标阵亡后幻象不再消失。"
+            ""
           ],
           "type": 0,
           "behavior": "8589934597",
@@ -1436,7 +1466,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "鬼影重重和如影随形的目标阵亡后幻象不再消失。"
           ],
           "type": 1,
           "behavior": "8",
@@ -1728,8 +1758,8 @@
               "name": "AbilityCooldown",
               "values_float": [
                 60,
-                50,
-                40
+                55,
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3655,7 +3685,7 @@
         {
           "color": 5,
           "title_loc": "独来独往",
-          "description_loc": "荒芜可以对敌人造成部分伤害，并且幽鬼之刃会施加荒芜伤害。",
+          "description_loc": "幽鬼自身的荒芜造成{s:bonus_bonus_damage_multiplier_tooltip}倍伤害，但是幽鬼的幻象不再触发荒芜。",
           "name": "spectre_forsaken",
           "icon": "spectre",
           "gradient_id": 0
@@ -3663,7 +3693,7 @@
         {
           "color": 4,
           "title_loc": "趁人之危",
-          "description_loc": "空降还会向目标施放幽鬼之刃，并且冷却时间降低。",
+          "description_loc": "空降还会对目标施放幽鬼之刃。",
           "name": "spectre_twist_the_knife",
           "icon": "nuke",
           "gradient_id": 2

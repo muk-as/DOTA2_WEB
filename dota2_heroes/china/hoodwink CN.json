@@ -62,7 +62,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "如果附近没有可弹射的目标，爆栗出击会弹射至附近的树木，剩余弹射次数将设为%bounces_after_tree_bounce%次。"
+            "如果附近没有可弹射的目标，爆栗出击会弹射至附近的树木，剩余弹射次数将设为%bounces_after_tree_bounce%次。",
+            ""
           ],
           "type": 0,
           "behavior": "1099645845528",
@@ -109,10 +110,7 @@
             {
               "name": "bonus_range",
               "values_float": [
-                75,
-                150,
-                225,
-                300
+                100
               ],
               "is_percentage": false,
               "heading_loc": "额外攻击距离：",
@@ -149,7 +147,7 @@
             {
               "name": "base_damage_pct",
               "values_float": [
-                75
+                80
               ],
               "is_percentage": true,
               "heading_loc": "基础攻击力：",
@@ -487,6 +485,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -813,6 +812,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "密林奔走还会提供攻击和施法距离加成。",
+            "",
             ""
           ],
           "type": 0,
@@ -1034,10 +1034,10 @@
               "facet_bonus": {
                 "name": "hoodwink_hunter",
                 "values": [
-                  100,
+                  75,
                   150,
-                  200,
-                  250
+                  225,
+                  300
                 ],
                 "operation": 0
               },
@@ -1059,10 +1059,10 @@
               "facet_bonus": {
                 "name": "hoodwink_hunter",
                 "values": [
-                  100,
+                  75,
                   150,
-                  200,
-                  250
+                  225,
+                  300
                 ],
                 "operation": 0
               },
@@ -1106,6 +1106,23 @@
               "name": "heal_movement",
               "values_float": [
                 0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "evasion_multiplier",
+              "values_float": [
+                2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1194,7 +1211,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_hoodwink_scurry_charges",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1287,6 +1310,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1630,6 +1654,7 @@
           "shard_loc": "猎手旋镖还会降低状态抗性。",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2010,6 +2035,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -2068,10 +2094,10 @@
             {
               "name": "redirect_chance",
               "values_float": [
-                15,
-                20,
-                25,
-                30
+                14,
+                21,
+                28,
+                35
               ],
               "is_percentage": true,
               "heading_loc": "转向几率：",
@@ -2251,7 +2277,8 @@
           "scepter_loc": "提升箭矢速度和减速效果。",
           "facets_loc": [
             "",
-            ""
+            "",
+            "一箭穿心的冷却时间减少%quick_draw_tooltip_pct_cooldown_reduction%%%。伤害、负面状态持续时间和装载时间减少%quick_draw_tooltip_efficacy_pct%%%。转身速率提升%turn_rate_tooltip%%%。"
           ],
           "type": 1,
           "behavior": "134217744",
@@ -2370,13 +2397,13 @@
               "heading_loc": "最大蓄力时间：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                25
-              ],
+              "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "hoodwink_hipshot",
+                "values": [
+                  0.75
+                ],
+                "operation": 1
               },
               "required_facet": ""
             },
@@ -2392,16 +2419,18 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
-                  "value": 125,
+                  "value": 400,
                   "operation": 0
                 }
               ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "hoodwink_hipshot",
+                "values": [
+                  0.75
+                ],
+                "operation": 1
               },
               "required_facet": ""
             },
@@ -2467,9 +2496,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "hoodwink_hipshot",
+                "values": [
+                  0.75
+                ],
+                "operation": 1
               },
               "required_facet": ""
             },
@@ -2484,9 +2515,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "hoodwink_hipshot",
+                "values": [
+                  0.75
+                ],
+                "operation": 1
               },
               "required_facet": ""
             },
@@ -2501,7 +2534,9 @@
               "heading_loc": "移动速度减缓：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                20
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -2517,6 +2552,73 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "hoodwink_hipshot",
+                "values": [
+                  1.33
+                ],
+                "operation": 1
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "turn_rate_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "hoodwink_hipshot",
+                "values": [
+                  33
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vision_along_indicator",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_hoodwink_sharpshooter_vision",
+                  "value": 1,
+                  "operation": 5
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vision_radius_buffer",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_hoodwink_sharpshooter_vision",
+                  "value": 15,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -2539,6 +2641,44 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "quick_draw_tooltip_pct_cooldown_reduction",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "hoodwink_hipshot",
+                "values": [
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "quick_draw_tooltip_efficacy_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "hoodwink_hipshot",
+                "values": [
+                  25
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -2670,14 +2810,16 @@
                 45
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "冷却时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "hoodwink_hipshot",
+                "values": [
+                  0.5
+                ],
+                "operation": 1
               },
               "required_facet": ""
             }
@@ -4373,10 +4515,10 @@
         },
         {
           "color": 2,
-          "title_loc": "弹木特技",
-          "description_loc": "爆栗出击可以弹射一次到树上。",
-          "name": "hoodwink_treebounce_trickshot",
-          "icon": "tree",
+          "title_loc": "腰射",
+          "description_loc": "一箭穿心的冷却时间大幅减少。伤害、负面状态持续时间和装载时间也有所减少。",
+          "name": "hoodwink_hipshot",
+          "icon": "cooldown",
           "gradient_id": 0
         }
       ],
@@ -4401,6 +4543,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
@@ -4460,10 +4603,10 @@
           {
             "name": "redirect_chance",
             "values_float": [
-              15,
-              20,
-              25,
-              30
+              14,
+              21,
+              28,
+              35
             ],
             "is_percentage": true,
             "heading_loc": "转向几率：",

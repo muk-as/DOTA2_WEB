@@ -58,6 +58,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "提升震荡波的最高等级。%max_level%级震荡波会在到达最大长度后会返回至马格纳斯的当前位置。返回的震荡波行进距离增加%return_shockwave_bonus_distance%，对再次击中敌人并造成%return_damage_pct_tooltip%%%伤害。",
             ""
           ],
           "type": 0,
@@ -113,9 +115,7 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                400
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -147,6 +147,7 @@
                 90,
                 160,
                 230,
+                300,
                 300
               ],
               "is_percentage": false,
@@ -236,22 +237,55 @@
               "required_facet": ""
             },
             {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_diminishing_return",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_diminishing_return",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
               "name": "basic_slow_duration",
               "values_float": [
                 0.7,
                 0.8,
                 0.9,
+                1,
                 1
               ],
               "is_percentage": false,
               "heading_loc": "减速持续时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_magnus_6",
-                  "value": 0.75,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -264,18 +298,64 @@
             {
               "name": "return_damage_pct",
               "values_float": [
+                0,
+                0,
+                0,
+                0,
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                75
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "magnataur_diminishing_return",
+                "values": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  50
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "return_damage_pct_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_diminishing_return",
+                "values": [
+                  50
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "return_shockwave_bonus_distance",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_diminishing_return",
+                "values": [
+                  200
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -286,11 +366,9 @@
                 1200
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "距离：",
               "bonuses": [],
-              "values_shard": [
-                400
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -387,7 +465,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                75
+                85,
+                90,
+                95,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -455,6 +536,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "马格纳斯始终拥有授予力量的效果。每次后续攻击都会使技能对自身加成的提升%self_multiplier_bonus_per_stack%%%，最高为%self_multiplier_bonus_max_stacks%%%，持续%self_multiplier_bonus_max_stacks%%%秒。",
             "",
             ""
           ],
@@ -681,6 +764,94 @@
               "required_facet": ""
             },
             {
+              "name": "always_on",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_eternal_empowerment",
+                "values": [
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_multiplier_bonus_stack_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_eternal_empowerment",
+                "values": [
+                  10
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_multiplier_bonus_max_stacks",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_eternal_empowerment",
+                "values": [
+                  10,
+                  15,
+                  20,
+                  25
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_multiplier_bonus_per_stack",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "magnataur_eternal_empowerment",
+                "values": [
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 800
@@ -850,6 +1021,8 @@
           "facets_loc": [
             "把敌人拖拽至树木或高台会造成额外伤害。",
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -924,14 +1097,10 @@
               ],
               "is_percentage": false,
               "heading_loc": "冲刺距离：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_magnus_3",
-                  "value": 275,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [
+                275
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -984,7 +1153,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "减速持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_magnus_6",
+                  "value": 1.25,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1015,14 +1190,42 @@
               "required_facet": ""
             },
             {
+              "name": "damage_distance_pct",
+              "values_float": [
+                6,
+                9,
+                12,
+                15
+              ],
+              "is_percentage": true,
+              "heading_loc": "行进距离伤害：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_magnus_skewer_damage_distance",
+                  "value": 15,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "tree_radius",
               "values_float": [
-                200
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                200
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1034,15 +1237,14 @@
             {
               "name": "tree_hit_damage",
               "values_float": [
-                15,
-                20,
-                25,
-                30
+                0
               ],
               "is_percentage": false,
               "heading_loc": "树木击中伤害：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                30
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1054,15 +1256,14 @@
             {
               "name": "cliff_hit_damage",
               "values_float": [
-                50,
-                75,
-                100,
-                125
+                0
               ],
               "is_percentage": false,
               "heading_loc": "高台击中伤害：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                125
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1265,6 +1466,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -1645,6 +1848,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -1885,6 +2090,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             "两极反转会把马格纳斯附近的敌人推开，而不是把敌人牵引至他的前方。"
@@ -3936,19 +4143,19 @@
       "facets": [
         {
           "color": 5,
-          "title_loc": "两极反转",
-          "description_loc": "两极反转会把附近所有敌人牵引至前方。",
-          "name": "magnataur_reverse_polarity",
-          "icon": "vortex_in",
-          "gradient_id": 3
+          "title_loc": "永恒力量",
+          "description_loc": "授予力量总是在马格纳斯身上生效。每次后续的攻击会提升其威力。",
+          "name": "magnataur_eternal_empowerment",
+          "icon": "empower",
+          "gradient_id": 1
         },
         {
-          "color": 5,
-          "title_loc": "两极反转再反转",
-          "description_loc": "两极反转把附近的敌人全都推离马格纳斯。",
-          "name": "magnataur_reverse_reverse_polarity",
-          "icon": "vortex_out",
-          "gradient_id": 0
+          "color": 3,
+          "title_loc": "收益递减",
+          "description_loc": "提升震荡波的最高等级。{s:bonus_max_level_tooltip}级震荡波会返回至马格纳斯的地点。",
+          "name": "magnataur_diminishing_return",
+          "icon": "ricochet",
+          "gradient_id": 2
         }
       ],
       "facet_abilities": [
@@ -3970,6 +4177,8 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
+          "",
           "",
           "",
           ""

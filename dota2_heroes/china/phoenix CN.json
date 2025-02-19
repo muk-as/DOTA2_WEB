@@ -830,7 +830,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "烈日炙烤的光束末端对目标造成的伤害/治疗增加。光束强度从光束的后半段开始增强，在%focal_point_full_length_tooltip_only%距离达到最高的%focal_point_max_multiplier%%%基础伤害/治疗。如果使烈日炙烤的光束距离进一步增加，在%focal_point_full_length_tooltip_only%距离之外的伤害和治疗量会超过%focal_point_max_multiplier%%%。"
+            "烈日炙烤的光束末端对目标造成的伤害/治疗增加，并且施加%focal_point_blind_stack_multiplier%倍阳光猛烈叠加层数。光束强度从光束的后半段开始增强，在%focal_point_full_length_tooltip_only%距离达到最高的%focal_point_max_multiplier%%%基础伤害/治疗。如果使烈日炙烤的光束距离进一步增加，在%focal_point_full_length_tooltip_only%距离之外的伤害和治疗量会超过%focal_point_max_multiplier%%%。"
           ],
           "type": 0,
           "behavior": "16",
@@ -1134,6 +1134,25 @@
               "required_facet": ""
             },
             {
+              "name": "focal_point_blind_stack_multiplier",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "phoenix_hotspot",
+                "values": [
+                  2
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 1200
@@ -1350,7 +1369,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
+                  "value": 0.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3517,7 +3542,7 @@
         {
           "color": 0,
           "title_loc": "热点",
-          "description_loc": "烈日炙烤的光束尖端造成更多伤害。",
+          "description_loc": "烈日炙烤的光束尖端造成更多伤害，而且施加更多的阳光猛烈叠加层数。",
           "name": "phoenix_hotspot",
           "icon": "nuke",
           "gradient_id": 1
@@ -3822,7 +3847,13 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
+                "value": 0.5,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {

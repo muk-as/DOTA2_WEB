@@ -503,7 +503,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "齐天大圣的生命值高于%no_cooldown_hp_threshold%%%时丛林之舞无冷却。"
+            "提升丛林之舞的最高等级。%max_level%级丛林之舞会把冷却时间降低至0。"
           ],
           "type": 0,
           "behavior": "524296",
@@ -801,7 +801,26 @@
               "required_facet": ""
             },
             {
-              "name": "no_cooldown_hp_threshold",
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "monkey_king_simian_stride",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
               "values_float": [
                 0
               ],
@@ -813,9 +832,9 @@
               "facet_bonus": {
                 "name": "monkey_king_simian_stride",
                 "values": [
-                  95
+                  5
                 ],
-                "operation": 0
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -944,7 +963,8 @@
                 1.4,
                 1.2,
                 1,
-                0.8
+                0.8,
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1366,7 +1386,10 @@
             {
               "name": "movespeed",
               "values_float": [
-                10
+                6,
+                9,
+                12,
+                15
               ],
               "is_percentage": true,
               "heading_loc": "额外移动速度：",
@@ -1536,7 +1559,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                15
+                24,
+                20,
+                16,
+                12
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3715,7 +3741,7 @@
         {
           "color": 2,
           "title_loc": "猿猴步法",
-          "description_loc": "齐天大圣的生命值高于{s:bonus_no_cooldown_hp_threshold}%时丛林之舞无冷却。",
+          "description_loc": "提升丛林之舞的最高等级。{s:bonus_max_level_tooltip}级丛林之舞会把冷却时间降低至0。",
           "name": "monkey_king_simian_stride",
           "icon": "tree",
           "gradient_id": 4
@@ -3751,7 +3777,7 @@
         "damage": 0,
         "immunity": 0,
         "dispellable": 0,
-        "max_level": 1,
+        "max_level": 4,
         "cast_ranges": [
           0
         ],
@@ -3762,7 +3788,10 @@
           0
         ],
         "cooldowns": [
-          15
+          24,
+          20,
+          16,
+          12
         ],
         "durations": [
           0
@@ -3785,7 +3814,10 @@
           {
             "name": "movespeed",
             "values_float": [
-              10
+              6,
+              9,
+              12,
+              15
             ],
             "is_percentage": true,
             "heading_loc": "额外移动速度：",
@@ -3955,7 +3987,10 @@
           {
             "name": "AbilityCooldown",
             "values_float": [
-              15
+              24,
+              20,
+              16,
+              12
             ],
             "is_percentage": false,
             "heading_loc": "",
