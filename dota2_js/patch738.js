@@ -191,6 +191,7 @@
         MiscSection: "_2cOXjRG4ylBf_JsBV_AzI-",
         UpdatesSection: "_33CadKJCsI-njqngvcG2EQ",
         DotaPlusBadge: "_1GNSZxyaIktV_wEMYNxr7v",
+        DotaPlusBadgeMobile: "_3Tmn1T0cPjGU2btUECFXdR",
       };
     },
     95224: (e, a, t) => {
@@ -199,8 +200,8 @@
       var l = t(7552),
         n = t(85655),
         i = t.n(n),
-        r = t(21384),
-        o = t(89506),
+        o = t(21384),
+        r = t(89506),
         s = t(27866);
       const c = ({ image: e, is_new: a }) =>
           l.createElement(
@@ -208,10 +209,10 @@
             { className: i().ComparisonImage },
             l.createElement(
               "div",
-              { className: (0, r.A)(i().ImageLabel, a && i().IsNew) },
+              { className: (0, o.A)(i().ImageLabel, a && i().IsNew) },
               (0, s.Wn)(a ? "#729_new_image" : "#729_old_image"),
             ),
-            l.createElement("img", { src: `${o.r.IMG_URL}${e}` }),
+            l.createElement("img", { src: `${r.r.IMG_URL}${e}` }),
           ),
         m = (e) => {
           const [a, t] = (0, l.useState)(0);
@@ -226,7 +227,7 @@
                   "div",
                   {
                     key: "tab_" + n,
-                    className: (0, r.A)(i().Tab, a == n && i().Active),
+                    className: (0, o.A)(i().Tab, a == n && i().Active),
                     onClick: () => t(n),
                   },
                   (0, s.Wn)(e),
@@ -241,7 +242,7 @@
                   "div",
                   {
                     key: "tabelement_" + t,
-                    className: (0, r.A)(
+                    className: (0, o.A)(
                       i().TabContentContainer,
                       t == a && i().Active,
                     ),
@@ -266,8 +267,8 @@
       var l = t(85608),
         n = t(89506),
         i = t(33706),
-        r = t(27866),
-        o = t(68446),
+        o = t(27866),
+        r = t(68446),
         s = t(7552),
         c = t(83640),
         m = t(35927),
@@ -378,7 +379,7 @@
                       E().LabelMedium,
                     ),
                   },
-                  (0, r.Wn)(e.title),
+                  (0, o.Wn)(e.title),
                 ),
                 s.createElement(
                   "p",
@@ -389,7 +390,7 @@
                       E().BodySmall,
                     ),
                   },
-                  (0, r.Wn)(e.description),
+                  (0, o.Wn)(e.description),
                 ),
               ),
             ),
@@ -443,7 +444,7 @@
             : (t = !0);
         return a;
       }
-      (0, o.PA)(({ patchnotes: e, heroname: a }) => {
+      (0, r.PA)(({ patchnotes: e, heroname: a }) => {
         const t = i.B5.Get().getHeroList(),
           l = t?.heroes.find((e) => e.name.replace("npc_dota_hero_", "") == a);
         return l
@@ -462,7 +463,7 @@
                       E().TitleSmall,
                     ),
                   },
-                  (0, r.Wn)(l.name_loc),
+                  (0, o.Wn)(l.name_loc),
                 ),
                 s.createElement(
                   "div",
@@ -474,7 +475,7 @@
                       E().LightGrayText,
                     ),
                   },
-                  (0, r.Wn)("#patch738_heroes_hero_rework_" + a),
+                  (0, o.Wn)("#patch738_heroes_hero_rework_" + a),
                 ),
                 s.createElement(
                   "div",
@@ -522,22 +523,22 @@
                   "+ ",
                   a,
                   " ",
-                  (0, r.Wn)(l),
+                  (0, o.Wn)(l),
                 )
               : s.createElement(
                   "div",
                   { className: E().Stat },
-                  (0, r.Wn)(l),
+                  (0, o.Wn)(l),
                   " ",
                   a,
                 )
           );
         },
         W =
-          ((0, o.PA)(({ name: e, components: a, recipeCost: t }) => {
+          ((0, r.PA)(({ name: e, components: a, recipeCost: t }) => {
             const l = i.B5.Get().getItemList(),
-              o = l?.itemabilities.find((a) => a.name == e),
-              c = i.B5.Get().getItemData(o?.id);
+              r = l?.itemabilities.find((a) => a.name == e),
+              c = i.B5.Get().getItemData(r?.id);
             if (!c) return null;
             let m = c.desc_loc;
             c.special_values.forEach((e) => {
@@ -615,7 +616,7 @@
                     s.createElement(
                       "div",
                       { className: (0, p.A)(E().NeutralItemTier, N) },
-                      (0, r.Wn)("#neutral_item_tier", h),
+                      (0, o.Wn)("#neutral_item_tier", h),
                     ),
                 ),
               ),
@@ -700,7 +701,7 @@
                       ),
                     },
                     " ",
-                    (0, r.Wn)("#patch738_recipe"),
+                    (0, o.Wn)("#patch738_recipe"),
                     " ",
                   ),
                   s.createElement(
@@ -798,7 +799,7 @@
             (a = a.replace(/<\/h2>/g, "</b>")),
             (a = a.replace(/<h1>/g, "<b>")),
             (a = a.replace(/<\/h1>/g, "</b>\n\n")),
-            (0, r.Wn)(a)
+            (0, o.Wn)(a)
           );
         }
         render() {
@@ -817,7 +818,7 @@
                 s.createElement(
                   "title",
                   null,
-                  (0, r.Wn)("#patch738_website_title"),
+                  (0, o.Wn)("#patch738_website_title"),
                 ),
               ),
               s.createElement(
@@ -844,7 +845,7 @@
                     s.createElement(
                       "p",
                       { className: (0, p.A)(E().TitleFont, E().TitleSmall) },
-                      (0, r.Wn)("#patch738_website_subheader"),
+                      (0, o.Wn)("#patch738_website_subheader"),
                     ),
                     s.createElement(
                       "p",
@@ -855,7 +856,7 @@
                           E().TitleExtraLarge,
                         ),
                       },
-                      (0, r.Wn)("#patch738_website_title"),
+                      (0, o.Wn)("#patch738_website_title"),
                     ),
                     s.createElement(
                       "p",
@@ -866,7 +867,7 @@
                           E().DisplayMedium,
                         ),
                       },
-                      (0, r.Wn)("#patch738_website_introduction"),
+                      (0, o.Wn)("#patch738_website_introduction"),
                     ),
                   ),
                 ),
@@ -896,7 +897,7 @@
                             E().TitleExtraLarge,
                           ),
                         },
-                        (0, r.Wn)("#patch738_map_title"),
+                        (0, o.Wn)("#patch738_map_title"),
                       ),
                       s.createElement(
                         "p",
@@ -908,7 +909,7 @@
                             E().LightGrayText,
                           ),
                         },
-                        (0, r.Wn)("#patch738_map_introduction"),
+                        (0, o.Wn)("#patch738_map_introduction"),
                       ),
                     ),
                     s.createElement(
@@ -1009,7 +1010,7 @@
                             E().TitleLarge,
                           ),
                         },
-                        (0, r.Wn)("#patch738_map_majorchanges_river_title"),
+                        (0, o.Wn)("#patch738_map_majorchanges_river_title"),
                       ),
                       s.createElement(
                         "p",
@@ -1021,7 +1022,7 @@
                             E().LightGrayText,
                           ),
                         },
-                        (0, r.Wn)(
+                        (0, o.Wn)(
                           "#patch738_map_majorchanges_river_description",
                         ),
                       ),
@@ -1051,7 +1052,7 @@
                             E().TitleLarge,
                           ),
                         },
-                        (0, r.Wn)("#patch738_map_majorchanges_creeps_title"),
+                        (0, o.Wn)("#patch738_map_majorchanges_creeps_title"),
                       ),
                       s.createElement(
                         "p",
@@ -1063,7 +1064,7 @@
                             E().LightGrayText,
                           ),
                         },
-                        (0, r.Wn)(
+                        (0, o.Wn)(
                           "#patch738_map_majorchanges_creeps_description",
                         ),
                       ),
@@ -1105,7 +1106,7 @@
                               E().TitleMedium,
                             ),
                           },
-                          (0, r.Wn)("#patch738_map_majorchanges_wisdom_title"),
+                          (0, o.Wn)("#patch738_map_majorchanges_wisdom_title"),
                         ),
                         s.createElement("div", { className: E().Dash }),
                         s.createElement(
@@ -1118,7 +1119,7 @@
                               E().LightGrayText,
                             ),
                           },
-                          (0, r.Wn)(
+                          (0, o.Wn)(
                             "#patch738_map_majorchanges_wisdom_description",
                           ),
                         ),
@@ -1156,7 +1157,7 @@
                               E().TitleMedium,
                             ),
                           },
-                          (0, r.Wn)("#patch738_map_majorchanges_lotus_title"),
+                          (0, o.Wn)("#patch738_map_majorchanges_lotus_title"),
                         ),
                         s.createElement("div", { className: E().Dash }),
                         s.createElement(
@@ -1169,7 +1170,7 @@
                               E().LightGrayText,
                             ),
                           },
-                          (0, r.Wn)(
+                          (0, o.Wn)(
                             "#patch738_map_majorchanges_lotus_description",
                           ),
                         ),
@@ -1207,7 +1208,7 @@
                               E().TitleMedium,
                             ),
                           },
-                          (0, r.Wn)("#patch738_map_majorchanges_roshan_title"),
+                          (0, o.Wn)("#patch738_map_majorchanges_roshan_title"),
                         ),
                         s.createElement("div", { className: E().Dash }),
                         s.createElement(
@@ -1220,7 +1221,7 @@
                               E().LightGrayText,
                             ),
                           },
-                          (0, r.Wn)(
+                          (0, o.Wn)(
                             "#patch738_map_majorchanges_roshan_description",
                           ),
                         ),
@@ -1257,7 +1258,7 @@
                               E().TitleMedium,
                             ),
                           },
-                          (0, r.Wn)(
+                          (0, o.Wn)(
                             "#patch738_map_majorchanges_tormentor_title",
                           ),
                         ),
@@ -1272,7 +1273,7 @@
                               E().LightGrayText,
                             ),
                           },
-                          (0, r.Wn)(
+                          (0, o.Wn)(
                             "#patch738_map_majorchanges_tormentor_description",
                           ),
                         ),
@@ -1291,7 +1292,7 @@
                             E().TitleMedium,
                           ),
                         },
-                        (0, r.Wn)("#patch738_map_majorchanges_otherchanges"),
+                        (0, o.Wn)("#patch738_map_majorchanges_otherchanges"),
                       ),
                     ),
                     s.createElement(
@@ -1311,7 +1312,7 @@
                             E().CarouselGroupTitle,
                           ),
                         },
-                        (0, r.Wn)("#radiant"),
+                        (0, o.Wn)("#radiant"),
                       ),
                       s.createElement(
                         b.U,
@@ -1416,7 +1417,7 @@
                             E().CarouselGroupTitle,
                           ),
                         },
-                        (0, r.Wn)("#dire"),
+                        (0, o.Wn)("#dire"),
                       ),
                       s.createElement(
                         b.U,
@@ -1538,7 +1539,7 @@
                             E().TitleExtraLarge,
                           ),
                         },
-                        (0, r.Wn)("#patch738_neutrals_title"),
+                        (0, o.Wn)("#patch738_neutrals_title"),
                       ),
                       s.createElement(
                         "p",
@@ -1550,7 +1551,7 @@
                             E().LightGrayText,
                           ),
                         },
-                        (0, r.Wn)("#patch738_neutrals_introduction"),
+                        (0, o.Wn)("#patch738_neutrals_introduction"),
                       ),
                     ),
                     s.createElement(
@@ -1577,7 +1578,7 @@
                               E().TitleMedium,
                             ),
                           },
-                          (0, r.Wn)("#patch738_neutrals_lumber_title"),
+                          (0, o.Wn)("#patch738_neutrals_lumber_title"),
                         ),
                         s.createElement(
                           "p",
@@ -1589,7 +1590,7 @@
                               E().LightGrayText,
                             ),
                           },
-                          (0, r.Wn)("#patch738_neutrals_lumber_description"),
+                          (0, o.Wn)("#patch738_neutrals_lumber_description"),
                         ),
                       ),
                     ),
@@ -1618,7 +1619,7 @@
                               E().TitleMedium,
                             ),
                           },
-                          (0, r.Wn)("#patch738_neutrals_crafting_title"),
+                          (0, o.Wn)("#patch738_neutrals_crafting_title"),
                         ),
                         s.createElement(
                           "p",
@@ -1630,7 +1631,7 @@
                               E().LightGrayText,
                             ),
                           },
-                          (0, r.Wn)("#patch738_neutrals_crafting_description"),
+                          (0, o.Wn)("#patch738_neutrals_crafting_description"),
                         ),
                       ),
                     ),
@@ -1657,7 +1658,7 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)("#patch738_neutrals_timings_title"),
+                            (0, o.Wn)("#patch738_neutrals_timings_title"),
                           ),
                           s.createElement(
                             "p",
@@ -1669,7 +1670,7 @@
                                 E().LightGrayText,
                               ),
                             },
-                            (0, r.Wn)("#patch738_neutrals_timings_description"),
+                            (0, o.Wn)("#patch738_neutrals_timings_description"),
                           ),
                         ),
                       ),
@@ -1692,7 +1693,7 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)("#patch738_neutrals_tab_title"),
+                            (0, o.Wn)("#patch738_neutrals_tab_title"),
                           ),
                           s.createElement(
                             "p",
@@ -1704,7 +1705,7 @@
                                 E().LightGrayText,
                               ),
                             },
-                            (0, r.Wn)("#patch738_neutrals_tab_description"),
+                            (0, o.Wn)("#patch738_neutrals_tab_description"),
                           ),
                         ),
                       ),
@@ -1723,7 +1724,7 @@
                             E().LightGrayText,
                           ),
                         },
-                        (0, r.Wn)("#patch738_neutrals_changes_moreinfo"),
+                        (0, o.Wn)("#patch738_neutrals_changes_moreinfo"),
                       ),
                     ),
                   ),
@@ -1750,7 +1751,7 @@
                             E().TitleExtraLarge,
                           ),
                         },
-                        (0, r.Wn)("#patch738_qol_title"),
+                        (0, o.Wn)("#patch738_qol_title"),
                       ),
                       s.createElement(
                         "p",
@@ -1762,7 +1763,7 @@
                             E().LightGrayText,
                           ),
                         },
-                        (0, r.Wn)("#patch738_qol_introduction"),
+                        (0, o.Wn)("#patch738_qol_introduction"),
                       ),
                     ),
                     s.createElement(
@@ -1787,7 +1788,7 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_roshan_timer_title",
                             ),
                           ),
@@ -1801,7 +1802,7 @@
                                 E().LightGrayText,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_roshan_timer_description",
                             ),
                           ),
@@ -1826,7 +1827,7 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_markforsell_title",
                             ),
                           ),
@@ -1840,7 +1841,7 @@
                                 E().LightGrayText,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_markforsell_description",
                             ),
                           ),
@@ -1865,7 +1866,7 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_item_effects_title",
                             ),
                           ),
@@ -1879,7 +1880,7 @@
                                 E().LightGrayText,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_item_effects_description",
                             ),
                           ),
@@ -1896,7 +1897,7 @@
                                   E().SeeListLabel,
                                 ),
                               },
-                              (0, r.Wn)(
+                              (0, o.Wn)(
                                 "#patch738_qol_feature_item_effects_list_label",
                               ),
                             ),
@@ -1913,7 +1914,7 @@
                                     E().TooltipHeader,
                                   ),
                                 },
-                                (0, r.Wn)(
+                                (0, o.Wn)(
                                   "#patch738_qol_feature_item_effects_title",
                                 ),
                               ),
@@ -1929,7 +1930,7 @@
                                       E().LightGrayText,
                                     ),
                                   },
-                                  (0, r.Wn)(
+                                  (0, o.Wn)(
                                     "#patch738_qol_feature_item_effects_list_col1",
                                   ),
                                 ),
@@ -1942,7 +1943,7 @@
                                       E().LightGrayText,
                                     ),
                                   },
-                                  (0, r.Wn)(
+                                  (0, o.Wn)(
                                     "#patch738_qol_feature_item_effects_list_col2",
                                   ),
                                 ),
@@ -1974,7 +1975,7 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_attributes_pips_title",
                             ),
                           ),
@@ -1988,7 +1989,7 @@
                                 E().LightGrayText,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_attributes_pips_description",
                             ),
                           ),
@@ -2013,7 +2014,24 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)("#patch738_qol_feature_hud_timers_title"),
+                            (0, o.Wn)("#patch738_qol_feature_hud_timers_title"),
+                          ),
+                          s.createElement(
+                            "div",
+                            { className: E().DotaPlusBadgeMobile },
+                            s.createElement("img", {
+                              src: `${n.r.IMG_URL}/icons/dota_plus.png`,
+                            }),
+                            s.createElement(
+                              "p",
+                              {
+                                className: (0, p.A)(
+                                  E().LabelFont,
+                                  E().LabelSmall,
+                                ),
+                              },
+                              (0, o.Wn)("#dota_plus"),
+                            ),
                           ),
                           s.createElement(
                             "p",
@@ -2023,9 +2041,10 @@
                                 E().BodyFont,
                                 E().BodyLarge,
                                 E().LightGrayText,
+                                E().LastOnMobile,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_hud_timers_description",
                             ),
                           ),
@@ -2043,7 +2062,7 @@
                                   E().LabelSmall,
                                 ),
                               },
-                              (0, r.Wn)("#dota_plus"),
+                              (0, o.Wn)("#dota_plus"),
                             ),
                           ),
                         ),
@@ -2067,7 +2086,7 @@
                                 E().LabelExtraLarge,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_backpack_grace_title",
                             ),
                           ),
@@ -2081,7 +2100,7 @@
                                 E().LightGrayText,
                               ),
                             },
-                            (0, r.Wn)(
+                            (0, o.Wn)(
                               "#patch738_qol_feature_backpack_grace_description",
                             ),
                           ),
@@ -2115,7 +2134,7 @@
                             E().LabelMedium,
                           ),
                         },
-                        (0, r.Wn)("#patchnotes_update"),
+                        (0, o.Wn)("#patchnotes_update"),
                       ),
                       s.createElement(
                         "h2",
@@ -2126,7 +2145,7 @@
                             E().TitleExtraLarge,
                           ),
                         },
-                        (0, r.Wn)("#patch738_gameplayupdate_title"),
+                        (0, o.Wn)("#patch738_gameplayupdate_title"),
                       ),
                       s.createElement(
                         "p",
@@ -2138,7 +2157,7 @@
                             E().LightGrayText,
                           ),
                         },
-                        (0, r.Wn)("#patch738_gameplayupdate_introduction"),
+                        (0, o.Wn)("#patch738_gameplayupdate_introduction"),
                       ),
                     ),
                     s.createElement(
@@ -2179,7 +2198,7 @@
           );
         }
       };
-      H = (0, l.Cg)([o.PA], H);
+      H = (0, l.Cg)([r.PA], H);
       const D = H;
     },
   },
