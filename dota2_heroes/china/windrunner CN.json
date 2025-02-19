@@ -62,6 +62,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "束缚击会对目标单位身后的所有单位和树木施加，每个额外束缚的单位和树木都会使风行者获得攻击力加成。非英雄单位和树木提供的攻击力加成较少。",
             ""
           ],
           "type": 0,
@@ -194,9 +196,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "windrunner_tangled",
+                "values": [
+                  0
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -213,6 +217,69 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_damage_per_hero",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "每个英雄的攻击力加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "windrunner_tangled",
+                "values": [
+                  12,
+                  20,
+                  28,
+                  36
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_damage_per_other_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "非英雄/树木攻击力：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "windrunner_tangled",
+                "values": [
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_buff_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "攻击力加成持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "windrunner_tangled",
+                "values": [
+                  6
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -392,7 +459,9 @@
           "facets_loc": [
             "",
             "",
-            ""
+            "",
+            "",
+            "被击中的敌方英雄血量低于临界值就会被秒杀。秒杀血量是基于箭矢的威力。"
           ],
           "type": 0,
           "behavior": "144",
@@ -466,13 +535,7 @@
               ],
               "is_percentage": true,
               "heading_loc": "移动速度减缓：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_windranger_powershot_slow",
-                  "value": 20,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -489,7 +552,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "减速持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_windranger_powershot_slow",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -625,6 +694,50 @@
               "required_facet": ""
             },
             {
+              "name": "min_execute_threshold",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "最低秒杀血量：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "windrunner_killshot",
+                "values": [
+                  5
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_execute_threshold",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "最高秒杀血量：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "windrunner_killshot",
+                "values": [
+                  9,
+                  10,
+                  11,
+                  12
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 2600
@@ -729,7 +842,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100
+                90,
+                100,
+                110,
+                120
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -795,6 +911,8 @@
           "scepter_loc": "风行使承受的物理伤害减少%physical_damage_pct%%%，并且自身获得隐身状态，攻击或施法都不会脱离隐身。",
           "facets_loc": [
             "风行会使风行者和附近友军获得额外移动速度加成。",
+            "",
+            "",
             "",
             ""
           ],
@@ -1187,6 +1305,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -1381,7 +1501,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100
+                125
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1449,7 +1569,9 @@
           "facets_loc": [
             "",
             "",
-            "集中火力不再需要施法目标，而是对风行者攻击距离 + %bonus_range%范围内的随机敌人发动攻击。每秒发动固定次数的攻击，并且每4箭才会击中一次同个敌人。以英雄优先。"
+            "集中火力不再需要施法目标，而是对风行者攻击距离 + %bonus_range%范围内的随机敌人发动攻击。每秒发动固定次数的攻击，并且每4箭才会击中一次同个敌人。以英雄优先。",
+            "",
+            ""
           ],
           "type": 1,
           "behavior": "134217736",
@@ -1874,6 +1996,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -1919,7 +2043,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_windranger_9",
+                  "value": 25,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1936,7 +2066,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_windranger_9",
+                  "value": 25,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3762,18 +3898,18 @@
       "facets": [
         {
           "color": 1,
-          "title_loc": "集中火力",
-          "description_loc": "集中火力快速攻击单个目标。",
-          "name": "windrunner_focusfire",
-          "icon": "focus_fire",
+          "title_loc": "前赴后继",
+          "description_loc": "束缚击会作用于更多敌人，并且每个束缚的目标都会提供攻击力。",
+          "name": "windrunner_tangled",
+          "icon": "tree",
           "gradient_id": 2
         },
         {
           "color": 2,
-          "title_loc": "旋风",
-          "description_loc": "集中火力随机对范围内敌人发动攻击。",
-          "name": "windrunner_whirlwind",
-          "icon": "multi_arrow",
+          "title_loc": "致命一箭",
+          "description_loc": "强力击会秒杀低血量的敌方英雄。",
+          "name": "windrunner_killshot",
+          "icon": "execute",
           "gradient_id": 0
         }
       ],
@@ -3796,6 +3932,8 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
+          "",
           "",
           "",
           ""
@@ -3843,7 +3981,13 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_windranger_9",
+                "value": 25,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -3860,7 +4004,13 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_windranger_9",
+                "value": 25,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {

@@ -136,13 +136,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "额外伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_drow_ranger_2",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -808,7 +802,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_drow_ranger_7",
+                  "value": 0,
+                  "operation": 5
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -828,13 +828,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_drow_ranger_7",
-                  "value": 3.5,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -951,7 +945,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "每波箭矢数：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_drow_ranger_2",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1790,12 +1790,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "trueshot_agi_bonus_self",
+              "name": "radius",
               "values_float": [
-                2
+                1200
               ],
-              "is_percentage": true,
-              "heading_loc": "每级自身敏捷加成：",
+              "is_percentage": false,
+              "heading_loc": "作用范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1807,12 +1807,32 @@
               "required_facet": ""
             },
             {
-              "name": "trueshot_agi_bonus_allies",
+              "name": "trueshot_agi_bonus_base",
+              "values_float": [
+                4,
+                8,
+                12,
+                16
+              ],
+              "is_percentage": true,
+              "heading_loc": "基础敏捷加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "trueshot_agi_bonus_per_level",
               "values_float": [
                 1
               ],
               "is_percentage": true,
-              "heading_loc": "每级友军敏捷加成：",
+              "heading_loc": "每级敏捷加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1824,9 +1844,9 @@
               "required_facet": ""
             },
             {
-              "name": "trueshot_aspd_bonus_creeps",
+              "name": "trueshot_agi_bonus_allies_pct",
               "values_float": [
-                0
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1835,20 +1855,18 @@
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
-                "values": [
-                  3
-                ],
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
             },
             {
-              "name": "radius",
+              "name": "agi_bonus_pct_tooltip",
               "values_float": [
-                1200
+                0
               ],
-              "is_percentage": false,
-              "heading_loc": "作用范围：",
+              "is_percentage": true,
+              "heading_loc": "总敏捷加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -3971,7 +3989,7 @@
                 {
                   "name": "damage_bonus",
                   "values_float": [
-                    20
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -4163,7 +4181,7 @@
         "id": 1205,
         "name": "drow_ranger_trueshot",
         "name_loc": "精准光环",
-        "desc_loc": "卓尔游侠和附近远程英雄根据卓尔游侠的当前敏捷和英雄等级获得敏捷加成。",
+        "desc_loc": "卓尔游侠根据她自身的当前敏捷和英雄等级获得敏捷加成。附近远程英雄获得%trueshot_agi_bonus_allies_pct%%%敏捷加成。",
         "lore_loc": "崔希丝在卓尔族森林中独处的时光让她有时间教导其他弓箭手如何提高弓技。",
         "notes_loc": [],
         "shard_loc": "",
@@ -4173,14 +4191,14 @@
           ""
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "13194139533378",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
         "immunity": 0,
         "dispellable": 0,
-        "max_level": 1,
+        "max_level": 4,
         "cast_ranges": [
           0
         ],
@@ -4209,12 +4227,12 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "trueshot_agi_bonus_self",
+            "name": "radius",
             "values_float": [
-              2
+              1200
             ],
-            "is_percentage": true,
-            "heading_loc": "每级自身敏捷加成：",
+            "is_percentage": false,
+            "heading_loc": "作用范围：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -4226,12 +4244,32 @@
             "required_facet": ""
           },
           {
-            "name": "trueshot_agi_bonus_allies",
+            "name": "trueshot_agi_bonus_base",
+            "values_float": [
+              4,
+              8,
+              12,
+              16
+            ],
+            "is_percentage": true,
+            "heading_loc": "基础敏捷加成：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "trueshot_agi_bonus_per_level",
             "values_float": [
               1
             ],
             "is_percentage": true,
-            "heading_loc": "每级友军敏捷加成：",
+            "heading_loc": "每级敏捷加成：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -4243,9 +4281,9 @@
             "required_facet": ""
           },
           {
-            "name": "trueshot_aspd_bonus_creeps",
+            "name": "trueshot_agi_bonus_allies_pct",
             "values_float": [
-              0
+              50
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -4254,20 +4292,18 @@
             "values_scepter": [],
             "facet_bonus": {
               "name": "",
-              "values": [
-                3
-              ],
+              "values": [],
               "operation": 0
             },
             "required_facet": ""
           },
           {
-            "name": "radius",
+            "name": "agi_bonus_pct_tooltip",
             "values_float": [
-              1200
+              0
             ],
-            "is_percentage": false,
-            "heading_loc": "作用范围：",
+            "is_percentage": true,
+            "heading_loc": "总敏捷加成：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

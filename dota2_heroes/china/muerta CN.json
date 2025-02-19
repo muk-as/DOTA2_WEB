@@ -16,8 +16,8 @@
       "str_gain": 2,
       "agi_base": 20,
       "agi_gain": 2.7,
-      "int_base": 24,
-      "int_gain": 3.3,
+      "int_base": 23,
+      "int_gain": 3.4,
       "attack_capability": 2,
       "role_levels": [
         3,
@@ -30,8 +30,8 @@
         0,
         0
       ],
-      "damage_min": 48,
-      "damage_max": 56,
+      "damage_min": 47,
+      "damage_max": 55,
       "attack_rate": 1.7,
       "attack_range": 575,
       "projectile_speed": 3000,
@@ -43,8 +43,8 @@
       "sight_range_night": 800,
       "max_health": 538,
       "health_regen": 2.15,
-      "max_mana": 363,
-      "mana_regen": 1.2,
+      "max_mana": 351,
+      "mana_regen": 1.15,
       "abilities": [
         {
           "id": 5751,
@@ -58,7 +58,7 @@
             "可以弹离减益免疫目标。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "弹无虚发的伤害提升。弹无虚发的作用范围在弹跳后会扩大，并且跳弹恐惧敌人时会穿过敌方英雄。",
           "facets_loc": [
             "",
             ""
@@ -115,15 +115,11 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_muerta_dead_shot_damage",
-                  "value": 80,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                125
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -192,6 +188,25 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ricochet_radius_expansion_per_second",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                300
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -271,6 +286,25 @@
               "required_facet": ""
             },
             {
+              "name": "scepter_pierces",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 1000
@@ -280,7 +314,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_muerta_dead_shot_range",
-                  "value": 350,
+                  "value": 300,
                   "operation": 0
                 }
               ],
@@ -420,7 +454,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -435,6 +469,9 @@
           "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_dead_shot.jpg",
           "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_dead_shot.mp4",
           "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_dead_shot.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_muerta/muerta_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_muerta/muerta_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_muerta/muerta_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -810,7 +847,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_muerta_calling_hp_regen",
-                  "value": 1.5,
+                  "value": 3,
                   "operation": 0
                 }
               ],
@@ -990,7 +1027,8 @@
           "notes_loc": [
             "如果距离内没有其他单位，她会向原目标发射两枪。",
             "第二枪可以击中琼英碧灵攻击距离加上%target_search_bonus_range%范围内的单位。",
-            "第二枪可以触发攻击特效。"
+            "第二枪可以触发攻击特效。",
+            "以英雄优先，然后是非英雄单位，然后是建筑。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1037,10 +1075,10 @@
             {
               "name": "double_shot_chance",
               "values_float": [
-                26,
-                34,
-                42,
-                50
+                18,
+                27,
+                36,
+                45
               ],
               "is_percentage": true,
               "heading_loc": "触发几率：",
@@ -1251,383 +1289,6 @@
           "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_gunslinger.jpg",
           "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_gunslinger.mp4",
           "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_gunslinger.webm",
-          "is_inborn": 0
-        },
-        {
-          "id": 5760,
-          "name": "muerta_parting_shot",
-          "name_loc": "临别一枪",
-          "desc_loc": "琼英碧灵精准地射中一名英雄的灵魂，将其从身体中分离，并击退%knockback_distance%距离。<br>灵魂无法作为目标，被锁闭、缴械，并且是无敌状态，持续%debuff_duration%秒。<br>身体在持续时间内为眩晕状态，具有%damage_reduction_percent%%%伤害减免效果。<br><br>效果结束后灵魂强制回到身体，并施加强驱散。即使英雄阵亡，灵魂也会存活到效果结束。",
-          "lore_loc": "",
-          "notes_loc": [
-            "减益免疫单位会受到枪击的伤害，但是不会从身体中分离。",
-            "临别一枪击中友方英雄不会造成伤害。"
-          ],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "8657043529",
-          "target_team": 3,
-          "target_type": 1,
-          "flags": 131136,
-          "damage": 2,
-          "immunity": 4,
-          "dispellable": 3,
-          "max_level": 1,
-          "cast_ranges": [
-            750
-          ],
-          "cast_points": [
-            0.3
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            45
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            300
-          ],
-          "mana_costs": [
-            250
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "projectile_speed",
-              "values_float": [
-                2500
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "knockback_duration",
-              "values_float": [
-                0.2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "knockback_distance",
-              "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "击退距离：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "debuff_duration",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "持续时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ethereal_damage_bonus",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "movement_slow",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "soul_return_time",
-              "values_float": [
-                0.75
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "soul_return_min_speed",
-              "values_float": [
-                500
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "damage_reduction_percent",
-              "values_float": [
-                35
-              ],
-              "is_percentage": true,
-              "heading_loc": "身体伤害减少：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "#AbilityDamage",
-              "values_float": [
-                300
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastRange",
-              "values_float": [
-                750
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChannelTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityDuration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0.3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChargeRestoreTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                250
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                45
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": true,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/muerta_parting_shot.png",
-          "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.jpg",
-          "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.mp4",
-          "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.webm",
-          "video_scepter_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_shard.png",
-          "video_scepter_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_aghanims_scepter.mp4",
           "is_inborn": 0
         },
         {
@@ -1978,13 +1639,13 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/muerta_pierce_the_veil.png",
-          "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_aghanims_shard.jpg",
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/muerta_parting_shot.png",
+          "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.jpg",
           "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.mp4",
-          "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.mp4",
-          "video_shard_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_shard.png",
-          "video_shard_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_aghanims_shard.mp4",
-          "video_shard_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_aghanims_shard.mp4",
+          "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_muerta/muerta_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_muerta/muerta_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_muerta/muerta_aghanims_shard.webm",
           "is_inborn": 0
         },
         {
@@ -2185,10 +1846,10 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_muerta/muerta_supernatural.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_muerta/muerta_supernatural.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_muerta/muerta_supernatural.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_muerta/muerta_supernatural.webm",
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/muerta_pierce_the_veil.png",
+          "video_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_aghanims_shard.jpg",
+          "video_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.mp4",
+          "video_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_pierce_the_veil.mp4",
           "is_inborn": 1
         }
       ],
@@ -2393,10 +2054,10 @@
           "item_quality": 0
         },
         {
-          "id": 1438,
-          "name": "special_bonus_unique_muerta_calling_hp_regen",
-          "name_loc": "唤魂内+{s:bonus_hp_regen_pct}% 最大生命值恢复",
-          "desc_loc": "只对琼英碧灵生效。",
+          "id": 5902,
+          "name": "special_bonus_hp_150",
+          "name_loc": "+{s:value} 生命",
+          "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -2441,6 +2102,23 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                150
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2592,10 +2270,10 @@
           "item_quality": 0
         },
         {
-          "id": 5756,
-          "name": "special_bonus_unique_muerta_dead_shot_damage",
-          "name_loc": "+{s:bonus_damage} 弹无虚发伤害",
-          "desc_loc": "",
+          "id": 1438,
+          "name": "special_bonus_unique_muerta_calling_hp_regen",
+          "name_loc": "唤魂内+{s:bonus_hp_regen_pct}% 最大生命值恢复",
+          "desc_loc": "只对琼英碧灵生效。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -3824,7 +3502,7 @@
       "crops_img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/muerta.png",
       "top_img": "https://img.dota2.com.cn/dota2static/file/8b716b61-6f49-4169-a932-a15fa48bff82.png",
       "top_video": "https://static.pwesports.cn/esportsadmin/DOTA2/2023-3-7/8ce2a858-75cf-4b79-85f4-88221722c0d9.webm",
-      "update_time": 1732060997,
+      "update_time": 1739927035,
       "facets": [
         {
           "color": 2,

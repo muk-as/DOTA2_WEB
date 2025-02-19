@@ -60,6 +60,7 @@
             "",
             "",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -413,6 +414,7 @@
             "",
             "",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -620,6 +622,25 @@
               "required_facet": ""
             },
             {
+              "name": "current_hp_pct_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                30
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "creep_ability_level",
               "values_float": [
                 0
@@ -816,6 +837,7 @@
             "",
             "",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -903,9 +925,7 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                -1
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -937,13 +957,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "传送延迟：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_chen_3",
-                  "value": 2,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1182,7 +1196,8 @@
             "召唤信徒会召唤巨狼或头狼。",
             "召唤信徒会召唤地狱熊怪或地狱熊怪粉碎者。",
             "召唤信徒会召唤丘陵巨魔或黑暗巨魔召唤法师。",
-            "召唤信徒会召唤萨特窃神者或萨特苦难使者。"
+            "召唤信徒会召唤萨特窃神者或萨特苦难使者。",
+            "召唤信徒会召唤沼蛙法师学徒或者沼蛙法师。"
           ],
           "type": 0,
           "behavior": "68",
@@ -1350,6 +1365,25 @@
               "required_facet": ""
             },
             {
+              "name": "summon_frogs",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "chen_frog_convert",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "convert_hp_tooltip",
               "values_float": [
                 0
@@ -1357,6 +1391,29 @@
               "is_percentage": false,
               "heading_loc": "劝化生命值：",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_chen_3",
+                  "value": 150,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1537,6 +1594,7 @@
             "",
             "",
             "",
+            "",
             ""
           ],
           "type": 1,
@@ -1590,13 +1648,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "初始治疗：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_chen_2",
-                  "value": 200,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1632,13 +1684,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "每秒治疗量：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_chen_2",
-                  "value": 10,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1679,6 +1725,29 @@
                   "name": "special_bonus_unique_chen_12",
                   "value": 1,
                   "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "full_heal_on_chen_and_creeps",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_chen_2",
+                  "value": 1,
+                  "operation": 5
                 }
               ],
               "values_shard": [],
@@ -3500,20 +3569,12 @@
       "update_time": 1739926930,
       "facets": [
         {
-          "color": 3,
+          "color": 1,
           "title_loc": "半人马信徒",
           "description_loc": "召唤信徒会召唤半人马猎手或半人马征服者。",
           "name": "chen_centaur_convert",
           "icon": "area_of_effect",
           "gradient_id": 3
-        },
-        {
-          "color": 1,
-          "title_loc": "巨狼信徒",
-          "description_loc": "召唤信徒会召唤巨狼或头狼。",
-          "name": "chen_wolf_convert",
-          "icon": "damage",
-          "gradient_id": 2
         },
         {
           "color": 0,
@@ -3538,6 +3599,14 @@
           "name": "chen_satyr_convert",
           "icon": "mana",
           "gradient_id": 1
+        },
+        {
+          "color": 3,
+          "title_loc": "沼蛙法师信徒",
+          "description_loc": "召唤信徒会召唤沼蛙法师学徒或者沼蛙法师。",
+          "name": "chen_frog_convert",
+          "icon": "bubbles",
+          "gradient_id": 3
         }
       ],
       "facet_abilities": [
@@ -3572,7 +3641,8 @@
           "召唤信徒会召唤巨狼或头狼。",
           "召唤信徒会召唤地狱熊怪或地狱熊怪粉碎者。",
           "召唤信徒会召唤丘陵巨魔或黑暗巨魔召唤法师。",
-          "召唤信徒会召唤萨特窃神者或萨特苦难使者。"
+          "召唤信徒会召唤萨特窃神者或萨特苦难使者。",
+          "召唤信徒会召唤沼蛙法师学徒或者沼蛙法师。"
         ],
         "type": 0,
         "behavior": "68",
@@ -3740,6 +3810,25 @@
             "required_facet": ""
           },
           {
+            "name": "summon_frogs",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "chen_frog_convert",
+              "values": [
+                1
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
             "name": "convert_hp_tooltip",
             "values_float": [
               0
@@ -3747,6 +3836,29 @@
             "is_percentage": false,
             "heading_loc": "劝化生命值：",
             "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "attack_speed",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_chen_3",
+                "value": 150,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {

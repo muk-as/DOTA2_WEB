@@ -107,9 +107,9 @@
               "name": "bonus_speed",
               "values_float": [
                 10,
-                20,
-                30,
-                40
+                18,
+                26,
+                34
               ],
               "is_percentage": true,
               "heading_loc": "移动速度加成：",
@@ -130,7 +130,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_slardar_7",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -191,7 +197,7 @@
               "facet_bonus": {
                 "name": "slardar_leg_day",
                 "values": [
-                  2
+                  2.5
                 ],
                 "operation": 0
               },
@@ -345,13 +351,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_slardar_7",
-                  "value": 2,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -558,7 +558,7 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [
-                300
+                1.8
               ],
               "facet_bonus": {
                 "name": "",
@@ -1105,8 +1105,8 @@
               "values_float": [
                 18
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "额外移动速度：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1120,10 +1120,10 @@
             {
               "name": "puddle_regen",
               "values_float": [
-                2,
-                4,
-                6,
-                8
+                2.5,
+                5,
+                7.5,
+                10
               ],
               "is_percentage": false,
               "heading_loc": "生命恢复：",
@@ -1179,12 +1179,38 @@
               "required_facet": ""
             },
             {
-              "name": "river_speed_tooltip",
+              "name": "river_damage",
               "values_float": [
-                18
+                8,
+                16,
+                24,
+                32
               ],
-              "is_percentage": true,
-              "heading_loc": "移动速度加成：",
+              "is_percentage": false,
+              "heading_loc": "攻击力加成：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_slardar_6",
+                  "value": 12,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_puddle_radius_tooltip",
+              "values_float": [
+                80
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1196,15 +1222,12 @@
               "required_facet": ""
             },
             {
-              "name": "river_damage",
+              "name": "scepter_puddle_duration_increase_tooltip",
               "values_float": [
-                8,
-                16,
-                24,
-                32
+                5
               ],
               "is_percentage": false,
-              "heading_loc": "攻击力加成：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1493,10 +1516,12 @@
                 100
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "水迹作用范围：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                1.8
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1507,13 +1532,15 @@
             {
               "name": "puddle_duration",
               "values_float": [
-                8
+                7
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "水迹持续时间：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                5
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1553,7 +1580,7 @@
               "facet_bonus": {
                 "name": "slardar_brineguard",
                 "values": [
-                  40
+                  50
                 ],
                 "operation": 0
               },
@@ -3396,11 +3423,11 @@
         "id": 1253,
         "name": "slardar_seaborn_sentinel",
         "name_loc": "汪洋前哨",
-        "desc_loc": "斯拉达在水洼或河道中将获得移动速度、生命恢复、攻击力和护甲加成。",
+        "desc_loc": "斯拉达在水洼、水迹或河道中将获得移动速度、生命恢复、攻击力和护甲加成。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
-        "scepter_loc": "在水洼或河道中获得额外生命恢复、护甲和状态抗性。",
+        "scepter_loc": "在水洼、水迹或河道中获得额外生命恢复、护甲和状态抗性。水洼/水迹的作用范围提升%scepter_puddle_radius_tooltip%%%，水洼的持续时间提升%scepter_puddle_duration_increase_tooltip%秒。",
         "facets_loc": [
           "",
           ""
@@ -3446,8 +3473,8 @@
             "values_float": [
               18
             ],
-            "is_percentage": false,
-            "heading_loc": "",
+            "is_percentage": true,
+            "heading_loc": "额外移动速度：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3461,10 +3488,10 @@
           {
             "name": "puddle_regen",
             "values_float": [
-              2,
-              4,
-              6,
-              8
+              2.5,
+              5,
+              7.5,
+              10
             ],
             "is_percentage": false,
             "heading_loc": "生命恢复：",
@@ -3520,12 +3547,38 @@
             "required_facet": ""
           },
           {
-            "name": "river_speed_tooltip",
+            "name": "river_damage",
             "values_float": [
-              18
+              8,
+              16,
+              24,
+              32
             ],
-            "is_percentage": true,
-            "heading_loc": "移动速度加成：",
+            "is_percentage": false,
+            "heading_loc": "攻击力加成：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_slardar_6",
+                "value": 12,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "scepter_puddle_radius_tooltip",
+            "values_float": [
+              80
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3537,15 +3590,12 @@
             "required_facet": ""
           },
           {
-            "name": "river_damage",
+            "name": "scepter_puddle_duration_increase_tooltip",
             "values_float": [
-              8,
-              16,
-              24,
-              32
+              5
             ],
             "is_percentage": false,
-            "heading_loc": "攻击力加成：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

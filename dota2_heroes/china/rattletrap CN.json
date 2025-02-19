@@ -186,7 +186,7 @@
             {
               "name": "creep_damage_multiplier",
               "values_float": [
-                1.5
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1027,7 +1027,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "减速持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_clockwerk_7",
+                  "value": 0.4,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1220,13 +1226,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_clockwerk_7",
-                  "value": 2,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1361,7 +1361,7 @@
                 3
               ],
               "is_percentage": false,
-              "heading_loc": "自身眩晕时间：",
+              "heading_loc": "自身减速时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1970,7 +1970,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "发射钩爪击中友军时拥有更大的撞击范围，使发条技师和击中的友军都获得护甲加成，并且部分退还冷却时间和魔法消耗。",
+            "如果发射钩爪击中的目标附近%radius_ally%范围内还有另一名友方英雄，那么发条技师和范围内所有友军都会获得护甲加成，并且部分退还冷却时间和魔法消耗。",
             ""
           ],
           "type": 1,
@@ -2053,19 +2053,19 @@
               "required_facet": ""
             },
             {
-              "name": "stun_radius_ally",
+              "name": "radius_ally",
               "values_float": [
                 175
               ],
-              "is_percentage": true,
-              "heading_loc": "击中友军的眩晕范围：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "rattletrap_hookup",
                 "values": [
-                  300
+                  350
                 ],
                 "operation": 5
               },
@@ -2077,7 +2077,7 @@
                 0
               ],
               "is_percentage": true,
-              "heading_loc": "击中友军返还冷却时间：",
+              "heading_loc": "冷却时间/魔法消耗退还：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -2096,7 +2096,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "友军护盾持续时间：",
+              "heading_loc": "友军护甲持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -4215,7 +4215,7 @@
         {
           "color": 5,
           "title_loc": "钩结",
-          "description_loc": "发射钩爪击中友军时拥有更大的撞击范围，提供护甲加成，并且部分退还冷却时间和魔法消耗。",
+          "description_loc": "如果发射钩爪击中的目标附近{s:bonus_radius_ally}范围内还有另一名友方英雄，那么发条技师和范围内所有友军都会获得护甲加成，并且部分退还冷却时间和魔法消耗。",
           "name": "rattletrap_hookup",
           "icon": "cooldown",
           "gradient_id": 2

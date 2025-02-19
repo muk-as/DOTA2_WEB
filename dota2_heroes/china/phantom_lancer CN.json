@@ -59,7 +59,8 @@
           "scepter_loc": "灵魂之矛可以向范围内敌人弹射一次，以英雄优先。提升灵魂之矛的幻象继承攻击力。",
           "facets_loc": [
             "",
-            ""
+            "",
+            "幻影长矛手幻象放出的灵魂之矛会造成%illusion_lance_damage_pct%%%长矛伤害。<br><br>不会影响阿哈利姆神杖弹射效果的长矛伤害。"
           ],
           "type": 0,
           "behavior": "8",
@@ -116,13 +117,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_lance_damage",
-                  "value": 35,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -156,7 +151,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "减速持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_lance_slow_duration",
+                  "value": 1.25,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -311,7 +312,7 @@
             {
               "name": "scepter_bonus_illusion_damage",
               "values_float": [
-                20
+                30
               ],
               "is_percentage": true,
               "heading_loc": "幻象额外继承攻击力：",
@@ -328,7 +329,7 @@
             {
               "name": "scepter_total_hits",
               "values_float": [
-                2
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -338,6 +339,25 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "illusion_lance_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "phantom_lancer_lancelot",
+                "values": [
+                  25
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -521,6 +541,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "幻影长矛手每缺失%hp_missing_per_extra_illusion_pct%%%生命都会额外产生一个幻象。",
+            "",
             ""
           ],
           "type": 0,
@@ -923,6 +944,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1242,6 +1264,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1290,7 +1313,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                  "value": 15,
+                  "value": 20,
                   "operation": 0
                 }
               ],
@@ -1313,7 +1336,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                  "value": 15,
+                  "value": 20,
                   "operation": 0
                 }
               ],
@@ -1492,7 +1515,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "并列的幻象会在附近随机单位身旁产生，继承更高的攻击力，但是无法控制。"
+            "并列的幻象会在附近随机单位身旁产生，继承更高的攻击力，但是无法控制。",
+            ""
           ],
           "type": 1,
           "behavior": "2",
@@ -1659,7 +1683,7 @@
             {
               "name": "illusion_damage_in_pct",
               "values_float": [
-                525
+                500
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1676,7 +1700,7 @@
             {
               "name": "tooltip_total_illusion_damage_in_pct",
               "values_float": [
-                625
+                600
               ],
               "is_percentage": true,
               "heading_loc": "幻象承受伤害：",
@@ -3615,20 +3639,20 @@
       "update_time": 1739926824,
       "facets": [
         {
-          "color": 1,
-          "title_loc": "汇聚",
-          "description_loc": "神行百变会产生额外幻象，数量取决于幻影长矛手的当前生命值。",
-          "name": "phantom_lancer_convergence",
-          "icon": "illusion",
-          "gradient_id": 1
-        },
-        {
           "color": 3,
           "title_loc": "离散",
           "description_loc": "并列的幻象会在附近随机单位身旁产生，继承更高的攻击力，但是无法控制。",
           "name": "phantom_lancer_divergence",
           "icon": "summons",
           "gradient_id": 2
+        },
+        {
+          "color": 1,
+          "title_loc": "众矛之的",
+          "description_loc": "幻影长矛手幻象放出的灵魂之矛会造成{s:bonus_illusion_lance_damage_pct}%长矛伤害。",
+          "name": "phantom_lancer_lancelot",
+          "icon": "phantom_lance",
+          "gradient_id": 1
         }
       ],
       "facet_abilities": [
@@ -3650,6 +3674,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
@@ -3699,7 +3724,7 @@
             "bonuses": [
               {
                 "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                "value": 15,
+                "value": 20,
                 "operation": 0
               }
             ],
@@ -3722,7 +3747,7 @@
             "bonuses": [
               {
                 "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                "value": 15,
+                "value": 20,
                 "operation": 0
               }
             ],

@@ -14,7 +14,7 @@
       "npe_desc_loc": "灵活的近战大师，拥有两套武器和技能",
       "str_base": 19,
       "str_gain": 2.6,
-      "agi_base": 26,
+      "agi_base": 27,
       "agi_gain": 3.5,
       "int_base": 18,
       "int_gain": 1.7,
@@ -30,14 +30,14 @@
         0,
         0
       ],
-      "damage_min": 49,
-      "damage_max": 55,
+      "damage_min": 50,
+      "damage_max": 56,
       "attack_rate": 2,
       "attack_range": 225,
       "projectile_speed": 900,
-      "armor": 6.3333335,
+      "armor": 5.5,
       "magic_resistance": 25,
-      "movement_speed": 320,
+      "movement_speed": 315,
       "turn_rate": 1,
       "sight_range_day": 1800,
       "sight_range_night": 800,
@@ -50,9 +50,11 @@
           "id": 1498,
           "name": "kez_echo_slash",
           "name_loc": "回音重斩",
-          "desc_loc": "凯挥舞他的长刀向前沿一条直线斩击，对区域内目标造成他攻击伤害的一定百分比和短暂减速。经过短暂延迟后，这个区域会被再次攻击。英雄会承受额外伤害。",
+          "desc_loc": "凯挥舞他的长刀向前沿一条直线斩击，攻击区域内的敌人并施加短暂减速。经过短暂延迟后，这个区域会被再次攻击。英雄会承受额外伤害。",
           "lore_loc": "凯和他的师父克洛孜孜不倦地训练影武团，改进古代的技艺让空中的敌人失去平衡。",
-          "notes_loc": [],
+          "notes_loc": [
+            "会摧毁树木。不会继承分裂效果。"
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
@@ -437,7 +439,7 @@
           "id": 1499,
           "name": "kez_grappling_claw",
           "name_loc": "制敌爪钩",
-          "desc_loc": "凯向目标单位或者树木发射一枚抓钩并摆荡过去。抓钩碰到目标后，在凯到达前该单位会被减速。凯落地后会发动一次攻击，带有%lifesteal_pct%%%吸血效果，如果目标是英雄，还会额外带有固定数值的治疗效果。",
+          "desc_loc": "凯向目标单位或者树木发射一枚抓钩并摆荡过去。抓钩碰到目标后，在凯到达前该单位会被减速。凯落地后会发动一次攻击，带有额外吸血效果。",
           "lore_loc": "影武者拥有极快的速度和强大的力量，在空中飞得再高也会被拽下来。",
           "notes_loc": [],
           "shard_loc": "",
@@ -811,7 +813,7 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            150
+            200
           ],
           "cast_points": [
             0
@@ -1222,7 +1224,7 @@
           "lore_loc": "影武团的领袖，曾经也是翔影教团的追随者，他的武技可以在长刀和双钗这两种流派之间自如地切换。",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "施放任何武器的技能都会重置流派变换的冷却时间。<br><br>凯在使用流派变换后%scepter_cooldown_timer%秒内施放的第一个技能不会使相对的武器技能进入冷却。",
+          "scepter_loc": "施放任何武器的技能都会重置流派变换的冷却时间。<br><br>在使用流派变换后%scepter_cooldown_timer%秒内施放的第一个技能不会使相对的武器技能进入冷却。",
           "facets_loc": [
             "凯切换到长刀后第一次攻击或技能造成额外伤害，切换到双钗后获得移动速度加成。",
             ""
@@ -1595,7 +1597,7 @@
           "id": 1501,
           "name": "kez_raptor_dance",
           "name_loc": "猛禽之舞",
-          "desc_loc": "凯进入不可控制的持续施法，持续%AbilityChannelTime%秒，获得减益免疫状态和%magic_resist%%%魔法抗性。如果持续施法成功完成，凯会对周围发动致命的辐射状斩击，基于目标的最大生命值造成伤害，并且造成伤害的一定百分比会治疗凯。凯在斩击完成后会获得一次强驱散效果。",
+          "desc_loc": "凯进入不可控制的持续施法，持续%AbilityChannelTime%秒，获得%invuln_period%秒无敌状态和若驱散效果，持续施法内剩余时间和斩击时间内会对魔法伤害免疫。如果持续施法成功完成，凯会对周围发动致命的辐射状斩击，基于目标的最大生命值造成伤害，并且造成伤害的一定百分比会治疗凯。",
           "lore_loc": "陆行族内心的愤怒尽数释放，将敌人的精元吸收殆尽。",
           "notes_loc": [],
           "shard_loc": "",
@@ -2398,7 +2400,7 @@
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
-          "damage": 2,
+          "damage": 1,
           "immunity": 4,
           "dispellable": 0,
           "max_level": 4,
@@ -2668,7 +2670,7 @@
           "id": 1504,
           "name": "kez_shodo_sai",
           "name_loc": "翔影之钗",
-          "desc_loc": "装备双钗时凯的攻击和技能有几率标记敌人。被标记的敌人会被减速，并且凯的下次攻击或技能伤害会获得克敌机先，同时眩晕敌人并造成致命一击，状态效果会被消耗。<br><br>凯可以主动开启技能，使自身被缴械，面朝方向被锁定，招架来自目标方向的攻击和攻击效果，持续%parry_duration%秒。如果有敌方英雄的攻击被招架，该英雄会被眩晕并标记，该负面效果触发时造成额外的致命一击和眩晕。<br><br>子技能可以用于提前取消招架状态。",
+          "desc_loc": "装备双钗时凯的攻击和技能有几率标记敌人。凯的下次攻击或技能伤害会获得克敌机先，同时眩晕敌人并造成致命一击，状态效果会被消耗。<br><br>凯可以主动开启技能，使自身被缴械，面朝方向被锁定，招架来自目标方向的攻击和攻击效果，持续%parry_duration%秒。如果有敌方英雄的攻击被招架，该英雄会被眩晕并标记，该负面效果触发时造成额外的致命一击和眩晕。<br><br>子技能可以用于提前取消招架状态。",
           "lore_loc": "也许翔影教团已经迷失了方向，但是凯和影武团还是能利用翔影的知识造福人民。",
           "notes_loc": [],
           "shard_loc": "被动提供%shard_base_movement_speed%移动速度，每个被标记的敌人还会额外提供%shard_vuln_movement_speed%移动速度。",
@@ -3141,7 +3143,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -3155,9 +3157,6 @@
           "video_jpg": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/kez/kez_shodo_sai.jpg",
           "video_mp4": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/kez/kez_shodo_sai.mp4",
           "video_webm": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/kez/kez_shodo_sai.webm",
-          "video_shard_jpg": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/kez/kez_aghanims_shard.jpg",
-          "video_shard_mp4": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/kez/kez_aghanims_shard.mp4",
-          "video_shard_webm": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/kez/kez_aghanims_shard.webm",
           "is_inborn": 0
         },
         {
@@ -3536,6 +3535,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -3751,6 +3751,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -3966,6 +3967,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -4164,6 +4166,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -4362,6 +4365,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -4560,6 +4564,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -4758,6 +4763,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -4956,6 +4962,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 2,
@@ -5149,7 +5156,7 @@
       "crops_img": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/kez.png",
       "top_img": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.png",
       "top_video": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.webm",
-      "update_time": 1739923422,
+      "update_time": 1739927039,
       "facets": [
         {
           "color": 1,

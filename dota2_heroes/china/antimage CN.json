@@ -688,7 +688,7 @@
           "shard_loc": "法术反制被动提供光环，降低敌人的技能伤害。降低效果对近距离的敌人更强。",
           "scepter_loc": "",
           "facets_loc": [
-            "法术反制会把技能反弹给施法者，技能的伤害还得到了增强。",
+            "法术反制会使施法者被燃烧该技能魔法消耗的一定百分比，并且造成%damage_from_mana_drain_percent%%%燃烧魔法的伤害，最高为每次反弹技能造成%max_damage_from_mana_drain%点伤害。",
             ""
           ],
           "type": 0,
@@ -736,10 +736,10 @@
             {
               "name": "magic_resistance",
               "values_float": [
-                15,
-                25,
-                35,
-                45
+                16,
+                24,
+                32,
+                40
               ],
               "is_percentage": true,
               "heading_loc": "魔法抗性：",
@@ -828,9 +828,9 @@
               "required_facet": ""
             },
             {
-              "name": "castable_while_disabled",
+              "name": "does_reflect",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -845,25 +845,6 @@
               "required_facet": ""
             },
             {
-              "name": "does_reflect",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "antimage_magebanes_mirror",
-                "values": [
-                  1
-                ],
-                "operation": 5
-              },
-              "required_facet": ""
-            },
-            {
               "name": "reflected_spell_amp",
               "values_float": [
                 0
@@ -874,13 +855,70 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "antimage_magebanes_mirror",
-                "values": [
-                  40
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "mana_drain_percent",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "燃烧魔耗百分比：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "antimage_magebanes_mirror",
+                "values": [
+                  150,
+                  190,
+                  230,
+                  270
+                ],
+                "operation": 5
+              },
+              "required_facet": "antimage_magebanes_mirror"
+            },
+            {
+              "name": "damage_from_mana_drain_percent",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "antimage_magebanes_mirror"
+            },
+            {
+              "name": "max_damage_from_mana_drain",
+              "values_float": [
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "antimage_magebanes_mirror"
             },
             {
               "name": "AbilityCastRange",
@@ -1050,7 +1088,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "友军法术反制会把技能反弹给施法者，技能的伤害还得到了增强。",
+            "法术反制会使施法者被燃烧该技能魔法消耗的一定百分比，并且造成%damage_from_mana_drain_percent%%%燃烧魔法的伤害，最高为每次反弹技能造成%max_damage_from_mana_drain%点伤害。",
             ""
           ],
           "type": 0,
@@ -1161,9 +1199,9 @@
               "required_facet": ""
             },
             {
-              "name": "castable_while_disabled",
+              "name": "does_reflect",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1178,25 +1216,6 @@
               "required_facet": ""
             },
             {
-              "name": "does_reflect",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "antimage_magebanes_mirror",
-                "values": [
-                  1
-                ],
-                "operation": 5
-              },
-              "required_facet": ""
-            },
-            {
               "name": "reflected_spell_amp",
               "values_float": [
                 0
@@ -1207,13 +1226,64 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "antimage_magebanes_mirror",
-                "values": [
-                  40
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "mana_drain_percent",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "燃烧魔耗百分比：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "antimage_magebanes_mirror",
+                "values": [
+                  270
+                ],
+                "operation": 5
+              },
+              "required_facet": "antimage_magebanes_mirror"
+            },
+            {
+              "name": "damage_from_mana_drain_percent",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "antimage_magebanes_mirror"
+            },
+            {
+              "name": "max_damage_from_mana_drain",
+              "values_float": [
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "antimage_magebanes_mirror"
             },
             {
               "name": "AbilityCastRange",
@@ -3725,7 +3795,7 @@
         {
           "color": 4,
           "title_loc": "灭法之镜",
-          "description_loc": "法术反制和友军法术反制会把技能反弹给施法者，而不只是抵挡。",
+          "description_loc": "法术反制或友军法术反制成功反制技能后会使敌人立刻被燃烧该技能魔法消耗的一定百分比，并且根据燃烧的魔法消耗造成伤害。",
           "name": "antimage_magebanes_mirror",
           "icon": "ricochet",
           "gradient_id": 1

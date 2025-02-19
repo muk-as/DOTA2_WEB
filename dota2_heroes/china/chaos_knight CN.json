@@ -60,7 +60,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "",
+            "混乱之箭打击目标后一分为二，额外眩晕%bounce_range_pct%%%施法距离内的一个敌人，并对另一个敌人造成伤害。以英雄优先。分裂后只打击到一个敌人的话总是会造成眩晕。<br><br>额外目标不会产生魔晶幻象。"
           ],
           "type": 0,
           "behavior": "8",
@@ -269,9 +271,28 @@
               "required_facet": ""
             },
             {
+              "name": "bounce_range_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "chaos_knight_cloven_chaos",
+                "values": [
+                  60
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
-                500
+                600
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -450,7 +471,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "实相裂隙除了平常效果外，还有均等几率施加破坏、缴械或沉默，持续时间为基础负面效果时间的%additional_debuff_duration_percent%%%。"
+            "实相裂隙除了平常效果外，还有均等几率施加破坏、缴械或沉默，持续时间为基础负面效果时间的%additional_debuff_duration_percent%%%。",
+            "",
+            ""
           ],
           "type": 0,
           "behavior": "524296",
@@ -771,6 +794,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -835,7 +860,7 @@
             {
               "name": "crit_min",
               "values_float": [
-                125
+                120
               ],
               "is_percentage": true,
               "heading_loc": "最低致命一击：",
@@ -853,9 +878,9 @@
               "name": "crit_max",
               "values_float": [
                 140,
-                175,
-                210,
-                245
+                180,
+                220,
+                260
               ],
               "is_percentage": true,
               "heading_loc": "最高致命一击：",
@@ -898,24 +923,7 @@
             {
               "name": "creep_multiplier",
               "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "creep_lifesteal_reduction_pct",
-              "values_float": [
-                70
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1094,6 +1102,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -1335,6 +1345,8 @@
           "shard_loc": "",
           "scepter_loc": "产生全地图上所有友方英雄的一个幻象。额外产生一个混沌骑士的幻象。",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -3351,45 +3363,53 @@
       "update_time": 1739926956,
       "facets": [
         {
-          "color": 0,
-          "title_loc": "千变幻景",
-          "description_loc": "所有混沌骑士的幻象都是强幻象，并且在他附近时承受的伤害降低。",
-          "name": "chaos_knight_strong_illusions",
-          "icon": "illusion",
-          "gradient_id": 1
-        },
-        {
           "color": 5,
           "title_loc": "无理",
           "description_loc": "实相裂隙除了平常效果外，还有均等几率施加破坏、缴械或沉默，持续时间为基础负面效果时间的{s:bonus_additional_debuff_duration_percent}%。",
           "name": "chaos_knight_irrationality",
           "icon": "rng",
           "gradient_id": 0
+        },
+        {
+          "color": 1,
+          "title_loc": "基本法则锻造",
+          "description_loc": "混沌骑士在打造中立物品时可以选择下一级的宝物。",
+          "name": "chaos_knight_facet_fundamental_forging",
+          "icon": "item",
+          "gradient_id": 1
+        },
+        {
+          "color": 0,
+          "title_loc": "混沌分化",
+          "description_loc": "混乱之箭在击中目标后一分为二，额外对一个敌人造成眩晕，再对另一个敌人造成伤害。",
+          "name": "chaos_knight_cloven_chaos",
+          "icon": "ricochet",
+          "gradient_id": 0
         }
       ],
       "facet_abilities": [
         {
+          "abilities": []
+        },
+        {
           "abilities": [
             {
-              "id": 1352,
-              "name": "chaos_knight_phantasmagoria",
-              "name_loc": "千变幻景",
-              "desc_loc": "所有混沌骑士的幻象都是强幻象，并且在他附近时承受的伤害降低。",
+              "id": 1556,
+              "name": "chaos_knight_fundamental_forging",
+              "name_loc": "基本法则锻造",
+              "desc_loc": "混沌骑士打造中立物品时，他的%trinket_options_next%个宝物选项是下个等级，而%trinket_options_current%个选项是当前等级。不能保证他能保留当前宝物。当打造等级为最高时，所有选项都是该级的。",
               "lore_loc": "",
-              "notes_loc": [
-                "混沌骑士自身制造，或源自混沌骑士的所有幻象都是强幻象。%aura_radius%范围内的混沌骑士幻象拥有%damage_reduction_pct%%%承伤降低。",
-                "对阿哈利姆神杖升级混沌之军幻象同样有效。",
-                "强幻象不会被技能秒杀。",
-                "破坏会使被动的承受伤害降低光环失效。"
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "13194139533315",
+              "behavior": "4398046511107",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -3425,9 +3445,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "aura_radius",
+                  "name": "trinket_options_current",
                   "values_float": [
-                    1200
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3442,9 +3462,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_reduction_pct",
+                  "name": "trinket_options_next",
                   "values_float": [
-                    20
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3626,10 +3646,12 @@
         "scepter_loc": "",
         "facets_loc": [
           "",
+          "",
+          "",
           ""
         ],
         "type": 0,
-        "behavior": "4398046511106",
+        "behavior": "13194139533314",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,

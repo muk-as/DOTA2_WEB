@@ -57,6 +57,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -101,10 +102,10 @@
             {
               "name": "radius",
               "values_float": [
+                350,
                 400,
-                475,
-                550,
-                625
+                450,
+                500
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -399,7 +400,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "炼金术士处于化学狂暴作用时，冷却时间减少%chemical_rage_cooldown_reduction_pct%%%。"
+            "炼金术士处于化学狂暴作用时，冷却时间减少%chemical_rage_cooldown_reduction_pct%%%。",
+            ""
           ],
           "type": 0,
           "behavior": "2052",
@@ -779,6 +781,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -820,10 +823,10 @@
             {
               "name": "max_stacks",
               "values_float": [
-                4,
-                6,
-                8,
-                10
+                10,
+                12,
+                14,
+                16
               ],
               "is_percentage": false,
               "heading_loc": "最大叠加数：",
@@ -857,10 +860,10 @@
             {
               "name": "slow_per_stack",
               "values_float": [
-                4,
-                5,
-                6,
-                7
+                1.5,
+                2,
+                2.5,
+                3
               ],
               "is_percentage": true,
               "heading_loc": "每次叠加减速：",
@@ -877,13 +880,47 @@
             {
               "name": "attack_damage_per_stack",
               "values_float": [
-                3,
-                4,
-                5,
-                6
+                1.5,
+                2,
+                2.5,
+                3
               ],
               "is_percentage": true,
               "heading_loc": "每次叠加降低基础攻击力：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stacks_per_attack",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "one_tooltip",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1060,7 +1097,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "炼金术士处于化学狂暴作用时，冷却时间减少%chemical_rage_cooldown_reduction_pct%%%。"
+            "炼金术士处于化学狂暴作用时，冷却时间减少%chemical_rage_cooldown_reduction_pct%%%。",
+            ""
           ],
           "type": 0,
           "behavior": "8589934601",
@@ -1371,7 +1409,8 @@
           "scepter_loc": "炼金术士熔铸阿哈利姆神杖并让一位友方英雄获得所有神杖升级效果。炼金术士每送出一把神杖都将获得攻击力和技能增强加成。",
           "facets_loc": [
             "",
-            ""
+            "",
+            "炼金术士每对友军送出一把阿哈利姆神杖就获得%gpm_increase_per_stack%每分钟金钱。"
           ],
           "type": 0,
           "behavior": "8796093022210",
@@ -1533,6 +1572,59 @@
                   250
                 ],
                 "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_bonus_damage",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "每把神杖攻击力加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_spell_amp",
+              "values_float": [
+                5
+              ],
+              "is_percentage": true,
+              "heading_loc": "每把神杖技能增强：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gpm_increase_per_stack",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "alchemist_dividends",
+                "values": [
+                  75
+                ],
+                "operation": 0
               },
               "required_facet": ""
             },
@@ -1707,6 +1799,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 1,
@@ -1868,9 +1961,9 @@
             {
               "name": "bonus_movespeed",
               "values_float": [
+                20,
                 30,
-                45,
-                60
+                40
               ],
               "is_percentage": false,
               "heading_loc": "移动速度提升：",
@@ -1881,57 +1974,6 @@
                   "operation": 0
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_gold_damage",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_bonus_damage",
-              "values_float": [
-                25
-              ],
-              "is_percentage": false,
-              "heading_loc": "每把神杖攻击力加成：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_spell_amp",
-              "values_float": [
-                5
-              ],
-              "is_percentage": true,
-              "heading_loc": "每把神杖技能增强：",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3722,9 +3764,20 @@
           "name": "alchemist_mixologist",
           "icon": "cooldown",
           "gradient_id": 2
+        },
+        {
+          "color": 2,
+          "title_loc": "分红",
+          "description_loc": "炼金术士每对友军送出一把阿哈利姆神杖就获得+{s:bonus_gpm_increase_per_stack}每分钟金钱。",
+          "name": "alchemist_dividends",
+          "icon": "aghs",
+          "gradient_id": 2
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3741,10 +3794,11 @@
         "lore_loc": "尽管对付不了一座山，但拉泽尔还是掌握着技术，能转化一些较小的化合物来填满他的荷包。",
         "notes_loc": [],
         "shard_loc": "",
-        "scepter_loc": "",
+        "scepter_loc": "炼金术士熔铸阿哈利姆神杖并让一位友方英雄获得所有神杖升级效果。炼金术士每送出一把神杖都将获得攻击力和技能增强加成。",
         "facets_loc": [
           "",
-          ""
+          "",
+          "炼金术士每对友军送出一把阿哈利姆神杖就获得%gpm_increase_per_stack%每分钟金钱。"
         ],
         "type": 0,
         "behavior": "8796093022210",
@@ -3910,6 +3964,59 @@
             "required_facet": ""
           },
           {
+            "name": "scepter_bonus_damage",
+            "values_float": [
+              25
+            ],
+            "is_percentage": false,
+            "heading_loc": "每把神杖攻击力加成：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "scepter_spell_amp",
+            "values_float": [
+              5
+            ],
+            "is_percentage": true,
+            "heading_loc": "每把神杖技能增强：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "gpm_increase_per_stack",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "alchemist_dividends",
+              "values": [
+                75
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
             "name": "AbilityCastRange",
             "values_float": [
               0
@@ -4047,7 +4154,7 @@
           }
         ],
         "is_item": false,
-        "ability_has_scepter": false,
+        "ability_has_scepter": true,
         "ability_has_shard": false,
         "ability_is_granted_by_scepter": false,
         "ability_is_granted_by_shard": false,
