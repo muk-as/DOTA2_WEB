@@ -6,7 +6,7 @@
           "id": 951,
           "name": "chen_martyrdom",
           "name_loc": "Martyrdom",
-          "desc_loc": "Sacrifice the life of this unit to heal an ally or damage an enemy with the current level of Hand of God.",
+          "desc_loc": "Sacrifice the life of this unit to instantly heal an ally for %current_hp_pct%%% of this unit's current health.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -14,7 +14,7 @@
           "facets_loc": [],
           "type": 0,
           "behavior": "8",
-          "target_team": 3,
+          "target_team": 1,
           "target_type": 3,
           "flags": 0,
           "damage": 0,
@@ -22,7 +22,7 @@
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
-            0
+            1200
           ],
           "cast_points": [
             0.3,
@@ -33,7 +33,7 @@
             0
           ],
           "cooldowns": [
-            8
+            4
           ],
           "durations": [
             0
@@ -51,9 +51,26 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "current_hp_pct",
+              "values_float": [
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
-                0
+                1200
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -172,7 +189,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                8
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",

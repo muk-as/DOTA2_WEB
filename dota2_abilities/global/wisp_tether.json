@@ -6,14 +6,14 @@
           "id": 5485,
           "name": "wisp_tether",
           "name_loc": "Tether",
-          "desc_loc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, the tethered unit gains a portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether. Tether slows and damages enemies touching it.",
+          "desc_loc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, the tethered unit gains a portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether. Tether slows enemies touching it.",
           "lore_loc": "The benevolent touch of Io brings strength from between the planes.",
           "notes_loc": [
             "If you try to tether a unit that is 700 distance or further away from Io, he will latch on and pull himself closer to the tethered unit (to a distance of 300).",
             "The tethered unit will heal faster and will heal even if Io is at full health.",
             "Io's movement speed matches the tethered unit's."
           ],
-          "shard_loc": "Tether stuns enemies touching it for 1.75 seconds and deals 150 damage. Does not affect the same unit more than once every 7 seconds. Increases movement speed bonus by 8%%.",
+          "shard_loc": "Tether damages enemies touching it. Io is healed for %damage_to_heal%%% of the damage done.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -193,10 +193,10 @@
             {
               "name": "slow",
               "values_float": [
-                10,
-                20,
+                15,
                 30,
-                40
+                45,
+                60
               ],
               "is_percentage": true,
               "heading_loc": "ENEMY MOVE/ATTACK SLOW:",
@@ -234,14 +234,16 @@
               "required_facet": ""
             },
             {
-              "name": "shard_bonus_spell_lifesteal",
+              "name": "damage",
               "values_float": [
-                10
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                120
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -251,17 +253,16 @@
               "required_facet": ""
             },
             {
-              "name": "damage",
+              "name": "damage_to_heal",
               "values_float": [
-                15,
-                25,
-                35,
-                45
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE PER SECOND:",
+              "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -447,7 +448,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

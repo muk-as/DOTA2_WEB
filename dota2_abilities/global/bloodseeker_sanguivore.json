@@ -11,8 +11,8 @@
           "notes_loc": [
             "Creeps lifesteal is reduced by %creep_lifesteal_reduction_pct%%%."
           ],
-          "shard_loc": "",
-          "scepter_loc": "",
+          "shard_loc": "Passively turns all Bloodseeker's overheal from his own abilities into an all damage barrier up to %max_shield_pct%%% of Bloodseeker's Max Health. Barrier amount decays by %barrier_decay_pct%%% per second",
+          "scepter_loc": "Bloodseeker heals for %pure_damage_lifesteal_pct%%% of the <font color=\"#d8ae53\">Pure</font> damage he deals.",
           "facets_loc": [],
           "type": 0,
           "behavior": "4398046511106",
@@ -145,6 +145,63 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "barrier_decay_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                1.5
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_shield_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                50
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "pure_damage_lifesteal_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                30
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -290,8 +347,8 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_scepter": true,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": true,

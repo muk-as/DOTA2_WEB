@@ -6,7 +6,7 @@
           "id": 1281,
           "name": "faceless_void_time_zone",
           "name_loc": "Time Zone",
-          "desc_loc": "Creates a blister in spacetime, altering the movement, attack, cast, projectile, and turn rate speed of all units inside. Allies have increased speed and enemies have decreased speed.<br><br>Enemies are leashed inside the Time Zone.",
+          "desc_loc": "Creates a blister in spacetime, altering the movement, cast, projectile, cooldown, and turn rate speed of all units inside. Allies have increased speed and cooldown acceleration. Enemies are leashed, have decreased speed, and have frozen ability and item cooldowns. Time Dilation does not tick down while inside.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -22,7 +22,7 @@
           "dispellable": 3,
           "max_level": 3,
           "cast_ranges": [
-            625
+            500
           ],
           "cast_points": [
             0.35,
@@ -34,8 +34,8 @@
           ],
           "cooldowns": [
             130,
-            120,
-            110
+            125,
+            120
           ],
           "durations": [
             0
@@ -47,9 +47,9 @@
             0
           ],
           "mana_costs": [
-            150,
-            225,
-            300
+            125,
+            200,
+            275
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -57,7 +57,7 @@
             {
               "name": "radius",
               "values_float": [
-                900
+                700
               ],
               "is_percentage": false,
               "heading_loc": "RADIUS:",
@@ -80,9 +80,9 @@
             {
               "name": "duration",
               "values_float": [
-                5,
-                5.5,
-                6
+                3.75,
+                4.25,
+                4.75
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -116,9 +116,7 @@
             {
               "name": "bonus_attack_speed",
               "values_float": [
-                70,
-                110,
-                150
+                0
               ],
               "is_percentage": false,
               "heading_loc": "ATTACK SPEED MANIPULATION:",
@@ -141,9 +139,7 @@
             {
               "name": "bonus_move_speed",
               "values_float": [
-                50,
-                60,
-                70
+                60
               ],
               "is_percentage": true,
               "heading_loc": "MOVEMENT SPEED MANIPULATION:",
@@ -160,8 +156,6 @@
             {
               "name": "bonus_cast_speed",
               "values_float": [
-                40,
-                50,
                 60
               ],
               "is_percentage": true,
@@ -179,8 +173,6 @@
             {
               "name": "bonus_turn_speed",
               "values_float": [
-                40,
-                50,
                 60
               ],
               "is_percentage": true,
@@ -198,9 +190,7 @@
             {
               "name": "bonus_projectile_speed",
               "values_float": [
-                30,
-                40,
-                50
+                40
               ],
               "is_percentage": true,
               "heading_loc": "PROJECTILE SPEED MANIPULATION:",
@@ -232,9 +222,26 @@
               "required_facet": ""
             },
             {
+              "name": "cooldown_acceleration",
+              "values_float": [
+                400
+              ],
+              "is_percentage": true,
+              "heading_loc": "COOLDOWN ACCELERATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
-                625
+                500
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -336,9 +343,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                150,
-                225,
-                300
+                125,
+                200,
+                275
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -356,8 +363,8 @@
               "name": "AbilityCooldown",
               "values_float": [
                 130,
-                120,
-                110
+                125,
+                120
               ],
               "is_percentage": false,
               "heading_loc": "",

@@ -6,7 +6,7 @@
           "id": 5131,
           "name": "windrunner_powershot",
           "name_loc": "Powershot",
-          "desc_loc": "CHANNELED - Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which slows and deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage and slow power is reduced.",
+          "desc_loc": "CHANNELED - Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages and slows enemies' movement speed along its path. For each enemy that Powershot hits, its damage and slow is reduced.",
           "lore_loc": "During her early years of training, Lyralei learned to fire powerful arrows that cleaved even trees to reach their targets.",
           "notes_loc": [
             "Powershot will destroy trees in its area of effect."
@@ -48,7 +48,10 @@
             0
           ],
           "mana_costs": [
-            100
+            90,
+            100,
+            110,
+            120
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -83,13 +86,7 @@
               ],
               "is_percentage": true,
               "heading_loc": "SLOW:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_windranger_powershot_slow",
-                  "value": 20,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -106,7 +103,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "SLOW DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_windranger_powershot_slow",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -242,6 +245,43 @@
               "required_facet": ""
             },
             {
+              "name": "min_execute_threshold",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MIN EXECUTE THRESHOLD:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_execute_threshold",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MAX EXECUTE THRESHOLD:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 2600
@@ -346,7 +386,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100
+                90,
+                100,
+                110,
+                120
               ],
               "is_percentage": false,
               "heading_loc": "",

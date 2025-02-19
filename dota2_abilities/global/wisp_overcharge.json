@@ -9,7 +9,7 @@
           "desc_loc": "Io gains health regeneration based on max health.  If Io is Tethered to an ally, that unit also gains any bonuses granted by Overcharge.",
           "lore_loc": "Drawing on the energy of matter from all worlds, Io begins the unravelling of time.",
           "notes_loc": [],
-          "shard_loc": "Grants Overcharge Slow Resistance. Io also gains Spell Lifesteal and can now share Spell Lifesteal with its tethered target.",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -66,7 +66,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "ATTACK SPEED:",
+              "heading_loc": "BONUS ATTACK SPEED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -106,7 +106,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "ARMOR:",
+              "heading_loc": "BONUS ARMOR:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -126,7 +126,7 @@
                 0
               ],
               "is_percentage": true,
-              "heading_loc": "MAGIC RESISTANCE:",
+              "heading_loc": "BONUS MAGIC RESISTANCE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -170,6 +170,29 @@
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wisp_overcharge_duration",
+                  "value": 1.5,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "spell_lifesteal",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "SPELL LIFESTEAL:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -181,32 +204,19 @@
               "required_facet": ""
             },
             {
-              "name": "shard_bonus_slow_resistance",
+              "name": "unslowable",
               "values_float": [
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "SLOW RESISTANCE:",
-              "bonuses": [],
-              "values_shard": [
-                30
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wisp_9",
+                  "value": 1,
+                  "operation": 0
+                }
               ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_bonus_spell_lifesteal",
-              "values_float": [
-                10
-              ],
-              "is_percentage": true,
-              "heading_loc": "SPELL LIFESTEAL:",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -361,7 +371,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

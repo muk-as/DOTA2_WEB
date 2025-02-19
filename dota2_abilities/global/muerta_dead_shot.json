@@ -14,7 +14,7 @@
             "Can ricochet off of magic immune targets."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Dead Shot damage is increased. Dead Shot expands after it ricochets and pierces through enemy heroes as it fears them.",
           "facets_loc": [],
           "type": 0,
           "behavior": "1073741832",
@@ -68,15 +68,11 @@
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_muerta_dead_shot_damage",
-                  "value": 80,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                125
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -145,6 +141,25 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ricochet_radius_expansion_per_second",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                300
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -224,6 +239,25 @@
               "required_facet": ""
             },
             {
+              "name": "scepter_pierces",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 1000
@@ -233,7 +267,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_muerta_dead_shot_range",
-                  "value": 350,
+                  "value": 300,
                   "operation": 0
                 }
               ],
@@ -373,7 +407,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

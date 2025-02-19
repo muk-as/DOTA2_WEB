@@ -15,7 +15,7 @@
             "Meat Hook can drag friendly units, but they won't be damaged.",
             "Meat Hook can hit and drag runes to Pudge, refunding the Hook's mana cost."
           ],
-          "shard_loc": "",
+          "shard_loc": "When Meat Hook hits an enemy, it deals bonus damage based on the distance pulled.<br><br>When Meat Hook hits an ally, Meat Hook's cooldown is reduced by %cooldown_reduction_pct_allied_hook%%%.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -191,15 +191,14 @@
             {
               "name": "distance_to_damage",
               "values_float": [
-                0,
-                0,
-                0,
                 0
               ],
               "is_percentage": true,
               "heading_loc": "DISTANCE AS DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                20
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -216,7 +215,28 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                10
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cooldown_reduction_pct_allied_hook",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -390,7 +410,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

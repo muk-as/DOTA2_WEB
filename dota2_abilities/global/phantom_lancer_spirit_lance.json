@@ -9,10 +9,10 @@
           "desc_loc": "Sends a magical spirit lance to a target enemy unit that damages and slows, while summoning an illusory phantom to attack the unit.",
           "lore_loc": "Azwraith's proficiency at spearing his family's meal of fish is proving quite useful in the battlefield.",
           "notes_loc": [
-            "Nearby illusions will mimic the cast animation."
+            "Illusions within %fake_lance_distance% range of Phantom Lancer will mimic the cast animation."
           ],
           "shard_loc": "",
-          "scepter_loc": "Spirit Lance bounces twice on enemies, prioritizing Heroes. Increases Spirit Lance illusion damage.",
+          "scepter_loc": "Spirit Lance bounces once on enemies, prioritizing Heroes. Increases Spirit Lance illusion damage.",
           "facets_loc": [],
           "type": 0,
           "behavior": "8",
@@ -69,13 +69,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "LANCE DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_lance_damage",
-                  "value": 35,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -109,7 +103,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "SLOW DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_lance_slow_duration",
+                  "value": 1.25,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -264,7 +264,7 @@
             {
               "name": "scepter_bonus_illusion_damage",
               "values_float": [
-                20
+                30
               ],
               "is_percentage": true,
               "heading_loc": "BONUS ILLUSION DAMAGE:",
@@ -281,7 +281,24 @@
             {
               "name": "scepter_total_hits",
               "values_float": [
-                2
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "illusion_lance_damage_pct",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",

@@ -6,15 +6,14 @@
           "id": 5370,
           "name": "invoker_quas",
           "name_loc": "Quas",
-          "desc_loc": "Allows manipulation of ice elements.",
+          "desc_loc": "Allows manipulation of ice elements. Active <font color='#7998b5'>Quas</font> instances imbue Invoker with bonus hp regeneration. Passively grants bonus strength per level of <font color='#7998b5'>Quas</font>.",
           "lore_loc": "",
           "notes_loc": [
             "Invoker can only have 3 of any instance.",
-            "Spell Lifesteal for the spell is calculated on cast. Changing orbs afterwards has no effect.",
             "Will not break invisibility and can be cast while channeling."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Grants %scepter_bonus_levels% current and max levels.",
           "facets_loc": [],
           "type": 0,
           "behavior": "70368748374020",
@@ -53,18 +52,40 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "lifesteal_per_instance",
+              "name": "max_level",
               "values_float": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                7
               ],
               "is_percentage": false,
-              "heading_loc": "LIFESTEAL PER INSTANCE:",
+              "heading_loc": "MAX LEVEL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "hp_regen_per_instance",
+              "values_float": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "HP REGEN PER INSTANCE:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_invoker_13",
@@ -82,41 +103,12 @@
               "required_facet": ""
             },
             {
-              "name": "intrinsic_attack_damage_dot_per_second",
-              "values_float": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "DAMAGE PER SECOND:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_invoker_13",
-                  "value": 2,
-                  "operation": 1
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "intrinsic_attack_damage_dot_duration",
+              "name": "upgrade_at_level",
               "values_float": [
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "DURATION:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -134,6 +126,23 @@
               ],
               "is_percentage": false,
               "heading_loc": "BONUS STRENGTH PER LEVEL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_bonus_levels",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -282,7 +291,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

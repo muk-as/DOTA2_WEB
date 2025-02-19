@@ -6,7 +6,7 @@
           "id": 1501,
           "name": "kez_raptor_dance",
           "name_loc": "Raptor Dance",
-          "desc_loc": "Kez enters into an uncontrollable channel for %AbilityChannelTime% second, gaining debuff immunity and %magic_resist%%% magic resistance. If the channel completes successfully, Kez performs a series of deadly radial slashes around him that deal damage based on the max health of the target and heal Kez for a percentage of all damage dealt. Kez receives a strong dispel upon completion.",
+          "desc_loc": "Kez enters into an uncontrollable channel for %AbilityChannelTime% second, becoming invulnerable for %invuln_period%s and receiving a basic dispel, remaining immune to magic damage for the remainder of the channel and the duration of the slashes. If the channel completes successfully, Kez performs a series of deadly radial slashes around him that deal damage based on the max health of the target and heal Kez for a percentage of all damage dealt.",
           "lore_loc": "Unleash the inner fury of the Flightless to feast on the essence of your foes.",
           "notes_loc": [],
           "shard_loc": "",
@@ -163,6 +163,23 @@
               "required_facet": ""
             },
             {
+              "name": "invuln_period",
+              "values_float": [
+                0.1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "magic_resist",
               "values_float": [
                 100
@@ -181,6 +198,23 @@
             },
             {
               "name": "hard_dispel",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "basic_dispel",
               "values_float": [
                 1
               ],

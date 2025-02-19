@@ -6,10 +6,10 @@
           "id": 5520,
           "name": "magnataur_skewer",
           "name_loc": "Skewer",
-          "desc_loc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed. Deals additional damage when skewering enemies into trees or cliffs.",
+          "desc_loc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed. The damage is increased based on distance traveled.",
           "lore_loc": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants.",
           "notes_loc": [],
-          "shard_loc": "",
+          "shard_loc": "Increases range and deals additional damage when skewering enemies into trees or cliffs.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -84,14 +84,10 @@
               ],
               "is_percentage": false,
               "heading_loc": "DISTANCE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_magnus_3",
-                  "value": 275,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [
+                275
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -144,7 +140,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "SLOW DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_magnus_6",
+                  "value": 1.25,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -175,14 +177,42 @@
               "required_facet": ""
             },
             {
+              "name": "damage_distance_pct",
+              "values_float": [
+                6,
+                9,
+                12,
+                15
+              ],
+              "is_percentage": true,
+              "heading_loc": "DISTANCE AS DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_magnus_skewer_damage_distance",
+                  "value": 15,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "tree_radius",
               "values_float": [
-                200
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                200
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -194,15 +224,14 @@
             {
               "name": "tree_hit_damage",
               "values_float": [
-                15,
-                20,
-                25,
-                30
+                0
               ],
               "is_percentage": false,
               "heading_loc": "TREE HIT DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                30
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -214,15 +243,14 @@
             {
               "name": "cliff_hit_damage",
               "values_float": [
-                50,
-                75,
-                100,
-                125
+                0
               ],
               "is_percentage": false,
               "heading_loc": "CLIFF HIT DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                125
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -396,7 +424,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

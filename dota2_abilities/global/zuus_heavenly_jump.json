@@ -6,7 +6,7 @@
           "id": 641,
           "name": "zuus_heavenly_jump",
           "name_loc": "Heavenly Jump",
-          "desc_loc": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (prioritizing heroes), dealing damage as well as reducing their movement and attack speed. Zeus gets 900 unobstructed vision around him for 3 seconds.",
+          "desc_loc": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (prioritizing heroes), dealing damage as well as reducing their movement and attack speed. Zeus gets %vision_radius% unobstructed vision around him for 3 seconds.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -77,10 +77,13 @@
             {
               "name": "hop_distance",
               "values_float": [
-                500
+                300,
+                400,
+                500,
+                600
               ],
               "is_percentage": false,
-              "heading_loc": "DISTANCE:",
+              "heading_loc": "LEAP DISTANCE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -134,7 +137,41 @@
                 1000
               ],
               "is_percentage": false,
-              "heading_loc": "RANGE:",
+              "heading_loc": "SHOCK RANGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vision_radius",
+              "values_float": [
+                900
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vision_duration",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -148,7 +185,7 @@
             {
               "name": "duration",
               "values_float": [
-                1.6
+                1.4
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",

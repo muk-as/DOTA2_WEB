@@ -6,7 +6,7 @@
           "id": 5683,
           "name": "arc_warden_tempest_double",
           "name_loc": "Tempest Double",
-          "desc_loc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.<br><br>If killed by the enemy, the Tempest Double gives bounty gold to enemies, and the ability's cooldown is restarted.<br><br>The Tempest Double loses its sense of self if he is too far away from Arc Warden and takes more damage.",
+          "desc_loc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.<br><br>The Tempest Double loses its sense of self and fractures over time, becoming slower and less accurate.",
           "lore_loc": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
           "notes_loc": [
             "Tempest Double and Refresher Orb cannot be used by the duplicate."
@@ -33,9 +33,9 @@
             0
           ],
           "cooldowns": [
-            100,
-            90,
-            80
+            60,
+            55,
+            50
           ],
           "durations": [
             0
@@ -74,7 +74,9 @@
             {
               "name": "duration",
               "values_float": [
-                60
+                18,
+                21,
+                24
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -89,12 +91,12 @@
               "required_facet": ""
             },
             {
-              "name": "penalty_distance",
+              "name": "max_blind_chance",
               "values_float": [
-                2000
+                35
               ],
-              "is_percentage": false,
-              "heading_loc": "PENALTY DISTANCE:",
+              "is_percentage": true,
+              "heading_loc": "MAX MISS CHANCE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -106,17 +108,34 @@
               "required_facet": ""
             },
             {
-              "name": "ignore_penalty_distance",
+              "name": "max_slow",
               "values_float": [
-                0
+                35
+              ],
+              "is_percentage": true,
+              "heading_loc": "MAX SELF SLOW:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "has_debuff",
+              "values_float": [
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_arc_warden_8",
-                  "value": 1,
-                  "operation": 0
+                  "value": 0,
+                  "operation": 5
                 }
               ],
               "values_shard": [],
@@ -129,12 +148,69 @@
               "required_facet": ""
             },
             {
-              "name": "incoming_damage_penalty",
+              "name": "rune_duration",
               "values_float": [
-                60
+                0
               ],
-              "is_percentage": true,
-              "heading_loc": "PENALTY INCREASED DAMAGE:",
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "invis_rune",
+              "values_float": [
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "arcane_rune",
+              "values_float": [
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "haste_rune",
+              "values_float": [
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -267,9 +343,9 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                100,
-                90,
-                80
+                60,
+                55,
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",

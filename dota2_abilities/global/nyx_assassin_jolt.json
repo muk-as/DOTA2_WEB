@@ -6,7 +6,7 @@
           "id": 1104,
           "name": "nyx_assassin_jolt",
           "name_loc": "Mind Flare",
-          "desc_loc": "Deals damages to the enemy equal to a percentage of its Max Mana. Additionally deals damage equal to a percentage of damage the target received from Nyx Assassin in the past %damage_echo_duration%s. Instantly kills non-ancient creeps.",
+          "desc_loc": "Deals damages to the enemy equal to a percentage of its Max Mana. Additionally deals damage equal to a percentage of damage the target received from Nyx Assassin in the past %damage_echo_duration%s. ",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -60,13 +60,33 @@
             {
               "name": "max_mana_as_damage_pct",
               "values_float": [
-                20,
                 25,
                 30,
-                35
+                35,
+                40
               ],
               "is_percentage": true,
               "heading_loc": "MAX MANA AS DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mana_burn_pct",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MANA BURNT:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -120,7 +140,7 @@
             {
               "name": "damage_echo_pct",
               "values_float": [
-                25
+                20
               ],
               "is_percentage": true,
               "heading_loc": "BONUS DAMAGE:",

@@ -6,15 +6,17 @@
           "id": 5379,
           "name": "silencer_last_word",
           "name_loc": "Last Word",
-          "desc_loc": "Enemies within %radius% range of Silencer are slowed and damaged every second for each Silence they have on them.",
+          "desc_loc": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
           "lore_loc": "Nortrom ensures that spells uttered by his opponents will be their last.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Channeling abilities will trigger this effect once the caster finishes its channel."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
-          "target_team": 0,
+          "behavior": "8",
+          "target_team": 2,
           "target_type": 19,
           "flags": 0,
           "damage": 2,
@@ -22,16 +24,19 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            0
+            900
           ],
           "cast_points": [
-            0
+            0.3
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            0
+            22,
+            18,
+            14,
+            10
           ],
           "durations": [
             0
@@ -43,28 +48,25 @@
             0
           ],
           "mana_costs": [
-            0
+            100,
+            105,
+            110,
+            115
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "damage_per_silence",
+              "name": "damage",
               "values_float": [
-                30,
-                40,
-                50,
-                60
+                120,
+                160,
+                200,
+                240
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE PER SILENCE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer_4",
-                  "value": 35,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "BASE DAMAGE:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -75,22 +77,53 @@
               "required_facet": ""
             },
             {
-              "name": "slow_per_silence",
+              "name": "int_multiplier",
               "values_float": [
-                6,
-                9,
-                12,
-                15
+                1,
+                1.5,
+                2,
+                2.5
               ],
-              "is_percentage": true,
-              "heading_loc": "SLOW PER SILENCE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer_4",
-                  "value": 5,
-                  "operation": 0
-                }
+              "is_percentage": false,
+              "heading_loc": "INT DIFF MULTIPLIER:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "debuff_duration",
+              "values_float": [
+                4
               ],
+              "is_percentage": false,
+              "heading_loc": "ENEMY CAST TIMER:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                3,
+                4,
+                5,
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "SILENCE DURATION:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -103,11 +136,17 @@
             {
               "name": "radius",
               "values_float": [
-                1200
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
+              "heading_loc": "AOE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_4",
+                  "value": 250,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -120,7 +159,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                0
+                900
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -171,7 +210,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0
+                0.3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -222,7 +261,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                0
+                100,
+                105,
+                110,
+                115
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -239,7 +281,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0
+                22,
+                18,
+                14,
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",

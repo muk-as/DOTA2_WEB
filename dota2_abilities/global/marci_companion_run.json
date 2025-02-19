@@ -13,7 +13,7 @@
             "Marci's initial run to her target unit can be disjointed.",
             "Does not trigger spell reflect."
           ],
-          "shard_loc": "Decreases the cooldown of Rebound, it can be cast on enemies, and causes Marci to also get the speed boost when she casts it.",
+          "shard_loc": "Increases damage. Rebound can be cast on enemies, and causes Marci to also get the speed boost when she casts it.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -53,10 +53,10 @@
             0
           ],
           "mana_costs": [
-            70,
-            80,
+            75,
             90,
-            100
+            105,
+            120
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -128,7 +128,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_marci_rebound_radius",
+                  "value": 75,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -149,7 +155,9 @@
               "is_percentage": false,
               "heading_loc": "IMPACT DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                20
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -323,10 +331,10 @@
             {
               "name": "ally_movespeed_pct",
               "values_float": [
+                15,
+                20,
                 25,
-                30,
-                35,
-                40
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -401,6 +409,108 @@
               "name": "scepter_armor",
               "values_float": [
                 15
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_arc_offset",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_impact_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "postjump_unleash_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "postjump_flurry_charges",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -528,10 +638,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                70,
-                80,
+                75,
                 90,
-                100
+                105,
+                120
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -556,9 +666,7 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                3
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

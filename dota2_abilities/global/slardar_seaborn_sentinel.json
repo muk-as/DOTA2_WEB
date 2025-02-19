@@ -6,11 +6,11 @@
           "id": 1253,
           "name": "slardar_seaborn_sentinel",
           "name_loc": "Seaborn Sentinel",
-          "desc_loc": "Slardar gains bonus movement speed, health regeneration, attack damage, and armor while in a puddle or river.",
+          "desc_loc": "Slardar gains bonus movement speed, health regeneration, attack damage, and armor while in a puddle, trail, or river.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river.",
+          "scepter_loc": "Provides additional HP Regen, Armor and Status Resistance while in a puddle, trail, or river. Increases puddle/trail radius by %scepter_puddle_radius_tooltip%%% and puddle/trail duration by %scepter_puddle_duration_increase_tooltip%s.",
           "facets_loc": [],
           "type": 0,
           "behavior": "66",
@@ -53,8 +53,8 @@
               "values_float": [
                 18
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "BONUS MOVE SPEED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -68,10 +68,10 @@
             {
               "name": "puddle_regen",
               "values_float": [
-                2,
-                4,
-                6,
-                8
+                2.5,
+                5,
+                7.5,
+                10
               ],
               "is_percentage": false,
               "heading_loc": "HP REGEN:",
@@ -127,12 +127,38 @@
               "required_facet": ""
             },
             {
-              "name": "river_speed_tooltip",
+              "name": "river_damage",
               "values_float": [
-                18
+                8,
+                16,
+                24,
+                32
               ],
-              "is_percentage": true,
-              "heading_loc": "BONUS MOVE SPEED:",
+              "is_percentage": false,
+              "heading_loc": "BONUS DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_slardar_6",
+                  "value": 12,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_puddle_radius_tooltip",
+              "values_float": [
+                80
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -144,15 +170,12 @@
               "required_facet": ""
             },
             {
-              "name": "river_damage",
+              "name": "scepter_puddle_duration_increase_tooltip",
               "values_float": [
-                8,
-                16,
-                24,
-                32
+                5
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS DAMAGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

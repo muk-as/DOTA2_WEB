@@ -6,12 +6,12 @@
           "id": 5299,
           "name": "jakiro_liquid_fire",
           "name_loc": "Liquid Fire",
-          "desc_loc": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks.",
+          "desc_loc": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks. Shares a cooldown with Liquid Frost.",
           "lore_loc": "The left maw of Jakiro opens, laying waste to any in its path.",
           "notes_loc": [
             "Works on both units and buildings."
           ],
-          "shard_loc": "Jakiro's Liquid Fire attack also deals %pct_health_damage%%% of the enemy unit's max health as damage per second. This damage does not apply to buildings.",
+          "shard_loc": "Jakiro's Liquid Fire no longer shares a cooldown with Liquid Frost.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -126,10 +126,14 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                2.5
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_jakiro_3",
+                  "value": 2.5,
+                  "operation": 0
+                }
               ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -173,18 +177,16 @@
               "required_facet": ""
             },
             {
-              "name": "double_head",
-              "values_float": [],
+              "name": "shares_cooldown",
+              "values_float": [
+                1
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_jakiro_3",
-                  "value": 1,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [
+                0
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

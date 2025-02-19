@@ -6,7 +6,7 @@
           "id": 1499,
           "name": "kez_grappling_claw",
           "name_loc": "Grappling Claw",
-          "desc_loc": "Kez swings on a grappling hook towards the target unit or tree.  When the grappling hook collides with the target, that unit has slowed movement speed until Kez arrives. Upon landing, he attacks with %lifesteal_pct%%% lifesteal, and heals a flat bonus amount if the target is a Hero.",
+          "desc_loc": "Kez swings on a grappling hook towards the target unit or tree.  When the grappling hook collides with the target, that unit has slowed movement speed until Kez arrives.  Upon landing, he attacks with bonus lifesteal.",
           "lore_loc": "The Kazurai have the speed and reach to drag even the highest flyers from the skies.",
           "notes_loc": [],
           "shard_loc": "",
@@ -125,13 +125,10 @@
             {
               "name": "bonus_flat_lifesteal",
               "values_float": [
-                30,
-                60,
-                90,
-                120
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "HERO BONUS HEAL:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -145,10 +142,13 @@
             {
               "name": "lifesteal_pct",
               "values_float": [
-                100
+                50,
+                75,
+                100,
+                125
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "LIFESTEAL:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

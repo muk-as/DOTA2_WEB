@@ -6,14 +6,14 @@
           "id": 5371,
           "name": "invoker_wex",
           "name_loc": "Wex",
-          "desc_loc": "Allows manipulation of storm elements.",
+          "desc_loc": "Allows manipulation of storm elements. Active <font color='#d671a9'>Wex</font> instances imbue Invoker with bonus movement speed. Passively grants bonus agility per level of <font color='#d671a9'>Wex</font>.",
           "lore_loc": "",
           "notes_loc": [
             "Invoker can only have 3 of any instance.",
             "Will not break invisibility and can be cast while channeling."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Grants %scepter_bonus_levels% current and max levels.",
           "facets_loc": [],
           "type": 0,
           "behavior": "70368748374020",
@@ -52,15 +52,37 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "max_level",
+              "values_float": [
+                7
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX LEVEL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "move_speed_per_instance",
               "values_float": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                0.6,
+                1.2,
+                1.8,
+                2.4,
+                3,
+                3.6,
+                4.2,
+                4.8,
+                5.4,
+                6
               ],
               "is_percentage": true,
               "heading_loc": "MOVE SPEED PER INSTANCE:",
@@ -81,25 +103,13 @@
               "required_facet": ""
             },
             {
-              "name": "intrinsic_attack_speed",
+              "name": "upgrade_at_level",
               "values_float": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "ATTACK SPEED:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_invoker_13",
-                  "value": 2,
-                  "operation": 1
-                }
-              ],
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -116,6 +126,23 @@
               ],
               "is_percentage": false,
               "heading_loc": "BONUS AGILITY PER LEVEL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_bonus_levels",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -264,7 +291,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

@@ -11,8 +11,8 @@
           "notes_loc": [
             "Damage dealt to Bloodseeker or allies is non-lethal and can never kill a hero."
           ],
-          "shard_loc": "Bloodrage attacks now deal %shard_max_health_dmg% pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker.",
-          "scepter_loc": "",
+          "shard_loc": "",
+          "scepter_loc": "Bloodrage attacks now deal %max_health_dmg_pct%%% of the target's max health as <font color=\"#d8ae53\">Pure</font> damage.",
           "facets_loc": [],
           "type": 0,
           "behavior": "2056",
@@ -129,7 +129,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "MAX HEALTH DAMAGE PER SECOND:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_bloodseeker",
+                  "value": 0.7,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -140,9 +146,28 @@
               "required_facet": ""
             },
             {
-              "name": "shard_max_health_dmg",
+              "name": "max_health_dmg_pct",
               "values_float": [
-                35
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                3
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "thirst_threshold_bonus",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -297,8 +322,8 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_scepter": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

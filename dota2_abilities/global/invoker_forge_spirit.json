@@ -6,7 +6,7 @@
           "id": 5387,
           "name": "invoker_forge_spirit",
           "name_loc": "Forge Spirit",
-          "desc_loc": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage and armor are based on the level of <font color='#cabe68'>Exort</font> while attack range, health, and duration are based on the level of <font color='#7998b5'>Quas</font>. The elemental's scorching attack is capable of melting the armor of enemy heroes. Spawns two spirits when Quas and Exort are at least level 4.",
+          "desc_loc": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage and armor are based on the level of <font color='#cabe68'>Exort</font> while attack range, health, and duration are based on the level of <font color='#7998b5'>Quas</font>. The elemental's scorching attack is capable of melting the armor of enemy heroes. The number of spirits spawned is determined by the lower level of <font color='#7998b5'>Quas</font> and <font color='#cabe68'>Exort</font>.",
           "lore_loc": "Culween's Most Cunning Fabrications.",
           "notes_loc": [
             "Casting this ability will replace currently summoned Forged Spirits."
@@ -53,14 +53,16 @@
             {
               "name": "spirit_damage",
               "values_float": [
-                22,
-                32,
-                42,
-                52,
-                62,
-                72,
-                82,
-                92
+                20,
+                30,
+                40,
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                110
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE (<font color='#cabe68'>EXORT</font>):\n",
@@ -84,7 +86,9 @@
                 300,
                 350,
                 400,
-                450
+                450,
+                500,
+                550
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -108,7 +112,9 @@
                 4,
                 5,
                 6,
-                7
+                7,
+                8,
+                9
               ],
               "is_percentage": false,
               "heading_loc": "ARMOR (<font color='#cabe68'>EXORT</font>):\n",
@@ -132,7 +138,9 @@
                 560,
                 625,
                 690,
-                755
+                755,
+                820,
+                885
               ],
               "is_percentage": false,
               "heading_loc": "ATTACK RANGE (<font color='#7998b5'>QUAS</font>):\n",
@@ -156,7 +164,9 @@
                 700,
                 800,
                 900,
-                1000
+                1000,
+                1100,
+                1200
               ],
               "is_percentage": false,
               "heading_loc": "HEALTH (<font color='#7998b5'>QUAS</font>):\n",
@@ -173,6 +183,7 @@
             {
               "name": "spirit_duration",
               "values_float": [
+                10,
                 20,
                 30,
                 40,
@@ -180,7 +191,8 @@
                 60,
                 70,
                 80,
-                90
+                90,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "DURATION (<font color='#7998b5'>QUAS</font>):\n",
@@ -204,7 +216,9 @@
                 1.2,
                 1.3,
                 1.4,
-                1.5
+                1.5,
+                1.6,
+                1.7
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -219,42 +233,21 @@
               "required_facet": ""
             },
             {
-              "name": "spirit_count",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_invoker_11",
-                  "value": 1,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "extra_spirit_count_quas",
               "values_float": [
-                0,
-                0,
-                0,
                 1,
                 1,
                 1,
-                1,
-                1
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "SPIRIT COUNT (<font color='#7998b5'>QUAS</font>):\n",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -268,17 +261,19 @@
             {
               "name": "extra_spirit_count_exort",
               "values_float": [
-                0,
-                0,
-                0,
                 1,
                 1,
                 1,
-                1,
-                1
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "SPIRIT COUNT (<font color='#cabe68'>EXORT</font>):\n",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

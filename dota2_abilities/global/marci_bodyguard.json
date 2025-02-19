@@ -6,7 +6,7 @@
           "id": 1427,
           "name": "marci_bodyguard",
           "name_loc": "Bodyguard",
-          "desc_loc": "Marci protects an allied hero. For %bodyguard_duration%s, whenever the ally attacks or is attacked by an enemy, Marci counter-attacks that target if they are within her attack range plus %bodyguard_attack_range_buffer%. The ally also gains bonus armor and healing from Marci's lifesteal for the duration. Passively grants Marci lifesteal and bonus attack damage.",
+          "desc_loc": "Passively grants Marci lifesteal and bonus attack damage.\n\nMarci protects an allied hero. For %bodyguard_duration%s, the ally also gains %max_partner_penalty%%% of lifesteal and attack damage bonus. Whenever the ally attacks or is attacked by an enemy, Marci counter-attacks that target if they are within her attack range plus %bodyguard_attack_range_buffer%.",
           "lore_loc": "",
           "notes_loc": [
             "Marci cannot cast Bodyguard on herself.",
@@ -156,15 +156,12 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_armor",
+              "name": "max_partner_penalty",
               "values_float": [
-                4,
-                8,
-                12,
-                16
+                75
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS ARMOR:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -179,6 +176,23 @@
               "name": "counter_cooldown",
               "values_float": [
                 0.45
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "shared_healing_percent",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",

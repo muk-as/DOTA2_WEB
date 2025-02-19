@@ -6,13 +6,13 @@
           "id": 5252,
           "name": "life_stealer_infest",
           "name_loc": "Infest",
-          "desc_loc": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack. Does not work on enemy heroes.\n\nDISPEL TYPE: Basic Dispel",
+          "desc_loc": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack, and the creep loses a portion of their max hitpoints over time. Does not work on enemy heroes.\n\nDISPEL TYPE: Basic Dispel",
           "lore_loc": "With this infestation, N'aix consumes the life blood of the host, restoring him back to full unholy power.",
           "notes_loc": [
             "Lifestealer gains experience while under the effects of Infest.",
             "Creeps that are controlled while Infested gain Infest's movement speed bonus.",
-            "Infest Level 2 and 3 can be used on Ancient creeps.",
-            "Does not trigger spell reflect."
+            "Does not trigger spell reflect.",
+            "Infesting an enemy hero with Aghanim's Scepter will deal Gorestorm damage based on all damage that Lifestealer dealt to the host during the Infest duration."
           ],
           "shard_loc": "Infest explosion applies a %bonus_open_wounds_duration_pct%%% duration Open Wounds to enemies in the damage radius.",
           "scepter_loc": "Increases cast range and reduces cooldown to %bonus_AbilityCooldown%s.  Infest may target enemy heroes for a short duration, disarming them and attacking them from the inside while increasing Lifestealer's regeneration rate.",
@@ -219,6 +219,93 @@
               "values_shard": [
                 50
               ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "creep_max_hp_drain_pct_per_second",
+              "values_float": [
+                2,
+                1,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "CREEP MAX HP LOSS / SEC:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "can_target_ancients",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dot_damage_as_pct_of_damage_dealt",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "REMAINING HEALTH AS GORESTORM DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dot_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "GORESTORM DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dot_tick_interval",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

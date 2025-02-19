@@ -6,12 +6,12 @@
           "id": 5051,
           "name": "mirana_starfall",
           "name_loc": "Starstorm",
-          "desc_loc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a %starfall_secondary_radius% radius will be struck a second time for %secondary_starfall_damage_percent%%% of the damage.",
+          "desc_loc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a %starfall_secondary_radius% radius will be struck a second time.",
           "lore_loc": "The Goddess breaks the strata to empower her Princess in the time of need.",
           "notes_loc": [
             "Starstorm is not blocked by Linken's Sphere.",
             "Starstorm cannot hit invisible units.",
-            "Starstorm will choose a new target for the second star if the first died before impact."
+            "Starstorm will choose a new target for the second meteor if the first died before impact."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -62,6 +62,49 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "damage",
+              "values_float": [
+                75,
+                150,
+                225,
+                300
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_mirana_7",
+                  "value": 250,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "secondary_starfall_damage_percent",
+              "values_float": [
+                60
+              ],
+              "is_percentage": true,
+              "heading_loc": "SECOND METEOR DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "starfall_radius",
               "values_float": [
                 675
@@ -96,12 +139,12 @@
               "required_facet": ""
             },
             {
-              "name": "secondary_starfall_damage_percent",
+              "name": "starstruck_blind_pct",
               "values_float": [
-                80
+                0
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "BLIND MISS RATE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -113,22 +156,16 @@
               "required_facet": ""
             },
             {
-              "name": "damage",
+              "name": "starstruck_duration",
               "values_float": [
-                75,
-                150,
-                225,
-                300
+                0,
+                0,
+                0,
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_mirana_7",
-                  "value": 250,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "BLIND DURATION:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -267,7 +304,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_mirana_3",
+                  "value": 2,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

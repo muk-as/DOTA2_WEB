@@ -6,7 +6,7 @@
           "id": 1504,
           "name": "kez_shodo_sai",
           "name_loc": "Shodo Sai",
-          "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. Marked enemies are slowed, and the next attack or ability damage from Kez gains True Strike and will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and Marked, taking additional critical strike and stun when the debuff is triggered.<br><br>The sub-ability may be used to cancel the blocking early.",
+          "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. The next attack or ability damage from Kez gains True Strike and will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and Marked, taking additional critical strike and stun when the debuff is triggered.<br><br>The sub-ability may be used to cancel the blocking early.",
           "lore_loc": "The Shodo may have lost their way, but Kez and the Kazurai can still use Shodo knowledge for the good of the people.",
           "notes_loc": [],
           "shard_loc": "Passively grants %shard_base_movement_speed% movement speed, and an additional %shard_vuln_movement_speed% movement speed per Marked enemy.",
@@ -108,10 +108,10 @@
             {
               "name": "vuln_slow",
               "values_float": [
-                10
+                0
               ],
-              "is_percentage": true,
-              "heading_loc": "MARKED MOVE SLOW:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -174,44 +174,6 @@
               "heading_loc": "MARKED STUN DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_base_movement_speed",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                10
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_vuln_movement_speed",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                10
-              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -298,6 +260,60 @@
               ],
               "is_percentage": false,
               "heading_loc": "PARRY BONUS STUN DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "sai_swap_bonus_movement_speed",
+              "values_float": [
+                12
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mark_trigger_cd_reduction",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MARK COOLDOWN REDUCTION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "invis_bonus_crit",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "INVIS BONUS CRIT:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -453,7 +469,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

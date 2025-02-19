@@ -6,14 +6,14 @@
           "id": 5678,
           "name": "arc_warden_magnetic_field",
           "name_loc": "Magnetic Field",
-          "desc_loc": "Arc Warden generates a circular distortion field of magnetic energy around themself.",
+          "desc_loc": "Arc Warden generates a circular distortion field of magnetic energy. The magnetic field grants bonus attack speed and protects allied units within it by evading attacks coming from outside the field.",
           "lore_loc": "Time and space are of little consequence to one as old as Zet.",
           "notes_loc": [],
-          "shard_loc": "Magnetic Field slows enemies and enemy attack projectiles while they are in it. Also provides allies inside with increased attack projectile speed. Increases the radius by %bonus_radius%.",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "134217764",
+          "behavior": "4429185072",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -62,9 +62,7 @@
               "is_percentage": false,
               "heading_loc": "RADIUS:",
               "bonuses": [],
-              "values_shard": [
-                75
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -74,31 +72,12 @@
               "required_facet": ""
             },
             {
-              "name": "projectile_slow",
+              "name": "knockback_enemies",
               "values_float": [
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "ATTACK PROJECTILE SPEED:",
-              "bonuses": [],
-              "values_shard": [
-                75
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_slow_pct",
-              "values_float": [
-                30
-              ],
-              "is_percentage": true,
-              "heading_loc": "MOVEMENT SLOW:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -142,7 +121,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_arc_warden_3",
-                  "value": 16,
+                  "value": 25,
                   "operation": 0
                 }
               ],
@@ -173,108 +152,101 @@
               "required_facet": ""
             },
             {
-              "name": "tempest_duration",
-              "values_float": [
-                4,
-                5,
-                6,
-                7
-              ],
-              "is_percentage": false,
-              "heading_loc": "DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_range_bonus",
-              "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS ATTACK RANGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_damage_bonus",
-              "values_float": [
-                20,
-                40,
-                60,
-                80
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS ATTACK DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_arc_warden_3",
-                  "value": 25,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_magic_damage",
-              "values_float": [
-                20,
-                40,
-                60,
-                80
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_arc_warden_3",
-                  "value": 16,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "affects_buildings",
               "values_float": [
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_arc_warden_7",
-                  "value": 1,
-                  "operation": 5
-                }
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rune_pull_strength",
+              "values_float": [
+                0
               ],
+              "is_percentage": false,
+              "heading_loc": "RUNE PULL FORCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rune_pull_max_speed_as_multiplier_of_pull_strength",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rune_pull_falloff_multiplier",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rune_pull_radius",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "RUNE PULL RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rune_activate_radius_buffer",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -435,7 +407,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

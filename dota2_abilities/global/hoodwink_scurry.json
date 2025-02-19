@@ -6,9 +6,11 @@
           "id": 9501,
           "name": "hoodwink_scurry",
           "name_loc": "Scurry",
-          "desc_loc": "Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time.",
+          "desc_loc": "Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time. All sources of evasion are doubled for the duration.",
           "lore_loc": "There's not a nook or cranny in the Wood Tomo'kan out of reach of Hoodwink's paws.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Redirect chance from Mistwoods Wayfarer is also doubled for the duration."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -305,6 +307,23 @@
               "required_facet": ""
             },
             {
+              "name": "evasion_multiplier",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 275
@@ -379,7 +398,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_hoodwink_scurry_charges",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

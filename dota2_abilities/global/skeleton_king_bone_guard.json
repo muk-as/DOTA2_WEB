@@ -6,7 +6,7 @@
           "id": 5087,
           "name": "skeleton_king_bone_guard",
           "name_loc": "Bone Guard",
-          "desc_loc": "Gains a Charge for every 2 units killed. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
+          "desc_loc": "Gains a Charge for every 2 creeps killed and 2 charges per hero killed.. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
           "lore_loc": "Wraith King's blade drains his enemy's essence to feed his aura.",
           "notes_loc": [
             "Break disables the gaining of new stacks."
@@ -60,7 +60,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "SKELETON DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wraith_king_facet_1",
+                  "value": 25,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -97,7 +103,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wraith_king_facet_3",
+                  "value": 5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -250,6 +262,23 @@
               "required_facet": ""
             },
             {
+              "name": "skeleton_charges_per_hero_multiplier",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 0
@@ -378,7 +407,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wraith_king_facet_1",
+                  "value": 25,
+                  "operation": 4
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

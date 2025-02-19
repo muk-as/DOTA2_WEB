@@ -9,11 +9,11 @@
           "desc_loc": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts %leap_bonus_duration% seconds.",
           "lore_loc": "None can fail to recognize Mirana's iconic white beast in the heat of battle.",
           "notes_loc": [],
-          "shard_loc": "Upon landing, launches a projectile along Sagan's leap path, dealing damage and slowing units affected and guarantees them to be hit with a secondary Starstorm if that spell is cast. Leap does not break Moonlight Shadow invisibility.<br><br> Can be put on alt-cast to choose the distance and facing direction of the jump. <br><br>Grants %shard_bonus_charges% bonus charge(s).",
+          "shard_loc": "Grants +%additional_charges% Leap charge. Attacks during the Leap buff critically strike for %crit_damage_pct%%% damage.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "134742016",
+          "behavior": "134742020",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -72,23 +72,6 @@
               "required_facet": ""
             },
             {
-              "name": "min_jump_distance",
-              "values_float": [
-                200
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "leap_speed",
               "values_float": [
                 1300
@@ -125,10 +108,10 @@
             {
               "name": "leap_speedbonus",
               "values_float": [
-                8,
-                16,
-                24,
-                32
+                6,
+                12,
+                18,
+                24
               ],
               "is_percentage": true,
               "heading_loc": "MOVEMENT BONUS:",
@@ -186,99 +169,16 @@
               "required_facet": ""
             },
             {
-              "name": "shard_radius",
+              "name": "additional_charges",
               "values_float": [
-                300
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "INITIAL CONE RADIUS:",
+              "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_radius_end",
-              "values_float": [
-                450
-              ],
-              "is_percentage": false,
-              "heading_loc": "FINAL CONE RADIUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_damage",
-              "values_float": [
-                170
-              ],
-              "is_percentage": false,
-              "heading_loc": "DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_slow_pct",
-              "values_float": [
-                30
-              ],
-              "is_percentage": true,
-              "heading_loc": "MOVEMENT SLOW:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_slow_duration",
-              "values_float": [
-                2.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "SLOW DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_bonus_charges",
-              "values_float": [
+              "values_shard": [
                 1
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -288,9 +188,28 @@
               "required_facet": ""
             },
             {
-              "name": "shard_projectile_distance",
+              "name": "crit_damage_pct",
               "values_float": [
-                800
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                150
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "root_radius",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -305,9 +224,12 @@
               "required_facet": ""
             },
             {
-              "name": "shard_projectile_speed",
+              "name": "root_duration",
               "values_float": [
-                1200
+                0,
+                0,
+                0,
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",

@@ -6,7 +6,7 @@
           "id": 5275,
           "name": "night_stalker_void",
           "name_loc": "Void",
-          "desc_loc": "Creates a damaging void that slows an enemy unit, reduces its vision and deals damage. At night, Void also mini-stuns, interrupting channeling abilities, and its effects lasts longer.",
+          "desc_loc": "Creates a damaging void that slows an enemy unit and deals damage. At night, Void also mini-stuns, interrupting channeling abilities, and its effects lasts longer.",
           "lore_loc": "Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was.",
           "notes_loc": [
             "Void does not ministun enemies during the day."
@@ -65,17 +65,12 @@
                 80,
                 160,
                 240,
-                320
+                320,
+                400
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_night_stalker_4",
-                  "value": 80,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -105,6 +100,7 @@
             {
               "name": "duration_night",
               "values_float": [
+                2,
                 2.5,
                 3,
                 3.5,
@@ -157,26 +153,6 @@
               "required_facet": ""
             },
             {
-              "name": "vision_penalty",
-              "values_float": [
-                100,
-                200,
-                300,
-                400
-              ],
-              "is_percentage": false,
-              "heading_loc": "VISION REDUCTION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "invisible_damage_pers",
               "values_float": [
                 0
@@ -211,7 +187,79 @@
               "required_facet": ""
             },
             {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "disable_vision",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cast_radius",
+              "values_float": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cast_radius_tooltip",
               "values_float": [
                 0
               ],
@@ -359,7 +407,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_night_stalker_4",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

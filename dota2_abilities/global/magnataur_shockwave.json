@@ -9,7 +9,7 @@
           "desc_loc": "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him, and slowing them for a brief period.",
           "lore_loc": "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations.",
           "notes_loc": [],
-          "shard_loc": "Increases range, and causes Shockwave to return towards the caster's original cast location after reaching max length, hitting enemies a second time for %return_damage_pct%%% of the damage.",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -52,7 +52,10 @@
             0
           ],
           "mana_costs": [
-            75
+            85,
+            90,
+            95,
+            100
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -65,9 +68,7 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                400
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -99,6 +100,7 @@
                 90,
                 160,
                 230,
+                300,
                 300
               ],
               "is_percentage": false,
@@ -188,22 +190,51 @@
               "required_facet": ""
             },
             {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "basic_slow_duration",
               "values_float": [
                 0.7,
                 0.8,
                 0.9,
+                1,
                 1
               ],
               "is_percentage": false,
               "heading_loc": "SLOW DURATION:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_magnus_6",
-                  "value": 0.75,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -216,14 +247,50 @@
             {
               "name": "return_damage_pct",
               "values_float": [
+                0,
+                0,
+                0,
+                0,
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                75
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "return_damage_pct_tooltip",
+              "values_float": [
+                0
               ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "return_shockwave_bonus_distance",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -238,11 +305,9 @@
                 1200
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DISTANCE:",
               "bonuses": [],
-              "values_shard": [
-                400
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -339,7 +404,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                75
+                85,
+                90,
+                95,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -376,7 +444,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

@@ -5,13 +5,13 @@
         {
           "id": 5053,
           "name": "morphling_adaptive_strike_agi",
-          "name_loc": "Adaptive Strike (Agility)",
-          "desc_loc": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used. \n\n Also puts Adaptive Strike (Strength) on a %shared_cooldown% second cooldown.",
+          "name_loc": "Adaptive Strike",
+          "desc_loc": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used.\n\nThe target is also knocked back based on Morphling's strength. If his strength is 50% higher than his agility, the maximum knockback distance is used.",
           "lore_loc": "The Morphling calls upon his elements to crush his opponents with waves.",
           "notes_loc": [
             "Projectile moves at %projectile_speed% speed."
           ],
-          "shard_loc": "Increases bonus Agility.",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -36,10 +36,10 @@
             0
           ],
           "cooldowns": [
-            16,
+            17,
             14,
-            12,
-            10
+            11,
+            8
           ],
           "durations": [
             0
@@ -62,10 +62,10 @@
             {
               "name": "damage_base",
               "values_float": [
-                55,
-                65,
+                25,
+                50,
                 75,
-                85
+                100
               ],
               "is_percentage": false,
               "heading_loc": "BASE DAMAGE:",
@@ -117,6 +117,91 @@
               "required_facet": ""
             },
             {
+              "name": "stun_min",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "STUN MIN:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stun_max",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "STUN MAX:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "knockback_min",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "KNOCKBACK MIN:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "knockback_max",
+              "values_float": [
+                350
+              ],
+              "is_percentage": false,
+              "heading_loc": "KNOCKBACK MAX:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "knockback_duration",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "projectile_speed",
               "values_float": [
                 1150
@@ -134,9 +219,9 @@
               "required_facet": ""
             },
             {
-              "name": "shared_cooldown",
+              "name": "extra_targets",
               "values_float": [
-                3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -278,14 +363,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                16,
+                17,
                 14,
-                12,
-                10
+                11,
+                8
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_morphling_7",
+                  "value": 3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

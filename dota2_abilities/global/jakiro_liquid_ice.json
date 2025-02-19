@@ -6,10 +6,10 @@
           "id": 1317,
           "name": "jakiro_liquid_ice",
           "name_loc": "Liquid Frost",
-          "desc_loc": "Jakiro's attacks chill his enemies, slowing movement for %duration% seconds and increasing damage taken from Jakiro's attacks and abilities. This effect does not apply to buildings.",
+          "desc_loc": "Jakiro chill his enemies with ice added to his attack, slowing movement for %duration% seconds and increasing damage taken from Jakiro's attacks and abilities. This effect does not apply to buildings. Shares a cooldown with Liquid Fire.",
           "lore_loc": "",
           "notes_loc": [],
-          "shard_loc": "Jakiro's Liquid Frost attack also deals %pct_health_damage%%% of the enemy unit's max health as damage per second.",
+          "shard_loc": "Jakiro's Liquid Frost no longer shares a cooldown with Liquid Fire.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -104,13 +104,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "BONUS DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_jakiro_4",
-                  "value": 10,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -127,10 +121,14 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                2.5
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_jakiro_3",
+                  "value": 2.5,
+                  "operation": 0
+                }
               ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -191,18 +189,16 @@
               "required_facet": ""
             },
             {
-              "name": "double_head",
-              "values_float": [],
+              "name": "shares_cooldown",
+              "values_float": [
+                1
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_jakiro_3",
-                  "value": 1,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [
+                0
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

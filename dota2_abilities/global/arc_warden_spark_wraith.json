@@ -6,13 +6,13 @@
           "id": 5679,
           "name": "arc_warden_spark_wraith",
           "name_loc": "Spark Wraith",
-          "desc_loc": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit. Non-hero units receive %creep_damage_bonus_pct%%% more damage.",
+          "desc_loc": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.",
           "lore_loc": "Lesser fragments of Zet's original self.",
           "notes_loc": [
             "Spark Wraiths can not be disjointed."
           ],
-          "shard_loc": "",
-          "scepter_loc": "Causes Spark Wraiths to spawn a new Spark Wraith after impacting an enemy, which then starts its %scepter_activation_delay% second activation period. The new Spark Wraiths last %scepter_duration% seconds and has a radius of %scepter_radius%",
+          "shard_loc": "When Spark Wraith activates, a secondary Spark Wraith will fuse to the next closest target that deals %second_wraith_damage_pct%%% damage. Increases Spark Wraith search radius.",
+          "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
           "behavior": "48",
@@ -61,7 +61,9 @@
               "is_percentage": false,
               "heading_loc": "SEARCH RADIUS:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                100
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -107,11 +109,17 @@
             {
               "name": "base_activation_delay",
               "values_float": [
-                2
+                1.5
               ],
               "is_percentage": false,
               "heading_loc": "ACTIVATION DELAY:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_arc_warden_7",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -125,9 +133,9 @@
               "name": "spark_damage_base",
               "values_float": [
                 100,
-                180,
-                260,
-                340
+                170,
+                240,
+                310
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
@@ -150,7 +158,7 @@
             {
               "name": "wraith_speed_base",
               "values_float": [
-                400
+                550
               ],
               "is_percentage": false,
               "heading_loc": "WRAITH SPEED:",
@@ -167,90 +175,10 @@
             {
               "name": "ministun_duration",
               "values_float": [
-                0.6,
-                0.8,
-                1,
-                1.2
-              ],
-              "is_percentage": false,
-              "heading_loc": "SLOW DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tempest_activation_delay",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "ACTIVATION DELAY:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spark_damage_tempest",
-              "values_float": [
-                75,
-                140,
-                205,
-                270
-              ],
-              "is_percentage": false,
-              "heading_loc": "DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_arc_warden",
-                  "value": 40,
-                  "operation": 3
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "wraith_speed_tempest",
-              "values_float": [
-                725
-              ],
-              "is_percentage": false,
-              "heading_loc": "WRAITH SPEED:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ministun_duration_tempest",
-              "values_float": [
-                0.4,
                 0.5,
                 0.6,
-                0.7
+                0.7,
+                0.8
               ],
               "is_percentage": false,
               "heading_loc": "SLOW DURATION:",
@@ -316,14 +244,16 @@
               "required_facet": ""
             },
             {
-              "name": "scepter_activation_delay",
+              "name": "maximum_targets",
               "values_float": [
-                2
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                1
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -333,14 +263,16 @@
               "required_facet": ""
             },
             {
-              "name": "scepter_duration",
+              "name": "second_wraith_damage_pct",
               "values_float": [
-                15
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                80
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -350,14 +282,16 @@
               "required_facet": ""
             },
             {
-              "name": "scepter_radius",
+              "name": "second_wraith_speed_pct",
               "values_float": [
-                225
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                100
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -369,7 +303,7 @@
             {
               "name": "creep_damage_bonus_pct",
               "values_float": [
-                40
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -521,8 +455,8 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
-          "ability_has_shard": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

@@ -9,7 +9,7 @@
           "desc_loc": "Generates a wall of solid ice directly in front of Invoker for a duration based on the level of <font color='#7998b5'>Quas</font>. The bitter cold emanating from it greatly slows nearby enemies based on the level of <font color='#7998b5'>Quas</font> and deals damage each second based on the level of <font color='#cabe68'>Exort</font>.",
           "lore_loc": "Killing Wall of Koryx.",
           "notes_loc": [],
-          "shard_loc": "Allows Ice Wall to be a Vector Target ability with 1100 cast range. Increases wall length by 320.",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -52,13 +52,15 @@
               "name": "duration",
               "values_float": [
                 3,
-                4.5,
+                4,
+                5,
                 6,
-                7.5,
+                7,
+                8,
                 9,
-                10.5,
-                12,
-                13.5
+                10,
+                11,
+                12
               ],
               "is_percentage": false,
               "heading_loc": "WALL DURATION (<font color='#7998b5'>QUAS</font>):\n",
@@ -82,7 +84,9 @@
                 -100,
                 -120,
                 -140,
-                -160
+                -160,
+                -180,
+                -200
               ],
               "is_percentage": true,
               "heading_loc": "MOVEMENT SLOW (<font color='#7998b5'>QUAS</font>):\n",
@@ -116,14 +120,16 @@
             {
               "name": "damage_per_second",
               "values_float": [
-                6,
-                12,
-                18,
+                8,
+                16,
                 24,
-                30,
-                36,
-                42,
-                48
+                32,
+                40,
+                48,
+                56,
+                64,
+                72,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SECOND (<font color='#cabe68'>EXORT</font>):\n",
@@ -212,9 +218,145 @@
               "required_facet": ""
             },
             {
+              "name": "bonus_wall_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_half_length",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "vector_cast_range",
               "values_float": [
                 0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_armor",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_healing",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "ALLY HP REGEN:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_buff_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "ALLY BUFF DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "root_delay",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "root_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "root_damage",
+              "values_float": [
+                300
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -367,7 +509,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

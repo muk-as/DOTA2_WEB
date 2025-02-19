@@ -9,8 +9,8 @@
           "desc_loc": "CHANNELED - Magically binds an enemy unit so that it cannot move or attack, absorbing their life energy over time.",
           "lore_loc": "A self-defense incantation, Rhasta developed shackles after his master was slain in the Bleeding Hills.",
           "notes_loc": [],
-          "shard_loc": "Shackles creates %shard_ward_count% Serpent Wards attacking the target. Increases Shackles cast range by %shard_bonus_cast_range%. Serpent wards lasts %ward_linger_duration% seconds after Shackles end.",
-          "scepter_loc": "",
+          "shard_loc": "",
+          "scepter_loc": "Increase cast range. Every %scepter_shock_interval% seconds, shackled units emit a radial Ether Shock hitting all other units within %scepter_shock_radius% of the target for %scepter_shock_pct%%% of Ether Shock's normal damage. Shackles can now also be cast on allies and Mass Serpent Wards that stay within %ally_break_range% units of Shadow Shaman. Allied units are not disabled by Shackle.",
           "facets_loc": [],
           "type": 0,
           "behavior": "136",
@@ -130,57 +130,6 @@
               "required_facet": ""
             },
             {
-              "name": "shard_bonus_cast_range",
-              "values_float": [
-                75
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_ward_count",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_ward_spawn_distance",
-              "values_float": [
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "ward_linger_duration",
               "values_float": [
                 0
@@ -188,10 +137,10 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
+              "values_shard": [],
+              "values_scepter": [
                 2.5
               ],
-              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -268,15 +217,112 @@
               "required_facet": ""
             },
             {
-              "name": "AbilityCastRange",
+              "name": "scepter_shock_pct",
               "values_float": [
-                450
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                100
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_shock_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                600
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_shock_interval",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                0.9
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "alt_cast_on_allies",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_break_range",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                2000
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                450
+              ],
+              "is_percentage": false,
+              "heading_loc": "CAST RANGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                150
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -414,8 +460,8 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_scepter": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

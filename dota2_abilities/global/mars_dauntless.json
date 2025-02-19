@@ -6,7 +6,7 @@
           "id": 1415,
           "name": "mars_dauntless",
           "name_loc": "Dauntless",
-          "desc_loc": "Mars and allied heroes within %radius% units get more HP Regen the more they are outnumbered by enemy heroes in that area.",
+          "desc_loc": "Mars gets more HP Regen the more he and his allies are outnumbered by enemy heroes in %radius% radius.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -51,11 +51,17 @@
             {
               "name": "health_regen_per_enemy",
               "values_float": [
-                30
+                50
               ],
               "is_percentage": true,
               "heading_loc": "HP REGEN PER EXTRA ENEMY:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_mars_dauntless_hpregen",
+                  "value": 10,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -68,7 +74,7 @@
             {
               "name": "radius",
               "values_float": [
-                2000
+                900
               ],
               "is_percentage": false,
               "heading_loc": "",
