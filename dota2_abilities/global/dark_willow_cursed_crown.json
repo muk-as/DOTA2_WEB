@@ -9,7 +9,7 @@
           "desc_loc": "Dark Willow casts an ancient fae curse on the target. After a delay, the target and nearby enemies are stunned.",
           "lore_loc": "Didn't anyone ever tell you? Never strike a deal with a fairy...",
           "notes_loc": [],
-          "shard_loc": "Cursed Crown creates %shard_bramble_amount% brambles in a %shard_spawn_radius% radius around the target after the counter ends. Triggers even upon dispel. Reduces stun delay by %shard_delay_reduction% second.",
+          "shard_loc": "Cursed Crown creates %shard_bramble_amount% brambles in a %shard_spawn_radius% radius around the target after the counter ends. Triggers even upon dispel. Cursed Crown cooldown reduced by 1.5 seconds.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -84,13 +84,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "STUN DURATION:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_dark_willow_6",
-                  "value": 0.5,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -126,7 +120,7 @@
             {
               "name": "shard_delay_reduction",
               "values_float": [
-                1
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -161,6 +155,40 @@
               "name": "shard_spawn_radius",
               "values_float": [
                 175
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "accumulated_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "accumulated_damage_pct_ally",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -310,7 +338,9 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                1.5
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

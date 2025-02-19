@@ -6,14 +6,14 @@
           "id": 7325,
           "name": "lich_sinister_gaze",
           "name_loc": "Sinister Gaze",
-          "desc_loc": "CHANNELED. Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.<br><br>Lich can use his other abilities while channeling this ability. <br><br> If cast on a creep lasts %creep_duration_multiplier%x longer and deals %creep_damage% damage per second.",
+          "desc_loc": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.<br><br> If cast on a creep lasts %creep_duration_multiplier%x longer.",
           "lore_loc": "Mind the cold...",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Sinister Gaze becomes an Area of Effect ability, affecting units within a radius of %aoe_scepter% in the target area.",
+          "scepter_loc": "Sinister Gaze becomes an Area of Effect ability, affecting units within a radius of %aoe_scepter% in the target area. Sinister Gaze allows Lich to cast other abilities while channeling it.",
           "facets_loc": [],
           "type": 0,
-          "behavior": "536871048",
+          "behavior": "136",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
@@ -49,10 +49,7 @@
             0
           ],
           "mana_costs": [
-            50,
-            60,
-            70,
-            80
+            25
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -106,7 +103,7 @@
             {
               "name": "mana_drain",
               "values_float": [
-                12
+                15
               ],
               "is_percentage": true,
               "heading_loc": "MANA DRAIN PER SECOND:",
@@ -157,12 +154,12 @@
               "required_facet": ""
             },
             {
-              "name": "creep_damage",
+              "name": "frost_blast_damage_percent",
               "values_float": [
-                250
+                0
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "FROST BLAST DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -287,10 +284,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                50,
-                60,
-                70,
-                80
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",

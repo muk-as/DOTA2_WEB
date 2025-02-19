@@ -10,11 +10,11 @@
           "lore_loc": "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight.",
           "notes_loc": [
             "Pulse interval is %pulse_interval%s.",
-            "Total duration flight duration is %abilitychanneltime% seconds of channel time + %airtime_duration% of flight time.",
+            "Total flight duration is %abilitychanneltime% seconds of channel time + %airtime_duration% of flight time.",
             "Cannot be cast without the Hammer."
           ],
           "shard_loc": "",
-          "scepter_loc": "Reduces the channel time and increases the healing and total duration of Solar Guardian's air time. Causes allies in the destination area to have evasion while Dawnbreaker is airborne. Solar Guardian can be cast again after take off to land early. While airborne, the landing point of Solar Guardian can be moved at a speed of %airtime_scepter_movement_speed%.",
+          "scepter_loc": "Solar Guardian's aura now lingers for %scepter_aura_duration%s after landing and follows Dawnbreaker around. Solar Guardian's heal per pulse is increased. Channel time and air time is reduced.",
           "facets_loc": [],
           "type": 1,
           "behavior": "144",
@@ -60,15 +60,55 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "airtime_duration",
+              "name": "scepter_aura_duration",
               "values_float": [
-                0.8
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "miss_rate",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "EVASION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_heal",
+              "values_float": [
+                45,
+                70,
+                95
+              ],
+              "is_percentage": false,
+              "heading_loc": "HEAL PER PULSE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                10,
+                15,
+                20
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -111,29 +151,6 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "base_heal",
-              "values_float": [
-                45,
-                70,
-                95
-              ],
-              "is_percentage": false,
-              "heading_loc": "HEAL PER PULSE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                15,
-                20,
-                25
-              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -219,7 +236,7 @@
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "CHANNEL TIME:",
+              "heading_loc": "SCEPTER CHANNEL TIME:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -236,24 +253,7 @@
                 3.5
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS AIR TIME:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "miss_rate",
-              "values_float": [
-                60
-              ],
-              "is_percentage": true,
-              "heading_loc": "EVASION:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -274,6 +274,25 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "airtime_duration",
+              "values_float": [
+                0.8
+              ],
+              "is_percentage": false,
+              "heading_loc": "AIR TIME:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                0.5
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],

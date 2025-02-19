@@ -6,7 +6,7 @@
           "id": 7314,
           "name": "antimage_counterspell",
           "name_loc": "Counterspell",
-          "desc_loc": "Passively grants magic resistance. Counterspell may be activated to create an anti-magic shell around Anti-Mage that blocks any targeted spells.",
+          "desc_loc": "Passively grants magic resistance. Counterspell may be activated to create an anti-magic shell around Anti-Mage that blocks and reflects any targeted spells.",
           "lore_loc": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation.",
           "notes_loc": [
             "Break disables the passive magic resistance."
@@ -59,10 +59,10 @@
             {
               "name": "magic_resistance",
               "values_float": [
-                15,
-                25,
-                35,
-                45
+                16,
+                24,
+                32,
+                40
               ],
               "is_percentage": true,
               "heading_loc": "MAGIC RESISTANCE:",
@@ -151,26 +151,9 @@
               "required_facet": ""
             },
             {
-              "name": "castable_while_disabled",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "does_reflect",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -191,6 +174,60 @@
               ],
               "is_percentage": true,
               "heading_loc": "REFLECTED SPELL AMP:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mana_drain_percent",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "MANA BURN PERCENTAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_from_mana_drain_percent",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_damage_from_mana_drain",
+              "values_float": [
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

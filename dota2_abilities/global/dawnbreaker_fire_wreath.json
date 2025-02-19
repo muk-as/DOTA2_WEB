@@ -12,7 +12,8 @@
             "Dawnbreaker travels at a rate of %movement_speed% for the duration of the ability and takes a brief %self_stun_duration%s to recover after the final strike.",
             "Celestial Hammer or Solar Guardian cannot be cast during the combo.",
             "Cleave does not work with this ability.",
-            "Can be self-cast to move forward"
+            "Can be self-cast to move forward.",
+            "The first two strikes will slow enemy movement speed by %swipe_slow%%% for %sweep_stun_duration%s."
           ],
           "shard_loc": "Dawnbreaker gains debuff immunity, 50%% magic resistance, and free movement during Starbreaker. Dawnbreaker is slowed by %shard_movement_penalty%%% down to a minimum of %movement_speed%.",
           "scepter_loc": "",
@@ -341,8 +342,82 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [
-                25
+                35
               ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_self_max",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS ATTACK SPEED PER SWIPE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_ally_max",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS ATTACK SPEED PER SWIPE (ALLIES):",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movespeed_bonus_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -483,7 +558,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_dawnbreaker_fire_wreath_cooldown",
-                  "value": 5,
+                  "value": 4,
                   "operation": 2
                 }
               ],
