@@ -57,6 +57,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -210,7 +213,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "减速持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_marci_dispose_slow",
+                  "value": 1.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -439,7 +448,10 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "",
+            "回身踢设为多样施法时，玛西会把目标友军带向她的而最终目的地。友军落地时对敌人造成%ally_impact_damage_pct%%%回身踢伤害。\n\n不会影响被缠绕或束缚的友军。",
+            "如果玛西已升级怒拳破，回身踢落地后玛西会获得一次%postjump_flurry_charges%拳的狂怒连技。如果怒拳破已经开启，则改为持续时间延长%postjump_unleash_duration%秒。\n\n如果拥有阿哈利姆神杖，本次狂怒连技的脉冲效果不会沉默敌人。"
           ],
           "type": 0,
           "behavior": "1074528264",
@@ -553,7 +565,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_marci_rebound_radius",
+                  "value": 75,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -574,7 +592,9 @@
               "is_percentage": false,
               "heading_loc": "撞击伤害：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                20
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -748,10 +768,10 @@
             {
               "name": "ally_movespeed_pct",
               "values_float": [
+                15,
+                20,
                 25,
-                30,
-                35,
-                40
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -838,6 +858,118 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "ally_arc_offset",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "marci_pickmeup",
+                "values": [
+                  150
+                ],
+                "operation": 5
+              },
+              "required_facet": "marci_pickmeup"
+            },
+            {
+              "name": "ally_impact_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "marci_pickmeup",
+                "values": [
+                  25
+                ],
+                "operation": 5
+              },
+              "required_facet": "marci_pickmeup"
+            },
+            {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "marci_pickmeup",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "postjump_unleash_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "marci_fleeting_fury",
+                "values": [
+                  3
+                ],
+                "operation": 5
+              },
+              "required_facet": "marci_fleeting_fury"
+            },
+            {
+              "name": "postjump_flurry_charges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "marci_fleeting_fury",
+                "values": [
+                  3
+                ],
+                "operation": 5
+              },
+              "required_facet": "marci_fleeting_fury"
             },
             {
               "name": "AbilityCastRange",
@@ -953,10 +1085,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                70,
-                80,
+                75,
                 90,
-                100
+                105,
+                120
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -981,9 +1113,7 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                3
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1024,6 +1154,9 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
+            "",
             "",
             ""
           ],
@@ -1185,7 +1318,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1253,7 +1386,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0
+                240
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1299,6 +1432,9 @@
           "shard_loc": "",
           "scepter_loc": "怒拳破的冷却时间减少%scepter_cooldown_reduction%秒，并且施放时对玛西施加弱驱散。怒拳破生效期间，玛西的所有技能在施放时都会施放脉冲。玛西的所有怒拳破脉冲都会沉默敌人，持续%pulse_silence_duration%秒。<br><br>驱散类型：弱驱散",
           "facets_loc": [
+            "",
+            "",
+            "",
             "",
             ""
           ],
@@ -3429,704 +3565,42 @@
       "crops_img": "https://static.pwesports.cn/esportsadmin/DOTA2/2021-10-29/npc_dota_hero_marci.png",
       "top_img": "https://static.pwesports.cn/esportsadmin/DOTA2/2021-10-29/npc_dota_hero_marci.png",
       "top_video": "https://static.pwesports.cn/esportsadmin/DOTA2/2021-10-29/npc_dota_hero_marci.webm",
-      "update_time": 1727823815,
+      "update_time": 1739923416,
       "facets": [
         {
-          "color": 5,
-          "title_loc": "健体术",
-          "description_loc": "玛西可以保护一名友军，使他们获得共享吸血和攻击力。她靠近友军时效果更强。",
-          "name": "marci_sidekick",
-          "icon": "healing",
-          "gradient_id": 3
+          "color": 3,
+          "title_loc": "好友系统",
+          "description_loc": "在护卫术效果下玛西和她的搭档会共享本技能一定百分比的生命治疗量。",
+          "name": "marci_buddy_system",
+          "icon": "twin_hearts",
+          "gradient_id": 1
         },
         {
-          "color": 3,
-          "title_loc": "护卫术",
-          "description_loc": "玛西可以保护一名友军，她在敌人范围内时会在友军受到攻击后作出反击。",
-          "name": "marci_bodyguard",
+          "color": 4,
+          "title_loc": "接送服务",
+          "description_loc": "回身踢可以设为多样施法，让玛西在跳跃后带走她的友军。",
+          "name": "marci_pickmeup",
           "icon": "ricochet",
-          "gradient_id": 1
+          "gradient_id": 0
+        },
+        {
+          "color": 1,
+          "title_loc": "怒拳一现",
+          "description_loc": "回身踢落地后玛西会获得狂怒连技。",
+          "name": "marci_fleeting_fury",
+          "icon": "fist",
+          "gradient_id": 0
         }
       ],
       "facet_abilities": [
         {
-          "abilities": [
-            {
-              "id": 1426,
-              "name": "marci_guardian",
-              "name_loc": "健体术",
-              "desc_loc": "玛西的忠诚保证了她的安全，为选定的友方英雄和她自身注入了共享吸血效果和攻击力加成。如果玛西和她的友军相距超过%max_partner_distance%后友军不会获得加成效果，而玛西只会获得%max_partner_penalty%%%效果，直到他们再次靠近彼此。玛西的吸血效果还会治疗友军，而友军的吸血效果也会治疗玛西。",
-              "lore_loc": "玛西小时候就已经懂得，乱世之中最好的财富是可靠的伙伴。",
-              "notes_loc": [
-                "玛西无法对自身施放健体术。",
-                "吸血效果对非英雄单位减少%creep_lifesteal_reduction_pct%%%。"
-              ],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8",
-              "target_team": 1,
-              "target_type": 1,
-              "flags": 0,
-              "damage": 1,
-              "immunity": 1,
-              "dispellable": 3,
-              "max_level": 4,
-              "cast_ranges": [
-                1000
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                20
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                45,
-                40,
-                35,
-                30
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "lifesteal_pct",
-                  "values_float": [
-                    12,
-                    18,
-                    24,
-                    30
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "吸血：",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_marci_guardian_lifesteal",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_damage",
-                  "values_float": [
-                    10,
-                    15,
-                    20,
-                    25
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "额外基础攻击力：",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_marci_guardian_damage",
-                      "value": 20,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_attack_range",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_partner_distance",
-                  "values_float": [
-                    1750
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_partner_penalty",
-                  "values_float": [
-                    50
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_lifesteal_reduction_pct",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    1000
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    45,
-                    40,
-                    35,
-                    30
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
+          "abilities": []
         },
         {
-          "abilities": [
-            {
-              "id": 1427,
-              "name": "marci_bodyguard",
-              "name_loc": "护卫术",
-              "desc_loc": "玛西保护一个友方英雄。在%bodyguard_duration%秒内，每当该友军攻击敌人或者被攻击，只要目标在玛西的攻击距离 + %bodyguard_attack_range_buffer%范围内，玛西就会作出反击。友军在持续时间内还会获得额外护甲，以及玛西的吸血带来的治疗效果。被动使玛西获得吸血和攻击力加成。",
-              "lore_loc": "",
-              "notes_loc": [
-                "玛西无法对自身施放护卫术。",
-                "吸血效果对非英雄单位减少%creep_lifesteal_reduction_pct%%%。",
-                "玛西的反击具有%counter_cooldown%秒冷却时间。"
-              ],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8",
-              "target_team": 1,
-              "target_type": 1,
-              "flags": 0,
-              "damage": 1,
-              "immunity": 1,
-              "dispellable": 3,
-              "max_level": 4,
-              "cast_ranges": [
-                1000
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                20
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                50
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "bodyguard_duration",
-                  "values_float": [
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "lifesteal_pct",
-                  "values_float": [
-                    12,
-                    18,
-                    24,
-                    30
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "吸血：",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_marci_guardian_lifesteal",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_damage",
-                  "values_float": [
-                    12,
-                    18,
-                    24,
-                    30
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "额外基础攻击力：",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_marci_guardian_damage",
-                      "value": 20,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_lifesteal_reduction_pct",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bodyguard_attack_range_buffer",
-                  "values_float": [
-                    125
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_armor",
-                  "values_float": [
-                    4,
-                    8,
-                    12,
-                    16
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "额外护甲：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "counter_cooldown",
-                  "values_float": [
-                    0.45
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    1000
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    50
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
+          "abilities": []
+        },
+        {
+          "abilities": []
         }
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/file/b5a9fc4a-123f-4797-95d0-5fa723d819b1.png",
@@ -4134,17 +3608,22 @@
         "id": 1428,
         "name": "marci_special_delivery",
         "name_loc": "特快专递",
-        "desc_loc": "所有友方信使获得%bonus_levels%级额外等级和%bonus_hp_tooltip%点额外生命。",
+        "desc_loc": "玛西吹起口哨，立刻把她的信使传送到她身边。<br><br>所有友方信使被动获得%bonus_levels%级额外等级和%bonus_hp_tooltip%点额外生命。",
         "lore_loc": "",
-        "notes_loc": [],
+        "notes_loc": [
+          "特快专递的口哨拥有%abilitycastpoint%秒施法前摇。"
+        ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
           "",
+          "",
+          "",
+          "",
           ""
         ],
         "type": 0,
-        "behavior": "4398046511107",
+        "behavior": "8589934660",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
@@ -4156,13 +3635,13 @@
           0
         ],
         "cast_points": [
-          0
+          1
         ],
         "channel_times": [
           0
         ],
         "cooldowns": [
-          0
+          240
         ],
         "durations": [
           0
@@ -4301,7 +3780,7 @@
           {
             "name": "AbilityCastPoint",
             "values_float": [
-              0
+              1
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -4369,7 +3848,7 @@
           {
             "name": "AbilityCooldown",
             "values_float": [
-              0
+              240
             ],
             "is_percentage": false,
             "heading_loc": "",

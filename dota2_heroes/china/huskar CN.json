@@ -58,6 +58,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -330,7 +331,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.5
+                0.35
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -455,6 +456,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             "沸血之矛还会燃烧敌人一定百分比的最大生命值。会消耗最大生命值，而不是当前生命值。"
           ],
           "type": 0,
@@ -553,7 +555,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_huskar_2",
-                  "value": 4,
+                  "value": 5,
                   "operation": 0
                 }
               ],
@@ -777,6 +779,7 @@
           "facets_loc": [
             "",
             "",
+            "狂战士之血可以消耗一定生命来主动开启。驱散哈斯卡，然后在一定延迟后回复消耗的生命，并且每驱散一个负面状态，他就会额外回复生命。\n\n驱散类型：弱驱散",
             ""
           ],
           "type": 0,
@@ -933,9 +936,110 @@
               "required_facet": ""
             },
             {
+              "name": "activatable",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_cauterize",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_healthcost_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "当前生命值消耗：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_cauterize",
+                "values": [
+                  30
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_cooldown",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "冷却时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_cauterize",
+                "values": [
+                  50,
+                  40,
+                  30,
+                  20
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_delay",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "炙疗延迟：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_cauterize",
+                "values": [
+                  3
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_heal_pct_per_debuff",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "每个负面效果提供最大生命值治疗：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "huskar_cauterize",
+                "values": [
+                  5
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
-                550
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -986,7 +1090,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1099,6 +1203,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1310,6 +1415,7 @@
           "facets_loc": [
             "牺牲还会使目标附近的敌人减速。",
             "牺牲还会治疗目标附近的友方单位。",
+            "",
             ""
           ],
           "type": 1,
@@ -1387,7 +1493,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_huskar",
-                  "value": 0.2,
+                  "value": 0.25,
                   "operation": 0
                 }
               ],
@@ -1429,7 +1535,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_huskar",
-                  "value": 20,
+                  "value": 25,
                   "operation": 0
                 }
               ],
@@ -1525,13 +1631,15 @@
             {
               "name": "taunt_duration",
               "values_float": [
-                3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "嘲讽持续时间：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                3
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1542,13 +1650,15 @@
             {
               "name": "cast_range_bonus",
               "values_float": [
-                250
+                0
               ],
               "is_percentage": false,
               "heading_loc": "施法距离加成：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                250
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -3437,23 +3547,15 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_huskar.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_huskar/npc_dota_hero_huskar.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_huskar/npc_dota_hero_huskar.webm",
-      "update_time": 1734573676,
+      "update_time": 1739923305,
       "facets": [
         {
           "color": 0,
-          "title_loc": "血洗",
-          "description_loc": "牺牲还会使目标附近的敌人减速。",
-          "name": "huskar_bloodbath",
-          "icon": "area_of_effect",
+          "title_loc": "炙疗",
+          "description_loc": "狂战士之血可以消耗一定生命来主动开启。驱散哈斯卡，然后在一定延迟后回复消耗的生命，并且每驱散一个负面状态，他就会额外回复生命。",
+          "name": "huskar_cauterize",
+          "icon": "broken_chain",
           "gradient_id": 0
-        },
-        {
-          "color": 3,
-          "title_loc": "虚无输血",
-          "description_loc": "牺牲还会治疗目标附近的友方单位。",
-          "name": "huskar_nothl_transfusion",
-          "icon": "healing",
-          "gradient_id": 2
         },
         {
           "color": 1,
@@ -3465,9 +3567,6 @@
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         },
@@ -3488,6 +3587,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           "",
           ""

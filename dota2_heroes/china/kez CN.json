@@ -56,6 +56,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 0,
@@ -442,6 +443,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 0,
@@ -557,13 +559,10 @@
             {
               "name": "bonus_flat_lifesteal",
               "values_float": [
-                30,
-                60,
-                90,
-                120
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "英雄额外治疗：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -577,10 +576,13 @@
             {
               "name": "lifesteal_pct",
               "values_float": [
-                100
+                50,
+                75,
+                100,
+                125
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "吸血：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -796,7 +798,8 @@
           "shard_loc": "凯可以主动使用技能，他的攻击会刺中目标，暂时使自己和目标被晕在原地。目标身上的影武长刀效果爆发，移除该效果并且使该次攻击根据叠加的层数造成额外伤害。",
           "scepter_loc": "",
           "facets_loc": [
-            ""
+            "",
+            "从隐身状态下触发翔影之钗标记造成的致命一击伤害会增加。凯触发翔影之钗标记时，影武长刀的冷却时间会减少。"
           ],
           "type": 0,
           "behavior": "2",
@@ -871,7 +874,7 @@
             {
               "name": "katana_bonus_damage",
               "values_float": [
-                20
+                12
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -952,6 +955,26 @@
               "required_facet": ""
             },
             {
+              "name": "shard_cooldown",
+              "values_float": [
+                20,
+                15,
+                10,
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "stun_duration",
               "values_float": [
                 0
@@ -990,9 +1013,51 @@
               "required_facet": ""
             },
             {
+              "name": "katana_swap_bonus_damage",
+              "values_float": [
+                12
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "kez_flutter"
+            },
+            {
+              "name": "mark_trigger_cd_reduction",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "标记冷却时间减少：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "kez_shadowhawk",
+                "values": [
+                  20,
+                  30,
+                  40,
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
-                150
+                200
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1118,9 +1183,7 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                5
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1161,6 +1224,7 @@
           "shard_loc": "",
           "scepter_loc": "施放任何武器的技能都会重置流派变换的冷却时间。<br><br>凯在使用流派变换后%scepter_cooldown_timer%秒内施放的第一个技能不会使相对的武器技能进入冷却。",
           "facets_loc": [
+            "凯切换到长刀后第一次攻击或技能造成额外伤害，切换到双钗后获得移动速度加成。",
             ""
           ],
           "type": 0,
@@ -1236,7 +1300,7 @@
             {
               "name": "katana_bonus_damage",
               "values_float": [
-                20
+                12
               ],
               "is_percentage": true,
               "heading_loc": "长刀额外攻击力：",
@@ -1249,6 +1313,23 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "katana_swap_bonus_damage",
+              "values_float": [
+                12
+              ],
+              "is_percentage": true,
+              "heading_loc": "切换长刀额外伤害：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "kez_flutter"
             },
             {
               "name": "sai_attack_range",
@@ -1283,6 +1364,40 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "sai_swap_bonus_movement_speed",
+              "values_float": [
+                12
+              ],
+              "is_percentage": true,
+              "heading_loc": "切换双钗移动速度：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "kez_flutter"
+            },
+            {
+              "name": "sai_swap_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "切换双钗加速持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "kez_flutter"
             },
             {
               "name": "cooldown_reduction_per_level",
@@ -1486,6 +1601,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 1,
@@ -1639,6 +1755,23 @@
               "required_facet": ""
             },
             {
+              "name": "invuln_period",
+              "values_float": [
+                0.1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "magic_resist",
               "values_float": [
                 100
@@ -1657,6 +1790,23 @@
             },
             {
               "name": "hard_dispel",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "basic_dispel",
               "values_float": [
                 1
               ],
@@ -1847,6 +1997,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 0,
@@ -1920,7 +2071,7 @@
             {
               "name": "rush_range",
               "values_float": [
-                575
+                525
               ],
               "is_percentage": false,
               "heading_loc": "冲刺距离：",
@@ -1977,10 +2128,10 @@
             {
               "name": "base_attack_rate_katana",
               "values_float": [
+                1.5,
                 1.4,
                 1.3,
-                1.2,
-                1.1
+                1.2
               ],
               "is_percentage": false,
               "heading_loc": "长刀基础攻击间隔：",
@@ -1997,10 +2148,10 @@
             {
               "name": "base_attack_rate_sai",
               "values_float": [
+                1.3,
                 1.2,
                 1.1,
-                1,
-                0.9
+                1
               ],
               "is_percentage": false,
               "heading_loc": "双钗基础攻击间隔：",
@@ -2018,9 +2169,9 @@
               "name": "attack_speed_factor",
               "values_float": [
                 6,
-                7,
                 8,
-                9
+                10,
+                12
               ],
               "is_percentage": true,
               "heading_loc": "攻击速度系数：",
@@ -2239,6 +2390,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 0,
@@ -2522,7 +2674,8 @@
           "shard_loc": "被动提供%shard_base_movement_speed%移动速度，每个被标记的敌人还会额外提供%shard_vuln_movement_speed%移动速度。",
           "scepter_loc": "",
           "facets_loc": [
-            ""
+            "",
+            "从隐身状态下触发翔影之钗标记造成的致命一击伤害会增加。凯触发翔影之钗标记时，翔影之钗的冷却时间会减少。"
           ],
           "type": 0,
           "behavior": "8732542993",
@@ -2620,10 +2773,10 @@
             {
               "name": "vuln_slow",
               "values_float": [
-                10
+                0
               ],
-              "is_percentage": true,
-              "heading_loc": "标记时减速：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -2686,44 +2839,6 @@
               "heading_loc": "标记眩晕时间：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_base_movement_speed",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                10
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_vuln_movement_speed",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                10
-              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -2816,6 +2931,67 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "sai_swap_bonus_movement_speed",
+              "values_float": [
+                12
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "kez_flutter"
+            },
+            {
+              "name": "mark_trigger_cd_reduction",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "标记冷却时间减少：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "kez_shadowhawk",
+                "values": [
+                  20,
+                  30,
+                  40,
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "invis_bonus_crit",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "隐身额外暴击：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "kez_shadowhawk",
+                "values": [
+                  50
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -2994,6 +3170,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             ""
           ],
           "type": 1,
@@ -4972,18 +5149,29 @@
       "crops_img": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/kez.png",
       "top_img": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.png",
       "top_video": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.webm",
-      "update_time": 1734577365,
+      "update_time": 1739923422,
       "facets": [
         {
+          "color": 1,
+          "title_loc": "振翼",
+          "description_loc": "凯切换到长刀后第一次攻击或技能造成额外伤害，切换到双钗后获得移动速度加成。",
+          "name": "kez_flutter",
+          "icon": "kez_flutter",
+          "gradient_id": 1
+        },
+        {
           "color": 3,
-          "title_loc": "陆行族英雄",
-          "description_loc": "凯总有一些有趣的把戏，但现在他要去赢下一场大战。这个命石没有任何作用……暂时的。",
-          "name": "kez_default",
-          "icon": "kez",
+          "title_loc": "隼影",
+          "description_loc": "从隐身状态下触发翔影之钗标记造成的致命一击伤害会增加。凯触发翔影之钗标记时，翔影之钗和影武长刀的冷却时间都会减少。",
+          "name": "kez_shadowhawk",
+          "icon": "kez_shadowhawk",
           "gradient_id": 3
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         }
@@ -4997,8 +5185,9 @@
         "lore_loc": "影武团的领袖，曾经也是翔影教团的追随者，他的武技可以在长刀和双钗这两种流派之间自如地切换。",
         "notes_loc": [],
         "shard_loc": "",
-        "scepter_loc": "施放任何武器的技能都会重置流派变换的冷却时间。<br><br>凯在使用流派变换后%scepter_cooldown_timer%秒内施放的第一个技能不会使相对的武器技能进入冷却。",
+        "scepter_loc": "施放任何武器的技能都会重置流派变换的冷却时间。<br><br>在使用流派变换后%scepter_cooldown_timer%秒内施放的第一个技能不会使相对的武器技能进入冷却。",
         "facets_loc": [
+          "凯切换到长刀后第一次攻击或技能造成额外伤害，切换到双钗后获得移动速度加成。",
           ""
         ],
         "type": 0,
@@ -5074,7 +5263,7 @@
           {
             "name": "katana_bonus_damage",
             "values_float": [
-              20
+              12
             ],
             "is_percentage": true,
             "heading_loc": "长刀额外攻击力：",
@@ -5087,6 +5276,23 @@
               "operation": 0
             },
             "required_facet": ""
+          },
+          {
+            "name": "katana_swap_bonus_damage",
+            "values_float": [
+              12
+            ],
+            "is_percentage": true,
+            "heading_loc": "切换长刀额外伤害：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": "kez_flutter"
           },
           {
             "name": "sai_attack_range",
@@ -5121,6 +5327,40 @@
               "operation": 0
             },
             "required_facet": ""
+          },
+          {
+            "name": "sai_swap_bonus_movement_speed",
+            "values_float": [
+              12
+            ],
+            "is_percentage": true,
+            "heading_loc": "切换双钗移动速度：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": "kez_flutter"
+          },
+          {
+            "name": "sai_swap_duration",
+            "values_float": [
+              2
+            ],
+            "is_percentage": false,
+            "heading_loc": "切换双钗加速持续时间：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": "kez_flutter"
           },
           {
             "name": "cooldown_reduction_per_level",

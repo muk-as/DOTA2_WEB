@@ -61,7 +61,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "只要窒碍短匕击中敌人后没有致死，那就会留下一个可叠加的负面状态，持续%dagger_recast_time%秒。只要该单位阵亡，每有一层叠加效果就对目标附近的随机敌人放出一把窒碍短匕，以英雄优先，伤害和减速时间的数值为%dagger_secondary_reduce%%%。"
           ],
           "type": 0,
           "behavior": "8",
@@ -142,10 +143,10 @@
             {
               "name": "duration",
               "values_float": [
-                2.2,
-                2.8,
-                3.4,
-                4
+                2.1,
+                2.4,
+                2.7,
+                3
               ],
               "is_percentage": false,
               "heading_loc": "减速持续时间：",
@@ -192,7 +193,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_phantom_assassin_5",
-                  "value": 20,
+                  "value": 15,
                   "operation": 0
                 }
               ],
@@ -218,7 +219,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_phantom_assassin_5",
-                  "value": 20,
+                  "value": 15,
                   "operation": 0
                 }
               ],
@@ -227,6 +228,44 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dagger_recast_time",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "phantom_assassin_sweet_release",
+                "values": [
+                  6
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dagger_secondary_reduce",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "phantom_assassin_sweet_release",
+                "values": [
+                  50
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -363,7 +402,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_phantom_assassin_7",
-                  "value": 2,
+                  "value": 1.5,
                   "operation": 2
                 }
               ],
@@ -405,6 +444,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -695,7 +735,8 @@
           "shard_loc": "魅影无形主动技能生效时移动速度提升40%。",
           "scepter_loc": "魅影无形能立刻施放，并且施放时施加驱散效果。每次击杀英雄时幻影刺客将刷新所有技能的冷却时间。降低冷却时间。",
           "facets_loc": [
-            "发动攻击不再驱散魅影无形。魅影无形期间和结束后，物品和技能的魔法消耗减少。",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -817,7 +858,7 @@
             {
               "name": "break_on_attack",
               "values_float": [
-                1
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -825,11 +866,9 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "phantom_assassin_veiled_one",
-                "values": [
-                  0
-                ],
-                "operation": 5
+                "name": "",
+                "values": [],
+                "operation": 0
               },
               "required_facet": ""
             },
@@ -1084,6 +1123,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1347,7 +1387,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                50
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1364,7 +1404,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                15
+                20
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1410,6 +1450,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1475,7 +1516,7 @@
             {
               "name": "evasion_per_level",
               "values_float": [
-                1.5
+                1
               ],
               "is_percentage": true,
               "heading_loc": "每级额外闪避：",
@@ -1672,7 +1713,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "每攻击同个英雄%attacks_to_proc%次触发恩赐解脱，或者攻击同个非英雄单位%attacks_to_proc_creeps%次触发。"
+            "每攻击同个英雄%attacks_to_proc%次触发恩赐解脱，或者攻击同个非英雄单位%attacks_to_proc_creeps%次触发。窒碍短匕计为%two_tooltip%次攻击。",
+            ""
           ],
           "type": 1,
           "behavior": "2",
@@ -1733,7 +1775,7 @@
                 ],
                 "operation": 5
               },
-              "required_facet": "phantom_assassin_veiled_one"
+              "required_facet": ""
             },
             {
               "name": "dagger_crit_chance",
@@ -1758,14 +1800,14 @@
                 ],
                 "operation": 5
               },
-              "required_facet": "phantom_assassin_veiled_one"
+              "required_facet": ""
             },
             {
               "name": "crit_bonus",
               "values_float": [
                 200,
-                325,
-                450
+                300,
+                400
               ],
               "is_percentage": true,
               "heading_loc": "致命一击伤害：",
@@ -1775,7 +1817,7 @@
               "facet_bonus": {
                 "name": "phantom_assassin_methodical",
                 "values": [
-                  125
+                  100
                 ],
                 "operation": 0
               },
@@ -1846,6 +1888,25 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "two_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "phantom_assassin_methodical",
+                "values": [
+                  2
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -3621,22 +3682,22 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_phantom_assassin.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_phantom_assassin/npc_dota_hero_phantom_assassin.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_phantom_assassin/npc_dota_hero_phantom_assassin.webm",
-      "update_time": 1722628875,
+      "update_time": 1739923276,
       "facets": [
-        {
-          "color": 3,
-          "title_loc": "魅影之纱",
-          "description_loc": "发动攻击不再驱散魅影无形。魅影无形期间和结束后，物品和技能的魔法消耗减少。",
-          "name": "phantom_assassin_veiled_one",
-          "icon": "mana",
-          "gradient_id": 3
-        },
         {
           "color": 5,
           "title_loc": "有条不紊",
           "description_loc": "每攻击同个英雄{s:bonus_attacks_to_proc}次触发恩赐解脱，或者攻击同个非英雄单位{s:bonus_attacks_to_proc_creeps}次触发。",
           "name": "phantom_assassin_methodical",
-          "icon": "damage",
+          "icon": "skull",
+          "gradient_id": 0
+        },
+        {
+          "color": 0,
+          "title_loc": "甜蜜释放",
+          "description_loc": "窒碍短匕会在敌人阵亡时重新施放。",
+          "name": "phantom_assassin_sweet_release",
+          "icon": "phantom_ass_dagger",
           "gradient_id": 0
         }
       ],
@@ -3659,6 +3720,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
@@ -3724,7 +3786,7 @@
           {
             "name": "evasion_per_level",
             "values_float": [
-              1.5
+              1
             ],
             "is_percentage": true,
             "heading_loc": "每级额外闪避：",

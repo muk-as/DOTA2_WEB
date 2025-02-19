@@ -1292,6 +1292,23 @@
               "required_facet": ""
             },
             {
+              "name": "bonus_mine_damage_pct",
+              "values_float": [
+                15
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 10
@@ -1345,7 +1362,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                1.5
+                1.25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3526,7 +3543,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_techies.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_techies/npc_dota_hero_techies.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_techies/npc_dota_hero_techies.webm",
-      "update_time": 1727827408,
+      "update_time": 1739923393,
       "facets": [
         {
           "color": 5,
@@ -3547,7 +3564,7 @@
         {
           "color": 3,
           "title_loc": "斯布恩的藏品",
-          "description_loc": "工程师可以使用背包中的物品，就像物品还在物品栏里一样。",
+          "description_loc": "工程师会把之前选择的所有附魔都堆叠到最新打造的中立物品上。",
           "name": "techies_backpack",
           "icon": "item",
           "gradient_id": 1
@@ -3784,9 +3801,11 @@
               "id": 1403,
               "name": "techies_spoons_stash",
               "name_loc": "斯布恩的藏品",
-              "desc_loc": "工程师可以使用背包中的物品，就像物品还在物品栏里一样。",
+              "desc_loc": "工程师会把之前选择的所有附魔都堆叠到最新打造的中立物品上。",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "打造第二件第5级中立物品后只有一个第5级附魔会被堆叠。"
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -3988,7 +4007,7 @@
         "id": 5644,
         "name": "techies_minefield_sign",
         "name_loc": "雷区标识",
-        "desc_loc": "在指定地点放置警示牌，使作用范围内所有地雷为无敌状态。同一时间只能存在一个标识。持续%lifetime%秒。",
+        "desc_loc": "在指定地点放置警示牌，使作用范围内的粘性炸弹和感应地雷为无敌状态，并且造成的伤害增加%bonus_mine_damage_pct%%%。同一时间只能存在一个标识。持续%lifetime%秒。",
         "lore_loc": "别四处乱跑！",
         "notes_loc": [],
         "shard_loc": "",
@@ -4011,7 +4030,7 @@
           10
         ],
         "cast_points": [
-          1.5
+          1.25
         ],
         "channel_times": [
           0
@@ -4141,6 +4160,23 @@
             "required_facet": ""
           },
           {
+            "name": "bonus_mine_damage_pct",
+            "values_float": [
+              15
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
             "name": "AbilityCastRange",
             "values_float": [
               10
@@ -4194,7 +4230,7 @@
           {
             "name": "AbilityCastPoint",
             "values_float": [
-              1.5
+              1.25
             ],
             "is_percentage": false,
             "heading_loc": "",

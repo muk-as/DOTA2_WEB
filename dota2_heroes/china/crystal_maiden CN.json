@@ -59,6 +59,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "水晶室女拥有更大的作用范围，并且为友方英雄提供一个物理伤害护盾。水晶室女身上的护盾数值更高。",
             ""
           ],
           "type": 0,
@@ -113,18 +115,14 @@
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_crystal_maiden_6",
-                  "value": 100,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "crystal_maiden_glacial_guard",
+                "values": [
+                  100
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -172,10 +170,10 @@
             {
               "name": "duration",
               "values_float": [
-                5
+                4
               ],
               "is_percentage": false,
-              "heading_loc": "持续时间：",
+              "heading_loc": "减速持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -225,6 +223,75 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "physical_barrier_amount",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "物理护盾数值：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_glacial_guard",
+                "values": [
+                  40,
+                  70,
+                  100,
+                  130
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "physical_barrier_self_amount",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "自身物理伤害数值：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_glacial_guard",
+                "values": [
+                  80,
+                  140,
+                  200,
+                  260
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "physical_barrier_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "护盾持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_glacial_guard",
+                "values": [
+                  4
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -408,6 +475,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -708,7 +777,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "每次水晶室女施放技能时，附近的友军都会回复魔法，数值为该技能耗魔的一定百分比。"
+            "",
+            "",
+            "主动开启奥术光环会临时提升水晶室女的技能增强，但技能的魔法消耗也会增加。在持续时间内，只要水晶室女施放技能，她的友军会回复魔法。不会影响物品。极寒领域的持续施法期间持续时间会暂停。"
           ],
           "type": 0,
           "behavior": "2",
@@ -814,7 +885,81 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "crystal_maiden_cold_comfort",
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activatable",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_arcane_overflow",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_spell_amp_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "技能增强：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_arcane_overflow",
+                "values": [
+                  35
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_mana_cost_increase_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "魔法消耗增加：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_arcane_overflow",
+                "values": [
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mana_battery_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "魔法回复范围：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_arcane_overflow",
                 "values": [
                   1200
                 ],
@@ -825,9 +970,6 @@
             {
               "name": "mana_battery_mana_pct",
               "values_float": [
-                0,
-                0,
-                0,
                 0
               ],
               "is_percentage": true,
@@ -836,12 +978,47 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "crystal_maiden_cold_comfort",
+                "name": "crystal_maiden_arcane_overflow",
                 "values": [
-                  10,
-                  15,
-                  20,
                   25
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_arcane_overflow",
+                "values": [
+                  10
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_cooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "冷却时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "crystal_maiden_arcane_overflow",
+                "values": [
+                  30
                 ],
                 "operation": 0
               },
@@ -1012,6 +1189,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -1322,7 +1501,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "魔法恢复增强提升至%mana_regen_multiplier%%%。"
+            "",
+            "",
+            ""
           ],
           "type": 0,
           "behavior": "13194139533315",
@@ -1363,7 +1544,10 @@
             {
               "name": "mana_regen_multiplier",
               "values_float": [
-                50
+                25,
+                50,
+                75,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1371,10 +1555,8 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "crystal_maiden_cold_comfort",
-                "values": [
-                  25
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -1549,6 +1731,8 @@
           "scepter_loc": "使自身在极寒领域期间可以移动、施法和攻击。仍然可以被敌人打断。在此期间移动速度降低%shard_self_movement_speed_slow_pct%%%。冰爆总数提升%shard_bonus_explosion%%%。对极寒领域内停留超过%frostbite_delay%秒的所有单位都会施加冰封禁制。",
           "facets_loc": [
             "极寒领域也被动提升了水晶室女的施法距离和作用范围。",
+            "",
+            "",
             ""
           ],
           "type": 1,
@@ -3669,21 +3853,21 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_crystal_maiden.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_crystal_maiden/npc_dota_hero_crystal_maiden.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_crystal_maiden/npc_dota_hero_crystal_maiden.webm",
-      "update_time": 1727830812,
+      "update_time": 1739923210,
       "facets": [
         {
           "color": 5,
-          "title_loc": "冰雪无垠",
-          "description_loc": "极寒领域也被动提升了水晶室女的施法距离和作用范围。",
-          "name": "crystal_maiden_frozen_expanse",
-          "icon": "area_of_effect",
-          "gradient_id": 1
+          "title_loc": "冰川护体",
+          "description_loc": "水晶室女拥有更大的作用范围，并且为友方英雄提供一个物理伤害护盾。水晶室女身上的护盾数值更高。",
+          "name": "crystal_maiden_glacial_guard",
+          "icon": "armor",
+          "gradient_id": 3
         },
         {
           "color": 3,
-          "title_loc": "雪中送冰",
-          "description_loc": "水晶室女在施放技能时会回复友军的魔法。提升先天的魔法恢复增强。",
-          "name": "crystal_maiden_cold_comfort",
+          "title_loc": "奥术外溢",
+          "description_loc": "主动开启奥术光环会临时提升水晶室女的技能增强，但技能的魔法消耗也会增加。在持续时间内，只要水晶室女施放技能，她的友军会回复魔法。",
+          "name": "crystal_maiden_arcane_overflow",
           "icon": "mana",
           "gradient_id": 2
         }
@@ -3708,7 +3892,9 @@
         "scepter_loc": "",
         "facets_loc": [
           "",
-          "魔法恢复增强提升至%mana_regen_multiplier%%%。"
+          "",
+          "",
+          ""
         ],
         "type": 0,
         "behavior": "13194139533315",
@@ -3749,7 +3935,10 @@
           {
             "name": "mana_regen_multiplier",
             "values_float": [
-              50
+              25,
+              50,
+              75,
+              100
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3757,10 +3946,8 @@
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "crystal_maiden_cold_comfort",
-              "values": [
-                25
-              ],
+              "name": "",
+              "values": [],
               "operation": 0
             },
             "required_facet": ""

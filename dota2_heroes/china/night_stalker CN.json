@@ -59,7 +59,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "虚空作用下的敌人不会与友军共享视野。当不在友军视野中，他们会受到每秒伤害。",
-            ""
+            "",
+            "提升虚空的最高等级。%max_level%级虚空在夜间变为以范围为目标的技能，并且施加%cast_radius_tooltip%范围效果。"
           ],
           "type": 0,
           "behavior": "8",
@@ -112,22 +113,19 @@
                 80,
                 160,
                 240,
-                320
+                320,
+                400
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_night_stalker_4",
-                  "value": 80,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "night_stalker_voidbringer",
+                "values": [
+                  0
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -152,6 +150,7 @@
             {
               "name": "duration_night",
               "values_float": [
+                2,
                 2.5,
                 3,
                 3.5,
@@ -163,8 +162,10 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "night_stalker_voidbringer",
+                "values": [
+                  0
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -193,26 +194,6 @@
               ],
               "is_percentage": false,
               "heading_loc": "攻击速度降低：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "vision_penalty",
-              "values_float": [
-                100,
-                200,
-                300,
-                400
-              ],
-              "is_percentage": false,
-              "heading_loc": "视野减少：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -260,6 +241,44 @@
               "required_facet": ""
             },
             {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "night_stalker_voidbringer",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "night_stalker_voidbringer",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
               "name": "disable_vision",
               "values_float": [
                 0
@@ -275,6 +294,52 @@
                   1
                 ],
                 "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cast_radius",
+              "values_float": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "night_stalker_voidbringer",
+                "values": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  300
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cast_radius_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "night_stalker_voidbringer",
+                "values": [
+                  300
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -410,7 +475,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_night_stalker_4",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -449,6 +520,7 @@
           "shard_loc": "",
           "scepter_loc": "减少伤残恐惧的冷却时间，并且变为开关型技能，开启后在原初始持续时间结束后每秒会消耗最大魔法值的一定百分比。",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -834,6 +906,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "暗夜猎影的最高等级提升至%max_level_tooltip%级。暗夜魔王初始就额外拥有一级暗夜猎影。",
             ""
           ],
           "type": 0,
@@ -878,6 +951,7 @@
                 22,
                 28,
                 34,
+                40,
                 40
               ],
               "is_percentage": true,
@@ -886,9 +960,15 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "night_stalker_dayswap",
+                "values": [
+                  16,
+                  22,
+                  28,
+                  34,
+                  40
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -898,6 +978,7 @@
                 20,
                 40,
                 60,
+                80,
                 80
               ],
               "is_percentage": false,
@@ -912,9 +993,15 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "night_stalker_dayswap",
+                "values": [
+                  15,
+                  35,
+                  55,
+                  75,
+                  95
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -928,7 +1015,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_night_stalker_hunter_status_resist",
-                  "value": 35,
+                  "value": 30,
                   "operation": 0
                 }
               ],
@@ -1005,6 +1092,63 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "night_stalker_dayswap",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "night_stalker_dayswap",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "gives_free_level",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "night_stalker_dayswap",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -1179,6 +1323,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1441,6 +1586,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3302,41 +3448,39 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_night_stalker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_night_stalker/npc_dota_hero_night_stalker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_night_stalker/npc_dota_hero_night_stalker.webm",
-      "update_time": 1723662093,
+      "update_time": 1739923307,
       "facets": [
-        {
-          "color": 3,
-          "title_loc": "失明虚空",
-          "description_loc": "虚空作用下的敌人不会与友军共享视野。当不在友军视野中，他们会受到每秒伤害。",
-          "name": "night_stalker_blinding_void",
-          "icon": "no_vision",
-          "gradient_id": 0
-        },
         {
           "color": 5,
           "title_loc": "长夜之治",
-          "description_loc": "比赛现在会从夜晚开始，而不是白天。夜晚时间比白天长。",
+          "description_loc": "比赛现在会从夜晚开始，而不是白天。夜晚时间比白天长。暗夜魔王初始拥有额外一级暗夜猎影。",
           "name": "night_stalker_dayswap",
           "icon": "moon",
+          "gradient_id": 0
+        },
+        {
+          "color": 3,
+          "title_loc": "虚空使者",
+          "description_loc": "提升虚空的最高等级。{s:bonus_max_level_tooltip}级虚空在夜间变为以范围为目标的技能，并且施加范围效果。",
+          "name": "night_stalker_voidbringer",
+          "icon": "area_of_effect",
           "gradient_id": 0
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": [
             {
               "id": 1311,
               "name": "night_stalker_night_reign",
               "name_loc": "长夜之治",
-              "desc_loc": "比赛现在会从夜晚开始，而不是白天。夜晚时间比白天长。",
+              "desc_loc": "比赛现在会从夜晚开始，而不是白天。夜晚时间比白天长。暗夜魔王初始拥有额外一级暗夜猎影。",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3400,6 +3544,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "白天时间减少：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "roshan_initial_move_timer_override",
+                  "values_float": [
+                    1199
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -3578,6 +3739,9 @@
               "item_quality": 0
             }
           ]
+        },
+        {
+          "abilities": []
         }
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_night_stalker.png",
@@ -3591,6 +3755,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
