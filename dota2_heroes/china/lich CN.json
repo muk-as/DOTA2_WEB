@@ -162,6 +162,26 @@
               "required_facet": ""
             },
             {
+              "name": "damage",
+              "values_float": [
+                40,
+                80,
+                120,
+                160
+              ],
+              "is_percentage": false,
+              "heading_loc": "基础伤害：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "aoe_damage",
               "values_float": [
                 80,
@@ -178,26 +198,6 @@
                   "operation": 0
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "#AbilityDamage",
-              "values_float": [
-                40,
-                80,
-                120,
-                160
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -400,7 +400,7 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            1000
+            800
           ],
           "cast_points": [
             0.2
@@ -552,10 +552,10 @@
             {
               "name": "duration",
               "values_float": [
+                4,
                 5,
                 6,
-                7,
-                8
+                7
               ],
               "is_percentage": false,
               "heading_loc": "魔盾持续时间：",
@@ -637,7 +637,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                1000
+                800
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -799,17 +799,17 @@
           "id": 7325,
           "name": "lich_sinister_gaze",
           "name_loc": "阴邪凝视",
-          "desc_loc": "持续施法 - 使一个敌方单位着魔，缓慢走到巫妖与其之间的一点，并吸取其当前魔法值的一定百分比。<br><br>巫妖在持续施法时可以使用他的其他技能。<br><br>如果对非英雄单位施放，持续时间会增加至%creep_duration_multiplier%倍，并且每秒造成%creep_damage%点伤害。",
+          "desc_loc": "持续施法 - 使一个敌方单位着魔，缓慢走到巫妖与其之间的一点，并吸取其当前魔法值的一定百分比。<br><br>如果对非英雄单位施放，持续时间会增加至%creep_duration_multiplier%倍。",
           "lore_loc": "当心寒意……",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "阴邪凝视变为范围型技能，会作用于目标区域%aoe_scepter%范围内所有单位。",
+          "scepter_loc": "阴邪凝视变成范围型技能，对目标区域%aoe_scepter%范围内所有单位生效。在阴邪凝视的持续施法期间可以施放其他技能。",
           "facets_loc": [
             "",
             ""
           ],
           "type": 0,
-          "behavior": "536871048",
+          "behavior": "136",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
@@ -902,7 +902,7 @@
             {
               "name": "mana_drain",
               "values_float": [
-                12
+                15
               ],
               "is_percentage": true,
               "heading_loc": "每秒魔法吸取：",
@@ -953,12 +953,12 @@
               "required_facet": ""
             },
             {
-              "name": "creep_damage",
+              "name": "frost_blast_damage_percent",
               "values_float": [
-                250
+                0
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "寒霜爆发伤害：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1083,10 +1083,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                50,
-                60,
-                70,
-                80
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1146,7 +1143,7 @@
           "id": 8028,
           "name": "lich_ice_spire",
           "name_loc": "寒冰尖柱",
-          "desc_loc": "在目标地点创造一根寒冰尖柱，减缓范围内敌人的移动速度。可以承受5次英雄攻击或10次非英雄攻击，并且被摧毁时会在附近产生一个寒霜爆发的效果。<br><br>连环霜冻可以对尖柱施放，并且范围内没有其他敌人时可以弹跳至冰柱上。<br><br>巫妖可以对其施放冰霜魔盾。冰霜魔盾每次造成伤害时会治疗尖柱，使其回复1次英雄攻击次数。",
+          "desc_loc": "在目标地点创造一根寒冰尖柱，减缓范围内敌人的移动速度。可以承受5次英雄攻击或10次非英雄攻击，并且被摧毁时会在附近产生一个寒霜爆发的效果。<br><br>连环霜冻可以对尖柱施放，并且范围内没有其他敌人时可以弹跳至冰柱上，同时对尖柱造成1点英雄攻击。<br><br>巫妖可以对其施放冰霜魔盾。冰霜魔盾每次造成伤害时会治疗尖柱，使其回复1次英雄攻击次数。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1211,7 +1208,7 @@
             {
               "name": "aura_radius",
               "values_float": [
-                750
+                550
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -1791,7 +1788,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害递增：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lich_jump_damage",
+                  "value": 100,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1821,7 +1824,7 @@
             {
               "name": "jump_range",
               "values_float": [
-                600
+                550
               ],
               "is_percentage": false,
               "heading_loc": "弹跳距离：",
@@ -1939,16 +1942,12 @@
             },
             {
               "name": "has_unlimited_jumps",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lich_5",
-                  "value": 1,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -2403,7 +2402,7 @@
         {
           "id": 530,
           "name": "special_bonus_unique_lich_6",
-          "name_loc": "+{s:bonus_radius} 寒霜爆发范围和伤害",
+          "name_loc": "+{s:bonus_radius} 寒霜爆发范围和范围伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -3612,9 +3611,9 @@
           "item_quality": 0
         },
         {
-          "id": 318,
-          "name": "special_bonus_unique_lich_5",
-          "name_loc": "连环霜冻无限弹跳",
+          "id": 1543,
+          "name": "special_bonus_unique_lich_jump_damage",
+          "name_loc": "+{s:bonus_bonus_jump_damage} 连环冰霜递增伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -3660,23 +3659,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -3832,7 +3814,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_lich.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lich/npc_dota_hero_lich.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lich/npc_dota_hero_lich.webm",
-      "update_time": 1732060843,
+      "update_time": 1739926846,
       "facets": [
         {
           "color": 3,

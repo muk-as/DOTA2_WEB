@@ -7,17 +7,17 @@
       "name_loc": "育母蜘蛛",
       "order_id": 53,
       "name_english_loc": "Broodmother",
-      "primary_attr": 3,
+      "primary_attr": 1,
       "complexity": 2,
       "bio_loc": "几个世纪以来，育母蜘蛛布蕾克·艾拉齐娜一直潜伏在灼神山的火山口岩洞中，悉心的照料着数以百万计的幼虫，保证他们能够安全地存活到去地上世界捕食的年龄。直到后来，“贪婪维齐尔”索罗普瑟斯，在死火山的火山口修建了他的磁石庙塔，因为他知道，就算有人觊觎丰富的磁石，也不可能活着穿越那条蜘蛛出没的死亡之路。\r\n\t\t\t\t<br><br>在安享了几百年的安宁后，布蕾克·艾拉齐娜发现一直有不速之客不停地在干扰着她的生活，毛手毛脚的小偷、有勇无谋的骑士，以及年轻鲁莽的贵族——诚然，他们都是美味的食物，但是他们的到来切实地影响了她照料她那“无辜”的后代。忍无可忍之时，她去造访了索罗普瑟斯，但这个维齐尔却不愿意妥协，于是她用蛛丝将他裹起来，扔到一边作为一场特殊生日宴会的中心。\r\n\t\t\t\t<br><br>不幸的是，磁石庙塔主人的失踪却让更多的人壮着胆子前来骚扰。而当她的一个新生儿被一个冒失的探险者踩死时，她终于爆发了。育母蜘蛛向着地上世界前进，誓要清洗掉世界上所有可能对她的孩子有威胁的入侵者，即使是英雄也不例外，直到确保她能够为珍贵的小蜘蛛们提供一个安全健康的温床。",
       "hype_loc": "育母蜘蛛在蛛网中滑行，培育出一支<b>蜘蛛大军</b>直捣敌人的基地。猎物一旦靠近，她将与自己的孩子一同袭击，释放内心无法满足的狩猎天性，咬得敌人<b>麻痹不动</b>。",
       "npe_desc_loc": "操控小蜘蛛大军猎杀敌人",
-      "str_base": 19,
-      "str_gain": 2.3,
+      "str_base": 18,
+      "str_gain": 2.9,
       "agi_base": 18,
-      "agi_gain": 2.6,
+      "agi_gain": 3.4,
       "int_base": 18,
-      "int_gain": 1.4,
+      "int_gain": 2,
       "attack_capability": 1,
       "role_levels": [
         1,
@@ -30,8 +30,8 @@
         3,
         0
       ],
-      "damage_min": 9,
-      "damage_max": 15,
+      "damage_min": 47,
+      "damage_max": 53,
       "attack_rate": 1.7,
       "attack_range": 175,
       "projectile_speed": 900,
@@ -41,8 +41,8 @@
       "turn_rate": 0.6,
       "sight_range_day": 1800,
       "sight_range_night": 800,
-      "max_health": 538,
-      "health_regen": 2.15,
+      "max_health": 516,
+      "health_regen": 2.0500002,
       "max_mana": 291,
       "mana_regen": 0.90000004,
       "abilities": [
@@ -50,11 +50,9 @@
           "id": 5282,
           "name": "broodmother_insatiable_hunger",
           "name_loc": "极度饥渴",
-          "desc_loc": "对活物体液的强烈饥渴提高了育母蜘蛛的攻击力，并使她的攻击附带吸血效果。对非英雄单位的吸血效果减少%creep_lifesteal_reduction_pct%%%。",
+          "desc_loc": "对活物体液的强烈饥渴提高了育母蜘蛛的攻击力，并使她的攻击附带吸血效果。",
           "lore_loc": "虽然大多数猎物都被她用丝茧包裹，作为饲料留给后代，但育母蜘蛛对那些迷路的英雄情有独钟。",
-          "notes_loc": [
-            "与其他吸血效果完全叠加。"
-          ],
+          "notes_loc": [],
           "shard_loc": "提升持续时间。开启极度饥渴后，攻击力加成每%shard_damage_tick_interval%秒提升%shard_damage_per_tick%%%。",
           "scepter_loc": "",
           "facets_loc": [
@@ -143,23 +141,6 @@
               "required_facet": ""
             },
             {
-              "name": "creep_lifesteal_reduction_pct",
-              "values_float": [
-                40
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "duration",
               "values_float": [
                 8,
@@ -191,7 +172,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_broodmother_1",
-                  "value": 0.3,
+                  "value": 0.25,
                   "operation": 0
                 }
               ],
@@ -424,11 +405,10 @@
           "id": 5280,
           "name": "broodmother_spin_web",
           "name_loc": "织网",
-          "desc_loc": "编织出一张蜘蛛网，育母蜘蛛在蛛网里被动提升移动速度和转身速率，并且获得无视地形移动的能力。<br><br>织网拥有最多%AbilityCharges%点能量点数，充能时间为每%abilitychargerestoretime%秒。<br><br>织网现在可向其他蛛网触及的区域全地图施放。蛛网永久存在，不过可以手动摧毁。当其数量超过上限，最早的蛛网将会消失。",
+          "desc_loc": "编织出一张蜘蛛网，育母蜘蛛在蛛网里被动提升移动速度和转身速率，并且获得无视地形移动的能力。<br><br>织网现在可向其他蛛网触及的区域全地图施放。蛛网永久存在，不过可以手动摧毁。当其数量超过上限，最早的蛛网将会消失。",
           "lore_loc": "编制出一张蛛丝之床，艾拉齐娜的网保护她和她的后代，同时给予前进的敌人警告。",
           "notes_loc": [
-            "也会作用于小蜘蛛。",
-            "100%生命时获得全额移动速度加成，1点生命时获得0%移动速度加成"
+            "也会作用于小蜘蛛。"
           ],
           "shard_loc": "",
           "scepter_loc": "提升蛛网内移动速度，并且提升蛛网最大数量",
@@ -499,13 +479,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "蛛网数量上限：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_broodmother_6",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -585,10 +559,10 @@
               "facet_bonus": {
                 "name": "broodmother_necrotic_webs",
                 "values": [
-                  15,
-                  20,
-                  25,
-                  30
+                  10,
+                  30,
+                  50,
+                  70
                 ],
                 "operation": 5
               },
@@ -1407,7 +1381,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "英雄生命值治疗：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_broodmother_6",
+                  "value": 0.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -2254,7 +2234,7 @@
         {
           "id": 900,
           "name": "special_bonus_unique_broodmother_6",
-          "name_loc": "+{s:bonus_count} 织网最多蛛网",
+          "name_loc": "+{s:bonus_kill_heal_heroes}% 蜘蛛奶英雄生命值治疗",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -3666,14 +3646,14 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_broodmother.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_broodmother/npc_dota_hero_broodmother.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_broodmother/npc_dota_hero_broodmother.webm",
-      "update_time": 1728374521,
+      "update_time": 1739926919,
       "facets": [
         {
           "color": 5,
           "title_loc": "坏死之网",
           "description_loc": "减少蛛网上敌人的生命恢复。",
           "name": "broodmother_necrotic_webs",
-          "icon": "debuff",
+          "icon": "web",
           "gradient_id": 0
         },
         {
@@ -3750,7 +3730,13 @@
             ],
             "is_percentage": true,
             "heading_loc": "英雄生命值治疗：",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_broodmother_6",
+                "value": 0.5,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -4004,7 +3990,7 @@
         "name_loc": "自然先知",
         "attack_capability": 2,
         "img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_furion.png",
-        "primary_attr": 2,
+        "primary_attr": 3,
         "complexity": 2
       }
     }

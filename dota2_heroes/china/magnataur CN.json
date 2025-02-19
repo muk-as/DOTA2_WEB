@@ -17,7 +17,7 @@
       "agi_base": 12,
       "agi_gain": 2,
       "int_base": 20,
-      "int_gain": 1.6,
+      "int_gain": 2.1,
       "attack_capability": 1,
       "role_levels": [
         0,
@@ -30,8 +30,8 @@
         0,
         3
       ],
-      "damage_min": 9,
-      "damage_max": 17,
+      "damage_min": 30,
+      "damage_max": 38,
       "attack_rate": 1.8,
       "attack_range": 200,
       "projectile_speed": 900,
@@ -53,7 +53,7 @@
           "desc_loc": "马格纳斯放出一道能量波，对一条直线上的敌方单位造成伤害，并将他们朝自身牵引，同时受到短暂减速效果。",
           "lore_loc": "杰尔拉克山体并不稳定，马格纳斯已经学会如何将山体里的回响引导出来。",
           "notes_loc": [],
-          "shard_loc": "提升距离，并且使震荡波到达最大长度后返回至施法者原来施法的地点，再次击中敌人，造成%return_damage_pct%%%伤害。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -424,7 +424,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -438,9 +438,6 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/magnataur_shockwave.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/magnataur_shockwave.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/magnataur_shockwave.webm",
-          "video_shard_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/magnataur/magnataur_aghanims_shard.jpg",
-          "video_shard_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/magnataur/magnataur_aghanims_shard.mp4",
-          "video_shard_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/magnataur/magnataur_aghanims_shard.webm",
           "is_inborn": 0
         },
         {
@@ -845,10 +842,10 @@
           "id": 5520,
           "name": "magnataur_skewer",
           "name_loc": "巨角冲撞",
-          "desc_loc": "马格纳斯向前冲刺，用他巨大的犀角将敌人挑起。被击中的英雄将被拽至终点，然后受到伤害并且攻击速度和移动速度都被降低。使敌人穿过树木或高台时造成额外伤害。",
+          "desc_loc": "马格纳斯向前冲刺，用他巨大的犀角将敌人挑起。被击中的英雄将被拽至终点，然后受到伤害并且攻击速度和移动速度都被降低。根据行进的距离伤害也会提升。",
           "lore_loc": "对潜在的商人来说，半人犀牛的犀角价值与犀角能够造成的破坏成正比。",
           "notes_loc": [],
-          "shard_loc": "",
+          "shard_loc": "提升距离，并且使敌人穿过树木和高台时造成额外伤害。",
           "scepter_loc": "",
           "facets_loc": [
             "把敌人拖拽至树木或高台会造成额外伤害。",
@@ -1239,7 +1236,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -1253,6 +1250,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/magnataur_skewer.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/magnataur_skewer.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/magnataur_skewer.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_magnataur/magnataur_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_magnataur/magnataur_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_magnataur/magnataur_aghanims_shard.webm",
           "is_inborn": 0
         },
         {
@@ -2278,15 +2278,17 @@
       ],
       "talents": [
         {
-          "id": 6690,
-          "name": "special_bonus_unique_magnus_4",
-          "name_loc": "+{s:bonus_empower_duration}秒 授予力量持续时间",
+          "id": 7132,
+          "name": "special_bonus_mp_regen_150",
+          "name_loc": "+{s:value} 魔法恢复",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -2327,6 +2329,23 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2480,13 +2499,15 @@
         {
           "id": 525,
           "name": "special_bonus_unique_magnus_6",
-          "name_loc": "+{s:bonus_basic_slow_duration}秒 震荡波减速",
+          "name_loc": "+{s:bonus_slow_duration}秒 巨角冲撞减速",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -2689,6 +2710,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -2889,6 +2912,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -3087,6 +3112,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -3295,15 +3322,17 @@
           "item_quality": 0
         },
         {
-          "id": 6507,
-          "name": "special_bonus_unique_magnus_3",
-          "name_loc": "+{s:bonus_range} 巨角冲撞距离",
+          "id": 1562,
+          "name": "special_bonus_unique_magnus_skewer_damage_distance",
+          "name_loc": "+{s:bonus_damage_distance_pct}% 巨角冲撞行进距离伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -3506,6 +3535,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -3706,6 +3737,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -3899,7 +3932,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_magnataur.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/npc_dota_hero_magnataur.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_magnataur/npc_dota_hero_magnataur.webm",
-      "update_time": 1724976174,
+      "update_time": 1739926986,
       "facets": [
         {
           "color": 5,

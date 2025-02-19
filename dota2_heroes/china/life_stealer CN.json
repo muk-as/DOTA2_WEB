@@ -37,7 +37,7 @@
       "projectile_speed": 900,
       "armor": 4.166667,
       "magic_resistance": 25,
-      "movement_speed": 320,
+      "movement_speed": 315,
       "turn_rate": 0.9,
       "sight_range_day": 1800,
       "sight_range_night": 800,
@@ -47,20 +47,335 @@
       "mana_regen": 0.75,
       "abilities": [
         {
+          "id": 5249,
+          "name": "life_stealer_rage",
+          "name_loc": "狂暴",
+          "desc_loc": "进入狂暴状态，获得减益免疫和魔法抗性加成。\n\n驱散类型：弱驱散",
+          "lore_loc": "奈克斯的疯狂和残暴使得他在战斗中异常凶狠无情。",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "2052",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 3,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            20,
+            19,
+            18,
+            17
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            75,
+            100,
+            125,
+            150
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "duration",
+              "values_float": [
+                3,
+                4,
+                5,
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lifestealer",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "magic_resist",
+              "values_float": [
+                80
+              ],
+              "is_percentage": true,
+              "heading_loc": "魔法抗性：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "status_resist",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "状态抗性：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "debuff_immunity",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_armor",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                80,
+                100,
+                120,
+                140
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                20,
+                19,
+                18,
+                17
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_open_wounds.png",
+          "video_jpg": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/life_stealer/life_stealer_open_wounds.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_rage.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_rage.webm",
+          "is_inborn": 0
+        },
+        {
           "id": 5251,
           "name": "life_stealer_open_wounds",
           "name_loc": "撕裂伤口",
-          "desc_loc": "噬魂鬼撕裂一个敌方单位，减缓受害者的移动速度，并使所有友军在攻击该单位时根据造成的伤害回复一定比例的生命。所有伤害都有回复效果，包括技能的伤害。受害者在持续时间内逐渐恢复移动速度。",
+          "desc_loc": "噬魂鬼撕裂一个敌方单位，减缓受害者的移动速度，并使所有友军在攻击该单位时根据造成的伤害回复一定比例的生命。受害者在持续时间内逐渐恢复移动速度。",
           "lore_loc": "新鲜的伤口和鲜血的芳香通常能引来清道夫清理善后。",
           "notes_loc": [
             "撕裂伤口的减速有8个独立的阶段：50%/50%/40%/30%/20%/10%/10%/10%，每过一秒就会进入下个阶段，减速效果不断降低。",
-            "与其他吸血类效果完全叠加。"
+            "治疗数值会被噬魂鬼的吸血增强效果提升。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
             "",
+            "",
+            "如果有单位在撕裂伤口效果下阵亡，撕裂伤口的冷却时间将会重置。",
             ""
           ],
           "type": 0,
@@ -158,7 +473,7 @@
                 50
               ],
               "is_percentage": true,
-              "heading_loc": "生命吸取：",
+              "heading_loc": "伤害转为治疗：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_lifestealer_6",
@@ -251,6 +566,25 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "reset_cooldown_on_kill",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "life_stealer_fleshfeast",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -410,10 +744,10 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_open_wounds.png",
-          "video_jpg": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/life_stealer/life_stealer_open_wounds.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_rage.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_rage.webm",
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_ghoul_frenzy.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_feast.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_feast.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_feast.webm",
           "is_inborn": 0
         },
         {
@@ -426,6 +760,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -667,10 +1003,10 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_ghoul_frenzy.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_feast.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_feast.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_feast.webm",
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_feast.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_ghoul_frenzy.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_ghoul_frenzy.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_ghoul_frenzy.webm",
           "is_inborn": 0
         },
         {
@@ -682,7 +1018,7 @@
           "notes_loc": [
             "对友军和敌人有效。对肉山无效。",
             "回复量与造成伤害相互独立。",
-            "与其他吸血类效果完全叠加。",
+            "治疗数值会被吸血增强效果提升。",
             "破坏会使技能无法获得新的叠加效果。",
             "破坏不会使现有叠加效果提供的加成失效。"
           ],
@@ -691,6 +1027,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "盛宴的击杀英雄获得生命上限已经提升。",
             ""
           ],
           "type": 0,
@@ -738,7 +1076,7 @@
                 3
               ],
               "is_percentage": true,
-              "heading_loc": "最大生命值回复：",
+              "heading_loc": "来自目标最大生命值的治疗：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_lifestealer_3",
@@ -784,6 +1122,9 @@
             {
               "name": "bonus_hp_per_hero",
               "values_float": [
+                15,
+                15,
+                15,
                 15
               ],
               "is_percentage": false,
@@ -792,9 +1133,14 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "life_stealer_fleshfeast",
+                "values": [
+                  25,
+                  35,
+                  45,
+                  55
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -998,30 +1344,32 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_feast.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_ghoul_frenzy.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_ghoul_frenzy.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_ghoul_frenzy.webm",
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_infest.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_open_wounds.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_open_wounds.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_open_wounds.webm",
           "is_inborn": 1
         },
         {
           "id": 5252,
           "name": "life_stealer_infest",
           "name_loc": "感染",
-          "desc_loc": "噬魂鬼进入目标单位的身体，无法被察觉，而且自身在体内时每秒恢复最大生命值的一定百分比。接着可以从宿主体内现身，对周围所有敌方单位造成伤害。如果被感染单位是敌方非英雄单位或中立生物，噬魂鬼可以控制其进行移动和攻击。无法对敌方英雄生效。\n\n驱散类型：弱驱散",
+          "desc_loc": "噬魂鬼进入目标单位的身体，无法被察觉，而且自身在体内时每秒恢复最大生命值的一定百分比。接着可以从宿主体内现身，对周围所有敌方单位造成伤害。如果被感染单位是敌方非英雄单位或中立生物，噬魂鬼可以控制其进行移动和攻击，而且该生物会持续失去最大生命值的一部分。无法对敌方英雄生效。\n\n驱散类型：弱驱散",
           "lore_loc": "奈克斯通过寄生吞噬宿主的生命之血，使他的不洁之力恢复如初。",
           "notes_loc": [
             "噬魂鬼在感染一个单位期间能够从周围死亡的单位身上获得经验。",
             "被感染控制的单位会获得感染的移动速度加成。",
-            "2级和3级感染可以对远古生物使用。",
-            "不会触发法术反弹。"
+            "不会触发法术反弹。",
+            "拥有阿哈利姆神杖后感染敌方英雄的喋血风暴伤害会基于噬魂鬼在感染的持续时间内对敌方英雄宿主造成的伤害。"
           ],
           "shard_loc": "感染现身时会对伤害范围内的敌人施加%bonus_open_wounds_duration_pct%%%持续时间的撕裂伤口。",
           "scepter_loc": "提升施法距离并且冷却时间降低至%bonus_AbilityCooldown%秒。感染可以对敌方英雄施放，持续时间较短，将他们缴械，并在他们体内发动攻击，同时提升噬魂鬼的恢复速率。",
           "facets_loc": [
             "",
             "",
-            ""
+            "",
+            "",
+            "吞噬感染的中立生物会使敌人沾满鲜血，根据宿主的剩余生命值造成持续伤害。感染可以对远古中立生物使用。"
           ],
           "type": 1,
           "behavior": "33554440",
@@ -1234,6 +1582,101 @@
               "required_facet": ""
             },
             {
+              "name": "creep_max_hp_drain_pct_per_second",
+              "values_float": [
+                2,
+                1,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "生物每秒最大生命值流失：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "can_target_ancients",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "life_stealer_gorestorm",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dot_damage_as_pct_of_damage_dealt",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "剩余生命值作为喋血风暴伤害：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "life_stealer_gorestorm",
+                "values": [
+                  25
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dot_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "喋血风暴持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "life_stealer_gorestorm",
+                "values": [
+                  3
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "dot_tick_interval",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "life_stealer_gorestorm",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 150
@@ -1390,13 +1833,13 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_infest.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_open_wounds.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_open_wounds.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_open_wounds.webm",
-          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_scepter.jpg",
-          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_scepter.mp4",
-          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_scepter.webm",
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_infest.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_infest.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_infest.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/life_stealer_infest.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_shard.webm",
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_scepter.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_scepter.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_life_stealer/life_stealer_aghanims_scepter.webm",
@@ -1405,15 +1848,17 @@
       ],
       "talents": [
         {
-          "id": 1033,
-          "name": "special_bonus_unique_lifestealer_infest_damage",
-          "name_loc": "+{s:bonus_damage} 感染伤害",
+          "id": 5920,
+          "name": "special_bonus_all_stats_4",
+          "name_loc": "+{s:value} 全属性",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -1454,6 +1899,23 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -1614,6 +2076,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -1816,6 +2280,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -2014,6 +2480,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -2216,6 +2684,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -2416,6 +2886,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -2607,13 +3079,15 @@
         {
           "id": 7012,
           "name": "special_bonus_unique_lifestealer_3",
-          "name_loc": "+{s:bonus_hp_damage_percent}% 盛宴吸血/伤害",
+          "name_loc": "+{s:bonus_hp_damage_percent}% 盛宴治疗/伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -2816,7 +3290,9 @@
           "facets_loc": [
             "",
             "",
-            "+{s:bonus_duration}秒 肆意狂怒持续时间"
+            "+{s:bonus_duration}秒 肆意狂怒持续时间",
+            "",
+            ""
           ],
           "type": 2,
           "behavior": "2",
@@ -3009,611 +3485,31 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_life_stealer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/npc_dota_hero_life_stealer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_life_stealer/npc_dota_hero_life_stealer.webm",
-      "update_time": 1728374508,
+      "update_time": 1739926903,
       "facets": [
         {
-          "color": 1,
-          "title_loc": "狂暴",
-          "description_loc": "噬魂鬼可以施放<b color='white'>狂暴</b>，变为减益免疫，并且提升魔法抗性。",
-          "name": "life_stealer_rage",
-          "icon": "lifestealer_rage",
-          "gradient_id": 3
+          "color": 5,
+          "title_loc": "血肉盛宴",
+          "description_loc": "盛宴的每次击杀英雄获得的最大生命值提升。如果有英雄在撕裂伤口效果下阵亡，冷却时间将会重置。",
+          "name": "life_stealer_fleshfeast",
+          "icon": "full_heart",
+          "gradient_id": 0
         },
         {
           "color": 0,
-          "title_loc": "肆意狂怒",
-          "description_loc": "噬魂鬼可以施放<b color='white'>肆意狂怒</b>，驱散自身并且抗性更高。被眩晕时可以施放。",
-          "name": "life_stealer_rage_dispell",
-          "icon": "broken_chain",
+          "title_loc": "喋血风暴",
+          "description_loc": "吞噬感染的中立生物会使敌人沾满鲜血，根据宿主的剩余生命值造成持续伤害。感染可以对远古中立生物使用。",
+          "name": "life_stealer_gorestorm",
+          "icon": "area_of_effect",
           "gradient_id": 0
         }
       ],
       "facet_abilities": [
         {
-          "abilities": [
-            {
-              "id": 5249,
-              "name": "life_stealer_rage",
-              "name_loc": "狂暴",
-              "desc_loc": "进入狂暴状态，获得减益免疫和魔法抗性加成。\n\n驱散类型：弱驱散",
-              "lore_loc": "奈克斯的疯狂和残暴使得他在战斗中异常凶狠无情。",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "2052",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 3,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                20,
-                19,
-                18,
-                17
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                80,
-                100,
-                120,
-                140
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "duration",
-                  "values_float": [
-                    3,
-                    4,
-                    5,
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "持续时间：",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lifestealer",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "magic_resist",
-                  "values_float": [
-                    80
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "魔法抗性：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "status_resist",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "状态抗性：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "debuff_immunity",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_armor",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    80,
-                    100,
-                    120,
-                    140
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    20,
-                    19,
-                    18,
-                    17
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
+          "abilities": []
         },
         {
-          "abilities": [
-            {
-              "id": 1301,
-              "name": "life_stealer_unfettered",
-              "name_loc": "肆意狂怒",
-              "desc_loc": "陷入狂烈的愤怒，获得状态抗性和魔法抗性加成。施加驱散，而且被控制时可以施放。\n\n驱散类型：强驱散",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "2099204",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 3,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                20,
-                19,
-                18,
-                17
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                80,
-                100,
-                120,
-                140
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "duration",
-                  "values_float": [
-                    4,
-                    5,
-                    6,
-                    7
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "持续时间：",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lifestealer",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "magic_resist",
-                  "values_float": [
-                    60
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "魔法抗性加成：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "status_resist",
-                  "values_float": [
-                    60
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "状态抗性加成：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    80,
-                    100,
-                    120,
-                    140
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    20,
-                    19,
-                    18,
-                    17
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
+          "abilities": []
         }
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_life_stealer.png",
@@ -3626,7 +3522,7 @@
         "notes_loc": [
           "对友军和敌人有效。对肉山无效。",
           "回复量与造成伤害相互独立。",
-          "与其他吸血类效果完全叠加。",
+          "治疗数值会被吸血增强效果提升。",
           "破坏会使技能无法获得新的叠加效果。",
           "破坏不会使现有叠加效果提供的加成失效。"
         ],
@@ -3635,6 +3531,8 @@
         "facets_loc": [
           "",
           "",
+          "",
+          "盛宴的击杀英雄获得生命上限已经提升。",
           ""
         ],
         "type": 0,
@@ -3682,7 +3580,7 @@
               3
             ],
             "is_percentage": true,
-            "heading_loc": "最大生命值回复：",
+            "heading_loc": "来自目标最大生命值的治疗：",
             "bonuses": [
               {
                 "name": "special_bonus_unique_lifestealer_3",
@@ -3728,6 +3626,9 @@
           {
             "name": "bonus_hp_per_hero",
             "values_float": [
+              15,
+              15,
+              15,
               15
             ],
             "is_percentage": false,
@@ -3736,9 +3637,14 @@
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
+              "name": "life_stealer_fleshfeast",
+              "values": [
+                25,
+                35,
+                45,
+                55
+              ],
+              "operation": 5
             },
             "required_facet": ""
           },

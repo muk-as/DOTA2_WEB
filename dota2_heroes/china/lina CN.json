@@ -372,7 +372,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_lina_1",
-                  "value": 3.5,
+                  "value": 3,
                   "operation": 2
                 }
               ],
@@ -763,7 +763,7 @@
             "每次技能击中敌人时都会刷新持续时间。",
             "使用物品不会触发炽魂。"
           ],
-          "shard_loc": "每点炽魂能量点数能使莉娜的技能多造成%shard_bonus_spell_damage%点伤害。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -834,10 +834,10 @@
             {
               "name": "fiery_soul_move_speed_bonus",
               "values_float": [
+                1,
                 1.5,
                 2,
-                2.5,
-                3
+                2.5
               ],
               "is_percentage": true,
               "heading_loc": "移动速度提升：",
@@ -920,9 +920,7 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                25
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1116,7 +1114,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -1130,9 +1128,6 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/lina_fiery_soul.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/lina_fiery_soul.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/lina_fiery_soul.webm",
-          "video_shard_jpg": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/lina/lina_aghanims_shard.jpg",
-          "video_shard_mp4": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/lina/lina_aghanims_shard.mp4",
-          "video_shard_webm": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/lina/lina_aghanims_shard.webm",
           "is_inborn": 0
         },
         {
@@ -1187,7 +1182,7 @@
             {
               "name": "flame_cloak_duration",
               "values_float": [
-                8
+                7
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
@@ -1503,7 +1498,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "过热伤害：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lina_7",
+                  "value": 60,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1523,7 +1524,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "过热伤害（幻象）：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lina_7",
+                  "value": 60,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1731,7 +1738,7 @@
           "notes_loc": [
             "神灭斩在技能施放到伤害生效有%damage_delay%秒延迟，因此有若干技能可以躲避该伤害。"
           ],
-          "shard_loc": "",
+          "shard_loc": "造成伤害的%barrier_pct%%%会转化为莉娜身上的全伤害护盾。护盾持续%barrier_duration%秒。",
           "scepter_loc": "",
           "facets_loc": [
             "施放神灭斩会暂时让莉娜的能量达到顶峰，给予炽魂的叠加效果。",
@@ -1914,17 +1921,15 @@
             },
             {
               "name": "barrier_pct",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lina_7",
-                  "value": 125,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [
+                75
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1935,17 +1940,15 @@
             },
             {
               "name": "barrier_duration",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lina_7",
-                  "value": 15,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [
+                10
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -2087,7 +2090,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_lina_6",
-                  "value": 25,
+                  "value": 20,
                   "operation": 2
                 }
               ],
@@ -2103,7 +2106,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -2117,6 +2120,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/lina_laguna_blade.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/lina_laguna_blade.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/lina_laguna_blade.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lina/lina_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lina/lina_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lina/lina_aghanims_shard.webm",
           "is_inborn": 0
         }
       ],
@@ -3335,8 +3341,8 @@
         {
           "id": 961,
           "name": "special_bonus_unique_lina_7",
-          "name_loc": "{s:bonus_barrier_pct}% 神灭斩伤害变为护盾",
-          "desc_loc": "持续{s:bonus_barrier_duration}秒。",
+          "name_loc": "+{s:bonus_damage_illusions}% 燎火过热伤害",
+          "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -3735,7 +3741,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_lina.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/npc_dota_hero_lina.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lina/npc_dota_hero_lina.webm",
-      "update_time": 1732064437,
+      "update_time": 1739926844,
       "facets": [
         {
           "color": 1,
@@ -4164,7 +4170,13 @@
             ],
             "is_percentage": false,
             "heading_loc": "过热伤害：",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_lina_7",
+                "value": 60,
+                "operation": 3
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -4184,7 +4196,13 @@
             ],
             "is_percentage": false,
             "heading_loc": "过热伤害（幻象）：",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_lina_7",
+                "value": 60,
+                "operation": 3
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {

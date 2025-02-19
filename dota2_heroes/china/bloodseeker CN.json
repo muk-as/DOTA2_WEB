@@ -55,8 +55,8 @@
           "notes_loc": [
             "对血魔或友军造成的伤害不能致死，而且不能杀死英雄。"
           ],
-          "shard_loc": "血怒的攻击造成%shard_max_health_dmg%点纯粹伤害，并且自身回复相同数值。仅对血魔自身有效。",
-          "scepter_loc": "",
+          "shard_loc": "",
+          "scepter_loc": "血怒下的攻击现在造成%max_health_dmg_pct%%%目标最大生命值的<font color=\"#d8ae53\">纯粹</font>伤害。",
           "facets_loc": [
             "",
             ""
@@ -344,8 +344,8 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_scepter": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -359,9 +359,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_bloodrage.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_bloodrage.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_bloodrage.webm",
-          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_shard.jpg",
-          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_shard.mp4",
-          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_shard.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -384,7 +384,7 @@
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 2,
+          "damage": 4,
           "immunity": 4,
           "dispellable": 2,
           "max_level": 4,
@@ -765,7 +765,7 @@
             0
           ],
           "mana_costs": [
-            50
+            0
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -1081,300 +1081,6 @@
           "is_inborn": 0
         },
         {
-          "id": 902,
-          "name": "bloodseeker_blood_mist",
-          "name_loc": "血雾",
-          "desc_loc": "血魔将自己的鲜血撒向一片区域，伤害自身的同时对敌人造成伤害和减速。开启时食血动物的治疗效果提升。技能处于冷却时无法关闭。<br><br>另外，被动使来自自身技能的超量治疗变成全伤害护盾，最多可达血魔最大生命的50%%。护盾数值每秒衰减%barrier_decay_pct%%%。",
-          "lore_loc": "",
-          "notes_loc": [
-            "对血魔造成的伤害不能致死，而且不能杀死英雄。"
-          ],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "8594129413",
-          "target_team": 2,
-          "target_type": 19,
-          "flags": 0,
-          "damage": 2,
-          "immunity": 4,
-          "dispellable": 3,
-          "max_level": 1,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0.5
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            3
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "hp_cost_per_second",
-              "values_float": [
-                7
-              ],
-              "is_percentage": true,
-              "heading_loc": "每秒生命消耗/伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "radius",
-              "values_float": [
-                450
-              ],
-              "is_percentage": false,
-              "heading_loc": "作用范围：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "movement_slow",
-              "values_float": [
-                30
-              ],
-              "is_percentage": true,
-              "heading_loc": "移动速度减缓：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "barrier_decay_pct",
-              "values_float": [
-                0.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "voracity_bonus_pct",
-              "values_float": [
-                50
-              ],
-              "is_percentage": true,
-              "heading_loc": "食血动物治疗加成：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastRange",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChannelTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityDuration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChargeRestoreTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": true,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/file/1ef5ede1-7ec6-4806-be88-6ea4062a3f28.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_rupture.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_rupture.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_rupture.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/file/b385861e-79b7-4aed-a77d-9c7aec55d45c.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/file/6b66ac4f-e715-41b8-a7de-93418d8a5d93.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/file/48b5b52f-6f64-4875-825c-ec7fba0f7496.webm",
-          "is_inborn": 0
-        },
-        {
           "id": 1203,
           "name": "bloodseeker_sanguivore",
           "name_loc": "食血动物",
@@ -1383,8 +1089,8 @@
           "notes_loc": [
             "非英雄单位的吸血效果减少%creep_lifesteal_reduction_pct%%%。"
           ],
-          "shard_loc": "",
-          "scepter_loc": "",
+          "shard_loc": "被动使来自血魔自身技能的超量治疗变为全伤害护盾，最高可达血魔最大生命的%max_shield_pct%%%。护盾数值每秒衰减%barrier_decay_pct%%%",
+          "scepter_loc": "血魔从他造成的<font color=\"#d8ae53\">纯粹</font>伤害中可以回复%pure_damage_lifesteal_pct%%%。",
           "facets_loc": [
             "",
             ""
@@ -1665,8 +1371,8 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_scepter": true,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": true,
@@ -1676,10 +1382,16 @@
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_rupture.png",
+          "img": "https://img.dota2.com.cn/dota2static/file/1ef5ede1-7ec6-4806-be88-6ea4062a3f28.png",
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_rupture.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_rupture.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/bloodseeker_rupture.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_bloodseeker/bloodseeker_aghanims_shard.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/file/b385861e-79b7-4aed-a77d-9c7aec55d45c.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/file/6b66ac4f-e715-41b8-a7de-93418d8a5d93.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/file/48b5b52f-6f64-4875-825c-ec7fba0f7496.webm",
           "is_inborn": 1
         },
         {
@@ -3032,9 +2744,9 @@
           "item_quality": 0
         },
         {
-          "id": 6550,
-          "name": "special_bonus_spell_lifesteal_15",
-          "name_loc": "+{s:value}% 技能吸血",
+          "id": 6230,
+          "name": "special_bonus_unique_bloodseeker",
+          "name_loc": "-{s:bonus_damage_pct}% 血怒每秒最大生命值伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -3080,23 +2792,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                15
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -3650,7 +3345,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_bloodseeker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/npc_dota_hero_bloodseeker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/npc_dota_hero_bloodseeker.webm",
-      "update_time": 1737763209,
+      "update_time": 1739926810,
       "facets": [
         {
           "color": 0,

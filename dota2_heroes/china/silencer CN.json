@@ -50,11 +50,10 @@
           "id": 5377,
           "name": "silencer_curse_of_the_silent",
           "name_loc": "奥术诅咒",
-          "desc_loc": "诅咒目标区域，使敌方英雄持续受到伤害，并且移动速度被减缓。期间受到作用的英雄一旦施放技能，他们就会短时间内被沉默。目标被沉默时不计入负面效果的持续时间。",
+          "desc_loc": "诅咒目标区域，造成伤害并使敌方英雄持续受到伤害，并且移动速度被减缓。被沉默的敌人受到%penalty_multiplier%倍减速和伤害。期间受到作用的英雄一旦施放魔法，持续时间就会延长。目标被沉默时不计入负面效果的持续时间。",
           "lore_loc": "无法使用咒语对诺崇来说不是什么问题，但对他的敌人来说，这可是个大问题。",
           "notes_loc": [
-            "非英雄单位也会受到作用。",
-            "会立刻造成首次伤害。"
+            "非英雄单位也会受到作用。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -117,13 +116,27 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer",
-                  "value": 15,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "application_damage",
+              "values_float": [
+                20,
+                40,
+                60,
+                80
               ],
+              "is_percentage": false,
+              "heading_loc": "初始伤害：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -161,29 +174,6 @@
                 {
                   "name": "special_bonus_unique_silencer_arcane_curse_duration",
                   "value": 2,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "silence_duration",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "沉默持续时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer_arcane_curse_duration",
-                  "value": 1,
                   "operation": 0
                 }
               ],
@@ -235,6 +225,71 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "penalty_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "惩罚持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "penalty_multiplier",
+              "values_float": [
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "沉默惩罚倍数：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer",
+                  "value": 0.5,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration_percent_per_stolen_int",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -410,12 +465,9 @@
           "id": 5378,
           "name": "silencer_glaives_of_wisdom",
           "name_loc": "智慧之刃",
-          "desc_loc": "沉默术士用他的智慧强化刀刃，每次攻击窃取目标的智力，并造成基于他智力值的额外伤害。沉默术士攻击同个目标%stacks_for_silence%次后敌人会被沉默%silence_duration%秒。",
+          "desc_loc": "沉默术士用他的智慧强化刀刃，每次攻击窃取目标的智力，并造成基于他智力值的额外伤害。",
           "lore_loc": "尽管无法使用传统咒语，但诺崇的风蚀之寒血统赋予他一种诡异的智慧，在肉搏中助他一臂之力。",
-          "notes_loc": [
-            "叠加效果会在%debuff_linger_duration%秒后重置。",
-            "智慧之刃的沉默持续时间内不会获得叠加效果。"
-          ],
+          "notes_loc": [],
           "shard_loc": "提升每次攻击的智力窃取数值和持续时间。",
           "scepter_loc": "",
           "facets_loc": [
@@ -464,9 +516,9 @@
             {
               "name": "intellect_damage_pct",
               "values_float": [
-                20,
-                40,
-                60,
+                35,
+                50,
+                65,
                 80
               ],
               "is_percentage": true,
@@ -580,7 +632,7 @@
             {
               "name": "stacks_for_silence",
               "values_float": [
-                4
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -796,9 +848,11 @@
           "id": 5379,
           "name": "silencer_last_word",
           "name_loc": "遗言",
-          "desc_loc": "沉默术士对附近%radius%范围内的敌人根据他们身上的沉默效果数量造成减速和每秒伤害。",
+          "desc_loc": "向目标施加魔咒，提供目标的视野，并且只要目标施放技能或魔咒消失，目标就会受到伤害并被沉默。根据沉默术士和目标的智力差还将造成额外伤害。",
           "lore_loc": "诺崇的敌人念出的咒语往往将成为他们的遗言。",
-          "notes_loc": [],
+          "notes_loc": [
+            "持续施法类技能在英雄结束施法后触发此技能的效果。"
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
@@ -806,8 +860,8 @@
             ""
           ],
           "type": 0,
-          "behavior": "2",
-          "target_team": 0,
+          "behavior": "8",
+          "target_team": 2,
           "target_type": 19,
           "flags": 0,
           "damage": 2,
@@ -815,10 +869,10 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            0
+            900
           ],
           "cast_points": [
-            0
+            0.3
           ],
           "channel_times": [
             0
@@ -848,22 +902,16 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "damage_per_silence",
+              "name": "damage",
               "values_float": [
-                30,
-                40,
-                50,
-                60
+                120,
+                160,
+                200,
+                240
               ],
               "is_percentage": false,
-              "heading_loc": "每个沉默效果伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer_4",
-                  "value": 35,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "基础伤害：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -874,22 +922,53 @@
               "required_facet": ""
             },
             {
-              "name": "slow_per_silence",
+              "name": "int_multiplier",
               "values_float": [
-                6,
-                9,
-                12,
-                15
+                1,
+                1.5,
+                2,
+                2.5
               ],
-              "is_percentage": true,
-              "heading_loc": "每个沉默效果减速：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer_4",
-                  "value": 5,
-                  "operation": 0
-                }
+              "is_percentage": false,
+              "heading_loc": "智力差倍数：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "debuff_duration",
+              "values_float": [
+                4
               ],
+              "is_percentage": false,
+              "heading_loc": "魔咒持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                3,
+                4,
+                5,
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "沉默持续时间：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -902,11 +981,17 @@
             {
               "name": "radius",
               "values_float": [
-                1200
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
+              "heading_loc": "作用范围：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_4",
+                  "value": 250,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -919,7 +1004,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                0
+                900
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -970,7 +1055,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0
+                0.3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1021,7 +1106,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                0
+                100,
+                105,
+                110,
+                115
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1038,7 +1126,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0
+                22,
+                18,
+                14,
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1075,12 +1166,12 @@
           "id": 1335,
           "name": "silencer_brain_drain",
           "name_loc": "智力外流",
-          "desc_loc": "如果沉默术士击杀了敌方英雄，他将永久窃取%permanent_int_steal_amount%点智力。",
+          "desc_loc": "如果沉默术士击杀了敌方英雄，他将永久窃取智力。",
           "lore_loc": "",
           "notes_loc": [
             "沉默术士无需完成击杀就能永久智力，只要敌方英雄在沉默术士附近%permanent_int_steal_range%范围内阵亡或者死亡时带有沉默术士的负面效果即可。"
           ],
-          "shard_loc": "每次击杀窃取的智力值提升至%permanent_int_steal_amount%点。",
+          "shard_loc": "提升每次击杀窃取的智力值。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1145,7 +1236,7 @@
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "永久智力窃取：",
               "bonuses": [],
               "values_shard": [
                 2
@@ -1587,9 +1678,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                130,
-                115,
-                100
+                120
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1630,7 +1719,7 @@
         {
           "id": 6184,
           "name": "special_bonus_unique_silencer",
-          "name_loc": "+{s:bonus_damage} 奥术诅咒伤害",
+          "name_loc": "+{s:bonus_penalty_multiplier} 奥术诅咒惩罚倍数",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2261,7 +2350,7 @@
         {
           "id": 1467,
           "name": "special_bonus_unique_silencer_arcane_curse_duration",
-          "name_loc": "+{s:bonus_duration}/{s:bonus_silence_duration}秒 奥术诅咒基础/沉默持续时间",
+          "name_loc": "+{s:bonus_duration}秒/+{s:bonus_penalty_duration}秒 奥术诅咒基础/惩罚持续时间",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2659,7 +2748,7 @@
         {
           "id": 6880,
           "name": "special_bonus_unique_silencer_4",
-          "name_loc": "+{s:bonus_damage_per_silence}/{s:bonus_slow_per_silence}% 遗言伤害/减速",
+          "name_loc": "{s:bonus_radius} 范围型遗言",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -3275,7 +3364,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_silencer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_silencer/npc_dota_hero_silencer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_silencer/npc_dota_hero_silencer.webm",
-      "update_time": 1734577307,
+      "update_time": 1739926945,
       "facets": [
         {
           "color": 4,
@@ -3507,12 +3596,12 @@
         "id": 1335,
         "name": "silencer_brain_drain",
         "name_loc": "智力外流",
-        "desc_loc": "如果沉默术士击杀了敌方英雄，他将永久窃取%permanent_int_steal_amount%点智力。",
+        "desc_loc": "如果沉默术士击杀了敌方英雄，他将永久窃取智力。",
         "lore_loc": "",
         "notes_loc": [
           "沉默术士无需完成击杀就能永久智力，只要敌方英雄在沉默术士附近%permanent_int_steal_range%范围内阵亡或者死亡时带有沉默术士的负面效果即可。"
         ],
-        "shard_loc": "每次击杀窃取的智力值提升至%permanent_int_steal_amount%点。",
+        "shard_loc": "提升每次击杀窃取的智力值。",
         "scepter_loc": "",
         "facets_loc": [
           "",
@@ -3577,7 +3666,7 @@
               1
             ],
             "is_percentage": false,
-            "heading_loc": "",
+            "heading_loc": "永久智力窃取：",
             "bonuses": [],
             "values_shard": [
               2

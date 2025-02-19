@@ -13,11 +13,11 @@
       "hype_loc": "风行者<b>身法轻灵多变</b>，总是在寻找出手的角度。她要么张弓射出<b>强力致命的一箭</b>，要么将<b>敌人束缚在一起</b>，向他们射出箭雨，风行者永远都是那么雷厉风行。",
       "npe_desc_loc": "向单个目标快速射出密集的箭矢",
       "str_base": 18,
-      "str_gain": 2,
+      "str_gain": 2.6,
       "agi_base": 17,
-      "agi_gain": 1.4,
-      "int_base": 21,
-      "int_gain": 2.4,
+      "agi_gain": 1.7,
+      "int_base": 18,
+      "int_gain": 3.2,
       "attack_capability": 2,
       "role_levels": [
         1,
@@ -30,8 +30,8 @@
         0,
         0
       ],
-      "damage_min": 7,
-      "damage_max": 13,
+      "damage_min": 21,
+      "damage_max": 33,
       "attack_rate": 1.5,
       "attack_range": 600,
       "projectile_speed": 1250,
@@ -43,8 +43,8 @@
       "sight_range_night": 800,
       "max_health": 516,
       "health_regen": 2.0500002,
-      "max_mana": 327,
-      "mana_regen": 1.3000001,
+      "max_mana": 291,
+      "mana_regen": 1.1500001,
       "abilities": [
         {
           "id": 5130,
@@ -382,7 +382,7 @@
           "id": 5131,
           "name": "windrunner_powershot",
           "name_loc": "强力击",
-          "desc_loc": "持续施法 - 风行者为她的弓蓄力，射出一支强力的箭矢，最长可蓄力%abilitychanneltime%秒，其间可以打断蓄力，蓄力时间越长，箭矢伤害和减速效果越高。这支箭会对穿过的所有敌方单位造成伤害，并破坏树木。每伤害一个单位，箭矢的伤害和减速效果都会降低。",
+          "desc_loc": "持续施法 - 风行者为她的弓蓄力，射出一支强力的箭矢，最长可蓄力%abilitychanneltime%秒，其间可以打断蓄力，蓄力时间越长，箭矢伤害越高。这支箭会对穿过的所有敌方单位造成伤害和减速效果，并破坏树木。每伤害一个单位，箭矢的伤害和减速效果都会降低。",
           "lore_loc": "在早年的训练生涯，莱瑞蕾学会了射出足以破开树木击中目标的强力箭矢。",
           "notes_loc": [
             "强力击将摧毁作用范围内的树木。"
@@ -2106,13 +2106,15 @@
         {
           "id": 1195,
           "name": "special_bonus_unique_windranger_powershot_slow",
-          "name_loc": "+{s:bonus_slow}% 强力击减速",
+          "name_loc": "+{s:bonus_slow_duration}秒 强力击减速",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -2306,13 +2308,15 @@
         {
           "id": 7890,
           "name": "special_bonus_unique_windranger_9",
-          "name_loc": "-{s:value}秒 束缚击冷却",
+          "name_loc": "+{s:bonus_min_movespeed} 举步生风最低/最高移速",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -2353,23 +2357,6 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -2530,6 +2517,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -2749,6 +2738,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -2947,6 +2938,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -3149,6 +3142,8 @@
           "facets_loc": [
             "",
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -3347,6 +3342,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             "",
             ""
@@ -3549,7 +3546,9 @@
           "facets_loc": [
             "",
             "",
-            "旋风击杀后延长{s:bonus_duration_increase_per_kill}秒持续时间"
+            "旋风击杀后延长{s:bonus_duration_increase_per_kill}秒持续时间",
+            "",
+            ""
           ],
           "type": 2,
           "behavior": "2",
@@ -3759,7 +3758,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_windrunner.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_windrunner/npc_dota_hero_windrunner.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_windrunner/npc_dota_hero_windrunner.webm",
-      "update_time": 1728003640,
+      "update_time": 1739926839,
       "facets": [
         {
           "color": 1,

@@ -7,17 +7,17 @@
       "name_loc": "祈求者",
       "order_id": 67,
       "name_english_loc": "Invoker",
-      "primary_attr": 3,
+      "primary_attr": 2,
       "complexity": 3,
       "bio_loc": "在创立之初，魔法本质上是一门记忆的艺术，有些人认为这才是其最强力的形式。它无需任何科技，也无需魔杖或者其他施法媒介，只需要你有一颗魔法师的心。所有的那些祭祀里面的象形符号也仅仅是帮助记忆的手段，初衷是为了让施法者能够回想起施放法术时那大量的细节以及步骤。\r\n\t\t\t\t<br><br>在那个年代，最伟大的法师就是记忆天赋最高的人，然而魔法祈唤实在是太过艰深，因此所有的法师不得不有所专攻。即使是最刻苦的法师，将一辈子奉献给魔法，最多也只能掌握三到四个法术。普通的法师能掌握两个就心满意足了，而对于那些乡下的法师来说，只掌握一个法术也再正常不过——即使这样，在极少的真正需要使用魔法的场合，他还得借助魔典才能战胜自己的健忘。\r\n\t\t\t\t<br><br>然而，在那些早期的施法者中，有一个例外，一个智力超群，记忆力惊人的天才，以祈求者的名字为人们所知。在年少时，祈求者就已经掌握了不下十种法术。是的，不是四五个，也不是七个，而是十个，而且他还能毫不费力的施放这些法术。他学到过更多的法术，但是因为觉得没用，试过一次以后就彻底从脑中遗忘，这样才能为其他更为有用的法术留出空间。这些法术就是包括永生之术——能让施法者永生的法术，那些在世界之初吟唱了这个法术的人现在还活得好好的（除非他们被物质毁灭了）。\r\n\t\t\t\t<br><br>而大多数这样的准不朽者都低调地生活在我们中间，害怕他们的秘密泄露：然而祈求者不是一个喜欢隐藏自己天赋的人。他来自远古，比任何人都要博学，而他的心智还有余力让他去思考他无穷的自我价值...以及更多的法术——他在世界毁灭之时的漫长暮色中用来自娱自乐的法术。",
       "hype_loc": "祈求者可以随意施展脑海中复杂的<b>法术</b>，充分做到随机应变。<b>三种魔法元素</b>的任意组合都可以产生十大魔法之一，意味着他向来都是有条不紊地毁灭敌人或者逃离追杀。",
       "npe_desc_loc": "利用一系列法术连招达到出神入化的效果",
       "str_base": 19,
-      "str_gain": 2.6,
+      "str_gain": 2.5,
       "agi_base": 14,
-      "agi_gain": 1.8,
-      "int_base": 19,
-      "int_gain": 4,
+      "agi_gain": 2,
+      "int_base": 20,
+      "int_gain": 4.7,
       "attack_capability": 2,
       "role_levels": [
         1,
@@ -30,8 +30,8 @@
         1,
         0
       ],
-      "damage_min": 3,
-      "damage_max": 11,
+      "damage_min": 35,
+      "damage_max": 41,
       "attack_rate": 1.7,
       "attack_range": 600,
       "projectile_speed": 900,
@@ -42,23 +42,22 @@
       "sight_range_day": 1800,
       "sight_range_night": 800,
       "max_health": 538,
-      "health_regen": 2.4,
-      "max_mana": 303,
-      "mana_regen": 0.95,
+      "health_regen": 2.15,
+      "max_mana": 315,
+      "mana_regen": 1,
       "abilities": [
         {
           "id": 5370,
           "name": "invoker_quas",
           "name_loc": "冰",
-          "desc_loc": "允许祈求者掌控冰元素。",
+          "desc_loc": "允许祈求者掌控冰元素。每个活跃的<font color='#7998b5'>冰</font>元素会让祈求者获得生命恢复加成。每级<font color='#7998b5'>冰</font>被动提供额外力量。",
           "lore_loc": "",
           "notes_loc": [
             "祈求者最多只有3个元素。",
-            "技能吸血效果会在施放技能时确定。之后更改元素球不会有任何效果。",
             "不会打破隐身状态，而且可以在持续施法期间施放。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "提供%scepter_bonus_levels%级当前和最高等级。",
           "facets_loc": [
             "被动使攻击在击中后造成持续伤害。",
             "每个<font color='#7998b5'>冰元素</font>都会让祈求者的攻击具有固定数值的吸血效果。"
@@ -347,7 +346,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -362,20 +361,23 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_quas.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_quas.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_quas.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
           "id": 5371,
           "name": "invoker_wex",
           "name_loc": "雷",
-          "desc_loc": "允许祈求者掌控雷元素。",
+          "desc_loc": "允许祈求者掌控雷元素。每个活跃的<font color='#d671a9'>雷</font>元素会让祈求者获得移动速度加成。每级<font color='#d671a9'>雷</font>被动提供额外敏捷。",
           "lore_loc": "",
           "notes_loc": [
             "祈求者最多只有3个球。",
             "不会打破隐身状态，而且可以在持续施法期间施放。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "提供%scepter_bonus_levels%级当前和最高等级。",
           "facets_loc": [
             "被动提供攻击速度。",
             "每个<font color='#d671a9'>雷元素</font>都会提供移动速度加成。"
@@ -645,7 +647,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -660,21 +662,23 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_wex.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_wex.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_wex.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
           "id": 5372,
           "name": "invoker_exort",
           "name_loc": "火",
-          "desc_loc": "允许祈求者掌控火元素。",
+          "desc_loc": "允许祈求者掌控火元素。每个活跃的<font color='#cabe68'>火</font>元素会让祈求者获得攻击力加成。每级<font color='#cabe68'>火</font>被动提供额外智力。",
           "lore_loc": "",
           "notes_loc": [
             "祈求者最多只有3个球。",
-            "技能增强效果会在施放技能时确定。之后更改元素球不会有任何效果。",
             "不会打破隐身状态，而且可以在持续施法期间施放。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "提供%scepter_bonus_levels%级当前和最高等级。",
           "facets_loc": [
             "被动提供攻击力加成。",
             "祈求者施加一个负面效果，每个<font color='#cabe68'>火</font>元素都会使目标受到的技能伤害增加，持续%resist_debuff_duration%秒。"
@@ -992,7 +996,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -1007,6 +1011,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_exort.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_exort.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_exort.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -1238,7 +1245,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
@@ -1249,13 +1256,13 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_invoke.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_invoke.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_invoke.webm",
-          "is_inborn": 0
+          "is_inborn": 1
         },
         {
           "id": 5376,
           "name": "invoker_cold_snap",
           "name_loc": "急速冷却",
-          "desc_loc": "祈求者将敌人的热量抽空，将其降到绝对零度，持续时间取决于<font color='#7998b5'>冰元素</font>等级。敌人将受到伤害并被短暂冻结，后续攻击会使敌人再次冻结，造成额外伤害并且治疗祈求者。冻结的眩晕时间固定，但是冻结的冷却时间将会随着<font color='#7998b5'>冰元素</font>等级提高而缩短。",
+          "desc_loc": "祈求者将敌人的热量抽空，将其降到绝对零度，持续时间取决于<font color='#7998b5'>冰元素</font>等级。敌人将受到伤害并被短暂冻结，后续攻击会使敌人再次冻结并造成额外伤害。被冻结的频率固定，但是冻结的冷却时间将会随着<font color='#7998b5'>冰元素</font>等级提高而缩短。",
           "lore_loc": "塞卓昂的无尽战栗。",
           "notes_loc": [
             "只有%damage_trigger%点以上的实际伤害才能触发急速冷却。"
@@ -1946,7 +1953,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -1961,6 +1968,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_ghost_walk.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_ghost_walk.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_ghost_walk.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -2332,7 +2342,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -2347,6 +2357,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_tornado.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_tornado.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_tornado.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -2358,7 +2371,7 @@
           "notes_loc": [
             "对被吹起的单位（强袭飓风或Eul的神圣法杖）无效。"
           ],
-          "shard_loc": "提升电磁脉冲燃烧魔法的伤害系数，并且将敌方单位以每秒%shard_drag_speed%距离的速度向电磁脉冲的中心牵引。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -2960,7 +2973,7 @@
             "每个敌方单位受到撞击伤害的间隔为%damage_interval%秒，后续较低的烧灼伤害持续%burn_duration%秒。",
             "陨石移动的速度为%travel_speed%。"
           ],
-          "shard_loc": "在混沌陨石的施法地点两侧额外有%bonus_meteor_count%枚流星着陆。冷却时间减少%bonus_AbilityCooldown%秒。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -3382,7 +3395,7 @@
             "祈求者使用阳炎冲击击杀英雄后，即使不在经验范围内也能获得经验。"
           ],
           "shard_loc": "",
-          "scepter_loc": "双击阳炎冲击发动毁天灭地。施放后阳炎冲击的冷却时间为%cataclysm_cooldown%秒。每个敌方英雄附近%cataclysm_min_range%-%cataclysm_max_range%范围内产生%cataclysm_count%个可见的阳炎冲击。另外冰、雷和火的等级均提升1级。",
+          "scepter_loc": "",
           "facets_loc": [
             "",
             ""
@@ -3724,7 +3737,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": true,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -3738,6 +3751,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/file/5abf5f3b-50b2-4468-a0da-b91650e0bb8f.png",
           "video_mp4": "https://img.dota2.com.cn/dota2static/file/fb21df84-7037-4d99-8be1-6bcfd952da9c.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/file/7f9aeba3-e8cb-481c-93d1-6ff65cec891e.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_shard.webm",
           "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.jpg",
           "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.mp4",
           "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_scepter.webm",
@@ -3747,7 +3763,7 @@
           "id": 5387,
           "name": "invoker_forge_spirit",
           "name_loc": "熔炉精灵",
-          "desc_loc": "祈求者融合火之灼热和冰之坚毅，创造出熔炉精灵。熔炉精灵的攻击力和护甲取决于<font color='#cabe68'>火元素</font>的等级，攻击距离、持续时间和生命值取决于<font color='#7998b5'>冰元素</font>的等级。元素的灼热攻击能够熔化敌方英雄的护甲。冰元素和火元素都达到4级后可以产生2个熔炉精灵。",
+          "desc_loc": "祈求者融合火之灼热和冰之坚毅，创造出熔炉精灵。熔炉精灵的攻击力和护甲取决于<font color='#cabe68'>火元素</font>的等级，攻击距离、持续时间和生命值取决于<font color='#7998b5'>冰元素</font>的等级。元素的灼热攻击能够熔化敌方英雄的护甲。熔炉精灵的产生数量取决于<font color='#7998b5'>冰元素</font>和<font color='#cabe68'>火元素</font>中等级较低的元素。",
           "lore_loc": "卡尔维因的至邪造物。",
           "notes_loc": [
             "施放此技能后原有的熔炉精灵将会死亡。"
@@ -4195,7 +4211,7 @@
           "desc_loc": "在祈求者前方创造一堵寒冰之墙，持续时间取决于<font color='#7998b5'>冰元素</font>的等级。冰霜之墙放射出的寒冰之气将对敌方单位造成减速和伤害，减速效果取决于<font color='#7998b5'>冰元素</font>的等级，每秒伤害取决于<font color='#cabe68'>火元素</font>的等级。",
           "lore_loc": "科瑞克斯的杀戮之墙。",
           "notes_loc": [],
-          "shard_loc": "寒冰之墙变成以矢量为目标的技能，施法距离为1100。墙体长度提升320。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -4556,7 +4572,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
@@ -4570,6 +4586,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_ice_wall.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_ice_wall.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_ice_wall.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_invoker/invoker_aghanims_shard.webm",
           "is_inborn": 0
         },
         {
@@ -4955,227 +4974,6 @@
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_deafening_blast.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_deafening_blast.webm",
           "is_inborn": 0
-        },
-        {
-          "id": 1334,
-          "name": "invoker_mastermind",
-          "name_loc": "聪明绝顶",
-          "desc_loc": "祈求者反补线上小兵时，他会获得%xp_on_deny_percent%%%经验。",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "13194139533314",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 1,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "xp_on_deny_percent",
-              "values_float": [
-                25
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastRange",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChannelTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityDuration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChargeRestoreTime",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_mastermind.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_mastermind.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_mastermind.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/invoker_mastermind.webm",
-          "is_inborn": 1
         }
       ],
       "talents": [
@@ -5189,6 +4987,9 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
+            "",
             "",
             ""
           ],
@@ -5389,6 +5190,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -5580,13 +5384,16 @@
         {
           "id": 315,
           "name": "special_bonus_unique_invoker_11",
-          "name_loc": "+{s:bonus_spirit_count} 熔炉精灵数量",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 阳炎冲击冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
+            "",
             "",
             ""
           ],
@@ -5787,6 +5594,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -5985,6 +5795,9 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
+            "",
             "",
             ""
           ],
@@ -6185,6 +5998,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -6384,6 +6200,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -6575,7 +6394,7 @@
         {
           "id": 724,
           "name": "special_bonus_unique_invoker_13",
-          "name_loc": "",
+          "name_loc": "{s:bonus_move_speed_per_instance}倍 冰/雷/火活跃效果",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -6583,7 +6402,10 @@
           "scepter_loc": "",
           "facets_loc": [
             "{s:bonus_intrinsic_attack_speed}倍 冰/雷/火被动效果",
-            "{s:bonus_magic_amp}倍 冰/雷/火活跃效果"
+            "",
+            "",
+            "",
+            ""
           ],
           "type": 2,
           "behavior": "2",
@@ -6776,7 +6598,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_invoker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/npc_dota_hero_invoker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/npc_dota_hero_invoker.webm",
-      "update_time": 1732060917,
+      "update_time": 1739926943,
       "facets": [
         {
           "color": 4,

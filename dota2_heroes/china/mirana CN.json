@@ -7,17 +7,17 @@
       "name_loc": "米拉娜",
       "order_id": 10,
       "name_english_loc": "Mirana",
-      "primary_attr": 3,
+      "primary_attr": 1,
       "complexity": 2,
       "bio_loc": "出生于皇室，带有高贵血统的公主米拉娜，在她即将登上太阳王座时，欣然放弃了所有对国土的世俗权力，将自身完全奉献给了月之女神赛莉蒙妮。从那以后米拉娜就作为众所周知的月之公主，巡回在神圣的银夜森林，搜寻着从月之女神保护地中的银色水池里偷取夜光莲花的大胆之徒。米拉娜骑着她庞大的猫科伙伴，高雅、自豪且无畏，对月相和星座的流转熟稔于心。她的弓上镶嵌着月之矿石的碎晶，可以吸收明月的力量，为她的箭矢注入光能。",
       "hype_loc": "米拉娜在战场的远处将<b>致命的箭矢</b>瞄准敌人，而她时刻准备着跃入战场。盟友可以在她的祝福下<b>不被敌人探查</b>，保证己方永远都在潜行。",
       "npe_desc_loc": "精准的箭矢从远处眩晕敌人",
-      "str_base": 18,
-      "str_gain": 1.9,
+      "str_base": 20,
+      "str_gain": 2.2,
       "agi_base": 26,
-      "agi_gain": 2.5,
+      "agi_gain": 3.1,
       "int_base": 22,
-      "int_gain": 1.4,
+      "int_gain": 1.9,
       "attack_capability": 2,
       "role_levels": [
         1,
@@ -30,8 +30,8 @@
         0,
         0
       ],
-      "damage_min": -2,
-      "damage_max": 2,
+      "damage_min": 48,
+      "damage_max": 54,
       "attack_rate": 1.7,
       "attack_range": 630,
       "projectile_speed": 900,
@@ -41,8 +41,8 @@
       "turn_rate": 0.6,
       "sight_range_day": 1800,
       "sight_range_night": 800,
-      "max_health": 516,
-      "health_regen": 2.0500002,
+      "max_health": 560,
+      "health_regen": 2.25,
       "max_mana": 339,
       "mana_regen": 1.5,
       "abilities": [
@@ -50,7 +50,7 @@
           "id": 5051,
           "name": "mirana_starfall",
           "name_loc": "群星风暴",
-          "desc_loc": "召唤一波流星砸向附近的敌方单位。%starfall_secondary_radius%范围内最近的敌方单位将会再受到一次%secondary_starfall_damage_percent%%%伤害的冲击。",
+          "desc_loc": "召唤一波流星砸向附近的敌方单位。%starfall_secondary_radius%范围内最近的敌方单位将会再受到一次冲击。",
           "lore_loc": "月之女神打破月亮的一部分地表，让她的公主在需要之时获得力量。",
           "notes_loc": [
             "群星风暴不会被林肯法球抵挡。",
@@ -405,7 +405,8 @@
           "lore_loc": "明月的能量让月之公主的箭矢变得愈发致命。",
           "notes_loc": [
             "神箭每飞行150码，中箭后眩晕的持续时间将提高0.5秒，额外伤害增加14点。",
-            "月神之箭可以射中隐身单位。"
+            "月神之箭可以射中隐身单位。",
+            "流星赶月不会对阿哈利姆神杖升级群星风暴的第二次流星生效。"
           ],
           "shard_loc": "",
           "scepter_loc": "月神之箭在主神箭行进途中对敌人释放群星风暴。对击中的单位施放第二个群星风暴，造成的伤害有所降低。",
@@ -876,7 +877,7 @@
           "desc_loc": "米拉娜的坐骑向前跳跃加入战斗，发出一声凶狠的咆哮鼓舞它的主人，提升攻击和移动速度。速度加成持续%leap_bonus_duration%秒。",
           "lore_loc": "在战斗最激烈的时候，没人会注意不到米拉娜标志性的白色野兽。",
           "notes_loc": [],
-          "shard_loc": "落地时沿着塞根的跳跃方向放出一个弹道，对敌人造成伤害和减速，施放群星风暴会让他们必定被次级群星风暴击中。跳跃不会脱离月之暗面的隐身效果。<br><br>可以设为多样施法来选择跳跃的距离和面朝方向。<br><br>获得%shard_bonus_charges%点额外能量点数。",
+          "shard_loc": "现在提供+%additional_charges% 跳跃能量点数。跳跃的加成状态期间的攻击都会触发致命一击，造成%crit_damage_pct%%%伤害",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -885,7 +886,7 @@
             "落地时跳跃会缠绕米拉娜附近%root_radius%范围内的目标，持续%root_duration%秒。"
           ],
           "type": 0,
-          "behavior": "134742016",
+          "behavior": "134742020",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -1505,19 +1506,338 @@
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/mirana_invis.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/mirana_invis.webm",
           "is_inborn": 1
+        },
+        {
+          "id": 1213,
+          "name": "mirana_invis",
+          "name_loc": "月之暗面",
+          "desc_loc": "让米拉娜和所有己方英雄进入隐身状态。米拉娜在持续时间内获得伤害输出加成。只要还在月光阴影的持续时间内，即使隐身被打破也会在短时间内重新淡入隐身。",
+          "lore_loc": "作为赛莉蒙妮的代言人，米拉娜能将月蚀之暗投向大地，将她和她的友军隐藏在阴影中。",
+          "notes_loc": [
+            "受到作用的单位会自动停止攻击敌人。"
+          ],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "type": 1,
+          "behavior": "167772164",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 1,
+          "dispellable": 3,
+          "max_level": 3,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            140,
+            120,
+            100
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            125
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "fade_delay",
+              "values_float": [
+                2.5,
+                2,
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "渐隐延迟：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                18
+              ],
+              "is_percentage": false,
+              "heading_loc": "持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_movement_speed",
+              "values_float": [
+                9,
+                12,
+                15
+              ],
+              "is_percentage": true,
+              "heading_loc": "移动速度加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "evasion",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_mirana_5",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_outgoing_damage_pct",
+              "values_float": [
+                9,
+                12,
+                15
+              ],
+              "is_percentage": true,
+              "heading_loc": "自身伤害输出加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDuration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                125
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                140,
+                120,
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_mirana_4",
+                  "value": 20,
+                  "operation": 2
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/mirana_invis.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/mirana_invis.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/mirana_invis.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/mirana_invis.webm",
+          "is_inborn": 0
         }
       ],
       "talents": [
         {
           "id": 6397,
           "name": "special_bonus_unique_mirana_3",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 月神之箭冷却",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 群星风暴冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -1718,6 +2038,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -1917,7 +2239,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "太阳金辉提供+{s:bonus_evasion}% 闪避"
+            "太阳金辉提供+{s:bonus_evasion}% 闪避",
+            "",
+            ""
           ],
           "type": 2,
           "behavior": "2",
@@ -2115,6 +2439,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -2315,7 +2641,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "-{s:bonus_AbilityCooldown}秒 太阳金辉冷却"
+            "-{s:bonus_AbilityCooldown}秒 太阳金辉冷却",
+            "",
+            ""
           ],
           "type": 2,
           "behavior": "2",
@@ -2504,15 +2832,17 @@
           "item_quality": 0
         },
         {
-          "id": 1194,
-          "name": "special_bonus_20_crit_2",
-          "name_loc": "+{s:crit_chance}% 致命一击（{s:crit_multiplier}%伤害）",
+          "id": 1488,
+          "name": "special_bonus_attack_base_damage_35",
+          "name_loc": "+{s:value} 基础攻击力",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -2553,26 +2883,9 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "crit_chance",
+              "name": "value",
               "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "crit_multiplier",
-              "values_float": [
-                200
+                35
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -2746,6 +3059,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -2946,6 +3261,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -3139,7 +3456,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_mirana.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/npc_dota_hero_mirana.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_mirana/npc_dota_hero_mirana.webm",
-      "update_time": 1739923217,
+      "update_time": 1739926820,
       "facets": [
         {
           "color": 3,
