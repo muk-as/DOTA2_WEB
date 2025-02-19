@@ -57,6 +57,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -483,6 +484,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "踏启动后会使獸和他的友军获得移动速度加成。",
+            "",
             ""
           ],
           "type": 0,
@@ -919,6 +921,7 @@
           "scepter_loc": "獸开启咤时，以自身为圆心施放出%projectile_waves%波弹道，每波每层咤的叠加效果有%projectiles_per_stack%个弹道。弹道造成伤害并对击中的敌人施加破坏效果。经过短暂延迟后每个弹道会分裂成两个。",
           "facets_loc": [
             "",
+            "被敌方英雄眩晕、妖术、嘲讽、恐惧或缠绕作用时还会获得%bonus_stack_count_increase_on_disable%层咤的叠加层数。",
             ""
           ],
           "type": 0,
@@ -958,26 +961,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_damage",
-              "values_float": [
-                5,
-                10,
-                15,
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "基础额外攻击力：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "bonus_damage_per_stack",
               "values_float": [
                 10,
@@ -1010,6 +993,25 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stack_count_increase_on_disable",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "primal_beast_provoke_the_beast",
+                "values": [
+                  2
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -1051,10 +1053,10 @@
             {
               "name": "move_slow_per_stack",
               "values_float": [
-                5,
+                4,
                 6,
-                7,
-                8
+                8,
+                10
               ],
               "is_percentage": true,
               "heading_loc": "每层叠加移速减缓：",
@@ -1558,6 +1560,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1918,7 +1921,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "每次捶击都会使所有技能和物品的作用范围提升%bonus_aoe_pct_per_hit%%%。加成效果持续%bonus_aoe_duration%秒。"
+            "",
+            "每次捶击都会使獸的作用范围提升%bonus_aoe_pct_per_hit%%%，持续%bonus_aoe_duration%秒。作用范围加成会在每次捶击开始时获得。加成效果可以叠加，并且可作用于技能和物品。"
           ],
           "type": 1,
           "behavior": "168",
@@ -2075,7 +2079,7 @@
               "facet_bonus": {
                 "name": "primal_beast_ferocity",
                 "values": [
-                  10
+                  20
                 ],
                 "operation": 0
               },
@@ -2094,7 +2098,7 @@
               "facet_bonus": {
                 "name": "primal_beast_ferocity",
                 "values": [
-                  20
+                  25
                 ],
                 "operation": 0
               },
@@ -2326,6 +2330,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -4165,16 +4170,16 @@
       "facets": [
         {
           "color": 0,
-          "title_loc": "袭",
-          "description_loc": "踏启动后会使獸和他的友军获得移动速度加成。",
-          "name": "primal_beast_romp_n_stomp",
-          "icon": "speed",
+          "title_loc": "激",
+          "description_loc": "被敌方英雄控制时获得{s:bonus_stack_count_increase_on_disable}层咤的叠加效果。",
+          "name": "primal_beast_provoke_the_beast",
+          "icon": "broken_chain",
           "gradient_id": 0
         },
         {
           "color": 1,
           "title_loc": "凶",
-          "description_loc": "捶每次击中后都会使獸的技能和物品提升作用范围。",
+          "description_loc": "每次捶击都会提升獸的作用范围。",
           "name": "primal_beast_ferocity",
           "icon": "area_of_effect",
           "gradient_id": 3
@@ -4199,6 +4204,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],

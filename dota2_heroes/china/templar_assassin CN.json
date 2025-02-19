@@ -60,7 +60,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "只要消耗一层护盾，圣堂刺客就会获得一层攻击力。"
+            "只要消耗一层护盾，圣堂刺客就会获得一层攻击力。",
+            ""
           ],
           "type": 0,
           "behavior": "2052",
@@ -160,7 +161,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_templar_assassin_refraction_damage",
-                  "value": 20,
+                  "value": 40,
                   "operation": 0
                 }
               ],
@@ -420,7 +421,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "隐匿的额外伤害和护甲降低效果会施加给灵能之刃飞溅距离内所有敌人。",
-            ""
+            "",
+            "隐匿状态下圣堂刺客会在%attack_range_increase_time%秒内逐渐提升她的攻击距离，最高为额外%attack_range_increase_max%距离。"
           ],
           "type": 0,
           "behavior": "33816580",
@@ -497,13 +499,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "护甲削弱：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_templar_assassin_2",
-                  "value": -3,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -525,6 +521,86 @@
                   "name": "special_bonus_unique_templar_assassin_7",
                   "value": 1,
                   "operation": 5
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_range_increase_max",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "templar_assassin_hidden_reach",
+                "values": [
+                  400
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_range_increase_time",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "templar_assassin_hidden_reach",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_range_smoothness",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "templar_assassin_hidden_reach",
+                "values": [
+                  0.015
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "debuff_duration",
+              "values_float": [
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "护甲降低持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_templar_assassin_meld_duration",
+                  "value": 2.5,
+                  "operation": 0
                 }
               ],
               "values_shard": [],
@@ -573,10 +649,10 @@
             {
               "name": "AbilityDuration",
               "values_float": [
-                6
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "护甲降低持续时间：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -711,6 +787,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -778,9 +855,9 @@
             {
               "name": "attack_spill_range",
               "values_float": [
-                550,
+                400,
+                500,
                 600,
-                650,
                 700
               ],
               "is_percentage": false,
@@ -821,9 +898,9 @@
             {
               "name": "attack_spill_pct",
               "values_float": [
-                85,
+                70,
+                80,
                 90,
-                95,
                 100
               ],
               "is_percentage": true,
@@ -1040,6 +1117,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1081,7 +1159,7 @@
             {
               "name": "extra_damage",
               "values_float": [
-                300
+                375
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1268,6 +1346,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 1,
@@ -1442,9 +1521,7 @@
               "heading_loc": "额外伤害：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                100
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1747,6 +1824,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3587,7 +3665,7 @@
         {
           "color": 5,
           "title_loc": "太虚之刃",
-          "description_loc": "隐匿攻击目标时还会对灵能之刃飞溅击中的所有敌人施加额外伤害和负面效果.",
+          "description_loc": "隐匿的额外伤害和护甲降低效果会施加给灵能之刃飞溅距离内所有敌人。",
           "name": "templar_assassin_voidblades",
           "icon": "ricochet",
           "gradient_id": 3
@@ -3599,9 +3677,20 @@
           "name": "templar_assassin_refractor",
           "icon": "damage",
           "gradient_id": 0
+        },
+        {
+          "color": 3,
+          "title_loc": "天隐之触",
+          "description_loc": "隐匿状态下圣堂刺客会在{s:bonus_attack_range_increase_time}秒内逐渐提升她的攻击距离，最高为额外{s:bonus_attack_range_increase_max}距离。",
+          "name": "templar_assassin_hidden_reach",
+          "icon": "range",
+          "gradient_id": 1
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -3620,6 +3709,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],

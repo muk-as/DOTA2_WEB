@@ -56,7 +56,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "克林克兹和每个骷髅弓手都会施加一个可叠加的负面效果，每个攻击的骷髅弓手会施加一层叠加效果，每层会使目标的%bonus_blind_pct%%%攻击落空。也会对建筑施加。",
+            "克林克兹和每个骷髅弓手都会施加一个可叠加的负面效果，每个攻击的骷髅弓手会施加一层叠加效果，每层会使目标的%bonus_blind_pct%%%攻击落空，持续%debuff_duration%秒。也会对建筑施加。",
             ""
           ],
           "type": 0,
@@ -134,7 +134,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_clinkz_1",
+                  "value": 0.75,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -155,10 +161,8 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "clinkz_suppressive_fire",
-                "values": [
-                  100
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -210,7 +214,7 @@
               "facet_bonus": {
                 "name": "clinkz_suppressive_fire",
                 "values": [
-                  1
+                  2
                 ],
                 "operation": 5
               },
@@ -229,7 +233,7 @@
               "facet_bonus": {
                 "name": "clinkz_suppressive_fire",
                 "values": [
-                  5
+                  30
                 ],
                 "operation": 5
               },
@@ -504,13 +508,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "额外伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_clinkz_1",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -793,7 +791,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "死亡契约会把克林克兹传送至目标。降低死亡契约的充能时间。"
+            "死亡契约会把克林克兹传送至目标。降低死亡契约的充能时间。如果设为多样施法，或者克林克兹被缠绕或束缚，那他就不会传送至目标地点。"
           ],
           "type": 0,
           "behavior": "33554440",
@@ -1030,7 +1028,7 @@
                 40
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "基础充能时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1749,8 +1747,8 @@
               "name": "move_speed_bonus_pct",
               "values_float": [
                 25,
-                40,
-                55
+                35,
+                45
               ],
               "is_percentage": true,
               "heading_loc": "移动速度提升：",

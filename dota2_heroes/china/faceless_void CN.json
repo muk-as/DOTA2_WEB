@@ -340,9 +340,9 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                24,
-                18,
-                12,
+                21,
+                16,
+                11,
                 6
               ],
               "is_percentage": false,
@@ -3168,7 +3168,7 @@
               "id": 5185,
               "name": "faceless_void_chronosphere",
               "name_loc": "时间结界",
-              "desc_loc": "在时空中创造一个泡状遮罩，将所有位于其中的单位定住，并使虚空假面在其内部来去自如。所有技能和物品冷却全部冻结。只有虚空假面和他控制的单位不受影响。在其中的隐形敌人会显形。",
+              "desc_loc": "在时空中创造一个泡状遮罩，将所有位于其中的单位定住，并使虚空假面在其内部来去自如。只有虚空假面和他控制的单位不受影响。在其中的隐形敌人会显形。",
               "lore_loc": "当超维视界的裂隙突现之时，所有被其困住的可怜灵魂都将万劫不复。",
               "notes_loc": [
                 "能够定住所有单位和建筑，不论敌我。除了虚空假面控制的单位。",
@@ -3216,9 +3216,9 @@
                 0
               ],
               "mana_costs": [
-                150,
-                225,
-                300
+                125,
+                200,
+                275
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -3410,9 +3410,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    150,
-                    225,
-                    300
+                    125,
+                    200,
+                    275
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3467,7 +3467,7 @@
               "id": 1281,
               "name": "faceless_void_time_zone",
               "name_loc": "逆转时空",
-              "desc_loc": "在时空中创造一个遮罩，改变其中所有单位的移动、攻击、施法、弹道和转身速度。友军的速度提升，敌人的速度降低。<br><br>敌人在逆转时空内为束缚状态。",
+              "desc_loc": "在时空中创造一个遮罩，改变其中所有单位的移动、攻击、施法、弹道和转身速度。友军的速度提升，冷却加快。敌人被束缚，速度降低，技能和物品的冷却全部冻结。时间膨胀的负面状态持续时间在逆转时空内不会变少。",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -3487,7 +3487,7 @@
               "dispellable": 3,
               "max_level": 3,
               "cast_ranges": [
-                625
+                500
               ],
               "cast_points": [
                 0.35,
@@ -3499,8 +3499,8 @@
               ],
               "cooldowns": [
                 130,
-                120,
-                110
+                125,
+                120
               ],
               "durations": [
                 0
@@ -3512,9 +3512,9 @@
                 0
               ],
               "mana_costs": [
-                150,
-                225,
-                300
+                125,
+                200,
+                275
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -3522,7 +3522,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    900
+                    700
                   ],
                   "is_percentage": false,
                   "heading_loc": "作用范围：",
@@ -3545,9 +3545,9 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    5,
-                    5.5,
-                    6
+                    3.75,
+                    4.25,
+                    4.75
                   ],
                   "is_percentage": false,
                   "heading_loc": "持续时间：",
@@ -3581,9 +3581,7 @@
                 {
                   "name": "bonus_attack_speed",
                   "values_float": [
-                    70,
-                    110,
-                    150
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "攻击速度操控：",
@@ -3606,9 +3604,7 @@
                 {
                   "name": "bonus_move_speed",
                   "values_float": [
-                    50,
-                    60,
-                    70
+                    60
                   ],
                   "is_percentage": true,
                   "heading_loc": "移动速度操控：",
@@ -3625,8 +3621,6 @@
                 {
                   "name": "bonus_cast_speed",
                   "values_float": [
-                    40,
-                    50,
                     60
                   ],
                   "is_percentage": true,
@@ -3644,8 +3638,6 @@
                 {
                   "name": "bonus_turn_speed",
                   "values_float": [
-                    40,
-                    50,
                     60
                   ],
                   "is_percentage": true,
@@ -3663,9 +3655,7 @@
                 {
                   "name": "bonus_projectile_speed",
                   "values_float": [
-                    30,
-                    40,
-                    50
+                    40
                   ],
                   "is_percentage": true,
                   "heading_loc": "弹道速度操控：",
@@ -3697,9 +3687,26 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "cooldown_acceleration",
+                  "values_float": [
+                    400
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "冷却速度加快：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    625
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3801,9 +3808,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    150,
-                    225,
-                    300
+                    125,
+                    200,
+                    275
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3821,8 +3828,8 @@
                   "name": "AbilityCooldown",
                   "values_float": [
                     130,
-                    120,
-                    110
+                    125,
+                    120
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

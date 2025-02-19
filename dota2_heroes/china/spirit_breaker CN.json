@@ -61,6 +61,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "暗影冲刺的移动速度加成会在冲刺结束后逐渐消失。",
+            "",
             ""
           ],
           "type": 0,
@@ -518,6 +519,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -817,7 +819,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "过去%bonus_chance_duration%秒内对不止一名英雄触发了巨力重击就会使重击的概率提升。第一个英雄之后每个英雄都会使巨力重击的概率提升%bonus_chance_pct%%%。"
           ],
           "type": 0,
           "behavior": "2",
@@ -862,18 +865,50 @@
               ],
               "is_percentage": true,
               "heading_loc": "重击概率：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_spirit_breaker_1",
-                  "value": 17,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_chance_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "spirit_breaker_bulls_hit",
+                "values": [
+                  17
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_chance_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "spirit_breaker_bulls_hit",
+                "values": [
+                  10
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -891,7 +926,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_spirit_breaker_3",
-                  "value": 25,
+                  "value": 20,
                   "operation": 0
                 }
               ],
@@ -1155,7 +1190,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_spirit_breaker_1",
+                  "value": 0.3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1194,6 +1235,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1256,7 +1298,7 @@
             {
               "name": "duration",
               "values_float": [
-                6
+                7
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
@@ -1455,6 +1497,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1679,7 +1722,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "被幽冥一击击中的敌方目标受到友方的击退效果的移动距离更远。"
+            "被幽冥一击击中的敌方目标受到友方的击退效果的移动距离更远。",
+            ""
           ],
           "type": 1,
           "behavior": "134742024",
@@ -3692,10 +3736,10 @@
         },
         {
           "color": 3,
-          "title_loc": "跌跌撞撞",
-          "description_loc": "被幽冥一击击中的敌方目标受到友方的强制位移效果的移动距离更远。",
-          "name": "spirit_breaker_imbalanced",
-          "icon": "movement",
+          "title_loc": "气冲斗牛",
+          "description_loc": "如果近期内对不止一名英雄触发巨力重击，那么重击的概率将会提升。",
+          "name": "spirit_breaker_bulls_hit",
+          "icon": "rng",
           "gradient_id": 2
         }
       ],
@@ -3718,6 +3762,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],

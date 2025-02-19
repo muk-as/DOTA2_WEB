@@ -56,7 +56,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
+            "波浪形态会攻击路径上的敌人。不会施加攻击特效。",
             ""
           ],
           "type": 0,
@@ -138,7 +138,7 @@
             {
               "name": "pct_damage",
               "values_float": [
-                50
+                0
               ],
               "is_percentage": true,
               "heading_loc": "攻击伤害：",
@@ -152,8 +152,10 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "morphling_agi",
+                "values": [
+                  50
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -387,7 +389,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "变体打击的眩晕时间会基于变体精灵的力量值。"
           ],
           "type": 0,
           "behavior": "8",
@@ -437,10 +439,10 @@
             {
               "name": "damage_base",
               "values_float": [
-                55,
-                65,
+                25,
+                50,
                 75,
-                85
+                100
               ],
               "is_percentage": false,
               "heading_loc": "基础伤害：",
@@ -492,6 +494,95 @@
               "required_facet": ""
             },
             {
+              "name": "stun_min",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "最小眩晕：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "morphling_str",
+                "values": [
+                  0.5
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stun_max",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "最大眩晕：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "morphling_str",
+                "values": [
+                  2.4
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "knockback_min",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "最小击退距离：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "knockback_max",
+              "values_float": [
+                350
+              ],
+              "is_percentage": false,
+              "heading_loc": "最大击退距离：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "knockback_duration",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "projectile_speed",
               "values_float": [
                 1150
@@ -509,9 +600,9 @@
               "required_facet": ""
             },
             {
-              "name": "shared_cooldown",
+              "name": "extra_targets",
               "values_float": [
-                3
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -653,14 +744,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                16,
+                17,
                 14,
-                12,
-                10
+                11,
+                8
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_morphling_7",
+                  "value": 3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -781,10 +878,10 @@
             {
               "name": "morph_rate_tooltip",
               "values_float": [
+                5,
                 10,
                 15,
-                20,
-                25
+                20
               ],
               "is_percentage": false,
               "heading_loc": "变换速率：",
@@ -801,20 +898,11 @@
             {
               "name": "mana_cost",
               "values_float": [
-                5,
-                10,
-                15,
-                20
+                10
               ],
               "is_percentage": false,
               "heading_loc": "每秒消耗魔法：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_morphling_morph_no_manacost",
-                  "value": 100,
-                  "operation": 4
-                }
-              ],
+              "bonuses": [],
               "values_shard": [
                 50
               ],
@@ -1095,10 +1183,10 @@
             {
               "name": "morph_rate_tooltip",
               "values_float": [
+                5,
                 10,
                 15,
-                20,
-                25
+                20
               ],
               "is_percentage": false,
               "heading_loc": "变换速率：",
@@ -1115,20 +1203,11 @@
             {
               "name": "mana_cost",
               "values_float": [
-                5,
-                10,
-                15,
-                20
+                10
               ],
               "is_percentage": false,
               "heading_loc": "每秒消耗魔法：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_morphling_morph_no_manacost",
-                  "value": 100,
-                  "operation": 4
-                }
-              ],
+              "bonuses": [],
               "values_shard": [
                 50
               ],
@@ -1384,7 +1463,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_morphling_8",
-                  "value": 16,
+                  "value": 12,
                   "operation": 0
                 }
               ],
@@ -1762,9 +1841,9 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_all_stats_per_level_of_attributes",
+              "name": "bonus_primary_stat_per_level_of_attributes",
               "values_float": [
-                2
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1779,9 +1858,9 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_all_stats_pct_tooltip",
+              "name": "bonus_int_per_level_of_attributes",
               "values_float": [
-                100
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3622,7 +3701,7 @@
         {
           "color": 2,
           "title_loc": "潮涨",
-          "description_loc": "变体精灵的主属性现在是<font color='#9acd32'>敏捷</font>。变体打击会击退目标。",
+          "description_loc": "变体精灵的主属性现在是<font color='#9acd32'>敏捷</font>。波浪形态会攻击路径上的敌人。",
           "name": "morphling_agi",
           "icon": "agility",
           "gradient_id": 0
@@ -3630,7 +3709,7 @@
         {
           "color": 0,
           "title_loc": "潮落",
-          "description_loc": "变体精灵的主属性现在是<font color='#ff0000'>力量</font>，而且属性变换可以加速技能的冷却。",
+          "description_loc": "变体精灵的主属性现在是<font color='#ff0000'>力量</font>。变体打击的眩晕是基于变体精灵的力量值。变体精灵每%agi_per_one_spell_amp%点敏捷会获得%one_percent_tooltip%%%技能增强。",
           "name": "morphling_str",
           "icon": "strength",
           "gradient_id": 0
@@ -3643,7 +3722,7 @@
               "id": 1218,
               "name": "morphling_ebb",
               "name_loc": "潮涨",
-              "desc_loc": "变体精灵的主属性现在是<font color='#9acd32'>敏捷</font>",
+              "desc_loc": "变体精灵的主属性现在是<font color='#9acd32'>敏捷</font>。",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -3846,10 +3925,10 @@
               "id": 1219,
               "name": "morphling_flow",
               "name_loc": "潮落",
-              "desc_loc": "变体精灵的主属性现在是<font color='#ff0000'>力量</font>，而且属性变换可以加速技能的冷却。",
+              "desc_loc": "变体精灵的主属性现在是<font color='#ff0000'>力量</font>。变体打击的眩晕是基于变体精灵的力量值。变体精灵每%agi_per_one_spell_amp%点敏捷会获得%one_percent_tooltip%%%技能增强。",
               "lore_loc": "",
               "notes_loc": [
-                "变体精灵的技能冷却速度取决于当前敏捷和力量的比值，敏捷/力量比值为%agi_pct_at_max_cooldown_speed%%%时达到最高的%max_cooldown_speed_pct%%%冷却速度加快。也会影响正在冷却的技能。"
+                "破坏会禁用敏捷提供的技能增强。"
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -3894,9 +3973,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "agi_pct_at_max_cooldown_speed",
+                  "name": "agi_per_one_spell_amp",
                   "values_float": [
-                    175
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3911,9 +3990,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "agi_pct_at_min_cooldown_speed",
+                  "name": "one_percent_tooltip",
                   "values_float": [
-                    50
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3928,46 +4007,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "min_cooldown_speed_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_cooldown_speed_pct",
-                  "values_float": [
-                    60
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "cooldown_reduction_tooltip",
+                  "name": "spell_amp_tooltip",
                   "values_float": [
                     0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "技能冷却速度加快：",
+                  "heading_loc": "技能增强：",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -4136,7 +4181,7 @@
         "id": 1220,
         "name": "morphling_accumulation",
         "name_loc": "积少成多",
-        "desc_loc": "变体精灵每半级获得%percent_to_increment%%%属性成长加成，而不是升级时获得全额加成。变体精灵从天赋树的全属性附加技能点获得+%bonus_all_stats_pct_tooltip%%%属性加成。",
+        "desc_loc": "变体精灵每半级获得%percent_to_increment%%%属性成长加成，而不是升级时获得全额加成。从天赋树的全属性附加技能点可以使变体精灵的主属性获得额外+%bonus_primary_stat_per_level_of_attributes%。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
@@ -4199,9 +4244,9 @@
             "required_facet": ""
           },
           {
-            "name": "bonus_all_stats_per_level_of_attributes",
+            "name": "bonus_primary_stat_per_level_of_attributes",
             "values_float": [
-              2
+              3
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -4216,9 +4261,9 @@
             "required_facet": ""
           },
           {
-            "name": "bonus_all_stats_pct_tooltip",
+            "name": "bonus_int_per_level_of_attributes",
             "values_float": [
-              100
+              0
             ],
             "is_percentage": false,
             "heading_loc": "",

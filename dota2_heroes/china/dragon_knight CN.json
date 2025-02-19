@@ -60,7 +60,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "",
+            "伤害类型改为物理。",
             ""
           ],
           "type": 0,
@@ -257,6 +257,25 @@
               "required_facet": ""
             },
             {
+              "name": "physical_damage_type",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dragon_knight_corrosive_dragon",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 600
@@ -427,8 +446,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
-            "",
+            "在古龙形态下，神龙摆尾会施加给目标附近%dragon_aoe%范围内的敌人。",
+            "伤害类型改为物理。",
             ""
           ],
           "type": 0,
@@ -580,18 +599,33 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_dragon_knight_8",
-                  "value": 400,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "dragon_knight_fire_dragon",
+                "values": [
+                  175
+                ],
+                "operation": 5
+              },
+              "required_facet": "dragon_knight_fire_dragon"
+            },
+            {
+              "name": "physical_damage_type",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dragon_knight_corrosive_dragon",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -767,9 +801,9 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "古龙形态下攻击会在小范围内溅射，人形态下攻击具有分裂效果。",
-            "攻击附带毒素，可作用于敌方单位和建筑，降低护甲并持续造成伤害。古龙形态下效果会溅射。",
-            "攻击带有冰霜，会作用于敌方单位，降低移动速度和攻击速度，同时降低治疗效果。古龙形态下效果会溅射。"
+            "攻击会对敌方单位造成额外魔法伤害，并且技能和物品的作用范围提升。",
+            "攻击附带致命的毒素，可作用于敌方单位和建筑，降低护甲并持续造成物理伤害。",
+            "攻击带有冰霜，会作用于敌方单位，降低移动速度和攻击速度，同时降低治疗效果。"
           ],
           "type": 0,
           "behavior": "2",
@@ -835,7 +869,7 @@
                 20
               ],
               "is_percentage": false,
-              "heading_loc": "腐蚀吐息伤害：",
+              "heading_loc": "每秒腐蚀伤害：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -852,7 +886,7 @@
                 3
               ],
               "is_percentage": false,
-              "heading_loc": "腐蚀吐息持续时间：",
+              "heading_loc": "腐蚀持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -872,7 +906,7 @@
                 3
               ],
               "is_percentage": false,
-              "heading_loc": "腐蚀吐息降低护甲：",
+              "heading_loc": "腐蚀降低护甲：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -903,66 +937,35 @@
               "required_facet": ""
             },
             {
-              "name": "cleave_starting_width",
+              "name": "magic_damage",
               "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "分裂起始宽度：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": "dragon_knight_fire_dragon"
-            },
-            {
-              "name": "cleave_ending_width",
-              "values_float": [
-                260
-              ],
-              "is_percentage": false,
-              "heading_loc": "分裂末端宽度：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": "dragon_knight_fire_dragon"
-            },
-            {
-              "name": "cleave_distance",
-              "values_float": [
-                400
-              ],
-              "is_percentage": false,
-              "heading_loc": "分裂距离：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": "dragon_knight_fire_dragon"
-            },
-            {
-              "name": "cleave_damage",
-              "values_float": [
+                10,
+                20,
                 30,
-                40,
-                50,
-                60
+                40
               ],
-              "is_percentage": true,
-              "heading_loc": "分裂伤害：",
+              "is_percentage": false,
+              "heading_loc": "魔法伤害：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": "dragon_knight_fire_dragon"
+            },
+            {
+              "name": "bonus_aoe",
+              "values_float": [
+                25,
+                50,
+                75,
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "作用范围加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1001,7 +1004,7 @@
                 -35
               ],
               "is_percentage": true,
-              "heading_loc": "冰霜吐息降低移动速度：",
+              "heading_loc": "冰霜降低移动速度：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1021,7 +1024,7 @@
                 -35
               ],
               "is_percentage": false,
-              "heading_loc": "冰霜吐息降低攻击速度：",
+              "heading_loc": "冰霜攻击速度降低：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1038,7 +1041,7 @@
                 3
               ],
               "is_percentage": false,
-              "heading_loc": "冰霜吐息持续时间：",
+              "heading_loc": "冰霜持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1058,7 +1061,7 @@
                 35
               ],
               "is_percentage": true,
-              "heading_loc": "冰霜吐息治疗降低：",
+              "heading_loc": "冰霜治疗降低：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1235,7 +1238,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "",
+            "伤害类型改为物理。",
             ""
           ],
           "type": 0,
@@ -1277,7 +1280,7 @@
             {
               "name": "radius",
               "values_float": [
-                350
+                275
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -1389,6 +1392,25 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "physical_damage_type",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dragon_knight_corrosive_dragon",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -1563,9 +1585,9 @@
           "shard_loc": "古龙形态获得龙炎火球技能。",
           "scepter_loc": "古龙形态的等级提升，增加了4级的黑龙，攻击力提升，并且飞龙之怒的攻击效果更强。",
           "facets_loc": [
-            "古龙形态下分裂会变为溅射伤害，并增加额外的伤害百分比。",
-            "古龙形态下腐蚀吐息的伤害和护甲降低效果都会增加。",
-            "古龙形态下冰霜吐息的攻击速度、移动速度和治疗效果降低都会增加。"
+            "",
+            "",
+            ""
           ],
           "type": 1,
           "behavior": "4",
@@ -1625,10 +1647,10 @@
             {
               "name": "bonus_movement_speed",
               "values_float": [
+                20,
+                25,
                 30,
-                35,
-                40,
-                45
+                35
               ],
               "is_percentage": false,
               "heading_loc": "移动速度提升：",
@@ -1783,10 +1805,30 @@
             {
               "name": "ranged_splash_radius",
               "values_float": [
-                350
+                275
               ],
               "is_percentage": false,
               "heading_loc": "效果溅射范围：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ranged_splash_damage_pct",
+              "values_float": [
+                30,
+                40,
+                50,
+                60
+              ],
+              "is_percentage": true,
+              "heading_loc": "攻击伤害溅射：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1805,9 +1847,15 @@
                 0,
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "冰霜吐息效果加成：",
-              "bonuses": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_8",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1830,9 +1878,15 @@
                 0,
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "腐蚀吐息效果加成：",
-              "bonuses": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_8",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1855,9 +1909,15 @@
                 0,
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "溅射伤害效果加成：",
-              "bonuses": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_8",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1871,6 +1931,32 @@
                 "operation": 5
               },
               "required_facet": "dragon_knight_fire_dragon"
+            },
+            {
+              "name": "wyrms_wrath_bonus_tooltip",
+              "values_float": [
+                20,
+                30,
+                40,
+                50
+              ],
+              "is_percentage": true,
+              "heading_loc": "飞龙之怒加成：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight_8",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -3961,7 +4047,7 @@
         {
           "color": 0,
           "title_loc": "火龙",
-          "description_loc": "龙骑士的攻击拥有溅射伤害，古龙形态下效果还会变强。",
+          "description_loc": "龙骑士的攻击会造成额外魔法伤害。龙骑士的技能拥有更大的作用范围，古龙形态下效果还会变强。",
           "name": "dragon_knight_fire_dragon",
           "icon": "dragon_fire",
           "gradient_id": 1
@@ -3969,7 +4055,7 @@
         {
           "color": 2,
           "title_loc": "毒龙",
-          "description_loc": "龙骑士的攻击拥有腐蚀之力，古龙形态下效果还会变强。",
+          "description_loc": "龙骑士的攻击拥有腐蚀之力，古龙形态下效果还会变强。他的所有技能都造成物理伤害。",
           "name": "dragon_knight_corrosive_dragon",
           "icon": "dragon_poison",
           "gradient_id": 0

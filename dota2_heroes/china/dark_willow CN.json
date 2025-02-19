@@ -59,7 +59,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "产生额外的荆棘。这些荆棘持续%extra_brambles_placement_duration%秒。"
+            "产生额外的荆棘。这些荆棘持续%extra_brambles_placement_duration%秒。",
+            ""
           ],
           "type": 0,
           "behavior": "48",
@@ -485,6 +486,7 @@
           "scepter_loc": "发动普通攻击不再使邪影芳灵脱离暗影之境。持续时间内每次攻击都带有额外伤害。",
           "facets_loc": [
             "处于暗影之境时，邪影芳灵会散发出一个%aura_radius%范围的光环，使她对范围内的敌人造成的伤害增加，最高为%aura_damage_pct%%%。根据她在暗影之境内停留的时间，造成的伤害会随之增加。",
+            "",
             ""
           ],
           "type": 0,
@@ -861,7 +863,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "倒计时期间诅咒王冠会累计邪影芳灵对目标造成所有伤害的%accumulated_damage_pct%%%，还有友方英雄对其造成攻击伤害的%accumulated_damage_pct_ally%%%。倒计时结束时，累计的伤害会作为魔法伤害施加给整个区域。拥有阿哈利姆魔晶后，可以在技能被驱散时触发。"
           ],
           "type": 0,
           "behavior": "8",
@@ -935,13 +938,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "眩晕持续时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_dark_willow_6",
-                  "value": 0.5,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -977,7 +974,7 @@
             {
               "name": "shard_delay_reduction",
               "values_float": [
-                1
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1024,6 +1021,44 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "accumulated_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dark_willow_shattering_crown",
+                "values": [
+                  35
+                ],
+                "operation": 5
+              },
+              "required_facet": "dark_willow_shattering_crown"
+            },
+            {
+              "name": "accumulated_damage_pct_ally",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "dark_willow_shattering_crown",
+                "values": [
+                  15
+                ],
+                "operation": 5
+              },
+              "required_facet": "dark_willow_shattering_crown"
             },
             {
               "name": "AbilityCastRange",
@@ -1161,7 +1196,9 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                1.5
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1202,6 +1239,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1360,7 +1398,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "游走持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dark_willow_6",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1614,6 +1658,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1853,6 +1898,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3848,10 +3894,10 @@
         },
         {
           "color": 2,
-          "title_loc": "荆棘丛生",
-          "description_loc": "荆棘迷宫会产生额外的荆棘。",
-          "name": "dark_willow_thorny_thicket",
-          "icon": "area_of_effect",
+          "title_loc": "破碎之冠",
+          "description_loc": "诅咒王冠会累计邪影芳灵对目标造成的所有伤害，还有友方英雄对其造成的攻击伤害。倒计时结束时，累计的伤害会作为魔法伤害施加给整个区域。",
+          "name": "dark_willow_shattering_crown",
+          "icon": "barrier",
           "gradient_id": 4
         }
       ],
@@ -3874,6 +3920,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
