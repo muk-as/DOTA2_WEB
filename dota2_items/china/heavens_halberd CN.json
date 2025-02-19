@@ -8,7 +8,7 @@
             "id": 210,
             "name": "item_heavens_halberd",
             "name_loc": "天堂之戟",
-            "desc_loc": "<h1>主动：缴械</h1>阻止目标单位进行物理攻击，持续%disarm_range%/%disarm_melee%（远程/近战）秒。",
+            "desc_loc": "<h1>主动：缴械</h1>阻止目标单位进行物理攻击，持续%disarm_range%/%disarm_melee%（远程/近战）秒。\n\n<h1>被动：伤害格挡</h1> 拥有%block_chance%%%几率格挡伤害，近战英雄可格挡%block_damage_melee%点伤害，远程英雄可格挡%block_damage_ranged%点。",
             "lore_loc": "这把战戟挥动起来如同轻型武器般迅捷，能让持有者赢得决斗的胜利。",
             "notes_loc": [],
             "shard_loc": "",
@@ -45,18 +45,18 @@
               0
             ],
             "mana_costs": [
-              75
+              25
             ],
             "gold_costs": [],
             "health_costs": [],
             "special_values": [
               {
-                "name": "bonus_evasion",
+                "name": "bonus_health",
                 "values_float": [
-                  25
+                  275
                 ],
-                "is_percentage": true,
-                "heading_loc": "+$evasion",
+                "is_percentage": false,
+                "heading_loc": "+$health",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -68,12 +68,80 @@
                 "required_facet": ""
               },
               {
-                "name": "bonus_strength",
+                "name": "bonus_health_regen",
                 "values_float": [
-                  20
+                  6
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$str",
+                "heading_loc": "+$hp_regen",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "block_damage_melee",
+                "values_float": [
+                  60
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "block_damage_ranged",
+                "values_float": [
+                  30
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "block_chance",
+                "values_float": [
+                  60
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "bonus_all_stats",
+                "values_float": [
+                  5
+                ],
+                "is_percentage": false,
+                "heading_loc": "+$all",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -87,7 +155,7 @@
               {
                 "name": "disarm_range",
                 "values_float": [
-                  5
+                  4
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -108,40 +176,6 @@
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "slow_resistance",
-                "values_float": [
-                  25
-                ],
-                "is_percentage": true,
-                "heading_loc": "+减速抗性",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "hp_regen_amp",
-                "values_float": [
-                  25
-                ],
-                "is_percentage": true,
-                "heading_loc": "+生命恢复和吸血增强",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -257,7 +291,7 @@
               {
                 "name": "AbilityManaCost",
                 "values_float": [
-                  75
+                  25
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -295,7 +329,7 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 3500,
+            "item_cost": 2600,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

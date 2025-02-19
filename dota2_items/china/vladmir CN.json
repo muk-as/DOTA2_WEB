@@ -8,9 +8,11 @@
             "id": 81,
             "name": "item_vladmir",
             "name_loc": "弗拉迪米尔的祭品",
-            "desc_loc": "<h1>被动：弗拉迪米尔光环</h1>向周围队友提供%lifesteal_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复和%armor_aura%点护甲。攻击非英雄单位的吸血效果降低%creep_lifesteal_reduction_pct%%%。<br><br>作用范围：%aura_radius%",
+            "desc_loc": "<h1>被动：弗拉迪米尔光环</h1>向周围队友提供%lifesteal_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复和%armor_aura%点护甲。<br><br>作用范围：%aura_radius%",
             "lore_loc": "一副怪异的面具，纠缠着死去吸血鬼的怨念。",
-            "notes_loc": [],
+            "notes_loc": [
+              "攻击非英雄单位的吸血效果减少至%lifesteal_creeps_tooltip%%%。"
+            ],
             "shard_loc": "",
             "scepter_loc": "",
             "facets_loc": [],
@@ -136,23 +138,6 @@
                 "required_facet": ""
               },
               {
-                "name": "creep_lifesteal_reduction_pct",
-                "values_float": [
-                  40
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
                 "name": "damage_aura",
                 "values_float": [
                   18
@@ -170,9 +155,60 @@
                 "required_facet": ""
               },
               {
+                "name": "lifesteal_self",
+                "values_float": [
+                  0
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "damage_self",
+                "values_float": [
+                  0
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
                 "name": "aura_radius",
                 "values_float": [
                   1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "lifesteal_creeps_tooltip",
+                "values_float": [
+                  12
                 ],
                 "is_percentage": false,
                 "heading_loc": "",

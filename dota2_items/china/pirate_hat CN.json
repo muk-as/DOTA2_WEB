@@ -8,14 +8,14 @@
             "id": 372,
             "name": "item_pirate_hat",
             "name_loc": "海盗帽",
-            "desc_loc": "<h1>主动：发掘</h1>持续施法%abilitychanneltime%秒。<br>一直都会找到赏金神符！",
+            "desc_loc": "<h1>被动：抢劫</h1>从%gold_steal_range%范围内阵亡的敌方英雄身上偷取%gold_steal_base%金。如果海盗帽的佩戴者是击杀者，那么没有距离限制，而且还会额外偷取%gold_steal_kill%金。\n<h1>被动：藏宝</h1>死亡时损失的金钱减少%gold_loss_reduction%%%。",
             "lore_loc": "咸味颇重的骷髅礼帽，戴上后会深受财运无穷的诅咒。",
             "notes_loc": [],
             "shard_loc": "",
             "scepter_loc": "",
             "facets_loc": [],
             "type": 0,
-            "behavior": "134217872",
+            "behavior": "2",
             "target_team": 0,
             "target_type": 0,
             "flags": 0,
@@ -24,16 +24,16 @@
             "dispellable": 0,
             "max_level": 0,
             "cast_ranges": [
-              250
+              0
             ],
             "cast_points": [
-              0.1
+              0
             ],
             "channel_times": [
-              1
+              0
             ],
             "cooldowns": [
-              40
+              0
             ],
             "durations": [
               0
@@ -51,12 +51,12 @@
             "health_costs": [],
             "special_values": [
               {
-                "name": "bonus_attack_speed",
+                "name": "gold_steal_base",
                 "values_float": [
                   150
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$attack",
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -68,12 +68,46 @@
                 "required_facet": ""
               },
               {
-                "name": "bonus_ms",
+                "name": "gold_steal_kill",
                 "values_float": [
-                  15
+                  150
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$move_speed",
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "gold_steal_range",
+                "values_float": [
+                  1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "gold_loss_reduction",
+                "values_float": [
+                  100
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -87,7 +121,7 @@
               {
                 "name": "AbilityCastRange",
                 "values_float": [
-                  250
+                  0
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -104,7 +138,7 @@
               {
                 "name": "AbilityChannelTime",
                 "values_float": [
-                  1
+                  0
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -138,7 +172,7 @@
               {
                 "name": "AbilityCastPoint",
                 "values_float": [
-                  0.1
+                  0
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -206,7 +240,7 @@
               {
                 "name": "AbilityCooldown",
                 "values_float": [
-                  40
+                  0
                 ],
                 "is_percentage": false,
                 "heading_loc": "",

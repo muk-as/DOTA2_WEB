@@ -8,7 +8,7 @@
             "id": 377,
             "name": "item_minotaur_horn",
             "name_loc": "恶牛角",
-            "desc_loc": "<h1>主动：天仙下凡</h1>提供减益免疫，持续%duration%秒。",
+            "desc_loc": "<h1>主动：天仙下凡</h1>施加弱驱散。提供%magic_resist%%%魔法抗性加成，并且免疫纯粹和反弹伤害，持续%duration%秒。持续时间内敌方技能的负面效果不会生效。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>",
             "lore_loc": "在一只强大野兽的居所深处伏击得手后获得的战利品。",
             "notes_loc": [],
             "shard_loc": "",
@@ -51,12 +51,12 @@
             "health_costs": [],
             "special_values": [
               {
-                "name": "bonus_strength",
+                "name": "duration",
                 "values_float": [
-                  20
+                  2
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$str",
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -68,9 +68,26 @@
                 "required_facet": ""
               },
               {
-                "name": "duration",
+                "name": "magic_resist",
                 "values_float": [
-                  2
+                  50
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "model_scale",
+                "values_float": [
+                  40
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -229,7 +246,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 4294967295,
+            "item_neutral_tier": 4,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1

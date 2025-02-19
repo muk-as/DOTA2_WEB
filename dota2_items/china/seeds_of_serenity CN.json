@@ -8,7 +8,7 @@
             "id": 945,
             "name": "item_seeds_of_serenity",
             "name_loc": "宁静种籽",
-            "desc_loc": "<h1>主动：盎然生机</h1>对%radius%范围的地面施放。对作用范围内所有友方单位提供+%aura_health_regen%点/秒生命恢复。持续%duration%秒。",
+            "desc_loc": "<h1>主动：盎然生机</h1>对%radius%范围的地面施放。对作用范围内所有友方单位提供+%aura_health_regen%点/秒生命恢复 + %aura_health_regen_pct%%%施法者施法时生命恢复。持续%duration%秒。",
             "lore_loc": "常青的嫩芽，被树人视为珍宝，也遭到入侵者的觊觎。",
             "notes_loc": [],
             "shard_loc": "",
@@ -53,10 +53,10 @@
               {
                 "name": "bonus_health",
                 "values_float": [
-                  150
+                  0
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$health",
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -70,10 +70,10 @@
               {
                 "name": "bonus_health_regen",
                 "values_float": [
-                  4
+                  0
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$hp_regen",
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -87,7 +87,24 @@
               {
                 "name": "aura_health_regen",
                 "values_float": [
-                  10
+                  6
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "aura_health_regen_pct",
+                "values_float": [
+                  25
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -280,7 +297,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 0,
+            "item_neutral_tier": 4294967295,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1
