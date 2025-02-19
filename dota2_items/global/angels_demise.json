@@ -6,11 +6,9 @@
           "id": 1808,
           "name": "item_angels_demise",
           "name_loc": "Khanda",
-          "desc_loc": "<h1>Passive: Empower Spell</h1> The next Unit Target spell you cast on an enemy deals %spell_crit_flat% + %spell_crit_multiplier%%% of your attack damage as bonus damage to the target, and slows them by %slow%%% for %slow_duration%s.\n\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%%% chance to deal %crit_multiplier%%% damage.",
+          "desc_loc": "<h1>Passive: Empower Spell</h1> The next Unit Target spell you cast on an enemy deals a separate %bonus_spell_damage% additional damage and applies a debuff that slows the target by %slow%%% and disables their passives for %slow_duration%s.",
           "lore_loc": "",
-          "notes_loc": [
-            "Critical Strike does not work against buildings."
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -33,7 +31,7 @@
             0
           ],
           "cooldowns": [
-            6
+            12
           ],
           "durations": [
             0
@@ -51,97 +49,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_damage",
+              "name": "bonus_mana_regen",
               "values_float": [
-                50
+                8
               ],
               "is_percentage": false,
-              "heading_loc": "+$damage",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "crit_chance",
-              "values_float": [
-                30
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spell_crit_multiplier",
-              "values_float": [
-                60
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spell_crit_flat",
-              "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "crit_multiplier",
-              "values_float": [
-                160
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_crit_damage",
-              "values_float": [
-                60
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "+$mana_regen",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -206,7 +119,7 @@
             {
               "name": "slow",
               "values_float": [
-                50
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -223,7 +136,24 @@
             {
               "name": "slow_duration",
               "values_float": [
-                1.5
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_spell_damage",
+              "values_float": [
+                250
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -359,7 +289,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                6
+                12
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -380,7 +310,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 5100,
+          "item_cost": 5900,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

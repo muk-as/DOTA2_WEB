@@ -6,7 +6,7 @@
           "id": 1466,
           "name": "item_gungir",
           "name_loc": "Gleipnir",
-          "desc_loc": "<h1>Active: Eternal Chains</h1>Roots all enemies in a target %radius% radius for %duration% seconds and deals %active_damage% damage. \n\n<h1>Passive: Chain Lightning</h1>Grants a %chain_chance%%% chance on attack to release a bolt of electricity that leaps between %chain_strikes% targets within a %chain_radius% radius, dealing %chain_damage% magical damage to each. Lightning proc pierces evasion. Deals %illusion_multiplier_pct%%% damage to illusions.",
+          "desc_loc": "<h1>Active: Eternal Chains</h1>Roots all enemies in a %radius_tooltip% radius for %duration% seconds.",
           "lore_loc": "Bindings forged by impossible means to leash an ancient evil.",
           "notes_loc": [],
           "shard_loc": "",
@@ -43,154 +43,18 @@
             0
           ],
           "mana_costs": [
-            200
+            100
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_damage",
+              "name": "bonus_aoe",
               "values_float": [
-                25
+                75
               ],
               "is_percentage": false,
-              "heading_loc": "+$damage",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_attack_speed",
-              "values_float": [
-                25
-              ],
-              "is_percentage": false,
-              "heading_loc": "+$attack",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "chain_chance",
-              "values_float": [
-                25
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "chain_damage",
-              "values_float": [
-                140
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "chain_strikes",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "chain_radius",
-              "values_float": [
-                650
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "chain_delay",
-              "values_float": [
-                0.25
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "chain_cooldown",
-              "values_float": [
-                0.2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_intellect",
-              "values_float": [
-                24
-              ],
-              "is_percentage": false,
-              "heading_loc": "+$int",
+              "heading_loc": "+$aoe_bonus",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -204,7 +68,7 @@
             {
               "name": "bonus_hp",
               "values_float": [
-                275
+                450
               ],
               "is_percentage": false,
               "heading_loc": "+$health",
@@ -219,9 +83,43 @@
               "required_facet": ""
             },
             {
-              "name": "duration",
+              "name": "bonus_intellect",
               "values_float": [
-                2
+                15
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$int",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_mana",
+              "values_float": [
+                200
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$mana",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "radius",
+              "values_float": [
+                275
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -236,7 +134,7 @@
               "required_facet": ""
             },
             {
-              "name": "radius",
+              "name": "radius_tooltip",
               "values_float": [
                 350
               ],
@@ -253,26 +151,9 @@
               "required_facet": ""
             },
             {
-              "name": "active_damage",
+              "name": "duration",
               "values_float": [
-                165
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "illusion_multiplier_pct",
-              "values_float": [
-                150
+                2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -391,7 +272,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                200
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -429,7 +310,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 5750,
+          "item_cost": 4550,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,
