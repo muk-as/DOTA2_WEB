@@ -62,6 +62,8 @@
           "scepter_loc": "严寒烧灼变成开关型技能，开启后每秒消耗一定量魔法。攻击时每个目标不再只受到一次负面效果。提升寒冬飞龙的移动速度。",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -509,6 +511,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -902,6 +906,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "极寒之拥可以对建筑施放。不会治疗建筑。冰茧中的友方单位和建筑在冰茧解冻后获得攻击力加成。如果建筑同时处于极寒之拥和防御符文的作用，极寒之拥的持续时间会暂停。",
             ""
           ],
           "type": 0,
@@ -1046,6 +1052,80 @@
                 "name": "",
                 "values": [],
                 "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "tick_interval",
+              "values_float": [
+                0.25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "can_target_buildings",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "winter_wyvern_winterproof",
+                "values": [
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_buff_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "攻击力加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "winter_wyvern_winterproof",
+                "values": [
+                  60
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_buff_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "攻击力加成持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "winter_wyvern_winterproof",
+                "values": [
+                  6
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -1227,6 +1307,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -1269,6 +1351,23 @@
               "name": "share_percentage",
               "values_float": [
                 20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "three_tooltip",
+              "values_float": [
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1451,7 +1550,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "",
+            "如果主目标阵亡，那么寒冬诅咒会重新施放给血量最低的敌方英雄。重新施法的最短、最长和额外持续时间都是%transfer_duration_pct%%%。不会转移给幻象。被诅咒的敌人受到来自寒冬飞龙的物理、魔法和纯粹伤害为%damage_amplification_tooltip%%%。"
           ],
           "type": 1,
           "behavior": "35184372088872",
@@ -1529,19 +1630,40 @@
               "required_facet": ""
             },
             {
-              "name": "damage_amplification",
+              "name": "damage_amplification_for_all_damage_types",
               "values_float": [
-                30
+                0
               ],
-              "is_percentage": true,
-              "heading_loc": "寒冬诅咒加深魔法伤害：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "winter_wyvern_recursive",
+                "values": [
+                  25
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_amplification_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "winter_wyvern_recursive",
+                "values": [
+                  125
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -1635,6 +1757,44 @@
                 "name": "",
                 "values": [],
                 "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "transfer_on_death",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "winter_wyvern_recursive",
+                "values": [
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "transfer_duration_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "winter_wyvern_recursive",
+                "values": [
+                  50
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -3433,501 +3593,27 @@
       "facets": [
         {
           "color": 3,
-          "title_loc": "蓝心精华",
-          "description_loc": "寒冬飞龙的治疗也会回复魔法。",
-          "name": "winter_wyvern_heal_mana",
-          "icon": "mana",
-          "gradient_id": 0
+          "title_loc": "抗寒",
+          "description_loc": "极寒之拥可以对建筑施放。不会治疗建筑。冰茧解冻后友方单位和建筑获得攻击力加成。",
+          "name": "winter_wyvern_winterproof",
+          "icon": "tower",
+          "gradient_id": 2
         },
         {
-          "color": 5,
-          "title_loc": "飞龙视野",
-          "description_loc": "寒冬飞龙的攻击距离超过了%attack_range_min%后获得攻击力加成。",
-          "name": "winter_wyvern_atk_range",
-          "icon": "damage",
-          "gradient_id": 3
+          "color": 3,
+          "title_loc": "递归",
+          "description_loc": "如果主目标阵亡，那么寒冬诅咒会重新施放给血量最低的敌方英雄。被诅咒的敌人受到来自寒冬飞龙的物理、魔法和纯粹伤害为{s:bonus_damage_amplification_tooltip}%。",
+          "name": "winter_wyvern_recursive",
+          "icon": "ricochet",
+          "gradient_id": 0
         }
       ],
       "facet_abilities": [
         {
-          "abilities": [
-            {
-              "id": 1405,
-              "name": "winter_wyvern_essence_of_the_blueheart",
-              "name_loc": "蓝心精华",
-              "desc_loc": "寒冬飞龙的治疗也会回复魔法。",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "3",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 3,
-              "max_level": 1,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "restore_pct",
-                  "values_float": [
-                    24
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "治疗转为魔法：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
+          "abilities": []
         },
         {
-          "abilities": [
-            {
-              "id": 1406,
-              "name": "winter_wyvern_dragon_sight",
-              "name_loc": "飞龙视野",
-              "desc_loc": "寒冬飞龙的攻击距离超过了%attack_range_min%后获得攻击力加成。",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "3",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 3,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "attack_range_per_damage",
-                  "values_float": [
-                    40,
-                    30,
-                    20,
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_per_ten_attack_range_tooltip",
-                  "values_float": [
-                    0.25,
-                    0.33,
-                    0.5,
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "每10攻击距离提升攻击力：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "attack_range_min",
-                  "values_float": [
-                    400
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
+          "abilities": []
         }
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_winter_wyvern.png",
@@ -3935,12 +3621,14 @@
         "id": 1404,
         "name": "winter_wyvern_eldwurm_scholar",
         "name_loc": "古龙学者",
-        "desc_loc": "友方英雄激活智慧神符时，寒冬飞龙会与整个队伍分享知识，没有获得初始奖励的3名英雄会获得%share_percentage%%%相应经验。",
+        "desc_loc": "友方英雄激活智慧神龛时，寒冬飞龙会与整个队伍分享知识，没有获得初始奖励的%three_tooltip%名英雄会获得%share_percentage%%%相应经验。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
+          "",
           "",
           ""
         ],
@@ -3984,6 +3672,23 @@
             "name": "share_percentage",
             "values_float": [
               20
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "three_tooltip",
+            "values_float": [
+              3
             ],
             "is_percentage": false,
             "heading_loc": "",
