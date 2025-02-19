@@ -63,7 +63,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "肉钩会根据牵引的距离造成额外伤害，但基础伤害减少。"
+            "肉钩会根据牵引的距离造成额外伤害，但基础伤害减少。",
+            ""
           ],
           "type": 0,
           "behavior": "134217744",
@@ -245,24 +246,18 @@
             {
               "name": "distance_to_damage",
               "values_float": [
-                0,
-                0,
-                0,
                 0
               ],
               "is_percentage": true,
               "heading_loc": "行进距离伤害：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                20
+              ],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "pudge_flayers_hook",
-                "values": [
-                  12,
-                  18,
-                  24,
-                  30
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -275,13 +270,32 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                10
+              ],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "pudge_flayers_hook",
-                "values": [
-                  10
-                ],
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cooldown_reduction_pct_allied_hook",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                50
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -488,7 +502,8 @@
           "scepter_loc": "提升腐烂的作用范围和伤害，并且可以降低敌人的生命恢复。",
           "facets_loc": [
             "",
-            ""
+            "",
+            "腐烂开启时，帕吉每秒会获得%attack_damage_per_second_tooltip%%%攻击力加成。腐烂关闭后，攻击力加成会在%time_for_decay_tooltip%秒内迅速衰减。"
           ],
           "type": 0,
           "behavior": "138412548",
@@ -627,6 +642,157 @@
                 "name": "",
                 "values": [],
                 "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_damage_per_stack",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "pudge_rotten_core",
+                "values": [
+                  0.8,
+                  1.6,
+                  2.4,
+                  3.2
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_total_stacks",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "pudge_rotten_core",
+                "values": [
+                  25
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stacks_decrement_per_rot_off_tick",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "pudge_rotten_core",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_damage_per_second_tooltip",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "pudge_rotten_core",
+                "values": [
+                  4,
+                  8,
+                  12,
+                  16
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_bonus_damage_tooltip",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "最高攻击力加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "pudge_rotten_core",
+                "values": [
+                  20,
+                  40,
+                  60,
+                  80
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "time_for_max_stacks_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "最大加成所需时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "pudge_rotten_core",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "time_for_decay_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "pudge_rotten_core",
+                "values": [
+                  1
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -798,6 +964,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1063,6 +1230,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1312,6 +1480,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "肢解每次对英雄造成伤害时都会提升自身力量值。",
+            "",
             ""
           ],
           "type": 1,
@@ -1487,8 +1656,8 @@
               "values_float": [
                 5
               ],
-              "is_percentage": true,
-              "heading_loc": "最大生命值恢复：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1522,7 +1691,7 @@
                 300
               ],
               "is_percentage": false,
-              "heading_loc": "对友军施法距离加成：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1548,9 +1717,9 @@
               "facet_bonus": {
                 "name": "pudge_fresh_meat",
                 "values": [
-                  1,
-                  3,
-                  5
+                  2,
+                  4,
+                  6
                 ],
                 "operation": 0
               },
@@ -1712,9 +1881,7 @@
               "is_percentage": false,
               "heading_loc": "冷却时间：",
               "bonuses": [],
-              "values_shard": [
-                5
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -3386,20 +3553,20 @@
       "update_time": 1739926828,
       "facets": [
         {
-          "color": 2,
+          "color": 0,
           "title_loc": "小鲜肉",
           "description_loc": "肢解对英雄造成伤害时会提升自身力量值。",
           "name": "pudge_fresh_meat",
           "icon": "meat",
-          "gradient_id": 3
+          "gradient_id": 0
         },
         {
-          "color": 0,
-          "title_loc": "剥皮长钩",
-          "description_loc": "肉钩会根据牵引的距离造成额外伤害，但基础伤害减少。",
-          "name": "pudge_flayers_hook",
-          "icon": "pudge_hook",
-          "gradient_id": 0
+          "color": 2,
+          "title_loc": "腐烂之核",
+          "description_loc": "腐烂开启时帕吉每秒都会获得攻击力加成。",
+          "name": "pudge_rotten_core",
+          "icon": "fist",
+          "gradient_id": 3
         }
       ],
       "facet_abilities": [
@@ -3415,14 +3582,15 @@
         "id": 1223,
         "name": "pudge_innate_graft_flesh",
         "name_loc": "腐肉堆积",
-        "desc_loc": "每次帕吉击杀敌方英雄时，他就会永久获得%flesh_heap_strength_buff_amount%点力量加成。",
+        "desc_loc": "每次帕吉击杀敌方英雄时，他的皮肤就会永久变厚，获得的每层叠加效果为%flesh_heap_strength_buff_amount%点额外力量。",
         "lore_loc": "",
         "notes_loc": [
-          "帕吉附近%flesh_heap_range%范围内敌方英雄阵亡时他都会获得力量加成，不论击杀者是谁。"
+          "帕吉附近%flesh_heap_range%范围内敌方英雄阵亡时他都会获得一层叠加效果，不论击杀者是谁。"
         ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
