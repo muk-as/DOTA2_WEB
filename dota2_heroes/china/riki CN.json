@@ -628,7 +628,7 @@
           "scepter_loc": "提升施法距离、攻击次数并且可以对友方英雄施放，持续时间内藏在他们体内。每次额外攻击一个目标。",
           "facets_loc": [
             "",
-            "绝杀秘技攻击非英雄单位时拥有%creep_agility_multiplier%倍敏捷加成。"
+            "绝杀秘技攻击非英雄单位时拥有%creep_agility_multiplier%倍敏捷加成。只要力丸在绝杀秘技期间击杀一个非英雄单位，冷却时间就会减少%cooldown_reduction_per_creep_kill%秒。"
           ],
           "type": 0,
           "behavior": "176",
@@ -840,6 +840,25 @@
               "required_facet": ""
             },
             {
+              "name": "cooldown_reduction_per_creep_kill",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "riki_exterminator",
+                "values": [
+                  0.75
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 400
@@ -971,13 +990,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_riki_6",
-                  "value": 3,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1113,7 +1126,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "击杀经验奖励：",
+              "heading_loc": "击杀英雄奖励经验：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1146,9 +1159,34 @@
                 "name": "riki_contract_killer",
                 "values": [
                   25,
-                  100,
-                  100,
-                  100
+                  75,
+                  125,
+                  175
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_xp_assist_other",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "击杀守卫/信使奖励经验：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "riki_contract_killer",
+                "values": [
+                  25,
+                  75,
+                  125,
+                  175
                 ],
                 "operation": 0
               },
@@ -1367,7 +1405,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "渐隐时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_riki_6",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3178,7 +3222,7 @@
         {
           "color": 4,
           "title_loc": "消灭",
-          "description_loc": "绝杀秘技攻击非英雄单位时拥有{s:bonus_creep_agility_multiplier}倍敏捷加成。",
+          "description_loc": "绝杀秘技攻击非英雄单位时拥有{s:bonus_creep_agility_multiplier}倍敏捷加成。只要力丸在绝杀秘技期间击杀一个非英雄单位，冷却时间就会减少{s:bonus_cooldown_reduction_per_creep_kill}秒。",
           "name": "riki_exterminator",
           "icon": "agility",
           "gradient_id": 2
@@ -3200,7 +3244,8 @@
         "desc_loc": "力丸每次从背后攻击敌人时都会根据自身敏捷造成额外伤害。",
         "lore_loc": "",
         "notes_loc": [
-          "反补友方单位时不会生效。"
+          "反补友方单位时不会生效。",
+          "力丸的幻象也会有背刺的动作，但是不会造成额外伤害。"
         ],
         "shard_loc": "",
         "scepter_loc": "",
@@ -3213,7 +3258,7 @@
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
-        "damage": 0,
+        "damage": 1,
         "immunity": 0,
         "dispellable": 0,
         "max_level": 4,
@@ -3296,7 +3341,7 @@
               0
             ],
             "is_percentage": false,
-            "heading_loc": "击杀经验奖励：",
+            "heading_loc": "击杀英雄奖励经验：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -3329,9 +3374,34 @@
               "name": "riki_contract_killer",
               "values": [
                 25,
-                100,
-                100,
-                100
+                75,
+                125,
+                175
+              ],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bonus_xp_assist_other",
+            "values_float": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "击杀守卫/信使奖励经验：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "riki_contract_killer",
+              "values": [
+                25,
+                75,
+                125,
+                175
               ],
               "operation": 0
             },
