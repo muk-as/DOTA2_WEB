@@ -430,11 +430,12 @@
               "id": 5119,
               "name": "tidehunter_kraken_shell",
               "name_loc": "Kraken Shell",
-              "desc_loc": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage.\n\nDoes not stack with items that provide Damage Block.",
+              "desc_loc": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. Reduced block amount versus creeps.\n\nCan be activated to double the block amount at the cost of %active_move_speed_penalty_pct%%% movement speed. Lasts %active_duration%s.",
               "lore_loc": "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet.",
               "notes_loc": [
                 "Break disables the gaining of new Kraken Swell stacks.",
-                "Break does not disable the bonuses from existing Kraken Swell stacks."
+                "Break does not disable the bonuses from existing Kraken Swell stacks.",
+                "Does not stack with items that provide Damage Block."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -443,25 +444,28 @@
                 ""
               ],
               "type": 0,
-              "behavior": "2",
+              "behavior": "2052",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
-              "dispellable": 0,
+              "dispellable": 3,
               "max_level": 4,
               "cast_ranges": [
                 0
               ],
               "cast_points": [
+                0,
+                0,
+                0,
                 0
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                0
+                30
               ],
               "durations": [
                 0
@@ -473,7 +477,7 @@
                 0
               ],
               "mana_costs": [
-                0
+                45
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -519,6 +523,74 @@
                       3,
                       4
                     ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "creep_reduction_penalty_pct",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CREEP PENALTY:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "active_pct_effectiveness",
+                  "values_float": [
+                    200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "active_move_speed_penalty_pct",
+                  "values_float": [
+                    40
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "active_duration",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -628,7 +700,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    0
+                    45
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -645,7 +717,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    0
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3440,7 +3512,7 @@
                   "id": 1254,
                   "name": "tidehunter_krill_eater",
                   "name_loc": "Krill Eater",
-                  "desc_loc": "Tidehunter begins the game much smaller and with -%attack_range_base% attack range and -%anchor_smash_radius_base% Anchor Smash radius. Tidehunter grows larger with experience, gaining attacking range and Anchor Smash radius per level. Base Strength reduced, and Strength Gain increased.",
+                  "desc_loc": "Tidehunter begins the game much smaller and with -%attack_range_base% attack range and -%anchor_smash_radius_base% Anchor Smash radius. Tidehunter grows larger with experience, gaining attacking range and Anchor Smash radius per level. Strength Gain increased.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
@@ -3622,26 +3694,9 @@
                       "required_facet": ""
                     },
                     {
-                      "name": "base_strength_tooltip",
-                      "values_float": [
-                        22
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "BASE STRENGTH:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
                       "name": "strength_gain_tooltip",
                       "values_float": [
-                        4
+                        4.1
                       ],
                       "is_percentage": false,
                       "heading_loc": "STRENGTH GAIN:",

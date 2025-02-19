@@ -22,7 +22,7 @@
             {
               "color": 2,
               "title_loc": "Rapid Decay",
-              "description_loc": "Ghost Shroud steals speed from his enemies.",
+              "description_loc": "Ghost Shroud steals speed from his enemies and decreases their restorative powers.",
               "name": "necrolyte_rapid_decay",
               "icon": "speed",
               "gradient_id": 3
@@ -349,7 +349,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -371,7 +371,7 @@
               "scepter_loc": "Reduces Ghost Shroud cooldown.",
               "facets_loc": [
                 "",
-                "Necrophos gains movement speed equal to %movement_transfer%%% of movement speed lost by enemies."
+                "Necrophos gains movement speed equal to %movement_transfer%%% of the movement speed lost by enemies. Enemies lose %enemies_negative_heal_bonus_as_pct_of_self%%% of the restoration amplification gained by Necrophos."
               ],
               "type": 0,
               "behavior": "2052",
@@ -454,6 +454,25 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "enemies_negative_heal_bonus_as_pct_of_self",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "necrolyte_rapid_decay",
+                    "values": [
+                      100
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -745,7 +764,7 @@
                 {
                   "name": "aura_radius",
                   "values_float": [
-                    800
+                    700
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -762,10 +781,10 @@
                 {
                   "name": "aura_damage",
                   "values_float": [
-                    0.6,
-                    1.2,
+                    0.8,
+                    1.3,
                     1.8,
-                    2.4
+                    2.3
                   ],
                   "is_percentage": true,
                   "heading_loc": "HEALTH DECAY:",

@@ -12,17 +12,25 @@
           "npe_desc_loc": "Flexible melee master with two sets of weapons and abilities",
           "facets": [
             {
+              "color": 1,
+              "title_loc": "Flutter",
+              "description_loc": "Kez deals extra damage on the first attack or ability after switching to Katana, and gains bonus movement speed after switching to Sai.",
+              "name": "kez_flutter",
+              "icon": "kez_flutter",
+              "gradient_id": 1
+            },
+            {
               "color": 3,
-              "title_loc": "Hero of the Flightless",
-              "description_loc": "Kez always has a few fun tricks up his sleeve, but right now he's got a war to win. This facet doesn't do anything... yet.",
-              "name": "kez_default",
-              "icon": "kez",
+              "title_loc": "Shadowhawk",
+              "description_loc": "Triggering a Shodo Sai Mark from invisibility deals bonus critical damage.  When Kez triggers a Shodo Sai Mark, reduce the cooldown of Shodo Sai and Kazurai Katana.",
+              "name": "kez_shadowhawk",
+              "icon": "kez_shadowhawk",
               "gradient_id": 3
             }
           ],
           "str_base": 19,
           "str_gain": 2.6,
-          "agi_base": 26,
+          "agi_base": 27,
           "agi_gain": 3.5,
           "int_base": 18,
           "int_gain": 1.7,
@@ -40,14 +48,14 @@
             0,
             0
           ],
-          "damage_min": 49,
-          "damage_max": 55,
+          "damage_min": 50,
+          "damage_max": 56,
           "attack_rate": 2,
           "attack_range": 225,
           "projectile_speed": 900,
-          "armor": 6.3333335,
+          "armor": 5.5,
           "magic_resistance": 25,
-          "movement_speed": 320,
+          "movement_speed": 315,
           "turn_rate": 1,
           "sight_range_day": 1800,
           "sight_range_night": 800,
@@ -60,12 +68,15 @@
               "id": 1498,
               "name": "kez_echo_slash",
               "name_loc": "Echo Slash",
-              "desc_loc": "Kez slashes forward in a line with his Katana, dealing a percentage of his attack damage and a brief slow to targets in the area. After a short delay, the area is attacked again. Heroes take bonus damage.",
+              "desc_loc": "Kez slashes forward in a line with his Katana, attacking enemies in an area and applying a brief slow. After a short delay, the area is attacked again. Heroes take bonus damage.",
               "lore_loc": "Kez and his master Kraw have worked tirelessly to train the Kazurai new ways to keep the flyers off balance by improving upon ancient techniques.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Destroys trees. Doesn't apply Cleave."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 0,
@@ -441,12 +452,13 @@
               "id": 1499,
               "name": "kez_grappling_claw",
               "name_loc": "Grappling Claw",
-              "desc_loc": "Kez swings on a grappling hook towards the target unit or tree.  When the grappling hook collides with the target, that unit has slowed movement speed until Kez arrives. Upon landing, he attacks with %lifesteal_pct%%% lifesteal, and heals a flat bonus amount if the target is a Hero.",
+              "desc_loc": "Kez swings on a grappling hook towards the target unit or tree.  When the grappling hook collides with the target, that unit has slowed movement speed until Kez arrives.  Upon landing, he attacks with bonus lifesteal.",
               "lore_loc": "The Kazurai have the speed and reach to drag even the highest flyers from the skies.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 0,
@@ -562,13 +574,10 @@
                 {
                   "name": "bonus_flat_lifesteal",
                   "values_float": [
-                    30,
-                    60,
-                    90,
-                    120
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "HERO BONUS HEAL:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -582,10 +591,13 @@
                 {
                   "name": "lifesteal_pct",
                   "values_float": [
-                    100
+                    50,
+                    75,
+                    100,
+                    125
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "LIFESTEAL:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -796,7 +808,8 @@
               "shard_loc": "Kez may activate the ability to impale the target with his attack, briefly stunning himself and the target in place. The target's debuff bursts, removing it and causing the attack to deal bonus damage based on the stack amount.",
               "scepter_loc": "",
               "facets_loc": [
-                ""
+                "",
+                "Triggering a Shodo Sai Mark from invisibility deals bonus critical damage. When Kez triggers a Shodo Sai Mark, reduce the cooldown of Kazurai Katana."
               ],
               "type": 0,
               "behavior": "2",
@@ -808,7 +821,7 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                150
+                200
               ],
               "cast_points": [
                 0
@@ -871,7 +884,7 @@
                 {
                   "name": "katana_bonus_damage",
                   "values_float": [
-                    20
+                    12
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -952,6 +965,26 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "shard_cooldown",
+                  "values_float": [
+                    20,
+                    15,
+                    10,
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "stun_duration",
                   "values_float": [
                     0
@@ -990,9 +1023,51 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "katana_swap_bonus_damage",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "kez_flutter"
+                },
+                {
+                  "name": "mark_trigger_cd_reduction",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MARK COOLDOWN REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "kez_shadowhawk",
+                    "values": [
+                      20,
+                      30,
+                      40,
+                      50
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    150
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1118,9 +1193,7 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    5
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1151,8 +1224,9 @@
               "lore_loc": "As former followers of the Shodo, the leaders of the Kazurai Order can switch effortlessly between twin disciplines of martial mastery over sai and blade.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Casting any weapon ability refreshes the cooldown of Switch Discipline.<br><br>The first ability Kez casts %scepter_cooldown_timer% seconds after using Switch Discipline will not set its alternate weapon ability on cooldown.",
+              "scepter_loc": "Casting any weapon ability refreshes the cooldown of Switch Discipline.<br><br>Casting a weapon ability that would set its alternate weapon ability on cooldown does not do so if it's the first one used within %scepter_cooldown_timer% seconds after casting Switch Discipline.",
               "facets_loc": [
+                "Kez deals extra damage on the first attack or ability after switching to Katana, and gains bonus speed after switching to Sai.",
                 ""
               ],
               "type": 0,
@@ -1228,7 +1302,7 @@
                 {
                   "name": "katana_bonus_damage",
                   "values_float": [
-                    20
+                    12
                   ],
                   "is_percentage": true,
                   "heading_loc": "KATANA BONUS DAMAGE:",
@@ -1241,6 +1315,23 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "katana_swap_bonus_damage",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "KATANA SWAP BONUS DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "kez_flutter"
                 },
                 {
                   "name": "sai_attack_range",
@@ -1275,6 +1366,40 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "sai_swap_bonus_movement_speed",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SAI SWAP MOVEMENT SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "kez_flutter"
+                },
+                {
+                  "name": "sai_swap_duration",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SAI SWAP SPEED DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "kez_flutter"
                 },
                 {
                   "name": "cooldown_reduction_per_level",
@@ -1464,12 +1589,13 @@
               "id": 1501,
               "name": "kez_raptor_dance",
               "name_loc": "Raptor Dance",
-              "desc_loc": "Kez enters into an uncontrollable channel for %AbilityChannelTime% second, gaining debuff immunity and %magic_resist%%% magic resistance. If the channel completes successfully, Kez performs a series of deadly radial slashes around him that deal damage based on the max health of the target and heal Kez for a percentage of all damage dealt. Kez receives a strong dispel upon completion.",
+              "desc_loc": "Kez enters into an uncontrollable channel for %AbilityChannelTime% second, becoming invulnerable for %invuln_period%s and receiving a basic dispel, remaining immune to magic damage for the remainder of the channel and the duration of the slashes. If the channel completes successfully, Kez performs a series of deadly radial slashes around him that deal damage based on the max health of the target and heal Kez for a percentage of all damage dealt.",
               "lore_loc": "Unleash the inner fury of the Flightless to feast on the essence of your foes.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 1,
@@ -1623,6 +1749,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "invuln_period",
+                  "values_float": [
+                    0.1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "magic_resist",
                   "values_float": [
                     100
@@ -1641,6 +1784,23 @@
                 },
                 {
                   "name": "hard_dispel",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "basic_dispel",
                   "values_float": [
                     1
                   ],
@@ -1826,6 +1986,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 0,
@@ -1899,7 +2060,7 @@
                 {
                   "name": "rush_range",
                   "values_float": [
-                    575
+                    525
                   ],
                   "is_percentage": false,
                   "heading_loc": "RUSH RANGE:",
@@ -1956,10 +2117,10 @@
                 {
                   "name": "base_attack_rate_katana",
                   "values_float": [
+                    1.5,
                     1.4,
                     1.3,
-                    1.2,
-                    1.1
+                    1.2
                   ],
                   "is_percentage": false,
                   "heading_loc": "KATANA BASE ATTACK RATE:",
@@ -1976,10 +2137,10 @@
                 {
                   "name": "base_attack_rate_sai",
                   "values_float": [
+                    1.3,
                     1.2,
                     1.1,
-                    1,
-                    0.9
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "SAI BASE ATTACK RATE:",
@@ -1997,9 +2158,9 @@
                   "name": "attack_speed_factor",
                   "values_float": [
                     6,
-                    7,
                     8,
-                    9
+                    10,
+                    12
                   ],
                   "is_percentage": true,
                   "heading_loc": "ATTACK SPEED FACTOR:",
@@ -2213,6 +2374,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 0,
@@ -2220,7 +2382,7 @@
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
-              "damage": 2,
+              "damage": 1,
               "immunity": 4,
               "dispellable": 0,
               "max_level": 4,
@@ -2485,13 +2647,14 @@
               "id": 1504,
               "name": "kez_shodo_sai",
               "name_loc": "Shodo Sai",
-              "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. Marked enemies are slowed, and the next attack or ability damage from Kez gains True Strike and will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and Marked, taking additional critical strike and stun when the debuff is triggered.<br><br>The sub-ability may be used to cancel the blocking early.",
+              "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. The next attack or ability damage from Kez gains True Strike and will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and Marked, taking additional critical strike and stun when the debuff is triggered.<br><br>The sub-ability may be used to cancel the blocking early.",
               "lore_loc": "The Shodo may have lost their way, but Kez and the Kazurai can still use Shodo knowledge for the good of the people.",
               "notes_loc": [],
               "shard_loc": "Passively grants %shard_base_movement_speed% movement speed, and an additional %shard_vuln_movement_speed% movement speed per Marked enemy.",
               "scepter_loc": "",
               "facets_loc": [
-                ""
+                "",
+                "Triggering a Shodo Sai Mark from invisibility deals bonus critical damage. When Kez triggers a Shodo Sai Mark, reduce the cooldown of Shodo Sai."
               ],
               "type": 0,
               "behavior": "8732542993",
@@ -2589,10 +2752,10 @@
                 {
                   "name": "vuln_slow",
                   "values_float": [
-                    10
+                    0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "MARKED MOVE SLOW:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2655,44 +2818,6 @@
                   "heading_loc": "MARKED STUN DURATION:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_base_movement_speed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    10
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_vuln_movement_speed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    10
-                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -2785,6 +2910,67 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "sai_swap_bonus_movement_speed",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "kez_flutter"
+                },
+                {
+                  "name": "mark_trigger_cd_reduction",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MARK COOLDOWN REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "kez_shadowhawk",
+                    "values": [
+                      20,
+                      30,
+                      40,
+                      50
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "invis_bonus_crit",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "INVIS BONUS CRIT:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "kez_shadowhawk",
+                    "values": [
+                      50
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -2934,7 +3120,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -2955,6 +3141,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 1,
@@ -3315,6 +3502,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -3530,6 +3718,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -3745,6 +3934,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -3943,6 +4133,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -4141,6 +4332,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -4339,6 +4531,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -4537,6 +4730,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -4735,6 +4929,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 ""
               ],
               "type": 2,
@@ -4925,6 +5120,9 @@
             }
           ],
           "facet_abilities": [
+            {
+              "abilities": []
+            },
             {
               "abilities": []
             }

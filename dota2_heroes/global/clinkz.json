@@ -74,7 +74,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Clinkz and each Skeleton Archer apply a stacking debuff, one stack per attacking Skeleton Archer, causing them to miss %bonus_blind_pct%%% of their attacks per stack. Applies to buildings as well.",
+                "Clinkz and each Skeleton Archer apply a stacking debuff, one stack per attacking Skeleton Archer, causing them to miss %bonus_blind_pct%%% of their attacks per stack for %debuff_duration%s. Applies to buildings as well.",
                 ""
               ],
               "type": 0,
@@ -152,7 +152,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clinkz_1",
+                      "value": 0.75,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -173,10 +179,8 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "clinkz_suppressive_fire",
-                    "values": [
-                      100
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -228,7 +232,7 @@
                   "facet_bonus": {
                     "name": "clinkz_suppressive_fire",
                     "values": [
-                      1
+                      2
                     ],
                     "operation": 5
                   },
@@ -247,7 +251,7 @@
                   "facet_bonus": {
                     "name": "clinkz_suppressive_fire",
                     "values": [
-                      5
+                      30
                     ],
                     "operation": 5
                   },
@@ -419,7 +423,7 @@
               "id": 1119,
               "name": "clinkz_tar_bomb",
               "name_loc": "Tar Bomb",
-              "desc_loc": "Clinkz throws a projectile filled with tar at the target enemy, dealing Magic damage on impact. After impact, the tar spills onto the ground and stays there for %ground_duration% seconds. Any enemy that walks across it gets slowed, and attacks from Clinkz or his Skeleton Archers will deal bonus physical damage.<br><br> When the Tar Bomb hits, any Skeleton Archers within attack range will attack the target.",
+              "desc_loc": "Clinkz throws a projectile filled with tar at the target enemy, dealing Magic damage on impact. After impact, the tar spills onto the ground and stays there for %ground_duration% seconds. Any enemy that walks across it gets slowed, and attacks from Clinkz or his Skeleton Archers will deal bonus physical damage.<br><br> When the Tar Bomb hits, any Skeleton Archers within attack range will attack the target. If autocast is activated, Clinkz will throw a tar bomb when attacking the target, if it is available.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -429,7 +433,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "40",
+              "behavior": "4136",
               "target_team": 2,
               "target_type": 23,
               "flags": 0,
@@ -517,13 +521,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_clinkz_1",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -801,7 +799,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Death Pact teleports Clinkz towards his victim. Reduces Death Pact cooldown."
+                "Death Pact teleports Clinkz towards his victim. Reduces Death Pact cooldown. If Alt-Cast behavior is activated, or Clinkz is Rooted or Leashed, he will not teleport to the target location."
               ],
               "type": 0,
               "behavior": "33554440",
@@ -1038,7 +1036,7 @@
                     40
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "BASE CHARGE RESTORE TIME:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1733,8 +1731,8 @@
                   "name": "move_speed_bonus_pct",
                   "values_float": [
                     25,
-                    40,
-                    55
+                    35,
+                    45
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS MOVEMENT SPEED:",
@@ -2274,7 +2272,7 @@
             {
               "id": 6104,
               "name": "special_bonus_unique_clinkz_1",
-              "name_loc": "+{s:bonus_damage_bonus} Tar Bomb Bonus Attack Damage",
+              "name_loc": "+{s:bonus_duration}s Strafe Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3702,7 +3700,7 @@
               "id": 6620,
               "name": "special_bonus_unique_clinkz_3",
               "name_loc": "Tar Bomb Multishot",
-              "desc_loc": "Any attack on enemy covered in tar will send another arrow into a random enemy within Clinkz's attack range.",
+              "desc_loc": "Any autocasted Tar Bomb attack or an attack on an enemy covered in tar will send another arrow into a random enemy within Clinkz's attack range.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

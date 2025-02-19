@@ -22,7 +22,7 @@
             {
               "color": 0,
               "title_loc": "Bad Influence",
-              "description_loc": "Battle Trance grants allied heroes {s:bonus_attack_speed_share_percent}% of the attack speed bonus.",
+              "description_loc": "During Battle Trance, Troll Warlord has increased max Fervor stacks and no attack speed limit. Battle Trance grants allied heroes {s:bonus_attack_speed_share_percent}% of the attack speed bonus. ",
               "name": "troll_warlord_bad_influence",
               "icon": "damage",
               "gradient_id": 1
@@ -1055,7 +1055,7 @@
                 "Break disables the gaining of new stacks.",
                 "Break disables the proc chance granted by Aghanim's Shard."
               ],
-              "shard_loc": "Increases max Fervor stacks by %bonus_max_stacks% and grants Troll %base_chance%%% + %extra_attack_chance_per_stack%%% chance per Fervor stack of firing an additional ranged attack to any unit within its ranged attack range plus %range_buffer%.",
+              "shard_loc": "Grants Troll %base_chance%%% + %extra_attack_chance_per_stack%%% chance per Fervor stack of firing an additional ranged attack to any unit within its ranged attack range plus %range_buffer%.",
               "scepter_loc": "",
               "facets_loc": [
                 "Fervor grants armor per stack while in melee form.",
@@ -1131,13 +1131,30 @@
                   "is_percentage": false,
                   "heading_loc": "MAX STACKS:",
                   "bonuses": [],
-                  "values_shard": [
-                    3
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "stack_limit_during_battle_trance",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "troll_warlord_bad_influence",
+                    "values": [
+                      15
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1182,7 +1199,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "ARMOR PER STACK:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1800,7 +1817,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Battle Trance grants allied heroes %attack_speed_share_percent%%% of the attack speed bonus."
+                "During Battle Trance, Troll Warlord has increased max Fervor stacks and no attack speed limit. Battle Trance grants allied heroes %attack_speed_share_percent%%% of the attack speed bonus."
               ],
               "type": 1,
               "behavior": "0",
@@ -1916,7 +1933,7 @@
                   "facet_bonus": {
                     "name": "troll_warlord_bad_influence",
                     "values": [
-                      40
+                      50
                     ],
                     "operation": 0
                   },
@@ -1954,6 +1971,44 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "stack_limit_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BATTLE TRANCE MAX FERVOR STACKS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "troll_warlord_bad_influence",
+                    "values": [
+                      15
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "ignore_attack_speed_limit",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "troll_warlord_bad_influence",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""

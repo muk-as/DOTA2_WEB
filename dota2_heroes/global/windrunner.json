@@ -13,27 +13,27 @@
           "facets": [
             {
               "color": 1,
-              "title_loc": "Focus Fire",
-              "description_loc": "Focus Fire rapidly attacks a single target.",
-              "name": "windrunner_focusfire",
-              "icon": "focus_fire",
+              "title_loc": "Tangled",
+              "description_loc": "Shackleshot affects more enemies and grants damage per unit shackled.",
+              "name": "windrunner_tangled",
+              "icon": "tree",
               "gradient_id": 2
             },
             {
               "color": 2,
-              "title_loc": "Whirlwind",
-              "description_loc": "Focus Fire randomly attacks enemies within range.",
-              "name": "windrunner_whirlwind",
-              "icon": "multi_arrow",
+              "title_loc": "Killshot",
+              "description_loc": "Powershot executes low health enemy heroes.",
+              "name": "windrunner_killshot",
+              "icon": "execute",
               "gradient_id": 0
             }
           ],
           "str_base": 18,
-          "str_gain": 2,
+          "str_gain": 2.6,
           "agi_base": 17,
-          "agi_gain": 1.4,
-          "int_base": 21,
-          "int_gain": 2.4,
+          "agi_gain": 1.7,
+          "int_base": 18,
+          "int_gain": 3.2,
           "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 2,
@@ -48,8 +48,8 @@
             0,
             0
           ],
-          "damage_min": 7,
-          "damage_max": 13,
+          "damage_min": 21,
+          "damage_max": 33,
           "attack_rate": 1.5,
           "attack_range": 600,
           "projectile_speed": 1250,
@@ -61,8 +61,8 @@
           "sight_range_night": 800,
           "max_health": 516,
           "health_regen": 2.0500002,
-          "max_mana": 327,
-          "mana_regen": 1.3000001,
+          "max_mana": 291,
+          "mana_regen": 1.1500001,
           "abilities": [
             {
               "id": 5130,
@@ -80,6 +80,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "Shackleshot applies to all units and trees behind the target unit and grants Windranger bonus attack damage for each additional shackled unit and tree. Creeps and trees grant less bonus damage.",
                 ""
               ],
               "type": 0,
@@ -212,9 +214,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "windrunner_tangled",
+                    "values": [
+                      0
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -231,6 +235,69 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_damage_per_hero",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE PER HERO:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "windrunner_tangled",
+                    "values": [
+                      12,
+                      20,
+                      28,
+                      36
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_damage_per_other_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CREEP/TREE DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "windrunner_tangled",
+                    "values": [
+                      50
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_buff_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE BUFF DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "windrunner_tangled",
+                    "values": [
+                      6
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -395,7 +462,7 @@
               "id": 5131,
               "name": "windrunner_powershot",
               "name_loc": "Powershot",
-              "desc_loc": "CHANNELED - Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which slows and deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage and slow power is reduced.",
+              "desc_loc": "CHANNELED - Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages and slows enemies' movement speed along its path. For each enemy that Powershot hits, its damage and slow is reduced.",
               "lore_loc": "During her early years of training, Lyralei learned to fire powerful arrows that cleaved even trees to reach their targets.",
               "notes_loc": [
                 "Powershot will destroy trees in its area of effect."
@@ -405,7 +472,9 @@
               "facets_loc": [
                 "",
                 "",
-                ""
+                "",
+                "",
+                "Enemy heroes hit are executed if below a health threshold. The execute threshold is based on the arrow's power."
               ],
               "type": 0,
               "behavior": "144",
@@ -441,7 +510,10 @@
                 0
               ],
               "mana_costs": [
-                100
+                90,
+                100,
+                110,
+                120
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -476,13 +548,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "SLOW:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_windranger_powershot_slow",
-                      "value": 20,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -499,7 +565,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_windranger_powershot_slow",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -635,6 +707,50 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "min_execute_threshold",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MIN EXECUTE THRESHOLD:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "windrunner_killshot",
+                    "values": [
+                      5
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_execute_threshold",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX EXECUTE THRESHOLD:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "windrunner_killshot",
+                    "values": [
+                      9,
+                      10,
+                      11,
+                      12
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     2600
@@ -739,7 +855,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    100
+                    90,
+                    100,
+                    110,
+                    120
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -800,6 +919,8 @@
               "scepter_loc": "Windrun reduces physical damage taken by %physical_damage_pct%%%, and grants invisibility that is not broken by attacking or casting spells.",
               "facets_loc": [
                 "Windrun grants additional bonus movement speed to Windranger and nearby allies.",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1184,6 +1305,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1217,7 +1340,7 @@
                 0
               ],
               "mana_costs": [
-                100
+                125
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1378,7 +1501,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    100
+                    125
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1438,7 +1561,9 @@
               "facets_loc": [
                 "",
                 "",
-                "Focus Fire no longer requires a target, instead firing at random enemies within Windranger's attack range + %bonus_range%. Fires a fixed number of attacks per second, and can only hit the same enemy every 4 shots. Prioritizes Heroes."
+                "Focus Fire no longer requires a target, instead firing at random enemies within Windranger's attack range + %bonus_range%. Fires a fixed number of attacks per second, and can only hit the same enemy every 4 shots. Prioritizes Heroes.",
+                "",
+                ""
               ],
               "type": 1,
               "behavior": "134217736",
@@ -1858,6 +1983,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1903,7 +2030,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_windranger_9",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1920,7 +2053,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_windranger_9",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2085,13 +2224,15 @@
             {
               "id": 1195,
               "name": "special_bonus_unique_windranger_powershot_slow",
-              "name_loc": "+{s:bonus_slow}% Powershot Slow",
+              "name_loc": "+{s:bonus_slow_duration}s Powershot Slow Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -2285,13 +2426,15 @@
             {
               "id": 7890,
               "name": "special_bonus_unique_windranger_9",
-              "name_loc": "-{s:value}s Shackleshot Cooldown",
+              "name_loc": "+{s:bonus_min_movespeed} Easy Breezy Min/Max Movespeed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -2332,23 +2475,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2509,6 +2635,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -2728,6 +2856,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2926,6 +3056,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -3128,6 +3260,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3326,6 +3460,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -3528,7 +3664,9 @@
               "facets_loc": [
                 "",
                 "",
-                "Whirlwind Kills extend duration by {s:bonus_duration_increase_per_kill}s"
+                "Whirlwind Kills extend duration by {s:bonus_duration_increase_per_kill}s",
+                "",
+                ""
               ],
               "type": 2,
               "behavior": "2",

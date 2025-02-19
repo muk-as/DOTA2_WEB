@@ -12,26 +12,34 @@
           "npe_desc_loc": "Has strong but random damage output",
           "facets": [
             {
-              "color": 0,
-              "title_loc": "Phantasmagoria",
-              "description_loc": "All Chaos Knight Illusions are Strong Illusions and take less damage when near him.",
-              "name": "chaos_knight_strong_illusions",
-              "icon": "illusion",
-              "gradient_id": 1
-            },
-            {
               "color": 5,
               "title_loc": "Irrationality",
               "description_loc": "Reality Rift has equal chances of applying Break, Disarm, or Silence for {s:bonus_additional_debuff_duration_percent}% of the base debuff duration in addition to its normal effects.",
               "name": "chaos_knight_irrationality",
               "icon": "rng",
               "gradient_id": 0
+            },
+            {
+              "color": 1,
+              "title_loc": "Fundamental Forging",
+              "description_loc": "Chaos Knight can craft artifacts from the next tier when making a Neutral Item.",
+              "name": "chaos_knight_facet_fundamental_forging",
+              "icon": "item",
+              "gradient_id": 1
+            },
+            {
+              "color": 0,
+              "title_loc": "Cloven Chaos",
+              "description_loc": "Chaos Bolt splits in half upon striking its target, stunning one additional enemy and damaging another.",
+              "name": "chaos_knight_cloven_chaos",
+              "icon": "ricochet",
+              "gradient_id": 0
             }
           ],
           "str_base": 24,
           "str_gain": 3.1,
           "agi_base": 18,
-          "agi_gain": 1.4,
+          "agi_gain": 1.8,
           "int_base": 18,
           "int_gain": 1.2,
           "primary_attr": 0,
@@ -78,7 +86,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "",
+                "Chaos Bolt splits in half upon striking its target, stunning one additional enemy and damaging another within %bounce_range_pct%%% of the cast range. Prioritizes heroes. Always stuns when splitting to a single target.<br><br>Additional targets do not create Shard illusions."
               ],
               "type": 0,
               "behavior": "8",
@@ -90,7 +100,7 @@
               "dispellable": 1,
               "max_level": 4,
               "cast_ranges": [
-                500
+                600
               ],
               "cast_points": [
                 0.4,
@@ -287,9 +297,28 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "bounce_range_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "chaos_knight_cloven_chaos",
+                    "values": [
+                      60
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -460,7 +489,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Reality Rift has equal chances of applying Break, Disarm, or Silence for %additional_debuff_duration_percent%%% of the base debuff duration in addition to its normal effects."
+                "Reality Rift has equal chances of applying Break, Disarm, or Silence for %additional_debuff_duration_percent%%% of the base debuff duration in addition to its normal effects.",
+                "",
+                ""
               ],
               "type": 0,
               "behavior": "524296",
@@ -769,12 +800,14 @@
               "id": 5428,
               "name": "chaos_knight_chaos_strike",
               "name_loc": "Chaos Strike",
-              "desc_loc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Deals %creep_multiplier%x damage to creeps, but lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.",
+              "desc_loc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Lifesteal from creeps is reduced.",
               "lore_loc": "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -840,7 +873,7 @@
                 {
                   "name": "crit_min",
                   "values_float": [
-                    125
+                    120
                   ],
                   "is_percentage": true,
                   "heading_loc": "CRITICAL MIN:",
@@ -858,9 +891,9 @@
                   "name": "crit_max",
                   "values_float": [
                     140,
-                    175,
-                    210,
-                    245
+                    180,
+                    220,
+                    260
                   ],
                   "is_percentage": true,
                   "heading_loc": "CRITICAL MAX:",
@@ -903,24 +936,7 @@
                 {
                   "name": "creep_multiplier",
                   "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_lifesteal_reduction_pct",
-                  "values_float": [
-                    70
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1095,10 +1111,12 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "4398046511106",
+              "behavior": "13194139533314",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1330,6 +1348,8 @@
               "shard_loc": "",
               "scepter_loc": "Creates an illusion of allied heroes globally. Creates an additional illusion for Chaos Knight as well.",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1716,6 +1736,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1914,6 +1936,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2114,6 +2138,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2312,6 +2338,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2529,6 +2557,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2727,6 +2757,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2927,6 +2959,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3126,6 +3160,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3317,27 +3353,27 @@
           ],
           "facet_abilities": [
             {
+              "abilities": []
+            },
+            {
               "abilities": [
                 {
-                  "id": 1352,
-                  "name": "chaos_knight_phantasmagoria",
-                  "name_loc": "Phantasmagoria",
-                  "desc_loc": "All Chaos Knight Illusions are Strong Illusions and take less damage when near him.",
+                  "id": 1556,
+                  "name": "chaos_knight_fundamental_forging",
+                  "name_loc": "Fundamental Forging",
+                  "desc_loc": "Whenever Chaos Knight crafts a Neutral Item, %trinket_options_next% of his Artifact options will be from the next tier and %trinket_options_current% will be from the current tier. He is not guaranteed to be able to keep an Artifact between tiers. When crafting at the highest tier, all options are for that tier.",
                   "lore_loc": "",
-                  "notes_loc": [
-                    "All illusions created by Chaos Knight or of Chaos Knight are Strong Illusions. Chaos Knight's Illusions within %aura_radius% radius have %damage_reduction_pct%%% damage reduction.",
-                    "Also applies to Aghanim's Scepter Phantasm Illusions.",
-                    "Strong Illusions are not instantly killed by spells.",
-                    "Break disables the passive Damage Reduction aura."
-                  ],
+                  "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
                     "",
+                    "",
+                    "",
                     ""
                   ],
                   "type": 0,
-                  "behavior": "13194139533315",
+                  "behavior": "4398046511107",
                   "target_team": 0,
                   "target_type": 0,
                   "flags": 0,
@@ -3373,9 +3409,9 @@
                   "health_costs": [],
                   "special_values": [
                     {
-                      "name": "aura_radius",
+                      "name": "trinket_options_current",
                       "values_float": [
-                        1200
+                        2
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3390,9 +3426,9 @@
                       "required_facet": ""
                     },
                     {
-                      "name": "damage_reduction_pct",
+                      "name": "trinket_options_next",
                       "values_float": [
-                        20
+                        2
                       ],
                       "is_percentage": false,
                       "heading_loc": "",

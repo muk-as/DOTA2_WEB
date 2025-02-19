@@ -26,6 +26,14 @@
               "name": "alchemist_mixologist",
               "icon": "cooldown",
               "gradient_id": 2
+            },
+            {
+              "color": 2,
+              "title_loc": "Dividends",
+              "description_loc": "Alchemist gains +{s:bonus_gpm_increase_per_stack} GPM for each Aghanim's Scepter he has granted to allies.",
+              "name": "alchemist_dividends",
+              "icon": "aghs",
+              "gradient_id": 2
             }
           ],
           "str_base": 23,
@@ -75,6 +83,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -122,10 +131,10 @@
                 {
                   "name": "radius",
                   "values_float": [
+                    350,
                     400,
-                    475,
-                    550,
-                    625
+                    450,
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -415,7 +424,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "While Alchemist is affected by Chemical Rage, cooldown is reduced by %chemical_rage_cooldown_reduction_pct%%%."
+                "While Alchemist is affected by Chemical Rage, cooldown is reduced by %chemical_rage_cooldown_reduction_pct%%%.",
+                ""
               ],
               "type": 0,
               "behavior": "2052",
@@ -783,12 +793,13 @@
               "id": 1116,
               "name": "alchemist_corrosive_weaponry",
               "name_loc": "Corrosive Weaponry",
-              "desc_loc": "Alchemist coats his weapons with an acid that applies a stacking slow and base attack damage reduction to enemies hit.",
+              "desc_loc": "Alchemist coats his weapons and empowers his spells with an acid that applies a stacking slow and base attack damage reduction to enemies hit.\n\nAttacks apply %stacks_per_attack% stacks. Unstable Concoction applies %one_tooltip% stack per second of brew time.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -831,10 +842,10 @@
                 {
                   "name": "max_stacks",
                   "values_float": [
-                    4,
-                    6,
-                    8,
-                    10
+                    10,
+                    12,
+                    14,
+                    16
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX STACKS:",
@@ -868,10 +879,10 @@
                 {
                   "name": "slow_per_stack",
                   "values_float": [
-                    4,
-                    5,
-                    6,
-                    7
+                    1.5,
+                    2,
+                    2.5,
+                    3
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SLOW PER STACK:",
@@ -888,13 +899,47 @@
                 {
                   "name": "attack_damage_per_stack",
                   "values_float": [
-                    3,
-                    4,
-                    5,
-                    6
+                    1.5,
+                    2,
+                    2.5,
+                    3
                   ],
                   "is_percentage": true,
                   "heading_loc": "BASE ATTACK DAMAGE REDUCTION PER STACK:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "stacks_per_attack",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "one_tooltip",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1066,7 +1111,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "While Alchemist is affected by Chemical Rage, cooldown is reduced by %chemical_rage_cooldown_reduction_pct%%%."
+                "While Alchemist is affected by Chemical Rage, cooldown is reduced by %chemical_rage_cooldown_reduction_pct%%%.",
+                ""
               ],
               "type": 0,
               "behavior": "8589934601",
@@ -1366,10 +1412,11 @@
               "lore_loc": "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. Alchemist will gain bonus damage and spell amplification for each gifted Scepter.",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Alchemist gains %gpm_increase_per_stack% GPM for each Aghanim's Scepter he has granted to allies."
               ],
               "type": 0,
               "behavior": "8796093022210",
@@ -1535,6 +1582,59 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "scepter_bonus_damage",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE PER SCEPTER:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_spell_amp",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SPELL AMP PER SCEPTER:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "gpm_increase_per_stack",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "alchemist_dividends",
+                    "values": [
+                      75
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     0
@@ -1672,7 +1772,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1694,8 +1794,9 @@
                 "Has a %transformation_time% second transformation time, which can be used to dodge projectiles and stuns."
               ],
               "shard_loc": "",
-              "scepter_loc": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. Alchemist will gain bonus damage and spell amplification for each gifted Scepter.",
+              "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1858,9 +1959,9 @@
                 {
                   "name": "bonus_movespeed",
                   "values_float": [
+                    20,
                     30,
-                    45,
-                    60
+                    40
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS MOVE SPEED:",
@@ -1871,57 +1972,6 @@
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_gold_damage",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_bonus_damage",
-                  "values_float": [
-                    25
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS DAMAGE PER SCEPTER:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_spell_amp",
-                  "values_float": [
-                    5
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SPELL AMP PER SCEPTER:",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2071,7 +2121,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -2095,6 +2145,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2295,6 +2346,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2493,6 +2545,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2693,6 +2746,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2891,6 +2945,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3091,6 +3146,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3289,6 +3345,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3489,6 +3546,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3679,6 +3737,9 @@
             }
           ],
           "facet_abilities": [
+            {
+              "abilities": []
+            },
             {
               "abilities": []
             },

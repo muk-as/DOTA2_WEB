@@ -13,16 +13,16 @@
           "facets": [
             {
               "color": 0,
-              "title_loc": "Romp n' Stomp",
-              "description_loc": "Trample grants bonus movement speed to Primal Beast and his allies when activated.",
-              "name": "primal_beast_romp_n_stomp",
-              "icon": "speed",
+              "title_loc": "Provoke the Beast",
+              "description_loc": "Gain {s:bonus_stack_count_increase_on_disable} Uproar stacks upon being disabled by an enemy hero.",
+              "name": "primal_beast_provoke_the_beast",
+              "icon": "broken_chain",
               "gradient_id": 0
             },
             {
               "color": 1,
               "title_loc": "Ferocity",
-              "description_loc": "Each Pulverize hit increases the AoE bonuses of Primal Beast's abilities and items.",
+              "description_loc": "Each Pulverize slam increase Primal Beast's AoE.",
               "name": "primal_beast_ferocity",
               "icon": "area_of_effect",
               "gradient_id": 3
@@ -74,6 +74,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -496,6 +497,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Trample grants bonus movement speed to Primal Beast and his allies when activated.",
+                "",
                 ""
               ],
               "type": 0,
@@ -914,16 +916,17 @@
               "id": 995,
               "name": "primal_beast_uproar",
               "name_loc": "Uproar",
-              "desc_loc": "The Beast's temper passively provides bonus damage. Additionally, for every instance of %damage_limit% damage or more Primal Beast takes from enemy heroes, he accumulates stacks of Uproar. \n\n When activated, Primal Beast releases a roar that slows surrounding enemies and grants the Beast additional attack damage and armor for %roar_duration% seconds based on his current stacks of Uproar.",
+              "desc_loc": "The Beast's temper causes every instance of %damage_limit% hero damage or more to grant a stack of Uproar. \n\n When activated, Primal Beast releases a roar that slows surrounding enemies and grants the Beast additional attack damage and armor for %roar_duration% seconds based on his current stacks of Uproar.",
               "lore_loc": "Already draped in a broken patchwork of barding and chains upon appearing in the mistwoods, the Beast tolerates no further attempts at subjugation.",
               "notes_loc": [
-                "Break disables the passive bonus attack damage.",
+                "Primal Beast cannot gain Uproar stacks from self damage.",
                 "Break disables the gaining of new stacks."
               ],
               "shard_loc": "",
               "scepter_loc": "When Primal Beast activates Uproar, he releases %projectile_waves% waves of %projectiles_per_stack% projectiles per stack of uproar each in a circle around him. Projectiles deal damage and Break enemies hit. After a short delay, each projectile splinters in two.",
               "facets_loc": [
                 "",
+                "Gain %bonus_stack_count_increase_on_disable% Uproar stacks upon being stunned, hexed, taunted, feared, or rooted by an enemy hero.",
                 ""
               ],
               "type": 0,
@@ -963,26 +966,6 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_damage",
-                  "values_float": [
-                    5,
-                    10,
-                    15,
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BASE BONUS DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "bonus_damage_per_stack",
                   "values_float": [
                     10,
@@ -1015,6 +998,25 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "stack_count_increase_on_disable",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "primal_beast_provoke_the_beast",
+                    "values": [
+                      2
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1056,10 +1058,10 @@
                 {
                   "name": "move_slow_per_stack",
                   "values_float": [
-                    5,
+                    4,
                     6,
-                    7,
-                    8
+                    8,
+                    10
                   ],
                   "is_percentage": true,
                   "heading_loc": "SLOW PER STACK:",
@@ -1555,6 +1557,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1907,7 +1910,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Each hit increases increased the area of effect of all abilities and items by %bonus_aoe_pct_per_hit%%%. Buff lasts %bonus_aoe_duration% seconds."
+                "",
+                "Each Pulverize slam increase Primal Beast's AoE by %bonus_aoe_pct_per_hit%%% for %bonus_aoe_duration%s. The AoE bonus is granted at the beginning of each slam. The buff stacks and affects abilities and items."
               ],
               "type": 1,
               "behavior": "168",
@@ -2064,7 +2068,7 @@
                   "facet_bonus": {
                     "name": "primal_beast_ferocity",
                     "values": [
-                      10
+                      20
                     ],
                     "operation": 0
                   },
@@ -2083,7 +2087,7 @@
                   "facet_bonus": {
                     "name": "primal_beast_ferocity",
                     "values": [
-                      20
+                      25
                     ],
                     "operation": 0
                   },
@@ -2311,6 +2315,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -2519,15 +2524,16 @@
           ],
           "talents": [
             {
-              "id": 7741,
-              "name": "special_bonus_unique_primal_beast_onslaught_damage",
-              "name_loc": "+{s:bonus_knockback_damage} Onslaught Damage",
+              "id": 5960,
+              "name": "special_bonus_attack_damage_20",
+              "name_loc": "+{s:value} Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2567,6 +2573,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2727,6 +2750,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2927,6 +2951,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3125,6 +3150,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3325,6 +3351,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3523,6 +3550,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3723,6 +3751,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3921,6 +3950,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],

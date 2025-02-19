@@ -12,14 +12,6 @@
           "npe_desc_loc": "Takes reduced damage when facing away from enemies",
           "facets": [
             {
-              "color": 1,
-              "title_loc": "Berserk",
-              "description_loc": "Warpath grants scaling Attack Speed instead of Damage.",
-              "name": "bristleback_berserk",
-              "icon": "damage",
-              "gradient_id": 0
-            },
-            {
               "color": 2,
               "title_loc": "Snot Rocket",
               "description_loc": "Bristleback now fires Viscous Nasal Goo instead of Quills when damaged. Viscous Nasal Goo effects are stronger.",
@@ -30,7 +22,7 @@
             {
               "color": 0,
               "title_loc": "Seeing Red",
-              "description_loc": "Warpath can be activated to gain extra bonuses. While Seeing Red, Bristleback's vision is limited and he does not share vision with his allies.",
+              "description_loc": "Warpath can be activated to gain extra bonuses. While Seeing Red, Bristleback's vision is limited and he does not receive vision from his allies.",
               "name": "bristleback_seeing_red",
               "icon": "no_vision",
               "gradient_id": 0
@@ -970,7 +962,7 @@
                 {
                   "name": "activation_manacost",
                   "values_float": [
-                    100
+                    125
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1349,7 +1341,7 @@
                 0
               ],
               "mana_costs": [
-                40
+                60
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1527,7 +1519,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    40
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1589,7 +1581,7 @@
               "facets_loc": [
                 "Warpath grants scaling Attack Speed instead of Damage.",
                 "",
-                "Warpath can be activated to grant bonus attack damage and movement speed for a short duration. While Seeing Red, Bristleback's vision is reduced to a narrow cone and he does not share vision with his allies."
+                "Warpath can be activated to grant bonus attack damage and movement speed for a short duration. While Seeing Red, Bristleback's vision is reduced to a narrow cone and he does not receive vision from his allies."
               ],
               "type": 1,
               "behavior": "2",
@@ -1624,9 +1616,7 @@
                 0
               ],
               "mana_costs": [
-                55,
-                65,
-                75
+                0
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1685,8 +1675,8 @@
                   "name": "move_speed_per_stack",
                   "values_float": [
                     2,
-                    3,
-                    4
+                    2.5,
+                    3
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT PER STACK:",
@@ -1923,9 +1913,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    55,
-                    65,
-                    75
+                    0,
+                    0,
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1933,8 +1923,12 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "bristleback_seeing_red",
+                    "values": [
+                      55,
+                      65,
+                      75
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -3876,9 +3870,6 @@
             }
           ],
           "facet_abilities": [
-            {
-              "abilities": []
-            },
             {
               "abilities": []
             },

@@ -12,20 +12,28 @@
           "npe_desc_loc": "Dashes around pummeling enemies with rapid attacks",
           "facets": [
             {
-              "color": 5,
-              "title_loc": "Sidekick",
-              "description_loc": "Marci can protect an ally, granting them shared lifesteal and damage. Effect is stronger if she's close to the ally.",
-              "name": "marci_sidekick",
-              "icon": "healing",
-              "gradient_id": 3
+              "color": 3,
+              "title_loc": "Buddy System",
+              "description_loc": "While bodyguarded, Marci and her partner share a portion of health healed by this ability with each other.",
+              "name": "marci_buddy_system",
+              "icon": "twin_hearts",
+              "gradient_id": 1
             },
             {
-              "color": 3,
-              "title_loc": "Bodyguard",
-              "description_loc": "Marci can protect an ally, countering attacks directed towards them if she's in range of the enemy.",
-              "name": "marci_bodyguard",
+              "color": 4,
+              "title_loc": "Pick-me-up",
+              "description_loc": "Rebound can be alt-cast to bring Marci's ally with her after the jump.",
+              "name": "marci_pickmeup",
               "icon": "ricochet",
-              "gradient_id": 1
+              "gradient_id": 0
+            },
+            {
+              "color": 1,
+              "title_loc": "Fleeting Fury",
+              "description_loc": "Upon landing with Rebound, Marci gains a Fury combo. ",
+              "name": "marci_fleeting_fury",
+              "icon": "fist",
+              "gradient_id": 0
             }
           ],
           "str_base": 23,
@@ -33,7 +41,7 @@
           "agi_base": 20,
           "agi_gain": 1.8,
           "int_base": 19,
-          "int_gain": 1.5,
+          "int_gain": 1.9,
           "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 1,
@@ -48,8 +56,8 @@
             0,
             2
           ],
-          "damage_min": 7,
-          "damage_max": 13,
+          "damage_min": 29,
+          "damage_max": 33,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 0,
@@ -74,6 +82,9 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -225,7 +236,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_marci_dispose_slow",
+                      "value": 1.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -445,11 +462,14 @@
                 "Marci's initial run to her target unit can be disjointed.",
                 "Does not trigger spell reflect."
               ],
-              "shard_loc": "Decreases the cooldown of Rebound, it can be cast on enemies, and causes Marci to also get the speed boost when she casts it.",
+              "shard_loc": "Increases damage. Rebound can be cast on enemies, and causes Marci to also get the speed boost when she casts it.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "",
+                "When Rebound is set to alt-cast, Marci brings the target ally with her to her final destination. The ally deals %ally_impact_damage_pct%%% of the Rebound damage to the enemies around it's destination.\n\n Will not apply to Rooted or Leashed allies.",
+                "If Marci has Unleash leveled, after landing from Rebound, Marci gains a %postjump_flurry_charges% strike Fury combo. If Unleash is already active, its duration is instead extended by %postjump_unleash_duration%s.\n\n If upgraded by Aghanim's Scepter, the resulting Unleashed pulse will not silence enemies."
               ],
               "type": 0,
               "behavior": "1074528264",
@@ -488,10 +508,10 @@
                 0
               ],
               "mana_costs": [
-                70,
-                80,
+                75,
                 90,
-                100
+                105,
+                120
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -563,7 +583,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_marci_rebound_radius",
+                      "value": 75,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -584,7 +610,9 @@
                   "is_percentage": false,
                   "heading_loc": "IMPACT DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    20
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -758,10 +786,10 @@
                 {
                   "name": "ally_movespeed_pct",
                   "values_float": [
+                    15,
+                    20,
                     25,
-                    30,
-                    35,
-                    40
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -848,6 +876,118 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "ally_arc_offset",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "marci_pickmeup",
+                    "values": [
+                      150
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "marci_pickmeup"
+                },
+                {
+                  "name": "ally_impact_damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "marci_pickmeup",
+                    "values": [
+                      25
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "marci_pickmeup"
+                },
+                {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "marci_pickmeup",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "postjump_unleash_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "marci_fleeting_fury",
+                    "values": [
+                      3
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "marci_fleeting_fury"
+                },
+                {
+                  "name": "postjump_flurry_charges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "marci_fleeting_fury",
+                    "values": [
+                      3
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "marci_fleeting_fury"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -963,10 +1103,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    70,
-                    80,
+                    75,
                     90,
-                    100
+                    105,
+                    120
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -991,9 +1131,7 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    3
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1017,20 +1155,387 @@
               "item_quality": 0
             },
             {
-              "id": 1428,
-              "name": "marci_special_delivery",
-              "name_loc": "Special Delivery",
-              "desc_loc": "All allied couriers gain %bonus_levels% bonus levels and %bonus_hp_tooltip% bonus health.",
+              "id": 1427,
+              "name": "marci_bodyguard",
+              "name_loc": "Bodyguard",
+              "desc_loc": "Passively grants Marci lifesteal and bonus attack damage.\n\nMarci protects an allied hero. For %bodyguard_duration%s, the ally also gains %max_partner_penalty%%% of lifesteal and attack damage bonus. Whenever the ally attacks or is attacked by an enemy, Marci counter-attacks that target if they are within her attack range plus %bodyguard_attack_range_buffer%.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Marci cannot cast Bodyguard on herself.",
+                "Lifesteal effectiveness gets a %creep_lifesteal_reduction_pct%%% penalty against creeps.",
+                "Marci's counter-attack has a %counter_cooldown%s cooldown."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "While bodyguarded, Marci and her partner share %shared_healing_percent%%% of health healed by this ability with each other.",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "4398046511107",
+              "behavior": "8",
+              "target_team": 1,
+              "target_type": 1,
+              "flags": 0,
+              "damage": 1,
+              "immunity": 1,
+              "dispellable": 3,
+              "max_level": 4,
+              "cast_ranges": [
+                1000
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                20
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                50
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "bodyguard_duration",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "lifesteal_pct",
+                  "values_float": [
+                    12,
+                    18,
+                    24,
+                    30
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "LIFESTEAL:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_marci_guardian_lifesteal",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_damage",
+                  "values_float": [
+                    12,
+                    18,
+                    24,
+                    30
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "BONUS BASE ATTACK DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_marci_guardian_damage",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "creep_lifesteal_reduction_pct",
+                  "values_float": [
+                    40
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bodyguard_attack_range_buffer",
+                  "values_float": [
+                    125
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_partner_penalty",
+                  "values_float": [
+                    75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "counter_cooldown",
+                  "values_float": [
+                    0.45
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shared_healing_percent",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "marci_buddy_system",
+                    "values": [
+                      100
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "marci_buddy_system"
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    1000
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1428,
+              "name": "marci_special_delivery",
+              "name_loc": "Special Delivery",
+              "desc_loc": "Marci whistles to instantly summon her courier to her.<br><br>Passively grants all allied couriers %bonus_levels% bonus levels and %bonus_hp_tooltip% bonus health.",
+              "lore_loc": "",
+              "notes_loc": [
+                "Special Delivery whistle has a cast point of %abilitycastpoint% second."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8589934660",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1042,13 +1547,13 @@
                 0
               ],
               "cast_points": [
-                0
+                1
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                0
+                240
               ],
               "durations": [
                 0
@@ -1187,7 +1692,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1255,7 +1760,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    0
+                    240
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1296,6 +1801,9 @@
               "shard_loc": "",
               "scepter_loc": "Reduces Unleash cooldown by %scepter_cooldown_reduction% seconds and causes Unleash to apply a basic dispel on Marci. While Unleash is Active, all of Marci's abilities unleash pulses when cast. All of Marci's unleash pulses will silence units for %pulse_silence_duration% seconds.<br><br>DISPEL TYPE: Basic Dispel",
               "facets_loc": [
+                "",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1805,15 +2313,18 @@
           ],
           "talents": [
             {
-              "id": 8243,
-              "name": "special_bonus_unique_marci_lunge_range",
-              "name_loc": "+{s:bonus_max_jump_distance} Rebound Cast/Jump Range",
+              "id": 1572,
+              "name": "special_bonus_unique_marci_dispose_slow",
+              "name_loc": "+{s:bonus_debuff_duration}s Dispose Slow Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2004,15 +2515,18 @@
               "item_quality": 0
             },
             {
-              "id": 1429,
-              "name": "special_bonus_unique_marci_guardian_lifesteal",
-              "name_loc": "+{s:bonus_lifesteal_pct}% Sidekick Lifesteal",
+              "id": 1573,
+              "name": "special_bonus_unique_marci_rebound_radius",
+              "name_loc": "+{s:bonus_landing_radius} Rebound Landing Radius",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2052,23 +2566,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2229,6 +2726,9 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2429,6 +2929,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2627,6 +3130,9 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2827,6 +3333,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3026,6 +3535,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3217,7 +3729,7 @@
             {
               "id": 1431,
               "name": "special_bonus_unique_marci_guardian_damage",
-              "name_loc": "+{s:bonus_bonus_damage}% Sidekick Damage",
+              "name_loc": "+{s:bonus_bonus_damage}% Bodyguard Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3225,7 +3737,10 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "+{s:bonus_bonus_damage}% Bodyguard Damage"
+                "+{s:bonus_bonus_damage}% Bodyguard Damage",
+                "",
+                "",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -3416,683 +3931,13 @@
           ],
           "facet_abilities": [
             {
-              "abilities": [
-                {
-                  "id": 1426,
-                  "name": "marci_guardian",
-                  "name_loc": "Sidekick",
-                  "desc_loc": "Marci's loyalty helps ensure survival, imbuing a chosen allied hero and herself with shared lifesteal and attack damage. If Marci and her ally are further apart from each other than %max_partner_distance%, the ally receives no bonuses and Marci only gets %max_partner_penalty%%% until they get close again. Marci's lifesteal also heals her ally and the ally lifesteal also heals Marci.",
-                  "lore_loc": "Marci learned at a young age that the best asset in a scrap is a steady companion.",
-                  "notes_loc": [
-                    "Marci cannot cast Sidekick on herself.",
-                    "Lifesteal effectiveness gets a %creep_lifesteal_reduction_pct%%% penalty against creeps."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "8",
-                  "target_team": 1,
-                  "target_type": 1,
-                  "flags": 0,
-                  "damage": 1,
-                  "immunity": 1,
-                  "dispellable": 3,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    1000
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    20
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    45,
-                    40,
-                    35,
-                    30
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "lifesteal_pct",
-                      "values_float": [
-                        12,
-                        18,
-                        24,
-                        30
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "LIFESTEAL:",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_marci_guardian_lifesteal",
-                          "value": 10,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "bonus_damage",
-                      "values_float": [
-                        10,
-                        15,
-                        20,
-                        25
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "BONUS BASE ATTACK DAMAGE:",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_marci_guardian_damage",
-                          "value": 20,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "bonus_attack_range",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "max_partner_distance",
-                      "values_float": [
-                        1750
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "max_partner_penalty",
-                      "values_float": [
-                        50
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "creep_lifesteal_reduction_pct",
-                      "values_float": [
-                        40
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastRange",
-                      "values_float": [
-                        1000
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChannelTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityDuration",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCharges",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChargeRestoreTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        45,
-                        40,
-                        35,
-                        30
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        20
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
+              "abilities": []
             },
             {
-              "abilities": [
-                {
-                  "id": 1427,
-                  "name": "marci_bodyguard",
-                  "name_loc": "Bodyguard",
-                  "desc_loc": "Marci protects an allied hero. For %bodyguard_duration%s, whenever the ally attacks or is attacked by an enemy, Marci counter-attacks that target if they are within her attack range plus %bodyguard_attack_range_buffer%. The ally also gains bonus armor and healing from Marci's lifesteal for the duration. Passively grants Marci lifesteal and bonus attack damage.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Marci cannot cast Bodyguard on herself.",
-                    "Lifesteal effectiveness gets a %creep_lifesteal_reduction_pct%%% penalty against creeps.",
-                    "Marci's counter-attack has a %counter_cooldown%s cooldown."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "8",
-                  "target_team": 1,
-                  "target_type": 1,
-                  "flags": 0,
-                  "damage": 1,
-                  "immunity": 1,
-                  "dispellable": 3,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    1000
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    20
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    50
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "bodyguard_duration",
-                      "values_float": [
-                        6
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "lifesteal_pct",
-                      "values_float": [
-                        12,
-                        18,
-                        24,
-                        30
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "LIFESTEAL:",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_marci_guardian_lifesteal",
-                          "value": 10,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "bonus_damage",
-                      "values_float": [
-                        12,
-                        18,
-                        24,
-                        30
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "BONUS BASE ATTACK DAMAGE:",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_marci_guardian_damage",
-                          "value": 20,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "creep_lifesteal_reduction_pct",
-                      "values_float": [
-                        40
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "bodyguard_attack_range_buffer",
-                      "values_float": [
-                        125
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "bonus_armor",
-                      "values_float": [
-                        4,
-                        8,
-                        12,
-                        16
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "BONUS ARMOR:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "counter_cooldown",
-                      "values_float": [
-                        0.45
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastRange",
-                      "values_float": [
-                        1000
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChannelTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityDuration",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCharges",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChargeRestoreTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        50
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        20
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
+              "abilities": []
+            },
+            {
+              "abilities": []
             }
           ]
         }

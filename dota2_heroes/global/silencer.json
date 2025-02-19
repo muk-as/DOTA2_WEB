@@ -68,11 +68,10 @@
               "id": 5377,
               "name": "silencer_curse_of_the_silent",
               "name_loc": "Arcane Curse",
-              "desc_loc": "Curses the target area, causing enemy heroes to take damage over time and slowing their movement speed. If a target casts a spell, they are silenced for a short period. The duration is paused as long as the target is silenced.",
+              "desc_loc": "Curses the target area, dealing damage and causing enemy heroes to take damage over time and slowing their movement speed. Silenced enemies take %penalty_multiplier%x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The duration is paused as long as the target is silenced.",
               "lore_loc": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
               "notes_loc": [
-                "Affects creeps.",
-                "First instance of damage is done immediately."
+                "Affects creeps."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -135,13 +134,27 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_silencer",
-                      "value": 15,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "application_damage",
+                  "values_float": [
+                    20,
+                    40,
+                    60,
+                    80
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "INITIAL DAMAGE:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -179,29 +192,6 @@
                     {
                       "name": "special_bonus_unique_silencer_arcane_curse_duration",
                       "value": 2,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "silence_duration",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SILENCE DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_silencer_arcane_curse_duration",
-                      "value": 1,
                       "operation": 0
                     }
                   ],
@@ -253,6 +243,71 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "penalty_duration",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "PENALTY DURATION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_silencer_arcane_curse_duration",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "penalty_multiplier",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SILENCED MULTIPLIER:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_silencer",
+                      "value": 0.5,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "duration_percent_per_stolen_int",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -423,12 +478,9 @@
               "id": 5378,
               "name": "silencer_glaives_of_wisdom",
               "name_loc": "Glaives of Wisdom",
-              "desc_loc": "Silencer enchants his glaives with his wisdom, stealing his target's Intelligence with each hit and dealing additional damage based on his Intelligence. After %stacks_for_silence% attacks on the same target, that enemy will be silenced for %silence_duration% seconds.",
+              "desc_loc": "Silencer enchants his glaives with his wisdom, stealing his target's Intelligence with each hit and dealing additional damage based on his Intelligence.",
               "lore_loc": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat.",
-              "notes_loc": [
-                "Stacks reset after %debuff_linger_duration% seconds.",
-                "Stacks cannot be gained for the duration of Glaives of Wisdom's Silence."
-              ],
+              "notes_loc": [],
               "shard_loc": "Increases Stolen Intelligence per hit and steal duration.",
               "scepter_loc": "",
               "facets_loc": [
@@ -480,9 +532,9 @@
                 {
                   "name": "intellect_damage_pct",
                   "values_float": [
-                    20,
-                    40,
-                    60,
+                    35,
+                    50,
+                    65,
                     80
                   ],
                   "is_percentage": true,
@@ -596,7 +648,7 @@
                 {
                   "name": "stacks_for_silence",
                   "values_float": [
-                    4
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -804,9 +856,11 @@
               "id": 5379,
               "name": "silencer_last_word",
               "name_loc": "Last Word",
-              "desc_loc": "Enemies within %radius% range of Silencer are slowed and damaged every second for each Silence they have on them.",
+              "desc_loc": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
               "lore_loc": "Nortrom ensures that spells uttered by his opponents will be their last.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Channeling abilities will trigger this effect once the caster finishes its channel."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -814,8 +868,8 @@
                 ""
               ],
               "type": 0,
-              "behavior": "2",
-              "target_team": 0,
+              "behavior": "8",
+              "target_team": 2,
               "target_type": 19,
               "flags": 0,
               "damage": 2,
@@ -823,16 +877,19 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                0
+                900
               ],
               "cast_points": [
-                0
+                0.3
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                0
+                22,
+                18,
+                14,
+                10
               ],
               "durations": [
                 0
@@ -844,28 +901,25 @@
                 0
               ],
               "mana_costs": [
-                0
+                100,
+                105,
+                110,
+                115
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage_per_silence",
+                  "name": "damage",
                   "values_float": [
-                    30,
-                    40,
-                    50,
-                    60
+                    120,
+                    160,
+                    200,
+                    240
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE PER SILENCE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_silencer_4",
-                      "value": 35,
-                      "operation": 0
-                    }
-                  ],
+                  "heading_loc": "BASE DAMAGE:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -876,22 +930,53 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "slow_per_silence",
+                  "name": "int_multiplier",
                   "values_float": [
-                    6,
-                    9,
-                    12,
-                    15
+                    1,
+                    1.5,
+                    2,
+                    2.5
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "SLOW PER SILENCE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_silencer_4",
-                      "value": 5,
-                      "operation": 0
-                    }
+                  "is_percentage": false,
+                  "heading_loc": "INT DIFF MULTIPLIER:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "debuff_duration",
+                  "values_float": [
+                    4
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "ENEMY CAST TIMER:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "duration",
+                  "values_float": [
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SILENCE DURATION:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -904,11 +989,17 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    1200
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
+                  "heading_loc": "AOE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_silencer_4",
+                      "value": 250,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -921,7 +1012,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    0
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -972,7 +1063,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0
+                    0.3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1023,7 +1114,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    0
+                    100,
+                    105,
+                    110,
+                    115
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1040,7 +1134,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    0
+                    22,
+                    18,
+                    14,
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1072,12 +1169,12 @@
               "id": 1335,
               "name": "silencer_brain_drain",
               "name_loc": "Brain Drain",
-              "desc_loc": "If Silencer kills an enemy hero, he permanently steals %permanent_int_steal_amount% Intelligence.",
+              "desc_loc": "If Silencer kills an enemy hero, he permanently steals Intelligence.",
               "lore_loc": "",
               "notes_loc": [
                 "To permanently steal Intelligence, Silencer doesn't need to land the killing blow, as long as the enemy hero is killed within %permanent_int_steal_range% range of Silencer or was debuffed by Silencer at the time of death."
               ],
-              "shard_loc": "Increases the Intelligence stolen per kill to %permanent_int_steal_amount%.",
+              "shard_loc": "Increases the Intelligence stolen per kill.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1142,7 +1239,7 @@
                     1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "PERMANENT INT STEAL:",
                   "bonuses": [],
                   "values_shard": [
                     2
@@ -1341,9 +1438,7 @@
                 0
               ],
               "cooldowns": [
-                130,
-                115,
-                100
+                120
               ],
               "durations": [
                 4.5,
@@ -1576,9 +1671,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    130,
-                    115,
-                    100
+                    120
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1611,7 +1704,7 @@
             {
               "id": 6184,
               "name": "special_bonus_unique_silencer",
-              "name_loc": "+{s:bonus_damage} Arcane Curse Damage",
+              "name_loc": "+{s:bonus_penalty_multiplier} Arcane Curse Penalty Multiplier",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2242,7 +2335,7 @@
             {
               "id": 1467,
               "name": "special_bonus_unique_silencer_arcane_curse_duration",
-              "name_loc": "+{s:bonus_duration}/{s:bonus_silence_duration}s Arcane Curse Base/Silence Duration",
+              "name_loc": "+{s:bonus_duration}s/+{s:bonus_penalty_duration}s Arcane Curse Base/Penalty Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2640,7 +2733,7 @@
             {
               "id": 6880,
               "name": "special_bonus_unique_silencer_4",
-              "name_loc": "+{s:bonus_damage_per_silence}/{s:bonus_slow_per_silence}% Last Word Damage/Slow",
+              "name_loc": "{s:bonus_radius} AoE Last Word",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

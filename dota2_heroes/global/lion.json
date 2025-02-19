@@ -720,7 +720,7 @@
               "desc_loc": "CHANNELED - Channels magical energy, taking mana and slowing enemies over time. If the enemy has no mana remaining, the slow is increased by %movespeed_bonus_when_empty_pct%%%. <br><br> Can target allies to give them mana and movement speed at a %ally_pct%%% rate.",
               "lore_loc": "Lesser magi are nothing more than a source of magical restoration for the Demon Witch.",
               "notes_loc": [
-                "Instantly destroys illusions and prevents heroes from going invisible."
+                "Prevents heroes from going invisible."
               ],
               "shard_loc": "Causes Mana Drain to affect up to %shard_bonus_targets% additional enemies and increases break distance. Lion becomes Debuff Immune with %magic_resist%%% magic resistance while channeling.",
               "scepter_loc": "",
@@ -1184,7 +1184,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lion_11",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1201,7 +1207,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lion_11",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2060,9 +2072,9 @@
               "item_quality": 0
             },
             {
-              "id": 6600,
-              "name": "special_bonus_unique_lion_3",
-              "name_loc": "+{s:bonus_damage} Earth Spike Damage",
+              "id": 5918,
+              "name": "special_bonus_movement_speed_20",
+              "name_loc": "+{s:value} Movement Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2108,6 +2120,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2460,7 +2489,7 @@
             {
               "id": 781,
               "name": "special_bonus_unique_lion_11",
-              "name_loc": "+{s:value} Max Health Per Finger of Death Kill",
+              "name_loc": "+{s:bonus_spell_amp}% To Hell And Back Debuff/Spell Amp",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2506,23 +2535,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    70
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

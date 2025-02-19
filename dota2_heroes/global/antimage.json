@@ -14,7 +14,7 @@
             {
               "color": 4,
               "title_loc": "Magebane's Mirror",
-              "description_loc": "Counterspell and Counterspell Ally reflect spells back at their caster instead of just blocking.",
+              "description_loc": "Spells countered by Counterspell or Counterspell Ally will immediately burn a percentage of its mana cost from the enemy and deal damage based on the burned mana cost.",
               "name": "antimage_magebanes_mirror",
               "icon": "ricochet",
               "gradient_id": 1
@@ -685,7 +685,7 @@
               "id": 7314,
               "name": "antimage_counterspell",
               "name_loc": "Counterspell",
-              "desc_loc": "Passively grants magic resistance. Counterspell may be activated to create an anti-magic shell around Anti-Mage that blocks any targeted spells.",
+              "desc_loc": "Passively grants magic resistance. Counterspell may be activated to create an anti-magic shell around Anti-Mage that blocks and reflects any targeted spells.",
               "lore_loc": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation.",
               "notes_loc": [
                 "Break disables the passive magic resistance."
@@ -693,7 +693,7 @@
               "shard_loc": "Counterspell passively grants an aura that reduces enemy spell damage. The reduction is stronger in close range.",
               "scepter_loc": "",
               "facets_loc": [
-                "Counterspell reflects reflects amplified versions of spells back to their caster.",
+                "Counterspell burns a percentage of the countered spell's mana cost from its caster and does damage based on %damage_from_mana_drain_percent%%% of the burned mana cost, up to a maximum of %max_damage_from_mana_drain% damage per reflected spell.",
                 ""
               ],
               "type": 0,
@@ -741,10 +741,10 @@
                 {
                   "name": "magic_resistance",
                   "values_float": [
-                    15,
-                    25,
-                    35,
-                    45
+                    16,
+                    24,
+                    32,
+                    40
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAGIC RESISTANCE:",
@@ -833,9 +833,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "castable_while_disabled",
+                  "name": "does_reflect",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -850,25 +850,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "does_reflect",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "antimage_magebanes_mirror",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "reflected_spell_amp",
                   "values_float": [
                     0
@@ -879,13 +860,70 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "antimage_magebanes_mirror",
-                    "values": [
-                      40
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "mana_drain_percent",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MANA BURN PERCENTAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "antimage_magebanes_mirror",
+                    "values": [
+                      150,
+                      190,
+                      230,
+                      270
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "antimage_magebanes_mirror"
+                },
+                {
+                  "name": "damage_from_mana_drain_percent",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "antimage_magebanes_mirror"
+                },
+                {
+                  "name": "max_damage_from_mana_drain",
+                  "values_float": [
+                    400
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "antimage_magebanes_mirror"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1044,13 +1082,13 @@
               "id": 1143,
               "name": "antimage_counterspell_ally",
               "name_loc": "Counterspell Ally",
-              "desc_loc": "Counterspell Ally may be activated to create an anti-magic shell around an allied hero that blocks any targeted spells. Any time a spell is blocked by Counterspell or Counterspell Ally, an illusion of Anti-Mage will be created next to the enemy.",
+              "desc_loc": "Counterspell Ally may be activated to create an anti-magic shell around an allied hero that blocks and reflects any targeted spells. Any time a spell is blocked by Counterspell or Counterspell Ally, an illusion of Anti-Mage will be created next to the enemy.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Counterspell Ally reflects amplified versions of spells back to their caster.",
+                "Counterspell burns a percentage of the countered spell's mana cost from its caster and does damage based on %damage_from_mana_drain_percent%%% of the burned mana cost, up to a maximum of %max_damage_from_mana_drain% damage per reflected spell.",
                 ""
               ],
               "type": 0,
@@ -1161,9 +1199,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "castable_while_disabled",
+                  "name": "does_reflect",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1178,25 +1216,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "does_reflect",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "antimage_magebanes_mirror",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "reflected_spell_amp",
                   "values_float": [
                     0
@@ -1207,13 +1226,64 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "antimage_magebanes_mirror",
-                    "values": [
-                      40
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "mana_drain_percent",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MANA BURN PERCENTAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "antimage_magebanes_mirror",
+                    "values": [
+                      270
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "antimage_magebanes_mirror"
+                },
+                {
+                  "name": "damage_from_mana_drain_percent",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "antimage_magebanes_mirror"
+                },
+                {
+                  "name": "max_damage_from_mana_drain",
+                  "values_float": [
+                    400
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "antimage_magebanes_mirror"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -2705,7 +2775,7 @@
             {
               "id": 6800,
               "name": "special_bonus_unique_antimage_5",
-              "name_loc": "+{s:bonus_move_slow_max}% Persecutor Max Movement Slow",
+              "name_loc": "+{s:bonus_move_slow_min}%/{s:bonus_move_slow_max}% Persecutor Min/Max Movement Slow",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

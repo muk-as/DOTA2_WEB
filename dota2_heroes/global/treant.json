@@ -859,6 +859,9 @@
                 0
               ],
               "mana_costs": [
+                40,
+                45,
+                50,
                 55
               ],
               "gold_costs": [],
@@ -867,10 +870,10 @@
                 {
                   "name": "heal_per_second",
                   "values_float": [
-                    2,
                     3,
                     4,
-                    5
+                    5,
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "HEAL PER SECOND:",
@@ -1041,6 +1044,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
+                    40,
+                    45,
+                    50,
                     55
                   ],
                   "is_percentage": false,
@@ -1349,7 +1355,8 @@
               "desc_loc": "Provides Treant with Tree Walking whenever he hasn't taken damage for %cooldown_time% seconds. While nearby trees or affected by Nature's Grasp, Treant gains bonus movement speed.",
               "lore_loc": "The Protectors don't often come into vision; their natural state being nestled within their leafy brethren.",
               "notes_loc": [
-                "While affected by Nature's Guise, Treant can move unobstructed through other trees."
+                "While affected by Nature's Guise, Treant can move unobstructed through other trees.",
+                "With Aghanim's Shard, invisibility is broken upon attacking. Using abilities and items will not break invisibility."
               ],
               "shard_loc": "Causes Treant to become invisible with Nature's Guise and root enemies upon attacking. Deals damage over time and roots for longer if the attack was near a tree. Total damage equals %shard_damage% + %attack_damage_pct%%% of Treant's Base Attack Damage.",
               "scepter_loc": "",
@@ -1518,8 +1525,14 @@
                     10
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MOVEMENT SPEED:",
-                  "bonuses": [],
+                  "heading_loc": "MOVEMENT SPEED BONUS:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_treant_12",
+                      "value": 2.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2423,7 +2436,7 @@
             {
               "id": 755,
               "name": "special_bonus_unique_treant_12",
-              "name_loc": "-{s:value}s Nature's Grasp Cooldown",
+              "name_loc": "+{s:bonus_movement_bonus}% Nature's Guise Movement Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2469,23 +2482,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    4
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

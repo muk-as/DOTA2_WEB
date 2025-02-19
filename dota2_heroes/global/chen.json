@@ -12,20 +12,12 @@
           "npe_desc_loc": "Converts creeps to his cause, building an army",
           "facets": [
             {
-              "color": 3,
+              "color": 1,
               "title_loc": "Centaur Convert",
               "description_loc": "Summon Convert calls forth either a Centaur Courser or Centaur Conqueror.",
               "name": "chen_centaur_convert",
               "icon": "area_of_effect",
               "gradient_id": 3
-            },
-            {
-              "color": 1,
-              "title_loc": "Wolf Convert",
-              "description_loc": "Summon Convert calls forth either a Giant Wolf or Alpha Wolf.",
-              "name": "chen_wolf_convert",
-              "icon": "damage",
-              "gradient_id": 2
             },
             {
               "color": 0,
@@ -50,6 +42,14 @@
               "name": "chen_satyr_convert",
               "icon": "mana",
               "gradient_id": 1
+            },
+            {
+              "color": 3,
+              "title_loc": "Marshmage Convert",
+              "description_loc": "Summon Convert calls forth either a Marshmage Apprentice or a Marshmage.",
+              "name": "chen_frog_convert",
+              "icon": "bubbles",
+              "gradient_id": 3
             }
           ],
           "str_base": 23,
@@ -58,7 +58,7 @@
           "agi_gain": 2.1,
           "int_base": 19,
           "int_gain": 3.2,
-          "primary_attr": 3,
+          "primary_attr": 2,
           "complexity": 3,
           "attack_capability": 2,
           "role_levels": [
@@ -72,8 +72,8 @@
             2,
             0
           ],
-          "damage_min": 9,
-          "damage_max": 16,
+          "damage_min": 46,
+          "damage_max": 56,
           "attack_rate": 1.7,
           "attack_range": 650,
           "projectile_speed": 1100,
@@ -98,6 +98,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 "",
@@ -444,8 +445,9 @@
                 "Fully restores the creep's mana upon converting."
               ],
               "shard_loc": "Allows Holy Persuasion to target Ancient creeps. Can control up to 1/2/3 Ancient creeps based on Hand of God's level. Additionally levels up some abilities of creeps by 1 level.",
-              "scepter_loc": "Grants persuaded creeps Martyrdom ability. Sacrifice the life of this unit to heal an ally or damage an enemy with the current level of Hand of God.",
+              "scepter_loc": "Grants persuaded creeps the Martyrdom ability. Sacrifice the life of this unit to instantly heal an ally for %current_hp_pct_tooltip%%% of the unit's current health.",
               "facets_loc": [
+                "",
                 "",
                 "",
                 "",
@@ -657,6 +659,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "current_hp_pct_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    30
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "creep_ability_level",
                   "values_float": [
                     0
@@ -836,8 +857,9 @@
               "lore_loc": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "HP Regen Aura becomes global and affects all allied units.",
+              "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 "",
@@ -929,9 +951,7 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    -1
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -963,13 +983,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "TELEPORT DELAY:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_chen_3",
-                      "value": 2,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1177,7 +1191,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1203,7 +1217,8 @@
                 "Summon Convert calls forth either a Giant Wolf or Alpha Wolf.",
                 "Summon Convert calls forth either a Hellbear or Hellbear Smasher.",
                 "Summon Convert calls forth either a Hill Troll or Dark Troll Summoner.",
-                "Summon Convert calls forth either a Satyr Mindstealer or Satyr Tormenter."
+                "Summon Convert calls forth either a Satyr Mindstealer or Satyr Tormenter.",
+                "Summon Convert calls forth either a Marshmage Apprentice or a Marshmage."
               ],
               "type": 0,
               "behavior": "68",
@@ -1371,6 +1386,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "summon_frogs",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "chen_frog_convert",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "convert_hp_tooltip",
                   "values_float": [
                     0
@@ -1378,6 +1412,29 @@
                   "is_percentage": false,
                   "heading_loc": "CONVERT HP:",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_chen_3",
+                      "value": 150,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1553,6 +1610,7 @@
                 "",
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 1,
@@ -1606,13 +1664,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "INITIAL HEAL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_chen_2",
-                      "value": 200,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1648,13 +1700,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "HEAL PER SECOND:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_chen_2",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1695,6 +1741,29 @@
                       "name": "special_bonus_unique_chen_12",
                       "value": 1,
                       "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "full_heal_on_chen_and_creeps",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_chen_2",
+                      "value": 1,
+                      "operation": 5
                     }
                   ],
                   "values_shard": [],
@@ -1872,6 +1941,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 "",
@@ -2067,13 +2137,14 @@
             {
               "id": 6363,
               "name": "special_bonus_unique_chen_3",
-              "name_loc": "-{s:bonus_teleport_delay}s Divine Favor Teleport Delay",
+              "name_loc": "+{s:bonus_attack_speed} Convert Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 "",
@@ -2280,6 +2351,7 @@
                 "",
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2482,6 +2554,7 @@
                 "",
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2680,6 +2753,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 "",
@@ -2903,6 +2977,7 @@
                 "",
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3105,6 +3180,7 @@
                 "",
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3296,13 +3372,14 @@
             {
               "id": 6260,
               "name": "special_bonus_unique_chen_2",
-              "name_loc": "+{s:bonus_heal_amount}/+{s:bonus_heal_per_second} Hand of God Heal/Heal Over Time",
-              "desc_loc": "",
+              "name_loc": "Hand of God Fully Heals Chen and His Creeps",
+              "desc_loc": "Initial Heal fully heals. Heal over time is still applied.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 "",

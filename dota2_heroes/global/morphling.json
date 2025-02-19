@@ -14,7 +14,7 @@
             {
               "color": 2,
               "title_loc": "Ebb",
-              "description_loc": "Morphling's Primary Attribute is now <font color='#9acd32'>Agility</font> and Adaptive Strike pushes enemies.",
+              "description_loc": "Morphling's Primary Attribute is now <font color='#9acd32'>Agility</font>. Waveform attacks enemies in his path.",
               "name": "morphling_agi",
               "icon": "agility",
               "gradient_id": 0
@@ -22,7 +22,7 @@
             {
               "color": 0,
               "title_loc": "Flow",
-              "description_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font> and Attribute Shift can accelerate his cooldowns.",
+              "description_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font>. Adaptive Strike stuns based on Morphling's strength. Morphling gains %one_percent_tooltip%%% Spell Amp per %agi_per_one_spell_amp% Agility.",
               "name": "morphling_str",
               "icon": "strength",
               "gradient_id": 0
@@ -68,15 +68,13 @@
               "id": 5052,
               "name": "morphling_waveform",
               "name_loc": "Waveform",
-              "desc_loc": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path.  Morphling is invulnerable during Waveform and attacks all enemies it goes through with a penalty.",
+              "desc_loc": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path. Morphling is invulnerable during Waveform.",
               "lore_loc": "A torrential flood takes enemies by force.",
-              "notes_loc": [
-                "Attack does not apply on hit effects without the talent."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "",
+                "Waveform attacks enemies in his path. Does not apply on-hit effects.",
                 ""
               ],
               "type": 0,
@@ -158,7 +156,7 @@
                 {
                   "name": "pct_damage",
                   "values_float": [
-                    50
+                    0
                   ],
                   "is_percentage": true,
                   "heading_loc": "ATTACK DAMAGE PERCENTAGE:",
@@ -172,8 +170,10 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "morphling_agi",
+                    "values": [
+                      50
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -392,17 +392,17 @@
             {
               "id": 5053,
               "name": "morphling_adaptive_strike_agi",
-              "name_loc": "Adaptive Strike (Agility)",
-              "desc_loc": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used. \n\n Also puts Adaptive Strike (Strength) on a %shared_cooldown% second cooldown.",
+              "name_loc": "Adaptive Strike",
+              "desc_loc": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used.\n\nThe target is also knocked back based on Morphling's strength. If his strength is 50% higher than his agility, the maximum knockback distance is used.",
               "lore_loc": "The Morphling calls upon his elements to crush his opponents with waves.",
               "notes_loc": [
                 "Projectile moves at %projectile_speed% speed."
               ],
-              "shard_loc": "Increases bonus Agility.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "Adaptive Strike stuns based on Morphling's strength."
               ],
               "type": 0,
               "behavior": "8",
@@ -426,10 +426,10 @@
                 0
               ],
               "cooldowns": [
-                16,
+                17,
                 14,
-                12,
-                10
+                11,
+                8
               ],
               "durations": [
                 0
@@ -452,10 +452,10 @@
                 {
                   "name": "damage_base",
                   "values_float": [
-                    55,
-                    65,
+                    25,
+                    50,
                     75,
-                    85
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE DAMAGE:",
@@ -507,277 +507,20 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "projectile_speed",
-                  "values_float": [
-                    1150
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shared_cooldown",
-                  "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    600,
-                    700,
-                    800,
-                    900
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0.25
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    40,
-                    50,
-                    60,
-                    70
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    16,
-                    14,
-                    12,
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 7000,
-              "name": "morphling_adaptive_strike_str",
-              "name_loc": "Adaptive Strike (Strength)",
-              "desc_loc": "Launches a surge of water toward an enemy unit, stunning the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun is dealt. \n\n Also puts Adaptive Strike (Agility) on a %shared_cooldown% second cooldown.",
-              "lore_loc": "The Morphling calls upon his elements to crush his opponents with waves.",
-              "notes_loc": [
-                "Projectile moves at %projectile_speed% speed."
-              ],
-              "shard_loc": "Increases bonus Strength.",
-              "scepter_loc": "",
-              "facets_loc": [
-                "The target is also knocked back based on Morphling's strength.",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8",
-              "target_team": 2,
-              "target_type": 19,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 4,
-              "dispellable": 1,
-              "max_level": 4,
-              "cast_ranges": [
-                600,
-                700,
-                800,
-                900
-              ],
-              "cast_points": [
-                0.25
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                16,
-                14,
-                12,
-                10
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                40,
-                50,
-                60,
-                70
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
                   "name": "stun_min",
                   "values_float": [
-                    0.5
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN MIN:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_morphling_10",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "morphling_str",
+                    "values": [
+                      0.5
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -785,20 +528,30 @@
                 {
                   "name": "stun_max",
                   "values_float": [
-                    1.2,
-                    1.6,
-                    2,
-                    2.4
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN MAX:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_morphling_10",
-                      "value": 1,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "morphling_str",
+                    "values": [
+                      2.4
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "knockback_min",
+                  "values_float": [
+                    50
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "KNOCKBACK MIN:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -809,28 +562,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "knockback_min",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "KNOCKBACK MIN:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "morphling_agi",
-                    "values": [
-                      100
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "morphling_agi"
-                },
-                {
                   "name": "knockback_max",
                   "values_float": [
-                    0
+                    350
                   ],
                   "is_percentage": false,
                   "heading_loc": "KNOCKBACK MAX:",
@@ -838,13 +572,28 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "morphling_agi",
-                    "values": [
-                      500
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "morphling_agi"
+                  "required_facet": ""
+                },
+                {
+                  "name": "knockback_duration",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "projectile_speed",
@@ -864,9 +613,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shared_cooldown",
+                  "name": "extra_targets",
                   "values_float": [
-                    3
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1008,14 +757,20 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    16,
+                    17,
                     14,
-                    12,
-                    10
+                    11,
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_morphling_7",
+                      "value": 3,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1131,10 +886,10 @@
                 {
                   "name": "morph_rate_tooltip",
                   "values_float": [
+                    5,
                     10,
                     15,
-                    20,
-                    25
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "SHIFT RATE:",
@@ -1151,20 +906,11 @@
                 {
                   "name": "mana_cost",
                   "values_float": [
-                    5,
-                    10,
-                    15,
-                    20
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "MANA COST PER SECOND:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_morphling_morph_no_manacost",
-                      "value": 100,
-                      "operation": 4
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [
                     50
                   ],
@@ -1437,10 +1183,10 @@
                 {
                   "name": "morph_rate_tooltip",
                   "values_float": [
+                    5,
                     10,
                     15,
-                    20,
-                    25
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "SHIFT RATE:",
@@ -1457,20 +1203,11 @@
                 {
                   "name": "mana_cost",
                   "values_float": [
-                    5,
-                    10,
-                    15,
-                    20
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "MANA COST PER SECOND:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_morphling_morph_no_manacost",
-                      "value": 100,
-                      "operation": 4
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [
                     50
                   ],
@@ -1718,7 +1455,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_morphling_8",
-                      "value": 16,
+                      "value": 12,
                       "operation": 0
                     }
                   ],
@@ -2025,7 +1762,7 @@
               "id": 1220,
               "name": "morphling_accumulation",
               "name_loc": "Accumulation",
-              "desc_loc": "Morphling receives %percent_to_increment%%% of stat growth bonuses every half level instead of the full bonus at level up. Morphling receives +%bonus_all_stats_pct_tooltip%%% bonus stats from All Attributes bonus from skill points in the Talent Tree.",
+              "desc_loc": "Morphling receives %percent_to_increment%%% of stat growth bonuses every half level instead of the full bonus at level up. All Attributes bonuses from skill points in the Talent Tree provide an additional +%bonus_primary_stat_per_level_of_attributes% to Morphling's primary attribute.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -2088,9 +1825,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_all_stats_per_level_of_attributes",
+                  "name": "bonus_primary_stat_per_level_of_attributes",
                   "values_float": [
-                    2
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2105,9 +1842,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_all_stats_pct_tooltip",
+                  "name": "bonus_int_per_level_of_attributes",
                   "values_float": [
-                    100
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2490,205 +2227,6 @@
               "item_quality": 0
             },
             {
-              "id": 6062,
-              "name": "special_bonus_unique_morphling_1",
-              "name_loc": "+{s:bonus_AbilityCastRange} Waveform Range",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
               "id": 7060,
               "name": "special_bonus_unique_morphling_8",
               "name_loc": "+{s:bonus_duration}s Morph Duration",
@@ -2888,8 +2426,622 @@
               "item_quality": 0
             },
             {
-              "id": 5929,
-              "name": "special_bonus_agility_15",
+              "id": 6062,
+              "name": "special_bonus_unique_morphling_1",
+              "name_loc": "+{s:bonus_AbilityCastRange} Waveform Range",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 6027,
+              "name": "special_bonus_attack_range_75",
+              "name_loc": "+{s:value} Attack Range",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 7056,
+              "name": "special_bonus_unique_morphling_7",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Adaptive Strike Cooldown",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 5962,
+              "name": "special_bonus_agility_20",
               "name_loc": "+{s:value} Agility",
               "desc_loc": "",
               "lore_loc": "",
@@ -2939,439 +3091,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    15
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 6840,
-              "name": "special_bonus_unique_morphling_4",
-              "name_loc": "+{s:bonus_pct_damage}% Waveform Attack Damage And Applies On Hit Effects",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 903,
-              "name": "special_bonus_unique_morphling_10",
-              "name_loc": "+{s:bonus_stun_max}s Adaptive Strike Stun Duration",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    0
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3958,7 +3678,7 @@
                   "id": 1218,
                   "name": "morphling_ebb",
                   "name_loc": "Ebb",
-                  "desc_loc": "Morphling's Primary Attribute is now <font color='#9acd32'>Agility</font>",
+                  "desc_loc": "Morphling's Primary Attribute is now <font color='#9acd32'>Agility</font>.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
@@ -4161,10 +3881,10 @@
                   "id": 1219,
                   "name": "morphling_flow",
                   "name_loc": "Flow",
-                  "desc_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font> and Attribute Shift can accelerate his cooldowns.",
+                  "desc_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font>. Adaptive Strike stuns based on Morphling's strength. Morphling gains %one_percent_tooltip%%% Spell Amp per %agi_per_one_spell_amp% Agility.",
                   "lore_loc": "",
                   "notes_loc": [
-                    "Morphling's ability cooldown durations change based on his current Agility/Strength ratio, with a maximum of %max_cooldown_speed_pct%%% cooldown acceleration at %agi_pct_at_max_cooldown_speed%%% Agility/Strength ratio. Also affects spells already on cooldown."
+                    "Break disables the Spell Amp per Agility."
                   ],
                   "shard_loc": "",
                   "scepter_loc": "",
@@ -4209,9 +3929,9 @@
                   "health_costs": [],
                   "special_values": [
                     {
-                      "name": "agi_pct_at_max_cooldown_speed",
+                      "name": "agi_per_one_spell_amp",
                       "values_float": [
-                        175
+                        4
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -4226,9 +3946,9 @@
                       "required_facet": ""
                     },
                     {
-                      "name": "agi_pct_at_min_cooldown_speed",
+                      "name": "one_percent_tooltip",
                       "values_float": [
-                        50
+                        1
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -4243,46 +3963,12 @@
                       "required_facet": ""
                     },
                     {
-                      "name": "min_cooldown_speed_pct",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "max_cooldown_speed_pct",
-                      "values_float": [
-                        60
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "cooldown_reduction_tooltip",
+                      "name": "spell_amp_tooltip",
                       "values_float": [
                         0
                       ],
                       "is_percentage": true,
-                      "heading_loc": "ABILITY COOLDOWN ACCELERATION:",
+                      "heading_loc": "SPELL AMP:",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],

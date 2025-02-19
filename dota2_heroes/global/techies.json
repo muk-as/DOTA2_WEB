@@ -30,18 +30,18 @@
             {
               "color": 3,
               "title_loc": "Spoon's Stash",
-              "description_loc": "Techies can use items in their backpack as if they were in their inventory.",
+              "description_loc": "Techies stack all previously selected Enchantments onto newly crafted Neutral Items.",
               "name": "techies_backpack",
               "icon": "item",
               "gradient_id": 1
             }
           ],
           "str_base": 19,
-          "str_gain": 2.5,
+          "str_gain": 2.6,
           "agi_base": 14,
-          "agi_gain": 1.3,
+          "agi_gain": 1.8,
           "int_base": 25,
-          "int_gain": 3,
+          "int_gain": 2.8,
           "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 2,
@@ -56,8 +56,8 @@
             0,
             0
           ],
-          "damage_min": 3,
-          "damage_max": 5,
+          "damage_min": 20,
+          "damage_max": 22,
           "attack_rate": 1.7,
           "attack_range": 600,
           "projectile_speed": 900,
@@ -1147,7 +1147,7 @@
               "id": 5644,
               "name": "techies_minefield_sign",
               "name_loc": "Minefield Sign",
-              "desc_loc": "Plant a warning sign, causing mines within its radius to be invulnerable. Only one sign can exist at a time. Lasts %lifetime% seconds. ",
+              "desc_loc": "Plant a warning sign, causing Sticky Bombs and Proximity Mines within its radius to be invulnerable and deal %bonus_mine_damage_pct%%% more damage. Only one sign can exist at a time. Lasts %lifetime% seconds. ",
               "lore_loc": "Watch your step!",
               "notes_loc": [],
               "shard_loc": "",
@@ -1170,7 +1170,7 @@
                 10
               ],
               "cast_points": [
-                1.5
+                1.25
               ],
               "channel_times": [
                 0
@@ -1300,6 +1300,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "bonus_mine_damage_pct",
+                  "values_float": [
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     10
@@ -1353,7 +1370,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    1.5
+                    1.25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3748,9 +3765,11 @@
                   "id": 1403,
                   "name": "techies_spoons_stash",
                   "name_loc": "Spoon's Stash",
-                  "desc_loc": "Techies can use items in their backpack as if they were in their inventory.",
+                  "desc_loc": "Techies stack all previously selected Enchantments onto newly crafted Neutral Items.",
                   "lore_loc": "",
-                  "notes_loc": [],
+                  "notes_loc": [
+                    "Only one Tier 5 Enchantment can be stacked after crafting your second Tier 5 Neutral Item."
+                  ],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [

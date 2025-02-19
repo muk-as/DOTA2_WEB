@@ -13,24 +13,16 @@
           "facets": [
             {
               "color": 0,
-              "title_loc": "Bloodbath",
-              "description_loc": "Life Break also slows enemies in a radius around the target.",
-              "name": "huskar_bloodbath",
-              "icon": "area_of_effect",
+              "title_loc": "Cauterize",
+              "description_loc": "Berserker's Blood can be activated for a health cost. Dispels Huskar, then after a delay, heals for the amount of health consumed plus an additional bonus per debuff dispelled.",
+              "name": "huskar_cauterize",
+              "icon": "broken_chain",
               "gradient_id": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Nothl Transfusion",
-              "description_loc": "Life Break also heals friendly units in a radius around the target.",
-              "name": "huskar_nothl_transfusion",
-              "icon": "healing",
-              "gradient_id": 2
             },
             {
               "color": 1,
               "title_loc": "Incendiary",
-              "description_loc": "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health. Reduces burn duration.",
+              "description_loc": "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health.",
               "name": "huskar_nothl_conflagration",
               "icon": "damage",
               "gradient_id": 0
@@ -84,6 +76,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -99,7 +92,7 @@
                 500
               ],
               "cast_points": [
-                0.5
+                0.35
               ],
               "channel_times": [
                 0
@@ -353,7 +346,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0.5
+                    0.35
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -466,11 +459,12 @@
                 "Incendiary does not deal extra Max Health Burn Damage to Roshan."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Burning Spears launches an additional %multishot_targets% spears onto random enemies within Huskar's attack range.",
               "facets_loc": [
                 "",
                 "",
-                "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health. Reduces burn duration."
+                "",
+                "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health."
               ],
               "type": 0,
               "behavior": "135176",
@@ -568,7 +562,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_huskar_2",
-                      "value": 4,
+                      "value": 5,
                       "operation": 0
                     }
                   ],
@@ -787,6 +781,7 @@
               "facets_loc": [
                 "",
                 "",
+                "Berserker's Blood can be activated for a health cost. Dispels Huskar, then after a delay, heals for the amount of health consumed plus an additional bonus per debuff dispelled.\n\nDISPEL TYPE: Basic Dispel",
                 ""
               ],
               "type": 0,
@@ -799,10 +794,10 @@
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                550
+                0
               ],
               "cast_points": [
-                0.3
+                0
               ],
               "channel_times": [
                 0
@@ -943,9 +938,110 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "activatable",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_cauterize",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_healthcost_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CURRENT HP COST:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_cauterize",
+                    "values": [
+                      30
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_cooldown",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "COOLDOWN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_cauterize",
+                    "values": [
+                      50,
+                      40,
+                      30,
+                      20
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_delay",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CAUTERIZE DELAY:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_cauterize",
+                    "values": [
+                      3
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_heal_pct_per_debuff",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX HP HEAL PER DEBUFF:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "huskar_cauterize",
+                    "values": [
+                      5
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    550
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -996,7 +1092,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0.3
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1104,6 +1200,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1310,6 +1407,7 @@
               "facets_loc": [
                 "Life Break also slows enemies in a radius around the target.",
                 "Life Break also heals friendly units in a radius around the target.",
+                "",
                 ""
               ],
               "type": 1,
@@ -1387,7 +1485,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_huskar",
-                      "value": 0.2,
+                      "value": 0.25,
                       "operation": 0
                     }
                   ],
@@ -1429,7 +1527,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_huskar",
-                      "value": 20,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -1525,13 +1623,15 @@
                 {
                   "name": "taunt_duration",
                   "values_float": [
-                    3
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "TAUNT DURATION:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    3
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1542,13 +1642,15 @@
                 {
                   "name": "cast_range_bonus",
                   "values_float": [
-                    250
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "CAST RANGE BONUS:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    250
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1785,6 +1887,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2002,6 +2105,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2202,6 +2306,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2400,6 +2505,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -2619,6 +2725,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2817,6 +2924,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -3036,6 +3144,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3236,6 +3345,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3426,9 +3536,6 @@
             }
           ],
           "facet_abilities": [
-            {
-              "abilities": []
-            },
             {
               "abilities": []
             },

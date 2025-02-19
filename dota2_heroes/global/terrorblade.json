@@ -22,7 +22,7 @@
             {
               "color": 3,
               "title_loc": "Soul Fragment",
-              "description_loc": "Conjure Image illusions always spawn at full health, but has an additional health cost.",
+              "description_loc": "Conjure Image illusions always spawn at full health and cost health instead of mana.",
               "name": "terrorblade_soul_fragment",
               "icon": "illusion",
               "gradient_id": 2
@@ -129,7 +129,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "REFLECTION DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_terrorblade_2",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -426,13 +432,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_terrorblade_2",
-                      "value": 4,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -469,7 +469,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Conjure Image illusions always spawn at full health, but has an additional health cost."
+                "Conjure Image illusions always spawn at full health and cost health instead of mana."
               ],
               "type": 0,
               "behavior": "4",
@@ -543,13 +543,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_terrorblade_4",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -569,13 +563,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_terrorblade_4",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -839,7 +827,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_terrorblade_4",
+                      "value": 2,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1218,7 +1212,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1685,7 +1679,7 @@
                 {
                   "name": "scepter_meta_duration",
                   "values_float": [
-                    10
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "METAMORPHOSIS DURATION:",
@@ -2370,7 +2364,7 @@
             {
               "id": 6942,
               "name": "special_bonus_unique_terrorblade_2",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Reflection Cooldown",
+              "name_loc": "+{s:bonus_illusion_duration}s Reflection Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2569,7 +2563,7 @@
             {
               "id": 7861,
               "name": "special_bonus_unique_terrorblade_4",
-              "name_loc": "+{s:bonus_illusion_outgoing_damage}% Conjure Image Damage",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Conjure Image Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

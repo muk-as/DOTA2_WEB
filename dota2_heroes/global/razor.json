@@ -129,13 +129,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE MIN:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_razor_4",
-                      "value": 30,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -155,13 +149,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE MAX:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_razor_4",
-                      "value": 30,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -255,7 +243,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_razor_4",
+                      "value": 0.75,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -473,7 +467,7 @@
               "notes_loc": [
                 "The link is broken when either unit dies or the distance between them becomes %drain_range_buffer% units greater than Static Link's cast range."
               ],
-              "shard_loc": "Increases Cast Range. Allows Static Link to be put on alt-cast to pull Razor and his Target towards at each other at a speed of %pull_speed%.",
+              "shard_loc": "Increases Cast Range. Slows Razor's target by %move_speed_factor%x the amount of damage stolen while the link is active.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -676,6 +670,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "move_speed_factor",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "pull_speed",
                   "values_float": [
                     0
@@ -684,7 +697,7 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    75
+                    0
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -703,7 +716,7 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    175
+                    0
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1805,7 +1818,7 @@
             {
               "id": 6861,
               "name": "special_bonus_unique_razor_4",
-              "name_loc": "+{s:bonus_damage_min} Plasma Field Damage",
+              "name_loc": "+{s:bonus_slow_duration}s Plasma Field Slow Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

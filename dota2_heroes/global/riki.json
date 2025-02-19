@@ -22,7 +22,7 @@
             {
               "color": 4,
               "title_loc": "Exterminator",
-              "description_loc": "Tricks of the Trade has {s:bonus_creep_agility_multiplier}x Agility Bonus when attacking non-hero units.",
+              "description_loc": "Tricks of the Trade has {s:bonus_creep_agility_multiplier}x Agility Bonus when attacking non-hero units. When Riki kills a non-hero unit during Tricks of the Trade, the cooldown is reduced by {s:bonus_cooldown_reduction_per_creep_kill}s.",
               "name": "riki_exterminator",
               "icon": "agility",
               "gradient_id": 2
@@ -68,7 +68,7 @@
               "id": 5142,
               "name": "riki_smoke_screen",
               "name_loc": "Smoke Screen",
-              "desc_loc": "Throws down a smoke bomb, silencing enemies. Enemies attacking from the smoke or attacking allies within the smoke have a chance to miss their attacks.",
+              "desc_loc": "Throws down a smoke bomb, silencing enemies and causing them to miss attacks.",
               "lore_loc": "Since his escape during the night of his betrayal, Riki has valued the use of a simple smoke screen to confuse his opponents.",
               "notes_loc": [
                 "Can be cast during Tricks of the Trade.",
@@ -633,7 +633,7 @@
               "scepter_loc": "Increases cast range, number of attacks and allows you to target an allied hero, hiding inside them for the duration.  Each attack hits an additional target.",
               "facets_loc": [
                 "",
-                "Tricks of the Trade has %creep_agility_multiplier%x Agility Bonus when attacking non-hero units."
+                "Tricks of the Trade has %creep_agility_multiplier%x Agility Bonus when attacking non-hero units. When Riki kills a non-hero unit during Tricks of the Trade, the cooldown is reduced by %cooldown_reduction_per_creep_kill%s."
               ],
               "type": 0,
               "behavior": "176",
@@ -848,6 +848,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "cooldown_reduction_per_creep_kill",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "riki_exterminator",
+                    "values": [
+                      0.75
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     400
@@ -979,13 +998,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_riki_6",
-                      "value": 3,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1016,7 +1029,8 @@
               "desc_loc": "Every time Riki strikes his enemy from behind, he deals bonus damage based on his Agility.",
               "lore_loc": "",
               "notes_loc": [
-                "Does not work when denying friendly units."
+                "Does not work when denying friendly units.",
+                "Illusions of Riki will play Backstab animations, but not deal any bonus damage."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1029,7 +1043,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
+              "damage": 1,
               "immunity": 0,
               "dispellable": 0,
               "max_level": 4,
@@ -1112,7 +1126,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS XP KILL:",
+                  "heading_loc": "BONUS XP HERO KILL:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1145,9 +1159,34 @@
                     "name": "riki_contract_killer",
                     "values": [
                       25,
-                      100,
-                      100,
-                      100
+                      75,
+                      125,
+                      175
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_xp_assist_other",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS XP WARD/COURIER KILL:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "riki_contract_killer",
+                    "values": [
+                      25,
+                      75,
+                      125,
+                      175
                     ],
                     "operation": 0
                   },
@@ -1309,9 +1348,7 @@
               "name_loc": "Cloak and Dagger",
               "desc_loc": "Riki fades into the shadows, becoming invisible. When Riki attacks, he becomes visible.",
               "lore_loc": "Riki comes for you.",
-              "notes_loc": [
-                "Illusions of Riki will play Backstab animations, but not deal any bonus damage."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1323,7 +1360,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 1,
+              "damage": 0,
               "immunity": 3,
               "dispellable": 3,
               "max_level": 3,
@@ -1363,7 +1400,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "FADE DELAY:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_riki_6",
+                      "value": 1,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2756,7 +2799,7 @@
             {
               "id": 347,
               "name": "special_bonus_unique_riki_6",
-              "name_loc": "-{s:bonus_AbilityCooldown} Tricks of the Trade Cooldown",
+              "name_loc": "-{s:bonus_fade_delay}s Cloak and Dagger Fade Delay",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

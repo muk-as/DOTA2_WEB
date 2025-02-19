@@ -30,7 +30,7 @@
           ],
           "str_base": 20,
           "str_gain": 2.6,
-          "agi_base": 19,
+          "agi_base": 21,
           "agi_gain": 3.3,
           "int_base": 15,
           "int_gain": 1.5,
@@ -48,12 +48,12 @@
             0,
             3
           ],
-          "damage_min": 56,
-          "damage_max": 62,
+          "damage_min": 58,
+          "damage_max": 64,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
-          "armor": 3.1666667,
+          "armor": 3.5,
           "magic_resistance": 25,
           "movement_speed": 300,
           "turn_rate": 0.9,
@@ -99,9 +99,9 @@
                 0
               ],
               "cooldowns": [
-                24,
-                18,
-                12,
+                21,
+                16,
+                11,
                 6
               ],
               "durations": [
@@ -358,9 +358,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    24,
-                    18,
-                    12,
+                    21,
+                    16,
+                    11,
                     6
                   ],
                   "is_percentage": false,
@@ -399,7 +399,7 @@
               "id": 5691,
               "name": "faceless_void_time_dilation",
               "name_loc": "Time Dilation",
-              "desc_loc": "Faceless Void traps all nearby enemies in a time dilation field for %duration% seconds, extending their cooldowns and slowing their movement and attack speed by %slow%%% for each cooldown extended. Deals bonus damage per second for each cooldown. The debuff does not tick down while inside Chronosphere.",
+              "desc_loc": "Faceless Void traps all nearby enemies in a time dilation field for %duration% seconds, extending their cooldowns and slowing their movement and attack speed by %slow%%% for each cooldown extended. Deals bonus damage per second for each cooldown.",
               "lore_loc": "For those facing off against Darkterror, each moment seems to stretch into eternity.",
               "notes_loc": [
                 "Does not affect item cooldowns."
@@ -735,7 +735,9 @@
               "name_loc": "Time Lock",
               "desc_loc": "Adds the chance for an attack to lock an enemy unit in time while attacking it a second time.",
               "lore_loc": "The strike of the Faceless Void lands with dimension shifting force.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Does not stack with Skull Basher."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -3124,7 +3126,7 @@
                   "id": 5185,
                   "name": "faceless_void_chronosphere",
                   "name_loc": "Chronosphere",
-                  "desc_loc": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it.  All ability and item cooldowns are frozen. Only Faceless Void and any units he controls are unaffected. Invisible enemies in the sphere will be revealed.",
+                  "desc_loc": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it. Only Faceless Void and any units he controls are unaffected. Invisible enemies in the sphere will be revealed.",
                   "lore_loc": "When a rift opens to Claszureme, all poor souls caught within will likely never return.",
                   "notes_loc": [
                     "Pauses all units and buildings, friendly or enemy, except those owned by Faceless Void.",
@@ -3172,9 +3174,9 @@
                     0
                   ],
                   "mana_costs": [
-                    150,
-                    225,
-                    300
+                    125,
+                    200,
+                    275
                   ],
                   "gold_costs": [],
                   "health_costs": [],
@@ -3366,9 +3368,9 @@
                     {
                       "name": "AbilityManaCost",
                       "values_float": [
-                        150,
-                        225,
-                        300
+                        125,
+                        200,
+                        275
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3423,7 +3425,7 @@
                   "id": 1281,
                   "name": "faceless_void_time_zone",
                   "name_loc": "Time Zone",
-                  "desc_loc": "Creates a blister in spacetime, altering the movement, attack, cast, projectile, and turn rate speed of all units inside. Allies have increased speed and enemies have decreased speed.<br><br>Enemies are leashed inside the Time Zone.",
+                  "desc_loc": "Creates a blister in spacetime, altering the movement, cast, projectile, cooldown, and turn rate speed of all units inside. Allies have increased speed and cooldown acceleration. Enemies are leashed, have decreased speed, and have frozen ability and item cooldowns. Time Dilation does not tick down while inside.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
@@ -3443,7 +3445,7 @@
                   "dispellable": 3,
                   "max_level": 3,
                   "cast_ranges": [
-                    625
+                    500
                   ],
                   "cast_points": [
                     0.35,
@@ -3455,8 +3457,8 @@
                   ],
                   "cooldowns": [
                     130,
-                    120,
-                    110
+                    125,
+                    120
                   ],
                   "durations": [
                     0
@@ -3468,9 +3470,9 @@
                     0
                   ],
                   "mana_costs": [
-                    150,
-                    225,
-                    300
+                    125,
+                    200,
+                    275
                   ],
                   "gold_costs": [],
                   "health_costs": [],
@@ -3478,7 +3480,7 @@
                     {
                       "name": "radius",
                       "values_float": [
-                        900
+                        700
                       ],
                       "is_percentage": false,
                       "heading_loc": "RADIUS:",
@@ -3501,9 +3503,9 @@
                     {
                       "name": "duration",
                       "values_float": [
-                        5,
-                        5.5,
-                        6
+                        3.75,
+                        4.25,
+                        4.75
                       ],
                       "is_percentage": false,
                       "heading_loc": "DURATION:",
@@ -3537,9 +3539,7 @@
                     {
                       "name": "bonus_attack_speed",
                       "values_float": [
-                        70,
-                        110,
-                        150
+                        0
                       ],
                       "is_percentage": false,
                       "heading_loc": "ATTACK SPEED MANIPULATION:",
@@ -3562,9 +3562,7 @@
                     {
                       "name": "bonus_move_speed",
                       "values_float": [
-                        50,
-                        60,
-                        70
+                        60
                       ],
                       "is_percentage": true,
                       "heading_loc": "MOVEMENT SPEED MANIPULATION:",
@@ -3581,8 +3579,6 @@
                     {
                       "name": "bonus_cast_speed",
                       "values_float": [
-                        40,
-                        50,
                         60
                       ],
                       "is_percentage": true,
@@ -3600,8 +3596,6 @@
                     {
                       "name": "bonus_turn_speed",
                       "values_float": [
-                        40,
-                        50,
                         60
                       ],
                       "is_percentage": true,
@@ -3619,9 +3613,7 @@
                     {
                       "name": "bonus_projectile_speed",
                       "values_float": [
-                        30,
-                        40,
-                        50
+                        40
                       ],
                       "is_percentage": true,
                       "heading_loc": "PROJECTILE SPEED MANIPULATION:",
@@ -3653,9 +3645,26 @@
                       "required_facet": ""
                     },
                     {
+                      "name": "cooldown_acceleration",
+                      "values_float": [
+                        400
+                      ],
+                      "is_percentage": true,
+                      "heading_loc": "COOLDOWN ACCELERATION:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
                       "name": "AbilityCastRange",
                       "values_float": [
-                        625
+                        500
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3757,9 +3766,9 @@
                     {
                       "name": "AbilityManaCost",
                       "values_float": [
-                        150,
-                        225,
-                        300
+                        125,
+                        200,
+                        275
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
@@ -3777,8 +3786,8 @@
                       "name": "AbilityCooldown",
                       "values_float": [
                         130,
-                        120,
-                        110
+                        125,
+                        120
                       ],
                       "is_percentage": false,
                       "heading_loc": "",

@@ -14,7 +14,7 @@
             {
               "color": 5,
               "title_loc": "Hookup",
-              "description_loc": "When hitting an ally, Hookshot has a larger impact radius, grants armor, and partially refunds its cooldown and manacost.",
+              "description_loc": "If there's another allied hero within {s:bonus_radius_ally} of Hookshot's hit target, Clockwerk and all allies in the area receive bonus armor, while refunding a portion of Hookshot's cooldown and manacost.",
               "name": "rattletrap_hookup",
               "icon": "cooldown",
               "gradient_id": 2
@@ -28,13 +28,13 @@
               "gradient_id": 2
             }
           ],
-          "str_base": 27,
-          "str_gain": 3.1,
+          "str_base": 26,
+          "str_gain": 3.2,
           "agi_base": 13,
-          "agi_gain": 2.1,
+          "agi_gain": 2.3,
           "int_base": 18,
           "int_gain": 1.7,
-          "primary_attr": 3,
+          "primary_attr": 0,
           "complexity": 2,
           "attack_capability": 1,
           "role_levels": [
@@ -48,8 +48,8 @@
             0,
             3
           ],
-          "damage_min": 8,
-          "damage_max": 10,
+          "damage_min": 50,
+          "damage_max": 52,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
@@ -59,8 +59,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 714,
-          "health_regen": 3.2,
+          "max_health": 692,
+          "health_regen": 3.1000001,
           "max_mana": 291,
           "mana_regen": 0.90000004,
           "abilities": [
@@ -68,7 +68,7 @@
               "id": 5237,
               "name": "rattletrap_battery_assault",
               "name_loc": "Battery Assault",
-              "desc_loc": "Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun. Deals %creep_damage_multiplier%x damage to creeps.",
+              "desc_loc": "Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun.",
               "lore_loc": "Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver.",
               "notes_loc": [
                 "Remains active if Clockwerk is disabled."
@@ -204,7 +204,7 @@
                 {
                   "name": "creep_damage_multiplier",
                   "values_float": [
-                    1.5
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1038,7 +1038,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clockwerk_7",
+                      "value": 0.4,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1231,13 +1237,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_clockwerk_7",
-                      "value": 2,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1367,7 +1367,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SELF STUN DURATION:",
+                  "heading_loc": "SELF SLOW DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1960,7 +1960,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "When hitting an ally, Hookshot has a larger impact radius, grants Clockwerk and the hit allies bonus armor, and partially refunds its cooldown and manacost.",
+                "If there's another allied hero within %radius_ally% of Hookshot's hit target, Clockwerk and all allies in the area receive bonus armor, while refunding a portion of Hookshot's cooldown and manacost.",
                 ""
               ],
               "type": 1,
@@ -2043,19 +2043,19 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "stun_radius_ally",
+                  "name": "radius_ally",
                   "values_float": [
                     175
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ALLY HIT STUN RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "rattletrap_hookup",
                     "values": [
-                      300
+                      350
                     ],
                     "operation": 5
                   },
@@ -2067,7 +2067,7 @@
                     0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "ALLY HIT COOLDOWN REFUND:",
+                  "heading_loc": "COOLDOWN/MANACOST REFUND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2086,7 +2086,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ALLY BARRIER DURATION:",
+                  "heading_loc": "ALLY ARMOR DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2562,7 +2562,7 @@
             {
               "id": 850,
               "name": "special_bonus_unique_clockwerk_7",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Rocket Flare Cooldown",
+              "name_loc": "+{s:bonus_slow_duration}s Rocket Flare Slow Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

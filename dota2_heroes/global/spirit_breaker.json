@@ -21,10 +21,10 @@
             },
             {
               "color": 3,
-              "title_loc": "Imbalanced",
-              "description_loc": "Enemy targets hit by Nether Strike will be moved further by allied forced movement effects.",
-              "name": "spirit_breaker_imbalanced",
-              "icon": "movement",
+              "title_loc": "Bull's Hit",
+              "description_loc": "Greater Bash chance is increased if you've bashed more than one hero recently.",
+              "name": "spirit_breaker_bulls_hit",
+              "icon": "rng",
               "gradient_id": 2
             }
           ],
@@ -79,6 +79,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Charge of Darkness bonus movement speed lingers after charge ends.",
+                "",
                 ""
               ],
               "type": 0,
@@ -531,6 +532,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -825,7 +827,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Greater Bash chance is increased if you've bashed more than one hero within the last %bonus_chance_duration%s. Each additional hero past the first increases Greater Bash chance by %bonus_chance_pct%%%."
               ],
               "type": 0,
               "behavior": "2",
@@ -870,18 +873,50 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "CHANCE TO BASH:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_spirit_breaker_1",
-                      "value": 17,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_chance_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "spirit_breaker_bulls_hit",
+                    "values": [
+                      17
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_chance_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "spirit_breaker_bulls_hit",
+                    "values": [
+                      10
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -899,7 +934,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_spirit_breaker_3",
-                      "value": 25,
+                      "value": 20,
                       "operation": 0
                     }
                   ],
@@ -1163,7 +1198,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_spirit_breaker_1",
+                      "value": 0.3,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1197,6 +1238,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1259,7 +1301,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    6
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1450,6 +1492,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1669,7 +1712,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Enemy targets hit by Nether Strike will be moved further by allied knockback effects."
+                "Enemy targets hit by Nether Strike will be moved further by allied knockback effects.",
+                ""
               ],
               "type": 1,
               "behavior": "134742024",
@@ -2003,6 +2047,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2218,6 +2263,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2435,6 +2481,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2651,6 +2698,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2859,13 +2907,14 @@
             {
               "id": 6149,
               "name": "special_bonus_unique_spirit_breaker_1",
-              "name_loc": "+{s:bonus_chance_pct}% Greater Bash Chance",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Greater Bash Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3066,6 +3115,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3265,6 +3315,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3463,6 +3514,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],

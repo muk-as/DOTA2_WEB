@@ -117,7 +117,7 @@
                 0
               ],
               "mana_costs": [
-                95
+                85
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -159,9 +159,9 @@
                 {
                   "name": "bolt_damage",
                   "values_float": [
-                    75,
-                    95,
-                    115,
+                    60,
+                    85,
+                    110,
                     135
                   ],
                   "is_percentage": false,
@@ -219,7 +219,7 @@
                 {
                   "name": "extra_bolt_search_radius",
                   "values_float": [
-                    700
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -357,7 +357,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    95
+                    85
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -409,7 +409,7 @@
               "id": 5582,
               "name": "skywrath_mage_concussive_shot",
               "name_loc": "Concussive Shot",
-              "desc_loc": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range.  Upon impact, it deals damage and slows in an area of effect. Deals %creep_damage_pct%%% damage to creeps.",
+              "desc_loc": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range.  Upon impact, it deals damage and slows in an area of effect.",
               "lore_loc": "Those who serve the court of the Ghastly Eyrie are ever locked in covert war. One must always know where danger lurks nearest.",
               "notes_loc": [
                 "If no enemy heroes are in range or they are in fog, Concussive Shot targets the nearest enemy creep.",
@@ -417,7 +417,7 @@
                 "Provides 400 vision around the projectile, and reveals the target area for 3.34 seconds upon impact."
               ],
               "shard_loc": "",
-              "scepter_loc": "When Skywrath Mage casts Concussive Shot, a different random target within cast range will be hit with the same ability. Heroes will take priority.",
+              "scepter_loc": "When Skywrath Mage casts Concussive Shot, a different random target within %scepter_radius% range of the original target will be hit with the same ability. Heroes will take priority.",
               "facets_loc": [
                 "",
                 ""
@@ -615,24 +615,7 @@
                 {
                   "name": "scepter_radius",
                   "values_float": [
-                    700
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_damage_pct",
-                  "values_float": [
-                    75
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -812,7 +795,7 @@
                 "The magic damage resistance reduction doesn't affect creeps."
               ],
               "shard_loc": "Ancient Seal debuff now causes other debuffs applied to last 50%% longer. Grants vision over the target.",
-              "scepter_loc": "Anytime Skywrath Mage casts Ancient Seal, a different random target within %scepter_radius% range will be affected by the same ability. Heroes will take priority.",
+              "scepter_loc": "Anytime Skywrath Mage casts Ancient Seal, a different random target within %scepter_radius% range of the original target will be affected by the same ability. Heroes will take priority.",
               "facets_loc": [
                 "",
                 ""
@@ -911,7 +894,7 @@
                 {
                   "name": "scepter_radius",
                   "values_float": [
-                    700
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1133,10 +1116,10 @@
                 {
                   "name": "spell_lifesteal",
                   "values_float": [
-                    20,
+                    25,
                     30,
-                    40,
-                    50
+                    35,
+                    40
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1318,7 +1301,7 @@
                 "Mystic Flare will damage enemy creeps if no enemy heroes are present."
               ],
               "shard_loc": "",
-              "scepter_loc": "When Skywrath Mage casts Mystic Flare, another Mystic Flare will be created on the position of a different random target enemy within %scepter_radius% range. Heroes will take priority.",
+              "scepter_loc": "When Skywrath Mage casts Mystic Flare, another Mystic Flare will be created on the position of a different random target enemy within %scepter_radius% range of the original target. Heroes will take priority.",
               "facets_loc": [
                 "",
                 ""
@@ -1445,7 +1428,7 @@
                 {
                   "name": "scepter_radius",
                   "values_float": [
-                    700
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1602,7 +1585,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": true,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,

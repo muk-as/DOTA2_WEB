@@ -34,7 +34,7 @@
           "agi_gain": 3.2,
           "int_base": 22,
           "int_gain": 3.5,
-          "primary_attr": 2,
+          "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 2,
           "role_levels": [
@@ -48,8 +48,8 @@
             3,
             0
           ],
-          "damage_min": 40,
-          "damage_max": 50,
+          "damage_min": 16,
+          "damage_max": 26,
           "attack_rate": 1.5,
           "attack_range": 620,
           "projectile_speed": 1125,
@@ -72,13 +72,12 @@
               "lore_loc": "Verdant overgrowth is a common ailment reported by Nature's Prophet's attackers.",
               "notes_loc": [
                 "Sprout can be cast on any unit, or the ground.",
-                "Trees created by Sprout have the same interactions with abilities as regular trees.",
-                "A Tango that consumes a tree created by Sprout provides the standard healing effects."
+                "Trees created by Sprout have the same interactions with abilities as regular trees."
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Allies inside and nearby on the outside of the sprout are healed over time. Allied buildings are healed at a %building_healing_pct%%% rate.",
+                "Allies inside and nearby on the outside of the sprout are healed over time. Allied buildings are healed at a %building_healing_pct%%% rate. Allied Tangos provide double the heal duration when consuming a tree created by Sprout.",
                 ""
               ],
               "type": 0,
@@ -1578,7 +1577,7 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 3,
-              "max_level": 5,
+              "max_level": 4,
               "cast_ranges": [
                 0
               ],
@@ -1609,11 +1608,7 @@
                 {
                   "name": "damage_per_tree_pct",
                   "values_float": [
-                    2,
-                    3,
-                    4,
-                    5,
-                    6
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1630,7 +1625,10 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    300
+                    300,
+                    400,
+                    500,
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1664,10 +1662,6 @@
                 {
                   "name": "multiplier",
                   "values_float": [
-                    1,
-                    1,
-                    1,
-                    1,
                     1
                   ],
                   "is_percentage": false,
@@ -1684,11 +1678,7 @@
                   "facet_bonus": {
                     "name": "furion_ironwood_treant",
                     "values": [
-                      2,
-                      3,
-                      4,
-                      5,
-                      6
+                      4
                     ],
                     "operation": 1
                   },

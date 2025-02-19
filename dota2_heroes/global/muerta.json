@@ -32,8 +32,8 @@
           "str_gain": 2,
           "agi_base": 20,
           "agi_gain": 2.7,
-          "int_base": 24,
-          "int_gain": 3.3,
+          "int_base": 23,
+          "int_gain": 3.4,
           "primary_attr": 2,
           "complexity": 1,
           "attack_capability": 2,
@@ -48,8 +48,8 @@
             0,
             0
           ],
-          "damage_min": 48,
-          "damage_max": 56,
+          "damage_min": 47,
+          "damage_max": 55,
           "attack_rate": 1.7,
           "attack_range": 575,
           "projectile_speed": 3000,
@@ -61,8 +61,8 @@
           "sight_range_night": 800,
           "max_health": 538,
           "health_regen": 2.15,
-          "max_mana": 363,
-          "mana_regen": 1.2,
+          "max_mana": 351,
+          "mana_regen": 1.15,
           "abilities": [
             {
               "id": 5751,
@@ -76,7 +76,7 @@
                 "Can ricochet off of magic immune targets."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Dead Shot damage is increased. Dead Shot expands after it ricochets and pierces through enemy heroes as it fears them.",
               "facets_loc": [
                 "",
                 ""
@@ -133,15 +133,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_muerta_dead_shot_damage",
-                      "value": 80,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    125
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -210,6 +206,25 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "ricochet_radius_expansion_per_second",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    300
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -289,6 +304,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "scepter_pierces",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     1000
@@ -298,7 +332,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_muerta_dead_shot_range",
-                      "value": 350,
+                      "value": 300,
                       "operation": 0
                     }
                   ],
@@ -438,7 +472,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -823,7 +857,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_muerta_calling_hp_regen",
-                      "value": 1.5,
+                      "value": 3,
                       "operation": 0
                     }
                   ],
@@ -998,7 +1032,8 @@
               "notes_loc": [
                 "If no other units are in range, she fires both guns at the original target.",
                 "Secondary shots can hit units within Muerta's attack range plus %target_search_bonus_range%.",
-                "The secondary shot can trigger attack modifiers."
+                "The secondary shot can trigger attack modifiers.",
+                "Prioritizes heroes, then non-hero units, then buildings."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1045,10 +1080,10 @@
                 {
                   "name": "double_shot_chance",
                   "values_float": [
-                    26,
-                    34,
-                    42,
-                    50
+                    18,
+                    27,
+                    36,
+                    45
                   ],
                   "is_percentage": true,
                   "heading_loc": "CHANCE:",
@@ -1247,375 +1282,6 @@
               "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 5760,
-              "name": "muerta_parting_shot",
-              "name_loc": "Parting Shot",
-              "desc_loc": "Muerta precisely shoots a hero in their soul, separating it from their physical body and knocking it %knockback_distance% units away.<br>The soul is untargetable, muted, disarmed, and invulnerable for %debuff_duration% seconds.<br>The body is stunned and has %damage_reduction_percent%%% damage reduction for this duration.<br><br>After the effect ends the hero's soul is forcefully returned to their body applying a strong dispel. The soul will survive until the end of the effect even if the hero is killed.",
-              "lore_loc": "",
-              "notes_loc": [
-                "Debuff Immune units will take the damage from the shot but not be separated from their body.",
-                "Allied heroes hit with Parting Shot will not be damaged."
-              ],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8657043529",
-              "target_team": 3,
-              "target_type": 1,
-              "flags": 131136,
-              "damage": 2,
-              "immunity": 4,
-              "dispellable": 3,
-              "max_level": 1,
-              "cast_ranges": [
-                750
-              ],
-              "cast_points": [
-                0.3
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                45
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                300
-              ],
-              "mana_costs": [
-                250
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "projectile_speed",
-                  "values_float": [
-                    2500
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "knockback_duration",
-                  "values_float": [
-                    0.2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "knockback_distance",
-                  "values_float": [
-                    150
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "KNOCKBACK DISTANCE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "debuff_duration",
-                  "values_float": [
-                    4
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "ethereal_damage_bonus",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movement_slow",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "soul_return_time",
-                  "values_float": [
-                    0.75
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "soul_return_min_speed",
-                  "values_float": [
-                    500
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_reduction_percent",
-                  "values_float": [
-                    35
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "PHYSICAL BODY DAMAGE REDUCTION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "#AbilityDamage",
-                  "values_float": [
-                    300
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    750
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChannelTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0.3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCharges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityChargeRestoreTime",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    250
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    45
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": true,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": true,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
               "item_cost": 0,
@@ -2375,10 +2041,10 @@
               "item_quality": 0
             },
             {
-              "id": 1438,
-              "name": "special_bonus_unique_muerta_calling_hp_regen",
-              "name_loc": "+{s:bonus_hp_regen_pct}% Max HP Regen while inside The Calling",
-              "desc_loc": "Only applies to Muerta.",
+              "id": 5902,
+              "name": "special_bonus_hp_150",
+              "name_loc": "+{s:value} Health",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -2423,6 +2089,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    150
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2574,10 +2257,10 @@
               "item_quality": 0
             },
             {
-              "id": 5756,
-              "name": "special_bonus_unique_muerta_dead_shot_damage",
-              "name_loc": "+{s:bonus_damage} Dead Shot Damage",
-              "desc_loc": "",
+              "id": 1438,
+              "name": "special_bonus_unique_muerta_calling_hp_regen",
+              "name_loc": "+{s:bonus_hp_regen_pct}% Max HP Regen while inside The Calling",
+              "desc_loc": "Only applies to Muerta.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

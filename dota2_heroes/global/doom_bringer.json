@@ -30,7 +30,7 @@
             {
               "color": 5,
               "title_loc": "Impending Doom",
-              "description_loc": "Every {s:bonus_upgrade_interval} minutes, Doom's duration is increased by {s:bonus_upgrade_amount}s. Doom DPS decreased.",
+              "description_loc": "Every {s:bonus_upgrade_interval} minutes, Doom's duration is increased by {s:bonus_upgrade_amount}s.",
               "name": "doom_bringer_impending_doom",
               "icon": "cooldown",
               "gradient_id": 0
@@ -354,7 +354,7 @@
                   "facet_bonus": {
                     "name": "doom_bringer_gluttony",
                     "values": [
-                      85
+                      80
                     ],
                     "operation": 5
                   },
@@ -422,7 +422,7 @@
               "notes_loc": [
                 "Scorched Earth follows Doom, centered on his location."
               ],
-              "shard_loc": "Heals Doom and his controlled units for %heal_pct%%% of the damage dealt.",
+              "shard_loc": "Heals Doom and his controlled units for %heal_pct%%% of the damage value.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -487,13 +487,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_doom_4",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -808,10 +802,10 @@
                 {
                   "name": "burn_damage",
                   "values_float": [
-                    20,
+                    15,
                     30,
-                    40,
-                    50
+                    45,
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE BURN DAMAGE:",
@@ -875,7 +869,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_doom_4",
+                      "value": 0.2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1093,7 +1093,7 @@
               "id": 5342,
               "name": "doom_bringer_doom",
               "name_loc": "Doom",
-              "desc_loc": "Inflicts a curse that dispels an enemy Hero and prevents them from casting spells or healing in any way, while taking damage over time.\n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Inflicts a curse that dispels an enemy and prevents them from casting spells or healing in any way, while taking damage over time.\n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
               "notes_loc": [],
               "shard_loc": "",
@@ -1101,7 +1101,7 @@
               "facets_loc": [
                 "",
                 "",
-                "Every %upgrade_interval% minutes, Doom's duration is increased by %upgrade_amount%s. Doom DPS decreased."
+                "Every %upgrade_interval% minutes, Doom's duration is increased by %upgrade_amount%s."
               ],
               "type": 1,
               "behavior": "8",
@@ -1113,7 +1113,7 @@
               "dispellable": 3,
               "max_level": 3,
               "cast_ranges": [
-                500
+                400
               ],
               "cast_points": [
                 0.5
@@ -1167,9 +1167,9 @@
                 {
                   "name": "damage",
                   "values_float": [
-                    30,
-                    50,
-                    70
+                    25,
+                    45,
+                    65
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER SECOND:",
@@ -1177,13 +1177,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "doom_bringer_impending_doom",
-                    "values": [
-                      30,
-                      45,
-                      60
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -1329,7 +1325,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    500
+                    400
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1535,7 +1531,7 @@
                 {
                   "name": "bonus_damage",
                   "values_float": [
-                    15
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1904,7 +1900,7 @@
             {
               "id": 6370,
               "name": "special_bonus_unique_doom_4",
-              "name_loc": "+{s:bonus_damage_per_second} Scorched Earth Damage",
+              "name_loc": "+{s:bonus_ministun_duration}s Infernal Blade Stun Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

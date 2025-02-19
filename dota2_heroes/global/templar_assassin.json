@@ -14,7 +14,7 @@
             {
               "color": 5,
               "title_loc": "Voidblades",
-              "description_loc": "Attacking a target with Meld also applies the bonus damage and debuff to enemies hit by the Psi Blades spill.",
+              "description_loc": "Meld bonus damage and armor reductions are applied to all enemies in the Psi Blades split range.",
               "name": "templar_assassin_voidblades",
               "icon": "ricochet",
               "gradient_id": 3
@@ -26,12 +26,20 @@
               "name": "templar_assassin_refractor",
               "icon": "damage",
               "gradient_id": 0
+            },
+            {
+              "color": 3,
+              "title_loc": "Hidden Reach",
+              "description_loc": "When in Meld, Templar increases her attack range by up to an additional {s:bonus_attack_range_increase_max} range over {s:bonus_attack_range_increase_time}s.",
+              "name": "templar_assassin_hidden_reach",
+              "icon": "range",
+              "gradient_id": 1
             }
           ],
           "str_base": 23,
           "str_gain": 2.4,
           "agi_base": 23,
-          "agi_gain": 3.2,
+          "agi_gain": 3.4,
           "int_base": 20,
           "int_gain": 2,
           "primary_attr": 1,
@@ -72,14 +80,14 @@
               "lore_loc": "Manipulating her psionic veil, Lanaya bends nature's law to her will.",
               "notes_loc": [
                 "Damage as HP Removal bypasses Refraction (it won't reduce the charges).",
-                "Only instances of %damage_threshold% or more damage will trigger Refraction.",
                 "Refraction is visible to enemies."
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Whenever a shield instance is consumed, Templar Assassin gains a damage instance."
+                "Whenever a shield instance is consumed, Templar Assassin gains a damage instance.",
+                ""
               ],
               "type": 0,
               "behavior": "2052",
@@ -176,7 +184,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_templar_assassin_refraction_damage",
-                      "value": 20,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -421,7 +429,7 @@
               "id": 5195,
               "name": "templar_assassin_meld",
               "name_loc": "Meld",
-              "desc_loc": "Templar Assassin conceals herself, becoming invisible as long as she remains still.  If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for %abilityduration% seconds.",
+              "desc_loc": "Templar Assassin conceals herself, becoming invisible as long as she remains still.  If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for %debuff_duration% seconds.",
               "lore_loc": "Lanaya is as elusive as her covenant with the Hidden Temple.",
               "notes_loc": [
                 "Meld is broken by any action other than staying in position or channeling Psionic Projection.",
@@ -430,8 +438,9 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Meld bonus damage and armor reductions are applied to all enemies in the Psi Blades spill range",
-                ""
+                "Meld bonus damage and armor reductions are applied to all enemies in the Psi Blades split range.",
+                "",
+                "When in Meld, Templar increases her attack range by up to an additional %attack_range_increase_max% range over %attack_range_increase_time%s."
               ],
               "type": 0,
               "behavior": "33816580",
@@ -461,7 +470,7 @@
                 5
               ],
               "durations": [
-                6
+                0
               ],
               "damages": [
                 0,
@@ -508,13 +517,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "ARMOR REDUCTION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_templar_assassin_2",
-                      "value": -3,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -536,6 +539,86 @@
                       "name": "special_bonus_unique_templar_assassin_7",
                       "value": 1,
                       "operation": 5
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_range_increase_max",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "templar_assassin_hidden_reach",
+                    "values": [
+                      400
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_range_increase_time",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "templar_assassin_hidden_reach",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_range_smoothness",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "templar_assassin_hidden_reach",
+                    "values": [
+                      0.015
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "debuff_duration",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR REDUCTION DURATION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_templar_assassin_meld_duration",
+                      "value": 2.5,
+                      "operation": 0
                     }
                   ],
                   "values_shard": [],
@@ -584,10 +667,10 @@
                 {
                   "name": "AbilityDuration",
                   "values_float": [
-                    6
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ARMOR REDUCTION DURATION:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -707,7 +790,7 @@
               "id": 5196,
               "name": "templar_assassin_psi_blades",
               "name_loc": "Psi Blades",
-              "desc_loc": "Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units directly behind it, while gaining bonus attack range. For each unit it damages, the spill damage is reduced by a percentage.",
+              "desc_loc": "Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units directly behind it, while gaining bonus attack range. For each unit it damages, the split damage is reduced by a percentage.",
               "lore_loc": "Her blades pierce the skin as much as the mind, furthering her understanding of the mystery that is reality.",
               "notes_loc": [
                 "Split damage hits invisible units.",
@@ -716,6 +799,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -784,9 +868,9 @@
                 {
                   "name": "attack_spill_range",
                   "values_float": [
-                    550,
+                    400,
+                    500,
                     600,
-                    650,
                     700
                   ],
                   "is_percentage": false,
@@ -827,9 +911,9 @@
                 {
                   "name": "attack_spill_pct",
                   "values_float": [
-                    85,
+                    70,
+                    80,
                     90,
-                    95,
                     100
                   ],
                   "is_percentage": true,
@@ -1041,6 +1125,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1082,7 +1167,7 @@
                 {
                   "name": "extra_damage",
                   "values_float": [
-                    300
+                    375
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1234,7 +1319,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": true,
               "ability_is_granted_by_shard": false,
@@ -1260,6 +1345,7 @@
               "shard_loc": "Increases max trap count and trap vision range.  When activated, traps now silence affected enemies.",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1435,9 +1521,7 @@
                   "heading_loc": "BONUS DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    100
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1733,6 +1817,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1924,15 +2009,16 @@
           ],
           "talents": [
             {
-              "id": 1059,
-              "name": "special_bonus_unique_templar_assassin_refraction_damage",
-              "name_loc": "+{s:bonus_bonus_damage} Refraction Damage",
+              "id": 1548,
+              "name": "special_bonus_unique_templar_assassin_meld_duration",
+              "name_loc": "+{s:bonus_debuff_duration}s Meld Debuff Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2133,6 +2219,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2332,6 +2419,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2523,13 +2611,14 @@
             {
               "id": 757,
               "name": "special_bonus_unique_templar_assassin_8",
-              "name_loc": "+{s:value} Psi Blades Attack and Spill Range",
+              "name_loc": "+{s:value} Psi Blades Attack and Split Range",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2747,6 +2836,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2953,15 +3043,16 @@
               "item_quality": 0
             },
             {
-              "id": 6545,
-              "name": "special_bonus_unique_templar_assassin_2",
-              "name_loc": "+{s:bonus_bonus_armor} Meld Armor Reduction",
+              "id": 1059,
+              "name": "special_bonus_unique_templar_assassin_refraction_damage",
+              "name_loc": "+{s:bonus_bonus_damage} Refraction Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3162,6 +3253,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3361,6 +3453,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3551,6 +3644,9 @@
             }
           ],
           "facet_abilities": [
+            {
+              "abilities": []
+            },
             {
               "abilities": []
             },

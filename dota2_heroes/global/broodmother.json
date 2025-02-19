@@ -16,7 +16,7 @@
               "title_loc": "Necrotic Webs",
               "description_loc": "Reduces health regeneration of enemies on webs.",
               "name": "broodmother_necrotic_webs",
-              "icon": "debuff",
+              "icon": "web",
               "gradient_id": 0
             },
             {
@@ -28,13 +28,13 @@
               "gradient_id": 0
             }
           ],
-          "str_base": 19,
-          "str_gain": 2.3,
+          "str_base": 18,
+          "str_gain": 2.9,
           "agi_base": 18,
-          "agi_gain": 2.6,
+          "agi_gain": 3.4,
           "int_base": 18,
-          "int_gain": 1.4,
-          "primary_attr": 3,
+          "int_gain": 2,
+          "primary_attr": 1,
           "complexity": 2,
           "attack_capability": 1,
           "role_levels": [
@@ -48,8 +48,8 @@
             3,
             0
           ],
-          "damage_min": 9,
-          "damage_max": 15,
+          "damage_min": 47,
+          "damage_max": 53,
           "attack_rate": 1.7,
           "attack_range": 175,
           "projectile_speed": 900,
@@ -59,8 +59,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
-          "health_regen": 2.15,
+          "max_health": 516,
+          "health_regen": 2.0500002,
           "max_mana": 291,
           "mana_regen": 0.90000004,
           "abilities": [
@@ -68,11 +68,9 @@
               "id": 5282,
               "name": "broodmother_insatiable_hunger",
               "name_loc": "Insatiable Hunger",
-              "desc_loc": "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack. Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.",
+              "desc_loc": "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack.",
               "lore_loc": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes.",
-              "notes_loc": [
-                "Fully stacks with other sources of lifesteal."
-              ],
+              "notes_loc": [],
               "shard_loc": "Increases duration. While Hunger is active, the bonus damage is increased by %shard_damage_per_tick%%% every %shard_damage_tick_interval%s.",
               "scepter_loc": "",
               "facets_loc": [
@@ -161,23 +159,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "creep_lifesteal_reduction_pct",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "duration",
                   "values_float": [
                     8,
@@ -209,7 +190,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_1",
-                      "value": 0.3,
+                      "value": 0.25,
                       "operation": 0
                     }
                   ],
@@ -434,11 +415,10 @@
               "id": 5280,
               "name": "broodmother_spin_web",
               "name_loc": "Spin Web",
-              "desc_loc": "Spins a large web that grants Broodmother a passive movement speed increase and increases her Turn Rate, while in its vicinity, as well as giving free movement.<br><br> Spin Web charges restore every %abilitychargerestoretime% seconds, with a max of %AbilityCharges% charges.<br><br>Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears.",
+              "desc_loc": "Spins a large web that grants Broodmother a passive movement speed increase and increases her Turn Rate, while in its vicinity, as well as giving free movement.<br><br>Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears.",
               "lore_loc": "Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of foreboding.",
               "notes_loc": [
-                "Also affects Spiderlings.",
-                "Grants full movement speed bonus at 100% HP, 0% movement speed bonus at 1HP"
+                "Also affects Spiderlings."
               ],
               "shard_loc": "",
               "scepter_loc": "Increases movement speed, and increases Spin Web max count",
@@ -509,13 +489,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX SIMULTANEOUS WEBS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_broodmother_6",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -595,10 +569,10 @@
                   "facet_bonus": {
                     "name": "broodmother_necrotic_webs",
                     "values": [
-                      15,
-                      20,
-                      25,
-                      30
+                      10,
+                      30,
+                      50,
+                      70
                     ],
                     "operation": 5
                   },
@@ -1399,7 +1373,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "HERO HEALTH AS HEAL:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_broodmother_6",
+                      "value": 0.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2236,7 +2216,7 @@
             {
               "id": 900,
               "name": "special_bonus_unique_broodmother_6",
-              "name_loc": "+{s:bonus_count} Spin Web Simultaneous Webs",
+              "name_loc": "+{s:bonus_kill_heal_heroes}% Spider's Milk Hero Health as heal",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

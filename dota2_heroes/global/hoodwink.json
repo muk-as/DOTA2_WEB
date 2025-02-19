@@ -21,16 +21,16 @@
             },
             {
               "color": 2,
-              "title_loc": "Treebounce Trickshot",
-              "description_loc": "Acorn Shot can bounce once on trees.",
-              "name": "hoodwink_treebounce_trickshot",
-              "icon": "tree",
+              "title_loc": "Hipshot",
+              "description_loc": "Sharpshooter has a greatly reduced cooldown. Damage, debuff duration, turn time, and wind-up times are also reduced.",
+              "name": "hoodwink_hipshot",
+              "icon": "cooldown",
               "gradient_id": 0
             }
           ],
           "str_base": 17,
           "str_gain": 2,
-          "agi_base": 24,
+          "agi_base": 25,
           "agi_gain": 3.6,
           "int_base": 21,
           "int_gain": 2.9,
@@ -48,12 +48,12 @@
             0,
             0
           ],
-          "damage_min": 46,
-          "damage_max": 53,
+          "damage_min": 47,
+          "damage_max": 54,
           "attack_rate": 2,
           "attack_range": 575,
           "projectile_speed": 1800,
-          "armor": 4,
+          "armor": 4.166667,
           "magic_resistance": 25,
           "movement_speed": 310,
           "turn_rate": 0.9,
@@ -80,7 +80,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "If there are no bounce targets within range of Acorn Shot, it can bounce off a nearby tree and set the remaining number of bounces to %bounces_after_tree_bounce%."
+                "If there are no bounce targets within range of Acorn Shot, it can bounce off a nearby tree and set the remaining number of bounces to %bounces_after_tree_bounce%.",
+                ""
               ],
               "type": 0,
               "behavior": "1099645845528",
@@ -127,10 +128,7 @@
                 {
                   "name": "bonus_range",
                   "values_float": [
-                    75,
-                    150,
-                    225,
-                    300
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK RANGE:",
@@ -167,7 +165,7 @@
                 {
                   "name": "base_damage_pct",
                   "values_float": [
-                    75
+                    80
                   ],
                   "is_percentage": true,
                   "heading_loc": "BASE DAMAGE:",
@@ -500,6 +498,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -812,13 +811,16 @@
               "id": 9501,
               "name": "hoodwink_scurry",
               "name_loc": "Scurry",
-              "desc_loc": "Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time.",
+              "desc_loc": "Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time. All sources of evasion are doubled for the duration.",
               "lore_loc": "There's not a nook or cranny in the Wood Tomo'kan out of reach of Hoodwink's paws.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Redirect chance from Mistwoods Wayfarer is also doubled for the duration."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "Scurry also provides bonus attack and cast range.",
+                "",
                 ""
               ],
               "type": 0,
@@ -1040,10 +1042,10 @@
                   "facet_bonus": {
                     "name": "hoodwink_hunter",
                     "values": [
-                      100,
+                      75,
                       150,
-                      200,
-                      250
+                      225,
+                      300
                     ],
                     "operation": 0
                   },
@@ -1065,10 +1067,10 @@
                   "facet_bonus": {
                     "name": "hoodwink_hunter",
                     "values": [
-                      100,
+                      75,
                       150,
-                      200,
-                      250
+                      225,
+                      300
                     ],
                     "operation": 0
                   },
@@ -1112,6 +1114,23 @@
                   "name": "heal_movement",
                   "values_float": [
                     0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "evasion_multiplier",
+                  "values_float": [
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1200,7 +1219,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_hoodwink_scurry_charges",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1288,6 +1313,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1623,6 +1649,7 @@
               "shard_loc": "Hunter's Boomerang also reduces status resistance.",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1995,6 +2022,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -2053,10 +2081,10 @@
                 {
                   "name": "redirect_chance",
                   "values_float": [
-                    15,
-                    20,
-                    25,
-                    30
+                    14,
+                    21,
+                    28,
+                    35
                   ],
                   "is_percentage": true,
                   "heading_loc": "REDIRECT CHANCE:",
@@ -2228,10 +2256,11 @@
               "lore_loc": "While her first arbalest was a chance discovery, Hoodwink now takes great care in carving and caring for her own -- of course with some necessary components pilfered or otherwise cleverly procured.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Decreases wind-up time and increases arrow speed.",
+              "scepter_loc": "Increases arrow speed and movement speed slow.",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Sharpshooter has a %quick_draw_tooltip_pct_cooldown_reduction%%% reduced cooldown. Damage, debuff duration, and wind-up times are reduced by %quick_draw_tooltip_efficacy_pct%%%. Turn rate is increased by %turn_rate_tooltip%%%."
               ],
               "type": 1,
               "behavior": "134217744",
@@ -2350,13 +2379,13 @@
                   "heading_loc": "MAX WIND-UP TIME:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    25
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      0.75
+                    ],
+                    "operation": 1
                   },
                   "required_facet": ""
                 },
@@ -2372,16 +2401,18 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
-                      "value": 125,
+                      "value": 400,
                       "operation": 0
                     }
                   ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      0.75
+                    ],
+                    "operation": 1
                   },
                   "required_facet": ""
                 },
@@ -2447,9 +2478,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      0.75
+                    ],
+                    "operation": 1
                   },
                   "required_facet": ""
                 },
@@ -2464,9 +2497,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      0.75
+                    ],
+                    "operation": 1
                   },
                   "required_facet": ""
                 },
@@ -2481,7 +2516,9 @@
                   "heading_loc": "MOVE SLOW:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    20
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -2497,6 +2534,73 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      1.33
+                    ],
+                    "operation": 1
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "turn_rate_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      33
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "vision_along_indicator",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_hoodwink_sharpshooter_vision",
+                      "value": 1,
+                      "operation": 5
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "vision_radius_buffer",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_hoodwink_sharpshooter_vision",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2519,6 +2623,44 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "quick_draw_tooltip_pct_cooldown_reduction",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      50
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "quick_draw_tooltip_efficacy_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      25
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -2650,14 +2792,16 @@
                     45
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "COOLDOWN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "hoodwink_hipshot",
+                    "values": [
+                      0.5
+                    ],
+                    "operation": 1
                   },
                   "required_facet": ""
                 }
@@ -2678,15 +2822,16 @@
           ],
           "talents": [
             {
-              "id": 9512,
-              "name": "special_bonus_unique_hoodwink_scurry_duration",
-              "name_loc": "+{s:bonus_duration}s Scurry Duration",
+              "id": 1568,
+              "name": "special_bonus_unique_hoodwink_scurry_charges",
+              "name_loc": "+{s:bonus_AbilityCharges} Scurry Ability Charge",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2877,15 +3022,16 @@
               "item_quality": 0
             },
             {
-              "id": 9510,
-              "name": "special_bonus_unique_hoodwink_bushwhack_cooldown",
-              "name_loc": "-{s:value}s Bushwhack Cooldown",
+              "id": 7132,
+              "name": "special_bonus_mp_regen_150",
+              "name_loc": "+{s:value} Mana Regen",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2928,7 +3074,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    2
+                    1.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3102,6 +3248,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3294,13 +3441,14 @@
             {
               "id": 9513,
               "name": "special_bonus_unique_hoodwink_acorn_shot_bounces",
-              "name_loc": "+{s:bonus_bounce_count} Acorn Shot Bounces",
+              "name_loc": "+{s:bonus_bounce_count} Acorn Shot Bounce",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3491,15 +3639,16 @@
               "item_quality": 0
             },
             {
-              "id": 1134,
-              "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
-              "name_loc": "+{s:bonus_max_damage} Sharpshooter Max Damage",
-              "desc_loc": "",
+              "id": 1569,
+              "name": "special_bonus_unique_hoodwink_sharpshooter_vision",
+              "name_loc": "Sharpshooter Provides Vision While Charging",
+              "desc_loc": "Also Grants True Sight. Does Not Reveal Wards.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3699,6 +3848,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3916,6 +4066,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -4122,15 +4273,16 @@
               "item_quality": 0
             },
             {
-              "id": 9507,
-              "name": "special_bonus_unique_hoodwink_sharpshooter_pure_damage",
-              "name_loc": "Sharpshooter Pierces Debuff Immunity",
+              "id": 1134,
+              "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
+              "name_loc": "+{s:bonus_max_damage} Sharpshooter Max Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -4170,23 +4322,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

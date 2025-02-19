@@ -14,7 +14,7 @@
             {
               "color": 5,
               "title_loc": "Forsaken",
-              "description_loc": "Desolate can deal partial damage to enemies and is applied by Spectral Dagger.",
+              "description_loc": "Spectre deals {s:bonus_bonus_damage_multiplier_tooltip}x damage with Desolate. Spectre's illusions no longer have Desolate.",
               "name": "spectre_forsaken",
               "icon": "spectre",
               "gradient_id": 0
@@ -22,7 +22,7 @@
             {
               "color": 4,
               "title_loc": "Twist the Knife",
-              "description_loc": "Reality also casts Spectral Dagger on the target and has a decreased cooldown.",
+              "description_loc": "Reality also casts Spectral Dagger on the target.",
               "name": "spectre_twist_the_knife",
               "icon": "nuke",
               "gradient_id": 2
@@ -34,7 +34,7 @@
           "agi_gain": 2.1,
           "int_base": 16,
           "int_gain": 1.7,
-          "primary_attr": 1,
+          "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 1,
           "role_levels": [
@@ -48,8 +48,8 @@
             0,
             0
           ],
-          "damage_min": 48,
-          "damage_max": 52,
+          "damage_min": 21,
+          "damage_max": 25,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
@@ -77,7 +77,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Spectral Dagger applies an instance of Desolate.",
+                "",
                 ""
               ],
               "type": 0,
@@ -324,11 +324,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "spectre_forsaken",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -501,7 +499,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "If an enemy has only non-hero allies nearby, it will take %only_creep_allies_damage_pct%%% of Desolate's damage.",
+                "Spectre deals %bonus_damage_multiplier_tooltip%x damage with Desolate. Spectre's illusions no longer have Desolate.",
                 ""
               ],
               "type": 0,
@@ -560,8 +558,29 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "spectre_forsaken",
+                    "values": [
+                      1.75
+                    ],
+                    "operation": 1
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_damage_multiplier_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "spectre_forsaken",
+                    "values": [
+                      1.75
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -573,13 +592,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_spectre_desolate_radius",
-                      "value": 100,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -600,11 +613,28 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "illusions_can_apply",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
                     "name": "spectre_forsaken",
                     "values": [
-                      60
+                      0
                     ],
-                    "operation": 0
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -814,10 +844,10 @@
                 {
                   "name": "damage_reflection_pct",
                   "values_float": [
+                    7,
                     11,
-                    14,
-                    17,
-                    20
+                    15,
+                    19
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE REFLECTED:",
@@ -1108,7 +1138,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Haunt illusions no longer disappear when their target dies."
+                ""
               ],
               "type": 0,
               "behavior": "8589934597",
@@ -1428,7 +1458,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "Haunt and Shadow Step illusions no longer disappear when their target dies."
               ],
               "type": 1,
               "behavior": "8",
@@ -1452,8 +1482,8 @@
               ],
               "cooldowns": [
                 60,
-                50,
-                40
+                55,
+                50
               ],
               "durations": [
                 0
@@ -1720,8 +1750,8 @@
                   "name": "AbilityCooldown",
                   "values_float": [
                     60,
-                    50,
-                    40
+                    55,
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3198,7 +3228,7 @@
             {
               "id": 6902,
               "name": "special_bonus_unique_spectre_4",
-              "name_loc": "+{s:value}% Haunt Illusion Damage",
+              "name_loc": "+{s:value}% All Illusion Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3247,7 +3277,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    30
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

@@ -125,9 +125,9 @@
                   "name": "bonus_speed",
                   "values_float": [
                     10,
-                    20,
-                    30,
-                    40
+                    18,
+                    26,
+                    34
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS MOVE SPEED:",
@@ -148,7 +148,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_slardar_7",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -209,7 +215,7 @@
                   "facet_bonus": {
                     "name": "slardar_leg_day",
                     "values": [
-                      2
+                      2.5
                     ],
                     "operation": 0
                   },
@@ -363,13 +369,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_slardar_7",
-                      "value": 2,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -571,7 +571,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    300
+                    1.8
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -778,7 +778,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -794,7 +794,7 @@
               "id": 5116,
               "name": "slardar_bash",
               "name_loc": "Bash of the Deep",
-              "desc_loc": "After %attack_count% attacks, your next attack will bash the target. Deals double damage against creeps.",
+              "desc_loc": "After %attack_count% attacks, your next attack will bash the target.",
               "lore_loc": "Thieves of the wealth of the Deep Ones meet the brutality of the Slithereen Guard in melee combat.",
               "notes_loc": [
                 "Does not stack with Skull Basher."
@@ -1055,11 +1055,11 @@
               "id": 1253,
               "name": "slardar_seaborn_sentinel",
               "name_loc": "Seaborn Sentinel",
-              "desc_loc": "Slardar gains bonus movement speed, health regeneration, attack damage, and armor while in a puddle or river.",
+              "desc_loc": "Slardar gains bonus movement speed, health regeneration, attack damage, and armor while in a puddle, trail, or river.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river.",
+              "scepter_loc": "Provides additional HP Regen, Armor and Status Resistance while in a puddle, trail, or river. Increases puddle/trail radius by %scepter_puddle_radius_tooltip%%% and puddle/trail duration by %scepter_puddle_duration_increase_tooltip%s.",
               "facets_loc": [
                 "",
                 ""
@@ -1105,8 +1105,8 @@
                   "values_float": [
                     18
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "BONUS MOVE SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1120,10 +1120,10 @@
                 {
                   "name": "puddle_regen",
                   "values_float": [
-                    2,
-                    4,
-                    6,
-                    8
+                    2.5,
+                    5,
+                    7.5,
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "HP REGEN:",
@@ -1179,12 +1179,38 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "river_speed_tooltip",
+                  "name": "river_damage",
                   "values_float": [
-                    18
+                    8,
+                    16,
+                    24,
+                    32
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "BONUS MOVE SPEED:",
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_slardar_6",
+                      "value": 12,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_puddle_radius_tooltip",
+                  "values_float": [
+                    80
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1196,15 +1222,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "river_damage",
+                  "name": "scepter_puddle_duration_increase_tooltip",
                   "values_float": [
-                    8,
-                    16,
-                    24,
-                    32
+                    5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS DAMAGE:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1369,7 +1392,7 @@
               "id": 5117,
               "name": "slardar_amplify_damage",
               "name_loc": "Corrosive Haze",
-              "desc_loc": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility. The enemy unit leaves a trail of water behind it for 8 seconds.",
+              "desc_loc": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility. The enemy unit leaves a trail of water behind it.",
               "lore_loc": "Even the strongest armor counts for little when left to the brine of the sea.",
               "notes_loc": [],
               "shard_loc": "",
@@ -1485,10 +1508,12 @@
                     100
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "TRAIL RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    1.8
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1499,13 +1524,15 @@
                 {
                   "name": "puddle_duration",
                   "values_float": [
-                    8
+                    7
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "TRAIL DURATION:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    5
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1545,7 +1572,7 @@
                   "facet_bonus": {
                     "name": "slardar_brineguard",
                     "values": [
-                      40
+                      50
                     ],
                     "operation": 0
                   },
@@ -1706,7 +1733,7 @@
             {
               "id": 852,
               "name": "special_bonus_unique_slardar_7",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Guardian Sprint Cooldown",
+              "name_loc": "+{s:bonus_duration}s Guardian Sprint Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1903,9 +1930,9 @@
               "item_quality": 0
             },
             {
-              "id": 1085,
-              "name": "special_bonus_unique_slardar_slithereen_crush_stun",
-              "name_loc": "+{s:bonus_stun_duration}s Slithereen Crush Stun Duration",
+              "id": 695,
+              "name": "special_bonus_unique_slardar_6",
+              "name_loc": "+{s:bonus_river_damage} Seaborn Sentinel Bonus Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

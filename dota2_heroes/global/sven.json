@@ -22,15 +22,15 @@
             {
               "color": 0,
               "title_loc": "Wrath of God",
-              "description_loc": "Sven gains additional attack damage from Strength, but has decreased base damage.",
+              "description_loc": "Sven gains additional attack damage from Strength.",
               "name": "sven_strscaling",
               "icon": "strength",
               "gradient_id": 0
             }
           ],
-          "str_base": 25,
-          "str_gain": 3.2,
-          "agi_base": 21,
+          "str_base": 23,
+          "str_gain": 3.5,
+          "agi_base": 18,
           "agi_gain": 2.2,
           "int_base": 16,
           "int_gain": 1.5,
@@ -48,19 +48,19 @@
             0,
             2
           ],
-          "damage_min": 62,
-          "damage_max": 64,
+          "damage_min": 60,
+          "damage_max": 62,
           "attack_rate": 1.9,
           "attack_range": 150,
           "projectile_speed": 0,
-          "armor": 2.5,
+          "armor": 3,
           "magic_resistance": 25,
           "movement_speed": 325,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 670,
-          "health_regen": 3.25,
+          "max_health": 626,
+          "health_regen": 3.05,
           "max_mana": 267,
           "mana_regen": 0.8,
           "abilities": [
@@ -168,7 +168,10 @@
                 {
                   "name": "bolt_aoe",
                   "values_float": [
-                    270
+                    250,
+                    270,
+                    290,
+                    310
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -478,6 +481,9 @@
                 {
                   "name": "cleave_ending_width",
                   "values_float": [
+                    270,
+                    300,
+                    330,
                     360
                   ],
                   "is_percentage": false,
@@ -495,10 +501,13 @@
                 {
                   "name": "cleave_distance",
                   "values_float": [
+                    400,
+                    500,
+                    600,
                     700
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "CLEAVE DISTANCE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -512,10 +521,10 @@
                 {
                   "name": "great_cleave_damage",
                   "values_float": [
-                    40,
-                    60,
+                    50,
+                    65,
                     80,
-                    100
+                    95
                   ],
                   "is_percentage": true,
                   "heading_loc": "CLEAVE DAMAGE:",
@@ -763,10 +772,10 @@
                 {
                   "name": "movespeed",
                   "values_float": [
-                    10,
-                    14,
-                    18,
-                    22
+                    6,
+                    9,
+                    12,
+                    15
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS SPEED:",
@@ -785,10 +794,10 @@
                 {
                   "name": "bonus_armor",
                   "values_float": [
-                    6,
+                    5,
                     8,
-                    10,
-                    12
+                    11,
+                    14
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ARMOR:",
@@ -915,10 +924,10 @@
                   "facet_bonus": {
                     "name": "sven_heavy_plate",
                     "values": [
-                      60,
-                      120,
-                      180,
-                      240
+                      70,
+                      140,
+                      210,
+                      280
                     ],
                     "operation": 5
                   },
@@ -1414,7 +1423,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_sven",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1776,9 +1791,9 @@
               "item_quality": 0
             },
             {
-              "id": 5906,
-              "name": "special_bonus_attack_speed_20",
-              "name_loc": "+{s:value} Attack Speed",
+              "id": 6045,
+              "name": "special_bonus_unique_sven",
+              "name_loc": "+{s:bonus_bonus_damage_pct}% Vanquisher Bonus Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1824,23 +1839,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3213,7 +3211,7 @@
                   "id": 1234,
                   "name": "sven_wrath_of_god",
                   "name_loc": "Wrath of God",
-                  "desc_loc": "Sven gains additional attack damage from Strength, but has decreased base damage.",
+                  "desc_loc": "Sven gains additional attack damage from Strength.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
@@ -3261,10 +3259,10 @@
                     {
                       "name": "bonus_damage_per_str",
                       "values_float": [
+                        0,
+                        0.3,
                         0.4,
-                        0.5,
-                        0.6,
-                        0.7
+                        0.5
                       ],
                       "is_percentage": false,
                       "heading_loc": "BONUS DAMAGE PER STR:",
@@ -3281,10 +3279,10 @@
                     {
                       "name": "base_damage_reduction",
                       "values_float": [
-                        20
+                        0
                       ],
                       "is_percentage": false,
-                      "heading_loc": "BASE DAMAGE REDUCTION:",
+                      "heading_loc": "",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],

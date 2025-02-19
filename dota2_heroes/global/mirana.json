@@ -13,28 +13,28 @@
           "facets": [
             {
               "color": 3,
-              "title_loc": "Moonlight Shadow",
-              "description_loc": "Mirana's Ultimate grants allies invisiblity and movement speed.",
-              "name": "mirana_moonlight",
-              "icon": "moon",
+              "title_loc": "Starstruck",
+              "description_loc": "Starstorm's second meteor deals more damage and blinds the target.",
+              "name": "mirana_starstruck",
+              "icon": "no_vision",
               "gradient_id": 1
             },
             {
               "color": 5,
-              "title_loc": "Solar Flare",
-              "description_loc": "Mirana's Ultimate grants allies increasing attack speed and damage over time.",
-              "name": "mirana_sunlight",
-              "icon": "sun",
+              "title_loc": "Leaps and Bounds",
+              "description_loc": "Upon landing, Leap roots targets in a {s:bonus_root_radius} radius for {s:bonus_root_duration}s.",
+              "name": "mirana_leaps_and_bounds",
+              "icon": "slow",
               "gradient_id": 3
             }
           ],
-          "str_base": 18,
-          "str_gain": 1.9,
+          "str_base": 20,
+          "str_gain": 2.2,
           "agi_base": 26,
-          "agi_gain": 2.5,
+          "agi_gain": 3.1,
           "int_base": 22,
-          "int_gain": 1.4,
-          "primary_attr": 3,
+          "int_gain": 1.9,
+          "primary_attr": 1,
           "complexity": 2,
           "attack_capability": 2,
           "role_levels": [
@@ -48,8 +48,8 @@
             0,
             0
           ],
-          "damage_min": -2,
-          "damage_max": 2,
+          "damage_min": 48,
+          "damage_max": 54,
           "attack_rate": 1.7,
           "attack_range": 630,
           "projectile_speed": 900,
@@ -59,8 +59,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 516,
-          "health_regen": 2.0500002,
+          "max_health": 560,
+          "health_regen": 2.25,
           "max_mana": 339,
           "mana_regen": 1.5,
           "abilities": [
@@ -68,17 +68,19 @@
               "id": 5051,
               "name": "mirana_starfall",
               "name_loc": "Starstorm",
-              "desc_loc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a %starfall_secondary_radius% radius will be struck a second time for %secondary_starfall_damage_percent%%% of the damage.",
+              "desc_loc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a %starfall_secondary_radius% radius will be struck a second time.",
               "lore_loc": "The Goddess breaks the strata to empower her Princess in the time of need.",
               "notes_loc": [
                 "Starstorm is not blocked by Linken's Sphere.",
                 "Starstorm cannot hit invisible units.",
-                "Starstorm will choose a new target for the second star if the first died before impact."
+                "Starstorm will choose a new target for the second meteor if the first died before impact."
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "Starstorm's second meteor deals more damage and blinds the target.",
                 ""
               ],
               "type": 0,
@@ -127,6 +129,51 @@
               "health_costs": [],
               "special_values": [
                 {
+                  "name": "damage",
+                  "values_float": [
+                    75,
+                    150,
+                    225,
+                    300
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_7",
+                      "value": 250,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "secondary_starfall_damage_percent",
+                  "values_float": [
+                    60
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SECOND METEOR DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "mirana_starstruck",
+                    "values": [
+                      40
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "starfall_radius",
                   "values_float": [
                     675
@@ -161,45 +208,46 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "secondary_starfall_damage_percent",
+                  "name": "starstruck_blind_pct",
                   "values_float": [
-                    80
+                    0
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "BLIND MISS RATE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "mirana_starstruck",
+                    "values": [
+                      60
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
-                  "name": "damage",
+                  "name": "starstruck_duration",
                   "values_float": [
-                    75,
-                    150,
-                    225,
-                    300
+                    0,
+                    0,
+                    0,
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_mirana_7",
-                      "value": 250,
-                      "operation": 0
-                    }
-                  ],
+                  "heading_loc": "BLIND DURATION:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "mirana_starstruck",
+                    "values": [
+                      3.5,
+                      4,
+                      4.5,
+                      5
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -332,7 +380,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_3",
+                      "value": 2,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -364,11 +418,14 @@
               "lore_loc": "Lunar energies make the Princess of the Moon's arrows more deadly than most.",
               "notes_loc": [
                 "For every 150 distance the arrow travels, the stun duration upon impact increases by 0.5 seconds, and the bonus damage added increases by 14.",
-                "Sacred Arrow can hit invisible units."
+                "Sacred Arrow can hit invisible units.",
+                "Starstruck does not apply to the second Starstorm from Aghanim's Scepter."
               ],
               "shard_loc": "",
               "scepter_loc": "Causes Sacred Arrow to release a Starstorm on enemies along the travel path of the primary arrow, releasing a second Starstorm that deals less damage to the impacted unit.",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -532,7 +589,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAXIMUM BONUS DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_arrow_damage",
+                      "value": 180,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -788,13 +851,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_mirana_3",
-                      "value": 2,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -825,14 +882,16 @@
               "desc_loc": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts %leap_bonus_duration% seconds.",
               "lore_loc": "None can fail to recognize Mirana's iconic white beast in the heat of battle.",
               "notes_loc": [],
-              "shard_loc": "Upon landing, launches a projectile along Sagan's leap path, dealing damage and slowing units affected and guarantees them to be hit with a secondary Starstorm if that spell is cast. Leap does not break Moonlight Shadow invisibility.<br><br> Can be put on alt-cast to choose the distance and facing direction of the jump. <br><br>Grants %shard_bonus_charges% bonus charge(s).",
+              "shard_loc": "Grants +%additional_charges% Leap charge. Attacks during the Leap buff critically strike for %crit_damage_pct%%% damage.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "",
+                "Upon landing, Leap roots targets in a %root_radius% radius for %root_duration%s."
               ],
               "type": 0,
-              "behavior": "134742016",
+              "behavior": "134742020",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -891,23 +950,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "min_jump_distance",
-                  "values_float": [
-                    200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "leap_speed",
                   "values_float": [
                     1300
@@ -944,10 +986,10 @@
                 {
                   "name": "leap_speedbonus",
                   "values_float": [
-                    8,
-                    16,
-                    24,
-                    32
+                    6,
+                    12,
+                    18,
+                    24
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT BONUS:",
@@ -1005,99 +1047,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_radius",
+                  "name": "additional_charges",
                   "values_float": [
-                    300
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "INITIAL CONE RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_radius_end",
-                  "values_float": [
-                    450
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "FINAL CONE RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_damage",
-                  "values_float": [
-                    170
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_slow_pct",
-                  "values_float": [
-                    30
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_slow_duration",
-                  "values_float": [
-                    2.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_bonus_charges",
-                  "values_float": [
+                  "values_shard": [
                     1
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1107,14 +1066,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_projectile_distance",
+                  "name": "crit_damage_pct",
                   "values_float": [
-                    800
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    150
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1124,9 +1085,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_projectile_speed",
+                  "name": "root_radius",
                   "values_float": [
-                    1200
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1134,9 +1095,36 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "mirana_leaps_and_bounds",
+                    "values": [
+                      250
+                    ],
                     "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "root_duration",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "mirana_leaps_and_bounds",
+                    "values": [
+                      1.1,
+                      1.4,
+                      1.7,
+                      2
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -1304,6 +1292,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1345,7 +1335,7 @@
                 {
                   "name": "bonus_lotus",
                   "values_float": [
-                    20
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1508,19 +1498,333 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
+            },
+            {
+              "id": 1213,
+              "name": "mirana_invis",
+              "name_loc": "Moonlight Shadow",
+              "desc_loc": "Turns Mirana and all allied heroes invisible and grants bonus movement speed. Mirana gains bonus outgoing damage during the duration. If a hero is revealed, invisibility will restore after the fade delay as long as Moonlight Shadow's duration has not expired.",
+              "lore_loc": "Her tenure with Selemene allows Mirana to eclipse the ground, wrapping her allies in a cloak of shadows.",
+              "notes_loc": [
+                "Units affected will not auto attack enemies."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "type": 1,
+              "behavior": "167772164",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 1,
+              "dispellable": 3,
+              "max_level": 3,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                140,
+                120,
+                100
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                125
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "fade_delay",
+                  "values_float": [
+                    2.5,
+                    2,
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "FADE DELAY:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "duration",
+                  "values_float": [
+                    18
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_movement_speed",
+                  "values_float": [
+                    9,
+                    12,
+                    15
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "evasion",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_5",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_outgoing_damage_pct",
+                  "values_float": [
+                    9,
+                    12,
+                    15
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SELF OUTGOING DAMAGE BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChannelTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDuration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    125
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    140,
+                    120,
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_4",
+                      "value": 20,
+                      "operation": 2
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
             }
           ],
           "talents": [
             {
               "id": 6397,
               "name": "special_bonus_unique_mirana_3",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Sacred Arrow cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Starstorm Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1721,6 +2025,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1920,7 +2226,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Solar Flare gives +{s:bonus_evasion}% Evasion"
+                "Solar Flare gives +{s:bonus_evasion}% Evasion",
+                "",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -2118,6 +2426,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2318,7 +2628,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "-{s:bonus_AbilityCooldown}s Solar Flare Cooldown"
+                "-{s:bonus_AbilityCooldown}s Solar Flare Cooldown",
+                "",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -2507,15 +2819,17 @@
               "item_quality": 0
             },
             {
-              "id": 1194,
-              "name": "special_bonus_20_crit_2",
-              "name_loc": "+{s:crit_chance}% Critical Strike ({s:crit_multiplier}%)",
+              "id": 1488,
+              "name": "special_bonus_attack_base_damage_35",
+              "name_loc": "+{s:value} Base Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2556,26 +2870,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "crit_chance",
+                  "name": "value",
                   "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "crit_multiplier",
-                  "values_float": [
-                    200
+                    35
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2749,6 +3046,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2949,6 +3248,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3140,660 +3441,10 @@
           ],
           "facet_abilities": [
             {
-              "abilities": [
-                {
-                  "id": 1213,
-                  "name": "mirana_invis",
-                  "name_loc": "Moonlight Shadow",
-                  "desc_loc": "Turns Mirana and all allied heroes invisible and grants bonus movement speed. If a hero is revealed, invisibility will restore after the fade delay as long as Moonlight Shadow's duration has not expired.",
-                  "lore_loc": "Her tenure with Selemene allows Mirana to eclipse the ground, wrapping her allies in a cloak of shadows.",
-                  "notes_loc": [
-                    "Units affected will not auto attack enemies."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 1,
-                  "behavior": "167772164",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 1,
-                  "dispellable": 3,
-                  "max_level": 3,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0.5,
-                    0.5,
-                    0.5
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    140,
-                    120,
-                    100
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    125
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "fade_delay",
-                      "values_float": [
-                        2.5,
-                        2,
-                        1.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "FADE DELAY:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        18
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "bonus_movement_speed",
-                      "values_float": [
-                        9,
-                        12,
-                        15
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "MOVEMENT SPEED:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "evasion",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_mirana_5",
-                          "value": 20,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastRange",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChannelTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityDuration",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCharges",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChargeRestoreTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        125
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        140,
-                        120,
-                        100
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_mirana_4",
-                          "value": 20,
-                          "operation": 2
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
+              "abilities": []
             },
             {
-              "abilities": [
-                {
-                  "id": 1214,
-                  "name": "mirana_solar_flare",
-                  "name_loc": "Solar Flare",
-                  "desc_loc": "Gradually increases attack speed and damage of Mirana and all allied heroes, reaching maximum power after %max_damage_time%s. <br><br> Allies receive %ally_pct%%% of the bonus.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 1,
-                  "behavior": "167772164",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 1,
-                  "dispellable": 3,
-                  "max_level": 3,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0.5,
-                    0.5,
-                    0.5
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    140,
-                    120,
-                    100
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    125
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "smoothness",
-                      "values_float": [
-                        0.015
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "increase_rate",
-                      "values_float": [
-                        10,
-                        15,
-                        20
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "max_total_increase",
-                      "values_float": [
-                        70,
-                        110,
-                        150
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "MAX ATTACK SPEED/DAMAGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "day_vision_multiplier",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "ally_pct",
-                      "values_float": [
-                        50
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "ALLY BONUS:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        16
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "TOTAL DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "max_damage_time",
-                      "values_float": [
-                        6
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "evasion",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_mirana_5",
-                          "value": 20,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastRange",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChannelTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityDuration",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCharges",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChargeRestoreTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        125
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        140,
-                        120,
-                        100
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_mirana_4",
-                          "value": 20,
-                          "operation": 2
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
+              "abilities": []
             }
           ]
         }

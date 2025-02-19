@@ -12,20 +12,20 @@
           "npe_desc_loc": "Creates a copy of himself to split push",
           "facets": [
             {
-              "color": 5,
-              "title_loc": "Order",
-              "description_loc": "Arc Warden and Tempest Double have their respective ability effects.",
-              "name": "arc_warden_order",
-              "icon": "arc_warden",
-              "gradient_id": 3
+              "color": 3,
+              "title_loc": "Runed Replica",
+              "description_loc": "The Tempest Double is infused with the bonuses of Power Runes for {s:bonus_rune_duration}s when created.<br><br>Level 1 - Invisibility Rune.<br><br>Level 2 - Invisibility and Arcane Runes.<br><br>Level 3 - Invisibility, Arcane, and Haste Runes.",
+              "name": "arc_warden_runed_replica",
+              "icon": "arc_warden_alt",
+              "gradient_id": 1
             },
             {
-              "color": 5,
-              "title_loc": "Disorder",
-              "description_loc": "Arc Warden and Tempest Double have their ability effects swapped.",
-              "name": "arc_warden_disorder",
-              "icon": "arc_warden_alt",
-              "gradient_id": 0
+              "color": 1,
+              "title_loc": "Power Capture",
+              "description_loc": "Magnetic Field pulls runes. Arc Warden gains +{s:bonus_all_attribute_bonus_per_stack} all attributes permanently upon activating a Power Rune.",
+              "name": "arc_warden_power_capture",
+              "icon": "rune",
+              "gradient_id": 1
             }
           ],
           "str_base": 20,
@@ -34,7 +34,7 @@
           "agi_gain": 3,
           "int_base": 24,
           "int_gain": 2.6,
-          "primary_attr": 1,
+          "primary_attr": 3,
           "complexity": 3,
           "attack_capability": 2,
           "role_levels": [
@@ -48,8 +48,8 @@
             0,
             0
           ],
-          "damage_min": 53,
-          "damage_max": 59,
+          "damage_min": 23,
+          "damage_max": 29,
           "attack_rate": 1.7,
           "attack_range": 625,
           "projectile_speed": 900,
@@ -72,10 +72,12 @@
               "lore_loc": "An infinitesimal fraction of the power which imprisoned the Ancients.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Flux silences when the target is alone, deals more damage, and lasts longer.",
               "facets_loc": [
-                "Movement speed slow is increased.",
-                "Damage is increased."
+                "",
+                "",
+                "",
+                ""
               ],
               "type": 0,
               "behavior": "8",
@@ -126,15 +128,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_arc_warden_4",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    2
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -188,45 +186,33 @@
                   "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    50
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_order"
+                  "required_facet": ""
                 },
                 {
                   "name": "move_speed_slow_pct",
                   "values_float": [
-                    15,
-                    22,
-                    30,
-                    39
+                    14,
+                    21,
+                    28,
+                    35
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SPEED SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_order"
-                },
-                {
-                  "name": "tempest_damage_per_second",
-                  "values_float": [
-                    20,
-                    45,
-                    70,
-                    95
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_arc_warden_4",
+                      "value": 20,
+                      "operation": 0
+                    }
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "DAMAGE PER SECOND:",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -234,27 +220,7 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_disorder"
-                },
-                {
-                  "name": "tempest_move_speed_slow_pct",
-                  "values_float": [
-                    5,
-                    8,
-                    11,
-                    14
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SPEED SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_disorder"
+                  "required_facet": ""
                 },
                 {
                   "name": "applies_silence",
@@ -263,15 +229,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_arc_warden_flux_silences",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    1
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -426,7 +388,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -442,17 +404,19 @@
               "id": 5678,
               "name": "arc_warden_magnetic_field",
               "name_loc": "Magnetic Field",
-              "desc_loc": "Arc Warden generates a circular distortion field of magnetic energy around themself.",
+              "desc_loc": "Arc Warden generates a circular distortion field of magnetic energy. The magnetic field grants bonus attack speed and protects allied units within it by evading attacks coming from outside the field.",
               "lore_loc": "Time and space are of little consequence to one as old as Zet.",
               "notes_loc": [],
-              "shard_loc": "Magnetic Field slows enemies and enemy attack projectiles while they are in it. Also provides allies inside with increased attack projectile speed. Increases the radius by %bonus_radius%.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "The magnetic field pushes enemies away, grants bonus attack speed and protects allied heroes within it by evading attacks coming from outside the field.",
-                "Allies gain bonus attack range and deal bonus damage with their attacks. Duration is increased."
+                "",
+                "",
+                "",
+                "Magnetic Field pulls runes. Runes inside Magnetic Field automatically activate."
               ],
               "type": 0,
-              "behavior": "134217764",
+              "behavior": "4429185072",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -501,9 +465,7 @@
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
                   "bonuses": [],
-                  "values_shard": [
-                    75
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -513,31 +475,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "projectile_slow",
+                  "name": "knockback_enemies",
                   "values_float": [
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "ATTACK PROJECTILE SPEED:",
-                  "bonuses": [],
-                  "values_shard": [
-                    75
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_slow_pct",
-                  "values_float": [
-                    30
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SLOW:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -566,7 +509,7 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_order"
+                  "required_facet": ""
                 },
                 {
                   "name": "attack_speed_bonus",
@@ -581,7 +524,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_arc_warden_3",
-                      "value": 16,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -592,7 +535,7 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_order"
+                  "required_facet": ""
                 },
                 {
                   "name": "evasion_chance",
@@ -609,88 +552,16 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_order"
+                  "required_facet": ""
                 },
                 {
-                  "name": "tempest_duration",
+                  "name": "affects_buildings",
                   "values_float": [
-                    4,
-                    5,
-                    6,
-                    7
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_disorder"
-                },
-                {
-                  "name": "attack_range_bonus",
-                  "values_float": [
-                    150
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS ATTACK RANGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_disorder"
-                },
-                {
-                  "name": "attack_damage_bonus",
-                  "values_float": [
-                    20,
-                    40,
-                    60,
-                    80
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS ATTACK DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_arc_warden_3",
-                      "value": 25,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_disorder"
-                },
-                {
-                  "name": "attack_magic_damage",
-                  "values_float": [
-                    20,
-                    40,
-                    60,
-                    80
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_arc_warden_3",
-                      "value": 16,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -701,24 +572,102 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "affects_buildings",
+                  "name": "rune_pull_strength",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "RUNE PULL FORCE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_power_capture",
+                    "values": [
+                      150
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "rune_pull_max_speed_as_multiplier_of_pull_strength",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_arc_warden_7",
-                      "value": 1,
-                      "operation": 5
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "arc_warden_power_capture",
+                    "values": [
+                      4
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "rune_pull_falloff_multiplier",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_power_capture",
+                    "values": [
+                      3
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "rune_pull_radius",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "RUNE PULL RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_power_capture",
+                    "values": [
+                      1200,
+                      1800,
+                      2400,
+                      3000
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "rune_activate_radius_buffer",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_power_capture",
+                    "values": [
+                      30
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -874,7 +823,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -889,16 +838,18 @@
               "id": 5679,
               "name": "arc_warden_spark_wraith",
               "name_loc": "Spark Wraith",
-              "desc_loc": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit. Non-hero units receive %creep_damage_bonus_pct%%% more damage.",
+              "desc_loc": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.",
               "lore_loc": "Lesser fragments of Zet's original self.",
               "notes_loc": [
                 "Spark Wraiths can not be disjointed."
               ],
-              "shard_loc": "",
-              "scepter_loc": "Causes Spark Wraiths to spawn a new Spark Wraith after impacting an enemy, which then starts its %scepter_activation_delay% second activation period. The new Spark Wraiths last %scepter_duration% seconds and has a radius of %scepter_radius%",
+              "shard_loc": "When Spark Wraith activates, a secondary Spark Wraith will fuse to the next closest target that deals %second_wraith_damage_pct%%% damage. Increases Spark Wraith search radius.",
+              "scepter_loc": "",
               "facets_loc": [
-                "Activation delay and damage increased.",
-                "Wraith movement speed and slow duration increased."
+                "",
+                "",
+                "",
+                ""
               ],
               "type": 0,
               "behavior": "48",
@@ -947,7 +898,9 @@
                   "is_percentage": false,
                   "heading_loc": "SEARCH RADIUS:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    100
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -993,11 +946,17 @@
                 {
                   "name": "base_activation_delay",
                   "values_float": [
-                    2
+                    1.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "ACTIVATION DELAY:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_arc_warden_7",
+                      "value": 1,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1005,15 +964,15 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_order"
+                  "required_facet": ""
                 },
                 {
                   "name": "spark_damage_base",
                   "values_float": [
                     100,
-                    180,
-                    260,
-                    340
+                    170,
+                    240,
+                    310
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -1031,12 +990,12 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_order"
+                  "required_facet": ""
                 },
                 {
                   "name": "wraith_speed_base",
                   "values_float": [
-                    400
+                    550
                   ],
                   "is_percentage": false,
                   "heading_loc": "WRAITH SPEED:",
@@ -1048,95 +1007,15 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_order"
+                  "required_facet": ""
                 },
                 {
                   "name": "ministun_duration",
                   "values_float": [
-                    0.6,
-                    0.8,
-                    1,
-                    1.2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_order"
-                },
-                {
-                  "name": "tempest_activation_delay",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ACTIVATION DELAY:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_disorder"
-                },
-                {
-                  "name": "spark_damage_tempest",
-                  "values_float": [
-                    75,
-                    140,
-                    205,
-                    270
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_arc_warden",
-                      "value": 40,
-                      "operation": 3
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_disorder"
-                },
-                {
-                  "name": "wraith_speed_tempest",
-                  "values_float": [
-                    725
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "WRAITH SPEED:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "arc_warden_disorder"
-                },
-                {
-                  "name": "ministun_duration_tempest",
-                  "values_float": [
-                    0.4,
                     0.5,
                     0.6,
-                    0.7
+                    0.7,
+                    0.8
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
@@ -1148,7 +1027,7 @@
                     "values": [],
                     "operation": 0
                   },
-                  "required_facet": "arc_warden_disorder"
+                  "required_facet": ""
                 },
                 {
                   "name": "think_interval",
@@ -1202,14 +1081,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_activation_delay",
+                  "name": "maximum_targets",
                   "values_float": [
-                    2
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    1
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1219,14 +1100,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_duration",
+                  "name": "second_wraith_damage_pct",
                   "values_float": [
-                    15
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    80
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1236,14 +1119,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_radius",
+                  "name": "second_wraith_speed_pct",
                   "values_float": [
-                    225
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    100
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1255,7 +1140,7 @@
                 {
                   "name": "creep_damage_bonus_pct",
                   "values_float": [
-                    40
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1407,8 +1292,8 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
-              "ability_has_shard": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1432,7 +1317,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "",
+                "Runes of Power fuse to the Self. Arc Warden gains +%all_attribute_bonus_per_stack% all attributes permanently whenever Arc Warden or the Tempest Double activates a Power Rune."
               ],
               "type": 0,
               "behavior": "13194139533314",
@@ -1517,6 +1404,44 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_stacks_per_rune_pickup",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_power_capture",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "all_attribute_bonus_per_stack",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_power_capture",
+                    "values": [
+                      1.5
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1675,7 +1600,7 @@
               "id": 5683,
               "name": "arc_warden_tempest_double",
               "name_loc": "Tempest Double",
-              "desc_loc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.<br><br>If killed by the enemy, the Tempest Double gives bounty gold to enemies, and the ability's cooldown is restarted.<br><br>The Tempest Double loses its sense of self if he is too far away from Arc Warden and takes more damage.",
+              "desc_loc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.<br><br>The Tempest Double loses its sense of self and fractures over time, becoming slower and less accurate.",
               "lore_loc": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
               "notes_loc": [
                 "Tempest Double and Refresher Orb cannot be used by the duplicate."
@@ -1684,6 +1609,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "The Tempest Double is infused with the bonuses of Power Runes for %rune_duration%s when created.<br><br>Level 1 - Invisibility Rune.<br><br>Level 2 - Invisibility and Arcane Runes.<br><br>Level 3 - Invisibility, Arcane, and Haste Runes.",
                 ""
               ],
               "type": 1,
@@ -1705,9 +1632,9 @@
                 0
               ],
               "cooldowns": [
-                100,
-                90,
-                80
+                60,
+                55,
+                50
               ],
               "durations": [
                 0
@@ -1746,7 +1673,9 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    60
+                    18,
+                    21,
+                    24
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1761,12 +1690,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "penalty_distance",
+                  "name": "max_blind_chance",
                   "values_float": [
-                    2000
+                    35
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "PENALTY DISTANCE:",
+                  "is_percentage": true,
+                  "heading_loc": "MAX MISS CHANCE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1778,17 +1707,34 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "ignore_penalty_distance",
+                  "name": "max_slow",
                   "values_float": [
-                    0
+                    35
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX SELF SLOW:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "has_debuff",
+                  "values_float": [
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_arc_warden_8",
-                      "value": 1,
-                      "operation": 0
+                      "value": 0,
+                      "operation": 5
                     }
                   ],
                   "values_shard": [],
@@ -1801,19 +1747,90 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "incoming_damage_penalty",
+                  "name": "rune_duration",
                   "values_float": [
-                    60
+                    0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "PENALTY INCREASED DAMAGE:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "arc_warden_runed_replica",
+                    "values": [
+                      10
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "invis_rune",
+                  "values_float": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_runed_replica",
+                    "values": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "arcane_rune",
+                  "values_float": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_runed_replica",
+                    "values": [
+                      0,
+                      1,
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "haste_rune",
+                  "values_float": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "arc_warden_runed_replica",
+                    "values": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -1939,9 +1956,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    100,
-                    90,
-                    80
+                    60,
+                    55,
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1981,6 +1998,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2180,6 +2199,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2389,13 +2410,15 @@
             {
               "id": 7105,
               "name": "special_bonus_unique_arc_warden_4",
-              "name_loc": "+{s:bonus_duration}s Flux Duration",
+              "name_loc": "+{s:bonus_move_speed_slow_pct}% Flux Slow",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2588,13 +2611,15 @@
             {
               "id": 7104,
               "name": "special_bonus_unique_arc_warden_3",
-              "name_loc": "+{s:bonus_attack_speed_bonus} Magnetic Field Attack Speed/Bonus Damage",
+              "name_loc": "+{s:bonus_attack_speed_bonus} Magnetic Field Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2795,6 +2820,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2994,6 +3021,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3185,13 +3214,15 @@
             {
               "id": 1111,
               "name": "special_bonus_unique_arc_warden_8",
-              "name_loc": "No Distance Penalty For Tempest Double",
+              "name_loc": "Tempest Double Has No Penalties",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -3382,15 +3413,17 @@
               "item_quality": 0
             },
             {
-              "id": 1485,
-              "name": "special_bonus_unique_arc_warden_flux_silences",
-              "name_loc": "Flux Silences when target is alone",
+              "id": 975,
+              "name": "special_bonus_unique_arc_warden_7",
+              "name_loc": "-{s:bonus_base_activation_delay}s Spark Wraith Activation Delay",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],

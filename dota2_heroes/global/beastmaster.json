@@ -31,9 +31,9 @@
           "str_base": 25,
           "str_gain": 2.9,
           "agi_base": 22,
-          "agi_gain": 1.6,
+          "agi_gain": 1.9,
           "int_base": 16,
-          "int_gain": 1.2,
+          "int_gain": 1.9,
           "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 1,
@@ -48,8 +48,8 @@
             0,
             2
           ],
-          "damage_min": 5,
-          "damage_max": 9,
+          "damage_min": 28,
+          "damage_max": 32,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 0,
@@ -783,7 +783,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_beastmaster_3",
+                      "value": 5,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -814,7 +820,7 @@
               "desc_loc": "Beastmaster summons a hawk that circles around Beastmaster and dive-bombs at enemies with a base attack rate of every %hawk_base_attack_interval%s, damaging and rooting them. Attack rate increases with the Hawk's attack speed. Prioritizes heroes. ",
               "lore_loc": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need.",
               "notes_loc": [],
-              "shard_loc": "Reduces Hawk cooldown by %bonus_AbilityCooldown%s and summons an additional Hawk.",
+              "shard_loc": "Increases Hawk duration by %bonus_duration%s and summons an additional Hawk.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -867,7 +873,9 @@
                   "is_percentage": false,
                   "heading_loc": "SUMMON DURATION:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    5
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1015,13 +1023,13 @@
                 {
                   "name": "dive_damage",
                   "values_float": [
-                    60,
-                    90,
-                    120,
-                    150
+                    50,
+                    80,
+                    110,
+                    140
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE:",
+                  "heading_loc": "DIVE DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_beastmaster_2",
@@ -1272,10 +1280,14 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    10
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_beastmaster_3",
+                      "value": 5,
+                      "operation": 2
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1460,27 +1472,6 @@
                       40,
                       50
                     ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "magic_resist",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_beastmaster_3",
-                      "value": 8,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -2662,7 +2653,7 @@
             {
               "id": 6611,
               "name": "special_bonus_unique_beastmaster_3",
-              "name_loc": "{s:bonus_magic_resist}% Inner Beast Magic Resist",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Call Of The Wild Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

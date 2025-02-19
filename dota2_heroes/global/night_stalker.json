@@ -12,19 +12,19 @@
           "npe_desc_loc": "Enpowered by the shadows of nightfall",
           "facets": [
             {
-              "color": 3,
-              "title_loc": "Blinding Void",
-              "description_loc": "Enemies affected by Void do not share vision with their allies. Affected enemies take damage per second when they are not visible to their allies.",
-              "name": "night_stalker_blinding_void",
-              "icon": "no_vision",
+              "color": 5,
+              "title_loc": "Night Reign",
+              "description_loc": "The game now starts at night instead of day. Night is longer than day. Night Stalker starts with a bonus level of Hunter in the Night.",
+              "name": "night_stalker_dayswap",
+              "icon": "moon",
               "gradient_id": 0
             },
             {
-              "color": 5,
-              "title_loc": "Night Reign",
-              "description_loc": "The game now starts at night instead of day. Night is longer than day.",
-              "name": "night_stalker_dayswap",
-              "icon": "moon",
+              "color": 3,
+              "title_loc": "Voidbringer",
+              "description_loc": "Increases the max level of Void. Level {s:bonus_max_level_tooltip} Void at night becomes ground targeted and applies to an area.",
+              "name": "night_stalker_voidbringer",
+              "icon": "area_of_effect",
               "gradient_id": 0
             }
           ],
@@ -68,7 +68,7 @@
               "id": 5275,
               "name": "night_stalker_void",
               "name_loc": "Void",
-              "desc_loc": "Creates a damaging void that slows an enemy unit, reduces its vision and deals damage. At night, Void also mini-stuns, interrupting channeling abilities, and its effects lasts longer.",
+              "desc_loc": "Creates a damaging void that slows an enemy unit and deals damage. At night, Void also mini-stuns, interrupting channeling abilities, and its effects lasts longer.",
               "lore_loc": "Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was.",
               "notes_loc": [
                 "Void does not ministun enemies during the day."
@@ -77,7 +77,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Enemies affected by Void do not share vision with their allies. Affected enemies take damage per second when they are not visible to their allies.",
-                ""
+                "",
+                "Increases the max level of Void. Level %max_level% Void at night becomes ground targeted and applies to a %cast_radius_tooltip% AoE."
               ],
               "type": 0,
               "behavior": "8",
@@ -130,22 +131,19 @@
                     80,
                     160,
                     240,
-                    320
+                    320,
+                    400
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_night_stalker_4",
-                      "value": 80,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "night_stalker_voidbringer",
+                    "values": [
+                      0
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -170,6 +168,7 @@
                 {
                   "name": "duration_night",
                   "values_float": [
+                    2,
                     2.5,
                     3,
                     3.5,
@@ -181,8 +180,10 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "night_stalker_voidbringer",
+                    "values": [
+                      0
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -211,26 +212,6 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "vision_penalty",
-                  "values_float": [
-                    100,
-                    200,
-                    300,
-                    400
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "VISION REDUCTION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -278,6 +259,44 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "night_stalker_voidbringer",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "night_stalker_voidbringer",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "disable_vision",
                   "values_float": [
                     0
@@ -293,6 +312,52 @@
                       1
                     ],
                     "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cast_radius",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "night_stalker_voidbringer",
+                    "values": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      300
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cast_radius_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "night_stalker_voidbringer",
+                    "values": [
+                      300
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -428,7 +493,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_night_stalker_4",
+                      "value": 1,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -462,6 +533,7 @@
               "shard_loc": "",
               "scepter_loc": "Reduces cooldown of Crippling Fear and it becomes a toggled ability that takes a percentage of max mana per second to maintain after the initial duration time.",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -547,7 +619,7 @@
                     0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MANACOST:",
+                  "heading_loc": "MANA COST:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
@@ -839,6 +911,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "Increases the max level of Hunter in the Night to %max_level_tooltip%. Night Stalker starts with a bonus level of Hunter in the Night.",
                 ""
               ],
               "type": 0,
@@ -883,6 +956,7 @@
                     22,
                     28,
                     34,
+                    40,
                     40
                   ],
                   "is_percentage": true,
@@ -891,9 +965,15 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "night_stalker_dayswap",
+                    "values": [
+                      16,
+                      22,
+                      28,
+                      34,
+                      40
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -903,6 +983,7 @@
                     20,
                     40,
                     60,
+                    80,
                     80
                   ],
                   "is_percentage": false,
@@ -917,9 +998,15 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "night_stalker_dayswap",
+                    "values": [
+                      15,
+                      35,
+                      55,
+                      75,
+                      95
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -933,7 +1020,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_night_stalker_hunter_status_resist",
-                      "value": 35,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -1010,6 +1097,63 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "night_stalker_dayswap",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "night_stalker_dayswap",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "gives_free_level",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "night_stalker_dayswap",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1176,6 +1320,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1434,6 +1579,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1661,13 +1807,14 @@
             {
               "id": 505,
               "name": "special_bonus_unique_night_stalker_4",
-              "name_loc": "+{s:bonus_damage} Void Damage",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Void Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1868,6 +2015,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2066,6 +2214,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2266,6 +2415,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2465,6 +2615,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2663,6 +2814,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2880,6 +3032,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3079,6 +3232,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3120,7 +3274,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    50
+                    40
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3287,20 +3441,18 @@
           ],
           "facet_abilities": [
             {
-              "abilities": []
-            },
-            {
               "abilities": [
                 {
                   "id": 1311,
                   "name": "night_stalker_night_reign",
                   "name_loc": "Night Reign",
-                  "desc_loc": "The game now starts at night instead of day. Night is longer than day.",
+                  "desc_loc": "The game now starts at night instead of day. Night is longer than day. Night Stalker starts with a bonus level of Hunter in the Night.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
+                    "",
                     "",
                     ""
                   ],
@@ -3364,6 +3516,23 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "DAYTIME REDUCTION:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
+                      "name": "roshan_initial_move_timer_override",
+                      "values_float": [
+                        1199
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],
@@ -3542,6 +3711,9 @@
                   "item_quality": 0
                 }
               ]
+            },
+            {
+              "abilities": []
             }
           ]
         }

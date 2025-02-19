@@ -22,7 +22,7 @@
             {
               "color": 3,
               "title_loc": "Dark Reef Renegade",
-              "description_loc": "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes.",
+              "description_loc": "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes. Slark's attacks reduce the target's armor while Slark is under the effects of Barracuda.",
               "name": "slark_dark_reef_renegade",
               "icon": "cooldown",
               "gradient_id": 2
@@ -929,7 +929,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_slark_4",
-                      "value": 40,
+                      "value": 35,
                       "operation": 0
                     }
                   ],
@@ -1195,7 +1195,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    250
+                    225
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -1372,7 +1372,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes."
+                "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes. Slark's attacks reduce the target's armor while Slark is under the effects of Barracuda."
               ],
               "type": 0,
               "behavior": "66",
@@ -1478,9 +1478,6 @@
                 {
                   "name": "linger_duration",
                   "values_float": [
-                    0,
-                    0,
-                    0,
                     0
                   ],
                   "is_percentage": false,
@@ -1491,10 +1488,51 @@
                   "facet_bonus": {
                     "name": "slark_dark_reef_renegade",
                     "values": [
-                      1.5,
+                      2
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "corruption_armor",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "slark_dark_reef_renegade",
+                    "values": [
+                      1,
                       2,
-                      2.5,
-                      3
+                      3,
+                      4
+                    ],
+                    "operation": 2
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "corruption_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR REDUCTION DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "slark_dark_reef_renegade",
+                    "values": [
+                      2
                     ],
                     "operation": 0
                   },
@@ -2995,7 +3033,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    90
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

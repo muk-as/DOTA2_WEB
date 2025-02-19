@@ -12,23 +12,23 @@
           "npe_desc_loc": "Creates illusions of himself to trick or attack foes",
           "facets": [
             {
-              "color": 1,
-              "title_loc": "Convergence",
-              "description_loc": "Doppelganger spawns additional illusions, with the amount depending on Phantom Lancer's current health.",
-              "name": "phantom_lancer_convergence",
-              "icon": "illusion",
-              "gradient_id": 1
-            },
-            {
               "color": 3,
               "title_loc": "Divergence",
               "description_loc": "Juxtapose Illusions spawn on random nearby units and deal more damage but can't be controlled.",
               "name": "phantom_lancer_divergence",
               "icon": "summons",
               "gradient_id": 2
+            },
+            {
+              "color": 1,
+              "title_loc": "Lancelot",
+              "description_loc": "Spirit Lances from Phantom Lancer's illusions deal {s:bonus_illusion_lance_damage_pct}% Lance Damage.",
+              "name": "phantom_lancer_lancelot",
+              "icon": "phantom_lance",
+              "gradient_id": 1
             }
           ],
-          "str_base": 19,
+          "str_base": 21,
           "str_gain": 2.2,
           "agi_base": 26,
           "agi_gain": 2.8,
@@ -59,8 +59,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
-          "health_regen": 3.4,
+          "max_health": 582,
+          "health_regen": 3.6000001,
           "max_mana": 327,
           "mana_regen": 1.0500001,
           "abilities": [
@@ -71,13 +71,14 @@
               "desc_loc": "Sends a magical spirit lance to a target enemy unit that damages and slows, while summoning an illusory phantom to attack the unit.",
               "lore_loc": "Azwraith's proficiency at spearing his family's meal of fish is proving quite useful in the battlefield.",
               "notes_loc": [
-                "Nearby illusions will mimic the cast animation."
+                "Illusions within %fake_lance_distance% range of Phantom Lancer will mimic the cast animation."
               ],
               "shard_loc": "",
-              "scepter_loc": "Spirit Lance bounces twice on enemies, prioritizing Heroes. Increases Spirit Lance illusion damage.",
+              "scepter_loc": "Spirit Lance bounces once on enemies, prioritizing Heroes. Increases Spirit Lance illusion damage.",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Spirit Lances from Phantom Lancer's illusions deal %illusion_lance_damage_pct%%% Lance Damage.<br><br>Does not affect Lance Damage from additional bounces from Aghanim's Scepter."
               ],
               "type": 0,
               "behavior": "8",
@@ -134,13 +135,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "LANCE DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_lance_damage",
-                      "value": 35,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -174,7 +169,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_lance_slow_duration",
+                      "value": 1.25,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -329,7 +330,7 @@
                 {
                   "name": "scepter_bonus_illusion_damage",
                   "values_float": [
-                    20
+                    30
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS ILLUSION DAMAGE:",
@@ -346,7 +347,7 @@
                 {
                   "name": "scepter_total_hits",
                   "values_float": [
-                    2
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -356,6 +357,25 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "illusion_lance_damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "phantom_lancer_lancelot",
+                    "values": [
+                      25
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -531,6 +551,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Spawns an additional illusion per %hp_missing_per_extra_illusion_pct%%% of health that Phantom Lancer is missing.",
+                "",
                 ""
               ],
               "type": 0,
@@ -928,6 +949,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1242,6 +1264,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1290,7 +1313,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                      "value": 15,
+                      "value": 20,
                       "operation": 0
                     }
                   ],
@@ -1313,7 +1336,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                      "value": 15,
+                      "value": 20,
                       "operation": 0
                     }
                   ],
@@ -1487,7 +1510,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Juxtapose Illusions spawn on random nearby units and deal more damage but can't be controlled."
+                "Juxtapose Illusions spawn on random nearby units and deal more damage but can't be controlled.",
+                ""
               ],
               "type": 1,
               "behavior": "2",
@@ -1654,7 +1678,7 @@
                 {
                   "name": "illusion_damage_in_pct",
                   "values_float": [
-                    525
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1671,7 +1695,7 @@
                 {
                   "name": "tooltip_total_illusion_damage_in_pct",
                   "values_float": [
-                    625
+                    600
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION DAMAGE TAKEN:",
@@ -1944,15 +1968,16 @@
           ],
           "talents": [
             {
-              "id": 1056,
-              "name": "special_bonus_unique_phantom_lancer_lance_damage",
-              "name_loc": "+{s:bonus_lance_damage} Spirit Lance Damage",
+              "id": 1536,
+              "name": "special_bonus_unique_phantom_lancer_lance_slow_duration",
+              "name_loc": "+{s:bonus_duration}s Spirit Lance Slow Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2153,6 +2178,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2351,6 +2377,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2568,6 +2595,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2784,6 +2812,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2983,6 +3012,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3181,6 +3211,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3397,6 +3428,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],

@@ -13,19 +13,19 @@
           "facets": [
             {
               "color": 5,
-              "title_loc": "Reverse Polarity",
-              "description_loc": "Reverse Polarity pulls all nearby enemies in.",
-              "name": "magnataur_reverse_polarity",
-              "icon": "vortex_in",
-              "gradient_id": 3
+              "title_loc": "Eternal Empowerment",
+              "description_loc": "Empower is always on Magnus. Each subsequent attack increases its power.",
+              "name": "magnataur_eternal_empowerment",
+              "icon": "empower",
+              "gradient_id": 1
             },
             {
-              "color": 5,
-              "title_loc": "Reverse Reverse Polarity",
-              "description_loc": "Reverse Polarity pushes enemies away all around Magnus.",
-              "name": "magnataur_reverse_reverse_polarity",
-              "icon": "vortex_out",
-              "gradient_id": 0
+              "color": 3,
+              "title_loc": "Diminishing Return",
+              "description_loc": "Increases the max level of Shockwave. Level {s:bonus_max_level_tooltip} Shockwave causes it to return towards Magnus's location.",
+              "name": "magnataur_diminishing_return",
+              "icon": "ricochet",
+              "gradient_id": 2
             }
           ],
           "str_base": 25,
@@ -33,7 +33,7 @@
           "agi_base": 12,
           "agi_gain": 2,
           "int_base": 20,
-          "int_gain": 1.6,
+          "int_gain": 2.1,
           "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 1,
@@ -48,8 +48,8 @@
             0,
             3
           ],
-          "damage_min": 9,
-          "damage_max": 17,
+          "damage_min": 30,
+          "damage_max": 38,
           "attack_rate": 1.8,
           "attack_range": 200,
           "projectile_speed": 900,
@@ -71,11 +71,13 @@
               "desc_loc": "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him, and slowing them for a brief period.",
               "lore_loc": "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations.",
               "notes_loc": [],
-              "shard_loc": "Increases range, and causes Shockwave to return towards the caster's original cast location after reaching max length, hitting enemies a second time for %return_damage_pct%%% of the damage.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
+                "",
+                "Increases the max level of Shockwave. Level %max_level% Shockwave causes it to return towards Magnus's current location after reaching max length. The return Shockwave travels %return_shockwave_bonus_distance% distance further and hits enemies a second time for %return_damage_pct_tooltip%%% of the damage.",
                 ""
               ],
               "type": 0,
@@ -118,7 +120,10 @@
                 0
               ],
               "mana_costs": [
-                75
+                85,
+                90,
+                95,
+                100
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -131,9 +136,7 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    400
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -165,6 +168,7 @@
                     90,
                     160,
                     230,
+                    300,
                     300
                   ],
                   "is_percentage": false,
@@ -254,22 +258,55 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_diminishing_return",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_diminishing_return",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "basic_slow_duration",
                   "values_float": [
                     0.7,
                     0.8,
                     0.9,
+                    1,
                     1
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_magnus_6",
-                      "value": 0.75,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -282,18 +319,64 @@
                 {
                   "name": "return_damage_pct",
                   "values_float": [
+                    0,
+                    0,
+                    0,
+                    0,
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    75
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "magnataur_diminishing_return",
+                    "values": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      50
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "return_damage_pct_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_diminishing_return",
+                    "values": [
+                      50
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "return_shockwave_bonus_distance",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_diminishing_return",
+                    "values": [
+                      200
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -304,11 +387,9 @@
                     1200
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DISTANCE:",
                   "bonuses": [],
-                  "values_shard": [
-                    400
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -405,7 +486,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    75
+                    85,
+                    90,
+                    95,
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -442,7 +526,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -468,6 +552,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "Empower is always on Magnus. Each of his subsequent attacks increases his self bonus by %self_multiplier_bonus_per_stack%%% up to a max of %self_multiplier_bonus_max_stacks%%% for %self_multiplier_bonus_stack_duration%s.",
                 "",
                 ""
               ],
@@ -694,6 +780,94 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "always_on",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_eternal_empowerment",
+                    "values": [
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "self_multiplier_bonus_stack_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_eternal_empowerment",
+                    "values": [
+                      10
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "self_multiplier_bonus_max_stacks",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_eternal_empowerment",
+                    "values": [
+                      10,
+                      15,
+                      20,
+                      25
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "self_multiplier_bonus_per_stack",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "magnataur_eternal_empowerment",
+                    "values": [
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     800
@@ -850,13 +1024,15 @@
               "id": 5520,
               "name": "magnataur_skewer",
               "name_loc": "Skewer",
-              "desc_loc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed. Deals additional damage when skewering enemies into trees or cliffs.",
+              "desc_loc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed. The damage is increased based on distance traveled.",
               "lore_loc": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants.",
               "notes_loc": [],
-              "shard_loc": "",
+              "shard_loc": "Increases range and deals additional damage when skewering enemies into trees or cliffs.",
               "scepter_loc": "",
               "facets_loc": [
                 "Deals additional damage when skewering enemies into trees or cliffs.",
+                "",
+                "",
                 "",
                 ""
               ],
@@ -932,14 +1108,10 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DISTANCE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_magnus_3",
-                      "value": 275,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [
+                    275
                   ],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -992,7 +1164,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_magnus_6",
+                      "value": 1.25,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1023,14 +1201,42 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "damage_distance_pct",
+                  "values_float": [
+                    6,
+                    9,
+                    12,
+                    15
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "DISTANCE AS DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_magnus_skewer_damage_distance",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "tree_radius",
                   "values_float": [
-                    200
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    200
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1042,15 +1248,14 @@
                 {
                   "name": "tree_hit_damage",
                   "values_float": [
-                    15,
-                    20,
-                    25,
-                    30
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "TREE HIT DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    30
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1062,15 +1267,14 @@
                 {
                   "name": "cliff_hit_damage",
                   "values_float": [
-                    50,
-                    75,
-                    100,
-                    125
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "CLIFF HIT DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    125
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1244,7 +1448,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1265,6 +1469,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -1637,6 +1843,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1872,6 +2080,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 "Reverse Polarity pushes enemies away all around Magnus instead of pulling enemies that are in front of him."
@@ -2260,15 +2470,17 @@
           ],
           "talents": [
             {
-              "id": 6690,
-              "name": "special_bonus_unique_magnus_4",
-              "name_loc": "+{s:bonus_empower_duration}s Empower Duration",
+              "id": 7132,
+              "name": "special_bonus_mp_regen_150",
+              "name_loc": "+{s:value} Mana Regen",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -2309,6 +2521,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2462,13 +2691,15 @@
             {
               "id": 525,
               "name": "special_bonus_unique_magnus_6",
-              "name_loc": "+{s:bonus_basic_slow_duration}s Shockwave Slow Duration",
+              "name_loc": "+{s:bonus_slow_duration}s Skewer Slow Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -2671,6 +2902,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2871,6 +3104,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3069,6 +3304,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -3277,15 +3514,17 @@
               "item_quality": 0
             },
             {
-              "id": 6507,
-              "name": "special_bonus_unique_magnus_3",
-              "name_loc": "+{s:bonus_range} Skewer Range",
+              "id": 1562,
+              "name": "special_bonus_unique_magnus_skewer_damage_distance",
+              "name_loc": "+{s:bonus_damage_distance_pct}% Skewer Damage Per Distance Travelled",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""
@@ -3488,6 +3727,8 @@
               "facets_loc": [
                 "",
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3686,6 +3927,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 "",
                 ""

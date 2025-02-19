@@ -13,17 +13,17 @@
           "facets": [
             {
               "color": 5,
-              "title_loc": "Frozen Expanse",
-              "description_loc": "Freezing Field also passively increases Crystal Maiden's cast range and area of effect.",
-              "name": "crystal_maiden_frozen_expanse",
-              "icon": "area_of_effect",
-              "gradient_id": 1
+              "title_loc": "Glacial Guard",
+              "description_loc": "Crystal Nova has increased radius and grants allied heroes a physical damage barrier. Barrier is increased for Crystal Maiden.",
+              "name": "crystal_maiden_glacial_guard",
+              "icon": "armor",
+              "gradient_id": 3
             },
             {
               "color": 3,
-              "title_loc": "Cold Comfort",
-              "description_loc": "Crystal Maiden restores her allies' Mana when casting spells. Increases innate Mana Regen Amplification.",
-              "name": "crystal_maiden_cold_comfort",
+              "title_loc": "Arcane Overflow",
+              "description_loc": "Activating Arcane Aura temporarily increases Crystal Maiden's spell amplification and mana costs. During the duration, Crystal Maiden restores her allies' Mana when casting spells.",
+              "name": "crystal_maiden_arcane_overflow",
               "icon": "mana",
               "gradient_id": 2
             }
@@ -77,6 +77,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "Crystal Nova has increased radius and grants allied heroes a physical damage barrier. Barrier is increased for Crystal Maiden.",
                 ""
               ],
               "type": 0,
@@ -131,18 +133,14 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_crystal_maiden_6",
-                      "value": 100,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "crystal_maiden_glacial_guard",
+                    "values": [
+                      100
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -190,10 +188,10 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    5
+                    4
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DURATION:",
+                  "heading_loc": "SLOW DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -243,6 +241,75 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "physical_barrier_amount",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "PHYSICAL BARRIER AMOUNT:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_glacial_guard",
+                    "values": [
+                      40,
+                      70,
+                      100,
+                      130
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "physical_barrier_self_amount",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SELF PHYSICAL BARRIER AMOUNT:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_glacial_guard",
+                    "values": [
+                      80,
+                      140,
+                      200,
+                      260
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "physical_barrier_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BARRIER DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_glacial_guard",
+                    "values": [
+                      4
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -421,6 +488,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -714,12 +783,16 @@
               "name_loc": "Arcane Aura",
               "desc_loc": "Gives additional mana regeneration to all friendly units on the map. Allies within a %proximity_bonus_radius% radius of Crystal Maiden receive %proximity_bonus_factor%x the mana regeneration.",
               "lore_loc": "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance.",
-              "notes_loc": [],
+              "notes_loc": [
+                "With Arcane Overflow and Aghanim's Scepter, cannot be activated while channeling Freezing Field."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Every time Crystal Maiden casts a spell, allies close to her receive mana equal to a percentage of the spell's mana cost."
+                "",
+                "",
+                "Activating Arcane Aura temporarily increases Crystal Maiden's spell amplification and mana costs. During the duration, Crystal Maiden restores her allies' Mana when casting spells. Does not affect items. Duration is paused while channeling Freezing Field."
               ],
               "type": 0,
               "behavior": "2",
@@ -825,7 +898,81 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "crystal_maiden_cold_comfort",
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activatable",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_arcane_overflow",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_spell_amp_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SPELL AMP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_arcane_overflow",
+                    "values": [
+                      35
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_mana_cost_increase_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MANA COST INCREASE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_arcane_overflow",
+                    "values": [
+                      50
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mana_battery_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MANA GRANT RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_arcane_overflow",
                     "values": [
                       1200
                     ],
@@ -836,9 +983,6 @@
                 {
                   "name": "mana_battery_mana_pct",
                   "values_float": [
-                    0,
-                    0,
-                    0,
                     0
                   ],
                   "is_percentage": true,
@@ -847,12 +991,47 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "crystal_maiden_cold_comfort",
+                    "name": "crystal_maiden_arcane_overflow",
                     "values": [
-                      10,
-                      15,
-                      20,
                       25
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_arcane_overflow",
+                    "values": [
+                      10
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "activation_cooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "COOLDOWN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "crystal_maiden_arcane_overflow",
+                    "values": [
+                      30
                     ],
                     "operation": 0
                   },
@@ -1018,6 +1197,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1320,7 +1501,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Increases Mana Regeneration Amplification to %mana_regen_multiplier%%%."
+                "",
+                "",
+                ""
               ],
               "type": 0,
               "behavior": "13194139533315",
@@ -1361,7 +1544,10 @@
                 {
                   "name": "mana_regen_multiplier",
                   "values_float": [
-                    50
+                    25,
+                    50,
+                    75,
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1369,10 +1555,8 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "crystal_maiden_cold_comfort",
-                    "values": [
-                      25
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1542,6 +1726,8 @@
               "scepter_loc": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move %shard_self_movement_speed_slow_pct%%% slower during this. Increases total number of explosions by %shard_bonus_explosion%%%. Applies Frostbite to any unit that has been standing in the Freezing Field for over %frostbite_delay%s.",
               "facets_loc": [
                 "Freezing Field also passively increases Crystal Maiden's cast range and area of effect.",
+                "",
+                "",
                 ""
               ],
               "type": 1,
@@ -2036,6 +2222,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2242,15 +2430,17 @@
               "item_quality": 0
             },
             {
-              "id": 772,
-              "name": "special_bonus_unique_crystal_maiden_6",
-              "name_loc": "+{s:bonus_radius} Crystal Nova AoE",
+              "id": 5926,
+              "name": "special_bonus_intelligence_12",
+              "name_loc": "+{s:value} Intelligence",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2290,6 +2480,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2450,6 +2657,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2650,6 +2859,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2848,6 +3059,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -3065,6 +3278,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3264,6 +3479,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3462,6 +3679,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],

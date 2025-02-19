@@ -14,7 +14,7 @@
             {
               "color": 0,
               "title_loc": "Nothl Boon",
-              "description_loc": "Dazzle's overhealing is converted into a barrier.",
+              "description_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies.",
               "name": "dazzle_facet_nothl_boon",
               "icon": "armor",
               "gradient_id": 1
@@ -22,18 +22,18 @@
             {
               "color": 4,
               "title_loc": "Poison Bloom",
-              "description_loc": "Dazzle can refresh and spread his Poison Touch when attacking enemies.",
+              "description_loc": "Dazzle can spread his Poison Touch when attacking enemies. Weave is stronger on enemies.",
               "name": "dazzle_poison_bloom",
               "icon": "ricochet",
               "gradient_id": 0
             }
           ],
           "str_base": 18,
-          "str_gain": 2,
+          "str_gain": 2.3,
           "agi_base": 20,
-          "agi_gain": 1.4,
+          "agi_gain": 1.7,
           "int_base": 25,
-          "int_gain": 2.8,
+          "int_gain": 3.7,
           "primary_attr": 3,
           "complexity": 1,
           "attack_capability": 2,
@@ -48,8 +48,8 @@
             0,
             0
           ],
-          "damage_min": 3,
-          "damage_max": 9,
+          "damage_min": 19,
+          "damage_max": 25,
           "attack_rate": 1.7,
           "attack_range": 575,
           "projectile_speed": 1200,
@@ -104,9 +104,9 @@
                 0
               ],
               "cooldowns": [
-                27,
-                23,
-                19,
+                24,
+                21,
+                18,
                 15
               ],
               "durations": [
@@ -319,25 +319,6 @@
                   "heading_loc": "BONUS SLOW PER HIT:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "hex_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1.6
-                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -566,9 +547,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    27,
-                    23,
-                    19,
+                    24,
+                    21,
+                    18,
                     15
                   ],
                   "is_percentage": false,
@@ -586,7 +567,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -634,9 +615,9 @@
                 0
               ],
               "cooldowns": [
-                36,
                 30,
-                24,
+                26,
+                22,
                 18
               ],
               "durations": [
@@ -845,14 +826,20 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    36,
                     30,
-                    24,
+                    26,
+                    22,
                     18
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dazzle_shallow_grave_cooldown",
+                      "value": 4,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -914,10 +901,10 @@
                 0
               ],
               "cooldowns": [
-                12,
-                11,
                 10,
-                9
+                9,
+                8,
+                7
               ],
               "durations": [
                 0
@@ -1190,10 +1177,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    12,
-                    11,
                     10,
-                    9
+                    9,
+                    8,
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1231,18 +1218,18 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "",
-                ""
+                "Weave applies %ally_multiplier%x stacks to allies.",
+                "Weave applies %enemy_multiplier%x stacks to enemies."
               ],
               "type": 0,
-              "behavior": "2",
+              "behavior": "66",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 1,
+              "max_level": 4,
               "cast_ranges": [
                 0
               ],
@@ -1273,7 +1260,10 @@
                 {
                   "name": "armor_change",
                   "values_float": [
-                    1
+                    0.5,
+                    0.75,
+                    1,
+                    1.25
                   ],
                   "is_percentage": false,
                   "heading_loc": "ARMOR CHANGE PER STACK:",
@@ -1375,6 +1365,44 @@
                     "name": "",
                     "values": [],
                     "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "ally_multiplier",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dazzle_facet_nothl_boon",
+                    "values": [
+                      2
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "enemy_multiplier",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dazzle_poison_bloom",
+                    "values": [
+                      2
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -1529,29 +1557,32 @@
               "item_quality": 0
             },
             {
-              "id": 7304,
-              "name": "dazzle_bad_juju",
-              "name_loc": "Bad Juju",
-              "desc_loc": "Decreases the remaining cooldown of all other abilities. Casting Bad Juju temporarily increases its health cost.",
-              "lore_loc": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "Weave also reduces item cooldowns.",
+              "id": 1550,
+              "name": "dazzle_nothl_projection",
+              "name_loc": "Nothl Projection",
+              "desc_loc": "Dazzle departs his body, traveling through the Nothl Realm as an invulnerable spirit that can cast spells, attack, and use items, leaving his body behind in the world with a visible tether. While active, Dazzle's basic abilities are empowered: Poison Touch hexes enemies, Shallow Grave heals upon expiration, and Shadow Wave has a shorter cooldown. The effect can be ended early, and Dazzle returns to the body at the end.",
+              "lore_loc": "",
+              "notes_loc": [
+                "When Dazzle's spirit is further than %leash_start% units from the body, the tether will begin to pull him back. The strength of the pull increases with distance.",
+                "Dazzle's Soul cannot attack buildings."
+              ],
+              "shard_loc": "Nothl Projection can be cast while Dazzle is disabled. Increases healing done while in the Nothl Realm.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 ""
               ],
               "type": 1,
-              "behavior": "4",
+              "behavior": "16",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 1,
-              "immunity": 4,
+              "damage": 0,
+              "immunity": 0,
               "dispellable": 3,
               "max_level": 3,
               "cast_ranges": [
-                0
+                600
               ],
               "cast_points": [
                 0.2
@@ -1560,7 +1591,9 @@
                 0
               ],
               "cooldowns": [
-                3
+                70,
+                60,
+                50
               ],
               "durations": [
                 0
@@ -1572,22 +1605,20 @@
                 0
               ],
               "mana_costs": [
-                0
+                100,
+                150,
+                200
               ],
               "gold_costs": [],
-              "health_costs": [
-                75
-              ],
+              "health_costs": [],
               "special_values": [
                 {
-                  "name": "cooldown_reduction",
+                  "name": "min_duration",
                   "values_float": [
-                    4,
-                    5,
-                    6
+                    5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "COOLDOWN REDUCTION ABILITIES:",
+                  "heading_loc": "MIN DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1599,14 +1630,192 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "cooldown_reduction_items",
+                  "name": "max_duration",
+                  "values_float": [
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "initial_travel_speed",
+                  "values_float": [
+                    1200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "soul_return_time",
+                  "values_float": [
+                    0.75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "soul_return_min_speed",
+                  "values_float": [
+                    500
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "leash_start",
+                  "values_float": [
+                    1600
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "base_leash_pull",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "leash_increase",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "poison_touch_hex",
+                  "values_float": [
+                    1.4,
+                    1.6,
+                    1.8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "HEX DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shallow_grave_heal",
+                  "values_float": [
+                    225,
+                    300,
+                    375
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SHALLOW GRAVE HEAL:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shadow_wave_cdr",
+                  "values_float": [
+                    30,
+                    45,
+                    60
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SHADOW WAVE COOLDOWN REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "castable_while_disabled",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    1
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1616,48 +1825,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "mana_cost_increase_pct",
+                  "name": "healing_amp",
                   "values_float": [
-                    40
+                    0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "HEALTH COST INCREASE PER CAST:",
+                  "heading_loc": "HEALING AMPLIFICATION:",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "mana_cost_increase_duration",
-                  "values_float": [
+                  "values_shard": [
                     20
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "HEALTH COST INCREASE DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_stacks",
-                  "values_float": [
-                    15
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1669,7 +1846,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    0
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1771,7 +1948,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    0
+                    100,
+                    150,
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1788,24 +1967,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityHealthCost",
-                  "values_float": [
-                    75
+                    70,
+                    60,
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1822,7 +1986,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -2666,9 +2830,9 @@
               "item_quality": 0
             },
             {
-              "id": 789,
-              "name": "special_bonus_unique_dazzle_5",
-              "name_loc": "+{s:value} Heal On Shallow Grave End",
+              "id": 1552,
+              "name": "special_bonus_unique_dazzle_shallow_grave_cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Shallow Grave Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2714,23 +2878,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3486,7 +3633,7 @@
                   "id": 1294,
                   "name": "dazzle_nothl_boon",
                   "name_loc": "Nothl Boon",
-                  "desc_loc": "Dazzle's overhealing is converted into a barrier.",
+                  "desc_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies.",
                   "lore_loc": "",
                   "notes_loc": [
                     "Whenever Dazzle overheals himself or an ally, it grants that hero a physical damage barrier equal to the amount overhealed for %duration% seconds. If the overhealed target already has a larger barrier its duration will be refreshed instead."

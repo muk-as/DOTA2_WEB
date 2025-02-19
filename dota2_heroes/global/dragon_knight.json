@@ -14,7 +14,7 @@
             {
               "color": 0,
               "title_loc": "Fire Dragon",
-              "description_loc": "Dragon Knight has Splash Damage on his attacks that get stronger when in Elder Dragon Form.",
+              "description_loc": "Dragon Knight deals additional Magic Damage with his attacks. Dragon Knight's abilities have increased Area of Effect that get stronger when in Elder Dragon Form.",
               "name": "dragon_knight_fire_dragon",
               "icon": "dragon_fire",
               "gradient_id": 1
@@ -22,7 +22,7 @@
             {
               "color": 2,
               "title_loc": "Corrosive Dragon",
-              "description_loc": "Dragon Knight has Corrosive Powers on his attacks that get stronger when in Elder Dragon Form.",
+              "description_loc": "Dragon Knight has Corrosive Powers on his attacks that get stronger when in Elder Dragon Form. All of his abilities deal Physical damage.",
               "name": "dragon_knight_corrosive_dragon",
               "icon": "dragon_poison",
               "gradient_id": 0
@@ -78,12 +78,15 @@
               "name_loc": "Breathe Fire",
               "desc_loc": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.",
               "lore_loc": "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Hits units up to 900 away.",
+                "Does not trigger spell block or spell reflect."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "",
+                "Damage type changed to Physical.",
                 ""
               ],
               "type": 0,
@@ -280,6 +283,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "physical_damage_type",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dragon_knight_corrosive_dragon",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     600
@@ -445,8 +467,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "",
-                "",
+                "When in Dragon Form, Dragon Tail applies to enemies in a %dragon_aoe% radius.",
+                "Damage type changed to Physical.",
                 ""
               ],
               "type": 0,
@@ -598,18 +620,33 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_dragon_knight_8",
-                      "value": 400,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "dragon_knight_fire_dragon",
+                    "values": [
+                      175
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "dragon_knight_fire_dragon"
+                },
+                {
+                  "name": "physical_damage_type",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dragon_knight_corrosive_dragon",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -774,15 +811,15 @@
               "id": 5228,
               "name": "dragon_knight_dragon_blood",
               "name_loc": "Wyrm's Wrath",
-              "desc_loc": "The life blood of the Dragon improves Dragon Knight's attacks. When in Dragon form, these attack effects are stronger.",
+              "desc_loc": "The life blood of the Dragon improves Dragon Knight's attacks. When in Dragon form, these effects are stronger.",
               "lore_loc": "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Attacks splash in a small radius while in Elder Dragon Form and cleave while in Human Form.",
-                "Attacks are filled with poison that affects enemy units and structures, reducing armor and dealing damage over time. The effect splashes while in Elder Dragon Form.",
-                "Attacks are filled with frost that affects enemy units, slowing movement speed, attack speed, and reducing healing. The effect splashes while in Elder Dragon Form."
+                "Attacks deal additional magic damage to enemy units. Spells and items have increased AoE.",
+                "Attacks are filled with lethal poison that affects enemy units and structures, reducing armor and dealing physical damage over time.",
+                "Attacks are filled with frost that affects enemy units, slowing movement speed, attack speed, and reducing healing."
               ],
               "type": 0,
               "behavior": "2",
@@ -848,7 +885,7 @@
                     20
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CORROSIVE BREATH DAMAGE:",
+                  "heading_loc": "CORROSIVE DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -865,7 +902,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CORROSIVE BREATH DURATION:",
+                  "heading_loc": "CORROSIVE DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -885,7 +922,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CORROSIVE BREATH ARMOR REDUCTION:",
+                  "heading_loc": "CORROSIVE ARMOR REDUCTION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -916,66 +953,35 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "cleave_starting_width",
+                  "name": "magic_damage",
                   "values_float": [
-                    150
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "CLEAVE STARTING WIDTH:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "dragon_knight_fire_dragon"
-                },
-                {
-                  "name": "cleave_ending_width",
-                  "values_float": [
-                    260
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "CLEAVE ENDING WIDTH:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "dragon_knight_fire_dragon"
-                },
-                {
-                  "name": "cleave_distance",
-                  "values_float": [
-                    400
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "CLEAVE DISTANCE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": "dragon_knight_fire_dragon"
-                },
-                {
-                  "name": "cleave_damage",
-                  "values_float": [
+                    10,
+                    20,
                     30,
-                    40,
-                    50,
-                    60
+                    40
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "CLEAVE DAMAGE:",
+                  "is_percentage": false,
+                  "heading_loc": "MAGIC DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": "dragon_knight_fire_dragon"
+                },
+                {
+                  "name": "bonus_aoe",
+                  "values_float": [
+                    25,
+                    50,
+                    75,
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "AOE BONUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1014,7 +1020,7 @@
                     -35
                   ],
                   "is_percentage": true,
-                  "heading_loc": "FROST BREATH MOVESPEED SLOW:",
+                  "heading_loc": "FROST MOVESPEED SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1034,7 +1040,7 @@
                     -35
                   ],
                   "is_percentage": false,
-                  "heading_loc": "FROST BREATH ATTACK SPEED SLOW:",
+                  "heading_loc": "FROST ATTACK SPEED SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1051,7 +1057,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "FROST BREATH DURATION:",
+                  "heading_loc": "FROST DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1071,7 +1077,7 @@
                     35
                   ],
                   "is_percentage": true,
-                  "heading_loc": "FROST BREATH HEALING REDUCTION:",
+                  "heading_loc": "FROST HEALING REDUCTION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1243,7 +1249,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "",
+                "Damage type changed to Physical.",
                 ""
               ],
               "type": 0,
@@ -1285,7 +1291,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    350
+                    275
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -1397,6 +1403,25 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "physical_damage_type",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dragon_knight_corrosive_dragon",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1555,18 +1580,17 @@
               "id": 5229,
               "name": "dragon_knight_elder_dragon_form",
               "name_loc": "Elder Dragon Form",
-              "desc_loc": "Dragon Knight takes the form of one of three powerful elder dragons. Increases movement speed and attack damage, with Wyrm's Wrath on-hit effects applying to all enemies near the target. Increases Dragon Tail range. Increases health regeneration and armor bonuses from Dragon Blood. ",
+              "desc_loc": "Dragon Knight takes the form of one of three powerful elder dragons. Increases movement speed and attack damage, applying  Wyrm's Wrath on-hit effects and a percentage of the attack damage to all enemies near the target. Increases Dragon Tail range. Increases health regeneration and armor bonuses from Dragon Blood. ",
               "lore_loc": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm.",
               "notes_loc": [
-                "Corrosive Breath poison damage is lethal.",
                 "Cooldowns of items that are different for ranged and melee units will be based on which form Dragon Knight was in when the item was used."
               ],
               "shard_loc": "Grants Elder Dragon Form the Fireball ability.",
               "scepter_loc": "Increases the level of Dragon Form by adding a Level 4 Black Dragon, that increases damage, and effectiveness of the Wyrm's Wrath attacks.",
               "facets_loc": [
-                "Cleave is transformed into Splash damage, adding the bonus damage percentage while in Elder Dragon Form.",
-                "Damage and Armor Reduction from Corrosive Breath is increased while in Elder Dragon Form.",
-                "Attack speed, movement speed and healing reduction from Frost Breath is increased while in Elder Dragon Form."
+                "",
+                "",
+                ""
               ],
               "type": 1,
               "behavior": "4",
@@ -1626,10 +1650,10 @@
                 {
                   "name": "bonus_movement_speed",
                   "values_float": [
+                    20,
+                    25,
                     30,
-                    35,
-                    40,
-                    45
+                    35
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS MOVE SPEED:",
@@ -1784,10 +1808,30 @@
                 {
                   "name": "ranged_splash_radius",
                   "values_float": [
-                    350
+                    275
                   ],
                   "is_percentage": false,
                   "heading_loc": "EFFECT SPLASH RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "ranged_splash_damage_pct",
+                  "values_float": [
+                    30,
+                    40,
+                    50,
+                    60
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ATTACK DAMAGE SPLASH:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1806,9 +1850,15 @@
                     0,
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "FROST BREATH EFFECT BONUS:",
-                  "bonuses": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dragon_knight_8",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1831,9 +1881,15 @@
                     0,
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "CORROSIVE BREATH EFFECT BONUS:",
-                  "bonuses": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dragon_knight_8",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1856,9 +1912,15 @@
                     0,
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "SPLASH DAMAGE EFFECT BONUS:",
-                  "bonuses": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dragon_knight_8",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1872,6 +1934,32 @@
                     "operation": 5
                   },
                   "required_facet": "dragon_knight_fire_dragon"
+                },
+                {
+                  "name": "wyrms_wrath_bonus_tooltip",
+                  "values_float": [
+                    20,
+                    30,
+                    40,
+                    50
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "WYRM'S WRATH BONUS:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dragon_knight_8",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -3742,7 +3830,7 @@
             {
               "id": 742,
               "name": "special_bonus_unique_dragon_knight_8",
-              "name_loc": "+{s:bonus_dragon_aoe} AoE Dragon Tail During Elder Dragon Form",
+              "name_loc": "+{s:bonus_frost_breath_effect_bonus}% Wyrm's Wrath effect during Elder Dragon Form",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

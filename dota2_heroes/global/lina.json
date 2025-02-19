@@ -390,7 +390,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_lina_1",
-                      "value": 3.5,
+                      "value": 3,
                       "operation": 2
                     }
                   ],
@@ -771,7 +771,7 @@
                 "Duration refreshes each time an opponent is hit with a spell.",
                 "Using items does not trigger Fiery Soul."
               ],
-              "shard_loc": "Lina's abilities deal %shard_bonus_spell_damage% more damage for each Fiery Soul Charge.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -842,10 +842,10 @@
                 {
                   "name": "fiery_soul_move_speed_bonus",
                   "values_float": [
+                    1,
                     1.5,
                     2,
-                    2.5,
-                    3
+                    2.5
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVE SPEED BONUS:",
@@ -928,9 +928,7 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    25
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1124,7 +1122,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1187,7 +1185,7 @@
                 {
                   "name": "flame_cloak_duration",
                   "values_float": [
-                    8
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1495,7 +1493,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "OVERHEAT DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lina_7",
+                      "value": 60,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1515,7 +1519,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "OVERHEAT DAMAGE (ILLUSION):",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lina_7",
+                      "value": 60,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1718,7 +1728,7 @@
               "notes_loc": [
                 "Laguna Blade has a %damage_delay% delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage."
               ],
-              "shard_loc": "",
+              "shard_loc": "%barrier_pct%%% of the damage dealt is converted to an all damage barrier for Lina. Barrier lasts for %barrier_duration%s.",
               "scepter_loc": "",
               "facets_loc": [
                 "Casting Laguna Blade temporarily supercharges Lina, granting her stacks of Fiery Soul.",
@@ -1901,17 +1911,15 @@
                 },
                 {
                   "name": "barrier_pct",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lina_7",
-                      "value": 125,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [
+                    75
                   ],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1922,17 +1930,15 @@
                 },
                 {
                   "name": "barrier_duration",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lina_7",
-                      "value": 15,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [
+                    10
                   ],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -2074,7 +2080,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_lina_6",
-                      "value": 25,
+                      "value": 20,
                       "operation": 2
                     }
                   ],
@@ -2090,7 +2096,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -3317,8 +3323,8 @@
             {
               "id": 961,
               "name": "special_bonus_unique_lina_7",
-              "name_loc": "{s:bonus_barrier_pct}% Laguna Blade Damage into barrier",
-              "desc_loc": "Lasts {s:bonus_barrier_duration} seconds.",
+              "name_loc": "+{s:bonus_damage_illusions}% Combustion Overheat Damage",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

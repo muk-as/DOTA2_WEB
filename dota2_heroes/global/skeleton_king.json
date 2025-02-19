@@ -209,13 +209,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "IMPACT DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_wraith_king_3",
-                      "value": 25,
-                      "operation": 3
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -235,13 +229,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER SECOND:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_wraith_king_3",
-                      "value": 25,
-                      "operation": 3
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -677,7 +665,6 @@
               "notes_loc": [
                 "Credit for allies whose death was delayed will go to whoever struck the original killing blow.",
                 "Does not affect Reincarnate deaths.",
-                "Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.",
                 "Break only disables the passive lifesteal component.",
                 "Respawn timer is reduced by Wraith duration."
               ],
@@ -740,23 +727,6 @@
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_lifesteal_reduction_pct",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1537,17 +1507,17 @@
               "item_quality": 0
             },
             {
-              "id": 6414,
-              "name": "special_bonus_unique_wraith_king_3",
-              "name_loc": "+{s:bonus_blast_dot_damage}% Wraithfire Blast Impact Damage/DPS",
+              "id": 1545,
+              "name": "special_bonus_unique_wraith_king_facet_1",
+              "name_loc": "",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "",
-                ""
+                "+{s:bonus_skeleton_duration}%/-{s:bonus_AbilityCooldown}% Bone Guard Duration / Cooldown",
+                "+{s:bonus_cursed_damage_pct}% Spectral Blade Curse Damage"
               ],
               "type": 2,
               "behavior": "2",
@@ -2151,9 +2121,9 @@
               "item_quality": 0
             },
             {
-              "id": 7200,
-              "name": "special_bonus_cleave_40",
-              "name_loc": "+{s:value}% Cleave",
+              "id": 5908,
+              "name": "special_bonus_attack_speed_60",
+              "name_loc": "+{s:value} Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2202,7 +2172,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    40
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2367,17 +2337,17 @@
               "item_quality": 0
             },
             {
-              "id": 5908,
-              "name": "special_bonus_attack_speed_60",
-              "name_loc": "+{s:value} Attack Speed",
+              "id": 1547,
+              "name": "special_bonus_unique_wraith_king_facet_3",
+              "name_loc": "",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "",
-                ""
+                "+{s:bonus_min_skeleton_spawn} Bone Guard Skeletons Spawned",
+                "-{s:bonus_curse_cooldown}% Spectral Blade Curse Cooldown"
               ],
               "type": 2,
               "behavior": "2",
@@ -2415,23 +2385,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    60
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3022,7 +2975,7 @@
                   "id": 5087,
                   "name": "skeleton_king_bone_guard",
                   "name_loc": "Bone Guard",
-                  "desc_loc": "Gains a Charge for every 2 units killed. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
+                  "desc_loc": "Gains a Charge for every 2 creeps killed and 2 charges per hero killed.. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
                   "lore_loc": "Wraith King's blade drains his enemy's essence to feed his aura.",
                   "notes_loc": [
                     "Break disables the gaining of new stacks."
@@ -3079,7 +3032,13 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "SKELETON DURATION:",
-                      "bonuses": [],
+                      "bonuses": [
+                        {
+                          "name": "special_bonus_unique_wraith_king_facet_1",
+                          "value": 25,
+                          "operation": 3
+                        }
+                      ],
                       "values_shard": [],
                       "values_scepter": [],
                       "facet_bonus": {
@@ -3116,7 +3075,13 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
-                      "bonuses": [],
+                      "bonuses": [
+                        {
+                          "name": "special_bonus_unique_wraith_king_facet_3",
+                          "value": 5,
+                          "operation": 0
+                        }
+                      ],
                       "values_shard": [],
                       "values_scepter": [],
                       "facet_bonus": {
@@ -3269,6 +3234,23 @@
                       "required_facet": ""
                     },
                     {
+                      "name": "skeleton_charges_per_hero_multiplier",
+                      "values_float": [
+                        4
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    },
+                    {
                       "name": "AbilityCastRange",
                       "values_float": [
                         0
@@ -3397,7 +3379,13 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "",
-                      "bonuses": [],
+                      "bonuses": [
+                        {
+                          "name": "special_bonus_unique_wraith_king_facet_1",
+                          "value": 25,
+                          "operation": 4
+                        }
+                      ],
                       "values_shard": [],
                       "values_scepter": [],
                       "facet_bonus": {
@@ -3481,7 +3469,13 @@
                       ],
                       "is_percentage": true,
                       "heading_loc": "CURSE DAMAGE:",
-                      "bonuses": [],
+                      "bonuses": [
+                        {
+                          "name": "special_bonus_unique_wraith_king_facet_1",
+                          "value": 15,
+                          "operation": 0
+                        }
+                      ],
                       "values_shard": [],
                       "values_scepter": [],
                       "facet_bonus": {
@@ -3521,7 +3515,13 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "CURSE COOLDOWN (HEROES):",
-                      "bonuses": [],
+                      "bonuses": [
+                        {
+                          "name": "special_bonus_unique_wraith_king_facet_3",
+                          "value": 25,
+                          "operation": 4
+                        }
+                      ],
                       "values_shard": [],
                       "values_scepter": [],
                       "facet_bonus": {
@@ -3538,7 +3538,13 @@
                       ],
                       "is_percentage": false,
                       "heading_loc": "CURSE COOLDOWN (CREEPS):",
-                      "bonuses": [],
+                      "bonuses": [
+                        {
+                          "name": "special_bonus_unique_wraith_king_facet_3",
+                          "value": 25,
+                          "operation": 4
+                        }
+                      ],
                       "values_shard": [],
                       "values_scepter": [],
                       "facet_bonus": {

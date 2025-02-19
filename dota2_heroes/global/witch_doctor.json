@@ -20,14 +20,6 @@
               "gradient_id": 3
             },
             {
-              "color": 0,
-              "title_loc": "Voodoo Festeration",
-              "description_loc": "Voodoo Restoration deals damage to enemies and only heals Witch Doctor.",
-              "name": "witch_doctor_voodoo_festeration",
-              "icon": "nuke",
-              "gradient_id": 2
-            },
-            {
               "color": 4,
               "title_loc": "Cleft Death",
               "description_loc": "Death Ward attacks multiple targets with reduced damage.",
@@ -928,13 +920,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "LOST HEALTH BURST DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_witch_doctor_7",
-                      "value": 30,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -968,7 +954,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_witch_doctor_7",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1039,7 +1031,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_witch_doctor_7",
+                      "value": 8,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -3018,9 +3016,9 @@
               "item_quality": 0
             },
             {
-              "id": 555,
-              "name": "special_bonus_unique_witch_doctor_7",
-              "name_loc": "+{s:bonus_bonus_damage}% Maledict Burst Damage",
+              "id": 6298,
+              "name": "special_bonus_unique_witch_doctor_2",
+              "name_loc": "+{s:value}% Target Max Health Voodoo Restoration Heal",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3028,7 +3026,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "",
+                "+{s:value}% Target Max Health Voodoo Restoration Damage",
                 ""
               ],
               "type": 2,
@@ -3067,6 +3065,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3218,9 +3233,9 @@
               "item_quality": 0
             },
             {
-              "id": 6298,
-              "name": "special_bonus_unique_witch_doctor_2",
-              "name_loc": "+{s:value}% Target Max Health Voodoo Restoration Heal",
+              "id": 555,
+              "name": "special_bonus_unique_witch_doctor_7",
+              "name_loc": "+{s:bonus_AbilityDuration}s Maledict Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3228,7 +3243,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "+{s:value}% Target Max Health Voodoo Restoration Damage",
+                "",
                 ""
               ],
               "type": 2,
@@ -3267,23 +3282,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3636,9 +3634,6 @@
             }
           ],
           "facet_abilities": [
-            {
-              "abilities": []
-            },
             {
               "abilities": []
             },

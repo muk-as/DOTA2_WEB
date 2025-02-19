@@ -22,7 +22,7 @@
             {
               "color": 0,
               "title_loc": "Hotspot",
-              "description_loc": "Sun Ray deals more damage towards the tip of the ray.",
+              "description_loc": "Sun Ray deals more damage and applies more Blinding Sun stacks towards the tip of the ray.",
               "name": "phoenix_hotspot",
               "icon": "nuke",
               "gradient_id": 1
@@ -34,7 +34,7 @@
           "agi_gain": 1.5,
           "int_base": 16,
           "int_gain": 1.8,
-          "primary_attr": 3,
+          "primary_attr": 0,
           "complexity": 2,
           "attack_capability": 2,
           "role_levels": [
@@ -48,8 +48,8 @@
             0,
             2
           ],
-          "damage_min": 9,
-          "damage_max": 19,
+          "damage_min": 44,
+          "damage_max": 54,
           "attack_rate": 1.7,
           "attack_range": 525,
           "projectile_speed": 1100,
@@ -838,7 +838,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Sun Ray does more damage/heal to targets near the end of the beam. Beam intensity starts increasing at half the beam length, up to %focal_point_max_multiplier%%% of base damage/heal at %focal_point_full_length_tooltip_only% range. Increasing Sun Ray length to beyond %focal_point_full_length_tooltip_only% range will result in more than %focal_point_max_multiplier%%% damage and healing."
+                "Sun Ray does more damage/heal and applies %focal_point_blind_stack_multiplier%x Blinding Sun stacks to targets near the end of the beam. Beam intensity starts increasing at half the beam length, up to %focal_point_max_multiplier%%% of base damage/heal at %focal_point_full_length_tooltip_only% range. Increasing Sun Ray length to beyond %focal_point_full_length_tooltip_only% range will result in more than %focal_point_max_multiplier%%% damage and healing."
               ],
               "type": 0,
               "behavior": "16",
@@ -1142,6 +1142,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "focal_point_blind_stack_multiplier",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "phoenix_hotspot",
+                    "values": [
+                      2
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     1200
@@ -1350,7 +1369,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
+                      "value": 0.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2077,9 +2102,9 @@
               "item_quality": 0
             },
             {
-              "id": 1190,
-              "name": "special_bonus_unique_phoenix_dive_damage",
-              "name_loc": "+{s:bonus_damage_per_second} Icarus Dive Damage Per Second",
+              "id": 1566,
+              "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
+              "name_loc": "+{s:bonus_blind_per_second}% Blinding Sun Miss Chance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

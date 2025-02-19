@@ -34,7 +34,7 @@
           "agi_gain": 1.8,
           "int_base": 21,
           "int_gain": 2.7,
-          "primary_attr": 3,
+          "primary_attr": 2,
           "complexity": 1,
           "attack_capability": 1,
           "role_levels": [
@@ -48,8 +48,8 @@
             0,
             1
           ],
-          "damage_min": 7,
-          "damage_max": 13,
+          "damage_min": 54,
+          "damage_max": 60,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
@@ -1347,14 +1347,12 @@
               "item_quality": 0
             },
             {
-              "id": 1305,
-              "name": "dark_seer_mental_fortitude",
-              "name_loc": "Mental Fortitude",
-              "desc_loc": "Dark Seer's Intelligence cannot be lower than the average of his Strength and Agility.",
+              "id": 1553,
+              "name": "dark_seer_aggrandize",
+              "name_loc": "Aggrandize",
+              "desc_loc": "When Dark Seer levels up, he restores a percentage of his max health and mana. Restore percentage is equal to %heal_pct_base%%% + %heal_pct_per_level%%% per hero level.",
               "lore_loc": "",
-              "notes_loc": [
-                "If the average between his Strength and Agility is higher, he gains Bonus Intelligence to match them."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1398,12 +1396,46 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "str_agi_average_tooltip",
+                  "name": "heal_pct_base",
+                  "values_float": [
+                    10
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "heal_pct_per_level",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "heal_pct_tooltip",
                   "values_float": [
                     0
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "MIN INTELLIGENCE:",
+                  "is_percentage": true,
+                  "heading_loc": "MAX HP/MANA RESTORE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1587,7 +1619,7 @@
               "target_type": 0,
               "flags": 0,
               "damage": 0,
-              "immunity": 0,
+              "immunity": 3,
               "dispellable": 0,
               "max_level": 3,
               "cast_ranges": [
@@ -3666,7 +3698,7 @@
                     {
                       "name": "int_to_atkspd",
                       "values_float": [
-                        0.5
+                        1
                       ],
                       "is_percentage": false,
                       "heading_loc": "",

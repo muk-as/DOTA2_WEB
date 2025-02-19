@@ -109,9 +109,9 @@
               ],
               "mana_costs": [
                 75,
-                80,
                 85,
-                90
+                95,
+                105
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -145,10 +145,10 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    500
+                    450
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "JUMP RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -302,9 +302,9 @@
                   "name": "AbilityManaCost",
                   "values_float": [
                     75,
-                    80,
                     85,
-                    90
+                    95,
+                    105
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -714,7 +714,7 @@
               "id": 641,
               "name": "zuus_heavenly_jump",
               "name_loc": "Heavenly Jump",
-              "desc_loc": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (prioritizing heroes), dealing damage as well as reducing their movement and attack speed. Zeus gets 900 unobstructed vision around him for 3 seconds.",
+              "desc_loc": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (prioritizing heroes), dealing damage as well as reducing their movement and attack speed. Zeus gets %vision_radius% unobstructed vision around him for 3 seconds.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -788,10 +788,13 @@
                 {
                   "name": "hop_distance",
                   "values_float": [
-                    500
+                    300,
+                    400,
+                    500,
+                    600
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DISTANCE:",
+                  "heading_loc": "LEAP DISTANCE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -845,7 +848,41 @@
                     1000
                   ],
                   "is_percentage": false,
-                  "heading_loc": "RANGE:",
+                  "heading_loc": "SHOCK RANGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "vision_radius",
+                  "values_float": [
+                    900
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "vision_duration",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -859,7 +896,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    1.6
+                    1.4
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1855,7 +1892,7 @@
                   "facet_bonus": {
                     "name": "zuus_divine_rampage",
                     "values": [
-                      15
+                      25
                     ],
                     "operation": 0
                   },
@@ -2112,10 +2149,10 @@
                   "facet_bonus": {
                     "name": "zuus_livewire",
                     "values": [
-                      4,
                       5,
                       6,
-                      7
+                      7,
+                      8
                     ],
                     "operation": 5
                   },
@@ -2124,6 +2161,9 @@
                 {
                   "name": "damage_health_pct_min_close",
                   "values_float": [
+                    0,
+                    0,
+                    0,
                     0
                   ],
                   "is_percentage": true,
@@ -2140,9 +2180,12 @@
                   "facet_bonus": {
                     "name": "zuus_livewire",
                     "values": [
-                      2
+                      2.5,
+                      3,
+                      3.5,
+                      4
                     ],
-                    "operation": 0
+                    "operation": 5
                   },
                   "required_facet": "zuus_livewire"
                 },

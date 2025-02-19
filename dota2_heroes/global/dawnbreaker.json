@@ -20,11 +20,19 @@
               "gradient_id": 3
             },
             {
+              "color": 0,
+              "title_loc": "Starsurge",
+              "description_loc": "Dawnbreaker and nearby allies gain bonus attack speed at the end of Starbreaker for each swipe that hit enemy heroes.",
+              "name": "dawnbreaker_blaze",
+              "icon": "fist",
+              "gradient_id": 1
+            },
+            {
               "color": 1,
-              "title_loc": "Gleaming Hammer",
-              "description_loc": "Celestial Hammer heals allies and damages enemies when on the ground.",
-              "name": "dawnbreaker_gleaming_hammer",
-              "icon": "dawnbreaker_hammer",
+              "title_loc": "Trailblazer",
+              "description_loc": "Walking along Celestial Hammer's fire trail gives bonus movespeed.",
+              "name": "dawnbreaker_hearthfire",
+              "icon": "speed",
               "gradient_id": 1
             }
           ],
@@ -74,12 +82,15 @@
                 "Dawnbreaker travels at a rate of %movement_speed% for the duration of the ability and takes a brief %self_stun_duration%s to recover after the final strike.",
                 "Celestial Hammer or Solar Guardian cannot be cast during the combo.",
                 "Cleave does not work with this ability.",
-                "Can be self-cast to move forward"
+                "Can be self-cast to move forward.",
+                "The first two strikes will slow enemy movement speed by %swipe_slow%%% for %sweep_stun_duration%s."
               ],
               "shard_loc": "Dawnbreaker gains debuff immunity, 50%% magic resistance, and free movement during Starbreaker. Dawnbreaker is slowed by %shard_movement_penalty%%% down to a minimum of %movement_speed%.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "Dawnbreaker and her allies in a %movespeed_bonus_radius% radius gain attack speed for %movespeed_bonus_duration% seconds at the end of Starbreaker for each swipe that hit enemy heroes.",
                 ""
               ],
               "type": 0,
@@ -406,12 +417,100 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    25
+                    35
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movespeed_bonus_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dawnbreaker_blaze",
+                    "values": [
+                      700
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movespeed_bonus_self_max",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS ATTACK SPEED PER SWIPE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dawnbreaker_blaze",
+                    "values": [
+                      15,
+                      21,
+                      27,
+                      33
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movespeed_bonus_ally_max",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS ATTACK SPEED PER SWIPE (ALLIES):",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dawnbreaker_blaze",
+                    "values": [
+                      9,
+                      12,
+                      15,
+                      18
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movespeed_bonus_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "dawnbreaker_blaze",
+                    "values": [
+                      4
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -548,7 +647,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_dawnbreaker_fire_wreath_cooldown",
-                      "value": 5,
+                      "value": 4,
                       "operation": 2
                     }
                   ],
@@ -590,7 +689,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "When Celestial Hammer is on the ground, it emits the healing and damaging effects of Solar Guardian, reduced by %hammer_solar_guardian_effectiveness_pct%%% in a %hammer_solar_guardian_radius% AoE around it. Increases the duration that the hammer can remain stationary to %pause_duration%s."
+                "When Celestial Hammer lands on the ground, it creates the healing and damaging effects of Solar Guardian, reduced by %hammer_solar_guardian_effectiveness_pct%%% in a %hammer_solar_guardian_radius% AoE around it. Increases the duration that the hammer can remain stationary to %pause_duration%s.",
+                "",
+                "Allied heroes walking on Celestial Hammer's fire trail gain bonus movement speed."
               ],
               "type": 0,
               "behavior": "16",
@@ -801,14 +902,18 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dawnbreaker_gleaming_hammer",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "dawnbreaker_gleaming_hammer",
-                    "values": [
-                      2
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -897,14 +1002,18 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dawnbreaker_gleaming_hammer",
+                      "value": 200,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "dawnbreaker_gleaming_hammer",
-                    "values": [
-                      200
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -916,13 +1025,42 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dawnbreaker_gleaming_hammer",
+                      "value": 40,
+                      "operation": 5
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "fire_trail_health_regen",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "FIRE TRAIL MOVESPEED BONUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "dawnbreaker_gleaming_hammer",
+                    "name": "dawnbreaker_hearthfire",
                     "values": [
-                      50
+                      10,
+                      15,
+                      20,
+                      25
                     ],
                     "operation": 5
                   },
@@ -1091,13 +1229,15 @@
               "desc_loc": "After a number of attacks, Dawnbreaker powers up, charging her next attack with a critical hit that heals all allied heroes within %heal_radius% units around her for a portion of attack damage dealt. Creeps and neutral enemies provide less healing. Allies are healed for %allied_healing_pct%%% of the amount.",
               "lore_loc": "Diminished in power without access to the Children's replenishing light, Valora can still recharge herself and her allies by creating order from the chaos which resides within each fight.",
               "notes_loc": [
-                "Luminosity Heal is considered a lifesteal and increased by sources of Lifesteal Amplification.",
+                "Luminosity Heal is increased by sources of Lifesteal Amplification.",
                 "Break disables the gaining of new stacks."
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "Whenever Dawnbreaker hits a target with a powered up Luminosity, she decreases the cooldowns of all of her abilities.",
+                "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1229,7 +1369,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_dawnbreaker_luminosity_crit",
-                      "value": 50,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -1296,7 +1436,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "attackspeed_bonus_max",
+                  "name": "triggered_by_celestial_hammer",
                   "values_float": [
                     0
                   ],
@@ -1308,26 +1448,7 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movespeed_bonus_max",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      20
+                      1
                     ],
                     "operation": 0
                   },
@@ -1487,12 +1608,14 @@
               "id": 1424,
               "name": "dawnbreaker_break_of_dawn",
               "name_loc": "Break of Dawn",
-              "desc_loc": "Whenever the sun comes out, Dawnbreaker reveals the whole map to allies for 5 seconds.",
+              "desc_loc": "Whenever the sun comes out, Dawnbreaker reveals the whole map to allies for %reveal_duration% seconds.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1775,12 +1898,14 @@
               "lore_loc": "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight.",
               "notes_loc": [
                 "Pulse interval is %pulse_interval%s.",
-                "Total duration flight duration is %abilitychanneltime% seconds of channel time + %airtime_duration% of flight time.",
+                "Total flight duration is %abilitychanneltime% seconds of channel time + %airtime_duration% of flight time.",
                 "Cannot be cast without the Hammer."
               ],
               "shard_loc": "",
-              "scepter_loc": "Reduces the channel time and increases the healing and total duration of Solar Guardian's air time. Causes allies in the destination area to have evasion while Dawnbreaker is airborne. Solar Guardian can be cast again after take off to land early. While airborne, the landing point of Solar Guardian can be moved at a speed of %airtime_scepter_movement_speed%.",
+              "scepter_loc": "Solar Guardian's aura now lingers for %scepter_aura_duration%s after landing and follows Dawnbreaker around. Solar Guardian's heal per pulse is increased. Channel time and air time is reduced.",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1828,15 +1953,55 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "airtime_duration",
+                  "name": "scepter_aura_duration",
                   "values_float": [
-                    0.8
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "miss_rate",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "EVASION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "base_heal",
+                  "values_float": [
+                    45,
+                    70,
+                    95
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "HEAL PER PULSE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    10,
+                    15,
+                    20
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1879,29 +2044,6 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "base_heal",
-                  "values_float": [
-                    45,
-                    70,
-                    95
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "HEAL PER PULSE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    15,
-                    20,
-                    25
-                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1987,7 +2129,7 @@
                     1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CHANNEL TIME:",
+                  "heading_loc": "SCEPTER CHANNEL TIME:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2004,24 +2146,7 @@
                     3.5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS AIR TIME:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "miss_rate",
-                  "values_float": [
-                    60
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "EVASION:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2042,6 +2167,25 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "airtime_duration",
+                  "values_float": [
+                    0.8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "AIR TIME:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.5
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -2212,15 +2356,17 @@
           ],
           "talents": [
             {
-              "id": 7941,
-              "name": "special_bonus_unique_dawnbreaker_fire_wreath_swipe",
-              "name_loc": "+{s:bonus_swipe_damage} Starbreaker Swipe/Smash Damage",
+              "id": 6159,
+              "name": "special_bonus_attack_damage_12",
+              "name_loc": "+{s:value} Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2260,6 +2406,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -2420,6 +2583,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2620,6 +2785,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2818,6 +2985,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -3018,6 +3187,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3216,6 +3387,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -3416,6 +3589,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3615,6 +3790,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -3805,6 +3982,9 @@
             }
           ],
           "facet_abilities": [
+            {
+              "abilities": []
+            },
             {
               "abilities": []
             },

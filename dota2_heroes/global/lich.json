@@ -105,10 +105,10 @@
                 4
               ],
               "damages": [
-                40,
-                80,
-                120,
-                160
+                0,
+                0,
+                0,
+                0
               ],
               "mana_costs": [
                 110,
@@ -180,6 +180,26 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "damage",
+                  "values_float": [
+                    40,
+                    80,
+                    120,
+                    160
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BASE DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "aoe_damage",
                   "values_float": [
                     80,
@@ -196,26 +216,6 @@
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "#AbilityDamage",
-                  "values_float": [
-                    40,
-                    80,
-                    120,
-                    160
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -413,7 +413,7 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                1000
+                800
               ],
               "cast_points": [
                 0.2
@@ -565,10 +565,10 @@
                 {
                   "name": "duration",
                   "values_float": [
+                    4,
                     5,
                     6,
-                    7,
-                    8
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "BUFF DURATION:",
@@ -650,7 +650,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    1000
+                    800
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -807,17 +807,17 @@
               "id": 7325,
               "name": "lich_sinister_gaze",
               "name_loc": "Sinister Gaze",
-              "desc_loc": "CHANNELED. Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.<br><br>Lich can use his other abilities while channeling this ability. <br><br> If cast on a creep lasts %creep_duration_multiplier%x longer and deals %creep_damage% damage per second.",
+              "desc_loc": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.<br><br> If cast on a creep lasts %creep_duration_multiplier%x longer.",
               "lore_loc": "Mind the cold...",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Sinister Gaze becomes an Area of Effect ability, affecting units within a radius of %aoe_scepter% in the target area.",
+              "scepter_loc": "Sinister Gaze becomes an Area of Effect ability, affecting units within a radius of %aoe_scepter% in the target area. Sinister Gaze allows Lich to cast other abilities while channeling it.",
               "facets_loc": [
                 "",
                 ""
               ],
               "type": 0,
-              "behavior": "536871048",
+              "behavior": "136",
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
@@ -853,10 +853,7 @@
                 0
               ],
               "mana_costs": [
-                50,
-                60,
-                70,
-                80
+                25
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -910,7 +907,7 @@
                 {
                   "name": "mana_drain",
                   "values_float": [
-                    12
+                    15
                   ],
                   "is_percentage": true,
                   "heading_loc": "MANA DRAIN PER SECOND:",
@@ -961,12 +958,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "creep_damage",
+                  "name": "frost_blast_damage_percent",
                   "values_float": [
-                    250
+                    0
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "FROST BLAST DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1091,10 +1088,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    50,
-                    60,
-                    70,
-                    80
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1146,7 +1140,7 @@
               "id": 8028,
               "name": "lich_ice_spire",
               "name_loc": "Ice Spire",
-              "desc_loc": "Creates an Ice Spire at the target spot, slowing enemies around it. Can take 5 hero hits or 10 creep hits and when destroyed it will create a Frost Blast around it.<br><br>Chain Frost can be cast on the Spire and can bounce to the Spire if there are no other enemies in range.<br><br>Lich can cast Frost Shield on the Spire. Each Frost Shield tick will heal the spire by 1 hero attack.",
+              "desc_loc": "Creates an Ice Spire at the target spot, slowing enemies around it. Can take 5 hero hits or 10 creep hits and when destroyed it will create a Frost Blast around it.<br><br>Chain Frost can be cast on the Spire and can bounce to the Spire and damage the spire by 1 hero attack if there are no other enemies in range.<br><br>Lich can cast Frost Shield on the Spire. Each Frost Shield tick will heal the spire by 1 hero attack.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1211,7 +1205,7 @@
                 {
                   "name": "aura_radius",
                   "values_float": [
-                    750
+                    550
                   ],
                   "is_percentage": false,
                   "heading_loc": "EFFECT RADIUS:",
@@ -1778,7 +1772,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "INCREMENTAL DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lich_jump_damage",
+                      "value": 100,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1808,7 +1808,7 @@
                 {
                   "name": "jump_range",
                   "values_float": [
-                    600
+                    550
                   ],
                   "is_percentage": false,
                   "heading_loc": "BOUNCE RANGE:",
@@ -1926,16 +1926,12 @@
                 },
                 {
                   "name": "has_unlimited_jumps",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lich_5",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2385,7 +2381,7 @@
             {
               "id": 530,
               "name": "special_bonus_unique_lich_6",
-              "name_loc": "+{s:bonus_radius} Frost Blast Radius and Damage",
+              "name_loc": "+{s:bonus_radius} Frost Blast Radius and Area Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3594,9 +3590,9 @@
               "item_quality": 0
             },
             {
-              "id": 318,
-              "name": "special_bonus_unique_lich_5",
-              "name_loc": "Chain Frost Unlimited Bounces",
+              "id": 1543,
+              "name": "special_bonus_unique_lich_jump_damage",
+              "name_loc": "+{s:bonus_bonus_jump_damage} Chain Frost Incremental Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -3642,23 +3638,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

@@ -192,13 +192,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAGIC RESISTANCE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_viper_4",
-                      "value": 4,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -493,7 +487,9 @@
               "name_loc": "Nethertoxin",
               "desc_loc": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage over time based on how long they remain in it. Units in it have their attack speed slowed.",
               "lore_loc": "Poison from the Nether Reaches turns wounds into fatalities, and fatigue into death.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Multiple Nethertoxins do not stack."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -670,6 +666,52 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "radius_increase",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_viper_nethertoxin_radius",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "expand_interval",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_viper_nethertoxin_radius",
+                      "value": 0.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1213,7 +1255,7 @@
               "id": 983,
               "name": "viper_nose_dive",
               "name_loc": "Nosedive",
-              "desc_loc": "Viper slams into the ground, splattering each enemy in a %corrosive_radius% AoE for %effect_duration% seconds with the effect of Corrosive Skin.",
+              "desc_loc": "Viper slams into the ground, releasing a Nethertoxin and splattering each enemy in a %corrosive_radius% AoE for %effect_duration% seconds with the effect of Corrosive Skin.",
               "lore_loc": "It was thought that Netherdrake wings touch ground only in death, but some surmise that those who've witnessed more intentional landings merely haven't survived to tell the tale.",
               "notes_loc": [
                 "Cannot be used while Leashed or Rooted."
@@ -1830,7 +1872,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_viper_4",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2144,7 +2192,7 @@
             {
               "id": 6820,
               "name": "special_bonus_unique_viper_4",
-              "name_loc": "+{s:bonus_magic_resistance}% Poison Attack Magic Resistance Reduction",
+              "name_loc": "+{s:bonus_duration}s Viper Strike Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2190,23 +2238,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
@@ -3370,9 +3401,9 @@
               "item_quality": 0
             },
             {
-              "id": 645,
-              "name": "special_bonus_unique_viper_5",
-              "name_loc": "Become Universal",
+              "id": 1549,
+              "name": "special_bonus_unique_viper_nethertoxin_radius",
+              "name_loc": "Nethertoxin Radius increases by {s:bonus_radius_increase} every {s:bonus_expand_interval}s",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

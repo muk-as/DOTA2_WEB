@@ -14,7 +14,7 @@
             {
               "color": 0,
               "title_loc": "Victory Feast",
-              "description_loc": "Mars gains health, mana, and attack damage when an enemy inside his Arena of Blood dies.",
+              "description_loc": "Mars and his allies gain health, mana, and attack damage when an enemy inside his Arena of Blood dies.",
               "name": "mars_victory_feast",
               "icon": "healing",
               "gradient_id": 2
@@ -1476,7 +1476,7 @@
               "id": 1415,
               "name": "mars_dauntless",
               "name_loc": "Dauntless",
-              "desc_loc": "Mars and allied heroes within %radius% units get more HP Regen the more they are outnumbered by enemy heroes in that area.",
+              "desc_loc": "Mars gets more HP Regen the more he and his allies are outnumbered by enemy heroes in %radius% radius.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1524,11 +1524,17 @@
                 {
                   "name": "health_regen_per_enemy",
                   "values_float": [
-                    30
+                    50
                   ],
                   "is_percentage": true,
                   "heading_loc": "HP REGEN PER EXTRA ENEMY:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mars_dauntless_hpregen",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1541,7 +1547,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    2000
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1715,7 +1721,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "If Mars is in the Arena when an enemy dies inside of it, he restores %arena_kill_buff_heal_pct%%% of his max health and mana and gets a %arena_kill_buff_damage_pct%%% attack damage buff for %arena_kill_buff_duration%s.",
+                "If Mars is in the Arena when an enemy dies inside of it, he restores %arena_kill_buff_heal_pct%%% of his max health and mana and gets a %arena_kill_buff_damage_pct%%% attack damage buff for %arena_kill_buff_duration%s. Allies inside the Arena receive %allied_reduction_pct%%% of the bonuses.",
                 "Arena of Blood obscures vision and enemies within the arena do not share vision with their allies."
               ],
               "type": 1,
@@ -2037,6 +2043,25 @@
                     "name": "mars_victory_feast",
                     "values": [
                       30
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "allied_reduction_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "mars_victory_feast",
+                    "values": [
+                      50
                     ],
                     "operation": 0
                   },
@@ -2404,9 +2429,9 @@
               "item_quality": 0
             },
             {
-              "id": 884,
-              "name": "special_bonus_unique_mars_bulwark_damage_reduction",
-              "name_loc": "+{s:bonus_physical_damage_reduction}%/+{s:bonus_physical_damage_reduction_side}% Bulwark Front/Side damage reduction",
+              "id": 1567,
+              "name": "special_bonus_unique_mars_dauntless_hpregen",
+              "name_loc": "+{s:bonus_health_regen_per_enemy}% Dauntless Regen Per Enemy",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
