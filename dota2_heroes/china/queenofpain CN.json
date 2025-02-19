@@ -57,8 +57,9 @@
             "受到暗影突袭作用的单位在生命值低于最大值25%时可以被队友反补。"
           ],
           "shard_loc": "",
-          "scepter_loc": "暗影突袭变为%aoe_radius%范围型技能，并且初始伤害提升。暗影突袭效果结束后或重新施加给敌方英雄时，目标将放出痛苦尖叫，伤害附近所有敌人。",
+          "scepter_loc": "暗影突袭变为%aoe_radius%范围型技能。暗影突袭效果结束后或重新施加给敌方英雄时，目标将放出痛苦尖叫，伤害附近所有敌人。",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -110,18 +111,16 @@
             {
               "name": "strike_damage",
               "values_float": [
-                30,
-                60,
-                90,
-                120
+                50,
+                80,
+                110,
+                140
               ],
               "is_percentage": false,
               "heading_loc": "初始伤害：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                50
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -482,6 +481,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -775,6 +775,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1038,17 +1039,18 @@
           "is_inborn": 0
         },
         {
-          "id": 1278,
-          "name": "queenofpain_bondage",
-          "name_loc": "束手束脚",
-          "desc_loc": "每当%radius%范围内的敌人对痛苦女王造成技能伤害时，她就会反弹造成伤害的%spell_reflect_pct%%%。",
+          "id": 1277,
+          "name": "queenofpain_succubus",
+          "name_loc": "魅魔",
+          "desc_loc": "所有来源的技能吸血也对纯粹伤害生效。痛苦女王获得技能吸血，与敌人的距离越近效果越强。敌人距离她不到%close_radius%距离时达到最强效果，距离她超过%max_radius%距离时为最弱效果。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "技能吸血也对反弹的纯粹和魔法伤害有效。"
           ],
           "type": 0,
           "behavior": "8796093022210",
@@ -1056,7 +1058,7 @@
           "target_type": 0,
           "flags": 0,
           "damage": 0,
-          "immunity": 4,
+          "immunity": 0,
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
@@ -1087,9 +1089,26 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "spell_reflect_pct",
+              "name": "spell_lifesteal",
               "values_float": [
-                15
+                2
+              ],
+              "is_percentage": true,
+              "heading_loc": "最低技能吸血：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "close_radius",
+              "values_float": [
+                300
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1104,9 +1123,9 @@
               "required_facet": ""
             },
             {
-              "name": "radius",
+              "name": "max_radius",
               "values_float": [
-                1200
+                800
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1116,6 +1135,42 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "spell_lifesteal_close",
+              "values_float": [
+                14
+              ],
+              "is_percentage": true,
+              "heading_loc": "最高技能吸血：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "lifesteal_reflected",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "queenofpain_facet_bondage",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -1287,6 +1342,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1654,6 +1710,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1852,6 +1909,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2069,6 +2127,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2267,6 +2326,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2484,6 +2544,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2683,6 +2744,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2881,6 +2943,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -3098,6 +3161,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -3291,16 +3355,8 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_queenofpain.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_queenofpain/npc_dota_hero_queenofpain.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_queenofpain/npc_dota_hero_queenofpain.webm",
-      "update_time": 1732068042,
+      "update_time": 1739926877,
       "facets": [
-        {
-          "color": 3,
-          "title_loc": "魅魔",
-          "description_loc": "痛苦女王获得技能吸血，与敌人的距离越近效果越强。",
-          "name": "queenofpain_lifesteal",
-          "icon": "healing",
-          "gradient_id": 0
-        },
         {
           "color": 0,
           "title_loc": "受虐成狂",
@@ -3308,23 +3364,30 @@
           "name": "queenofpain_selfdmg",
           "icon": "nuke",
           "gradient_id": 0
+        },
+        {
+          "color": 3,
+          "title_loc": "束手束脚",
+          "description_loc": "痛苦女王会把受到的技能伤害反弹给敌人。",
+          "name": "queenofpain_facet_bondage",
+          "icon": "twin_hearts",
+          "gradient_id": 0
         }
       ],
       "facet_abilities": [
         {
           "abilities": [
             {
-              "id": 1277,
-              "name": "queenofpain_succubus",
-              "name_loc": "魅魔",
-              "desc_loc": "痛苦女王获得技能吸血，与敌人的距离越近效果越强。",
+              "id": 1276,
+              "name": "queenofpain_masochist",
+              "name_loc": "受虐成狂",
+              "desc_loc": "痛苦女王拥有技能增强加成，但是她技能伤害的一定百分比会反弹回她自己身上。",
               "lore_loc": "",
-              "notes_loc": [
-                "距离为%max_radius%时效果最低，为%spell_lifesteal%%%，距离在%close_radius%时提升至%spell_lifesteal_close%%%。"
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3365,9 +3428,26 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "spell_lifesteal",
+                  "name": "spell_amplification",
                   "values_float": [
-                    12
+                    14
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "技能增强：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spell_amplification_per_level",
+                  "values_float": [
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3382,46 +3462,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "close_radius",
+                  "name": "damage_reflected_to_self",
                   "values_float": [
-                    300
+                    27
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_radius",
-                  "values_float": [
-                    800
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spell_lifesteal_close",
-                  "values_float": [
-                    18
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "技能伤害反弹回自身：",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -3587,15 +3633,16 @@
         {
           "abilities": [
             {
-              "id": 1276,
-              "name": "queenofpain_masochist",
-              "name_loc": "受虐成狂",
-              "desc_loc": "痛苦女王拥有技能增强加成，但是她技能伤害的一定百分比会反弹回她自己身上。",
+              "id": 1278,
+              "name": "queenofpain_bondage",
+              "name_loc": "束手束脚",
+              "desc_loc": "每当%radius%范围内的敌人对痛苦女王造成技能伤害时，她就会反弹造成伤害的%spell_reflect_pct%%%。",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -3605,7 +3652,7 @@
               "target_type": 0,
               "flags": 0,
               "damage": 0,
-              "immunity": 0,
+              "immunity": 4,
               "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
@@ -3636,26 +3683,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "spell_amplification",
+                  "name": "spell_reflect_pct",
                   "values_float": [
-                    14
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "技能增强：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spell_amplification_per_level",
-                  "values_float": [
-                    0
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3670,12 +3700,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_reflected_to_self",
+                  "name": "radius",
                   "values_float": [
-                    21
+                    1200
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "技能伤害反弹回自身：",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -3841,17 +3871,18 @@
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_queenofpain.png",
       "new_abilities": {
-        "id": 1278,
-        "name": "queenofpain_bondage",
-        "name_loc": "束手束脚",
-        "desc_loc": "每当%radius%范围内的敌人对痛苦女王造成技能伤害时，她就会反弹造成伤害的%spell_reflect_pct%%%。",
+        "id": 1277,
+        "name": "queenofpain_succubus",
+        "name_loc": "魅魔",
+        "desc_loc": "所有来源的技能吸血也对纯粹伤害生效。痛苦女王获得技能吸血，与敌人的距离越近效果越强。敌人距离她不到%close_radius%距离时达到最强效果，距离她超过%max_radius%距离时为最弱效果。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
           "",
-          ""
+          "",
+          "技能吸血也对反弹的纯粹和魔法伤害有效。"
         ],
         "type": 0,
         "behavior": "8796093022210",
@@ -3859,7 +3890,7 @@
         "target_type": 0,
         "flags": 0,
         "damage": 0,
-        "immunity": 4,
+        "immunity": 0,
         "dispellable": 0,
         "max_level": 1,
         "cast_ranges": [
@@ -3890,9 +3921,26 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "spell_reflect_pct",
+            "name": "spell_lifesteal",
             "values_float": [
-              15
+              2
+            ],
+            "is_percentage": true,
+            "heading_loc": "最低技能吸血：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "close_radius",
+            "values_float": [
+              300
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3907,9 +3955,9 @@
             "required_facet": ""
           },
           {
-            "name": "radius",
+            "name": "max_radius",
             "values_float": [
-              1200
+              800
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -3919,6 +3967,42 @@
             "facet_bonus": {
               "name": "",
               "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "spell_lifesteal_close",
+            "values_float": [
+              14
+            ],
+            "is_percentage": true,
+            "heading_loc": "最高技能吸血：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "lifesteal_reflected",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "queenofpain_facet_bondage",
+              "values": [
+                1
+              ],
               "operation": 0
             },
             "required_facet": ""
