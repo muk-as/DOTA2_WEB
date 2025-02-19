@@ -239,10 +239,10 @@
             {
               "name": "slow",
               "values_float": [
-                10,
-                20,
+                15,
                 30,
-                40
+                45,
+                60
               ],
               "is_percentage": true,
               "heading_loc": "对敌移动/攻击速度降低：",
@@ -280,14 +280,16 @@
               "required_facet": ""
             },
             {
-              "name": "shard_bonus_spell_lifesteal",
+              "name": "damage",
               "values_float": [
-                10
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "每秒伤害：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                120
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -297,17 +299,16 @@
               "required_facet": ""
             },
             {
-              "name": "damage",
+              "name": "damage_to_heal",
               "values_float": [
-                15,
-                25,
-                35,
-                45
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "每秒伤害：",
+              "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1042,7 +1043,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "攻击速度：",
+              "heading_loc": "攻击速度加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1092,7 +1093,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "护甲：",
+              "heading_loc": "护甲加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1117,7 +1118,7 @@
                 0
               ],
               "is_percentage": true,
-              "heading_loc": "魔法抗性：",
+              "heading_loc": "魔法抗性加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1166,6 +1167,29 @@
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wisp_overcharge_duration",
+                  "value": 1.5,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "spell_lifesteal",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "技能吸血：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1177,32 +1201,19 @@
               "required_facet": ""
             },
             {
-              "name": "shard_bonus_slow_resistance",
+              "name": "unslowable",
               "values_float": [
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "减速抗性：",
-              "bonuses": [],
-              "values_shard": [
-                30
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wisp_9",
+                  "value": 1,
+                  "operation": 0
+                }
               ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_bonus_spell_lifesteal",
-              "values_float": [
-                10
-              ],
-              "is_percentage": true,
-              "heading_loc": "技能吸血：",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

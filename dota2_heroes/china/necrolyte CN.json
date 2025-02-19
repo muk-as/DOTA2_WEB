@@ -358,7 +358,7 @@
           "scepter_loc": "降低幽魂护罩的冷却时间。",
           "facets_loc": [
             "",
-            "瘟疫法师获得移动速度加成，数值等于%movement_transfer%%%敌人损失移速。"
+            "瘟疫法师获得移动速度加成，数值等于%movement_transfer%%%敌人损失移速。敌人的恢复增强减少%enemies_negative_heal_bonus_as_pct_of_self%%%，与瘟疫法师获得的相同。"
           ],
           "type": 0,
           "behavior": "2052",
@@ -441,6 +441,25 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "enemies_negative_heal_bonus_as_pct_of_self",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "necrolyte_rapid_decay",
+                "values": [
+                  100
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -737,7 +756,7 @@
             {
               "name": "aura_radius",
               "values_float": [
-                800
+                700
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -754,10 +773,10 @@
             {
               "name": "aura_damage",
               "values_float": [
-                0.6,
-                1.2,
+                0.8,
+                1.3,
                 1.8,
-                2.4
+                2.3
               ],
               "is_percentage": true,
               "heading_loc": "每秒生命流失：",
@@ -3482,7 +3501,7 @@
         {
           "color": 2,
           "title_loc": "快速腐朽",
-          "description_loc": "幽魂护罩会窃取敌人的移动速度。",
+          "description_loc": "幽魂护罩会窃取敌人的移动速度，并降低他们的恢复能力。",
           "name": "necrolyte_rapid_decay",
           "icon": "speed",
           "gradient_id": 3
