@@ -255,9 +255,9 @@
             {
               "name": "duration",
               "values_float": [
+                3.5,
                 5,
-                6,
-                7,
+                6.5,
                 8
               ],
               "is_percentage": false,
@@ -1218,7 +1218,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "编织会对友军施加%ally_multiplier%倍叠加层数。",
+            "编织会对友军施加%ally_multiplier%倍叠加层数。编织的每层叠加效果会使来自戴泽的治疗效果增强%heal_amplification_pct%%%。",
             "编织会对敌人施加%enemy_multiplier%倍叠加层数。"
           ],
           "type": 0,
@@ -1335,7 +1335,7 @@
               "required_facet": ""
             },
             {
-              "name": "heal_reduction",
+              "name": "heal_amplification_pct",
               "values_float": [
                 0
               ],
@@ -1345,9 +1345,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "dazzle_facet_nothl_boon",
+                "values": [
+                  5
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
@@ -1795,8 +1797,8 @@
               "name": "shadow_wave_cdr",
               "values_float": [
                 30,
-                45,
-                60
+                40,
+                50
               ],
               "is_percentage": true,
               "heading_loc": "暗影波冷却时间减少：",
@@ -3643,12 +3645,12 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_dazzle.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_dazzle/npc_dota_hero_dazzle.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_dazzle/npc_dota_hero_dazzle.webm",
-      "update_time": 1739926896,
+      "update_time": 1741118494,
       "facets": [
         {
           "color": 0,
           "title_loc": "虚无之恩",
-          "description_loc": "戴泽的超量治疗会转化为护盾。编织对友军的效果更强。",
+          "description_loc": "戴泽的超量治疗会转化为护盾。编织对友军的效果更强，还会增强来自戴泽的治疗效果。",
           "name": "dazzle_facet_nothl_boon",
           "icon": "armor",
           "gradient_id": 1
@@ -3669,7 +3671,7 @@
               "id": 1294,
               "name": "dazzle_nothl_boon",
               "name_loc": "虚无之恩",
-              "desc_loc": "戴泽的超量治疗会转化为护盾。编织对友军的效果更强。",
+              "desc_loc": "戴泽的超量治疗会转化为护盾。编织对友军的效果更强，还会增强来自戴泽的治疗效果。",
               "lore_loc": "",
               "notes_loc": [
                 "每次戴泽对自身或友军产生超量治疗时，该英雄都会获得一个物理伤害护盾，数额等于超量治疗量，持续%duration%秒。如果超量治疗的目标已经拥有数额更大的护盾，那将改为刷新其持续时间。"
@@ -3900,7 +3902,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
-          "编织会对友军施加%ally_multiplier%倍叠加层数。",
+          "编织会对友军施加%ally_multiplier%倍叠加层数。编织的每层叠加效果会使来自戴泽的治疗效果增强%heal_amplification_pct%%%。",
           "编织会对敌人施加%enemy_multiplier%倍叠加层数。"
         ],
         "type": 0,
@@ -4017,7 +4019,7 @@
             "required_facet": ""
           },
           {
-            "name": "heal_reduction",
+            "name": "heal_amplification_pct",
             "values_float": [
               0
             ],
@@ -4027,9 +4029,11 @@
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
+              "name": "dazzle_facet_nothl_boon",
+              "values": [
+                5
+              ],
+              "operation": 5
             },
             "required_facet": ""
           },
