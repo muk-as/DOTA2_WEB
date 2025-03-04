@@ -14,7 +14,7 @@
             {
               "color": 0,
               "title_loc": "Nothl Boon",
-              "description_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies.",
+              "description_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies and amplifies incoming heals from Dazzle.",
               "name": "dazzle_facet_nothl_boon",
               "icon": "armor",
               "gradient_id": 1
@@ -273,9 +273,9 @@
                 {
                   "name": "duration",
                   "values_float": [
+                    3.5,
                     5,
-                    6,
-                    7,
+                    6.5,
                     8
                   ],
                   "is_percentage": false,
@@ -1218,7 +1218,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Weave applies %ally_multiplier%x stacks to allies.",
+                "Weave applies %ally_multiplier%x stacks to allies. Weave amplifies incoming heals from Dazzle by %heal_amplification_pct%%% per stack.",
                 "Weave applies %enemy_multiplier%x stacks to enemies."
               ],
               "type": 0,
@@ -1335,7 +1335,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "heal_reduction",
+                  "name": "heal_amplification_pct",
                   "values_float": [
                     0
                   ],
@@ -1345,9 +1345,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "dazzle_facet_nothl_boon",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -1790,8 +1792,8 @@
                   "name": "shadow_wave_cdr",
                   "values_float": [
                     30,
-                    45,
-                    60
+                    40,
+                    50
                   ],
                   "is_percentage": true,
                   "heading_loc": "SHADOW WAVE COOLDOWN REDUCTION:",
@@ -3633,7 +3635,7 @@
                   "id": 1294,
                   "name": "dazzle_nothl_boon",
                   "name_loc": "Nothl Boon",
-                  "desc_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies.",
+                  "desc_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies and amplifies incoming heals from Dazzle.",
                   "lore_loc": "",
                   "notes_loc": [
                     "Whenever Dazzle overheals himself or an ally, it grants that hero a physical damage barrier equal to the amount overhealed for %duration% seconds. If the overhealed target already has a larger barrier its duration will be refreshed instead."

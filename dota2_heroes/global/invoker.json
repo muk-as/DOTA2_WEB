@@ -14,7 +14,7 @@
             {
               "color": 3,
               "title_loc": "Scholar of Koryx",
-              "description_loc": "<font color='#7998b5'>Quas</font> gains an additional max level. When Invoker reaches level 6, <font color='#7998b5'>Quas</font> gains an additional level.<br><br>When <b>Cold Snap</b> triggers, Invoker is healed.<br><br><font color='#92acf5'>Aghanim's Scepter</font> upgrades <b>Ghost Walk</b> and grants 2 current and max levels to <font color='#7998b5'>Quas</font>, increasing it to 10.<br><br><font color='#92acf5'>Aghanim's Shard</font> upgrades <b>Ice Wall</b>.",
+              "description_loc": "<font color='#7998b5'>Quas</font> gains an additional max level. When Invoker reaches level 6, <font color='#7998b5'>Quas</font> gains an additional level.<br><br>When <b>Cold Snap</b> triggers, Invoker is healed and restores some mana.<br><br><font color='#92acf5'>Aghanim's Scepter</font> upgrades <b>Ghost Walk</b> and grants 2 current and max levels to <font color='#7998b5'>Quas</font>, increasing it to 10.<br><br><font color='#92acf5'>Aghanim's Shard</font> upgrades <b>Ice Wall</b>.",
               "name": "invoker_quas_focus",
               "icon": "invoker_quas",
               "gradient_id": 0
@@ -1265,7 +1265,7 @@
               "facets_loc": [
                 "",
                 "",
-                "When Cold Snap triggers, Invoker is healed %freeze_heal% hp.",
+                "When Cold Snap triggers, Invoker is healed %freeze_heal% hp and restores %freeze_mana% mana.",
                 "",
                 ""
               ],
@@ -1432,6 +1432,25 @@
                       104,
                       117,
                       130
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "freeze_mana",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "invoker_quas_focus",
+                    "values": [
+                      5
                     ],
                     "operation": 0
                   },
@@ -1841,7 +1860,7 @@
                 {
                   "name": "ally_duration",
                   "values_float": [
-                    20
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2990,7 +3009,6 @@
                   "facet_bonus": {
                     "name": "invoker_wex_focus",
                     "values": [
-                      50,
                       60,
                       70,
                       80,
@@ -2999,7 +3017,8 @@
                       110,
                       120,
                       130,
-                      140
+                      140,
+                      150
                     ],
                     "operation": 0
                   },
@@ -3789,7 +3808,7 @@
                 {
                   "name": "cataclysm_cooldown",
                   "values_float": [
-                    60
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -4164,16 +4183,16 @@
                 {
                   "name": "spirit_attack_range",
                   "values_float": [
-                    300,
-                    365,
-                    430,
-                    495,
-                    560,
-                    625,
+                    305,
+                    360,
+                    415,
+                    470,
+                    525,
+                    580,
+                    635,
                     690,
-                    755,
-                    820,
-                    885
+                    745,
+                    800
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK RANGE (<font color='#7998b5'>QUAS</font>):\n",
