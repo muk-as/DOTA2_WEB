@@ -9,6 +9,28 @@
         UpRightArrow: "_3KCtpfqeVGR0eaqc5YB4iF",
       };
     },
+    85655: (e) => {
+      e.exports = {
+        Tooltip: "_19T9N3UHHbAODE9sxxoLtb",
+        CarouselFade: "_D1I4Yzr_NSlA70n0WMzr",
+        StandardButton: "mgvs9cPEYOJ3Q9r1J6Xvv",
+        ButtonText: "_2MUkIuEbGuL6NdEm21Eoz9",
+        Icon: "_2dDXk1s2V92ElJmDhv4kOC",
+        Play: "_1ZhvqFTdNClE1GSKe9lIwC",
+        SteamLogo: "_2GSNhjmGVrkHS1HRhAYMiS",
+        ToolTip: "S2816E7lw3xwpK0fpEU9j",
+        PlayerReportTooltip: "_3UgI1sTrl6KyLY4GdZpwRz",
+        ComparisonImage: "_3SX3hhAHRpb7bRPg9YLyR2",
+        ImageLabel: "_3bKKQTvBpbxJ08XrDQJ4xn",
+        IsNew: "S0b_nhi5aY46bpyCNasDF",
+        TabbedMapComparison: "_3o6_Ks0vSIsM1b7E9OlHj",
+        TabHeader: "_2kgUPa_RFGPVkckZE2a7ab",
+        Tab: "_1wY4IE4Lg3TreYGTu1DSxd",
+        Active: "ZBQE3qlmuiEadHG7T6gCw",
+        TabContents: "_15E7RnjZvLS7TPcNOg_MN8",
+        TabContentContainer: "_2tKRoICKxcJBUHYRH5k9JZ",
+      };
+    },
     55730: (e) => {
       e.exports = {
         Tooltip: "_2Sxw98Ax0L2pXY3ZWbV2rp",
@@ -53,10 +75,11 @@
         WebsiteSectionHeader: "_3eUuGW09iHPHFGlkKpOzTW",
         TextSection: "_2TiGvUo3I0FlIIhd42rWkw",
         SubsectionDivider: "_2vbb_v-nF9HeX4yv9zRAOa",
+        TopDash: "_1ZhQ7ojSq5YZrljqFiElSt",
+        Background: "_3lqUUbGKYAWuLMbT0FK76O",
         SectionDivider: "_1U0VNRUobDoOSZxQmEXhIm",
         Pattern: "_1kNvYKuER3MyMAYedL9lwj",
         Overlay: "_1FSKvx3M5boWbmjMOreIMz",
-        TopDash: "_1ZhQ7ojSq5YZrljqFiElSt",
         BottomDash: "_3ajP6jV_xUE-tZhcYQ6wdB",
         ButtonsSection: "SzGQ107u9vsQCgKe2Iw2v",
         Grid_4: "_1DKNidKUBYxnQXRRjvgmDs",
@@ -120,7 +143,6 @@
         AbilitySlider: "_212ksZE1kJfJKfRz7ywVDg",
         AbilitySlide: "_10ZyZ9ZN0i2xzvGLbpCOeY",
         SlideAbilityInfoContainer: "bJx6OHWlfj2E620y3eDZP",
-        SlideAbilityIcon: "_2-7H_P8IPZPq2Nc4WDgZNu",
         AbilityText: "_3eDXxv9U5p7d5suJJBkJSP",
         AbilityName: "Fh_x7lLSOdiLC9peoEudp",
         AbilityDesc: "_1ckE9a96_gi_h2VkdFqECz",
@@ -211,14 +233,74 @@
           },
         });
     },
+    95224: (e, a, t) => {
+      "use strict";
+      t.d(a, { U: () => o, v: () => c });
+      var l = t(7552),
+        r = t(85655),
+        n = t.n(r),
+        i = t(21384),
+        s = t(89506),
+        m = t(27866);
+      const c = ({ image: e, is_new: a }) =>
+          l.createElement(
+            "div",
+            { className: n().ComparisonImage },
+            l.createElement(
+              "div",
+              { className: (0, i.A)(n().ImageLabel, a && n().IsNew) },
+              (0, m.Wn)(a ? "#729_new_image" : "#729_old_image"),
+            ),
+            l.createElement("img", { src: `${s.r.IMG_URL}${e}` }),
+          ),
+        o = (e) => {
+          const [a, t] = (0, l.useState)(0);
+          return l.createElement(
+            "div",
+            { className: n().TabbedMapComparison },
+            l.createElement(
+              "div",
+              { className: n().TabHeader },
+              e.labels.map((e, r) =>
+                l.createElement(
+                  "div",
+                  {
+                    key: "tab_" + r,
+                    className: (0, i.A)(n().Tab, a == r && n().Active),
+                    onClick: () => t(r),
+                  },
+                  (0, m.Wn)(e),
+                ),
+              ),
+            ),
+            l.createElement(
+              "div",
+              { className: n().TabContents },
+              l.Children.map(e.children, (e, t) =>
+                l.createElement(
+                  "div",
+                  {
+                    key: "tabelement_" + t,
+                    className: (0, i.A)(
+                      n().TabContentContainer,
+                      t == a && n().Active,
+                    ),
+                  },
+                  e,
+                ),
+              ),
+            ),
+          );
+        };
+    },
     33903: (e, a, t) => {
       "use strict";
       t.r(a),
         t.d(a, {
-          DownloadIcon: () => I,
-          InnateIconSmall: () => W,
-          PlayIcon: () => A,
-          default: () => U,
+          DownloadIcon: () => B,
+          InnateIconSmall: () => C,
+          PlayIcon: () => W,
+          default: () => O,
         });
       var l = t(85608),
         r = t(89506),
@@ -226,7 +308,7 @@
         i = t(27866),
         s = t(68446),
         m = t(7552),
-        c = t(83640),
+        c = t(73202),
         o = t(35927),
         p = t(21384),
         d = t(76489),
@@ -235,34 +317,36 @@
         E = t(55730),
         N = t.n(E),
         u = t(61840),
-        y = t(32389),
-        b = t(54159),
-        h = t(45237),
-        v = t(722),
+        b = t(32389),
+        y = t(54159),
+        v = t(45237),
+        h = t(722),
         T = t(55651),
         S = t(82101),
         L = t(85286),
-        x = t.n(L);
-      const A = () =>
+        x = t.n(L),
+        A = t(4665),
+        I = t(95224);
+      const W = () =>
           m.createElement("div", {
             className: N().ControlIcon,
             style: { backgroundImage: `url( ${r.r.IMG_URL}/icons/play.svg )` },
           }),
-        I = () =>
+        B = () =>
           m.createElement("div", {
             className: N().ControlIcon,
             style: {
               backgroundImage: `url( ${r.r.IMG_URL}/icons/download.svg )`,
             },
           }),
-        W = () =>
+        C = () =>
           m.createElement("div", {
             className: (0, p.A)(N().InnateIconSmall, N().ControlIcon),
             style: {
               backgroundImage: `url( ${r.r.IMG_URL}/icons/innate_icon_small.svg )`,
             },
           });
-      const B = (e) => {
+      const k = (e) => {
         const a = (0, m.useRef)();
         return e.video
           ? m.createElement(
@@ -287,7 +371,7 @@
               src: `${r.r.IMG_URL}/` + e.image,
             });
       };
-      function k(e) {
+      function w(e) {
         let a = "",
           t = !0;
         for (let l = 0; l < e.length; ++l)
@@ -298,7 +382,7 @@
             : (t = !0);
         return a;
       }
-      const C = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
+      const H = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
           const t = n.B5.Get().getHeroList(),
             l = t?.heroes.find(
               (e) => e.name.replace("npc_dota_hero_", "") == a,
@@ -306,7 +390,7 @@
           return l
             ? m.createElement(
                 "div",
-                { className: (0, p.A)(N().HeroRework, N()[k(a)]) },
+                { className: (0, p.A)(N().HeroRework, N()[w(a)]) },
                 m.createElement(
                   "div",
                   {
@@ -358,7 +442,7 @@
               m.createElement(
                 "span",
                 { key: a, className: N().SingleValue },
-                (0, b.F)(e),
+                (0, y.F)(e),
               ),
             ),
             t = !1,
@@ -386,7 +470,7 @@
                 )
           );
         },
-        H = (0, s.PA)(({ name: e, components: a, recipeCost: t }) => {
+        R = (0, s.PA)(({ name: e, components: a, recipeCost: t }) => {
           const l = n.B5.Get().getItemList(),
             s = l?.itemabilities.find((a) => a.name == e),
             c = n.B5.Get().getItemData(s?.id);
@@ -394,7 +478,7 @@
           let o = c.desc_loc;
           c.special_values.forEach((e) => {
             let a =
-              e.values_float.length > 0 ? (0, b.F)(e.values_float[0]) : "0";
+              e.values_float.length > 0 ? (0, y.F)(e.values_float[0]) : "0";
             (o = o.replace("%" + e.name + "%", a)),
               (o = o.replace("%" + e.name.toLowerCase() + "%", a));
           }),
@@ -409,9 +493,9 @@
                 ? c.item_neutral_tier + 1
                 : -1,
             u = N()["Tier" + E],
-            y = c.cooldowns.reduce((e, a) => e + a) > 0,
-            h = c.mana_costs.reduce((e, a) => e + a) > 0,
-            v =
+            b = c.cooldowns.reduce((e, a) => e + a) > 0,
+            v = c.mana_costs.reduce((e, a) => e + a) > 0,
+            h =
               !!(c.health_costs && c.health_costs.length > 0) &&
               c.health_costs.reduce((e, a) => e + a) > 0,
             T = a
@@ -483,11 +567,11 @@
                     className: N().Description,
                     dangerouslySetInnerHTML: { __html: o },
                   }),
-                  (y || h || v) &&
+                  (b || v || h) &&
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().DescriptionHeader) },
-                      h &&
+                      v &&
                         m.createElement(
                           "div",
                           { className: N().ManaContainer },
@@ -496,11 +580,11 @@
                             "div",
                             { className: N().ManaText },
                             c.mana_costs.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, b.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
                             ),
                           ),
                         ),
-                      v &&
+                      h &&
                         m.createElement(
                           "div",
                           { className: N().HealthContainer },
@@ -509,11 +593,11 @@
                             "div",
                             { className: N().HealthText },
                             c.health_costs.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, b.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
                             ),
                           ),
                         ),
-                      y &&
+                      b &&
                         m.createElement(
                           "div",
                           { className: N().CooldownContainer },
@@ -527,7 +611,7 @@
                             "div",
                             { className: N().CooldownText },
                             c.cooldowns.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, b.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
                             ),
                           ),
                         ),
@@ -575,7 +659,7 @@
               ),
           );
         }),
-        w = ({
+        G = ({
           index: e,
           video: a,
           name: t,
@@ -583,7 +667,7 @@
           autoplay: n,
           onSlideIn: i,
         }) => {
-          const s = (0, m.useContext)(y.Yc),
+          const s = (0, m.useContext)(b.Yc),
             c = (0, m.useRef)();
           return (
             (0, m.useEffect)(() => {
@@ -618,7 +702,7 @@
             )
           );
         },
-        R = (e) =>
+        f = (e) =>
           m.createElement(
             "div",
             {
@@ -631,8 +715,14 @@
             m.createElement("div", { className: N().TopDash }),
             m.createElement("div", { className: N().BottomDash }),
           ),
-        f = () => m.createElement("div", { className: N().SubsectionDivider }),
-        F = (e) =>
+        F = () =>
+          m.createElement(
+            "div",
+            { className: N().SubsectionDivider },
+            m.createElement("div", { className: N().TopDash }),
+            m.createElement("div", { className: N().Background }),
+          ),
+        M = (e) =>
           m.createElement(
             "div",
             { className: N().DashedSectionSubHeader },
@@ -646,7 +736,7 @@
             ),
             m.createElement("div", { className: N().DashRight }),
           ),
-        G = [
+        U = [
           {
             abilityId: 352,
             posterDir: "abilities/ringmaster/ringmaster_tame_the_beasts.jpg",
@@ -683,7 +773,7 @@
             bIsShard: !0,
           },
         ];
-      let M = class extends m.Component {
+      let P = class extends m.Component {
         parallaxContainerRef = m.createRef();
         videoRef = m.createRef();
         constructor(e) {
@@ -720,7 +810,7 @@
           return (
             e.special_values.forEach((e) => {
               let t =
-                e.values_float.length > 0 ? (0, b.F)(e.values_float[0]) : "0";
+                e.values_float.length > 0 ? (0, y.F)(e.values_float[0]) : "0";
               (a = a.replace("%" + e.name + "%", t)),
                 (a = a.replace("%" + e.name.toLowerCase() + "%", t));
             }),
@@ -850,7 +940,7 @@
                     ),
                   ),
                 ),
-                R(),
+                f(),
                 m.createElement(
                   "div",
                   {
@@ -910,7 +1000,7 @@
                     ),
                   ),
                 ),
-                R(),
+                f(),
                 m.createElement(
                   "div",
                   {
@@ -940,7 +1030,7 @@
                     ),
                   ),
                 ),
-                R(N().MobileOnly),
+                f(N().MobileOnly),
                 m.createElement(
                   "div",
                   {
@@ -1000,7 +1090,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(B, {
+                        m.createElement(k, {
                           image: "templatepage/image_1_1.png",
                           video: "templatepage/video_1_1.mp4",
                         }),
@@ -1039,7 +1129,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(B, {
+                        m.createElement(k, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1077,7 +1167,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(B, {
+                        m.createElement(k, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1113,14 +1203,14 @@
                         ),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "div",
                       { className: N().Grid_2 },
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(B, {
+                        m.createElement(k, {
                           image: "templatepage/image_3_2.png",
                         }),
                         m.createElement(
@@ -1158,7 +1248,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(B, {
+                        m.createElement(k, {
                           image: "templatepage/image_3_2.png",
                           video: "templatepage/video_3_2.mp4",
                         }),
@@ -1195,7 +1285,7 @@
                         ),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "div",
                       {
@@ -1204,7 +1294,7 @@
                           N().WideImage,
                         ),
                       },
-                      m.createElement(B, {
+                      m.createElement(k, {
                         image: "templatepage/image_3_2.png",
                       }),
                       m.createElement(
@@ -1248,7 +1338,7 @@
                           N().WideImage,
                         ),
                       },
-                      m.createElement(B, {
+                      m.createElement(k, {
                         image: "templatepage/image_3_2.png",
                         video: "templatepage/video_3_2.mp4",
                       }),
@@ -1284,7 +1374,7 @@
                         ),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "div",
                       { className: N().Grid_2 },
@@ -1296,7 +1386,7 @@
                             N().NarrowImage,
                           ),
                         },
-                        m.createElement(B, {
+                        m.createElement(k, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1339,7 +1429,7 @@
                             N().NarrowImage,
                           ),
                         },
-                        m.createElement(B, {
+                        m.createElement(k, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1375,7 +1465,7 @@
                         ),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1410,7 +1500,7 @@
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().ImmersiveTextImageBlock) },
-                      m.createElement(B, {
+                      m.createElement(k, {
                         image: "templatepage/image_21_9.png",
                         video: "templatepage/video_21_9.mp4",
                       }),
@@ -1449,7 +1539,7 @@
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().ActionTextImageBlock) },
-                      m.createElement(B, {
+                      m.createElement(k, {
                         image: "templatepage/image_16_9.png",
                       }),
                       m.createElement(
@@ -1493,11 +1583,11 @@
                             { className: N().ButtonText },
                             (0, i.Wn)("Button action"),
                           ),
-                          m.createElement(v.U, null),
+                          m.createElement(h.U, null),
                         ),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1530,22 +1620,22 @@
                     m.createElement(
                       "div",
                       { className: N().HeroReworkContainer },
-                      m.createElement(C, {
+                      m.createElement(H, {
                         patchnotes: e?.heroes,
                         heroname: "muerta",
                       }),
-                      m.createElement(C, {
+                      m.createElement(H, {
                         patchnotes: e?.heroes,
                         heroname: "clinkz",
                       }),
-                      m.createElement(C, {
+                      m.createElement(H, {
                         patchnotes: e?.heroes,
                         heroname: "arc_warden",
                       }),
                     ),
                   ),
                 ),
-                R(),
+                f(),
                 m.createElement(
                   "div",
                   {
@@ -1594,7 +1684,7 @@
                         (0, i.Wn)("#templatepage_newhero_introduction"),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1687,7 +1777,7 @@
                         "div",
                         { className: N().ButtonsSection },
                         m.createElement(
-                          h.N_,
+                          v.N_,
                           { to: T.J.hero("ringmaster") },
                           m.createElement(
                             "div",
@@ -1697,7 +1787,7 @@
                               { className: N().ButtonText },
                               (0, i.Wn)("#templatepage_hero_detail_button"),
                             ),
-                            m.createElement(v.U, null),
+                            m.createElement(h.U, null),
                           ),
                         ),
                         m.createElement(
@@ -1711,7 +1801,7 @@
                             { className: N().ButtonText },
                             (0, i.Wn)("#templatepage_play_trailer_button"),
                           ),
-                          m.createElement(v.U, null),
+                          m.createElement(h.U, null),
                         ),
                       ),
                     ),
@@ -1721,19 +1811,19 @@
                   "div",
                   { className: N().AbilitySection },
                   m.createElement(
-                    y.gi,
+                    b.gi,
                     {
                       className: N().AbilityCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 56.25,
-                      totalSlides: G.length,
+                      totalSlides: U.length,
                     },
                     m.createElement(
-                      y.Ap,
+                      b.Ap,
                       { className: N().AbilitySlider },
-                      G.map((e, a) =>
+                      U.map((e, a) =>
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             className: N().AbilitySlide,
                             key: `HeroAbilitySlide-${a}`,
@@ -1817,9 +1907,9 @@
                         m.createElement(
                           "div",
                           { className: (0, p.A)(N().CarouselDots) },
-                          G.map((e, a) =>
+                          U.map((e, a) =>
                             m.createElement(
-                              y.cL,
+                              b.cL,
                               {
                                 key: `HeroAbilityDot-${a}`,
                                 slide: a,
@@ -1856,7 +1946,7 @@
                     m.createElement(
                       "div",
                       { className: N().WebsiteSectionHeader },
-                      m.createElement(F, { subHeader: "Hero name" }),
+                      m.createElement(M, { subHeader: "Hero name" }),
                       m.createElement(
                         "h2",
                         { className: (0, p.A)(N().TitleFont, N().TitleMedium) },
@@ -1878,7 +1968,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail1.png`,
                             }),
-                            m.createElement(I, null),
+                            m.createElement(B, null),
                           ),
                         ),
                         m.createElement(
@@ -1890,7 +1980,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail2.png`,
                             }),
-                            m.createElement(I, null),
+                            m.createElement(B, null),
                           ),
                         ),
                       ),
@@ -1906,7 +1996,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail3.png`,
                             }),
-                            m.createElement(I, null),
+                            m.createElement(B, null),
                           ),
                         ),
                         m.createElement(
@@ -1918,7 +2008,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail4.png`,
                             }),
-                            m.createElement(I, null),
+                            m.createElement(B, null),
                           ),
                         ),
                       ),
@@ -1934,7 +2024,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail5.png`,
                             }),
-                            m.createElement(I, null),
+                            m.createElement(B, null),
                           ),
                         ),
                         m.createElement(
@@ -1946,7 +2036,7 @@
                             m.createElement("img", {
                               src: `${r.r.IMG_URL}/muerta/wallpaper_thumbnail6.png`,
                             }),
-                            m.createElement(I, null),
+                            m.createElement(B, null),
                           ),
                         ),
                       ),
@@ -1979,7 +2069,7 @@
                         ),
                       ),
                       m.createElement(
-                        h.N_,
+                        v.N_,
                         { to: T.J.hero("ringmaster") },
                         m.createElement(
                           "div",
@@ -1989,7 +2079,7 @@
                             { className: N().ButtonText },
                             (0, i.Wn)("#templatepage_hero_detail_button"),
                           ),
-                          m.createElement(v.U, null),
+                          m.createElement(h.U, null),
                         ),
                       ),
                     ),
@@ -2003,7 +2093,137 @@
                     ),
                   ),
                 ),
-                R(),
+                f(),
+                m.createElement(
+                  "div",
+                  {
+                    id: "TerrainComparisonSection",
+                    className: (0, p.A)(
+                      N().WebsiteSection,
+                      N().TerrainComparisonSection,
+                    ),
+                  },
+                  m.createElement(
+                    "div",
+                    { className: N().WebsiteSectionInner },
+                    m.createElement(
+                      "div",
+                      { className: N().WebsiteSectionHeader },
+                      m.createElement(
+                        "h2",
+                        {
+                          className: (0, p.A)(
+                            N().SectionHeaderLabel,
+                            N().TitleFont,
+                            N().TitleExtraLarge,
+                          ),
+                        },
+                        (0, i.Wn)("Terrain Comparison"),
+                      ),
+                      m.createElement(
+                        "p",
+                        {
+                          className: (0, p.A)(
+                            N().WebsiteDescription,
+                            N().DisplayFont,
+                            N().DisplayMedium,
+                            N().LightGrayText,
+                          ),
+                        },
+                        (0, i.Wn)("Useful for comparing map terrain changes"),
+                      ),
+                    ),
+                    m.createElement(
+                      I.U,
+                      { labels: ["1", "2", "3", "4", "5", "6", "7"] },
+                      m.createElement(A.EW, {
+                        itemOne: m.createElement(I.v, {
+                          is_new: !0,
+                          image:
+                            "patch738/comparison/radiant/old/WisdomShrine_R.jpg",
+                        }),
+                        itemTwo: m.createElement(I.v, {
+                          is_new: !1,
+                          image:
+                            "patch738/comparison/radiant/new/WisdomShrine_R.jpg",
+                        }),
+                      }),
+                      m.createElement(A.EW, {
+                        itemOne: m.createElement(I.v, {
+                          is_new: !0,
+                          image:
+                            "patch738/comparison/radiant/old/LotusPool_R.jpg",
+                        }),
+                        itemTwo: m.createElement(I.v, {
+                          is_new: !1,
+                          image:
+                            "patch738/comparison/radiant/new/LotusPool_R.jpg",
+                        }),
+                      }),
+                      m.createElement(A.EW, {
+                        itemOne: m.createElement(I.v, {
+                          is_new: !0,
+                          image:
+                            "patch738/comparison/radiant/old/RoshPit_South.jpg",
+                        }),
+                        itemTwo: m.createElement(I.v, {
+                          is_new: !1,
+                          image:
+                            "patch738/comparison/radiant/new/RoshPit_South.jpg",
+                        }),
+                      }),
+                      m.createElement(A.EW, {
+                        itemOne: m.createElement(I.v, {
+                          is_new: !0,
+                          image:
+                            "patch738/comparison/radiant/old/MapCorner_R.jpg",
+                        }),
+                        itemTwo: m.createElement(I.v, {
+                          is_new: !1,
+                          image:
+                            "patch738/comparison/radiant/new/MapCorner_R.jpg",
+                        }),
+                      }),
+                      m.createElement(A.EW, {
+                        itemOne: m.createElement(I.v, {
+                          is_new: !0,
+                          image:
+                            "patch738/comparison/radiant/old/T1Gutter_R.jpg",
+                        }),
+                        itemTwo: m.createElement(I.v, {
+                          is_new: !1,
+                          image:
+                            "patch738/comparison/radiant/new/T1Gutter_R.jpg",
+                        }),
+                      }),
+                      m.createElement(A.EW, {
+                        itemOne: m.createElement(I.v, {
+                          is_new: !0,
+                          image:
+                            "patch738/comparison/radiant/old/T2Approach_R.jpg",
+                        }),
+                        itemTwo: m.createElement(I.v, {
+                          is_new: !1,
+                          image:
+                            "patch738/comparison/radiant/new/T2Approach_R.jpg",
+                        }),
+                      }),
+                      m.createElement(A.EW, {
+                        itemOne: m.createElement(I.v, {
+                          is_new: !0,
+                          image:
+                            "patch738/comparison/radiant/old/BaseCorner_R.jpg",
+                        }),
+                        itemTwo: m.createElement(I.v, {
+                          is_new: !1,
+                          image:
+                            "patch738/comparison/radiant/new/BaseCorner_R.jpg",
+                        }),
+                      }),
+                    ),
+                  ),
+                ),
+                f(),
                 m.createElement(
                   "div",
                   {
@@ -2058,7 +2278,7 @@
                       ),
                     ),
                     m.createElement(
-                      y.gi,
+                      b.gi,
                       {
                         className: N().TreasureCarousel,
                         naturalSlideWidth: 600,
@@ -2070,17 +2290,17 @@
                         dragEnabled: !1,
                       },
                       m.createElement(
-                        y.Ap,
+                        b.Ap,
                         { className: N().TreasureSlider },
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 0,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 0,
                             video: "set_ancientapparation",
                             name: "#frosty_treasure_treasure_name_1",
@@ -2092,14 +2312,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 1,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 1,
                             video: "set_snapfire",
                             name: "#frosty_treasure_treasure_name_2",
@@ -2111,14 +2331,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 2,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 2,
                             video: "set_alchemist",
                             name: "#frosty_treasure_treasure_name_3",
@@ -2130,14 +2350,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 3,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 3,
                             video: "set_arcwarden",
                             name: "#frosty_treasure_treasure_name_4",
@@ -2149,14 +2369,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 4,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 4,
                             video: "set_pudge",
                             name: "#frosty_treasure_treasure_name_5",
@@ -2168,14 +2388,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 5,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 5,
                             video: "set_tusk",
                             name: "#frosty_treasure_treasure_name_6",
@@ -2187,14 +2407,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 6,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 6,
                             video: "set_primalbeast",
                             name: "#frosty_treasure_treasure_name_7",
@@ -2206,14 +2426,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 7,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 7,
                             video: "set_crystalmaiden",
                             name: "#frosty_treasure_treasure_name_8",
@@ -2225,14 +2445,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 8,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 8,
                             video: "set_wraithking",
                             name: "#frosty_treasure_treasure_name_9",
@@ -2244,14 +2464,14 @@
                           }),
                         ),
                         m.createElement(
-                          y.q7,
+                          b.q7,
                           {
                             index: 9,
                             className: N().TreasureSlide,
                             innerClassName: N().TreasureInnerSlide,
                             classNameHidden: N().TreasureSlideHidden,
                           },
-                          m.createElement(w, {
+                          m.createElement(G, {
                             index: 9,
                             video: "set_roshan",
                             name: "#frosty_treasure_treasure_name_10",
@@ -2289,7 +2509,7 @@
                         "div",
                         { className: N().CarouselDots },
                         m.createElement(
-                          y._X,
+                          b._X,
                           {
                             className: (0, p.A)(
                               N().TreasurePaginationButton,
@@ -2299,57 +2519,57 @@
                           m.createElement("div", { className: N().PrevArrow }),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 0 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 1 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 2 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 3 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 4 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 5 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 6 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 7 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 8 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.cL,
+                          b.cL,
                           { className: N().TreasureSelector, slide: 9 },
                           m.createElement("div", null),
                         ),
                         m.createElement(
-                          y.CC,
+                          b.CC,
                           {
                             className: (0, p.A)(
                               N().TreasurePaginationButton,
@@ -2360,7 +2580,7 @@
                         ),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "p",
                       { className: (0, p.A)(N().TitleFont, N().TitleSmall) },
@@ -2452,7 +2672,7 @@
                     ),
                   ),
                 ),
-                R(),
+                f(),
                 m.createElement(
                   "div",
                   {
@@ -2494,13 +2714,18 @@
                         ),
                       ),
                     ),
-                    f(),
+                    F(),
                     m.createElement(
                       "div",
                       { className: N().TextWaterfallExampleBlock },
                       m.createElement(
                         "p",
-                        { className: N().TextWaterfallExampleBlockTitle },
+                        {
+                          className: (0, p.A)(
+                            N().TextWaterfallExampleBlockTitle,
+                            N().GrayText,
+                          ),
+                        },
                         (0, i.Wn)("Title"),
                       ),
                       m.createElement(
@@ -2544,7 +2769,12 @@
                       { className: N().TextWaterfallExampleBlock },
                       m.createElement(
                         "p",
-                        { className: N().TextWaterfallExampleBlockTitle },
+                        {
+                          className: (0, p.A)(
+                            N().TextWaterfallExampleBlockTitle,
+                            N().GrayText,
+                          ),
+                        },
                         (0, i.Wn)("Display"),
                       ),
                       m.createElement(
@@ -2593,7 +2823,12 @@
                       { className: N().TextWaterfallExampleBlock },
                       m.createElement(
                         "p",
-                        { className: N().TextWaterfallExampleBlockTitle },
+                        {
+                          className: (0, p.A)(
+                            N().TextWaterfallExampleBlockTitle,
+                            N().GrayText,
+                          ),
+                        },
                         (0, i.Wn)("Body"),
                       ),
                       m.createElement(
@@ -2624,7 +2859,12 @@
                       { className: N().TextWaterfallExampleBlock },
                       m.createElement(
                         "p",
-                        { className: N().TextWaterfallExampleBlockTitle },
+                        {
+                          className: (0, p.A)(
+                            N().TextWaterfallExampleBlockTitle,
+                            N().GrayText,
+                          ),
+                        },
                         (0, i.Wn)("Label"),
                       ),
                       m.createElement(
@@ -2655,7 +2895,7 @@
                     ),
                   ),
                 ),
-                R(),
+                f(),
                 m.createElement(
                   "div",
                   {
@@ -2711,31 +2951,31 @@
                     m.createElement(
                       "div",
                       { className: N().GameItemsContainer },
-                      m.createElement(H, {
+                      m.createElement(R, {
                         name: "item_angels_demise",
                         components: ["phylactery", "lesser_crit"],
                         recipeCost: 600,
                       }),
-                      m.createElement(H, {
+                      m.createElement(R, {
                         name: "item_devastator",
                         components: ["witch_blade", "mystic_staff"],
                       }),
-                      m.createElement(H, {
+                      m.createElement(R, {
                         name: "item_arcane_boots",
                         components: ["boots", "ring_of_basilius"],
                         recipeCost: 375,
                       }),
-                      m.createElement(H, {
+                      m.createElement(R, {
                         name: "item_bloodthorn",
                         components: ["orchid", "javelin", "hyperstone"],
                         recipeCost: 450,
                       }),
-                      m.createElement(H, { name: "item_safety_bubble" }),
-                      m.createElement(H, { name: "item_light_collector" }),
-                      m.createElement(H, { name: "item_doubloon" }),
-                      m.createElement(H, { name: "item_ancient_guardian" }),
-                      m.createElement(H, { name: "item_unwavering_condition" }),
-                      m.createElement(H, { name: "item_panic_button" }),
+                      m.createElement(R, { name: "item_safety_bubble" }),
+                      m.createElement(R, { name: "item_light_collector" }),
+                      m.createElement(R, { name: "item_doubloon" }),
+                      m.createElement(R, { name: "item_ancient_guardian" }),
+                      m.createElement(R, { name: "item_unwavering_condition" }),
+                      m.createElement(R, { name: "item_panic_button" }),
                     ),
                     m.createElement(
                       "div",
@@ -2775,8 +3015,8 @@
           );
         }
       };
-      M = (0, l.Cg)([s.PA], M);
-      const U = M;
+      P = (0, l.Cg)([s.PA], P);
+      const O = P;
     },
   },
 ]);
