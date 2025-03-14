@@ -93,8 +93,8 @@
         s = r(7552),
         l = r(68544),
         n = r.n(l),
-        i = r(21384),
-        m = r(27866),
+        m = r(21384),
+        i = r(27866),
         c = r(89506),
         d = r(32389),
         u = r(18804);
@@ -128,7 +128,7 @@
         }) => {
           const [u, _] = (0, s.useState)(0),
             [p, E] = (0, s.useState)(0),
-            b = {
+            A = {
               strContentDir: e,
               strPrimaryColor: t,
               strSecondaryColor: r,
@@ -137,7 +137,7 @@
           return s.createElement(
             "div",
             {
-              className: (0, i.A)(
+              className: (0, m.A)(
                 n().BattlePassImmortalCarousel,
                 1 == l.length && n().SingleTreasure,
               ),
@@ -147,7 +147,7 @@
             },
             s.createElement(
               g,
-              { immortalCarouselContext: b },
+              { immortalCarouselContext: A },
               s.createElement(
                 "div",
                 { className: n().TreasureList },
@@ -156,7 +156,7 @@
                     "div",
                     {
                       key: `title_${o}`,
-                      className: (0, i.A)(
+                      className: (0, m.A)(
                         n().Treasure,
                         a.bEnabled && n().Enabled,
                         u == o && n().Selected,
@@ -176,13 +176,13 @@
                     s.createElement(
                       "div",
                       {
-                        className: (0, i.A)(
+                        className: (0, m.A)(
                           n().TextStyleOverline,
                           n().TreasureName,
                         ),
                         style: { color: t },
                       },
-                      (0, m.Wn)(`#${e}_immortals_treasure_${o + 1}`),
+                      (0, i.Wn)(`#${e}_immortals_treasure_${o + 1}`),
                     ),
                   ),
                 ),
@@ -192,7 +192,7 @@
                   "div",
                   {
                     key: `carousel_${r}`,
-                    className: (0, i.A)(
+                    className: (0, m.A)(
                       n().CarouselContainer,
                       u == r && n().ShowCarousel,
                     ),
@@ -216,7 +216,7 @@
                             index: t,
                             onFocus: () => E(t),
                           },
-                          s.createElement(C, {
+                          s.createElement(h, {
                             nIndex: t,
                             strVideo: e.strHeroName,
                             bHeroLeft: e.eImageLoc == o.Left,
@@ -238,7 +238,7 @@
                             slide: t,
                             "data-tip":
                               e?.strTooltip?.length > 0
-                                ? (0, m.Wn)(e.strTooltip)
+                                ? (0, i.Wn)(e.strTooltip)
                                 : "",
                           },
                           s.createElement(y, {
@@ -248,11 +248,11 @@
                           }),
                         ),
                       ),
-                      s.createElement(h, null),
+                      s.createElement(C, null),
                     ),
                     s.createElement(
                       d._X,
-                      { className: (0, i.A)(n().CarouselArrow, n().Left) },
+                      { className: (0, m.A)(n().CarouselArrow, n().Left) },
                       s.createElement("img", {
                         src: `${c.r.IMG_URL}${e}/arrow_left.png`,
                         className: n().ArrowImage,
@@ -260,7 +260,7 @@
                     ),
                     s.createElement(
                       d.CC,
-                      { className: (0, i.A)(n().CarouselArrow, n().Right) },
+                      { className: (0, m.A)(n().CarouselArrow, n().Right) },
                       s.createElement("img", {
                         src: `${c.r.IMG_URL}${e}/arrow_left.png`,
                         className: n().ArrowImage,
@@ -271,30 +271,30 @@
                   s.createElement(
                     "div",
                     {
-                      className: (0, i.A)(
+                      className: (0, m.A)(
                         n().TextStyleCaption,
                         n().TreasureLevels,
                       ),
                     },
-                    (0, m.Wn)(`#${e}_immortals_levels_${r}_desc`),
+                    (0, i.Wn)(`#${e}_immortals_levels_${r}_desc`),
                   ),
                 ),
               ),
               s.createElement(
                 "div",
                 {
-                  className: (0, i.A)(
+                  className: (0, m.A)(
                     n().TextStyleFootnote,
                     n().ImmortalsFootnote,
                   ),
                   style: { color: a },
                 },
-                (0, m.Wn)(`#${e}_immortals_footnote`),
+                (0, i.Wn)(`#${e}_immortals_footnote`),
               ),
             ),
           );
         },
-        h = () => {
+        C = () => {
           const e = p();
           return s.createElement(u.A, {
             effect: "solid",
@@ -306,7 +306,7 @@
             className: n().Tooltip,
           });
         },
-        C = ({
+        h = ({
           nIndex: e,
           strVideo: t,
           bHeroLeft: r,
@@ -314,7 +314,7 @@
           bGold: o,
         }) => {
           const l = (0, s.useContext)(d.Yc),
-            m = p(),
+            i = p(),
             u = (0, s.useRef)();
           return (
             (0, s.useEffect)(() => {
@@ -331,8 +331,8 @@
                 { className: n().VideoContainer },
                 r &&
                   s.createElement("img", {
-                    className: (0, i.A)(n().HeroImage, n().Left),
-                    src: `${c.r.IMG_URL}${m.strContentDir}/immortals/art/${t}${o ? "_gold" : ""}.png`,
+                    className: (0, m.A)(n().HeroImage, n().Left),
+                    src: `${c.r.IMG_URL}${i.strContentDir}/immortals/art/${t}${o ? "_gold" : ""}.png`,
                   }),
                 s.createElement(
                   "video",
@@ -344,21 +344,21 @@
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${c.r.IMG_URL}${m.strContentDir}/immortals/${t}.jpg`,
+                    poster: `${c.r.IMG_URL}${i.strContentDir}/immortals/${t}.jpg`,
                   },
                   s.createElement("source", {
                     type: "video/webm",
-                    src: `${c.r.VIDEO_URL}${m.strContentDir}/immortals/${t}${o ? "_gold" : ""}.webm`,
+                    src: `${c.r.VIDEO_URL}${i.strContentDir}/immortals/${t}${o ? "_gold" : ""}.webm`,
                   }),
                   s.createElement("source", {
                     type: "video/mp4",
-                    src: `${c.r.VIDEO_URL}${m.strContentDir}/immortals/${t}${o ? "_gold" : ""}.mp4`,
+                    src: `${c.r.VIDEO_URL}${i.strContentDir}/immortals/${t}${o ? "_gold" : ""}.mp4`,
                   }),
                 ),
                 a &&
                   s.createElement("img", {
-                    className: (0, i.A)(n().HeroImage, n().Right),
-                    src: `${c.r.IMG_URL}${m.strContentDir}/immortals/art/${t}${o ? "_gold" : ""}.png`,
+                    className: (0, m.A)(n().HeroImage, n().Right),
+                    src: `${c.r.IMG_URL}${i.strContentDir}/immortals/art/${t}${o ? "_gold" : ""}.png`,
                   }),
               ),
             )
@@ -381,18 +381,18 @@
               s.createElement(
                 "div",
                 {
-                  className: (0, i.A)(
+                  className: (0, m.A)(
                     n().TextStyleSmallHeading,
                     n().ImmortalName,
                   ),
                   style: { color: r.strPrimaryColor },
                 },
-                (0, m.Wn)(`#${r.strContentDir}_immortal_${e}_${a + 1}_name`),
+                (0, i.Wn)(`#${r.strContentDir}_immortal_${e}_${a + 1}_name`),
               ),
               s.createElement(
                 "div",
-                { className: (0, i.A)(n().TextStyleBody, n().ImmortalDesc) },
-                (0, m.Wn)(`#${r.strContentDir}_immortal_${e}_${a + 1}_desc`),
+                { className: (0, m.A)(n().TextStyleBody, n().ImmortalDesc) },
+                (0, i.Wn)(`#${r.strContentDir}_immortal_${e}_${a + 1}_desc`),
               ),
             )
           );
@@ -403,7 +403,7 @@
           return s.createElement(
             "div",
             {
-              className: (0, i.A)(
+              className: (0, m.A)(
                 n().ImmortalDot,
                 t == a.Rare && n().Rare,
                 t == a.Very && n().VeryRare,
@@ -427,8 +427,8 @@
         s = r.n(o),
         l = r(21384),
         n = r(27866),
-        i = r(89506),
-        m = r(76489);
+        m = r(89506),
+        i = r(76489);
       const c = ({
           colorTopEdge: e,
           colorTop: t,
@@ -451,8 +451,8 @@
             },
             a.createElement("img", {
               className: s().CapsuleTitle,
-              onError: (e) => (e.target.src = `${i.r.IMG_URL}${p}`),
-              src: `${i.r.IMG_URL}${_}${i.r.LANGUAGE}.png`,
+              onError: (e) => (e.target.src = `${m.r.IMG_URL}${p}`),
+              src: `${m.r.IMG_URL}${_}${m.r.LANGUAGE}.png`,
             }),
             a.createElement(
               "div",
@@ -462,7 +462,7 @@
             a.createElement(
               "a",
               {
-                href: `${i.r.BASE_URL}store/itemdetails/${u}`,
+                href: `${m.r.BASE_URL}store/itemdetails/${u}`,
                 className: (0, l.A)(
                   s().TextStyleButton,
                   s().TextColorWhite,
@@ -473,7 +473,7 @@
                   backgroundImage: `linear-gradient( ${e}, ${e} )`,
                 },
               },
-              (0, n.Wn)("#battlepass_purchase_label", m.o.GetBPPrice(u)),
+              (0, n.Wn)("#battlepass_purchase_label", i.o.GetBPPrice(u)),
             ),
             a.createElement(
               "div",
@@ -515,8 +515,8 @@
               a.createElement("img", {
                 className: s().CapsuleTitle,
                 onError: (t) =>
-                  (t.target.src = `${i.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
-                src: `${i.r.IMG_URL}${e.capsuleImageLocation}${i.r.LANGUAGE}.png`,
+                  (t.target.src = `${m.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                src: `${m.r.IMG_URL}${e.capsuleImageLocation}${m.r.LANGUAGE}.png`,
               }),
             a.createElement(
               "div",
@@ -659,8 +659,8 @@
               ),
               style: {
                 backgroundImage: e.isUpgraded
-                  ? `url( ${i.r.IMG_URL}/international2024/compendium/panel_upgraded_compendium.jpg )`
-                  : `url( ${i.r.IMG_URL}/international2024/compendium/panel_standard_compendium.jpg )`,
+                  ? `url( ${m.r.IMG_URL}/international2024/compendium/panel_upgraded_compendium.jpg )`
+                  : `url( ${m.r.IMG_URL}/international2024/compendium/panel_standard_compendium.jpg )`,
               },
             },
             a.createElement(
@@ -668,8 +668,8 @@
               { className: s().FlourishContainer },
               a.createElement("img", {
                 src: e.isUpgraded
-                  ? `${i.r.IMG_URL}international2024/dividers_and_flourishes/flourish_upgraded_compendium.png`
-                  : `${i.r.IMG_URL}international2024/dividers_and_flourishes/flourish_standard_compendium.png`,
+                  ? `${m.r.IMG_URL}international2024/dividers_and_flourishes/flourish_upgraded_compendium.png`
+                  : `${m.r.IMG_URL}international2024/dividers_and_flourishes/flourish_standard_compendium.png`,
               }),
             ),
             e.title &&
@@ -689,8 +689,8 @@
               a.createElement("img", {
                 className: s().CapsuleTitle,
                 onError: (t) =>
-                  (t.target.src = `${i.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
-                src: `${i.r.IMG_URL}${e.capsuleImageLocation}${i.r.LANGUAGE}.png`,
+                  (t.target.src = `${m.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                src: `${m.r.IMG_URL}${e.capsuleImageLocation}${m.r.LANGUAGE}.png`,
               }),
             a.createElement(
               "div",
@@ -816,27 +816,6 @@
             ),
             a.createElement(
               "div",
-              {
-                className: (0, l.A)(
-                  s().TextStyleButton,
-                  s().TextColorWhite,
-                  s().CapsulePurchaseButton,
-                ),
-                style: {
-                  borderTop: e.colorButtonOverride
-                    ? `1px solid ${e.colorButtonOverride}`
-                    : `1px solid ${e.colorTopEdge}`,
-                  backgroundImage: e.colorButtonOverride
-                    ? `linear-gradient( ${e.colorButtonOverride}, ${e.colorButtonOverride} )`
-                    : `linear-gradient( ${e.colorTopEdge}, ${e.colorTopEdge} )`,
-                },
-                onClick: () =>
-                  m.o.PurchaseOnSteamStore(e.itemid, 1, window.location.href),
-              },
-              (0, n.Wn)("#battlepass_purchase_label", m.o.GetBPPrice(e.itemid)),
-            ),
-            a.createElement(
-              "div",
               { className: s().BoostersFootnoteContainer },
               !e.isUpgraded &&
                 a.createElement(
@@ -862,10 +841,10 @@
                   s().CapsuleDiscount,
                 ),
               },
-              m.o.GetBPDiscount(e.eventid, e.itemid) &&
+              i.o.GetBPDiscount(e.eventid, e.itemid) &&
                 (0, n.Wn)(
                   "#ti13_compendium_purchase_discount",
-                  m.o.GetBPDiscount(e.eventid, e.itemid),
+                  i.o.GetBPDiscount(e.eventid, e.itemid),
                 ),
             ),
           );

@@ -615,27 +615,6 @@
             ),
             i.createElement(
               "div",
-              {
-                className: (0, l.A)(
-                  r().TextStyleButton,
-                  r().TextColorWhite,
-                  r().CapsulePurchaseButton,
-                ),
-                style: {
-                  borderTop: e.colorButtonOverride
-                    ? `1px solid ${e.colorButtonOverride}`
-                    : `1px solid ${e.colorTopEdge}`,
-                  backgroundImage: e.colorButtonOverride
-                    ? `linear-gradient( ${e.colorButtonOverride}, ${e.colorButtonOverride} )`
-                    : `linear-gradient( ${e.colorTopEdge}, ${e.colorTopEdge} )`,
-                },
-                onClick: () =>
-                  m.o.PurchaseOnSteamStore(e.itemid, 1, window.location.href),
-              },
-              (0, s.Wn)("#battlepass_purchase_label", m.o.GetBPPrice(e.itemid)),
-            ),
-            i.createElement(
-              "div",
               { className: r().BoostersFootnoteContainer },
               !e.isUpgraded &&
                 i.createElement(
@@ -707,7 +686,7 @@
             null
           );
         },
-        T = [
+        R = [
           {
             posterDir: "abilities/ringmaster/ringmaster_tame_the_beasts.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_tame_the_beasts.mp4",
@@ -745,7 +724,7 @@
             bIsShard: !0,
           },
         ],
-        R = [
+        T = [
           {
             posterDir: "abilities/ringmaster/ringmaster_funhouse_mirror.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_funhouse_mirror.mp4",
@@ -932,7 +911,7 @@
                 src: `${n.r.IMG_URL}/` + e.image,
               }),
           ),
-        B = (e) =>
+        W = (e) =>
           o.createElement(
             "div",
             {
@@ -963,7 +942,7 @@
                 src: `${n.r.IMG_URL}/` + e.image,
               }),
           ),
-        W = (e) =>
+        f = (e) =>
           o.createElement(
             "div",
             {
@@ -996,7 +975,7 @@
               bNoGapInTextCapsule: e.bNoGapInTextCapsule,
             }),
           ),
-        f = ({ bShowLearnMore: e = !1 }) =>
+        B = ({ bShowLearnMore: e = !1 }) =>
           o.createElement(
             "div",
             { className: v().PurchaseSection },
@@ -1060,8 +1039,8 @@
               ),
           ),
         x = 49,
-        k = [30237, 30240];
-      let U = class extends o.Component {
+        U = [30237, 30240];
+      let k = class extends o.Component {
         videoRef = o.createRef();
         constructor(e) {
           super(e), (this.state = { bPlayingVideo: !1 });
@@ -1074,7 +1053,7 @@
           e.current.scrollIntoView({ behavior: "smooth" });
         }
         render() {
-          _.o.RequestBPPrices(k), _.o.RequestBPDiscounts(x, k);
+          _.o.RequestBPPrices(U);
           const e =
               "schinese" == n.r.LANGUAGE || "tchinese" == n.r.LANGUAGE
                 ? "cn_logo_ti_compendium_01"
@@ -1249,12 +1228,12 @@
                       className: v().AbilityCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 56.25,
-                      totalSlides: T.length + R.length,
+                      totalSlides: R.length + T.length,
                     },
                     o.createElement(
                       C.Ap,
                       { className: v().AbilitySlider },
-                      T.map((e, t) =>
+                      R.map((e, t) =>
                         o.createElement(
                           C.q7,
                           { key: `HeroAbilitySlide-${t}`, index: t },
@@ -1304,12 +1283,12 @@
                           ),
                         ),
                       ),
-                      R.map((e, t) =>
+                      T.map((e, t) =>
                         o.createElement(
                           C.q7,
                           {
-                            key: `HeroAbilitySlide-${T.length + t}`,
-                            index: T.length + t,
+                            key: `HeroAbilitySlide-${R.length + t}`,
+                            index: R.length + t,
                           },
                           o.createElement(
                             "video",
@@ -1372,7 +1351,7 @@
                         o.createElement(
                           "div",
                           { className: (0, d.A)(v().CarouselDots) },
-                          T.map((e, t) =>
+                          R.map((e, t) =>
                             o.createElement(
                               C.cL,
                               {
@@ -1437,12 +1416,12 @@
                         o.createElement(
                           "div",
                           { className: (0, d.A)(v().CarouselDots) },
-                          R.map((e, t) =>
+                          T.map((e, t) =>
                             o.createElement(
                               C.cL,
                               {
-                                key: `HeroAbilityDot-${T.length + t}`,
-                                slide: T.length + t,
+                                key: `HeroAbilityDot-${R.length + t}`,
+                                slide: R.length + t,
                                 className: v().AbilitySelector,
                                 style: {
                                   backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
@@ -1466,12 +1445,12 @@
                       className: v().AbilityCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 56.25,
-                      totalSlides: T.length + R.length,
+                      totalSlides: R.length + T.length,
                     },
                     o.createElement(
                       C.Ap,
                       { className: v().AbilitySlider },
-                      T.map((e, t) =>
+                      R.map((e, t) =>
                         o.createElement(
                           C.q7,
                           { key: `HeroAbilitySlide-${t}`, index: t },
@@ -1529,12 +1508,12 @@
                           ),
                         ),
                       ),
-                      R.map((e, t) =>
+                      T.map((e, t) =>
                         o.createElement(
                           C.q7,
                           {
-                            key: `HeroAbilitySlide-${T.length + t}`,
-                            index: T.length + t,
+                            key: `HeroAbilitySlide-${R.length + t}`,
+                            index: R.length + t,
                           },
                           o.createElement(
                             "div",
@@ -1605,7 +1584,7 @@
                         o.createElement(
                           "div",
                           { className: (0, d.A)(v().CarouselDotsMobile) },
-                          T.map((e, t) =>
+                          R.map((e, t) =>
                             o.createElement(
                               C.cL,
                               {
@@ -1638,12 +1617,12 @@
                         o.createElement(
                           "div",
                           { className: (0, d.A)(v().CarouselDotsMobile) },
-                          R.map((e, t) =>
+                          T.map((e, t) =>
                             o.createElement(
                               C.cL,
                               {
-                                key: `HeroAbilityDot-${T.length + t}`,
-                                slide: T.length + t,
+                                key: `HeroAbilityDot-${R.length + t}`,
+                                slide: R.length + t,
                                 className: v().AbilitySelector,
                                 style: {
                                   backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
@@ -1819,7 +1798,7 @@
                       bCenterText: !1,
                     }),
                   ),
-                  o.createElement(B, {
+                  o.createElement(W, {
                     description: "#international2024_effigies_desc",
                     image: "international2024/effigy/effigy_splash_art3.png",
                     bSwapImageSide: !0,
@@ -1856,7 +1835,7 @@
                       bSwapImageSide: !1,
                     }),
                   ),
-                  o.createElement(f, null),
+                  o.createElement(B, null),
                 ),
                 o.createElement("div", {
                   className: (0, d.A)(v().SectionDivider, v().Compendium),
@@ -1903,25 +1882,25 @@
                         v().CompendiumActivities,
                       ),
                     },
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_activities_play_title",
                       description: "#international2024_activities_play_desc",
                       image:
                         "international2024/compendium/ti2024_rewards_points.png",
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_activities_fantasy_title",
                       description: "#international2024_activities_fantasy_desc",
                       image:
                         "international2024/compendium/ti2024_fantasy_reroll_stats.png",
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_activities_oracles_title",
                       description: "#international2024_activities_oracles_desc",
                       image:
                         "international2024/compendium/ti2024_oracles_challenge_predict_group_stage.png",
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_activities_bingo_title",
                       description: "#international2024_activities_bingo_desc",
                       image: "international2024/compendium/ti2024_bingo.png",
@@ -1979,7 +1958,7 @@
                     }),
                   ),
                   o.createElement("br", null),
-                  o.createElement(B, {
+                  o.createElement(W, {
                     title: "#international2024_rewards_physical_aegis_title",
                     description:
                       "#international2024_rewards_physical_aegis_desc",
@@ -1996,7 +1975,7 @@
                         v().CompendiumRewardsLarge,
                       ),
                     },
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_hud_title",
                       description: "#international2024_rewards_hud_desc",
                       image:
@@ -2004,7 +1983,7 @@
                       bNoGapBetweenPicAndText: !0,
                       bNoGapInTextCapsule: !0,
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_versus_title",
                       description: "#international2024_rewards_versus_desc",
                       image:
@@ -2022,37 +2001,37 @@
                         v().CompendiumRewardsSmall,
                       ),
                     },
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_stickers_title",
                       image:
                         "international2024/compendium/ti2024_team_player_stickers.png",
                       bNoGapBetweenPicAndText: !0,
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_chat_wheels_title",
                       image:
                         "international2024/compendium/ti2024_rewards_permenent_chatwheels.png",
                       bNoGapBetweenPicAndText: !0,
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_effigy_title",
                       image:
                         "international2024/compendium/ti2024_team_effigy_block.png",
                       bNoGapBetweenPicAndText: !0,
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_materials_title",
                       image:
                         "international2024/compendium/ti2024_rewards_fantasy_token.png",
                       bNoGapBetweenPicAndText: !0,
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_teleport_fx_title",
                       image:
                         "international2024/compendium/ti2024_rewards_teleport.png",
                       bNoGapBetweenPicAndText: !0,
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_rewards_loading_screens_title",
                       image:
                         "international2024/compendium/ti2024_rewards_loading_screens.png",
@@ -2106,7 +2085,7 @@
                         v().CompendiumSupporterClubs,
                       ),
                     },
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_supporters_clubs_tiers_title",
                       description:
                         "#international2024_supporters_clubs_tiers_desc",
@@ -2114,7 +2093,7 @@
                         "international2024/compendium/ti2024_supporters_club.png",
                       bNoGapBetweenPicAndText: !0,
                     }),
-                    o.createElement(W, {
+                    o.createElement(f, {
                       title: "#international2024_talent_tiers_title",
                       description: "#international2024_talent_tiers_desc",
                       image:
@@ -2136,7 +2115,7 @@
                       v().FooterSection,
                     ),
                   },
-                  o.createElement(f, { bShowLearnMore: !0 }),
+                  o.createElement(B, { bShowLearnMore: !0 }),
                 ),
                 o.createElement("div", {
                   className: (0, d.A)(v().SectionDivider, v().Compendium),
@@ -2148,8 +2127,8 @@
           );
         }
       };
-      U = (0, i.Cg)([s.PA], U);
-      const G = U;
+      k = (0, i.Cg)([s.PA], k);
+      const G = k;
     },
   },
 ]);

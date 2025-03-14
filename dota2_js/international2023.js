@@ -120,7 +120,7 @@
     },
     24953: (e, t, a) => {
       "use strict";
-      a.d(t, { $x: () => m, Jh: () => _, c: () => d });
+      a.d(t, { $x: () => m, Jh: () => d, c: () => _ });
       var n = a(7552),
         i = a(32484),
         r = a.n(i),
@@ -134,8 +134,8 @@
           colorMiddle: a,
           colorBottom: i,
           level: m,
-          discountPct: d,
-          itemid: _,
+          discountPct: _,
+          itemid: d,
           capsuleImageLocation: p = "labyrinth/bp_logo_",
           capsuleImageOnErrorLocation: u = "labyrinth/bp_logo_en.png",
         }) =>
@@ -161,7 +161,7 @@
             n.createElement(
               "a",
               {
-                href: `${o.r.BASE_URL}store/itemdetails/${_}`,
+                href: `${o.r.BASE_URL}store/itemdetails/${d}`,
                 className: (0, l.A)(
                   r().TextStyleButton,
                   r().TextColorWhite,
@@ -172,7 +172,7 @@
                   backgroundImage: `linear-gradient( ${e}, ${e} )`,
                 },
               },
-              (0, s.Wn)("#battlepass_purchase_label", c.o.GetBPPrice(_)),
+              (0, s.Wn)("#battlepass_purchase_label", c.o.GetBPPrice(d)),
             ),
             n.createElement(
               "div",
@@ -183,10 +183,10 @@
                   r().CapsuleDiscount,
                 ),
               },
-              d && (0, s.Wn)("#battlepass_purchase_discount", d, m),
+              _ && (0, s.Wn)("#battlepass_purchase_discount", _, m),
             ),
           ),
-        d = (e) =>
+        _ = (e) =>
           n.createElement(
             "div",
             {
@@ -348,7 +348,7 @@
                 ),
             ),
           ),
-        _ = (e) =>
+        d = (e) =>
           n.createElement(
             "div",
             {
@@ -515,27 +515,6 @@
             ),
             n.createElement(
               "div",
-              {
-                className: (0, l.A)(
-                  r().TextStyleButton,
-                  r().TextColorWhite,
-                  r().CapsulePurchaseButton,
-                ),
-                style: {
-                  borderTop: e.colorButtonOverride
-                    ? `1px solid ${e.colorButtonOverride}`
-                    : `1px solid ${e.colorTopEdge}`,
-                  backgroundImage: e.colorButtonOverride
-                    ? `linear-gradient( ${e.colorButtonOverride}, ${e.colorButtonOverride} )`
-                    : `linear-gradient( ${e.colorTopEdge}, ${e.colorTopEdge} )`,
-                },
-                onClick: () =>
-                  c.o.PurchaseOnSteamStore(e.itemid, 1, window.location.href),
-              },
-              (0, s.Wn)("#battlepass_purchase_label", c.o.GetBPPrice(e.itemid)),
-            ),
-            n.createElement(
-              "div",
               { className: r().BoostersFootnoteContainer },
               !e.isUpgraded &&
                 n.createElement(
@@ -580,9 +559,9 @@
         o = a(73202),
         c = a(21384),
         m = a(47202),
-        d = a(36305),
-        _ = a(73868),
-        p = a.n(_),
+        _ = a(36305),
+        d = a(73868),
+        p = a.n(d),
         u = a(88351),
         g = a(92444),
         E = a(24953),
@@ -789,7 +768,7 @@
                 }),
             ),
           ),
-        T = (e) =>
+        W = (e) =>
           s.createElement(
             "div",
             { className: p().ComingSoonCapsule },
@@ -808,7 +787,7 @@
               ),
             ),
           ),
-        W = () =>
+        T = () =>
           s.createElement(
             "div",
             { className: p().PurchaseSection },
@@ -824,7 +803,7 @@
                 level: 6,
                 booster_level: 6,
                 itemid: 22507,
-                eventid: f,
+                eventid: B,
                 cullingBlades: 4,
                 rerollTokens: 6,
                 fantasyTokens: 36,
@@ -841,7 +820,7 @@
                 level: 50,
                 booster_level: 28,
                 itemid: 24173,
-                eventid: f,
+                eventid: B,
                 cullingBlades: 13,
                 rerollTokens: 15,
                 fantasyTokens: 78,
@@ -863,7 +842,7 @@
               (0, r.Wn)("#international2023_tournament_learn_more"),
             ),
           ),
-        B = ({ nIndex: e, strVideo: t }) => {
+        F = ({ nIndex: e, strVideo: t }) => {
           const a = (0, s.useContext)(h.Yc),
             n = (0, s.useRef)();
           return (
@@ -895,7 +874,7 @@
             )
           );
         },
-        F = [
+        f = [
           { strVideo: "showcase_ti" },
           { strVideo: "showcase_windranger" },
           { strVideo: "showcase_pro_team" },
@@ -903,7 +882,7 @@
           { strVideo: "showcase_sniper" },
           { strVideo: "showcase_cliff" },
         ],
-        f = 45;
+        B = 45;
       let x = class extends s.Component {
         constructor(e) {
           super(e), (this.state = {});
@@ -993,18 +972,18 @@
                       className: p().ShowcaseCarousel,
                       naturalSlideWidth: 2,
                       naturalSlideHeight: 1,
-                      totalSlides: F.length,
+                      totalSlides: f.length,
                       isPlaying: !0,
                       infinite: !0,
                     },
                     s.createElement(
                       h.Ap,
                       null,
-                      F.map((e, t) =>
+                      f.map((e, t) =>
                         s.createElement(
                           h.q7,
                           { key: `ShowcaseSlide-${t}`, index: t },
-                          s.createElement(B, {
+                          s.createElement(F, {
                             nIndex: t,
                             strVideo: e.strVideo,
                           }),
@@ -1030,7 +1009,7 @@
                     s.createElement(
                       "div",
                       { className: p().CarouselDots },
-                      F.map((e, t) =>
+                      f.map((e, t) =>
                         s.createElement(
                           h.cL,
                           {
@@ -1166,7 +1145,7 @@
                   { className: p().Introduction },
                   (0, r.Wn)("#international2023_compendium_intro"),
                 ),
-                s.createElement(W, null),
+                s.createElement(T, null),
               ),
               s.createElement("div", {
                 className: (0, c.A)(p().SectionDivider, p().Compendium),
@@ -1492,7 +1471,7 @@
                   image: "international2023/ti2023_talent_stickers.png",
                   imageStyle: p().Image65Percent,
                 }),
-                s.createElement(T, {
+                s.createElement(W, {
                   description: "#international2023_talent_coming_soon",
                 }),
               ),
@@ -1509,14 +1488,14 @@
                     p().FooterSection,
                   ),
                 },
-                s.createElement(W, null),
+                s.createElement(T, null),
               ),
               s.createElement("div", {
                 className: (0, c.A)(p().SectionDivider, p().Compendium),
               }),
             ),
             s.createElement(S, null),
-            s.createElement(d.K, null),
+            s.createElement(_.K, null),
           );
         }
       };
