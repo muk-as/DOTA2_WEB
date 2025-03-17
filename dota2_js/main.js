@@ -37640,16 +37640,19 @@
     33706: (e, t, a) => {
       "use strict";
       a.d(t, {
-        B5: () => N,
-        HJ: () => b,
-        Iu: () => B,
-        MT: () => T,
-        PO: () => I,
-        lm: () => S,
-        mU: () => f,
-        oF: () => C,
-        qK: () => y,
-        wB: () => v,
+        B5: () => L,
+        HJ: () => v,
+        Iu: () => M,
+        JD: () => y,
+        MT: () => N,
+        PO: () => A,
+        k4: () => I,
+        lm: () => B,
+        mU: () => S,
+        nK: () => R,
+        oF: () => D,
+        qK: () => T,
+        wB: () => w,
       });
       var r = a(2593),
         n = a(75749),
@@ -37662,11 +37665,13 @@
         d = ["DotaGameDataHeroData"],
         u = ["DotaGameDataItemList"],
         _ = ["DotaGameDataItemListItem"],
-        p = "PregameItemQueryKey",
-        g = "EarlygameItemQueryKey",
-        h = "LategameItemQueryKeyV2",
-        E = "MaingameItemQueryKey";
-      function b() {
+        p = ["DotaGameDataAbilityListItem"],
+        g = "AbilitiesQueryKey",
+        h = "PregameItemQueryKey",
+        E = "EarlygameItemQueryKey",
+        b = "LategameItemQueryKeyV2",
+        f = "MaingameItemQueryKey";
+      function v() {
         const e = (0, o.jE)();
         return (0, l.I)({
           queryKey: u,
@@ -37684,7 +37689,26 @@
           meta: { persist: !0 },
         });
       }
-      function f(e) {
+      function y(e) {
+        const t = (0, o.jE)();
+        return (0, l.I)({
+          queryKey: [...p, e],
+          queryFn: () =>
+            (async function (e, t) {
+              const a = await i().get(s.r.BASE_URL + "datafeed/abilitylist", {
+                  params: { language: s.r.LANGUAGE },
+                }),
+                r = a?.data?.result?.data;
+              let n;
+              if (r)
+                for (const a of r.itemabilities)
+                  a && e.setQueryData([...p, a.id], a), a.id == t && (n = a);
+              return n;
+            })(t, e),
+          meta: { persist: !0 },
+        });
+      }
+      function S(e) {
         const t = (0, o.jE)();
         return (0, l.I)({
           queryKey: [..._, e],
@@ -37703,7 +37727,7 @@
           meta: { persist: !0 },
         });
       }
-      function v() {
+      function w() {
         const e = (0, o.jE)();
         return (0, l.I)({
           queryKey: c,
@@ -37724,7 +37748,7 @@
           meta: { persist: !0 },
         });
       }
-      function y(e) {
+      function T(e) {
         return (0, l.I)({
           queryKey: [...d, e],
           queryFn: () =>
@@ -37739,7 +37763,7 @@
           meta: { persist: !0 },
         });
       }
-      function S(e) {
+      function B(e) {
         const t = (0, o.jE)();
         return (0, l.I)({
           queryKey: [...m, e],
@@ -37758,7 +37782,7 @@
           meta: { persist: !0 },
         });
       }
-      function w(e, t) {
+      function C(e, t) {
         return {
           queryKey: [e, t],
           queryFn: () =>
@@ -37772,7 +37796,49 @@
             })(t),
         };
       }
-      function T(e, t, a, r, n, i, s, o, c, m) {
+      function I(e, t, a, r, n, i, s, o, c, m, d) {
+        const u = {
+          project_id: 2,
+          published_version: 9,
+          additional_data: [10],
+          data: {
+            data: [
+              {
+                data_source_id: 2461332265,
+                data_object: {
+                  elements: [{ name: "skilled_abilities", data_int32s: d }],
+                },
+              },
+              {
+                data_source_id: 3835464906,
+                data_object: {
+                  elements: [
+                    { name: "hero_id", data_int32s: [e] },
+                    { name: "hero_facet", data_int32s: [t] },
+                    { name: "position", data_int32s: [a] },
+                    { name: "allied_hero_ids", data_int32s: r },
+                    { name: "allied_hero_facets", data_int32s: n },
+                    { name: "enemy_hero_ids", data_int32s: i },
+                    { name: "enemy_herofacets", data_int32s: s },
+                  ],
+                },
+              },
+              {
+                data_source_id: 2197406710,
+                data_object: {
+                  elements: [
+                    { name: "player_mmr", data_int32s: [o] },
+                    { name: "game_mode", data_int32s: [c] },
+                    { name: "team_won", data_bools: [m] },
+                  ],
+                },
+              },
+            ],
+          },
+        };
+        return console.log("Inferencing abilities with", u), (0, l.I)(C(g, u));
+      }
+      function N(e, t, a, r, n, i, s, o, c, m) {
         const d = {
           project_id: 29,
           published_version: 2,
@@ -37812,9 +37878,9 @@
             ],
           },
         };
-        return (0, l.I)(w(p, d));
+        return (0, l.I)(C(h, d));
       }
-      function B(e, t, a, r, n, i, s, o, c, m) {
+      function M(e, t, a, r, n, i, s, o, c, m) {
         const d = {
           project_id: 27,
           published_version: 2,
@@ -37854,9 +37920,52 @@
             ],
           },
         };
-        return (0, l.I)(w(g, d));
+        return (0, l.I)(C(E, d));
       }
-      function C(e, t, a, r, n, i, s, o, c, m, d) {
+      function R(e, t, a, r, n, i, s, o, c) {
+        const m = {
+          project_id: 50,
+          published_version: 7,
+          additional_data: [10],
+          data: {
+            data: [
+              {
+                data_source_id: 3616116112,
+                data_object: {
+                  elements: [{ name: "purchase_history", data_int32s: c }],
+                },
+              },
+              {
+                data_source_id: 3835464906,
+                data_object: {
+                  elements: [
+                    { name: "hero_id", data_int32s: [e] },
+                    { name: "hero_facet", data_int32s: [t] },
+                    { name: "position", data_int32s: [a] },
+                    { name: "allied_hero_ids", data_int32s: r },
+                    { name: "allied_hero_facets", data_int32s: [0, 0, 0, 0] },
+                    { name: "enemy_hero_ids", data_int32s: n },
+                    { name: "enemy_hero_facets", data_int32s: [0, 0, 0, 0, 0] },
+                  ],
+                },
+              },
+              {
+                data_source_id: 2197406710,
+                data_object: {
+                  elements: [
+                    { name: "average_mmr", data_int32s: [i] },
+                    { name: "game_mode", data_int32s: [s] },
+                    { name: "lobby_type", data_int32s: [7] },
+                  ],
+                },
+              },
+            ],
+          },
+          inference_iterations: 5,
+        };
+        return console.log("inferenceRequest", m), (0, l.I)(C(f, m));
+      }
+      function D(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 32,
           published_version: 1,
@@ -37896,9 +38005,9 @@
             ],
           },
         };
-        return (0, l.I)(w(E, u));
+        return (0, l.I)(C(f, u));
       }
-      function I(e, t, a, r, n, i, s, o, c, m, d) {
+      function A(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 28,
           published_version: 2,
@@ -37941,9 +38050,9 @@
             ],
           },
         };
-        return (0, l.I)(w(h, u));
+        return (0, l.I)(C(b, u));
       }
-      class N {
+      class L {
         m_asyncHeroList = new r.N();
         m_asyncAbilityList = new r.N();
         m_asyncItemList = new r.N();
@@ -37952,7 +38061,7 @@
         m_asyncItemData = new r.L();
         static g_Singleton;
         static Get() {
-          return N.g_Singleton || (N.g_Singleton = new N()), N.g_Singleton;
+          return L.g_Singleton || (L.g_Singleton = new L()), L.g_Singleton;
         }
         getHeroList() {
           return this.m_asyncHeroList.getData(
