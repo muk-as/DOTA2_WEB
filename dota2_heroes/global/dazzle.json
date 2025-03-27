@@ -337,7 +337,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_dazzle_poison_touch_attack_range_bonus",
-                      "value": 300,
+                      "value": 200,
                       "operation": 0
                     }
                   ],
@@ -367,7 +367,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "dazzle_poison_bloom"
                 },
                 {
                   "name": "split_damage",
@@ -379,13 +379,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SPLIT DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_dazzle_3",
-                      "value": 60,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -417,7 +411,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "dazzle_poison_bloom"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1024,7 +1018,7 @@
                 {
                   "name": "scepter_heal_pct",
                   "values_float": [
-                    150
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1351,7 +1345,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "dazzle_facet_nothl_boon"
                 },
                 {
                   "name": "ultimate_always_applies",
@@ -1387,7 +1381,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "dazzle_facet_nothl_boon"
                 },
                 {
                   "name": "enemy_multiplier",
@@ -1406,7 +1400,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "dazzle_poison_bloom"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1584,7 +1578,7 @@
               "dispellable": 3,
               "max_level": 3,
               "cast_ranges": [
-                600
+                450
               ],
               "cast_points": [
                 0.2
@@ -1634,11 +1628,17 @@
                 {
                   "name": "max_duration",
                   "values_float": [
-                    15
+                    12
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dazzle_nothl_projection_duration",
+                      "value": 5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1736,7 +1736,7 @@
                 {
                   "name": "leash_increase",
                   "values_float": [
-                    0.5
+                    1.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1848,7 +1848,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    600
+                    450
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2616,9 +2616,9 @@
               "item_quality": 0
             },
             {
-              "id": 1153,
-              "name": "special_bonus_attack_speed_90",
-              "name_loc": "+{s:value} Attack Speed",
+              "id": 1613,
+              "name": "special_bonus_unique_dazzle_nothl_projection_duration",
+              "name_loc": "+{s:bonus_max_duration}s Nothl Projection Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2664,23 +2664,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    90
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [

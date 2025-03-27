@@ -22,7 +22,7 @@
             {
               "color": 1,
               "title_loc": "Venomous Volley",
-              "description_loc": "Every %attack_count% attacks, Medusa applies poison to her arrow that briefly reduces movement speed, attack speed, and cast speed.",
+              "description_loc": "Every %attack_count% attacks, Medusa applies poison to her arrow that briefly reduces movement speed and attack speed.",
               "name": "medusa_slow_attacks",
               "icon": "slow",
               "gradient_id": 2
@@ -622,13 +622,15 @@
                 {
                   "name": "stone_form_scepter_base",
                   "values_float": [
-                    1
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    1
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -639,13 +641,15 @@
                 {
                   "name": "stone_form_scepter_increment",
                   "values_float": [
-                    0.2
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    0.2
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -704,7 +708,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_engorged"
                 },
                 {
                   "name": "mana_per_damage",
@@ -723,7 +727,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_engorged"
                 },
                 {
                   "name": "attack_buff_duration",
@@ -742,7 +746,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_engorged"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1720,7 +1724,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_mana_pact"
                 },
                 {
                   "name": "aspd_increase_max_tooltip",
@@ -1739,7 +1743,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_mana_pact"
                 },
                 {
                   "name": "aspd_increase_buff_duration",
@@ -1758,7 +1762,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_mana_pact"
                 },
                 {
                   "name": "aspd_increase_mana_cost_pct",
@@ -1777,7 +1781,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_mana_pact"
                 },
                 {
                   "name": "aspd_increase_max_aspd_time",
@@ -1796,7 +1800,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_mana_pact"
                 },
                 {
                   "name": "attack_buff_cooldown",
@@ -1815,7 +1819,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_mana_pact"
                 },
                 {
                   "name": "min_duration",
@@ -1834,7 +1838,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "medusa_mana_pact"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -3993,7 +3997,7 @@
                   "id": 1477,
                   "name": "medusa_venomed_volley",
                   "name_loc": "Venomous Volley",
-                  "desc_loc": "Every %attack_count% attacks, Medusa applies poison to her arrow that briefly reduces movement speed, attack speed, and cast speed.",
+                  "desc_loc": "Every %attack_count% attacks, Medusa applies poison to her arrow that briefly reduces movement speed and attack speed.",
                   "lore_loc": "",
                   "notes_loc": [
                     "Poisoned attack is considered an on-hit effect for Split Shot."
@@ -4104,7 +4108,7 @@
                     {
                       "name": "cast_slow",
                       "values_float": [
-                        50
+                        0
                       ],
                       "is_percentage": true,
                       "heading_loc": "CAST SPEED SLOW:",

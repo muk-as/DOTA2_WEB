@@ -1207,7 +1207,7 @@
               "id": 1321,
               "name": "chen_summon_convert",
               "name_loc": "Summon Convert",
-              "desc_loc": "Chen summons a convert to fight for him. The convert gains bonuses from Holy Persuasion and dies if Chen dies. Its maximum health is set to %health_min% + %bonus_health_per_level% per Chen Level.<br><br> The spell stays on cooldown while the convert is alive, but refreshes whenever Chen respawns. The Convert counts towards Holy Persuasion max unit count. The Convert's ability levels upgrade with levels of Holy Persuasion.",
+              "desc_loc": "Chen summons a convert to fight for him. The convert gains bonuses from Holy Persuasion and dies if Chen dies. Its maximum health is set to %health_min% + %bonus_health_per_level% per Chen Level.<br><br> The spell stays on cooldown while the convert is alive, but refreshes whenever Chen respawns. The Convert counts towards Holy Persuasion max unit count. The Convert's ability level increases with Chen's level of Holy Persusasion.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1307,7 +1307,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "chen_centaur_convert"
                 },
                 {
                   "name": "summon_wolves",
@@ -1326,7 +1326,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "chen_wolf_convert"
                 },
                 {
                   "name": "summon_hellbears",
@@ -1345,7 +1345,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "chen_hellbear_convert"
                 },
                 {
                   "name": "summon_trolls",
@@ -1364,7 +1364,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "chen_troll_convert"
                 },
                 {
                   "name": "summon_satyrs",
@@ -1383,7 +1383,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "chen_satyr_convert"
                 },
                 {
                   "name": "summon_frogs",
@@ -1402,7 +1402,7 @@
                     ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "chen_frog_convert"
                 },
                 {
                   "name": "convert_hp_tooltip",
@@ -1713,14 +1713,16 @@
                 {
                   "name": "ancient_creeps_scepter",
                   "values_float": [
-                    1,
-                    2,
-                    3
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "SHARD HOLY PERSUASION ANCIENTS:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    1,
+                    2,
+                    3
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1731,9 +1733,7 @@
                 },
                 {
                   "name": "does_purge",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
@@ -1754,9 +1754,7 @@
                 },
                 {
                   "name": "full_heal_on_chen_and_creeps",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
