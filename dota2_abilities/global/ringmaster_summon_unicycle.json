@@ -6,7 +6,7 @@
           "id": 196,
           "name": "ringmaster_summon_unicycle",
           "name_loc": "Unicycle",
-          "desc_loc": "<h1>Use: Saddle Up</h1>Summons a speedy unicycle to ride around on for %mount_duration% seconds. Crashing into trees destroys them and slows the unicycle. Attacking, using abilities, taking damage, picking up runes, or crashing into units and other obstacles dismounts the rider.",
+          "desc_loc": "<h1>Use: Saddle Up</h1>Summons a speedy unicycle to ride around on for %mount_duration% seconds. %damage_grace_period%s after mounting the unicycle, taking damage from enemy hero sources greather than %damage_threshold% dismounts the rider. Crashing into trees destroys them and slows the unicycle. Attacking, using channeled abilities, or crashing into units and other obstacles also dismounts the rider.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -188,6 +188,40 @@
               "name": "knockback_distance",
               "values_float": [
                 50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_grace_period",
+              "values_float": [
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_threshold",
+              "values_float": [
+                20
               ],
               "is_percentage": false,
               "heading_loc": "",
