@@ -783,9 +783,7 @@
             },
             {
               "name": "strong_dispel",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [
@@ -806,9 +804,7 @@
             },
             {
               "name": "grant_flying",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [
@@ -830,13 +826,15 @@
             {
               "name": "max_charges",
               "values_float": [
-                2
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                2
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -2526,7 +2524,7 @@
                 ],
                 "operation": 5
               },
-              "required_facet": ""
+              "required_facet": "ringmaster_carny_classics"
             },
             {
               "name": "use_souvenir_set_2",
@@ -2545,7 +2543,7 @@
                 ],
                 "operation": 5
               },
-              "required_facet": ""
+              "required_facet": "ringmaster_sideshow_secrets"
             },
             {
               "name": "AbilityCastRange",
@@ -4309,7 +4307,7 @@
       "crops_img": "https://static.pwesports.cn/esportsadmin/DOTA2/heroes/crops/ringmaster.png",
       "top_img": "https://static.pwesports.cn/esportsadmin/DOTA2/heroes/renders/ringmaster.png",
       "top_video": "https://static.pwesports.cn/esportsadmin/DOTA2/heroes/renders/ringmaster.webm?v5",
-      "update_time": 1740186205,
+      "update_time": 1743105811,
       "facets": [
         {
           "color": 1,
@@ -5736,7 +5734,7 @@
               "id": 196,
               "name": "ringmaster_summon_unicycle",
               "name_loc": "独轮车",
-              "desc_loc": "<h1>使用：上车</h1>召唤一辆快速的独轮车并骑上去，持续%mount_duration%秒。撞到树木会将其摧毁，并且独轮车会减速。攻击、使用技能、受到伤害、拾取神符或撞到单位和其他障碍物都会使他下车。",
+              "desc_loc": "<h1>使用：上车</h1>召唤一辆快速的独轮车并骑上去，持续%mount_duration%秒。上车%damage_grace_period%秒后受到来自敌方英雄的伤害超过%damage_threshold%点会让他下车。撞到树木会将其摧毁，并且独轮车会减速。攻击、使用持续施法类技能或者撞到单位和其他障碍物都会使他下车。",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -5936,6 +5934,40 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "damage_grace_period",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_threshold",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     0
@@ -6089,7 +6121,7 @@
               "id": 278,
               "name": "ringmaster_weighted_pie",
               "name_loc": "超重派",
-              "desc_loc": "<h1>使用：扔派</h1>将敌人击退并将其视野减少至%vision_radius%，视野会在%blind_duration%秒内恢复，并且目标的友军在持续时间内对他提供视野。立刻秒杀任何非远古非英雄单位。",
+              "desc_loc": "<h1>使用：扔派</h1>将敌人击退，减缓其%max_slow_pct%%%移动速度并将其视野减少至%vision_radius%，移动速度和视野会在%blind_duration%秒内恢复，并且目标的友军在持续时间内对他提供视野。立刻秒杀任何非远古非英雄单位。",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -6224,6 +6256,23 @@
                   "name": "vision_radius",
                   "values_float": [
                     50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_slow_pct",
+                  "values_float": [
+                    45
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -6475,7 +6524,7 @@
               ],
               "operation": 5
             },
-            "required_facet": ""
+            "required_facet": "ringmaster_carny_classics"
           },
           {
             "name": "use_souvenir_set_2",
@@ -6494,7 +6543,7 @@
               ],
               "operation": 5
             },
-            "required_facet": ""
+            "required_facet": "ringmaster_sideshow_secrets"
           },
           {
             "name": "AbilityCastRange",
