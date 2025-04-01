@@ -49,9 +49,9 @@
         {
           "id": 5608,
           "name": "earth_spirit_boulder_smash",
-          "name_loc": "巨石冲击",
-          "desc_loc": "大地之灵将敌方单位或友方单位作为目标，将其击飞，目标将沿他面朝的方向飞行一段距离。如果大地之灵点地为目标，他将击飞%remnant_smash_radius_tooltip%范围内距离最近的单位，优先以残岩为目标。击飞的单位或残岩会对碰到的所有单位造成伤害。如果敌人是被残岩击中还将额外被减速。残岩被击飞的距离比其他单位更远。",
-          "lore_loc": "大地之灵的一招一式都蕴含着移山之力。",
+          "name_loc": "Boulder Smash",
+          "desc_loc": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest unit in a %remnant_smash_radius_tooltip% radius, prioritizing Stone Remnants. The travelling unit or Remnant damages all enemy units it hits.  If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units.",
+          "lore_loc": "It is with the power of a mountain that Earth Spirit strikes his enemies.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -366,13 +366,13 @@
         {
           "id": 5609,
           "name": "earth_spirit_rolling_boulder",
-          "name_loc": "巨石翻滚",
-          "desc_loc": "大地之灵化身为巨石，经过%delay%秒延迟后向目标位置翻滚，对经过的敌人造成伤害和眩晕，伤害值为%damage% + %damage_str%%%力量。如果撞到敌方英雄或自身被眩晕，翻滚都会中止。如果翻滚过程中经过残岩将会大幅提高翻滚距离和速度，造成的眩晕时间更长。",
-          "lore_loc": "大地之灵将自己与大地紧密结合，使松散的石块吸附到身上，从而组成一个防护圆球向前滚动。",
+          "name_loc": "Rolling Boulder",
+          "desc_loc": "Earth Spirit gathers himself into a boulder and, after a %delay%s delay, rolls toward the target location, dealing %damage% + %damage_str%%% STR damage and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer.",
+          "lore_loc": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
           "notes_loc": [
-            "翻滚时经过残岩会将其摧毁。",
-            "巨石的作用范围为%radius%。",
-            "大地之灵在滚动时无法作为目标，而且无敌。"
+            "Rolling over a Stone Remnant will destroy the Remnant.",
+            "The boulder has a radius of %radius%.",
+            "Earth Spirit is untargetable and invulnerable while rolling."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -838,14 +838,14 @@
         {
           "id": 5610,
           "name": "earth_spirit_geomagnetic_grip",
-          "name_loc": "地磁之握",
-          "desc_loc": "大地之灵将残岩拉扯到自己所在的位置，行进路径上被击中的敌人都会被沉默并受到伤害。",
-          "lore_loc": "同性相吸。即使是深藏于鲜血和骨头中的矿物都不能免疫大地之灵的呼唤。",
+          "name_loc": "Geomagnetic Grip",
+          "desc_loc": "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced and take damage.",
+          "lore_loc": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit.",
           "notes_loc": [
-            "如果目标处于时间结界，决斗或黑洞之中则不起作用。",
-            "地磁之握还可以对友方小兵施放。"
+            "Will not work on a unit inside Chronosphere, Duel, or Black Hole.",
+            "Geomagnetic Grip can also target allied creeps."
           ],
-          "shard_loc": "可以抓取友军。",
+          "shard_loc": "Can now grab allies.",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1118,11 +1118,11 @@
         {
           "id": 1395,
           "name": "earth_spirit_stone_caller",
-          "name_loc": "残岩",
-          "desc_loc": "在指定位置召唤一块残岩。残岩没有视野，为无敌状态，可以加强大地之灵的技能效果。召唤残岩需要消耗一点能量点数。英雄每升%hero_level_increment%级都会额外获得能量点数。",
-          "lore_loc": "大地之灵唤出的残岩源自与他一同在大地黑暗的怀抱下埋藏多年的兵马俑。",
+          "name_loc": "Stone Remnant",
+          "desc_loc": "Call a Stone Remnant to the target location.  Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities.  Calling a Stone Remnant consumes a charge, which recharge over time. Gains additional charges every %hero_level_increment% hero levels.",
+          "lore_loc": "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth.",
           "notes_loc": [],
-          "shard_loc": "残岩提供地面视野。残岩的最大能量点数增加%shard_tooltip%点。",
+          "shard_loc": "Causes Stone Remnant to provide ground vision. Increases the amount of remnants by %shard_tooltip%.",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1364,11 +1364,11 @@
         {
           "id": 5648,
           "name": "earth_spirit_petrify",
-          "name_loc": "残岩魔咒",
-          "desc_loc": "大地之灵对一名英雄施法，使其暂时获得残岩的属性。经过短时间后残岩就会碎裂，释放出英雄，并对周围单位造成伤害。<br><br>可以对残岩施放。对残岩施放时冷却时间为5秒。<br>对友方英雄施放时施法距离更远。",
-          "lore_loc": "考林操控大地的元素之力，使生命体暂时石化，将其收编于他的兵马俑大军中。",
+          "name_loc": "Enchant Remnant",
+          "desc_loc": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After a short duration the remnant shatters, releasing the hero and damaging nearby enemies. < br><br>Can be cast on Stone Remnants. Has a 5 second cooldown when used that way.<br>Has a larger cast range when cast on an ally hero.",
+          "lore_loc": "Kaolin uses the elemental power of the Earth to temporarily petrify living beings, so that they might be conscripted into his stone funerary army.",
           "notes_loc": [
-            "如果大地之灵自身受到残岩魔咒的效果，也可以成为巨石冲击的目标。"
+            "Earth Spirit himself can be targeted by Boulder Smash if he is enchanted."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1574,9 +1574,9 @@
         {
           "id": 5612,
           "name": "earth_spirit_magnetize",
-          "name_loc": "磁化",
-          "desc_loc": "将附近小范围内的敌方单位磁化，使其短时间内受到伤害。被磁化的英雄单位将会引起附近残岩的爆炸，每次爆炸都将摧毁残岩并刷新残岩附近单位身上的磁化时间（若附近单位未被磁化则为其施加一个磁化效果）。该过程可重复数次。如果一个被磁化的英雄受到了地磁之握或巨石冲击的作用，那么所有被磁化的英雄都会受到同样效果。",
-          "lore_loc": "在大地之灵的呼唤下，敌人体内的鲜血和骨头中所含的矿物都开始倒戈。",
+          "name_loc": "Magnetize",
+          "desc_loc": "Magnetizes units in a small nearby area, causing them to take damage for a short duration. Magnetized heroes cause nearby Stone Remnants to explode, destroying the remnant and refreshing Magnetize's duration on all nearby enemies. This process can repeat multiple times. If an enemy hero is affected by Geomagnetic Grip or Boulder Smash, all magnetized heroes share the effects.",
+          "lore_loc": "At the Earth Spirit's call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1945,7 +1945,7 @@
         {
           "id": 7657,
           "name": "special_bonus_unique_earth_spirit_5",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 地磁之握冷却",
+          "name_loc": "-{s:bonus_AbilityCooldown}s Geomagnetic Grip Cooldown",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2008,7 +2008,7 @@
         {
           "id": 324,
           "name": "special_bonus_unique_earth_spirit_4",
-          "name_loc": "+{s:bonus_distance} 巨石翻滚距离",
+          "name_loc": "+{s:bonus_distance} Rolling Boulder Distance",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2071,7 +2071,7 @@
         {
           "id": 6640,
           "name": "special_bonus_unique_earth_spirit_3",
-          "name_loc": "+{s:bonus_stun_duration}秒 巨石翻滚眩晕",
+          "name_loc": "+{s:bonus_stun_duration}s Rolling Boulder Stun Duration",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2134,7 +2134,7 @@
         {
           "id": 7661,
           "name": "special_bonus_unique_earth_spirit_6",
-          "name_loc": "+{s:bonus_rock_damage} 巨石冲击伤害",
+          "name_loc": "+{s:bonus_rock_damage} Boulder Smash Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2197,7 +2197,7 @@
         {
           "id": 977,
           "name": "special_bonus_unique_earth_spirit_8",
-          "name_loc": "+{s:bonus_damage_duration}% 磁化伤害/持续时间",
+          "name_loc": "+{s:bonus_damage_duration}% Magnetize Damage & Duration",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2260,7 +2260,7 @@
         {
           "id": 6203,
           "name": "special_bonus_unique_earth_spirit",
-          "name_loc": "+{s:bonus_damage} 巨石翻滚伤害",
+          "name_loc": "+{s:bonus_damage} Rolling Boulder Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2323,7 +2323,7 @@
         {
           "id": 6514,
           "name": "special_bonus_unique_earth_spirit_2",
-          "name_loc": "磁化不可驱散",
+          "name_loc": "Magnetize Undispellable",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2386,7 +2386,7 @@
         {
           "id": 7662,
           "name": "special_bonus_unique_earth_spirit_7",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 巨石冲击冷却",
+          "name_loc": "-{s:bonus_AbilityCooldown}s Boulder Smash Cooldown",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2451,7 +2451,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_earth_spirit.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/npc_dota_hero_earth_spirit.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_earth_spirit/npc_dota_hero_earth_spirit.webm",
-      "update_time": 1743469376,
+      "update_time": 1743472919,
       "facets": [
         {
           "color": 2,

@@ -49,9 +49,9 @@
         {
           "id": 5421,
           "name": "shadow_demon_disruption",
-          "name_loc": "崩裂禁锢",
-          "desc_loc": "将目标单位从战场上放逐一段时间。回归时会产生该单位的2个具有额外基础攻击力的幻象，受暗影恶魔控制。",
-          "lore_loc": "欺骗的痛苦不是在其发生之时，而是在其被揭露之时。",
+          "name_loc": "Disruption",
+          "desc_loc": "Banishes the targeted unit from the battlefield for a short duration.  Upon returning, two illusions of the banished unit with bonus base damage are created under Shadow Demon's control.",
+          "lore_loc": "The pain of deception comes not while it happens, but when it is revealed.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -428,8 +428,8 @@
         {
           "id": 1001,
           "name": "shadow_demon_disseminate",
-          "name_loc": "散播",
-          "desc_loc": "只要目标受到伤害，目标附近%radius%范围内所有敌人，若目标为敌人那也包括目标自身，他们都将受到该伤害的一定百分比。可以对敌方或友方目标施放。敌人被崩裂禁锢隐藏时效果暂停。",
+          "name_loc": "Disseminate",
+          "desc_loc": "Whenever the target takes damage, all enemies, including the target itself if it is an enemy, within %radius% range of the target also receive a portion of that damage. Can target enemy and allied units. Effect is paused if the target is hidden by Disruption.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -664,11 +664,11 @@
         {
           "id": 5423,
           "name": "shadow_demon_shadow_poison",
-          "name_loc": "暗影剧毒",
-          "desc_loc": "在一条直线上造成伤害，并以毒咒折磨敌方单位。根据目标身上的叠加层数，毒咒造成1/2/4/8/16倍的叠加伤害，至多%max_multiply_stacks%层。更多层的叠加每层造成%bonus_stack_damage%点伤害。这部分延缓的伤害在暗影毒的持续时间结束后生效，或者使用附属技能立刻造成伤害。",
-          "lore_loc": "暗影恶魔不断增长的影响力能够玷污最勇敢最纯洁的英雄。",
+          "name_loc": "Shadow Poison",
+          "desc_loc": "Deals damage in a line, and afflicts enemy units with a poison effect. The poison deals 1/2/4/8/16 times the stack damage based on the number of stacks on the target, up to %max_multiply_stacks% stacks. Additional stacks cause %bonus_stack_damage% damage each.  This deferred damage is dealt when Shadow Poison's duration is expired, or the Release sub-ability is used.",
+          "lore_loc": "The ever growing influence of the Shadow Demon can pollute the most valiant and pure of heroes.",
           "notes_loc": [
-            "暗影剧毒可以作用处于崩裂禁锢的单位。"
+            "Shadow Poison can affect units under Disruption."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -962,15 +962,15 @@
         {
           "id": 916,
           "name": "shadow_demon_demonic_cleanse",
-          "name_loc": "邪恶净愈",
-          "desc_loc": "净愈目标友方单位，在持续时间内移除负面效果。在持续时间结束时该单位受到治疗效果。崩裂禁锢中的单位依然可以受到邪恶净愈的效果。<br><br>驱散类型：弱驱散",
+          "name_loc": "Demonic Cleanse",
+          "desc_loc": "Cleanses the target allied unit, removing negative buffs for the duration.  At the end of the duration, the unit is healed. Units under the effect of Disruption can still be affected by Demonic Cleanse.<br><br>DISPEL TYPE: Basic Dispel",
           "lore_loc": "",
           "notes_loc": [
-            "可以对无敌单位施放。",
-            "净愈的持续时间内将持续移除目标的负面状态。"
+            "Can be cast on invulnerable units.",
+            "Negative buffs are continously removed from the target for the duration of the Cleanse."
           ],
           "shard_loc": "",
-          "scepter_loc": "变为充能型技能，拥有%max_charges%点能量点数，每%charge_restore_time_tooltip_scepter%秒恢复一点。",
+          "scepter_loc": "Cooldown is removed, replaced with %max_charges% charges that replenish every %charge_restore_time_tooltip_scepter% seconds.",
           "facets_loc": [
             "",
             ""
@@ -1140,16 +1140,16 @@
         {
           "id": 5425,
           "name": "shadow_demon_demonic_purge",
-          "name_loc": "邪恶净化",
-          "desc_loc": "净化目标敌方单位，移除增益魔法效果，并使目标在持续时间内减速。伤害在持续时间结束时计算，在此之前目标单位的移动速度缓慢地恢复。崩裂禁锢中的单位依然可以受到邪恶净化的影响。\n\n驱散类型：弱驱散",
-          "lore_loc": "一旦暗影恶魔不再需要他的信徒，他会抛弃对它的奴役——还有它的生命。",
+          "name_loc": "Demonic Purge",
+          "desc_loc": "Purges the target enemy unit, removing positive buffs, and slowing the target for the duration.  The unit slowly regains its speed until the end of the duration, upon which damage is dealt.  Units under the effect of Disruption can still be affected by Demonic Purge.\n\nDISPEL TYPE: Basic Dispel",
+          "lore_loc": "Once Shadow Demon no longer has any need for his collected cultist, he releases it from its subservience - and its life.",
           "notes_loc": [
-            "减速效果起始时为%max_slow%%%，然后持续减少至%min_slow%%%。",
-            "邪恶净化的持续时间内将持续移除目标的有益状态。",
-            "可以对无敌单位施放。"
+            "The slow starts at %max_slow%%% and decreases over time to %min_slow%%%.",
+            "Positive buffs are continously removed from the target for the duration of the Purge.",
+            "Can be cast on invulnerable units."
           ],
           "shard_loc": "",
-          "scepter_loc": "移除冷却时间，变为每隔%charge_restore_time_tooltip_scepter%秒充能一次，最多有%max_charges%点能量。另外邪恶净化还将在生效时间内破坏目标的被动技能。",
+          "scepter_loc": "Cooldown is removed, replaced with %max_charges% charges that replenish every %charge_restore_time_tooltip_scepter% seconds. Also causes Demonic Purge to break its target's passive abilities while active.",
           "facets_loc": [
             "",
             ""
@@ -1428,12 +1428,12 @@
         {
           "id": 1341,
           "name": "shadow_demon_menace",
-          "name_loc": "威胁",
-          "desc_loc": "暗影恶魔的攻击会对敌人施加一个可叠加的%stack%%%伤害加深效果，持续%duration%秒。",
+          "name_loc": "Menace",
+          "desc_loc": "Shadow Demon's Attacks apply a stacking %stack%%% Amplify Damage debuff to the enemy for %duration% seconds.",
           "lore_loc": "",
           "notes_loc": [
-            "破坏会使技能无法施加新的叠加效果。",
-            "破坏不会使现有叠加效果提供的状态失效。"
+            "Break disables the application of new stacks.",
+            "Break does not disable the effects of existing stacks."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1535,7 +1535,7 @@
         {
           "id": 6873,
           "name": "special_bonus_unique_shadow_demon_4",
-          "name_loc": "+{s:bonus_stack_damage}% 暗影剧毒伤害",
+          "name_loc": "+{s:bonus_stack_damage}% Shadow Poison Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1597,7 +1597,7 @@
         {
           "id": 6137,
           "name": "special_bonus_strength_10",
-          "name_loc": "+{s:value} 力量",
+          "name_loc": "+{s:value} Strength",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1677,7 +1677,7 @@
         {
           "id": 5919,
           "name": "special_bonus_movement_speed_25",
-          "name_loc": "+{s:value} 移动速度",
+          "name_loc": "+{s:value} Movement Speed",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1757,7 +1757,7 @@
         {
           "id": 6542,
           "name": "special_bonus_unique_shadow_demon_3",
-          "name_loc": "-{s:value}秒 暗影剧毒冷却",
+          "name_loc": "-{s:value}s Shadow Poison Cooldown",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1837,7 +1837,7 @@
         {
           "id": 1004,
           "name": "special_bonus_unique_shadow_demon_disseminate_damage",
-          "name_loc": "+{s:bonus_damage_reflection_pct}% 散播共享伤害",
+          "name_loc": "+{s:bonus_damage_reflection_pct}% Disseminate Shared Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1899,7 +1899,7 @@
         {
           "id": 6208,
           "name": "special_bonus_unique_shadow_demon_1",
-          "name_loc": "+{s:bonus_purge_damage} 邪恶净化伤害",
+          "name_loc": "+{s:bonus_purge_damage} Demonic Purge Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1961,7 +1961,7 @@
         {
           "id": 752,
           "name": "special_bonus_unique_shadow_demon_9",
-          "name_loc": "-{s:value}秒 邪恶净化/净愈冷却",
+          "name_loc": "-{s:value}s Demonic Purge Cooldown",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2041,7 +2041,7 @@
         {
           "id": 7118,
           "name": "special_bonus_unique_shadow_demon_7",
-          "name_loc": "{s:bonus_AbilityCharges} 崩裂禁锢能量点数",
+          "name_loc": "{s:bonus_AbilityCharges} Charges of Disruption",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2105,7 +2105,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_shadow_demon.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_shadow_demon/npc_dota_hero_shadow_demon.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_shadow_demon/npc_dota_hero_shadow_demon.webm",
-      "update_time": 1743469324,
+      "update_time": 1743472870,
       "facets": [
         {
           "color": 5,

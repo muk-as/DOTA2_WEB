@@ -49,14 +49,14 @@
         {
           "id": 5494,
           "name": "slark_dark_pact",
-          "name_loc": "黑暗契约",
-          "desc_loc": "短暂延迟后，斯拉克牺牲部分生命力，清除大部分负面状态并对自己和周围敌方单位造成伤害。斯拉克自身只受到造成伤害的%self_damage_pct%%%。\n\n驱散类型：强驱散",
-          "lore_loc": "鱼人具有使鳍快速重新生长的能力，这样在重伤下也能救回自己的命。",
+          "name_loc": "Dark Pact",
+          "desc_loc": "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and dealing damage to enemy units around him and to himself.  Slark only takes %self_damage_pct%%% of the damage.\n\nDISPEL TYPE: Strong Dispel",
+          "lore_loc": "Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives.",
           "notes_loc": [
-            "经过%delay%秒施法延迟后，每隔%pulse_interval%秒释放1道伤害波造成伤害，总共%total_pulses%道。",
-            "每道伤害波还会移除斯拉克身上的负面效果。",
-            "不能使用此技能自杀。",
-            "如果斯拉克死亡，伤害波将停止释放。"
+            "%delay% seconds after cast, a series of %total_pulses% pulses separated by %pulse_interval% seconds deal the damage.",
+            "Each pulse also removes debuffs from Slark.",
+            "You can't kill yourself with this skill.",
+            "The pulses stop if Slark dies."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -310,16 +310,16 @@
         {
           "id": 5495,
           "name": "slark_pounce",
-          "name_loc": "突袭",
-          "desc_loc": "斯拉克向前跳跃，束缚第一个碰到的英雄。该单位只能在斯拉克着地点附近的有限范围内移动。",
-          "lore_loc": "在暗黑之礁的服刑期间，斯拉克成长为危险的刺客；举止凶残，无所畏惧。",
+          "name_loc": "Pounce",
+          "desc_loc": "Slark leaps forward, leashing the first hero he connects.  That unit can only move a limited distance away from Slark's landing position.",
+          "lore_loc": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
           "notes_loc": [
-            "施放后斯拉克以%pounce_speed%的速度向前跳跃，抓住敌方英雄或跳跃%pounce_distance%距离后停下。",
-            "不能束缚减益免疫单位。",
-            "斯拉克落地点附近的树木将会被摧毁。"
+            "On cast, Slark leaps forward at a speed of %pounce_speed%, stopping when he latches onto an enemy hero or has traveled %pounce_distance% distance.",
+            "Debuff Immune units cannot be leashed.",
+            "Trees will be destroyed around Slark's landing location."
           ],
           "shard_loc": "",
-          "scepter_loc": "变为充能型技能，并且提升距离。",
+          "scepter_loc": "Provides charges and increases range.",
           "facets_loc": [
             "Pounce applies stacks of Essence Shift when striking enemy heroes.",
             ""
@@ -621,15 +621,15 @@
         {
           "id": 5496,
           "name": "slark_essence_shift",
-          "name_loc": "能量转移",
-          "desc_loc": "斯拉克的攻击会偷走敌方英雄的生命能量，每次吸取他们的一点全属性并转化成自身额外的敏捷值。只要敌方英雄带着该效果在斯拉克300范围内阵亡，他将永久窃取%stat_loss%点敏捷。",
-          "lore_loc": "每攻击一次敌人，斯拉克对他们的弱点就多了解一分。",
+          "name_loc": "Essence Shift",
+          "desc_loc": "Slark steals the life essence of enemy heroes with his attacks, draining each of their attributes and converting them to bonus Agility. If Slark kills an affected enemy hero, he permanently steals %stat_loss% Agility.",
+          "lore_loc": "With each strike at his adversaries, Slark's knowledge of their weaknesses improves.",
           "notes_loc": [
-            "属性值最少为1点。",
-            "斯拉克或受到作用的单位死亡后，阵亡单位因能量转移变化的属性值将回归正常。但是两方的属性值相互独立，并无关联。",
-            "斯拉克无需完成击杀就能永久窃取敏捷，只要敌方英雄身上拥有能量转移状态时在斯拉克的窃取范围内阵亡即可。",
-            "破坏会使技能无法获得临时的叠加效果。依然可以获得永久的叠加效果。",
-            "破坏不会使现有叠加效果提供的加成失效。"
+            "Attributes cannot be dropped below 1.",
+            "Essence Shifted stats are returned to normal on death. The stat return for Slark and for the affected hero are separate.",
+            "To permanently steal Agility, Slark doesn't need to land the killing blow, as long as the enemy hero is killed within Slark's Steal Radius while having the Essence Shift debuff.",
+            "Break disables the gaining of temporary stacks. Does not disable the gaining of permanent stacks.",
+            "Break does not disable the bonuses of existing stacks."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -778,8 +778,8 @@
         {
           "id": 729,
           "name": "slark_depth_shroud",
-          "name_loc": "深海护罩",
-          "desc_loc": "在目标地点创造一团云雾。作用范围内所有友军为隐藏状态，受到暗影之舞的作用。",
+          "name_loc": "Depth Shroud",
+          "desc_loc": "Creates a cloud at the target location. All allies inside the radius are hidden and affected by Shadow Dance.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -951,11 +951,11 @@
         {
           "id": 1375,
           "name": "slark_barracuda",
-          "name_loc": "梭子鱼",
-          "desc_loc": "当斯拉克不处于敌方视野内时，他会获得移动速度加成和生命恢复。",
+          "name_loc": "Barracuda",
+          "desc_loc": "When not visible to the enemy team, Slark gains bonus movement speed and health regeneration.",
           "lore_loc": "",
           "notes_loc": [
-            "如果斯拉克受到中立生物的攻击，%neutral_disable%秒内将失去被动的移速加成和生命恢复效果。"
+            "If Slark is damaged by a neutral unit, the passive movement and health regeneration bonuses are lost for %neutral_disable% seconds."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1183,9 +1183,9 @@
         {
           "id": 5497,
           "name": "slark_shadow_dance",
-          "name_loc": "暗影之舞",
-          "desc_loc": "斯拉克将自己藏进暗影之云，变成隐身状态，不会被反隐手段发现。攻击、施法、使用物品都不会使斯拉克显形。",
-          "lore_loc": "秘而不宣的第十三个逃犯是个浑身滑溜的敌人。",
+          "name_loc": "Shadow Dance",
+          "desc_loc": "When used, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark.",
+          "lore_loc": "The hidden Thirteenth is a slippery foe.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1318,7 +1318,7 @@
         {
           "id": 821,
           "name": "special_bonus_unique_slark_6",
-          "name_loc": "-{s:value}秒 黑暗契约冷却",
+          "name_loc": "-{s:value}s Dark Pact Cooldown",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1398,7 +1398,7 @@
         {
           "id": 6147,
           "name": "special_bonus_unique_slark",
-          "name_loc": "+{s:bonus_leash_duration}秒 突袭束缚",
+          "name_loc": "+{s:bonus_leash_duration}s Pounce Leash",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1460,7 +1460,7 @@
         {
           "id": 6892,
           "name": "special_bonus_unique_slark_2",
-          "name_loc": "+{s:bonus_total_damage} 黑暗契约伤害",
+          "name_loc": "+{s:bonus_total_damage} Dark Pact Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1522,7 +1522,7 @@
         {
           "id": 921,
           "name": "special_bonus_unique_slark_8",
-          "name_loc": "+{s:bonus_bonus_regen} 梭子鱼生命恢复",
+          "name_loc": "+{s:bonus_bonus_regen} Barracuda Regen",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1584,7 +1584,7 @@
         {
           "id": 814,
           "name": "special_bonus_unique_slark_5",
-          "name_loc": "+{s:bonus_agi_gain} 能量转移敏捷获取/失去",
+          "name_loc": "+{s:bonus_agi_gain} Agility gain/stolen per Essence Shift Stack",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1646,7 +1646,7 @@
         {
           "id": 892,
           "name": "special_bonus_unique_slark_7",
-          "name_loc": "+{s:value} 暗影之舞攻击速度",
+          "name_loc": "+{s:value} Shadow Dance Attack Speed",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1726,7 +1726,7 @@
         {
           "id": 6893,
           "name": "special_bonus_unique_slark_3",
-          "name_loc": "+{s:bonus_duration}秒 暗影之舞持续时间",
+          "name_loc": "+{s:bonus_duration}s Shadow Dance Duration",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1788,7 +1788,7 @@
         {
           "id": 6894,
           "name": "special_bonus_unique_slark_4",
-          "name_loc": "+{s:bonus_duration}秒 能量转移持续时间",
+          "name_loc": "+{s:bonus_duration}s Essence Shift Duration",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1852,7 +1852,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_slark.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_slark/npc_dota_hero_slark.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_slark/npc_dota_hero_slark.webm",
-      "update_time": 1743469345,
+      "update_time": 1743472882,
       "facets": [
         {
           "color": 2,

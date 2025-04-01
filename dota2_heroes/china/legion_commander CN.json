@@ -49,11 +49,11 @@
         {
           "id": 5595,
           "name": "legion_commander_overwhelming_odds",
-          "name_loc": "压倒性优势",
-          "desc_loc": "用敌人的数量反制他们，造成伤害并提升军团指挥官的攻击速度。根据作用单位和英雄的数量决定造成的伤害数值。对幻象和召唤单位额外造成相当于其当前生命值一定百分比的伤害。可以在决斗期间施放。",
-          "lore_loc": "石堂城的弓箭手就等特蕾丝汀一声令下。",
+          "name_loc": "Overwhelming Odds",
+          "desc_loc": "Turns the enemies' numbers against them, dealing damage per unit or per hero and granting you bonus attack speed. Deals bonus damage to illusions and summoned units as a percent of their current health. Can be cast during Duel.",
+          "lore_loc": "The archers of Stonehall are ready at Tresdin's command.",
           "notes_loc": [],
-          "shard_loc": "决斗期间施放会获得%duel_radius_bonus%作用范围加成。",
+          "shard_loc": "Gives %duel_radius_bonus% bonus radius when cast during Duel.",
           "scepter_loc": "",
           "facets_loc": [
             "Overwhelming Odds grants an all damage barrier based on the damage it deals to enemy heroes.",
@@ -420,11 +420,11 @@
         {
           "id": 5596,
           "name": "legion_commander_press_the_attack",
-          "name_loc": "强攻",
-          "desc_loc": "移除友方目标单位的负面效果和控制技能，并提升其移动速度和生命恢复，持续一定时间。\n\n驱散类型：强驱散",
-          "lore_loc": "古铜军团的重振号角可以鼓舞人心。",
+          "name_loc": "Press The Attack",
+          "desc_loc": "Removes debuffs and disables from the target friendly unit, and grants bonus movement speed and health regen for a short time.\n\nDISPEL TYPE: Strong Dispel",
+          "lore_loc": "The rallying horn of the Bronze Legion is able to inspire any heart.",
           "notes_loc": [],
-          "shard_loc": "强攻的目标现在获得减益免疫状态，持续1.75秒。冷却时间减少2秒。",
+          "shard_loc": "Press The Attack targets now gain Debuff Immunity for 1.75 seconds. Reduces cooldown by 2 seconds.",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -652,9 +652,9 @@
         {
           "id": 5597,
           "name": "legion_commander_moment_of_courage",
-          "name_loc": "勇气之霎",
-          "desc_loc": "每当受到攻击，军团指挥官都有几率立即作出反击，而且此次攻击具有吸血效果。",
-          "lore_loc": "特蕾丝汀知道，敌人出招最狠的时候也是他们最脆弱的时候。",
+          "name_loc": "Moment of Courage",
+          "desc_loc": "When attacked, Legion Commander has a chance to immediately counterattack with bonus lifesteal.",
+          "lore_loc": "Tresdin knows that an enemy's most vulnerable moment often follows their fiercest stroke.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -809,11 +809,11 @@
         {
           "id": 1483,
           "name": "legion_commander_outfight_them",
-          "name_loc": "迎难而战！",
-          "desc_loc": "对等级高于自己的敌方英雄发动攻击可以使自己的生命恢复、吸血和治疗效果提升%heal_bonus_pct%%%，持续%duration%秒。",
+          "name_loc": "Outfight Them!",
+          "desc_loc": "Attacking an enemy hero that is higher level than you increases your HP regeneration, lifesteal, and incoming heals by %heal_bonus_pct%%% for %duration%s.",
           "lore_loc": "",
           "notes_loc": [
-            "对满级的英雄发动攻击时总是会施加效果。"
+            "Always applies when attacking a hero that is at max level."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -913,14 +913,14 @@
         {
           "id": 5598,
           "name": "legion_commander_duel",
-          "name_loc": "决斗",
-          "desc_loc": "军团指挥官强制与目标敌方英雄进行决斗，持续短暂的数秒。决斗开始后双方英雄只能进行物理攻击，不能使用任何物品和技能，不过其间军团指挥官可以施放压倒性优势。如果有英雄在决斗期间死亡，赢得决斗的英雄将永久获得攻击力加成。",
-          "lore_loc": "与石堂城的士兵进行单挑是令人无法抗拒的挑战。",
+          "name_loc": "Duel",
+          "desc_loc": "Legion Commander and the target enemy hero are forced to attack each other for a short duration.  Neither hero can use items or abilities, with the exception of Legion Commander being able to cast Overwhelming Odds. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
+          "lore_loc": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
           "notes_loc": [
-            "如果双方距离超过2000，决斗也会结束。"
+            "Duels will end if the units are pushed 2000 units apart."
           ],
-          "shard_loc": "每次决斗获胜的攻击力提升%shard_duel_damage_bonus%点。具有追溯效果。",
-          "scepter_loc": "提升决斗的持续时间。军团指挥官在决斗期间为减益免疫状态。",
+          "shard_loc": "Increases Duel damage by %shard_duel_damage_bonus% per win. Applies retroactively.",
+          "scepter_loc": "Increases Duel duration.  Legion Commander is debuff immune for the duration of the Duel.",
           "facets_loc": [
             "",
             "When a Duel is won, units that damaged the loser during the Duel will gain permanent bonus damage. If Legion Commander won the Duel, she will automatically cast Press the Attack on herself. Assisting allies will also receive a Press the Attack buff with duration decreased by %assist_pta_duration_pct%%%."
@@ -1190,7 +1190,7 @@
         {
           "id": 1113,
           "name": "special_bonus_unique_legion_commander_9",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 压倒性优势冷却",
+          "name_loc": "-{s:bonus_AbilityCooldown}s Overwhelming Odds Cooldown",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1252,7 +1252,7 @@
         {
           "id": 1176,
           "name": "special_bonus_unique_legion_commander_pta_movespeed",
-          "name_loc": "+{s:bonus_move_speed}% 强攻移动速度",
+          "name_loc": "+{s:bonus_move_speed}% Press The Attack Movement Speed",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1314,7 +1314,7 @@
         {
           "id": 463,
           "name": "special_bonus_unique_legion_commander_6",
-          "name_loc": "+{s:bonus_hp_regen} 强攻生命恢复",
+          "name_loc": "+{s:bonus_hp_regen} Press The Attack HP Regen",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1376,7 +1376,7 @@
         {
           "id": 6671,
           "name": "special_bonus_unique_legion_commander_4",
-          "name_loc": "+{s:bonus_damage_per_hero} 压倒性优势英雄提供伤害",
+          "name_loc": "+{s:bonus_damage_per_hero} Overwhelming Odds Damage per Hero",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1438,7 +1438,7 @@
         {
           "id": 7395,
           "name": "special_bonus_unique_legion_commander_5",
-          "name_loc": "{s:bonus_radius} 范围型强攻",
+          "name_loc": "{s:bonus_radius} AoE Press The Attack",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1500,7 +1500,7 @@
         {
           "id": 6526,
           "name": "special_bonus_unique_legion_commander_3",
-          "name_loc": "+{s:bonus_trigger_chance}% 勇气之霎触发几率",
+          "name_loc": "+{s:bonus_trigger_chance}% Moment of Courage Proc Chance",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1562,7 +1562,7 @@
         {
           "id": 880,
           "name": "special_bonus_unique_legion_commander_7",
-          "name_loc": "+{s:bonus_hp_leech_percent}% 勇气之霎吸血",
+          "name_loc": "+{s:bonus_hp_leech_percent}% Moment of Courage Lifesteal",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1624,8 +1624,8 @@
         {
           "id": 925,
           "name": "special_bonus_unique_legion_commander_8",
-          "name_loc": "强攻提供{s:value}秒 减益免疫",
-          "desc_loc": "另外提升50%%魔法抗性",
+          "name_loc": "Press the Attack grants {s:value}s Debuff Immunity",
+          "desc_loc": "Also increases magic resistance by 50%%",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1706,7 +1706,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_legion_commander.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_legion_commander/npc_dota_hero_legion_commander.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_legion_commander/npc_dota_hero_legion_commander.webm",
-      "update_time": 1743469373,
+      "update_time": 1743472915,
       "facets": [
         {
           "color": 1,

@@ -49,12 +49,12 @@
         {
           "id": 5462,
           "name": "nyx_assassin_impale",
-          "name_loc": "穿刺",
-          "desc_loc": "岩石尖刺在地上沿一条直线穿刺而出。敌方单位受到伤害，然后被抛向空中，落地时被眩晕。",
-          "lore_loc": "所有狂热的圣甲虫都拥有地底通道的秘密学识，并用其为自己带来优势。",
+          "name_loc": "Impale",
+          "desc_loc": "Rock spikes burst from the earth along a straight path. Enemy units take damage, then are hurled into the air and stunned.",
+          "lore_loc": "All zealot scarabs possess intimate knowledge of underground pathways, using them to their advantage.",
           "notes_loc": [
-            "尖刺的移动速度是每秒%speed%，最远作用距离为%length%。",
-            "穿刺不会被林肯法球格挡。"
+            "The spikes move at %speed% units per second, over %length% range.",
+            "Impale cannot be blocked by Linken's Sphere."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -303,8 +303,8 @@
         {
           "id": 1104,
           "name": "nyx_assassin_jolt",
-          "name_loc": "神智爆裂",
-          "desc_loc": "对敌人造成等同于其最大魔法值乘以系数的伤害。另外还会根据过去%damage_echo_duration%秒内目标受到来自司夜刺客的伤害再造成一定百分比的伤害。施加伤害前会重置累计伤害。",
+          "name_loc": "Mind Flare",
+          "desc_loc": "Deals damages to the enemy equal to a percentage of its Max Mana. Deals additional damage equal to a percentage of the damage the target has taken from Nyx Assassin in the last %damage_echo_duration%s. Resets accumulated damage before applying damage.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -557,13 +557,13 @@
         {
           "id": 5464,
           "name": "nyx_assassin_spiked_carapace",
-          "name_loc": "尖刺外壳",
-          "desc_loc": "激活状态下，尖刺外壳可以反弹并无效化司夜刺客受到的伤害（每个攻击者最多作用一次），同时眩晕攻击者。激活尖刺外壳不会打破复仇的隐身状态。\n\n钻地状态下尖刺外壳施放后将立刻眩晕周围的敌人。",
-          "lore_loc": "虽然甲壳相对较薄，不过保护身体的是一圈伸缩自如，剃刀般锋利的尖刺。",
+          "name_loc": "Spiked Carapace",
+          "desc_loc": "When activated while above ground, Spiked Carapace reflects and negates damage dealt to Nyx Assassin (max once from each source), as well as stunning the source of the damage. Activating Spiked Carapace will not break Vendetta invisibility.\n\nWhile Burrowed, Spiked Carapace instantly stuns nearby enemies when cast.",
+          "lore_loc": "While their carapace is relatively thin, it's guarded by a retractable field of razor-sharp spikes.",
           "notes_loc": [
-            "反弹的伤害与司夜刺客本应受到的实际伤害相同。",
-            "尖刺外壳只有在受到玩家控制单位的伤害后会反弹。",
-            "反弹的伤害与司夜刺客受到的伤害类型相同。"
+            "The damage is calculated after all reductions.",
+            "Spiked Carapace will only trigger on damage from other player controlled units.",
+            "The damage reflected will have the same damage type as it had when it was dealt to Nyx."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -741,11 +741,11 @@
         {
           "id": 5666,
           "name": "nyx_assassin_burrow",
-          "name_loc": "钻地",
-          "desc_loc": "司夜刺客经过短时间的掘地后钻入地下。钻地后尖刺外壳一施放就会直接眩晕附近所有敌人，神智爆裂和穿刺的施法距离提升，穿刺的冷却时间减少。钻地后司夜刺客固定在原地，无法攻击，并且是隐身状态。同时受到的所有伤害都会降低。",
-          "lore_loc": "狂热圣甲虫中某些层级的成名绝技是挖掘小型洞穴，守株待兔，做好伏击猎物的准备。",
+          "name_loc": "Burrow",
+          "desc_loc": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mind Flare and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. Nyx gains damage reduction from all damage sources.",
+          "lore_loc": "Some castes of zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey.",
           "notes_loc": [
-            "施放复仇将取消钻地状态。"
+            "Casting Vendetta will cancel burrow."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -933,8 +933,8 @@
         {
           "id": 1365,
           "name": "nyx_assassin_nyxth_sense",
-          "name_loc": "夜神感知",
-          "desc_loc": "司夜刺客可以探测到附近%radius%范围内的英雄。",
+          "name_loc": "Nyxth Sense",
+          "desc_loc": "Nyx Assassin can detect heroes within %radius% units of himself.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1018,15 +1018,15 @@
         {
           "id": 5465,
           "name": "nyx_assassin_vendetta",
-          "name_loc": "复仇",
-          "desc_loc": "司夜刺客进入隐身状态并获得移动速度加成。如果司夜刺客以攻击打破隐身，当次攻击将造成超高额外伤害。司夜刺客当次攻击具有%attack_range_bonus%额外攻击距离，并且攻击动作加快%attack_animation_bonus%%%。",
-          "lore_loc": "圣甲虫为女王的荣耀而杀戮。",
+          "name_loc": "Vendetta",
+          "desc_loc": "Allows Nyx Assassin to become invisible and gain a speed bonus.  If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack. Nyx Assassin has %attack_range_bonus% additional attack range and a %attack_animation_bonus%%% faster attack animation for this attack.",
+          "lore_loc": "The scarab kills for the glory of his queen.",
           "notes_loc": [
-            "进入隐身时间为%fade_time%秒。",
-            "如果在隐身期间使用了技能，或者隐身时间结束，额外伤害的效果将会消失。",
-            "拥有阿哈利姆魔晶后，会在造成额外伤害前施加破坏效果。"
+            "Has a %fade_time% second fadetime.",
+            "If a spell is used to break the invisibility, or the invisibility expires, the bonus damage is lost.",
+            "With Aghanim's Shard, the Break is applied before the bonus damage."
           ],
-          "shard_loc": "复仇在攻击时施加破坏。",
+          "shard_loc": "Vendetta applies Break on attack.",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1323,7 +1323,7 @@
         {
           "id": 402,
           "name": "special_bonus_unique_nyx_4",
-          "name_loc": "+{s:bonus_damage_reflect_pct}% 尖刺外壳伤害反弹",
+          "name_loc": "+{s:bonus_damage_reflect_pct}% Spiked Carapace Damage Reflect",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1385,7 +1385,7 @@
         {
           "id": 6814,
           "name": "special_bonus_unique_nyx_3",
-          "name_loc": "+{s:bonus_duration}秒 穿刺眩晕",
+          "name_loc": "+{s:bonus_duration}s Impale Stun Duration",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1447,7 +1447,7 @@
         {
           "id": 1171,
           "name": "special_bonus_unique_nyx_vendetta_damage",
-          "name_loc": "+{s:bonus_bonus_damage} 复仇伤害",
+          "name_loc": "+{s:bonus_bonus_damage} Vendetta Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1509,7 +1509,7 @@
         {
           "id": 1368,
           "name": "special_bonus_unique_nyx_jolt_cooldown",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 神智爆裂冷却",
+          "name_loc": "-{s:bonus_AbilityCooldown}s Mind Flare Cooldown",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1571,7 +1571,7 @@
         {
           "id": 891,
           "name": "special_bonus_unique_nyx_6",
-          "name_loc": "+{s:bonus_stun_duration}秒 尖刺外壳眩晕",
+          "name_loc": "+{s:bonus_stun_duration}s Spiked Carapace Stun Duration",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1651,7 +1651,7 @@
         {
           "id": 6399,
           "name": "special_bonus_unique_nyx_2",
-          "name_loc": "+{s:bonus_impale_damage} 穿刺伤害",
+          "name_loc": "+{s:bonus_impale_damage} Impale Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1713,7 +1713,7 @@
         {
           "id": 6130,
           "name": "special_bonus_unique_nyx",
-          "name_loc": "{s:bonus_aoe} 范围型神智爆裂",
+          "name_loc": "{s:bonus_aoe} Mind Flare Radius",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1793,7 +1793,7 @@
         {
           "id": 435,
           "name": "special_bonus_agility_80",
-          "name_loc": "+{s:value} 敏捷",
+          "name_loc": "+{s:value} Agility",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1875,7 +1875,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_nyx_assassin.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nyx_assassin/npc_dota_hero_nyx_assassin.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nyx_assassin/npc_dota_hero_nyx_assassin.webm",
-      "update_time": 1743469335,
+      "update_time": 1743472878,
       "facets": [
         {
           "color": 3,

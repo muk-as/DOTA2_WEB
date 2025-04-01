@@ -49,9 +49,9 @@
         {
           "id": 5548,
           "name": "bristleback_viscous_nasal_goo",
-          "name_loc": "粘稠鼻液",
-          "desc_loc": "用鼻涕包裹一个敌方单位，降低护甲和移动速度，持续%goo_duration%秒。多次施放的效果会叠加，并且刷新持续时间。",
-          "lore_loc": "被大雪困住的时候着了凉，但是钢背兽让这为他所用。",
+          "name_loc": "Viscous Nasal Goo",
+          "desc_loc": "Covers a target in snot, causing it to have reduced armor and movement speed for %goo_duration% seconds.  Multiple casts stack and refresh the duration.",
+          "lore_loc": "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -347,11 +347,11 @@
         {
           "id": 5549,
           "name": "bristleback_quill_spray",
-          "name_loc": "刺针扫射",
-          "desc_loc": "将尖刺喷射向敌人，对钢背兽附近的敌人造成伤害。任何单位最近%quill_stack_duration%秒内每次受到刺针扫射的打击都会受到额外伤害。",
-          "lore_loc": "执法者的荣誉维护起来非常棘手。他的刺针也是。",
+          "name_loc": "Quill Spray",
+          "desc_loc": "Sprays enemy units with quills dealing damage in an area of effect around Bristleback.  Deals bonus damage for every time a unit was hit by Quill Spray in the last %quill_stack_duration% seconds.",
+          "lore_loc": "An enforcer's honor can be a prickly thing.  So can his quills.",
           "notes_loc": [
-            "刺针扫射的伤害不能被伤害格挡类技能减免。"
+            "Quill Spray damage is not reduced by damage block abilities."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -572,15 +572,15 @@
         {
           "id": 5550,
           "name": "bristleback_bristleback",
-          "name_loc": "钢毛后背",
-          "desc_loc": "如果伤害来自钢背兽的侧面或者背后，他所受的伤害将会降低。钢背兽每次从背后受到%quill_release_threshold%点伤害会自动释放一次当前等级的刺针扫射。",
-          "lore_loc": "在战斗中背部迎人或许正好合适。",
+          "name_loc": "Bristleback",
+          "desc_loc": "Bristleback takes less damage if hit on the sides or rear.  If Bristleback takes %quill_release_threshold% damage from the rear, he releases a Quill Spray of the current level.",
+          "lore_loc": "Turning his back to a fight might be just the thing.",
           "notes_loc": [
-            "钢背兽的背面是以背部中心点为原点，向左向右各呈70度角的扇形区域。",
-            "钢背兽的侧面是以背部中心点为原点，向左向右各呈110度角的扇形区域，背面的扇形区域不算在内。"
+            "Bristleback's rear is considered to be within 70 degrees from the back.",
+            "Bristleback's side is considered to be within 110 degrees from the back."
           ],
           "shard_loc": "",
-          "scepter_loc": "钢毛后背增加主动效果。钢背兽将背部转向目标方向，%activation_delay%秒后以%activation_spray_interval%秒间隔朝背部前方的锥形范围强行连续喷出%activation_num_quill_sprays%次刺针扫射。钢背兽在这段时间内面朝方向被锁定，被缴械，并且移动速度减缓%activation_movement_speed_pct%%%。",
+          "scepter_loc": "Adds active ability to Bristleback. Bristleback rotates towards the targeted direction and, after %activation_delay%s, forcefully ejects %activation_num_quill_sprays% sequential Quill Sprays in a tight conical pattern out of his back every %activation_spray_interval%s. Bristleback's facing is locked during this time, he is disarmed, and his speed is reduced by %activation_movement_speed_pct%%%.",
           "facets_loc": [
             "",
             "Instead of releasing Quill Spray from taking damage, he instead launches Nasal Goo of the current level at all nearby enemies.",
@@ -976,8 +976,8 @@
         {
           "id": 643,
           "name": "bristleback_hairball",
-          "name_loc": "毛团",
-          "desc_loc": "向目标地点咳出一团满是刺针的毛团。毛团会在该地点爆开，范围内的敌人都将受到多个鼻液叠加效果和单次刺针扫射的作用。",
+          "name_loc": "Hairball",
+          "desc_loc": "Coughs a quill-packed hairball towards the target location. Erupts at the location, hitting enemies with Viscous Nasal Goo stacks and Quill Spray.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1184,14 +1184,14 @@
         {
           "id": 5551,
           "name": "bristleback_warpath",
-          "name_loc": "战意",
-          "desc_loc": "钢背兽每次使用技能时都会进入狂暴状态，移动速度和攻击力都将提升。",
-          "lore_loc": "“别没事就发火”，他母亲总是这样训斥他。但是在战斗中，火冒三丈将有非凡效果。",
+          "name_loc": "Warpath",
+          "desc_loc": "Bristleback works himself up into a fury every time he casts a spell, increasing his movement speed and damage.",
+          "lore_loc": "'Temper, temper,' his mum always chided.  But in a fight, a temper can come in handy.",
           "notes_loc": [
-            "钢背兽的幻象也能继承加成效果。",
-            "使用物品不会触发战意。",
-            "破坏会使技能无法获得新的叠加效果。",
-            "破坏不会使现有叠加效果提供的加成失效。"
+            "Bristleback's illusions will receive the bonuses.",
+            "Items will not trigger Warpath.",
+            "Break disables the gaining of new stacks.",
+            "Break does not disable the bonuses from existing stacks."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1504,8 +1504,8 @@
         {
           "id": 1479,
           "name": "bristleback_prickly",
-          "name_loc": "尖刺在背",
-          "desc_loc": "钢背兽攻击身后的敌方英雄时拥有%amp_pct%%%伤害和负面效果持续时间增强。",
+          "name_loc": "Prickly",
+          "desc_loc": "Bristleback has %amp_pct%%% damage and debuff duration amp against enemy heroes that are behind him.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1609,7 +1609,7 @@
         {
           "id": 6016,
           "name": "special_bonus_attack_speed_25",
-          "name_loc": "+{s:value} 攻击速度",
+          "name_loc": "+{s:value} Attack Speed",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1690,7 +1690,7 @@
         {
           "id": 7132,
           "name": "special_bonus_mp_regen_150",
-          "name_loc": "+{s:value} 魔法恢复",
+          "name_loc": "+{s:value} Mana Regen",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1771,7 +1771,7 @@
         {
           "id": 1078,
           "name": "special_bonus_unique_bristleback_5",
-          "name_loc": "+{s:bonus_AbilityCastRange} 粘稠鼻液施法距离",
+          "name_loc": "+{s:bonus_AbilityCastRange} Goo Cast Range",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1834,7 +1834,7 @@
         {
           "id": 1079,
           "name": "special_bonus_unique_bristleback_6",
-          "name_loc": "+{s:bonus_back_damage_reduction}/{s:bonus_side_damage_reduction}% 钢毛后背背面/侧面减伤",
+          "name_loc": "+{s:bonus_back_damage_reduction}%/{s:bonus_side_damage_reduction}% Bristleback Back/Side Damage Reduction",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1897,7 +1897,7 @@
         {
           "id": 6308,
           "name": "special_bonus_hp_regen_25",
-          "name_loc": "+{s:value} 生命恢复",
+          "name_loc": "+{s:value} Health Regen",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1978,7 +1978,7 @@
         {
           "id": 6360,
           "name": "special_bonus_unique_bristleback_2",
-          "name_loc": "+{s:bonus_quill_stack_damage} 刺针叠加伤害",
+          "name_loc": "+{s:bonus_quill_stack_damage} Quill Stack Damage",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2041,7 +2041,7 @@
         {
           "id": 434,
           "name": "special_bonus_spell_lifesteal_12",
-          "name_loc": "+{s:value}% 技能吸血",
+          "name_loc": "+{s:value}% Spell Lifesteal",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2122,7 +2122,7 @@
         {
           "id": 6615,
           "name": "special_bonus_unique_bristleback_3",
-          "name_loc": "+{s:bonus_damage_per_stack} 战意叠加攻击力",
+          "name_loc": "+{s:bonus_damage_per_stack} Warpath Damage Per Stack",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2187,7 +2187,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_bristleback.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/npc_dota_hero_bristleback.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bristleback/npc_dota_hero_bristleback.webm",
-      "update_time": 1743469352,
+      "update_time": 1743472887,
       "facets": [
         {
           "color": 2,
