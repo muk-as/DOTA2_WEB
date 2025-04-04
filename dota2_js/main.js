@@ -37640,17 +37640,18 @@
     33706: (e, t, a) => {
       "use strict";
       a.d(t, {
-        B5: () => L,
+        B5: () => P,
         HJ: () => v,
         Iu: () => M,
         JD: () => y,
         MT: () => N,
-        PO: () => A,
+        PO: () => L,
+        er: () => D,
         k4: () => I,
         lm: () => B,
         mU: () => S,
         nK: () => R,
-        oF: () => D,
+        oF: () => A,
         qK: () => T,
         wB: () => w,
       });
@@ -37718,7 +37719,7 @@
                   params: { language: s.r.LANGUAGE },
                 }),
                 r = a?.data?.result?.data;
-              let n;
+              let n = null;
               if (r)
                 for (const a of r.itemabilities)
                   a && e.setQueryData([..._, a.id], a), a.id == t && (n = a);
@@ -37922,8 +37923,8 @@
         };
         return (0, l.I)(C(E, d));
       }
-      function R(e, t, a, r, n, i, s, o, c, m, d) {
-        const u = {
+      function R(e, t, a, r, n, i, s, o, c, m, d, u) {
+        const _ = {
           project_id: 50,
           published_version: 7,
           additional_data: [10],
@@ -37932,7 +37933,10 @@
               {
                 data_source_id: 3616116112,
                 data_object: {
-                  elements: [{ name: "purchase_history", data_int32s: c }],
+                  elements: [
+                    { name: "purchase_history", data_int32s: m },
+                    { name: "inventory_items", data_int32s: d },
+                  ],
                 },
               },
               {
@@ -37943,9 +37947,9 @@
                     { name: "hero_facet", data_int32s: [t] },
                     { name: "position", data_int32s: [a] },
                     { name: "allied_hero_ids", data_int32s: r },
-                    { name: "allied_hero_facets", data_int32s: [0, 0, 0, 0] },
-                    { name: "enemy_hero_ids", data_int32s: n },
-                    { name: "enemy_hero_facets", data_int32s: [0, 0, 0, 0, 0] },
+                    { name: "allied_hero_facets", data_int32s: n },
+                    { name: "enemy_hero_ids", data_int32s: i },
+                    { name: "enemy_hero_facets", data_int32s: s },
                   ],
                 },
               },
@@ -37953,8 +37957,61 @@
                 data_source_id: 2197406710,
                 data_object: {
                   elements: [
-                    { name: "average_mmr", data_int32s: [i] },
-                    { name: "game_mode", data_int32s: [s] },
+                    { name: "average_mmr", data_int32s: [o] },
+                    { name: "game_mode", data_int32s: [c] },
+                    { name: "lobby_type", data_int32s: [7] },
+                  ],
+                },
+              },
+            ],
+          },
+          inference_iterations: 15,
+          weighted_items: [],
+          item_weights: [],
+        };
+        return (
+          u.forEach((e, t) => {
+            _.weighted_items.push(t), _.item_weights.push(e);
+          }),
+          (0, l.I)(C(f, _))
+        );
+      }
+      function D(e, t, a, r, n, i, s, o, c, m, d, u) {
+        const _ = {
+          project_id: 50,
+          published_version: 7,
+          additional_data: [10],
+          data: {
+            data: [
+              {
+                data_source_id: 3616116112,
+                data_object: {
+                  elements: [
+                    { name: "purchase_history", data_int32s: m },
+                    { name: "inventory_items", data_int32s: d },
+                  ],
+                },
+              },
+              {
+                data_source_id: 3835464906,
+                data_object: {
+                  elements: [
+                    { name: "hero_id", data_int32s: [e] },
+                    { name: "hero_facet", data_int32s: [t] },
+                    { name: "position", data_int32s: [a] },
+                    { name: "allied_hero_ids", data_int32s: r },
+                    { name: "allied_hero_facets", data_int32s: n },
+                    { name: "enemy_hero_ids", data_int32s: i },
+                    { name: "enemy_hero_facets", data_int32s: s },
+                  ],
+                },
+              },
+              {
+                data_source_id: 2197406710,
+                data_object: {
+                  elements: [
+                    { name: "average_mmr", data_int32s: [o] },
+                    { name: "game_mode", data_int32s: [c] },
                     { name: "lobby_type", data_int32s: [7] },
                   ],
                 },
@@ -37962,19 +38019,9 @@
             ],
           },
         };
-        return (
-          (u.inference_iterations = d ? 12 : 0),
-          (u.weighted_items = []),
-          (u.item_weights = []),
-          m.forEach((e, t) => {
-            u.weighted_items.push(t), u.item_weights.push(e);
-          }),
-          console.log(m),
-          console.log("inferenceRequest", u),
-          (0, l.I)(C(f, u))
-        );
+        return (0, l.I)(C(f, _));
       }
-      function D(e, t, a, r, n, i, s, o, c, m, d) {
+      function A(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 32,
           published_version: 1,
@@ -38016,7 +38063,7 @@
         };
         return (0, l.I)(C(f, u));
       }
-      function A(e, t, a, r, n, i, s, o, c, m, d) {
+      function L(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 28,
           published_version: 2,
@@ -38061,7 +38108,7 @@
         };
         return (0, l.I)(C(b, u));
       }
-      class L {
+      class P {
         m_asyncHeroList = new r.N();
         m_asyncAbilityList = new r.N();
         m_asyncItemList = new r.N();
@@ -38070,7 +38117,7 @@
         m_asyncItemData = new r.L();
         static g_Singleton;
         static Get() {
-          return L.g_Singleton || (L.g_Singleton = new L()), L.g_Singleton;
+          return P.g_Singleton || (P.g_Singleton = new P()), P.g_Singleton;
         }
         getHeroList() {
           return this.m_asyncHeroList.getData(
