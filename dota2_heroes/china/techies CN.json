@@ -49,9 +49,9 @@
         {
           "id": 879,
           "name": "techies_sticky_bomb",
-          "name_loc": "Sticky Bomb",
-          "desc_loc": "Lobs a Sticky Bomb towards the target area. If it lands next to an enemy hero, the bomb will stick to it, slowing its movement speed. After a few seconds the bomb will explode, dealing damage in an area around the detonation and applying a secondary slow for %secondary_slow_duration% seconds.",
-          "lore_loc": "Such revolutionary brilliance was meant to be shared.",
+          "name_loc": "粘性炸弹",
+          "desc_loc": "向目标区域抛出一个粘性炸弹。如果炸弹落在一个敌方英雄身旁，炸弹会粘上去，减缓其移动速度。数秒后炸弹会爆炸，对爆炸区域内造成伤害，并再次施加减速，持续%secondary_slow_duration%秒。",
+          "lore_loc": "这样革命性的才华本应与他人分享。",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -423,11 +423,11 @@
         {
           "id": 886,
           "name": "techies_reactive_tazer",
-          "name_loc": "Reactive Tazer",
-          "desc_loc": "Techies trigger an electric charge giving them bonus movement speed for a short period of time. Enemies attacking Techies are temporarily disarmed and get a Basic Dispel. At the end of the effect, the charge explodes, disarming all enemies within the radius.",
-          "lore_loc": "A steady bomb hand prefers an abundance of personal space.",
+          "name_loc": "活性电击",
+          "desc_loc": "工程师放出电荷，使他们短时间内获得移动速度加成。攻击工程师的敌人被暂时缴械，并且受到弱驱散效果。效果结束时，电荷将会爆炸，使范围内所有敌人缴械。",
+          "lore_loc": "想要双手稳稳地握住炸弹更需要大量个人空间。",
           "notes_loc": [],
-          "shard_loc": "Reactive Tazer can be cast on allies and deals damage on detonation. Also deals damage to any enemy that attacks the affected ally.",
+          "shard_loc": "活性电击可以对友军施放，并且引爆时造成伤害。对作用下友军发动攻击也会受到伤害。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -662,14 +662,14 @@
         {
           "id": 5601,
           "name": "techies_suicide",
-          "name_loc": "Blast Off!",
-          "desc_loc": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and stun enemies. Upon landing, the assault deals Techies non-lethal damage equal to a percentage of their current health.",
-          "lore_loc": "Where we going?",
+          "name_loc": "爆破起飞！",
+          "desc_loc": "工程师冲到敌人中间，在相遇时引爆炸药，造成大量范围伤害，并眩晕敌人。引爆时会对工程师造成当前生命值一定百分比的非致死伤害。",
+          "lore_loc": "我们是要去哪？",
           "notes_loc": [
-            "The self-damage Techies receive from this blast is pure and non-lethal.",
-            "This ability destroys trees."
+            "工程师在此次爆炸中受到的自身伤害为纯粹伤害，而且不会致死。",
+            "此技能将摧毁树木。"
           ],
-          "shard_loc": "Increases Blast Off! cast range by %shard_bonus_cast_range% and applies a %shard_stun_duration% second stun to affected enemies.",
+          "shard_loc": "爆破起飞！的施法距离提升%shard_bonus_cast_range%，并且对作用下的敌人造成%shard_stun_duration%秒眩晕。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -936,12 +936,12 @@
         {
           "id": 5644,
           "name": "techies_minefield_sign",
-          "name_loc": "Minefield Sign",
-          "desc_loc": "Plant a warning sign, causing Sticky Bombs and Proximity Mines within its radius to be invulnerable and deal %bonus_mine_damage_pct%%% more damage. Only one sign can exist at a time. Lasts %lifetime% seconds. ",
-          "lore_loc": "Watch your step!",
+          "name_loc": "雷区标识",
+          "desc_loc": "在指定地点放置警示牌，使作用范围内的粘性炸弹和感应地雷为无敌状态，并且造成的伤害增加%bonus_mine_damage_pct%%%。同一时间只能存在一个标识。持续%lifetime%秒。",
+          "lore_loc": "别四处乱跑！",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Increases radius and duration of Minefield Sign. When an enemy hero walks within %trigger_radius% units of a minefield sign, the %aura_radius% units area around the sign will become a minefield for %minefield_duration% seconds, dealing damage to enemy units any time they move within its area. Minefield Sign is destroyed after this effect ends.",
+          "scepter_loc": "提升雷区标识的作用范围和持续时间。敌方英雄进入标识的%trigger_radius%范围内时整个%aura_radius%范围变成一片雷区，持续%minefield_duration%秒。敌方单位在区域内移动都会受到伤害。雷区持续时间结束后标识会被摧毁。",
           "facets_loc": [
             "",
             "",
@@ -1186,15 +1186,15 @@
         {
           "id": 5599,
           "name": "techies_land_mines",
-          "name_loc": "Proximity Mines",
-          "desc_loc": "Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active %radius% AoE of the mine. Mines detonate if an enemy is standing within the active AoE for %proximity_threshold% seconds dealing damage and temporarily reducing the enemy's Magic Resistance. The explosion deals full damage if the target is within %min_distance% radius and decreases up to %outer_damage%%% on the edge. Deals %building_damage_pct%%% damage to buildings.",
-          "lore_loc": "The bane of Toterin!",
+          "name_loc": "感应地雷",
+          "desc_loc": "埋布隐形的地雷，不会被真实视域检测到，但是有敌方单位在地雷的%radius%生效范围内会显形。敌人在生效范围内停留超过%proximity_threshold%秒会使地雷爆炸，并且魔法抗性会被暂时降低。爆炸对%min_distance%范围内目标造成全额伤害，对边缘造成的伤害减少至%outer_damage%%%。对建筑物造成%building_damage_pct%%%伤害。",
+          "lore_loc": "起重港的噩梦！",
           "notes_loc": [
-            "Cannot be placed within %placement_radius% AoE of another Proximity Mine.",
-            "Proximity Mines do not block neutral creep camps from spawning.",
-            "Mines last until they explode or are destroyed.",
-            "Mines are triggered by invisible units.",
-            "Grants 30 gold if destroyed by an enemy hero."
+            "感应地雷的%placement_radius%范围内不能再放置地雷。",
+            "感应地雷不会阻止中立生物产生。",
+            "地雷持续时间没有上限，除非爆炸或被摧毁。",
+            "隐形单位也能触发地雷。",
+            "敌方英雄将地雷摧毁可以获得30金钱。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1540,7 +1540,7 @@
         {
           "id": 6000,
           "name": "special_bonus_magic_resistance_20",
-          "name_loc": "+{s:value}% Magic Resistance",
+          "name_loc": "+{s:value}% 魔法抗性",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1621,7 +1621,7 @@
         {
           "id": 6997,
           "name": "special_bonus_unique_techies_3",
-          "name_loc": "-{s:bonus_AbilityChargeRestoreTime}s Proximity Mines Cooldown",
+          "name_loc": "-{s:bonus_AbilityChargeRestoreTime}秒 感应地雷充能",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1684,7 +1684,7 @@
         {
           "id": 6282,
           "name": "special_bonus_unique_techies",
-          "name_loc": "+{s:bonus_damage} Blast Off! Damage",
+          "name_loc": "+{s:bonus_damage} 爆破起飞！伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1747,7 +1747,7 @@
         {
           "id": 6160,
           "name": "special_bonus_mp_regen_3",
-          "name_loc": "+{s:value} Mana Regen",
+          "name_loc": "+{s:value} 魔法恢复",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1828,7 +1828,7 @@
         {
           "id": 6552,
           "name": "special_bonus_unique_techies_2",
-          "name_loc": "+{s:bonus_radius} Sticky Bomb Latch/Explosion Radius",
+          "name_loc": "+{s:bonus_radius} 粘性炸弹抓取/爆炸范围",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1891,7 +1891,7 @@
         {
           "id": 412,
           "name": "special_bonus_unique_techies_5",
-          "name_loc": "-{s:bonus_AbilityCooldown}s Blast Off! Cooldown",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 爆破起飞！冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1954,7 +1954,7 @@
         {
           "id": 703,
           "name": "special_bonus_attack_damage_252",
-          "name_loc": "+{s:value} Damage",
+          "name_loc": "+{s:value} 攻击力",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2035,7 +2035,7 @@
         {
           "id": 6998,
           "name": "special_bonus_unique_techies_4",
-          "name_loc": "-{s:bonus_activation_delay}s Proximity Mines Activation Delay",
+          "name_loc": "-{s:bonus_activation_delay}秒 感应地雷启动延迟",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -2100,7 +2100,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_techies.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_techies/npc_dota_hero_techies.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_techies/npc_dota_hero_techies.webm",
-      "update_time": 1743721348,
+      "update_time": 1743724946,
       "facets": [
         {
           "color": 5,

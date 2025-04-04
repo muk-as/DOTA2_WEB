@@ -49,11 +49,11 @@
         {
           "id": 5377,
           "name": "silencer_curse_of_the_silent",
-          "name_loc": "Arcane Curse",
-          "desc_loc": "Curses the target area, dealing damage and causing enemy heroes to take damage over time and slowing their movement speed. Silenced enemies take %penalty_multiplier%x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The duration is paused as long as the target is silenced.",
-          "lore_loc": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
+          "name_loc": "奥术诅咒",
+          "desc_loc": "诅咒目标区域，造成伤害并使敌方英雄持续受到伤害，并且移动速度被减缓。被沉默的敌人受到%penalty_multiplier%倍减速和伤害。期间受到作用的英雄一旦施放魔法，持续时间就会延长。目标被沉默时不计入负面效果的持续时间。",
+          "lore_loc": "无法使用咒语对诺崇来说不是什么问题，但对他的敌人来说，这可是个大问题。",
           "notes_loc": [
-            "Affects creeps."
+            "非英雄单位也会受到作用。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -409,11 +409,11 @@
         {
           "id": 5378,
           "name": "silencer_glaives_of_wisdom",
-          "name_loc": "Glaives of Wisdom",
-          "desc_loc": "Silencer enchants his glaives with his wisdom, stealing his target's Intelligence with each hit and dealing additional damage based on his Intelligence.",
-          "lore_loc": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat.",
+          "name_loc": "智慧之刃",
+          "desc_loc": "沉默术士用他的智慧强化刀刃，每次攻击窃取目标的智力，并造成基于他智力值的额外伤害。",
+          "lore_loc": "尽管无法使用传统咒语，但诺崇的风蚀之寒血统赋予他一种诡异的智慧，在肉搏中助他一臂之力。",
           "notes_loc": [],
-          "shard_loc": "Increases Stolen Intelligence per hit and steal duration.",
+          "shard_loc": "提升每次攻击的智力窃取数值和持续时间。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -669,11 +669,11 @@
         {
           "id": 5379,
           "name": "silencer_last_word",
-          "name_loc": "Last Word",
-          "desc_loc": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
-          "lore_loc": "Nortrom ensures that spells uttered by his opponents will be their last.",
+          "name_loc": "遗言",
+          "desc_loc": "向目标施加魔咒，提供目标的视野，并且只要目标施放技能或魔咒消失，目标就会受到伤害并被沉默。根据沉默术士和目标的智力差还将造成额外伤害。",
+          "lore_loc": "诺崇的敌人念出的咒语往往将成为他们的遗言。",
           "notes_loc": [
-            "Channeling abilities will trigger this effect once the caster finishes its channel."
+            "持续施法类技能在英雄结束施法后触发此技能的效果。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -917,13 +917,13 @@
         {
           "id": 1335,
           "name": "silencer_brain_drain",
-          "name_loc": "Brain Drain",
-          "desc_loc": "If Silencer kills an enemy hero, he permanently steals Intelligence.",
+          "name_loc": "智力外流",
+          "desc_loc": "如果沉默术士击杀了敌方英雄，他将永久窃取智力。",
           "lore_loc": "",
           "notes_loc": [
-            "To permanently steal Intelligence, Silencer doesn't need to land the killing blow, as long as the enemy hero is killed within %permanent_int_steal_range% range of Silencer or was debuffed by Silencer at the time of death."
+            "沉默术士无需完成击杀就能永久智力，只要敌方英雄在沉默术士附近%permanent_int_steal_range%范围内阵亡或者死亡时带有沉默术士的负面效果即可。"
           ],
-          "shard_loc": "Increases the Intelligence stolen per kill.",
+          "shard_loc": "提升每次击杀窃取的智力值。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1026,14 +1026,14 @@
         {
           "id": 5380,
           "name": "silencer_global_silence",
-          "name_loc": "Global Silence",
-          "desc_loc": "Silencer stops all sound, preventing enemy heroes and units on the map from casting spells.",
-          "lore_loc": "With a shock to the ground, all magic and sound pauses, and Nortrom fulfills his prophecy.",
+          "name_loc": "全领域静默",
+          "desc_loc": "沉默术士停止一切声音，阻止地图上所有敌方英雄和单位施法。",
+          "lore_loc": "随着大地一震，所有的魔法和声音都停止了，诺崇实现了他的预言。",
           "notes_loc": [
-            "This skill works on invisible and Debuff Immune units, but gaining debuff immunity will remove its effect."
+            "沉默效果对隐身和减益免疫单位有效，但是期间获得减益免疫状态将移除该效果。"
           ],
           "shard_loc": "",
-          "scepter_loc": "Global Silence applies Arcane Curse to heroes for the duration of Global Silence.",
+          "scepter_loc": "全领域静默在全领域静默的持续时间内对英雄施加奥术诅咒。",
           "facets_loc": [
             "",
             "全领域静默在一个单位身上第一次结束后还会再次施加。"
@@ -1267,7 +1267,7 @@
         {
           "id": 6184,
           "name": "special_bonus_unique_silencer",
-          "name_loc": "+{s:bonus_penalty_multiplier} Arcane Curse Penalty Multiplier",
+          "name_loc": "+{s:bonus_penalty_multiplier} 奥术诅咒惩罚倍数",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1329,7 +1329,7 @@
         {
           "id": 5906,
           "name": "special_bonus_attack_speed_20",
-          "name_loc": "+{s:value} Attack Speed",
+          "name_loc": "+{s:value} 攻击速度",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1409,7 +1409,7 @@
         {
           "id": 721,
           "name": "special_bonus_unique_silencer_7",
-          "name_loc": "-{s:value}s Global Silence Cooldown",
+          "name_loc": "-{s:value}秒 全领域静默冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1489,7 +1489,7 @@
         {
           "id": 1467,
           "name": "special_bonus_unique_silencer_arcane_curse_duration",
-          "name_loc": "+{s:bonus_duration}s/+{s:bonus_penalty_duration}s Arcane Curse Base/Penalty Duration",
+          "name_loc": "+{s:bonus_duration}秒/+{s:bonus_penalty_duration}秒 奥术诅咒基础/惩罚持续时间",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1551,8 +1551,8 @@
         {
           "id": 1073,
           "name": "special_bonus_unique_silencer_glaives_bounces",
-          "name_loc": "{s:bonus_bounce_count} Glaives of Wisdom Bounce",
-          "desc_loc": "Glaives of Wisdom Bounce to targets withing a {s:bonus_bounce_range} range.",
+          "name_loc": "{s:bonus_bounce_count} 智慧之刃弹射",
+          "desc_loc": "智慧之刃向{s:bonus_bounce_range}范围内的目标弹射。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1613,7 +1613,7 @@
         {
           "id": 6880,
           "name": "special_bonus_unique_silencer_4",
-          "name_loc": "{s:bonus_radius} AoE Last Word",
+          "name_loc": "{s:bonus_radius} 范围型遗言",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1693,7 +1693,7 @@
         {
           "id": 6879,
           "name": "special_bonus_unique_silencer_3",
-          "name_loc": "+{s:bonus_intellect_damage_pct}% Glaives of Wisdom Damage",
+          "name_loc": "+{s:bonus_intellect_damage_pct}% 智慧之刃伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1755,7 +1755,7 @@
         {
           "id": 1337,
           "name": "special_bonus_unique_silencer_arcane_curse_charges",
-          "name_loc": "{s:bonus_AbilityCharges} Arcane Curse charges",
+          "name_loc": "{s:bonus_AbilityCharges} 奥术诅咒能量点数",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1819,7 +1819,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_silencer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_silencer/npc_dota_hero_silencer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_silencer/npc_dota_hero_silencer.webm",
-      "update_time": 1743721296,
+      "update_time": 1743724899,
       "facets": [
         {
           "color": 4,

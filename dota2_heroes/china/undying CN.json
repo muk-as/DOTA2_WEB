@@ -49,16 +49,16 @@
         {
           "id": 5442,
           "name": "undying_decay",
-          "name_loc": "Decay",
-          "desc_loc": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the enemy's strength for himself. Deals %creep_damage_multiplier%x damage to creeps.",
-          "lore_loc": "The strength of the living is simply borrowed from the strength of the dead.",
+          "name_loc": "腐朽",
+          "desc_loc": "不朽尸王偷取区域内所有敌方英雄的力量，造成基础伤害并将敌人的力量据为己有。对非英雄单位造成%creep_damage_multiplier%倍伤害。",
+          "lore_loc": "生者的力量只不过是借用自死者。",
           "notes_loc": [
-            "The strength stolen stacks, but can't cause a hero to have strength below 1.",
-            "The strength steal takes effect before the damage is dealt.",
-            "Affects invisible units."
+            "窃据的力量可以叠加，但是敌方英雄的力量至少为1点。",
+            "力量的窃取先于技能造成的伤害。",
+            "可以作用隐形单位。"
           ],
           "shard_loc": "",
-          "scepter_loc": "Increases strength steal.",
+          "scepter_loc": "提升力量窃取。",
           "facets_loc": [
             "",
             ""
@@ -114,7 +114,7 @@
                 140
               ],
               "is_percentage": false,
-              "heading_loc": "BASE DAMAGE:",
+              "heading_loc": "基础伤害：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_undying_8",
@@ -137,7 +137,7 @@
                 4
               ],
               "is_percentage": false,
-              "heading_loc": "STRENGTH STEAL:",
+              "heading_loc": "力量窃取：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [
@@ -156,7 +156,7 @@
                 35
               ],
               "is_percentage": false,
-              "heading_loc": "STEAL DURATION:",
+              "heading_loc": "偷取效果持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -173,7 +173,7 @@
                 325
               ],
               "is_percentage": false,
-              "heading_loc": "RADIUS:",
+              "heading_loc": "作用范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -351,19 +351,19 @@
         {
           "id": 5443,
           "name": "undying_soul_rip",
-          "name_loc": "Soul Rip",
-          "desc_loc": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. Soul Rip can also be used to heal Tombstone.",
-          "lore_loc": "Even allies feel despair in Undying's presence.",
+          "name_loc": "噬魂",
+          "desc_loc": "不朽尸王从附近的所有单位身上扯出生命力，并使用它治疗队友或伤害敌人。可以使用噬魂治疗墓碑。",
+          "lore_loc": "即使是友军也能从不朽尸王的存在中感受到绝望。",
           "notes_loc": [
-            "Can heal Tombstone, but can't heal or damage other buildings.",
-            "Does not rip from invisible units, invulnerable units, units in the fog of war, or spell immune enemies.",
-            "Does rip from spell immune allies, including zombies."
+            "可以治疗墓碑，但是不能治疗或伤害其他建筑。",
+            "不会扯出隐身单位、无敌单位、战争迷雾内单位或减益免疫敌人的生命力。",
+            "可以扯出减益免疫友军，包括僵尸的生命力。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "Casting Soul Rip on allies increases their Strength by a percentage of Undying's Strength."
+            "对友军施放噬魂会使他们的力量提升，数值为不朽尸王力量的一定百分比。"
           ],
           "type": 0,
           "behavior": "134217736",
@@ -413,7 +413,7 @@
                 45
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE/HEAL PER UNIT:",
+              "heading_loc": "每个单位提供伤害/治疗量：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_undying_6",
@@ -436,7 +436,7 @@
                 10
               ],
               "is_percentage": false,
-              "heading_loc": "MAX UNITS:",
+              "heading_loc": "有效单位数上限：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -453,7 +453,7 @@
                 1300
               ],
               "is_percentage": false,
-              "heading_loc": "RIP RADIUS:",
+              "heading_loc": "噬魂作用范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -473,7 +473,7 @@
                 16
               ],
               "is_percentage": false,
-              "heading_loc": "TOMBSTONE HEAL:",
+              "heading_loc": "墓碑治疗量：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -490,7 +490,7 @@
                 0
               ],
               "is_percentage": true,
-              "heading_loc": "STRENGTH GAIN:",
+              "heading_loc": "力量获得：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -509,7 +509,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "DURATION:",
+              "heading_loc": "持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -637,15 +637,15 @@
         {
           "id": 5444,
           "name": "undying_tombstone",
-          "name_loc": "Tombstone",
-          "desc_loc": "Summons a tombstone at the target point.  Zombies will frequently spawn next to every enemy unit in the area around the Tombstone, and attack them.  Zombies have the Deathlust ability, which causes their attacks to slow the target, and if the target reaches below a certain amount of health, increases the attack and movement speed of the zombie.",
-          "lore_loc": "Dirge calls on his fallen brothers to fight for the Dead God.",
+          "name_loc": "墓碑",
+          "desc_loc": "在目标位置召唤一座墓碑。墓碑会不断在其附近的每个敌方单位身边产生僵尸攻击他们。僵尸拥有死亡渴望技能，使他们的攻击带有减速效果，并且若目标的生命值低于一定数值或一定百分比，僵尸的攻击和移动速度会提升。",
+          "lore_loc": "挽歌召唤他倒下的战友为死亡之神作战。",
           "notes_loc": [
-            "Tombstone is Spell Immune, but can be healed by Soul Rip.",
-            "Zombies and Tombstone are Spell Immune.",
-            "If their initial target dies or goes out of vision, the Zombie will die."
+            "墓碑免疫技能，但是可以被噬魂治疗。",
+            "僵尸和墓碑均免疫技能。",
+            "如果初始目标死亡或丢失视野，僵尸将会死亡。"
           ],
-          "shard_loc": "Tombstone can be cast on an allied hero to bunker inside of the tombstone. Heroes that enter the Tombstone cannot leave for %tombstone_bunker_cd% seconds nor can they re-enter after leaving. If the tombstone is destroyed with a hero inside, that hero gets stunned for %tombstone_stun_penalty% seconds.",
+          "shard_loc": "墓碑可以对友方英雄施放，让他们躲进墓碑。进入墓碑的英雄%tombstone_bunker_cd%秒内无法离开，离开后同样的时间内无法再次进入。如果英雄在内时墓碑被摧毁，该英雄会被眩晕%tombstone_stun_penalty%秒。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -728,7 +728,7 @@
                 8
               ],
               "is_percentage": false,
-              "heading_loc": "ATTACKS TO DESTROY:",
+              "heading_loc": "摧毁所需攻击次数：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_undying_5",
@@ -751,7 +751,7 @@
                 30
               ],
               "is_percentage": false,
-              "heading_loc": "TOMBSTONE DURATION:",
+              "heading_loc": "墓碑持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -768,7 +768,7 @@
                 1200
               ],
               "is_percentage": false,
-              "heading_loc": "ZOMBIE SPAWN RADIUS:",
+              "heading_loc": "僵尸产生范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -785,7 +785,7 @@
                 40
               ],
               "is_percentage": true,
-              "heading_loc": "DEATHLUST HEALTH THRESHOLD:",
+              "heading_loc": "死亡渴望触发百分比：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -805,7 +805,7 @@
                 2.8
               ],
               "is_percentage": false,
-              "heading_loc": "ZOMBIE SPAWN INTERVAL:",
+              "heading_loc": "僵尸产生间隔：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -822,7 +822,7 @@
                 34
               ],
               "is_percentage": false,
-              "heading_loc": "ZOMBIE ATTACK DAMAGE:",
+              "heading_loc": "僵尸攻击力：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_undying",
@@ -1026,8 +1026,8 @@
         {
           "id": 1360,
           "name": "undying_ceaseless_dirge",
-          "name_loc": "Ceaseless Dirge",
-          "desc_loc": "When Undying dies he will instantly respawn in the fountain. Begins the game on cooldown. Cannot be refreshed.",
+          "name_loc": "挽歌犹唱",
+          "desc_loc": "不朽尸王阵亡时会立刻在泉水复活。比赛开始时处于冷却状态。无法被刷新。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1128,14 +1128,14 @@
         {
           "id": 5447,
           "name": "undying_flesh_golem",
-          "name_loc": "Flesh Golem",
-          "desc_loc": "Undying transforms into a horrifying flesh golem. Gains a percentage increase to strength and imbues attacks with a slow and damage amplification.",
-          "lore_loc": "The flesh of the recently dead add to the power of Dirge's plague.",
+          "name_loc": "血肉傀儡",
+          "desc_loc": "不朽尸王变身为一具令人毛骨悚然的血肉傀儡。获得一定百分比的力量加成，攻击附带减速和伤害加深效果。",
+          "lore_loc": "新近死者的血肉增强了挽歌瘟疫的力量。",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "While transformed into a Flesh Golem, attacks spawn a zombie.",
+            "变身为血肉傀儡后，每次攻击会产生一个僵尸。",
             ""
           ],
           "type": 1,
@@ -1184,7 +1184,7 @@
                 40
               ],
               "is_percentage": true,
-              "heading_loc": "SLOW:",
+              "heading_loc": "移动速度减缓：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1203,7 +1203,7 @@
                 35
               ],
               "is_percentage": true,
-              "heading_loc": "DAMAGE AMPLIFICATION:",
+              "heading_loc": "伤害加深：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1220,7 +1220,7 @@
                 3
               ],
               "is_percentage": false,
-              "heading_loc": "SLOW DURATION:",
+              "heading_loc": "减速持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1239,7 +1239,7 @@
                 60
               ],
               "is_percentage": true,
-              "heading_loc": "STRENGTH MULTIPLIER:",
+              "heading_loc": "力量加成系数：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_undying_4",
@@ -1262,7 +1262,7 @@
                 40
               ],
               "is_percentage": false,
-              "heading_loc": "DURATION:",
+              "heading_loc": "持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1281,7 +1281,7 @@
                 40
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS MOVESPEED:",
+              "heading_loc": "移动速度加成：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1317,7 +1317,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "ZOMBIE DURATION:",
+              "heading_loc": "僵尸持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1407,7 +1407,7 @@
         {
           "id": 813,
           "name": "special_bonus_unique_undying_8",
-          "name_loc": "+{s:bonus_decay_damage} Decay Damage",
+          "name_loc": "+{s:bonus_decay_damage} 腐朽伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1469,7 +1469,7 @@
         {
           "id": 807,
           "name": "special_bonus_unique_undying_7",
-          "name_loc": "-{s:bonus_AbilityCooldown}s Tombstone Cooldown",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 墓碑冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1549,7 +1549,7 @@
         {
           "id": 6155,
           "name": "special_bonus_unique_undying",
-          "name_loc": "+{s:bonus_zombie_damage_tooltip} Zombie Damage",
+          "name_loc": "+{s:bonus_zombie_damage_tooltip} 僵尸攻击力",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1629,7 +1629,7 @@
         {
           "id": 616,
           "name": "special_bonus_unique_undying_6",
-          "name_loc": "+{s:bonus_damage_per_unit} Soul Rip Damage/Heal",
+          "name_loc": "+{s:bonus_damage_per_unit} 噬魂伤害/治疗",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1691,7 +1691,7 @@
         {
           "id": 6546,
           "name": "special_bonus_unique_undying_3",
-          "name_loc": "Tombstone On Death",
+          "name_loc": "死亡时召唤墓碑",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1771,7 +1771,7 @@
         {
           "id": 6420,
           "name": "special_bonus_unique_undying_2",
-          "name_loc": "-{s:value}s Decay Cooldown",
+          "name_loc": "-{s:value}秒 腐朽冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1851,7 +1851,7 @@
         {
           "id": 6971,
           "name": "special_bonus_unique_undying_4",
-          "name_loc": "+{s:bonus_str_percentage}% Flesh Golem Strength Bonus",
+          "name_loc": "+{s:bonus_str_percentage}% 血肉傀儡额外力量",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1913,7 +1913,7 @@
         {
           "id": 6972,
           "name": "special_bonus_unique_undying_5",
-          "name_loc": "+{s:bonus_hits_to_destroy_tooltip} Tombstone Attacks to Destroy",
+          "name_loc": "+{s:bonus_hits_to_destroy_tooltip} 墓碑可攻击次数",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
@@ -1995,23 +1995,25 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_undying.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_undying/npc_dota_hero_undying.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_undying/npc_dota_hero_undying.webm",
-      "update_time": 1743472876,
+      "update_time": 1743724912,
       "facets": [
         {
           "color": 2,
-          "title_loc": "Rotting Mitts",
-          "description_loc": "While transformed into a Flesh Golem, attacks spawn a zombie.",
+          "title_loc": "腐朽之拳",
+          "description_loc": "变身为血肉傀儡后，每次攻击会产生一个僵尸。",
           "name": "undying_rotting_mitts",
           "icon": "summons",
-          "gradient_id": 4
+          "gradient_id": 4,
+          "index": 0
         },
         {
           "color": 0,
-          "title_loc": "Ripped",
-          "description_loc": "Casting Soul Rip on allies increases their Strength by a percentage of Undying's Strength.",
+          "title_loc": "共噬",
+          "description_loc": "对友军施放噬魂会使他们的力量提升，数值为不朽尸王力量的一定百分比。",
           "name": "undying_ripped",
           "icon": "strength",
-          "gradient_id": 1
+          "gradient_id": 1,
+          "index": 1
         }
       ],
       "facet_abilities": [
@@ -2026,8 +2028,8 @@
       "new_abilities": {
         "id": 1360,
         "name": "undying_ceaseless_dirge",
-        "name_loc": "Ceaseless Dirge",
-        "desc_loc": "When Undying dies he will instantly respawn in the fountain. Begins the game on cooldown. Cannot be refreshed.",
+        "name_loc": "挽歌犹唱",
+        "desc_loc": "不朽尸王阵亡时会立刻在泉水复活。比赛开始时处于冷却状态。无法被刷新。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
