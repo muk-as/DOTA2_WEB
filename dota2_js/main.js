@@ -37183,6 +37183,7 @@
                   persistOptions: {
                     persister: po,
                     buster: "v1",
+                    maxAge: 6e4,
                     dehydrateOptions: {
                       shouldDehydrateQuery: (e) => e.meta?.persist,
                     },
@@ -42048,10 +42049,10 @@
           return (
             3 == e.primary_attr &&
               ((t += Math.floor(
-                0.7 * Math.floor(e.str_base + e.agi_base + e.int_base),
+                0.45 * Math.floor(e.str_base + e.agi_base + e.int_base),
               )),
               (a += Math.floor(
-                0.7 * Math.floor(e.str_base + e.agi_base + e.int_base),
+                0.45 * Math.floor(e.str_base + e.agi_base + e.int_base),
               ))),
             n.createElement(
               "div",
