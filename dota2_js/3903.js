@@ -91,6 +91,7 @@
         Flipped: "_28XCfXDRGO9ZjIbqUAU2BW",
         NarrowImage: "_3hdP525OklJ_aLJM_9PtIz",
         WideImage: "_2RF9AIz6vBTJ52qEA-Qs1Z",
+        FullWidthImage: "yctoNnfiDN21JE2CGW-jJ",
         ActionTextImageBlock: "_2mB8NO-5-N-2sJ6C18lOcy",
         ActionImage: "_1Im854RYNMqQayy09kbURE",
         HeroReworkContainer: "_1bXU8ZiubuIMHZ43NJ5iPK",
@@ -115,6 +116,7 @@
         AbilityImage: "_1NO7OQ5RqjRZaBce_V26L6",
         AbilityHotKey: "Dyp8jUXYgKywAXDOZYhXZ",
         Active: "_2HRdRpIAlwABdcFBJtjmoC",
+        DotaPlusBadge: "eOcI9laaMKmL_0bp4BOzh",
         HeaderSection: "_3KpyyIz5BM3xSiumWzJTLF",
         LogoContainer: "_1dnwSCPty0_1gz6lUSvaiE",
         LogoImage: "_2_u-Qo63s-M-RfEUZNV53X",
@@ -318,14 +320,14 @@
         N = t.n(E),
         u = t(61840),
         b = t(32389),
-        y = t(54159),
-        v = t(45237),
+        v = t(54159),
+        y = t(45237),
         h = t(722),
         T = t(55651),
         S = t(82101),
         L = t(85286),
-        x = t.n(L),
-        A = t(4665),
+        A = t.n(L),
+        x = t(4665),
         I = t(95224);
       const W = () =>
           m.createElement("div", {
@@ -382,7 +384,7 @@
             : (t = !0);
         return a;
       }
-      const H = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
+      const D = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
           const t = n.B5.Get().getHeroList(),
             l = t?.heroes.find(
               (e) => e.name.replace("npc_dota_hero_", "") == a,
@@ -436,13 +438,13 @@
               )
             : null;
         }),
-        D = (e) => {
+        H = (e) => {
           if (!e.special.heading_loc) return null;
           let a = e.special.values_float.map((e, a) =>
               m.createElement(
                 "span",
                 { key: a, className: N().SingleValue },
-                (0, y.F)(e),
+                (0, v.F)(e),
               ),
             ),
             t = !1,
@@ -478,13 +480,13 @@
           let o = c.desc_loc;
           c.special_values.forEach((e) => {
             let a =
-              e.values_float.length > 0 ? (0, y.F)(e.values_float[0]) : "0";
+              e.values_float.length > 0 ? (0, v.F)(e.values_float[0]) : "0";
             (o = o.replace("%" + e.name + "%", a)),
               (o = o.replace("%" + e.name.toLowerCase() + "%", a));
           }),
             (o = o.replace(/\%\%/g, "%"));
           let d = c.special_values?.map((e, a) =>
-              m.createElement(D, { key: a, special: e }),
+              m.createElement(H, { key: a, special: e }),
             ),
             _ = c.name.replace("item_", ""),
             g = c.item_cost,
@@ -494,7 +496,7 @@
                 : -1,
             u = N()["Tier" + E],
             b = c.cooldowns.reduce((e, a) => e + a) > 0,
-            v = c.mana_costs.reduce((e, a) => e + a) > 0,
+            y = c.mana_costs.reduce((e, a) => e + a) > 0,
             h =
               !!(c.health_costs && c.health_costs.length > 0) &&
               c.health_costs.reduce((e, a) => e + a) > 0,
@@ -567,11 +569,11 @@
                     className: N().Description,
                     dangerouslySetInnerHTML: { __html: o },
                   }),
-                  (b || v || h) &&
+                  (b || y || h) &&
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().DescriptionHeader) },
-                      v &&
+                      y &&
                         m.createElement(
                           "div",
                           { className: N().ManaContainer },
@@ -580,7 +582,7 @@
                             "div",
                             { className: N().ManaText },
                             c.mana_costs.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, v.F)(e),
                             ),
                           ),
                         ),
@@ -593,7 +595,7 @@
                             "div",
                             { className: N().HealthText },
                             c.health_costs.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, v.F)(e),
                             ),
                           ),
                         ),
@@ -611,7 +613,7 @@
                             "div",
                             { className: N().CooldownText },
                             c.cooldowns.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, v.F)(e),
                             ),
                           ),
                         ),
@@ -697,6 +699,10 @@
                 m.createElement("source", {
                   type: "video/webm",
                   src: `${r.r.VIDEO_URL}/templatepage/treasure/${a}.webm`,
+                }),
+                m.createElement("source", {
+                  type: 'video/mp4; codecs="hvc1"',
+                  src: `${r.r.VIDEO_URL}/templatepage/treasure/${a}.mov`,
                 }),
               ),
             )
@@ -789,7 +795,7 @@
             e ? this.videoRef.current.play() : this.videoRef.current.pause();
         }
         handleScroll = (e) => {
-          x().refresh();
+          A().refresh();
         };
         componentDidMount() {
           this.parallaxContainerRef.current.addEventListener(
@@ -810,7 +816,7 @@
           return (
             e.special_values.forEach((e) => {
               let t =
-                e.values_float.length > 0 ? (0, y.F)(e.values_float[0]) : "0";
+                e.values_float.length > 0 ? (0, v.F)(e.values_float[0]) : "0";
               (a = a.replace("%" + e.name + "%", t)),
                 (a = a.replace("%" + e.name.toLowerCase() + "%", t));
             }),
@@ -1084,6 +1090,10 @@
                         ),
                       ),
                     ),
+                    m.createElement(k, {
+                      additionalClassName: N().FullWidthImage,
+                      image: "templatepage/image_16_9.png",
+                    }),
                     m.createElement(
                       "div",
                       { className: N().Grid_3 },
@@ -1280,6 +1290,23 @@
                             },
                             (0, i.Wn)(
                               "#templatepage_components_textimageblock_vertical_larger_description",
+                            ),
+                          ),
+                          m.createElement(
+                            "div",
+                            { className: N().DotaPlusBadge },
+                            m.createElement("img", {
+                              src: `${r.r.IMG_URL}/icons/dota_plus.png`,
+                            }),
+                            m.createElement(
+                              "p",
+                              {
+                                className: (0, p.A)(
+                                  N().LabelFont,
+                                  N().LabelSmall,
+                                ),
+                              },
+                              (0, i.Wn)("#dota_plus"),
                             ),
                           ),
                         ),
@@ -1620,15 +1647,15 @@
                     m.createElement(
                       "div",
                       { className: N().HeroReworkContainer },
-                      m.createElement(H, {
+                      m.createElement(D, {
                         patchnotes: e?.heroes,
                         heroname: "muerta",
                       }),
-                      m.createElement(H, {
+                      m.createElement(D, {
                         patchnotes: e?.heroes,
                         heroname: "clinkz",
                       }),
-                      m.createElement(H, {
+                      m.createElement(D, {
                         patchnotes: e?.heroes,
                         heroname: "arc_warden",
                       }),
@@ -1777,7 +1804,7 @@
                         "div",
                         { className: N().ButtonsSection },
                         m.createElement(
-                          v.N_,
+                          y.N_,
                           { to: T.J.hero("ringmaster") },
                           m.createElement(
                             "div",
@@ -2069,7 +2096,7 @@
                         ),
                       ),
                       m.createElement(
-                        v.N_,
+                        y.N_,
                         { to: T.J.hero("ringmaster") },
                         m.createElement(
                           "div",
@@ -2136,7 +2163,7 @@
                     m.createElement(
                       I.U,
                       { labels: ["1", "2", "3", "4", "5", "6", "7"] },
-                      m.createElement(A.EW, {
+                      m.createElement(x.EW, {
                         itemOne: m.createElement(I.v, {
                           is_new: !0,
                           image:
@@ -2148,7 +2175,7 @@
                             "patch738/comparison/radiant/new/WisdomShrine_R.jpg",
                         }),
                       }),
-                      m.createElement(A.EW, {
+                      m.createElement(x.EW, {
                         itemOne: m.createElement(I.v, {
                           is_new: !0,
                           image:
@@ -2160,7 +2187,7 @@
                             "patch738/comparison/radiant/new/LotusPool_R.jpg",
                         }),
                       }),
-                      m.createElement(A.EW, {
+                      m.createElement(x.EW, {
                         itemOne: m.createElement(I.v, {
                           is_new: !0,
                           image:
@@ -2172,7 +2199,7 @@
                             "patch738/comparison/radiant/new/RoshPit_South.jpg",
                         }),
                       }),
-                      m.createElement(A.EW, {
+                      m.createElement(x.EW, {
                         itemOne: m.createElement(I.v, {
                           is_new: !0,
                           image:
@@ -2184,7 +2211,7 @@
                             "patch738/comparison/radiant/new/MapCorner_R.jpg",
                         }),
                       }),
-                      m.createElement(A.EW, {
+                      m.createElement(x.EW, {
                         itemOne: m.createElement(I.v, {
                           is_new: !0,
                           image:
@@ -2196,7 +2223,7 @@
                             "patch738/comparison/radiant/new/T1Gutter_R.jpg",
                         }),
                       }),
-                      m.createElement(A.EW, {
+                      m.createElement(x.EW, {
                         itemOne: m.createElement(I.v, {
                           is_new: !0,
                           image:
@@ -2208,7 +2235,7 @@
                             "patch738/comparison/radiant/new/T2Approach_R.jpg",
                         }),
                       }),
-                      m.createElement(A.EW, {
+                      m.createElement(x.EW, {
                         itemOne: m.createElement(I.v, {
                           is_new: !0,
                           image:
