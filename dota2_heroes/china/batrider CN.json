@@ -61,7 +61,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "粘性燃油可以对建筑造成伤害。"
+            "提升粘性燃油的最高等级。%max_level_tooltip%级粘性燃油会使每次攻击施加%napalm_stacks_on_attack_tooltip%层粘性燃油。"
           ],
           "type": 0,
           "behavior": "35184506306608",
@@ -103,19 +103,75 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "batrider_arsonist",
+                "values": [
+                  1
+                ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "batrider_arsonist",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": "batrider_arsonist"
+            },
+            {
+              "name": "stacks_per_cast",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "每次施法叠加层数：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "damage",
               "values_float": [
+                2.5,
                 5,
+                7.5,
                 10,
-                15,
-                20
+                10
               ],
               "is_percentage": false,
               "heading_loc": "每次叠加伤害：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_batrider_4",
-                  "value": 20,
+                  "value": 10,
                   "operation": 0
                 }
               ],
@@ -171,10 +227,11 @@
             {
               "name": "movement_speed_pct",
               "values_float": [
+                -0.75,
                 -1.5,
+                -2.25,
                 -3,
-                -4.5,
-                -6
+                -3
               ],
               "is_percentage": true,
               "heading_loc": "移动速度减缓：",
@@ -191,10 +248,11 @@
             {
               "name": "turn_rate_pct",
               "values_float": [
-                -10,
-                -30,
-                -50,
-                -70
+                -5,
+                -15,
+                -25,
+                -35,
+                -35
               ],
               "is_percentage": true,
               "heading_loc": "转身速度降低：",
@@ -211,12 +269,31 @@
             {
               "name": "max_stacks",
               "values_float": [
-                10
+                20
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "unlimited_stacks",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                1
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -243,112 +320,18 @@
               "required_facet": ""
             },
             {
-              "name": "shard_napalm_on_attack_chance_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                50
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "application_damage",
               "values_float": [
                 5,
                 10,
                 15,
+                20,
                 20
               ],
               "is_percentage": false,
               "heading_loc": "施加时伤害：",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "is_passive",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  0
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "base_applications_every_attack",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  0
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_applications_every_other_attack",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                1
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attacks_apply_napalm_in_aoe",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                0
-              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -365,12 +348,58 @@
               "is_percentage": true,
               "heading_loc": "对建筑伤害：",
               "bonuses": [],
+              "values_shard": [
+                35
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "napalm_stacks_on_attack",
+              "values_float": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "batrider_arsonist",
                 "values": [
-                  45
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": "batrider_arsonist"
+            },
+            {
+              "name": "napalm_stacks_on_attack_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "batrider_arsonist",
+                "values": [
+                  1
                 ],
                 "operation": 0
               },
@@ -700,7 +729,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_batrider_2",
-                  "value": 2,
+                  "value": 4,
                   "operation": 0
                 }
               ],
@@ -846,7 +875,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
+            "火焰飞行还会使蝙蝠骑士着火。他每秒会被烧灼一定百分比的最大生命值，但是移动速度和技能增强会逐渐大幅提升。对自身的烧灼伤害恒定，不会逐渐增加。",
             ""
           ],
           "type": 0,
@@ -984,6 +1013,88 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "self_burn_buff",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "batrider_buff_on_displacement",
+                "values": [
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": "batrider_buff_on_displacement"
+            },
+            {
+              "name": "movement_speed_pct_total",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "最高移动速度加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "batrider_buff_on_displacement",
+                "values": [
+                  25,
+                  30,
+                  35,
+                  40
+                ],
+                "operation": 5
+              },
+              "required_facet": "batrider_buff_on_displacement"
+            },
+            {
+              "name": "spell_amplification_total",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "最高技能增强加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "batrider_buff_on_displacement",
+                "values": [
+                  20
+                ],
+                "operation": 5
+              },
+              "required_facet": "batrider_buff_on_displacement"
+            },
+            {
+              "name": "hp_cost_per_second",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "每秒最大生命值伤害：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "batrider_buff_on_displacement",
+                "values": [
+                  2
+                ],
+                "operation": 5
+              },
+              "required_facet": "batrider_buff_on_displacement"
             },
             {
               "name": "AbilityManaCost",
@@ -1955,153 +2066,30 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_batrider.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_batrider/npc_dota_hero_batrider.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_batrider/npc_dota_hero_batrider.webm",
-      "update_time": 1743724885,
+      "update_time": 1747951284,
       "facets": [
         {
-          "color": 1,
+          "color": 0,
           "title_loc": "火上浇油",
-          "description_loc": "蝙蝠骑士使敌人发生位移后会获得移动速度和技能增强。",
+          "description_loc": "火焰飞行还会使蝙蝠骑士着火。他每秒会被烧灼一定百分比的最大生命值，但是移动速度和技能增强会逐渐大幅提升。",
           "name": "batrider_buff_on_displacement",
-          "icon": "speed",
-          "gradient_id": 1,
+          "icon": "nuke",
+          "gradient_id": 0,
           "index": 0
         },
         {
-          "color": 0,
+          "color": 1,
           "title_loc": "纵火犯",
-          "description_loc": "粘性燃油可以对建筑造成伤害。",
+          "description_loc": "提升粘性燃油的最高等级。{s:bonus_max_level_tooltip}级粘性燃油会使每次攻击施加{s:bonus_napalm_stacks_on_attack_tooltip}层粘性燃油。",
           "name": "batrider_arsonist",
-          "icon": "siege",
-          "gradient_id": 0,
+          "icon": "damage",
+          "gradient_id": 1,
           "index": 1
         }
       ],
       "facet_abilities": [
         {
-          "abilities": [
-            {
-              "id": 1320,
-              "name": "batrider_stoked",
-              "name_loc": "火上浇油",
-              "desc_loc": "蝙蝠骑士使敌人发生位移后会获得移动速度和技能增强。",
-              "lore_loc": "",
-              "notes_loc": [
-                "对一名敌方英雄使用的技能或物品施加了强制位移效果后，会获得移动速度和技能增强加成。不会叠加。"
-              ],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8796093022275",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "duration",
-                  "values_float": [
-                    7
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "持续时间：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movement_speed_pct",
-                  "values_float": [
-                    4,
-                    6,
-                    8,
-                    10
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "移动速度加成：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spell_amplification",
-                  "values_float": [
-                    2,
-                    4,
-                    6,
-                    8
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "技能增强：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
+          "abilities": []
         },
         {
           "abilities": []

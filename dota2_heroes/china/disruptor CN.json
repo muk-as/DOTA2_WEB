@@ -56,7 +56,8 @@
           "shard_loc": "提升风雷之击的施法距离和打击次数。还可以对地施放，使风雷之击先潜伏最多%shard_ground_delay%秒，并附着到第一个进入作用范围的敌人身上。",
           "scepter_loc": "",
           "facets_loc": [
-            "风雷之击还会额外打击动能力场内所有敌人。",
+            "风雷之击还会额外打击动能力场内所有敌人。风雷之击的减速时间加倍。",
+            "",
             ""
           ],
           "type": 0,
@@ -205,19 +206,15 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_disruptor",
-                  "value": 0.6,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "disruptor_thunderstorm",
+                "values": [
+                  2
+                ],
+                "operation": 1
               },
               "required_facet": ""
             },
@@ -241,7 +238,7 @@
             {
               "name": "shard_ground_delay",
               "values_float": [
-                5
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -384,6 +381,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -656,6 +654,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -750,7 +749,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_disruptor_5",
-                  "value": 2,
+                  "value": 1.5,
                   "operation": 0
                 }
               ],
@@ -872,7 +871,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "电磁排斥可以手动激活，可以对友军施放，造成的伤害等同于干扰者当前生命值的%current_hp_as_damage%%%。手动激活后技能会进入%manual_cooldown%秒冷却。"
           ],
           "type": 0,
           "behavior": "2",
@@ -934,7 +934,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_disruptor_7",
+                  "value": 150,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -951,7 +957,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_disruptor_7",
+                  "value": 150,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -994,6 +1006,107 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "current_hp_as_damage",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "disruptor_conduit",
+                "values": [
+                  10
+                ],
+                "operation": 5
+              },
+              "required_facet": "disruptor_conduit"
+            },
+            {
+              "name": "manual_cooldown",
+              "values_float": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "disruptor_conduit",
+                "values": [
+                  26,
+                  20,
+                  14,
+                  8
+                ],
+                "operation": 0
+              },
+              "required_facet": "disruptor_conduit"
+            },
+            {
+              "name": "max_level",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "disruptor_conduit",
+                "values": [
+                  4
+                ],
+                "operation": 5
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "disruptor_conduit",
+                "values": [
+                  600
+                ],
+                "operation": 5
+              },
+              "required_facet": "disruptor_conduit"
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "disruptor_conduit",
+                "values": [
+                  50
+                ],
+                "operation": 5
+              },
+              "required_facet": "disruptor_conduit"
             },
             {
               "name": "AbilityCooldown",
@@ -1041,6 +1154,7 @@
           "shard_loc": "",
           "scepter_loc": "锁闭物品。",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1120,13 +1234,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害波数：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_disruptor_7",
-                  "value": 6,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1145,7 +1253,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "最大每秒伤害：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_disruptor",
+                  "value": 60,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1162,13 +1276,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_disruptor_7",
-                  "value": 1.5,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1793,12 +1901,12 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_disruptor.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_disruptor/npc_dota_hero_disruptor.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_disruptor/npc_dota_hero_disruptor.webm",
-      "update_time": 1743724914,
+      "update_time": 1747951311,
       "facets": [
         {
           "color": 0,
           "title_loc": "雷暴",
-          "description_loc": "风雷之击还会额外打击动能力场内所有敌人。",
+          "description_loc": "风雷之击还会额外打击动能力场内所有敌人。风雷之击的减速时间加倍。",
           "name": "disruptor_thunderstorm",
           "icon": "area_of_effect",
           "gradient_id": 1,
@@ -1812,6 +1920,15 @@
           "icon": "fence",
           "gradient_id": 1,
           "index": 1
+        },
+        {
+          "color": 5,
+          "title_loc": "转移",
+          "description_loc": "电磁排斥可以手动激活，可以对友军施放，造成的伤害等同于干扰者当前生命值的一定百分比。",
+          "name": "disruptor_conduit",
+          "icon": "vortex_out",
+          "gradient_id": 0,
+          "index": 2
         }
       ],
       "facet_abilities": [
@@ -1825,11 +1942,12 @@
               "name": "disruptor_kinetic_fence",
               "name_loc": "动能栅栏",
               "desc_loc": "在短暂的构造时间后，创造一面敌人无法通过的动能墙壁。",
-              "lore_loc": "",
+              "lore_loc": "有一瞬间，就好像风本身都凝固了。",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1881,7 +1999,7 @@
                     350
                   ],
                   "is_percentage": false,
-                  "heading_loc": "长度：",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1935,7 +2053,7 @@
                     1200
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "长度：",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2061,6 +2179,9 @@
               "item_quality": 0
             }
           ]
+        },
+        {
+          "abilities": []
         }
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_disruptor.png",
@@ -2069,7 +2190,7 @@
         "name": "disruptor_electromagnetic_repulsion",
         "name_loc": "电磁排斥",
         "desc_loc": "每当干扰者受到%effect_radius%范围内来自任意来源的%damage_threshold%点伤害，附近所有敌人都会被推开最多%effect_radius%距离。",
-        "lore_loc": "",
+        "lore_loc": "风暴中找到的避风港。",
         "notes_loc": [
           "%damage_reset_interval%秒后伤害计数会重置。"
         ],
@@ -2077,17 +2198,18 @@
         "scepter_loc": "",
         "facets_loc": [
           "",
-          ""
+          "",
+          "电磁排斥可以手动激活，可以对友军施放，造成的伤害等同于干扰者当前生命值的%current_hp_as_damage%%%。手动激活后技能会进入%manual_cooldown%秒冷却。"
         ],
         "type": 0,
-        "behavior": "2",
+        "behavior": "66",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
         "immunity": 0,
         "dispellable": 3,
-        "max_level": 1,
+        "max_level": 4,
         "cast_ranges": [
           0
         ],
@@ -2139,7 +2261,13 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_disruptor_7",
+                "value": 150,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -2156,7 +2284,13 @@
             ],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_disruptor_7",
+                "value": 150,
+                "operation": 0
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -2199,6 +2333,107 @@
               "operation": 0
             },
             "required_facet": ""
+          },
+          {
+            "name": "current_hp_as_damage",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "disruptor_conduit",
+              "values": [
+                10
+              ],
+              "operation": 5
+            },
+            "required_facet": "disruptor_conduit"
+          },
+          {
+            "name": "manual_cooldown",
+            "values_float": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "disruptor_conduit",
+              "values": [
+                26,
+                20,
+                14,
+                8
+              ],
+              "operation": 0
+            },
+            "required_facet": "disruptor_conduit"
+          },
+          {
+            "name": "max_level",
+            "values_float": [
+              1
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "disruptor_conduit",
+              "values": [
+                4
+              ],
+              "operation": 5
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastRange",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "disruptor_conduit",
+              "values": [
+                600
+              ],
+              "operation": 5
+            },
+            "required_facet": "disruptor_conduit"
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "disruptor_conduit",
+              "values": [
+                50
+              ],
+              "operation": 5
+            },
+            "required_facet": "disruptor_conduit"
           },
           {
             "name": "AbilityCooldown",

@@ -59,6 +59,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -269,7 +270,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "能量齿轮的形成半径更大。"
+            "能量齿轮的形成半径更大。",
+            ""
           ],
           "type": 0,
           "behavior": "4",
@@ -357,7 +359,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "魔法值损失：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_clockwerk_2",
+                  "value": 70,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -641,6 +649,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -749,13 +758,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_clockwerk_flare_damage",
-                  "value": 75,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -942,6 +945,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1235,6 +1239,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1410,6 +1415,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "如果发射钩爪击中的目标附近%radius_ally%范围内还有另一名友方英雄，那么发条技师和范围内所有友军都会获得护甲加成，并且部分退还冷却时间和魔法消耗。",
+            "",
             ""
           ],
           "type": 1,
@@ -1738,7 +1744,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "发条技师可以消耗锁子甲，永久获得+%armor_per_chainmail%点护甲。可以叠加。对自身施放后即可消耗。"
           ],
           "type": 0,
           "behavior": "2",
@@ -1792,6 +1799,118 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "damage_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "伤害输出加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "can_consume_chainmail",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "rattletrap_junk_mail",
+                "values": [
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": "rattletrap_junk_mail"
+            },
+            {
+              "name": "armor_per_chainmail",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "rattletrap_junk_mail",
+                "values": [
+                  4
+                ],
+                "operation": 5
+              },
+              "required_facet": "rattletrap_junk_mail"
+            },
+            {
+              "name": "model_scale_per_chainmail",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "rattletrap_junk_mail",
+                "values": [
+                  3
+                ],
+                "operation": 5
+              },
+              "required_facet": "rattletrap_junk_mail"
+            },
+            {
+              "name": "model_scale_maximum",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "rattletrap_junk_mail",
+                "values": [
+                  150
+                ],
+                "operation": 5
+              },
+              "required_facet": "rattletrap_junk_mail"
+            },
+            {
+              "name": "health_bar_offset_per_stack",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "rattletrap_junk_mail",
+                "values": [
+                  3.5
+                ],
+                "operation": 5
+              },
+              "required_facet": "rattletrap_junk_mail"
             }
           ],
           "is_item": false,
@@ -2333,7 +2452,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_rattletrap.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_rattletrap/npc_dota_hero_rattletrap.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_rattletrap/npc_dota_hero_rattletrap.webm",
-      "update_time": 1743724867,
+      "update_time": 1747951267,
       "facets": [
         {
           "color": 5,
@@ -2352,9 +2471,21 @@
           "icon": "area_of_effect",
           "gradient_id": 2,
           "index": 1
+        },
+        {
+          "color": 1,
+          "title_loc": "人形锁子甲",
+          "description_loc": "发条技师可以消耗锁子甲，永久获得+{s:bonus_armor_per_chainmail}点护甲。",
+          "name": "rattletrap_junk_mail",
+          "icon": "armor",
+          "gradient_id": 1,
+          "index": 2
         }
       ],
       "facet_abilities": [
+        {
+          "abilities": []
+        },
         {
           "abilities": []
         },
@@ -2374,7 +2505,8 @@
         "scepter_loc": "",
         "facets_loc": [
           "",
-          ""
+          "",
+          "发条技师可以消耗锁子甲，永久获得+%armor_per_chainmail%点护甲。可以叠加。对自身施放后即可消耗。"
         ],
         "type": 0,
         "behavior": "2",
@@ -2428,6 +2560,118 @@
               "operation": 0
             },
             "required_facet": ""
+          },
+          {
+            "name": "damage_tooltip",
+            "values_float": [
+              0
+            ],
+            "is_percentage": true,
+            "heading_loc": "伤害输出加成：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "can_consume_chainmail",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "rattletrap_junk_mail",
+              "values": [
+                1
+              ],
+              "operation": 5
+            },
+            "required_facet": "rattletrap_junk_mail"
+          },
+          {
+            "name": "armor_per_chainmail",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "rattletrap_junk_mail",
+              "values": [
+                4
+              ],
+              "operation": 5
+            },
+            "required_facet": "rattletrap_junk_mail"
+          },
+          {
+            "name": "model_scale_per_chainmail",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "rattletrap_junk_mail",
+              "values": [
+                3
+              ],
+              "operation": 5
+            },
+            "required_facet": "rattletrap_junk_mail"
+          },
+          {
+            "name": "model_scale_maximum",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "rattletrap_junk_mail",
+              "values": [
+                150
+              ],
+              "operation": 5
+            },
+            "required_facet": "rattletrap_junk_mail"
+          },
+          {
+            "name": "health_bar_offset_per_stack",
+            "values_float": [
+              0
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "rattletrap_junk_mail",
+              "values": [
+                3.5
+              ],
+              "operation": 5
+            },
+            "required_facet": "rattletrap_junk_mail"
           }
         ],
         "is_item": false,

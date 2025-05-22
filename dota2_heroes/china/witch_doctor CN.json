@@ -60,6 +60,7 @@
           "facets_loc": [
             "麻痹药剂每次弹跳造成额外伤害。",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -141,7 +142,10 @@
             {
               "name": "base_damage",
               "values_float": [
-                50
+                55,
+                70,
+                85,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "基础伤害：",
@@ -175,10 +179,10 @@
             {
               "name": "bounces",
               "values_float": [
-                2,
+                3,
                 4,
-                6,
-                8
+                5,
+                6
               ],
               "is_percentage": false,
               "heading_loc": "弹跳次数：",
@@ -235,7 +239,7 @@
             {
               "name": "bounce_bonus_damage",
               "values_float": [
-                0
+                20
               ],
               "is_percentage": false,
               "heading_loc": "每次弹跳增加伤害：",
@@ -243,18 +247,16 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "witch_doctor_headhunter",
-                "values": [
-                  30
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
-              "required_facet": "witch_doctor_headhunter"
+              "required_facet": ""
             },
             {
               "name": "creep_damage_pct",
               "values_float": [
-                150
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -376,6 +378,7 @@
           "facets_loc": [
             "",
             "巫毒疗法对敌人造成伤害，只会治疗巫医自身。",
+            "",
             ""
           ],
           "type": 0,
@@ -644,7 +647,8 @@
           "facets_loc": [
             "",
             "",
-            ""
+            "",
+            "被诅咒的敌人阵亡后会对%spread_radius%范围内所有敌方单位造成伤害，数值等于下次爆发伤害的%spread_pct%%%。"
           ],
           "type": 0,
           "behavior": "134217776",
@@ -765,6 +769,61 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "spread_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "witch_doctor_malpractice",
+                "values": [
+                  75
+                ],
+                "operation": 0
+              },
+              "required_facet": "witch_doctor_malpractice"
+            },
+            {
+              "name": "spread_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "witch_doctor_malpractice",
+                "values": [
+                  800
+                ],
+                "operation": 0
+              },
+              "required_facet": "witch_doctor_malpractice"
+            },
+            {
+              "name": "spread_speed",
+              "values_float": [
+                1200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -920,6 +979,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1079,6 +1139,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1186,7 +1247,8 @@
           "facets_loc": [
             "",
             "",
-            "死亡守卫同时攻击%initial_target_count%个目标，但伤害降低。次级目标受到%secondary_attack_damage_pct%%%伤害。"
+            "死亡守卫同时攻击%initial_target_count%个目标，但伤害降低。次级目标受到%secondary_attack_damage_pct%%%伤害。",
+            ""
           ],
           "type": 1,
           "behavior": "144",
@@ -2054,17 +2116,8 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_witch_doctor.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_witch_doctor/npc_dota_hero_witch_doctor.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_witch_doctor/npc_dota_hero_witch_doctor.webm",
-      "update_time": 1743724841,
+      "update_time": 1747951242,
       "facets": [
-        {
-          "color": 5,
-          "title_loc": "赶尽杀绝",
-          "description_loc": "麻痹药剂每次弹跳造成额外伤害。",
-          "name": "witch_doctor_headhunter",
-          "icon": "ricochet",
-          "gradient_id": 3,
-          "index": 0
-        },
         {
           "color": 4,
           "title_loc": "死亡分裂",
@@ -2073,6 +2126,15 @@
           "icon": "death_ward",
           "gradient_id": 0,
           "index": 2
+        },
+        {
+          "color": 0,
+          "title_loc": "巫蛊爆炸",
+          "description_loc": "巫蛊咒术作用下的敌人阵亡会爆炸。",
+          "name": "witch_doctor_malpractice",
+          "icon": "nuke",
+          "gradient_id": 2,
+          "index": 3
         }
       ],
       "facet_abilities": [
@@ -2094,6 +2156,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           "",
           ""
