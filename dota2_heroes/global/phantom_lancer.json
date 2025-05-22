@@ -62,7 +62,7 @@
           "sight_range_day": 1800,
           "sight_range_night": 800,
           "max_health": 582,
-          "health_regen": 3.6000001,
+          "health_regen": 4.1000004,
           "max_mana": 327,
           "mana_regen": 1.0500001,
           "abilities": [
@@ -234,7 +234,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -251,7 +257,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -322,7 +334,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    750
+                    0
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -341,7 +353,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    30
+                    0
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -360,7 +372,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    1
+                    0
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -464,7 +476,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -801,7 +813,7 @@
                 "Rush movement speed is %bonus_speed%."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases Range. Whenever Phantom Lancer Rushes through enemies, he creates Juxtapose illusions that attack them.",
               "facets_loc": [
                 "",
                 "",
@@ -873,15 +885,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX RUSH DISTANCE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer",
-                      "value": 300,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    625
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -956,6 +964,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "illusion_spawn_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    75
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCooldown",
                   "values_float": [
                     13,
@@ -977,7 +1004,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1760,9 +1787,9 @@
               "item_quality": 0
             },
             {
-              "id": 6146,
-              "name": "special_bonus_unique_phantom_lancer",
-              "name_loc": "+{s:bonus_max_distance} Phantom Rush Range",
+              "id": 1631,
+              "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
+              "name_loc": "+{s:bonus_tooltip_illusion_damage}% Spirit Lance Illusion Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
