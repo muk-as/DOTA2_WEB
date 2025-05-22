@@ -6,14 +6,14 @@
           "id": 5320,
           "name": "batrider_sticky_napalm",
           "name_loc": "Sticky Napalm",
-          "desc_loc": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies.  Additional casts of Sticky Napalm continue to increase damage, up to %max_stacks% stacks. Applies a small amount of damage with each cast.",
+          "desc_loc": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies. Additional casts of Sticky Napalm continue to increase damage, up to %max_stacks% stacks. Applies a small amount of damage with each cast.",
           "lore_loc": "It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents.",
           "notes_loc": [
             "All damage from Batrider gets amplified, except for Radiance, Orb of Venom, Urn of Shadows, and Spirit Vessel.",
             "Sticky Napalm does not require turning to cast.",
             "Sticky Napalm deals %creep_damage_pct%%% damage to creeps."
           ],
-          "shard_loc": "Every other attack applies +%bonus_applications_every_other_attack% additional stack of Sticky Napalm.",
+          "shard_loc": "Sticky Napalm no longer has a stack limit.<br><br>Sticky Napalm deals damage to structures.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -53,19 +53,71 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "max_level",
+              "values_float": [
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_level_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stacks_per_cast",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "STACKS PER CAST:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "damage",
               "values_float": [
+                2.5,
                 5,
+                7.5,
                 10,
-                15,
-                20
+                10
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER STACK:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_batrider_4",
-                  "value": 20,
+                  "value": 10,
                   "operation": 0
                 }
               ],
@@ -121,10 +173,11 @@
             {
               "name": "movement_speed_pct",
               "values_float": [
+                -0.75,
                 -1.5,
+                -2.25,
                 -3,
-                -4.5,
-                -6
+                -3
               ],
               "is_percentage": true,
               "heading_loc": "MOVEMENT SLOW:",
@@ -141,10 +194,11 @@
             {
               "name": "turn_rate_pct",
               "values_float": [
-                -10,
-                -30,
-                -50,
-                -70
+                -5,
+                -15,
+                -25,
+                -35,
+                -35
               ],
               "is_percentage": true,
               "heading_loc": "TURN RATE SLOW:",
@@ -161,12 +215,31 @@
             {
               "name": "max_stacks",
               "values_float": [
-                10
+                20
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "unlimited_stacks",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                1
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -193,30 +266,12 @@
               "required_facet": ""
             },
             {
-              "name": "shard_napalm_on_attack_chance_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                50
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "application_damage",
               "values_float": [
                 5,
                 10,
                 15,
+                20,
                 20
               ],
               "is_percentage": false,
@@ -232,84 +287,52 @@
               "required_facet": ""
             },
             {
-              "name": "is_passive",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "base_applications_every_attack",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_applications_every_other_attack",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                1
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attacks_apply_napalm_in_aoe",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                0
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "building_damage_pct",
               "values_float": [
                 0
               ],
               "is_percentage": true,
               "heading_loc": "BUILDING DAMAGE:",
+              "bonuses": [],
+              "values_shard": [
+                35
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "napalm_stacks_on_attack",
+              "values_float": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "napalm_stacks_on_attack_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

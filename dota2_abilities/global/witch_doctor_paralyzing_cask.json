@@ -6,7 +6,7 @@
           "id": 5138,
           "name": "witch_doctor_paralyzing_cask",
           "name_loc": "Paralyzing Cask",
-          "desc_loc": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits. Deals %creep_damage_pct%%% damage to creeps.",
+          "desc_loc": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits. Damage increases each bounce.",
           "lore_loc": "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy.",
           "notes_loc": [
             "Targets can be hit multiple times, as long as another unit is struck in between the bounces."
@@ -93,7 +93,10 @@
             {
               "name": "base_damage",
               "values_float": [
-                50
+                55,
+                70,
+                85,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "BASE DAMAGE:",
@@ -127,10 +130,10 @@
             {
               "name": "bounces",
               "values_float": [
-                2,
+                3,
                 4,
-                6,
-                8
+                5,
+                6
               ],
               "is_percentage": false,
               "heading_loc": "BOUNCES:",
@@ -187,7 +190,7 @@
             {
               "name": "bounce_bonus_damage",
               "values_float": [
-                0
+                20
               ],
               "is_percentage": false,
               "heading_loc": "BONUS DAMAGE PER BOUNCE:",
@@ -204,7 +207,7 @@
             {
               "name": "creep_damage_pct",
               "values_float": [
-                150
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",

@@ -6,9 +6,11 @@
           "id": 1503,
           "name": "kez_talon_toss",
           "name_loc": "Talon Toss",
-          "desc_loc": "Kez throws a Sai at the target unit. The Sai detonates when it hits, dealing damage and applying silence to all enemies in the area.",
+          "desc_loc": "Kez throws a Sai at the target unit, applying a fixed damage attack and silence.",
           "lore_loc": "The Shodo learned to rely upon distance and disorientation to survive against much stronger opposition.",
-          "notes_loc": [],
+          "notes_loc": [
+            "The fixed damage attack has True Strike."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -31,9 +33,9 @@
             0
           ],
           "cooldowns": [
-            16,
             13,
-            10,
+            11,
+            9,
             7
           ],
           "durations": [
@@ -52,29 +54,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "radius",
-              "values_float": [
-                275
-              ],
-              "is_percentage": false,
-              "heading_loc": "RADIUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "damage",
               "values_float": [
-                75,
-                125,
-                175,
-                225
+                60,
+                120,
+                180,
+                240
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
@@ -108,14 +93,35 @@
             {
               "name": "silence_duration",
               "values_float": [
-                1.75,
                 2,
                 2.25,
-                2.5
+                2.5,
+                2.75
               ],
               "is_percentage": false,
               "heading_loc": "SILENCE DURATION:",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_factor",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kez_talon_toss_attack_factor",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -179,9 +185,9 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                16,
                 13,
-                10,
+                11,
+                9,
                 7
               ],
               "is_percentage": false,

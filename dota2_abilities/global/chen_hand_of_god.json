@@ -12,7 +12,7 @@
             "Can heal invulnerable and hidden/banished allies."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Decreases the cooldown of Hand of God to %AbilityCooldown%s and it becomes a chanelled spell that lasts for up to %AbilityChannelTime% seconds. The initial heal happens at the start of the channel, and while channeling other nearby allied units become debuff immune with %debuff_immune_resist%%% magic resistance and the power of the heal over time is increased by %nearby_hot_boost%%%.",
           "facets_loc": [],
           "type": 1,
           "behavior": "4",
@@ -175,6 +175,82 @@
               "required_facet": ""
             },
             {
+              "name": "debuff_immune_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "CHANNEL RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                800
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "debuff_immune_resist",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                60
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "nearby_hot_boost",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                200
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChannelTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                6
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastPoint",
               "values_float": [
                 0.3
@@ -221,7 +297,9 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                40
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -231,7 +309,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

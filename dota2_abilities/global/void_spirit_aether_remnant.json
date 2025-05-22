@@ -9,7 +9,7 @@
           "desc_loc": "Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
           "lore_loc": "Inai exists far beyond the scope of a single point in space and time.",
           "notes_loc": [],
-          "shard_loc": "Increases Aether Remnant watch range and only pulls enemy hero units. Other units take %creep_damage_pct%%% damage every %damage_tick_rate%s that they are in the remnant's path, but the remnant is not destroyed. Decreases cooldown to %AbilityCooldown%s.",
+          "shard_loc": "Creates an additional watcher path that rotates around the remnant.  The remnant now provides True Sight, and no longer triggers on creeps, instead dealing %creep_damage_pct%%% damage to them every second in both paths.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -130,9 +130,7 @@
               "is_percentage": false,
               "heading_loc": "WATCH RANGE:",
               "bonuses": [],
-              "values_shard": [
-                150
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -195,17 +193,17 @@
             {
               "name": "impact_damage",
               "values_float": [
-                85,
-                135,
-                185,
-                235
+                90,
+                140,
+                190,
+                240
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_void_spirit_2",
-                  "value": 50,
+                  "value": 60,
                   "operation": 0
                 }
               ],
@@ -320,7 +318,7 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [
-                1
+                0.5
               ],
               "values_scepter": [],
               "facet_bonus": {
@@ -339,7 +337,7 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [
-                30
+                50
               ],
               "values_scepter": [],
               "facet_bonus": {
@@ -375,6 +373,44 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "truesight_range",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                475
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "rotation_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                1.5
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -431,9 +467,7 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                2
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

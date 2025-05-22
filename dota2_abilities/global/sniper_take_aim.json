@@ -6,7 +6,7 @@
           "id": 5156,
           "name": "sniper_take_aim",
           "name_loc": "Take Aim",
-          "desc_loc": "Increases armor, Headshot chance, and attack range. Slows you by %slow%%% for the duration.",
+          "desc_loc": "Increases vision range, Headshot chance, and attack range. Slows you by %slow%%% for the duration and restricts your vision to a frontal cone.",
           "lore_loc": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
           "notes_loc": [],
           "shard_loc": "",
@@ -114,7 +114,10 @@
             {
               "name": "active_attack_range_bonus",
               "values_float": [
-                200
+                100,
+                150,
+                200,
+                250
               ],
               "is_percentage": false,
               "heading_loc": "BONUS ATTACK RANGE:",
@@ -135,15 +138,32 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_armor",
+              "name": "bonus_vision",
               "values_float": [
-                5,
-                10,
-                15,
-                20
+                500,
+                750,
+                1000,
+                1250
               ],
               "is_percentage": false,
-              "heading_loc": "ARMOR:",
+              "heading_loc": "BONUS VISION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "view_restrict",
+              "values_float": [
+                140
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

@@ -6,14 +6,16 @@
           "id": 1501,
           "name": "kez_raptor_dance",
           "name_loc": "Raptor Dance",
-          "desc_loc": "Kez enters into an uncontrollable channel for %AbilityChannelTime% second, becoming invulnerable for %invuln_period%s and receiving a basic dispel, remaining immune to magic damage for the remainder of the channel and the duration of the slashes. If the channel completes successfully, Kez performs a series of deadly radial slashes around him that deal damage based on the max health of the target and heal Kez for a percentage of all damage dealt.",
+          "desc_loc": "Kez enters into an uncontrollable state for %AbilityCastPoint% second, becoming invulnerable for %invuln_period%s and receiving a basic dispel, remaining immune to magic damage for the remainder of the cast time and the duration of the slashes.<br><br> If the cast completes successfully, Kez performs a series of deadly radial slashes around him that deal damage based on the max health of the target and heal Kez for a percentage of all damage dealt.",
           "lore_loc": "Unleash the inner fury of the Flightless to feast on the essence of your foes.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Slash Lifesteal is reduced to %illusion_lifesteal_pct%%% when slashing a creep or an illusion."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 1,
-          "behavior": "134217892",
+          "behavior": "134217764",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
@@ -25,10 +27,10 @@
             0
           ],
           "cast_points": [
-            0
+            1
           ],
           "channel_times": [
-            1
+            0
           ],
           "cooldowns": [
             40,
@@ -72,13 +74,17 @@
             {
               "name": "strikes",
               "values_float": [
-                2,
-                3,
                 4
               ],
               "is_percentage": false,
               "heading_loc": "STRIKES:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kez_raptor_dance_strikes",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -114,7 +120,9 @@
             {
               "name": "base_damage",
               "values_float": [
-                75
+                30,
+                60,
+                90
               ],
               "is_percentage": false,
               "heading_loc": "BASE DAMAGE:",
@@ -131,7 +139,7 @@
             {
               "name": "max_health_damage_pct",
               "values_float": [
-                4
+                3
               ],
               "is_percentage": true,
               "heading_loc": "MAX HEALTH AS DAMAGE:",
@@ -152,6 +160,23 @@
               ],
               "is_percentage": true,
               "heading_loc": "SLASH LIFESTEAL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "illusion_lifesteal_pct",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -214,7 +239,7 @@
               "required_facet": ""
             },
             {
-              "name": "AbilityChannelTime",
+              "name": "AbilityCastPoint",
               "values_float": [
                 1
               ],
@@ -258,13 +283,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_kez_ultimate_cooldown",
-                  "value": 4,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

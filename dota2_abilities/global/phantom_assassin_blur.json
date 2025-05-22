@@ -6,16 +6,16 @@
           "id": 5192,
           "name": "phantom_assassin_blur",
           "name_loc": "Blur",
-          "desc_loc": "Phantom Assassin blurs her body, disjointing incoming projectiles, increasing her movement speed, causing her to be impossible to see until she comes near enemy heroes, towers, or outposts.",
+          "desc_loc": "Phantom Assassin blurs her body, disjointing incoming projectiles, increasing her movement speed, causing her to be impossible to see until she comes near enemy heroes or towers.",
           "lore_loc": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat.",
           "notes_loc": [
             "Attacking Roshan with a regular attack will dispel Blur."
           ],
-          "shard_loc": "Increases your movement speed by 40% while in Blur's active.",
-          "scepter_loc": "Causes Blur to have instant cast time and applies a dispel. Any time Phantom Assassin gets a hero kill, her abilities are refreshed. Reduces cooldown.",
+          "shard_loc": "Decreases Cooldown. Any time Phantom Assassin gets a hero kill, her ability cooldowns advance %cooldown_refund_pct%%% of their max cooldown values.",
+          "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "4",
+          "behavior": "8589934660",
           "target_team": 1,
           "target_type": 1,
           "flags": 0,
@@ -114,25 +114,6 @@
               "required_facet": ""
             },
             {
-              "name": "scepter_cooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "COOLDOWN REDUCTION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                50
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "manacost_reduction_during_blur_pct",
               "values_float": [
                 0
@@ -195,6 +176,63 @@
               "heading_loc": "ACTIVE MOVEMENT SPEED:",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "immediate_cast",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                0
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "purge_on_cast",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                0
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cooldown_refund_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                60
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -268,7 +306,9 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                10
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -279,11 +319,11 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
-          "ability_has_shard": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

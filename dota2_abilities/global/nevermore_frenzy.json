@@ -6,8 +6,8 @@
           "id": 1216,
           "name": "nevermore_frenzy",
           "name_loc": "Feast of Souls",
-          "desc_loc": "Shadow Fiend gains Bonus Attack Speed for %duration% seconds. For the duration of the effect, Shadow Fiend's Max Soul count is increased by %soul_cost%, but he loses that amount of souls after it is done.",
-          "lore_loc": "",
+          "desc_loc": "Shadow Fiend gains Bonus Attack Speed and Movement Speed for %duration% seconds. For the duration of the effect, Necromastery's Max Soul count is increased by %max_soul_increase%, but he loses that amount of souls after it is done.",
+          "lore_loc": "For Nevermore, there's as much delight in the harvest as there is in the feast.",
           "notes_loc": [
             "Cannot be cast unless Shadow Fiend has enough souls to pay the cost."
           ],
@@ -33,7 +33,7 @@
             0
           ],
           "cooldowns": [
-            16
+            21
           ],
           "durations": [
             0
@@ -45,7 +45,10 @@
             0
           ],
           "mana_costs": [
-            60
+            60,
+            65,
+            70,
+            75
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -67,6 +70,26 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_move_speed",
+              "values_float": [
+                5,
+                7,
+                9,
+                11
+              ],
+              "is_percentage": true,
+              "heading_loc": "BONUS MOVE SPEED:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -102,8 +125,8 @@
             {
               "name": "cast_speed_pct_tooltip",
               "values_float": [],
-              "is_percentage": true,
-              "heading_loc": "CAST SPEED:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_nevermore_frenzy_castspeed",
@@ -123,10 +146,7 @@
             {
               "name": "duration",
               "values_float": [
-                7.5,
-                8,
-                8.5,
-                9
+                8
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -158,9 +178,29 @@
               "required_facet": ""
             },
             {
+              "name": "max_soul_increase",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityManaCost",
               "values_float": [
-                60
+                60,
+                65,
+                70,
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -177,7 +217,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                16
+                21
               ],
               "is_percentage": false,
               "heading_loc": "",

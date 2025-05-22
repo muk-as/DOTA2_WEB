@@ -6,10 +6,10 @@
           "id": 1504,
           "name": "kez_shodo_sai",
           "name_loc": "Shodo Sai",
-          "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. The next attack or ability damage from Kez gains True Strike and will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and Marked, taking additional critical strike and stun when the debuff is triggered.<br><br>The sub-ability may be used to cancel the blocking early.",
+          "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. The next attack or ability damage from Kez will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and Marked.<br><br>The sub-ability may be used to cancel the blocking early.",
           "lore_loc": "The Shodo may have lost their way, but Kez and the Kazurai can still use Shodo knowledge for the good of the people.",
           "notes_loc": [],
-          "shard_loc": "Passively grants %shard_base_movement_speed% movement speed, and an additional %shard_vuln_movement_speed% movement speed per Marked enemy.",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -91,7 +91,7 @@
             {
               "name": "sai_proc_vuln_chance",
               "values_float": [
-                17
+                18
               ],
               "is_percentage": true,
               "heading_loc": "CHANCE TO MARK:",
@@ -218,15 +218,16 @@
             },
             {
               "name": "parry_bonus_crit",
-              "values_float": [
-                25,
-                50,
-                75,
-                100
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kez_mark_damage",
+                  "value": 0,
+                  "operation": 0
+                }
               ],
-              "is_percentage": true,
-              "heading_loc": "PARRY BONUS CRITICAL STRIKE:",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -242,7 +243,7 @@
                 0.5
               ],
               "is_percentage": false,
-              "heading_loc": "PARRY BONUS STUN DURATION:",
+              "heading_loc": "PARRY STUN DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

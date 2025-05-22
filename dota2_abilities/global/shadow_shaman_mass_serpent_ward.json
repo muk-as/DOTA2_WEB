@@ -6,7 +6,7 @@
           "id": 5081,
           "name": "shadow_shaman_mass_serpent_ward",
           "name_loc": "Mass Serpent Ward",
-          "desc_loc": "Summons %ward_count% Serpent Wards to attack enemy units and structures. The Wards are immune to magic.",
+          "desc_loc": "Summons %ward_count% Serpent Wards to attack enemy units and structures. The Wards are immune to magic. Creeps deal half damage to the Serpent Ward.",
           "lore_loc": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the snakes to do his bidding.",
           "notes_loc": [],
           "shard_loc": "",
@@ -146,12 +146,35 @@
               "required_facet": ""
             },
             {
+              "name": "hits_to_destroy_mega_ward_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "HITS TO DESTROY:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_shadow_shaman_1",
+                  "value": 50,
+                  "operation": 3
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "ward_health",
               "values_float": [
                 4
               ],
               "is_percentage": false,
-              "heading_loc": "CREEP HITS TO DESTROY:",
+              "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_shadow_shaman_1",
@@ -207,7 +230,7 @@
               "required_facet": ""
             },
             {
-              "name": "mega_ward_multiplier_tooltip",
+              "name": "mega_ward_multiplier_damage",
               "values_float": [
                 0
               ],
@@ -224,24 +247,7 @@
               "required_facet": ""
             },
             {
-              "name": "mega_ward_health_tooltip",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "mega_ward_health_reduction_pct",
+              "name": "mega_ward_multiplier_health",
               "values_float": [
                 0
               ],
@@ -266,6 +272,25 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ward_damage_tooltip",
+              "values_float": [
+                50,
+                85,
+                120
+              ],
+              "is_percentage": false,
+              "heading_loc": "WARD DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

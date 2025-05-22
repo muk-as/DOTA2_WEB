@@ -6,7 +6,7 @@
           "id": 5028,
           "name": "juggernaut_blade_fury",
           "name_loc": "Blade Fury",
-          "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune, increasing his magic resistance by 80%%, and dealing damage to nearby enemy units. Juggernaut deals damage in an interval equal to %blade_fury_aspd_multiplier%x his attack speed. Applies a strong dispel at the end of the spin.",
+          "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune, increasing his magic resistance by 80%%, and dealing damage every %blade_fury_damage_tick%s to nearby enemy units. Applies a strong dispel at the end of the spin.",
           "lore_loc": "Yurnero's renowned katana techniques are feared by warriors and sorcerors alike.",
           "notes_loc": [
             "You can use items during Blade Fury.",
@@ -61,9 +61,35 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "blade_fury_aspd_multiplier",
+              "name": "blade_fury_damage",
               "values_float": [
-                2
+                80,
+                110,
+                140,
+                170
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE PER SECOND:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_juggernaut",
+                  "value": 90,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "blade_fury_damage_tick",
+              "values_float": [
+                0.2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -88,26 +114,6 @@
               "values_shard": [
                 100
               ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "blade_fury_damage_per_tick",
-              "values_float": [
-                40,
-                45,
-                50,
-                55
-              ],
-              "is_percentage": false,
-              "heading_loc": "DAMAGE PER TICK:",
-              "bonuses": [],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

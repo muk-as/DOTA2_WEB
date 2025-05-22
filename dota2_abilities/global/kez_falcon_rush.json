@@ -6,7 +6,7 @@
           "id": 1502,
           "name": "kez_falcon_rush",
           "name_loc": "Falcon Rush",
-          "desc_loc": "Kez gains the ability to rush towards enemy targets to deliver echoing secondary attacks.  While in this state, Kez has phased collision and an attack rate that is less affected by attack speed.",
+          "desc_loc": "Kez gains the ability to rush towards enemy targets to deliver echoing secondary attacks.  While in this state, Kez has phased collision, slow resistance, and an attack rate that is less affected by attack speed.",
           "lore_loc": "An ancient Shodo technique used to hunt faster aerial foes, stealing the advantage and delivering multiple attacks within a single flap of their prey's panicking wings.",
           "notes_loc": [],
           "shard_loc": "",
@@ -15,7 +15,7 @@
           "type": 0,
           "behavior": "8724154373",
           "target_team": 2,
-          "target_type": 19,
+          "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 0,
@@ -31,10 +31,10 @@
             0
           ],
           "cooldowns": [
-            20,
+            21,
             18,
-            16,
-            14
+            15,
+            12
           ],
           "durations": [
             0
@@ -55,32 +55,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "duration",
-              "values_float": [
-                3,
-                4,
-                5,
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "DURATION:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_kez_falcon_rush_duration",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "rush_range",
               "values_float": [
                 525
@@ -88,27 +62,6 @@
               "is_percentage": false,
               "heading_loc": "RUSH RANGE:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "buff_evasion_pct",
-              "values_float": [],
-              "is_percentage": true,
-              "heading_loc": "EVASION:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_kez_falcon_rush_evasion",
-                  "value": 50,
-                  "operation": 0
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -136,15 +89,15 @@
               "required_facet": ""
             },
             {
-              "name": "base_attack_rate_katana",
+              "name": "echo_damage",
               "values_float": [
-                1.5,
-                1.4,
-                1.3,
-                1.2
+                45,
+                55,
+                65,
+                75
               ],
-              "is_percentage": false,
-              "heading_loc": "KATANA BASE ATTACK RATE:",
+              "is_percentage": true,
+              "heading_loc": "SECONDARY ATTACKS DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -156,7 +109,53 @@
               "required_facet": ""
             },
             {
-              "name": "base_attack_rate_sai",
+              "name": "slow_resist",
+              "values_float": [
+                15,
+                30,
+                45,
+                60
+              ],
+              "is_percentage": true,
+              "heading_loc": "SLOW RESISTANCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                3,
+                4,
+                5,
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "DURATION:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kez_falcon_rush_duration",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_attack_rate",
               "values_float": [
                 1.3,
                 1.2,
@@ -165,6 +164,43 @@
               ],
               "is_percentage": false,
               "heading_loc": "SAI BASE ATTACK RATE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "katana_attack_rate_penalty",
+              "values_float": [
+                0.2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_attack_rate_katana_tooltip",
+              "values_float": [
+                1.5,
+                1.4,
+                1.3,
+                1.2
+              ],
+              "is_percentage": false,
+              "heading_loc": "KATANA BASE ATTACK RATE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -213,23 +249,6 @@
               "required_facet": ""
             },
             {
-              "name": "echo_damage",
-              "values_float": [
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "AbilityManaCost",
               "values_float": [
                 85,
@@ -252,10 +271,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                20,
+                21,
                 18,
-                16,
-                14
+                15,
+                12
               ],
               "is_percentage": false,
               "heading_loc": "",

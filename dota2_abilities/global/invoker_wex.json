@@ -6,14 +6,14 @@
           "id": 5371,
           "name": "invoker_wex",
           "name_loc": "Wex",
-          "desc_loc": "Allows manipulation of storm elements. Active <font color='#d671a9'>Wex</font> instances imbue Invoker with bonus movement speed. Passively grants bonus agility per level of <font color='#d671a9'>Wex</font>.",
-          "lore_loc": "",
+          "desc_loc": "Allows manipulation of storm elements. Active <font color='#d671a9'>Wex</font> instances imbue Invoker with bonus movement and attack speed. Passively grants bonus agility per level of <font color='#d671a9'>Wex</font>.",
+          "lore_loc": "A withering wind.",
           "notes_loc": [
             "Invoker can only have 3 of any instance.",
             "Will not break invisibility and can be cast while channeling."
           ],
           "shard_loc": "",
-          "scepter_loc": "Grants %scepter_bonus_levels% current and max levels.",
+          "scepter_loc": "Grants %scepter_bonus_levels% current and max level.",
           "facets_loc": [],
           "type": 0,
           "behavior": "70368748374020",
@@ -103,6 +103,38 @@
               "required_facet": ""
             },
             {
+              "name": "attack_speed_per_instance",
+              "values_float": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "ATTACK SPEED PER INSTANCE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_invoker_13",
+                  "value": 2,
+                  "operation": 1
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "upgrade_at_level",
               "values_float": [
                 0
@@ -140,6 +172,23 @@
               "name": "scepter_bonus_levels",
               "values_float": [
                 1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "facet_bonus_levels",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",

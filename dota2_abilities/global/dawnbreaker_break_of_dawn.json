@@ -6,14 +6,14 @@
           "id": 1424,
           "name": "dawnbreaker_break_of_dawn",
           "name_loc": "Break of Dawn",
-          "desc_loc": "Whenever the sun comes out, Dawnbreaker reveals the whole map to allies for %reveal_duration% seconds.",
+          "desc_loc": "Whenever the sun comes out, Dawnbreaker gains bonus base damage and vision that decreases throughout the course of the day.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
+          "behavior": "8589934658",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -49,9 +49,9 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "reveal_duration",
+              "name": "day_threshold",
               "values_float": [
-                4
+                0.006
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -66,12 +66,12 @@
               "required_facet": ""
             },
             {
-              "name": "think_interval",
+              "name": "max_dmg_pct",
               "values_float": [
-                0.1
+                25
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "MAX DAMAGE INCREASE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -83,12 +83,12 @@
               "required_facet": ""
             },
             {
-              "name": "reveal_linger",
+              "name": "max_vision_pct",
               "values_float": [
-                1
+                20
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "MAX VISION INCREASE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -100,12 +100,12 @@
               "required_facet": ""
             },
             {
-              "name": "reveal_radius",
+              "name": "current_dmg_tooltip",
               "values_float": [
-                20000
+                0
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "CURRENT DAMAGE INCREASE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -117,12 +117,12 @@
               "required_facet": ""
             },
             {
-              "name": "conceal_duration",
+              "name": "current_vision_tooltip",
               "values_float": [
-                1
+                0
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "CURRENT VISION INCREASE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

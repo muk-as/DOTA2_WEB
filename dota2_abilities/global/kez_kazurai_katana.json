@@ -6,14 +6,14 @@
           "id": 1500,
           "name": "kez_kazurai_katana",
           "name_loc": "Kazurai Katana",
-          "desc_loc": "Katana attacks and abilities apply a stacking damage over time to enemies that deals a percentage of the original attack's damage as additional damage over time. Affected enemies have non-stacking reduced health regeneration.",
+          "desc_loc": "Katana attacks and abilities apply a stacking damage over time to enemies that deals a percentage of the original attack's damage as additional damage over time. <br><br>Kez may activate the ability to impale the target with his attack, preventing them from moving or turning. The target's Katana debuff bursts, causing some of the stacks to deal damage instantly.",
           "lore_loc": "To fight back against the reach of Imperia and her Queensguard, the Kazurai had to become skilled in the ways of attrition.",
           "notes_loc": [],
-          "shard_loc": "Kez may activate the ability to impale the target with his attack, briefly stunning himself and the target in place. The target's debuff bursts, removing it and causing the attack to deal bonus damage based on the stack amount.",
+          "shard_loc": "Kez lifesteals %lifesteal_pct%%% from the impale.  If the impale comes from behind the target, the target is stunned and the full stack amount bursts.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
+          "behavior": "131080",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
@@ -31,7 +31,10 @@
             0
           ],
           "cooldowns": [
-            0
+            20,
+            15,
+            10,
+            5
           ],
           "durations": [
             0
@@ -43,7 +46,7 @@
             0
           ],
           "mana_costs": [
-            0
+            50
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -83,9 +86,9 @@
               "required_facet": ""
             },
             {
-              "name": "katana_bonus_damage",
+              "name": "katana_agility_bonus_base_damage",
               "values_float": [
-                12
+                20
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -102,10 +105,7 @@
             {
               "name": "katana_bleed_duration",
               "values_float": [
-                5,
-                6,
-                7,
-                8
+                7
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -122,17 +122,17 @@
             {
               "name": "katana_bleed_attack_damage_pct",
               "values_float": [
-                6,
+                5,
                 7,
-                8,
-                9
+                9,
+                11
               ],
               "is_percentage": true,
               "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_kez_kazura_katana_bleed_damage",
-                  "value": 5,
+                  "value": 4,
                   "operation": 0
                 }
               ],
@@ -146,15 +146,12 @@
               "required_facet": ""
             },
             {
-              "name": "heal_reduction_pct",
+              "name": "impale_duration",
               "values_float": [
-                20,
-                25,
-                30,
-                35
+                0.6
               ],
-              "is_percentage": true,
-              "heading_loc": "REGEN REDUCTION:",
+              "is_percentage": false,
+              "heading_loc": "IMPALE DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -166,7 +163,24 @@
               "required_facet": ""
             },
             {
-              "name": "shard_cooldown",
+              "name": "bleed_as_rupture_pct",
+              "values_float": [
+                50
+              ],
+              "is_percentage": true,
+              "heading_loc": "STACKS AS BURST DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "lifesteal_pct",
               "values_float": [
                 0
               ],
@@ -174,10 +188,7 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [
-                20,
-                15,
-                10,
-                5
+                100
               ],
               "values_scepter": [],
               "facet_bonus": {
@@ -188,34 +199,15 @@
               "required_facet": ""
             },
             {
-              "name": "stun_duration",
+              "name": "creep_lifesteal_reduction_pct",
               "values_float": [
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "IMPALE DURATION:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [
-                0.6
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bleed_as_rupture_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "STACKS AS BURST DAMAGE:",
-              "bonuses": [],
-              "values_shard": [
-                100
+                40
               ],
               "values_scepter": [],
               "facet_bonus": {
@@ -234,6 +226,25 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "backstab_angle",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                105
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -262,14 +273,32 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                0
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                50
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                20,
+                15,
+                10,
+                5
               ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
