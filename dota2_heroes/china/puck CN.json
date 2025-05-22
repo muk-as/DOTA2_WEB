@@ -60,7 +60,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "幻象法球现在能以矢量为目标，操控法球的行进路线。法球移动速度更快，持续时间也更久，但是超过最大施法距离后会被摧毁。"
+            "幻象法球现在能以矢量为目标，操控法球的行进路线。法球移动速度更快，持续时间也更久，每%damage_interval%秒会在范围内造成额外%damage_over_time_pct%%%伤害，但是超过最大施法距离后会被摧毁。"
           ],
           "type": 0,
           "behavior": "16",
@@ -114,7 +114,7 @@
                 225
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -368,6 +368,63 @@
                   0
                 ],
                 "operation": 0
+              },
+              "required_facet": "puck_curveball"
+            },
+            {
+              "name": "increase_per_sec",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "puck_curveball",
+                "values": [
+                  0
+                ],
+                "operation": 0
+              },
+              "required_facet": "puck_curveball"
+            },
+            {
+              "name": "damage_over_time_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "puck_curveball",
+                "values": [
+                  5
+                ],
+                "operation": 5
+              },
+              "required_facet": "puck_curveball"
+            },
+            {
+              "name": "damage_interval",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "puck_curveball",
+                "values": [
+                  0.5
+                ],
+                "operation": 5
               },
               "required_facet": "puck_curveball"
             },
@@ -2038,7 +2095,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_puck.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_puck/npc_dota_hero_puck.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_puck/npc_dota_hero_puck.webm",
-      "update_time": 1743724819,
+      "update_time": 1747951223,
       "facets": [
         {
           "color": 4,
@@ -2052,7 +2109,7 @@
         {
           "color": 3,
           "title_loc": "曲线法球",
-          "description_loc": "帕克能以任意方向让幻象法球的轨迹弯曲，移动速度更快，持续时间更长。",
+          "description_loc": "帕克能以任意方向让幻象法球的轨迹弯曲，移动速度更快，造成的伤害更高，持续时间更长。",
           "name": "puck_curveball",
           "icon": "curve_ball",
           "gradient_id": 2,

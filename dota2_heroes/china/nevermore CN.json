@@ -257,9 +257,9 @@
               "facet_bonus": {
                 "name": "nevermore_shadowmire",
                 "values": [
-                  3,
                   6,
-                  9,
+                  8,
+                  10,
                   12
                 ],
                 "operation": 5
@@ -325,7 +325,7 @@
                 9
               ],
               "is_percentage": false,
-              "heading_loc": "冷却时间：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -436,6 +436,26 @@
               "required_facet": ""
             },
             {
+              "name": "bonus_move_speed",
+              "values_float": [
+                5,
+                7,
+                9,
+                11
+              ],
+              "is_percentage": true,
+              "heading_loc": "额外移动速度：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "cast_speed_pct",
               "values_float": [
                 100
@@ -461,8 +481,8 @@
             {
               "name": "cast_speed_pct_tooltip",
               "values_float": [],
-              "is_percentage": true,
-              "heading_loc": "施法速度：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_nevermore_frenzy_castspeed",
@@ -482,10 +502,7 @@
             {
               "name": "duration",
               "values_float": [
-                7.5,
-                8,
-                8.5,
-                9
+                8
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -517,9 +534,29 @@
               "required_facet": ""
             },
             {
+              "name": "max_soul_increase",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityManaCost",
               "values_float": [
-                60
+                60,
+                65,
+                70,
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -536,7 +573,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                16
+                21
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -629,8 +666,14 @@
                 -7
               ],
               "is_percentage": false,
-              "heading_loc": "护甲削弱：",
-              "bonuses": [],
+              "heading_loc": "护甲降低：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_nevermore_3",
+                  "value": 2,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1226,6 +1269,23 @@
               "required_facet": ""
             },
             {
+              "name": "souls_per_hero_kill",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "necromastery_soul_release",
               "values_float": [
                 0.7
@@ -1248,7 +1308,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "每次击杀收获灵魂：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [
                 2
@@ -1266,8 +1326,8 @@
               "values_float": [
                 0
               ],
-              "is_percentage": true,
-              "heading_loc": "致命一击伤害：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [
                 190
@@ -1286,7 +1346,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "恐惧持续时间：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [
                 0.4
@@ -1860,7 +1920,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_nevermore.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/npc_dota_hero_nevermore.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_nevermore/npc_dota_hero_nevermore.webm",
-      "update_time": 1743724815,
+      "update_time": 1747951220,
       "facets": [
         {
           "color": 5,
@@ -1894,14 +1954,14 @@
         "id": 5062,
         "name": "nevermore_necromastery",
         "name_loc": "支配死灵",
-        "desc_loc": "影魔每杀死一个单位都会窃取其灵魂，获得额外攻击力。影魔死亡时%soul_release_tooltip%%%的灵魂将逃离他的束缚。",
+        "desc_loc": "影魔每杀死一个单位都会窃取其灵魂，获得额外攻击力。击杀英雄会获得%souls_per_hero_kill%个灵魂。影魔死亡时%soul_release_tooltip%%%的灵魂将逃离他的束缚。",
         "lore_loc": "被收割的亡魂在魂渊内外盘旋，增加了影魔的力量，也方便他扩大自己的灵魂收藏。",
         "notes_loc": [
           "反补、杀死中立生物也能收集到灵魂。",
           "破坏会使技能无法获得新的叠加效果。",
           "破坏不会使现有叠加效果提供的加成失效。"
         ],
-        "shard_loc": "影魔每次击杀都会额外获得1个灵魂。影魔每次攻击可以消耗1个灵魂，造成致命一击伤害，并使目标恐惧。",
+        "shard_loc": "",
         "scepter_loc": "提高灵魂数量上限。",
         "facets_loc": [
           "每次击杀英雄会使灵魂上限增加%max_soul_increase_on_hero_kill%个，直到影魔阵亡。",
@@ -2006,6 +2066,23 @@
             "required_facet": ""
           },
           {
+            "name": "souls_per_hero_kill",
+            "values_float": [
+              3
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
             "name": "necromastery_soul_release",
             "values_float": [
               0.7
@@ -2028,7 +2105,7 @@
               0
             ],
             "is_percentage": false,
-            "heading_loc": "每次击杀收获灵魂：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [
               2
@@ -2046,8 +2123,8 @@
             "values_float": [
               0
             ],
-            "is_percentage": true,
-            "heading_loc": "致命一击伤害：",
+            "is_percentage": false,
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [
               190
@@ -2066,7 +2143,7 @@
               0
             ],
             "is_percentage": false,
-            "heading_loc": "恐惧持续时间：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [
               0.4

@@ -61,7 +61,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "瘴气击中敌方英雄时会在他们身旁产生%num_created_wards_tooltip%个基于瘟疫守卫当前等级的瘟疫守卫。"
           ],
           "type": 0,
           "behavior": "48",
@@ -238,24 +238,41 @@
             },
             {
               "name": "create_wards",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_venomancer_gale_plagueward",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "venomancer_plague_carrier",
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
-              "required_facet": ""
+              "required_facet": "venomancer_plague_carrier"
+            },
+            {
+              "name": "num_created_wards_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "venomancer_plague_carrier",
+                "values": [
+                  2
+                ],
+                "operation": 0
+              },
+              "required_facet": "venomancer_plague_carrier"
             },
             {
               "name": "explosion_damage",
@@ -549,7 +566,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "瘟疫守卫可以附着在友军身上，并且拥有%max_charges%点能量点数。附着守卫的生命值取决于携带者的最大生命值，被摧毁时只会提供%gold_bounty_pct%%%击杀金钱。"
+            ""
           ],
           "type": 0,
           "behavior": "16",
@@ -594,25 +611,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "can_target",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "venomancer_plague_carrier",
-                "values": [
-                  1
-                ],
-                "operation": 5
-              },
-              "required_facet": "venomancer_plague_carrier"
-            },
-            {
               "name": "gold_bounty_pct",
               "values_float": [
                 100
@@ -623,32 +621,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "venomancer_plague_carrier",
-                "values": [
-                  20
-                ],
-                "operation": 5
+                "name": "",
+                "values": [],
+                "operation": 0
               },
               "required_facet": ""
-            },
-            {
-              "name": "max_charges",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "venomancer_plague_carrier",
-                "values": [
-                  3
-                ],
-                "operation": 5
-              },
-              "required_facet": "venomancer_plague_carrier"
             },
             {
               "name": "duration",
@@ -716,9 +693,9 @@
             {
               "name": "ward_hp_tooltip",
               "values_float": [
-                120,
-                230,
-                340,
+                150,
+                250,
+                350,
                 450
               ],
               "is_percentage": false,
@@ -764,56 +741,6 @@
                 "operation": 0
               },
               "required_facet": ""
-            },
-            {
-              "name": "threshold",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "附着守卫生命值：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "venomancer_plague_carrier",
-                "values": [
-                  100,
-                  150,
-                  200,
-                  250
-                ],
-                "operation": 0
-              },
-              "required_facet": "venomancer_plague_carrier"
-            },
-            {
-              "name": "threshold_max_hp_pct",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "来自携带者的守卫生命值：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "venomancer_plague_carrier",
-                "values": [
-                  1.5,
-                  2,
-                  2.5,
-                  3
-                ],
-                "operation": 0
-              },
-              "required_facet": "venomancer_plague_carrier"
             },
             {
               "name": "AbilityCastRange",
@@ -907,7 +834,7 @@
           "scepter_loc": "提升每个负面效果提供的基础伤害。瘟疫守卫也会根据他们的攻击力造成脓毒休克伤害。",
           "facets_loc": [
             "",
-            ""
+            "瘟疫守卫还会根据他们的攻击力造成脓毒休克的伤害。"
           ],
           "type": 0,
           "behavior": "66",
@@ -955,7 +882,7 @@
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [
-                10
+                15
               ],
               "facet_bonus": {
                 "name": "",
@@ -973,15 +900,15 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                1
-              ],
+              "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
+                "name": "venomancer_plague_carrier",
+                "values": [
+                  1
+                ],
+                "operation": 5
               },
-              "required_facet": ""
+              "required_facet": "venomancer_plague_carrier"
             }
           ],
           "is_item": false,
@@ -1858,7 +1785,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_venomancer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/npc_dota_hero_venomancer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_venomancer/npc_dota_hero_venomancer.webm",
-      "update_time": 1743724853,
+      "update_time": 1747951253,
       "facets": [
         {
           "color": 2,
@@ -1872,7 +1799,7 @@
         {
           "color": 1,
           "title_loc": "瘟疫傍身",
-          "description_loc": "瘟疫守卫可以附着在友军身上，并且拥有额外能量点数。",
+          "description_loc": "瘴气击中敌方英雄时会在他们身旁产生{s:bonus_num_created_wards_tooltip}个瘟疫守卫。瘟疫守卫还会根据他们的攻击力造成脓毒休克的伤害。",
           "name": "venomancer_plague_carrier",
           "icon": "summons",
           "gradient_id": 0,
@@ -1898,10 +1825,10 @@
           "破坏只会使剧毒术士攻击的额外伤害失效。"
         ],
         "shard_loc": "",
-        "scepter_loc": "提升每个负面效果提供的基础伤害。瘟疫守卫也会根据他们的攻击力造成脓毒休克伤害。",
+        "scepter_loc": "提升每个负面状态提供的基础伤害。",
         "facets_loc": [
           "",
-          ""
+          "瘟疫守卫还会根据他们的攻击力造成脓毒休克的伤害。"
         ],
         "type": 0,
         "behavior": "66",
@@ -1949,7 +1876,7 @@
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [
-              10
+              15
             ],
             "facet_bonus": {
               "name": "",
@@ -1967,15 +1894,15 @@
             "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
-            "values_scepter": [
-              1
-            ],
+            "values_scepter": [],
             "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
+              "name": "venomancer_plague_carrier",
+              "values": [
+                1
+              ],
+              "operation": 5
             },
-            "required_facet": ""
+            "required_facet": "venomancer_plague_carrier"
           }
         ],
         "is_item": false,

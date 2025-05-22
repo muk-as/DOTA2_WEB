@@ -59,7 +59,8 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "发芽内和外围附近的友军会持续获得治疗效果。对友方建筑的治疗速率为%building_healing_pct%%%。友方的树之祭祀对发芽产生的树木使用吞食会使持续时间加倍。",
+            "施放发芽后附近%healing_radius%范围内的树木会散发出治疗附近友军的光环。友军的树之祭祀吞食发芽产生的树木回提供双倍治疗时间。",
+            "",
             ""
           ],
           "type": 0,
@@ -148,9 +149,9 @@
               "name": "sprout_damage",
               "values_float": [
                 70,
-                140,
-                210,
-                280
+                135,
+                200,
+                265
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
@@ -215,24 +216,30 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "发芽每秒治疗：",
-              "bonuses": [],
+              "heading_loc": "每秒治疗：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_furion_8",
+                  "value": 30,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "furion_soothing_saplings",
                 "values": [
-                  10,
-                  20,
-                  30,
-                  40
+                  14,
+                  26,
+                  38,
+                  50
                 ],
                 "operation": 5
               },
               "required_facet": "furion_soothing_saplings"
             },
             {
-              "name": "building_healing_pct",
+              "name": "healing_tree_proximity",
               "values_float": [
                 0
               ],
@@ -244,7 +251,26 @@
               "facet_bonus": {
                 "name": "furion_soothing_saplings",
                 "values": [
-                  50
+                  175
+                ],
+                "operation": 0
+              },
+              "required_facet": "furion_soothing_saplings"
+            },
+            {
+              "name": "healing_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "furion_soothing_saplings",
+                "values": [
+                  1200
                 ],
                 "operation": 0
               },
@@ -360,6 +386,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -410,9 +437,9 @@
             {
               "name": "barrier",
               "values_float": [
-                100,
-                150,
-                200,
+                70,
+                130,
+                190,
                 250
               ],
               "is_percentage": false,
@@ -545,7 +572,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "召唤的树人数量减少，但是威力变大，而且拥有坚锐技能。"
+            "召唤的树人数量减少，但是威力变大，而且拥有坚锐技能。",
+            ""
           ],
           "type": 0,
           "behavior": "48",
@@ -1019,6 +1047,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1226,7 +1255,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "树人的倍数增加。"
+            "树人的倍数增加。",
+            ""
           ],
           "type": 0,
           "behavior": "8796093022274",
@@ -1375,6 +1405,7 @@
           "shard_loc": "",
           "scepter_loc": "缠绕所有击中的敌人。持续时间根据弹跳次序从%scepter_min_entangle_duration%秒开始增加，弹跳数达到上限时为%scepter_max_entangle_duration%秒。",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2116,25 +2147,25 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_furion.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_furion/npc_dota_hero_furion.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_furion/npc_dota_hero_furion.webm",
-      "update_time": 1743724869,
+      "update_time": 1747951269,
       "facets": [
         {
           "color": 2,
           "title_loc": "舒缓之苗",
-          "description_loc": "发芽内和外围附近的友军会持续获得治疗效果。",
+          "description_loc": "施放发芽后，{s:bonus_healing_radius}范围内所有树木都会治疗附近友军。",
           "name": "furion_soothing_saplings",
           "icon": "healing",
           "gradient_id": 0,
           "index": 0
         },
         {
-          "color": 3,
-          "title_loc": "铁树树人",
-          "description_loc": "自然的呼唤只会产生{s:bonus_max_treants}个树人，但是生命值和攻击力增加，视野增加，移动速度增加，而且拥有坚锐技能。",
-          "name": "furion_ironwood_treant",
-          "icon": "siege",
+          "color": 1,
+          "title_loc": "自然先富",
+          "description_loc": "只要自然先知击杀敌方英雄，或者在他附近阵亡，在原地会长出一棵摇钱树，掉落可以收集的金袋。",
+          "name": "furion_natures_profit",
+          "icon": "gold",
           "gradient_id": 2,
-          "index": 1
+          "index": 2
         }
       ],
       "facet_abilities": [
@@ -2142,7 +2173,214 @@
           "abilities": []
         },
         {
-          "abilities": []
+          "abilities": [
+            {
+              "id": 1619,
+              "name": "furion_natures_profit",
+              "name_loc": "自然先富",
+              "desc_loc": "只要有敌方英雄被自然先知击杀，或者在他附近%radius%范围内阵亡，会在原地长出一棵摇钱树。每次都会掉落若干金袋，所有英雄都可以拾取。每个金袋提供的金钱等于阵亡英雄等级的数倍。",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8796093022274",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 3,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "tick_interval",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "产生间隔：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "initial_spawn_time",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "树木产生延迟：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "radius",
+                  "values_float": [
+                    750
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bags_per_tick",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "每次金袋数量：",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_furion_8",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "tree_duration",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "树木持续时间：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "min_throw_range",
+                  "values_float": [
+                    200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_throw_range",
+                  "values_float": [
+                    250
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "hero_level_gold_multiplier",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "每级英雄等级金钱：",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            }
+          ]
         }
       ],
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_furion.png",
@@ -2157,7 +2395,8 @@
         "scepter_loc": "",
         "facets_loc": [
           "",
-          "树人的倍数增加。"
+          "树人的倍数增加。",
+          ""
         ],
         "type": 0,
         "behavior": "8796093022274",

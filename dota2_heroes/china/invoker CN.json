@@ -59,8 +59,6 @@
           "shard_loc": "",
           "scepter_loc": "提供%scepter_bonus_levels%级当前和最高等级。",
           "facets_loc": [
-            "",
-            "",
             "<font color='#7998b5'>冰</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#7998b5'>冰</font>会自动额外获得一级。",
             "",
             ""
@@ -208,6 +206,25 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "facet_bonus_levels",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "invoker_quas_focus",
+                "values": [
+                  0
+                ],
+                "operation": 0
+              },
+              "required_facet": "invoker_quas_focus"
             }
           ],
           "is_item": false,
@@ -244,8 +261,6 @@
           "shard_loc": "",
           "scepter_loc": "提供%scepter_bonus_levels%级当前和最高等级。",
           "facets_loc": [
-            "",
-            "",
             "",
             "<font color='#d671a9'>雷</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#d671a9'>雷</font>会自动额外获得一级。",
             ""
@@ -340,6 +355,38 @@
               "required_facet": ""
             },
             {
+              "name": "attack_speed_per_instance",
+              "values_float": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "单个元素攻速加成：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_invoker_13",
+                  "value": 2,
+                  "operation": 1
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "upgrade_at_level",
               "values_float": [
                 0
@@ -393,6 +440,25 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "facet_bonus_levels",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "invoker_wex_focus",
+                "values": [
+                  0
+                ],
+                "operation": 0
+              },
+              "required_facet": "invoker_wex_focus"
             }
           ],
           "is_item": false,
@@ -429,8 +495,6 @@
           "shard_loc": "",
           "scepter_loc": "提供%scepter_bonus_levels%级当前和最高等级。",
           "facets_loc": [
-            "",
-            "",
             "",
             "",
             "<font color='#cabe68'>火</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#cabe68'>火</font>会自动额外获得一级。"
@@ -495,16 +559,16 @@
             {
               "name": "bonus_damage_per_instance",
               "values_float": [
-                1,
-                3,
-                5,
-                7,
-                9,
-                11,
-                13,
-                15,
-                17,
-                19
+                2,
+                4,
+                6,
+                8,
+                10,
+                12,
+                14,
+                16,
+                18,
+                20
               ],
               "is_percentage": false,
               "heading_loc": "每级攻击力：",
@@ -578,6 +642,25 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "facet_bonus_levels",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "invoker_exort_focus",
+                "values": [
+                  0
+                ],
+                "operation": 0
+              },
+              "required_facet": "invoker_exort_focus"
             }
           ],
           "is_item": false,
@@ -615,8 +698,6 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
-            "",
             "",
             "",
             ""
@@ -741,8 +822,6 @@
           "facets_loc": [
             "",
             "",
-            "急速冷却触发时，祈求者会被治疗%freeze_heal%点生命并回复%freeze_mana%点魔法。",
-            "",
             ""
           ],
           "type": 0,
@@ -853,16 +932,16 @@
             {
               "name": "freeze_damage",
               "values_float": [
-                8,
-                16,
-                24,
-                32,
-                40,
-                48,
-                56,
-                64,
+                28,
+                36,
+                44,
+                52,
+                60,
                 68,
-                72
+                76,
+                84,
+                92,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "冷却伤害（<font color='#7998b5'>冰</font>）：",
@@ -878,59 +957,24 @@
             },
             {
               "name": "freeze_heal",
-              "values_float": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "冻结治疗（<font color='#7998b5'>冰</font>）：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "invoker_quas_focus",
-                "values": [
-                  13,
-                  26,
-                  39,
-                  52,
-                  65,
-                  78,
-                  91,
-                  104,
-                  117,
-                  130
-                ],
-                "operation": 0
-              },
-              "required_facet": "invoker_quas_focus"
-            },
-            {
-              "name": "freeze_mana",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_invoker_cold_snap_heal",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "invoker_quas_focus",
-                "values": [
-                  5
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
-              "required_facet": "invoker_quas_focus"
+              "required_facet": ""
             },
             {
               "name": "damage_trigger",
@@ -1056,8 +1100,6 @@
           "facets_loc": [
             "",
             "",
-            "",
-            "",
             ""
           ],
           "type": 0,
@@ -1124,8 +1166,10 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "invoker_quas_focus",
+                "values": [
+                  0
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -1252,12 +1296,12 @@
               "required_facet": ""
             },
             {
-              "name": "ally_cast_area_of_effect",
+              "name": "apply_ice_wall_debuff",
               "values_float": [
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "对友军作用范围：",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1269,57 +1313,6 @@
                 "operation": 0
               },
               "required_facet": "invoker_quas_focus"
-            },
-            {
-              "name": "ally_duration",
-              "values_float": [
-                30
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ally_fadetime",
-              "values_float": [
-                0.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "disable_time",
-              "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
             },
             {
               "name": "AbilityCastPoint",
@@ -1406,8 +1399,6 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
-            "",
             "",
             "",
             ""
@@ -1650,36 +1641,40 @@
             {
               "name": "twister_damage",
               "values_float": [
-                30
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "气旋每秒伤害（<font color='#d671a9'>雷</font>）：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "invoker_wex_focus",
+                "values": [
+                  0
+                ],
                 "operation": 0
               },
-              "required_facet": ""
+              "required_facet": "invoker_wex_focus"
             },
             {
               "name": "twister_duration",
               "values_float": [
-                4
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "气旋持续时间（<font color='#7998b5'>冰</font>）：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "invoker_wex_focus",
+                "values": [
+                  0
+                ],
                 "operation": 0
               },
-              "required_facet": ""
+              "required_facet": "invoker_wex_focus"
             },
             {
               "name": "twister_tick_rate",
@@ -1806,8 +1801,6 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
-            "",
             "",
             "",
             ""
@@ -2065,8 +2058,6 @@
           "facets_loc": [
             "",
             "",
-            "",
-            "对祈求者或他控制下任意远程单位使用灵动迅捷会提供攻击距离加成。",
             ""
           ],
           "type": 0,
@@ -2124,7 +2115,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_invoker_5",
-                  "value": 30,
+                  "value": 35,
                   "operation": 0
                 }
               ],
@@ -2156,7 +2147,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_invoker_5",
-                  "value": 30,
+                  "value": 35,
                   "operation": 0
                 }
               ],
@@ -2168,43 +2159,6 @@
                 "operation": 0
               },
               "required_facet": ""
-            },
-            {
-              "name": "bonus_attack_range",
-              "values_float": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "攻击距离提升（<font color='#d671a9'>雷</font>）：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "invoker_wex_focus",
-                "values": [
-                  60,
-                  70,
-                  80,
-                  90,
-                  100,
-                  110,
-                  120,
-                  130,
-                  140,
-                  150
-                ],
-                "operation": 0
-              },
-              "required_facet": "invoker_wex_focus"
             },
             {
               "name": "duration",
@@ -2325,9 +2279,7 @@
           "facets_loc": [
             "",
             "",
-            "",
-            "",
-            "陨石的作用范围提升%bonus_area_of_effect%，行进距离提升%bonus_travel_distance%。"
+            ""
           ],
           "type": 0,
           "behavior": "8724152401",
@@ -2389,14 +2341,18 @@
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_invoker_chaos_meteor_size",
+                  "value": 25,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "invoker_exort_focus",
-                "values": [
-                  30
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -2421,10 +2377,8 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "invoker_exort_focus",
-                "values": [
-                  200
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -2691,8 +2645,6 @@
           "facets_loc": [
             "",
             "",
-            "",
-            "",
             ""
           ],
           "type": 0,
@@ -2768,16 +2720,16 @@
             {
               "name": "damage",
               "values_float": [
-                200,
-                250,
-                300,
-                350,
-                400,
-                450,
-                500,
-                550,
-                600,
-                650
+                175,
+                225,
+                275,
+                325,
+                375,
+                425,
+                475,
+                525,
+                575,
+                625
               ],
               "is_percentage": false,
               "heading_loc": "伤害（<font color='#cabe68'>火</font>）：\n",
@@ -2847,7 +2799,7 @@
             {
               "name": "cataclysm_cooldown",
               "values_float": [
-                75
+                90
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3027,8 +2979,6 @@
           "facets_loc": [
             "",
             "",
-            "",
-            "",
             ""
           ],
           "type": 0,
@@ -3200,16 +3150,16 @@
             {
               "name": "spirit_duration",
               "values_float": [
-                10,
-                20,
+                24,
                 30,
-                40,
-                50,
+                36,
+                42,
+                48,
+                54,
                 60,
-                70,
-                80,
-                90,
-                100
+                66,
+                72,
+                78
               ],
               "is_percentage": false,
               "heading_loc": "持续时间（<font color='#7998b5'>冰</font>）：\n",
@@ -3383,8 +3333,6 @@
           "facets_loc": [
             "",
             "",
-            "",
-            "",
             ""
           ],
           "type": 0,
@@ -3495,16 +3443,16 @@
             {
               "name": "damage_per_second",
               "values_float": [
-                8,
-                16,
-                24,
-                32,
+                30,
+                35,
                 40,
-                48,
-                56,
-                64,
-                72,
-                80
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75
               ],
               "is_percentage": false,
               "heading_loc": "每秒伤害（<font color='#cabe68'>火</font>）：\n",
@@ -3515,6 +3463,23 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "tick_interval",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3542,12 +3507,29 @@
               "required_facet": ""
             },
             {
-              "name": "num_wall_elements",
+              "name": "wall_total_length",
               "values_float": [
-                15
+                1200
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "冰墙长度：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "wall_width",
+              "values_float": [
+                105
+              ],
+              "is_percentage": false,
+              "heading_loc": "冰墙宽度：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -3561,47 +3543,19 @@
               "required_facet": ""
             },
             {
-              "name": "wall_element_spacing",
-              "values_float": [
-                80
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "wall_element_radius",
-              "values_float": [
-                105
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_wall_radius",
+              "name": "vector_cast_range",
               "values_float": [
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_invoker_glacier",
+                  "value": 600,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -3614,9 +3568,26 @@
               "required_facet": "invoker_quas_focus"
             },
             {
-              "name": "bonus_half_length",
+              "name": "glacier_formation_delay",
               "values_float": [
-                1
+                1.3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "glacier_formation_speed",
+              "values_float": [
+                600
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -3633,23 +3604,6 @@
             {
               "name": "root_delay",
               "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "root_duration",
-              "values_float": [
                 0
               ],
               "is_percentage": false,
@@ -3667,21 +3621,42 @@
               "required_facet": "invoker_quas_focus"
             },
             {
-              "name": "root_damage",
+              "name": "root_duration",
               "values_float": [
-                300
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "缠绕时间（<font color='#7998b5'>冰</font>）：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "",
-                "values": [],
+                "name": "invoker_quas_focus",
+                "values": [
+                  0
+                ],
                 "operation": 0
               },
-              "required_facet": ""
+              "required_facet": "invoker_quas_focus"
+            },
+            {
+              "name": "root_damage",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "缠绕伤害（<font color='#7998b5'>冰</font>）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "invoker_quas_focus",
+                "values": [
+                  0
+                ],
+                "operation": 0
+              },
+              "required_facet": "invoker_quas_focus"
             },
             {
               "name": "AbilityCastPoint",
@@ -3766,8 +3741,6 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "",
-            "",
             "",
             "",
             ""
@@ -4608,34 +4581,34 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_invoker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/npc_dota_hero_invoker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_invoker/npc_dota_hero_invoker.webm",
-      "update_time": 1743728498,
+      "update_time": 1747947689,
       "facets": [
         {
           "color": 3,
           "title_loc": "科瑞克斯学者",
-          "description_loc": "<font color='#7998b5'>冰</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#7998b5'>冰</font>会自动额外获得一级。<br><br><b>急速冷却</b>触发时，祈求者会被治疗，并回复若干魔法。<br><br><font color='#92acf5'>阿哈利姆神杖</font>会升级<b>幽灵漫步</b>，并且<font color='#7998b5'>冰</font>获得2级当前等级和最高等级，使其最高可达10级。<br><br><font color='#92acf5'>阿哈利姆魔晶</font>会升级<b>寒冰之墙</b>。",
+          "description_loc": "<font color='#7998b5'>冰</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#7998b5'>冰</font>会自动额外获得一级。<br><br><font color='#92acf5'>阿哈利姆神杖</font>会升级<b>寒冰之墙</b>。<br><br><font color='#92acf5'>阿哈利姆魔晶</font>会升级<b>幽灵漫步</b>。",
           "name": "invoker_quas_focus",
           "icon": "invoker_quas",
           "gradient_id": 0,
-          "index": 2
+          "index": 0
         },
         {
           "color": 4,
           "title_loc": "托纳鲁斯心智",
-          "description_loc": "<font color='#d671a9'>雷</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#d671a9'>雷</font>会自动额外获得一级。<br><br>对祈求者或他控制的远程单位使用<b>灵动迅捷</b>会提供攻击距离加成。<br><br><font color='#92acf5'>阿哈利姆神杖</font>会升级<b>强袭飓风</b>，并且<font color='#d671a9'>雷</font>获得2级当前等级和最高等级，使其最高可达10级。<font color='#92acf5'>阿哈利姆魔晶</font>会升级<b>电磁脉冲</b>。",
+          "description_loc": "<font color='#d671a9'>雷</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#d671a9'>雷</font>会自动额外获得一级。<br><br><font color='#92acf5'>阿哈利姆神杖</font>会升级<b>强袭飓风</b>。<br><br><font color='#92acf5'>阿哈利姆魔晶</font>会升级<b>电磁脉冲</b>。",
           "name": "invoker_wex_focus",
           "icon": "invoker_wex",
           "gradient_id": 0,
-          "index": 3
+          "index": 1
         },
         {
           "color": 1,
           "title_loc": "加拉隆党羽",
-          "description_loc": "<font color='#cabe68'>火</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#cabe68'>火</font>会自动额外获得一级。<br><br><b>混沌陨石</b>的作用范围和行进距离提升。<br><br><font color='#92acf5'>阿哈利姆神杖</font>会升级<b>阳炎冲击</b>，并且<font color='#cabe68'>火</font>获得2级当前等级和最高等级，使其最高可达10级。<br><br><font color='#92acf5'>阿哈利姆魔晶</font>会升级<b>阳炎冲击</b>。",
+          "description_loc": "<font color='#cabe68'>火</font>的最高等级额外增加一级。祈求者到达6级时，<font color='#cabe68'>火</font>会自动额外获得一级。<br><br><font color='#92acf5'>阿哈利姆神杖</font>会升级<b>阳炎冲击</b>。<br><br><font color='#92acf5'>阿哈利姆魔晶</font>会升级<b>阳炎冲击</b>。",
           "name": "invoker_exort_focus",
           "icon": "invoker_exort",
           "gradient_id": 0,
-          "index": 4
+          "index": 2
         }
       ],
       "facet_abilities": [
@@ -4664,8 +4637,6 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
-          "",
-          "",
           "",
           "",
           ""

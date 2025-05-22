@@ -59,6 +59,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -181,7 +183,7 @@
               "required_facet": ""
             },
             {
-              "name": "burrow_speed_scepter",
+              "name": "mound_duration",
               "values_float": [
                 0
               ],
@@ -189,20 +191,20 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                3000
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
-                "values": [],
-                "operation": 0
+                "values": [
+                  0
+                ],
+                "operation": 5
               },
               "required_facet": ""
             },
             {
-              "name": "scepter_channel_time",
+              "name": "is_vector_target",
               "values_float": [
-                2
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -211,15 +213,17 @@
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
-                "values": [],
+                "values": [
+                  1
+                ],
                 "operation": 0
               },
               "required_facet": ""
             },
             {
-              "name": "scepter_max_power",
+              "name": "underground_distance_pct",
               "values_float": [
-                2
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -228,7 +232,9 @@
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
-                "values": [],
+                "values": [
+                  60
+                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -358,7 +364,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "沙尘暴的作用范围提升，并且沙王在其中获得隐身效果。",
-            "沙尘暴能以%sand_storm_move_speed_pct%%%沙王移速的速度跟随沙王，并且只要和沙王相距不超过%sand_storm_max_distance_from_caster%就不会消失。"
+            "沙尘暴能以%sand_storm_move_speed_pct%%%沙王移速的速度跟随沙王，并且只要和沙王相距不超过%sand_storm_max_distance_from_caster%就不会消失。",
+            "当沙王在沙尘暴中攻击敌人时，他会对目标施加致盲的负面状态。",
+            ""
           ],
           "type": 0,
           "behavior": "33554436",
@@ -425,10 +433,10 @@
             {
               "name": "sand_storm_radius",
               "values_float": [
-                350,
-                400,
-                450,
-                500
+                425,
+                500,
+                575,
+                650
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -436,14 +444,9 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "sand_king_sandshroud",
-                "values": [
-                  575,
-                  650,
-                  725,
-                  800
-                ],
-                "operation": 5
+                "name": "",
+                "values": [],
+                "operation": 0
               },
               "required_facet": ""
             },
@@ -476,7 +479,7 @@
             {
               "name": "fade_delay",
               "values_float": [
-                -1
+                0.7
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -484,70 +487,55 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "sand_king_sandshroud",
-                "values": [
-                  0.7
-                ],
-                "operation": 5
+                "name": "",
+                "values": [],
+                "operation": 0
               },
               "required_facet": ""
             },
             {
-              "name": "sand_storm_move_speed_pct",
+              "name": "blind_pct",
               "values_float": [
+                0,
+                0,
+                0,
                 0
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "致盲：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "sand_king_dust_devil",
+                "name": "sand_king_obscurity",
                 "values": [
-                  70
+                  20,
+                  30,
+                  40,
+                  50
                 ],
                 "operation": 0
               },
-              "required_facet": "sand_king_dust_devil"
+              "required_facet": "sand_king_obscurity"
             },
             {
-              "name": "sand_storm_max_distance_from_caster",
+              "name": "blind_debuff_duration",
               "values_float": [
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "致盲持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "sand_king_dust_devil",
+                "name": "sand_king_obscurity",
                 "values": [
-                  2500
+                  5
                 ],
                 "operation": 0
               },
-              "required_facet": "sand_king_dust_devil"
-            },
-            {
-              "name": "sand_storm_move_speed_bonus_when_outside_radius",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "sand_king_dust_devil",
-                "values": [
-                  55
-                ],
-                "operation": 0
-              },
-              "required_facet": "sand_king_dust_devil"
+              "required_facet": "sand_king_obscurity"
             },
             {
               "name": "AbilityDuration",
@@ -636,7 +624,9 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "",
+            "被尾刺的最中心范围击中的每个敌方英雄都会立刻产生一次腐尸毒的爆炸，造成%caustic_damage_pct%%%伤害。阿哈利姆神杖升级产生的尾刺不会施加。"
           ],
           "type": 0,
           "behavior": "134217776",
@@ -683,10 +673,10 @@
             {
               "name": "radius",
               "values_float": [
-                225,
-                255,
-                285,
-                315
+                230,
+                250,
+                270,
+                290
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -735,12 +725,31 @@
               "required_facet": ""
             },
             {
+              "name": "inner_radius_procs_caustic",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "sand_king_pinpoint",
+                "values": [
+                  1
+                ],
+                "operation": 5
+              },
+              "required_facet": "sand_king_pinpoint"
+            },
+            {
               "name": "attack_damage",
               "values_float": [
-                35,
-                70,
-                105,
-                140
+                50,
+                75,
+                100,
+                125
               ],
               "is_percentage": false,
               "heading_loc": "额外伤害：",
@@ -805,6 +814,25 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "caustic_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "sand_king_pinpoint",
+                "values": [
+                  50
+                ],
+                "operation": 0
+              },
+              "required_facet": "sand_king_pinpoint"
             },
             {
               "name": "AbilityCastRange",
@@ -910,6 +938,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            "",
             ""
           ],
           "type": 0,
@@ -974,10 +1004,10 @@
             {
               "name": "caustic_finale_damage_base",
               "values_float": [
-                15,
-                35,
-                55,
-                75
+                20,
+                40,
+                60,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "基础伤害：",
@@ -994,13 +1024,13 @@
             {
               "name": "caustic_finale_damage_pct",
               "values_float": [
-                4,
-                8,
-                12,
-                16
+                3,
+                7,
+                11,
+                15
               ],
               "is_percentage": true,
-              "heading_loc": "最大生命值伤害：",
+              "heading_loc": "阵亡单位的最大生命值伤害：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1062,6 +1092,8 @@
           "shard_loc": "提升地震波伤害，每%shard_interval%秒都会在沙王身上产生一道较小的地震波。",
           "scepter_loc": "地震的脉冲开始时每%spine_tick_rate%秒会在随机地点产生%scepter_explosions_per_pulse%片尾刺的攻击区域，每片区域为地震当前范围的%scepter_explosion_radius_pct%%%，对击中的敌人造成%spine_damage_pct%%%尾刺伤害。魔晶的地震波会产生%shard_explosions_per_pulse%次攻击。",
           "facets_loc": [
+            "",
+            "",
             "",
             ""
           ],
@@ -1161,7 +1193,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_sand_king_5",
-                  "value": 100,
+                  "value": 75,
                   "operation": 0
                 }
               ],
@@ -1184,7 +1216,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_sand_king_5",
-                  "value": 12,
+                  "value": 7,
                   "operation": 0
                 }
               ],
@@ -2046,25 +2078,25 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_sand_king.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_sand_king/npc_dota_hero_sand_king.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_sand_king/npc_dota_hero_sand_king.webm",
-      "update_time": 1743724823,
+      "update_time": 1747951226,
       "facets": [
         {
-          "color": 5,
-          "title_loc": "黄沙漫天",
-          "description_loc": "沙尘暴的作用范围提升，并且沙王在其中获得隐身效果。",
-          "name": "sand_king_sandshroud",
-          "icon": "vision",
+          "color": 1,
+          "title_loc": "喷砂",
+          "description_loc": "当沙王在沙尘暴中攻击敌人时，他会对目标施加致盲的负面状态。",
+          "name": "sand_king_obscurity",
+          "icon": "no_vision",
           "gradient_id": 3,
-          "index": 0
+          "index": 2
         },
         {
-          "color": 1,
-          "title_loc": "尘卷旋风",
-          "description_loc": "沙王移动时沙尘暴会跟随沙王。",
-          "name": "sand_king_dust_devil",
-          "icon": "speed",
+          "color": 0,
+          "title_loc": "腐尸刺",
+          "description_loc": "尾刺的最中心范围击中的每名敌方英雄都会产生一次腐尸毒的爆炸。",
+          "name": "sand_king_pinpoint",
+          "icon": "area_of_effect",
           "gradient_id": 1,
-          "index": 1
+          "index": 3
         }
       ],
       "facet_abilities": [
@@ -2086,6 +2118,8 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
+          "",
           "",
           ""
         ],
@@ -2151,10 +2185,10 @@
           {
             "name": "caustic_finale_damage_base",
             "values_float": [
-              15,
-              35,
-              55,
-              75
+              20,
+              40,
+              60,
+              80
             ],
             "is_percentage": false,
             "heading_loc": "基础伤害：",
@@ -2171,13 +2205,13 @@
           {
             "name": "caustic_finale_damage_pct",
             "values_float": [
-              4,
-              8,
-              12,
-              16
+              3,
+              7,
+              11,
+              15
             ],
             "is_percentage": true,
-            "heading_loc": "最大生命值伤害：",
+            "heading_loc": "阵亡单位的最大生命值伤害：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
