@@ -50,13 +50,13 @@
           "id": 5015,
           "name": "bloodseeker_bloodrage",
           "name_loc": "血怒",
-          "desc_loc": "使血魔陷入渴望鲜血的狂怒中，以每秒流失一定百分比生命的代价获得攻击速度和技能增强加成。对友方英雄的攻击速度加成减半。",
+          "desc_loc": "使血魔或友方英雄陷入渴望鲜血的狂怒中，以每秒流失一定百分比生命的代价获得攻击速度和技能增强加成。对友方英雄的攻击速度加成减半。",
           "lore_loc": "史德利古尔与人分享他那野兽般的嗜血饥渴。",
           "notes_loc": [
             "对血魔或友军造成的伤害不能致死，而且不能杀死英雄。"
           ],
           "shard_loc": "",
-          "scepter_loc": "血怒下的攻击现在造成%max_health_dmg_pct%%%目标最大生命值的<font color=\"#d8ae53\">纯粹</font>伤害。",
+          "scepter_loc": "血怒下血魔的攻击现在造成%max_health_dmg_pct%%%目标最大生命值的<font color=\"#d8ae53\">纯粹</font>伤害。",
           "facets_loc": [
             "",
             "",
@@ -1531,15 +1531,16 @@
       ],
       "talents": [
         {
-          "id": 482,
-          "name": "special_bonus_unique_bloodseeker_5",
-          "name_loc": "+{s:bonus_attack_speed} 血怒攻击速度",
+          "id": 6034,
+          "name": "special_bonus_hp_175",
+          "name_loc": "+{s:value} 生命",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1578,7 +1579,25 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": [],
+          "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                175
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
@@ -1603,7 +1622,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
+            "",
+            "+{s:bonus_base_damage_amp}% 血怒基础攻击力增强"
           ],
           "type": 2,
           "behavior": "2",
@@ -1664,6 +1684,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1727,6 +1748,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1789,6 +1811,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1843,13 +1866,14 @@
         {
           "id": 6230,
           "name": "special_bonus_unique_bloodseeker",
-          "name_loc": "-{s:bonus_damage_pct}% 血怒每秒最大生命值伤害",
+          "name_loc": "-{s:bonus_damage_pct}% 血怒对友军每秒最大生命值伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1913,6 +1937,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1975,6 +2000,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2031,7 +2057,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_bloodseeker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/npc_dota_hero_bloodseeker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/npc_dota_hero_bloodseeker.webm",
-      "update_time": 1747951205,
+      "update_time": 1747954808,
       "facets": [
         {
           "color": 0,

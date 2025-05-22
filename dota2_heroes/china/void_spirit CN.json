@@ -14,7 +14,7 @@
       "npe_desc_loc": "出入人世来打击敌人",
       "str_base": 22,
       "str_gain": 2.6,
-      "agi_base": 19,
+      "agi_base": 21,
       "agi_gain": 2.2,
       "int_base": 24,
       "int_gain": 3.1,
@@ -35,7 +35,7 @@
       "attack_rate": 1.7,
       "attack_range": 200,
       "projectile_speed": 900,
-      "armor": 2.1666667,
+      "armor": 2.5,
       "magic_resistance": 25,
       "movement_speed": 290,
       "turn_rate": 0.7,
@@ -53,7 +53,7 @@
           "desc_loc": "虚无之灵向目标地点派出一个残像。残像观察着一片区域，面朝矢量的方向。当有目标进入其视线，残像会拉扯，并造成伤害。",
           "lore_loc": "无玄的存在远超时间和空间中的一个点。",
           "notes_loc": [],
-          "shard_loc": "提升残阴的观察距离，并且只牵引敌方英雄单位。其他单位处于残阴路径时每%damage_tick_rate%秒受到%creep_damage_pct%%%伤害，但是残像不会被摧毁。冷却时间降低至%AbilityCooldown%秒。",
+          "shard_loc": "额外产生一道观察路径，会围绕残阴旋转。残阴现在会提供真实视域，不再对非英雄单位触发，而是每秒在两道路径上造成%creep_damage_pct%%%伤害。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -559,7 +559,7 @@
           "notes_loc": [
             "太虚呼唤不会在外圈产生残阴。"
           ],
-          "shard_loc": "异化增加一部分外圈。伤害提升%shard_bonus_damage%点。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1235,7 +1235,7 @@
           "id": 1420,
           "name": "void_spirit_intrinsic_edge",
           "name_loc": "内在优势",
-          "desc_loc": "虚无之灵从他的所有属性中获得的次级加成提升%secondary_stat_bonus_pct%%%",
+          "desc_loc": "虚无之灵从力量中获得的生命恢复、敏捷中获得的护甲、智力中获得的魔法恢复和魔法抗性均提升%secondary_stat_bonus_pct%%%。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1394,7 +1394,7 @@
           "notes_loc": [
             "太虚之径的攻击不会分裂。"
           ],
-          "shard_loc": "虚无之灵的攻击拥有%attack_chance_pct%%%几率，并且非大招技能拥有%ability_chance_pct%%%几率在敌人身上留下虚无印记。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1643,8 +1643,8 @@
       ],
       "talents": [
         {
-          "id": 6926,
-          "name": "special_bonus_mp_regen_175",
+          "id": 7132,
+          "name": "special_bonus_mp_regen_150",
           "name_loc": "+{s:value} 魔法恢复",
           "desc_loc": "",
           "lore_loc": "",
@@ -1695,151 +1695,7 @@
             {
               "name": "value",
               "values_float": [
-                1.75
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 7707,
-          "name": "special_bonus_unique_void_spirit_2",
-          "name_loc": "+{s:bonus_impact_damage} 残阴伤害",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 7713,
-          "name": "special_bonus_unique_void_spirit_7",
-          "name_loc": "残阴提供 {s:value} 真实视域",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                475
+                1.5
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1935,6 +1791,132 @@
               "required_facet": ""
             }
           ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 1657,
+          "name": "special_bonus_unique_void_spirit_resonant_pulse_barrier",
+          "name_loc": "+{s:bonus_base_absorb_amount}% 共鸣脉冲护盾",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 7707,
+          "name": "special_bonus_unique_void_spirit_2",
+          "name_loc": "+{s:bonus_impact_damage} 残阴伤害",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
@@ -2241,7 +2223,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_void_spirit.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_void_spirit/npc_dota_hero_void_spirit.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_void_spirit/npc_dota_hero_void_spirit.webm",
-      "update_time": 1747951351,
+      "update_time": 1747954943,
       "facets": [
         {
           "color": 4,
