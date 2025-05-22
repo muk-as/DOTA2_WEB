@@ -472,7 +472,7 @@
                 0
               ],
               "mana_costs": [
-                80
+                120
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -500,10 +500,10 @@
                 {
                   "name": "move_speed",
                   "values_float": [
-                    5,
-                    10,
-                    15,
-                    20
+                    0,
+                    8,
+                    16,
+                    24
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS MOVEMENT SPEED:",
@@ -800,13 +800,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_ringmaster_box_cast_range",
-                      "value": 200,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -858,7 +852,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    80
+                    120
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -961,11 +955,17 @@
                 {
                   "name": "damage_impact",
                   "values_float": [
-                    75
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "IMPACT DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_ringmaster_dagger_impact_damage",
+                      "value": 75,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1353,7 +1353,7 @@
                 {
                   "name": "illusion_percent_damage",
                   "values_float": [
-                    50
+                    30
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION MAX HEALTH LOSS:",
@@ -2053,7 +2053,7 @@
               "id": 388,
               "name": "ringmaster_dark_carnival_souvenirs",
               "name_loc": "Dark Carnival Barker",
-              "desc_loc": "Ringmaster receives a random single-use Dark Carnival Souvenir whenever an enemy hero dies within %souvenir_collection_range% units of him. Additional Souvenirs are held as charges.<br><br>If Ringmaster does not have a Souvenir when he respawns he will be granted one.",
+              "desc_loc": "Ringmaster receives a random single-use Dark Carnival Souvenir whenever an enemy hero dies within %souvenir_collection_range% units of him. Additional Souvenirs are held as charges.<br><br>If Ringmaster does not have a Souvenir when he dies he will be granted one.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -2234,9 +2234,9 @@
               "item_quality": 0
             },
             {
-              "id": 397,
-              "name": "special_bonus_unique_ringmaster_box_cast_range",
-              "name_loc": "+{s:bonus_AbilityCastRange} Escape Act Cast Range",
+              "id": 1630,
+              "name": "special_bonus_unique_ringmaster_dagger_impact_damage",
+              "name_loc": "+{s:bonus_damage_impact} Impalement Arts Impact Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

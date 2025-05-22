@@ -32,7 +32,7 @@
           ],
           "str_base": 22,
           "str_gain": 2.6,
-          "agi_base": 19,
+          "agi_base": 21,
           "agi_gain": 2.2,
           "int_base": 24,
           "int_gain": 3.1,
@@ -55,7 +55,7 @@
           "attack_rate": 1.7,
           "attack_range": 200,
           "projectile_speed": 900,
-          "armor": 2.1666667,
+          "armor": 2.5,
           "magic_resistance": 25,
           "movement_speed": 290,
           "turn_rate": 0.7,
@@ -73,7 +73,7 @@
               "desc_loc": "Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
               "lore_loc": "Inai exists far beyond the scope of a single point in space and time.",
               "notes_loc": [],
-              "shard_loc": "Increases Aether Remnant watch range and only pulls enemy hero units. Other units take %creep_damage_pct%%% damage every %damage_tick_rate%s that they are in the remnant's path, but the remnant is not destroyed. Decreases cooldown to %AbilityCooldown%s.",
+              "shard_loc": "Creates an additional watcher path that rotates around the remnant.  The remnant now provides True Sight, and no longer triggers on creeps, instead dealing %creep_damage_pct%%% damage to them every second in both paths.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -198,9 +198,7 @@
                   "is_percentage": false,
                   "heading_loc": "WATCH RANGE:",
                   "bonuses": [],
-                  "values_shard": [
-                    150
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -263,17 +261,17 @@
                 {
                   "name": "impact_damage",
                   "values_float": [
-                    85,
-                    135,
-                    185,
-                    235
+                    90,
+                    140,
+                    190,
+                    240
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_void_spirit_2",
-                      "value": 50,
+                      "value": 60,
                       "operation": 0
                     }
                   ],
@@ -388,7 +386,7 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    1
+                    0.5
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -407,7 +405,7 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    30
+                    50
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -454,6 +452,44 @@
                     "operation": 0
                   },
                   "required_facet": "void_spirit_aether_artifice"
+                },
+                {
+                  "name": "truesight_range",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    475
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "rotation_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1.5
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -503,9 +539,7 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    2
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -537,7 +571,7 @@
               "notes_loc": [
                 "Call of the Void will never spawn Aether Remnants in the Outer Ring."
               ],
-              "shard_loc": "Adds a partial outer ring to Dissimilate. Increases damage by %shard_bonus_damage%.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -961,16 +995,16 @@
                   "name": "damage",
                   "values_float": [
                     60,
-                    105,
-                    150,
-                    195
+                    110,
+                    160,
+                    210
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_void_spirit_4",
-                      "value": 70,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -1010,7 +1044,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE DAMAGE BARRIER:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_void_spirit_resonant_pulse_barrier",
+                      "value": 20,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1030,17 +1070,18 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BARRIER AMOUNT PER HERO HIT:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_void_spirit_resonant_pulse_barrier",
+                      "value": 20,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "void_spirit_sanctuary",
-                    "values": [
-                      15,
-                      20,
-                      25,
-                      30
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1193,7 +1234,7 @@
               "id": 1420,
               "name": "void_spirit_intrinsic_edge",
               "name_loc": "Intrinsic Edge",
-              "desc_loc": "Void Spirit gains %secondary_stat_bonus_pct%%% more secondary bonuses from all of his stats.",
+              "desc_loc": "Void Spirit gains %secondary_stat_bonus_pct%%% more HP regen from Strength, armor from Agility, and mana regen and magic resistance from Intelligence.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1255,6 +1296,74 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "hp_regen",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "HEALTH REGENERATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "armor",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mp_regen",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MANA REGENERATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "magic_resist",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAGIC RESIST:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1279,7 +1388,7 @@
               "notes_loc": [
                 "Astral Step attacks do not cleave."
               ],
-              "shard_loc": "Void Spirits attacks have a %attack_chance_pct%%% Chance, and Non-Ult Spells a %ability_chance_pct%%% Chance to put a Void Mark on the Enemy.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1476,7 +1585,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_void_spirit_1",
-                      "value": 4,
+                      "value": 3,
                       "operation": 2
                     }
                   ],
@@ -1523,8 +1632,8 @@
           ],
           "talents": [
             {
-              "id": 6926,
-              "name": "special_bonus_mp_regen_175",
+              "id": 7132,
+              "name": "special_bonus_mp_regen_150",
               "name_loc": "+{s:value} Mana Regen",
               "desc_loc": "",
               "lore_loc": "",
@@ -1575,151 +1684,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    1.75
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 7707,
-              "name": "special_bonus_unique_void_spirit_2",
-              "name_loc": "+{s:bonus_impact_damage} Aether Remnant Damage",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 7713,
-              "name": "special_bonus_unique_void_spirit_7",
-              "name_loc": "Remnant Provides {s:value} True Sight",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    475
+                    1.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1815,6 +1780,132 @@
                   "required_facet": ""
                 }
               ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1657,
+              "name": "special_bonus_unique_void_spirit_resonant_pulse_barrier",
+              "name_loc": "+{s:bonus_base_absorb_amount}% Resonant Pulse Barrier",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 7707,
+              "name": "special_bonus_unique_void_spirit_2",
+              "name_loc": "+{s:bonus_impact_damage} Aether Remnant Damage",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,

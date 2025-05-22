@@ -13,21 +13,21 @@
           "facets": [
             {
               "color": 4,
-              "title_loc": "Irrepressible",
-              "description_loc": "Silencer cannot be silenced.",
-              "name": "silencer_irrepressible",
-              "icon": "silencer",
+              "title_loc": "Synaptic Split",
+              "description_loc": "Increases the max level of Glaives of Wisdom. Level {s:bonus_max_level_tooltip} Glaives of Wisdom bounce {s:bonus_bounce_count_tooltip} time to a random target within {s:bonus_bounce_range_tooltip} range.",
+              "name": "silencer_spread_the_knowledge",
+              "icon": "ricochet",
               "gradient_id": 1,
-              "index": 0
+              "index": 2
             },
             {
               "color": 5,
-              "title_loc": "Reverberating Silence",
-              "description_loc": "The first time Global Silence ends on a unit it is applied again.",
-              "name": "silencer_reverberating_silence",
+              "title_loc": "Suffer In Silence",
+              "description_loc": "Silencer takes less damage from and deals more damage to silenced targets.",
+              "name": "silencer_oppressive_silence",
               "icon": "debuff",
               "gradient_id": 3,
-              "index": 1
+              "index": 3
             }
           ],
           "str_base": 19,
@@ -78,6 +78,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -428,10 +430,12 @@
               "desc_loc": "Silencer enchants his glaives with his wisdom, stealing his target's Intelligence with each hit and dealing additional damage based on his Intelligence.",
               "lore_loc": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat.",
               "notes_loc": [],
-              "shard_loc": "Increases Stolen Intelligence per hit and steal duration.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "Increases the max level of Glaives of Wisdom. Level %max_level_tooltip% Glaives of Wisdom bounce %bounce_count_tooltip% time to a random target within %bounce_range_tooltip% range. The bounce costs mana upon hit and prioritizes heroes.",
                 ""
               ],
               "type": 0,
@@ -459,6 +463,7 @@
                 0,
                 0,
                 0,
+                0,
                 0
               ],
               "damages": [
@@ -471,17 +476,57 @@
                 14,
                 16,
                 18,
+                20,
                 20
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "silencer_spread_the_knowledge",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "silencer_spread_the_knowledge",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "silencer_spread_the_knowledge"
+                },
+                {
                   "name": "intellect_damage_pct",
                   "values_float": [
                     35,
                     50,
                     65,
+                    80,
                     80
                   ],
                   "is_percentage": true,
@@ -508,14 +553,13 @@
                     1,
                     2,
                     3,
+                    4,
                     4
                   ],
                   "is_percentage": false,
                   "heading_loc": "INT STEAL:",
                   "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -530,14 +574,19 @@
                     20,
                     25,
                     30,
+                    35,
                     35
                   ],
                   "is_percentage": false,
                   "heading_loc": "INT STEAL DURATION:",
-                  "bonuses": [],
-                  "values_shard": [
-                    50
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_silencer_5",
+                      "value": 40,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -548,45 +597,95 @@
                 },
                 {
                   "name": "bounce_range",
-                  "values_float": [],
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_silencer_glaives_bounces",
-                      "value": 600,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "silencer_spread_the_knowledge",
+                    "values": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      450
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "silencer_spread_the_knowledge"
+                },
+                {
+                  "name": "bounce_range_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "silencer_spread_the_knowledge",
+                    "values": [
+                      450
+                    ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "silencer_spread_the_knowledge"
                 },
                 {
                   "name": "bounce_count",
-                  "values_float": [],
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_silencer_glaives_bounces",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "silencer_spread_the_knowledge",
+                    "values": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "silencer_spread_the_knowledge"
+                },
+                {
+                  "name": "bounce_count_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "silencer_spread_the_knowledge",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "silencer_spread_the_knowledge"
                 },
                 {
                   "name": "silence_duration",
@@ -611,6 +710,7 @@
                     3,
                     4,
                     5,
+                    6,
                     6
                   ],
                   "is_percentage": false,
@@ -648,6 +748,7 @@
                     14,
                     16,
                     18,
+                    20,
                     20
                   ],
                   "is_percentage": false,
@@ -665,7 +766,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -688,6 +789,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -932,6 +1035,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1027,13 +1132,16 @@
               "desc_loc": "Silencer stops all sound, preventing enemy heroes and units on the map from casting spells.",
               "lore_loc": "With a shock to the ground, all magic and sound pauses, and Nortrom fulfills his prophecy.",
               "notes_loc": [
-                "This skill works on invisible and Debuff Immune units, but gaining debuff immunity will remove its effect."
+                "This skill works on invisible and Debuff Immune units, but gaining debuff immunity will remove its effect.",
+                "Multiple Arcane Curses from Aghanim's Scepter Global Silence do not stack."
               ],
               "shard_loc": "",
               "scepter_loc": "Global Silence applies Arcane Curse to heroes for the duration of Global Silence.",
               "facets_loc": [
                 "",
-                "The first time Global Silence ends on a unit it is applied again."
+                "The first time Global Silence ends on a unit it is applied again.",
+                "",
+                ""
               ],
               "type": 1,
               "behavior": "4",
@@ -1262,6 +1370,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1323,6 +1433,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1404,6 +1516,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1484,6 +1598,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1536,15 +1652,17 @@
               "item_quality": 0
             },
             {
-              "id": 1073,
-              "name": "special_bonus_unique_silencer_glaives_bounces",
-              "name_loc": "{s:bonus_bounce_count} Glaives of Wisdom Bounce",
-              "desc_loc": "Glaives of Wisdom Bounce to targets withing a {s:bonus_bounce_range} range.",
+              "id": 7048,
+              "name": "special_bonus_unique_silencer_5",
+              "name_loc": "+{s:bonus_int_steal_duration}s Glaives of Wisdom Int Steal Duration",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1607,6 +1725,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1688,6 +1808,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1750,6 +1872,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1804,29 +1928,34 @@
           ],
           "facet_abilities": [
             {
+              "abilities": []
+            },
+            {
               "abilities": [
                 {
-                  "id": 1336,
-                  "name": "silencer_irrepressible",
-                  "name_loc": "",
-                  "desc_loc": "",
+                  "id": 1624,
+                  "name": "silencer_oppressive_silence",
+                  "name_loc": "Suffer In Silence",
+                  "desc_loc": "Silencer takes less damage from and deals more damage to silenced targets.",
                   "lore_loc": "",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
                     "",
+                    "",
+                    "",
                     ""
                   ],
                   "type": 0,
-                  "behavior": "3",
+                  "behavior": "67",
                   "target_team": 0,
                   "target_type": 0,
                   "flags": 0,
                   "damage": 0,
                   "immunity": 0,
                   "dispellable": 0,
-                  "max_level": 1,
+                  "max_level": 4,
                   "cast_ranges": [
                     0
                   ],
@@ -1853,7 +1982,28 @@
                   ],
                   "gold_costs": [],
                   "health_costs": [],
-                  "special_values": [],
+                  "special_values": [
+                    {
+                      "name": "damage_pct",
+                      "values_float": [
+                        10,
+                        15,
+                        20,
+                        25
+                      ],
+                      "is_percentage": true,
+                      "heading_loc": "DAMAGE:",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    }
+                  ],
                   "is_item": false,
                   "ability_has_scepter": false,
                   "ability_has_shard": false,
@@ -1868,9 +2018,6 @@
                   "item_quality": 0
                 }
               ]
-            },
-            {
-              "abilities": []
             }
           ]
         }

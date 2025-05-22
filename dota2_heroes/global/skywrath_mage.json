@@ -34,7 +34,7 @@
           "str_gain": 2,
           "agi_base": 13,
           "agi_gain": 0.8,
-          "int_base": 23,
+          "int_base": 25,
           "int_gain": 4.1,
           "primary_attr": 2,
           "complexity": 1,
@@ -50,8 +50,8 @@
             0,
             0
           ],
-          "damage_min": 39,
-          "damage_max": 49,
+          "damage_min": 41,
+          "damage_max": 51,
           "attack_rate": 1.7,
           "attack_range": 625,
           "projectile_speed": 1000,
@@ -63,8 +63,8 @@
           "sight_range_night": 800,
           "max_health": 582,
           "health_regen": 2.3500001,
-          "max_mana": 351,
-          "mana_regen": 1.4,
+          "max_mana": 375,
+          "mana_regen": 1.5,
           "abilities": [
             {
               "id": 5581,
@@ -77,7 +77,7 @@
                 "Arcane Bolt cannot be disjointed."
               ],
               "shard_loc": "When Skywrath Mage casts Arcane Bolt, %total_bolt_count% bolts are created, one aimed at the original target, and the other at a random enemy within %extra_bolt_search_radius% range of the original target. Heroes will take priority.",
-              "scepter_loc": "When Skywrath Mage casts Arcane Bolt, %total_bolt_count% bolts are created, one aimed at the original target, and the rest - at random enemies within %extra_bolt_search_radius% range of the original target. Heroes will take priority.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 ""
@@ -188,7 +188,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_skywrath_2",
-                      "value": 0.5,
+                      "value": 1.5,
                       "operation": 0
                     }
                   ],
@@ -261,7 +261,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_skywrath_6",
+                      "value": 125,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -645,7 +651,7 @@
               "notes_loc": [
                 "The magic damage resistance reduction doesn't affect creeps."
               ],
-              "shard_loc": "Ancient Seal debuff now causes other debuffs applied to last 50%% longer. Grants vision over the target.",
+              "shard_loc": "",
               "scepter_loc": "Anytime Skywrath Mage casts Ancient Seal, a different random target within %scepter_radius% range of the original target will be affected by the same ability. Heroes will take priority.",
               "facets_loc": [
                 "",
@@ -1262,9 +1268,9 @@
               "item_quality": 0
             },
             {
-              "id": 6884,
-              "name": "special_bonus_unique_skywrath_2",
-              "name_loc": "+{s:bonus_int_multiplier}x Arcane Bolt Int Multiplier",
+              "id": 411,
+              "name": "special_bonus_unique_skywrath_6",
+              "name_loc": "+{s:bonus_AbilityCastRange} Arcane Bolt Cast Range",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1309,7 +1315,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1590,9 +1614,9 @@
               "item_quality": 0
             },
             {
-              "id": 411,
-              "name": "special_bonus_unique_skywrath_6",
-              "name_loc": "Arcane Bolt Pierces Spell Immunity",
+              "id": 6884,
+              "name": "special_bonus_unique_skywrath_2",
+              "name_loc": "+{s:bonus_int_multiplier}x Arcane Bolt Int Multiplier",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1637,25 +1661,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1740,7 +1746,7 @@
                   "name": "skywrath_mage_shield_of_the_scion",
                   "name_loc": "Shield of the Scion",
                   "desc_loc": "Every time Skywrath Mage deals magic damage to an enemy hero with an ability, he gains a magic damage barrier equal to %damage_barrier_base% + %damage_barrier_per_level% per his hero level. Each buff stacks independently.",
-                  "lore_loc": "",
+                  "lore_loc": "The court mages of Skywrath may only deploy their magic in defense of the kingdom and the throne.",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
@@ -1875,7 +1881,7 @@
                   "name": "skywrath_mage_staff_of_the_scion",
                   "name_loc": "Staff of the Scion",
                   "desc_loc": "Every time Skywrath Mage deals magic damage to an enemy hero with an ability, he reduces all his ability cooldowns by %cooldown_reduction%s.",
-                  "lore_loc": "",
+                  "lore_loc": "To raise the ire of Skywrath is to invite retribution that strikes like a storm.",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",

@@ -82,8 +82,7 @@
               "desc_loc": "Templar Assassin becomes highly elusive, gaining a small barrier and bonus to her damage.  The damage and avoidance effects are separate, and have a limited number of instances. If a barrier is consumed, a new one is created as long as there are charges left. If an instance of damage would deal more damage than the remaining barrier, all of the damage is absorbed.",
               "lore_loc": "Manipulating her psionic veil, Lanaya bends nature's law to her will.",
               "notes_loc": [
-                "Damage as HP Removal bypasses Refraction (it won't reduce the charges).",
-                "Refraction is visible to enemies."
+                "Damage as HP Removal bypasses Refraction (it won't reduce the charges)."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -391,10 +390,10 @@
                 {
                   "name": "bonus_damage",
                   "values_float": [
-                    70,
-                    125,
-                    180,
-                    235
+                    55,
+                    105,
+                    155,
+                    205
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
@@ -411,14 +410,20 @@
                 {
                   "name": "bonus_armor",
                   "values_float": [
+                    -3.5,
                     -5,
-                    -6,
-                    -7,
+                    -6.5,
                     -8
                   ],
                   "is_percentage": false,
                   "heading_loc": "ARMOR REDUCTION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_templar_assassin_8",
+                      "value": 3,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -497,7 +502,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_templar_assassin_meld_duration",
-                      "value": 2.5,
+                      "value": 2,
                       "operation": 0
                     }
                   ],
@@ -627,13 +632,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK RANGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_templar_assassin_8",
-                      "value": 100,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -653,13 +652,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "PSI BLADE RANGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_templar_assassin_8",
-                      "value": 100,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1146,7 +1139,7 @@
                   "heading_loc": "MIN SILENCE DURATION:",
                   "bonuses": [],
                   "values_shard": [
-                    1
+                    0.25
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1535,7 +1528,7 @@
             {
               "id": 757,
               "name": "special_bonus_unique_templar_assassin_8",
-              "name_loc": "+{s:value} Psi Blades Attack and Split Range",
+              "name_loc": "+{s:value} Meld Armor Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1585,7 +1578,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    100
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

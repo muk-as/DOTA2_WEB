@@ -73,7 +73,7 @@
               "desc_loc": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Damage, Movement Slow, Attack Slow and Slow Duration are increased by %point_blank_dmg_bonus_pct%%% for enemies caught at point-blank range.",
               "lore_loc": "A favorite from her collection, Beadie crafted Ol' Rackatee as her first line of defense when she ventured into the Outlands.",
               "notes_loc": [],
-              "shard_loc": "Causes Scatterblast to deal extra damage as well as stun and knockback enemy units in the point blank range.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -778,6 +778,53 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "AbilityCharges",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_snapfire_firesnap_cookie_additional_charge",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    21,
+                    19,
+                    17,
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_snapfire_3",
+                      "value": 4,
+                      "operation": 2
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityManaCost",
                   "values_float": [
                     85,
@@ -1180,7 +1227,7 @@
               "name": "snapfire_gobble_up",
               "name_loc": "Gobble Up",
               "desc_loc": "Mortimer gobbles up a creep or an allied hero, which he can then spit towards enemies. The unit stays in his belly up to %max_time_in_belly% seconds.",
-              "lore_loc": "",
+              "lore_loc": "SHLORP!",
               "notes_loc": [
                 "Snapfire earns the creep's bounty after it has been spat out and died."
               ],
@@ -1332,7 +1379,7 @@
               "name": "snapfire_spit_creep",
               "name_loc": "Spit Out",
               "desc_loc": "Mortimer spits out the unit that's in his mouth, causing impact damage and stun in a large area. The glob leaves a pool of firespit based on the current level of Mortimer Kisses, that slows and applies damage over time. Spit Out has a no minimum launch range.",
-              "lore_loc": "",
+              "lore_loc": "SPITTOOO!",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
@@ -2256,7 +2303,7 @@
                 {
                   "name": "damage_amp",
                   "values_float": [
-                    25
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2670,9 +2717,9 @@
               "item_quality": 0
             },
             {
-              "id": 989,
-              "name": "special_bonus_unique_snapfire_mortimer_kisses_impact_damage",
-              "name_loc": "+{s:bonus_damage_per_impact} Mortimer Kisses Impact Damage",
+              "id": 1628,
+              "name": "special_bonus_unique_snapfire_firesnap_cookie_additional_charge",
+              "name_loc": "{s:bonus_AbilityCharges} Firesnap Cookie Charges",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

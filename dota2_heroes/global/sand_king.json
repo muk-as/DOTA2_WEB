@@ -12,22 +12,22 @@
           "npe_desc_loc": "Burrows to stun and slow enemies",
           "facets": [
             {
-              "color": 5,
-              "title_loc": "Sandshroud",
-              "description_loc": "Sand Storm has increased radius and grants Sand King Invisibility while in it.",
-              "name": "sand_king_sandshroud",
-              "icon": "vision",
+              "color": 1,
+              "title_loc": "Sandblast",
+              "description_loc": "When Sand King attacks enemies in Sand Storm, he applies a blinding debuff to his target.",
+              "name": "sand_king_obscurity",
+              "icon": "no_vision",
               "gradient_id": 3,
-              "index": 0
+              "index": 2
             },
             {
-              "color": 1,
-              "title_loc": "Dust Devil",
-              "description_loc": "Sand Storm follows Sand King when he moves.",
-              "name": "sand_king_dust_devil",
-              "icon": "speed",
+              "color": 0,
+              "title_loc": "Final Sting",
+              "description_loc": "A Caustic Finale explosion is created around every enemy hero hit in Stinger's innermost radius.",
+              "name": "sand_king_pinpoint",
+              "icon": "area_of_effect",
               "gradient_id": 1,
-              "index": 1
+              "index": 3
             }
           ],
           "str_base": 22,
@@ -79,10 +79,12 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "1099512152088",
+              "behavior": "1099512152080",
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
@@ -201,7 +203,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "burrow_speed_scepter",
+                  "name": "mound_duration",
                   "values_float": [
                     0
                   ],
@@ -209,20 +211,20 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    3000
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
-                    "values": [],
-                    "operation": 0
+                    "values": [
+                      0
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_channel_time",
+                  "name": "is_vector_target",
                   "values_float": [
-                    2
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -231,15 +233,17 @@
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
-                    "values": [],
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_max_power",
+                  "name": "underground_distance_pct",
                   "values_float": [
-                    2
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -248,7 +252,9 @@
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
-                    "values": [],
+                    "values": [
+                      60
+                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -363,7 +369,7 @@
               "id": 5103,
               "name": "sandking_sand_storm",
               "name_loc": "Sand Storm",
-              "desc_loc": "Sand King creates a fearsome sandstorm that damages enemy units. The effect ends when Sand King leaves the area.",
+              "desc_loc": "Sand King creates a fearsome sandstorm that damages enemy units and grants Sand King Invisibility while he is in it. The effect ends when Sand King leaves the area.",
               "lore_loc": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste.",
               "notes_loc": [
                 "Sand Storm can be used to dodge projectiles.",
@@ -373,7 +379,9 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Sand Storm has increased radius and grants Sand King Invisibility while in it.",
-                "Sand Storm follows Sand King at a rate of %sand_storm_move_speed_pct%%% of his movement speed and is still active at a distance of up to %sand_storm_max_distance_from_caster% units away from Sand King."
+                "Sand Storm follows Sand King at a rate of %sand_storm_move_speed_pct%%% of his movement speed and is still active at a distance of up to %sand_storm_max_distance_from_caster% units away from Sand King.",
+                "When Sand King attacks enemies in Sand Storm, he applies a blinding debuff to the target.",
+                ""
               ],
               "type": 0,
               "behavior": "33554436",
@@ -440,10 +448,10 @@
                 {
                   "name": "sand_storm_radius",
                   "values_float": [
-                    350,
-                    400,
-                    450,
-                    500
+                    425,
+                    500,
+                    575,
+                    650
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -451,14 +459,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "sand_king_sandshroud",
-                    "values": [
-                      575,
-                      650,
-                      725,
-                      800
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -491,7 +494,7 @@
                 {
                   "name": "fade_delay",
                   "values_float": [
-                    -1
+                    0.7
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -499,70 +502,55 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "sand_king_sandshroud",
-                    "values": [
-                      0.7
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
-                  "name": "sand_storm_move_speed_pct",
+                  "name": "blind_pct",
                   "values_float": [
+                    0,
+                    0,
+                    0,
                     0
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "BLIND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "sand_king_dust_devil",
+                    "name": "sand_king_obscurity",
                     "values": [
-                      70
+                      20,
+                      30,
+                      40,
+                      50
                     ],
                     "operation": 0
                   },
-                  "required_facet": "sand_king_dust_devil"
+                  "required_facet": "sand_king_obscurity"
                 },
                 {
-                  "name": "sand_storm_max_distance_from_caster",
+                  "name": "blind_debuff_duration",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "BLIND DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "sand_king_dust_devil",
+                    "name": "sand_king_obscurity",
                     "values": [
-                      2500
+                      5
                     ],
                     "operation": 0
                   },
-                  "required_facet": "sand_king_dust_devil"
-                },
-                {
-                  "name": "sand_storm_move_speed_bonus_when_outside_radius",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "sand_king_dust_devil",
-                    "values": [
-                      55
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "sand_king_dust_devil"
+                  "required_facet": "sand_king_obscurity"
                 },
                 {
                   "name": "AbilityDuration",
@@ -640,13 +628,15 @@
               "name": "sandking_scorpion_strike",
               "name_loc": "Stinger",
               "desc_loc": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing extra damage to each. Enemies within an innermost radius of %inner_radius% take %inner_radius_bonus_damage_pct%%% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
-              "lore_loc": "",
+              "lore_loc": "Crixalis is certainly capable of mercy, but the soul of the sand finds few foes worth sparing.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "",
+                "A Caustic Finale explosion that deals %caustic_damage_pct%%% damage is created around every enemy hero hit in Stinger's innermost radius. Does not apply to strikes created by Aghanim's Scepter upgrade."
               ],
               "type": 0,
               "behavior": "134217776",
@@ -693,10 +683,10 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    225,
-                    255,
-                    285,
-                    315
+                    230,
+                    250,
+                    270,
+                    290
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -745,12 +735,31 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "inner_radius_procs_caustic",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "sand_king_pinpoint",
+                    "values": [
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "sand_king_pinpoint"
+                },
+                {
                   "name": "attack_damage",
                   "values_float": [
-                    35,
-                    70,
-                    105,
-                    140
+                    50,
+                    75,
+                    100,
+                    125
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
@@ -815,6 +824,25 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "caustic_damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "sand_king_pinpoint",
+                    "values": [
+                      50
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "sand_king_pinpoint"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -915,6 +943,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 0,
@@ -979,10 +1009,10 @@
                 {
                   "name": "caustic_finale_damage_base",
                   "values_float": [
-                    15,
-                    35,
-                    55,
-                    75
+                    20,
+                    40,
+                    60,
+                    80
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE DAMAGE:",
@@ -999,13 +1029,13 @@
                 {
                   "name": "caustic_finale_damage_pct",
                   "values_float": [
-                    4,
-                    8,
-                    12,
-                    16
+                    3,
+                    7,
+                    11,
+                    15
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MAX HEALTH DAMAGE:",
+                  "heading_loc": "DYING UNIT'S MAX HEALTH AS DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1062,6 +1092,8 @@
               "shard_loc": "Increases Epicenter damage per pulse. Every %shard_interval%s causes a small single Epicenter Pulse around Sand King.",
               "scepter_loc": "When the pulses start, %scepter_explosions_per_pulse% Stinger attack areas are created every %spine_tick_rate%s at random locations, each measuring %scepter_explosion_radius_pct%%% of the Epicenter's current radius, that apply %spine_damage_pct%%% of Stinger damage to enemies hit. Shard pulses cause %shard_explosions_per_pulse% attack(s).",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1161,7 +1193,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_sand_king_5",
-                      "value": 100,
+                      "value": 75,
                       "operation": 0
                     }
                   ],
@@ -1184,7 +1216,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_sand_king_5",
-                      "value": 12,
+                      "value": 7,
                       "operation": 0
                     }
                   ],
@@ -1509,6 +1541,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1570,6 +1604,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1633,6 +1669,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1694,6 +1732,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1757,6 +1797,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1818,6 +1860,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -1899,6 +1943,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1953,13 +1999,15 @@
             {
               "id": 475,
               "name": "special_bonus_unique_sand_king_4",
-              "name_loc": "{s:value}% Sand Storm Slow and Blind",
+              "name_loc": "{s:value}% Sand Storm Slow",
               "desc_loc": "Enemy units in range of Sand Storm have their movement speed slowed by {s:value}% and miss {s:value}% of their attacks.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
                 "",
                 ""
               ],
@@ -2002,7 +2050,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    35
+                    45
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

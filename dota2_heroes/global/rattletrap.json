@@ -28,6 +28,15 @@
               "icon": "area_of_effect",
               "gradient_id": 2,
               "index": 1
+            },
+            {
+              "color": 1,
+              "title_loc": "Chainmeal",
+              "description_loc": "Clockwerk can consume Chainmails to permanently gain +{s:bonus_armor_per_chainmail} armor.",
+              "name": "rattletrap_junk_mail",
+              "icon": "armor",
+              "gradient_id": 1,
+              "index": 2
             }
           ],
           "str_base": 26,
@@ -78,6 +87,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -284,7 +294,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Power Cogs form in a larger radius."
+                "Power Cogs form in a larger radius.",
+                ""
               ],
               "type": 0,
               "behavior": "4",
@@ -375,7 +386,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MANA BURN:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clockwerk_2",
+                      "value": 70,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -654,6 +671,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -762,13 +780,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_clockwerk_flare_damage",
-                      "value": 75,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -950,6 +962,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1229,11 +1242,12 @@
               "name": "rattletrap_jetpack",
               "name_loc": "Jetpack",
               "desc_loc": "Clockwerk activates a jetpack, gaining flying movement, flying vision, and bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Jetpack is cancelled upon casting Hookshot.",
-              "lore_loc": "",
+              "lore_loc": "Sure it's blown up over fourteen testing dummies, but at least they all flew!",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1402,6 +1416,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "If there's another allied hero within %radius_ally% of Hookshot's hit target, Clockwerk and all allies in the area receive bonus armor, while refunding a portion of Hookshot's cooldown and manacost.",
+                "",
                 ""
               ],
               "type": 1,
@@ -1725,7 +1740,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Clockwerk can consume Chainmails to permanently gain +%armor_per_chainmail% armor per Chainmail consumed. Can stack. Self-cast to consume."
               ],
               "type": 0,
               "behavior": "2",
@@ -1779,6 +1795,118 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "damage_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "OUTGOING DAMAGE BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "can_consume_chainmail",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "rattletrap_junk_mail",
+                    "values": [
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "rattletrap_junk_mail"
+                },
+                {
+                  "name": "armor_per_chainmail",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "rattletrap_junk_mail",
+                    "values": [
+                      4
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "rattletrap_junk_mail"
+                },
+                {
+                  "name": "model_scale_per_chainmail",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "rattletrap_junk_mail",
+                    "values": [
+                      3
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "rattletrap_junk_mail"
+                },
+                {
+                  "name": "model_scale_maximum",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "rattletrap_junk_mail",
+                    "values": [
+                      150
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "rattletrap_junk_mail"
+                },
+                {
+                  "name": "health_bar_offset_per_stack",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "rattletrap_junk_mail",
+                    "values": [
+                      3.5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "rattletrap_junk_mail"
                 }
               ],
               "is_item": false,
@@ -1806,6 +1934,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1869,6 +1998,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1931,6 +2061,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1992,6 +2123,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2073,6 +2205,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2125,15 +2258,16 @@
               "item_quality": 0
             },
             {
-              "id": 8252,
-              "name": "special_bonus_unique_clockwerk_flare_damage",
-              "name_loc": "+{s:bonus_damage} Rocket Flare Damage",
+              "id": 6364,
+              "name": "special_bonus_unique_clockwerk_2",
+              "name_loc": "+{s:bonus_mana_burn} Power Cogs Mana Burn",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2197,6 +2331,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2259,6 +2394,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2312,6 +2448,9 @@
             }
           ],
           "facet_abilities": [
+            {
+              "abilities": []
+            },
             {
               "abilities": []
             },

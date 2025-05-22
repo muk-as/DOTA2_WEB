@@ -22,12 +22,12 @@
             },
             {
               "color": 5,
-              "title_loc": "Bloodrush",
-              "description_loc": "Bloodseeker can supercharge the movement speed from Thirst temporarily.",
-              "name": "bloodseeker_bloodrush",
-              "icon": "speed",
+              "title_loc": "Old Blood",
+              "description_loc": "Bloodrage silences the target and can be applied to enemies. Bloodrage increases base attack damage instead of spell damage.",
+              "name": "bloodseeker_old_blood",
+              "icon": "debuff",
               "gradient_id": 1,
-              "index": 1
+              "index": 2
             }
           ],
           "str_base": 24,
@@ -70,16 +70,17 @@
               "id": 5015,
               "name": "bloodseeker_bloodrage",
               "name_loc": "Bloodrage",
-              "desc_loc": "Drives Bloodseeker into a bloodthirsty rage which causes him to attack faster and deal more spell damage at the cost of a percentage of his health per second. Provides half attack speed to allied heroes.",
+              "desc_loc": "Drives Bloodseeker or an allied hero into a bloodthirsty rage which causes them to attack faster and deal more spell damage at the cost of a percentage of their health per second. Provides half attack speed to allied heroes.",
               "lore_loc": "Strygwyr shares his animalistic thirst for bloodshed.",
               "notes_loc": [
                 "Damage dealt to Bloodseeker or allies is non-lethal and can never kill a hero."
               ],
               "shard_loc": "",
-              "scepter_loc": "Bloodrage attacks now deal %max_health_dmg_pct%%% of the target's max health as <font color=\"#d8ae53\">Pure</font> damage.",
+              "scepter_loc": "Bloodseeker's Bloodrage attacks now deal %max_health_dmg_pct%%% of the target's max health as <font color=\"#d8ae53\">Pure</font> damage.",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Bloodrage can be cast on enemies, and increases the target's base attack damage instead of spell damage. Silences the target for the duration of the spell and has decreased cast range."
               ],
               "type": 0,
               "behavior": "2056",
@@ -147,13 +148,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK SPEED:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_bloodseeker_5",
-                      "value": 25,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -183,9 +178,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "bloodseeker_old_blood",
+                    "values": [
+                      0
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -203,6 +200,23 @@
                       "operation": 2
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_pct_enemies",
+                  "values_float": [
+                    1.4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -232,6 +246,56 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "can_silence",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "bloodseeker_old_blood",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "bloodseeker_old_blood"
+                },
+                {
+                  "name": "base_damage_amp",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "BASE DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bloodseeker_6",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "bloodseeker_old_blood",
+                    "values": [
+                      10,
+                      15,
+                      20,
+                      25
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "bloodseeker_old_blood"
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     800
@@ -242,9 +306,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "bloodseeker_old_blood",
+                    "values": [
+                      400
+                    ],
+                    "operation": 5
                   },
                   "required_facet": ""
                 },
@@ -264,6 +330,25 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "bloodseeker_old_blood",
+                    "values": [
+                      60
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "bloodseeker_old_blood"
                 },
                 {
                   "name": "AbilityCooldown",
@@ -311,6 +396,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -594,7 +680,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Can be activated to grant bonus movement speed and %sanguivore_multiplier%x Sanguivore heal bonus for a short duration. While on cooldown, passive Thirst move speed is reduced by %inactive_penalty_pct%%% . Cannot be cast when all enemy heroes are at full health."
+                "Can be activated to grant bonus movement speed and %sanguivore_multiplier%x Sanguivore heal bonus for a short duration. While on cooldown, passive Thirst move speed is reduced by %inactive_penalty_pct%%% . Cannot be cast when all enemy heroes are at full health.",
+                ""
               ],
               "type": 0,
               "behavior": "2",
@@ -905,6 +992,7 @@
               "scepter_loc": "Bloodseeker heals for %pure_damage_lifesteal_pct%%% of the <font color=\"#d8ae53\">Pure</font> damage he deals.",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1127,6 +1215,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Ruptured units are pushed when attacked by Bloodseeker.",
+                "",
                 ""
               ],
               "type": 1,
@@ -1428,15 +1517,16 @@
           ],
           "talents": [
             {
-              "id": 482,
-              "name": "special_bonus_unique_bloodseeker_5",
-              "name_loc": "+{s:bonus_attack_speed} Bloodrage Attack Speed",
+              "id": 6034,
+              "name": "special_bonus_hp_175",
+              "name_loc": "+{s:value} Health",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1475,7 +1565,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    175
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1500,7 +1608,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "+{s:bonus_base_damage_amp}% Bloodrage Base Damage Amp"
               ],
               "type": 2,
               "behavior": "2",
@@ -1561,6 +1670,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1624,6 +1734,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1686,6 +1797,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1740,13 +1852,14 @@
             {
               "id": 6230,
               "name": "special_bonus_unique_bloodseeker",
-              "name_loc": "-{s:bonus_damage_pct}% Bloodrage Max Health Damage Per Second",
+              "name_loc": "-{s:bonus_damage_pct}% Bloodrage Max Health DPS For Allies",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1810,6 +1923,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1871,6 +1985,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],

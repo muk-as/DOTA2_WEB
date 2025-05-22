@@ -72,7 +72,9 @@
               "name_loc": "Swashbuckle",
               "desc_loc": "Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
               "lore_loc": "The Pangolier's blade is even nimbler than his tongue.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Casting Swashbuckle during Rolling Thunder ends Rolling Thunder."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -417,7 +419,7 @@
               "shard_loc": "",
               "scepter_loc": "Causes Shield Crash to cast a 2-attack Swashbuckle every 90 degrees around your hero.",
               "facets_loc": [
-                "Pangolier can cast Shield Crash a second time mid-flight, dealing more damage and gaining more barrier.",
+                "Pangolier can cast Shield Crash a second time mid-flight, dealing more damage and gaining more barrier. Longer flight time results in more damage and barrier increases.",
                 ""
               ],
               "type": 0,
@@ -504,7 +506,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-                      "value": 80,
+                      "value": 90,
                       "operation": 0
                     }
                   ],
@@ -577,6 +579,25 @@
                   "required_facet": "pangolier_double_jump"
                 },
                 {
+                  "name": "min_damage_increase_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MIN DAMAGE INCREASE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "pangolier_double_jump",
+                    "values": [
+                      30
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "pangolier_double_jump"
+                },
+                {
                   "name": "max_damage_increase_pct",
                   "values_float": [
                     0
@@ -596,19 +617,19 @@
                   "required_facet": "pangolier_double_jump"
                 },
                 {
-                  "name": "min_damage_increase_pct",
+                  "name": "min_barrier_increase_pct_tooltip",
                   "values_float": [
                     0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MIN DAMAGE INCREASE:",
+                  "heading_loc": "MIN BARRIER INCREASE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "pangolier_double_jump",
                     "values": [
-                      25
+                      30
                     ],
                     "operation": 5
                   },
@@ -1136,7 +1157,7 @@
               "name": "pangolier_rollup",
               "name_loc": "Roll Up",
               "desc_loc": "Pangolier curls into an immobile protective ball, gaining debuff immunity, %magic_resistance%%% magic resistance, and allowing him to turn. Can be cast during Rolling Thunder to temporarily hit the brakes. Can cast Rolling Thunder and Shield Crash during Roll Up. If enemies attack Pangolier during this, he will roll away from the attacker, applying Rolling Thunder damage/stun if there are enemies in the way.",
-              "lore_loc": "",
+              "lore_loc": "It requires deft tailwork and immense balance to defy momentum in the heart of battle.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",

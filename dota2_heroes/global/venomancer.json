@@ -23,7 +23,7 @@
             {
               "color": 1,
               "title_loc": "Plague Carrier",
-              "description_loc": "Plague Wards can be attached to allies and have extra charges.",
+              "description_loc": "When Venomous Gale impacts enemy heroes, {s:bonus_num_created_wards_tooltip} Plague Wards are created around them. Plague Wards also deal Septic Shock damage based on their attack damage.",
               "name": "venomancer_plague_carrier",
               "icon": "summons",
               "gradient_id": 0,
@@ -81,7 +81,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "When Venomous Gale impacts enemy heroes, %num_created_wards_tooltip% Plague Wards are created around them based on the current level of Plague Ward."
               ],
               "type": 0,
               "behavior": "48",
@@ -258,24 +258,41 @@
                 },
                 {
                   "name": "create_wards",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_venomancer_gale_plagueward",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
+                    "name": "venomancer_plague_carrier",
+                    "values": [
+                      1
+                    ],
                     "operation": 0
                   },
-                  "required_facet": ""
+                  "required_facet": "venomancer_plague_carrier"
+                },
+                {
+                  "name": "num_created_wards_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "venomancer_plague_carrier",
+                    "values": [
+                      2
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "venomancer_plague_carrier"
                 },
                 {
                   "name": "explosion_damage",
@@ -556,7 +573,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Plague Wards can be attached to allies and have %max_charges% charges. Attached wards health depends on the max health of the carrier and give only %gold_bounty_pct%%% of their gold bounty when killed."
+                ""
               ],
               "type": 0,
               "behavior": "16",
@@ -601,25 +618,6 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "can_target",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "venomancer_plague_carrier"
-                },
-                {
                   "name": "gold_bounty_pct",
                   "values_float": [
                     100
@@ -630,32 +628,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      20
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "max_charges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      3
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "venomancer_plague_carrier"
                 },
                 {
                   "name": "duration",
@@ -723,9 +700,9 @@
                 {
                   "name": "ward_hp_tooltip",
                   "values_float": [
-                    120,
-                    230,
-                    340,
+                    150,
+                    250,
+                    350,
                     450
                   ],
                   "is_percentage": false,
@@ -771,56 +748,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "threshold",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ATTACHED WARD HP:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      100,
-                      150,
-                      200,
-                      250
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "venomancer_plague_carrier"
-                },
-                {
-                  "name": "threshold_max_hp_pct",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "WARD HP FROM CARRIER:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      1.5,
-                      2,
-                      2.5,
-                      3
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "venomancer_plague_carrier"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -906,10 +833,10 @@
                 "Break only disables the bonus damage for Venomancer's attacks."
               ],
               "shard_loc": "",
-              "scepter_loc": "Increases base damage per debuff. Plague Wards also deal Septic Shock damage based on their attack damage.",
+              "scepter_loc": "Increases base damage per debuff.",
               "facets_loc": [
                 "",
-                ""
+                "Plague Wards also deal Septic Shock damage based on their attack damage."
               ],
               "type": 0,
               "behavior": "66",
@@ -957,7 +884,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    10
+                    15
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -975,15 +902,15 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    1
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "venomancer_plague_carrier",
+                    "values": [
+                      1
+                    ],
+                    "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "venomancer_plague_carrier"
                 }
               ],
               "is_item": false,
@@ -1004,7 +931,7 @@
               "name": "venomancer_noxious_plague",
               "name_loc": "Noxious Plague",
               "desc_loc": "Infects an enemy with a deadly plague that does an initial burst of damage and additional damage over time based on the unit's maximum health. The plague slows the target and nearby enemies based on their distance to the target. When the target dies or the debuff expires, all nearby enemies are infected with a noncommunicable version of the plague.",
-              "lore_loc": "",
+              "lore_loc": "Deep in the heart of the jungles of Jidi, the seeds of extermination freely grow.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1639,10 +1566,10 @@
               "item_quality": 0
             },
             {
-              "id": 1083,
-              "name": "special_bonus_unique_venomancer_gale_plagueward",
-              "name_loc": "Gale Creates Plague Wards",
-              "desc_loc": "When Venomous Gale impacts enemy Heroes, it creates {s:bonus_create_wards} Plague Wards around them.",
+              "id": 548,
+              "name": "special_bonus_attack_base_damage_50",
+              "name_loc": "+{s:value} Base Damage",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1686,7 +1613,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,

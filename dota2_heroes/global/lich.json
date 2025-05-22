@@ -12,15 +12,6 @@
           "npe_desc_loc": "Unleashes a powerful attack that bounces between enemies",
           "facets": [
             {
-              "color": 3,
-              "title_loc": "Frostbound",
-              "description_loc": "Chain Frost lingers on its last target if it fails to bounce and can bounce again if new targets become available.",
-              "name": "lich_frostbound",
-              "icon": "snowflake",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
               "color": 5,
               "title_loc": "Growing Cold",
               "description_loc": "When an enemy is killed by Chain Frost or while under the effect of Frost Shield, the duration of these abilities is extended.",
@@ -28,6 +19,15 @@
               "icon": "cooldown",
               "gradient_id": 0,
               "index": 1
+            },
+            {
+              "color": 0,
+              "title_loc": "Evil Eye",
+              "description_loc": "Sinister Gaze applies a lingering effect to the target, causing it to take extra magic damage from Lich and amplify incoming movement slows.",
+              "name": "lich_cryophobia",
+              "icon": "vision",
+              "gradient_id": 0,
+              "index": 2
             }
           ],
           "str_base": 20,
@@ -76,6 +76,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -352,7 +353,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Whenever an enemy dies under the effect of Frost Shield, its duration is increased."
+                "Whenever an enemy dies under the effect of Frost Shield, its duration is increased.",
+                ""
               ],
               "type": 0,
               "behavior": "33554440",
@@ -690,14 +692,15 @@
               "id": 7325,
               "name": "lich_sinister_gaze",
               "name_loc": "Sinister Gaze",
-              "desc_loc": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.<br><br> If cast on a creep lasts %creep_duration_multiplier%x longer.",
+              "desc_loc": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.",
               "lore_loc": "Mind the cold...",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "Sinister Gaze becomes an Area of Effect ability, affecting units within a radius of %aoe_scepter% in the target area. Sinister Gaze allows Lich to cast other abilities while channeling it.",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Sinister Gaze applies an Evil Eye debuff that will deal additional damage every time Lich deals magic damage to the target, and amplifies received movement slows by %slow_resistance%%%. The Evil Eye debuff duration lingers up to %post_gaze_debuff_duration_multiplier%x the elapsed Sinister Gaze duration."
               ],
               "type": 0,
               "behavior": "136",
@@ -790,7 +793,7 @@
                 {
                   "name": "mana_drain",
                   "values_float": [
-                    15
+                    20
                   ],
                   "is_percentage": true,
                   "heading_loc": "MANA DRAIN PER SECOND:",
@@ -824,9 +827,53 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "creep_duration_multiplier",
+                  "name": "damage",
                   "values_float": [
-                    2
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "lich_cryophobia",
+                    "values": [
+                      10,
+                      15,
+                      20,
+                      25
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "lich_cryophobia"
+                },
+                {
+                  "name": "slow_resistance",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SLOW RESISTANCE REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "lich_cryophobia",
+                    "values": [
+                      50
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "lich_cryophobia"
+                },
+                {
+                  "name": "post_gaze_debuff_duration_multiplier",
+                  "values_float": [
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -834,11 +881,13 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "lich_cryophobia",
+                    "values": [
+                      2
+                    ],
+                    "operation": 5
                   },
-                  "required_facet": ""
+                  "required_facet": "lich_cryophobia"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -938,12 +987,13 @@
               "id": 8028,
               "name": "lich_ice_spire",
               "name_loc": "Ice Spire",
-              "desc_loc": "Creates an Ice Spire at the target spot, slowing enemies around it. Can take 5 hero hits or 10 creep hits and when destroyed it will create a Frost Blast around it.<br><br>Chain Frost can be cast on the Spire and can bounce to the Spire and damage the spire by 1 hero attack if there are no other enemies in range.<br><br>Lich can cast Frost Shield on the Spire. Each Frost Shield tick will heal the spire by 1 hero attack.",
-              "lore_loc": "",
+              "desc_loc": "Creates an Ice Spire at the target spot, slowing enemies around it. Can take %max_hero_attacks% hero hits or %max_creep_attacks% creep hits and when destroyed it will create a Frost Blast around it.<br><br>Chain Frost can be cast on the Spire and can bounce to the Spire and damage the spire by 1 hero attack if there are no other enemies in range.<br><br>Lich can cast Frost Shield on the Spire. Each Frost Shield tick will heal the spire by 1 hero attack.",
+              "lore_loc": "The waters within the Black Pool remain liquid far below the point of freezing and immediately crystallize when removed.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1020,7 +1070,7 @@
                 {
                   "name": "max_hero_attacks",
                   "values_float": [
-                    5
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1037,7 +1087,7 @@
                 {
                   "name": "max_creep_attacks",
                   "values_float": [
-                    10
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1178,17 +1228,18 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "4398046576642",
+              "behavior": "65603",
               "target_team": 1,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 1,
+              "max_level": 4,
               "cast_ranges": [
                 1500
               ],
@@ -1199,7 +1250,10 @@
                 0
               ],
               "cooldowns": [
-                0
+                60,
+                50,
+                40,
+                30
               ],
               "durations": [
                 0
@@ -1268,9 +1322,98 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "max_level",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [
+                      4
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "health_conversion",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CURRENT HEALTH CONVERTED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [
+                      0,
+                      70,
+                      85,
+                      100
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "xp_multiplier",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "XP MULTIPLIER:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [
+                      0,
+                      100,
+                      125,
+                      150
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     1500
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    60,
+                    50,
+                    40,
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1302,7 +1445,7 @@
               "id": 5137,
               "name": "lich_chain_frost",
               "name_loc": "Chain Frost",
-              "desc_loc": "Releases an orb of frost that bounces between nearby enemy units up to %jumps% times, slowing and damaging each time it hits. Each bounce increases the damage for the subsequent bounces.",
+              "desc_loc": "Releases an orb of frost that bounces between nearby enemy units up to %jumps% times, slowing and damaging each time it hits. Each bounce increases the damage for the subsequent bounces. Chain Frost lingers on its last target if it fails to bounce and can bounce again if new targets become available.",
               "lore_loc": "Almost universally considered the ultimate in frost magic, Ethreain's orb of frozen death strikes fear into those who dare stand against him.",
               "notes_loc": [
                 "Chain Frost cannot be disjointed.",
@@ -1313,7 +1456,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Chain Frost lingers on its last target if it fails to bounce and can bounce again if new targets become available.",
-                "Killing an enemy with Chain Frost increases the number of bounces."
+                "Killing an enemy with Chain Frost increases the number of bounces.",
+                ""
               ],
               "type": 1,
               "behavior": "8",
@@ -1597,12 +1741,12 @@
                 {
                   "name": "frostbound_duration",
                   "values_float": [
-                    0,
-                    0,
-                    0
+                    2,
+                    2,
+                    2
                   ],
                   "is_percentage": false,
-                  "heading_loc": "FROSTBOUND DURATION:",
+                  "heading_loc": "LINGER DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1615,7 +1759,7 @@
                     ],
                     "operation": 5
                   },
-                  "required_facet": "lich_frostbound"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1716,6 +1860,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1778,6 +1923,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1839,6 +1985,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1920,6 +2067,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1981,6 +2129,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2044,6 +2193,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2106,6 +2256,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2167,6 +2318,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],

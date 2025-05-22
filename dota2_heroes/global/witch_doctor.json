@@ -12,15 +12,6 @@
           "npe_desc_loc": "Channels a high damage death ward",
           "facets": [
             {
-              "color": 5,
-              "title_loc": "Headhunter",
-              "description_loc": "Paralyzing Cask deals more damage each bounce.",
-              "name": "witch_doctor_headhunter",
-              "icon": "ricochet",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
               "color": 4,
               "title_loc": "Cleft Death",
               "description_loc": "Death Ward attacks multiple targets with reduced damage.",
@@ -28,6 +19,15 @@
               "icon": "death_ward",
               "gradient_id": 0,
               "index": 2
+            },
+            {
+              "color": 0,
+              "title_loc": "Malpractice",
+              "description_loc": "Enemies dying while Maledicted explode.",
+              "name": "witch_doctor_malpractice",
+              "icon": "nuke",
+              "gradient_id": 2,
+              "index": 3
             }
           ],
           "str_base": 20,
@@ -70,7 +70,7 @@
               "id": 5138,
               "name": "witch_doctor_paralyzing_cask",
               "name_loc": "Paralyzing Cask",
-              "desc_loc": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits. Deals %creep_damage_pct%%% damage to creeps.",
+              "desc_loc": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits. Damage increases each bounce.",
               "lore_loc": "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy.",
               "notes_loc": [
                 "Targets can be hit multiple times, as long as another unit is struck in between the bounces."
@@ -79,6 +79,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Paralyzing Cask deals more damage each bounce.",
+                "",
                 "",
                 ""
               ],
@@ -161,7 +162,10 @@
                 {
                   "name": "base_damage",
                   "values_float": [
-                    50
+                    55,
+                    70,
+                    85,
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE DAMAGE:",
@@ -195,10 +199,10 @@
                 {
                   "name": "bounces",
                   "values_float": [
-                    2,
+                    3,
                     4,
-                    6,
-                    8
+                    5,
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "BOUNCES:",
@@ -255,7 +259,7 @@
                 {
                   "name": "bounce_bonus_damage",
                   "values_float": [
-                    0
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE PER BOUNCE:",
@@ -263,18 +267,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "witch_doctor_headhunter",
-                    "values": [
-                      30
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "witch_doctor_headhunter"
+                  "required_facet": ""
                 },
                 {
                   "name": "creep_damage_pct",
                   "values_float": [
-                    150
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -391,6 +393,7 @@
               "facets_loc": [
                 "",
                 "Voodoo Restoration deals damage to enemies and only heals Witch Doctor.",
+                "",
                 ""
               ],
               "type": 0,
@@ -654,7 +657,8 @@
               "facets_loc": [
                 "",
                 "",
-                ""
+                "",
+                "Enemies who die while cursed deal damage equal to %spread_pct%%% of what the next burst damage would be to all enemy units in a %spread_radius% radius."
               ],
               "type": 0,
               "behavior": "134217776",
@@ -775,6 +779,61 @@
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spread_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "witch_doctor_malpractice",
+                    "values": [
+                      75
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "witch_doctor_malpractice"
+                },
+                {
+                  "name": "spread_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "witch_doctor_malpractice",
+                    "values": [
+                      800
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "witch_doctor_malpractice"
+                },
+                {
+                  "name": "spread_speed",
+                  "values_float": [
+                    1200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -927,6 +986,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1076,6 +1136,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1178,7 +1239,8 @@
               "facets_loc": [
                 "",
                 "",
-                "Death Ward attacks %initial_target_count% targets at once with reduced damage. The secondary target takes %secondary_attack_damage_pct%%% of the damage."
+                "Death Ward attacks %initial_target_count% targets at once with reduced damage. The secondary target takes %secondary_attack_damage_pct%%% of the damage.",
+                ""
               ],
               "type": 1,
               "behavior": "144",
@@ -1505,6 +1567,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1566,6 +1629,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1649,6 +1713,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1710,6 +1775,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1775,6 +1841,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1838,6 +1905,7 @@
               "facets_loc": [
                 "",
                 "+{s:value}% Target Max Health Voodoo Restoration Damage",
+                "",
                 ""
               ],
               "type": 2,
@@ -1919,6 +1987,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1980,6 +2049,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""

@@ -12,21 +12,21 @@
           "npe_desc_loc": "Can lasso an enemy away from his team",
           "facets": [
             {
-              "color": 1,
+              "color": 0,
               "title_loc": "Stoked",
-              "description_loc": "Batrider gains Move Speed and Spell Amplification when displacing enemies.",
+              "description_loc": "Firefly also lights Batrider on fire. He gains increasingly more Move Speed and Spell Amplification and burns away a portion of his max health each second.",
               "name": "batrider_buff_on_displacement",
-              "icon": "speed",
-              "gradient_id": 1,
+              "icon": "nuke",
+              "gradient_id": 0,
               "index": 0
             },
             {
-              "color": 0,
+              "color": 1,
               "title_loc": "Arsonist",
-              "description_loc": "Sticky Napalm deals damage to structures.",
+              "description_loc": "Increases the max level of Sticky Napalm. Level {s:bonus_max_level_tooltip} Sticky Napalm causes every attack to apply {s:bonus_napalm_stacks_on_attack_tooltip} stack of Sticky Napalm.",
               "name": "batrider_arsonist",
-              "icon": "siege",
-              "gradient_id": 0,
+              "icon": "damage",
+              "gradient_id": 1,
               "index": 1
             }
           ],
@@ -57,7 +57,7 @@
           "projectile_speed": 900,
           "armor": 4.5,
           "magic_resistance": 25,
-          "movement_speed": 330,
+          "movement_speed": 320,
           "turn_rate": 0.9,
           "sight_range_day": 1600,
           "sight_range_night": 800,
@@ -70,18 +70,18 @@
               "id": 5320,
               "name": "batrider_sticky_napalm",
               "name_loc": "Sticky Napalm",
-              "desc_loc": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies.  Additional casts of Sticky Napalm continue to increase damage, up to %max_stacks% stacks. Applies a small amount of damage with each cast.",
+              "desc_loc": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies. Additional casts of Sticky Napalm continue to increase damage, up to %max_stacks% stacks. Applies a small amount of damage with each cast.",
               "lore_loc": "It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents.",
               "notes_loc": [
                 "All damage from Batrider gets amplified, except for Radiance, Orb of Venom, Urn of Shadows, and Spirit Vessel.",
                 "Sticky Napalm does not require turning to cast.",
                 "Sticky Napalm deals %creep_damage_pct%%% damage to creeps."
               ],
-              "shard_loc": "Every other attack applies +%bonus_applications_every_other_attack% additional stack of Sticky Napalm.",
+              "shard_loc": "Sticky Napalm no longer has a stack limit.<br><br>Sticky Napalm deals damage to structures.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Sticky Napalm deals damage to structures."
+                "Increases the max level of Sticky Napalm. Level %max_level_tooltip% Sticky Napalm causes every attack to apply %napalm_stacks_on_attack_tooltip% stack of Sticky Napalm."
               ],
               "type": 0,
               "behavior": "35184506306608",
@@ -120,19 +120,75 @@
               "health_costs": [],
               "special_values": [
                 {
+                  "name": "max_level",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "batrider_arsonist",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_level_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "batrider_arsonist",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "batrider_arsonist"
+                },
+                {
+                  "name": "stacks_per_cast",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "STACKS PER CAST:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "damage",
                   "values_float": [
+                    2.5,
                     5,
+                    7.5,
                     10,
-                    15,
-                    20
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER STACK:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_batrider_4",
-                      "value": 20,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -188,10 +244,11 @@
                 {
                   "name": "movement_speed_pct",
                   "values_float": [
+                    -0.75,
                     -1.5,
+                    -2.25,
                     -3,
-                    -4.5,
-                    -6
+                    -3
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SLOW:",
@@ -208,10 +265,11 @@
                 {
                   "name": "turn_rate_pct",
                   "values_float": [
-                    -10,
-                    -30,
-                    -50,
-                    -70
+                    -5,
+                    -15,
+                    -25,
+                    -35,
+                    -35
                   ],
                   "is_percentage": true,
                   "heading_loc": "TURN RATE SLOW:",
@@ -228,12 +286,31 @@
                 {
                   "name": "max_stacks",
                   "values_float": [
-                    10
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "unlimited_stacks",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -260,112 +337,18 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_napalm_on_attack_chance_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    50
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "application_damage",
                   "values_float": [
                     5,
                     10,
                     15,
+                    20,
                     20
                   ],
                   "is_percentage": false,
                   "heading_loc": "APPLICATION DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "is_passive",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      0
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "base_applications_every_attack",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      0
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_applications_every_other_attack",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "attacks_apply_napalm_in_aoe",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    0
-                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -382,12 +365,58 @@
                   "is_percentage": true,
                   "heading_loc": "BUILDING DAMAGE:",
                   "bonuses": [],
+                  "values_shard": [
+                    35
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "napalm_stacks_on_attack",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "batrider_arsonist",
                     "values": [
-                      45
+                      0,
+                      0,
+                      0,
+                      0,
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "batrider_arsonist"
+                },
+                {
+                  "name": "napalm_stacks_on_attack_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "batrider_arsonist",
+                    "values": [
+                      1
                     ],
                     "operation": 0
                   },
@@ -465,7 +494,7 @@
               "desc_loc": "Hurls an explosive cocktail that explodes when it reaches the target location, knocking back, slowing and dealing damage over time to enemies in the area.",
               "lore_loc": "A molotov cocktail is the weapon of choice for Batrider.",
               "notes_loc": [],
-              "shard_loc": "Causes Flamebreak to have two charges and apply a Sticky Napalm charge on impact.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -709,7 +738,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_batrider_2",
-                      "value": 2,
+                      "value": 4,
                       "operation": 0
                     }
                   ],
@@ -850,7 +879,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "",
+                "Firefly also lights Batrider on fire. He gains increasingly more Move Speed and Spell Amplification and burns away a portion of his max health each second. Maximum bonuses are reached at the end of Firefly's duration. Self-burn damage is constant and does not increase over time.",
                 ""
               ],
               "type": 0,
@@ -988,6 +1017,88 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "self_burn_buff",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "batrider_buff_on_displacement",
+                    "values": [
+                      1
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "batrider_buff_on_displacement"
+                },
+                {
+                  "name": "movement_speed_pct_total",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX MOVEMENT SPEED BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "batrider_buff_on_displacement",
+                    "values": [
+                      25,
+                      30,
+                      35,
+                      40
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "batrider_buff_on_displacement"
+                },
+                {
+                  "name": "spell_amplification_total",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX SPELL AMPLIFICATION BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "batrider_buff_on_displacement",
+                    "values": [
+                      20
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "batrider_buff_on_displacement"
+                },
+                {
+                  "name": "hp_cost_per_second",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX HEALTH AS DAMAGE PER SECOND:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "batrider_buff_on_displacement",
+                    "values": [
+                      2
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "batrider_buff_on_displacement"
                 },
                 {
                   "name": "AbilityManaCost",
@@ -1171,7 +1282,7 @@
                 "If Batrider moves more than 425 units in 0.05 seconds the lasso breaks.",
                 "Batrider cannot attack while using Flaming Lasso."
               ],
-              "shard_loc": "Flaming Lasso no longer disarms you.",
+              "shard_loc": "",
               "scepter_loc": "Flaming Lasso grabs both its target, as well as the target's nearest allied hero within %grab_radius_scepter% units. The secondary target is tethered to the first.",
               "facets_loc": [
                 "",
@@ -1406,7 +1517,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": true,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1936,130 +2047,7 @@
           ],
           "facet_abilities": [
             {
-              "abilities": [
-                {
-                  "id": 1320,
-                  "name": "batrider_stoked",
-                  "name_loc": "Stoked",
-                  "desc_loc": "Batrider gains Move Speed and Spell Amplification when displacing enemies.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "After using an ability or item on an enemy hero that applies a forced movement effect, gain bonus movement speed and spell amplification. Does not stack."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "8796093022275",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        7
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "movement_speed_pct",
-                      "values_float": [
-                        4,
-                        6,
-                        8,
-                        10
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "MOVEMENT SPEED:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "spell_amplification",
-                      "values_float": [
-                        2,
-                        4,
-                        6,
-                        8
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "SPELL AMPLIFICATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
+              "abilities": []
             },
             {
               "abilities": []

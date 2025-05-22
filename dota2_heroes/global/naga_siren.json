@@ -23,7 +23,7 @@
             {
               "color": 2,
               "title_loc": "Deluge",
-              "description_loc": "Naga Siren can create a splash around herself and her illusions, damaging enemies and reducing their Status Resistance.",
+              "description_loc": "Naga Siren can create a splash around herself and her illusions, damaging enemies and capping their max movement speed.",
               "name": "naga_siren_active_riptide",
               "icon": "nuke",
               "gradient_id": 2,
@@ -32,7 +32,7 @@
           ],
           "str_base": 21,
           "str_gain": 2.4,
-          "agi_base": 21,
+          "agi_base": 22,
           "agi_gain": 3.3,
           "int_base": 21,
           "int_gain": 2,
@@ -50,12 +50,12 @@
             2,
             1
           ],
-          "damage_min": 44,
-          "damage_max": 46,
+          "damage_min": 45,
+          "damage_max": 47,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
-          "armor": 4.5,
+          "armor": 4.666667,
           "magic_resistance": 25,
           "movement_speed": 330,
           "turn_rate": 0.6,
@@ -359,7 +359,7 @@
               "lore_loc": "The only way to escape the onslaught of a Slithereen is to never oppose one in the first place.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Increases cast range and projectile speed.  Allows Ensnare to target and affect Debuff Immune units.",
+              "scepter_loc": "Increases cast range and projectile speed.  Allows Ensnare to target and affect Debuff Immune units. Ensnare applies Break.",
               "facets_loc": [
                 "",
                 ""
@@ -503,18 +503,16 @@
                 },
                 {
                   "name": "does_break",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_naga_siren_net_breaks",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    1
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -726,7 +724,6 @@
               "lore_loc": "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need.",
               "notes_loc": [
                 "Units affected by Song of the Siren are invulnerable and cannot take damage from any source.",
-                "Doesn't affect Debuff Immune units.",
                 "The area of the song follows Naga, so if she moves far enough away from affected units, they will wake up."
               ],
               "shard_loc": "Increases Song of the Siren's regen and adds mana regeneration for allies.",
@@ -756,8 +753,8 @@
                 0
               ],
               "cooldowns": [
-                180,
-                140,
+                160,
+                130,
                 100
               ],
               "durations": [
@@ -928,8 +925,8 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    180,
-                    140,
+                    160,
+                    130,
                     100
                   ],
                   "is_percentage": false,
@@ -1437,9 +1434,9 @@
               "item_quality": 0
             },
             {
-              "id": 1371,
-              "name": "special_bonus_unique_naga_siren_net_breaks",
-              "name_loc": "Ensnare applies Break",
+              "id": 6150,
+              "name": "special_bonus_agility_25",
+              "name_loc": "+{s:value} Agility",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1484,7 +1481,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1675,8 +1690,8 @@
                   "id": 1369,
                   "name": "naga_siren_deluge",
                   "name_loc": "Deluge",
-                  "desc_loc": "Naga Siren and all of her images hit nearby units with a damaging wave of water that reduces enemy status resistance and caps their max movement speed.",
-                  "lore_loc": "",
+                  "desc_loc": "Naga Siren and all of her images hit nearby units with a damaging wave of water that caps their max movement speed.",
+                  "lore_loc": "There's no use trying to run through deep water.",
                   "notes_loc": [
                     "Casting Deluge doesn't interrupt channeling."
                   ],
@@ -1732,9 +1747,9 @@
                       "name": "damage",
                       "values_float": [
                         80,
-                        140,
-                        200,
-                        260
+                        150,
+                        220,
+                        290
                       ],
                       "is_percentage": false,
                       "heading_loc": "DAMAGE:",
@@ -1789,26 +1804,9 @@
                       "required_facet": ""
                     },
                     {
-                      "name": "status_resistance",
-                      "values_float": [
-                        -35
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "STATUS RESISTANCE REDUCTION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
                       "name": "max_movement_speed",
                       "values_float": [
-                        240
+                        230
                       ],
                       "is_percentage": false,
                       "heading_loc": "MAX MOVEMENT SPEED:",

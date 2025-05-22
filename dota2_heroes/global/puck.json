@@ -23,7 +23,7 @@
             {
               "color": 3,
               "title_loc": "Curveball",
-              "description_loc": "Puck's Illusory Orb can be curved in any direction, moves faster, and lasts longer.",
+              "description_loc": "Puck's Illusory Orb can be curved in any direction, moves faster, deals more damage and lasts longer.",
               "name": "puck_curveball",
               "icon": "curve_ball",
               "gradient_id": 2,
@@ -80,7 +80,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Illusory Orb can now be vector targeted to manipulate the orb's travel path. The orb moves faster and lasts longer, but if it exceeds the max cast range it will be destroyed."
+                "Illusory Orb can now be vector targeted to manipulate the orb's travel path. The orb moves faster, lasts longer, and deals an additional %damage_over_time_pct%%% of it's damage every %damage_interval%s in it's area of effect, but if it exceeds the max cast range it will be destroyed."
               ],
               "type": 0,
               "behavior": "16",
@@ -134,7 +134,7 @@
                     225
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -392,6 +392,63 @@
                   "required_facet": "puck_curveball"
                 },
                 {
+                  "name": "increase_per_sec",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "puck_curveball",
+                    "values": [
+                      0
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "puck_curveball"
+                },
+                {
+                  "name": "damage_over_time_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "puck_curveball",
+                    "values": [
+                      5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "puck_curveball"
+                },
+                {
+                  "name": "damage_interval",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "puck_curveball",
+                    "values": [
+                      0.5
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "puck_curveball"
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     1950
@@ -487,7 +544,7 @@
               "lore_loc": "With a mischievous grin, Puck spreads its enchanted powder which disrupts magical flow.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Waning Rift now has %scepter_radius% radius and range and knocks enemies back %scepter_pushback% distance over %scepter_pushback_duration% seconds (non-interrupting). Reveals invisible enemy units and wards in the area for %scepter_vision_duration% seconds.",
+              "scepter_loc": "",
               "facets_loc": [
                 "Waning Rift pushes enemies away. If the ability is in alt-cast state, it will pull them instead.",
                 ""

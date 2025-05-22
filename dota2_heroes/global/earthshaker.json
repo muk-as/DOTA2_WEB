@@ -14,20 +14,20 @@
             {
               "color": 0,
               "title_loc": "Tectonic Buildup",
-              "description_loc": "Aftershock radius is increased by {s:bonus_aftershock_range_increase_per_level_interval} every {s:bonus_aftershock_range_level_interval} hero levels.",
+              "description_loc": "Aftershock radius is increased by {s:bonus_aftershock_range_increase_per_level_interval} for every level of Echo Slam.",
               "name": "earthshaker_tectonic_buildup",
               "icon": "area_of_effect",
               "gradient_id": 1,
               "index": 0
             },
             {
-              "color": 1,
-              "title_loc": "Slugger",
-              "description_loc": "Enemies killed with Enchant Totem or Earthshaker's other abilities are sent flying, dealing damage to enemies they hit.",
-              "name": "earthshaker_slugger",
-              "icon": "movement",
-              "gradient_id": 1,
-              "index": 1
+              "color": 5,
+              "title_loc": "Resonating Ridge",
+              "description_loc": "Enemy heroes stunned by Fissure emit an echo to each nearby unit.",
+              "name": "earthshaker_reverberating_ridge",
+              "icon": "ricochet",
+              "gradient_id": 2,
+              "index": 2
             }
           ],
           "str_base": 22,
@@ -80,7 +80,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Enemy heroes stunned by Fissure emit an echo to each nearby unit within a %echoes_radius% radius, dealing damage equal to %echoes_damage_multiplier%%% of Echo Slam's current echo damage."
               ],
               "type": 0,
               "behavior": "134217744",
@@ -266,25 +267,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "fissure_movement_speed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "FISSURE MOVESPEED:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      100
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "fissure_max_distance_moved",
                   "values_float": [
                     300
@@ -300,6 +282,44 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "echoes_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "earthshaker_reverberating_ridge",
+                    "values": [
+                      400
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "earthshaker_reverberating_ridge"
+                },
+                {
+                  "name": "echoes_damage_multiplier",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "earthshaker_reverberating_ridge",
+                    "values": [
+                      60
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "earthshaker_reverberating_ridge"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -409,6 +429,7 @@
               "shard_loc": "",
               "scepter_loc": "Enchant Totem becomes a ground target ability, causing Earthshaker to jump in the air and land at the target spot, casting Enchant Totem there.  Self-casting the ability will behave in the original form, without jumping. Grants Enchant Totem a cleaving attack.",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -777,7 +798,8 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Aftershock radius is increased by %aftershock_range_increase_per_level_interval% every %aftershock_range_level_interval% hero levels.",
+                "Aftershock radius is increased by %aftershock_range_increase_per_level_interval% for every level of Echo Slam.",
+                "",
                 ""
               ],
               "type": 0,
@@ -822,10 +844,10 @@
                 {
                   "name": "aftershock_range",
                   "values_float": [
-                    350
+                    300
                   ],
                   "is_percentage": false,
-                  "heading_loc": "RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -875,30 +897,30 @@
                   "facet_bonus": {
                     "name": "earthshaker_tectonic_buildup",
                     "values": [
-                      50
+                      40
                     ],
                     "operation": 0
                   },
                   "required_facet": "earthshaker_tectonic_buildup"
                 },
                 {
-                  "name": "aftershock_range_level_interval",
+                  "name": "aftershock_range_tooltip",
                   "values_float": [
-                    0
+                    300
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "earthshaker_tectonic_buildup",
                     "values": [
-                      10
+                      0
                     ],
                     "operation": 0
                   },
-                  "required_facet": "earthshaker_tectonic_buildup"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityDuration",
@@ -944,6 +966,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1045,8 +1068,8 @@
                   "name": "echo_slam_echo_damage",
                   "values_float": [
                     90,
-                    110,
-                    130
+                    100,
+                    110
                   ],
                   "is_percentage": false,
                   "heading_loc": "ECHO DAMAGE:",
@@ -1144,15 +1167,16 @@
               "item_quality": 0
             },
             {
-              "id": 1448,
-              "name": "earthshaker_spirit_cairn",
-              "name_loc": "Spirit Cairn",
-              "desc_loc": "When Earthshaker dies, a %fissure_radius% radius fissure is created where he died. This fissure blocks movement and allows Earthshaker to continue to gain experience around it. It remains until Earthshaker respawns.",
+              "id": 1494,
+              "name": "earthshaker_slugger",
+              "name_loc": "Slugger",
+              "desc_loc": "Enemies killed with Enchant Totem or Earthshaker's other abilities are sent flying, dealing damage to enemies they hit.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1162,9 +1186,9 @@
               "target_type": 0,
               "flags": 0,
               "damage": 0,
-              "immunity": 4,
-              "dispellable": 0,
-              "max_level": 1,
+              "immunity": 0,
+              "dispellable": 3,
+              "max_level": 4,
               "cast_ranges": [
                 0
               ],
@@ -1193,12 +1217,171 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "fissure_radius",
+                  "name": "projectile_body_on_kill",
                   "values_float": [
-                    75
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_initial_impact_radius",
+                  "values_float": [
+                    225
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_speed",
+                  "values_float": [
+                    1600
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_distance",
+                  "values_float": [
+                    1200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DISTANCE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_width_creep",
+                  "values_float": [
+                    175
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_width_hero",
+                  "values_float": [
+                    175
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_vision",
+                  "values_float": [
+                    175
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_damage_creep",
+                  "values_float": [
+                    30,
+                    45,
+                    60,
+                    75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE (CREEP DEATH):",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_damage_hero",
+                  "values_float": [
+                    150,
+                    250,
+                    350,
+                    450
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE (HERO DEATH):",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_damage_additional_percent_health",
+                  "values_float": [
+                    7
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "FLYING ENEMY'S MAX HEALTH AS DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1235,6 +1418,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1316,6 +1500,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1377,6 +1562,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1440,6 +1626,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1501,6 +1688,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1564,6 +1752,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1625,6 +1814,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1688,6 +1878,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1745,273 +1936,7 @@
               "abilities": []
             },
             {
-              "abilities": [
-                {
-                  "id": 1494,
-                  "name": "earthshaker_slugger",
-                  "name_loc": "Slugger",
-                  "desc_loc": "Enemies killed with Enchant Totem or Earthshaker's other abilities are sent flying, dealing damage to enemies they hit.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "projectile_body_on_kill",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          1
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_initial_impact_radius",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          225
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_speed",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "SPEED:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          1600
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_distance",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DISTANCE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          1200
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_width_creep",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          175
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_width_hero",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          175
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_vision",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          175
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_damage_creep",
-                      "values_float": [
-                        0,
-                        0,
-                        0,
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DAMAGE (CREEP DEATH):",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          40,
-                          60,
-                          80,
-                          100
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_damage_hero",
-                      "values_float": [
-                        0,
-                        0,
-                        0,
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DAMAGE (HERO DEATH):",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          150,
-                          250,
-                          350,
-                          450
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    },
-                    {
-                      "name": "projectile_body_damage_additional_percent_health",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "FLYING ENEMY'S MAX HEALTH AS DAMAGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "earthshaker_slugger",
-                        "values": [
-                          7
-                        ],
-                        "operation": 5
-                      },
-                      "required_facet": "earthshaker_slugger"
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
+              "abilities": []
             }
           ]
         }

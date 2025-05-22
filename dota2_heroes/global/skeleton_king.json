@@ -34,7 +34,7 @@
           "str_gain": 2.8,
           "agi_base": 16,
           "agi_gain": 1.7,
-          "int_base": 18,
+          "int_base": 16,
           "int_gain": 1.6,
           "primary_attr": 0,
           "complexity": 1,
@@ -57,14 +57,14 @@
           "projectile_speed": 0,
           "armor": 3.6666667,
           "magic_resistance": 25,
-          "movement_speed": 315,
+          "movement_speed": 310,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
           "max_health": 604,
           "health_regen": 2.7,
-          "max_mana": 291,
-          "mana_regen": 0.90000004,
+          "max_mana": 267,
+          "mana_regen": 0.8,
           "abilities": [
             {
               "id": 5086,
@@ -477,7 +477,7 @@
               "id": 1283,
               "name": "skeleton_king_vampiric_spirit",
               "name_loc": "Vampiric Spirit",
-              "desc_loc": "Grants Wraith King Lifesteal. When slain Wraith King turns into a free pathing Wraith with Bonus Attack and Movement Speed for a short duration, delaying his death.",
+              "desc_loc": "Grants Wraith King Lifesteal. When slain Wraith King turns into a free pathing Wraith with Bonus Attack and Movement Speed for a short duration, delaying his death. Wraith King cannot reincarnate after being a Wraith.",
               "lore_loc": "",
               "notes_loc": [
                 "Credit for allies whose death was delayed will go to whoever struck the original killing blow.",
@@ -530,9 +530,9 @@
                 {
                   "name": "vampiric_aura",
                   "values_float": [
-                    16,
-                    24,
-                    32,
+                    10,
+                    20,
+                    30,
                     40
                   ],
                   "is_percentage": true,
@@ -829,6 +829,27 @@
                     "operation": 0
                   },
                   "required_facet": "skeleton_king_facet_bone_guard"
+                },
+                {
+                  "name": "trigger_wraithfire_blast",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_wraith_king_4",
+                      "value": 1,
+                      "operation": 5
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityManaCost",
@@ -1422,25 +1443,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1462,10 +1465,11 @@
                   "id": 5087,
                   "name": "skeleton_king_bone_guard",
                   "name_loc": "Bone Guard",
-                  "desc_loc": "Gains a Charge for every 2 creeps killed and 2 charges per hero killed.. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
+                  "desc_loc": "Gains a Charge for every 2 creeps killed and 2 charges per hero killed. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
                   "lore_loc": "Wraith King's blade drains his enemy's essence to feed his aura.",
                   "notes_loc": [
-                    "Break disables the gaining of new stacks."
+                    "Break disables the gaining of new stacks.",
+                    "Casting Wraithfire Blast on an enemy causes the skeletons to attack that enemy."
                   ],
                   "shard_loc": "",
                   "scepter_loc": "",
@@ -1806,7 +1810,7 @@
                   "name": "skeleton_king_spectral_blade",
                   "name_loc": "Spectral Blade",
                   "desc_loc": "Curses units that Wraith King attacks, dealing a flat amount of damage and a percentage of the attack damage again after a delay. Vampiric Spirit's lifesteal applies to the curse damage and a unit cannot be cursed again for a short period of time.",
-                  "lore_loc": "",
+                  "lore_loc": "The eternal spite of every soul stolen by Ostarion bleeds into reality with each strike of his murderous blade.",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",

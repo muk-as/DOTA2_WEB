@@ -14,7 +14,7 @@
             {
               "color": 1,
               "title_loc": "Primeval Power",
-              "description_loc": "Treant gains +{s:bonus_attack_damage_per_level} base attack damage per hero level.",
+              "description_loc": "Treant gains +{s:attack_damage_per_level} base attack damage per hero level.",
               "name": "treant_primeval_power",
               "icon": "damage",
               "gradient_id": 2,
@@ -71,7 +71,7 @@
               "name": "treant_natures_grasp",
               "name_loc": "Nature's Grasp",
               "desc_loc": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through. Vines deal 50% more damage if they touch a tree. Does half damage to creeps.",
-              "lore_loc": "The Protectors don't often come into vision; their natural state being nestled within their leafy brethren.",
+              "lore_loc": "The tendrils of Rooftrellen's influence stretch to all corners of the forest.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
@@ -788,9 +788,9 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    15,
-                    20,
-                    25,
+                    18,
+                    22,
+                    26,
                     30
                   ],
                   "is_percentage": false,
@@ -934,7 +934,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "TREE VISION RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
@@ -953,7 +953,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "TREE OVERGROWTH RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
@@ -1173,7 +1173,7 @@
                 {
                   "name": "cooldown_time",
                   "values_float": [
-                    3
+                    2.75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1356,9 +1356,9 @@
                 0
               ],
               "cooldowns": [
-                120,
                 110,
-                100
+                100,
+                90
               ],
               "durations": [
                 0
@@ -1486,9 +1486,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    120,
                     110,
-                    100
+                    100,
+                    90
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1515,88 +1515,6 @@
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 1358,
-              "name": "treant_innate_attack_damage",
-              "name_loc": "",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "4398046511107",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 1,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "attack_damage_per_level",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "treant_primeval_power",
-                    "values": [
-                      6
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "treant_primeval_power"
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -2123,7 +2041,88 @@
           ],
           "facet_abilities": [
             {
-              "abilities": []
+              "abilities": [
+                {
+                  "id": 1358,
+                  "name": "treant_innate_attack_damage",
+                  "name_loc": "",
+                  "desc_loc": "",
+                  "lore_loc": "",
+                  "notes_loc": [],
+                  "shard_loc": "",
+                  "scepter_loc": "",
+                  "facets_loc": [
+                    "",
+                    ""
+                  ],
+                  "type": 0,
+                  "behavior": "4398046511107",
+                  "target_team": 0,
+                  "target_type": 0,
+                  "flags": 0,
+                  "damage": 0,
+                  "immunity": 0,
+                  "dispellable": 0,
+                  "max_level": 1,
+                  "cast_ranges": [
+                    0
+                  ],
+                  "cast_points": [
+                    0
+                  ],
+                  "channel_times": [
+                    0
+                  ],
+                  "cooldowns": [
+                    0
+                  ],
+                  "durations": [
+                    0
+                  ],
+                  "damages": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "mana_costs": [
+                    0
+                  ],
+                  "gold_costs": [],
+                  "health_costs": [],
+                  "special_values": [
+                    {
+                      "name": "attack_damage_per_level",
+                      "values_float": [
+                        6
+                      ],
+                      "is_percentage": false,
+                      "heading_loc": "",
+                      "bonuses": [],
+                      "values_shard": [],
+                      "values_scepter": [],
+                      "facet_bonus": {
+                        "name": "",
+                        "values": [],
+                        "operation": 0
+                      },
+                      "required_facet": ""
+                    }
+                  ],
+                  "is_item": false,
+                  "ability_has_scepter": false,
+                  "ability_has_shard": false,
+                  "ability_is_granted_by_scepter": false,
+                  "ability_is_granted_by_shard": false,
+                  "ability_is_innate": false,
+                  "item_cost": 0,
+                  "item_initial_charges": 0,
+                  "item_neutral_tier": 4294967295,
+                  "item_stock_max": 0,
+                  "item_stock_time": 0,
+                  "item_quality": 0
+                }
+              ]
             },
             {
               "abilities": []

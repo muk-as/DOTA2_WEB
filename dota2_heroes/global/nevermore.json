@@ -274,9 +274,9 @@
                   "facet_bonus": {
                     "name": "nevermore_shadowmire",
                     "values": [
-                      3,
                       6,
-                      9,
+                      8,
+                      10,
                       12
                     ],
                     "operation": 5
@@ -342,7 +342,7 @@
                     9
                   ],
                   "is_percentage": false,
-                  "heading_loc": "COOLDOWN:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -371,8 +371,8 @@
               "id": 1216,
               "name": "nevermore_frenzy",
               "name_loc": "Feast of Souls",
-              "desc_loc": "Shadow Fiend gains Bonus Attack Speed for %duration% seconds. For the duration of the effect, Shadow Fiend's Max Soul count is increased by %soul_cost%, but he loses that amount of souls after it is done.",
-              "lore_loc": "",
+              "desc_loc": "Shadow Fiend gains Bonus Attack Speed and Movement Speed for %duration% seconds. For the duration of the effect, Necromastery's Max Soul count is increased by %max_soul_increase%, but he loses that amount of souls after it is done.",
+              "lore_loc": "For Nevermore, there's as much delight in the harvest as there is in the feast.",
               "notes_loc": [
                 "Cannot be cast unless Shadow Fiend has enough souls to pay the cost."
               ],
@@ -401,7 +401,7 @@
                 0
               ],
               "cooldowns": [
-                16
+                21
               ],
               "durations": [
                 0
@@ -413,7 +413,10 @@
                 0
               ],
               "mana_costs": [
-                60
+                60,
+                65,
+                70,
+                75
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -435,6 +438,26 @@
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_move_speed",
+                  "values_float": [
+                    5,
+                    7,
+                    9,
+                    11
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "BONUS MOVE SPEED:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -470,8 +493,8 @@
                 {
                   "name": "cast_speed_pct_tooltip",
                   "values_float": [],
-                  "is_percentage": true,
-                  "heading_loc": "CAST SPEED:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nevermore_frenzy_castspeed",
@@ -491,10 +514,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    7.5,
-                    8,
-                    8.5,
-                    9
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -526,9 +546,29 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "max_soul_increase",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    60
+                    60,
+                    65,
+                    70,
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -545,7 +585,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    16
+                    21
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -582,7 +622,7 @@
               "notes_loc": [
                 "Stacks fully with other armor reduction abilities and aura."
               ],
-              "shard_loc": "Lowers nearby enemy magic resistance by 14%%.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed.",
@@ -633,8 +673,14 @@
                     -7
                   ],
                   "is_percentage": false,
-                  "heading_loc": "REDUCTION:",
-                  "bonuses": [],
+                  "heading_loc": "ARMOR REDUCTION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_nevermore_3",
+                      "value": 2,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1105,14 +1151,14 @@
               "id": 5062,
               "name": "nevermore_necromastery",
               "name_loc": "Necromastery",
-              "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases %soul_release_tooltip%%% of them from bondage.",
+              "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. Hero kills grant %souls_per_hero_kill% souls. On death, he releases %soul_release_tooltip%%% of them from bondage.",
               "lore_loc": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
               "notes_loc": [
                 "Denies and neutral creeps also provide bonus damage through Necromastery.",
                 "Break disables the gaining of new stacks.",
                 "Break does not disable the bonuses from existing stacks."
               ],
-              "shard_loc": "Shadow Fiend gains an extra soul per kill. Shadow Fiend can consume a soul per attack to deal critical damage and fear the target.",
+              "shard_loc": "",
               "scepter_loc": "Increases max souls.",
               "facets_loc": [
                 "Every hero kill increases max souls by %max_soul_increase_on_hero_kill% until Shadow Fiend dies.",
@@ -1217,6 +1263,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "souls_per_hero_kill",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "necromastery_soul_release",
                   "values_float": [
                     0.7
@@ -1239,7 +1302,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SOULS PER KILL:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
                     2
@@ -1257,8 +1320,8 @@
                   "values_float": [
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "CRITICAL DAMAGE:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
                     190
@@ -1277,7 +1340,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "FEAR DURATION:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
                     0.4
@@ -1469,7 +1532,7 @@
             {
               "id": 6875,
               "name": "special_bonus_unique_nevermore_3",
-              "name_loc": "Presence Aura Affects Buildings",
+              "name_loc": "+{s:bonus_presence_armor_reduction} Presence Armor Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

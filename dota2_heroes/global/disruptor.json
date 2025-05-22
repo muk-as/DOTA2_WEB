@@ -14,7 +14,7 @@
             {
               "color": 0,
               "title_loc": "Thunderstorm",
-              "description_loc": "Thunder Strike additionally hits all enemies within Kinetic Field.",
+              "description_loc": "Thunder Strike additionally hits all enemies within Kinetic Field. Thunder Strike Slow duration is doubled.",
               "name": "disruptor_thunderstorm",
               "icon": "area_of_effect",
               "gradient_id": 1,
@@ -28,6 +28,15 @@
               "icon": "fence",
               "gradient_id": 1,
               "index": 1
+            },
+            {
+              "color": 5,
+              "title_loc": "Transferrence",
+              "description_loc": "Electromagnetic Repulsion can be activated manually, be cast on allies and deals damage equal to a percentage of Disruptor's current health.",
+              "name": "disruptor_conduit",
+              "icon": "vortex_out",
+              "gradient_id": 0,
+              "index": 2
             }
           ],
           "str_base": 21,
@@ -76,7 +85,8 @@
               "shard_loc": "Increases the cast range and strike count of Thunder Strike. It can now also be ground targeted, where it will lie dormant for up to %shard_ground_delay% seconds and attach to the first enemy that comes within the radius.",
               "scepter_loc": "",
               "facets_loc": [
-                "Thunder Strike additionally hits all enemies within Kinetic Field.",
+                "Thunder Strike additionally hits all enemies within Kinetic Field. Thunder Strike Slow duration is doubled.",
+                "",
                 ""
               ],
               "type": 0,
@@ -225,19 +235,15 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_disruptor",
-                      "value": 0.6,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
+                    "name": "disruptor_thunderstorm",
+                    "values": [
+                      2
+                    ],
+                    "operation": 1
                   },
                   "required_facet": ""
                 },
@@ -261,7 +267,7 @@
                 {
                   "name": "shard_ground_delay",
                   "values_float": [
-                    5
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -396,6 +402,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -663,6 +670,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -757,7 +765,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_disruptor_5",
-                      "value": 2,
+                      "value": 1.5,
                       "operation": 0
                     }
                   ],
@@ -866,7 +874,7 @@
               "name": "disruptor_electromagnetic_repulsion",
               "name_loc": "Electromagnetic Repulsion",
               "desc_loc": "Whenever Disruptor takes more than %damage_threshold% damage from any source within %effect_radius% radius, all nearby enemies within are pushed back up to a %effect_radius% unit distance.",
-              "lore_loc": "",
+              "lore_loc": "Safe harbor found inside the storm.",
               "notes_loc": [
                 "After %damage_reset_interval%s, the damage counter is reset."
               ],
@@ -874,17 +882,18 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
+                "",
+                "Electromagnetic Repulsion can activated manually, be cast on allies and deals damage to enemies equal to %current_hp_as_damage%%% of Disruptor's current health. If activated this way, the ability goes on an %manual_cooldown%s cooldown."
               ],
               "type": 0,
-              "behavior": "2",
+              "behavior": "66",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
               "dispellable": 3,
-              "max_level": 1,
+              "max_level": 4,
               "cast_ranges": [
                 0
               ],
@@ -936,7 +945,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_disruptor_7",
+                      "value": 150,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -953,7 +968,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_disruptor_7",
+                      "value": 150,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -998,6 +1019,107 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "current_hp_as_damage",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "disruptor_conduit",
+                    "values": [
+                      10
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "disruptor_conduit"
+                },
+                {
+                  "name": "manual_cooldown",
+                  "values_float": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "disruptor_conduit",
+                    "values": [
+                      26,
+                      20,
+                      14,
+                      8
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "disruptor_conduit"
+                },
+                {
+                  "name": "max_level",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "disruptor_conduit",
+                    "values": [
+                      4
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "disruptor_conduit",
+                    "values": [
+                      600
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "disruptor_conduit"
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "disruptor_conduit",
+                    "values": [
+                      50
+                    ],
+                    "operation": 5
+                  },
+                  "required_facet": "disruptor_conduit"
+                },
+                {
                   "name": "AbilityCooldown",
                   "values_float": [
                     4
@@ -1038,6 +1160,7 @@
               "shard_loc": "",
               "scepter_loc": "Mutes items.",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1117,13 +1240,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "PULSES:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_disruptor_7",
-                      "value": 6,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1142,7 +1259,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX DAMAGE PER SECOND:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_disruptor",
+                      "value": 60,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1159,13 +1282,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_disruptor_7",
-                      "value": 1.5,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1274,6 +1391,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1354,6 +1472,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1416,6 +1535,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1468,15 +1588,16 @@
               "item_quality": 0
             },
             {
-              "id": 517,
-              "name": "special_bonus_unique_disruptor_7",
-              "name_loc": "+{s:bonus_duration}s Static Storm Duration",
+              "id": 6215,
+              "name": "special_bonus_unique_disruptor",
+              "name_loc": "+{s:bonus_damage_max} Static Storm Max DPS",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1540,7 +1661,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "+{s:bonus_AbilityCharges} Kinetic Fence Charge"
+                "+{s:bonus_AbilityCharges} Kinetic Fence Charge",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -1592,15 +1714,16 @@
               "item_quality": 0
             },
             {
-              "id": 6215,
-              "name": "special_bonus_unique_disruptor",
-              "name_loc": "+{s:bonus_slow_duration}s Thunder Strike Slow Duration",
+              "id": 517,
+              "name": "special_bonus_unique_disruptor_7",
+              "name_loc": "+{s:bonus_effect_radius} Electromagnetic Repulsion Radius/Knockback",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1664,6 +1787,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1725,6 +1849,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1789,11 +1914,12 @@
                   "name": "disruptor_kinetic_fence",
                   "name_loc": "Kinetic Fence",
                   "desc_loc": "After a short formation time, creates a wall out of kinetic energy that enemies cannot pass.",
-                  "lore_loc": "",
+                  "lore_loc": "For a brief moment, it's as if the wind itself had turned solid.",
                   "notes_loc": [],
                   "shard_loc": "",
                   "scepter_loc": "",
                   "facets_loc": [
+                    "",
                     "",
                     ""
                   ],
@@ -1845,7 +1971,7 @@
                         350
                       ],
                       "is_percentage": false,
-                      "heading_loc": "LENGTH:",
+                      "heading_loc": "",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],
@@ -1899,7 +2025,7 @@
                         1200
                       ],
                       "is_percentage": false,
-                      "heading_loc": "",
+                      "heading_loc": "LENGTH:",
                       "bonuses": [],
                       "values_shard": [],
                       "values_scepter": [],
@@ -2025,6 +2151,9 @@
                   "item_quality": 0
                 }
               ]
+            },
+            {
+              "abilities": []
             }
           ]
         }

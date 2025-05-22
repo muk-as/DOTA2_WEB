@@ -70,7 +70,7 @@
               "id": 5028,
               "name": "juggernaut_blade_fury",
               "name_loc": "Blade Fury",
-              "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune, increasing his magic resistance by 80%%, and dealing damage to nearby enemy units. Juggernaut deals damage in an interval equal to %blade_fury_aspd_multiplier%x his attack speed. Applies a strong dispel at the end of the spin.",
+              "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune, increasing his magic resistance by 80%%, and dealing damage every %blade_fury_damage_tick%s to nearby enemy units. Applies a strong dispel at the end of the spin.",
               "lore_loc": "Yurnero's renowned katana techniques are feared by warriors and sorcerors alike.",
               "notes_loc": [
                 "You can use items during Blade Fury.",
@@ -128,9 +128,35 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "blade_fury_aspd_multiplier",
+                  "name": "blade_fury_damage",
                   "values_float": [
-                    2
+                    80,
+                    110,
+                    140,
+                    170
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE PER SECOND:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_juggernaut",
+                      "value": 90,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "blade_fury_damage_tick",
+                  "values_float": [
+                    0.2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -155,26 +181,6 @@
                   "values_shard": [
                     100
                   ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "blade_fury_damage_per_tick",
-                  "values_float": [
-                    40,
-                    45,
-                    50,
-                    55
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DAMAGE PER TICK:",
-                  "bonuses": [],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -715,7 +721,7 @@
               "name": "juggernaut_swift_slash",
               "name_loc": "Swiftslash",
               "desc_loc": "Performs a short Omnislash for %duration% seconds.",
-              "lore_loc": "",
+              "lore_loc": "A briefer onslaught for those less deserving of the honor.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1510,9 +1516,9 @@
               "item_quality": 0
             },
             {
-              "id": 1150,
-              "name": "special_bonus_unique_juggernaut_blade_fury_cooldown",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Blade Fury Cooldown",
+              "id": 6105,
+              "name": "special_bonus_unique_juggernaut",
+              "name_loc": "+{s:bonus_blade_fury_damage} Blade Fury DPS",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
