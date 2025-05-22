@@ -8,8 +8,8 @@
             "id": 327,
             "name": "item_helm_of_the_undying",
             "name_loc": "不朽尸王的头盔",
-            "desc_loc": "<h1>被动：死亡延迟</h1>受到致死打击后还能继续存活%duration%秒。",
-            "lore_loc": "",
+            "desc_loc": "<h1>被动：死亡延迟</h1>受到致死打击后额外存活%duration%秒。如果有敌方英雄在%kill_radius%范围内阵亡，死亡延迟效果延迟%bonus_kill_duration%秒。",
+            "lore_loc": "戴上它的代价会在来世偿还。",
             "notes_loc": [],
             "shard_loc": "",
             "scepter_loc": "",
@@ -33,7 +33,7 @@
               0
             ],
             "cooldowns": [
-              0
+              50
             ],
             "durations": [
               0
@@ -51,12 +51,12 @@
             "health_costs": [],
             "special_values": [
               {
-                "name": "bonus_armor",
+                "name": "duration",
                 "values_float": [
-                  6
+                  5
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$armor",
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -68,9 +68,43 @@
                 "required_facet": ""
               },
               {
-                "name": "duration",
+                "name": "bonus_kill_duration",
                 "values_float": [
                   5
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "kill_radius",
+                "values_float": [
+                  1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "AbilityCooldown",
+                "values_float": [
+                  50
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -93,7 +127,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 4294967295,
+            "item_neutral_tier": 4,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1
