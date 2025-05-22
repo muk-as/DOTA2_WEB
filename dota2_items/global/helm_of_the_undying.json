@@ -6,8 +6,8 @@
           "id": 327,
           "name": "item_helm_of_the_undying",
           "name_loc": "Helm of the Undying",
-          "desc_loc": "<h1>Passive: Death Delay</h1> Survive for an extra %duration% seconds after receiving a killing blow.",
-          "lore_loc": "",
+          "desc_loc": "<h1>Passive: Death Delay</h1> Survive for an extra %duration% seconds after receiving a killing blow. If any enemy heroes dies within %kill_radius% units, the death delay effect is extended by %bonus_kill_duration% seconds.",
+          "lore_loc": "The price for wearing it is paid in the afterlife.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
@@ -31,7 +31,7 @@
             0
           ],
           "cooldowns": [
-            0
+            50
           ],
           "durations": [
             0
@@ -49,12 +49,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_armor",
+              "name": "duration",
               "values_float": [
-                6
+                5
               ],
               "is_percentage": false,
-              "heading_loc": "+$armor",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -66,9 +66,43 @@
               "required_facet": ""
             },
             {
-              "name": "duration",
+              "name": "bonus_kill_duration",
               "values_float": [
                 5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "kill_radius",
+              "values_float": [
+                1200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -91,7 +125,7 @@
           "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
+          "item_neutral_tier": 4,
           "item_stock_max": 0,
           "item_stock_time": 0,
           "item_quality": 1
