@@ -631,26 +631,11 @@
                   ),
                 ),
             ),
-            i.createElement(
-              "div",
-              {
-                className: (0, l.A)(
-                  r().TextStyleFootnote,
-                  r().TextColorGreenGlow,
-                  r().CapsuleDiscount,
-                ),
-              },
-              m.o.GetBPDiscount(e.eventid, e.itemid) &&
-                (0, s.Wn)(
-                  "#ti13_compendium_purchase_discount",
-                  m.o.GetBPDiscount(e.eventid, e.itemid),
-                ),
-            ),
           );
     },
     84398: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => G });
+      a.r(t), a.d(t, { default: () => F });
       var i = a(85608),
         n = a(89506),
         r = a(55651),
@@ -724,7 +709,7 @@
             bIsShard: !0,
           },
         ],
-        T = [
+        L = [
           {
             posterDir: "abilities/ringmaster/ringmaster_funhouse_mirror.jpg",
             videoSrcMp4: "abilities/ringmaster/ringmaster_funhouse_mirror.mp4",
@@ -747,7 +732,7 @@
             abilityDesc: "#ringmaster_ability_strongman_tonic_Description",
           },
         ],
-        L = (e) => {
+        T = (e) => {
           const t =
               e.bulletLine1 &&
               (0, l.Wn)(e.bulletLine1) &&
@@ -924,7 +909,7 @@
               "data-aos-delay": "100",
               "data-aos-duration": "1000",
             },
-            o.createElement(L, {
+            o.createElement(T, {
               title: e.title,
               description: e.description,
               bulletLine1: e.bulletLine1,
@@ -967,7 +952,7 @@
                 src: `${n.r.IMG_URL}/` + e.image,
               }),
             ),
-            o.createElement(L, {
+            o.createElement(T, {
               title: e.title,
               description: e.description,
               contents: e.contents,
@@ -1228,7 +1213,7 @@
                       className: v().AbilityCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 56.25,
-                      totalSlides: R.length + T.length,
+                      totalSlides: R.length + L.length,
                     },
                     o.createElement(
                       C.Ap,
@@ -1283,7 +1268,7 @@
                           ),
                         ),
                       ),
-                      T.map((e, t) =>
+                      L.map((e, t) =>
                         o.createElement(
                           C.q7,
                           {
@@ -1416,7 +1401,7 @@
                         o.createElement(
                           "div",
                           { className: (0, d.A)(v().CarouselDots) },
-                          T.map((e, t) =>
+                          L.map((e, t) =>
                             o.createElement(
                               C.cL,
                               {
@@ -1445,7 +1430,7 @@
                       className: v().AbilityCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 56.25,
-                      totalSlides: R.length + T.length,
+                      totalSlides: R.length + L.length,
                     },
                     o.createElement(
                       C.Ap,
@@ -1508,7 +1493,7 @@
                           ),
                         ),
                       ),
-                      T.map((e, t) =>
+                      L.map((e, t) =>
                         o.createElement(
                           C.q7,
                           {
@@ -1617,7 +1602,7 @@
                         o.createElement(
                           "div",
                           { className: (0, d.A)(v().CarouselDotsMobile) },
-                          T.map((e, t) =>
+                          L.map((e, t) =>
                             o.createElement(
                               C.cL,
                               {
@@ -2128,7 +2113,7 @@
         }
       };
       k = (0, i.Cg)([s.PA], k);
-      const G = k;
+      const F = k;
     },
   },
 ]);

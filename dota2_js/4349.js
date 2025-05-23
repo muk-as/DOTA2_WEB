@@ -216,7 +216,7 @@
                             index: t,
                             onFocus: () => E(t),
                           },
-                          s.createElement(h, {
+                          s.createElement(C, {
                             nIndex: t,
                             strVideo: e.strHeroName,
                             bHeroLeft: e.eImageLoc == o.Left,
@@ -248,7 +248,7 @@
                           }),
                         ),
                       ),
-                      s.createElement(C, null),
+                      s.createElement(h, null),
                     ),
                     s.createElement(
                       d._X,
@@ -294,7 +294,7 @@
             ),
           );
         },
-        C = () => {
+        h = () => {
           const e = p();
           return s.createElement(u.A, {
             effect: "solid",
@@ -306,7 +306,7 @@
             className: n().Tooltip,
           });
         },
-        h = ({
+        C = ({
           nIndex: e,
           strVideo: t,
           bHeroLeft: r,
@@ -830,21 +830,6 @@
                   (0, n.Wn)(
                     "#ti13_compendium_purchase_upgraded_boosters_footnote",
                   ),
-                ),
-            ),
-            a.createElement(
-              "div",
-              {
-                className: (0, l.A)(
-                  s().TextStyleFootnote,
-                  s().TextColorGreenGlow,
-                  s().CapsuleDiscount,
-                ),
-              },
-              i.o.GetBPDiscount(e.eventid, e.itemid) &&
-                (0, n.Wn)(
-                  "#ti13_compendium_purchase_discount",
-                  i.o.GetBPDiscount(e.eventid, e.itemid),
                 ),
             ),
           );

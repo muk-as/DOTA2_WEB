@@ -531,26 +531,11 @@
                   ),
                 ),
             ),
-            n.createElement(
-              "div",
-              {
-                className: (0, l.A)(
-                  r().TextStyleFootnote,
-                  r().TextColorGreenGlow,
-                  r().CapsuleDiscount,
-                ),
-              },
-              c.o.GetBPDiscount(e.eventid, e.itemid) &&
-                (0, s.Wn)(
-                  "#ti13_compendium_purchase_discount",
-                  c.o.GetBPDiscount(e.eventid, e.itemid),
-                ),
-            ),
           );
     },
     85665: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => L });
+      a.r(t), a.d(t, { default: () => x });
       var n = a(85608),
         i = a(89506),
         r = a(27866),
@@ -883,7 +868,7 @@
           { strVideo: "showcase_cliff" },
         ],
         B = 45;
-      let x = class extends s.Component {
+      let L = class extends s.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -1499,8 +1484,8 @@
           );
         }
       };
-      x = (0, n.Cg)([l.PA], x);
-      const L = x;
+      L = (0, n.Cg)([l.PA], L);
+      const x = L;
     },
   },
 ]);
