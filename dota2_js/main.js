@@ -41285,7 +41285,13 @@
     },
     82101: (e, t, a) => {
       "use strict";
-      a.d(t, { b9: () => O, cT: () => N, sG: () => I, uV: () => Y });
+      a.d(t, {
+        $t: () => x,
+        b9: () => O,
+        cT: () => N,
+        sG: () => I,
+        uV: () => $,
+      });
       var r = a(89506),
         n = a(7552),
         i = a(45237),
@@ -42239,7 +42245,12 @@
             n.createElement(G, { heroData: e }),
           ),
         O = new Map([["marci_pickmeup", "marci_companion_run_secondary"]]),
-        x = ({ ability: e, facet: t, facetNum: a, isFacetAbility: i }) => {
+        x = [
+          "abilities/necrolyte_sadist",
+          "abilities/nevermore_necromastery",
+          "abilities/zuus_static_field",
+        ],
+        U = ({ ability: e, facet: t, facetNum: a, isFacetAbility: i }) => {
           if (!!(1 & e.behavior)) return null;
           let s = new Map(),
             o = !1;
@@ -42360,7 +42371,7 @@
             )
           );
         },
-        U = ({ heroData: e, facet: t, facetNum: a, facetAbilities: i }) => {
+        F = ({ heroData: e, facet: t, facetNum: a, facetAbilities: i }) => {
           let s = new Map();
           const o = [...e.abilities, ...i];
           for (const e of o)
@@ -42491,7 +42502,7 @@
                 "div",
                 { className: l().FacetNewAbilities },
                 i.map((e) =>
-                  n.createElement(x, {
+                  n.createElement(U, {
                     key: `facetability_${e.name}`,
                     ability: e,
                     facet: t,
@@ -42504,7 +42515,7 @@
                 "div",
                 { className: l().FacetAbilities },
                 e.abilities.map((e) =>
-                  n.createElement(x, {
+                  n.createElement(U, {
                     key: `facetability_${e.name}`,
                     ability: e,
                     facet: t,
@@ -42516,7 +42527,7 @@
             ),
           );
         },
-        F = ({ heroData: e }) =>
+        z = ({ heroData: e }) =>
           e
             ? n.createElement(
                 "div",
@@ -42530,7 +42541,7 @@
                   "div",
                   { className: l().FacetList },
                   e.facets.map((t, a) =>
-                    n.createElement(U, {
+                    n.createElement(F, {
                       key: `Facet_${t.name}`,
                       heroData: e,
                       facetAbilities: e.facet_abilities[a].abilities,
@@ -42541,7 +42552,7 @@
                 ),
               )
             : null,
-        z = (0, d.PA)(({ heroData: e }) => {
+        j = (0, d.PA)(({ heroData: e }) => {
           const [t, a] = (0, n.useState)(!1);
           if (!e) return null;
           const i = m.o.getSelectedAbilityIndex();
@@ -43068,7 +43079,7 @@
             ),
           );
         }),
-        j = ({ heroData: e }) =>
+        H = ({ heroData: e }) =>
           n.createElement(
             "div",
             { className: l().AbilityDetailsSection },
@@ -43078,9 +43089,9 @@
                 { className: l().AbilityDetailsHeader },
                 (0, _.Wn)("#hero_ability_details"),
               ),
-            n.createElement(z, { heroData: e }),
+            n.createElement(j, { heroData: e }),
           ),
-        H = ({ prevhero: e, nexthero: t }) =>
+        q = ({ prevhero: e, nexthero: t }) =>
           n.createElement(
             "div",
             { className: l().HeroNavigator },
@@ -43109,7 +43120,7 @@
               },
             }),
           ),
-        q = ({ heroData: e, left: t }) => {
+        V = ({ heroData: e, left: t }) => {
           let a = "";
           switch (e.primary_attr) {
             case 0:
@@ -43178,14 +43189,14 @@
             )
           );
         },
-        V = ({ nPrevHeroID: e, nNextHeroID: t }) => {
+        Y = ({ nPrevHeroID: e, nNextHeroID: t }) => {
           const a = f.B5.Get().getHeroData(e),
             r = f.B5.Get().getHeroData(t);
           return a && r
             ? n.createElement(
                 "div",
                 { className: l().BottomSection },
-                n.createElement(q, { heroData: a, left: !0 }),
+                n.createElement(V, { heroData: a, left: !0 }),
                 n.createElement(
                   i.N_,
                   { to: u.J.herogrid(), className: l().AllHeroesContainer },
@@ -43206,11 +43217,11 @@
                     " ",
                   ),
                 ),
-                n.createElement(q, { heroData: r, left: !1 }),
+                n.createElement(V, { heroData: r, left: !1 }),
               )
             : null;
         },
-        Y = (0, d.PA)((e) => {
+        $ = (0, d.PA)((e) => {
           const t = (0, s.g)().id,
             a = f.B5.Get().getHeroList();
           let i = 0;
@@ -43284,7 +43295,7 @@
                 "div",
                 { className: l().UpperSection },
                 n.createElement("div", { className: l().BackgroundGradient }),
-                n.createElement(H, { prevhero: c, nexthero: d }),
+                n.createElement(q, { prevhero: c, nexthero: d }),
                 n.createElement(I, {
                   key: o ? o.name : "",
                   heroname: o ? o.name : "",
@@ -43308,7 +43319,7 @@
               n.createElement(
                 "div",
                 { className: l().FacetBarContainer },
-                n.createElement(F, { heroData: o }),
+                n.createElement(z, { heroData: o }),
               ),
               n.createElement(
                 "div",
@@ -43318,8 +43329,8 @@
                     backgroundImage: `url( ${r.r.IMG_URL}backgrounds/grey_painterly.png )`,
                   },
                 },
-                n.createElement(j, { heroData: o }),
-                n.createElement(V, { nNextHeroID: v, nPrevHeroID: u }),
+                n.createElement(H, { heroData: o }),
+                n.createElement(Y, { nNextHeroID: v, nPrevHeroID: u }),
               ),
               n.createElement(g.K, null),
             )
@@ -43720,28 +43731,61 @@
                           t.abilities?.length > 0
                             ? t.abilities[0].ability_id
                             : 0,
-                        o = s.itemabilities.find((e) => e.id == i),
-                        m = o ? `abilities/${o.name}` : "icons/innate_icon";
-                      return n.createElement(
-                        "div",
-                        {
-                          key: `hero${e.hero_id}_innate_${a}`,
-                          className: l().Innate,
-                        },
-                        n.createElement("img", {
-                          className: l().InnateIcon,
-                          onError: (e) =>
-                            (e.target.src = `${r.r.IMG_URL}icons/innate_icon.png`),
-                          src: `${r.r.IMG_URL}${m}.png `,
-                        }),
+                        o = s.itemabilities.find((e) => e.id == i);
+                      let m = o ? `abilities/${o.name}` : "icons/innate_icon";
+                      return (
+                        v.$t.includes(m) && (m = "icons/innate_icon"),
                         n.createElement(
                           "div",
-                          { className: l().RightSide },
-                          t.general_notes?.length > 0 &&
-                            n.createElement(
-                              "div",
-                              { className: l().InnateNotes },
-                              t.general_notes.map((t, a) =>
+                          {
+                            key: `hero${e.hero_id}_innate_${a}`,
+                            className: l().Innate,
+                          },
+                          n.createElement("img", {
+                            className: l().InnateIcon,
+                            onError: (e) =>
+                              (e.target.src = `${r.r.IMG_URL}icons/innate_icon.png`),
+                            src: `${r.r.IMG_URL}${m}.png `,
+                          }),
+                          n.createElement(
+                            "div",
+                            { className: l().RightSide },
+                            t.general_notes?.length > 0 &&
+                              n.createElement(
+                                "div",
+                                { className: l().InnateNotes },
+                                t.general_notes.map((t, a) =>
+                                  n.createElement(
+                                    "div",
+                                    {
+                                      key: `hero_${e.hero_id}_${a}`,
+                                      className: l().InnateNote,
+                                    },
+                                    n.createElement("div", {
+                                      className: l().Indent,
+                                      style: {
+                                        width: S * (t.indent_level - 1),
+                                        minWidth: S * (t.indent_level - 1),
+                                      },
+                                    }),
+                                    n.createElement("div", {
+                                      className: (0, c.A)(
+                                        l().Dot,
+                                        t.hide_dot && l().IsHidden,
+                                      ),
+                                    }),
+                                    (0, _.Wn)(t.note),
+                                  ),
+                                ),
+                              ),
+                            o &&
+                              n.createElement(
+                                "div",
+                                { className: l().AbilityName },
+                                o.name_loc,
+                              ),
+                            t.abilities?.length > 0 &&
+                              t.abilities[0].ability_notes.map((t, a) =>
                                 n.createElement(
                                   "div",
                                   {
@@ -43764,38 +43808,8 @@
                                   (0, _.Wn)(t.note),
                                 ),
                               ),
-                            ),
-                          o &&
-                            n.createElement(
-                              "div",
-                              { className: l().AbilityName },
-                              o.name_loc,
-                            ),
-                          t.abilities?.length > 0 &&
-                            t.abilities[0].ability_notes.map((t, a) =>
-                              n.createElement(
-                                "div",
-                                {
-                                  key: `hero_${e.hero_id}_${a}`,
-                                  className: l().InnateNote,
-                                },
-                                n.createElement("div", {
-                                  className: l().Indent,
-                                  style: {
-                                    width: S * (t.indent_level - 1),
-                                    minWidth: S * (t.indent_level - 1),
-                                  },
-                                }),
-                                n.createElement("div", {
-                                  className: (0, c.A)(
-                                    l().Dot,
-                                    t.hide_dot && l().IsHidden,
-                                  ),
-                                }),
-                                (0, _.Wn)(t.note),
-                              ),
-                            ),
-                        ),
+                          ),
+                        )
                       );
                     }),
                   ),
@@ -43904,59 +43918,62 @@
                             { className: l().FacetAbilities },
                             t.abilities?.map((i, o) => {
                               const m = i.ability_id,
-                                d = s.itemabilities.find((e) => e.id == m),
-                                u = d
-                                  ? `abilities/${v.b9.has(t.facet) ? v.b9.get(t.facet) : d.name}`
-                                  : "icons/innate_icon";
-                              return n.createElement(
-                                "div",
-                                {
-                                  key: `hero_${e.hero_id}_facet_${a}_ability_${o}`,
-                                  className: l().FacetAbility,
-                                },
-                                n.createElement("img", {
-                                  className: l().AbilityIcon,
-                                  onError: (e) =>
-                                    (e.target.src = `${r.r.IMG_URL}icons/innate_icon.png`),
-                                  src: `${r.r.IMG_URL}${u}.png`,
-                                }),
+                                d = s.itemabilities.find((e) => e.id == m);
+                              let u = d
+                                ? `abilities/${v.b9.has(t.facet) ? v.b9.get(t.facet) : d.name}`
+                                : "icons/innate_icon";
+                              return (
+                                v.$t.includes(u) && (u = "icons/innate_icon"),
                                 n.createElement(
                                   "div",
-                                  { className: l().RightSide },
-                                  d &&
-                                    n.createElement(
-                                      "div",
-                                      { className: l().AbilityName },
-                                      d.name_loc,
-                                    ),
-                                  i.ability_notes.map((t, a) =>
-                                    n.createElement(
-                                      "div",
-                                      {
-                                        key: `hero_${e.hero_id}_${a}`,
-                                        className: l().AbilityNote,
-                                      },
-                                      n.createElement("div", {
-                                        className: l().Indent,
-                                        style: {
-                                          width: S * (t.indent_level - 1),
-                                          minWidth: S * (t.indent_level - 1),
+                                  {
+                                    key: `hero_${e.hero_id}_facet_${a}_ability_${o}`,
+                                    className: l().FacetAbility,
+                                  },
+                                  n.createElement("img", {
+                                    className: l().AbilityIcon,
+                                    onError: (e) =>
+                                      (e.target.src = `${r.r.IMG_URL}icons/innate_icon.png`),
+                                    src: `${r.r.IMG_URL}${u}.png`,
+                                  }),
+                                  n.createElement(
+                                    "div",
+                                    { className: l().RightSide },
+                                    d &&
+                                      n.createElement(
+                                        "div",
+                                        { className: l().AbilityName },
+                                        d.name_loc,
+                                      ),
+                                    i.ability_notes.map((t, a) =>
+                                      n.createElement(
+                                        "div",
+                                        {
+                                          key: `hero_${e.hero_id}_${a}`,
+                                          className: l().AbilityNote,
                                         },
-                                      }),
-                                      n.createElement("div", {
-                                        className: (0, c.A)(
-                                          l().Dot,
-                                          t.hide_dot && l().IsHidden,
-                                        ),
-                                      }),
-                                      (0, _.Wn)(t.note),
-                                      t.info &&
-                                        n.createElement(T, {
-                                          infoText: t.info,
+                                        n.createElement("div", {
+                                          className: l().Indent,
+                                          style: {
+                                            width: S * (t.indent_level - 1),
+                                            minWidth: S * (t.indent_level - 1),
+                                          },
                                         }),
+                                        n.createElement("div", {
+                                          className: (0, c.A)(
+                                            l().Dot,
+                                            t.hide_dot && l().IsHidden,
+                                          ),
+                                        }),
+                                        (0, _.Wn)(t.note),
+                                        t.info &&
+                                          n.createElement(T, {
+                                            infoText: t.info,
+                                          }),
+                                      ),
                                     ),
                                   ),
-                                ),
+                                )
                               );
                             }),
                           ),
@@ -44020,56 +44037,58 @@
                 { className: l().Notes },
                 e.abilities.map((e) => {
                   const t = s.itemabilities.find((t) => t.id == e.ability_id);
-                  return t
-                    ? n.createElement(
+                  if (!t) return null;
+                  let a = `abilities/${t.name}`;
+                  return (
+                    v.$t.includes(a) && (a = "icons/innate_icon"),
+                    n.createElement(
+                      "div",
+                      {
+                        key: "ability_" + e.ability_id,
+                        className: l().AbilityNote,
+                      },
+                      n.createElement("img", {
+                        className: l().AbilityIcon,
+                        onError: (e) =>
+                          (e.target.src = `${r.r.IMG_URL}icons/innate_icon.png`),
+                        src: `${r.r.IMG_URL}${a}.png`,
+                      }),
+                      n.createElement(
                         "div",
-                        {
-                          key: "ability_" + e.ability_id,
-                          className: l().AbilityNote,
-                        },
-                        n.createElement("img", {
-                          className: l().AbilityIcon,
-                          onError: (e) =>
-                            (e.target.src = `${r.r.IMG_URL}icons/innate_icon.png`),
-                          src: `${r.r.IMG_URL}abilities/${t.name}.png`,
-                        }),
+                        { className: l().RightSection },
                         n.createElement(
                           "div",
-                          { className: l().RightSection },
+                          { className: l().AbilityName },
+                          t.name_loc,
+                        ),
+                        e.ability_notes.map((e) =>
                           n.createElement(
                             "div",
-                            { className: l().AbilityName },
-                            t.name_loc,
-                          ),
-                          e.ability_notes.map((e) =>
+                            { key: e.note, className: l().NoteElement },
+                            n.createElement("div", {
+                              className: l().Indent,
+                              style: {
+                                width: S * e.indent_level,
+                                minWidth: S * e.indent_level,
+                              },
+                            }),
+                            n.createElement("div", {
+                              className: (0, c.A)(
+                                l().Dot,
+                                e.hide_dot && l().IsHidden,
+                              ),
+                            }),
                             n.createElement(
                               "div",
-                              { key: e.note, className: l().NoteElement },
-                              n.createElement("div", {
-                                className: l().Indent,
-                                style: {
-                                  width: S * e.indent_level,
-                                  minWidth: S * e.indent_level,
-                                },
-                              }),
-                              n.createElement("div", {
-                                className: (0, c.A)(
-                                  l().Dot,
-                                  e.hide_dot && l().IsHidden,
-                                ),
-                              }),
-                              n.createElement(
-                                "div",
-                                { className: l().Note },
-                                (0, _.Wn)(e.note),
-                              ),
-                              e.info &&
-                                n.createElement(T, { infoText: e.info }),
+                              { className: l().Note },
+                              (0, _.Wn)(e.note),
                             ),
+                            e.info && n.createElement(T, { infoText: e.info }),
                           ),
                         ),
-                      )
-                    : null;
+                      ),
+                    )
+                  );
                 }),
               ),
             e.talent_notes?.length > 0 &&
