@@ -41286,7 +41286,7 @@
     82101: (e, t, a) => {
       "use strict";
       a.d(t, {
-        $t: () => x,
+        Hq: () => x,
         b9: () => O,
         cT: () => N,
         sG: () => I,
@@ -43369,7 +43369,7 @@
       const y = n.lazy(() => a.e(4605).then(a.bind(a, 44605))),
         S = 20;
       let w = 0;
-      const T = (0, d.PA)(({ infoText: e }) =>
+      const T = (0, d.PA)(({ infoText: e, bPlaceLeft: t = !1 }) =>
           n.createElement(
             "div",
             { className: l().InfoBlock },
@@ -43383,7 +43383,7 @@
               {
                 class: "PatchnotesTooltip",
                 id: "infoTip" + w++,
-                place: "top",
+                place: t ? "left" : "top",
                 effect: "solid",
               },
               n.createElement("div", {
@@ -43734,7 +43734,7 @@
                         o = s.itemabilities.find((e) => e.id == i);
                       let m = o ? `abilities/${o.name}` : "icons/innate_icon";
                       return (
-                        v.$t.includes(m) && (m = "icons/innate_icon"),
+                        v.Hq.includes(m) && (m = "icons/innate_icon"),
                         n.createElement(
                           "div",
                           {
@@ -43923,7 +43923,7 @@
                                 ? `abilities/${v.b9.has(t.facet) ? v.b9.get(t.facet) : d.name}`
                                 : "icons/innate_icon";
                               return (
-                                v.$t.includes(u) && (u = "icons/innate_icon"),
+                                v.Hq.includes(u) && (u = "icons/innate_icon"),
                                 n.createElement(
                                   "div",
                                   {
@@ -43945,11 +43945,11 @@
                                         { className: l().AbilityName },
                                         d.name_loc,
                                       ),
-                                    i.ability_notes.map((t, a) =>
+                                    i.ability_notes.map((t, r) =>
                                       n.createElement(
                                         "div",
                                         {
-                                          key: `hero_${e.hero_id}_${a}`,
+                                          key: `hero_${e.hero_id}_${r}`,
                                           className: l().AbilityNote,
                                         },
                                         n.createElement("div", {
@@ -43969,6 +43969,7 @@
                                         t.info &&
                                           n.createElement(T, {
                                             infoText: t.info,
+                                            bPlaceLeft: g.length > 1 && 0 == a,
                                           }),
                                       ),
                                     ),
@@ -44040,7 +44041,7 @@
                   if (!t) return null;
                   let a = `abilities/${t.name}`;
                   return (
-                    v.$t.includes(a) && (a = "icons/innate_icon"),
+                    v.Hq.includes(a) && (a = "icons/innate_icon"),
                     n.createElement(
                       "div",
                       {
