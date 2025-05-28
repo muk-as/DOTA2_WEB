@@ -23,7 +23,7 @@
             {
               "color": 3,
               "title_loc": "Learning Curve",
-              "description_loc": "Level requirement of all spells and talents reduced by {s:bonus_required_level}. You get {s:bonus_level_one_ability_points} Ability Points at level one and {s:bonus_level_two_ability_points} Ability Points at level two.",
+              "description_loc": "Level requirement of all spells and talents reduced by {s:bonus_required_level_reduction}. You get {s:bonus_level_one_ability_points} Ability Points at level one and {s:bonus_level_two_ability_points} Ability Points at level two.",
               "name": "ogre_magi_learning_curve",
               "icon": "ogre",
               "gradient_id": 1,
@@ -184,21 +184,23 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "required_level",
-                  "values_float": [
-                    1
-                  ],
+                  "name": "fireblast_proc",
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_ogre_magi_3",
+                      "value": 17,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "ogre_magi_learning_curve",
-                    "values": [
-                      1
-                    ],
-                    "operation": 2
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -469,25 +471,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "required_level",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "ogre_magi_learning_curve",
-                    "values": [
-                      1
-                    ],
-                    "operation": 2
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     700,
@@ -752,25 +735,6 @@
                     "name": "",
                     "values": [],
                     "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "required_level",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "ogre_magi_learning_curve",
-                    "values": [
-                      1
-                    ],
-                    "operation": 2
                   },
                   "required_facet": ""
                 },
@@ -1453,6 +1417,25 @@
                     "operation": 5
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "required_level_reduction",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "ogre_magi_learning_curve",
+                    "values": [
+                      1
+                    ],
+                    "operation": 0
+                  },
+                  "required_facet": "ogre_magi_learning_curve"
                 }
               ],
               "is_item": false,
@@ -1599,25 +1582,6 @@
                     "operation": 5
                   },
                   "required_facet": "ogre_magi_fat_chance"
-                },
-                {
-                  "name": "required_level",
-                  "values_float": [
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "ogre_magi_learning_curve",
-                    "values": [
-                      1
-                    ],
-                    "operation": 2
-                  },
-                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -2046,7 +2010,7 @@
             {
               "id": 7030,
               "name": "special_bonus_unique_ogre_magi_3",
-              "name_loc": "{s:value}% Fireblast chance on attack",
+              "name_loc": "{s:bonus_fireblast_proc}% Fireblast chance on attack",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2091,25 +2055,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    17
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
