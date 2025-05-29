@@ -80,22 +80,22 @@
               "facets_loc": [
                 "",
                 "",
-                "Bloodrage can be cast on enemies, and increases the target's base attack damage instead of spell damage. Silences the target for the duration of the spell and has decreased cast range."
+                "Bloodrage can be cast on enemies, and increases the target's base attack damage instead of spell damage. Silences the target for the duration of the spell and has decreased cast range. When cast on units other than Bloodseeker himself, the spell has a %enemy_castpoint% cast point."
               ],
               "type": 0,
-              "behavior": "2056",
+              "behavior": "8",
               "target_team": 1,
               "target_type": 1,
               "flags": 0,
               "damage": 4,
-              "immunity": 3,
+              "immunity": 4,
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
                 800
               ],
               "cast_points": [
-                0.2
+                0
               ],
               "channel_times": [
                 0
@@ -286,14 +286,31 @@
                   "facet_bonus": {
                     "name": "bloodseeker_old_blood",
                     "values": [
-                      10,
                       15,
                       20,
-                      25
+                      25,
+                      30
                     ],
                     "operation": 5
                   },
                   "required_facet": "bloodseeker_old_blood"
+                },
+                {
+                  "name": "enemy_castpoint",
+                  "values_float": [
+                    0.3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -311,23 +328,6 @@
                       400
                     ],
                     "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0.2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
                   },
                   "required_facet": ""
                 },
