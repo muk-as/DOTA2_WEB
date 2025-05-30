@@ -2324,7 +2324,7 @@
               "desc_loc": "谜团受到伤害时会产生虚灵体。",
               "lore_loc": "",
               "notes_loc": [
-                "每当谜团受到任意来源的伤害超过%damage_threshold%点，他的身旁都会产生一个虚灵体。这种方式产生的虚灵体提供的击杀经验和金钱减少%non_splitting_bounty_reduction%%%。"
+                "每当谜团受到任意来源的伤害超过%damage_threshold%点，他的身旁都会产生一个虚灵体。伤害累计会在%damage_reset_interval%秒后清零。这种方式产生的虚灵体提供的击杀经验和金钱减少%non_splitting_bounty_reduction_tooltip%%%。"
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -2371,7 +2371,7 @@
                 {
                   "name": "damage_threshold",
                   "values_float": [
-                    350
+                    375
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2406,6 +2406,23 @@
                   "name": "eidolon_spawns",
                   "values_float": [
                     1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "non_splitting_bounty_reduction_tooltip",
+                  "values_float": [
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

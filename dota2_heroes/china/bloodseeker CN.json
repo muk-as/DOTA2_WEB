@@ -60,7 +60,7 @@
           "facets_loc": [
             "",
             "",
-            "血怒可以对敌人施放，施法距离减少，而且会提升目标的基础攻击力，而不是技能伤害。目标在技能持续时间内会被沉默。"
+            "血怒可以对敌人施放，施法距离减少，而且会提升目标的基础攻击力，而不是技能伤害。目标在技能持续时间内会被沉默。对血魔自身以外的单位施放时，技能具有%enemy_castpoint%秒施法前摇。"
           ],
           "type": 0,
           "behavior": "8",
@@ -266,14 +266,31 @@
               "facet_bonus": {
                 "name": "bloodseeker_old_blood",
                 "values": [
-                  10,
                   15,
                   20,
-                  25
+                  25,
+                  30
                 ],
                 "operation": 5
               },
               "required_facet": "bloodseeker_old_blood"
+            },
+            {
+              "name": "enemy_castpoint",
+              "values_float": [
+                0.3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -291,23 +308,6 @@
                   400
                 ],
                 "operation": 5
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0.2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
               },
               "required_facet": ""
             },
