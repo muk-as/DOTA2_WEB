@@ -14,7 +14,7 @@
             "Can be cast on invulnerable units."
           ],
           "shard_loc": "",
-          "scepter_loc": "Cooldown is removed, replaced with %max_charges% charges that replenish every %charge_restore_time_tooltip_scepter% seconds. Also causes Demonic Purge to break its target's passive abilities while active.",
+          "scepter_loc": "Causes Demonic Purge to break and gain %max_charges% charges.",
           "facets_loc": [],
           "type": 1,
           "behavior": "8",
@@ -89,7 +89,7 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "MAX CHARGES:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [
@@ -108,29 +108,14 @@
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                70,
-                65,
-                60
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "charge_restore_time_tooltip_scepter",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
               "heading_loc": "BASE CHARGE RESTORE TIME:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_shadow_demon_9",
+                  "value": 30,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [
                 70,
@@ -257,7 +242,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_shadow_demon_9",
+                  "value": 30,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
