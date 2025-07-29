@@ -147,7 +147,7 @@
         o = t(89506),
         i = t(27866),
         c = t(21384),
-        m = t(47341);
+        m = t(80179);
       !(function (e) {
         (e[(e.TOP = 0)] = "TOP"),
           (e[(e.BOTTOM = 1)] = "BOTTOM"),
@@ -208,7 +208,7 @@
               "div",
               { className: (0, c.A)(s().TrailerContainer, a && s().Playing) },
               e.strYouTubeVideoID &&
-                l.createElement(m.N, {
+                l.createElement(m.N1, {
                   video: e.strYouTubeVideoID,
                   autoplay: !1,
                   playsInline: !0,
