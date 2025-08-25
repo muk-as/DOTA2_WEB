@@ -181,7 +181,7 @@
         o = t(73202),
         d = t(45237),
         _ = t(21384),
-        N = t(76489),
+        N = t(18645),
         E = t(47202),
         u = t(36305),
         v = t(42313),
@@ -234,7 +234,7 @@
         ],
         W = ({ index: e, video: a, name: t, onSlideIn: l }) => {
           const r = (0, c.useContext)(m.Yc),
-            n = (0, c.useRef)(),
+            n = (0, c.useRef)(void 0),
             i =
               -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
               -1 != navigator.userAgent.toLowerCase().indexOf("macintosh");
