@@ -21560,7 +21560,8 @@
               S = u?.tourney.dire_team_id;
           }
           const w = $t.E.Get().GetTeamNames(S),
-            T = u ? Ra()(1e3 * u.start_time).format("LT") : "";
+            T = u ? Ra()(1e3 * u.start_time).format("LT") : "",
+            I = u && u.duration > 3600 ? "h:mm:ss" : "mm:ss";
           return s.createElement(
             "div",
             {
@@ -21660,10 +21661,11 @@
                   "div",
                   { className: qa().Duration },
                   u &&
-                    s.createElement(_a(), {
-                      date: 1e3 * u.duration,
-                      format: "mm:ss",
-                    }),
+                    Ra()
+                      .utc(
+                        Ra().duration(u.duration, "seconds").asMilliseconds(),
+                      )
+                      .format(I),
                 ),
             ),
             s.createElement(
@@ -40244,7 +40246,13 @@
               if (16 === s) o = i < _.e4.length ? _.e4[i].strLabel : "";
               break;
             case u.Kq.BRACKET_DOUBLE_ALL_WINNER:
-              if (4 === s) o = i < _.Kk.length ? _.Kk[i].strLabel : "";
+              switch (s) {
+                case 4:
+                  o = i < _.Kk.length ? _.Kk[i].strLabel : "";
+                  break;
+                case 8:
+                  o = i < _.Mb.length ? _.Mb[i].strLabel : "";
+              }
           }
           return r && (o += "_abbrev"), o;
         }
