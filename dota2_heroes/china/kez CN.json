@@ -5,14 +5,14 @@
       "id": 145,
       "name": "npc_dota_hero_kez",
       "name_loc": "凯",
-      "order_id": 0,
+      "order_id": 126,
       "name_english_loc": "Kez",
       "primary_attr": 1,
       "complexity": 3,
       "bio_loc": "“我生来就有悬赏。我越来越擅长制造麻烦，而悬赏金额也随之上涨。每次英佩瑞雅女王提高了悬赏，我就知道我做的事是对的。在冰川残骸待了那么久一直看不到悬赏，这一点是最难受的……我必须把悬赏重新提高到可观的数字。”",
       "hype_loc": "说到作战的策略，凯更乐于率性而为——他可以根据战场上的需求在<b>他的长刀和双钗之间</b>自如地切换，<b>劈砍、冲刺、突袭和招架</b>都是信手拈来。但只要他全神贯注，他可以应对所有可能的情况，选好合适的工具再提前一点计划就能<b>出击、逃跑或者智取敌人</b>。",
       "npe_desc_loc": "灵活的近战大师，拥有两套武器和技能",
-      "str_base": 19,
+      "str_base": 20,
       "str_gain": 2.8,
       "agi_base": 27,
       "agi_gain": 3.5,
@@ -32,7 +32,7 @@
       ],
       "damage_min": 50,
       "damage_max": 56,
-      "attack_rate": 1.9,
+      "attack_rate": 1.8,
       "attack_range": 225,
       "projectile_speed": 900,
       "armor": 5.5,
@@ -41,8 +41,8 @@
       "turn_rate": 1,
       "sight_range_day": 1800,
       "sight_range_night": 800,
-      "max_health": 538,
-      "health_regen": 3.4,
+      "max_health": 560,
+      "health_regen": 3.5,
       "max_mana": 315,
       "mana_regen": 1.25,
       "abilities": [
@@ -596,7 +596,7 @@
           "desc_loc": "长刀的攻击和技能会对敌人施加一个可叠加的持续伤害效果，持续时间内造成原攻击伤害一定百分比的额外伤害。<br><br>凯可以主动使用技能，刺中目标，阻止他们移动或转身。目标身上的影武长刀效果爆发，使部分叠加数值立刻造成伤害。",
           "lore_loc": "为了反击英佩瑞雅和她的羽林卫，影武者必须熟练掌握消耗战的技巧。",
           "notes_loc": [],
-          "shard_loc": "刺中后凯能从当次攻击吸血%lifesteal_pct%%%。如果从背后刺中目标，目标会被眩晕，而且叠加数值会全额爆发。",
+          "shard_loc": "刺中后凯能从当次攻击吸血%lifesteal_pct%%%。如果从背后刺中目标，目标会被眩晕。提升最大爆发叠加数值。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -876,7 +876,7 @@
           "id": 1497,
           "name": "kez_switch_weapons",
           "name_loc": "流派变换",
-          "desc_loc": "凯可以在影武长刀和翔影双钗之间变换。<br><br>基于装备的武器，他会获得不同的攻击特性和技能。技能会一起升级，而且使用后，相对的武器技能也会进入冷却。<br><br>英雄每升一级，流派变换的冷却时间减少%cooldown_reduction_per_level%秒。",
+          "desc_loc": "凯可以在影武长刀和翔影双钗之间变换。<br><br>基于装备的武器，他会获得不同的攻击特性和技能。技能会一起升级，而且使用后，相对的武器技能也会进入冷却。",
           "lore_loc": "影武团的领袖，曾经也是翔影教团的追随者，他的武技可以在长刀和双钗这两种流派之间自如地切换。",
           "notes_loc": [],
           "shard_loc": "",
@@ -904,7 +904,7 @@
             0
           ],
           "cooldowns": [
-            8
+            7.75
           ],
           "durations": [
             0
@@ -1436,9 +1436,11 @@
           "id": 1502,
           "name": "kez_falcon_rush",
           "name_loc": "天隼冲击",
-          "desc_loc": "开启后凯可以向敌方目标冲去，发动的攻击会重复一次。在这个状态下，凯拥有相位移动状态和减速抗性，攻击频率受到攻击速度的影响较小。",
+          "desc_loc": "开启后凯可以向敌方目标冲去，发动的攻击会重复一次。在这个状态下，凯拥有相位移动状态和减速抗性。",
           "lore_loc": "古老的翔影战技，用来猎杀空中速度更快的敌人，窃取他们的优势，并在猎物惊慌失措地扇动一次翅膀的时间内发动多次攻击。",
-          "notes_loc": [],
+          "notes_loc": [
+            "回声攻击触发随机效果的几率较低，和伤害百分比成正比。"
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
@@ -2794,10 +2796,10 @@
           "item_quality": 0
         },
         {
-          "id": 1656,
-          "name": "special_bonus_unique_kez_talon_toss_attack_factor",
-          "name_loc": "利爪飞掷增加{s:bonus_attack_factor}% 攻击伤害",
-          "desc_loc": "总是会使用双钗的攻击力数值。",
+          "id": 1714,
+          "name": "special_bonus_unique_kez_falcon_rush_attack_speed",
+          "name_loc": "+{s:bonus_bonus_attack_speed} 天隼冲击期间攻击速度",
+          "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -2984,7 +2986,7 @@
       "crops_img": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/kez.png",
       "top_img": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.png",
       "top_video": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.webm",
-      "update_time": 1765839726,
+      "update_time": 1765846894,
       "facets": [
         {
           "color": 1,
