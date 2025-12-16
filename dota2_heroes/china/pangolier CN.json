@@ -59,6 +59,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -177,7 +178,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_pangolier_3",
-                  "value": 15,
+                  "value": 20,
                   "operation": 0
                 }
               ],
@@ -293,6 +294,57 @@
               "required_facet": ""
             },
             {
+              "name": "slow_duration",
+              "values_float": [
+                0.4
+              ],
+              "is_percentage": false,
+              "heading_loc": "减速持续时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "slow_percent",
+              "values_float": [
+                100
+              ],
+              "is_percentage": true,
+              "heading_loc": "减速：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_penalty",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 400,
@@ -352,17 +404,17 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                21,
-                18,
-                15,
-                12
+                20,
+                17,
+                14,
+                11
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_pangolier_4",
-                  "value": 4,
+                  "value": 2,
                   "operation": 2
                 }
               ],
@@ -405,6 +457,7 @@
           "scepter_loc": "甲盾冲击将围绕英雄每90度施放一个刺击2次的虚张声势。",
           "facets_loc": [
             "石鳞剑士可以在半空中再次施放甲盾冲击，造成更高的伤害，并获得更高数值的护盾。在空中的时间越久，伤害和护盾的数值越高。",
+            "",
             ""
           ],
           "type": 0,
@@ -455,20 +508,14 @@
             {
               "name": "damage",
               "values_float": [
-                70,
-                130,
-                190,
-                250
+                50,
+                100,
+                150,
+                200
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_pangolier_shield_crash_radius",
-                  "value": 125,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -481,17 +528,17 @@
             {
               "name": "hero_shield",
               "values_float": [
-                50,
-                100,
-                150,
-                200
+                60,
+                120,
+                180,
+                240
               ],
               "is_percentage": false,
-              "heading_loc": "每个英雄提供护盾：",
+              "heading_loc": "护盾：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-                  "value": 90,
+                  "value": 125,
                   "operation": 0
                 }
               ],
@@ -507,7 +554,7 @@
             {
               "name": "duration",
               "values_float": [
-                10
+                6
               ],
               "is_percentage": false,
               "heading_loc": "护盾持续时间：",
@@ -528,13 +575,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_pangolier_shield_crash_radius",
-                  "value": 125,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -615,25 +656,6 @@
                 "name": "pangolier_double_jump",
                 "values": [
                   30
-                ],
-                "operation": 5
-              },
-              "required_facet": "pangolier_double_jump"
-            },
-            {
-              "name": "max_barrier_increase_pct_tooltip",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "最高护盾增加：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "pangolier_double_jump",
-                "values": [
-                  40
                 ],
                 "operation": 5
               },
@@ -725,114 +747,18 @@
               "required_facet": ""
             },
             {
-              "name": "slow",
+              "name": "scepter_damage_outgoing_tooltip",
               "values_float": [
-                20,
-                25,
-                30,
-                35
+                75
               ],
-              "is_percentage": true,
-              "heading_loc": "移动速度减缓：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "slow_duration",
-              "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "减速持续时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "parry_swashbuckles",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  2
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "parry_chance",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  50
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "parry_cooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  2
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "parry_damage_threshold",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  25
-                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -840,10 +766,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                70,
-                80,
-                90,
-                100
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -860,14 +783,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                18,
                 16,
-                14,
-                12
+                13,
+                10,
+                7
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_pangolier_shield_crash_cooldown",
+                  "value": 1.5,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -909,6 +838,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1060,6 +990,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1426,7 +1357,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "地雷滚滚的移动和转身速度提升，但是持续时间减少。"
+            "地雷滚滚的移动和转身速度提升，但是持续时间减少。",
+            ""
           ],
           "type": 1,
           "behavior": "134742020",
@@ -1533,6 +1465,23 @@
                 "values": [
                   115
                 ],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "move_speed_ramp_up_time",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -1665,7 +1614,9 @@
             {
               "name": "duration",
               "values_float": [
-                10
+                9,
+                10,
+                11
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
@@ -1694,25 +1645,6 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shield_crash_cooldown",
-              "values_float": [
-                9,
-                6,
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "甲盾冲击冷却时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1852,6 +1784,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2447,31 +2380,19 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_pangolier.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_pangolier/npc_dota_hero_pangolier.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_pangolier/npc_dota_hero_pangolier.webm",
-      "update_time": 1761883365,
+      "update_time": 1765839716,
       "facets": [
         {
-          "color": 0,
-          "title_loc": "二段跳",
-          "description_loc": "石鳞剑士可以利用甲盾冲击二段跳，造成更多伤害，获得更强的护盾。",
-          "name": "pangolier_double_jump",
-          "icon": "double_bounce",
+          "color": 3,
+          "title_loc": "危险关系",
+          "description_loc": "这颗命石没有任何效果。石鳞剑士还没处理完英雄冒险的后续……",
+          "name": "pangolier_pangolier",
+          "icon": "cooldown",
           "gradient_id": 1,
-          "index": 0
-        },
-        {
-          "color": 1,
-          "title_loc": "雷霆万钧",
-          "description_loc": "地雷滚滚的移动和转身速度提升，但是持续时间减少。",
-          "name": "pangolier_thunderbolt",
-          "icon": "speed",
-          "gradient_id": 1,
-          "index": 1
+          "index": 2
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         }
@@ -2491,6 +2412,7 @@
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
