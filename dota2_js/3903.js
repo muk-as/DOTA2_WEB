@@ -156,6 +156,14 @@
         GameplayUpdateContainer: "_2Od53Rl3JUlO5RHB2Ry75f",
         GameItemsContainer: "_2kG8xU-aSbZAgynUa0COQz",
         GameItemDetails: "_2aUp-BLzJyYJ-z0que4rKY",
+        ItemBorder: "g84c-JyzqGZA_mfZ5pPIW",
+        HeaderContainer: "_2gSeeObUqZERVTaMfln3ja",
+        HeaderTierColor: "_2oVREIfGFvsgr13mrm-Smi",
+        Tier1: "_3PbnBG9gAR7XnVF3YCoB-5",
+        Tier2: "_16ZkNqZtDeYcrzCvGUweNN",
+        Tier3: "_3GewOxLClHg4mV9IZ9EJjZ",
+        Tier4: "_21NNBsHJnppPzoVwMw3Mpz",
+        Tier5: "ONti_TyxGyqemdPaFn3Fb",
         Header: "_2KSi1YZoJgbyZe-GBapglc",
         ItemImage: "_2H7vQsDSpF-b5S5QL6ep8I",
         HeaderText: "_1ZaYzfoDVG09O05nJKgniu",
@@ -163,11 +171,6 @@
         GoldPrice: "_2yv7OgdX8ESkd0fZLuQtb",
         GoldIcon: "_1fVI8nde6EIEGBuwGnyLqx",
         NeutralItemTier: "_1RlnGWfSKvE6mUHJZvfidP",
-        Tier1: "_3PbnBG9gAR7XnVF3YCoB-5",
-        Tier2: "_16ZkNqZtDeYcrzCvGUweNN",
-        Tier3: "_3GewOxLClHg4mV9IZ9EJjZ",
-        Tier4: "_21NNBsHJnppPzoVwMw3Mpz",
-        Tier5: "ONti_TyxGyqemdPaFn3Fb",
         Body: "_3g1MSrTGqfuY6z_gO9JRWw",
         Stats: "_2VCS4hVB5Hzlq0PJHKXwNy",
         Stat: "_2yC0pUe_f6Qo3boH0affiC",
@@ -218,6 +221,8 @@
         TrailerVideo: "_3necJEW8J41HHqK5wc7dRu",
         CloseButton: "_2nNzqoP26iZVcuCkMXGnl6",
         CloseButtonImage: "bTEz25R0Bg1DqgM1pUDHK",
+        AnchorNavigation: "aVoPxa5bOqRF8JIRA3zk",
+        AnchorLink: "_3mnc9HsnSEr523ZpGMC9a7",
       };
     },
     722: (e, a, t) => {
@@ -302,7 +307,7 @@
           DownloadIcon: () => B,
           InnateIconSmall: () => C,
           PlayIcon: () => W,
-          default: () => O,
+          default: () => V,
         });
       var l = t(85608),
         r = t(89506),
@@ -313,22 +318,22 @@
         c = t(73202),
         o = t(35927),
         p = t(21384),
-        d = t(18645),
+        d = t(56698),
         _ = t(47202),
         g = t(36305),
         E = t(55730),
         N = t.n(E),
         u = t(61840),
         b = t(32389),
-        v = t(54159),
-        y = t(45237),
-        h = t(722),
-        T = t(55651),
+        h = t(54159),
+        v = t(45237),
+        T = t(722),
+        y = t(55651),
         S = t(82101),
         L = t(85286),
         A = t.n(L),
-        x = t(4665),
-        I = t(95224);
+        I = t(4665),
+        x = t(95224);
       const W = () =>
           m.createElement("div", {
             className: N().ControlIcon,
@@ -347,8 +352,9 @@
             style: {
               backgroundImage: `url( ${r.r.IMG_URL}/icons/innate_icon_small.svg )`,
             },
-          });
-      const k = (e) => {
+          }),
+        k = "TemplatePage";
+      const w = (e) => {
         const a = (0, m.useRef)(void 0);
         return e.video
           ? m.createElement(
@@ -373,7 +379,7 @@
               src: `${r.r.IMG_URL}/` + e.image,
             });
       };
-      function w(e) {
+      function R(e) {
         let a = "",
           t = !0;
         for (let l = 0; l < e.length; ++l)
@@ -384,7 +390,7 @@
             : (t = !0);
         return a;
       }
-      const D = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
+      const H = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
           const t = n.B5.Get().getHeroList(),
             l = t?.heroes.find(
               (e) => e.name.replace("npc_dota_hero_", "") == a,
@@ -392,7 +398,7 @@
           return l
             ? m.createElement(
                 "div",
-                { className: (0, p.A)(N().HeroRework, N()[w(a)]) },
+                { className: (0, p.A)(N().HeroRework, N()[R(a)]) },
                 m.createElement(
                   "div",
                   {
@@ -438,13 +444,13 @@
               )
             : null;
         }),
-        H = (e) => {
+        D = (e) => {
           if (!e.special.heading_loc) return null;
           let a = e.special.values_float.map((e, a) =>
               m.createElement(
                 "span",
                 { key: a, className: N().SingleValue },
-                (0, v.F)(e),
+                (0, h.F)(e),
               ),
             ),
             t = !1,
@@ -472,7 +478,7 @@
                 )
           );
         },
-        R = (0, s.PA)(({ name: e, components: a, recipeCost: t }) => {
+        f = (0, s.PA)(({ name: e, components: a, recipeCost: t }) => {
           const l = n.B5.Get().getItemList(),
             s = l?.itemabilities.find((a) => a.name == e),
             c = n.B5.Get().getItemData(s?.id);
@@ -480,13 +486,13 @@
           let o = c.desc_loc;
           c.special_values.forEach((e) => {
             let a =
-              e.values_float.length > 0 ? (0, v.F)(e.values_float[0]) : "0";
+              e.values_float.length > 0 ? (0, h.F)(e.values_float[0]) : "0";
             (o = o.replace("%" + e.name + "%", a)),
               (o = o.replace("%" + e.name.toLowerCase() + "%", a));
           }),
             (o = o.replace(/\%\%/g, "%"));
           let d = c.special_values?.map((e, a) =>
-              m.createElement(H, { key: a, special: e }),
+              m.createElement(D, { key: a, special: e }),
             ),
             _ = c.name.replace("item_", ""),
             g = c.item_cost,
@@ -496,11 +502,11 @@
                 : -1,
             u = N()["Tier" + E],
             b = c.cooldowns.reduce((e, a) => e + a) > 0,
-            y = c.mana_costs.reduce((e, a) => e + a) > 0,
-            h =
+            v = c.mana_costs.reduce((e, a) => e + a) > 0,
+            T =
               !!(c.health_costs && c.health_costs.length > 0) &&
               c.health_costs.reduce((e, a) => e + a) > 0,
-            T = a
+            y = a
               ? a.map((e, a) =>
                   m.createElement("img", {
                     key: a,
@@ -512,49 +518,58 @@
           return m.createElement(
             "div",
             { className: N().GameItemDetails },
+            m.createElement("div", { className: N().ItemBorder }),
             m.createElement(
               "div",
-              { className: N().Header },
-              m.createElement("img", {
-                className: N().ItemImage,
-                src: `${r.r.IMG_URL}/items/${_}.png`,
-              }),
+              { className: (0, p.A)(N().HeaderContainer) },
+              E > 0 &&
+                m.createElement("div", {
+                  className: (0, p.A)(N().HeaderTierColor, u),
+                }),
               m.createElement(
                 "div",
-                { className: N().HeaderText },
+                { className: (0, p.A)(N().Header) },
+                m.createElement("img", {
+                  className: N().ItemImage,
+                  src: `${r.r.IMG_URL}/items/${_}.png`,
+                }),
                 m.createElement(
                   "div",
-                  {
-                    className: (0, p.A)(
-                      N().ItemName,
-                      N().TitleFont,
-                      N().TitleExtraSmall,
-                    ),
-                  },
-                  c.name_loc,
-                ),
-                g > 0 &&
+                  { className: N().HeaderText },
                   m.createElement(
                     "div",
                     {
                       className: (0, p.A)(
-                        N().GoldPrice,
-                        N().LabelFont,
-                        N().LabelMedium,
+                        N().ItemName,
+                        N().TitleFont,
+                        N().TitleExtraSmall,
                       ),
                     },
-                    m.createElement("img", {
-                      className: N().GoldIcon,
-                      src: `${r.r.IMG_URL}/icons/gold.png`,
-                    }),
-                    g,
+                    c.name_loc,
                   ),
-                E > 0 &&
-                  m.createElement(
-                    "div",
-                    { className: (0, p.A)(N().NeutralItemTier, u) },
-                    (0, i.Wn)("#neutral_item_tier", E),
-                  ),
+                  g > 0 &&
+                    m.createElement(
+                      "div",
+                      {
+                        className: (0, p.A)(
+                          N().GoldPrice,
+                          N().LabelFont,
+                          N().LabelMedium,
+                        ),
+                      },
+                      m.createElement("img", {
+                        className: N().GoldIcon,
+                        src: `${r.r.IMG_URL}/icons/gold.png`,
+                      }),
+                      g,
+                    ),
+                  E > 0 &&
+                    m.createElement(
+                      "div",
+                      { className: (0, p.A)(N().NeutralItemTier, u) },
+                      (0, i.Wn)("#neutral_item_tier", E),
+                    ),
+                ),
               ),
             ),
             m.createElement(
@@ -569,11 +584,11 @@
                     className: N().Description,
                     dangerouslySetInnerHTML: { __html: o },
                   }),
-                  (b || y || h) &&
+                  (b || v || T) &&
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().DescriptionHeader) },
-                      y &&
+                      v &&
                         m.createElement(
                           "div",
                           { className: N().ManaContainer },
@@ -582,11 +597,11 @@
                             "div",
                             { className: N().ManaText },
                             c.mana_costs.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, v.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, h.F)(e),
                             ),
                           ),
                         ),
-                      h &&
+                      T &&
                         m.createElement(
                           "div",
                           { className: N().HealthContainer },
@@ -595,7 +610,7 @@
                             "div",
                             { className: N().HealthText },
                             c.health_costs.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, v.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, h.F)(e),
                             ),
                           ),
                         ),
@@ -613,14 +628,14 @@
                             "div",
                             { className: N().CooldownText },
                             c.cooldowns.map(
-                              (e, a) => (a > 0 ? " / " : "") + (0, v.F)(e),
+                              (e, a) => (a > 0 ? " / " : "") + (0, h.F)(e),
                             ),
                           ),
                         ),
                     ),
                 ),
             ),
-            T.length > 0 &&
+            y.length > 0 &&
               m.createElement(
                 "div",
                 { className: N().Recipe },
@@ -641,7 +656,7 @@
                 m.createElement(
                   "div",
                   { className: N().RecipeImagesContainer },
-                  T,
+                  y,
                   t &&
                     t > 0 &&
                     m.createElement(
@@ -708,7 +723,7 @@
             )
           );
         },
-        f = (e) =>
+        F = (e) =>
           m.createElement(
             "div",
             {
@@ -721,14 +736,14 @@
             m.createElement("div", { className: N().TopDash }),
             m.createElement("div", { className: N().BottomDash }),
           ),
-        F = () =>
+        M = () =>
           m.createElement(
             "div",
             { className: N().SubsectionDivider },
             m.createElement("div", { className: N().TopDash }),
             m.createElement("div", { className: N().Background }),
           ),
-        M = (e) =>
+        U = (e) =>
           m.createElement(
             "div",
             { className: N().DashedSectionSubHeader },
@@ -742,7 +757,7 @@
             ),
             m.createElement("div", { className: N().DashRight }),
           ),
-        U = [
+        P = [
           {
             abilityId: 352,
             posterDir: "abilities/ringmaster/ringmaster_tame_the_beasts.jpg",
@@ -779,9 +794,13 @@
             bIsShard: !0,
           },
         ];
-      let P = class extends m.Component {
-        parallaxContainerRef = m.createRef();
+      let O = class extends m.Component {
         videoRef = m.createRef();
+        navbarRef = m.createRef();
+        basicComponentsRef = m.createRef();
+        newHeroRef = m.createRef();
+        treasureRef = m.createRef();
+        patchRef = m.createRef();
         constructor(e) {
           super(e),
             (this.state = {
@@ -794,21 +813,30 @@
           this.setState({ bPlayingVideo: e }),
             e ? this.videoRef.current.play() : this.videoRef.current.pause();
         }
+        scrollToTarget(e) {
+          e.current.scrollIntoView({ behavior: "smooth" });
+        }
         handleScroll = (e) => {
-          A().refresh();
+          const a = this.basicComponentsRef.current.getBoundingClientRect().top;
+          (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(a, 0, -100, 0, 1), 0, 1)}`),
+            console.log(a),
+            (this.navbarRef.current.style.visibility =
+              a > 0 ? "hidden" : "visible"),
+            A().refresh();
         };
+        remapValue(e, a, t, l, r) {
+          return l + ((r - l) * (e - a)) / (t - a);
+        }
+        remapValueClamped(e, a, t, l, r) {
+          return Math.max(l, Math.min(r, this.remapValue(e, a, t, l, r)));
+        }
+        clamp = (e, a, t) => Math.min(Math.max(e, a), t);
         componentDidMount() {
-          this.parallaxContainerRef.current.addEventListener(
-            "scroll",
-            this.handleScroll,
-          ),
+          window.addEventListener("scroll", this.handleScroll),
             this.handleScroll(void 0);
         }
         componentWillUnmount() {
-          this.parallaxContainerRef.current.removeEventListener(
-            "scroll",
-            this.handleScroll,
-          );
+          window.removeEventListener("scroll", this.handleScroll);
         }
         convertAbilityDesc(e) {
           if (!e) return null;
@@ -816,7 +844,7 @@
           return (
             e.special_values.forEach((e) => {
               let t =
-                e.values_float.length > 0 ? (0, v.F)(e.values_float[0]) : "0";
+                e.values_float.length > 0 ? (0, h.F)(e.values_float[0]) : "0";
               (a = a.replace("%" + e.name + "%", t)),
                 (a = a.replace("%" + e.name.toLowerCase() + "%", t));
             }),
@@ -842,7 +870,7 @@
             "schinese" == r.r.LANGUAGE && (s = "templatepage_logo_cn"),
             m.createElement(
               "div",
-              { id: "TemplatePage", className: N().TemplatePage },
+              { id: k, className: N().TemplatePage },
               m.createElement(
                 "div",
                 {
@@ -903,10 +931,7 @@
               ),
               m.createElement(
                 "div",
-                {
-                  ref: this.parallaxContainerRef,
-                  className: (0, p.A)(N().PageContainer, N().Parallax),
-                },
+                { className: (0, p.A)(N().PageContainer) },
                 m.createElement(_.A, { bOverlapping: !0 }),
                 m.createElement(
                   "div",
@@ -946,7 +971,44 @@
                     ),
                   ),
                 ),
-                f(),
+                F(),
+                m.createElement(
+                  "div",
+                  { ref: this.navbarRef, className: N().AnchorNavigation },
+                  m.createElement(
+                    "div",
+                    {
+                      className: N().AnchorLink,
+                      onClick: () =>
+                        this.scrollToTarget(this.basicComponentsRef),
+                    },
+                    (0, i.Wn)("#templatepage_website_nav_basic_components"),
+                  ),
+                  m.createElement(
+                    "div",
+                    {
+                      className: N().AnchorLink,
+                      onClick: () => this.scrollToTarget(this.newHeroRef),
+                    },
+                    (0, i.Wn)("#templatepage_website_nav_new_hero"),
+                  ),
+                  m.createElement(
+                    "div",
+                    {
+                      className: N().AnchorLink,
+                      onClick: () => this.scrollToTarget(this.treasureRef),
+                    },
+                    (0, i.Wn)("#templatepage_website_nav_treasure"),
+                  ),
+                  m.createElement(
+                    "div",
+                    {
+                      className: N().AnchorLink,
+                      onClick: () => this.scrollToTarget(this.patchRef),
+                    },
+                    (0, i.Wn)("#templatepage_website_nav_patch"),
+                  ),
+                ),
                 m.createElement(
                   "div",
                   {
@@ -1006,7 +1068,7 @@
                     ),
                   ),
                 ),
-                f(),
+                F(),
                 m.createElement(
                   "div",
                   {
@@ -1036,10 +1098,11 @@
                     ),
                   ),
                 ),
-                f(N().MobileOnly),
+                F(N().MobileOnly),
                 m.createElement(
                   "div",
                   {
+                    ref: this.basicComponentsRef,
                     id: "BasicComponentsSection",
                     className: (0, p.A)(
                       N().WebsiteSection,
@@ -1090,7 +1153,7 @@
                         ),
                       ),
                     ),
-                    m.createElement(k, {
+                    m.createElement(w, {
                       additionalClassName: N().FullWidthImage,
                       image: "templatepage/image_16_9.png",
                     }),
@@ -1100,7 +1163,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(k, {
+                        m.createElement(w, {
                           image: "templatepage/image_1_1.png",
                           video: "templatepage/video_1_1.mp4",
                         }),
@@ -1139,7 +1202,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(k, {
+                        m.createElement(w, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1177,7 +1240,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(k, {
+                        m.createElement(w, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1213,14 +1276,14 @@
                         ),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "div",
                       { className: N().Grid_2 },
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(k, {
+                        m.createElement(w, {
                           image: "templatepage/image_3_2.png",
                         }),
                         m.createElement(
@@ -1258,7 +1321,7 @@
                       m.createElement(
                         "div",
                         { className: N().TextImageBlockVertical },
-                        m.createElement(k, {
+                        m.createElement(w, {
                           image: "templatepage/image_3_2.png",
                           video: "templatepage/video_3_2.mp4",
                         }),
@@ -1312,7 +1375,7 @@
                         ),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "div",
                       {
@@ -1321,7 +1384,7 @@
                           N().WideImage,
                         ),
                       },
-                      m.createElement(k, {
+                      m.createElement(w, {
                         image: "templatepage/image_3_2.png",
                       }),
                       m.createElement(
@@ -1365,7 +1428,7 @@
                           N().WideImage,
                         ),
                       },
-                      m.createElement(k, {
+                      m.createElement(w, {
                         image: "templatepage/image_3_2.png",
                         video: "templatepage/video_3_2.mp4",
                       }),
@@ -1401,7 +1464,7 @@
                         ),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "div",
                       { className: N().Grid_2 },
@@ -1413,7 +1476,7 @@
                             N().NarrowImage,
                           ),
                         },
-                        m.createElement(k, {
+                        m.createElement(w, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1456,7 +1519,7 @@
                             N().NarrowImage,
                           ),
                         },
-                        m.createElement(k, {
+                        m.createElement(w, {
                           image: "templatepage/image_1_1.png",
                         }),
                         m.createElement(
@@ -1492,7 +1555,7 @@
                         ),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1527,7 +1590,7 @@
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().ImmersiveTextImageBlock) },
-                      m.createElement(k, {
+                      m.createElement(w, {
                         image: "templatepage/image_21_9.png",
                         video: "templatepage/video_21_9.mp4",
                       }),
@@ -1566,7 +1629,7 @@
                     m.createElement(
                       "div",
                       { className: (0, p.A)(N().ActionTextImageBlock) },
-                      m.createElement(k, {
+                      m.createElement(w, {
                         image: "templatepage/image_16_9.png",
                       }),
                       m.createElement(
@@ -1610,11 +1673,11 @@
                             { className: N().ButtonText },
                             (0, i.Wn)("Button action"),
                           ),
-                          m.createElement(h.U, null),
+                          m.createElement(T.U, null),
                         ),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1647,25 +1710,26 @@
                     m.createElement(
                       "div",
                       { className: N().HeroReworkContainer },
-                      m.createElement(D, {
+                      m.createElement(H, {
                         patchnotes: e?.heroes,
                         heroname: "muerta",
                       }),
-                      m.createElement(D, {
+                      m.createElement(H, {
                         patchnotes: e?.heroes,
                         heroname: "clinkz",
                       }),
-                      m.createElement(D, {
+                      m.createElement(H, {
                         patchnotes: e?.heroes,
                         heroname: "arc_warden",
                       }),
                     ),
                   ),
                 ),
-                f(),
+                F(),
                 m.createElement(
                   "div",
                   {
+                    ref: this.newHeroRef,
                     id: "NewHeroSection",
                     className: (0, p.A)(N().WebsiteSection, N().NewHeroSection),
                   },
@@ -1685,7 +1749,7 @@
                             N().GrayText,
                           ),
                         },
-                        (0, i.Wn)("#templatepage_newhero_section_subheader"),
+                        (0, i.Wn)("#new_hero_introducing"),
                       ),
                       m.createElement(
                         "h2",
@@ -1711,7 +1775,7 @@
                         (0, i.Wn)("#templatepage_newhero_introduction"),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "div",
                       { className: N().TextSection },
@@ -1804,17 +1868,17 @@
                         "div",
                         { className: N().ButtonsSection },
                         m.createElement(
-                          y.N_,
-                          { to: T.J.hero("ringmaster") },
+                          v.N_,
+                          { to: y.J.hero("ringmaster") },
                           m.createElement(
                             "div",
                             { className: N().StandardButton },
                             m.createElement(
                               "div",
                               { className: N().ButtonText },
-                              (0, i.Wn)("#templatepage_hero_detail_button"),
+                              (0, i.Wn)("#view_hero_detail_page"),
                             ),
-                            m.createElement(h.U, null),
+                            m.createElement(T.U, null),
                           ),
                         ),
                         m.createElement(
@@ -1826,9 +1890,9 @@
                           m.createElement(
                             "div",
                             { className: N().ButtonText },
-                            (0, i.Wn)("#templatepage_play_trailer_button"),
+                            (0, i.Wn)("#play_trailer"),
                           ),
-                          m.createElement(h.U, null),
+                          m.createElement(T.U, null),
                         ),
                       ),
                     ),
@@ -1843,12 +1907,12 @@
                       className: N().AbilityCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 56.25,
-                      totalSlides: U.length,
+                      totalSlides: P.length,
                     },
                     m.createElement(
                       b.Ap,
                       { className: N().AbilitySlider },
-                      U.map((e, a) =>
+                      P.map((e, a) =>
                         m.createElement(
                           b.q7,
                           {
@@ -1934,7 +1998,7 @@
                         m.createElement(
                           "div",
                           { className: (0, p.A)(N().CarouselDots) },
-                          U.map((e, a) =>
+                          P.map((e, a) =>
                             m.createElement(
                               b.cL,
                               {
@@ -1973,7 +2037,7 @@
                     m.createElement(
                       "div",
                       { className: N().WebsiteSectionHeader },
-                      m.createElement(M, { subHeader: "Hero name" }),
+                      m.createElement(U, { subHeader: "Hero name" }),
                       m.createElement(
                         "h2",
                         { className: (0, p.A)(N().TitleFont, N().TitleMedium) },
@@ -2096,8 +2160,8 @@
                         ),
                       ),
                       m.createElement(
-                        y.N_,
-                        { to: T.J.hero("ringmaster") },
+                        v.N_,
+                        { to: y.J.hero("ringmaster") },
                         m.createElement(
                           "div",
                           { className: N().StandardButton },
@@ -2106,7 +2170,7 @@
                             { className: N().ButtonText },
                             (0, i.Wn)("#templatepage_hero_detail_button"),
                           ),
-                          m.createElement(h.U, null),
+                          m.createElement(T.U, null),
                         ),
                       ),
                     ),
@@ -2120,7 +2184,7 @@
                     ),
                   ),
                 ),
-                f(),
+                F(),
                 m.createElement(
                   "div",
                   {
@@ -2161,87 +2225,87 @@
                       ),
                     ),
                     m.createElement(
-                      I.U,
+                      x.U,
                       { labels: ["1", "2", "3", "4", "5", "6", "7"] },
-                      m.createElement(x.EW, {
-                        itemOne: m.createElement(I.v, {
+                      m.createElement(I.EW, {
+                        itemOne: m.createElement(x.v, {
                           is_new: !0,
                           image:
                             "patch738/comparison/radiant/old/WisdomShrine_R.jpg",
                         }),
-                        itemTwo: m.createElement(I.v, {
+                        itemTwo: m.createElement(x.v, {
                           is_new: !1,
                           image:
                             "patch738/comparison/radiant/new/WisdomShrine_R.jpg",
                         }),
                       }),
-                      m.createElement(x.EW, {
-                        itemOne: m.createElement(I.v, {
+                      m.createElement(I.EW, {
+                        itemOne: m.createElement(x.v, {
                           is_new: !0,
                           image:
                             "patch738/comparison/radiant/old/LotusPool_R.jpg",
                         }),
-                        itemTwo: m.createElement(I.v, {
+                        itemTwo: m.createElement(x.v, {
                           is_new: !1,
                           image:
                             "patch738/comparison/radiant/new/LotusPool_R.jpg",
                         }),
                       }),
-                      m.createElement(x.EW, {
-                        itemOne: m.createElement(I.v, {
+                      m.createElement(I.EW, {
+                        itemOne: m.createElement(x.v, {
                           is_new: !0,
                           image:
                             "patch738/comparison/radiant/old/RoshPit_South.jpg",
                         }),
-                        itemTwo: m.createElement(I.v, {
+                        itemTwo: m.createElement(x.v, {
                           is_new: !1,
                           image:
                             "patch738/comparison/radiant/new/RoshPit_South.jpg",
                         }),
                       }),
-                      m.createElement(x.EW, {
-                        itemOne: m.createElement(I.v, {
+                      m.createElement(I.EW, {
+                        itemOne: m.createElement(x.v, {
                           is_new: !0,
                           image:
                             "patch738/comparison/radiant/old/MapCorner_R.jpg",
                         }),
-                        itemTwo: m.createElement(I.v, {
+                        itemTwo: m.createElement(x.v, {
                           is_new: !1,
                           image:
                             "patch738/comparison/radiant/new/MapCorner_R.jpg",
                         }),
                       }),
-                      m.createElement(x.EW, {
-                        itemOne: m.createElement(I.v, {
+                      m.createElement(I.EW, {
+                        itemOne: m.createElement(x.v, {
                           is_new: !0,
                           image:
                             "patch738/comparison/radiant/old/T1Gutter_R.jpg",
                         }),
-                        itemTwo: m.createElement(I.v, {
+                        itemTwo: m.createElement(x.v, {
                           is_new: !1,
                           image:
                             "patch738/comparison/radiant/new/T1Gutter_R.jpg",
                         }),
                       }),
-                      m.createElement(x.EW, {
-                        itemOne: m.createElement(I.v, {
+                      m.createElement(I.EW, {
+                        itemOne: m.createElement(x.v, {
                           is_new: !0,
                           image:
                             "patch738/comparison/radiant/old/T2Approach_R.jpg",
                         }),
-                        itemTwo: m.createElement(I.v, {
+                        itemTwo: m.createElement(x.v, {
                           is_new: !1,
                           image:
                             "patch738/comparison/radiant/new/T2Approach_R.jpg",
                         }),
                       }),
-                      m.createElement(x.EW, {
-                        itemOne: m.createElement(I.v, {
+                      m.createElement(I.EW, {
+                        itemOne: m.createElement(x.v, {
                           is_new: !0,
                           image:
                             "patch738/comparison/radiant/old/BaseCorner_R.jpg",
                         }),
-                        itemTwo: m.createElement(I.v, {
+                        itemTwo: m.createElement(x.v, {
                           is_new: !1,
                           image:
                             "patch738/comparison/radiant/new/BaseCorner_R.jpg",
@@ -2250,10 +2314,11 @@
                     ),
                   ),
                 ),
-                f(),
+                F(),
                 m.createElement(
                   "div",
                   {
+                    ref: this.treasureRef,
                     id: "TreasureSection",
                     className: (0, p.A)(
                       N().WebsiteSection,
@@ -2607,7 +2672,7 @@
                         ),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "p",
                       { className: (0, p.A)(N().TitleFont, N().TitleSmall) },
@@ -2699,7 +2764,7 @@
                     ),
                   ),
                 ),
-                f(),
+                F(),
                 m.createElement(
                   "div",
                   {
@@ -2741,7 +2806,7 @@
                         ),
                       ),
                     ),
-                    F(),
+                    M(),
                     m.createElement(
                       "div",
                       { className: N().TextWaterfallExampleBlock },
@@ -2922,10 +2987,11 @@
                     ),
                   ),
                 ),
-                f(),
+                F(),
                 m.createElement(
                   "div",
                   {
+                    ref: this.patchRef,
                     id: "GameplayUpdateContainer",
                     className: (0, p.A)(
                       N().WebsiteSection,
@@ -2975,34 +3041,62 @@
                         ),
                       ),
                     ),
+                    M(),
+                    m.createElement(
+                      "p",
+                      {
+                        className: (0, p.A)(N().LabelExtraLarge, N().LabelFont),
+                      },
+                      (0, i.Wn)("Item updates"),
+                    ),
                     m.createElement(
                       "div",
                       { className: N().GameItemsContainer },
-                      m.createElement(R, {
+                      m.createElement(f, {
                         name: "item_angels_demise",
                         components: ["phylactery", "lesser_crit"],
                         recipeCost: 600,
                       }),
-                      m.createElement(R, {
+                      m.createElement(f, {
                         name: "item_devastator",
                         components: ["witch_blade", "mystic_staff"],
                       }),
-                      m.createElement(R, {
+                      m.createElement(f, {
                         name: "item_arcane_boots",
                         components: ["boots", "ring_of_basilius"],
                         recipeCost: 375,
                       }),
-                      m.createElement(R, {
+                      m.createElement(f, {
                         name: "item_bloodthorn",
                         components: ["orchid", "javelin", "hyperstone"],
                         recipeCost: 450,
                       }),
-                      m.createElement(R, { name: "item_safety_bubble" }),
-                      m.createElement(R, { name: "item_light_collector" }),
-                      m.createElement(R, { name: "item_doubloon" }),
-                      m.createElement(R, { name: "item_ancient_guardian" }),
-                      m.createElement(R, { name: "item_unwavering_condition" }),
-                      m.createElement(R, { name: "item_panic_button" }),
+                      m.createElement(f, { name: "item_safety_bubble" }),
+                      m.createElement(f, { name: "item_light_collector" }),
+                      m.createElement(f, { name: "item_doubloon" }),
+                      m.createElement(f, { name: "item_ancient_guardian" }),
+                      m.createElement(f, { name: "item_unwavering_condition" }),
+                      m.createElement(f, { name: "item_panic_button" }),
+                    ),
+                    M(),
+                    m.createElement(
+                      "p",
+                      {
+                        className: (0, p.A)(N().LabelExtraLarge, N().LabelFont),
+                      },
+                      (0, i.Wn)("Neutral item updates"),
+                    ),
+                    m.createElement(
+                      "div",
+                      { className: N().GameItemsContainer },
+                      m.createElement(f, { name: "item_dormant_curio" }),
+                      m.createElement(f, { name: "item_kobold_cup" }),
+                      m.createElement(f, { name: "item_sisters_shroud" }),
+                      m.createElement(f, { name: "item_jidi_pollen_bag" }),
+                      m.createElement(f, { name: "item_dezun_bloodrite" }),
+                      m.createElement(f, { name: "item_giant_maul" }),
+                      m.createElement(f, { name: "item_outworld_staff" }),
+                      m.createElement(f, { name: "item_divine_regalia" }),
                     ),
                     m.createElement(
                       "div",
@@ -3042,8 +3136,8 @@
           );
         }
       };
-      P = (0, l.Cg)([s.PA], P);
-      const O = P;
+      O = (0, l.Cg)([s.PA], O);
+      const V = O;
     },
   },
 ]);
