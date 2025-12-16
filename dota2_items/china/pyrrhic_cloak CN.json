@@ -8,7 +8,7 @@
             "id": 1608,
             "name": "item_pyrrhic_cloak",
             "name_loc": "皮洛士斗篷",
-            "desc_loc": "<h1>主动：报应</h1>在接下来%damage_time%秒内施法者所受伤害的%damage_pct%%%会作为物理伤害反弹至目标单位。",
+            "desc_loc": "<h1>主动：报应</h1>在接下来%damage_time%秒内施法者所受伤害的%damage_pct%%%会作为物理伤害反弹至目标单位，只要他们还在%max_distance%距离内。",
             "lore_loc": "世上就是有那种不关心部下死活，只想着消灭敌人的将军。",
             "notes_loc": [],
             "shard_loc": "",
@@ -54,6 +54,23 @@
                 "name": "damage_pct",
                 "values_float": [
                   75
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "max_distance",
+                "values_float": [
+                  1200
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -127,7 +144,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 3,
+            "item_neutral_tier": 4294967295,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1

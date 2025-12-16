@@ -8,7 +8,7 @@
             "id": 1604,
             "name": "item_searing_signet",
             "name_loc": "炽热纹章",
-            "desc_loc": "<h1>被动：烧蚀</h1>单次魔法伤害超过%damage_threshold%点会使敌人着火，使他们在%burn_duration%秒内受到%burn_damage%点魔法伤害。",
+            "desc_loc": "<h1>被动：烧蚀</h1>单次魔法伤害超过%damage_threshold%点会使敌人着火，使他们在%burn_duration%秒内受到%burn_damage%点魔法伤害。对非英雄目标的烧蚀伤害减少%creep_penalty%%%。",
             "lore_loc": "想要折磨魔法的使用者，必须想出非常规的手段。",
             "notes_loc": [
               "不会点燃%max_range%距离以外的敌人。"
@@ -72,7 +72,7 @@
               {
                 "name": "burn_damage",
                 "values_float": [
-                  72
+                  90
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -107,6 +107,23 @@
                 "name": "burn_tickrate",
                 "values_float": [
                   0.25
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "creep_penalty",
+                "values_float": [
+                  50
                 ],
                 "is_percentage": false,
                 "heading_loc": "",

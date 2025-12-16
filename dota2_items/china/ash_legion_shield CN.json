@@ -5,13 +5,13 @@
       "data": {
         "items": [
           {
-            "id": 1641,
-            "name": "item_outworld_staff",
-            "name_loc": "殁境法杖",
-            "desc_loc": "<h1>主动：自我放逐</h1>使施法者无敌且被控制，持续%invuln_duration%秒。施法者回归时会受到%self_dmg_pct%%%最大生命值的伤害。",
-            "lore_loc": "独孤的哨卫并非总是如此的证明。",
+            "id": 1717,
+            "name": "item_ash_legion_shield",
+            "name_loc": "余烬军团战盾",
+            "desc_loc": "<h1>Active: Shield Wall</h1>Reduce your own movement speed by %slow% to provide a %block_amount% physical damage barrier to all friendly player-controlled units in a %block_radius% unit radius. Lasts for %duration% seconds.",
+            "lore_loc": "",
             "notes_loc": [
-              "承受的回归伤害不会致死，会禁用闪烁匕首和其他受到伤害时会被锁闭的物品。"
+              "Shield Wall also affects other allies' player-controlled units."
             ],
             "shard_loc": "",
             "scepter_loc": "",
@@ -35,7 +35,7 @@
               0
             ],
             "cooldowns": [
-              30
+              40
             ],
             "durations": [
               0
@@ -47,15 +47,15 @@
               0
             ],
             "mana_costs": [
-              65
+              0
             ],
             "gold_costs": [],
             "health_costs": [],
             "special_values": [
               {
-                "name": "invuln_duration",
+                "name": "slow",
                 "values_float": [
-                  0.7
+                  12
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -70,9 +70,9 @@
                 "required_facet": ""
               },
               {
-                "name": "self_dmg_pct",
+                "name": "block_amount",
                 "values_float": [
-                  5
+                  140
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -87,9 +87,26 @@
                 "required_facet": ""
               },
               {
-                "name": "AbilityManaCost",
+                "name": "block_radius",
                 "values_float": [
-                  65
+                  800
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "duration",
+                "values_float": [
+                  6
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -106,7 +123,7 @@
               {
                 "name": "AbilityCooldown",
                 "values_float": [
-                  30
+                  40
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -129,7 +146,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 4294967295,
+            "item_neutral_tier": 0,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1

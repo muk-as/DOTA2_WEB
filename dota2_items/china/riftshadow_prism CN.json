@@ -5,14 +5,12 @@
       "data": {
         "items": [
           {
-            "id": 1641,
-            "name": "item_outworld_staff",
-            "name_loc": "殁境法杖",
-            "desc_loc": "<h1>主动：自我放逐</h1>使施法者无敌且被控制，持续%invuln_duration%秒。施法者回归时会受到%self_dmg_pct%%%最大生命值的伤害。",
-            "lore_loc": "独孤的哨卫并非总是如此的证明。",
-            "notes_loc": [
-              "承受的回归伤害不会致死，会禁用闪烁匕首和其他受到伤害时会被锁闭的物品。"
-            ],
+            "id": 1718,
+            "name": "item_riftshadow_prism",
+            "name_loc": "影墟棱晶",
+            "desc_loc": "<h1>主动：折射</h1>消耗自身%health_cost%%%当前生命值，制造一个满血的幻象，持续%duration%秒。幻象造成%outgoing_damage%%%伤害，承受%incoming_damage%%%伤害。",
+            "lore_loc": "",
+            "notes_loc": [],
             "shard_loc": "",
             "scepter_loc": "",
             "facets_loc": [],
@@ -47,15 +45,15 @@
               0
             ],
             "mana_costs": [
-              65
+              0
             ],
             "gold_costs": [],
             "health_costs": [],
             "special_values": [
               {
-                "name": "invuln_duration",
+                "name": "outgoing_damage",
                 "values_float": [
-                  0.7
+                  50
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -70,9 +68,9 @@
                 "required_facet": ""
               },
               {
-                "name": "self_dmg_pct",
+                "name": "incoming_damage",
                 "values_float": [
-                  5
+                  240
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -87,9 +85,26 @@
                 "required_facet": ""
               },
               {
-                "name": "AbilityManaCost",
+                "name": "duration",
                 "values_float": [
-                  65
+                  20
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "health_cost",
+                "values_float": [
+                  10
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -129,7 +144,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 4294967295,
+            "item_neutral_tier": 4,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1

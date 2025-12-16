@@ -8,7 +8,7 @@
             "id": 1076,
             "name": "item_specialists_array",
             "name_loc": "行家阵列",
-            "desc_loc": "<h1>被动：破裂攻击</h1>只对远程英雄生效。下次攻击会向攻击范围+%secondary_target_range_bonus%额外距离内%count%个额外目标发射弹道，并且额外造成%proc_bonus_damage%点伤害。不会触发攻击特效。",
+            "desc_loc": "<h1>被动：破裂攻击</h1>远程攻击拥有%proc_chance%%%几率对攻击者前方%secondary_target_angle%°内并且在攻击距离 + %secondary_target_range_bonus%范围内最近的敌人发射%count%个额外弹道。<br><br>额外攻击造成主目标攻击伤害的%proc_dmg_pct%%%，并且不会触发击中时特效。",
             "lore_loc": "加强扳机的出色器具，源自一位年迈的刺客闲暇时的想法。",
             "notes_loc": [],
             "shard_loc": "",
@@ -33,7 +33,7 @@
               0
             ],
             "cooldowns": [
-              8
+              0
             ],
             "durations": [
               0
@@ -50,6 +50,40 @@
             "gold_costs": [],
             "health_costs": [],
             "special_values": [
+              {
+                "name": "agility",
+                "values_float": [
+                  10
+                ],
+                "is_percentage": false,
+                "heading_loc": "+$agi",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "damage",
+                "values_float": [
+                  18
+                ],
+                "is_percentage": false,
+                "heading_loc": "+$damage",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
               {
                 "name": "count",
                 "values_float": [
@@ -85,9 +119,9 @@
                 "required_facet": ""
               },
               {
-                "name": "proc_bonus_damage",
+                "name": "secondary_target_angle",
                 "values_float": [
-                  10
+                  120
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -102,9 +136,26 @@
                 "required_facet": ""
               },
               {
-                "name": "AbilityCooldown",
+                "name": "proc_chance",
                 "values_float": [
-                  8
+                  25
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "proc_dmg_pct",
+                "values_float": [
+                  75
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -125,12 +176,12 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 0,
+            "item_cost": 2650,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,
             "item_stock_time": 0,
-            "item_quality": 1
+            "item_quality": 3
           }
         ]
       },

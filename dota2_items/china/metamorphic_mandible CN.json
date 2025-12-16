@@ -5,25 +5,23 @@
       "data": {
         "items": [
           {
-            "id": 1641,
-            "name": "item_outworld_staff",
-            "name_loc": "殁境法杖",
-            "desc_loc": "<h1>主动：自我放逐</h1>使施法者无敌且被控制，持续%invuln_duration%秒。施法者回归时会受到%self_dmg_pct%%%最大生命值的伤害。",
-            "lore_loc": "独孤的哨卫并非总是如此的证明。",
-            "notes_loc": [
-              "承受的回归伤害不会致死，会禁用闪烁匕首和其他受到伤害时会被锁闭的物品。"
-            ],
+            "id": 1719,
+            "name": "item_metamorphic_mandible",
+            "name_loc": "变态上颚",
+            "desc_loc": "<h1>主动：化蛹</h1>进入昆虫形态，持续%duration%秒，魔法抗性提升%bonus_magic_resistance%%%，移动速度提升%bonus_movespeed%%%。在昆虫形态下模型大小减少，护甲减少%armor_decrease%%%。",
+            "lore_loc": "",
+            "notes_loc": [],
             "shard_loc": "",
             "scepter_loc": "",
             "facets_loc": [],
             "type": 0,
-            "behavior": "2052",
+            "behavior": "4",
             "target_team": 0,
             "target_type": 0,
             "flags": 0,
             "damage": 0,
             "immunity": 0,
-            "dispellable": 0,
+            "dispellable": 2,
             "max_level": 0,
             "cast_ranges": [
               0
@@ -47,15 +45,15 @@
               0
             ],
             "mana_costs": [
-              65
+              0
             ],
             "gold_costs": [],
             "health_costs": [],
             "special_values": [
               {
-                "name": "invuln_duration",
+                "name": "duration",
                 "values_float": [
-                  0.7
+                  4
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -70,9 +68,9 @@
                 "required_facet": ""
               },
               {
-                "name": "self_dmg_pct",
+                "name": "bonus_magic_resistance",
                 "values_float": [
-                  5
+                  35
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -87,9 +85,43 @@
                 "required_facet": ""
               },
               {
-                "name": "AbilityManaCost",
+                "name": "bonus_movespeed",
                 "values_float": [
-                  65
+                  15
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "size_decrease",
+                "values_float": [
+                  20
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "armor_decrease",
+                "values_float": [
+                  45
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -129,7 +161,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 4294967295,
+            "item_neutral_tier": 3,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1
