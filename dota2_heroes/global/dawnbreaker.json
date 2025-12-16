@@ -59,8 +59,8 @@
             0,
             0
           ],
-          "damage_min": 49,
-          "damage_max": 53,
+          "damage_min": 50,
+          "damage_max": 54,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
@@ -1326,7 +1326,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAX DAMAGE INCREASE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_dawnbreaker_break_of_dawn_damage",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1413,7 +1419,7 @@
                 "Cannot be cast without the Hammer."
               ],
               "shard_loc": "",
-              "scepter_loc": "Solar Guardian's aura now lingers for %scepter_aura_duration%s after landing and follows Dawnbreaker around. Solar Guardian's heal per pulse is increased. Channel time and air time is reduced.",
+              "scepter_loc": "Increases Solar Guardian's heal per pulse. Solar Guardian's aura follows Dawnbreaker for %scepter_aura_duration%s after landing.",
               "facets_loc": [
                 "",
                 "",
@@ -1513,9 +1519,9 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    10,
                     15,
-                    20
+                    20,
+                    25
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -1644,11 +1650,11 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SCEPTER CHANNEL TIME:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    1
+                    1.7
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -1702,9 +1708,7 @@
                   "heading_loc": "AIR TIME:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    0.5
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1807,9 +1811,9 @@
           ],
           "talents": [
             {
-              "id": 6159,
-              "name": "special_bonus_attack_damage_12",
-              "name_loc": "+{s:value} Damage",
+              "id": 1570,
+              "name": "special_bonus_unique_dawnbreaker_break_of_dawn_damage",
+              "name_loc": "+{s:bonus_max_dmg_pct}% Break of Dawn Max Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1856,25 +1860,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    12
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,

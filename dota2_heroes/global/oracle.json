@@ -73,7 +73,7 @@
               "desc_loc": "CHANNELED - Gathers Oracle's power into a bolt of scouring energy that, when released, damages, roots, and dispels enemies of buffs in an area around the target. If target is an ally it will only dispel debuffs. The root duration increases with channeling time.\n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "The astral orb crackles with power while raw energy lances out, temporarily disrupting an enemy's connection to their own body.",
               "notes_loc": [
-                "Can be cast on invulnerable units."
+                "Affects invulnerable units."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -85,7 +85,7 @@
               "behavior": "536871080",
               "target_team": 3,
               "target_type": 19,
-              "flags": 64,
+              "flags": 0,
               "damage": 2,
               "immunity": 4,
               "dispellable": 2,
@@ -372,7 +372,7 @@
               "id": 5638,
               "name": "oracle_fates_edict",
               "name_loc": "Fate's Edict",
-              "desc_loc": "Oracle enraptures a target, disarming them if they are an enemy and granting them %magic_damage_resistance_pct_tooltip%%% magic damage resistance if they are an ally.",
+              "desc_loc": "Oracle enraptures a target, disarming them and granting them %magic_damage_resistance_pct_tooltip%%% magic damage resistance.",
               "lore_loc": "An unbreakable prophecy resounds: a chosen ally shall briefly suffer no magics.  Other kinds of suffering however...",
               "notes_loc": [],
               "shard_loc": "",
@@ -400,10 +400,10 @@
                 0
               ],
               "cooldowns": [
-                20,
                 17,
                 14,
-                11
+                11,
+                8
               ],
               "durations": [
                 0
@@ -415,10 +415,7 @@
                 0
               ],
               "mana_costs": [
-                95,
-                100,
-                105,
-                110
+                70
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -497,10 +494,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    95,
-                    100,
-                    105,
-                    110
+                    70
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -517,10 +511,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    20,
                     17,
                     14,
-                    11
+                    11,
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1269,9 +1263,7 @@
                   "is_percentage": true,
                   "heading_loc": "DELAYED HEAL AMPLIFICATION:",
                   "bonuses": [],
-                  "values_shard": [
-                    0
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",

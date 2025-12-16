@@ -73,7 +73,7 @@
               "desc_loc": "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack.",
               "lore_loc": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes.",
               "notes_loc": [],
-              "shard_loc": "Increases duration. While Hunger is active, the bonus damage is increased by %shard_damage_per_tick%%% every %shard_damage_tick_interval%s.",
+              "shard_loc": "While Hunger is active, the bonus damage is increased by %shard_damage_per_tick%%% every %shard_damage_tick_interval%s.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -150,7 +150,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "LIFESTEAL:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_broodmother_6",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -171,9 +177,7 @@
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
                   "bonuses": [],
-                  "values_shard": [
-                    2
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -426,7 +430,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVESPEED BONUS:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_broodmother_web_speed",
+                      "value": 14,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -477,6 +487,27 @@
                     "operation": 5
                   },
                   "required_facet": "broodmother_necrotic_webs"
+                },
+                {
+                  "name": "break_move_cap",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_broodmother_web_speed",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -650,7 +681,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_4",
-                      "value": 30,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -676,7 +707,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_4",
-                      "value": 30,
+                      "value": 25,
                       "operation": 2
                     }
                   ],
@@ -709,17 +740,17 @@
                 {
                   "name": "attack_damage",
                   "values_float": [
-                    2,
-                    4,
+                    3,
                     6,
-                    8
+                    9,
+                    12
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK BONUS:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_2",
-                      "value": 12,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -1035,13 +1066,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "HERO HEALTH AS HEAL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_broodmother_6",
-                      "value": 1.5,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1276,7 +1301,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_7",
-                      "value": 125,
+                      "value": 150,
                       "operation": 0
                     }
                   ],
@@ -1335,7 +1360,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_7",
-                      "value": 125,
+                      "value": 150,
                       "operation": 0
                     }
                   ],
@@ -1535,7 +1560,7 @@
             {
               "id": 900,
               "name": "special_bonus_unique_broodmother_6",
-              "name_loc": "+{s:bonus_kill_heal_heroes}% Spider's Milk Hero Health as heal",
+              "name_loc": "+{s:bonus_lifesteal_pct}% Insatiable Hunger Lifesteal",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1781,9 +1806,9 @@
               "item_quality": 0
             },
             {
-              "id": 6196,
-              "name": "special_bonus_attack_speed_35",
-              "name_loc": "+{s:value} Attack Speed",
+              "id": 6362,
+              "name": "special_bonus_unique_broodmother_4",
+              "name_loc": "+{s:bonus_miss_chance}% Incapacitating Bite Slow/Miss Chance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1828,25 +1853,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    35
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1923,9 +1930,9 @@
               "item_quality": 0
             },
             {
-              "id": 6362,
-              "name": "special_bonus_unique_broodmother_4",
-              "name_loc": "+{s:bonus_miss_chance}% Incapacitating Bite Slow/Miss Chance",
+              "id": 1704,
+              "name": "special_bonus_unique_broodmother_web_speed",
+              "name_loc": "+{s:bonus_bonus_movespeed}% Spin Web Move Speed and Ignore Speed Limit",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

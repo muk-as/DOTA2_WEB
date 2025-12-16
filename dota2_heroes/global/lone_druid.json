@@ -13,21 +13,12 @@
           "facets": [
             {
               "color": 2,
-              "title_loc": "Bear with Me",
-              "description_loc": "Spirit Link's Shared Armor is increased and Lone Druid's attacks heal the Spirit Bear.",
-              "name": "lone_druid_bear_with_me",
-              "icon": "healing",
+              "title_loc": "Forbearance",
+              "description_loc": "This facet doesn't do anything. Lone Druid is still attuning to nature...",
+              "name": "lone_druid_lone_druid",
+              "icon": "overshadow",
               "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Bear Necessities",
-              "description_loc": "Lone Druid's items are more powerful and his inventory is smaller.",
-              "name": "lone_druid_bear_necessities",
-              "icon": "item",
-              "gradient_id": 1,
-              "index": 2
+              "index": 3
             }
           ],
           "str_base": 18,
@@ -50,14 +41,14 @@
             3,
             0
           ],
-          "damage_min": 38,
-          "damage_max": 42,
+          "damage_min": 42,
+          "damage_max": 46,
           "attack_rate": 1.6,
           "attack_range": 550,
           "projectile_speed": 900,
           "armor": 3.3333335,
           "magic_resistance": 25,
-          "movement_speed": 325,
+          "movement_speed": 295,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
@@ -67,50 +58,49 @@
           "mana_regen": 0.65000004,
           "abilities": [
             {
-              "id": 1342,
-              "name": "lone_druid_spirit_bear",
-              "name_loc": "Summon Spirit Bear",
-              "desc_loc": "Summons a powerful Spirit Bear companion that can equip items.<br><br>If the bear moves %bear_attack_leash_range% distance away from the Lone Druid, it cannot attack.  Lone Druid suffers %backlash_damage%%% of his max health as backlash damage if the Spirit Bear dies.\nSpirit Bear has the Return, Demolish and Entangling Claws abilities.",
-              "lore_loc": "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need.",
+              "id": 1684,
+              "name": "lone_druid_entangle",
+              "name_loc": "Entangle",
+              "desc_loc": "Allows Lone Druid to Entangle enemies once they gain %hits_required% stacks. Entangled enemies are rooted and take damage over time.<br><br>When cast, applies %hits_incremented_on_active% stacks to each enemy hero in the area and %hits_required% stacks to enemy creeps. Also empowers Lone Druid for %lone_druid_buff_duration%s, making him apply %lone_druid_counters_applied_tooltip% stack with each attack on enemy heroes. Enemies cannot gain stacks while Entangled.<br><br>Leveling this ability also levels Spirit Bear's Entangling Claws ability.",
+              "lore_loc": "",
               "notes_loc": [
-                "Most spells interact with the Spirit Bear in the same way as they do with heroes.",
-                "Spirit Bear has 0 base attributes and does not gain them with level. Attributes from buffs or items fully affect the bear as they would for Universal heroes.",
-                "Spirit Bear cannot gain experience. Spirit Bear health and damage increase by %hp_gain_per_druid_level% and %damage_gain_per_druid_level% respectively with Lone Druid's level.",
-                "Spirit Bear has its own Aghanim's Scepter and Shard upgrades."
+                "Rooted units can't use Blink abilities and are revealed if they are invisible.",
+                "Lone Druid's Empowered Buff and enemy stack counter debuff cannot be dispelled.",
+                "Entangled debuff is dispellable.",
+                "Creeps can't gain stacks from either Lone Druid's or Spirit Bear's attacks, and are Entangled only on cast.",
+                "Roshan is affected as if he were a hero."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Entangle applies %hits_required% stacks to enemy heroes in the area and has increased radius. Enemies no longer have protection from gaining stacks while Entangled.",
               "facets_loc": [
                 "",
-                "Increases the distance from Lone Druid at which the Spirit Bear can attack.",
+                "",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "4",
-              "target_team": 0,
-              "target_type": 0,
+              "behavior": "48",
+              "target_team": 2,
+              "target_type": 19,
               "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
+              "damage": 2,
+              "immunity": 3,
+              "dispellable": 3,
               "max_level": 4,
               "cast_ranges": [
-                0
+                700
               ],
               "cast_points": [
-                0.5,
-                0.5,
-                0.5,
-                0.5
+                0.3
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                150,
-                140,
-                130,
-                120
+                24,
+                22,
+                20,
+                18
               ],
               "durations": [
                 0
@@ -122,24 +112,37 @@
                 0
               ],
               "mana_costs": [
-                75,
-                75,
-                75,
-                75
+                60
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bear_hp",
+                  "name": "active_radius",
                   "values_float": [
-                    1100,
-                    1400,
-                    1700,
-                    2000
+                    350
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BEAR HP:",
+                  "heading_loc": "RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    100
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "counter_duration",
+                  "values_float": [
+                    10
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "STACK DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -151,69 +154,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bear_regen_tooltip",
+                  "name": "lone_druid_counters_applied_tooltip",
                   "values_float": [
-                    5,
-                    6,
-                    7,
-                    8
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BEAR HP REGEN:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bear_bat",
-                  "values_float": [
-                    1.75,
-                    1.65,
-                    1.55,
-                    1.45
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BEAR BASE ATTACK TIME:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bear_armor",
-                  "values_float": [
-                    0,
-                    2,
-                    4,
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BEAR ARMOR:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "backlash_damage",
-                  "values_float": [
-                    20
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -228,54 +171,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bear_movespeed",
-                  "values_float": [
-                    300,
-                    330,
-                    360,
-                    390
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BEAR MOVESPEED:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lone_druid_11",
-                      "value": 30,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_bear_armor",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lone_druid_2",
-                      "value": 7,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_gain_per_druid_level",
+                  "name": "hits_required",
                   "values_float": [
                     5
                   ],
@@ -292,9 +188,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "hp_gain_per_druid_level",
+                  "name": "hits_incremented_on_active",
                   "values_float": [
-                    100
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -309,9 +205,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bear_attack_leash_range",
+                  "name": "lone_druid_buff_duration",
                   "values_float": [
-                    1100
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -319,10 +215,115 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "lone_druid_unbearable",
-                    "values": [
-                      500
-                    ],
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "nostack_protection",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "root_heroes_on_cast",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "entangle_duration",
+                  "values_float": [
+                    1.2,
+                    1.6,
+                    2,
+                    2.4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ROOT DURATION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lone_druid_entangle_duration",
+                      "value": 0.6,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage",
+                  "values_float": [
+                    60,
+                    70,
+                    80,
+                    90
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ROOT DAMAGE PER SECOND:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lone_druid_1",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    700
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -330,7 +331,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0.5
+                    0.3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -347,7 +348,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    75
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -364,10 +365,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    150,
-                    140,
-                    130,
-                    120
+                    24,
+                    22,
+                    20,
+                    18
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -383,7 +384,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -399,7 +400,7 @@
               "id": 7309,
               "name": "lone_druid_spirit_link",
               "name_loc": "Spirit Link",
-              "desc_loc": "Links Lone Druid and the Spirit Bear, increasing their attack speed as well as sharing a percentage of their armor and lifesteal with each other.",
+              "desc_loc": "Links Lone Druid and the Spirit Bear, increasing their movement speed as well as sharing a percentage of their lifesteal with each other.",
               "lore_loc": "Sylla is emboldened by the presence of his companion, his vitality replenished with each swipe of the Spirit Bear's claws.",
               "notes_loc": [
                 "Break disables the shared lifesteal."
@@ -409,19 +410,20 @@
               "facets_loc": [
                 "Shared Armor increased. Damage dealt by either the Spirit Bear or Lone Druid will heal the other.",
                 "Only damage dealt by Spirit Bear heals Lone Druid.",
+                "",
                 ""
               ],
               "type": 0,
               "behavior": "2",
-              "target_team": 1,
-              "target_type": 1,
+              "target_team": 0,
+              "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
-              "dispellable": 2,
+              "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                1200
+                0
               ],
               "cast_points": [
                 0
@@ -448,22 +450,36 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_attack_speed",
+                  "name": "bonus_movement_speed_druid",
                   "values_float": [
+                    10,
                     20,
-                    35,
-                    50,
-                    65
+                    30,
+                    40
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ATTACK SPEED:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lone_druid_spirit_link_attack_speed",
-                      "value": 45,
-                      "operation": 0
-                    }
+                  "heading_loc": "MOVEMENT SPEED (LONE DRUID):",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_movement_speed_bear",
+                  "values_float": [
+                    20,
+                    40,
+                    60,
+                    80
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "MOVEMENT SPEED (SPIRIT BEAR):",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -494,31 +510,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "armor_sharing",
-                  "values_float": [
-                    8,
-                    12,
-                    16,
-                    20
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "ARMOR SHARED:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lone_druid_bear_with_me",
-                    "values": [
-                      25
-                    ],
-                    "operation": 3
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "lifesteal_both_ways",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -526,13 +520,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "lone_druid_bear_with_me",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "lone_druid_bear_with_me"
+                  "required_facet": ""
                 },
                 {
                   "name": "duration",
@@ -567,65 +559,10 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    1200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    50
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    40
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -650,6 +587,7 @@
               "shard_loc": "Applies a basic dispel and grants allies in an area around the caster bonus movement and attack speed. Replicates between Lone Druid and Spirit Bear regardless of castability on the other.<br><br>DISPEL TYPE: Basic Dispel",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -921,10 +859,308 @@
               "item_quality": 0
             },
             {
+              "id": 1342,
+              "name": "lone_druid_spirit_bear",
+              "name_loc": "Summon Spirit Bear",
+              "desc_loc": "Summons a powerful Spirit Bear companion that can equip items.<br><br>If the bear moves %bear_attack_leash_range% distance away from the Lone Druid, it cannot attack.  Lone Druid suffers %backlash_damage%%% of his max health as backlash damage if the Spirit Bear dies.\nSpirit Bear has Demolish, Return, Entangling Claws, Savage Roar, and Spirit Link abilities.",
+              "lore_loc": "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need.",
+              "notes_loc": [
+                "Most spells interact with the Spirit Bear in the same way as they do with heroes.",
+                "Spirit Bear has 0 base attributes, 0 base armor, and %base_magic_resistance%%% base magic resistance. Attributes from buffs or items fully affect the bear as they would for Universal heroes.",
+                "Spirit Bear cannot gain experience. The Spirit Bear levels up when Lone Druid levels up.",
+                "Spirit Bear has its own Aghanim's Scepter and Shard upgrades.",
+                "Spirit Bear receives a copy of Lone Druid's Neutral Item that has an independent cooldown."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "Increases the distance from Lone Druid at which the Spirit Bear can attack.",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "4",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0.5
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                120
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                75
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "bear_hp",
+                  "values_float": [
+                    1500
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BEAR BASE HP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bear_regen_tooltip",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BEAR BASE HP REGEN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bear_bat",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BEAR BASE ATTACK TIME:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "backlash_damage",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bear_movespeed",
+                  "values_float": [
+                    310
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BEAR MOVESPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bear_magic_resistance",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bear_attack_leash_range",
+                  "values_float": [
+                    1100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "strength_gain_tooltip",
+                  "values_float": [
+                    4.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BEAR STRENGTH GAIN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "agility_gain_tooltip",
+                  "values_float": [
+                    4.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BEAR AGILITY GAIN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "intelligence_gain_tooltip",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BEAR INTELLIGENCE GAIN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    120
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lone_druid_2",
+                      "value": 25,
+                      "operation": 2
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": true,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
               "id": 5415,
               "name": "lone_druid_true_form",
               "name_loc": "True Form",
-              "desc_loc": "Lone Druid starts a transformation into a raging bear that has enhanced attack and defensive capabilities.",
+              "desc_loc": "Lone Druid morphs himself into a raging bear, losing his ranged advantage, but gaining bonus armor, bonus health, and bonus attack damage.",
               "lore_loc": "The mighty bear is the king of the forest, possessing the throne through raw power.",
               "notes_loc": [
                 "Cooldowns of items that are different for ranged and melee units will be based on which form Lone Druid was in when the item was used."
@@ -934,6 +1170,7 @@
               "facets_loc": [
                 "Lone Druid morphs himself into a raging bear, losing his ranged advantage, but gaining increased bonus armor, more health, and improved versions of Entangling Claws and Demolish.",
                 "Lone Druid morphs his Spirit Bear into an enraged form that gains bonus armor, attack speed, demolish damage, and a %entangling_claws_cooldown_reduction_pct%%% cooldown on Entangling Claws.",
+                "",
                 ""
               ],
               "type": 1,
@@ -957,7 +1194,9 @@
                 0
               ],
               "cooldowns": [
-                100
+                60,
+                55,
+                50
               ],
               "durations": [
                 0
@@ -969,7 +1208,7 @@
                 0
               ],
               "mana_costs": [
-                200
+                80
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -977,9 +1216,9 @@
                 {
                   "name": "bonus_armor",
                   "values_float": [
-                    8,
                     10,
-                    12
+                    15,
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ARMOR:",
@@ -1015,6 +1254,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "bonus_attack_damage",
+                  "values_float": [
+                    50,
+                    90,
+                    130
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS ATTACK DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "attack_speed_pct",
                   "values_float": [
                     0
@@ -1036,7 +1294,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    40
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1087,28 +1345,30 @@
                   "required_facet": "lone_druid_unbearable"
                 },
                 {
-                  "name": "entangling_claws_cooldown_reduction_pct",
-                  "values_float": [
-                    0
-                  ],
+                  "name": "bonus_slow_resistance",
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lone_druid_8",
+                      "value": 60,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "lone_druid_unbearable",
-                    "values": [
-                      75
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "lone_druid_unbearable"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    200
+                    80
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1125,17 +1385,13 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    100
+                    60,
+                    55,
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lone_druid_8",
-                      "value": 50,
-                      "operation": 4
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1158,100 +1414,20 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
-            },
-            {
-              "id": 1472,
-              "name": "lone_druid_gift_bearer",
-              "name_loc": "Gift Bearer",
-              "desc_loc": "Lone Druid's Spirit Bear receives a copy of his Neutral Item that has an independent cooldown.",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8796093022210",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 1,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "reroll",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
             }
           ],
           "talents": [
             {
-              "id": 5959,
-              "name": "special_bonus_hp_200",
-              "name_loc": "+{s:value} Health",
+              "id": 6262,
+              "name": "special_bonus_unique_lone_druid_2",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Summon Spirit Bear Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1291,25 +1467,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1324,15 +1482,16 @@
               "item_quality": 0
             },
             {
-              "id": 423,
-              "name": "special_bonus_unique_lone_druid_11",
-              "name_loc": "+{s:bonus_bear_movespeed} Spirit Bear Movement Speed",
-              "desc_loc": "",
+              "id": 6261,
+              "name": "special_bonus_unique_lone_druid_1",
+              "name_loc": "+{s:bonus_damage} Entangle Root Damage Per Second",
+              "desc_loc": "Also applies to Spirit Bear's Entangling Claws Root",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1398,6 +1557,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1450,15 +1610,16 @@
               "item_quality": 0
             },
             {
-              "id": 6262,
-              "name": "special_bonus_unique_lone_druid_2",
-              "name_loc": "+{s:bonus_bonus_bear_armor} Spirit Bear Armor",
+              "id": 7386,
+              "name": "special_bonus_agility_12",
+              "name_loc": "+{s:value} Agility",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1498,7 +1659,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1524,6 +1703,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1576,15 +1756,16 @@
               "item_quality": 0
             },
             {
-              "id": 1350,
-              "name": "special_bonus_unique_lone_druid_entangle_dps",
-              "name_loc": "+{s:bonus_damage} Entangling Claws DPS",
+              "id": 409,
+              "name": "special_bonus_attack_speed_55",
+              "name_loc": "+{s:value} Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1624,7 +1805,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    55
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1641,13 +1840,14 @@
             {
               "id": 6806,
               "name": "special_bonus_unique_lone_druid_8",
-              "name_loc": "-{s:bonus_AbilityCooldown}s True Form Cooldown",
+              "name_loc": "True Form provides {s:bonus_bonus_slow_resistance}% Slow Resistance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1702,15 +1902,16 @@
               "item_quality": 0
             },
             {
-              "id": 1349,
-              "name": "special_bonus_unique_lone_druid_spirit_link_attack_speed",
-              "name_loc": "+{s:bonus_bonus_attack_speed} Spirit Link Attack Speed",
-              "desc_loc": "",
+              "id": 1710,
+              "name": "special_bonus_unique_lone_druid_entangle_duration",
+              "name_loc": "+{s:bonus_entangle_duration}s Entangle Root Duration",
+              "desc_loc": "Also applies to Spirit Bear's Entangling Claws Root",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1768,113 +1969,6 @@
           "facet_abilities": [
             {
               "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1473,
-                  "name": "lone_druid_bear_necessities",
-                  "name_loc": "Bear Necessities",
-                  "desc_loc": "Lone Druid can only use the first %item_slots% items in his inventory. These items' passive bonuses are more powerful. Other item slots do not provide any bonuses. Neutral slot is unaffected.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "The following attributes can be increased:<br>* Intelligence, Strength and Agility<br>* Health, Mana and Evasion<br>* Attack Speed and Bonus Damage<br>* Health and Mana Regen"
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "13194139533315",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "item_slots",
-                      "values_float": [
-                        3
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "bonus_stat_percent",
-                      "values_float": [
-                        45,
-                        55,
-                        65,
-                        75
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "STAT BONUS:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
             }
           ]
         }

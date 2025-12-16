@@ -98,10 +98,10 @@
                 0
               ],
               "cooldowns": [
-                17,
-                15,
-                13,
-                11
+                18,
+                16,
+                14,
+                12
               ],
               "durations": [
                 0
@@ -175,9 +175,9 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    1.8,
-                    2.2,
-                    2.6,
+                    2.1,
+                    2.4,
+                    2.7,
                     3
                   ],
                   "is_percentage": false,
@@ -270,10 +270,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    17,
-                    15,
-                    13,
-                    11
+                    18,
+                    16,
+                    14,
+                    12
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -305,7 +305,7 @@
               "id": 5008,
               "name": "axe_battle_hunger",
               "name_loc": "Battle Hunger",
-              "desc_loc": "Enrages an enemy unit, causing it to take damage over time until it kills another unit or the duration ends. The damage is increased by a factor of Axe's armor. The enemy is also slowed as long as they are facing away from Axe.",
+              "desc_loc": "Enrages an enemy unit, causing it to take damage over time until it kills another unit or the duration ends. The enemy is slowed as long as they are facing away from Axe.",
               "lore_loc": "Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied.",
               "notes_loc": [
                 "Destroying buildings will also remove the debuff."
@@ -321,7 +321,7 @@
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
-              "damage": 1,
+              "damage": 4,
               "immunity": 4,
               "dispellable": 2,
               "max_level": 4,
@@ -384,20 +384,14 @@
                 {
                   "name": "slow",
                   "values_float": [
-                    -18,
-                    -22,
-                    -26,
-                    -30
+                    18,
+                    22,
+                    26,
+                    30
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SLOW:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_axe_6",
-                      "value": 10,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -417,28 +411,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER SECOND:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "armor_multiplier",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ARMOR MULTIPLIER:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_axe",
-                      "value": 2,
-                      "operation": 1
+                      "value": 12,
+                      "operation": 0
                     }
                   ],
                   "values_shard": [],
@@ -646,7 +623,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_axe_4",
-                      "value": 30,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -773,6 +750,27 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "helix_lifesteal",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_axe_helix_lifesteal",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCooldown",
                   "values_float": [
                     0.3
@@ -872,7 +870,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_axe_5",
-                      "value": 100,
+                      "value": 150,
                       "operation": 0
                     }
                   ],
@@ -1293,9 +1291,9 @@
               "item_quality": 0
             },
             {
-              "id": 670,
-              "name": "special_bonus_unique_axe_6",
-              "name_loc": "+{s:bonus_slow}% Battle Hunger Slow",
+              "id": 6102,
+              "name": "special_bonus_unique_axe",
+              "name_loc": "+{s:bonus_damage_per_second} Battle Hunger Damage Per Second",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1417,9 +1415,9 @@
               "item_quality": 0
             },
             {
-              "id": 562,
-              "name": "special_bonus_unique_axe_5",
-              "name_loc": "+{s:bonus_damage} Culling Blade Damage",
+              "id": 6145,
+              "name": "special_bonus_strength_15",
+              "name_loc": "+{s:value} Strength",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1464,7 +1462,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1603,9 +1619,9 @@
               "item_quality": 0
             },
             {
-              "id": 6102,
-              "name": "special_bonus_unique_axe",
-              "name_loc": "{s:bonus_armor_multiplier}x Battle Hunger Armor Multiplier",
+              "id": 562,
+              "name": "special_bonus_unique_axe_5",
+              "name_loc": "+{s:bonus_damage} Culling Blade Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

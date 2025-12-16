@@ -12,22 +12,13 @@
           "npe_desc_loc": "Stalks invisibly to ambush lone enemies",
           "facets": [
             {
-              "color": 5,
-              "title_loc": "Suppressive Fire",
-              "description_loc": "Strafe attacks cause enemies to miss more often.",
-              "name": "clinkz_suppressive_fire",
-              "icon": "no_vision",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
               "color": 1,
-              "title_loc": "Engulfing Step",
-              "description_loc": "Death Pact teleports Clinkz towards his victim. Reduces Death Pact cooldown.",
-              "name": "clinkz_engulfing_step",
-              "icon": "teleport",
+              "title_loc": "Trial By Pyre",
+              "description_loc": "This facet doesn't do anything. Clinkz is still burning with revenge...",
+              "name": "clinkz_clinkz",
+              "icon": "nuke",
               "gradient_id": 0,
-              "index": 1
+              "index": 2
             }
           ],
           "str_base": 17,
@@ -77,6 +68,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Clinkz and each Skeleton Archer apply a stacking debuff, one stack per attacking Skeleton Archer, causing them to miss %bonus_blind_pct%%% of their attacks per stack for %debuff_duration%s. Applies to buildings as well.",
+                "",
                 ""
               ],
               "type": 0,
@@ -89,7 +81,7 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                800
+                1200
               ],
               "cast_points": [
                 0
@@ -207,7 +199,7 @@
                 {
                   "name": "archer_attack_speed_pct",
                   "values_float": [
-                    60
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -262,7 +254,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    800
+                    1200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -337,44 +329,48 @@
               "item_quality": 0
             },
             {
-              "id": 1119,
-              "name": "clinkz_tar_bomb",
-              "name_loc": "Tar Bomb",
-              "desc_loc": "Clinkz throws a projectile filled with tar at the target enemy, dealing Magic damage on impact. After impact, the tar spills onto the ground and stays there for %ground_duration% seconds. Any enemy that walks across it gets slowed, and attacks from Clinkz or his Skeleton Archers will deal bonus physical damage.<br><br> When the Tar Bomb hits, any Skeleton Archers within attack range will attack the target. If autocast is activated, Clinkz will throw a tar bomb when attacking the target, if it is available.",
-              "lore_loc": "After his battle with Maraxiform, Clinkz found a useful source of ichor where his heart used to be.",
-              "notes_loc": [],
+              "id": 5260,
+              "name": "clinkz_searing_arrows",
+              "name_loc": "Searing Arrows",
+              "desc_loc": "Imbues Clinkz's arrows with fire for extra damage.<br><br>Skeleton Archers will fire Searing Arrows at targets Clinkz attacks for %skeleton_damage_pct%%% damage.",
+              "lore_loc": "Clinkz simply lights his arrows from his flaming essence for quite the destructive effect.",
+              "notes_loc": [
+                "Searing Arrows deal damage to structures.",
+                "The damage is directly added to Clinkz' attack damage, as physical damage."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "4136",
+              "behavior": "135176",
               "target_team": 2,
               "target_type": 23,
-              "flags": 0,
+              "flags": 16,
               "damage": 1,
-              "immunity": 0,
-              "dispellable": 2,
+              "immunity": 3,
+              "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                1000
+                600
               ],
               "cast_points": [
-                0.2,
-                0.2,
-                0.2,
-                0.2
+                0,
+                0,
+                0,
+                0
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                7,
-                6,
-                5,
-                4
+                0,
+                0,
+                0,
+                0
               ],
               "durations": [
                 0
@@ -386,112 +382,21 @@
                 0
               ],
               "mana_costs": [
-                45,
-                50,
-                55,
-                60
+                10
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "radius",
-                  "values_float": [
-                    325
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "projectile_speed",
-                  "values_float": [
-                    2000
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "damage_bonus",
                   "values_float": [
-                    15,
-                    25,
-                    35,
-                    45
+                    18,
+                    32,
+                    46,
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "ground_duration",
-                  "values_float": [
-                    5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "AREA DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "slow_movement_speed",
-                  "values_float": [
-                    -16,
-                    -19,
-                    -22,
-                    -25
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVESPEED SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "slow_duration",
-                  "values_float": [
-                    2.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -524,29 +429,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "impact_damage",
+                  "name": "skeleton_damage_pct",
                   "values_float": [
-                    40,
-                    60,
-                    80,
-                    100
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "IMPACT DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastRange",
-                  "values_float": [
-                    1000
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -561,9 +446,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "AbilityCastPoint",
+                  "name": "AbilityCastRange",
                   "values_float": [
-                    0.2
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -580,30 +465,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    45,
-                    50,
-                    55,
-                    60
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    7,
-                    6,
-                    5,
-                    4
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -635,7 +497,7 @@
               "id": 5262,
               "name": "clinkz_death_pact",
               "name_loc": "Death Pact",
-              "desc_loc": "Clinkz consumes the target enemy creep or friendly Skeleton Archer and creates a Skeleton Archer in their place, healing and gaining max health. Does not take Clinkz out of Skeleton Walk. <br><br>Only one archer can be summoned from Death Pact at a time.",
+              "desc_loc": "Clinkz consumes the target enemy creep or friendly Skeleton Archer, healing and gaining max health. Does not take Clinkz out of Skeleton Walk.",
               "lore_loc": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings.",
               "notes_loc": [
                 "If the target is an enemy, Clinkz will gain the correct experience and gold.",
@@ -646,7 +508,8 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Death Pact teleports Clinkz towards his victim. Reduces Death Pact cooldown. If Alt-Cast behavior is activated, or Clinkz is Rooted or Leashed, he will not teleport to the target location."
+                "Death Pact teleports Clinkz towards his victim. Reduces Death Pact cooldown. If Alt-Cast behavior is activated, or Clinkz is Rooted or Leashed, he will not teleport to the target location.",
+                ""
               ],
               "type": 0,
               "behavior": "33554440",
@@ -718,23 +581,6 @@
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "skeletons_spawned",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -897,7 +743,7 @@
               "id": 5259,
               "name": "clinkz_burning_barrage",
               "name_loc": "Burning Barrage",
-              "desc_loc": "CHANNELED - Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers, and dousing enemies with Tar Bomb slow.",
+              "desc_loc": "CHANNELED - Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers.",
               "lore_loc": "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver.",
               "notes_loc": [
                 "Bonus Attack Range increases the length of Burning Barrage."
@@ -905,6 +751,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1105,6 +952,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1163,7 +1011,7 @@
                 {
                   "name": "count",
                   "values_float": [
-                    5
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "COUNT:",
@@ -1180,7 +1028,7 @@
                 {
                   "name": "spawn_interval",
                   "values_float": [
-                    0.15
+                    0.1
                   ],
                   "is_percentage": false,
                   "heading_loc": "SPAWN INTERVAL:",
@@ -1263,14 +1111,15 @@
               "id": 5261,
               "name": "clinkz_wind_walk",
               "name_loc": "Skeleton Walk",
-              "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.",
+              "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.<br><br>Skeleton Archers are immobile and die within multiple attacks from a hero or tower. Skeleton Archers deal a percentage of Clinkz' damage, and deal %skeleton_building_damage_reduction%%% less damage to buildings. Attack range is equal to Clinkz' attack range.",
               "lore_loc": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
               "notes_loc": [
                 "Has a fadetime of %fade_time% seconds."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases Skeleton Archer health.",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1426,116 +1275,8 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    80,
-                    105,
-                    130
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    24,
-                    21,
-                    18
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_clinkz_10",
-                      "value": 4,
-                      "operation": 2
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 1306,
-              "name": "clinkz_bone_and_arrow",
-              "name_loc": "Bone and Arrow",
-              "desc_loc": "Clinkz summons a Skeleton Archer when he dies. Skeleton Archers are immobile and die within multiple attacks from a hero or tower. Skeleton Archers deal a percentage of Clinkz' damage, and deal less damage to buildings. Attack range is equal to Clinkz' attack range.<br><br>Some of Clinkz' other abilities can also summon Skeleton Archers.",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "Increases Skeleton Archer health.",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "4398046511170",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 3,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
                   "name": "skeleton_duration",
                   "values_float": [
-                    15,
                     20,
                     25,
                     30
@@ -1595,8 +1336,8 @@
                   "values_float": [
                     25
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "BUILDING DAMAGE REDUCTION:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1640,10 +1381,186 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    80,
+                    105,
+                    130
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    24,
+                    21,
+                    18
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clinkz_10",
+                      "value": 4,
+                      "operation": 2
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
               "ability_has_scepter": true,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1678,
+              "name": "clinkz_infernal_shred",
+              "name_loc": "Infernal Shred",
+              "desc_loc": "Clinkz and his skeletons apply a stacking debuff that causes their attacks to pierce up to %max_armor_piercing_pct%%% of the target's total physical armor (does not reduce their armor).  Clinkz applies %hero_stacks%%% per attack, and skeletons apply %skeleton_stacks%%%. <br><br>Lasts %duration% seconds.",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "4398046511170",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 3,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "duration",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "hero_stacks",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "skeleton_stacks",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_armor_piercing_pct",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1667,6 +1584,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1730,6 +1648,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1791,6 +1710,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1872,6 +1792,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1933,6 +1854,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1996,6 +1918,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2058,6 +1981,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2112,13 +2036,14 @@
             {
               "id": 6620,
               "name": "special_bonus_unique_clinkz_3",
-              "name_loc": "Tar Bomb Multishot",
-              "desc_loc": "Any autocasted Tar Bomb attack or an attack on an enemy covered in tar will send another arrow into a random enemy within Clinkz's attack range.",
+              "name_loc": "Searing Arrows Multishot",
+              "desc_loc": "A Searing Arrows attack will send another arrow into a random enemy within Clinkz's attack range.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -2173,9 +2098,6 @@
             }
           ],
           "facet_abilities": [
-            {
-              "abilities": []
-            },
             {
               "abilities": []
             }

@@ -73,7 +73,7 @@
               "desc_loc": "Ursa leaps forward %hop_distance% units and slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for %abilityduration% seconds.",
               "lore_loc": "The very steps of a male ursine shake the ground as well as the resolve of opposing warriors.",
               "notes_loc": [],
-              "shard_loc": "Earthshock applies a %shard_enrage_duration% second Enrage on Ursa when cast.",
+              "shard_loc": "Earthshock applies %fury_swipe_stacks_on_hit% Fury Swipes to enemies hit.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -213,7 +213,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_enrage_duration",
+                  "name": "fury_swipe_stacks_on_hit",
                   "values_float": [
                     0
                   ],
@@ -221,29 +221,8 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    1.2
+                    3
                   ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "fury_swipe_stacks_on_hit",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_ursa_earthshock_furyswipes",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -828,7 +807,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "HEALTH AS DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_ursa_maul_health",
+                      "value": 0.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -884,8 +869,8 @@
                 0
               ],
               "cooldowns": [
-                70,
-                50,
+                60,
+                45,
                 30
               ],
               "durations": [
@@ -1005,8 +990,8 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    70,
-                    50,
+                    60,
+                    45,
                     30
                   ],
                   "is_percentage": false,
@@ -1370,9 +1355,9 @@
               "item_quality": 0
             },
             {
-              "id": 1062,
-              "name": "special_bonus_unique_ursa_earthshock_furyswipes",
-              "name_loc": "Earthshock Applies {s:bonus_fury_swipe_stacks_on_hit} Fury Swipes",
+              "id": 1706,
+              "name": "special_bonus_unique_ursa_maul_health",
+              "name_loc": "+{s:bonus_health_as_damage_pct}% Maul Health As Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

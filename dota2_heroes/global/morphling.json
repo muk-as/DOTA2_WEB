@@ -23,7 +23,7 @@
             {
               "color": 0,
               "title_loc": "Flow",
-              "description_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font>. Adaptive Strike stuns based on Morphling's strength. Morphling gains %one_percent_tooltip%%% Spell Amp per %agi_per_one_spell_amp% Agility.",
+              "description_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font>. Morphling gains %one_percent_tooltip%%% Spell Amp per %agi_per_one_spell_amp% Agility.",
               "name": "morphling_str",
               "icon": "strength",
               "gradient_id": 0,
@@ -325,7 +325,7 @@
               "id": 5053,
               "name": "morphling_adaptive_strike_agi",
               "name_loc": "Adaptive Strike",
-              "desc_loc": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used.\n\nThe target is also knocked back based on Morphling's strength. If his strength is 50% higher than his agility, the maximum knockback distance is used.",
+              "desc_loc": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used.\n\nThe target is also knocked back and stunned based on Morphling's strength. If his strength is 50% higher than his agility, the maximum knockback distance and stun is used.",
               "lore_loc": "The Morphling calls upon his elements to crush his opponents with waves.",
               "notes_loc": [
                 "Projectile moves at %projectile_speed% speed."
@@ -334,7 +334,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Adaptive Strike stuns based on Morphling's strength."
+                ""
               ],
               "type": 0,
               "behavior": "8",
@@ -347,9 +347,9 @@
               "max_level": 4,
               "cast_ranges": [
                 600,
-                700,
-                800,
-                900
+                675,
+                750,
+                825
               ],
               "cast_points": [
                 0.25
@@ -441,7 +441,7 @@
                 {
                   "name": "stun_min",
                   "values_float": [
-                    0
+                    0.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN MIN:",
@@ -449,18 +449,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "morphling_str",
-                    "values": [
-                      0.5
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "morphling_str"
+                  "required_facet": ""
                 },
                 {
                   "name": "stun_max",
                   "values_float": [
-                    0
+                    2.4
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN MAX:",
@@ -468,13 +466,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "morphling_str",
-                    "values": [
-                      2.4
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "morphling_str"
+                  "required_facet": ""
                 },
                 {
                   "name": "knockback_min",
@@ -548,9 +544,9 @@
                   "name": "AbilityCastRange",
                   "values_float": [
                     600,
-                    700,
-                    800,
-                    900
+                    675,
+                    750,
+                    825
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2022,7 +2018,7 @@
                   "id": 1219,
                   "name": "morphling_flow",
                   "name_loc": "Flow",
-                  "desc_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font>. Adaptive Strike stuns based on Morphling's strength. Morphling gains %one_percent_tooltip%%% Spell Amp per %agi_per_one_spell_amp% Agility.",
+                  "desc_loc": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font>. Morphling gains %one_percent_tooltip%%% Spell Amp per %agi_per_one_spell_amp% Agility.",
                   "lore_loc": "",
                   "notes_loc": [
                     "Break disables the Spell Amp per Agility."

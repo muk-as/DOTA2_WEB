@@ -442,33 +442,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "enchant_armor",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_enchantress_enchant_armor",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "enchant_damage",
                   "values_float": [
                     0,
-                    25,
-                    50,
-                    75
+                    20,
+                    40,
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "CREEP ATTACK DAMAGE BONUS:",
@@ -531,6 +510,27 @@
                   "values_scepter": [
                     1
                   ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_armor",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_enchantress_enchant_armor",
+                      "value": 5,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -839,7 +839,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_enchantress_2",
-                      "value": 12,
+                      "value": 9,
                       "operation": 0
                     }
                   ],
@@ -962,11 +962,28 @@
                   "facet_bonus": {
                     "name": "enchantress_overprotective_wisps",
                     "values": [
-                      4
+                      3
                     ],
                     "operation": 5
                   },
                   "required_facet": "enchantress_overprotective_wisps"
+                },
+                {
+                  "name": "total_max_heal",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "TOTAL MAX HEAL:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastPoint",
@@ -1284,7 +1301,7 @@
                 {
                   "name": "bonus_attack_speed",
                   "values_float": [
-                    100
+                    70
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK SPEED:",
@@ -1512,7 +1529,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_enchantress_3",
-                      "value": 60,
+                      "value": 70,
                       "operation": 2
                     }
                   ],
@@ -1560,7 +1577,7 @@
               "id": 1464,
               "name": "enchantress_rabblerouser",
               "name_loc": "Rabble-Rouser",
-              "desc_loc": "All neutral camps deal more damage to enemy heroes. Damage increase is %base_damage_amp%%% + %damage_amp_per_level%%% per Enchantress's hero level.",
+              "desc_loc": "All neutral camps and Creeps under Enchantress' control deal more damage to enemy heroes.",
               "lore_loc": "",
               "notes_loc": [
                 "Does not affect converted neutrals, Tormentor, or Roshan."
@@ -1608,43 +1625,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "base_damage_amp",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_amp_per_level",
+                  "name": "damage_amp",
                   "values_float": [
                     4
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_increase_tooltip",
-                  "values_float": [
-                    0
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE INCREASE:",
@@ -1677,8 +1660,8 @@
             {
               "id": 1174,
               "name": "special_bonus_unique_enchantress_enchant_armor",
-              "name_loc": "+{s:bonus_enchant_armor} Enchanted Creep Armor",
-              "desc_loc": "",
+              "name_loc": "+{s:bonus_bonus_armor} Armor for Enchantress and her units",
+              "desc_loc": "Requires at least 1 level of Enchant",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1802,7 +1785,7 @@
               "id": 1541,
               "name": "special_bonus_unique_enchantress_enchant_attackspeed",
               "name_loc": "+{s:bonus_bonus_attackspeed} Attack Speed for Enchantress and her units",
-              "desc_loc": "",
+              "desc_loc": "Requires at least 1 level of Enchant",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1923,9 +1906,9 @@
               "item_quality": 0
             },
             {
-              "id": 6379,
-              "name": "special_bonus_unique_enchantress_3",
-              "name_loc": "+{s:bonus_slow_attack_speed} Untouchable Attack Slow",
+              "id": 6086,
+              "name": "special_bonus_unique_enchantress_2",
+              "name_loc": "+{s:bonus_wisp_count} Nature's Attendants Wisps",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1988,7 +1971,7 @@
               "id": 1130,
               "name": "special_bonus_unique_enchantress_enchant_health_damage",
               "name_loc": "+{s:bonus_bonus_health} Health / +{s:bonus_bonus_damage} Damage  for Enchantress and her units",
-              "desc_loc": "",
+              "desc_loc": "Requires at least 1 level of Enchant",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -2109,9 +2092,9 @@
               "item_quality": 0
             },
             {
-              "id": 6086,
-              "name": "special_bonus_unique_enchantress_2",
-              "name_loc": "+{s:bonus_wisp_count} Nature's Attendants Wisps",
+              "id": 6379,
+              "name": "special_bonus_unique_enchantress_3",
+              "name_loc": "+{s:bonus_slow_attack_speed} Untouchable Attack Slow",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

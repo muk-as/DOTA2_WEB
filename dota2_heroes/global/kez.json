@@ -5,7 +5,7 @@
         {
           "id": 145,
           "name": "npc_dota_hero_kez",
-          "order_id": 0,
+          "order_id": 126,
           "name_loc": "Kez",
           "bio_loc": "\"I was born with a price on my head. As I got better at causing trouble, that price went up. Every time Queen Imperia raised the bounty, I knew I must have done something right. I think that's the worst part about being gone so long in Icewrack... I've got to get that price back up to a respectable number.\"",
           "hype_loc": "When it comes to strategy, Kez tends to wing it — he's able to <b>swap on the fly between his katana and sai</b> to <b>slash, dash, swoop, and parry</b> as the needs of the battlefield demand. But when he puts his mind to it, he can account for any eventuality, choosing the right tool to <b>attack, escape or simply outwit his enemies</b> with a little advance planning.",
@@ -30,7 +30,7 @@
               "index": 1
             }
           ],
-          "str_base": 19,
+          "str_base": 20,
           "str_gain": 2.8,
           "agi_base": 27,
           "agi_gain": 3.5,
@@ -52,7 +52,7 @@
           ],
           "damage_min": 50,
           "damage_max": 56,
-          "attack_rate": 1.9,
+          "attack_rate": 1.8,
           "attack_range": 225,
           "projectile_speed": 900,
           "armor": 5.5,
@@ -61,8 +61,8 @@
           "turn_rate": 1,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
-          "health_regen": 3.4,
+          "max_health": 560,
+          "health_regen": 3.5,
           "max_mana": 315,
           "mana_regen": 1.25,
           "abilities": [
@@ -606,7 +606,7 @@
               "desc_loc": "Katana attacks and abilities apply a stacking damage over time to enemies that deals a percentage of the original attack's damage as additional damage over time. <br><br>Kez may activate the ability to impale the target with his attack, preventing them from moving or turning. The target's Katana debuff bursts, causing some of the stacks to deal damage instantly.",
               "lore_loc": "To fight back against the reach of Imperia and her Queensguard, the Kazurai had to become skilled in the ways of attrition.",
               "notes_loc": [],
-              "shard_loc": "Kez lifesteals %lifesteal_pct%%% from the impale.  If the impale comes from behind the target, the target is stunned and the full stack amount bursts.",
+              "shard_loc": "Kez lifesteals %lifesteal_pct%%% from the impale. If the impale comes from behind the target, the target is stunned. Increases max burst stacks.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -671,10 +671,10 @@
                 {
                   "name": "katana_bleed_attack_damage_pct",
                   "values_float": [
-                    5,
-                    7,
+                    3,
+                    6,
                     9,
-                    11
+                    12
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE PER SECOND:",
@@ -719,7 +719,9 @@
                   "is_percentage": true,
                   "heading_loc": "STACKS AS BURST DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    50
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -757,6 +759,25 @@
                   "bonuses": [],
                   "values_shard": [
                     40
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_stacks",
+                  "values_float": [
+                    500
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX BURST STACKS:",
+                  "bonuses": [],
+                  "values_shard": [
+                    500
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -857,7 +878,7 @@
               "id": 1497,
               "name": "kez_switch_weapons",
               "name_loc": "Switch Discipline",
-              "desc_loc": "Kez switches between his Kazurai Katana and Shodo Sai.<br><br>He gains different attack capabilities and abilities based on the weapon equipped. The abilities level up together, and when an ability is used, the associated alternate weapon ability also goes on cooldown.<br><br>Switch Discipline cooldown decreases by %cooldown_reduction_per_level%s per Hero level.",
+              "desc_loc": "Kez switches between his Kazurai Katana and Shodo Sai.<br><br>He gains different attack capabilities and abilities based on the weapon equipped. The abilities level up together, and when an ability is used, the associated alternate weapon ability also goes on cooldown.",
               "lore_loc": "As former followers of the Shodo, the leaders of the Kazurai Order can switch effortlessly between twin disciplines of martial mastery over sai and blade.",
               "notes_loc": [],
               "shard_loc": "",
@@ -885,7 +906,7 @@
                 0
               ],
               "cooldowns": [
-                8
+                7.75
               ],
               "durations": [
                 0
@@ -922,7 +943,7 @@
                 {
                   "name": "katana_base_attack_time",
                   "values_float": [
-                    2
+                    1.8
                   ],
                   "is_percentage": false,
                   "heading_loc": "KATANA BASE ATTACK TIME:",
@@ -939,7 +960,7 @@
                 {
                   "name": "katana_agility_bonus_base_damage",
                   "values_float": [
-                    20
+                    12
                   ],
                   "is_percentage": true,
                   "heading_loc": "KATANA BONUS AGILITY BASE DAMAGE:",
@@ -1045,23 +1066,6 @@
                   "required_facet": "kez_flutter"
                 },
                 {
-                  "name": "cooldown_reduction_per_level",
-                  "values_float": [
-                    0.2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "scepter_cooldown_timer",
                   "values_float": [
                     3
@@ -1081,10 +1085,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    8
+                    7.75
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "COOLDOWN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1421,9 +1425,11 @@
               "id": 1502,
               "name": "kez_falcon_rush",
               "name_loc": "Falcon Rush",
-              "desc_loc": "Kez gains the ability to rush towards enemy targets to deliver echoing secondary attacks.  While in this state, Kez has phased collision, slow resistance, and an attack rate that is less affected by attack speed.",
+              "desc_loc": "Kez gains the ability to rush towards enemy targets to deliver echoing secondary attacks.  While in this state, Kez has phased collision and slow resistance.",
               "lore_loc": "An ancient Shodo technique used to hunt faster aerial foes, stealing the advantage and delivering multiple attacks within a single flap of their prey's panicking wings.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Echo attacks have reduced chance to trigger random effects proportional to their damage percentage."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1492,7 +1498,7 @@
                 {
                   "name": "rush_speed",
                   "values_float": [
-                    1000
+                    850
                   ],
                   "is_percentage": false,
                   "heading_loc": "RUSH SPEED:",
@@ -1507,15 +1513,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "echo_damage",
+                  "name": "base_echo_damage",
                   "values_float": [
+                    35,
+                    40,
                     45,
-                    55,
-                    65,
-                    75
+                    50
                   ],
                   "is_percentage": true,
-                  "heading_loc": "SECONDARY ATTACKS DAMAGE:",
+                  "heading_loc": "ECHO ATTACK DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1573,29 +1579,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "base_attack_rate",
+                  "name": "break_range",
                   "values_float": [
-                    1.3,
-                    1.2,
-                    1.1,
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SAI BASE ATTACK RATE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "katana_attack_rate_penalty",
-                  "values_float": [
-                    0.2
+                    825
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1610,33 +1596,17 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "base_attack_rate_katana_tooltip",
-                  "values_float": [
-                    1.5,
-                    1.4,
-                    1.3,
-                    1.2
-                  ],
+                  "name": "bonus_attack_speed",
+                  "values_float": [],
                   "is_percentage": false,
-                  "heading_loc": "KATANA BASE ATTACK RATE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "attack_speed_factor",
-                  "values_float": [
-                    9
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kez_falcon_rush_attack_speed",
+                      "value": 60,
+                      "operation": 5
+                    }
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "ATTACK SPEED FACTOR:",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1647,26 +1617,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "current_attack_rate_tooltip",
+                  "name": "echo_proc_chance_reduction",
                   "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "CURRENT ATTACK RATE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "break_range",
-                  "values_float": [
-                    825
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1839,27 +1792,6 @@
                   "is_percentage": false,
                   "heading_loc": "SILENCE DURATION:",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "attack_factor",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_kez_talon_toss_attack_factor",
-                      "value": 50,
-                      "operation": 0
-                    }
-                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -2075,7 +2007,7 @@
                 {
                   "name": "stun_duration",
                   "values_float": [
-                    0.5
+                    0.4
                   ],
                   "is_percentage": false,
                   "heading_loc": "MARKED STUN DURATION:",
@@ -2166,10 +2098,27 @@
                 {
                   "name": "parry_stun_duration",
                   "values_float": [
-                    0.5
+                    0.4
                   ],
                   "is_percentage": false,
                   "heading_loc": "PARRY STUN DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "sai_swap_bonus_movement_speed",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2816,10 +2765,10 @@
               "item_quality": 0
             },
             {
-              "id": 1656,
-              "name": "special_bonus_unique_kez_talon_toss_attack_factor",
-              "name_loc": "Add {s:bonus_attack_factor}% of Attack Damage to Talon Toss",
-              "desc_loc": "Always uses Sai attack value.",
+              "id": 1714,
+              "name": "special_bonus_unique_kez_falcon_rush_attack_speed",
+              "name_loc": "+{s:bonus_bonus_attack_speed} Attack Speed During Falcon Rush",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

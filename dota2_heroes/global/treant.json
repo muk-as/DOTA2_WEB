@@ -12,22 +12,13 @@
           "npe_desc_loc": "Calls upon the forest to root his foes",
           "facets": [
             {
-              "color": 1,
-              "title_loc": "Primeval Power",
-              "description_loc": "Treant gains +{s:attack_damage_per_level} base attack damage per hero level.",
-              "name": "treant_primeval_power",
-              "icon": "damage",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
               "color": 2,
-              "title_loc": "Sapling",
-              "description_loc": "Leech Seed can be ground targeted to plant a tree.",
-              "name": "treant_sapling",
+              "title_loc": "Uprooted",
+              "description_loc": "This facet doesn't do anything. Treant Protector is still finding his roots...",
+              "name": "treant_treant",
               "icon": "tree",
               "gradient_id": 2,
-              "index": 1
+              "index": 2
             }
           ],
           "str_base": 25,
@@ -70,12 +61,13 @@
               "id": 338,
               "name": "treant_natures_grasp",
               "name_loc": "Nature's Grasp",
-              "desc_loc": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through. Vines deal 50% more damage if they touch a tree. Does half damage to creeps.",
+              "desc_loc": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through. Does %creep_penalty%%% less damage to creeps.",
               "lore_loc": "The tendrils of Rooftrellen's influence stretch to all corners of the forest.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -121,10 +113,10 @@
                 {
                   "name": "damage_per_second",
                   "values_float": [
-                    30,
-                    40,
+                    35,
                     50,
-                    60
+                    65,
+                    80
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER SECOND:",
@@ -145,12 +137,29 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "creep_penalty",
+                  "values_float": [
+                    35
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "movement_slow",
                   "values_float": [
-                    20,
                     25,
                     30,
-                    35
+                    35,
+                    40
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SLOW:",
@@ -358,17 +367,18 @@
               "id": 5435,
               "name": "treant_leech_seed",
               "name_loc": "Leech Seed",
-              "desc_loc": "Treant plants a life-sapping seed in an enemy unit, draining its health, while simultaneously slowing it. The seed heals friendly units around it. Healing to creeps is reduced by %creep_heal_reduction_pct%%%.",
+              "desc_loc": "Treant's attack plants a life-sapping seed in an enemy unit, dealing additional magic damage. The unit is then bound for a short duration and emits %healing_pulse_count% healing pulses to up to %max_heal_units% nearby allies of Treant Protector based on a flat amount and the damage dealt by the attack.",
               "lore_loc": "Rooftrellen nurtures the beings under his stewardship, sustained by the lifeforce of trespassers into his sacred ground.",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Leech Seed can be ground targeted, planting a tree that heals allies and damages all enemies in the effect radius for the duration of the ability. Damage to creeps is reduced by %creep_damage_reduction_pct%%%. If the tree is cut down, it immediately re-grows again."
+                "Leech Seed can be ground targeted, planting a tree that heals allies and damages all enemies in the effect radius for the duration of the ability. Damage to creeps is reduced by %creep_damage_reduction_pct%%%. If the tree is cut down, it immediately re-grows again.",
+                ""
               ],
               "type": 0,
-              "behavior": "40",
+              "behavior": "135176",
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
@@ -377,22 +387,19 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                400,
-                450,
-                500,
-                550
+                150
               ],
               "cast_points": [
-                0.3
+                0
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                24,
-                20,
-                16,
-                12
+                15,
+                12,
+                9,
+                6
               ],
               "durations": [
                 0
@@ -404,21 +411,21 @@
                 0
               ],
               "mana_costs": [
-                80,
-                90,
-                100,
-                110
+                0
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage_interval",
+                  "name": "duration",
                   "values_float": [
-                    1
+                    0.9,
+                    1.1,
+                    1.3,
+                    1.5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -430,19 +437,36 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "leech_damage",
+                  "name": "flat_heal",
                   "values_float": [
                     15,
-                    30,
-                    45,
-                    60
+                    25,
+                    35,
+                    45
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE/HEAL PER SECOND:",
+                  "heading_loc": "FLAT HEALING:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "leech_heal",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "DAMAGE TO HEALING:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_treant_2",
-                      "value": 45,
+                      "name": "special_bonus_unique_treant_3",
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -456,22 +480,39 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "movement_slow",
+                  "name": "leech_damage",
                   "values_float": [
-                    -8,
-                    -14,
-                    -20,
-                    -26
+                    20,
+                    40,
+                    60,
+                    80
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SLOW:",
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_treant_3",
-                      "value": 18,
-                      "operation": 2
+                      "name": "special_bonus_unique_treant_2",
+                      "value": 80,
+                      "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_heal_units",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -487,7 +528,7 @@
                     650
                   ],
                   "is_percentage": false,
-                  "heading_loc": "RADIUS:",
+                  "heading_loc": "HEAL RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -499,12 +540,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "duration",
+                  "name": "healing_pulse_count",
                   "values_float": [
-                    5
+                    2
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DURATION:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -533,104 +574,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "can_target_ground",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "treant_sapling",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "treant_sapling"
-                },
-                {
-                  "name": "creep_damage_reduction_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "treant_sapling",
-                    "values": [
-                      50
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "treant_sapling"
-                },
-                {
-                  "name": "creep_heal_reduction_pct",
-                  "values_float": [
-                    50
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    400,
-                    450,
-                    500,
-                    550
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0.3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    80,
-                    90,
-                    100,
-                    110
+                    150
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -647,14 +593,20 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    24,
-                    20,
-                    16,
-                    12
+                    15,
+                    12,
+                    9,
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_treant_14",
+                      "value": 3,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -682,12 +634,15 @@
               "id": 5436,
               "name": "treant_living_armor",
               "name_loc": "Living Armor",
-              "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and provides bonus armor.",
+              "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Each time this spell blocks damage, the block amount is decreased. If the damage block is decreased to 0, the buff is removed early.",
               "lore_loc": "The roots and tendrils of the Treant Protectors are far-reaching, stimulating the growth and rejuvenation of all of nature.",
-              "notes_loc": [],
-              "shard_loc": "",
+              "notes_loc": [
+                "Instances of damage less than %damage_block_threshold% are ignored."
+              ],
+              "shard_loc": "Increases the Damage Blocked by Living Armor. Treant now also passively benefits from Living Armor, with the damage block resetting after not taking damage for %passive_reset_cd% seconds.",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -736,43 +691,17 @@
                 {
                   "name": "heal_per_second",
                   "values_float": [
-                    3,
-                    4,
-                    5,
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "HEAL PER SECOND:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_treant_8",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_armor",
-                  "values_float": [
                     4,
                     7,
                     10,
                     13
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS ARMOR:",
+                  "heading_loc": "HEAL PER SECOND:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_treant_13",
-                      "value": 8,
+                      "name": "special_bonus_unique_treant_8",
+                      "value": 4,
                       "operation": 0
                     }
                   ],
@@ -788,13 +717,10 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    18,
-                    22,
-                    26,
-                    30
+                    12
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DURATION:",
+                  "heading_loc": "MAX DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -817,6 +743,85 @@
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_block_base",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE BLOCKED:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_treant_13",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "passive_reset_cd",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    0
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_block_loss",
+                  "values_float": [
+                    35,
+                    30,
+                    25,
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE BLOCK DECREASE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_block_threshold",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -901,7 +906,7 @@
               "id": 5649,
               "name": "treant_eyes_in_the_forest",
               "name_loc": "Eyes In The Forest",
-              "desc_loc": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. If Overgrowth is cast, units within a radius of an enchanted tree will be entangled and damaged. Passively causes all trees to respawn much faster.",
+              "desc_loc": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. The eyes last for %duration% seconds and are invisible, but are destroyed if their host tree is destroyed or if they are attacked directly.",
               "lore_loc": "One can never be too certain who, or what, might need protecting.",
               "notes_loc": [
                 "Being entangled by Overgrowth through enchanted trees from Eyes in the Forest does damage.",
@@ -910,6 +915,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -923,7 +929,7 @@
               "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
-                160
+                350
               ],
               "cast_points": [
                 0.2
@@ -944,7 +950,7 @@
                 0
               ],
               "mana_costs": [
-                100
+                30
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -952,15 +958,13 @@
                 {
                   "name": "vision_aoe",
                   "values_float": [
-                    0
+                    800
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    800
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -969,17 +973,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "overgrowth_aoe",
+                  "name": "hits_to_kill",
                   "values_float": [
-                    0
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    800
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -988,17 +990,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "tree_respawn_seconds",
+                  "name": "duration",
                   "values_float": [
-                    0
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    10
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1009,7 +1009,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    160
+                    350
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1060,7 +1060,7 @@
                 {
                   "name": "AbilityChargeRestoreTime",
                   "values_float": [
-                    40
+                    55
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1077,7 +1077,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    100
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1093,10 +1093,10 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": true,
-              "ability_is_granted_by_shard": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": true,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": true,
               "ability_is_innate": false,
               "item_cost": 0,
               "item_initial_charges": 0,
@@ -1109,15 +1109,17 @@
               "id": 5434,
               "name": "treant_natures_guise",
               "name_loc": "Nature's Guise",
-              "desc_loc": "Provides Treant with Tree Walking whenever he hasn't taken damage for %cooldown_time% seconds. While nearby trees or affected by Nature's Grasp, Treant gains bonus movement speed.",
+              "desc_loc": "Grants bonus movement speed when near trees. Treant Protector additionally has Tree Walking if he has not taken damage for %cooldown_time% seconds. While Tree Walking, Nature's Guise can be activated to grant Treant invisibility until he attacks or is no longer near a tree.",
               "lore_loc": "The Protectors don't often come into vision; their natural state being nestled within their leafy brethren.",
               "notes_loc": [
                 "While affected by Nature's Guise, Treant can move unobstructed through other trees.",
-                "With Aghanim's Shard, invisibility is broken upon attacking. Using abilities and items will not break invisibility."
+                "Vines from Nature's Grasp are considered trees for this ability.",
+                "While Tree Walking, taking damage does not disable the active ability or Tree Walking."
               ],
-              "shard_loc": "Causes Treant to become invisible with Nature's Guise and root enemies upon attacking. Deals damage over time and roots for longer if the attack was near a tree. Total damage equals %shard_damage% + %attack_damage_pct%%% of Treant's Base Attack Damage.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1140,7 +1142,7 @@
                 0
               ],
               "cooldowns": [
-                0
+                50
               ],
               "durations": [
                 0
@@ -1177,7 +1179,7 @@
                 {
                   "name": "grace_time",
                   "values_float": [
-                    0.75
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1200,82 +1202,6 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_root_time",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ROOT TIME:",
-                  "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_by_tree_root_time",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ROOT TIME BY TREE:",
-                  "bonuses": [],
-                  "values_shard": [
-                    2
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_damage",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    100
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "attack_damage_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    75
-                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1308,16 +1234,14 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_cooldown",
+                  "name": "AbilityCooldown",
                   "values_float": [
-                    0
+                    50
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ROOT COOLDOWN:",
+                  "heading_loc": "COOLDOWN:",
                   "bonuses": [],
-                  "values_shard": [
-                    10
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1329,7 +1253,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": true,
@@ -1350,8 +1274,9 @@
                 "Works on Debuff Immune units, but if units gain debuff immunity after the effect starts, they'll break free."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Decreases Cooldown to %AbilityCooldown% seconds. When casting Overgrowth, Treant Protector draws power from the soil, gaining an undispellable buff that greatly increasing his size for %bloom_duration% seconds. While enlarged, he gains phased movement with a fixed speed of %movement_speed%, %strength_bonus%%% bonus Strength, and a splashing attack that deals %splash_pct%%% of his attack damage in a %splash_radius% unit radius.",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1435,12 +1360,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "eyes_radius",
+                  "name": "damage",
                   "values_float": [
-                    800
+                    95
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1452,15 +1377,93 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage",
+                  "name": "bloom_duration",
                   "values_float": [
-                    95
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE PER SECOND:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    16
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "strength_bonus",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    100
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "splash_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    60
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "splash_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    300
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    345
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1513,15 +1516,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_treant_14",
-                      "value": 35,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    30
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1531,7 +1530,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1556,67 +1555,6 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 755,
-              "name": "special_bonus_unique_treant_12",
-              "name_loc": "+{s:bonus_movement_bonus}% Nature's Guise Movement Speed",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
                 "",
                 ""
               ],
@@ -1670,15 +1608,97 @@
               "item_quality": 0
             },
             {
-              "id": 6955,
-              "name": "special_bonus_unique_treant_3",
-              "name_loc": "+{s:bonus_movement_slow}% Leech Seed Movement Slow",
+              "id": 548,
+              "name": "special_bonus_attack_base_damage_50",
+              "name_loc": "+{s:value} Base Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 6955,
+              "name": "special_bonus_unique_treant_3",
+              "name_loc": "+{s:bonus_leech_heal}% Leech Seed Damage to Healing",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1742,6 +1762,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -1796,13 +1817,14 @@
             {
               "id": 756,
               "name": "special_bonus_unique_treant_13",
-              "name_loc": "+{s:bonus_bonus_armor} Living Armor Bonus Armor",
+              "name_loc": "+{s:bonus_damage_block_base} Living Armor Damage Block",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1858,13 +1880,14 @@
             {
               "id": 6531,
               "name": "special_bonus_unique_treant_2",
-              "name_loc": "+{s:bonus_leech_damage} Leech Seed Damage/Heal",
+              "name_loc": "+{s:bonus_leech_damage} Leech Seed Bonus Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1920,13 +1943,14 @@
             {
               "id": 1131,
               "name": "special_bonus_unique_treant_14",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Overgrowth Cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Leech Seed Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1990,6 +2014,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2043,90 +2068,6 @@
             }
           ],
           "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1358,
-                  "name": "treant_innate_attack_damage",
-                  "name_loc": "",
-                  "desc_loc": "",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "4398046511107",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "attack_damage_per_level",
-                      "values_float": [
-                        6
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
             {
               "abilities": []
             }

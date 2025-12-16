@@ -81,7 +81,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "When Venomous Gale impacts enemy heroes, %num_created_wards_tooltip% Plague Wards are created around them based on the current level of Plague Ward."
+                "When Venomous Gale impacts enemy heroes, %num_created_wards_tooltip% Plague Wards that have %ward_hp_dmg_pct%%% health and damage are created around them based on the current level of Plague Ward."
               ],
               "type": 0,
               "behavior": "48",
@@ -291,6 +291,25 @@
                       2
                     ],
                     "operation": 0
+                  },
+                  "required_facet": "venomancer_plague_carrier"
+                },
+                {
+                  "name": "ward_hp_dmg_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "venomancer_plague_carrier",
+                    "values": [
+                      75
+                    ],
+                    "operation": 5
                   },
                   "required_facet": "venomancer_plague_carrier"
                 },
@@ -877,7 +896,7 @@
                 {
                   "name": "bonus_dmg_per_debuff_pct",
                   "values_float": [
-                    10
+                    8
                   ],
                   "is_percentage": true,
                   "heading_loc": "BASE DAMAGE PER DEBUFF:",

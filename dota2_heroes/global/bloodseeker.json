@@ -75,8 +75,8 @@
               "notes_loc": [
                 "Damage dealt to Bloodseeker or allies is non-lethal and can never kill a hero."
               ],
-              "shard_loc": "",
-              "scepter_loc": "Bloodseeker's Bloodrage attacks now deal %max_health_dmg_pct%%% of the target's max health as <font color=\"#d8ae53\">Pure</font> damage.",
+              "shard_loc": "Bloodseeker's Bloodrage attacks now deal %max_health_dmg_pct%%% of the target's max health as <font color=\"#d8ae53\">Pure</font> damage.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
@@ -148,7 +148,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK SPEED:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bloodseeker_5",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -168,13 +174,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "SPELL AMPLIFICATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_bloodseeker_6",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -234,10 +234,10 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    3
+                  "values_shard": [
+                    2
                   ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -274,13 +274,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "BASE DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_bloodseeker_6",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -372,8 +366,8 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
-              "ability_has_shard": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -469,7 +463,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SILENCE DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bloodseeker_7",
+                      "value": 2.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -501,44 +501,6 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "heal",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "strong_dispel_count",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      3
-                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -983,13 +945,13 @@
               "id": 1203,
               "name": "bloodseeker_sanguivore",
               "name_loc": "Sanguivore",
-              "desc_loc": "Bloodseeker restores some life when he kills a unit, equal to %heal_hp_pct_per_level%%% of the units max health per Bloodseeker's Level plus a base of %base_heal%.<br><br>Restores for half values if an ally kills a nearby enemy hero.",
+              "desc_loc": "Bloodseeker restores some life when he kills a unit, equal to %base_heal% health plus a percentage of the units max health.<br><br>Restores for half values if an ally kills a nearby enemy hero.",
               "lore_loc": "",
               "notes_loc": [
                 "Creeps lifesteal is reduced by %creep_lifesteal_reduction_pct%%%."
               ],
-              "shard_loc": "Passively turns all Bloodseeker's overheal from his own abilities into an all damage barrier up to %max_shield_pct%%% of Bloodseeker's Max Health. Barrier amount decays by %barrier_decay_pct%%% per second",
-              "scepter_loc": "Bloodseeker heals for %pure_damage_lifesteal_pct%%% of the <font color=\"#d8ae53\">Pure</font> damage he deals.",
+              "shard_loc": "",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
@@ -1034,7 +996,7 @@
                 {
                   "name": "base_heal",
                   "values_float": [
-                    25
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1049,12 +1011,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "heal_hp_pct_per_level",
+                  "name": "heal_hp_pct",
                   "values_float": [
                     1.5
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "MAX HEALTH HEAL:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1100,33 +1062,18 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "max_hp_percent_heal_tooltip",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAX HP HEAL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "barrier_decay_pct",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1.5
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bloodseeker_overheal_barrier",
+                      "value": 1.5,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1137,15 +1084,17 @@
                 },
                 {
                   "name": "max_shield_pct",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    50
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bloodseeker_overheal_barrier",
+                      "value": 35,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1156,16 +1105,18 @@
                 },
                 {
                   "name": "pure_damage_lifesteal_pct",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    35
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bloodseeker_pure_damage_lifesteal",
+                      "value": 25,
+                      "operation": 5
+                    }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1192,8 +1143,8 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
-              "ability_has_shard": true,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": true,
@@ -1212,7 +1163,7 @@
               "lore_loc": "When the Bloodseeker hunts you, injuries become fatalities.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases initial damage and grants %AbilityCharges% Rupture Charges.",
               "facets_loc": [
                 "Ruptured units are pushed when attacked by Bloodseeker.",
                 "",
@@ -1303,15 +1254,11 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "HEALTH DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_bloodseeker_7",
-                      "value": 8,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    3
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1416,18 +1363,16 @@
                 },
                 {
                   "name": "AbilityCharges",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_bloodseeker_rupture_charges",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    2
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1437,18 +1382,18 @@
                 },
                 {
                   "name": "AbilityChargeRestoreTime",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_bloodseeker_rupture_charges",
-                      "value": 65,
-                      "operation": 5
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    75,
+                    70,
+                    65
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1484,15 +1429,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_bloodseeker_rupture_charges",
-                      "value": 0.25,
-                      "operation": 5
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    0.25
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1502,7 +1443,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1598,9 +1539,9 @@
               "item_quality": 0
             },
             {
-              "id": 818,
-              "name": "special_bonus_unique_bloodseeker_6",
-              "name_loc": "+{s:bonus_spell_amp}% Bloodrage Spell Amplification",
+              "id": 482,
+              "name": "special_bonus_unique_bloodseeker_5",
+              "name_loc": "+{s:bonus_attack_speed} Bloodrage Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1609,7 +1550,7 @@
               "facets_loc": [
                 "",
                 "",
-                "+{s:bonus_base_damage_amp}% Bloodrage Base Damage Amp"
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -1661,9 +1602,9 @@
               "item_quality": 0
             },
             {
-              "id": 819,
-              "name": "special_bonus_unique_bloodseeker_7",
-              "name_loc": "+{s:bonus_hp_pct}% Rupture Initial Damage",
+              "id": 6230,
+              "name": "special_bonus_unique_bloodseeker",
+              "name_loc": "-{s:bonus_damage_pct}% Bloodrage Max Health DPS For Allies",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1850,9 +1791,9 @@
               "item_quality": 0
             },
             {
-              "id": 6230,
-              "name": "special_bonus_unique_bloodseeker",
-              "name_loc": "-{s:bonus_damage_pct}% Bloodrage Max Health DPS For Allies",
+              "id": 5962,
+              "name": "special_bonus_agility_20",
+              "name_loc": "+{s:value} Agility",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1898,7 +1839,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1913,9 +1872,9 @@
               "item_quality": 0
             },
             {
-              "id": 905,
-              "name": "special_bonus_unique_bloodseeker_rupture_charges",
-              "name_loc": "{s:bonus_AbilityCharges} Rupture Charges",
+              "id": 819,
+              "name": "special_bonus_unique_bloodseeker_7",
+              "name_loc": "+{s:bonus_silence_duration}s Blood Rite Silence Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

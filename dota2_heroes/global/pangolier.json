@@ -12,22 +12,13 @@
           "npe_desc_loc": "Dashes and rolls in to disrupt enemy movements",
           "facets": [
             {
-              "color": 0,
-              "title_loc": "Double Jump",
-              "description_loc": "Pangolier can double jump with Shield Crash dealing more damage and gaining more barrier.",
-              "name": "pangolier_double_jump",
-              "icon": "double_bounce",
+              "color": 3,
+              "title_loc": "Dangerous Liaisons",
+              "description_loc": "This facet doesn't do anything. Pangolier is still recovering from a heroic exploit...",
+              "name": "pangolier_pangolier",
+              "icon": "cooldown",
               "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Thunderbolt",
-              "description_loc": "Rolling Thunder movement and turn speed increased, but duration is decreased.",
-              "name": "pangolier_thunderbolt",
-              "icon": "speed",
-              "gradient_id": 1,
-              "index": 1
+              "index": 2
             }
           ],
           "str_base": 19,
@@ -70,7 +61,7 @@
               "id": 6344,
               "name": "pangolier_swashbuckle",
               "name_loc": "Swashbuckle",
-              "desc_loc": "Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
+              "desc_loc": "Pangolier dashes along the target line, then slashes and briefly slows all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
               "lore_loc": "The Pangolier's blade is even nimbler than his tongue.",
               "notes_loc": [
                 "Casting Swashbuckle during Rolling Thunder ends Rolling Thunder."
@@ -78,6 +69,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -103,10 +95,10 @@
                 0
               ],
               "cooldowns": [
-                21,
-                18,
-                15,
-                12
+                20,
+                17,
+                14,
+                11
               ],
               "durations": [
                 0
@@ -197,7 +189,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_pangolier_3",
-                      "value": 15,
+                      "value": 20,
                       "operation": 0
                     }
                   ],
@@ -313,6 +305,57 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "slow_duration",
+                  "values_float": [
+                    0.4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SLOW DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "slow_percent",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SLOW:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_penalty",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     400,
@@ -372,17 +415,17 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    21,
-                    18,
-                    15,
-                    12
+                    20,
+                    17,
+                    14,
+                    11
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_pangolier_4",
-                      "value": 4,
+                      "value": 2,
                       "operation": 2
                     }
                   ],
@@ -413,13 +456,14 @@
               "id": 6461,
               "name": "pangolier_shield_crash",
               "name_loc": "Shield Crash",
-              "desc_loc": "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging and slowing all enemies in a radius. For each enemy hero hit, he gains an all damage shield for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.\n\n Shield Crash cooldown during Rolling Thunder is decreased.",
+              "desc_loc": "Pangolier jumps in the air and slams back to the ground in front of his current position damaging all enemies in a radius. Pangolier gains an all damage barrier for a short time if Shield Crash hits an enemy hero.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
               "lore_loc": "Only in the midst of his enemies does the Pangolier truly thrive.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Causes Shield Crash to cast a 2-attack Swashbuckle every 90 degrees around your hero.",
+              "scepter_loc": "Causes Shield Crash to cast a 2-attack Swashbuckle every 90 degrees around your hero that deals %scepter_damage_outgoing_tooltip%%% damage.",
               "facets_loc": [
                 "Pangolier can cast Shield Crash a second time mid-flight, dealing more damage and gaining more barrier. Longer flight time results in more damage and barrier increases.",
+                "",
                 ""
               ],
               "type": 0,
@@ -444,10 +488,10 @@
                 0
               ],
               "cooldowns": [
-                18,
                 16,
-                14,
-                12
+                13,
+                10,
+                7
               ],
               "durations": [
                 0
@@ -459,10 +503,7 @@
                 0
               ],
               "mana_costs": [
-                70,
-                80,
-                90,
-                100
+                75
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -470,20 +511,14 @@
                 {
                   "name": "damage",
                   "values_float": [
-                    70,
-                    130,
-                    190,
-                    250
+                    50,
+                    100,
+                    150,
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_pangolier_shield_crash_radius",
-                      "value": 125,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -496,17 +531,17 @@
                 {
                   "name": "hero_shield",
                   "values_float": [
-                    50,
-                    100,
-                    150,
-                    200
+                    60,
+                    120,
+                    180,
+                    240
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BARRIER PER HERO:",
+                  "heading_loc": "BARRIER:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-                      "value": 90,
+                      "value": 125,
                       "operation": 0
                     }
                   ],
@@ -522,7 +557,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    10
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "BARRIER DURATION:",
@@ -543,13 +578,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_pangolier_shield_crash_radius",
-                      "value": 125,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -630,25 +659,6 @@
                     "name": "pangolier_double_jump",
                     "values": [
                       30
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "pangolier_double_jump"
-                },
-                {
-                  "name": "max_barrier_increase_pct_tooltip",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAX BARRIER INCREASE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "pangolier_double_jump",
-                    "values": [
-                      40
                     ],
                     "operation": 5
                   },
@@ -740,114 +750,18 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "slow",
+                  "name": "scepter_damage_outgoing_tooltip",
                   "values_float": [
-                    20,
-                    25,
-                    30,
-                    35
+                    75
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "SLOW:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "slow_duration",
-                  "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "parry_swashbuckles",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "parry_chance",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "parry_cooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "parry_damage_threshold",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      25
-                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -855,10 +769,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    70,
-                    80,
-                    90,
-                    100
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -875,14 +786,20 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    18,
                     16,
-                    14,
-                    12
+                    13,
+                    10,
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_pangolier_shield_crash_cooldown",
+                      "value": 1.5,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -916,6 +833,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1062,6 +980,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 ""
               ],
@@ -1410,17 +1329,19 @@
               "id": 6343,
               "name": "pangolier_gyroshell",
               "name_loc": "Rolling Thunder",
-              "desc_loc": "Pangolier curls into a debuff immune ball with %magic_resistance%%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage proportional to his attack damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\n During Rolling Thunder, Shield Crash cooldown is reduced.\n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Pangolier curls into a debuff immune ball with %magic_resistance%%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage proportional to his attack damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
               "notes_loc": [
                 "Enemies can be stunned multiple times per use, but cannot be affected a subsequent time until the previous stun duration ends.",
-                "If Pangolier is disabled while rolling, he will continue to stun and knock enemies that come within range."
+                "If Pangolier is disabled while rolling, he will continue to stun and knock enemies that come within range.",
+                "It takes Pangolier %move_speed_ramp_up_time%s to reach full roll speed."
               ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Rolling Thunder movement and turn speed increased, but duration is decreased."
+                "Rolling Thunder movement and turn speed increased, but duration is decreased.",
+                ""
               ],
               "type": 1,
               "behavior": "134742020",
@@ -1527,6 +1448,23 @@
                     "values": [
                       115
                     ],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "move_speed_ramp_up_time",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1659,7 +1597,9 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    10
+                    9,
+                    10,
+                    11
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1688,25 +1628,6 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shield_crash_cooldown",
-                  "values_float": [
-                    9,
-                    6,
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SHIELD CRASH COOLDOWN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1842,6 +1763,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -1941,6 +1863,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2003,253 +1926,6 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 9060,
-              "name": "special_bonus_unique_pangolier_3",
-              "name_loc": "+{s:bonus_attack_damage}% Attack Damage as Swashbuckle Damage",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 1053,
-              "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-              "name_loc": "+{s:bonus_hero_shield} Shield Crash Barrier Per Hero",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 9135,
-              "name": "special_bonus_unique_pangolier_6",
-              "name_loc": "+{s:bonus_duration}s Rolling Thunder Duration",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 1196,
-              "name": "special_bonus_unique_pangolier_shield_crash_radius",
-              "name_loc": "+{s:bonus_radius} Shield Crash Radius and Damage",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
                 "",
                 ""
               ],
@@ -2313,6 +1989,259 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1053,
+              "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
+              "name_loc": "+{s:bonus_hero_shield} Shield Crash Barrier",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 9135,
+              "name": "special_bonus_unique_pangolier_6",
+              "name_loc": "+{s:bonus_duration}s Rolling Thunder Duration",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1694,
+              "name": "special_bonus_unique_pangolier_shield_crash_cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Shield Crash Cooldown",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 9060,
+              "name": "special_bonus_unique_pangolier_3",
+              "name_loc": "+{s:bonus_attack_damage}% Attack Damage as Swashbuckle Damage",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2375,6 +2304,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
+                "",
                 ""
               ],
               "type": 2,
@@ -2428,9 +2358,6 @@
             }
           ],
           "facet_abilities": [
-            {
-              "abilities": []
-            },
             {
               "abilities": []
             }

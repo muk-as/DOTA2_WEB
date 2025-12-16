@@ -12,28 +12,19 @@
           "npe_desc_loc": "Creates illusions of himself to trick or attack foes",
           "facets": [
             {
-              "color": 3,
-              "title_loc": "Divergence",
-              "description_loc": "Juxtapose Illusions spawn on random nearby units and deal more damage but can't be controlled.",
-              "name": "phantom_lancer_divergence",
-              "icon": "summons",
-              "gradient_id": 2,
-              "index": 1
-            },
-            {
               "color": 1,
-              "title_loc": "Lancelot",
-              "description_loc": "Spirit Lances from Phantom Lancer's illusions deal {s:bonus_illusion_lance_damage_pct}% Lance Damage.",
-              "name": "phantom_lancer_lancelot",
+              "title_loc": "Fractured",
+              "description_loc": "This facet doesn't do anything. Azwraith is out spear fishing...",
+              "name": "phantom_lancer_lancer",
               "icon": "phantom_lance",
-              "gradient_id": 1,
-              "index": 2
+              "gradient_id": 2,
+              "index": 3
             }
           ],
           "str_base": 21,
           "str_gain": 2.2,
           "agi_base": 26,
-          "agi_gain": 2.8,
+          "agi_gain": 3.4,
           "int_base": 21,
           "int_gain": 1.8,
           "primary_attr": 1,
@@ -80,7 +71,8 @@
               "facets_loc": [
                 "",
                 "",
-                "Spirit Lances from Phantom Lancer's illusions deal %illusion_lance_damage_pct%%% Lance Damage."
+                "Spirit Lances from Phantom Lancer's illusions deal %illusion_lance_damage_pct%%% Lance Damage.",
+                ""
               ],
               "type": 0,
               "behavior": "8",
@@ -137,7 +129,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "LANCE DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_lance_damage",
+                      "value": 100,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -234,13 +232,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -257,13 +249,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -383,22 +369,24 @@
                 },
                 {
                   "name": "illusion_lance_damage_pct",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_illusion_lances",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "phantom_lancer_lancelot",
-                    "values": [
-                      25
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "phantom_lancer_lancelot"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -509,6 +497,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "Spawns an additional illusion per %hp_missing_per_extra_illusion_pct%%% of health that Phantom Lancer is missing.",
+                "",
                 "",
                 ""
               ],
@@ -730,7 +719,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_doppelwalk_cast_range",
+                      "value": 125,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -818,7 +813,7 @@
               "id": 1221,
               "name": "phantom_lancer_phantom_edge",
               "name_loc": "Phantom Rush",
-              "desc_loc": "When targeting an enemy for an attack, Phantom Lancer quickly charges into range, gaining a temporary agility boost. Phantom Lancer's illusions also have this ability.",
+              "desc_loc": "When targeting an enemy for an attack, Phantom Lancer quickly charges into range, gaining bonus movement speed and evasion. Phantom Lancer's illusions also have this ability.",
               "lore_loc": "Azwraith knows that on the field of battle, speed can mean everything.",
               "notes_loc": [
                 "If the attack order is cancelled, the movement speed bonus is lost.",
@@ -829,6 +824,7 @@
               "facets_loc": [
                 "",
                 "",
+                "",
                 ""
               ],
               "type": 0,
@@ -836,7 +832,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
+              "damage": 1,
               "immunity": 0,
               "dispellable": 2,
               "max_level": 4,
@@ -850,10 +846,10 @@
                 0
               ],
               "cooldowns": [
-                13,
-                10,
+                15,
+                11,
                 7,
-                4
+                3
               ],
               "durations": [
                 0
@@ -927,55 +923,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_agility",
-                  "values_float": [
-                    10,
-                    20,
-                    30,
-                    40
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS AGILITY:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_phantom_rush_agility",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "agility_duration",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS AGILITY DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_2",
-                      "value": 2.5,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "illusion_spawn_radius",
                   "values_float": [
                     0
@@ -1014,12 +961,32 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "evasion",
+                  "values_float": [
+                    20,
+                    30,
+                    40,
+                    50
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "EVASION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    13,
-                    10,
+                    15,
+                    11,
                     7,
-                    4
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1051,12 +1018,13 @@
               "id": 1449,
               "name": "phantom_lancer_illusory_armaments",
               "name_loc": "Illusory Armaments",
-              "desc_loc": "Items, abilities, and auras that grant bonus damage instead grant base damage.",
+              "desc_loc": "Whenever an illusion of Phantom Lancer is created, its outgoing damage cannot go below a fixed value for %duration% seconds.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1098,19 +1066,13 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_to_base",
+                  "name": "outgoing_floor",
                   "values_float": [
-                    100
+                    18
                   ],
                   "is_percentage": true,
-                  "heading_loc": "BONUS TO BASE DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                      "value": 20,
-                      "operation": 0
-                    }
-                  ],
+                  "heading_loc": "MIN DAMAGE:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1121,16 +1083,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_to_base_illusions",
+                  "name": "duration",
                   "values_float": [
-                    70
+                    3
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "BONUS TO BASE DAMAGE (ILLUSIONS):",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                      "value": 20,
+                      "name": "special_bonus_unique_phantom_lancer_illusory_armaments_duration",
+                      "value": 2,
                       "operation": 0
                     }
                   ],
@@ -1169,6 +1131,7 @@
               "facets_loc": [
                 "",
                 "Juxtapose Illusions spawn on random nearby units and deal more damage but can't be controlled.",
+                "",
                 ""
               ],
               "type": 1,
@@ -1252,7 +1215,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION TRIGGER CHANCE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_juxtapose_illusio_proc_chance",
+                      "value": 3,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1280,21 +1249,30 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "illusion_damage_out_pct",
+                  "name": "illusion_from_illusion_duration",
                   "values_float": [
-                    -85,
-                    -83,
-                    -81
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_6",
-                      "value": 6,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "illusion_damage_out_pct",
+                  "values_float": [
+                    -85
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1309,19 +1287,11 @@
                 {
                   "name": "tooltip_illusion_damage",
                   "values_float": [
-                    15,
-                    17,
-                    19
+                    15
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_phantom_lancer_6",
-                      "value": 6,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1340,7 +1310,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_juxtapose_damage_in",
+                      "value": 70,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1357,24 +1333,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "ILLUSION DAMAGE TAKEN:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "illusion_from_illusion_duration",
-                  "values_float": [
-                    4
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_juxtapose_damage_in",
+                      "value": 70,
+                      "operation": 2
+                    }
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1541,68 +1506,6 @@
               "facets_loc": [
                 "",
                 "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 1180,
-              "name": "special_bonus_unique_phantom_lancer_phantom_rush_agility",
-              "name_loc": "+{s:bonus_bonus_agility} Phantom Rush Agility",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
                 "",
                 ""
               ],
@@ -1656,15 +1559,16 @@
               "item_quality": 0
             },
             {
-              "id": 6400,
-              "name": "special_bonus_unique_phantom_lancer_2",
-              "name_loc": "+{s:bonus_agility_duration}s Phantom Rush Bonus Agility Duration",
+              "id": 1695,
+              "name": "special_bonus_unique_phantom_lancer_juxtapose_illusio_proc_chance",
+              "name_loc": "+{s:bonus_illusion_proc_chance_pct}% Juxtapose Illusion Trigger Chance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1719,15 +1623,16 @@
               "item_quality": 0
             },
             {
-              "id": 563,
-              "name": "special_bonus_unique_phantom_lancer_5",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Spirit Lance Cooldown",
-              "desc_loc": "",
+              "id": 1696,
+              "name": "special_bonus_unique_phantom_lancer_illusion_lances",
+              "name_loc": "{s:bonus_illusion_lance_damage_pct}% Illusion Spirit Lance Damage",
+              "desc_loc": "Spirit Lances from illusions hit for a percentage of the normal damage amount",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1782,15 +1687,16 @@
               "item_quality": 0
             },
             {
-              "id": 1631,
-              "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
-              "name_loc": "+{s:bonus_tooltip_illusion_damage}% Spirit Lance Illusion Damage",
+              "id": 1697,
+              "name": "special_bonus_unique_phantom_lancer_doppelwalk_cast_range",
+              "name_loc": "+{s:bonus_AbilityCastRange} Doppelganger Cast Range",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1845,15 +1751,80 @@
               "item_quality": 0
             },
             {
-              "id": 564,
-              "name": "special_bonus_unique_phantom_lancer_6",
-              "name_loc": "+{s:bonus_tooltip_illusion_damage}% Juxtapose Damage",
+              "id": 1056,
+              "name": "special_bonus_unique_phantom_lancer_lance_damage",
+              "name_loc": "+{s:bonus_lance_damage} Spirit Lance Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1698,
+              "name": "special_bonus_unique_phantom_lancer_juxtapose_damage_in",
+              "name_loc": "-{s:bonus_illusion_damage_in_pct}% Juxtapose Illusion Damage Taken",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1910,13 +1881,14 @@
             {
               "id": 6850,
               "name": "special_bonus_unique_phantom_lancer_4",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Doppelganger CD",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Doppelganger Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -1971,15 +1943,16 @@
               "item_quality": 0
             },
             {
-              "id": 1450,
-              "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-              "name_loc": "+{s:bonus_bonus_to_base}% Illusory Armaments Damage",
+              "id": 1699,
+              "name": "special_bonus_unique_phantom_lancer_illusory_armaments_duration",
+              "name_loc": "+{s:bonus_duration}s Illusory Armaments Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
+                "",
                 "",
                 "",
                 ""
@@ -2035,9 +2008,6 @@
             }
           ],
           "facet_abilities": [
-            {
-              "abilities": []
-            },
             {
               "abilities": []
             }

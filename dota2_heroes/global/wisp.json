@@ -30,11 +30,11 @@
               "index": 1
             }
           ],
-          "str_base": 17,
+          "str_base": 19,
           "str_gain": 3,
           "agi_base": 14,
           "agi_gain": 1.6,
-          "int_base": 23,
+          "int_base": 21,
           "int_gain": 1.7,
           "primary_attr": 3,
           "complexity": 3,
@@ -61,10 +61,10 @@
           "turn_rate": 0.7,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 494,
-          "health_regen": 1.95,
-          "max_mana": 351,
-          "mana_regen": 1.15,
+          "max_health": 538,
+          "health_regen": 2.15,
+          "max_mana": 327,
+          "mana_regen": 1.0500001,
           "abilities": [
             {
               "id": 5485,
@@ -479,16 +479,10 @@
                 0
               ],
               "cooldowns": [
-                22,
-                21,
-                20,
-                19
+                15
               ],
               "durations": [
-                19,
-                19,
-                19,
-                19
+                15
               ],
               "damages": [
                 0,
@@ -497,10 +491,10 @@
                 0
               ],
               "mana_costs": [
+                90,
                 100,
                 110,
-                120,
-                130
+                120
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -515,7 +509,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "CREEP DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_wisp",
+                      "value": 50,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -538,8 +538,8 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_wisp",
-                      "value": 60,
-                      "operation": 0
+                      "value": 50,
+                      "operation": 3
                     }
                   ],
                   "values_shard": [],
@@ -673,7 +673,7 @@
                 {
                   "name": "spirit_duration",
                   "values_float": [
-                    19
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -745,7 +745,7 @@
                 {
                   "name": "AbilityDuration",
                   "values_float": [
-                    19
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -762,10 +762,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
+                    90,
                     100,
                     110,
-                    120,
-                    130
+                    120
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -782,10 +782,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    22,
-                    21,
-                    20,
-                    19
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1292,7 +1289,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "CAST TIME:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_wisp_relocate_delay",
+                      "value": 1.5,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1379,7 +1382,7 @@
               "id": 1626,
               "name": "wisp_essence_conduction",
               "name_loc": "Wellspring",
-              "desc_loc": "Io regenerates from consumables %consume_speed%x faster.",
+              "desc_loc": "Io regenerates from consumables and certain items %consume_speed%x faster.",
               "lore_loc": "",
               "notes_loc": [
                 "Total amount of restored health or mana remains the same.\n",
@@ -1523,9 +1526,9 @@
               "item_quality": 0
             },
             {
-              "id": 7071,
-              "name": "special_bonus_unique_wisp_8",
-              "name_loc": "+{s:bonus_tethered_unit_damage} Attack Damage to Tethered Units",
+              "id": 6115,
+              "name": "special_bonus_strength_7",
+              "name_loc": "+{s:value} Strength",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1570,7 +1573,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    7
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1649,7 +1670,7 @@
             {
               "id": 6265,
               "name": "special_bonus_unique_wisp",
-              "name_loc": "+{s:bonus_hero_damage} Spirits Hero Damage",
+              "name_loc": "+{s:bonus_hero_damage}% Spirits Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1833,9 +1854,9 @@
               "item_quality": 0
             },
             {
-              "id": 7072,
-              "name": "special_bonus_unique_wisp_9",
-              "name_loc": "Unslowable during Overcharge",
+              "id": 1711,
+              "name": "special_bonus_unique_wisp_relocate_delay",
+              "name_loc": "-{s:bonus_cast_delay}s Relocate Cast Delay",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
