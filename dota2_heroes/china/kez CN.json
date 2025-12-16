@@ -661,10 +661,10 @@
             {
               "name": "katana_bleed_attack_damage_pct",
               "values_float": [
-                5,
-                7,
+                3,
+                6,
                 9,
-                11
+                12
               ],
               "is_percentage": true,
               "heading_loc": "每秒伤害：",
@@ -709,7 +709,9 @@
               "is_percentage": true,
               "heading_loc": "叠加数值爆发伤害：",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -747,6 +749,25 @@
               "bonuses": [],
               "values_shard": [
                 40
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_stacks",
+              "values_float": [
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "最高爆发叠加数值：",
+              "bonuses": [],
+              "values_shard": [
+                500
               ],
               "values_scepter": [],
               "facet_bonus": {
@@ -920,7 +941,7 @@
             {
               "name": "katana_base_attack_time",
               "values_float": [
-                2
+                1.8
               ],
               "is_percentage": false,
               "heading_loc": "长刀基础攻击间隔：",
@@ -937,7 +958,7 @@
             {
               "name": "katana_agility_bonus_base_damage",
               "values_float": [
-                20
+                12
               ],
               "is_percentage": true,
               "heading_loc": "长刀敏捷额外提供基础攻击力：",
@@ -1043,23 +1064,6 @@
               "required_facet": "kez_flutter"
             },
             {
-              "name": "cooldown_reduction_per_level",
-              "values_float": [
-                0.2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "scepter_cooldown_timer",
               "values_float": [
                 3
@@ -1079,10 +1083,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                8
+                7.75
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "冷却时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1503,7 +1507,7 @@
             {
               "name": "rush_speed",
               "values_float": [
-                1000
+                850
               ],
               "is_percentage": false,
               "heading_loc": "冲刺速度：",
@@ -1518,15 +1522,15 @@
               "required_facet": ""
             },
             {
-              "name": "echo_damage",
+              "name": "base_echo_damage",
               "values_float": [
+                35,
+                40,
                 45,
-                55,
-                65,
-                75
+                50
               ],
               "is_percentage": true,
-              "heading_loc": "第二次攻击伤害：",
+              "heading_loc": "回声攻击伤害：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1584,29 +1588,9 @@
               "required_facet": ""
             },
             {
-              "name": "base_attack_rate",
+              "name": "break_range",
               "values_float": [
-                1.3,
-                1.2,
-                1.1,
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "双钗基础攻击频率：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "katana_attack_rate_penalty",
-              "values_float": [
-                0.2
+                825
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1621,33 +1605,17 @@
               "required_facet": ""
             },
             {
-              "name": "base_attack_rate_katana_tooltip",
-              "values_float": [
-                1.5,
-                1.4,
-                1.3,
-                1.2
-              ],
+              "name": "bonus_attack_speed",
+              "values_float": [],
               "is_percentage": false,
-              "heading_loc": "长刀基础攻击频率：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_speed_factor",
-              "values_float": [
-                9
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kez_falcon_rush_attack_speed",
+                  "value": 60,
+                  "operation": 5
+                }
               ],
-              "is_percentage": true,
-              "heading_loc": "攻击速度系数：",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1658,26 +1626,9 @@
               "required_facet": ""
             },
             {
-              "name": "current_attack_rate_tooltip",
+              "name": "echo_proc_chance_reduction",
               "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "当前攻击频率：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "break_range",
-              "values_float": [
-                825
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1855,27 +1806,6 @@
               "is_percentage": false,
               "heading_loc": "沉默持续时间：",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_factor",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_kez_talon_toss_attack_factor",
-                  "value": 50,
-                  "operation": 0
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -2096,7 +2026,7 @@
             {
               "name": "stun_duration",
               "values_float": [
-                0.5
+                0.4
               ],
               "is_percentage": false,
               "heading_loc": "标记眩晕时间：",
@@ -2187,10 +2117,27 @@
             {
               "name": "parry_stun_duration",
               "values_float": [
-                0.5
+                0.4
               ],
               "is_percentage": false,
               "heading_loc": "招架眩晕时间：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "sai_swap_bonus_movement_speed",
+              "values_float": [
+                12
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -3037,7 +2984,7 @@
       "crops_img": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/kez.png",
       "top_img": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.png",
       "top_video": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.webm",
-      "update_time": 1764914510,
+      "update_time": 1765839726,
       "facets": [
         {
           "color": 1,
@@ -3173,7 +3120,7 @@
         "id": 1497,
         "name": "kez_switch_weapons",
         "name_loc": "流派变换",
-        "desc_loc": "凯可以在影武长刀和翔影双钗之间变换。<br><br>基于装备的武器，他会获得不同的攻击特性和技能。技能会一起升级，而且使用后，相对的武器技能也会进入冷却。<br><br>英雄每升一级，流派变换的冷却时间减少%cooldown_reduction_per_level%秒。",
+        "desc_loc": "凯可以在影武长刀和翔影双钗之间变换。<br><br>基于装备的武器，他会获得不同的攻击特性和技能。技能会一起升级，而且使用后，相对的武器技能也会进入冷却。",
         "lore_loc": "影武团的领袖，曾经也是翔影教团的追随者，他的武技可以在长刀和双钗这两种流派之间自如地切换。",
         "notes_loc": [],
         "shard_loc": "",
@@ -3201,7 +3148,7 @@
           0
         ],
         "cooldowns": [
-          8
+          7.75
         ],
         "durations": [
           0
@@ -3238,7 +3185,7 @@
           {
             "name": "katana_base_attack_time",
             "values_float": [
-              2
+              1.8
             ],
             "is_percentage": false,
             "heading_loc": "长刀基础攻击间隔：",
@@ -3255,7 +3202,7 @@
           {
             "name": "katana_agility_bonus_base_damage",
             "values_float": [
-              20
+              12
             ],
             "is_percentage": true,
             "heading_loc": "长刀敏捷额外提供基础攻击力：",
@@ -3361,23 +3308,6 @@
             "required_facet": "kez_flutter"
           },
           {
-            "name": "cooldown_reduction_per_level",
-            "values_float": [
-              0.2
-            ],
-            "is_percentage": false,
-            "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
             "name": "scepter_cooldown_timer",
             "values_float": [
               3
@@ -3397,10 +3327,10 @@
           {
             "name": "AbilityCooldown",
             "values_float": [
-              8
+              7.75
             ],
             "is_percentage": false,
-            "heading_loc": "",
+            "heading_loc": "冷却时间：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

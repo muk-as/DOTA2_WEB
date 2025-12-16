@@ -60,7 +60,8 @@
           "facets_loc": [
             "",
             "",
-            "幻影长矛手幻象放出的灵魂之矛会造成%illusion_lance_damage_pct%%%长矛伤害。"
+            "幻影长矛手幻象放出的灵魂之矛会造成%illusion_lance_damage_pct%%%长矛伤害。",
+            ""
           ],
           "type": 0,
           "behavior": "8",
@@ -117,7 +118,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "伤害：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_lance_damage",
+                  "value": 100,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -214,13 +221,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -237,13 +238,7 @@
               ],
               "is_percentage": true,
               "heading_loc": "幻象继承攻击力：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -363,22 +358,24 @@
             },
             {
               "name": "illusion_lance_damage_pct",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_illusion_lances",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "phantom_lancer_lancelot",
-                "values": [
-                  25
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
-              "required_facet": "phantom_lancer_lancelot"
+              "required_facet": ""
             },
             {
               "name": "AbilityCastRange",
@@ -494,6 +491,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "幻影长矛手每缺失%hp_missing_per_extra_illusion_pct%%%生命都会额外产生一个幻象。",
+            "",
             "",
             ""
           ],
@@ -715,7 +713,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_doppelwalk_cast_range",
+                  "value": 125,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -819,6 +823,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -917,55 +922,6 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_agility",
-              "values_float": [
-                10,
-                20,
-                30,
-                40
-              ],
-              "is_percentage": false,
-              "heading_loc": "敏捷加成：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_phantom_rush_agility",
-                  "value": 10,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "agility_duration",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "敏捷加成持续时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_2",
-                  "value": 2.5,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "illusion_spawn_radius",
               "values_float": [
                 0
@@ -1004,12 +960,32 @@
               "required_facet": ""
             },
             {
+              "name": "evasion",
+              "values_float": [
+                20,
+                30,
+                40,
+                50
+              ],
+              "is_percentage": true,
+              "heading_loc": "闪避：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCooldown",
               "values_float": [
-                13,
-                10,
+                15,
+                11,
                 7,
-                4
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1057,6 +1033,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1096,19 +1073,13 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_to_base",
+              "name": "outgoing_floor",
               "values_float": [
-                100
+                18
               ],
               "is_percentage": true,
-              "heading_loc": "额外攻击力转为基础攻击力：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                  "value": 20,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "最低伤害：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1119,16 +1090,16 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_to_base_illusions",
+              "name": "duration",
               "values_float": [
-                70
+                3
               ],
-              "is_percentage": true,
-              "heading_loc": "额外攻击力转为基础（幻象）：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                  "value": 20,
+                  "name": "special_bonus_unique_phantom_lancer_illusory_armaments_duration",
+                  "value": 2,
                   "operation": 0
                 }
               ],
@@ -1172,6 +1143,7 @@
           "facets_loc": [
             "",
             "并列的幻象会在附近随机单位身旁产生，继承更高的攻击力，但是无法控制。",
+            "",
             ""
           ],
           "type": 1,
@@ -1255,7 +1227,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "幻象触发几率：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_juxtapose_illusio_proc_chance",
+                  "value": 3,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1283,21 +1261,30 @@
               "required_facet": ""
             },
             {
-              "name": "illusion_damage_out_pct",
+              "name": "illusion_from_illusion_duration",
               "values_float": [
-                -85,
-                -83,
-                -81
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_6",
-                  "value": 6,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "illusion_damage_out_pct",
+              "values_float": [
+                -85
               ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1312,19 +1299,11 @@
             {
               "name": "tooltip_illusion_damage",
               "values_float": [
-                15,
-                17,
-                19
+                15
               ],
               "is_percentage": true,
               "heading_loc": "幻象继承攻击力：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_6",
-                  "value": 6,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1343,7 +1322,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_juxtapose_damage_in",
+                  "value": 70,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1360,24 +1345,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "幻象承受伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "illusion_from_illusion_duration",
-              "values_float": [
-                4
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phantom_lancer_juxtapose_damage_in",
+                  "value": 70,
+                  "operation": 2
+                }
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -2049,31 +2023,19 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_phantom_lancer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_phantom_lancer/npc_dota_hero_phantom_lancer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_phantom_lancer/npc_dota_hero_phantom_lancer.webm",
-      "update_time": 1761883217,
+      "update_time": 1765843210,
       "facets": [
         {
-          "color": 3,
-          "title_loc": "离散",
-          "description_loc": "并列的幻象会在附近随机单位身旁产生，继承更高的攻击力，但是无法控制。",
-          "name": "phantom_lancer_divergence",
-          "icon": "summons",
-          "gradient_id": 2,
-          "index": 1
-        },
-        {
           "color": 1,
-          "title_loc": "众矛之的",
-          "description_loc": "幻影长矛手幻象放出的灵魂之矛会造成{s:bonus_illusion_lance_damage_pct}%长矛伤害。",
-          "name": "phantom_lancer_lancelot",
+          "title_loc": "支离破碎",
+          "description_loc": "这颗命石没有任何效果。阿兹瑞斯外出用矛捕鱼了…",
+          "name": "phantom_lancer_lancer",
           "icon": "phantom_lance",
-          "gradient_id": 1,
-          "index": 2
+          "gradient_id": 2,
+          "index": 3
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         }
@@ -2084,12 +2046,13 @@
         "id": 1449,
         "name": "phantom_lancer_illusory_armaments",
         "name_loc": "灵幻兵械",
-        "desc_loc": "提供额外攻击力的物品、技能和光环会改为提供基础攻击力。",
+        "desc_loc": "幻影长矛手只要制造出幻象，该幻象的继承攻击力不会低于一定值，持续%duration%秒。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           "",
           ""
@@ -2131,19 +2094,13 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "bonus_to_base",
+            "name": "outgoing_floor",
             "values_float": [
-              100
+              18
             ],
             "is_percentage": true,
-            "heading_loc": "额外攻击力转为基础攻击力：",
-            "bonuses": [
-              {
-                "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                "value": 20,
-                "operation": 0
-              }
-            ],
+            "heading_loc": "最低伤害：",
+            "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
@@ -2154,16 +2111,16 @@
             "required_facet": ""
           },
           {
-            "name": "bonus_to_base_illusions",
+            "name": "duration",
             "values_float": [
-              70
+              3
             ],
-            "is_percentage": true,
-            "heading_loc": "额外攻击力转为基础（幻象）：",
+            "is_percentage": false,
+            "heading_loc": "",
             "bonuses": [
               {
-                "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                "value": 20,
+                "name": "special_bonus_unique_phantom_lancer_illusory_armaments_duration",
+                "value": 2,
                 "operation": 0
               }
             ],
