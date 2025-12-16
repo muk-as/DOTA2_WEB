@@ -15,7 +15,7 @@
       "str_base": 21,
       "str_gain": 2.2,
       "agi_base": 26,
-      "agi_gain": 2.8,
+      "agi_gain": 3.4,
       "int_base": 21,
       "int_gain": 1.8,
       "attack_capability": 1,
@@ -812,7 +812,7 @@
           "id": 1221,
           "name": "phantom_lancer_phantom_edge",
           "name_loc": "幻影冲锋",
-          "desc_loc": "对目标发动攻击后，幻影长矛手将快速向其冲去，获得短暂的敏捷提升。幻影长矛手的幻象也将继承此技能。",
+          "desc_loc": "对目标发动攻击后，幻影长矛手将快速向其冲去，获得移动速度和闪避提升。幻影长矛手的幻象也将继承此技能。",
           "lore_loc": "阿兹瑞斯明白，瞬息万变的战场上，速度就是一切。",
           "notes_loc": [
             "如果冲锋中途取消攻击指令，那么移动速度加成就会消失。",
@@ -831,7 +831,7 @@
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 0,
+          "damage": 1,
           "immunity": 0,
           "dispellable": 2,
           "max_level": 4,
@@ -845,10 +845,10 @@
             0
           ],
           "cooldowns": [
-            13,
-            10,
+            15,
+            11,
             7,
-            4
+            3
           ],
           "durations": [
             0
@@ -1025,7 +1025,7 @@
           "id": 1449,
           "name": "phantom_lancer_illusory_armaments",
           "name_loc": "灵幻兵械",
-          "desc_loc": "提供额外攻击力的物品、技能和光环会改为提供基础攻击力。",
+          "desc_loc": "幻影长矛手只要制造出幻象，该幻象的继承攻击力不会低于一定值，持续%duration%秒。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -1526,68 +1526,6 @@
           "facets_loc": [
             "",
             "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 1180,
-          "name": "special_bonus_unique_phantom_lancer_phantom_rush_agility",
-          "name_loc": "+{s:bonus_bonus_agility} 幻影冲锋敏捷",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
             "",
             ""
           ],
@@ -1641,15 +1579,16 @@
           "item_quality": 0
         },
         {
-          "id": 6400,
-          "name": "special_bonus_unique_phantom_lancer_2",
-          "name_loc": "+{s:bonus_agility_duration}秒 幻影冲锋敏捷加成",
+          "id": 1695,
+          "name": "special_bonus_unique_phantom_lancer_juxtapose_illusio_proc_chance",
+          "name_loc": "+{s:bonus_illusion_proc_chance_pct}% 并列幻象触发几率",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1704,15 +1643,16 @@
           "item_quality": 0
         },
         {
-          "id": 563,
-          "name": "special_bonus_unique_phantom_lancer_5",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 灵魂之矛冷却",
-          "desc_loc": "",
+          "id": 1696,
+          "name": "special_bonus_unique_phantom_lancer_illusion_lances",
+          "name_loc": "{s:bonus_illusion_lance_damage_pct}% 幻象灵魂之矛伤害",
+          "desc_loc": "幻象投出的灵魂之矛会造成平常伤害的一定百分比",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1767,15 +1707,16 @@
           "item_quality": 0
         },
         {
-          "id": 1631,
-          "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
-          "name_loc": "+{s:bonus_tooltip_illusion_damage}% 灵魂之矛幻象攻击力",
+          "id": 1697,
+          "name": "special_bonus_unique_phantom_lancer_doppelwalk_cast_range",
+          "name_loc": "+{s:bonus_AbilityCastRange} 神行百变施法距离",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1830,15 +1771,80 @@
           "item_quality": 0
         },
         {
-          "id": 564,
-          "name": "special_bonus_unique_phantom_lancer_6",
-          "name_loc": "+{s:bonus_tooltip_illusion_damage}% 并列攻击力",
+          "id": 1056,
+          "name": "special_bonus_unique_phantom_lancer_lance_damage",
+          "name_loc": "+{s:bonus_lance_damage} 灵魂之矛伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 1698,
+          "name": "special_bonus_unique_phantom_lancer_juxtapose_damage_in",
+          "name_loc": "-{s:bonus_illusion_damage_in_pct}% 并列幻象承受伤害",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1904,6 +1910,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1956,15 +1963,16 @@
           "item_quality": 0
         },
         {
-          "id": 1450,
-          "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-          "name_loc": "+{s:bonus_bonus_to_base}% 灵幻兵械攻击力",
+          "id": 1699,
+          "name": "special_bonus_unique_phantom_lancer_illusory_armaments_duration",
+          "name_loc": "+{s:bonus_duration}秒 灵幻兵械持续时间",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -2023,7 +2031,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_phantom_lancer.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_phantom_lancer/npc_dota_hero_phantom_lancer.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_phantom_lancer/npc_dota_hero_phantom_lancer.webm",
-      "update_time": 1765843210,
+      "update_time": 1765846811,
       "facets": [
         {
           "color": 1,
@@ -2173,7 +2181,7 @@
         "name_loc": "幽鬼",
         "attack_capability": 1,
         "img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_spectre.png",
-        "primary_attr": 3,
+        "primary_attr": 1,
         "complexity": 2
       }
     }

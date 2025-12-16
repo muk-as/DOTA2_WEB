@@ -62,6 +62,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -281,7 +282,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_slark_6",
-                  "value": 0.5,
+                  "value": 0.75,
                   "operation": 2
                 }
               ],
@@ -328,6 +329,7 @@
           "scepter_loc": "变为充能型技能，并且提升距离。",
           "facets_loc": [
             "突袭在击中敌方英雄时会施加能量转移的叠加次数。",
+            "",
             ""
           ],
           "type": 0,
@@ -543,10 +545,10 @@
             {
               "name": "essence_stacks",
               "values_float": [
-                0,
-                0,
-                0,
-                0
+                1,
+                2,
+                3,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "能量转移叠加层数：",
@@ -554,16 +556,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "slark_leeching_leash",
-                "values": [
-                  1,
-                  2,
-                  3,
-                  4
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
-              "required_facet": "slark_leeching_leash"
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
@@ -625,35 +622,32 @@
           "is_inborn": 0
         },
         {
-          "id": 5496,
-          "name": "slark_essence_shift",
-          "name_loc": "能量转移",
-          "desc_loc": "斯拉克的攻击会偷走敌方英雄的生命能量，每次吸取他们的一点全属性并转化成自身额外的敏捷值。只要敌方英雄带着该效果在斯拉克300范围内阵亡，他将永久窃取%stat_loss%点敏捷。",
-          "lore_loc": "每攻击一次敌人，斯拉克对他们的弱点就多了解一分。",
+          "id": 1693,
+          "name": "slark_saltwater_shiv",
+          "name_loc": "海浪短刀",
+          "desc_loc": "斯拉克用他的海浪短刀划开目标，窃取目标一部分的移动速度、生命恢复和生命回复。这个效果可以叠加。",
+          "lore_loc": "",
           "notes_loc": [
-            "属性值最少为1点。",
-            "斯拉克或受到作用的单位死亡后，阵亡单位因能量转移变化的属性值将回归正常。但是两方的属性值相互独立，并无关联。",
-            "斯拉克无需完成击杀就能永久窃取敏捷，只要敌方英雄身上拥有能量转移状态时在斯拉克的窃取范围内阵亡即可。",
-            "破坏会使技能无法获得临时的叠加效果。依然可以获得永久的叠加效果。",
-            "破坏不会使现有叠加效果提供的加成失效。"
+            "后续使用海浪短刀会刷新所有短刀叠加效果的持续时间。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
+          "behavior": "134352904",
+          "target_team": 2,
+          "target_type": 1,
           "flags": 0,
-          "damage": 0,
-          "immunity": 3,
-          "dispellable": 3,
+          "damage": 1,
+          "immunity": 4,
+          "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            0
+            150
           ],
           "cast_points": [
             0
@@ -662,7 +656,10 @@
             0
           ],
           "cooldowns": [
-            0
+            10,
+            8,
+            6,
+            4
           ],
           "durations": [
             0
@@ -674,41 +671,21 @@
             0
           ],
           "mana_costs": [
-            0
+            20
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "agi_gain",
+              "name": "duration",
               "values_float": [
-                3
+                6,
+                8,
+                10,
+                12
               ],
               "is_percentage": false,
-              "heading_loc": "敏捷获取：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_slark_5",
-                  "value": 1,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "stat_loss",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "全属性丢失：",
+              "heading_loc": "持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -720,22 +697,16 @@
               "required_facet": ""
             },
             {
-              "name": "duration",
+              "name": "health_rest_steal",
               "values_float": [
-                15,
-                35,
-                55,
-                75
+                3,
+                4,
+                5,
+                6
               ],
-              "is_percentage": false,
-              "heading_loc": "持续时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_slark_4",
-                  "value": 35,
-                  "operation": 0
-                }
-              ],
+              "is_percentage": true,
+              "heading_loc": "叠加回复窃取：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -746,12 +717,83 @@
               "required_facet": ""
             },
             {
-              "name": "steal_radius",
+              "name": "regen_steal",
               "values_float": [
-                300
+                3
               ],
               "is_percentage": false,
-              "heading_loc": "窃取范围：",
+              "heading_loc": "叠加恢复窃取：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ms_steal",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "叠加移速窃取：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                150
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                10,
+                8,
+                6,
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -791,6 +833,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -833,7 +876,7 @@
             {
               "name": "duration",
               "values_float": [
-                3
+                2
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
@@ -955,29 +998,34 @@
           "is_inborn": 0
         },
         {
-          "id": 1375,
-          "name": "slark_barracuda",
-          "name_loc": "梭子鱼",
-          "desc_loc": "当斯拉克不处于敌方视野内时，他会获得移动速度加成和生命恢复。",
-          "lore_loc": "",
+          "id": 5496,
+          "name": "slark_essence_shift",
+          "name_loc": "能量转移",
+          "desc_loc": "斯拉克的攻击会偷走敌方英雄的生命能量，每次吸取他们的%stat_loss%点全属性并转化成自身额外%agi_gain%点敏捷值。只要敌方英雄带着该效果在斯拉克300范围内阵亡，他将永久窃取%stat_loss%点敏捷。",
+          "lore_loc": "每攻击一次敌人，斯拉克对他们的弱点就多了解一分。",
           "notes_loc": [
-            "如果斯拉克受到中立生物的攻击，%neutral_disable%秒内将失去被动的移速加成和生命恢复效果。"
+            "属性值最少为1点。",
+            "斯拉克或受到作用的单位死亡后，阵亡单位因能量转移变化的属性值将回归正常。但是两方的属性值相互独立，并无关联。",
+            "斯拉克无需完成击杀就能永久窃取敏捷，只要敌方英雄身上拥有能量转移状态时在斯拉克的窃取范围内阵亡即可。",
+            "破坏会使技能无法获得临时的叠加效果。依然可以获得永久的叠加效果。",
+            "破坏不会使现有叠加效果提供的加成失效。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "斯拉克不在友方英雄附近时被敌人看到后梭子鱼效果还会粘滞一段时间。在梭子鱼效果下斯拉克的攻击会降低目标的护甲。"
+            "",
+            ""
           ],
           "type": 0,
-          "behavior": "66",
+          "behavior": "562949953486915",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
+          "immunity": 3,
+          "dispellable": 3,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -1006,39 +1054,16 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_movement_speed",
+              "name": "agi_gain",
               "values_float": [
-                6,
-                24,
-                36,
-                48
-              ],
-              "is_percentage": true,
-              "heading_loc": "移动速度加成：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_regen",
-              "values_float": [
-                5,
-                70,
-                100,
-                130
+                3
               ],
               "is_percentage": false,
-              "heading_loc": "每秒获得生命：",
+              "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_slark_8",
-                  "value": 50,
+                  "name": "special_bonus_unique_slark_5",
+                  "value": 1,
                   "operation": 0
                 }
               ],
@@ -1052,91 +1077,9 @@
               "required_facet": ""
             },
             {
-              "name": "linger_search_radius",
+              "name": "stat_loss",
               "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "粘滞搜寻范围：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "slark_dark_reef_renegade",
-                "values": [
-                  900
-                ],
-                "operation": 0
-              },
-              "required_facet": "slark_dark_reef_renegade"
-            },
-            {
-              "name": "linger_duration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "粘滞持续时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "slark_dark_reef_renegade",
-                "values": [
-                  2
-                ],
-                "operation": 0
-              },
-              "required_facet": "slark_dark_reef_renegade"
-            },
-            {
-              "name": "corruption_armor",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "护甲降低：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "slark_dark_reef_renegade",
-                "values": [
-                  1,
-                  2,
-                  3,
-                  4
-                ],
-                "operation": 2
-              },
-              "required_facet": "slark_dark_reef_renegade"
-            },
-            {
-              "name": "corruption_duration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "护甲降低持续时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "slark_dark_reef_renegade",
-                "values": [
-                  2
-                ],
-                "operation": 0
-              },
-              "required_facet": "slark_dark_reef_renegade"
-            },
-            {
-              "name": "activation_delay",
-              "values_float": [
-                0.5
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1151,12 +1094,35 @@
               "required_facet": ""
             },
             {
-              "name": "neutral_disable",
+              "name": "duration",
               "values_float": [
-                2
+                15
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_slark_4",
+                  "value": 35,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "steal_radius",
+              "values_float": [
+                300
+              ],
+              "is_percentage": false,
+              "heading_loc": "窃取范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1190,12 +1156,13 @@
           "id": 5497,
           "name": "slark_shadow_dance",
           "name_loc": "暗影之舞",
-          "desc_loc": "斯拉克将自己藏进暗影之云，变成隐身状态，不会被反隐手段发现。攻击、施法、使用物品都不会使斯拉克显形。",
+          "desc_loc": "当斯拉克不处于敌方视野内时，他会被动获得移动速度加成和生命恢复。如果受到来自中立单位的伤害，被动移速和生命恢复加成会在%neutral_disable%秒内失去。<br><br>主动开启后，斯拉克将自己藏进暗影之云，变成隐身状态，不会被反隐手段发现。攻击、施法、使用物品都不会使斯拉克显形，但是敌人可以看见暗影之云。",
           "lore_loc": "秘而不宣的第十三个逃犯是个浑身滑溜的敌人。",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1240,6 +1207,84 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "bonus_movement_speed",
+              "values_float": [
+                24,
+                36,
+                48
+              ],
+              "is_percentage": true,
+              "heading_loc": "移动速度提升：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_regen",
+              "values_float": [
+                60,
+                90,
+                120
+              ],
+              "is_percentage": false,
+              "heading_loc": "每秒获得生命：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_slark_8",
+                  "value": 30,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "activation_delay",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "neutral_disable",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "duration",
               "values_float": [
                 4,
@@ -1251,7 +1296,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_slark_3",
-                  "value": 1.25,
+                  "value": 1.5,
                   "operation": 0
                 }
               ],
@@ -1353,6 +1398,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1414,6 +1460,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1477,6 +1524,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1531,13 +1579,14 @@
         {
           "id": 921,
           "name": "special_bonus_unique_slark_8",
-          "name_loc": "+{s:bonus_bonus_regen} 梭子鱼生命恢复",
+          "name_loc": "+{s:bonus_bonus_regen} 暗影之舞生命恢复",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1601,6 +1650,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1662,6 +1712,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1725,6 +1776,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1787,6 +1839,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1843,31 +1896,19 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_slark.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_slark/npc_dota_hero_slark.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_slark/npc_dota_hero_slark.webm",
-      "update_time": 1761883327,
+      "update_time": 1765846868,
       "facets": [
         {
-          "color": 2,
-          "title_loc": "抽吸突袭",
-          "description_loc": "突袭在击中敌方英雄时会施加能量转移的叠加次数。",
-          "name": "slark_leeching_leash",
-          "icon": "agility",
-          "gradient_id": 2,
-          "index": 0
-        },
-        {
           "color": 3,
-          "title_loc": "暗黑之礁叛徒",
-          "description_loc": "斯拉克不在友方英雄附近时被敌人看到后梭子鱼效果还会粘滞一段时间。在梭子鱼效果下斯拉克的攻击会降低目标的护甲。",
-          "name": "slark_dark_reef_renegade",
-          "icon": "cooldown",
+          "title_loc": "逃犯",
+          "description_loc": "这颗命石没有任何效果。斯拉克仍旧被暗黑之礁的噩梦困扰……",
+          "name": "slark_slark",
+          "icon": "broken_chain",
           "gradient_id": 2,
-          "index": 1
+          "index": 2
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         }
@@ -1875,29 +1916,34 @@
       "cartoon_avatars": null,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_slark.png",
       "new_abilities": {
-        "id": 1375,
-        "name": "slark_barracuda",
-        "name_loc": "梭子鱼",
-        "desc_loc": "当斯拉克不处于敌方视野内时，他会获得移动速度加成和生命恢复。",
-        "lore_loc": "",
+        "id": 5496,
+        "name": "slark_essence_shift",
+        "name_loc": "能量转移",
+        "desc_loc": "斯拉克的攻击会偷走敌方英雄的生命能量，每次吸取他们的%stat_loss%点全属性并转化成自身额外%agi_gain%点敏捷值。只要敌方英雄带着该效果在斯拉克300范围内阵亡，他将永久窃取%stat_loss%点敏捷。",
+        "lore_loc": "每攻击一次敌人，斯拉克对他们的弱点就多了解一分。",
         "notes_loc": [
-          "如果斯拉克受到中立生物的攻击，%neutral_disable%秒内将失去被动的移速加成和生命恢复效果。"
+          "属性值最少为1点。",
+          "斯拉克或受到作用的单位死亡后，阵亡单位因能量转移变化的属性值将回归正常。但是两方的属性值相互独立，并无关联。",
+          "斯拉克无需完成击杀就能永久窃取敏捷，只要敌方英雄身上拥有能量转移状态时在斯拉克的窃取范围内阵亡即可。",
+          "破坏会使技能无法获得临时的叠加效果。依然可以获得永久的叠加效果。",
+          "破坏不会使现有叠加效果提供的加成失效。"
         ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
           "",
-          "斯拉克不在友方英雄附近时被敌人看到后梭子鱼效果还会粘滞一段时间。在梭子鱼效果下斯拉克的攻击会降低目标的护甲。"
+          "",
+          ""
         ],
         "type": 0,
-        "behavior": "66",
+        "behavior": "562949953486915",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 0,
-        "immunity": 0,
-        "dispellable": 0,
-        "max_level": 4,
+        "immunity": 3,
+        "dispellable": 3,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -1926,39 +1972,16 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "bonus_movement_speed",
+            "name": "agi_gain",
             "values_float": [
-              6,
-              24,
-              36,
-              48
-            ],
-            "is_percentage": true,
-            "heading_loc": "移动速度加成：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "bonus_regen",
-            "values_float": [
-              5,
-              70,
-              100,
-              130
+              3
             ],
             "is_percentage": false,
-            "heading_loc": "每秒获得生命：",
+            "heading_loc": "",
             "bonuses": [
               {
-                "name": "special_bonus_unique_slark_8",
-                "value": 50,
+                "name": "special_bonus_unique_slark_5",
+                "value": 1,
                 "operation": 0
               }
             ],
@@ -1972,91 +1995,9 @@
             "required_facet": ""
           },
           {
-            "name": "linger_search_radius",
+            "name": "stat_loss",
             "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "粘滞搜寻范围：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "slark_dark_reef_renegade",
-              "values": [
-                900
-              ],
-              "operation": 0
-            },
-            "required_facet": "slark_dark_reef_renegade"
-          },
-          {
-            "name": "linger_duration",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "粘滞持续时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "slark_dark_reef_renegade",
-              "values": [
-                2
-              ],
-              "operation": 0
-            },
-            "required_facet": "slark_dark_reef_renegade"
-          },
-          {
-            "name": "corruption_armor",
-            "values_float": [
-              0,
-              0,
-              0,
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "护甲降低：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "slark_dark_reef_renegade",
-              "values": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "operation": 2
-            },
-            "required_facet": "slark_dark_reef_renegade"
-          },
-          {
-            "name": "corruption_duration",
-            "values_float": [
-              0
-            ],
-            "is_percentage": false,
-            "heading_loc": "护甲降低持续时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "slark_dark_reef_renegade",
-              "values": [
-                2
-              ],
-              "operation": 0
-            },
-            "required_facet": "slark_dark_reef_renegade"
-          },
-          {
-            "name": "activation_delay",
-            "values_float": [
-              0.5
+              1
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -2071,12 +2012,35 @@
             "required_facet": ""
           },
           {
-            "name": "neutral_disable",
+            "name": "duration",
             "values_float": [
-              2
+              15
             ],
             "is_percentage": false,
-            "heading_loc": "",
+            "heading_loc": "持续时间：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_slark_4",
+                "value": 35,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "steal_radius",
+            "values_float": [
+              300
+            ],
+            "is_percentage": false,
+            "heading_loc": "窃取范围：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],

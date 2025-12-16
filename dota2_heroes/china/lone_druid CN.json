@@ -30,14 +30,14 @@
         3,
         0
       ],
-      "damage_min": 38,
-      "damage_max": 42,
+      "damage_min": 42,
+      "damage_max": 46,
       "attack_rate": 1.6,
       "attack_range": 550,
       "projectile_speed": 900,
       "armor": 3.3333335,
       "magic_resistance": 25,
-      "movement_speed": 325,
+      "movement_speed": 295,
       "turn_rate": 0.6,
       "sight_range_day": 1800,
       "sight_range_night": 800,
@@ -47,50 +47,49 @@
       "mana_regen": 0.65000004,
       "abilities": [
         {
-          "id": 1342,
-          "name": "lone_druid_spirit_bear",
-          "name_loc": "熊灵伙伴",
-          "desc_loc": "召唤一只可以装备物品的熊灵伙伴。<br><br>若熊灵与独行德鲁伊的距离超过%bear_attack_leash_range%，则不能攻击。如果熊灵死亡，德鲁伊会受到自身最大生命值的%backlash_damage%%%作为反冲伤害。\n熊灵拥有回归、缠绕之爪和粉碎击技能。",
-          "lore_loc": "悉拉终生的伙伴与他的魂和心共生，在他需要时随时前来相助。",
+          "id": 1684,
+          "name": "lone_druid_entangle",
+          "name_loc": "缠绕之根",
+          "desc_loc": "敌方英雄获得%hits_required%层叠加效果后独行德鲁伊可以缠绕敌方英雄。被缠绕的英雄无法移动，并受到持续伤害。<br><br>施放时，对区域内每个敌方英雄施加%hits_incremented_on_active%层叠加效果，对敌方非英雄单位施加%hits_required%层。独行德鲁伊的攻击还会被强化%lone_druid_buff_duration%秒，每次攻击敌方英雄都会施加%lone_druid_counters_applied_tooltip%层叠加效果。被缠绕的英雄无法获得叠加层数。<br><br>升级这个技能也会升级熊灵的缠绕之爪技能。",
+          "lore_loc": "",
           "notes_loc": [
-            "熊灵受到的大多数技能效果与英雄相同。",
-            "熊灵的基础属性为0，并且升级时不会获得属性。熊灵装备的物品或享受的加成效果具有的属性对熊灵的加成效果与全才英雄类似。",
-            "熊灵无法获得经验。独行德鲁伊每升一级，熊灵的生命值和攻击力分别提升%hp_gain_per_druid_level%和%damage_gain_per_druid_level%。",
-            "熊灵拥有自己的阿哈利姆神杖和魔晶升级效果。"
+            "被缠绕的单位将无法使用闪烁类技能，如果进入隐身状态也会显形。",
+            "独行德鲁伊的强化增益和敌人叠加计数减益无法被驱散。",
+            "缠绕的减益效果可以被驱散。",
+            "独行德鲁伊或者熊灵的攻击不会使非英雄单位获得叠加效果，只会在施放缠绕之根时使他们被缠绕。",
+            "对肉山的作用机制和英雄相同。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "缠绕之根会对区域内敌方英雄施加%hits_required%层叠加效果，并且作用范围提升。触发缠绕的敌人不再受到保护，可以继续获得新的叠加层数。",
           "facets_loc": [
             "",
-            "提升了独行德鲁伊和熊灵相距较远时允许熊灵攻击的距离。",
+            "",
+            "",
             ""
           ],
           "type": 0,
-          "behavior": "4",
-          "target_team": 0,
-          "target_type": 0,
+          "behavior": "48",
+          "target_team": 2,
+          "target_type": 19,
           "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
+          "damage": 2,
+          "immunity": 3,
+          "dispellable": 3,
           "max_level": 4,
           "cast_ranges": [
-            0
+            700
           ],
           "cast_points": [
-            0.5,
-            0.5,
-            0.5,
-            0.5
+            0.3
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            150,
-            140,
-            130,
-            120
+            24,
+            22,
+            20,
+            18
           ],
           "durations": [
             0
@@ -102,24 +101,37 @@
             0
           ],
           "mana_costs": [
-            75,
-            75,
-            75,
-            75
+            60
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bear_hp",
+              "name": "active_radius",
               "values_float": [
-                1100,
-                1400,
-                1700,
-                2000
+                350
               ],
               "is_percentage": false,
-              "heading_loc": "熊灵生命值：",
+              "heading_loc": "范围：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                100
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "counter_duration",
+              "values_float": [
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "叠加效果持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -131,69 +143,9 @@
               "required_facet": ""
             },
             {
-              "name": "bear_regen_tooltip",
+              "name": "lone_druid_counters_applied_tooltip",
               "values_float": [
-                5,
-                6,
-                7,
-                8
-              ],
-              "is_percentage": false,
-              "heading_loc": "熊灵每秒生命恢复：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bear_bat",
-              "values_float": [
-                1.75,
-                1.65,
-                1.55,
-                1.45
-              ],
-              "is_percentage": false,
-              "heading_loc": "熊灵基础攻击间隔：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bear_armor",
-              "values_float": [
-                0,
-                2,
-                4,
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "熊灵护甲：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "backlash_damage",
-              "values_float": [
-                20
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -208,54 +160,7 @@
               "required_facet": ""
             },
             {
-              "name": "bear_movespeed",
-              "values_float": [
-                300,
-                330,
-                360,
-                390
-              ],
-              "is_percentage": false,
-              "heading_loc": "熊灵移动速度：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lone_druid_11",
-                  "value": 30,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_bear_armor",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lone_druid_2",
-                  "value": 7,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "damage_gain_per_druid_level",
+              "name": "hits_required",
               "values_float": [
                 5
               ],
@@ -272,9 +177,9 @@
               "required_facet": ""
             },
             {
-              "name": "hp_gain_per_druid_level",
+              "name": "hits_incremented_on_active",
               "values_float": [
-                100
+                2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -289,9 +194,9 @@
               "required_facet": ""
             },
             {
-              "name": "bear_attack_leash_range",
+              "name": "lone_druid_buff_duration",
               "values_float": [
-                1100
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -299,10 +204,115 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "lone_druid_unbearable",
-                "values": [
-                  500
-                ],
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "nostack_protection",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                0
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "root_heroes_on_cast",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "entangle_duration",
+              "values_float": [
+                1.2,
+                1.6,
+                2,
+                2.4
+              ],
+              "is_percentage": false,
+              "heading_loc": "缠绕持续时间：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lone_druid_entangle_duration",
+                  "value": 0.6,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage",
+              "values_float": [
+                60,
+                70,
+                80,
+                90
+              ],
+              "is_percentage": false,
+              "heading_loc": "每秒缠绕伤害：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lone_druid_1",
+                  "value": 15,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                700
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
                 "operation": 0
               },
               "required_facet": ""
@@ -310,7 +320,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.5
+                0.3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -327,7 +337,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                75
+                60
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -344,10 +354,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                150,
-                140,
-                130,
-                120
+                24,
+                22,
+                20,
+                18
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -363,7 +373,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -378,13 +388,16 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_spirit_bear.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_spirit_bear.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_spirit_bear.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lone_druid/lone_druid_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lone_druid/lone_druid_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lone_druid/lone_druid_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
           "id": 7309,
           "name": "lone_druid_spirit_link",
           "name_loc": "灵魂链接",
-          "desc_loc": "连接独行德鲁伊和熊灵，提升双方的攻击速度，另外双方共享一定百分比的护甲和吸血效果。",
+          "desc_loc": "连接独行德鲁伊和熊灵，提升双方的移动速度，另外双方共享一定百分比的吸血效果。",
           "lore_loc": "悉拉在他伙伴身旁倍感鼓舞，熊灵每次挥爪都让他的生命力得到补充。",
           "notes_loc": [
             "破坏会使共享吸血效果失效。"
@@ -394,19 +407,20 @@
           "facets_loc": [
             "共享护甲提升。熊灵和独行德鲁伊造成的伤害可以分别治疗对方。",
             "只有熊灵造成的伤害可以治疗独行德鲁伊。",
+            "",
             ""
           ],
           "type": 0,
           "behavior": "2",
-          "target_team": 1,
-          "target_type": 1,
+          "target_team": 0,
+          "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 0,
-          "dispellable": 2,
+          "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
-            1200
+            0
           ],
           "cast_points": [
             0
@@ -433,22 +447,36 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_attack_speed",
+              "name": "bonus_movement_speed_druid",
               "values_float": [
+                10,
                 20,
-                35,
-                50,
-                65
+                30,
+                40
               ],
               "is_percentage": false,
-              "heading_loc": "攻击速度加成：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lone_druid_spirit_link_attack_speed",
-                  "value": 45,
-                  "operation": 0
-                }
+              "heading_loc": "移动速度（独行德鲁伊）：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_movement_speed_bear",
+              "values_float": [
+                20,
+                40,
+                60,
+                80
               ],
+              "is_percentage": false,
+              "heading_loc": "移动速度（熊灵）：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -479,31 +507,9 @@
               "required_facet": ""
             },
             {
-              "name": "armor_sharing",
-              "values_float": [
-                8,
-                12,
-                16,
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "护甲共享：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "lone_druid_bear_with_me",
-                "values": [
-                  25
-                ],
-                "operation": 3
-              },
-              "required_facet": ""
-            },
-            {
               "name": "lifesteal_both_ways",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -511,13 +517,11 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "lone_druid_bear_with_me",
-                "values": [
-                  1
-                ],
-                "operation": 5
+                "name": "",
+                "values": [],
+                "operation": 0
               },
-              "required_facet": "lone_druid_bear_with_me"
+              "required_facet": ""
             },
             {
               "name": "duration",
@@ -552,65 +556,10 @@
                 "operation": 0
               },
               "required_facet": ""
-            },
-            {
-              "name": "AbilityCastRange",
-              "values_float": [
-                1200
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                50
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                40
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -625,9 +574,6 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_spirit_link.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_spirit_link.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_spirit_link.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lone_druid/lone_druid_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lone_druid/lone_druid_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_lone_druid/lone_druid_aghanims_scepter.webm",
           "is_inborn": 0
         },
         {
@@ -643,6 +589,7 @@
           "shard_loc": "施加弱驱散效果，并对施法者附近范围内友军提供移动速度和攻击速度加成。施法效果会在独行德鲁伊和熊灵之间复制，不论双方是否可以施法。<br><br>驱散类型：弱驱散",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -922,10 +869,313 @@
           "is_inborn": 0
         },
         {
+          "id": 1342,
+          "name": "lone_druid_spirit_bear",
+          "name_loc": "熊灵伙伴",
+          "desc_loc": "召唤一只可以装备物品的熊灵伙伴。<br><br>若熊灵与独行德鲁伊的距离超过%bear_attack_leash_range%，则不能攻击。如果熊灵死亡，独行德鲁伊会受到自身最大生命值的%backlash_damage%%%作为反冲伤害。\n熊灵拥有粉碎击、回归、缠绕之爪、野蛮咆哮和灵魂链接技能。",
+          "lore_loc": "悉拉终生的伙伴与他的魂和心共生，在他需要时随时前来相助。",
+          "notes_loc": [
+            "熊灵受到的大多数技能效果与英雄相同。",
+            "熊灵的基础属性为0，基础护甲为0并拥有%base_magic_resistance%%%基础魔法抗性。熊灵装备的物品或享受的加成效果具有的属性对熊灵的加成效果与全才英雄类似。",
+            "熊灵无法获得经验。熊灵会跟随独行德鲁伊一起升级。",
+            "熊灵拥有自己的阿哈利姆神杖和魔晶升级效果。",
+            "熊灵会获得独行德鲁伊身上中立物品的复制品。这件复制品拥有独立的冷却时间。"
+          ],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "提升了独行德鲁伊和熊灵相距较远时允许熊灵攻击的距离。",
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "4",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0.5
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            120
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            75
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "bear_hp",
+              "values_float": [
+                1500
+              ],
+              "is_percentage": false,
+              "heading_loc": "熊灵基础生命：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bear_regen_tooltip",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "熊灵基础生命恢复：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bear_bat",
+              "values_float": [
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "熊灵基础攻击间隔：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "backlash_damage",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bear_movespeed",
+              "values_float": [
+                310
+              ],
+              "is_percentage": false,
+              "heading_loc": "熊灵移动速度：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bear_magic_resistance",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bear_attack_leash_range",
+              "values_float": [
+                1100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "strength_gain_tooltip",
+              "values_float": [
+                4.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "熊灵力量成长：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "agility_gain_tooltip",
+              "values_float": [
+                4.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "熊灵敏捷成长：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "intelligence_gain_tooltip",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "熊灵智力成长：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                75
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                120
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lone_druid_2",
+                  "value": 25,
+                  "operation": 2
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.webm",
+          "is_inborn": 1
+        },
+        {
           "id": 5415,
           "name": "lone_druid_true_form",
           "name_loc": "真熊形态",
-          "desc_loc": "独行德鲁伊将自己的形态变换为狂怒的熊，攻击和防御能力都得到增强。",
+          "desc_loc": "独行德鲁伊将自己的形态变换为狂怒的熊，失去远程攻击的能力，但是获得额外护甲，额外生命值和额外攻击力。",
           "lore_loc": "强大的熊是森林之王，它们单纯地依靠力量就获得了这一位置。",
           "notes_loc": [
             "近战或远程物品的冷却时间不同时将根据独行德鲁伊在使用物品时处于远程或近战形态而定。"
@@ -935,6 +1185,7 @@
           "facets_loc": [
             "独行德鲁伊将自己的形态变换为狂怒的熊，失去远程攻击能力，但获得了额外护甲和生命值并获得更厉害的缠绕之爪和粉碎击。",
             "独行德鲁伊把自己的熊灵变为狂怒形态，获得额外护甲、攻击速度和粉碎击伤害，并且缠绕之爪的冷却时间减少至%entangling_claws_cooldown_reduction_pct%%%。",
+            "",
             ""
           ],
           "type": 1,
@@ -978,9 +1229,9 @@
             {
               "name": "bonus_armor",
               "values_float": [
-                8,
                 10,
-                12
+                15,
+                20
               ],
               "is_percentage": false,
               "heading_loc": "护甲提升：",
@@ -1016,6 +1267,25 @@
               "required_facet": ""
             },
             {
+              "name": "bonus_attack_damage",
+              "values_float": [
+                50,
+                90,
+                130
+              ],
+              "is_percentage": false,
+              "heading_loc": "攻击力加成：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "attack_speed_pct",
               "values_float": [
                 0
@@ -1037,7 +1307,7 @@
             {
               "name": "duration",
               "values_float": [
-                40
+                25
               ],
               "is_percentage": false,
               "heading_loc": "持续时间：",
@@ -1088,28 +1358,30 @@
               "required_facet": "lone_druid_unbearable"
             },
             {
-              "name": "entangling_claws_cooldown_reduction_pct",
-              "values_float": [
-                0
-              ],
+              "name": "bonus_slow_resistance",
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lone_druid_8",
+                  "value": 60,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "lone_druid_unbearable",
-                "values": [
-                  75
-                ],
+                "name": "",
+                "values": [],
                 "operation": 0
               },
-              "required_facet": "lone_druid_unbearable"
+              "required_facet": ""
             },
             {
               "name": "AbilityManaCost",
               "values_float": [
-                200
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1126,17 +1398,13 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                100
+                60,
+                55,
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lone_druid_8",
-                  "value": 50,
-                  "operation": 4
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1164,105 +1432,20 @@
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.webm",
           "is_inborn": 0
-        },
-        {
-          "id": 1472,
-          "name": "lone_druid_gift_bearer",
-          "name_loc": "英熊好礼",
-          "desc_loc": "独行德鲁伊的熊灵会获得他身上中立物品的复制品。这件复制品拥有独立的冷却时间。",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "8796093022210",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 1,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "reroll",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/lone_druid_true_form.webm",
-          "is_inborn": 1
         }
       ],
       "talents": [
         {
-          "id": 5959,
-          "name": "special_bonus_hp_200",
-          "name_loc": "+{s:value} 生命",
+          "id": 6262,
+          "name": "special_bonus_unique_lone_druid_2",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 熊灵伙伴冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1302,25 +1485,7 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                200
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
+          "special_values": [],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
@@ -1335,15 +1500,16 @@
           "item_quality": 0
         },
         {
-          "id": 423,
-          "name": "special_bonus_unique_lone_druid_11",
-          "name_loc": "+{s:bonus_bear_movespeed} 熊灵移动速度",
-          "desc_loc": "",
+          "id": 6261,
+          "name": "special_bonus_unique_lone_druid_1",
+          "name_loc": "+{s:bonus_damage} 缠绕之根每秒缠绕伤害",
+          "desc_loc": "也会施加给熊灵的缠绕之爪的缠绕",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1409,6 +1575,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1461,15 +1628,16 @@
           "item_quality": 0
         },
         {
-          "id": 6262,
-          "name": "special_bonus_unique_lone_druid_2",
-          "name_loc": "+{s:bonus_bonus_bear_armor} 熊灵护甲",
+          "id": 7386,
+          "name": "special_bonus_agility_12",
+          "name_loc": "+{s:value} 敏捷",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1509,7 +1677,25 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": [],
+          "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                12
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
@@ -1535,6 +1721,7 @@
           "facets_loc": [
             "",
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1587,15 +1774,16 @@
           "item_quality": 0
         },
         {
-          "id": 1350,
-          "name": "special_bonus_unique_lone_druid_entangle_dps",
-          "name_loc": "+{s:bonus_damage} 缠绕之爪伤害",
+          "id": 409,
+          "name": "special_bonus_attack_speed_55",
+          "name_loc": "+{s:value} 攻击速度",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1635,7 +1823,25 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": [],
+          "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                55
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
@@ -1652,13 +1858,14 @@
         {
           "id": 6806,
           "name": "special_bonus_unique_lone_druid_8",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 真熊形态冷却",
+          "name_loc": "真熊形态提供{s:bonus_bonus_slow_resistance}% 减速抗性",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1713,15 +1920,16 @@
           "item_quality": 0
         },
         {
-          "id": 1349,
-          "name": "special_bonus_unique_lone_druid_spirit_link_attack_speed",
-          "name_loc": "+{s:bonus_bonus_attack_speed} 灵魂链接攻击速度",
-          "desc_loc": "",
+          "id": 1710,
+          "name": "special_bonus_unique_lone_druid_entangle_duration",
+          "name_loc": "+{s:bonus_entangle_duration}秒 缠绕之根缠绕时间",
+          "desc_loc": "也会施加给熊灵的缠绕之爪的缠绕",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             "",
             ""
@@ -1780,157 +1988,48 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_lone_druid.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/npc_dota_hero_lone_druid.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_lone_druid/npc_dota_hero_lone_druid.webm",
-      "update_time": 1761883305,
+      "update_time": 1765846859,
       "facets": [
         {
           "color": 2,
-          "title_loc": "熊姿英发",
-          "description_loc": "灵魂链接的共享护甲增加，并且独行德鲁伊的攻击可以治疗熊灵。",
-          "name": "lone_druid_bear_with_me",
-          "icon": "healing",
+          "title_loc": "无名英熊",
+          "description_loc": "这颗命石没有任何效果。独行德鲁伊还在适应大自然……",
+          "name": "lone_druid_lone_druid",
+          "icon": "overshadow",
           "gradient_id": 1,
-          "index": 0
-        },
-        {
-          "color": 5,
-          "title_loc": "熊亦求精",
-          "description_loc": "独行德鲁伊的物品更具威力，而他的物品栏更少。",
-          "name": "lone_druid_bear_necessities",
-          "icon": "item",
-          "gradient_id": 1,
-          "index": 2
+          "index": 3
         }
       ],
       "facet_abilities": [
         {
           "abilities": []
-        },
-        {
-          "abilities": [
-            {
-              "id": 1473,
-              "name": "lone_druid_bear_necessities",
-              "name_loc": "熊亦求精",
-              "desc_loc": "独行德鲁伊只能使用他物品栏的前%item_slots%个物品。这些物品的被动加成更加强大。其他物品栏不会提供任何加成。中立物品栏位不受影响。",
-              "lore_loc": "",
-              "notes_loc": [
-                "下列属性可以提升：<br>* 力量、敏捷和智力<br>* 生命、魔法和闪避<br>* 攻击速度和攻击力加成<br>* 生命和魔法恢复"
-              ],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "13194139533315",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "item_slots",
-                  "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_stat_percent",
-                  "values_float": [
-                    45,
-                    55,
-                    65,
-                    75
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "属性加成：",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            }
-          ]
         }
       ],
       "cartoon_avatars": null,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_lone_druid.png",
       "new_abilities": {
-        "id": 1472,
-        "name": "lone_druid_gift_bearer",
-        "name_loc": "英熊好礼",
-        "desc_loc": "独行德鲁伊的熊灵会获得他身上中立物品的复制品。这件复制品拥有独立的冷却时间。",
-        "lore_loc": "",
-        "notes_loc": [],
+        "id": 1342,
+        "name": "lone_druid_spirit_bear",
+        "name_loc": "熊灵伙伴",
+        "desc_loc": "召唤一只可以装备物品的熊灵伙伴。<br><br>若熊灵与独行德鲁伊的距离超过%bear_attack_leash_range%，则不能攻击。如果熊灵死亡，独行德鲁伊会受到自身最大生命值的%backlash_damage%%%作为反冲伤害。\n熊灵拥有粉碎击、回归、缠绕之爪、野蛮咆哮和灵魂链接技能。",
+        "lore_loc": "悉拉终生的伙伴与他的魂和心共生，在他需要时随时前来相助。",
+        "notes_loc": [
+          "熊灵受到的大多数技能效果与英雄相同。",
+          "熊灵的基础属性为0，基础护甲为0并拥有%base_magic_resistance%%%基础魔法抗性。熊灵装备的物品或享受的加成效果具有的属性对熊灵的加成效果与全才英雄类似。",
+          "熊灵无法获得经验。熊灵会跟随独行德鲁伊一起升级。",
+          "熊灵拥有自己的阿哈利姆神杖和魔晶升级效果。",
+          "熊灵会获得独行德鲁伊身上中立物品的复制品。这件复制品拥有独立的冷却时间。"
+        ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
           "",
+          "提升了独行德鲁伊和熊灵相距较远时允许熊灵攻击的距离。",
           "",
           ""
         ],
         "type": 0,
-        "behavior": "8796093022210",
+        "behavior": "4",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
@@ -1942,13 +2041,13 @@
           0
         ],
         "cast_points": [
-          0
+          0.5
         ],
         "channel_times": [
           0
         ],
         "cooldowns": [
-          0
+          120
         ],
         "durations": [
           0
@@ -1960,19 +2059,229 @@
           0
         ],
         "mana_costs": [
-          0
+          75
         ],
         "gold_costs": [],
         "health_costs": [],
         "special_values": [
           {
-            "name": "reroll",
+            "name": "bear_hp",
             "values_float": [
-              1
+              1500
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵基础生命：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_regen_tooltip",
+            "values_float": [
+              3
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵基础生命恢复：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_bat",
+            "values_float": [
+              1.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵基础攻击间隔：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "backlash_damage",
+            "values_float": [
+              20
             ],
             "is_percentage": false,
             "heading_loc": "",
             "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_movespeed",
+            "values_float": [
+              310
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵移动速度：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_magic_resistance",
+            "values_float": [
+              25
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "bear_attack_leash_range",
+            "values_float": [
+              1100
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "strength_gain_tooltip",
+            "values_float": [
+              4.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵力量成长：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "agility_gain_tooltip",
+            "values_float": [
+              4.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵敏捷成长：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "intelligence_gain_tooltip",
+            "values_float": [
+              0.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "熊灵智力成长：",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCastPoint",
+            "values_float": [
+              0.5
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityManaCost",
+            "values_float": [
+              75
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "AbilityCooldown",
+            "values_float": [
+              120
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_lone_druid_2",
+                "value": 25,
+                "operation": 2
+              }
+            ],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {

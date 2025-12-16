@@ -7,7 +7,7 @@
       "name_loc": "幽鬼",
       "order_id": 44,
       "name_english_loc": "Spectre",
-      "primary_attr": 3,
+      "primary_attr": 1,
       "complexity": 2,
       "bio_loc": "和所有强大的能量都喜欢欺凌弱小一样，被称为墨丘利的幽鬼也是一个拥有着强横能量的存在，同样的，她对现实世界中的冲突和纷争无比着迷。然而她平时的幽鬼形态超越了常人的感知范围，因此每当她以实体形态出现时，她不得不损失一部分自我能量——尽管她也不愿意。在战斗中，她的自我意识逐渐散落并重新聚合，她也开始有了意识。她意识到了自己是幽鬼墨丘利——其他所有的鬼影都只是她自我的阴影。出于重新凝聚的打算，她开始专注，她的心智也在不断的成熟。只有等到她取得胜利或者彻底失败时，她那超物质的形态才会得以重聚。",
       "hype_loc": "与幽鬼为敌就休想摆脱她的鬼影。她的存在可以笼罩整片战场，轻松<b>毁灭落单的猎物</b>。一旦让她完成力量的积聚，谁也逃不过她可怕的惩罚。",
@@ -30,9 +30,9 @@
         0,
         0
       ],
-      "damage_min": 21,
-      "damage_max": 25,
-      "attack_rate": 1.7,
+      "damage_min": 48,
+      "damage_max": 52,
+      "attack_rate": 1.8,
       "attack_range": 150,
       "projectile_speed": 900,
       "armor": 4.166667,
@@ -59,6 +59,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -146,7 +147,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_spectre_3",
-                  "value": 12,
+                  "value": 15,
                   "operation": 0
                 }
               ],
@@ -332,10 +333,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
+                100,
                 110,
                 120,
-                130,
-                140
+                130
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -395,41 +396,45 @@
           "is_inborn": 0
         },
         {
-          "id": 5335,
-          "name": "spectre_desolate",
-          "name_loc": "荒芜",
-          "desc_loc": "当敌人附近%radius%范围内没有他们的友军时，幽鬼的攻击对他们造成额外伤害。",
-          "lore_loc": "战士们常常发现自己落单后还能在身边看到墨丘利——不得不质疑，这是不是真正的幽鬼。",
-          "notes_loc": [
-            "伤害在幽鬼攻击前产生。",
-            "幽鬼的幻象继承荒芜。"
-          ],
+          "id": 1679,
+          "name": "spectre_shadow_step",
+          "name_loc": "如影随形",
+          "desc_loc": "对目标制造一个无法控制的幻象。幻象承受%tooltip_illusion_total_damage_incoming%%%伤害。<br><br>子技能空降可以将本体传送至幻象，并将其摧毁。",
+          "lore_loc": "在强大的专注力下，墨丘利有时可以限制自己分裂的限度。",
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
-            "幽鬼自身的荒芜造成%bonus_damage_multiplier_tooltip%倍伤害，但是幽鬼的幻象不再触发荒芜。",
+            "",
+            "",
             ""
           ],
           "type": 0,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 4,
+          "behavior": "40",
+          "target_team": 2,
+          "target_type": 1,
+          "flags": 16,
+          "damage": 0,
           "immunity": 3,
           "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
-            0
+            700,
+            850,
+            1000,
+            1150
           ],
           "cast_points": [
-            0
+            0.3
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            0
+            32,
+            28,
+            24,
+            20
           ],
           "durations": [
             0
@@ -441,65 +446,47 @@
             0
           ],
           "mana_costs": [
-            0
+            60,
+            65,
+            70,
+            75
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_damage",
+              "name": "duration",
               "values_float": [
-                25,
-                40,
-                55,
-                70
+                3.5,
+                4,
+                4.5,
+                5
               ],
               "is_percentage": false,
-              "heading_loc": "额外伤害：",
+              "heading_loc": "持续时间：",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_spectre_2",
-                  "value": 15,
+                  "name": "special_bonus_unique_spectre_shadow_step_duration",
+                  "value": 1,
                   "operation": 0
                 }
               ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "spectre_forsaken",
-                "values": [
-                  2
-                ],
-                "operation": 1
+                "name": "",
+                "values": [],
+                "operation": 0
               },
               "required_facet": ""
             },
             {
-              "name": "bonus_damage_multiplier_tooltip",
+              "name": "illusion_damage_incoming",
               "values_float": [
-                0
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "spectre_forsaken",
-                "values": [
-                  2
-                ],
-                "operation": 0
-              },
-              "required_facet": "spectre_forsaken"
-            },
-            {
-              "name": "radius",
-              "values_float": [
-                350
-              ],
-              "is_percentage": false,
-              "heading_loc": "范围：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -511,9 +498,9 @@
               "required_facet": ""
             },
             {
-              "name": "illusions_can_apply",
+              "name": "tooltip_illusion_total_damage_incoming",
               "values_float": [
-                1
+                200
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -521,26 +508,140 @@
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
-                "name": "spectre_forsaken",
-                "values": [
-                  0
-                ],
-                "operation": 5
+                "name": "",
+                "values": [],
+                "operation": 0
               },
               "required_facet": ""
             },
             {
-              "name": "illusion_damage_outgoing",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
+              "name": "illusion_outgoing_damage",
+              "values_float": [
+                20,
+                30,
+                40,
+                50
+              ],
+              "is_percentage": true,
+              "heading_loc": "幻象攻击力：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_spectre_4",
-                  "value": 25,
+                  "value": 20,
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "move_speed",
+              "values_float": [
+                900
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_move_speed_illusion_pct",
+              "values_float": [
+                35
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                700,
+                850,
+                1000,
+                1150
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0.3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                60,
+                65,
+                70,
+                75
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                32,
+                28,
+                24,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -583,6 +684,7 @@
           "shard_loc": "折射可以主动施放，吸收和反弹的伤害比例提升%activation_bonus_pct%%%，持续%activation_duration%秒。冷却时间为%activation_cooldown%秒。魔法消耗为%activation_manacost%点。",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -651,7 +753,7 @@
             {
               "name": "min_radius",
               "values_float": [
-                300
+                350
               ],
               "is_percentage": false,
               "heading_loc": "最小范围：",
@@ -781,27 +883,140 @@
           "is_inborn": 0
         },
         {
-          "id": 5337,
-          "name": "spectre_haunt",
-          "name_loc": "鬼影重重",
-          "desc_loc": "创造一个复仇鬼影分别攻击每个敌方英雄。这个技能产生的幻象与如影随形的幻象类似，也可以使用空降来互换位置。",
-          "lore_loc": "在战斗最焦灼的时候，墨丘利的实体形态破裂，幽影的碎片在生者身边作祟。",
-          "notes_loc": [],
+          "id": 5335,
+          "name": "spectre_desolate",
+          "name_loc": "荒芜",
+          "desc_loc": "当敌人附近%radius%范围内没有他们的友军时，幽鬼和她的幻象的攻击对他们造成额外纯粹伤害。",
+          "lore_loc": "战士们常常发现自己落单后还能在身边看到墨丘利——不得不质疑，这是不是真正的幽鬼。",
+          "notes_loc": [
+            "伤害在幽鬼攻击前产生。",
+            "幽鬼的幻象继承荒芜。"
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "幽鬼自身的荒芜造成%bonus_damage_multiplier_tooltip%倍伤害，但是幽鬼的幻象不再触发荒芜。",
             "",
             ""
           ],
           "type": 0,
-          "behavior": "8589934597",
+          "behavior": "562949953421315",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 4,
+          "immunity": 3,
+          "dispellable": 0,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "bonus_damage",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "伤害：",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_spectre_2",
+                  "value": 10,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "radius",
+              "values_float": [
+                350
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": true,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_haunt.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt_single.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt_single.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt_single.webm",
+          "is_inborn": 1
+        },
+        {
+          "id": 5337,
+          "name": "spectre_haunt",
+          "name_loc": "鬼影重重",
+          "desc_loc": "创造一个复仇鬼影分别攻击每个敌方英雄。<br><br>鬼影无法控制，受到额外伤害，造成的伤害低于幽鬼本体。鬼影移动无视地形。<br><br>子技能空降可以将本体传送至幻象，并将其摧毁。",
+          "lore_loc": "在战斗最焦灼的时候，墨丘利的实体形态破裂，幽影的碎片在生者身边作祟。",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "幽鬼第一次对鬼影重重的幻象使用空降时，目标附近%fear_aoe%范围内的敌人会被恐惧，朝远离幽鬼的方向奔跑%fear_duration%秒，并且移动速度降低%fear_movespeed_slow%%%。<br><br>冷却时间减少%scepter_cooldown_reduction_tooltip%秒。",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 1,
+          "behavior": "4",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 3,
           "dispellable": 0,
-          "max_level": 1,
+          "max_level": 3,
           "cast_ranges": [
             0
           ],
@@ -830,6 +1045,23 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "scepter_cooldown_reduction_tooltip",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "duration",
               "values_float": [
                 6
@@ -849,238 +1081,8 @@
             {
               "name": "illusion_damage_outgoing",
               "values_float": [
-                -20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_outgoing",
-              "values_float": [
-                80
-              ],
-              "is_percentage": true,
-              "heading_loc": "鬼影继承攻击力：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "illusion_damage_incoming",
-              "values_float": [
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_illusion_total_damage_incoming",
-              "values_float": [
-                200
-              ],
-              "is_percentage": true,
-              "heading_loc": "鬼影承受伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "destroy_if_target_is_dead",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "spectre_twist_the_knife",
-                "values": [
-                  0
-                ],
-                "operation": 5
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0.3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                150
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                160
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_haunt.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt_single.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt_single.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt_single.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_spectre/spectre_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_spectre/spectre_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_spectre/spectre_aghanims_scepter.webm",
-          "is_inborn": 0
-        },
-        {
-          "id": 7851,
-          "name": "spectre_haunt_single",
-          "name_loc": "如影随形",
-          "desc_loc": "创造一个复仇鬼影攻击视野内单个敌方英雄。在技能持续期间内幽鬼可以使用空降将她和鬼影互换位置。\n\n鬼影无法控制，受到额外伤害，造成的伤害低于幽鬼本体。鬼影移动无视地形。",
-          "lore_loc": "在强大的专注力下，墨丘利有时可以限制自己分裂的限度。",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            "鬼影重重和如影随形的目标阵亡后幻象不再消失。"
-          ],
-          "type": 1,
-          "behavior": "8",
-          "target_team": 2,
-          "target_type": 1,
-          "flags": 131088,
-          "damage": 0,
-          "immunity": 3,
-          "dispellable": 0,
-          "max_level": 3,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0.3,
-            0.3,
-            0.3
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            60,
-            50,
-            40
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            150
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
-              "name": "duration",
-              "values_float": [
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "持续时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "illusion_damage_outgoing",
-              "values_float": [
-                -60,
-                -40,
+                -70,
+                -45,
                 -20
               ],
               "is_percentage": false,
@@ -1088,7 +1090,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_spectre_4",
-                  "value": 25,
+                  "value": 20,
                   "operation": 0
                 }
               ],
@@ -1104,13 +1106,19 @@
             {
               "name": "tooltip_outgoing",
               "values_float": [
-                40,
-                60,
+                30,
+                55,
                 80
               ],
               "is_percentage": true,
               "heading_loc": "鬼影继承攻击力：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_spectre_4",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1174,6 +1182,63 @@
               "required_facet": ""
             },
             {
+              "name": "fear_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1.5
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fear_aoe",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                400
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fear_movespeed_slow",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                50
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastPoint",
               "values_float": [
                 0.3
@@ -1193,7 +1258,9 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                150
+                125,
+                150,
+                175
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1210,15 +1277,17 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                60,
-                55,
-                50
+                180,
+                160,
+                140
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                20
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1228,7 +1297,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -1243,74 +1312,10 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_haunt.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_spectre/spectre_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_spectre/spectre_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_spectre/spectre_aghanims_scepter.webm",
           "is_inborn": 0
-        },
-        {
-          "id": 1323,
-          "name": "spectre_spectral",
-          "name_loc": "幽影",
-          "desc_loc": "幽鬼和她的幻象为永久相位状态。",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "4398046511106",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 1,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_spectral.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_spectral.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_spectral.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/spectre_spectral.webm",
-          "is_inborn": 1
         }
       ],
       "talents": [
@@ -1325,67 +1330,6 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 5910,
-          "name": "special_bonus_hp_regen_5",
-          "name_loc": "+{s:value} 生命恢复",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
             "",
             ""
           ],
@@ -1424,25 +1368,7 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": [
-            {
-              "name": "value",
-              "values_float": [
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
+          "special_values": [],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
@@ -1466,6 +1392,70 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 1705,
+          "name": "special_bonus_unique_spectre_shadow_step_duration",
+          "name_loc": "+{s:bonus_duration}秒 如影随形持续时间",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1529,6 +1519,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1590,6 +1581,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1671,6 +1663,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1732,6 +1725,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1795,6 +1789,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1851,31 +1846,19 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_spectre.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/npc_dota_hero_spectre.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_spectre/npc_dota_hero_spectre.webm",
-      "update_time": 1761883282,
+      "update_time": 1765846849,
       "facets": [
         {
           "color": 5,
-          "title_loc": "独来独往",
-          "description_loc": "幽鬼自身的荒芜造成{s:bonus_bonus_damage_multiplier_tooltip}倍伤害，但是幽鬼的幻象不再触发荒芜。",
-          "name": "spectre_forsaken",
-          "icon": "spectre",
+          "title_loc": "转瞬即逝",
+          "description_loc": "这颗命石没有任何效果。幽鬼还在位面之间穿梭……",
+          "name": "spectre_spectre",
+          "icon": "spirit",
           "gradient_id": 0,
-          "index": 0
-        },
-        {
-          "color": 4,
-          "title_loc": "趁人之危",
-          "description_loc": "空降还会对复仇鬼影的目标施放幽鬼之刃。",
-          "name": "spectre_twist_the_knife",
-          "icon": "nuke",
-          "gradient_id": 2,
-          "index": 1
+          "index": 2
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         }
@@ -1883,25 +1866,29 @@
       "cartoon_avatars": null,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_spectre.png",
       "new_abilities": {
-        "id": 1323,
-        "name": "spectre_spectral",
-        "name_loc": "幽影",
-        "desc_loc": "幽鬼和她的幻象为永久相位状态。",
-        "lore_loc": "",
-        "notes_loc": [],
+        "id": 5335,
+        "name": "spectre_desolate",
+        "name_loc": "荒芜",
+        "desc_loc": "当敌人附近%radius%范围内没有他们的友军时，幽鬼和她的幻象的攻击对他们造成额外纯粹伤害。",
+        "lore_loc": "战士们常常发现自己落单后还能在身边看到墨丘利——不得不质疑，这是不是真正的幽鬼。",
+        "notes_loc": [
+          "伤害在幽鬼攻击前产生。",
+          "幽鬼的幻象继承荒芜。"
+        ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
+          "幽鬼自身的荒芜造成%bonus_damage_multiplier_tooltip%倍伤害，但是幽鬼的幻象不再触发荒芜。",
           "",
           ""
         ],
         "type": 0,
-        "behavior": "4398046511106",
+        "behavior": "562949953421315",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
-        "damage": 0,
-        "immunity": 0,
+        "damage": 4,
+        "immunity": 3,
         "dispellable": 0,
         "max_level": 1,
         "cast_ranges": [
@@ -1930,7 +1917,48 @@
         ],
         "gold_costs": [],
         "health_costs": [],
-        "special_values": [],
+        "special_values": [
+          {
+            "name": "bonus_damage",
+            "values_float": [
+              25
+            ],
+            "is_percentage": false,
+            "heading_loc": "伤害：",
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_spectre_2",
+                "value": 10,
+                "operation": 0
+              }
+            ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "radius",
+            "values_float": [
+              350
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          }
+        ],
         "is_item": false,
         "ability_has_scepter": false,
         "ability_has_shard": false,

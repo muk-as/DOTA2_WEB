@@ -50,7 +50,7 @@
           "id": 338,
           "name": "treant_natures_grasp",
           "name_loc": "自然卷握",
-          "desc_loc": "朝目标地点制造藤蔓。藤蔓对穿过的敌人造成减速和伤害。藤蔓若碰到树木将多造成50%伤害。对非英雄单位造成半额伤害。",
+          "desc_loc": "朝目标地点制造藤蔓。藤蔓对穿过的敌人造成减速和伤害。对非英雄单位造成的伤害减少%creep_penalty%%%。",
           "lore_loc": "带有鲁夫特伦影响力的卷须延伸到了森林的各个角落。",
           "notes_loc": [],
           "shard_loc": "",
@@ -361,7 +361,7 @@
           "id": 5435,
           "name": "treant_leech_seed",
           "name_loc": "寄生种子",
-          "desc_loc": "树精卫士在一个敌方单位体内种下一颗吸血的种子，吸收其生命值，同时使其减速。种子对其周围的友方单位进行治疗。对非英雄单位的治疗量减少%creep_heal_reduction_pct%%%。",
+          "desc_loc": "树精卫士的攻击会对敌方单位种下一颗吸取生命的种子，造成额外魔法伤害。这个单位会被捆缚一小段时间，并放出%healing_pulse_count%次治疗脉冲，最多对附近%max_heal_units%名树精卫士的友军进行治疗，治疗量为固定数值加上当次攻击造成伤害的一定百分比。",
           "lore_loc": "鲁夫特伦悉心培育的这些生命完全靠闯入他圣地的入侵者的生命力维持。",
           "notes_loc": [],
           "shard_loc": "",
@@ -372,7 +372,7 @@
             ""
           ],
           "type": 0,
-          "behavior": "40",
+          "behavior": "135176",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
@@ -381,13 +381,10 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            400,
-            450,
-            500,
-            550
+            150
           ],
           "cast_points": [
-            0.3
+            0
           ],
           "channel_times": [
             0
@@ -639,10 +636,12 @@
           "id": 5436,
           "name": "treant_living_armor",
           "name_loc": "活体护甲",
-          "desc_loc": "将目标英雄或建筑笼罩在保护性外壳中，治疗目标并提供护甲加成。",
+          "desc_loc": "将目标英雄或建筑笼罩在保护性外壳中，治疗目标并格挡来自玩家控制来源的伤害。每次本技能格挡伤害后，下次的伤害格挡量都会减少。如果伤害格挡量降至0，加成效果会提前移除。",
           "lore_loc": "树精卫士的根须广泛蔓延，促进自然万物的生长和恢复。",
-          "notes_loc": [],
-          "shard_loc": "",
+          "notes_loc": [
+            "低于%damage_block_threshold%点的伤害会被无视。"
+          ],
+          "shard_loc": "提升活体护甲的伤害格挡量。树精卫士现在还会被动获得活体护甲的加成效果，%passive_reset_cd%秒内未受到伤害后伤害格挡量会重置。",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -911,7 +910,7 @@
           "id": 5649,
           "name": "treant_eyes_in_the_forest",
           "name_loc": "丛林之眼",
-          "desc_loc": "树精卫士对目标树木灌注魔力。注魔后树木将拥有周围的顺畅视野。如果树精卫士施放了疯狂生长，这些树木附近的单位也将会被困住，并受到伤害。被动使所有树木重生地更快。",
+          "desc_loc": "树精卫士对目标树木灌注魔力。注魔后树木将拥有周围的顺畅视野。树眼持续%duration%秒，为隐形状态，但是寄生的树木被摧毁或者树眼直接被攻击后都会被摧毁。",
           "lore_loc": "对于需要守卫的，谁也不能打包票究竟是什么人，或什么东西。",
           "notes_loc": [
             "丛林之眼的树木产生的疯狂生长效果也可以造成伤害。",
@@ -934,7 +933,7 @@
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
-            160
+            350
           ],
           "cast_points": [
             0.2
@@ -1098,10 +1097,10 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": true,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": true,
           "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
@@ -1113,22 +1112,23 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_eyes_in_the_forest.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_eyes_in_the_forest.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_eyes_in_the_forest.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_scepter.webm",
+          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_shard.jpg",
+          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_shard.mp4",
+          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_shard.webm",
           "is_inborn": 0
         },
         {
           "id": 5434,
           "name": "treant_natures_guise",
           "name_loc": "自然蔽护",
-          "desc_loc": "树精卫士只要靠近一棵树木或自然卷握的藤蔓，%cooldown_time%秒内不受到伤害就会获得树木穿行。生效时树精卫士获得移动速度加成。",
+          "desc_loc": "只要靠近树木就会获得移动速度加成。树精卫士在%cooldown_time%秒内不受到伤害就会额外获得树木穿行。树木穿行时，自然蔽护可以主动使用，使树精卫士获得隐身状态，直到他主动攻击，或不再靠近树木。",
           "lore_loc": "树精卫士不常出现在人们的视线中；他们舒适地隐蔽于枝繁叶茂的同胞当中并保持自然的形态。",
           "notes_loc": [
             "自然蔽护效果下树精卫士可以直接穿过树木。",
-            "拥有阿哈利姆魔晶后，攻击会脱离隐身状态。使用技能和物品不会脱离隐身状态。"
+            "自然卷握的藤蔓在这个技能下被视为树木。",
+            "While Tree Walking, taking damage does not disable the active ability or Tree Walking."
           ],
-          "shard_loc": "树精卫士在自然蔽护效果下隐身，攻击将缠绕敌人。如果攻击时靠近树木会造成持续伤害，并且缠绕时间更长。总伤害为%shard_damage% + %attack_damage_pct%%%树精卫士基础攻击力。",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
@@ -1154,7 +1154,7 @@
             0
           ],
           "cooldowns": [
-            0
+            50
           ],
           "durations": [
             0
@@ -1265,7 +1265,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": true,
@@ -1279,9 +1279,6 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_natures_guise.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_natures_guise.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_natures_guise.webm",
-          "video_shard_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_shard.jpg",
-          "video_shard_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_shard.mp4",
-          "video_shard_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_shard.webm",
           "is_inborn": 1
         },
         {
@@ -1294,7 +1291,7 @@
             "效果无视减益免疫，但是在期间获得减益免疫状态将挣脱控制。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "冷却时间降低至%AbilityCooldown%秒。施放疯狂生长时，树精卫士从土壤中汲取力量，获得不可驱散的增益效果，他的身体急剧增大，持续%bloom_duration%秒。变大后他会获得相位移动状态，移动速度为固定%movement_speed%，%strength_bonus%%%力量加成，并且拥有在%splash_radius%范围内造成%splash_pct%%%攻击伤害的溅射攻击。",
           "facets_loc": [
             "",
             "",
@@ -1550,7 +1547,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -1565,6 +1562,9 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_overgrowth.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_overgrowth.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/treant_overgrowth.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_treant/treant_aghanims_scepter.webm",
           "is_inborn": 0
         }
       ],
@@ -1579,6 +1579,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1632,15 +1633,16 @@
           "item_quality": 0
         },
         {
-          "id": 755,
-          "name": "special_bonus_unique_treant_12",
-          "name_loc": "+{s:bonus_movement_bonus}% 自然蔽护移动速度",
+          "id": 548,
+          "name": "special_bonus_attack_base_damage_50",
+          "name_loc": "+{s:value} 基础攻击力",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1679,7 +1681,25 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": [],
+          "special_values": [
+            {
+              "name": "value",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
@@ -1696,13 +1716,14 @@
         {
           "id": 6955,
           "name": "special_bonus_unique_treant_3",
-          "name_loc": "+{s:bonus_movement_slow}% 寄生种子减速",
+          "name_loc": "+{s:bonus_leech_heal}% 寄生种子伤害转为治疗",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1766,6 +1787,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1820,13 +1842,14 @@
         {
           "id": 756,
           "name": "special_bonus_unique_treant_13",
-          "name_loc": "+{s:bonus_bonus_armor} 活体护甲额外护甲",
+          "name_loc": "+{s:bonus_damage_block_base} 活体护甲伤害格挡",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1882,13 +1905,14 @@
         {
           "id": 6531,
           "name": "special_bonus_unique_treant_2",
-          "name_loc": "+{s:bonus_leech_damage} 寄生种子伤害/治疗",
+          "name_loc": "+{s:bonus_leech_damage} 寄生种子额外伤害",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1944,13 +1968,14 @@
         {
           "id": 1131,
           "name": "special_bonus_unique_treant_14",
-          "name_loc": "-{s:bonus_AbilityCooldown}秒 疯狂生长冷却",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 寄生种子冷却",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2014,6 +2039,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2070,7 +2096,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_treant.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/npc_dota_hero_treant.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_treant/npc_dota_hero_treant.webm",
-      "update_time": 1765839685,
+      "update_time": 1765846861,
       "facets": [
         {
           "color": 2,

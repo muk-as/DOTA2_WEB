@@ -57,6 +57,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "克林克兹和每个骷髅弓手都会施加一个可叠加的负面效果，每个攻击的骷髅弓手会施加一层叠加效果，每层会使目标的%bonus_blind_pct%%%攻击落空，持续%debuff_duration%秒。也会对建筑施加。",
+            "",
             ""
           ],
           "type": 0,
@@ -69,7 +70,7 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            800
+            1200
           ],
           "cast_points": [
             0
@@ -187,7 +188,7 @@
             {
               "name": "archer_attack_speed_pct",
               "values_float": [
-                60
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -242,7 +243,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                800
+                1200
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -322,44 +323,48 @@
           "is_inborn": 0
         },
         {
-          "id": 1119,
-          "name": "clinkz_tar_bomb",
-          "name_loc": "焦油炸弹",
-          "desc_loc": "克林克兹对敌方目标扔出一个涂满焦油的弹道，击中时造成魔法伤害。击中后焦油会溅到地上，并留在地面上，持续%ground_duration%秒。经过的敌人都会被减速，并且受到来自克林克兹或他的骷髅弓手的攻击都会承受额外物理伤害。<br><br>焦油炸弹击中时，攻击距离内的骷髅弓手都会攻击该目标。如果设为自动施放，克林克兹会在技能可用的情况下攻击目标时扔出焦油炸弹。",
-          "lore_loc": "克林克兹与莫拉格斯作战之后，他在恶魔心脏的所在之处找到了一种有用的脓液。",
-          "notes_loc": [],
+          "id": 5260,
+          "name": "clinkz_searing_arrows",
+          "name_loc": "灼热之箭",
+          "desc_loc": "让克林克兹的箭矢带有火焰，造成更多伤害。<br><br>骷髅弓手在攻击克林克兹的攻击目标时会发射灼热之箭，造成%skeleton_damage_pct%%%伤害。",
+          "lore_loc": "克林克兹用他的灼热精华点燃弓箭，造成毁灭性打击。",
+          "notes_loc": [
+            "灼热之箭能对建筑造成伤害。",
+            "伤害直接作为物理伤害加到克林克兹的攻击伤害中。"
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
-          "behavior": "4136",
+          "behavior": "135176",
           "target_team": 2,
           "target_type": 23,
-          "flags": 0,
+          "flags": 16,
           "damage": 1,
-          "immunity": 0,
-          "dispellable": 2,
+          "immunity": 3,
+          "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
-            1000
+            600
           ],
           "cast_points": [
-            0.2,
-            0.2,
-            0.2,
-            0.2
+            0,
+            0,
+            0,
+            0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            7,
-            6,
-            5,
-            4
+            0,
+            0,
+            0,
+            0
           ],
           "durations": [
             0
@@ -371,112 +376,21 @@
             0
           ],
           "mana_costs": [
-            45,
-            50,
-            55,
-            60
+            10
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "radius",
-              "values_float": [
-                325
-              ],
-              "is_percentage": false,
-              "heading_loc": "作用范围：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "projectile_speed",
-              "values_float": [
-                2000
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "damage_bonus",
               "values_float": [
-                15,
-                25,
-                35,
-                45
+                18,
+                32,
+                46,
+                60
               ],
               "is_percentage": false,
               "heading_loc": "额外伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ground_duration",
-              "values_float": [
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "区域持续时间：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "slow_movement_speed",
-              "values_float": [
-                -16,
-                -19,
-                -22,
-                -25
-              ],
-              "is_percentage": true,
-              "heading_loc": "移动速度减缓：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "slow_duration",
-              "values_float": [
-                2.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "减速持续时间：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -509,29 +423,9 @@
               "required_facet": ""
             },
             {
-              "name": "impact_damage",
+              "name": "skeleton_damage_pct",
               "values_float": [
-                40,
-                60,
-                80,
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "击中伤害：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastRange",
-              "values_float": [
-                1000
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -546,9 +440,9 @@
               "required_facet": ""
             },
             {
-              "name": "AbilityCastPoint",
+              "name": "AbilityCastRange",
               "values_float": [
-                0.2
+                600
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -565,30 +459,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                45,
-                50,
-                55,
-                60
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                7,
-                6,
-                5,
-                4
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -625,7 +496,7 @@
           "id": 5262,
           "name": "clinkz_death_pact",
           "name_loc": "死亡契约",
-          "desc_loc": "克林克兹以敌方非英雄单位或友方骷髅弓手为吞噬的目标，吞噬后在原地产生一个骷髅弓手，治疗并获得最大生命值。不会使克林克兹脱离骨隐步。<br><br>同一时间死亡契约召唤的骷髅弓手只有一个。",
+          "desc_loc": "克林克兹以敌方非英雄单位或友方骷髅弓手为吞噬的目标，治疗并获得最大生命值。不会使克林克兹脱离骨隐步。",
           "lore_loc": "萨瑟雷克斯的死亡契约已经成了克林克兹的一部分，他通过杀死那些低等生物来使自己的枯骨获得新生。",
           "notes_loc": [
             "如果目标是敌方单位，克林克兹将获得经验和金钱。",
@@ -636,7 +507,8 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            "死亡契约会把克林克兹传送至目标。降低死亡契约的充能时间。如果设为多样施法，或者克林克兹被缠绕或束缚，那他就不会传送至目标地点。"
+            "死亡契约会把克林克兹传送至目标。降低死亡契约的充能时间。如果设为多样施法，或者克林克兹被缠绕或束缚，那他就不会传送至目标地点。",
+            ""
           ],
           "type": 0,
           "behavior": "33554440",
@@ -708,23 +580,6 @@
                   "operation": 0
                 }
               ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "skeletons_spawned",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -892,7 +747,7 @@
           "id": 5259,
           "name": "clinkz_burning_barrage",
           "name_loc": "炽烈火雨",
-          "desc_loc": "持续施法 - 克林克兹持续朝目标方向射出多支灼热的箭矢，击中所有敌人，造成克林克兹攻击伤害的一定百分比并施加攻击特效，同时敌人会受到焦油炸弹的减速效果。",
+          "desc_loc": "持续施法 - 克林克兹持续施法，朝目标方向射出多支灼热的箭矢，击中所有敌人，造成克林克兹攻击伤害的一定百分比并施加攻击特效。",
           "lore_loc": "其他人很难分辨骷髅弓箭手身边缭绕的劲风到底是来自他心中的火焰还是他出箭的速度。",
           "notes_loc": [
             "攻击距离加成会提升炽烈火雨的长度。"
@@ -900,6 +755,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1111,6 +967,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -1169,7 +1026,7 @@
             {
               "name": "count",
               "values_float": [
-                5
+                6
               ],
               "is_percentage": false,
               "heading_loc": "数量：",
@@ -1186,7 +1043,7 @@
             {
               "name": "spawn_interval",
               "values_float": [
-                0.15
+                0.1
               ],
               "is_percentage": false,
               "heading_loc": "产生间隔：",
@@ -1277,14 +1134,15 @@
           "id": 5261,
           "name": "clinkz_wind_walk",
           "name_loc": "骨隐步",
-          "desc_loc": "克林克兹进入隐身状态，移动可以穿过其他单位，攻击或使用物品时现形。脱离隐身后会产生骷髅弓手。",
+          "desc_loc": "克林克兹进入隐身状态，移动可以穿过其他单位，攻击或使用物品时现形。脱离隐身后会产生骷髅弓手。<br><br>骷髅弓手不能移动，需要多次英雄或防御塔攻击才会被击杀。骷髅弓手继承克林克兹一定百分比的攻击力，对建筑造成的伤害降低%skeleton_building_damage_reduction%%%。攻击距离与克林克兹相同。",
           "lore_loc": "随着火焰的爆裂和烟雾的升起，骷髅弓箭手的身形遁于无形。",
           "notes_loc": [
             "渐隐时间为%fade_time%秒。"
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "提升骷髅弓手的生命值。",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1440,121 +1298,8 @@
               "required_facet": ""
             },
             {
-              "name": "AbilityManaCost",
-              "values_float": [
-                80,
-                105,
-                130
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                24,
-                21,
-                18
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_clinkz_10",
-                  "value": 4,
-                  "operation": 2
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            }
-          ],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0,
-          "img": "https://img.dota2.com.cn/dota2static/file/30c17acd-81b5-4140-86af-72532c951c7f.png",
-          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_wind_walk.jpg",
-          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_wind_walk.mp4",
-          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_wind_walk.webm",
-          "is_inborn": 0
-        },
-        {
-          "id": 1306,
-          "name": "clinkz_bone_and_arrow",
-          "name_loc": "骨头和箭头",
-          "desc_loc": "克林克兹死亡时会召唤一个骷髅弓手。骷髅弓手不能移动，需要多次英雄或防御塔攻击才会被击杀。骷髅弓手继承克林克兹一定百分比的攻击力，对建筑造成的伤害较低。攻击距离与克林克兹相同。<br><br>克林克兹的其他部分技能也可以召唤骷髅弓手。",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "提升骷髅弓手的生命值。",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 0,
-          "behavior": "4398046511170",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 3,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [
-            {
               "name": "skeleton_duration",
               "values_float": [
-                15,
                 20,
                 25,
                 30
@@ -1614,8 +1359,8 @@
               "values_float": [
                 25
               ],
-              "is_percentage": true,
-              "heading_loc": "对建筑伤害降低：",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1659,10 +1404,194 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
+              "values_float": [
+                80,
+                105,
+                130
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                24,
+                21,
+                18
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_clinkz_10",
+                  "value": 4,
+                  "operation": 2
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": false,
           "ability_has_scepter": true,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0,
+          "img": "https://img.dota2.com.cn/dota2static/file/30c17acd-81b5-4140-86af-72532c951c7f.png",
+          "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_wind_walk.jpg",
+          "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_wind_walk.mp4",
+          "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_wind_walk.webm",
+          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_clinkz/clinkz_aghanims_scepter.jpg",
+          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_clinkz/clinkz_aghanims_scepter.mp4",
+          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_clinkz/clinkz_aghanims_scepter.webm",
+          "is_inborn": 0
+        },
+        {
+          "id": 1678,
+          "name": "clinkz_infernal_shred",
+          "name_loc": "地狱之裂",
+          "desc_loc": "克林克兹和他的骷髅弓手会施加一个可叠加的负面效果，使他们的攻击可以穿透最高目标%max_armor_piercing_pct%%%总物理护甲（不会降低他们的护甲）。克林克兹每次攻击施加%hero_stacks%%%，骷髅弓手施加%skeleton_stacks%%%。<br><br>持续%duration%秒。",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 0,
+          "behavior": "4398046511170",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 3,
+          "max_level": 1,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [
+            {
+              "name": "duration",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "hero_stacks",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "skeleton_stacks",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_armor_piercing_pct",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
+          "is_item": false,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
@@ -1677,9 +1606,6 @@
           "video_jpg": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_bone_and_arrow.jpg",
           "video_mp4": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_bone_and_arrow.mp4",
           "video_webm": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/clinkz_bone_and_arrow.webm",
-          "video_scepter_jpg": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_clinkz/clinkz_aghanims_scepter.jpg",
-          "video_scepter_mp4": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_clinkz/clinkz_aghanims_scepter.mp4",
-          "video_scepter_webm": "https://img.dota2.com.cn/dota2static/herostatic/upgrade/npc_dota_hero_clinkz/clinkz_aghanims_scepter.webm",
           "is_inborn": 1
         }
       ],
@@ -1694,6 +1620,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1757,6 +1684,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1818,6 +1746,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1899,6 +1828,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1960,6 +1890,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2023,6 +1954,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2085,6 +2017,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2139,13 +2072,14 @@
         {
           "id": 6620,
           "name": "special_bonus_unique_clinkz_3",
-          "name_loc": "焦油炸弹齐射",
-          "desc_loc": "自动施放的焦油炸弹攻击或攻击被焦油覆盖的敌人都会向克林克兹攻击距离内一个随机敌人再射出一箭。",
+          "name_loc": "灼热之箭齐射",
+          "desc_loc": "灼热之箭的攻击会向克林克兹攻击距离内一个随机敌人再射出一箭。",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -2203,31 +2137,19 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_clinkz.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/npc_dota_hero_clinkz.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_clinkz/npc_dota_hero_clinkz.webm",
-      "update_time": 1761883266,
+      "update_time": 1765846842,
       "facets": [
         {
-          "color": 5,
-          "title_loc": "火力压制",
-          "description_loc": "扫射攻击会使敌人更容易攻击落空。",
-          "name": "clinkz_suppressive_fire",
-          "icon": "no_vision",
-          "gradient_id": 3,
-          "index": 0
-        },
-        {
           "color": 1,
-          "title_loc": "吞灭之步",
-          "description_loc": "死亡契约会把克林克兹传送至目标。降低死亡契约的充能时间。",
-          "name": "clinkz_engulfing_step",
-          "icon": "teleport",
+          "title_loc": "火刑审判",
+          "description_loc": "这颗命石没有任何效果。克林克兹还是心怀复仇之火……",
+          "name": "clinkz_clinkz",
+          "icon": "nuke",
           "gradient_id": 0,
-          "index": 1
+          "index": 2
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         }
@@ -2235,15 +2157,16 @@
       "cartoon_avatars": null,
       "mid_img": "https://img.dota2.com.cn/dota2static/herostatic/index/npc_dota_hero_clinkz.png",
       "new_abilities": {
-        "id": 1306,
-        "name": "clinkz_bone_and_arrow",
-        "name_loc": "骨头和箭头",
-        "desc_loc": "克林克兹死亡时会召唤一个骷髅弓手。骷髅弓手不能移动，需要多次英雄或防御塔攻击才会被击杀。骷髅弓手继承克林克兹一定百分比的攻击力，对建筑造成的伤害较低。攻击距离与克林克兹相同。<br><br>克林克兹的其他部分技能也可以召唤骷髅弓手。",
+        "id": 1678,
+        "name": "clinkz_infernal_shred",
+        "name_loc": "地狱之裂",
+        "desc_loc": "克林克兹和他的骷髅弓手会施加一个可叠加的负面效果，使他们的攻击可以穿透最高目标%max_armor_piercing_pct%%%总物理护甲（不会降低他们的护甲）。克林克兹每次攻击施加%hero_stacks%%%，骷髅弓手施加%skeleton_stacks%%%。<br><br>持续%duration%秒。",
         "lore_loc": "",
         "notes_loc": [],
         "shard_loc": "",
-        "scepter_loc": "提升骷髅弓手的生命值。",
+        "scepter_loc": "",
         "facets_loc": [
+          "",
           "",
           ""
         ],
@@ -2255,7 +2178,7 @@
         "damage": 0,
         "immunity": 0,
         "dispellable": 3,
-        "max_level": 4,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -2284,37 +2207,15 @@
         "health_costs": [],
         "special_values": [
           {
-            "name": "skeleton_duration",
+            "name": "duration",
             "values_float": [
-              15,
-              20,
-              25,
-              30
-            ],
-            "is_percentage": false,
-            "heading_loc": "骷髅弓手持续时间：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "skeleton_health",
-            "values_float": [
-              8
+              5
             ],
             "is_percentage": false,
             "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
-            "values_scepter": [
-              4
-            ],
+            "values_scepter": [],
             "facet_bonus": {
               "name": "",
               "values": [],
@@ -2323,48 +2224,29 @@
             "required_facet": ""
           },
           {
-            "name": "skeleton_health_tooltip",
+            "name": "hero_stacks",
             "values_float": [
               2
             ],
             "is_percentage": false,
-            "heading_loc": "骷髅弓手摧毁所需攻击次数：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
-            "values_scepter": [
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "skeleton_stacks",
+            "values_float": [
               1
             ],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "skeleton_building_damage_reduction",
-            "values_float": [
-              25
-            ],
-            "is_percentage": true,
-            "heading_loc": "对建筑伤害降低：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
-            "name": "attack_rate",
-            "values_float": [
-              1.6
-            ],
             "is_percentage": false,
-            "heading_loc": "骷髅弓手攻击间隔：",
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -2376,12 +2258,12 @@
             "required_facet": ""
           },
           {
-            "name": "damage_percent",
+            "name": "max_armor_piercing_pct",
             "values_float": [
               20
             ],
-            "is_percentage": true,
-            "heading_loc": "骷髅弓手继承攻击力：",
+            "is_percentage": false,
+            "heading_loc": "",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -2394,7 +2276,7 @@
           }
         ],
         "is_item": false,
-        "ability_has_scepter": true,
+        "ability_has_scepter": false,
         "ability_has_shard": false,
         "ability_is_granted_by_scepter": false,
         "ability_is_granted_by_shard": false,

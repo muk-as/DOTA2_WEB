@@ -60,6 +60,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 0,
@@ -308,16 +309,13 @@
           "id": 5143,
           "name": "riki_blink_strike",
           "name_loc": "闪烁突袭",
-          "desc_loc": "传送到一个目标背后，如果是敌人对其造成短暂减速和额外伤害。",
+          "desc_loc": "传送到目标背后，如果是敌人对其造成短暂减速，并发动一次拥有额外伤害的攻击。",
           "lore_loc": "隐形刺客迅捷的动作让他的目标几乎不可能逃脱。",
-          "notes_loc": [
-            "力丸对敌人使用闪烁突袭后首次攻击将触发背刺。",
-            "闪烁突袭的伤害在下次攻击前生效。",
-            "可以对友方单位使用闪烁突袭，但是不会造成伤害。"
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -326,7 +324,7 @@
           "target_team": 4,
           "target_type": 128,
           "flags": 0,
-          "damage": 2,
+          "damage": 1,
           "immunity": 3,
           "dispellable": 0,
           "max_level": 4,
@@ -366,10 +364,10 @@
             {
               "name": "bonus_damage",
               "values_float": [
-                40,
-                55,
-                70,
-                85
+                15,
+                30,
+                45,
+                60
               ],
               "is_percentage": false,
               "heading_loc": "额外伤害：",
@@ -410,7 +408,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_riki_9",
+                  "value": 500,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -428,49 +432,6 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChargeRestoreTime",
-              "values_float": [
-                25,
-                21,
-                17,
-                13
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_riki_9",
-                  "value": 4,
-                  "operation": 2
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -503,11 +464,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0.1
+                13,
+                10,
+                7,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_riki_5",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -540,21 +510,22 @@
           "id": 5145,
           "name": "riki_tricks_of_the_trade",
           "name_loc": "绝杀秘技",
-          "desc_loc": "持续施法 - 力丸转移出现实位面，从背后随机攻击附近的随机敌方单位。期间他的攻击力降低，但是他的敏捷值大幅提升。",
+          "desc_loc": "持续施法 - 力丸转移出现实位面，每隔一段时间从背后随机攻击附近的%interval_targets%个随机敌方单位。期间他的攻击伤害为固定值。",
           "lore_loc": "隐形刺客从不忌讳使用肮脏的战斗手法，尤其擅长从对手的背后发动攻击。",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "提升施法距离、攻击次数并且可以对友方英雄施放，持续时间内藏在他们体内。每次额外攻击一个目标。",
+          "scepter_loc": "提升施法距离。可以对友方单位施放，持续时间内藏在他们体内。藏在友方单位体内时，他会拥有%scepter_movespeed%%%移动速度加成，并且绝杀秘技的持续时间提升%scepter_bonus_duration%秒，并且额外发动%scepter_bonus_attacks%次攻击。",
           "facets_loc": [
             "",
-            "绝杀秘技攻击非英雄单位时拥有%creep_agility_multiplier%倍敏捷加成。只要力丸在绝杀秘技期间击杀一个非英雄单位，冷却时间就会减少%cooldown_reduction_per_creep_kill%秒。"
+            "绝杀秘技攻击非英雄单位时拥有%creep_agility_multiplier%倍敏捷加成。只要力丸在绝杀秘技期间击杀一个非英雄单位，冷却时间就会减少%cooldown_reduction_per_creep_kill%秒。",
+            ""
           ],
           "type": 0,
           "behavior": "176",
           "target_team": 1,
-          "target_type": 1,
-          "flags": 131072,
-          "damage": 0,
+          "target_type": 19,
+          "flags": 0,
+          "damage": 1,
           "immunity": 3,
           "dispellable": 0,
           "max_level": 4,
@@ -591,7 +562,7 @@
             {
               "name": "radius",
               "values_float": [
-                450
+                425
               ],
               "is_percentage": false,
               "heading_loc": "作用范围：",
@@ -611,7 +582,7 @@
                 4
               ],
               "is_percentage": false,
-              "heading_loc": "攻击次数：",
+              "heading_loc": "攻击间隔：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -623,11 +594,48 @@
               "required_facet": ""
             },
             {
-              "name": "damage_pct",
+              "name": "speed_per_attack",
               "values_float": [
-                40
+                180
               ],
-              "is_percentage": true,
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "interval_targets",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_damage",
+              "values_float": [
+                30,
+                50,
+                70,
+                90
+              ],
+              "is_percentage": false,
               "heading_loc": "攻击伤害：",
               "bonuses": [],
               "values_shard": [],
@@ -640,19 +648,14 @@
               "required_facet": ""
             },
             {
-              "name": "agility_pct",
-              "values_float": [
-                55,
-                70,
-                85,
-                100
-              ],
+              "name": "base_attack_damage_pct",
+              "values_float": [],
               "is_percentage": false,
-              "heading_loc": "敏捷加成：",
+              "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_riki_2",
-                  "value": 50,
+                  "name": "special_bonus_unique_riki_tricks_dmg",
+                  "value": 15,
                   "operation": 0
                 }
               ],
@@ -666,7 +669,64 @@
               "required_facet": ""
             },
             {
-              "name": "scepter_duration",
+              "name": "pocket_riki_enabled",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_movespeed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                15
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_bonus_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "scepter_bonus_attacks",
               "values_float": [
                 0
               ],
@@ -677,65 +737,6 @@
               "values_scepter": [
                 2
               ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_attacks",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "攻击次数：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                5
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_cast_range",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "施法距离：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                700
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "dispel",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_riki_5",
-                  "value": 1,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -790,7 +791,9 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                300
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -835,10 +838,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                45,
-                55,
-                65,
-                75
+                65
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -855,14 +855,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
+                21,
                 18,
-                16,
-                14,
+                15,
                 12
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_riki_6",
+                  "value": 4,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -898,27 +904,28 @@
           "id": 1258,
           "name": "riki_innate_backstab",
           "name_loc": "背刺",
-          "desc_loc": "力丸每次从背后攻击敌人时都会根据自身敏捷造成额外伤害。",
+          "desc_loc": "力丸每次从背后攻击敌人时都会造成额外伤害，伤害量为自身敏捷的一定倍数。",
           "lore_loc": "",
           "notes_loc": [
-            "反补友方单位时不会生效。",
+            "反补友方单位时具有%ally_multiplier%%%效果。",
             "力丸的幻象也会有背刺的动作，但是不会造成额外伤害。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
             "力丸获得助攻和击杀时会获得额外经验。",
+            "",
             ""
           ],
           "type": 0,
-          "behavior": "66",
+          "behavior": "67",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 1,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -949,13 +956,10 @@
             {
               "name": "damage_multiplier",
               "values_float": [
-                0.55,
-                0.9,
-                1.25,
-                1.6
+                0.6
               ],
               "is_percentage": false,
-              "heading_loc": "敏捷伤害系数：",
+              "heading_loc": "敏捷值倍数：",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_riki_1",
@@ -963,6 +967,23 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_multiplier",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1087,12 +1108,13 @@
           "id": 5144,
           "name": "riki_backstab",
           "name_loc": "刀光谍影",
-          "desc_loc": "力丸遁入阴影，保持隐身状态。主动攻击敌人，力丸将会显形。",
+          "desc_loc": "力丸遁入阴影，变为隐身状态，主动攻击敌人后力丸将会显形。击杀英雄和助攻会提供额外经验。",
           "lore_loc": "力丸来找你了。",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1141,13 +1163,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "渐隐时间：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_riki_6",
-                  "value": 1.25,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1169,6 +1185,42 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_xp_kill",
+              "values_float": [
+                130,
+                260,
+                390
+              ],
+              "is_percentage": false,
+              "heading_loc": "击杀英雄奖励经验：",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_xp_assist",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "助攻经验奖励：",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -1209,6 +1261,7 @@
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1272,6 +1325,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1324,15 +1378,16 @@
           "item_quality": 0
         },
         {
-          "id": 6193,
-          "name": "special_bonus_unique_riki_2",
-          "name_loc": "+{s:bonus_agility_pct} 绝杀秘技敏捷提升",
+          "id": 1702,
+          "name": "special_bonus_unique_riki_tricks_dmg",
+          "name_loc": "绝杀秘技+{s:bonus_base_attack_damage_pct}% 力丸基础攻击力",
           "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1396,6 +1451,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1458,129 +1514,6 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 795,
-          "name": "special_bonus_unique_riki_9",
-          "name_loc": "-{s:bonus_AbilityChargeRestoreTime}秒 闪烁突袭充能",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 347,
-          "name": "special_bonus_unique_riki_6",
-          "name_loc": "-{s:bonus_fade_delay}秒 刀光谍影渐隐延迟",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
             "",
             ""
           ],
@@ -1636,13 +1569,140 @@
         {
           "id": 6867,
           "name": "special_bonus_unique_riki_5",
-          "name_loc": "绝杀秘技施加弱驱散",
-          "desc_loc": "被缠绕或束缚时可以施放",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 闪烁突袭冷却",
+          "desc_loc": "",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 347,
+          "name": "special_bonus_unique_riki_6",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 绝杀秘技冷却",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 795,
+          "name": "special_bonus_unique_riki_9",
+          "name_loc": "+{s:bonus_AbilityCastRange} 闪烁突袭施法距离",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
             "",
             ""
           ],
@@ -1700,31 +1760,19 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_riki.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_riki/npc_dota_hero_riki.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_riki/npc_dota_hero_riki.webm",
-      "update_time": 1761883238,
+      "update_time": 1765846825,
       "facets": [
         {
-          "color": 5,
-          "title_loc": "契约杀手",
-          "description_loc": "力丸获得助攻和击杀时会获得额外经验。",
-          "name": "riki_contract_killer",
-          "icon": "xp",
-          "gradient_id": 3,
-          "index": 0
-        },
-        {
           "color": 4,
-          "title_loc": "消灭",
-          "description_loc": "绝杀秘技攻击非英雄单位时拥有{s:bonus_creep_agility_multiplier}倍敏捷加成。只要力丸在绝杀秘技期间击杀一个非英雄单位，冷却时间就会减少{s:bonus_cooldown_reduction_per_creep_kill}秒。",
-          "name": "riki_exterminator",
-          "icon": "agility",
+          "title_loc": "残杀",
+          "description_loc": "这颗命石没有任何效果。力丸还是一心为塔林家族复仇……",
+          "name": "riki_riki",
+          "icon": "execute",
           "gradient_id": 2,
-          "index": 1
+          "index": 2
         }
       ],
       "facet_abilities": [
-        {
-          "abilities": []
-        },
         {
           "abilities": []
         }
@@ -1735,27 +1783,28 @@
         "id": 1258,
         "name": "riki_innate_backstab",
         "name_loc": "背刺",
-        "desc_loc": "力丸每次从背后攻击敌人时都会根据自身敏捷造成额外伤害。",
+        "desc_loc": "力丸每次从背后攻击敌人时都会造成额外伤害，伤害量为自身敏捷的一定倍数。",
         "lore_loc": "",
         "notes_loc": [
-          "反补友方单位时不会生效。",
+          "反补友方单位时具有%ally_multiplier%%%效果。",
           "力丸的幻象也会有背刺的动作，但是不会造成额外伤害。"
         ],
         "shard_loc": "",
         "scepter_loc": "",
         "facets_loc": [
           "力丸获得助攻和击杀时会获得额外经验。",
+          "",
           ""
         ],
         "type": 0,
-        "behavior": "66",
+        "behavior": "67",
         "target_team": 0,
         "target_type": 0,
         "flags": 0,
         "damage": 1,
         "immunity": 0,
         "dispellable": 0,
-        "max_level": 4,
+        "max_level": 1,
         "cast_ranges": [
           0
         ],
@@ -1786,13 +1835,10 @@
           {
             "name": "damage_multiplier",
             "values_float": [
-              0.55,
-              0.9,
-              1.25,
-              1.6
+              0.6
             ],
             "is_percentage": false,
-            "heading_loc": "敏捷伤害系数：",
+            "heading_loc": "敏捷值倍数：",
             "bonuses": [
               {
                 "name": "special_bonus_unique_riki_1",
@@ -1800,6 +1846,23 @@
                 "operation": 0
               }
             ],
+            "values_shard": [],
+            "values_scepter": [],
+            "facet_bonus": {
+              "name": "",
+              "values": [],
+              "operation": 0
+            },
+            "required_facet": ""
+          },
+          {
+            "name": "ally_multiplier",
+            "values_float": [
+              25
+            ],
+            "is_percentage": false,
+            "heading_loc": "",
+            "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {

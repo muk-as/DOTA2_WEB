@@ -50,7 +50,7 @@
           "id": 6344,
           "name": "pangolier_swashbuckle",
           "name_loc": "虚张声势",
-          "desc_loc": "石鳞剑士先冲向目标地点，再向指示方向上的所有敌人刺出数剑。\n\n刺剑有几率触发幸运一击。",
+          "desc_loc": "石鳞剑士先冲向目标地点，再向指示方向上的所有敌人刺出数剑并减速他们。\n\n刺剑有几率触发幸运一击。",
           "lore_loc": "石鳞剑士的剑比舌头还要灵活。",
           "notes_loc": [
             "在地雷滚滚期间施放虚张声势将使地雷滚滚提前结束。"
@@ -450,11 +450,11 @@
           "id": 6461,
           "name": "pangolier_shield_crash",
           "name_loc": "甲盾冲击",
-          "desc_loc": "石鳞剑士跃入空中，再落向当前位置的前方地面造成冲击，对范围内所有敌人造成伤害和减速。冲击时每击中一名敌方英雄，他就能在短时间内获得一定数值的全伤害护盾。\n\n地雷滚滚过程中使用甲盾冲击将会保持前进，并且可以使地雷滚滚跨过地形障碍。\n\n地雷滚滚期间甲盾冲击的冷却时间会有所减少。",
+          "desc_loc": "石鳞剑士跃入空中，再落向当前位置的前方地面造成冲击，对范围内所有敌人造成伤害。甲盾冲击只要击中任意敌方英雄，他就能在短时间内获得一定数值的全伤害护盾。\n\n地雷滚滚过程中使用甲盾冲击将会保持前进，并且可以使地雷滚滚跨过地形障碍。",
           "lore_loc": "只有被敌人层层包围，石鳞剑士才能真正地一展雄风。",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "甲盾冲击将围绕英雄每90度施放一个刺击2次的虚张声势。",
+          "scepter_loc": "甲盾冲击将围绕英雄每90度施放一个刺击2次的虚张声势，造成%scepter_damage_outgoing_tooltip%%%伤害。",
           "facets_loc": [
             "石鳞剑士可以在半空中再次施放甲盾冲击，造成更高的伤害，并获得更高数值的护盾。在空中的时间越久，伤害和护盾的数值越高。",
             "",
@@ -1347,11 +1347,12 @@
           "id": 6343,
           "name": "pangolier_gyroshell",
           "name_loc": "地雷滚滚",
-          "desc_loc": "石鳞剑士卷成一个减益免疫状态的圆球，拥有%magic_resistance%%%魔法抗性加成，隆隆地向前滚去。滚动时移动速度提升，可以碾过树木，但是转身速率降低。敌人被击中后会被击退，然后受到基于石鳞剑士攻击力的伤害，落地时会被眩晕。\n\n与地形障碍相撞后会暂时停止滚动，并且滚动方向变反。\n\n地雷滚滚期间，甲盾冲击的冷却时间会有所减少。\n\n驱散类型：弱驱散",
+          "desc_loc": "石鳞剑士卷成一个减益免疫状态的圆球，拥有%magic_resistance%%%魔法抗性加成，隆隆地向前滚去。滚动时移动速度提升，可以碾过树木，但是转身速率降低。敌人被击中后会被击退，然后受到与他的攻击力成正比的伤害，并且被眩晕。\n\n与地形障碍相撞后会暂时停止滚动，并且滚动方向变反。\n\n驱散类型：弱驱散",
           "lore_loc": "他的祖先只能找到安全感的地方，石鳞剑士却看见了机遇……",
           "notes_loc": [
             "敌人在技能期间可以多次被眩晕，但是只有上一次眩晕结束后才会再次被眩晕。",
-            "即使石鳞剑士在滚动时被控制，他依然会对范围内敌人造成眩晕和击退。"
+            "即使石鳞剑士在滚动时被控制，他依然会对范围内敌人造成眩晕和击退。",
+            "石鳞剑士需要%move_speed_ramp_up_time%秒才能达到全额的滚动速度。"
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -1890,6 +1891,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -1952,253 +1954,6 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 9060,
-          "name": "special_bonus_unique_pangolier_3",
-          "name_loc": "虚张声势+{s:bonus_attack_damage}% 攻击伤害",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 1053,
-          "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
-          "name_loc": "+{s:bonus_hero_shield} 甲盾冲击每名英雄护盾",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 9135,
-          "name": "special_bonus_unique_pangolier_6",
-          "name_loc": "+{s:bonus_duration}秒 地雷滚滚持续时间",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
-            "",
-            ""
-          ],
-          "type": 2,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
-          "flags": 0,
-          "damage": 0,
-          "immunity": 0,
-          "dispellable": 0,
-          "max_level": 4,
-          "cast_ranges": [
-            0
-          ],
-          "cast_points": [
-            0
-          ],
-          "channel_times": [
-            0
-          ],
-          "cooldowns": [
-            0
-          ],
-          "durations": [
-            0
-          ],
-          "damages": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "mana_costs": [
-            0
-          ],
-          "gold_costs": [],
-          "health_costs": [],
-          "special_values": [],
-          "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
-          "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
-          "item_cost": 0,
-          "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
-          "item_stock_max": 0,
-          "item_stock_time": 0,
-          "item_quality": 0
-        },
-        {
-          "id": 1196,
-          "name": "special_bonus_unique_pangolier_shield_crash_radius",
-          "name_loc": "+{s:bonus_radius} 甲盾冲击范围和伤害",
-          "desc_loc": "",
-          "lore_loc": "",
-          "notes_loc": [],
-          "shard_loc": "",
-          "scepter_loc": "",
-          "facets_loc": [
             "",
             ""
           ],
@@ -2262,6 +2017,259 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 1053,
+          "name": "special_bonus_unique_pangolier_shield_crash_herostacks",
+          "name_loc": "+{s:bonus_hero_shield} 甲盾冲击护盾",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 9135,
+          "name": "special_bonus_unique_pangolier_6",
+          "name_loc": "+{s:bonus_duration}秒 地雷滚滚持续时间",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 1694,
+          "name": "special_bonus_unique_pangolier_shield_crash_cooldown",
+          "name_loc": "-{s:bonus_AbilityCooldown}秒 甲盾冲击冷却",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
+            ""
+          ],
+          "type": 2,
+          "behavior": "2",
+          "target_team": 0,
+          "target_type": 0,
+          "flags": 0,
+          "damage": 0,
+          "immunity": 0,
+          "dispellable": 0,
+          "max_level": 4,
+          "cast_ranges": [
+            0
+          ],
+          "cast_points": [
+            0
+          ],
+          "channel_times": [
+            0
+          ],
+          "cooldowns": [
+            0
+          ],
+          "durations": [
+            0
+          ],
+          "damages": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mana_costs": [
+            0
+          ],
+          "gold_costs": [],
+          "health_costs": [],
+          "special_values": [],
+          "is_item": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": false,
+          "ability_is_innate": false,
+          "item_cost": 0,
+          "item_initial_charges": 0,
+          "item_neutral_tier": 4294967295,
+          "item_stock_max": 0,
+          "item_stock_time": 0,
+          "item_quality": 0
+        },
+        {
+          "id": 9060,
+          "name": "special_bonus_unique_pangolier_3",
+          "name_loc": "虚张声势+{s:bonus_attack_damage}% 攻击伤害",
+          "desc_loc": "",
+          "lore_loc": "",
+          "notes_loc": [],
+          "shard_loc": "",
+          "scepter_loc": "",
+          "facets_loc": [
+            "",
+            "",
             ""
           ],
           "type": 2,
@@ -2324,6 +2332,7 @@
           "scepter_loc": "",
           "facets_loc": [
             "",
+            "",
             ""
           ],
           "type": 2,
@@ -2380,7 +2389,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_pangolier.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_pangolier/npc_dota_hero_pangolier.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_pangolier/npc_dota_hero_pangolier.webm",
-      "update_time": 1765839716,
+      "update_time": 1765846884,
       "facets": [
         {
           "color": 3,
