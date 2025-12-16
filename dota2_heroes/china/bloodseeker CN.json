@@ -128,7 +128,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "攻击速度：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_bloodseeker_5",
+                  "value": 30,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -148,13 +154,7 @@
               ],
               "is_percentage": true,
               "heading_loc": "技能增强：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_bloodseeker_6",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -214,10 +214,10 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                3
+              "values_shard": [
+                2
               ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -254,13 +254,7 @@
               ],
               "is_percentage": true,
               "heading_loc": "基础攻击力：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_bloodseeker_6",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -457,7 +451,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "沉默持续时间：",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_bloodseeker_7",
+                  "value": 2.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -489,44 +489,6 @@
               "facet_bonus": {
                 "name": "",
                 "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "heal",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  50
-                ],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "strong_dispel_count",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [
-                  3
-                ],
                 "operation": 0
               },
               "required_facet": ""
@@ -1032,7 +994,7 @@
             {
               "name": "base_heal",
               "values_float": [
-                25
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -1047,12 +1009,12 @@
               "required_facet": ""
             },
             {
-              "name": "heal_hp_pct_per_level",
+              "name": "heal_hp_pct",
               "values_float": [
                 1.5
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "最大生命值治疗：",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -1098,33 +1060,18 @@
               "required_facet": ""
             },
             {
-              "name": "max_hp_percent_heal_tooltip",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "最大生命值治疗：",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "barrier_decay_pct",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                1.5
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_bloodseeker_overheal_barrier",
+                  "value": 1.5,
+                  "operation": 0
+                }
               ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1135,15 +1082,17 @@
             },
             {
               "name": "max_shield_pct",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                50
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_bloodseeker_overheal_barrier",
+                  "value": 35,
+                  "operation": 0
+                }
               ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -1154,16 +1103,18 @@
             },
             {
               "name": "pure_damage_lifesteal_pct",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                35
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_bloodseeker_pure_damage_lifesteal",
+                  "value": 25,
+                  "operation": 5
+                }
               ],
+              "values_shard": [],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1312,15 +1263,11 @@
               ],
               "is_percentage": true,
               "heading_loc": "生命值伤害：",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_bloodseeker_7",
-                  "value": 8,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                3
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1425,18 +1372,16 @@
             },
             {
               "name": "AbilityCharges",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_bloodseeker_rupture_charges",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                2
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1446,18 +1391,18 @@
             },
             {
               "name": "AbilityChargeRestoreTime",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_bloodseeker_rupture_charges",
-                  "value": 65,
-                  "operation": 5
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                75,
+                70,
+                65
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -1493,15 +1438,11 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_bloodseeker_rupture_charges",
-                  "value": 0.25,
-                  "operation": 5
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                0.25
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -2057,7 +1998,7 @@
       "crops_img": "https://img.dota2.com.cn/dota2static/herostatic/crops/npc_dota_hero_bloodseeker.png",
       "top_img": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/npc_dota_hero_bloodseeker.png",
       "top_video": "https://img.dota2.com.cn/dota2static/herostatic/npc_dota_hero_bloodseeker/npc_dota_hero_bloodseeker.webm",
-      "update_time": 1761883207,
+      "update_time": 1765843205,
       "facets": [
         {
           "color": 0,
@@ -2092,13 +2033,13 @@
         "id": 1203,
         "name": "bloodseeker_sanguivore",
         "name_loc": "食血动物",
-        "desc_loc": "血魔每杀死一个单位都会回复部分生命，回复量为每级血魔等级为%heal_hp_pct_per_level%%%单位最大生命值，加上基础%base_heal%点。<br><br>友军击杀了附近的敌方英雄时会回复半额数值。",
+        "desc_loc": "血魔每杀死一个单位都会回复部分生命，回复量为基础%base_heal%点加上该单位最大生命值的一定百分比。<br><br>友军击杀了附近的敌方英雄时会回复半额数值。",
         "lore_loc": "",
         "notes_loc": [
           "非英雄单位的吸血效果减少%creep_lifesteal_reduction_pct%%%。"
         ],
-        "shard_loc": "被动使来自血魔自身技能的超量治疗变为全伤害护盾，最高可达血魔最大生命的%max_shield_pct%%%。护盾数值每秒衰减%barrier_decay_pct%%%",
-        "scepter_loc": "血魔从他造成的<font color=\"#d8ae53\">纯粹</font>伤害中可以回复%pure_damage_lifesteal_pct%%%。",
+        "shard_loc": "",
+        "scepter_loc": "",
         "facets_loc": [
           "",
           "",
@@ -2143,7 +2084,7 @@
           {
             "name": "base_heal",
             "values_float": [
-              25
+              30
             ],
             "is_percentage": false,
             "heading_loc": "",
@@ -2158,12 +2099,12 @@
             "required_facet": ""
           },
           {
-            "name": "heal_hp_pct_per_level",
+            "name": "heal_hp_pct",
             "values_float": [
               1.5
             ],
-            "is_percentage": false,
-            "heading_loc": "",
+            "is_percentage": true,
+            "heading_loc": "最大生命值治疗：",
             "bonuses": [],
             "values_shard": [],
             "values_scepter": [],
@@ -2209,33 +2150,18 @@
             "required_facet": ""
           },
           {
-            "name": "max_hp_percent_heal_tooltip",
-            "values_float": [
-              0
-            ],
-            "is_percentage": true,
-            "heading_loc": "最大生命值治疗：",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [],
-            "facet_bonus": {
-              "name": "",
-              "values": [],
-              "operation": 0
-            },
-            "required_facet": ""
-          },
-          {
             "name": "barrier_decay_pct",
-            "values_float": [
-              0
-            ],
+            "values_float": [],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [
-              1.5
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_bloodseeker_overheal_barrier",
+                "value": 1.5,
+                "operation": 0
+              }
             ],
+            "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
               "name": "",
@@ -2246,15 +2172,17 @@
           },
           {
             "name": "max_shield_pct",
-            "values_float": [
-              0
-            ],
+            "values_float": [],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [
-              50
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_bloodseeker_overheal_barrier",
+                "value": 35,
+                "operation": 0
+              }
             ],
+            "values_shard": [],
             "values_scepter": [],
             "facet_bonus": {
               "name": "",
@@ -2265,16 +2193,18 @@
           },
           {
             "name": "pure_damage_lifesteal_pct",
-            "values_float": [
-              0
-            ],
+            "values_float": [],
             "is_percentage": false,
             "heading_loc": "",
-            "bonuses": [],
-            "values_shard": [],
-            "values_scepter": [
-              35
+            "bonuses": [
+              {
+                "name": "special_bonus_unique_bloodseeker_pure_damage_lifesteal",
+                "value": 25,
+                "operation": 5
+              }
             ],
+            "values_shard": [],
+            "values_scepter": [],
             "facet_bonus": {
               "name": "",
               "values": [],
@@ -2301,8 +2231,8 @@
           }
         ],
         "is_item": false,
-        "ability_has_scepter": true,
-        "ability_has_shard": true,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
         "ability_is_granted_by_scepter": false,
         "ability_is_granted_by_shard": false,
         "ability_is_innate": true,
