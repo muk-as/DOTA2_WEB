@@ -8,7 +8,7 @@
             "id": 950,
             "name": "item_defiant_shell",
             "name_loc": "不羁甲壳",
-            "desc_loc": "<h1>被动：互换</h1> 被攻击后英雄会对攻击距离内的一个目标作出反击。冷却时间为%counter_cooldown%秒。",
+            "desc_loc": "<h1>被动：互换</h1> 被攻击后英雄会对攻击距离内的一个目标作出反击，伤害为平常攻击伤害的%counter_damage%%%。",
             "lore_loc": "",
             "notes_loc": [],
             "shard_loc": "",
@@ -33,7 +33,7 @@
               0
             ],
             "cooldowns": [
-              0
+              5
             ],
             "durations": [
               0
@@ -51,7 +51,24 @@
             "health_costs": [],
             "special_values": [
               {
-                "name": "counter_cooldown",
+                "name": "counter_damage",
+                "values_float": [
+                  80
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "AbilityCooldown",
                 "values_float": [
                   5
                 ],
@@ -76,7 +93,7 @@
             "ability_is_innate": false,
             "item_cost": 0,
             "item_initial_charges": 0,
-            "item_neutral_tier": 4294967295,
+            "item_neutral_tier": 1,
             "item_stock_max": 0,
             "item_stock_time": 0,
             "item_quality": 1

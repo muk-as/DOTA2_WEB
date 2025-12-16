@@ -8,9 +8,11 @@
             "id": 114,
             "name": "item_heart",
             "name_loc": "恐鳌之心",
-            "desc_loc": "",
+            "desc_loc": "<h1>被动：巨兽之血</h1>生命恢复提升缺失生命值的%missing_health_regen%%%。",
             "lore_loc": "保存完好的心脏，来自早已绝种的怪兽，能提升携带者的耐久力。",
-            "notes_loc": [],
+            "notes_loc": [
+              "多个巨兽之血的效果不会叠加。"
+            ],
             "shard_loc": "",
             "scepter_loc": "",
             "facets_loc": [],
@@ -68,12 +70,29 @@
                 "required_facet": ""
               },
               {
-                "name": "health_regen_pct",
+                "name": "hp_regen",
                 "values_float": [
-                  1.4
+                  1
                 ],
                 "is_percentage": true,
-                "heading_loc": "+最大生命恢复",
+                "heading_loc": "+最大生命值恢复",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "missing_health_regen",
+                "values_float": [
+                  1.5
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -91,7 +110,7 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 5200,
+            "item_cost": 5100,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

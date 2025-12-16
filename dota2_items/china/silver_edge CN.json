@@ -8,7 +8,7 @@
             "id": 249,
             "name": "item_silver_edge",
             "name_loc": "白银之锋",
-            "desc_loc": "<h1>主动：疾影步</h1>进入隐身直到%windwalk_duration%秒持续时间结束、或者在此之前攻击或施法。隐身时，移动速度将提升%windwalk_movement_speed%%%，而且可以穿越单位。<br><br>破隐一击将额外造成%windwalk_bonus_damage%点物理伤害，同时%backstab_duration%秒内目标的被动技能无效。\n\n",
+            "desc_loc": "<h1>主动：疾影步</h1>进入隐身直到%windwalk_duration%秒持续时间结束、或者在此之前攻击或施法。隐身时，移动速度将提升%windwalk_movement_speed%%%，而且可以穿越单位。<br><br>破隐一击将额外造成%windwalk_bonus_damage%点物理伤害，同时%backstab_duration%秒内目标的被动技能无效，移动速度不会超过%max_movement_speed%。\n\n",
             "lore_loc": "曾经是手刃不义之君的利器，但是后来王国也因此陷入了内乱。",
             "notes_loc": [],
             "shard_loc": "",
@@ -170,6 +170,23 @@
                 "required_facet": ""
               },
               {
+                "name": "max_movement_speed",
+                "values_float": [
+                  200
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
                 "name": "visibility_radius",
                 "values_float": [
                   1025
@@ -227,7 +244,7 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 5800,
+            "item_cost": 5700,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

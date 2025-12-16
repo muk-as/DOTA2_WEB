@@ -8,7 +8,7 @@
             "id": 269,
             "name": "item_holy_locket",
             "name_loc": "圣洁吊坠",
-            "desc_loc": "<h1>主动：充能</h1>使友方单位目标立刻根据能量点数回复相应的生命和魔法，每点能量恢复%restore_per_charge%点生命和魔法。<br><br>每%AbilityChargeRestoreTime%秒自动获得一点能量，每当附近%charge_radius%范围内有可见敌人施放技能也会获得一点。\n\n<h1>被动：神圣福佑</h1>自身提供的治疗效果提升%heal_increase%%%。",
+            "desc_loc": "<h1>主动：充能</h1>使友方单位目标受到的治疗增强提升%incoming_heal_increase_active%%%，持续%active_buff_duration%秒，并且立刻根据能量点数回复相应的生命和魔法，每点能量恢复%health_restore_per_charge%点生命和%mana_restore_per_charge%点魔法。<br><br>每%AbilityChargeRestoreTime%秒自动获得一点能量，每当附近%charge_radius%范围内有可见敌人施放技能也会获得一点。\n\n<h1>被动：神圣福佑</h1>自身提供的治疗效果提升%heal_increase_passive%%%。",
             "lore_loc": "一件珍贵的圣物，多年以来人们认为在远征失败后已经永远地遗失了。",
             "notes_loc": [],
             "shard_loc": "",
@@ -24,7 +24,7 @@
             "dispellable": 0,
             "max_level": 0,
             "cast_ranges": [
-              500
+              600
             ],
             "cast_points": [
               0
@@ -51,7 +51,7 @@
             "health_costs": [],
             "special_values": [
               {
-                "name": "heal_increase",
+                "name": "heal_increase_passive",
                 "values_float": [
                   15
                 ],
@@ -70,7 +70,7 @@
               {
                 "name": "max_charges",
                 "values_float": [
-                  20
+                  25
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -104,7 +104,7 @@
               {
                 "name": "bonus_all_stats",
                 "values_float": [
-                  9
+                  7
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$all",
@@ -119,9 +119,60 @@
                 "required_facet": ""
               },
               {
-                "name": "restore_per_charge",
+                "name": "health_restore_per_charge",
                 "values_float": [
                   17
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "mana_restore_per_charge",
+                "values_float": [
+                  15
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "incoming_heal_increase_active",
+                "values_float": [
+                  10
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "active_buff_duration",
+                "values_float": [
+                  4
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -172,7 +223,7 @@
               {
                 "name": "AbilityCastRange",
                 "values_float": [
-                  500
+                  600
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -189,7 +240,7 @@
               {
                 "name": "AbilityCharges",
                 "values_float": [
-                  20
+                  25
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -206,7 +257,7 @@
               {
                 "name": "AbilityChargeRestoreTime",
                 "values_float": [
-                  8
+                  10
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
