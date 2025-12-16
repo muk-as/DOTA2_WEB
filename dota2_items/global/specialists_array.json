@@ -6,7 +6,7 @@
           "id": 1076,
           "name": "item_specialists_array",
           "name_loc": "Specialist's Array",
-          "desc_loc": "<h1>Passive: Crackshot</h1> Ranged Only. The next attack fires projectiles that deal %proc_bonus_damage% bonus damage at %count% additional targets within attack range plus a %secondary_target_range_bonus% range bonus. Does not trigger attack modifiers.",
+          "desc_loc": "<h1>Passive: Crackshot</h1>Ranged attacks have a %proc_chance%%% chance to fire %count% additional projectiles at nearby targets with %secondary_target_range_bonus% extra range and within a %secondary_target_angle% degree angle in front of the attacker.<br><br>These extra attacks deal %proc_dmg_pct%%% of the primary attack and do not trigger on hit effects.",
           "lore_loc": "An impressive kit of trigger enhancements born in an aging assassin's idle mind.",
           "notes_loc": [],
           "shard_loc": "",
@@ -31,7 +31,7 @@
             0
           ],
           "cooldowns": [
-            8
+            0
           ],
           "durations": [
             0
@@ -48,6 +48,40 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "agility",
+              "values_float": [
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$agi",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage",
+              "values_float": [
+                18
+              ],
+              "is_percentage": false,
+              "heading_loc": "+$damage",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
             {
               "name": "count",
               "values_float": [
@@ -83,9 +117,9 @@
               "required_facet": ""
             },
             {
-              "name": "proc_bonus_damage",
+              "name": "secondary_target_angle",
               "values_float": [
-                10
+                120
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -100,9 +134,26 @@
               "required_facet": ""
             },
             {
-              "name": "AbilityCooldown",
+              "name": "proc_chance",
               "values_float": [
-                8
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "proc_dmg_pct",
+              "values_float": [
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -123,12 +174,12 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 0,
+          "item_cost": 2650,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,
           "item_stock_time": 0,
-          "item_quality": 1
+          "item_quality": 3
         }
       ]
     },

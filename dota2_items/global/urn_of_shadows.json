@@ -6,12 +6,13 @@
           "id": 92,
           "name": "item_urn_of_shadows",
           "name_loc": "Urn of Shadows",
-          "desc_loc": "<h1>Active: Soul Release</h1> Provides %soul_heal_amount% health regeneration when cast on allies, and deals %soul_damage_amount% damage per second when cast on enemies. <br><br>Lasts %duration% seconds.<br><br>If the unit is attacked by an enemy hero or Roshan, the effect is lost.<br><br>Gains charges every time an enemy hero dies within %soul_radius% units.  Only the closest Urn to the dying hero will gain a charge. ",
+          "desc_loc": "<h1>Active: Soul Release</h1> Provides %soul_heal_amount% health regeneration when cast on allies, and deals %soul_damage_amount% damage per second when cast on enemies. Lasts %duration% seconds.<br><br>Gains charges every time an enemy hero dies within %soul_radius% units.",
           "lore_loc": "Contains the ashes of powerful demons.",
           "notes_loc": [
             "Empty urns gain 2 charges.",
-            "If used on a hero with Soul Release already active on them, it will refresh its duration.",
-            "Does not trigger spell block or spell reflect."
+            "If the allied unit is attacked by an enemy hero or Roshan, the effect is lost.",
+            "Does not trigger spell block or spell reflect.",
+            "Empty urns will gain 1 charge when the user dies."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -55,7 +56,7 @@
             {
               "name": "mana_regen",
               "values_float": [
-                1.4
+                1.25
               ],
               "is_percentage": false,
               "heading_loc": "+$mana_regen",
@@ -106,7 +107,7 @@
             {
               "name": "soul_radius",
               "values_float": [
-                1400
+                1500
               ],
               "is_percentage": false,
               "heading_loc": "",

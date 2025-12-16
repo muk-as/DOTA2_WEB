@@ -6,7 +6,7 @@
           "id": 1604,
           "name": "item_searing_signet",
           "name_loc": "Searing Signet",
-          "desc_loc": "<h1>Passive: Burn Through</h1> Instances of magic damage from spells over %damage_threshold% ignites enemies, causing them to take %burn_damage% magic damage over %burn_duration% seconds.",
+          "desc_loc": "<h1>Passive: Burn Through</h1> Instances of magic damage from spells over %damage_threshold% ignites enemies, causing them to take %burn_damage% magic damage over %burn_duration% seconds. Burn damage against non-hero targets is decreased by %creep_penalty%%%.",
           "lore_loc": "To torture a magic user, one must devise means far beyond the mundane.",
           "notes_loc": [
             "Will not ignite enemies that are more than %max_range% range away."
@@ -70,7 +70,7 @@
             {
               "name": "burn_damage",
               "values_float": [
-                72
+                90
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -105,6 +105,23 @@
               "name": "burn_tickrate",
               "values_float": [
                 0.25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "creep_penalty",
+              "values_float": [
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",

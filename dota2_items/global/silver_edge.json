@@ -6,7 +6,7 @@
           "id": 249,
           "name": "item_silver_edge",
           "name_loc": "Silver Edge",
-          "desc_loc": "<h1>Active: Shadow Walk</h1>Makes you invisible for %windwalk_duration% seconds, or until you attack or cast a spell.  While invisible, you move %windwalk_movement_speed%%% faster and can move through units.  <br><br>Attacking to end the invisibility will deal %windwalk_bonus_damage% bonus physical damage and disable their passive abilities for %backstab_duration% seconds.\n\n",
+          "desc_loc": "<h1>Active: Shadow Walk</h1>Makes you invisible for %windwalk_duration% seconds, or until you attack or cast a spell.  While invisible, you move %windwalk_movement_speed%%% faster and can move through units.  <br><br>Attacking to end the invisibility will deal %windwalk_bonus_damage% bonus physical damage, disable their passive abilities for %backstab_duration% seconds, and cap their movement speed to %max_movement_speed%.\n\n",
           "lore_loc": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
           "notes_loc": [],
           "shard_loc": "",
@@ -168,6 +168,23 @@
               "required_facet": ""
             },
             {
+              "name": "max_movement_speed",
+              "values_float": [
+                200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "visibility_radius",
               "values_float": [
                 1025
@@ -225,7 +242,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 5800,
+          "item_cost": 5700,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

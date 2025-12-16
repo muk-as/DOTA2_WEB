@@ -6,7 +6,7 @@
           "id": 269,
           "name": "item_holy_locket",
           "name_loc": "Holy Locket",
-          "desc_loc": "<h1>Active: Energy Charge</h1>Target an allied unit to instantly restore %restore_per_charge% health and mana per charge stored. <br><br>Automatically gains a charge every %AbilityChargeRestoreTime% seconds and whenever a visible enemy within %charge_radius% range uses an ability.\n\n<h1>Passive: Holy Blessing</h1>Amplifies heals you provide by %heal_increase%%%.",
+          "desc_loc": "<h1>Active: Energy Charge</h1>Target an allied unit to increase their incoming Heal Amplification by %incoming_heal_increase_active%%% for %active_buff_duration%s and instantly restore %health_restore_per_charge% health and %mana_restore_per_charge% mana per charge stored. <br><br>Automatically gains a charge every %AbilityChargeRestoreTime% seconds and whenever a visible enemy within %charge_radius% range uses an ability.\n\n<h1>Passive: Holy Blessing</h1>Amplifies heals you provide by %heal_increase_passive%%%.",
           "lore_loc": "A prized relic long thought lost forever in a failed crusade.",
           "notes_loc": [],
           "shard_loc": "",
@@ -22,7 +22,7 @@
           "dispellable": 0,
           "max_level": 0,
           "cast_ranges": [
-            500
+            600
           ],
           "cast_points": [
             0
@@ -49,7 +49,7 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "heal_increase",
+              "name": "heal_increase_passive",
               "values_float": [
                 15
               ],
@@ -68,7 +68,7 @@
             {
               "name": "max_charges",
               "values_float": [
-                20
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -102,7 +102,7 @@
             {
               "name": "bonus_all_stats",
               "values_float": [
-                9
+                7
               ],
               "is_percentage": false,
               "heading_loc": "+$all",
@@ -117,9 +117,60 @@
               "required_facet": ""
             },
             {
-              "name": "restore_per_charge",
+              "name": "health_restore_per_charge",
               "values_float": [
                 17
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mana_restore_per_charge",
+              "values_float": [
+                15
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "incoming_heal_increase_active",
+              "values_float": [
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "active_buff_duration",
+              "values_float": [
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -170,7 +221,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                500
+                600
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -187,7 +238,7 @@
             {
               "name": "AbilityCharges",
               "values_float": [
-                20
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -204,7 +255,7 @@
             {
               "name": "AbilityChargeRestoreTime",
               "values_float": [
-                8
+                10
               ],
               "is_percentage": false,
               "heading_loc": "",
