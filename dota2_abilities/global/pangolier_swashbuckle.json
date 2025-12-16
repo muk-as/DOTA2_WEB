@@ -6,7 +6,7 @@
           "id": 6344,
           "name": "pangolier_swashbuckle",
           "name_loc": "Swashbuckle",
-          "desc_loc": "Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
+          "desc_loc": "Pangolier dashes along the target line, then slashes and briefly slows all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
           "lore_loc": "The Pangolier's blade is even nimbler than his tongue.",
           "notes_loc": [
             "Casting Swashbuckle during Rolling Thunder ends Rolling Thunder."
@@ -36,10 +36,10 @@
             0
           ],
           "cooldowns": [
-            21,
-            18,
-            15,
-            12
+            20,
+            17,
+            14,
+            11
           ],
           "durations": [
             0
@@ -130,7 +130,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_pangolier_3",
-                  "value": 15,
+                  "value": 20,
                   "operation": 0
                 }
               ],
@@ -246,6 +246,57 @@
               "required_facet": ""
             },
             {
+              "name": "slow_duration",
+              "values_float": [
+                0.4
+              ],
+              "is_percentage": false,
+              "heading_loc": "SLOW DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "slow_percent",
+              "values_float": [
+                100
+              ],
+              "is_percentage": true,
+              "heading_loc": "SLOW:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_penalty",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 400,
@@ -305,17 +356,17 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                21,
-                18,
-                15,
-                12
+                20,
+                17,
+                14,
+                11
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_pangolier_4",
-                  "value": 4,
+                  "value": 2,
                   "operation": 2
                 }
               ],

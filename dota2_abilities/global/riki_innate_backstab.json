@@ -6,24 +6,24 @@
           "id": 1258,
           "name": "riki_innate_backstab",
           "name_loc": "Backstab",
-          "desc_loc": "Every time Riki strikes his enemy from behind, he deals bonus damage based on his Agility.",
+          "desc_loc": "Every time Riki strikes his enemy from behind, he deals additional bonus damage equal to a multiple of his Agility.",
           "lore_loc": "",
           "notes_loc": [
-            "Does not work when denying friendly units.",
+            "Works when denying friendly units at %ally_multiplier%%% effectiveness.",
             "Illusions of Riki will play Backstab animations, but not deal any bonus damage."
           ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "66",
+          "behavior": "67",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 1,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -54,13 +54,10 @@
             {
               "name": "damage_multiplier",
               "values_float": [
-                0.55,
-                0.9,
-                1.25,
-                1.6
+                0.6
               ],
               "is_percentage": false,
-              "heading_loc": "AGI DAMAGE MULT:",
+              "heading_loc": "AGILITY MULTIPLIER:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_riki_1",
@@ -68,6 +65,23 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "ally_multiplier",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

@@ -6,14 +6,14 @@
           "id": 5338,
           "name": "spectre_reality",
           "name_loc": "Reality",
-          "desc_loc": "Spectre exchanges places with a chosen Haunt.",
+          "desc_loc": "Spectre assumes the target Shadow Step or Haunt illusion, destroying it.",
           "lore_loc": "The scattered shadows unite into the one true Spectre.",
           "notes_loc": [],
-          "shard_loc": "",
+          "shard_loc": "Reality also casts Spectral Dagger on the illusion's target.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "80",
+          "behavior": "524368",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -43,7 +43,7 @@
             0
           ],
           "mana_costs": [
-            40
+            25
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -52,6 +52,59 @@
               "name": "cast_dagger_on_target",
               "values_float": [
                 0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                0
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "may_target_shadow_step",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "travel_time",
+              "values_float": [
+                0.2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "min_speed",
+              "values_float": [
+                1500
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -68,7 +121,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",

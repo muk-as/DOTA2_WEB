@@ -6,13 +6,9 @@
           "id": 5143,
           "name": "riki_blink_strike",
           "name_loc": "Blink Strike",
-          "desc_loc": "Teleports behind the target unit, momentarily slowing them and striking for bonus damage if it is an enemy.",
+          "desc_loc": "Teleports behind the target unit, momentarily slowing them and attacking them with bonus damage if it is an enemy.",
           "lore_loc": "The Stealth Assassin's agile movement makes him impossible to escape.",
-          "notes_loc": [
-            "Riki's first attack after Blink Strike will be a backstab.",
-            "Blink Strike's damage is dealt before the next attack.",
-            "You can Blink Strike to allies, but no damage is dealt."
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -21,7 +17,7 @@
           "target_team": 4,
           "target_type": 128,
           "flags": 0,
-          "damage": 2,
+          "damage": 1,
           "immunity": 3,
           "dispellable": 0,
           "max_level": 4,
@@ -38,7 +34,10 @@
             0
           ],
           "cooldowns": [
-            0.1
+            13,
+            10,
+            7,
+            4
           ],
           "durations": [
             0
@@ -61,10 +60,10 @@
             {
               "name": "bonus_damage",
               "values_float": [
-                40,
-                55,
-                70,
-                85
+                15,
+                30,
+                45,
+                60
               ],
               "is_percentage": false,
               "heading_loc": "BONUS DAMAGE:",
@@ -105,7 +104,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_riki_9",
+                  "value": 500,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -123,49 +128,6 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityChargeRestoreTime",
-              "values_float": [
-                25,
-                21,
-                17,
-                13
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_riki_9",
-                  "value": 4,
-                  "operation": 2
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -198,11 +160,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                0.1
+                13,
+                10,
+                7,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_riki_5",
+                  "value": 1,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

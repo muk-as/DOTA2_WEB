@@ -9,7 +9,7 @@
           "desc_loc": "Katana attacks and abilities apply a stacking damage over time to enemies that deals a percentage of the original attack's damage as additional damage over time. <br><br>Kez may activate the ability to impale the target with his attack, preventing them from moving or turning. The target's Katana debuff bursts, causing some of the stacks to deal damage instantly.",
           "lore_loc": "To fight back against the reach of Imperia and her Queensguard, the Kazurai had to become skilled in the ways of attrition.",
           "notes_loc": [],
-          "shard_loc": "Kez lifesteals %lifesteal_pct%%% from the impale.  If the impale comes from behind the target, the target is stunned and the full stack amount bursts.",
+          "shard_loc": "Kez lifesteals %lifesteal_pct%%% from the impale. If the impale comes from behind the target, the target is stunned. Increases max burst stacks.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -71,10 +71,10 @@
             {
               "name": "katana_bleed_attack_damage_pct",
               "values_float": [
-                5,
-                7,
+                3,
+                6,
                 9,
-                11
+                12
               ],
               "is_percentage": true,
               "heading_loc": "DAMAGE PER SECOND:",
@@ -119,7 +119,9 @@
               "is_percentage": true,
               "heading_loc": "STACKS AS BURST DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -157,6 +159,25 @@
               "bonuses": [],
               "values_shard": [
                 40
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_stacks",
+              "values_float": [
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX BURST STACKS:",
+              "bonuses": [],
+              "values_shard": [
+                500
               ],
               "values_scepter": [],
               "facet_bonus": {

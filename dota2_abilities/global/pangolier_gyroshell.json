@@ -6,11 +6,12 @@
           "id": 6343,
           "name": "pangolier_gyroshell",
           "name_loc": "Rolling Thunder",
-          "desc_loc": "Pangolier curls into a debuff immune ball with %magic_resistance%%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage proportional to his attack damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\n During Rolling Thunder, Shield Crash cooldown is reduced.\n\nDISPEL TYPE: Basic Dispel",
+          "desc_loc": "Pangolier curls into a debuff immune ball with %magic_resistance%%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage proportional to his attack damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\nDISPEL TYPE: Basic Dispel",
           "lore_loc": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
           "notes_loc": [
             "Enemies can be stunned multiple times per use, but cannot be affected a subsequent time until the previous stun duration ends.",
-            "If Pangolier is disabled while rolling, he will continue to stun and knock enemies that come within range."
+            "If Pangolier is disabled while rolling, he will continue to stun and knock enemies that come within range.",
+            "It takes Pangolier %move_speed_ramp_up_time%s to reach full roll speed."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -112,6 +113,23 @@
               ],
               "is_percentage": false,
               "heading_loc": "ROLL SPEED:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "move_speed_ramp_up_time",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -246,7 +264,9 @@
             {
               "name": "duration",
               "values_float": [
-                10
+                9,
+                10,
+                11
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -273,25 +293,6 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shield_crash_cooldown",
-              "values_float": [
-                9,
-                6,
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "SHIELD CRASH COOLDOWN:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

@@ -6,13 +6,13 @@
           "id": 5610,
           "name": "earth_spirit_geomagnetic_grip",
           "name_loc": "Geomagnetic Grip",
-          "desc_loc": "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced and take damage.",
+          "desc_loc": "Earth Spirit pulls the target Stone Remnant or Allied Unit. Enemies struck by the gripped target will be silenced.<br><br>Pulled Remnants also deal damage to struck enemies.<br><br>Cast range is reduced when targeting an ally.",
           "lore_loc": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit.",
           "notes_loc": [
             "Will not work on a unit inside Chronosphere, Duel, or Black Hole.",
             "Geomagnetic Grip can also target allied creeps."
           ],
-          "shard_loc": "Can now grab allies.",
+          "shard_loc": "Decreases cooldown to %AbilityCooldown%s and increases allied unit cast range and pull speed.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -81,6 +81,29 @@
               ],
               "is_percentage": false,
               "heading_loc": "REMNANT DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_earth_spirit_5",
+                  "value": 175,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "pull_units_per_second",
+              "values_float": [
+                900
+              ],
+              "is_percentage": false,
+              "heading_loc": "REMNANT PULL SPEED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -117,9 +140,11 @@
                 600
               ],
               "is_percentage": false,
-              "heading_loc": "HERO PULL SPEED:",
+              "heading_loc": "ALLIED UNIT PULL SPEED:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -129,14 +154,19 @@
               "required_facet": ""
             },
             {
-              "name": "pull_units_per_second",
+              "name": "cast_range_heroes",
               "values_float": [
-                900
+                550,
+                600,
+                650,
+                700
               ],
               "is_percentage": false,
-              "heading_loc": "REMNANT PULL SPEED:",
+              "heading_loc": "ALLIED UNIT CAST RANGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -240,14 +270,10 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_earth_spirit_5",
-                  "value": 3,
-                  "operation": 2
-                }
+              "bonuses": [],
+              "values_shard": [
+                3
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

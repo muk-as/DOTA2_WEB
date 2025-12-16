@@ -6,10 +6,12 @@
           "id": 5436,
           "name": "treant_living_armor",
           "name_loc": "Living Armor",
-          "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and provides bonus armor.",
+          "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Each time this spell blocks damage, the block amount is decreased. If the damage block is decreased to 0, the buff is removed early.",
           "lore_loc": "The roots and tendrils of the Treant Protectors are far-reaching, stimulating the growth and rejuvenation of all of nature.",
-          "notes_loc": [],
-          "shard_loc": "",
+          "notes_loc": [
+            "Instances of damage less than %damage_block_threshold% are ignored."
+          ],
+          "shard_loc": "Increases the Damage Blocked by Living Armor. Treant now also passively benefits from Living Armor, with the damage block resetting after not taking damage for %passive_reset_cd% seconds.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -57,43 +59,17 @@
             {
               "name": "heal_per_second",
               "values_float": [
-                3,
-                4,
-                5,
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "HEAL PER SECOND:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_treant_8",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_armor",
-              "values_float": [
                 4,
                 7,
                 10,
                 13
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS ARMOR:",
+              "heading_loc": "HEAL PER SECOND:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_treant_13",
-                  "value": 8,
+                  "name": "special_bonus_unique_treant_8",
+                  "value": 4,
                   "operation": 0
                 }
               ],
@@ -109,13 +85,10 @@
             {
               "name": "duration",
               "values_float": [
-                18,
-                22,
-                26,
-                30
+                12
               ],
               "is_percentage": false,
-              "heading_loc": "DURATION:",
+              "heading_loc": "MAX DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -138,6 +111,85 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_block_base",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE BLOCKED:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_treant_13",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "passive_reset_cd",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                0
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_block_loss",
+              "values_float": [
+                35,
+                30,
+                25,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE BLOCK DECREASE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_block_threshold",
+              "values_float": [
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

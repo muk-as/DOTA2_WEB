@@ -6,7 +6,7 @@
           "id": 5402,
           "name": "brewmaster_drunken_brawler",
           "name_loc": "Drunken Brawler",
-          "desc_loc": "Brewmaster can switch stances based on the elements he controls, gaining passive bonuses that improve against enemies when Brewed Up.\n<font color=\"#9acd32\">Earth Brawler</font> - Grants %armor% armor and %magic_resist%%% Magic Resistance. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#87ceeb\">Storm Brawler</font> - Grants %dodge_chance%%% evasion and %bonus_move_speed%%% Bonus Move Speed. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#FF0000\">Fire Brawler</font> - Grants %crit_chance%%% chance to critical strike for %crit_multiplier%%% of your attack damage and %attack_speed% Attack Speed. Crit Chance and Attack Speed is %active_multiplier%x when Brewed Up.\n <font color=\"#662375\">Void Brawler</font> - Grants %bonus_status_resist%%% bonus Status Resistance to Brewmaster and applies a %movespeed%%% Slow for %slow_duration%s on attack. Slow and Status Resistance are %active_multiplier%x when affected by Cinder Brew.",
+          "desc_loc": "Brewmaster can switch stances based on the elements he controls.<br><br>Whenever Brewmaster casts an ability, he becomes Brewed Up, increasing his stance power by %brewed_up_bonus%%% for %brewed_up_duration%s.  If he casts another ability while Brewed Up, the duration is extended by %brewed_up_duration_extend%s. After Brewed Up expires, he is hungover and cannot Brew Up again for %hangover_time%s.<br><br><font color=\"#9acd32\">Earth Brawler</font> gains bonus Magic Resistance and Armor.<br><br><font color=\"#87ceeb\">Storm Brawler</font> gains bonus Evasion and Movement Speed.<br><br><font color=\"#FF0000\">Fire Brawler</font> gains bonus Attack Speed and chance to critical strike.",
           "lore_loc": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation.",
           "notes_loc": [
             "Stacks diminishingly with other sources of Evasion."
@@ -15,7 +15,7 @@
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2052",
+          "behavior": "70368748374020",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -51,54 +51,20 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "dodge_chance",
+              "name": "magic_resist",
               "values_float": [
-                15,
-                20,
-                25,
-                30
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "crit_chance",
-              "values_float": [
+                8,
+                12,
+                16,
                 20
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "active_multiplier",
-              "values_float": [
-                2.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "<font color=\"#9acd32\">MAGIC RESIST</font>:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_brewmaster_8",
-                  "value": 1,
-                  "operation": 0
+                  "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
+                  "value": 50,
+                  "operation": 3
                 }
               ],
               "values_shard": [],
@@ -111,67 +77,7 @@
               "required_facet": ""
             },
             {
-              "name": "crit_multiplier",
-              "values_float": [
-                120,
-                140,
-                160,
-                180
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_speed",
-              "values_float": [
-                10,
-                15,
-                20,
-                25
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "magic_resist",
-              "values_float": [
-                5,
-                10,
-                15,
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "armor",
+              "name": "bonus_armor",
               "values_float": [
                 2,
                 4,
@@ -179,8 +85,14 @@
                 8
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
+              "heading_loc": "<font color=\"#9acd32\">ARMOR</font>:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
+                  "value": 50,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -191,33 +103,22 @@
               "required_facet": ""
             },
             {
-              "name": "movespeed",
+              "name": "dodge_chance",
               "values_float": [
-                10,
                 15,
                 20,
-                25
+                25,
+                30
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "slow_duration",
-              "values_float": [
-                2
+              "is_percentage": true,
+              "heading_loc": "<font color=\"#87ceeb\">EVASION</font>:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
+                  "value": 50,
+                  "operation": 3
+                }
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -235,6 +136,165 @@
                 8,
                 10
               ],
+              "is_percentage": true,
+              "heading_loc": "<font color=\"#87ceeb\">MOVE SPEED</font>:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
+                  "value": 50,
+                  "operation": 3
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "crit_chance",
+              "values_float": [
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "<font color=\"#FF0000\">CRIT CHANCE</font>:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "crit_multiplier",
+              "values_float": [
+                120,
+                140,
+                160,
+                180
+              ],
+              "is_percentage": true,
+              "heading_loc": "<font color=\"#FF0000\">CRIT DAMAGE</font>:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
+                  "value": 50,
+                  "operation": 3
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_speed",
+              "values_float": [
+                10,
+                20,
+                30,
+                40
+              ],
+              "is_percentage": false,
+              "heading_loc": "<font color=\"#FF0000\">ATTACK SPEED</font>:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
+                  "value": 50,
+                  "operation": 3
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stance_multiplier_tooltip",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
+                  "value": 1.5,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "brewed_up_duration",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_brewed_up_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "brewed_up_duration_extend",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_brewmaster_brewed_up_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "brewed_up_bonus",
+              "values_float": [
+                150
+              ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
@@ -248,12 +308,9 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_status_resist",
+              "name": "hangover_time",
               "values_float": [
-                5,
-                10,
-                15,
-                20
+                9
               ],
               "is_percentage": false,
               "heading_loc": "",

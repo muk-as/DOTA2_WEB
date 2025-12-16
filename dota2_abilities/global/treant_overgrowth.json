@@ -12,7 +12,7 @@
             "Works on Debuff Immune units, but if units gain debuff immunity after the effect starts, they'll break free."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Decreases Cooldown to %AbilityCooldown% seconds. When casting Overgrowth, Treant Protector draws power from the soil, gaining an undispellable buff that greatly increasing his size for %bloom_duration% seconds. While enlarged, he gains phased movement with a fixed speed of %movement_speed%, %strength_bonus%%% bonus Strength, and a splashing attack that deals %splash_pct%%% of his attack damage in a %splash_radius% unit radius.",
           "facets_loc": [],
           "type": 1,
           "behavior": "4",
@@ -94,12 +94,12 @@
               "required_facet": ""
             },
             {
-              "name": "eyes_radius",
+              "name": "damage",
               "values_float": [
-                800
+                95
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -111,15 +111,93 @@
               "required_facet": ""
             },
             {
-              "name": "damage",
+              "name": "bloom_duration",
               "values_float": [
-                95
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE PER SECOND:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                16
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "strength_bonus",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                100
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "splash_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                60
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "splash_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                300
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "movement_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                345
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -172,15 +250,11 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_treant_14",
-                  "value": 35,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                30
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -190,7 +264,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

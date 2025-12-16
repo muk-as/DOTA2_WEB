@@ -6,7 +6,7 @@
           "id": 338,
           "name": "treant_natures_grasp",
           "name_loc": "Nature's Grasp",
-          "desc_loc": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through. Vines deal 50% more damage if they touch a tree. Does half damage to creeps.",
+          "desc_loc": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through. Does %creep_penalty%%% less damage to creeps.",
           "lore_loc": "The tendrils of Rooftrellen's influence stretch to all corners of the forest.",
           "notes_loc": [],
           "shard_loc": "",
@@ -54,10 +54,10 @@
             {
               "name": "damage_per_second",
               "values_float": [
-                30,
-                40,
+                35,
                 50,
-                60
+                65,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SECOND:",
@@ -78,12 +78,29 @@
               "required_facet": ""
             },
             {
+              "name": "creep_penalty",
+              "values_float": [
+                35
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "movement_slow",
               "values_float": [
-                20,
                 25,
                 30,
-                35
+                35,
+                40
               ],
               "is_percentage": true,
               "heading_loc": "MOVEMENT SLOW:",

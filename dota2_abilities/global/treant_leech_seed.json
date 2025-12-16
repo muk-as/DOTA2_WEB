@@ -6,14 +6,14 @@
           "id": 5435,
           "name": "treant_leech_seed",
           "name_loc": "Leech Seed",
-          "desc_loc": "Treant plants a life-sapping seed in an enemy unit, draining its health, while simultaneously slowing it. The seed heals friendly units around it. Healing to creeps is reduced by %creep_heal_reduction_pct%%%.",
+          "desc_loc": "Treant's attack plants a life-sapping seed in an enemy unit, dealing additional magic damage. The unit is then bound for a short duration and emits %healing_pulse_count% healing pulses to up to %max_heal_units% nearby allies of Treant Protector based on a flat amount and the damage dealt by the attack.",
           "lore_loc": "Rooftrellen nurtures the beings under his stewardship, sustained by the lifeforce of trespassers into his sacred ground.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "40",
+          "behavior": "135176",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
@@ -22,22 +22,19 @@
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            400,
-            450,
-            500,
-            550
+            150
           ],
           "cast_points": [
-            0.3
+            0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            24,
-            20,
-            16,
-            12
+            15,
+            12,
+            9,
+            6
           ],
           "durations": [
             0
@@ -49,21 +46,21 @@
             0
           ],
           "mana_costs": [
-            80,
-            90,
-            100,
-            110
+            0
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "damage_interval",
+              "name": "duration",
               "values_float": [
-                1
+                0.9,
+                1.1,
+                1.3,
+                1.5
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -75,19 +72,36 @@
               "required_facet": ""
             },
             {
-              "name": "leech_damage",
+              "name": "flat_heal",
               "values_float": [
                 15,
-                30,
-                45,
-                60
+                25,
+                35,
+                45
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE/HEAL PER SECOND:",
+              "heading_loc": "FLAT HEALING:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "leech_heal",
+              "values_float": [
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "DAMAGE TO HEALING:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_treant_2",
-                  "value": 45,
+                  "name": "special_bonus_unique_treant_3",
+                  "value": 10,
                   "operation": 0
                 }
               ],
@@ -101,22 +115,39 @@
               "required_facet": ""
             },
             {
-              "name": "movement_slow",
+              "name": "leech_damage",
               "values_float": [
-                -8,
-                -14,
-                -20,
-                -26
+                20,
+                40,
+                60,
+                80
               ],
-              "is_percentage": true,
-              "heading_loc": "MOVEMENT SLOW:",
+              "is_percentage": false,
+              "heading_loc": "BONUS DAMAGE:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_treant_3",
-                  "value": 18,
-                  "operation": 2
+                  "name": "special_bonus_unique_treant_2",
+                  "value": 80,
+                  "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_heal_units",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -132,7 +163,7 @@
                 650
               ],
               "is_percentage": false,
-              "heading_loc": "RADIUS:",
+              "heading_loc": "HEAL RADIUS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -144,12 +175,12 @@
               "required_facet": ""
             },
             {
-              "name": "duration",
+              "name": "healing_pulse_count",
               "values_float": [
-                5
+                2
               ],
               "is_percentage": false,
-              "heading_loc": "DURATION:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -178,100 +209,9 @@
               "required_facet": ""
             },
             {
-              "name": "can_target_ground",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "creep_damage_reduction_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "creep_heal_reduction_pct",
-              "values_float": [
-                50
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "AbilityCastRange",
               "values_float": [
-                400,
-                450,
-                500,
-                550
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0.3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                80,
-                90,
-                100,
-                110
+                150
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -288,14 +228,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                24,
-                20,
-                16,
-                12
+                15,
+                12,
+                9,
+                6
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_treant_14",
+                  "value": 3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

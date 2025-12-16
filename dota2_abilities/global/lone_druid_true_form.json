@@ -6,7 +6,7 @@
           "id": 5415,
           "name": "lone_druid_true_form",
           "name_loc": "True Form",
-          "desc_loc": "Lone Druid starts a transformation into a raging bear that has enhanced attack and defensive capabilities.",
+          "desc_loc": "Lone Druid morphs himself into a raging bear, losing his ranged advantage, but gaining bonus armor, bonus health, and bonus attack damage.",
           "lore_loc": "The mighty bear is the king of the forest, possessing the throne through raw power.",
           "notes_loc": [
             "Cooldowns of items that are different for ranged and melee units will be based on which form Lone Druid was in when the item was used."
@@ -35,7 +35,9 @@
             0
           ],
           "cooldowns": [
-            100
+            60,
+            55,
+            50
           ],
           "durations": [
             0
@@ -47,7 +49,7 @@
             0
           ],
           "mana_costs": [
-            200
+            80
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -55,9 +57,9 @@
             {
               "name": "bonus_armor",
               "values_float": [
-                8,
                 10,
-                12
+                15,
+                20
               ],
               "is_percentage": false,
               "heading_loc": "BONUS ARMOR:",
@@ -91,6 +93,25 @@
               "required_facet": ""
             },
             {
+              "name": "bonus_attack_damage",
+              "values_float": [
+                50,
+                90,
+                130
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS ATTACK DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "attack_speed_pct",
               "values_float": [
                 0
@@ -110,7 +131,7 @@
             {
               "name": "duration",
               "values_float": [
-                40
+                25
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -159,13 +180,17 @@
               "required_facet": ""
             },
             {
-              "name": "entangling_claws_cooldown_reduction_pct",
-              "values_float": [
-                0
-              ],
+              "name": "bonus_slow_resistance",
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lone_druid_8",
+                  "value": 60,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -178,7 +203,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                200
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -195,17 +220,13 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                100
+                60,
+                55,
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_lone_druid_8",
-                  "value": 50,
-                  "operation": 4
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

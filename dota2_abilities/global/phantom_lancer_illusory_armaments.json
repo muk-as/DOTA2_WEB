@@ -6,7 +6,7 @@
           "id": 1449,
           "name": "phantom_lancer_illusory_armaments",
           "name_loc": "Illusory Armaments",
-          "desc_loc": "Items, abilities, and auras that grant bonus damage instead grant base damage.",
+          "desc_loc": "Whenever an illusion of Phantom Lancer is created, its outgoing damage cannot go below a fixed value for %duration% seconds.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -49,19 +49,13 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_to_base",
+              "name": "outgoing_floor",
               "values_float": [
-                100
+                18
               ],
               "is_percentage": true,
-              "heading_loc": "BONUS TO BASE DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                  "value": 20,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "MIN DAMAGE:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -72,16 +66,16 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_to_base_illusions",
+              "name": "duration",
               "values_float": [
-                70
+                3
               ],
-              "is_percentage": true,
-              "heading_loc": "BONUS TO BASE DAMAGE (ILLUSIONS):",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
-                  "value": 20,
+                  "name": "special_bonus_unique_phantom_lancer_illusory_armaments_duration",
+                  "value": 2,
                   "operation": 0
                 }
               ],

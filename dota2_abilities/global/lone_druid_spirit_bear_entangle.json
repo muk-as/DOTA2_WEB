@@ -6,10 +6,12 @@
           "id": 1344,
           "name": "lone_druid_spirit_bear_entangle",
           "name_loc": "Entangling Claws",
-          "desc_loc": "Attacks have a chance to cause roots to burst from the ground, immobilizing the attacked enemy unit, and dealing damage per second.",
+          "desc_loc": "Allows Spirit Bear to Entangle enemy heroes once they gain %hits_required% stacks. Entangled enemies are rooted and take damage over time.<br><br>Spirit Bear's attacks are permanently empowered, making them apply %spirit_bear_counters_applied_tooltip% stack with each attack on enemy heroes. Enemies cannot gain stacks while Entangled.",
           "lore_loc": "",
           "notes_loc": [
-            "Entangled units can't use Blink abilities, and are revealed if they are invisible."
+            "Rooted units can't use Blink abilities and are revealed if they are invisible.",
+            "Enemy stack counter debuff cannot be dispelled.",
+            "Stacks are only applied to enemy heroes, creep heroes, and Roshan."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -20,7 +22,7 @@
           "target_type": 0,
           "flags": 0,
           "damage": 2,
-          "immunity": 4,
+          "immunity": 3,
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
@@ -33,7 +35,7 @@
             0
           ],
           "cooldowns": [
-            5
+            0
           ],
           "durations": [
             0
@@ -51,19 +53,19 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "damage",
+              "name": "entangle_duration",
               "values_float": [
-                30,
-                40,
-                50,
-                60
+                1.2,
+                1.6,
+                2,
+                2.4
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE PER SECOND:",
+              "heading_loc": "ROOT DURATION:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_lone_druid_entangle_dps",
-                  "value": 30,
+                  "name": "special_bonus_unique_lone_druid_entangle_duration",
+                  "value": 0.6,
                   "operation": 0
                 }
               ],
@@ -77,33 +79,22 @@
               "required_facet": ""
             },
             {
-              "name": "entangle_chance",
+              "name": "damage",
               "values_float": [
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "BEAR ENTANGLE CHANCE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "hero_duration",
-              "values_float": [
-                1,
-                1.6,
-                2.2,
-                2.8
+                60,
+                70,
+                80,
+                90
               ],
               "is_percentage": false,
-              "heading_loc": "HERO DURATION:",
-              "bonuses": [],
+              "heading_loc": "ROOT DAMAGE PER SECOND:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lone_druid_1",
+                  "value": 20,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -114,9 +105,9 @@
               "required_facet": ""
             },
             {
-              "name": "creep_damage_multiplier",
+              "name": "spirit_bear_counters_applied_tooltip",
               "values_float": [
-                3
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -131,12 +122,12 @@
               "required_facet": ""
             },
             {
-              "name": "hero_entangle_chance",
+              "name": "counter_duration",
               "values_float": [
-                30
+                10
               ],
-              "is_percentage": true,
-              "heading_loc": "TRUE FORM ENTANGLE CHANCE:",
+              "is_percentage": false,
+              "heading_loc": "STACK DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -148,7 +139,7 @@
               "required_facet": ""
             },
             {
-              "name": "AbilityCooldown",
+              "name": "hits_required",
               "values_float": [
                 5
               ],

@@ -6,13 +6,13 @@
           "id": 5261,
           "name": "clinkz_wind_walk",
           "name_loc": "Skeleton Walk",
-          "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.",
+          "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.<br><br>Skeleton Archers are immobile and die within multiple attacks from a hero or tower. Skeleton Archers deal a percentage of Clinkz' damage, and deal %skeleton_building_damage_reduction%%% less damage to buildings. Attack range is equal to Clinkz' attack range.",
           "lore_loc": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
           "notes_loc": [
             "Has a fadetime of %fade_time% seconds."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Increases Skeleton Archer health.",
           "facets_loc": [],
           "type": 1,
           "behavior": "4196356",
@@ -166,6 +166,114 @@
               "required_facet": ""
             },
             {
+              "name": "skeleton_duration",
+              "values_float": [
+                20,
+                25,
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "SKELETON ARCHER DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "skeleton_health",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                4
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "skeleton_health_tooltip",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "SKELETON ARCHER HITS TO KILL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "skeleton_building_damage_reduction",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_rate",
+              "values_float": [
+                1.6
+              ],
+              "is_percentage": false,
+              "heading_loc": "SKELETON ARCHER ATTACK RATE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_percent",
+              "values_float": [
+                20
+              ],
+              "is_percentage": true,
+              "heading_loc": "SKELETON ARCHER DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityManaCost",
               "values_float": [
                 80,
@@ -211,7 +319,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

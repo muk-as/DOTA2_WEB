@@ -6,7 +6,7 @@
           "id": 5148,
           "name": "enigma_midnight_pulse",
           "name_loc": "Midnight Pulse",
-          "desc_loc": "Steeps an area in dark resonance, dealing %base_damage% + a percentage of the enemies current HP as damage.",
+          "desc_loc": "Steeps an area in dark resonance, dealing damage to enemies every %tick_rate%s.",
           "lore_loc": "A section of the world slowly descends into the void.",
           "notes_loc": [
             "This ability destroys trees in its area.",
@@ -81,6 +81,26 @@
               "required_facet": ""
             },
             {
+              "name": "base_damage",
+              "values_float": [
+                5,
+                10,
+                15,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "BASE DPS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "damage_percent",
               "values_float": [
                 4,
@@ -89,7 +109,7 @@
                 10
               ],
               "is_percentage": true,
-              "heading_loc": "CURRENT HEALTH AS DAMAGE:",
+              "heading_loc": "CURRENT HP DPS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -110,26 +130,6 @@
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "base_damage",
-              "values_float": [
-                5,
-                10,
-                15,
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

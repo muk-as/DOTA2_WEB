@@ -6,7 +6,7 @@
           "id": 5649,
           "name": "treant_eyes_in_the_forest",
           "name_loc": "Eyes In The Forest",
-          "desc_loc": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. If Overgrowth is cast, units within a radius of an enchanted tree will be entangled and damaged. Passively causes all trees to respawn much faster.",
+          "desc_loc": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. The eyes last for %duration% seconds and are invisible, but are destroyed if their host tree is destroyed or if they are attacked directly.",
           "lore_loc": "One can never be too certain who, or what, might need protecting.",
           "notes_loc": [
             "Being entangled by Overgrowth through enchanted trees from Eyes in the Forest does damage.",
@@ -25,7 +25,7 @@
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
-            160
+            350
           ],
           "cast_points": [
             0.2
@@ -46,7 +46,7 @@
             0
           ],
           "mana_costs": [
-            100
+            30
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -54,15 +54,13 @@
             {
               "name": "vision_aoe",
               "values_float": [
-                0
+                800
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                800
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -71,17 +69,15 @@
               "required_facet": ""
             },
             {
-              "name": "overgrowth_aoe",
+              "name": "hits_to_kill",
               "values_float": [
-                0
+                2
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                800
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -90,17 +86,15 @@
               "required_facet": ""
             },
             {
-              "name": "tree_respawn_seconds",
+              "name": "duration",
               "values_float": [
-                0
+                300
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                10
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -111,7 +105,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                160
+                350
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -162,7 +156,7 @@
             {
               "name": "AbilityChargeRestoreTime",
               "values_float": [
-                40
+                55
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -179,7 +173,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                100
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -195,10 +189,10 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
-          "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
+          "ability_has_scepter": false,
+          "ability_has_shard": true,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": true,
           "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
