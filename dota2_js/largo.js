@@ -2291,11 +2291,11 @@
                           o.createElement(L.EW, {
                             itemOne: o.createElement(A.v, {
                               is_new: !0,
-                              image: "largo/terrain/bridge_radiant_new.jpg",
+                              image: "largo/terrain/bridge_radiant_old.jpg",
                             }),
                             itemTwo: o.createElement(A.v, {
                               is_new: !1,
-                              image: "largo/terrain/bridge_radiant_old.jpg",
+                              image: "largo/terrain/bridge_radiant_new.jpg",
                             }),
                           }),
                           o.createElement(L.EW, {
