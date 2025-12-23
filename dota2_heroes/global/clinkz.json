@@ -21,7 +21,7 @@
               "index": 2
             }
           ],
-          "str_base": 17,
+          "str_base": 18,
           "str_gain": 2,
           "agi_base": 25,
           "agi_gain": 2.7,
@@ -52,8 +52,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 494,
-          "health_regen": 1.95,
+          "max_health": 516,
+          "health_regen": 2.0500002,
           "max_mana": 327,
           "mana_regen": 1.0500001,
           "abilities": [
@@ -61,7 +61,7 @@
               "id": 1120,
               "name": "clinkz_strafe",
               "name_loc": "Strafe",
-              "desc_loc": "Clinkz gains attack speed and has bonus attack range. Any current Skeleton Archers within a %strafe_skeleton_radius% radius of Clinkz also gain bonus attack range and %archer_attack_speed_pct%%% of the attack speed bonus. <br><br> Casting Strafe does not break Skeleton Walk invisibility.",
+              "desc_loc": "Clinkz gains attack speed and has bonus attack range. Any current and future Skeleton Archers within a %strafe_skeleton_radius% radius of Clinkz also gain bonus attack range and %archer_attack_speed_pct%%% of the attack speed bonus. <br><br> Casting Strafe does not break Skeleton Walk invisibility.",
               "lore_loc": "The closest Clinkz can come to peace is knowing that this was the last thing Maraxiform ever saw.",
               "notes_loc": [],
               "shard_loc": "",
@@ -116,10 +116,10 @@
                 {
                   "name": "attack_speed_bonus",
                   "values_float": [
-                    100,
-                    140,
-                    180,
-                    220
+                    120,
+                    160,
+                    200,
+                    240
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK SPEED BONUS:",
@@ -390,10 +390,10 @@
                 {
                   "name": "damage_bonus",
                   "values_float": [
-                    18,
-                    32,
-                    46,
-                    60
+                    20,
+                    35,
+                    50,
+                    65
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
@@ -673,13 +673,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_clinkz_9",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -696,7 +690,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE CHARGE RESTORE TIME:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clinkz_9",
+                      "value": 10,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1510,7 +1510,7 @@
                 {
                   "name": "hero_stacks",
                   "values_float": [
-                    2
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1784,7 +1784,7 @@
             {
               "id": 554,
               "name": "special_bonus_unique_clinkz_9",
-              "name_loc": "+{s:bonus_AbilityCharges} Death Pact Charge",
+              "name_loc": "-{s:bonus_AbilityChargeRestoreTime}s Death Pact Charge Restore Time",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
