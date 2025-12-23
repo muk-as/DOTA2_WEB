@@ -53,25 +53,35 @@
       var r = a(85608),
         n = a(4248),
         l = a(89506),
-        o = a(68613),
-        s = a(68446),
+        s = a(68613),
+        o = a(68446),
         i = a(7552),
         c = a(73202),
         m = a(21384),
         d = a(88351),
         A = a(47202),
-        g = a(36305),
-        u = a(45237),
+        u = a(36305),
+        g = a(45237),
         _ = a(55651),
         p = a(13765),
-        L = a.n(p),
-        E = a(85286),
-        h = a.n(E);
+        h = a.n(p),
+        L = a(85286),
+        E = a.n(L);
       const w = (() => {
           switch (l.r.LANGUAGE) {
+            case "brazilian":
+              return "brazilian";
+            case "czech":
+              return "czech";
+            case "danish":
+              return "danish";
+            case "dutch":
+              return "dutch";
             case "english":
             default:
               return "english";
+            case "finnish":
+              return "finnish";
             case "latam":
               return "latam";
             case "russian":
@@ -82,12 +92,12 @@
               return "spanish";
           }
         })(),
-        I = ({ onIndexChanged: e, comicImageURLs: t }) => {
+        b = ({ onIndexChanged: e, comicImageURLs: t }) => {
           const [a, r] = (0, i.useState)(void 0),
             [n, l] = (0, i.useState)(
               Array.from({ length: t.length }, () => new Image()),
             ),
-            s = (0, d.zy)(),
+            o = (0, d.zy)(),
             c = (0, i.useCallback)(() => {
               r((e) => {
                 if ((void 0 === e && (e = 0), e + 1 >= t.length)) return e;
@@ -107,29 +117,29 @@
           }, [c]),
             (0, i.useEffect)(() => {
               let e = 0;
-              const t = new URLSearchParams(s.hash.substring(1)).get("p");
+              const t = new URLSearchParams(o.hash.substring(1)).get("p");
               null !== t && (e = parseInt(t)), r(e);
-            }, [s]),
+            }, [o]),
             (0, i.useEffect)(() => {
               if (void 0 === a) return;
               for (let e = 1; e <= 5; e++) {
                 const r = a + e;
                 if (r >= t.length) break;
-                let o = n;
-                o[r].src || ((o[r].src = t[r]), l(o));
+                let s = n;
+                s[r].src || ((s[r].src = t[r]), l(s));
               }
             }, [a, n, t]),
             (0, i.useEffect)(() => {
               e?.(a);
             }, [e, a]);
           const A = !a,
-            g = a + 1 >= t.length;
+            u = a + 1 >= t.length;
           return i.createElement(
             i.Fragment,
             null,
             i.createElement(
               "div",
-              { className: L().ComicViewer },
+              { className: h().ComicViewer },
               i.createElement("img", {
                 src:
                   void 0 !== a
@@ -142,36 +152,36 @@
                   0 == e.button && e.preventDefault();
                 },
               }),
-              i.createElement("div", { className: L().ComicViewerBorder }),
+              i.createElement("div", { className: h().ComicViewerBorder }),
             ),
             i.createElement(
               "div",
               {
                 className: (0, m.A)(
-                  L().ComicViewerHelpText,
-                  L().BodyFont,
-                  L().BodyLarge,
-                  g && L().Disabled,
+                  h().ComicViewerHelpText,
+                  h().BodyFont,
+                  h().BodyLarge,
+                  u && h().Disabled,
                 ),
               },
-              (0, o.we)("#comic_help_text"),
+              (0, s.we)("#comic_help_text"),
             ),
             i.createElement(
-              u.N_,
+              g.N_,
               {
                 className: (0, m.A)(
-                  L().ReturnLink,
-                  L().LabelFont,
-                  L().LabelMedium,
-                  A && L().Disabled,
+                  h().ReturnLink,
+                  h().LabelFont,
+                  h().LabelMedium,
+                  A && h().Disabled,
                 ),
                 to: _.J.largo_comic(),
               },
-              (0, o.we)("#comic_return_button"),
+              (0, s.we)("#comic_return_button"),
             ),
           );
         };
-      let b = class extends i.Component {
+      let I = class extends i.Component {
         constructor(e) {
           super(e);
           this.state = {
@@ -183,7 +193,7 @@
           };
         }
         handleScroll = (e) => {
-          h().refresh();
+          E().refresh();
         };
         componentDidMount() {
           this.handleScroll(void 0);
@@ -191,34 +201,34 @@
         render() {
           return i.createElement(
             "div",
-            { id: "LargoComic", className: L().LargoComic },
+            { id: "LargoComic", className: h().LargoComic },
             i.createElement(c.mg, null),
             i.createElement(
               "div",
-              { className: (0, m.A)(L().PageContainer) },
+              { className: (0, m.A)(h().PageContainer) },
               i.createElement("div", {
-                className: (0, m.A)(L().PageBackground),
+                className: (0, m.A)(h().PageBackground),
               }),
               i.createElement(A.A, { bOverlapping: !0 }),
               i.createElement(
                 "div",
-                { className: (0, m.A)(L().ComicContainer) },
-                i.createElement(I, {
+                { className: (0, m.A)(h().ComicContainer) },
+                i.createElement(b, {
                   onIndexChanged: (e) => {
                     document.title = e
-                      ? (0, o.we)(this.state.pageTitlePattern, e)
-                      : (0, o.we)(`${this.state.pageTitlePattern}_cover`);
+                      ? (0, s.we)(this.state.pageTitlePattern, e)
+                      : (0, s.we)(`${this.state.pageTitlePattern}_cover`);
                   },
                   comicImageURLs: this.state.comicImageURLs,
                 }),
-                i.createElement(g.K, null),
+                i.createElement(u.K, null),
               ),
             ),
           );
         }
       };
-      b = (0, r.Cg)([s.PA], b);
-      const C = b;
+      I = (0, r.Cg)([o.PA], I);
+      const C = I;
     },
   },
 ]);
