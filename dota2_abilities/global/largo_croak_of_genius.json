@@ -6,10 +6,11 @@
           "id": 1661,
           "name": "largo_croak_of_genius",
           "name_loc": "Croak of Genius",
-          "desc_loc": "Largo strums a tune to a friendly hero. The hero's items and abilities have reduced mana cost and a percentage of their damage reverberates over the following %damage_duration% seconds. When an affected hero spends mana, the remaining buff duration is reduced by %duration_reduction%s.",
+          "desc_loc": "Largo strums a tune to a friendly hero. The hero's items and abilities have reduced mana cost and a percentage of their damage reverberates over the following %damage_duration% seconds.\n\nWhen an affected hero spends mana, the remaining buff duration is reduced by %duration_reduction%s. Duration is not reduced for Largo himself.",
           "lore_loc": "Largo loves to help his friends find glory through the power of music, never missing a chance at a killer duet.",
           "notes_loc": [
-            "Only applies to damage sources affected by spell amplification."
+            "Only applies to damage sources affected by spell amplification.",
+            "Only applies to damage where the source and target are within %max_distance% units of each other."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -152,6 +153,23 @@
               "name": "duration_reduction",
               "values_float": [
                 0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_distance",
+              "values_float": [
+                2000
               ],
               "is_percentage": false,
               "heading_loc": "",
