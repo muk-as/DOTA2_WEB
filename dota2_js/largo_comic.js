@@ -47,30 +47,32 @@
         ReturnLink: "_1KN7LqXwoI40wlGbkIe4XG",
       };
     },
-    99798: (e, t, a) => {
+    99798: (e, a, t) => {
       "use strict";
-      a.r(t), a.d(t, { COMIC_LANGUAGE: () => w, default: () => C });
-      var r = a(85608),
-        n = a(4248),
-        l = a(89506),
-        s = a(68613),
-        o = a(68446),
-        i = a(7552),
-        c = a(73202),
-        m = a(21384),
-        d = a(88351),
-        A = a(47202),
-        u = a(36305),
-        g = a(45237),
-        _ = a(55651),
-        p = a(13765),
-        h = a.n(p),
-        L = a(85286),
-        E = a.n(L);
+      t.r(a), t.d(a, { COMIC_LANGUAGE: () => w, default: () => f });
+      var r = t(85608),
+        n = t(4248),
+        s = t(89506),
+        i = t(68613),
+        c = t(68446),
+        o = t(7552),
+        l = t(73202),
+        u = t(21384),
+        m = t(88351),
+        d = t(47202),
+        g = t(36305),
+        A = t(45237),
+        h = t(55651),
+        p = t(13765),
+        _ = t.n(p),
+        L = t(85286),
+        E = t.n(L);
       const w = (() => {
-          switch (l.r.LANGUAGE) {
+          switch (s.r.LANGUAGE) {
             case "brazilian":
               return "brazilian";
+            case "bulgarian":
+              return "bulgarian";
             case "czech":
               return "czech";
             case "danish":
@@ -82,113 +84,147 @@
               return "english";
             case "finnish":
               return "finnish";
+            case "french":
+              return "french";
+            case "german":
+              return "german";
+            case "greek":
+              return "greek";
+            case "hungarian":
+              return "hungarian";
+            case "italian":
+              return "italian";
+            case "japanese":
+              return "japanese";
+            case "koreana":
+              return "korean";
             case "latam":
               return "latam";
+            case "norwegian":
+              return "norwegian";
+            case "polish":
+              return "polish";
+            case "portuguese":
+              return "portuguese";
+            case "romanian":
+              return "romanian";
             case "russian":
               return "russian";
             case "schinese":
               return "schinese";
             case "spanish":
               return "spanish";
+            case "swedish":
+              return "swedish";
+            case "tchinese":
+              return "tchinese";
+            case "thai":
+              return "thai";
+            case "turkish":
+              return "turkish";
+            case "ukrainian":
+              return "ukrainian";
+            case "vietnamese":
+              return "vietnamese";
           }
         })(),
-        b = ({ onIndexChanged: e, comicImageURLs: t }) => {
-          const [a, r] = (0, i.useState)(void 0),
-            [n, l] = (0, i.useState)(
-              Array.from({ length: t.length }, () => new Image()),
+        b = ({ onIndexChanged: e, comicImageURLs: a }) => {
+          const [t, r] = (0, o.useState)(void 0),
+            [n, s] = (0, o.useState)(
+              Array.from({ length: a.length }, () => new Image()),
             ),
-            o = (0, d.zy)(),
-            c = (0, i.useCallback)(() => {
+            c = (0, m.zy)(),
+            l = (0, o.useCallback)(() => {
               r((e) => {
-                if ((void 0 === e && (e = 0), e + 1 >= t.length)) return e;
-                const a = e + 1;
-                return window.history.pushState({}, "", `#p=${a}`), a;
+                if ((void 0 === e && (e = 0), e + 1 >= a.length)) return e;
+                const t = e + 1;
+                return window.history.pushState({}, "", `#p=${t}`), t;
               });
-            }, [t]);
-          (0, i.useEffect)(() => {
+            }, [a]);
+          (0, o.useEffect)(() => {
             const e = (e) => {
               ("Space" !== e.code && " " !== e.key) ||
-                (e.preventDefault(), c());
+                (e.preventDefault(), l());
             };
             return (
               window.addEventListener("keydown", e),
               () => window.removeEventListener("keydown", e)
             );
-          }, [c]),
-            (0, i.useEffect)(() => {
+          }, [l]),
+            (0, o.useEffect)(() => {
               let e = 0;
-              const t = new URLSearchParams(o.hash.substring(1)).get("p");
-              null !== t && (e = parseInt(t)), r(e);
-            }, [o]),
-            (0, i.useEffect)(() => {
-              if (void 0 === a) return;
+              const a = new URLSearchParams(c.hash.substring(1)).get("p");
+              null !== a && (e = parseInt(a)), r(e);
+            }, [c]),
+            (0, o.useEffect)(() => {
+              if (void 0 === t) return;
               for (let e = 1; e <= 5; e++) {
-                const r = a + e;
-                if (r >= t.length) break;
-                let s = n;
-                s[r].src || ((s[r].src = t[r]), l(s));
+                const r = t + e;
+                if (r >= a.length) break;
+                let i = n;
+                i[r].src || ((i[r].src = a[r]), s(i));
               }
-            }, [a, n, t]),
-            (0, i.useEffect)(() => {
-              e?.(a);
-            }, [e, a]);
-          const A = !a,
-            u = a + 1 >= t.length;
-          return i.createElement(
-            i.Fragment,
+            }, [t, n, a]),
+            (0, o.useEffect)(() => {
+              e?.(t);
+            }, [e, t]);
+          const d = !t,
+            g = t + 1 >= a.length;
+          return o.createElement(
+            o.Fragment,
             null,
-            i.createElement(
+            o.createElement(
               "div",
-              { className: h().ComicViewer },
-              i.createElement("img", {
+              { className: _().ComicViewer },
+              o.createElement("img", {
                 src:
-                  void 0 !== a
-                    ? t[a]
+                  void 0 !== t
+                    ? a[t]
                     : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
                 onClick: (e) => {
-                  e.preventDefault(), c();
+                  e.preventDefault(), l();
                 },
                 onMouseUp: (e) => {
                   0 == e.button && e.preventDefault();
                 },
               }),
-              i.createElement("div", { className: h().ComicViewerBorder }),
+              o.createElement("div", { className: _().ComicViewerBorder }),
             ),
-            i.createElement(
+            o.createElement(
               "div",
               {
-                className: (0, m.A)(
-                  h().ComicViewerHelpText,
-                  h().BodyFont,
-                  h().BodyLarge,
-                  u && h().Disabled,
+                className: (0, u.A)(
+                  _().ComicViewerHelpText,
+                  _().BodyFont,
+                  _().BodyLarge,
+                  g && _().Disabled,
                 ),
               },
-              (0, s.we)("#comic_help_text"),
+              (0, i.we)("#comic_help_text"),
             ),
-            i.createElement(
-              g.N_,
+            o.createElement(
+              A.N_,
               {
-                className: (0, m.A)(
-                  h().ReturnLink,
-                  h().LabelFont,
-                  h().LabelMedium,
-                  A && h().Disabled,
+                className: (0, u.A)(
+                  _().ReturnLink,
+                  _().LabelFont,
+                  _().LabelMedium,
+                  d && _().Disabled,
                 ),
-                to: _.J.largo_comic(),
+                to: h.J.largo_comic(),
               },
-              (0, s.we)("#comic_return_button"),
+              (0, i.we)("#comic_return_button"),
             ),
           );
         };
-      let I = class extends i.Component {
+      let I = class extends o.Component {
         constructor(e) {
           super(e);
           this.state = {
             pageTitlePattern: "#LargoComic_title",
             comicImageURLs: Array.from(Array(53).keys()).map((e) => {
-              const t = e.toString().padStart(3, "0");
-              return `${n.TS.IMG_URL}comics/largo/${w}/${t}.webp`;
+              const a = e.toString().padStart(3, "0");
+              return `${n.TS.IMG_URL}comics/largo/${w}/${a}.webp`;
             }),
           };
         }
@@ -199,36 +235,36 @@
           this.handleScroll(void 0);
         }
         render() {
-          return i.createElement(
+          return o.createElement(
             "div",
-            { id: "LargoComic", className: h().LargoComic },
-            i.createElement(c.mg, null),
-            i.createElement(
+            { id: "LargoComic", className: _().LargoComic },
+            o.createElement(l.mg, null),
+            o.createElement(
               "div",
-              { className: (0, m.A)(h().PageContainer) },
-              i.createElement("div", {
-                className: (0, m.A)(h().PageBackground),
+              { className: (0, u.A)(_().PageContainer) },
+              o.createElement("div", {
+                className: (0, u.A)(_().PageBackground),
               }),
-              i.createElement(A.A, { bOverlapping: !0 }),
-              i.createElement(
+              o.createElement(d.A, { bOverlapping: !0 }),
+              o.createElement(
                 "div",
-                { className: (0, m.A)(h().ComicContainer) },
-                i.createElement(b, {
+                { className: (0, u.A)(_().ComicContainer) },
+                o.createElement(b, {
                   onIndexChanged: (e) => {
                     document.title = e
-                      ? (0, s.we)(this.state.pageTitlePattern, e)
-                      : (0, s.we)(`${this.state.pageTitlePattern}_cover`);
+                      ? (0, i.we)(this.state.pageTitlePattern, e)
+                      : (0, i.we)(`${this.state.pageTitlePattern}_cover`);
                   },
                   comicImageURLs: this.state.comicImageURLs,
                 }),
-                i.createElement(u.K, null),
+                o.createElement(g.K, null),
               ),
             ),
           );
         }
       };
-      I = (0, r.Cg)([o.PA], I);
-      const C = I;
+      I = (0, r.Cg)([c.PA], I);
+      const f = I;
     },
   },
 ]);
