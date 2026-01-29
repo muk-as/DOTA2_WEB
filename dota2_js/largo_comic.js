@@ -97,7 +97,7 @@
             case "japanese":
               return "japanese";
             case "koreana":
-              return "korean";
+              return "koreana";
             case "latam":
               return "latam";
             case "norwegian":
