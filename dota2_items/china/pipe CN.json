@@ -8,10 +8,10 @@
             "id": 90,
             "name": "item_pipe",
             "name_loc": "洞察烟斗",
-            "desc_loc": "<h1>主动：魔法护盾</h1>为周围友方单位套上能抵挡%barrier_block%点魔法伤害的护盾。持续%barrier_duration%秒。<br><br>作用范围：%barrier_radius%\n\n<h1>被动：洞察光环</h1> 提升友方单位每秒生命恢复速度%aura_health_regen%点和%magic_resistance_aura%%%的魔法抗性。<br><br>作用范围：%aura_radius%",
+            "desc_loc": "<h1>主动：魔法护盾</h1>为周围友方单位套上能抵挡%barrier_block%点魔法伤害的护盾。持续%barrier_duration%秒。<br><br>作用范围：%barrier_radius%\n\n<h1>被动：洞察光环</h1> 提升友方单位%magic_resistance_aura%%%魔法抗性。<br><br>作用范围：%aura_radius%",
             "lore_loc": "一件来源神秘的强大古物，能制造出抵挡法术攻击的护盾。",
             "notes_loc": [
-              "多个烟斗的魔法护盾不会叠加。",
+              "护盾不会作用于洞察烟斗的冷却时间内已受过护盾作用的单位。",
               "能与其他提高魔法抗性的技能叠加。"
             ],
             "shard_loc": "",
@@ -88,43 +88,9 @@
                 "required_facet": ""
               },
               {
-                "name": "barrier_debuff_duration",
+                "name": "add_nostack_debuff",
                 "values_float": [
-                  50
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "tooltip_resist",
-                "values_float": [
-                  20
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "aura_health_regen",
-                "values_float": [
-                  2.5
+                  1
                 ],
                 "is_percentage": false,
                 "heading_loc": "",

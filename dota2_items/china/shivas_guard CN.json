@@ -8,12 +8,13 @@
             "id": 119,
             "name": "item_shivas_guard",
             "name_loc": "希瓦的守护",
-            "desc_loc": "<h1>主动：极寒冲击</h1>发出一道寒冷的波动，使敌人受到的技能伤害增加%spell_amp%%%，持续%resist_debuff_duration%秒，对敌人造成%blast_damage%点魔法伤害并减速%blast_movement_speed%%%，持续%blast_debuff_duration%秒。<br><br>作用范围：%blast_radius%\n\n<h1>被动：霜冷光环</h1>降低所有敌人%aura_attack_speed%攻击速度，%restoration_reduction_aura%%%生命回复和获得的治疗效果。<br><br>作用范围：%aura_radius%",
+            "desc_loc": "<h1>主动：极寒冲击</h1>发出一道寒冷的波动，对敌人造成%blast_damage%点魔法伤害并减速%blast_movement_speed%%%，持续%blast_debuff_duration%秒。<br><br>作用范围：%blast_radius%\n\n<h1>被动：霜冷光环</h1>降低所有敌人%aura_attack_speed%攻击速度。<br><br>作用范围：%aura_radius%",
             "lore_loc": "据说曾经属于某位女神，至今仍保持大部分神力。",
             "notes_loc": [
               "极寒冲击的扩张速度为%blast_speed%，最大半径为%blast_radius%。",
               "极寒冲击将以施放者为中心。",
-              "多个霜冷光环效果不会叠加。"
+              "多个霜冷光环效果不会叠加。",
+              "多个裂隙之石或升级物品的作用范围加成不会叠加。"
             ],
             "shard_loc": "",
             "scepter_loc": "",
@@ -55,80 +56,29 @@
             "health_costs": [],
             "special_values": [
               {
-                "name": "bonus_intellect",
-                "values_float": [
-                  5
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$int",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "bonus_strength",
-                "values_float": [
-                  5
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$str",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "bonus_agility",
-                "values_float": [
-                  5
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$agi",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "bonus_hp_regen",
-                "values_float": [
-                  5
-                ],
-                "is_percentage": false,
-                "heading_loc": "+$hp_regen",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
                 "name": "bonus_armor",
                 "values_float": [
-                  15
+                  17
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$armor",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "bonus_aoe",
+                "values_float": [
+                  75
+                ],
+                "is_percentage": false,
+                "heading_loc": "+$aoe_bonus",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -176,7 +126,7 @@
               {
                 "name": "blast_damage",
                 "values_float": [
-                  200
+                  260
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -227,7 +177,7 @@
               {
                 "name": "blast_radius",
                 "values_float": [
-                  900
+                  825
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -245,74 +195,6 @@
                 "name": "blast_speed",
                 "values_float": [
                   400
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "restoration_reduction_aura",
-                "values_float": [
-                  25
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "illusion_multiplier_pct",
-                "values_float": [
-                  100
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "spell_amp",
-                "values_float": [
-                  15
-                ],
-                "is_percentage": false,
-                "heading_loc": "",
-                "bonuses": [],
-                "values_shard": [],
-                "values_scepter": [],
-                "facet_bonus": {
-                  "name": "",
-                  "values": [],
-                  "operation": 0
-                },
-                "required_facet": ""
-              },
-              {
-                "name": "resist_debuff_duration",
-                "values_float": [
-                  16
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -367,7 +249,7 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 5175,
+            "item_cost": 4500,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

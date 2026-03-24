@@ -8,9 +8,11 @@
             "id": 190,
             "name": "item_veil_of_discord",
             "name_loc": "纷争面纱",
-            "desc_loc": "<h1>主动：魔法虚弱</h1>发出一波弱化冲击，使%debuff_radius%范围内敌方英雄受到的技能伤害增加%spell_amp%%%。<br><br>可以在持续施法期间施放。<br><br>持续时间：%resist_debuff_duration%秒。",
+            "desc_loc": "<h1>主动：法术虚弱</h1>发出一波弱化冲击，使%debuff_radius%范围内敌方英雄受到的技能伤害增加%spell_amp%%%。<br><br>可以在持续施法期间施放。<br><br>持续时间：%resist_debuff_duration%秒。",
             "lore_loc": "一个堕落法师的头饰。",
-            "notes_loc": [],
+            "notes_loc": [
+              "法术虚弱不与血精石的法术虚弱光环叠加。"
+            ],
             "shard_loc": "",
             "scepter_loc": "",
             "facets_loc": [],
@@ -51,12 +53,12 @@
             "health_costs": [],
             "special_values": [
               {
-                "name": "bonus_all_stats",
+                "name": "bonus_health",
                 "values_float": [
-                  4
+                  175
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$all",
+                "heading_loc": "+$health",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -68,12 +70,12 @@
                 "required_facet": ""
               },
               {
-                "name": "bonus_armor",
+                "name": "bonus_intellect",
                 "values_float": [
-                  4
+                  10
                 ],
                 "is_percentage": false,
-                "heading_loc": "+$armor",
+                "heading_loc": "+$int",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -85,12 +87,12 @@
                 "required_facet": ""
               },
               {
-                "name": "bonus_hp_regen",
+                "name": "spell_lifesteal",
                 "values_float": [
-                  4.5
+                  18
                 ],
-                "is_percentage": false,
-                "heading_loc": "+$hp_regen",
+                "is_percentage": true,
+                "heading_loc": "+$spell_lifesteal",
                 "bonuses": [],
                 "values_shard": [],
                 "values_scepter": [],
@@ -210,7 +212,7 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 1725,
+            "item_cost": 1700,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

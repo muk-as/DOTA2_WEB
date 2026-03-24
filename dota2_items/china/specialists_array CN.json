@@ -8,7 +8,7 @@
             "id": 1076,
             "name": "item_specialists_array",
             "name_loc": "行家阵列",
-            "desc_loc": "<h1>被动：破裂攻击</h1>远程攻击拥有%proc_chance%%%几率对攻击者前方%secondary_target_angle%°内并且在攻击距离 + %secondary_target_range_bonus%范围内最近的敌人发射%count%个额外弹道。<br><br>额外攻击造成主目标攻击伤害的%proc_dmg_pct%%%，并且不会触发击中时特效。",
+            "desc_loc": "<h1>被动：分裂射击</h1>远程攻击有%proc_chance%%%的概率向非原攻击目标的前方%secondary_target_angle%度角内、攻击距离+%secondary_target_range_bonus%距离内的最多%count%个附近敌人发射额外弹道。额外弹道造成%base_proc_dmg% + %proc_dmg_pct%%%普通攻击伤害，并且不会触发击中效果。主攻击造成%base_proc_dmg% + %proc_dmg_pct_primary_tooltip%%%普通攻击伤害。",
             "lore_loc": "加强扳机的出色器具，源自一位年迈的刺客闲暇时的想法。",
             "notes_loc": [],
             "shard_loc": "",
@@ -53,7 +53,7 @@
               {
                 "name": "agility",
                 "values_float": [
-                  10
+                  12
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$agi",
@@ -70,7 +70,7 @@
               {
                 "name": "damage",
                 "values_float": [
-                  18
+                  20
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$damage",
@@ -104,7 +104,7 @@
               {
                 "name": "secondary_target_range_bonus",
                 "values_float": [
-                  225
+                  150
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -138,7 +138,24 @@
               {
                 "name": "proc_chance",
                 "values_float": [
-                  25
+                  30
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "base_proc_dmg",
+                "values_float": [
+                  20
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -168,6 +185,23 @@
                   "operation": 0
                 },
                 "required_facet": ""
+              },
+              {
+                "name": "proc_dmg_pct_primary_tooltip",
+                "values_float": [
+                  100
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
               }
             ],
             "is_item": true,
@@ -176,7 +210,7 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 2650,
+            "item_cost": 2550,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,
