@@ -6,10 +6,10 @@
           "id": 90,
           "name": "item_pipe",
           "name_loc": "Pipe of Insight",
-          "desc_loc": "<h1>Active: Barrier</h1>Gives a magic damage barrier that absorbs %barrier_block% damage to all nearby allies. Lasts %barrier_duration% seconds.<br><br>Radius: %barrier_radius%\n\n<h1>Passive: Insight Aura</h1> Gives allied units %aura_health_regen% health regeneration and %magic_resistance_aura%%% magic resistance.<br><br>Radius: %aura_radius%",
+          "desc_loc": "<h1>Active: Barrier</h1>Gives a magic damage barrier that absorbs %barrier_block% damage to all nearby allies. Lasts %barrier_duration% seconds.<br><br>Radius: %barrier_radius%\n\n<h1>Passive: Insight Aura</h1> Gives allied units %magic_resistance_aura%%% magic resistance.<br><br>Radius: %aura_radius%",
           "lore_loc": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
           "notes_loc": [
-            "Multiple instances of Barrier do not stack.",
+            "Barrier does not affect units that have been affected by Barrier within Pipe of Insight's cooldown.",
             "Stacks multiplicatively with other sources of magic resistance."
           ],
           "shard_loc": "",
@@ -86,43 +86,9 @@
               "required_facet": ""
             },
             {
-              "name": "barrier_debuff_duration",
+              "name": "add_nostack_debuff",
               "values_float": [
-                50
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_resist",
-              "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "aura_health_regen",
-              "values_float": [
-                2.5
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",

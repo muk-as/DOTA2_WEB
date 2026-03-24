@@ -6,7 +6,7 @@
           "id": 1076,
           "name": "item_specialists_array",
           "name_loc": "Specialist's Array",
-          "desc_loc": "<h1>Passive: Crackshot</h1>Ranged attacks have a %proc_chance%%% chance to fire %count% additional projectiles at nearby targets with %secondary_target_range_bonus% extra range and within a %secondary_target_angle% degree angle in front of the attacker.<br><br>These extra attacks deal %proc_dmg_pct%%% of the primary attack and do not trigger on hit effects.",
+          "desc_loc": "<h1>Passive: Splitshot</h1>Ranged attacks have a %proc_chance%%% chance to fire additional projectiles at up to %count% nearby enemies with %secondary_target_range_bonus% extra range and within a %secondary_target_angle% degree angle in front of the attacker. The additional projectiles deal %base_proc_dmg% + %proc_dmg_pct%%% damage of a normal attack and do not trigger on hit effects. The primary attack deals %base_proc_dmg% + %proc_dmg_pct_primary_tooltip%%% damage of a normal attack.",
           "lore_loc": "An impressive kit of trigger enhancements born in an aging assassin's idle mind.",
           "notes_loc": [],
           "shard_loc": "",
@@ -51,7 +51,7 @@
             {
               "name": "agility",
               "values_float": [
-                10
+                12
               ],
               "is_percentage": false,
               "heading_loc": "+$agi",
@@ -68,7 +68,7 @@
             {
               "name": "damage",
               "values_float": [
-                18
+                20
               ],
               "is_percentage": false,
               "heading_loc": "+$damage",
@@ -102,7 +102,7 @@
             {
               "name": "secondary_target_range_bonus",
               "values_float": [
-                225
+                150
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -136,7 +136,24 @@
             {
               "name": "proc_chance",
               "values_float": [
-                25
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_proc_dmg",
+              "values_float": [
+                20
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -166,6 +183,23 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "proc_dmg_pct_primary_tooltip",
+              "values_float": [
+                100
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": true,
@@ -174,7 +208,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 2650,
+          "item_cost": 2550,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

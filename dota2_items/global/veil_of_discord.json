@@ -6,9 +6,11 @@
           "id": 190,
           "name": "item_veil_of_discord",
           "name_loc": "Veil of Discord",
-          "desc_loc": "<h1>Active: Magic Weakness</h1> Cast a %debuff_radius% radius blast that causes enemy heroes to take %spell_amp%%% increased damage from spells.<br><br>Can be cast while channeling.<br><br>Duration: %resist_debuff_duration% seconds.",
+          "desc_loc": "<h1>Active: Spell Weakness</h1> Cast a %debuff_radius% radius blast that causes enemy heroes to take %spell_amp%%% increased damage from spells.<br><br>Can be cast while channeling.<br><br>Duration: %resist_debuff_duration% seconds.",
           "lore_loc": "The headwear of corrupt magi.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Spell Weakness does not stack with Bloodstone's Spell Weakness Aura."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -49,12 +51,12 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_all_stats",
+              "name": "bonus_health",
               "values_float": [
-                4
+                175
               ],
               "is_percentage": false,
-              "heading_loc": "+$all",
+              "heading_loc": "+$health",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -66,12 +68,12 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_armor",
+              "name": "bonus_intellect",
               "values_float": [
-                4
+                10
               ],
               "is_percentage": false,
-              "heading_loc": "+$armor",
+              "heading_loc": "+$int",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -83,12 +85,12 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_hp_regen",
+              "name": "spell_lifesteal",
               "values_float": [
-                4.5
+                18
               ],
-              "is_percentage": false,
-              "heading_loc": "+$hp_regen",
+              "is_percentage": true,
+              "heading_loc": "+$spell_lifesteal",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -208,7 +210,7 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 1725,
+          "item_cost": 1700,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,

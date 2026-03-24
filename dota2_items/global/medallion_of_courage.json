@@ -6,11 +6,9 @@
           "id": 187,
           "name": "item_medallion_of_courage",
           "name_loc": "Medallion of Courage",
-          "desc_loc": "<h1>Active: Valor</h1> If cast on an ally, grants them the %armor_reduction% armor, and removing it from the caster. <br><br>If cast on an enemy, reduces %armor_reduction% armor on both the enemy and the caster. .<br><br>Duration: %duration%",
-          "lore_loc": "The bearer has no fear of combat.",
-          "notes_loc": [
-            "Shares cooldown with Solar Crest."
-          ],
+          "desc_loc": "<h1>Active: Valor</h1>Increases armor by %ally_armor% or decreases armor by %enemy_armor% for %duration%s depending on if cast on an ally or enemy. Cannot be cast on self.",
+          "lore_loc": "",
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -33,7 +31,7 @@
             0
           ],
           "cooldowns": [
-            16
+            18
           ],
           "durations": [
             0
@@ -45,18 +43,18 @@
             0
           ],
           "mana_costs": [
-            0
+            30
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_armor",
+              "name": "ally_armor",
               "values_float": [
-                5
+                7
               ],
               "is_percentage": false,
-              "heading_loc": "+$armor",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -68,26 +66,9 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_mana_regen_pct",
+              "name": "enemy_armor",
               "values_float": [
-                1.5
-              ],
-              "is_percentage": false,
-              "heading_loc": "+$mana_regen",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "armor_reduction",
-              "values_float": [
-                -6
+                -4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -136,9 +117,26 @@
               "required_facet": ""
             },
             {
+              "name": "AbilityManaCost",
+              "values_float": [
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCooldown",
               "values_float": [
-                16
+                18
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -159,12 +157,12 @@
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
-          "item_cost": 1025,
+          "item_cost": 0,
           "item_initial_charges": 0,
-          "item_neutral_tier": 4294967295,
+          "item_neutral_tier": 1,
           "item_stock_max": 0,
           "item_stock_time": 0,
-          "item_quality": 3
+          "item_quality": 1
         }
       ]
     },
