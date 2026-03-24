@@ -10,17 +10,7 @@
           "bio_loc": "Just as higher states of energy seek a lower level, the Spectre known as Mercurial is a being of intense and violent energy who finds herself irresistibly drawn to scenes of strife as they unfold in the physical world. While her normal spectral state transcends sensory limitations, each time she takes on a physical manifestation, she is stricken by a loss of self--though not of purpose. In the clash of combat, her identity shatters and reconfigures, and she begins to regain awareness. She grasps that she is Mercurial the Spectre--and that all of her Haunts are but shadows of the one true Spectre. Focus comes in the struggle for survival; her true mind reasserts itself; until in the final moments of victory or defeat, she transcends matter and is restored once more to her eternal form.",
           "hype_loc": "Spectre haunts her enemies wherever they may be. Able to <b>destroy lone prey</b> with ease, she spreads her presence throughout the battlefield to choose her target. Once she has gathered her strength, none can escape her terrible wrath.",
           "npe_desc_loc": "Haunts her enemies and teleports to her target",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Ephemeral",
-              "description_loc": "This facet doesn't do anything. Spectre is still transcending between Planes...",
-              "name": "spectre_spectre",
-              "icon": "spirit",
-              "gradient_id": 0,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.4,
           "agi_base": 26,
@@ -48,12 +38,12 @@
           "projectile_speed": 900,
           "armor": 4.3333335,
           "magic_resistance": 25,
-          "movement_speed": 290,
+          "movement_speed": 295,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
           "max_health": 582,
-          "health_regen": 3.1000001,
+          "health_regen": 3.6000001,
           "max_mana": 267,
           "mana_regen": 0.8,
           "abilities": [
@@ -87,9 +77,6 @@
                 1800
               ],
               "cast_points": [
-                0.3,
-                0.3,
-                0.3,
                 0.3
               ],
               "channel_times": [
@@ -405,7 +392,7 @@
               "id": 1679,
               "name": "spectre_shadow_step",
               "name_loc": "Shadow Step",
-              "desc_loc": "Sends an uncontrollable illusion at a target that follows and attacks the target. The illusion deals decreased damage and receives %tooltip_illusion_total_damage_incoming%%% damage.<br><br>The Reality sub-ability may be used to teleport to the illusion, destroying it.",
+              "desc_loc": "Sends an uncontrollable illusion at a target that follows and attacks the target.<br><br>The Reality sub-ability may be used to teleport to the illusion, destroying it.",
               "lore_loc": "With great focus of will, Mercurial can sometimes limit the extent of her division.",
               "notes_loc": [],
               "shard_loc": "",
@@ -425,9 +412,9 @@
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                750,
-                900,
-                1050,
+                825,
+                950,
+                1075,
                 1200
               ],
               "cast_points": [
@@ -437,10 +424,10 @@
                 0
               ],
               "cooldowns": [
-                30,
-                26,
-                22,
-                18
+                24,
+                21,
+                18,
+                15
               ],
               "durations": [
                 0
@@ -489,7 +476,10 @@
                 {
                   "name": "illusion_damage_incoming",
                   "values_float": [
-                    100
+                    100,
+                    85,
+                    70,
+                    55
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -506,10 +496,13 @@
                 {
                   "name": "tooltip_illusion_total_damage_incoming",
                   "values_float": [
-                    200
+                    200,
+                    185,
+                    170,
+                    155
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "ILLUSION DAMAGE TAKEN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -523,9 +516,9 @@
                 {
                   "name": "illusion_outgoing_damage",
                   "values_float": [
-                    32,
-                    38,
-                    44,
+                    35,
+                    40,
+                    45,
                     50
                   ],
                   "is_percentage": true,
@@ -577,9 +570,9 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    750,
-                    900,
-                    1050,
+                    825,
+                    950,
+                    1075,
                     1200
                   ],
                   "is_percentage": false,
@@ -634,10 +627,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    30,
-                    26,
-                    22,
-                    18
+                    24,
+                    21,
+                    18,
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -674,7 +667,8 @@
               "notes_loc": [
                 "The reflected damage is not dealt to Spectre.",
                 "Illusions don't get this ability.",
-                "Damage is reflected before reductions, and is returned as the same damage type."
+                "Damage is reflected before reductions, and is returned as the same damage type.",
+                "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
               ],
               "shard_loc": "Dispersion can be activated to increase the amount absorbed and reflected by Dispersion by %activation_bonus_pct%%% of its base values for %activation_duration%s. Cooldown %activation_cooldown%. Manacost %activation_manacost%.",
               "scepter_loc": "",
@@ -925,7 +919,7 @@
                 {
                   "name": "bonus_damage",
                   "values_float": [
-                    25
+                    23
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -1030,8 +1024,8 @@
                 0
               ],
               "cooldowns": [
-                180,
                 160,
+                150,
                 140
               ],
               "durations": [
@@ -1071,9 +1065,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    5,
-                    6,
-                    7
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "HAUNT DURATION:",
@@ -1091,8 +1083,8 @@
                   "name": "illusion_damage_outgoing",
                   "values_float": [
                     -70,
-                    -45,
-                    -20
+                    -50,
+                    -30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1110,8 +1102,8 @@
                   "name": "tooltip_outgoing",
                   "values_float": [
                     30,
-                    55,
-                    80
+                    50,
+                    70
                   ],
                   "is_percentage": true,
                   "heading_loc": "HAUNT DAMAGE:",
@@ -1274,8 +1266,8 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    180,
                     160,
+                    150,
                     140
                   ],
                   "is_percentage": false,
@@ -1831,11 +1823,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

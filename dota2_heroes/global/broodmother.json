@@ -10,26 +10,7 @@
           "bio_loc": "For centuries, Black Arachnia the Broodmother lurked in the dark lava tubes beneath the smoldering caldera of Mount Pyrotheos, raising millions of spiderlings in safety before sending them to find prey in the wide world above. In a later age, the Vizier of Greed, Ptholopthales, erected his lodestone ziggurat on the slopes of the dead volcano, knowing that any looters who sought his magnetic wealth must survive the spider-haunted passages.\r\n\t\t\t\t<br><br>After millennia of maternal peace, Black Arachnia found herself beset by a steady trickle of furfeet and cutpurses, bold knights and noble youths--all of them delicious, certainly, and yet tending to create a less than nurturing environment for her innocent offspring. Tiring of the intrusions, she paid a visit to Ptholopthales; and when he proved unwilling to discuss a compromise, she wrapped the Vizier in silk and set him aside to be the centerpiece of a special birthday feast.\r\n\t\t\t\t<br><br>Unfortunately, the absence of the Magnetic Ziggurat's master merely emboldened a new generation of intruders. When one of her newborns was trodden underfoot by a clumsy adventurer, she reached the end of her silken rope. Broodmother headed for the surface, declaring her intent to rid the world of each and every possible invader, down to the last Hero if necessary, until she could ensure her nursery might once more be a safe and wholesome environment for her precious spiderspawn.",
           "hype_loc": "Gliding along her webs, Broodmother births an <b>army of spiders</b> to lead her team's forces toward the enemy base. As prey wanders near, she joins her children and attacks, <b>slowing foes</b> with incapacitating bites as she indulges her insatiable hunger.",
           "npe_desc_loc": "Hunts with her army of spiderlings",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Necrotic Webs",
-              "description_loc": "Reduces health restoration of enemies on webs.",
-              "name": "broodmother_necrotic_webs",
-              "icon": "web",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Feeding Frenzy",
-              "description_loc": "Insatiable Hunger also applies to nearby Spiderlings.",
-              "name": "broodmother_feeding_frenzy",
-              "icon": "summons",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 18,
           "str_gain": 2.9,
           "agi_base": 18,
@@ -70,7 +51,7 @@
               "id": 5282,
               "name": "broodmother_insatiable_hunger",
               "name_loc": "Insatiable Hunger",
-              "desc_loc": "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack.",
+              "desc_loc": "A violent lust for vital fluids increases Broodmother's attack damage and gives her and her Spiderlings a vampiric attack.",
               "lore_loc": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes.",
               "notes_loc": [],
               "shard_loc": "While Hunger is active, the bonus damage is increased by %shard_damage_per_tick%%% every %shard_damage_tick_interval%s.",
@@ -248,7 +229,7 @@
                 {
                   "name": "aura_radius",
                   "values_float": [
-                    0
+                    800
                   ],
                   "is_percentage": false,
                   "heading_loc": "SPIDERLING RADIUS:",
@@ -256,13 +237,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "broodmother_feeding_frenzy",
-                    "values": [
-                      800
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "broodmother_feeding_frenzy"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastPoint",
@@ -424,9 +403,9 @@
                   "name": "bonus_movespeed",
                   "values_float": [
                     10,
-                    22,
-                    34,
-                    46
+                    20,
+                    30,
+                    40
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVESPEED BONUS:",
@@ -750,7 +729,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_2",
-                      "value": 6,
+                      "value": 5,
                       "operation": 0
                     }
                   ],
@@ -1014,7 +993,7 @@
               "id": 1313,
               "name": "broodmother_spiders_milk",
               "name_loc": "Spider's Milk",
-              "desc_loc": "Whenever Broodmother kills a unit, she and all units under her control in a %kill_heal_aoe% radius receive a buff that heals them for a percentage of the victims health every %tick_rate% seconds. Healing from creeps is reduced by %kill_creeps_penalty%%%.",
+              "desc_loc": "Whenever Broodmother kills a unit, she and all units under her control in a %kill_heal_aoe% radius receive a buff for %kill_heal_duration%s that heals them for a percentage of the victim's health every %tick_rate% seconds. Healing from creeps is reduced by %kill_creeps_penalty%%%.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1024,7 +1003,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8796093022210",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1062,7 +1041,7 @@
                 {
                   "name": "kill_heal_heroes",
                   "values_float": [
-                    2
+                    1.9
                   ],
                   "is_percentage": true,
                   "heading_loc": "HERO HEALTH AS HEAL:",
@@ -1099,7 +1078,7 @@
                     600
                   ],
                   "is_percentage": false,
-                  "heading_loc": "RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1116,7 +1095,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BUFF DURATION:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1301,7 +1280,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_7",
-                      "value": 150,
+                      "value": 175,
                       "operation": 0
                     }
                   ],
@@ -1360,7 +1339,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_broodmother_7",
-                      "value": 150,
+                      "value": 175,
                       "operation": 0
                     }
                   ],
@@ -1992,14 +1971,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

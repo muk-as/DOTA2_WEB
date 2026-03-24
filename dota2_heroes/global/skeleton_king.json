@@ -10,26 +10,7 @@
           "bio_loc": "For untold years, King Ostarion built a kingdom from the remains of his enemies. It was an obsessive's errand, done to pass the long eternities of a monarchy that seemed fated never to end. He believed that as long as he built up the towers of his palace, he could not die. But eventually he learned that he had been deluded... that bone itself could perish. Deeply mistrustful of flesh, he sought a more permanent way of extending his reign, and at last settled on pursuit of wraith energy, a form of pure spirit given off by certain dark souls at death. Should he infuse himself with Wraith Essence, he thought he might create a body as luminous and eternal as his ego. On the millennial solstice known as Wraith-Night, he submitted to a rite of transformation, compelling his subjects to harvest enough souls to fuel his ambition for immortality. No one knows how many of his champions died, for the only survivor who mattered was the Wraith King who rose with the sun on the following morn. Now he rarely spends a moment on his glowing throne--but strides out with sword drawn, demanding a fealty that extends far beyond death. ",
           "hype_loc": "Striding fearlessly toward his enemies, Wraith King <b>stuns his foes</b> and slashes them into submission. Should his enemies gain the upper hand, his <b>self-resurrecting ultimate</b> ensures he'll have another chance to swing his sword.",
           "npe_desc_loc": "Can reincarnate instantly upon death",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Bone Guard",
-              "description_loc": "Wraith King can summon skeletons to fight for him.",
-              "name": "skeleton_king_facet_bone_guard",
-              "icon": "summons",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Spectral Blade",
-              "description_loc": "Wraith King's attacks curse enemies, dealing additional damage after a delay.",
-              "name": "skeleton_king_facet_cursed_blade",
-              "icon": "damage",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 2.8,
           "agi_base": 16,
@@ -55,7 +36,7 @@
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 0,
-          "armor": 3.6666667,
+          "armor": 2.6666667,
           "magic_resistance": 25,
           "movement_speed": 310,
           "turn_rate": 0.6,
@@ -174,14 +155,18 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_wraith_king_facet_1",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "skeleton_king_facet_bone_guard",
-                    "values": [
-                      0
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -332,13 +317,353 @@
               "item_quality": 0
             },
             {
+              "id": 5087,
+              "name": "skeleton_king_bone_guard",
+              "name_loc": "Bone Guard",
+              "desc_loc": "Gains a Charge for every 2 creeps killed and 2 charges per hero killed. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
+              "lore_loc": "Wraith King's blade drains his enemy's essence to feed his aura.",
+              "notes_loc": [
+                "Break disables the gaining of new stacks.",
+                "Casting Wraithfire Blast on an enemy causes the skeletons to attack that enemy."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8589934596",
+              "target_team": 1,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 1,
+              "immunity": 3,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0.1
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                42
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                70,
+                80,
+                90,
+                100
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "skeleton_duration",
+                  "values_float": [
+                    46
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SKELETON DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_skeleton_charges",
+                  "values_float": [
+                    2,
+                    4,
+                    6,
+                    8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX CHARGES:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "min_skeleton_spawn",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_wraith_king_facet_3",
+                      "value": 5,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spawn_interval",
+                  "values_float": [
+                    0.25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "reincarnate_time",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "gold_bounty",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "xp_bounty",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "skeleton_damage_tooltip",
+                  "values_float": [
+                    34,
+                    39,
+                    43,
+                    49
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SKELETON DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "talent_skeleton_damage",
+                  "values_float": [
+                    0,
+                    5,
+                    10,
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "skeleton_building_damage_reduction",
+                  "values_float": [
+                    35
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SKELETON BUILDING DAMAGE REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "skeleton_bonus_hero_damage",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SKELETON HERO BONUS DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "skeleton_charges_per_hero_multiplier",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    70,
+                    80,
+                    90,
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    42
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
               "id": 5088,
               "name": "skeleton_king_mortal_strike",
               "name_loc": "Mortal Strike",
               "desc_loc": "Wraith King passively deals bonus damage on an attack with a cooldown.",
               "lore_loc": "One blow to crush a foe.",
               "notes_loc": [],
-              "shard_loc": "Mortal Strike deals %wraith_crit_bonus%%% bonus damage when in Wraith form.",
+              "shard_loc": "Mortal Strike hits curse their target, causing them to take %curse_damage_pct%%% of the initial attack damage again as <font color=\"#d8ae53\">Pure</font> damage after a %curse_delay% second delay. Vampiric Spirit's lifesteal applies to the curse damage.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -350,7 +675,7 @@
               "target_type": 1,
               "flags": 0,
               "damage": 0,
-              "immunity": 0,
+              "immunity": 3,
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
@@ -421,7 +746,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "wraith_crit_bonus",
+                  "name": "curse_damage_pct",
                   "values_float": [
                     0
                   ],
@@ -429,7 +754,45 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    50
+                    75
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "curse_delay",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    3
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "curse_cooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    0
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -505,7 +868,7 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -536,10 +899,7 @@
                 {
                   "name": "vampiric_aura",
                   "values_float": [
-                    10,
-                    20,
-                    30,
-                    40
+                    14
                   ],
                   "is_percentage": true,
                   "heading_loc": "LIFESTEAL:",
@@ -562,10 +922,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    3.5,
-                    4,
-                    4.5,
-                    5
+                    4.25
                   ],
                   "is_percentage": false,
                   "heading_loc": "WRAITH DURATION:",
@@ -584,10 +941,7 @@
                 {
                   "name": "scepter_attack_speed",
                   "values_float": [
-                    30,
-                    45,
-                    60,
-                    75
+                    55
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK SPEED:",
@@ -604,10 +958,7 @@
                 {
                   "name": "scepter_move_speed_pct",
                   "values_float": [
-                    10,
-                    15,
-                    20,
-                    25
+                    20
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS MOVE SPEED:",
@@ -658,14 +1009,14 @@
               "id": 5089,
               "name": "skeleton_king_reincarnation",
               "name_loc": "Reincarnation",
-              "desc_loc": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle.  Upon death, enemy units in a %slow_radius% radius are slowed. Can be self-cast to kill Wraith King instantly.",
+              "desc_loc": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle.  Upon death, enemy units in a %slow_radius% radius are slowed. Skeletons spawn and attack each nearby enemy hero. Can be self-cast to kill Wraith King instantly.",
               "lore_loc": "Conspirators against the Wraith King wonder why he never stays dead.",
               "notes_loc": [
                 "Wraith King won't revive if he doesn't have enough mana.",
                 "If Wraith King has an Aegis and Reincarnation off cooldown, Reincarnation will trigger first.",
                 "Revives with full HP and Mana."
               ],
-              "shard_loc": "Causes Reincarnation to have no mana cost.",
+              "shard_loc": "",
               "scepter_loc": "Reduces cooldown.",
               "facets_loc": [
                 "When reincarnating, %shard_skeleton_count% skeletons are spawned and attack each nearby enemy hero.",
@@ -704,7 +1055,9 @@
                 0
               ],
               "mana_costs": [
-                225
+                220,
+                110,
+                0
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -816,25 +1169,21 @@
                 {
                   "name": "shard_skeleton_count",
                   "values_float": [
-                    0,
-                    0,
-                    0
+                    2,
+                    3,
+                    4
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "SKELETON COUNT PER HERO:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "skeleton_king_facet_bone_guard",
-                    "values": [
-                      2,
-                      3,
-                      4
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "skeleton_king_facet_bone_guard"
+                  "required_facet": ""
                 },
                 {
                   "name": "trigger_wraithfire_blast",
@@ -860,14 +1209,14 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    225
+                    220,
+                    110,
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    0
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -900,7 +1249,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": true,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -978,15 +1327,15 @@
             {
               "id": 1545,
               "name": "special_bonus_unique_wraith_king_facet_1",
-              "name_loc": "",
+              "name_loc": "+{s:bonus_blast_dot_duration}s Wraithfire Blast Slow Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "+{s:bonus_blast_dot_duration}s Wraithfire Blast Slow Duration",
-                "+{s:bonus_cursed_damage_pct}% Spectral Blade Curse Damage"
+                "",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -1262,15 +1611,15 @@
             {
               "id": 1547,
               "name": "special_bonus_unique_wraith_king_facet_3",
-              "name_loc": "",
+              "name_loc": "+{s:bonus_min_skeleton_spawn} Bone Guard Skeletons Spawned",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "+{s:bonus_min_skeleton_spawn} Bone Guard Skeletons Spawned",
-                "-{s:bonus_curse_cooldown}% Spectral Blade Curse Cooldown"
+                "",
+                ""
               ],
               "type": 2,
               "behavior": "2",
@@ -1446,528 +1795,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 5087,
-                  "name": "skeleton_king_bone_guard",
-                  "name_loc": "Bone Guard",
-                  "desc_loc": "Gains a Charge for every 2 creeps killed and 2 charges per hero killed. Activate to spend all charges, summoning skeletons that respawn once when killed. Skeletons benefit from Vampiric Spirit's lifesteal.",
-                  "lore_loc": "Wraith King's blade drains his enemy's essence to feed his aura.",
-                  "notes_loc": [
-                    "Break disables the gaining of new stacks.",
-                    "Casting Wraithfire Blast on an enemy causes the skeletons to attack that enemy."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "8589934596",
-                  "target_team": 1,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 1,
-                  "immunity": 3,
-                  "dispellable": 0,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0.1
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    42
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    70,
-                    80,
-                    90,
-                    100
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "skeleton_duration",
-                      "values_float": [
-                        46
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "SKELETON DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "max_skeleton_charges",
-                      "values_float": [
-                        2,
-                        4,
-                        6,
-                        8
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "MAX CHARGES:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "min_skeleton_spawn",
-                      "values_float": [],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_wraith_king_facet_3",
-                          "value": 5,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "spawn_interval",
-                      "values_float": [
-                        0.25
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "reincarnate_time",
-                      "values_float": [
-                        3
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "gold_bounty",
-                      "values_float": [
-                        5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "xp_bounty",
-                      "values_float": [
-                        5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "skeleton_damage_tooltip",
-                      "values_float": [
-                        34,
-                        39,
-                        43,
-                        49
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "SKELETON DAMAGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "talent_skeleton_damage",
-                      "values_float": [
-                        0,
-                        5,
-                        10,
-                        15
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "skeleton_building_damage_reduction",
-                      "values_float": [
-                        35
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "SKELETON BUILDING DAMAGE REDUCTION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "skeleton_bonus_hero_damage",
-                      "values_float": [
-                        25
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "SKELETON HERO BONUS DAMAGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "skeleton_charges_per_hero_multiplier",
-                      "values_float": [
-                        4
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0.1
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        70,
-                        80,
-                        90,
-                        100
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        42
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1282,
-                  "name": "skeleton_king_spectral_blade",
-                  "name_loc": "Spectral Blade",
-                  "desc_loc": "Curses units that Wraith King attacks, dealing a flat amount of damage and a percentage of the attack damage again after a delay. Vampiric Spirit's lifesteal applies to the curse damage and a unit cannot be cursed again for a short period of time.",
-                  "lore_loc": "The eternal spite of every soul stolen by Ostarion bleeds into reality with each strike of his murderous blade.",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "8589934594",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 4,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "cursed_damage_pct",
-                      "values_float": [
-                        50
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "CURSE DAMAGE:",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_wraith_king_facet_1",
-                          "value": 15,
-                          "operation": 0
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "cursed_damage",
-                      "values_float": [
-                        10,
-                        25,
-                        40,
-                        55
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "BASE DAMAGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "curse_cooldown",
-                      "values_float": [
-                        18,
-                        16,
-                        14,
-                        12
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "CURSE COOLDOWN (HEROES):",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_wraith_king_facet_3",
-                          "value": 25,
-                          "operation": 4
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "curse_cooldown_creep",
-                      "values_float": [
-                        6
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "CURSE COOLDOWN (CREEPS):",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_wraith_king_facet_3",
-                          "value": 25,
-                          "operation": 4
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "curse_delay",
-                      "values_float": [
-                        3
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "CURSE DELAY:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

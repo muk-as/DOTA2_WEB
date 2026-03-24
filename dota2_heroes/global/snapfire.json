@@ -10,26 +10,7 @@
           "bio_loc": "Beatrix Snapfire and her dragon toad Mortimer are a welcome sight to the ragged folk who scratch out lives along the desert routes and oases scattered throughout Nanarak, the rain-forsaken gateway to the Outlands.<br><br>As well known for her unrivaled skills as a weaponsmith as for dispensing wisdom, mirth, and the meanest firesnap cookies the world has ever seen, Beadie's survived to a ripe old age in a young keen's trade by being quick with her wits and even quicker with her guns.<br><br>Indeed, the Outlands are littered with the bones of bandits and ne'er-do-wells who thought to take advantage of her small stature and propensity for kindness.",
           "hype_loc": "Just as happy to blow your legs off with her <b>trusty scattergun</b> as to fill your belly up with a <b>deliciously-dangerous cookie</b>, Beatrix Snapfire delights in riding into battle with her dragon toad Mortimer, always ready to mow down their enemies with her homemade heavy artillery or finish them off with a steady barrage of <b>Mortimer's firespit globs.</b>",
           "npe_desc_loc": "Mows down her enemies with heavy artillery and trusty lizard",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Ricochet II",
-              "description_loc": "Whenever Snapfire glances or misses an attack, 2 ricochet attacks will bounce towards nearby enemies.",
-              "name": "snapfire_ricochet_ii",
-              "icon": "ricochet",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Full Bore",
-              "description_loc": "Scatterblast is narrower and longer. Bonus damage and slow when enemies are not in point blank range.",
-              "name": "snapfire_full_bore",
-              "icon": "range",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 3.5,
           "agi_base": 16,
@@ -70,7 +51,7 @@
               "id": 6480,
               "name": "snapfire_scatterblast",
               "name_loc": "Scatterblast",
-              "desc_loc": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Damage, Movement Slow, Attack Slow and Slow Duration are increased by %point_blank_dmg_bonus_pct%%% for enemies caught at point-blank range.",
+              "desc_loc": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Damage is increased by %point_blank_dmg_bonus_pct%%% and Movement Slow, Attack Slow and Slow Duration are increased by %point_blank_debuff_duration_pct%%% for enemies caught at point-blank range.",
               "lore_loc": "A favorite from her collection, Beadie crafted Ol' Rackatee as her first line of defense when she ventured into the Outlands.",
               "notes_loc": [],
               "shard_loc": "",
@@ -274,6 +255,23 @@
                 },
                 {
                   "name": "point_blank_dmg_bonus_pct",
+                  "values_float": [
+                    30
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "point_blank_debuff_duration_pct",
                   "values_float": [
                     50
                   ],
@@ -966,7 +964,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_snapfire_2",
-                      "value": 1,
+                      "value": 2,
                       "operation": 0
                     }
                   ],
@@ -2242,18 +2240,16 @@
               "item_quality": 0
             },
             {
-              "id": 1421,
-              "name": "snapfire_buckshot",
-              "name_loc": "Buckshot",
-              "desc_loc": "When attacking enemy heroes, Snapfire deals %damage_amp%%% more damage with her auto attacks, but has a %miss_chance%%% chance of a glancing shot, dealing %glancing_shot_damage_pct%%% damage.",
+              "id": 1782,
+              "name": "snapfire_boomstick",
+              "name_loc": "Boomstick",
+              "desc_loc": "Snapfire deals more damage to nearby enemies.",
               "lore_loc": "",
-              "notes_loc": [
-                "Ricochet II attacks cannot miss."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Whenever Snapfire glances or misses an attack, 2 ricochet attacks will bounce towards nearby enemies.",
+                "",
                 ""
               ],
               "type": 0,
@@ -2293,84 +2289,63 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "miss_chance",
-                  "values_float": [
-                    25
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_amp",
-                  "values_float": [
-                    30
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "split_shot",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "snapfire_ricochet_ii",
-                    "values": [
-                      2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "snapfire_ricochet_ii"
-                },
-                {
-                  "name": "split_shot_damage_pct",
+                  "name": "damage_amp_min",
                   "values_float": [
                     0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "RICOCHET ATTACK DAMAGE:",
+                  "heading_loc": "MIN DAMAGE AMP:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "snapfire_ricochet_ii",
-                    "values": [
-                      75
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "snapfire_ricochet_ii"
+                  "required_facet": ""
                 },
                 {
-                  "name": "glancing_shot_damage_pct",
+                  "name": "damage_amp_max",
                   "values_float": [
-                    60
+                    35
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX DAMAGE AMP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "distance_threshold_max",
+                  "values_float": [
+                    495
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "MIN DAMAGE RANGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "distance_threshold_min",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX DAMAGE RANGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2894,14 +2869,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

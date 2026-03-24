@@ -10,35 +10,7 @@
           "bio_loc": "In the storied saga of Dredger's Bight, no business has ever been more reviled than Techies Demolitions. Then again, Dredger's Bight no longer exists. Nor does Toterin. Or even Trapper Town. In fact, if one were to track the history of Techies Demolitions they might notice that shortly after Techies appear, towns tend to disappear.\r\n\t\t\t\t<br><br>Like every inevitable disaster surrounding Techies, the obliteration of Dredger's Bight began with an invention. Tasked with designing a safer way of detonating explosives in the mines beneath the city, pyrotechnic prodigies Squee, Spleen, and Spoon developed their most outlandish creation yet: a button which, when pressed, would trigger a distant device to spark a fuse.\r\n\t\t\t\t<br><br>Overeager to test their invention, the trio stuffed barrel after barrel with flamesalt explosives, piling every corner of their tiny workshop high with the newly developed remote bombs. From this stockpile they plucked a single payload, burying it in a far away field. As they cowered in a ditch, Spleen pressed the detonator button. Yet after a moment, nothing happened. Confused, he stood up, pressing his button again and again until, finally, an explosion tore a hole in the field. Elated, Squee and Spleen turned toward home just as a massive wave of sound and force arrived to knock them over.\r\n\t\t\t\t<br><br>Bewildered, their ears ringing from the unexpected blast, they gathered in the dingy miasma to see a smoking ruin where their workshop once stood. Chunks of wood and stone continued to fall as the yawning crater before them slowly deepened into an expanding pit. The whole of Dredger's Bight shuddered, and then gradually started to slide into the mines below as its panicked residents fled.\r\n\t\t\t\t<br><br>Sitting at the edge of their sinking home they grinned and giggled, as giddy at the possibilities as they were oblivious to the scorn of their former neighbors. They wondered only one thing: how could they trigger an even bigger blast?",
           "hype_loc": "For the Techies, battle is a matter of mischief. Giggling while they <b>lob sticky bombs</b> around the battlefield, their <b>hidden explosive mines, disarming zaps, and reckless blast-off attacks</b> are enough to leave most enemies dead. Or at least enraged. Often both.",
           "npe_desc_loc": "Surprises enemies with invisible landmines and explosive attacks",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Squee's Scope",
-              "description_loc": "Techies gains %attack_range_tooltip% attack range and attack projectile speed for each point of attack speed.",
-              "name": "techies_atk_range",
-              "icon": "range",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Spleen's Secret Sauce",
-              "description_loc": "Increased Blast Off! damage and self damage.",
-              "name": "techies_spleens_secret_sauce",
-              "icon": "nuke",
-              "gradient_id": 0,
-              "index": 1
-            },
-            {
-              "color": 3,
-              "title_loc": "Spoon's Stash",
-              "description_loc": "Techies stack all previously selected Enchantments onto newly crafted Neutral Items.",
-              "name": "techies_backpack",
-              "icon": "item",
-              "gradient_id": 1,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 2.6,
           "agi_base": 16,
@@ -442,10 +414,10 @@
               "id": 886,
               "name": "techies_reactive_tazer",
               "name_loc": "Reactive Tazer",
-              "desc_loc": "Techies trigger an electric charge giving them bonus movement speed for a short period of time. Enemies attacking Techies are temporarily disarmed and get a Basic Dispel. At the end of the effect, the charge explodes, disarming all enemies within the radius.",
+              "desc_loc": "Techies trigger an electric charge on the target ally, giving them bonus movement speed for a short period of time. Enemies attacking the target take damage and are temporarily disarmed and get a Basic Dispel.<br><br>At the end of the effect or if detonated early with the sub-ability, the charge explodes, disarming all enemies within the radius and dealing damage.",
               "lore_loc": "A steady bomb hand prefers an abundance of personal space.",
               "notes_loc": [],
-              "shard_loc": "Reactive Tazer can be cast on allies and deals damage on detonation. Also deals damage to any enemy that attacks the affected ally.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -453,16 +425,16 @@
                 ""
               ],
               "type": 0,
-              "behavior": "4",
+              "behavior": "8",
               "target_team": 1,
-              "target_type": 3,
+              "target_type": 1,
               "flags": 0,
-              "damage": 0,
+              "damage": 2,
               "immunity": 4,
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                500
+                600
               ],
               "cast_points": [
                 0.1
@@ -498,7 +470,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BUFF DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_techies_tazer_duration",
+                      "value": 25,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -518,7 +496,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DISARM DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_techies_tazer_duration",
+                      "value": 25,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -549,7 +533,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "stun_radius",
+                  "name": "explosion_radius",
                   "values_float": [
                     450
                   ],
@@ -566,16 +550,17 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_damage",
+                  "name": "damage",
                   "values_float": [
-                    0
+                    60,
+                    110,
+                    160,
+                    210
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [
-                    300
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -587,7 +572,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -658,7 +643,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -679,7 +664,7 @@
                 "The self-damage Techies receive from this blast is pure and non-lethal.",
                 "This ability destroys trees."
               ],
-              "shard_loc": "Increases Blast Off! cast range by %shard_bonus_cast_range% and applies a %shard_stun_duration% second stun to affected enemies.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -809,25 +794,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "hp_dmg",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAX HP AS BONUS DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "techies_spleens_secret_sauce",
-                    "values": [
-                      15
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "techies_spleens_secret_sauce"
-                },
-                {
                   "name": "duration",
                   "values_float": [
                     0.75
@@ -939,21 +905,261 @@
               "item_quality": 0
             },
             {
-              "id": 5644,
-              "name": "techies_minefield_sign",
-              "name_loc": "Minefield Sign",
-              "desc_loc": "Plant a warning sign, causing Sticky Bombs and Proximity Mines within its radius to be invulnerable and deal %bonus_mine_damage_pct%%% more damage. Only one sign can exist at a time. Lasts %lifetime% seconds. ",
-              "lore_loc": "Watch your step!",
+              "id": 1778,
+              "name": "techies_mutually_assured_destruction",
+              "name_loc": "M.A.D.",
+              "desc_loc": "Techies gain a percentage of their mana pool as bonus mana regeneration.<br><br>When Techies die, they leave behind a barrel that explodes after %explosion_delay%s, damaging enemies in an area around it. Damage is based on Techies' max mana.",
+              "lore_loc": "",
               "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "Increases radius and duration of Minefield Sign. When an enemy hero walks within %trigger_radius% units of a minefield sign, the %aura_radius% units area around the sign will become a minefield for %minefield_duration% seconds, dealing damage to enemy units any time they move within its area. Minefield Sign is destroyed after this effect ends.",
+              "shard_loc": "M.A.D. becomes an active ability. Techies plant an M.A.D. which can be detonated manually with a sub-ability. Only one M.A.D. from the active ability can be placed at a time.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
                 ""
               ],
               "type": 0,
-              "behavior": "8589934704",
+              "behavior": "562958543355907",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 2,
+              "immunity": 4,
+              "dispellable": 0,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                1
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "bonus_mana_as_mana_regen",
+                  "values_float": [
+                    0.08
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MANA POOL AS REGEN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "radius",
+                  "values_float": [
+                    400
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "base_damage",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BASE DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_mana_pct_as_damage",
+                  "values_float": [
+                    30
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX MANA AS DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [
+                    10
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_mana_regen",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CURRENT MANA REGEN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_damage",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CURRENT DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "explosion_delay",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    450
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    30
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": true,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": true,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 5644,
+              "name": "techies_minefield_sign",
+              "name_loc": "Minefield Sign",
+              "desc_loc": "Plant a warning sign, causing Proximity Mines within its radius to be invulnerable and deal %bonus_mine_damage_pct%%% more damage. Only one sign can exist at a time. Lasts %lifetime% seconds.<br><br>When an enemy Hero walks within %trigger_radius% units of a minefield sign, the %aura_radius% units area around the sign will become a minefield for %minefield_duration% seconds, dealing damage to enemy Heroes any time they move within its area. Minefield Sign is destroyed after this effect ends.",
+              "lore_loc": "Watch your step!",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8589934705",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -991,15 +1197,13 @@
                 {
                   "name": "aura_radius",
                   "values_float": [
-                    500
+                    1000
                   ],
                   "is_percentage": false,
                   "heading_loc": "EFFECT RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    500
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1010,15 +1214,13 @@
                 {
                   "name": "lifetime",
                   "values_float": [
-                    60
+                    240
                   ],
                   "is_percentage": false,
                   "heading_loc": "SIGN DURATION:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    180
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1063,15 +1265,13 @@
                 {
                   "name": "scepter_move_damage",
                   "values_float": [
-                    0
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    300
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1082,15 +1282,13 @@
                 {
                   "name": "scepter_move_amt",
                   "values_float": [
-                    0
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "MOVEMENT TRIGGER AMOUNT:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    200
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1168,11 +1366,11 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_scepter": true,
               "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
+              "ability_is_innate": false,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -1737,9 +1935,9 @@
               "item_quality": 0
             },
             {
-              "id": 6160,
-              "name": "special_bonus_mp_regen_3",
-              "name_loc": "+{s:value} Mana Regen",
+              "id": 1841,
+              "name": "special_bonus_unique_techies_tazer_duration",
+              "name_loc": "+{s:bonus_duration}% Reactive Tazer Buff and Disarm Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1785,25 +1983,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1944,8 +2124,8 @@
               "item_quality": 0
             },
             {
-              "id": 703,
-              "name": "special_bonus_attack_damage_252",
+              "id": 1724,
+              "name": "special_bonus_attack_damage_253",
               "name_loc": "+{s:value} Damage",
               "desc_loc": "",
               "lore_loc": "",
@@ -1996,7 +2176,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    252
+                    253
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2088,166 +2268,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1402,
-                  "name": "techies_squees_scope",
-                  "name_loc": "Squee's Scope",
-                  "desc_loc": "Techies gains %attack_range_tooltip% attack range and attack projectile speed for each point of attack speed.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 4,
-                  "dispellable": 0,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "attack_range_tooltip",
-                      "values_float": [
-                        1
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1403,
-                  "name": "techies_spoons_stash",
-                  "name_loc": "Spoon's Stash",
-                  "desc_loc": "Techies stack all previously selected Enchantments onto newly crafted Neutral Items.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Only one Tier 5 Enchantment can be stacked after crafting your second Tier 5 Neutral Item.",
-                    "Divine Regalia's Exalted loss of enchantment upon death only affects the most recently obtained Tier 5 enchantment."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 4,
-                  "dispellable": 0,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

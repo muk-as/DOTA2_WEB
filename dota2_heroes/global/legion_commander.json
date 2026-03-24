@@ -10,26 +10,7 @@
           "bio_loc": "They came without warning. Within the city walls of Stonehall there came a rumble and a terrible sound, and from blackness unknown came a force of beasts numbering beyond count, wielding flame and foul sorcery, slaying and snatching mothers and sons to dark purpose. Of once-mighty Stonehall's military strength only the Bronze Legion, led by the indomitable Commander Tresdin, was near enough to answer the call of battle. They rode into their city, fighting through bloodstained alleyways and burning markets, cutting their way through the monstrous throng to the source of the sudden invasion: an ethereal rift within the city square, and at its precipice thundered their dreaded champion.\r\n\t\t\t\t<br><br>Enwrapped in a corrosive shimmer, the leader of the abyssal horde swung its massive blade, cleaving a legionnaire in two as his flesh began to spoil. Tresdin lifted her blood-stained sword and settled her sights on the beast. It turned, smiling at her through a maze of teeth. Heedless of the battle raging around them, they charged one another.\r\n\t\t\t\t<br><br>Deflecting blow after blow, the pair danced their deadly duel as the Bronze Legion met its end around them. Tresdin leapt forward as her foe swung its sword to meet her. The odds turned. The attack smashed into Tresdin suddenly, a brutal thrust from the side, but even as her balance slipped she rallied her strength for another stroke. Blade scraped on blade, beyond the hilt to the gnarled paw below, carving it in two in a fearsome spray of sparks and blood. The vile audience looked on in astonishment as she pressed the attack, driving her blade through her foe's flesh into the stampeding heart within. With a scream that split the clouds above, the beast erupted in a torrent of gore and anguish. The stygian portal wavered, the power sustaining the chasm beyond vanishing as suddenly as it had appeared. The remaining invaders fell quickly to Stonehall steel.\r\n\t\t\t\t<br><br>Though victorious, the survivors saw little to celebrate: the city lay in ruins, and survivors were few. Fires continued to spread. Unfurling her banners of war, Tresdin gathered what allies she could. Her anger smoldered as she pledged brutal vengeance upon the forces of the abyss, and damned be any who would dare stand in her way.",
           "hype_loc": "Marching across the battlefield, Legion Commander <b>challenges lone enemies in single combat</b>. Each duel she wins increases the power of her attacks, until at last she can become a relentless one-woman army.",
           "npe_desc_loc": "Increases power with each duel victory",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Stonehall Plate",
-              "description_loc": "Overwhelming Odds grants an all damage barrier based on the damage it deals to enemy heroes.",
-              "name": "legion_commander_stonehall_plate",
-              "icon": "armor",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Spoils of War",
-              "description_loc": "When a Duel is won, units that damaged the loser during the Duel will gain permanent bonus damage. If Legion Commander won the Duel, she will automatically cast Press the Attack on herself and assisting allies.",
-              "name": "legion_commander_spoils_of_war",
-              "icon": "damage",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 24,
           "str_gain": 3.1,
           "agi_base": 18,
@@ -55,7 +36,7 @@
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
-          "armor": 3,
+          "armor": 2,
           "magic_resistance": 25,
           "movement_speed": 325,
           "turn_rate": 0.6,
@@ -70,13 +51,13 @@
               "id": 5595,
               "name": "legion_commander_overwhelming_odds",
               "name_loc": "Overwhelming Odds",
-              "desc_loc": "Turns the foes' numbers against them, dealing damage to all enemies in the area. Damage increases with each enemy unit or hero in the area. Also grants bonus Attack Speed to Legion Commander. Can be cast during Duel.",
+              "desc_loc": "Turns the foes' numbers against them, dealing a %movement_slow%%% impact slow for %slow_duration%s and damage to all enemies in the area. Damage increases with each enemy unit or hero in the area, and grants Legion Commander bonus attack speed.",
               "lore_loc": "The archers of Stonehall are ready at Tresdin's command.",
               "notes_loc": [],
-              "shard_loc": "Gives %duel_radius_bonus% bonus radius when cast during Duel.",
+              "shard_loc": "Overwhelming Odds has larger radius and grants an all damage barrier based on the damage it deals to enemy heroes.",
               "scepter_loc": "",
               "facets_loc": [
-                "Overwhelming Odds grants an all damage barrier based on the damage it deals to enemy heroes.",
+                "",
                 ""
               ],
               "type": 0,
@@ -122,17 +103,16 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage",
+                  "name": "radius",
                   "values_float": [
-                    40,
-                    70,
-                    100,
-                    130
+                    600
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BASE DAMAGE:",
+                  "heading_loc": "RADIUS:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    100
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -142,15 +122,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_per_unit",
+                  "name": "damage",
                   "values_float": [
-                    14,
-                    16,
-                    18,
-                    20
+                    40,
+                    70,
+                    100,
+                    130
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE PER CREEP:",
+                  "heading_loc": "BASE DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -188,6 +168,26 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "damage_per_unit",
+                  "values_float": [
+                    14,
+                    16,
+                    18,
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE PER CREEP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "bonus_attack_speed",
                   "values_float": [
                     50,
@@ -213,7 +213,7 @@
                     6
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SPEED DURATION:",
+                  "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -225,12 +225,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "radius",
+                  "name": "slow_duration",
                   "values_float": [
-                    600
+                    0.3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -242,73 +242,14 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "armor_per_creep",
+                  "name": "movement_slow",
                   "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "armor_per_hero",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    5
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    8
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "duel_radius_bonus",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "RADIUS BONUS IN DUEL:",
-                  "bonuses": [],
-                  "values_shard": [
                     100
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -325,16 +266,16 @@
                   "is_percentage": true,
                   "heading_loc": "DAMAGE TO BARRIER:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    50
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "legion_commander_stonehall_plate",
-                    "values": [
-                      40
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "legion_commander_stonehall_plate"
+                  "required_facet": ""
                 },
                 {
                   "name": "shield_duration",
@@ -344,16 +285,16 @@
                   "is_percentage": false,
                   "heading_loc": "BARRIER DURATION:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    6
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "legion_commander_stonehall_plate",
-                    "values": [
-                      6
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "legion_commander_stonehall_plate"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastPoint",
@@ -437,7 +378,7 @@
               "lore_loc": "The rallying horn of the Bronze Legion is able to inspire any heart.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases movement speed and becomes an %radius% area of effect ability, and always affects Legion Commander when used.",
               "facets_loc": [
                 "",
                 ""
@@ -508,15 +449,11 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS MOVE SPEED:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_legion_commander_pta_movespeed",
-                      "value": 12,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    12
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -552,18 +489,16 @@
                 },
                 {
                   "name": "radius",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_legion_commander_5",
-                      "value": 300,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    500
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -580,6 +515,27 @@
                     {
                       "name": "special_bonus_unique_legion_commander_8",
                       "value": 1.5,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "immunity_resist",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_8",
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -665,7 +621,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -681,9 +637,11 @@
               "id": 5597,
               "name": "legion_commander_moment_of_courage",
               "name_loc": "Moment of Courage",
-              "desc_loc": "When attacked, Legion Commander has a chance to immediately counterattack with bonus lifesteal.",
+              "desc_loc": "When attacked a number of times, Legion Commander will counter-attack her target with bonus lifesteal.",
               "lore_loc": "Tresdin knows that an enemy's most vulnerable moment often follows their fiercest stroke.",
-              "notes_loc": [],
+              "notes_loc": [
+                "The lifestealing strike is only triggered if being attacked."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -709,10 +667,7 @@
                 0
               ],
               "cooldowns": [
-                1.7,
-                1.4,
-                1.1,
-                0.8
+                0.3
               ],
               "durations": [
                 0
@@ -730,17 +685,20 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "trigger_chance",
+                  "name": "trigger_attacks",
                   "values_float": [
-                    25
+                    7,
+                    6,
+                    5,
+                    4
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "CHANCE TO COUNTERATTACK:",
+                  "is_percentage": false,
+                  "heading_loc": "ATTACKS TO TRIGGER:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_legion_commander_3",
-                      "value": 8,
-                      "operation": 0
+                      "value": 1,
+                      "operation": 2
                     }
                   ],
                   "values_shard": [],
@@ -756,6 +714,23 @@
                   "name": "buff_duration",
                   "values_float": [
                     1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "secondary_attack_damage",
+                  "values_float": [
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -798,10 +773,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    1.7,
-                    1.4,
-                    1.1,
-                    0.8
+                    0.3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -833,7 +805,7 @@
               "id": 1483,
               "name": "legion_commander_outfight_them",
               "name_loc": "Outfight Them!",
-              "desc_loc": "Attacking an enemy hero that is equal or higher level than you increases your Health Restoration by %heal_bonus_pct%%% for %duration%s.",
+              "desc_loc": "Passively grants Legion Commander armor.<br><br>If Legion or an allied Hero within %radius% range casts an ability, they gain bonus armor for %duration%s; allies gain %ally_factor%%% of the value.  This bonus stacks independently.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -843,14 +815,14 @@
                 ""
               ],
               "type": 0,
-              "behavior": "66",
+              "behavior": "562949953421379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -879,12 +851,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "heal_bonus_pct",
+                  "name": "radius",
                   "values_float": [
-                    30,
-                    40,
-                    50,
-                    60
+                    1200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -901,7 +870,47 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    4
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "armor",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_outfight_them_armor",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "ally_factor",
+                  "values_float": [
+                    50
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -933,16 +942,16 @@
               "id": 5598,
               "name": "legion_commander_duel",
               "name_loc": "Duel",
-              "desc_loc": "Legion Commander and the target enemy hero are forced to attack each other for a short duration.  Neither hero can use items or abilities, with the exception of Legion Commander being able to cast Overwhelming Odds. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
+              "desc_loc": "Legion Commander and the target enemy hero are forced to attack each other for a short duration. Neither hero can use items, and the target enemy hero cannot use abilities. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
               "lore_loc": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
               "notes_loc": [
                 "Duels will end if the units are pushed 2000 units apart."
               ],
-              "shard_loc": "Increases Duel damage by %shard_duel_damage_bonus% per win. Applies retroactively.",
-              "scepter_loc": "Increases Duel duration.  Legion Commander is debuff immune for the duration of the Duel.",
+              "shard_loc": "",
+              "scepter_loc": "When Legion Commander wins a duel, Press the Attack is automatically triggered around her.",
               "facets_loc": [
                 "",
-                "When a Duel is won, units that damaged the loser during the Duel will gain permanent bonus damage. If Legion Commander won the Duel, she will automatically cast Press the Attack on herself. Assisting allies will also receive a Press the Attack buff with %assist_pta_duration_pct%%% duration."
+                ""
               ],
               "type": 1,
               "behavior": "8",
@@ -996,11 +1005,15 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    1
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_duel_duration",
+                      "value": 1,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1018,9 +1031,7 @@
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [
-                    5
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1030,49 +1041,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "assist_reward_damage",
-                  "values_float": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ASSIST BONUS DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "legion_commander_spoils_of_war",
-                    "values": [
-                      5,
-                      10,
-                      15
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "legion_commander_spoils_of_war"
-                },
-                {
-                  "name": "assist_pta_duration_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "legion_commander_spoils_of_war",
-                    "values": [
-                      25
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "legion_commander_spoils_of_war"
-                },
-                {
-                  "name": "debuff_immunity",
+                  "name": "trigger_pta_on_victory",
                   "values_float": [
                     0
                   ],
@@ -1091,17 +1060,76 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_duel_damage_bonus",
+                  "name": "duel_refresh_on_victory",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_duel_refresh_on_victory",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "team_duel",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    5
+                  "values_shard": [],
+                  "values_scepter": [
+                    0
                   ],
-                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "team_duel_damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "team_duel_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1182,7 +1210,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": true,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1258,9 +1286,9 @@
               "item_quality": 0
             },
             {
-              "id": 1176,
-              "name": "special_bonus_unique_legion_commander_pta_movespeed",
-              "name_loc": "+{s:bonus_move_speed}% Press The Attack Movement Speed",
+              "id": 1837,
+              "name": "special_bonus_unique_legion_commander_outfight_them_armor",
+              "name_loc": "+{s:bonus_armor} Outfight Them! Armor",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1444,9 +1472,9 @@
               "item_quality": 0
             },
             {
-              "id": 7395,
-              "name": "special_bonus_unique_legion_commander_5",
-              "name_loc": "{s:bonus_radius} AoE Press The Attack",
+              "id": 1838,
+              "name": "special_bonus_unique_legion_commander_duel_duration",
+              "name_loc": "+{s:bonus_duration}s Duel Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1508,7 +1536,7 @@
             {
               "id": 6526,
               "name": "special_bonus_unique_legion_commander_3",
-              "name_loc": "+{s:bonus_trigger_chance}% Moment of Courage Proc Chance",
+              "name_loc": "-{s:bonus_trigger_attacks} Moment of Courage Attacks To Trigger",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1630,10 +1658,10 @@
               "item_quality": 0
             },
             {
-              "id": 925,
-              "name": "special_bonus_unique_legion_commander_8",
-              "name_loc": "Press the Attack grants {s:bonus_immunity_duration}s Debuff Immunity",
-              "desc_loc": "Also increases magic resistance by 50%%",
+              "id": 1839,
+              "name": "special_bonus_unique_legion_commander_duel_refresh_on_victory",
+              "name_loc": "Duel Refreshes Cooldown On Victory",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1692,14 +1720,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "Through a process of divination, children are selected for upbringing by the Sisters of the Veil, an order that considers assassination a sacred part of the natural order.  The Veiled Sisters identify targets through meditation and oracular utterances.  They accept no contracts, and never seem to pursue targets for political or mercenary reasons. Their killings bear no relation to any recognizable agenda, and can seem to be completely random:  A figure of great power is no more likely to be eliminated than a peasant or a well digger. Whatever pattern the killings may contain, it is known only to them. They treat their victims as sacrifices, and death at their hand is considered an honor. Raised with no identity except that of their order, any Phantom Assassin can take the place of any other; their number is not known. Perhaps there are many, perhaps there are few. Nothing is known of what lies under the Phantom Veil. Except that this one, from time to time, when none are near enough to hear, is known to stir her veils with the forbidden whisper of her own name: Mortred.",
           "hype_loc": "The moment she finds her prey, Phantom Assassin strikes. Instantly closing in on a target, she effortlessly <b>dodges attacks</b> as she relentlessly cuts away at her foe. Without warning, any one of her attacks could prove suddenly and <b>brutally fatal.</b>",
           "npe_desc_loc": "Blinks onto her foes with critical strikes",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Methodical",
-              "description_loc": "Coup de Grace procs every {s:bonus_attacks_to_proc} attacks on the same hero or {s:bonus_attacks_to_proc_creeps} attacks on non hero units.",
-              "name": "phantom_assassin_methodical",
-              "icon": "skull",
-              "gradient_id": 0,
-              "index": 1
-            },
-            {
-              "color": 0,
-              "title_loc": "Sweet Release",
-              "description_loc": "Stifling Dagger re-casts when an enemy dies.",
-              "name": "phantom_assassin_sweet_release",
-              "icon": "phantom_ass_dagger",
-              "gradient_id": 0,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 2,
           "agi_base": 21,
@@ -82,7 +63,7 @@
               "facets_loc": [
                 "",
                 "",
-                "Whenever a unit is non-fatally hit by Stifling Dagger, they receive a stacking debuff that lasts for %dagger_recast_time% seconds. When a unit dies, a Stifling Dagger with %dagger_secondary_reduce%%% damage and slow duration values is cast on a random nearby unit for every stack of the debuff, prioritizing heroes."
+                ""
               ],
               "type": 0,
               "behavior": "8",
@@ -260,16 +241,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    0
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "phantom_assassin_sweet_release",
-                    "values": [
-                      6
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "phantom_assassin_sweet_release"
+                  "required_facet": ""
                 },
                 {
                   "name": "dagger_secondary_reduce",
@@ -279,16 +260,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    0
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "phantom_assassin_sweet_release",
-                    "values": [
-                      50
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "phantom_assassin_sweet_release"
+                  "required_facet": ""
                 },
                 {
                   "name": "extra_daggers",
@@ -679,12 +660,9 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 3,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
-                625,
-                550,
-                475,
-                400
+                500
               ],
               "cast_points": [
                 0.3
@@ -730,10 +708,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    625,
-                    550,
-                    475,
-                    400
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "VANISH RADIUS:",
@@ -750,10 +725,7 @@
                 {
                   "name": "fade_duration",
                   "values_float": [
-                    0.4,
-                    0.6,
-                    0.8,
-                    1
+                    0.8
                   ],
                   "is_percentage": false,
                   "heading_loc": "VANISH BUFFER:",
@@ -768,72 +740,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "manacost_reduction_during_blur_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MANA COST REDUCTION DURING BLUR:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "phantom_assassin_veiled_one",
-                    "values": [
-                      30
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "phantom_assassin_veiled_one"
-                },
-                {
-                  "name": "buff_duration_after_break",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BUFF DURATION AFTER BLUR:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "phantom_assassin_veiled_one",
-                    "values": [
-                      5
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "phantom_assassin_veiled_one"
-                },
-                {
-                  "name": "manacost_reduction_after_blur_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MANA COST REDUCTION AFTER BLUR:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "phantom_assassin_veiled_one",
-                    "values": [
-                      100
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "phantom_assassin_veiled_one"
-                },
-                {
                   "name": "active_movespeed_bonus",
                   "values_float": [
-                    6,
-                    9,
-                    12,
-                    15
+                    9.5
                   ],
                   "is_percentage": true,
-                  "heading_loc": "ACTIVE MOVEMENT SPEED:",
+                  "heading_loc": "BONUS MOVEMENT SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -904,10 +816,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    625,
-                    550,
-                    475,
-                    400
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2030,14 +1939,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

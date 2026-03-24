@@ -10,26 +10,7 @@
           "bio_loc": "Kaldr, the Ancient Apparition, is an image projected from outside time. He springs from the cold, infinite void that both predates the universe and awaits its end. Kaldr is, Kaldr was, Kaldr shall be...and what we perceive, powerful as it appears to us, is but the faintest faded echo of the true, eternal Kaldr. Some believe that as the cosmos ages and approaches its final moments, the brightness and power of Kaldr will also intensify--that the Ancient Apparition will grow younger and stronger as eternity's end draws nigh. His grip of ice will bring all matter to a stop, his image will cast a light too terrible to behold. An Apparition no longer!",
           "hype_loc": "Able to launch a powerful blast of <b>damaging ice</b> across the battlefield, Ancient Apparition threatens to shatter weakened enemies wherever they are. Slowing enemies as he enhances his allies' effectiveness in battle, he is a constant threat to his foes.",
           "npe_desc_loc": "Launches a powerful icy blast from anywhere on the map",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Bone Chill",
-              "description_loc": "Ancient Apparition's abilities reduce the enemy's Strength.",
-              "name": "ancient_apparition_bone_chill",
-              "icon": "debuff",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Exposure",
-              "description_loc": "Cold Feet applies in an AoE, depending on the current level of Ice Blast.",
-              "name": "ancient_apparition_exposure",
-              "icon": "area_of_effect",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 20,
           "str_gain": 1.9,
           "agi_base": 20,
@@ -70,7 +51,7 @@
               "id": 5345,
               "name": "ancient_apparition_cold_feet",
               "name_loc": "Cold Feet",
-              "desc_loc": "Places Death Rime Stacks on an enemy that can be dispelled by moving away from the initial cast point.  If the enemy unit doesn't move outside of the given range, it will be stunned and frozen in place after 4 seconds.",
+              "desc_loc": "Places a curse on an enemy, dealing damage over time.  If the enemy unit doesn't move outside of the given range from the initial location, it will be stunned and frozen in place after %AbilityDuration% seconds.",
               "lore_loc": "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity.",
               "notes_loc": [
                 "Deals damage every half second."
@@ -133,19 +114,19 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "frost_stacks",
+                  "name": "damage_per_second",
                   "values_float": [
-                    2,
-                    4,
-                    6,
-                    8
+                    20,
+                    40,
+                    60,
+                    80
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DEATH RIME STACKS:",
+                  "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_ancient_apparition_8",
-                      "value": 2,
+                      "name": "special_bonus_unique_ancient_apparition_cold_feet_dps",
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -170,8 +151,8 @@
                   "heading_loc": "BREAK DISTANCE:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_ancient_apparition_1",
-                      "value": 300,
+                      "name": "special_bonus_unique_ancient_apparition_cold_feet_distance",
+                      "value": 250,
                       "operation": 0
                     }
                   ],
@@ -195,6 +176,27 @@
                   "is_percentage": false,
                   "heading_loc": "STUN DURATION:",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "area_of_effect",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_ancient_apparition_1",
+                      "value": 450,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -316,7 +318,7 @@
               "id": 5346,
               "name": "ancient_apparition_ice_vortex",
               "name_loc": "Ice Vortex",
-              "desc_loc": "Creates a vortex of icy energy that applies Death Rime Stacks and increases magic damage done to enemies in its range.",
+              "desc_loc": "Creates a vortex of icy energy that slows, deals damage, and increases magic damage done to enemies in its range.",
               "lore_loc": "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle.",
               "notes_loc": [
                 "Provides vision in a small area where it is placed."
@@ -332,7 +334,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
+              "damage": 2,
               "immunity": 4,
               "dispellable": 3,
               "max_level": 4,
@@ -418,13 +420,10 @@
                 {
                   "name": "movement_speed_pct",
                   "values_float": [
-                    -16,
-                    -19,
-                    -22,
-                    -25
+                    -8
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "MOVEMENT SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -443,7 +442,7 @@
                     -22,
                     -25
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "INCREASED MAGIC DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
@@ -476,15 +475,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "frost_stacks",
+                  "name": "damage_per_second",
                   "values_float": [
-                    1,
-                    2,
-                    3,
-                    4
+                    10,
+                    20,
+                    30,
+                    40
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DEATH RIME STACKS:",
+                  "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -633,11 +632,11 @@
               "id": 5347,
               "name": "ancient_apparition_chilling_touch",
               "name_loc": "Chilling Touch",
-              "desc_loc": "Enhances Ancient Apparition's attack with increased range and heavy magic damage. Applies a Death Rime Stack that lasts for %duration% seconds. Additionally applies a %slow%%% slow for %slow_duration% seconds.",
+              "desc_loc": "Enhances Ancient Apparition's attack with increased range and a burst of magical damage and slow.",
               "lore_loc": "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Removes cooldown and reduces manacost by %bonus_AbilityManaCost%%%.",
+              "scepter_loc": "Removes cooldown.",
               "facets_loc": [
                 "",
                 ""
@@ -676,10 +675,7 @@
                 0
               ],
               "mana_costs": [
-                45,
-                50,
-                55,
-                60
+                35
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -701,23 +697,6 @@
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "frost_stacks",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DEATH RIME STACKS:",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -750,7 +729,7 @@
                     100
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -770,7 +749,7 @@
                     1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "SLOW DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -810,18 +789,13 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    45,
-                    50,
-                    55,
-                    60
+                    35
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    40
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -866,27 +840,27 @@
               "item_quality": 0
             },
             {
-              "id": 1326,
-              "name": "ancient_apparition_death_rime",
-              "name_loc": "Death Rime",
-              "desc_loc": "Ancient Apparition's abilities apply Death Rime Stacks on enemies. Death Rime slows enemies' movement speed and deals damage over time.",
+              "id": 1756,
+              "name": "ancient_apparition_bone_chill",
+              "name_loc": "Bone Chill",
+              "desc_loc": "When Ancient Apparition deals Magic damage to an enemy with his abilities, it is slowed for a short duration. If the target is a Hero, its Strength is also reduced. Multiple instances of this effect stack and have independent durations.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases Base Strength Reduction.",
               "facets_loc": [
-                "Each Death Rime Stack also reduces the enemy's Strength.",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "8589934658",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 2,
               "immunity": 4,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -915,21 +889,17 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage",
+                  "name": "str_reduction",
                   "values_float": [
-                    10
+                    0.1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE PER SECOND PER STACK:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_ancient_apparition_6",
-                      "value": 50,
-                      "operation": 3
-                    }
-                  ],
+                  "heading_loc": "STRENGTH REDUCTION:",
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    0.3
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -938,56 +908,59 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "slow",
+                  "name": "tooltip_scepter_bonus",
                   "values_float": [
-                    2
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SLOW PER STACK:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_ancient_apparition_6",
-                      "value": 50,
-                      "operation": 3
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "strength_decrease",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    0.3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "STR REDUCTION PER STACK:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "ancient_apparition_bone_chill",
-                    "values": [
-                      0.5,
-                      0.75,
-                      1,
-                      1.25
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "ancient_apparition_bone_chill"
+                  "required_facet": ""
+                },
+                {
+                  "name": "str_reduction_duration",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_slow_pct",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MOVEMENT SLOW:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1003,7 +976,7 @@
               "id": 5348,
               "name": "ancient_apparition_ice_blast",
               "name_loc": "Ice Blast",
-              "desc_loc": "Launches a tracer toward any location on the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touch the icy ball of hail as it travels, are Frostbitten, gaining Death Rime Stacks and prevented from regenerating or healing. If a Frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
+              "desc_loc": "Launches a tracer toward any location on the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touch the icy ball of hail as it travels, are Frostbitten, taking damage over time and prevented from regenerating or healing. If a Frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
               "lore_loc": "Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power.",
               "notes_loc": [
                 "Upon cast, this ability is replaced by Release, used to stop the tracer on the target area.",
@@ -1151,23 +1124,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "frost_stacks",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DEATH RIME STACKS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "speed",
                   "values_float": [
                     1500
@@ -1191,7 +1147,7 @@
                     13,
                     14
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "SHATTER HEALTH THRESHOLD:",
                   "bonuses": [
                     {
@@ -1229,29 +1185,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "cold_feet_aoe",
-                  "values_float": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "COLD FEET AOE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "ancient_apparition_exposure",
-                    "values": [
-                      200,
-                      350,
-                      500
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "ancient_apparition_exposure"
-                },
-                {
                   "name": "target_sight_radius",
                   "values_float": [
                     500
@@ -1269,7 +1202,26 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "damage_per_second",
+                  "values_float": [
+                    12,
+                    24,
+                    36
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE PER SECOND:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDamage",
                   "values_float": [
                     250,
                     325,
@@ -1419,9 +1371,9 @@
               "item_quality": 0
             },
             {
-              "id": 973,
-              "name": "special_bonus_unique_ancient_apparition_8",
-              "name_loc": "+{s:bonus_frost_stacks} Cold Feet Death Rime Stacks",
+              "id": 1819,
+              "name": "special_bonus_unique_ancient_apparition_cold_feet_dps",
+              "name_loc": "+{s:bonus_damage_per_second} Cold Feet Damage Per Second",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1543,9 +1495,9 @@
               "item_quality": 0
             },
             {
-              "id": 6214,
-              "name": "special_bonus_unique_ancient_apparition_1",
-              "name_loc": "+{s:bonus_break_distance} Cold Feet Breaking distance",
+              "id": 1820,
+              "name": "special_bonus_unique_ancient_apparition_cold_feet_distance",
+              "name_loc": "+{s:bonus_break_distance} Cold Feet Break Distance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1729,9 +1681,9 @@
               "item_quality": 0
             },
             {
-              "id": 7106,
-              "name": "special_bonus_unique_ancient_apparition_6",
-              "name_loc": "+{s:bonus_damage}% Death Rime Slow/Damage",
+              "id": 6214,
+              "name": "special_bonus_unique_ancient_apparition_1",
+              "name_loc": "{s:bonus_area_of_effect} AoE Cold Feet",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1853,14 +1805,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

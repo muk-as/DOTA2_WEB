@@ -10,26 +10,7 @@
           "bio_loc": "Admired by many, Marci's origins are known to nameless few. She travels mostly in the company of the Princess Mirana, but the roots of their friendship are entwined in secrets neither would ever needlessly reveal. To allies, she serves as fierce and honest companion. To enemies, she acts as dauntless deterrence against harming any she deems friend. Though unwise opponents may consider her size unremarkable, Marci possesses an inner power that imbues her strikes with incredible might. She'll decimate those who think to test her, but those who earn her favor will have an unflappable confidant for life.",
           "hype_loc": "Proving that undying loyalty yields unrivaled power, Marci always marches into battle <b>ready to raise fists</b> in defense of her companions. Effortlessly <b>flinging friends and foes</b> around the battlefield, she happily <b>bounds into any brawl</b>, able to <b>grant allies a deadly edge</b> and <b>unleash a hidden power</b> strong enough to make even gods reconsider the wisdom of a hostile path.",
           "npe_desc_loc": "Dashes around pummeling enemies with rapid attacks",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Buddy System",
-              "description_loc": "While bodyguarded, Marci and her partner share a portion of health healed by this ability with each other.",
-              "name": "marci_buddy_system",
-              "icon": "twin_hearts",
-              "gradient_id": 1,
-              "index": 2
-            },
-            {
-              "color": 4,
-              "title_loc": "Pick-me-up",
-              "description_loc": "Rebound can be alt-cast to bring Marci's ally with her after the jump.",
-              "name": "marci_pickmeup",
-              "icon": "ricochet",
-              "gradient_id": 0,
-              "index": 3
-            }
-          ],
+          "facets": [],
           "str_base": 23,
           "str_gain": 3.2,
           "agi_base": 20,
@@ -381,11 +362,12 @@
               "id": 8235,
               "name": "marci_companion_run",
               "name_loc": "Rebound",
-              "desc_loc": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies in a %landing_radius% radius where she lands.\n\n The ally receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s.",
+              "desc_loc": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies where she lands.\n\nWhen Rebound is set to alt-cast, Marci brings the target ally with her to her final destination.\n\n The ally receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s.",
               "lore_loc": "With a friendly or brazen boost, Marci can find her way into the midst of any fight.",
               "notes_loc": [
                 "Marci's initial run to her target unit can be disjointed.",
-                "Does not trigger spell reflect."
+                "Does not trigger spell reflect.",
+                "Does not bring allies who are Rooted or Leashed when alt-cast."
               ],
               "shard_loc": "Increases damage. Rebound can be cast on enemies, and causes Marci to also get the speed boost when she casts it.",
               "scepter_loc": "",
@@ -792,7 +774,7 @@
                 {
                   "name": "ally_arc_offset",
                   "values_float": [
-                    0
+                    150
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -800,32 +782,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "marci_pickmeup",
-                    "values": [
-                      150
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "marci_pickmeup"
-                },
-                {
-                  "name": "ally_impact_damage_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "marci_pickmeup",
-                    "values": [
-                      35
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "marci_pickmeup"
+                  "required_facet": ""
                 },
                 {
                   "name": "max_level",
@@ -845,61 +806,23 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "max_level_tooltip",
+                  "name": "can_jump_off_allies",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "marci_pickmeup",
-                    "values": [
-                      5
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "marci_pickmeup"
-                },
-                {
-                  "name": "postjump_unleash_duration",
-                  "values_float": [
-                    0
+                  "values_shard": [
+                    1
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "marci_fleeting_fury",
-                    "values": [
-                      3
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "marci_fleeting_fury"
-                },
-                {
-                  "name": "postjump_flurry_charges",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "marci_fleeting_fury",
-                    "values": [
-                      3
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "marci_fleeting_fury"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1002,12 +925,12 @@
               "id": 1427,
               "name": "marci_bodyguard",
               "name_loc": "Bodyguard",
-              "desc_loc": "Passively grants Marci lifesteal and bonus attack damage.\n\nMarci protects an allied hero. For %bodyguard_duration%s, the ally also gains %max_partner_penalty%%% of lifesteal and attack damage bonus. Whenever the ally attacks or is attacked by an enemy, Marci counter-attacks that target if they are within her attack range plus %bodyguard_attack_range_buffer%.",
+              "desc_loc": "Passively grants Marci lifesteal and bonus attack damage.\n\nWhen cast on an ally, she provides them with %max_partner_penalty%%% of her passive lifesteal and attack damage bonus. Additionally Marci creates a shared all damage barrier for herself and her partner. As Marci attacks heroes, %shared_barrier_replenish_amount%%% of the damage dealt restores the barrier.",
               "lore_loc": "Marci learned at a young age that the best asset in a scrap is a steady companion.",
               "notes_loc": [
                 "Marci cannot cast Bodyguard on herself.",
                 "Lifesteal effectiveness gets a %creep_lifesteal_reduction_pct%%% penalty against creeps.",
-                "Marci's counter-attack has a %counter_cooldown%s cooldown."
+                "The shared barrier is reduced by damage on either Marci or her partner."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1025,13 +948,13 @@
               "flags": 0,
               "damage": 1,
               "immunity": 1,
-              "dispellable": 3,
+              "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                1000
+                500
               ],
               "cast_points": [
-                0
+                0.2
               ],
               "channel_times": [
                 0
@@ -1049,7 +972,10 @@
                 0
               ],
               "mana_costs": [
-                50
+                60,
+                65,
+                70,
+                75
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1057,10 +983,10 @@
                 {
                   "name": "bodyguard_duration",
                   "values_float": [
-                    6
+                    7
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1112,7 +1038,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_marci_guardian_damage",
-                      "value": 20,
+                      "value": 12,
                       "operation": 0
                     }
                   ],
@@ -1194,9 +1120,50 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shared_healing_percent",
+                  "name": "shared_barrier",
                   "values_float": [
-                    0
+                    90,
+                    160,
+                    230,
+                    300
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SHARED BARRIER AMOUNT:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "strong_dispel",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_marci_guardian_strong_dispel",
+                      "value": 1,
+                      "operation": 5
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shared_barrier_replenish_amount",
+                  "values_float": [
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1204,18 +1171,33 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "marci_buddy_system",
-                    "values": [
-                      100
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "marci_buddy_system"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    1000
+                    500
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1232,7 +1214,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    50
+                    60,
+                    65,
+                    70,
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1281,10 +1266,11 @@
               "id": 1428,
               "name": "marci_special_delivery",
               "name_loc": "Special Delivery",
-              "desc_loc": "Marci whistles to instantly summon her courier to her.<br><br>Passively grants all allied couriers %bonus_levels% bonus levels and %bonus_hp_tooltip% bonus health.",
+              "desc_loc": "Marci whistles to instantly summon her courier to her. If the courier started in the fountain, it will take items from Marci's stash. After teleporting it will transfer these items to Marci and head back to the fountain.<br><br>Passively grants all allied couriers %bonus_levels% bonus levels and %bonus_hp_tooltip% bonus health.",
               "lore_loc": "Professional courtesy, from one courier to another.",
               "notes_loc": [
-                "Special Delivery whistle has a cast point of %abilitycastpoint% second."
+                "Special Delivery whistle has a cast point of %abilitycastpoint% second.",
+                "If the courier didn't transfer any items or still has items after casting, it will remain next to Marci."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1314,7 +1300,7 @@
                 0
               ],
               "cooldowns": [
-                240
+                245
               ],
               "durations": [
                 0
@@ -1419,7 +1405,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    240
+                    245
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1692,7 +1678,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_marci_unleash_speed",
-                      "value": 10,
+                      "value": 15,
                       "operation": 0
                     }
                   ],
@@ -2084,9 +2070,9 @@
               "item_quality": 0
             },
             {
-              "id": 1138,
-              "name": "special_bonus_unique_marci_lunge_movespeed",
-              "name_loc": "+{s:bonus_ally_movespeed_pct}% Rebound Movement Speed Bonus",
+              "id": 1431,
+              "name": "special_bonus_unique_marci_guardian_damage",
+              "name_loc": "+{s:bonus_bonus_damage}% Bodyguard Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2094,7 +2080,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "",
+                "+{s:bonus_bonus_damage}% Bodyguard Damage",
                 "",
                 "",
                 ""
@@ -2344,9 +2330,9 @@
               "item_quality": 0
             },
             {
-              "id": 1431,
-              "name": "special_bonus_unique_marci_guardian_damage",
-              "name_loc": "+{s:bonus_bonus_damage}% Bodyguard Damage",
+              "id": 1844,
+              "name": "special_bonus_unique_marci_guardian_strong_dispel",
+              "name_loc": "Bodyguard Strong Dispels",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2354,7 +2340,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "+{s:bonus_bonus_damage}% Bodyguard Damage",
+                "",
                 "",
                 "",
                 ""
@@ -2409,14 +2395,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

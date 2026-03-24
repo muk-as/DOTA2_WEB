@@ -10,29 +10,10 @@
           "bio_loc": "How long has it been since he lost his name? The torn ruin of his mind no longer knows.\r\n\t\t\t\t<br><br>Dimly he recalls armor and banners and grim-faced kin riding at his side. He remembers a battle: pain and fear as pale hands ripped him from his saddle. He remembers terror as they threw him into the yawning pit of the Dead God alongside his brothers, to hear the Dirge and be consumed into nothingness. In the darkness below, time left them. Thought left them. Sanity left them. Hunger, however, did not. They turned on each other with split fingernails and shattered teeth. Then it came: distant at first, a fragile note at the edge of perception, joined by another, then another, inescapable and unending. The chorus grew into a living wall of sound pulsing in his mind until no other thought survived. With the Dirge consuming him, he opened his arms to the Dead God and welcomed his obliteration. Yet destruction was not what he'd been chosen for. The Dead God demanded war. In the belly of the great nothing, he was granted a new purpose: to spread the Dirge across the land, to rally the sleepless dead against the living. He was to become the Undying, the herald of the Dead God, to rise and fall and rise again whenever his body failed him. To trudge on through death unending, that the Dirge might never end.",
           "hype_loc": "Shambling into battle, Undying forces enemies to decide whether to flee his wrath or be torn apart by it. He <b>drains strength</b> from his foes, and <b>summons a horde of clawing undead</b>. When he finally becomes a <b>hulking flesh golem</b>, his enemies may already be overwhelmed.",
           "npe_desc_loc": "Summons hordes of zombies to attack his foes",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Rotting Mitts",
-              "description_loc": "While transformed into a Flesh Golem, attacks spawn a zombie.",
-              "name": "undying_rotting_mitts",
-              "icon": "summons",
-              "gradient_id": 4,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Ripped",
-              "description_loc": "Casting Soul Rip on allies increases their Strength by a percentage of Undying's Strength.",
-              "name": "undying_ripped",
-              "icon": "strength",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 2.4,
-          "agi_base": 10,
+          "agi_base": 13,
           "agi_gain": 1.2,
           "int_base": 27,
           "int_gain": 2.8,
@@ -55,7 +36,7 @@
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
-          "armor": 2.6666667,
+          "armor": 2.1666667,
           "magic_resistance": 25,
           "movement_speed": 300,
           "turn_rate": 0.6,
@@ -797,8 +778,8 @@
                   "values_float": [
                     40
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "DEATHLUST HEALTH THRESHOLD:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1150,7 +1131,7 @@
               "id": 5447,
               "name": "undying_flesh_golem",
               "name_loc": "Flesh Golem",
-              "desc_loc": "Undying transforms into a horrifying flesh golem. Gains a percentage increase to strength and imbues attacks with a slow and damage amplification.",
+              "desc_loc": "Undying transforms into a horrifying flesh golem.  While in this state, he gains a percentage increase to strength, bonus movement speed, and causes attacks to slow, apply damage amplification, and spawn Tombstone zombies.",
               "lore_loc": "The flesh of the recently dead add to the power of Dirge's plague.",
               "notes_loc": [],
               "shard_loc": "",
@@ -1205,7 +1186,7 @@
                     40
                   ],
                   "is_percentage": true,
-                  "heading_loc": "SLOW:",
+                  "heading_loc": "SLOW ON ATTACK:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1241,7 +1222,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
+                  "heading_loc": "DAMAGE AMP DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1314,7 +1295,7 @@
                 {
                   "name": "spawn_zombie_on_attack",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1322,32 +1303,28 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "undying_rotting_mitts",
-                    "values": [
-                      1
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "undying_rotting_mitts"
+                  "required_facet": ""
                 },
                 {
                   "name": "zombie_duration",
                   "values_float": [
-                    0
+                    15
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ZOMBIE DURATION:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "undying_rotting_mitts",
-                    "values": [
-                      15
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "undying_rotting_mitts"
+                  "required_facet": ""
                 },
                 {
                   "name": "zombie_spawn_padding",
@@ -1543,68 +1520,6 @@
               "item_quality": 0
             },
             {
-              "id": 6155,
-              "name": "special_bonus_unique_undying",
-              "name_loc": "+{s:bonus_zombie_damage_tooltip} Zombie Damage",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
               "id": 616,
               "name": "special_bonus_unique_undying_6",
               "name_loc": "+{s:bonus_damage_per_unit} Soul Rip Damage/Heal",
@@ -1667,9 +1582,9 @@
               "item_quality": 0
             },
             {
-              "id": 6972,
-              "name": "special_bonus_unique_undying_5",
-              "name_loc": "+{s:bonus_hits_to_destroy_tooltip} Tombstone Attacks to Destroy",
+              "id": 6155,
+              "name": "special_bonus_unique_undying",
+              "name_loc": "+{s:bonus_zombie_damage_tooltip} Zombie Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1732,6 +1647,68 @@
               "id": 6420,
               "name": "special_bonus_unique_undying_2",
               "name_loc": "-{s:bonus_AbilityCooldown}s Decay Cooldown",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 6972,
+              "name": "special_bonus_unique_undying_5",
+              "name_loc": "+{s:bonus_hits_to_destroy_tooltip} Tombstone Attacks to Destroy",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1915,14 +1892,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

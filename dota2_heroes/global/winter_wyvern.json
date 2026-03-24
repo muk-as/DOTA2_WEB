@@ -10,26 +10,7 @@
           "bio_loc": "Like many great poets, Auroth just wants time to write, but the Winter Wyvern's life is full of interruptions. The epics of the Eldwurms have a long and colorful history, but some fear that the remaining dragon scholars are not as prolific as they once were, with few lines added to the Eldwurm Eddas since the last age of greatness. Auroth laments: \"We forget that there is more to life than triumph and dominion over enemies. We must also live our lives in the pursuit of creative expression.\" She embarks on research expeditions, collecting books for inspiration. But all this research can be terribly distracting, and she spends less time writing than she should. Although she knows she should be lurking in her lair, adding to the Eddas, she finds herself engaged in epic battles against powerful enemies. She loots castles, raids ancient libraries ... and if she happens to heap glory on herself in the process, she tells herself that it's merely a side effect of her research. The fact is, while her skill and power on the battlefield are legendary, her scholarly travails have thus far hardly been the stuff of literary acclaim. But she is not content to stand as a protagonist of heroic lore. She wishes also to create it.",
           "hype_loc": "Winter Wyvern stalks the skies, <b>slowing foes</b> with burning cold as she soars over the battlefield. Should the enemy be foolish enough to gather, she <b>curses them</b> to attack one of their own as she blasts the gathering with <b>icy splinters.</b>",
           "npe_desc_loc": "Able to force her enemies to attack their own ally",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Winterproof",
-              "description_loc": "Cold Embrace can be cast on buildings. Does not heal buildings. Allied units and buildings gain bonus attack damage when emerging from the icy cocoon.",
-              "name": "winter_wyvern_winterproof",
-              "icon": "tower",
-              "gradient_id": 2,
-              "index": 2
-            },
-            {
-              "color": 3,
-              "title_loc": "Recursive",
-              "description_loc": "Winter's Curse is recast on the lowest health enemy hero if the primary target dies.",
-              "name": "winter_wyvern_recursive",
-              "icon": "ricochet",
-              "gradient_id": 0,
-              "index": 3
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 2.5,
           "agi_base": 16,
@@ -73,13 +54,12 @@
               "desc_loc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of %percent_damage%%% of their current health each second.",
               "lore_loc": "The same organ where some dragons stoke their inner flame is, in Auroth, a crucible of unimaginable cold. From deep within her frosty gullet, an exhalation sends enemies into burning agony.",
               "notes_loc": [
-                "Enemy units can only receive the Arctic Burn debuff once per cast.",
                 "This ability does not affect Roshan.",
                 "Reduces Winter Wyvern's attack point to %attack_point%.",
                 "The damage and slow from Arctic Burn can be dispelled."
               ],
               "shard_loc": "",
-              "scepter_loc": "Causes Arctic Burn to be a toggle ability, draining mana every second when active. Removes limit on number of attacks per target. Increases Winter Wyvern's movement speed.",
+              "scepter_loc": "Causes Arctic Burn to be a toggle ability, draining mana every second when active. Increases Winter Wyvern's movement speed.",
               "facets_loc": [
                 "",
                 "",
@@ -208,7 +188,7 @@
                 {
                   "name": "damage_duration",
                   "values_float": [
-                    5
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "BURN DURATION:",
@@ -231,17 +211,17 @@
                 {
                   "name": "move_slow",
                   "values_float": [
-                    16,
-                    24,
-                    32,
-                    40
+                    15,
+                    20,
+                    25,
+                    30
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SLOW:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_winter_wyvern_1",
-                      "value": 17,
+                      "value": 15,
                       "operation": 0
                     }
                   ],
@@ -515,7 +495,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_winter_wyvern_2",
-                      "value": 250,
+                      "value": 175,
                       "operation": 0
                     }
                   ],
@@ -741,7 +721,7 @@
               "desc_loc": "Encases an ally in an icy cocoon, freezing them solid while healing a base amount as well as a percentage of their maximum health each second. The cocoon blocks all physical damage.",
               "lore_loc": "From winter's heart comes a cold, healing embrace. The ice slows the blood and allows the spell to better work its curative magic.",
               "notes_loc": [],
-              "shard_loc": "When Cold Embrace ends, a Splinter Blast goes off at that location, hitting enemies within %shard_splinter_range% range. Reduces cooldown by %shard_cooldown_reduction% seconds.",
+              "shard_loc": "Reduces cooldown by %shard_cooldown_reduction% seconds. Allied units gain bonus attack damage when emerging from the icy cocoon.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -880,25 +860,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_splinter_range",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1150
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "tick_interval",
                   "values_float": [
                     0.25
@@ -942,16 +903,16 @@
                   "is_percentage": true,
                   "heading_loc": "BONUS ATTACK DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    60
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "winter_wyvern_winterproof",
-                    "values": [
-                      60
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "winter_wyvern_winterproof"
+                  "required_facet": ""
                 },
                 {
                   "name": "damage_buff_duration",
@@ -961,16 +922,16 @@
                   "is_percentage": false,
                   "heading_loc": "DAMAGE BUFF DURATION:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    6
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "winter_wyvern_winterproof",
-                    "values": [
-                      6
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "winter_wyvern_winterproof"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1064,10 +1025,10 @@
               "item_quality": 0
             },
             {
-              "id": 1404,
-              "name": "winter_wyvern_eldwurm_scholar",
-              "name_loc": "Eldwurm Scholar",
-              "desc_loc": "When a Shrine of Wisdom grants experience to allies, Winter Wyvern shares the knowledge with her entire team, granting %share_percentage%%% of the experience to each of the %three_tooltip% heroes that did not collect the initial bonus.",
+              "id": 1779,
+              "name": "winter_wyvern_eldwurms_edda",
+              "name_loc": "Eldwurm's Edda",
+              "desc_loc": "Grants Winter Wyvern the item Eldwurm's Edda, which can be consumed to increase the current and maximum level of a basic ability by one and Winter Wyvern's base intelligence by %intellect_pct%%% of its current value at the time of consumption.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1079,7 +1040,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "4398046511106",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1115,26 +1076,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "share_percentage",
+                  "name": "tooltip_seconds",
                   "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "three_tooltip",
-                  "values_float": [
-                    3
+                    420
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1178,7 +1122,7 @@
                 "",
                 "",
                 "",
-                "Winter's Curse is recast on the lowest health enemy hero if the primary target dies. When recast, minimum, maximum, and bonus durations are %transfer_duration_pct%%% as long. Cannot transfer to illusions."
+                ""
               ],
               "type": 1,
               "behavior": "35184372088872",
@@ -1229,7 +1173,7 @@
                     525
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CURSE RADIUS:",
+                  "heading_loc": "RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1246,7 +1190,7 @@
                     100
                   ],
                   "is_percentage": true,
-                  "heading_loc": "CURSE DAMAGE REDUCTION:",
+                  "heading_loc": "DAMAGE REDUCTION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1260,10 +1204,12 @@
                 {
                   "name": "bonus_attack_speed",
                   "values_float": [
-                    65
+                    50,
+                    65,
+                    80
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CURSE ATTACK SPEED:",
+                  "heading_loc": "ATTACK SPEED:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_winter_wyvern_3",
@@ -1286,7 +1232,7 @@
                     2
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CURSE MINIMUM DURATION:",
+                  "heading_loc": "MINIMUM DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1300,12 +1246,10 @@
                 {
                   "name": "max_duration",
                   "values_float": [
-                    4,
-                    5.5,
-                    7
+                    6
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CURSE MAXIMUM DURATION:",
+                  "heading_loc": "MAXIMUM DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1319,10 +1263,10 @@
                 {
                   "name": "bonus_duration_per_hero",
                   "values_float": [
-                    2
+                    1.5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CURSE BONUS DURATION PER HERO:",
+                  "heading_loc": "BONUS DURATION PER HERO:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1339,7 +1283,7 @@
                     0.5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CURSE BONUS DURATION PER CREEP:",
+                  "heading_loc": "BONUS DURATION PER CREEP:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1349,44 +1293,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "transfer_on_death",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "winter_wyvern_recursive",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "winter_wyvern_recursive"
-                },
-                {
-                  "name": "transfer_duration_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "winter_wyvern_recursive",
-                    "values": [
-                      50
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "winter_wyvern_recursive"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -2007,14 +1913,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

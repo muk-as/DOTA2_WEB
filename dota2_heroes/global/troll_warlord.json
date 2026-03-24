@@ -10,26 +10,7 @@
           "bio_loc": "It's an easy thing to offend a troll. A prickly and contentious race, trolls thrive on argument and strife, missing no excuse to raise their voices in dispute. Males grow to maturity in subterranean chambers beneath their matriarch's domicile, feeding and amusing themselves while contributing nothing. Often they stay for years beyond the age of maturity, while the matriarch provides them with sustenance. When young trolls are finally pushed from their sub-chamber, they gather with others of their kind, forming roving gangs of malcontents who complain loudly about all manner of vexation.     \r\n\t\t\t\t<br><br>As much as trolls love to argue, imagine how rare it is for a troll to be driven from his own kind for being too difficult to get along with. Such was Jah'rakal's fate, a monger troll from deep in the Hoven. So deluded was he, so bitter and abrasive, that even other trolls found his company intolerable. After one particularly vitriolic outburst in which he claimed the lion's share of loot from their latest raid, his cohorts finally snapped. They turned on him, beat him with clubs, and drove him from the encampment. Enraged at his banishment, he returned the next day, armed with steel, and slew them all, one by one. He then swore a blood oath: he would ever after be a fighting force unto himself. Now he roams the world as the Troll Warlord, bitter and angry, the Imperial high commander of an army of one.",
           "hype_loc": "Instantly able to swap between <b>ranged and melee attacks</b>, Troll Warlord is a formidable force at any distance. Axes in hand, he can strike in a storm of <b>spinning blades</b>. He takes down enemies with increasingly swift attacks, and can <b>speed his allies'</b> assaults wherever they are.",
           "npe_desc_loc": "Swaps between ranged and melee attacks at will",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Insensitive",
-              "description_loc": "Fervor grants armor per stack while in melee form.",
-              "name": "troll_warlord_insensitive",
-              "icon": "armor",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Bad Influence",
-              "description_loc": "During Battle Trance, Troll Warlord has increased max Fervor stacks and no attack speed limit. Battle Trance grants allied heroes {s:bonus_attack_speed_share_percent}% of the attack speed bonus. ",
-              "name": "troll_warlord_bad_influence",
-              "icon": "damage",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.5,
           "agi_base": 23,
@@ -70,7 +51,7 @@
               "id": 1478,
               "name": "troll_warlord_switch_stance",
               "name_loc": "Battle Stance",
-              "desc_loc": "Troll Warlord swaps from using ranged to melee attacks. Melee attacks have decreased base attack time.",
+              "desc_loc": "Troll Warlord swaps from using ranged to melee attacks. While melee, Troll Warlord's base attack time is improved to %base_attack_time%.<br><br>Troll Warlord gains %armor_per_interval% armor per %attack_speed_interval% bonus attack speed.",
               "lore_loc": "Jah'rakal has a variety of ways to get under an enemy's skin.",
               "notes_loc": [],
               "shard_loc": "",
@@ -85,7 +66,7 @@
               "target_type": 0,
               "flags": 0,
               "damage": 0,
-              "immunity": 3,
+              "immunity": 0,
               "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
@@ -139,6 +120,57 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "armor_per_interval",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_speed_interval",
+                  "values_float": [
+                    30
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "armor_bonus_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR BONUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -299,7 +331,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_troll_warlord_3",
-                      "value": 115,
+                      "value": 160,
                       "operation": 0
                     }
                   ],
@@ -560,7 +592,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_troll_warlord_3",
-                      "value": 100,
+                      "value": 160,
                       "operation": 0
                     }
                   ],
@@ -962,7 +994,7 @@
               "id": 5508,
               "name": "troll_warlord_berserkers_rage",
               "name_loc": "Berserker's Rage",
-              "desc_loc": "While in melee form, Troll Warlord's attacks have a chance to ensnare, preventing the target from moving or using mobility spells and has additional movement speed and armor.<br><br>When in ranged form, Troll Warlord's attacks have a chance to Maim the target, dealing bonus damage, and slowing the target's movement and attack speed.",
+              "desc_loc": "While in melee form, Troll Warlord's attacks have a chance to ensnare, preventing the target from moving or using mobility spells and has additional movement speed.<br><br>When in ranged form, Troll Warlord's attacks have a chance to Maim the target, dealing bonus damage, and slowing the target's movement and attack speed.",
               "lore_loc": "Like his anger, Troll Warlord's supply of axes is infinite.",
               "notes_loc": [
                 "Cooldowns of items that are different for ranged and melee units will be based on which form Troll Warlord was in when the item was used."
@@ -1023,32 +1055,6 @@
                     {
                       "name": "special_bonus_unique_troll_warlord_2",
                       "value": 20,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_armor",
-                  "values_float": [
-                    3,
-                    4,
-                    5,
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS ARMOR:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_troll_warlord",
-                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -1309,8 +1315,8 @@
                   "heading_loc": "TRANCE DURATION:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_troll_warlord_battle_trance_movespeed",
-                      "value": 1.5,
+                      "name": "special_bonus_unique_troll_warlord",
+                      "value": 1,
                       "operation": 0
                     }
                   ],
@@ -1363,22 +1369,24 @@
                 },
                 {
                   "name": "attack_speed_share_percent",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_troll_warlord_battle_trance_movespeed",
+                      "value": 100,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "troll_warlord_bad_influence",
-                    "values": [
-                      50
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "troll_warlord_bad_influence"
+                  "required_facet": ""
                 },
                 {
                   "name": "movement_speed",
@@ -1731,9 +1739,9 @@
               "item_quality": 0
             },
             {
-              "id": 6959,
-              "name": "special_bonus_unique_troll_warlord_3",
-              "name_loc": "+{s:bonus_axe_damage} Whirling Axes Damage",
+              "id": 6154,
+              "name": "special_bonus_unique_troll_warlord",
+              "name_loc": "+{s:bonus_trance_duration}s Battle Trance Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1795,7 +1803,7 @@
             {
               "id": 1011,
               "name": "special_bonus_unique_troll_warlord_battle_trance_movespeed",
-              "name_loc": "+{s:bonus_trance_duration}s Battle Trance Duration",
+              "name_loc": "Allies Receive Battle Trance Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1855,9 +1863,9 @@
               "item_quality": 0
             },
             {
-              "id": 6154,
-              "name": "special_bonus_unique_troll_warlord",
-              "name_loc": "+{s:bonus_bonus_armor} Berserker's Rage Armor",
+              "id": 6959,
+              "name": "special_bonus_unique_troll_warlord_3",
+              "name_loc": "+{s:bonus_axe_damage} Whirling Axes Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2041,14 +2049,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

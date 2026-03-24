@@ -10,26 +10,7 @@
           "bio_loc": "Alone across an untouched darkness gleamed the Keeper's first sun, a singular point of conscious light fated to spread warmth into the empty void. Through aeons beyond count, this blinding beacon set to coalescing its incalculable energy before bursting forth the cataclysmic flare of supernova. From this inferno raced new beacons, star progeny identical to its parent, who journeyed an unlit ocean and settled in constellatory array. In time, they too would be made to propagate through supernova flame. So would this dazzling cycle of birth and rebirth repeat until all skies hewn of Titan toil deigned to twinkle and shine.\r\n\t\t\t\t<br><br>By this ageless crucible the star that mortals would come to call Phoenix collapsed into being, and like its ancestors was thrust into an endless cosmos to find a place among its stellar brethren. Yet curiosity toward that which the dimming elders comfort in the darkness consumed the fledgling, and so over long cycles it inquired and studied. It learned that among worlds both whole and broken would soon stir a nexus of remarkable variety locked in an enduring conflict of cosmic consequence, a plane which would find itself in need of more influence than a dying sun's distant rays could provide. Thus this infant son of suns took terrestrial form, eagerly travelling to shine its warmth upon those who may need it most, and perhaps seize upon its solar destiny.",
           "hype_loc": "Diving into battle, Phoenix <b>blasts enemies</b> and <b>heals allies</b> with rays of solar flame. When the time is right, it can become a burning sun to scorch nearby foes before unleashing a <b>stunning detonation</b> that also restores Phoenix to full strength.",
           "npe_desc_loc": "Heals and damages at the sacrifice of its own health",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Dying Light",
-              "description_loc": "Phoenix deals %damage_pct%%% of his missing health as magic damage to all enemies in a %radius% radius every second.",
-              "name": "phoenix_facet_immolate",
-              "icon": "barrier",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Hotspot",
-              "description_loc": "Sun Ray deals more damage and applies more Blinding Sun stacks towards the tip of the ray.",
-              "name": "phoenix_hotspot",
-              "icon": "nuke",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 23,
           "str_gain": 3.3,
           "agi_base": 12,
@@ -647,7 +628,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Sun Ray does more damage/heal and applies %focal_point_blind_stack_multiplier%x Blinding Sun stacks to targets near the end of the beam. Beam intensity starts increasing at half the beam length, up to %focal_point_max_multiplier%%% of base damage/heal at %focal_point_full_length_tooltip_only% range. Increasing Sun Ray length to beyond %focal_point_full_length_tooltip_only% range will result in more than %focal_point_max_multiplier%%% damage and healing."
+                ""
               ],
               "type": 0,
               "behavior": "16",
@@ -896,82 +877,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "focal_point_max_multiplier",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "phoenix_hotspot",
-                    "values": [
-                      160
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "phoenix_hotspot"
-                },
-                {
-                  "name": "focal_point_start_length_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "phoenix_hotspot",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "phoenix_hotspot"
-                },
-                {
-                  "name": "focal_point_full_length_tooltip_only",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "phoenix_hotspot",
-                    "values": [
-                      1200
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "phoenix_hotspot"
-                },
-                {
-                  "name": "focal_point_blind_stack_multiplier",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "phoenix_hotspot",
-                    "values": [
-                      2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "phoenix_hotspot"
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     1200
@@ -1074,12 +979,14 @@
               "item_quality": 0
             },
             {
-              "id": 1398,
-              "name": "phoenix_blinding_sun",
-              "name_loc": "Blinding Sun",
-              "desc_loc": "Phoenix ability debuffs apply a stackable %blind_per_second%%% Miss chance per second. Lasts %blind_duration% seconds.",
+              "id": 1397,
+              "name": "phoenix_dying_light",
+              "name_loc": "Dying Light",
+              "desc_loc": "Phoenix deals %damage_pct%%% of its missing health as magic damage to all enemies in a %radius% radius every second.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Dying Light deals damage while Phoenix is transformed during Supernova."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1087,13 +994,13 @@
                 ""
               ],
               "type": 0,
-              "behavior": "13194139533314",
+              "behavior": "562949953421379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
-              "dispellable": 0,
+              "dispellable": 3,
               "max_level": 1,
               "cast_ranges": [
                 0
@@ -1123,16 +1030,33 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "blind_per_second",
+                  "name": "radius",
                   "values_float": [
-                    2
+                    400
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_pct",
+                  "values_float": [
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
-                      "value": 0.5,
+                      "name": "special_bonus_unique_phoenix_dying_light_damage",
+                      "value": 1,
                       "operation": 0
                     }
                   ],
@@ -1146,9 +1070,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "blind_duration",
+                  "name": "tick_interval",
                   "values_float": [
-                    4
+                    0.2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1542,9 +1466,9 @@
               "item_quality": 0
             },
             {
-              "id": 1566,
-              "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
-              "name_loc": "+{s:bonus_blind_per_second}% Blinding Sun Miss Chance",
+              "id": 1775,
+              "name": "special_bonus_unique_phoenix_dying_light_damage",
+              "name_loc": "+{s:bonus_damage_pct}% Dying Light Missing Health as Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1994,112 +1918,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1397,
-                  "name": "phoenix_dying_light",
-                  "name_loc": "Dying Light",
-                  "desc_loc": "Phoenix deals %damage_pct%%% of his missing health as magic damage to all enemies in a %radius% radius every second.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "radius",
-                      "values_float": [
-                        400
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "damage_pct",
-                      "values_float": [
-                        4.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

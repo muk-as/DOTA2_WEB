@@ -10,26 +10,7 @@
           "bio_loc": "Born to a royal family, a blood princess next in line for the Solar Throne, Mirana willingly surrendered any claim to mundane land or titles when she dedicated herself completely to the service of Selemene, Goddess of the Moon. Known ever since as Princess of the Moon, Mirana prowls the sacred Nightsilver Woods searching for any who would dare poach the sacred luminous lotus from the silvery pools of the Goddess's preserve. Riding on her enormous feline familiar, she is poised, proud and fearless, attuned to the phases of the moon and the wheeling of the greater constellations. Her bow, tipped with sharp shards of lunar ore, draws on the moon's power to charge its arrows of light.",
           "hype_loc": "As she takes aim from a distance with her <b>deadly arrow</b>, Mirana must always be ready to leap into battle. Able to <b>shield her allies</b> from the eyes of her enemies, she ensures that her team is always on the prowl.",
           "npe_desc_loc": "Stuns enemies with precise arrows from afar",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Starstruck",
-              "description_loc": "Starstorm's second meteor deals more damage and blinds the target.",
-              "name": "mirana_starstruck",
-              "icon": "no_vision",
-              "gradient_id": 1,
-              "index": 2
-            },
-            {
-              "color": 5,
-              "title_loc": "Leaps and Bounds",
-              "description_loc": "Upon landing, Leap roots targets in a {s:bonus_root_radius} radius for {s:bonus_root_duration}s.",
-              "name": "mirana_leaps_and_bounds",
-              "icon": "slow",
-              "gradient_id": 3,
-              "index": 3
-            }
-          ],
+          "facets": [],
           "str_base": 20,
           "str_gain": 2.2,
           "agi_base": 26,
@@ -628,7 +609,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "AbilityDamage",
                   "values_float": [
                     60,
                     150,
@@ -756,7 +737,7 @@
               "desc_loc": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts %leap_bonus_duration% seconds.",
               "lore_loc": "None can fail to recognize Mirana's iconic white beast in the heat of battle.",
               "notes_loc": [],
-              "shard_loc": "Grants +%additional_charges% Leap charge. Attacks during the Leap buff critically strike for %crit_damage_pct%%% damage.",
+              "shard_loc": "Grants +%additional_charges% Leap charge.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -940,69 +921,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "crit_damage_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    150
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "root_radius",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "mirana_leaps_and_bounds",
-                    "values": [
-                      250
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "mirana_leaps_and_bounds"
-                },
-                {
-                  "name": "root_duration",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "mirana_leaps_and_bounds",
-                    "values": [
-                      1.5,
-                      1.75,
-                      2,
-                      2.25
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "mirana_leaps_and_bounds"
-                },
-                {
                   "name": "AbilityCharges",
                   "values_float": [
                     2
@@ -1071,13 +989,13 @@
               "item_quality": 0
             },
             {
-              "id": 1215,
-              "name": "mirana_selemenes_faithful",
-              "name_loc": "Selemene's Faithful",
-              "desc_loc": "Healing Lotuses are %bonus_lotus%%% more effective on Mirana and her allies.",
+              "id": 1739,
+              "name": "mirana_celestial_quiver",
+              "name_loc": "Celestial Quiver",
+              "desc_loc": "When a charge is available, Mirana's next attack will deal bonus magic damage.<br><br>Gains a charge every %levels_per_quiver_tooltip% hero levels.",
               "lore_loc": "",
               "notes_loc": [],
-              "shard_loc": "",
+              "shard_loc": "Grants %quiver_restore% temporary Charges while Leap's buff is active.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1086,16 +1004,16 @@
                 ""
               ],
               "type": 0,
-              "behavior": "4398046511106",
-              "target_team": 0,
-              "target_type": 0,
+              "behavior": "562949953556488",
+              "target_team": 2,
+              "target_type": 19,
               "flags": 0,
-              "damage": 0,
+              "damage": 2,
               "immunity": 0,
               "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
-                0
+                630
               ],
               "cast_points": [
                 0
@@ -1122,9 +1040,102 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_lotus",
+                  "name": "bonus_damage",
                   "values_float": [
-                    50
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_mirana_quiver_damage",
+                      "value": 35,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "levels_per_quiver_tooltip",
+                  "values_float": [
+                    7
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "quiver_restore",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    3
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    630
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1141,7 +1152,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": true,
@@ -1700,9 +1711,9 @@
               "item_quality": 0
             },
             {
-              "id": 1488,
-              "name": "special_bonus_attack_base_damage_35",
-              "name_loc": "+{s:value} Base Damage",
+              "id": 1788,
+              "name": "special_bonus_unique_mirana_quiver_damage",
+              "name_loc": "+{s:bonus_bonus_damage} Celestial Quiver Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1749,25 +1760,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    35
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1910,14 +1903,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

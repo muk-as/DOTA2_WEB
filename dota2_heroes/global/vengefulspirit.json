@@ -10,26 +10,7 @@
           "bio_loc": "Even the most contented Skywrath is an ill-tempered creature, naturally inclined to seek revenge for the slightest insult. But Vengeful Spirit is the essence of vengeance. Once a proud and savage Skywrath scion, Shendelzare was first in succession for the Ghastly Eyrie until a sister's treachery robbed her of her birthright. Snared in an assassin's net, Shendelzare tore free only at the cost of her wings, limping away in the ultimate humiliation: On foot. With her wings broken, she knew the Skywrath would never accept her as ruler; and in the highest roost of the Eyrie, inaccessible except by winged flight, her sister was untouchable. Unwilling to live as a flightless cripple, and desiring revenge far more than earthly power, the fallen princess drove a bargain with the goddess Scree'Auk: She surrendered her broken body for an imperishable form of spirit energy, driven by vengeance, capable of doing great damage in the material plane. She may spend eternity flightless, but she will have her revenge.",
           "hype_loc": "Vengeful Spirit's presence is felt at all times, whether she is alive or dead. Able to <b>swap positions</b> with any nearby hero, <b>stun enemies</b>, and reduce her killer's effectiveness if she falls, she constantly brings confusion and chaos to her foes.",
           "npe_desc_loc": "Can swap herself with any nearby hero",
-          "facets": [
-            {
-              "color": 4,
-              "title_loc": "Avenging Missile",
-              "description_loc": "Magic Missile deals {s:bonus_damage_per_lasthit} bonus damage for every creep the enemy has killed.",
-              "name": "vengefulspirit_avenging_missile",
-              "icon": "nuke",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Soul Strike",
-              "description_loc": "Vengeful Spirit's ranged attacks behave as if they were melee attacks.",
-              "name": "vvengefulspirit_melee",
-              "icon": "fist",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 20,
           "str_gain": 2.6,
           "agi_base": 23,
@@ -52,12 +33,12 @@
           ],
           "damage_min": 51,
           "damage_max": 57,
-          "attack_rate": 1.7,
+          "attack_rate": 1.5,
           "attack_range": 400,
           "projectile_speed": 1500,
           "armor": 3.8333335,
           "magic_resistance": 25,
-          "movement_speed": 295,
+          "movement_speed": 300,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
@@ -639,13 +620,13 @@
               "id": 5123,
               "name": "vengefulspirit_command_aura",
               "name_loc": "Vengeance Aura",
-              "desc_loc": "Vengeful Spirit's presence increases the damage of nearby friendly heroes.",
+              "desc_loc": "Vengeful Spirit's presence increases the damage of nearby friendly heroes. Vengeful Spirit herself receives %self_multiplier%%% extra bonus.",
               "lore_loc": "Although they may not share her undying passion for revenge, allies do draw on her fanaticism in combat.",
               "notes_loc": [
                 "Break disables the damage aura."
               ],
               "shard_loc": "",
-              "scepter_loc": "Upon death, creates a strong illusion of Vengeful Spirit that deals full damage, takes increased damage, and can cast all of her spells. If the illusion is alive when Vengeful Spirit respawn, she will take its place. XP earned by her illusion is given to her. Strong Illusions are not instantly killed by spells.",
+              "scepter_loc": "Increases self multiplier. Upon death, creates a strong illusion of Vengeful Spirit that deals full damage, and can cast all of her spells.<br><br>If the illusion is alive when Vengeful Spirit respawn, she will take its place. XP earned by her illusion is given to her. Strong Illusions are not instantly killed by spells.",
               "facets_loc": [
                 "",
                 ""
@@ -713,6 +694,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "self_multiplier",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SELF MULTIPLIER:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    10
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "aura_radius",
                   "values_float": [
                     1200
@@ -758,7 +758,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    115
+                    100
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -821,7 +821,7 @@
               "id": 1238,
               "name": "vengefulspirit_retribution",
               "name_loc": "Retribution",
-              "desc_loc": "Whenever an enemy hero kills Vengeful Spirit, they get a debuff until their next death, causing Vengeful Spirit to deal %bonus_damage%%% bonus damage to them.",
+              "desc_loc": "Vengeful Spirit is considered both a ranged and a melee attacker to gain the respective bonuses.<br><br>When killed by an enemy hero, Vengeful Spirit deals %bonus_damage%%% bonus damage to her killer until their next death. Only one debuff can exist at a time.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -831,7 +831,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "4398046511106",
+              "behavior": "13194139533378",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1343,9 +1343,9 @@
               "item_quality": 0
             },
             {
-              "id": 6978,
-              "name": "special_bonus_unique_vengeful_spirit_5",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Magic Missile Cooldown",
+              "id": 1197,
+              "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
+              "name_loc": "Wave Of Terror Steals {s:bonus_steal_pct}% Of Reduced Damage And Armor",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1405,9 +1405,9 @@
               "item_quality": 0
             },
             {
-              "id": 1197,
-              "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
-              "name_loc": "Wave Of Terror Steals {s:bonus_steal_pct}% Of Reduced Damage And Armor",
+              "id": 6978,
+              "name": "special_bonus_unique_vengeful_spirit_5",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Magic Missile Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1591,95 +1591,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1237,
-                  "name": "vengefulspirit_soul_strike",
-                  "name_loc": "Soul Strike",
-                  "desc_loc": "Vengeful Spirit's ranged attacks behave as if they were melee attacks.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "bat_tooltip",
-                      "values_float": [
-                        1.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "BASE ATTACK TIME:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,17 +10,7 @@
           "bio_loc": "The exiled Murkroots of Velu’Mar discovered a living island so ancient it speaks only in song. Raised among the shamanic bards who learned to commune with it, Largo now roams the realms with a troupe of frogling disciples, looking for inspiration for new melodies to bring back and share with his island home.",
           "hype_loc": "With his slick-strumming fingers and sticky-whip tongue, Largo is always ready to <b>grant his team damage</b>, <b>healing</b>, <b>or speed</b> and <b>dispel friends or foes</b> using just the right lick.",
           "npe_desc_loc": "Strums music to empower allies and can dispel with a lick",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Musical pilgrimage",
-              "description_loc": "This facet doesn't do anything. Largo just arrived from the island of Velu'Mar...",
-              "name": "largo_largo",
-              "icon": "guitar",
-              "gradient_id": 1,
-              "index": 0
-            }
-          ],
+          "facets": [],
           "str_base": 24,
           "str_gain": 3.6,
           "agi_base": 14,
@@ -61,18 +51,20 @@
               "id": 1659,
               "name": "largo_catchy_lick",
               "name_loc": "Catchy Lick",
-              "desc_loc": "Largo licks the targeted unit with his tongue, pulling it back a short distance, applying a basic dispel, and dealing damage if it's an enemy.\n\nDispelling an effect from a target grants Largo temporary health regeneration.\n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Largo licks the targeted unit with his tongue, pulling it back a short distance, applying a basic dispel, and dealing damage if it's an enemy.\n\nKilling or dispelling an effect from a target grants Largo temporary health regeneration.\n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "After generations spent living on the ancient isaloth Velu'Mar, the descendants of the Murkroot exiles have grown resilient, happily sampling toxins that would've struck their ancestors dead.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Can lick runes to pull them"
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 ""
               ],
               "type": 0,
-              "behavior": "8",
+              "behavior": "268435464",
               "target_team": 3,
-              "target_type": 3,
+              "target_type": 131,
               "flags": 0,
               "damage": 2,
               "immunity": 4,
@@ -232,7 +224,7 @@
                 {
                   "name": "buff_duration",
                   "values_float": [
-                    10
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "HEALTH REGEN DURATION:",
@@ -736,7 +728,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_largo_3",
-                      "value": 1.5,
+                      "value": 1,
                       "operation": 5
                     }
                   ],
@@ -956,7 +948,7 @@
                 {
                   "name": "buff_amplification",
                   "values_float": [
-                    10
+                    9
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS DURATION:",
@@ -1013,7 +1005,7 @@
                 "Items can be used while in this mode."
               ],
               "shard_loc": "",
-              "scepter_loc": "Largo can play two songs per beat by strumming both at the same time. On beats when he strums two songs, Largo deals %burst_damage% + %damage_per_stack% magic damage per Groovin' stack to nearby enemies.",
+              "scepter_loc": "Largo can play two songs per beat by strumming both at the same time.",
               "facets_loc": [
                 ""
               ],
@@ -1217,58 +1209,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_per_stack",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_largo_7",
-                      "value": 7,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [
-                    10,
-                    15,
-                    20
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "burst_damage",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_largo_7",
-                      "value": 14,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [
-                    50
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityCooldown",
                   "values_float": [
                     2
@@ -1303,11 +1243,11 @@
               "id": 1663,
               "name": "largo_song_fight_song",
               "name_loc": "Bullbelly Blitz",
-              "desc_loc": "Largo plays a song that increases nearby allied heroes' spell amplification and grants their attacks additional magic damage.",
+              "desc_loc": "Largo plays a song that deals %burst_damage% magical damage to nearby enemies. The song also increases nearby allied heroes' spell amplification and grants their attacks additional magic damage.",
               "lore_loc": "'Hey, when a beach brawl breaks out, you gotta learn to throw your musical weight around or the party's over proper quick.'",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Deals additional %damage_per_stack% magic damage per Groovin' stack when this song is used in double-strumming.",
               "facets_loc": [
                 ""
               ],
@@ -1316,7 +1256,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
+              "damage": 2,
               "immunity": 0,
               "dispellable": 0,
               "max_level": 3,
@@ -1405,6 +1345,58 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "burst_damage",
+                  "values_float": [
+                    20,
+                    30,
+                    40
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_largo_7",
+                      "value": 12,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_per_stack",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE PER STACK:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_largo_7",
+                      "value": 6,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [
+                    6,
+                    12,
+                    18
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "magic_damage_bonus",
                   "values_float": [
                     20,
@@ -1416,7 +1408,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_largo_7",
-                      "value": 35,
+                      "value": 30,
                       "operation": 3
                     }
                   ],
@@ -1441,7 +1433,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_largo_7",
-                      "value": 35,
+                      "value": 30,
                       "operation": 3
                     }
                   ],
@@ -1509,7 +1501,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1630,15 +1622,15 @@
                   "name": "movespeed_bonus_burst",
                   "values_float": [
                     16,
-                    22,
-                    28
+                    20,
+                    24
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVE SPEED:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_largo_7",
-                      "value": 35,
+                      "value": 30,
                       "operation": 3
                     }
                   ],
@@ -1655,8 +1647,8 @@
                   "name": "slow_resistance",
                   "values_float": [
                     70,
-                    80,
-                    90
+                    75,
+                    80
                   ],
                   "is_percentage": true,
                   "heading_loc": "SLOW RESISTANCE:",
@@ -1871,7 +1863,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_largo_7",
-                      "value": 35,
+                      "value": 30,
                       "operation": 3
                     }
                   ],
@@ -2366,7 +2358,7 @@
             {
               "id": 1674,
               "name": "special_bonus_unique_largo_8",
-              "name_loc": "{s:bonus_AbilityCharges} Catchy Lick Charges",
+              "name_loc": "2 Catchy Lick Charges",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2425,11 +2417,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "For 500 years the mountain pressed down upon him, only his head free from the crushing weight of the stonewrought prison the elder gods had summoned to halt his childish rebellion. Moss grew along the lines of his exposed face, tufts of grass sprouted from his ears; his vision was framed in wildflowers reaching from the soil around his cheeks. Most thought him long dead, tormented by the gods for waging war against the heavens until naught but his legend survived. But, as the stories go, the Monkey King cannot die.<br><br>So he waited. Until the gods came to offer a chance at absolution, he endured. And when they did come to name the price, Sun Wukong accepted their charge: he would accompany a young acolyte on a secret pilgrimage, protect him from demons and dangers of the road, and guide the man home in possession of a coveted relic. Do that, and humbly obey the human's commands in service to their holy mission, and Wukong would prove himself reformed.<br><br>For a change, Sun Wukong fulfilled his oath to the gods with honor, and atoned for the sins of past insurrections. The acolyte, much learned in hardships, was returned to his home temple, relic in hand; and Wukong-finding himself for the first time in proper standing with any gods of consequence-was content for a short while to give up his old thirst for adventure and glory. But the Monkey King was born for mischief...and offending the gods never gets old.",
           "hype_loc": "Always in search of a good fight, Monkey King travels atop the trees aiming to spring from leafy cover and surprise his enemies. Calling upon an <b>army of monkey soldiers</b> to overwhelm opponents, this <b>agile trickster</b> revels in the chaos of battle, ready to slam his legendary staff down on any hopes of escape.",
           "npe_desc_loc": "Springs from the cover of the tree tops",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Simian Stride",
-              "description_loc": "Increases the max level of Tree Dance. Level {s:bonus_max_level_tooltip} Tree Dance reduces the cooldown to zero.",
-              "name": "monkey_king_simian_stride",
-              "icon": "tree",
-              "gradient_id": 4,
-              "index": 1
-            },
-            {
-              "color": 0,
-              "title_loc": "Changing of the Guard",
-              "description_loc": "Monkey King can transform into one of his soldiers during Wukong's command.",
-              "name": "monkey_king_transfiguration",
-              "icon": "summons",
-              "gradient_id": 2,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 2.8,
           "agi_base": 24,
@@ -424,7 +405,7 @@
               "id": 5721,
               "name": "monkey_king_tree_dance",
               "name_loc": "Tree Dance",
-              "desc_loc": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for %unperched_stunned_duration% seconds. Taking damage while on the ground puts Tree Dance on cooldown.",
+              "desc_loc": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for %unperched_stunned_duration%s. Taking damage while on the ground puts Tree Dance on cooldown.",
               "lore_loc": "Sun Wukong dances nimbly along the treetop canopy, always just out of arm's reach.",
               "notes_loc": [
                 "Tree Dance cooldown starts upon landing.",
@@ -448,19 +429,18 @@
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                800
+                900
               ],
               "cast_points": [
-                0.1
+                0.2
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                1.4,
-                1.2,
-                1,
-                0.8,
+                0.9,
+                0.6,
+                0.3,
                 0
               ],
               "durations": [
@@ -481,7 +461,7 @@
                 {
                   "name": "leap_speed",
                   "values_float": [
-                    700
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -532,14 +512,14 @@
                 {
                   "name": "ground_jump_distance",
                   "values_float": [
-                    800
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_monkey_king_7",
-                      "value": 450,
+                      "value": 350,
                       "operation": 0
                     }
                   ],
@@ -555,14 +535,14 @@
                 {
                   "name": "perched_jump_distance",
                   "values_float": [
-                    800
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "DISTANCE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_monkey_king_7",
-                      "value": 450,
+                      "value": 350,
                       "operation": 0
                     }
                   ],
@@ -720,7 +700,7 @@
                 {
                   "name": "range",
                   "values_float": [
-                    800
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -775,7 +755,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    800
+                    900
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -792,7 +772,7 @@
                 {
                   "name": "AbilityCastPoint",
                   "values_float": [
-                    0.1
+                    0.2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -809,10 +789,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    1.4,
-                    1.2,
-                    1,
-                    0.8,
+                    0.9,
+                    0.6,
+                    0.3,
                     0
                   ],
                   "is_percentage": false,
@@ -1020,6 +999,27 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "buff_is_undispellable",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_monkey_king_3",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1042,7 +1042,7 @@
               "desc_loc": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants damage immunity for %invul_duration% seconds upon transforming.",
               "lore_loc": "Watch out for that tree.",
               "notes_loc": [],
-              "shard_loc": "Mischief has a shorter cooldown, longer invulnerability period, and disjoints projectiles.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1057,7 +1057,7 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1068,10 +1068,7 @@
                 0
               ],
               "cooldowns": [
-                24,
-                20,
-                16,
-                12
+                24.5
               ],
               "durations": [
                 0
@@ -1145,13 +1142,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    24,
-                    20,
-                    16,
-                    12
+                    24.5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "COOLDOWN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1180,7 +1174,7 @@
               "id": 5725,
               "name": "monkey_king_wukongs_command",
               "name_loc": "Wukong's Command",
-              "desc_loc": "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King is granted bonus armor for the spell's duration.",
+              "desc_loc": "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack that attacks at a fixed rate of %attack_speed%s, and only targets enemy Heroes. Monkey King is granted bonus armor for the spell's duration.<br><br>Monkey King can transform into any one of his soldiers during Wukong's command, taking its place for a short duration, becoming indistinguishable from other soldiers, and leaving another soldier in his stead.",
               "lore_loc": "Monkey King rips out a tuft of fur to blow at his enemies, charging each strand to transform into a copy of himself.",
               "notes_loc": [
                 "Soldiers do not receive Jingu Mastery bonuses.",
@@ -1383,7 +1377,7 @@
                     1.1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SOLDIER ATTACK INTERVAL:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1599,13 +1593,145 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
+            },
+            {
+              "id": 1627,
+              "name": "monkey_king_transfiguration",
+              "name_loc": "Changing of the Guard",
+              "desc_loc": "Monkey King can transform into any one of his soldiers during Wukong's command, taking its place for a %transfiguration_duration%s, becoming indistinguishable from other soldiers, and leaving another soldier in his stead. While transformed, Monkey King is invulnerable, but cannot attack or cast spells",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8592556113",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0.3
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                3
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "transfiguration_duration",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "initial_cooldown",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
             }
           ],
           "talents": [
             {
-              "id": 6696,
-              "name": "special_bonus_unique_monkey_king_3",
-              "name_loc": "+{s:bonus_impact_damage} Primal Spring Max Damage",
+              "id": 7038,
+              "name": "special_bonus_unique_monkey_king_7",
+              "name_loc": "+{s:bonus_ground_jump_distance} Tree Dance Cast Range",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1729,9 +1855,9 @@
               "item_quality": 0
             },
             {
-              "id": 7038,
-              "name": "special_bonus_unique_monkey_king_7",
-              "name_loc": "+{s:bonus_ground_jump_distance} Tree Dance Cast Range",
+              "id": 747,
+              "name": "special_bonus_unique_monkey_king_8",
+              "name_loc": "0 Cooldown Primal Spring",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1855,9 +1981,9 @@
               "item_quality": 0
             },
             {
-              "id": 747,
-              "name": "special_bonus_unique_monkey_king_8",
-              "name_loc": "0 Cooldown Primal Spring",
+              "id": 6696,
+              "name": "special_bonus_unique_monkey_king_3",
+              "name_loc": "Jingu Mastery Undispellable",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2107,164 +2233,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1627,
-                  "name": "monkey_king_transfiguration",
-                  "name_loc": "Changing of the Guard",
-                  "desc_loc": "Monkey King can transform into any one of his soldiers during Wukong's command, taking its place for a %transfiguration_duration%s, becoming indistinguishable from other soldiers, and leaving another soldier in his stead. While transformed, Monkey King is invulnerable, but cannot attack or cast spells",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "2621521",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0.3
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    3
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    25
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "transfiguration_duration",
-                      "values_float": [
-                        1.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "initial_cooldown",
-                      "values_float": [
-                        1
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0.3
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        25
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        3
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

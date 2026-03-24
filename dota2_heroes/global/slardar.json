@@ -10,26 +10,7 @@
           "bio_loc": "Slardar is a Slithereen, one of the Deep Ones, guardian of a vast network of sunken cities and the ancient riches buried within them. In the lightless gulf of the deepest ocean abysses, the Slithereen Guard patrols secret treasure rooms, ever vigilant against the subaqueous thieves sent into the deeps by covetous dryland sorcerers. He is utterly loyal, and his taciturn nature hides deep knowledge of the most secret places of the sea. He rises to the shallows in spite of the pain caused him by brightness, to commit reconnaissance, to make sure no one is conspiring against the depths, and sometimes in relentless pursuit of the rare few who manage to steal off with an item from the Sunken Treasury. Because he has spent his whole life at great pressure, under tremendous weight of the sea, Slardar the Slithereen Guard is a creature of immense power.",
           "hype_loc": "Ready to find and demolish his foes, Slardar quickly slithers into battle. After <b>exposing an enemy's position</b> and shattering their defenses, he closes the distance to lock them in place with crushing blows and powerful bashes from his trident.",
           "npe_desc_loc": "Chases down his enemies to weaken and bash them",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Leg Day",
-              "description_loc": "Slardar has slow resistance and even more movement speed at the beginning of Guardian Sprint.",
-              "name": "slardar_leg_day",
-              "icon": "speed",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Brineguard",
-              "description_loc": "Corrosive Haze increases Slardar's armor by {s:bonus_armor_pct}% of the total armor reduced.",
-              "name": "slardar_brineguard",
-              "icon": "armor",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 3.4,
           "agi_base": 17,
@@ -70,7 +51,7 @@
               "id": 5114,
               "name": "slardar_sprint",
               "name_loc": "Guardian Sprint",
-              "desc_loc": "Slardar slithers ahead, moving significantly faster and passing through units.",
+              "desc_loc": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar has %slow_resistance_tooltip%%% slow resistance for the first %speed_burst_max_duration%s. The slow resistance gradually fades over the remaining sprint duration.",
               "lore_loc": "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming.",
               "notes_loc": [
                 "Activating this skill doesn't interrupt channeling abilities."
@@ -167,28 +148,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "speed_burst_percent",
+                  "name": "speed_burst_max_duration",
                   "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SPEED BURST MOVE SPEED:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "slardar_leg_day",
-                    "values": [
-                      8
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "slardar_leg_day"
-                },
-                {
-                  "name": "speed_burst_duration",
-                  "values_float": [
-                    0
+                    2.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -196,51 +158,28 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "slardar_leg_day",
-                    "values": [
-                      5
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "slardar_leg_day"
-                },
-                {
-                  "name": "speed_burst_max_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SPEED BURST DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "slardar_leg_day",
-                    "values": [
-                      2.5
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "slardar_leg_day"
+                  "required_facet": ""
                 },
                 {
                   "name": "slow_resistance_tooltip",
                   "values_float": [
-                    0
+                    100
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "SLOW RESISTANCE:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "slardar_leg_day",
-                    "values": [
-                      100
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "slardar_leg_day"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityManaCost",
@@ -679,7 +618,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_slardar_2",
-                      "value": 40,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -748,7 +687,7 @@
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Provides additional HP Regen, Armor and Status Resistance while in a puddle, trail, or river. Increases puddle/trail radius by %scepter_puddle_radius_tooltip% and puddle/trail duration by %scepter_puddle_duration_increase_tooltip%s.",
+              "scepter_loc": "Provides additional HP Regen, Armor and Status Resistance while in a puddle, trail, or river. Increases puddle/trail radius by %scepter_puddle_radius_tooltip%%% and puddle/trail duration by %scepter_puddle_duration_increase_tooltip%s.",
               "facets_loc": [
                 "",
                 ""
@@ -761,7 +700,7 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -809,17 +748,14 @@
                 {
                   "name": "puddle_regen",
                   "values_float": [
-                    2.5,
-                    5,
-                    7.5,
-                    10
+                    1.75
                   ],
                   "is_percentage": false,
                   "heading_loc": "HP REGEN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    22
+                    20
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -831,17 +767,14 @@
                 {
                   "name": "puddle_armor",
                   "values_float": [
-                    3,
-                    4,
-                    5,
-                    6
+                    1.8
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ARMOR:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    10
+                    8
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -870,19 +803,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "river_damage",
+                  "name": "river_damage_pct",
                   "values_float": [
-                    8,
-                    16,
-                    24,
-                    32
+                    11.4
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS DAMAGE:",
+                  "is_percentage": true,
+                  "heading_loc": "BONUS ATTACK DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_slardar_6",
-                      "value": 14,
+                      "value": 16,
                       "operation": 0
                     }
                   ],
@@ -1004,7 +934,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_slardar_5",
-                      "value": 4,
+                      "value": 3,
                       "operation": 2
                     }
                   ],
@@ -1278,9 +1208,9 @@
               "item_quality": 0
             },
             {
-              "id": 695,
-              "name": "special_bonus_unique_slardar_6",
-              "name_loc": "+{s:bonus_river_damage} Seaborn Sentinel Bonus Damage",
+              "id": 6889,
+              "name": "special_bonus_unique_slardar_2",
+              "name_loc": "+{s:bonus_bonus_damage} Bash of the Deep Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1420,9 +1350,9 @@
               "item_quality": 0
             },
             {
-              "id": 6889,
-              "name": "special_bonus_unique_slardar_2",
-              "name_loc": "+{s:bonus_bonus_damage} Bash of the Deep Damage",
+              "id": 504,
+              "name": "special_bonus_unique_slardar_5",
+              "name_loc": "-{s:bonus_armor_reduction} Corrosive Haze Armor",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1544,9 +1474,9 @@
               "item_quality": 0
             },
             {
-              "id": 504,
-              "name": "special_bonus_unique_slardar_5",
-              "name_loc": "-{s:bonus_armor_reduction} Corrosive Haze Armor",
+              "id": 695,
+              "name": "special_bonus_unique_slardar_6",
+              "name_loc": "+{s:bonus_river_damage_pct}% Seaborn Sentinel Bonus Attack Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1730,14 +1660,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

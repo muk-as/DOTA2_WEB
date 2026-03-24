@@ -10,32 +10,13 @@
           "bio_loc": "Emerging from the throes of the sacred Nothl Realm, Huskar opened his eyes to see the prodigal shadow priest Dazzle working a deep incantation over him. Against the ancient rites of the Dezun Order, Huskar's spirit had been saved from eternity, but like all who encounter the Nothl he found himself irrevocably changed. No longer at the mercy of a mortal body, his very lifeblood became a source of incredible power; every drop spilled was returned tenfold with a fierce, burning energy. However this newfound gift infuriated Huskar, for in his rescue from the Nothl, Dazzle had denied him a place among the gods. He had been denied his own holy sacrifice.\r\n\t\t\t\t<br><br>In time the elders of the order sought to expand their influence and Huskar, they agreed, would be a formidable tool in their campaign. Yet becoming a mere weapon for the order that denied him his birthright only upset him further. As the first embers of war appeared on the horizon, he fled his ancestral home to find new allies, all the while seeking a cause worthy of unleashing the power his total sacrifice could bring.",
           "hype_loc": "As his health lowers, Huskar's ability to slay enemies grows considerably. Able to <b>instantly remove a portion of both his and an enemy's health</b> with his ultimate, when near death he is able to throw his burning spears with <b>devastating speed</b>.",
           "npe_desc_loc": "Sacrifices his health to deal more damage",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Cauterize",
-              "description_loc": "Berserker's Blood can be activated for a health cost. Dispels Huskar, then after a delay, heals for the amount of health consumed plus an additional bonus per debuff dispelled.",
-              "name": "huskar_cauterize",
-              "icon": "broken_chain",
-              "gradient_id": 0,
-              "index": 2
-            },
-            {
-              "color": 1,
-              "title_loc": "Incendiary",
-              "description_loc": "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health.",
-              "name": "huskar_nothl_conflagration",
-              "icon": "damage",
-              "gradient_id": 0,
-              "index": 3
-            }
-          ],
+          "facets": [],
           "str_base": 23,
           "str_gain": 3.3,
           "agi_base": 10,
           "agi_gain": 1.5,
           "int_base": 18,
-          "int_gain": 1.5,
+          "int_gain": 0,
           "primary_attr": 0,
           "complexity": 1,
           "attack_capability": 2,
@@ -57,7 +38,7 @@
           "projectile_speed": 1400,
           "armor": 2.6666667,
           "magic_resistance": 25,
-          "movement_speed": 295,
+          "movement_speed": 290,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
@@ -73,7 +54,7 @@
               "desc_loc": "In a fiery rage, knocks all nearby enemies away from you to a fixed distance, dealing damage and silencing them.",
               "lore_loc": "Not even Huskar's own flesh can contain the unending expansion of his life force.",
               "notes_loc": [],
-              "shard_loc": "Lowers Inner Fire cooldown and causes it to apply a movement speed slow and heal Huskar for a percentage of the damage dealt to enemies.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -143,10 +124,10 @@
                 {
                   "name": "damage",
                   "values_float": [
-                    105,
-                    170,
-                    235,
-                    300
+                    110,
+                    180,
+                    250,
+                    320
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -221,6 +202,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "min_knockback_distance",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "knockback_duration",
                   "values_float": [
                     1
@@ -238,54 +236,14 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "movement_slow_pct",
+                  "name": "min_knockback_duration",
                   "values_float": [
-                    0
+                    0.4
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SLOW:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    50
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "hero_damage_heal_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "HERO DAMAGE AS HEAL:",
-                  "bonuses": [],
-                  "values_shard": [
-                    50
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_damage_heal_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "NON-HERO DAMAGE AS HEAL:",
-                  "bonuses": [],
-                  "values_shard": [
-                    10
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -339,9 +297,7 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    3
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -353,7 +309,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -429,28 +385,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "health_cost",
-                  "values_float": [
-                    4
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "CURRENT HEALTH COST:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "huskar_nothl_conflagration",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "max_health_cost",
                   "values_float": [
-                    0
+                    2
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAX HEALTH COST:",
@@ -458,13 +395,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_nothl_conflagration",
-                    "values": [
-                      4
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "huskar_nothl_conflagration"
+                  "required_facet": ""
                 },
                 {
                   "name": "burn_damage",
@@ -495,7 +430,7 @@
                 {
                   "name": "burn_damage_max_pct",
                   "values_float": [
-                    0
+                    0.5
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAX HEALTH BURN:",
@@ -503,13 +438,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_nothl_conflagration",
-                    "values": [
-                      0.75
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "huskar_nothl_conflagration"
+                  "required_facet": ""
                 },
                 {
                   "name": "duration",
@@ -574,7 +507,7 @@
               "notes_loc": [
                 "Bonuses are provided linearly, no bonus at Full HP and full bonus at strictly less than %hp_threshold_max%%% HP."
               ],
-              "shard_loc": "",
+              "shard_loc": "Huskar can activate Berserker's Blood for a health cost to cauterize himself. Dispels Huskar, then after a delay, heals for the amount of health consumed plus an additional bonus per debuff dispelled.<br/><br/>DISPEL TYPE: Basic Dispel",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -709,16 +642,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    1
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_cauterize",
-                    "values": [
-                      1
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "huskar_cauterize"
+                  "required_facet": ""
                 },
                 {
                   "name": "activation_healthcost_pct",
@@ -728,41 +661,35 @@
                   "is_percentage": true,
                   "heading_loc": "CURRENT HP COST:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    30
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_cauterize",
-                    "values": [
-                      30
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "huskar_cauterize"
+                  "required_facet": ""
                 },
                 {
                   "name": "activation_cooldown",
                   "values_float": [
-                    0,
-                    0,
-                    0,
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "COOLDOWN:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    20
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_cauterize",
-                    "values": [
-                      60,
-                      50,
-                      40,
-                      30
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "huskar_cauterize"
+                  "required_facet": ""
                 },
                 {
                   "name": "activation_delay",
@@ -772,16 +699,16 @@
                   "is_percentage": false,
                   "heading_loc": "CAUTERIZE DELAY:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    3
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_cauterize",
-                    "values": [
-                      3
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "huskar_cauterize"
+                  "required_facet": ""
                 },
                 {
                   "name": "activation_heal_pct_per_debuff",
@@ -791,21 +718,21 @@
                   "is_percentage": true,
                   "heading_loc": "MAX HP HEAL PER DEBUFF:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    3
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_cauterize",
-                    "values": [
-                      4
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "huskar_cauterize"
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -884,7 +811,7 @@
               "id": 5274,
               "name": "huskar_life_break",
               "name_loc": "Life Break",
-              "desc_loc": "Huskar draws upon his health to break an enemy's life, leaping at a target to shatter a percentage of that hero's current health and slow both their movement and attack speed.  While leaping, Huskar is Debuff Immune and has 60%% increased magic resistance.\n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Huskar draws upon his health to break an enemy's life, leaping at a target to shatter a percentage of that hero's current health and slow both their movement and attack speed.  While leaping, Huskar is Debuff Immune with %immunity_resist%%% magic resistance.\n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "No matter the danger, Huskar thrusts himself into melees that only he can survive.",
               "notes_loc": [
                 "If Huskar is disabled during the charge or the target moves more than 1400 units in 0.015 seconds, the charge stops.",
@@ -1148,42 +1075,21 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "splash_radius",
+                  "name": "immunity_resist",
                   "values_float": [
-                    0
+                    60
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SPLASH RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "huskar_bloodbath",
-                    "values": [
-                      500
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "huskar_bloodbath"
-                },
-                {
-                  "name": "life_break_heal_radius",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "HEAL RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "huskar_nothl_transfusion",
-                    "values": [
-                      550
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "huskar_nothl_transfusion"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1688,70 +1594,6 @@
               "item_quality": 0
             },
             {
-              "id": 6204,
-              "name": "special_bonus_unique_huskar",
-              "name_loc": "+{s:bonus_tooltip_health_damage}% Life Break Damage",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
               "id": 7143,
               "name": "special_bonus_unique_huskar_5",
               "name_loc": "+{s:bonus_duration}s Burning Spear Duration",
@@ -1814,16 +1656,73 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
-            }
-          ],
-          "facet_abilities": [
-            {
-              "abilities": []
             },
             {
-              "abilities": []
+              "id": 6204,
+              "name": "special_bonus_unique_huskar",
+              "name_loc": "+{s:bonus_tooltip_health_damage}% Life Break Damage",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
             }
-          ]
+          ],
+          "facet_abilities": []
         }
       ]
     },

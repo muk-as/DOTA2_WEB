@@ -10,26 +10,7 @@
           "bio_loc": "Among the emblematic powers that populate the Underscape, Razor the Lightning Revenant is one of the most feared. With his whip of lightning, he patrols the Narrow Maze, that treacherous webwork of passages by which the souls of the dead are sorted according to their own innate intelligence, cunning and persistence. Drifting above the Maze, Razor looks down on the baffled souls below, and delivers jolts of scalding electricity that both punish and quicken the souls as they decide their own fates, hurrying on toward luminous exits or endlessly dark pits. Razor is the eternal embodiment of a dominating power, abstract and almost clinical in his application of power. Yet he has a lordly air that suggests he takes a sardonic satisfaction in his work.",
           "hype_loc": "With a deadly <b>lightning storm</b> at his command, Razor charges into battle. Deploying a <b>sweeping ring</b> of electrified plasma to fry his enemies, he links with foes to <b>drain</b> them of their power and use it against them.",
           "npe_desc_loc": "Steals enemy damage to add to his own",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Thunderhead",
-              "description_loc": "Storm Surge lightning strikes more often and hits all units within Eye of the Storm's area of effect when it is active.",
-              "name": "razor_thunderhead",
-              "icon": "barrier",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Dynamo",
-              "description_loc": "Razor gains %spell_amp_mult%%% spell amplification for every %spell_amp_damage_divisor% points of attack damage.",
-              "name": "razor_spellamp",
-              "icon": "nuke",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 2.8,
           "agi_base": 24,
@@ -451,10 +432,10 @@
                 {
                   "name": "drain_rate",
                   "values_float": [
-                    5,
-                    10,
-                    15,
-                    20
+                    6,
+                    12,
+                    18,
+                    24
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE DRAIN RATE:",
@@ -564,63 +545,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "move_speed_factor",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "pull_speed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    0
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "min_pull_range",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    0
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     550
@@ -628,9 +552,7 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    150
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -696,7 +618,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -713,11 +635,13 @@
               "name_loc": "Storm Surge",
               "desc_loc": "There's a chance when attacked, and always when targeted with a spell, to release a forked lightning that strikes the target and other nearby enemies, prioritizing the unit type of the attacker, dealing damage and slowing movement speed.",
               "lore_loc": "Merely approaching the Lightning Revenant is rewarded with shock therapy.",
-              "notes_loc": [],
-              "shard_loc": "",
+              "notes_loc": [
+                "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+              ],
+              "shard_loc": "While Eye of the Storm is active, strike chance is %eye_of_the_storm_chance_multiplier%x as high, strike cooldown is reduced by %strike_cd_reduction_during_storm%s, and Lightning strikes all enemies within Eye of the Storm's radius. Does not apply to the same enemy twice from a single instance.",
               "scepter_loc": "",
               "facets_loc": [
-                "While Eye of the Storm is active, strike chance is %eye_of_the_storm_chance_multiplier%x as high, strike cooldown is reduced by %strike_cd_reduction_during_storm%s, and Lightning strikes all enemies within Eye of the Storm's radius. Does not apply to the same enemy twice from a single instance.",
+                "",
                 ""
               ],
               "type": 0,
@@ -803,7 +727,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_razor_storm_surge_damage_and_slow",
-                      "value": 25,
+                      "value": 30,
                       "operation": 3
                     }
                   ],
@@ -829,7 +753,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_razor_storm_surge_damage_and_slow",
-                      "value": 25,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -901,16 +825,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    2
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "razor_thunderhead",
-                    "values": [
-                      2
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "razor_thunderhead"
+                  "required_facet": ""
                 },
                 {
                   "name": "hit_targets_inside_eye_of_the_storm",
@@ -920,16 +844,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    1
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "razor_thunderhead",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "razor_thunderhead"
+                  "required_facet": ""
                 },
                 {
                   "name": "eye_of_the_storm_chance_multiplier",
@@ -939,21 +863,21 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    2
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "razor_thunderhead",
-                    "values": [
-                      2
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "razor_thunderhead"
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -968,7 +892,7 @@
               "id": 5084,
               "name": "razor_unstable_current",
               "name_loc": "Unstable Current",
-              "desc_loc": "Passively increases Razor's movement speed by %movespeed_per_level_pct%%% per hero level.",
+              "desc_loc": "Passively increases Razor's movement speed.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1014,24 +938,7 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "movespeed_per_level_pct",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movement_speed_tooltip",
+                  "name": "movespeed_pct",
                   "values_float": [
                     0
                   ],
@@ -1330,9 +1237,9 @@
               "item_quality": 0
             },
             {
-              "id": 6564,
-              "name": "special_bonus_spell_lifesteal_10",
-              "name_loc": "+{s:value}% Spell Lifesteal",
+              "id": 5931,
+              "name": "special_bonus_armor_4",
+              "name_loc": "+{s:value} Armor",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1381,7 +1288,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    10
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1800,129 +1707,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1225,
-                  "name": "razor_dynamo",
-                  "name_loc": "Dynamo",
-                  "desc_loc": "Razor gains %spell_amp_mult%%% spell amplification for every %spell_amp_damage_divisor% points of attack damage.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "spell_amp_damage_divisor",
-                      "values_float": [
-                        20
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "spell_amp_mult",
-                      "values_float": [
-                        1.25
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "total_spell_amp",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "SPELL AMP PER BONUS ATTACK DAMAGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "It is said that Nevermore the Shadow Fiend has the soul of a poet, and in fact he has thousands of them. Over the ages he has claimed the souls of poets, priests, emperors, beggars, slaves, philosophers, criminals and (naturally) heroes; no sort of soul escapes him. What he does with them is unknown. No one has ever peered into the Abysm whence Nevermore reaches out like an eel from among astral rocks. Does he devour them one after another? Does he mount them along the halls of an eldritch temple, or pickle the souls in necromantic brine? Is he merely a puppet, pushed through the dimensional rift by a demonic puppeteer? Such is his evil, so intense his aura of darkness, that no rational mind may penetrate it. Of course, if you really want to know where the stolen souls go, there's one sure way to find out: Add your soul to his collection. Or just wait for Nevermore.",
           "hype_loc": "<b>Capturing souls</b> from every kill he makes, Shadow Fiend is always gathering his power. Every assault, each carefully aimed raze that kills an enemy, brings him closer to <b>unleashing his gathered souls</b> in a deadly blast of scouring energy.",
           "npe_desc_loc": "Unleashes the souls of fallen enemies for damage",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Lasting Presence",
-              "description_loc": "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed. Every hero kill increases Necromastery's max souls by {s:bonus_max_soul_increase_on_hero_kill} until Shadow Fiend dies.",
-              "name": "nevermore_lasting_presence",
-              "icon": "armor_broken",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Shadowmire",
-              "description_loc": "Shadowraze slows enemies.",
-              "name": "nevermore_shadowmire",
-              "icon": "slow",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 2.7,
           "agi_base": 25,
@@ -70,12 +51,12 @@
               "id": 5059,
               "name": "nevermore_shadowraze1",
               "name_loc": "Shadowraze",
-              "desc_loc": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
+              "desc_loc": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area, dealing bonus damage based on his current Necromastery Soul amount. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
               "lore_loc": "Nevermore's trademark for harvesting souls.",
               "notes_loc": [
                 "Stack duration refreshes on stack gain."
               ],
-              "shard_loc": "Cooldown reduced by %cooldown_reduction_on_hero_hit%s per enemy hero.",
+              "shard_loc": "Cooldown reduced by %cooldown_reduction_on_hero_hit%s per enemy hero hit. Applies a stacking %movement_speed_debuff%%% movement speed debuff on enemies hit.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -120,20 +101,14 @@
                 {
                   "name": "shadowraze_damage",
                   "values_float": [
-                    90,
-                    160,
-                    230,
-                    300
+                    85,
+                    150,
+                    215,
+                    280
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_nevermore_2",
-                      "value": 120,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -261,27 +236,21 @@
                 {
                   "name": "movement_speed_debuff",
                   "values_float": [
-                    0,
-                    0,
-                    0,
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    12
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "nevermore_shadowmire",
-                    "values": [
-                      6,
-                      8,
-                      10,
-                      12
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "nevermore_shadowmire"
+                  "required_facet": ""
                 },
                 {
                   "name": "cooldown_reduction_on_hero_hit",
@@ -294,6 +263,23 @@
                   "values_shard": [
                     2
                   ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_per_soul",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE PER SOUL:",
+                  "bonuses": [],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -371,11 +357,9 @@
               "id": 1216,
               "name": "nevermore_frenzy",
               "name_loc": "Feast of Souls",
-              "desc_loc": "Shadow Fiend gains Bonus Attack Speed and Movement Speed for %duration% seconds. For the duration of the effect, Necromastery's Max Soul count is increased by %max_soul_increase%, but he loses that amount of souls after it is done.",
+              "desc_loc": "Shadow Fiend gains Bonus Movement and Attack Speed for %duration% seconds. For the duration of the effect, every %soul_collection_interval%s he collects souls from %soul_collection_per_interval% enemies in a %soul_collection_radius% radius. After the effect is over, he loses the souls whose owners are still alive, retaining the rest for %linger_duration%s, after which souls that are over the Necromastery max stack count are also lost.\n\n Can only collect souls once from each individual enemy.",
               "lore_loc": "For Nevermore, there's as much delight in the harvest as there is in the feast.",
-              "notes_loc": [
-                "Cannot be cast unless Shadow Fiend has enough souls to pay the cost."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -424,10 +408,10 @@
                 {
                   "name": "bonus_attack_speed",
                   "values_float": [
-                    40,
-                    55,
-                    70,
-                    85
+                    35,
+                    50,
+                    65,
+                    80
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK SPEED:",
@@ -450,10 +434,10 @@
                 {
                   "name": "bonus_move_speed",
                   "values_float": [
-                    5,
-                    7,
-                    9,
-                    11
+                    4,
+                    6,
+                    8,
+                    10
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS MOVE SPEED:",
@@ -529,12 +513,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "soul_cost",
+                  "name": "max_collection_count",
                   "values_float": [
-                    5
+                    4,
+                    6,
+                    8,
+                    10
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SOUL COST:",
+                  "heading_loc": "MAX COLLECTION TARGETS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -546,9 +533,100 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "max_soul_increase",
+                  "name": "soul_collection_per_interval",
                   "values_float": [
-                    5
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "soul_collection_radius",
+                  "values_float": [
+                    600
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "soul_collection_interval",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "soul_collection_per_hero",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SOULS PER HERO:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_nevermore_frenzy_max_collection_count",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "soul_collection_per_creep",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SOULS PER CREEP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "linger_duration",
+                  "values_float": [
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -708,44 +786,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_armor_per_stack",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "REDUCTION PER HERO:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "nevermore_lasting_presence",
-                    "values": [
-                      2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "nevermore_lasting_presence"
-                },
-                {
-                  "name": "kill_buff_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "HERO REDUCTION DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "nevermore_lasting_presence",
-                    "values": [
-                      60
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "nevermore_lasting_presence"
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     1200
@@ -780,14 +820,14 @@
               "id": 5064,
               "name": "nevermore_requiem",
               "name_loc": "Requiem of Souls",
-              "desc_loc": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed and magic resistance reduced for %requiem_slow_duration% seconds for each line hit up to a maximum of %requiem_slow_duration_max%. Lines of energy are created for every soul captured through Necromastery. <br><br> Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
+              "desc_loc": "Shadow Fiend gathers up to %max_soul_release% of his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed and magic resistance reduced for %requiem_slow_duration% seconds for each line hit up to a maximum of %requiem_slow_duration_max%. Lines of energy are created for every soul captured through Necromastery. <br><br> Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
               "lore_loc": "The captured souls of those past slain are released to ravage their former allies.",
               "notes_loc": [
                 "One line is generated from Shadow Fiend for every %requiem_soul_conversion% soul in his possession.",
                 "Fear and movement slow do not apply if the Requiem was released on death."
               ],
               "shard_loc": "",
-              "scepter_loc": "Reduces cooldown and causes Requiem of Souls to return back to Shadow Fiend. The wave back to Shadow Fiend deals less damage, but heals Shadow Fiend for all the damage it dealt.",
+              "scepter_loc": "Reduces cooldown and causes Requiem of Souls to return back to Shadow Fiend. The wave back to Shadow Fiend heals him for all the damage it dealt.",
               "facets_loc": [
                 "",
                 ""
@@ -872,7 +912,9 @@
                 {
                   "name": "requiem_reduction_mres",
                   "values_float": [
-                    -10
+                    -5,
+                    -10,
+                    -15
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAGIC RESIST REDUCTION:",
@@ -1041,12 +1083,12 @@
                   "values_float": [
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "DAMAGE ON RETURN:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    60
+                    100
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -1056,7 +1098,24 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "max_soul_release",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDamage",
                   "values_float": [
                     80,
                     120,
@@ -1149,7 +1208,7 @@
               "id": 5062,
               "name": "nevermore_necromastery",
               "name_loc": "Necromastery",
-              "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. Hero kills grant %souls_per_hero_kill% souls. On death, he releases %soul_release_tooltip%%% of them from bondage.",
+              "desc_loc": "Shadow Fiend steals the soul from units he kills, gaining %necromastery_damage_per_soul% bonus damage per soul. Hero kills grant %souls_per_hero_kill% souls. On death, he releases %soul_release_tooltip%%% of them from bondage.",
               "lore_loc": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
               "notes_loc": [
                 "Denies and neutral creeps also provide bonus damage through Necromastery.",
@@ -1163,14 +1222,14 @@
                 ""
               ],
               "type": 0,
-              "behavior": "66",
+              "behavior": "562949953421379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1201,20 +1260,11 @@
                 {
                   "name": "necromastery_damage_per_soul",
                   "values_float": [
-                    1,
-                    2,
-                    3,
-                    4
+                    1.35
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER SOUL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_nevermore_1",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1227,14 +1277,17 @@
                 {
                   "name": "necromastery_max_souls",
                   "values_float": [
-                    20,
-                    22,
-                    24,
-                    26
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE MAX SOULS:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_nevermore_1",
+                      "value": 5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1368,25 +1421,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "max_soul_increase_on_hero_kill",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "nevermore_lasting_presence",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "nevermore_lasting_presence"
                 },
                 {
                   "name": "current_max_souls_tooltip",
@@ -1608,9 +1642,9 @@
               "item_quality": 0
             },
             {
-              "id": 6070,
-              "name": "special_bonus_unique_nevermore_2",
-              "name_loc": "+{s:bonus_shadowraze_damage} Shadowraze Damage",
+              "id": 1789,
+              "name": "special_bonus_unique_nevermore_frenzy_max_collection_count",
+              "name_loc": "+{s:bonus_soul_collection_per_hero} Feast of Souls Souls Collected Per Hero",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1672,7 +1706,7 @@
             {
               "id": 6670,
               "name": "special_bonus_unique_nevermore_1",
-              "name_loc": "+{s:bonus_necromastery_damage_per_soul} Damage Per Soul",
+              "name_loc": "+{s:bonus_necromastery_max_souls} Necromastery Max Souls",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1918,14 +1952,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

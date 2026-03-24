@@ -10,26 +10,7 @@
           "bio_loc": "Deep in the Archive of Ultimyr, shelved between scholarly treatises on dragon cladistics and books of untranslatable spells, there is an ancient tome of entomological curiosities.  Compiled by scholars, the book describes the telepathic talents of the zealot scarab, a strange species of social insect with abilities unique to all the seven planes.    \r\n\t\t\t\t<br><br>Unlike most grubs of his colony, Nyx Assassin did not arise from metamorphosis with the plodding thoughts and blunted appendages common to the worker caste of his kind. For his was a special transformation, guided by the grace of Nyx.  He was the chosen one, selected from the many and anointed with an extract of the queen goddess herself.  Not all survive the dark blessing of the queen's chamber, but he emerged with a penetrating mind, and dagger-like claws--his razor sharp mandibles raking the air while his thoughts projected directly into the minds of those around him.  Of all zealot scarabs, he alone was selected for the highest calling.  After his metamorphosis, he was reborn, by grace of Nyx, with abilities which shaped him for one thing and one thing only: to kill in the name of his goddess.",
           "hype_loc": "Nyx Assassin is always hunting for fragile targets. Sneaking <b>invisibly</b> through the forest, when he spots his prey, he swipes them with his deadly claws and impales them on <b>stunning spikes</b>, then reverses any counterattack with his <b>reflecting carapace.</b>",
           "npe_desc_loc": "Reflects enemy damage and stuns",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Mana Burn",
-              "description_loc": "Mind Flare burns a percentage of the target's max mana.",
-              "name": "nyx_assassin_burn_mana",
-              "icon": "nuke",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Scuttle",
-              "description_loc": "For the first {s:bonus_free_pathing_duration}s of Vendetta, Nyx Assassin is hasted and has unobstructed pathing.",
-              "name": "nyx_assassin_scuttle",
-              "icon": "speed",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 17,
           "str_gain": 2.7,
           "agi_base": 18,
@@ -319,7 +300,7 @@
               "id": 1104,
               "name": "nyx_assassin_jolt",
               "name_loc": "Mind Flare",
-              "desc_loc": "Deals damages to the enemy equal to a percentage of its Max Mana. Deals additional damage equal to a percentage of the damage the target has taken from Nyx Assassin in the last %damage_echo_duration%s. Resets accumulated damage before applying damage.",
+              "desc_loc": "Deals damage equal to a percentage of the target's Max Mana and burns part of it away. Deals additional damage equal to a percentage of the damage the target has taken from Nyx Assassin in the last %damage_echo_duration%s. Resets accumulated damage before applying damage.",
               "lore_loc": "Only those raised by the queen can use their minds to touch the world around them.",
               "notes_loc": [],
               "shard_loc": "",
@@ -396,10 +377,10 @@
                 {
                   "name": "mana_burn_pct",
                   "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    9,
+                    12,
+                    15,
+                    18
                   ],
                   "is_percentage": true,
                   "heading_loc": "MANA BURNT:",
@@ -407,16 +388,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "nyx_assassin_burn_mana",
-                    "values": [
-                      16,
-                      19,
-                      22,
-                      25
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "nyx_assassin_burn_mana"
+                  "required_facet": ""
                 },
                 {
                   "name": "aoe",
@@ -576,7 +552,8 @@
               "notes_loc": [
                 "The damage is calculated after all reductions.",
                 "Spiked Carapace will only trigger on damage from other player controlled units.",
-                "The damage reflected will have the same damage type as it had when it was dealt to Nyx Assassin."
+                "The damage reflected will have the same damage type as it had when it was dealt to Nyx Assassin.",
+                "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -931,10 +908,10 @@
               "item_quality": 0
             },
             {
-              "id": 1365,
-              "name": "nyx_assassin_nyxth_sense",
-              "name_loc": "Nyxth Sense",
-              "desc_loc": "Nyx Assassin can detect heroes within %radius% units of himself.",
+              "id": 1767,
+              "name": "nyx_assassin_neuro_sting",
+              "name_loc": "Mana Burn",
+              "desc_loc": "Nyx Assassin's damage on enemies also burns mana as a percentage of the damage dealt.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -944,7 +921,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8796093022210",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -980,12 +957,12 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "radius",
+                  "name": "mana_burn_pct",
                   "values_float": [
-                    400
+                    12
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "MANA BURN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1014,18 +991,18 @@
               "id": 5465,
               "name": "nyx_assassin_vendetta",
               "name_loc": "Vendetta",
-              "desc_loc": "Allows Nyx Assassin to become invisible and gain a speed bonus.  If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack. Nyx Assassin has %attack_range_bonus% additional attack range and a %attack_animation_bonus%%% faster attack animation for this attack.",
+              "desc_loc": "Nyx Assassin becomes invisible and gains a speed bonus. If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack that applies a break to the target. Nyx Assassin has %attack_range_bonus% additional attack range and a %attack_animation_bonus%%% faster attack animation for this attack.",
               "lore_loc": "The scarab kills for the glory of his queen.",
               "notes_loc": [
                 "Has a %fade_time% second fadetime.",
                 "If a spell is used to break the invisibility, or the invisibility expires, the bonus damage is lost.",
                 "With Aghanim's Shard, the Break is applied before the bonus damage."
               ],
-              "shard_loc": "Vendetta applies Break on attack.",
+              "shard_loc": "Decreases cooldown by %bonus_AbilityCooldown%s. For the first %free_pathing_duration%s of Vendetta, Nyx is hasted and has unobstructed pathing.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "For the first %free_pathing_duration%s of Vendetta, Nyx is hasted and has unobstructed pathing."
+                ""
               ],
               "type": 1,
               "behavior": "4196356",
@@ -1165,14 +1142,12 @@
                 {
                   "name": "break_duration",
                   "values_float": [
-                    0
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "BREAK DURATION:",
                   "bonuses": [],
-                  "values_shard": [
-                    4
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1189,16 +1164,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    15
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "nyx_assassin_scuttle",
-                    "values": [
-                      15
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "nyx_assassin_scuttle"
+                  "required_facet": ""
                 },
                 {
                   "name": "free_pathing_movement_speed_bonus",
@@ -1208,16 +1183,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    200
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "nyx_assassin_scuttle",
-                    "values": [
-                      200
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "nyx_assassin_scuttle"
+                  "required_facet": ""
                 },
                 {
                   "name": "attack_animation_bonus",
@@ -1282,7 +1257,9 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    10
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1822,14 +1799,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

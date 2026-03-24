@@ -10,26 +10,7 @@
           "bio_loc": "In the realm of Pugna's birth, near the vents of the Nether Reaches, there stood a lamasery devoted to the Arts of Oblivion, which drew its power from the nether energies. The Grandmaster of the temple compound had himself passed into Oblivion several years prior, leaving his academy without a leader. From the moment of their master's death, the regents of the temple began rites of divination to identify their master's reincarnation, and eventually all signs converged on the immediate neighborhood. Several villages squatted in the shadow of the temple, their alleys and plazas full of the laughter of squalling children.\r\n\t\t\t\t<br><br>Pugna, a mere thirteen months of age, was but one candidate among the local brats, and on the appointed day he was presented at the temple alongside two other promising tots. The lamas offered a jumble of worn relics to the children, treasured possessions of their former grandmaster. One boy reached for a porphyry wand that had belonged to the lama...and put it in his nostril. An impish girl pulled out an amulet that had also been the lama's, and immediately swallowed it. Pugna regarded the other two coolly, gave a merry laugh, and blasted them with gouts of emerald flame, reducing them to ashes in an instant. He then snatched up the wand and amulet, saying 'Mine!' The regents hoisted the beaming Pugna on their shoulders, wrapped him in their grandmaster's vestments, and rushed him to the throne before his mood could change. Within five years, the temple itself was another pile of ash, which pleased Pugna to no end.",
           "hype_loc": "A crafty trickster, Pugna turns the enemy's power against itself as he blasts their defenses. While his <b>nether ward</b> strikes nearby foes that dare to cast a spell, he <b>drains life</b> from enemies to ensure he will be ready for the next assault.",
           "npe_desc_loc": "Drains enemy life to heal himself",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Siphoning Ward",
-              "description_loc": "Nether Ward restores mana and health to Pugna based on how much damage is dealt.",
-              "name": "pugna_siphoning_ward",
-              "icon": "healing",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Rewards of Ruin",
-              "description_loc": "Pugna receives {s:bonus_tower_scale}% spell amplification per destroyed tower.",
-              "name": "pugna_rewards_of_ruin",
-              "icon": "siege",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 2,
           "agi_base": 21,
@@ -57,7 +38,7 @@
           "projectile_speed": 900,
           "armor": 3.5,
           "magic_resistance": 25,
-          "movement_speed": 330,
+          "movement_speed": 325,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
@@ -668,44 +649,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "health_restore_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "DAMAGE TO HP:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "pugna_siphoning_ward",
-                    "values": [
-                      20
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "pugna_siphoning_ward"
-                },
-                {
-                  "name": "mana_restore_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "DAMAGE TO MANA:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "pugna_siphoning_ward",
-                    "values": [
-                      20
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "pugna_siphoning_ward"
-                },
-                {
                   "name": "attacks_to_destroy",
                   "values_float": [
                     4
@@ -873,12 +816,9 @@
               "id": 1288,
               "name": "pugna_oblivion_savant",
               "name_loc": "Oblivion Savant",
-              "desc_loc": "Pugna can cast spells and use items while channeling.",
+              "desc_loc": "Pugna can cast spells and use items while channeling.\n\nPugna receives %tower_scale%%% spell amplification per destroyed tower.",
               "lore_loc": "",
-              "notes_loc": [
-                "Includes items which are channeled.",
-                "Can still only channel a single spell at a time."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -924,7 +864,7 @@
                 {
                   "name": "tower_scale",
                   "values_float": [
-                    0
+                    1.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -932,13 +872,28 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "pugna_rewards_of_ruin",
-                    "values": [
-                      1.5
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "pugna_rewards_of_ruin"
+                  "required_facet": ""
+                },
+                {
+                  "name": "spell_amp_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SPELL AMP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1022,25 +977,6 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "health_drain_death_boost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      20
-                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1853,14 +1789,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

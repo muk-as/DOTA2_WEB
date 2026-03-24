@@ -10,30 +10,11 @@
           "bio_loc": "The malevolent familiar of a sadistic wizard who captured and hoped to tame him, Viper was curiously glad to have been sprung from the sealed and unchanging subterranean Nether Reaches where his race had lived for millions of years, after tectonic slippage had sealed off the Netherdrakes in luminous caverns. Viper spent some time appearing to submit to the wizard's enchainments, hoping to learn what he could of the dark magics the mage practiced. But he soon realized that few spells were as deadly as the toxins that were his birthright. Exuding an acid that swiftly ate away the bars of his cage, the Netherdrake slipped free of his confines, spit poison in the old spellcaster's eyes, and soared out to let the world know that it had a new master.",
           "hype_loc": "Launching <b>deadly poison from a distance</b>, Viper poses a grave threat to whomever he targets. As his various toxins <b>eat away at an enemy's health</b> and <b>slow their movement</b>, Viper simply does what he does best: he keeps adding more poison.",
           "npe_desc_loc": "Poisonous toxins chip away armor and slow enemies",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Poison Burst",
-              "description_loc": "After Poison Attack stacks expire, enemies around the target take additional damage.",
-              "name": "viper_poison_burst",
-              "icon": "area_of_effect",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Caustic Bath",
-              "description_loc": "Viper's Corrosive Skin effects are increased while he is in Nethertoxin.",
-              "name": "viper_caustic_bath",
-              "icon": "armor",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.4,
           "agi_base": 21,
-          "agi_gain": 2.7,
+          "agi_gain": 2.9,
           "int_base": 17,
           "int_gain": 2,
           "primary_attr": 1,
@@ -76,7 +57,7 @@
               "shard_loc": "Increases max stacks, and causes Poison Attack to lower armor per stack and to affect buildings for reduced damage.",
               "scepter_loc": "",
               "facets_loc": [
-                "After Poison Attack stacks expire, enemies around the target take additional damage equal to %accumulated_damage_explosion_pct%%% of the magic damage dealt by Poison Attack.",
+                "",
                 ""
               ],
               "type": 0,
@@ -145,7 +126,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_viper_7",
-                      "value": 10,
+                      "value": 15,
                       "operation": 3
                     }
                   ],
@@ -166,12 +147,12 @@
                     9,
                     12
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "MOVE SLOW:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_viper_7",
-                      "value": 10,
+                      "value": 15,
                       "operation": 3
                     }
                   ],
@@ -192,7 +173,7 @@
                     8,
                     10
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "MAGIC RESISTANCE:",
                   "bonuses": [],
                   "values_shard": [],
@@ -212,7 +193,9 @@
                   "is_percentage": false,
                   "heading_loc": "MAX STACKS:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    2
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -275,63 +258,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "shard_bonus_max_stacks",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS MAX STACKS:",
-                  "bonuses": [],
-                  "values_shard": [
-                    2
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "expiration_damage_radius",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "viper_poison_burst",
-                    "values": [
-                      300
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "viper_poison_burst"
-                },
-                {
-                  "name": "accumulated_damage_explosion_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "viper_poison_burst",
-                    "values": [
-                      100
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "viper_poison_burst"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -445,7 +371,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_viper_3",
-                      "value": 30,
+                      "value": 20,
                       "operation": 0
                     }
                   ],
@@ -471,7 +397,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_viper_3",
-                      "value": 30,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -707,13 +633,14 @@
               "lore_loc": "It is not unusual for sword and shield alike to corrode in the very hands of those who attack the Netherdrake.",
               "notes_loc": [
                 "Stacks multiplicatively with other magic damage resistance sources.",
-                "Break prevents the application of Corrosive Skin. Does not disable Corrosive Skin application from Nosedive."
+                "Break prevents the application of Corrosive Skin. Does not disable Corrosive Skin application from Nosedive.",
+                "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
               ],
               "shard_loc": "",
-              "scepter_loc": "Corrosive Skin applies %effect_multiplier%x the attack speed slow to enemies that are within %effect_multiplier_distance% distance of Viper.",
+              "scepter_loc": "Corrosive Skin applies %effect_multiplier%x the attack speed slow to enemies that are within %effect_multiplier_distance% distance of Viper.  Viper's Corrosive Skin Magic Resistance and Damage per Second are gradually increased while he is in Nethertoxin, up to %nethertoxin_bonus_pct%%% increased effect after %nethertoxin_bonus_pct_max_duration_tooltip%s.",
               "facets_loc": [
                 "",
-                "Viper's Corrosive Skin Magic Resistance and Damage per Second are gradually increased while he is in Nethertoxin, up to %nethertoxin_bonus_pct%%% increased effect after %nethertoxin_bonus_pct_max_duration_tooltip%s."
+                ""
               ],
               "type": 0,
               "behavior": "2",
@@ -796,7 +723,7 @@
                     20,
                     25
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "MAGIC RESISTANCE:",
                   "bonuses": [],
                   "values_shard": [],
@@ -821,7 +748,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_viper_1",
-                      "value": 20,
+                      "value": 15,
                       "operation": 0
                     }
                   ],
@@ -898,15 +825,15 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    50
+                  ],
                   "facet_bonus": {
-                    "name": "viper_caustic_bath",
-                    "values": [
-                      75
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "viper_caustic_bath"
+                  "required_facet": ""
                 },
                 {
                   "name": "nethertoxin_bonus_pct_max_duration_tooltip",
@@ -917,15 +844,15 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    4
+                  ],
                   "facet_bonus": {
-                    "name": "viper_caustic_bath",
-                    "values": [
-                      5
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "viper_caustic_bath"
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1161,7 +1088,7 @@
               "id": 1461,
               "name": "viper_predator",
               "name_loc": "Predator",
-              "desc_loc": "Viper's attacks deal an additional instance of physical damage per missing health percentage of the target hero, equal to %damage_base% + %damage_per_level% per Viper's level.",
+              "desc_loc": "Viper's attacks deal an additional instance of physical damage per missing health percentage of the target hero.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1207,53 +1134,19 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage_base",
+                  "name": "damage",
                   "values_float": [
-                    0.15
+                    0.25
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_viper_predator_damage",
-                      "value": 0.3,
+                      "value": 0.35,
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_per_level",
-                  "values_float": [
-                    0.05
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "total_damage_per_missing_health",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DAMAGE PER MISSING HEALTH%:",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1300,9 +1193,7 @@
               "dispellable": 3,
               "max_level": 3,
               "cast_ranges": [
-                700,
-                800,
-                900
+                750
               ],
               "cast_points": [
                 0.2
@@ -1387,7 +1278,7 @@
                     70,
                     80
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "MOVE SLOW:",
                   "bonuses": [],
                   "values_shard": [],
@@ -1489,9 +1380,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    700,
-                    800,
-                    900
+                    750
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1651,9 +1540,9 @@
               "item_quality": 0
             },
             {
-              "id": 984,
-              "name": "special_bonus_unique_viper_7",
-              "name_loc": "+{s:bonus_damage}% Poison Attack slow/damage",
+              "id": 6156,
+              "name": "special_bonus_unique_viper_1",
+              "name_loc": "+{s:bonus_damage} Corrosive Skin Damage Per Second",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1715,7 +1604,7 @@
             {
               "id": 6819,
               "name": "special_bonus_unique_viper_3",
-              "name_loc": "+{s:bonus_max_damage} Nethertoxin Min/Max Damage",
+              "name_loc": "+{s:bonus_min_damage}/{s:bonus_max_damage} Nethertoxin Min/Max Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1775,9 +1664,9 @@
               "item_quality": 0
             },
             {
-              "id": 6156,
-              "name": "special_bonus_unique_viper_1",
-              "name_loc": "+{s:bonus_damage} Corrosive Skin Damage Per Second",
+              "id": 984,
+              "name": "special_bonus_unique_viper_7",
+              "name_loc": "+{s:bonus_damage}% Poison Attack Slow / Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1901,7 +1790,7 @@
             {
               "id": 1540,
               "name": "special_bonus_unique_viper_predator_damage",
-              "name_loc": "+{s:bonus_damage_base} Predator Damage Per Missing Health",
+              "name_loc": "+{s:bonus_damage} Predator Damage Per Missing Health",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2025,7 +1914,7 @@
             {
               "id": 985,
               "name": "special_bonus_unique_viper_8",
-              "name_loc": "-{s:bonus_AbilityCooldown}% Viper Strike manacost/cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}% Viper Strike Mana Cost / Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2085,14 +1974,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "The ordinary ogre is the creature for whom the phrase 'As dumb as a bag of rock hammers' was coined. In his natural state, an ogre is supremely incapable of doing or deciding anything. Clothed in dirt, he sometimes finds himself accidentally draped in animal skins after eating lanekill. Not an especially social creature, he is most often found affectionately consorting with the boulders or tree-stumps he has mistaken for kin (a factor that may explain the ogre's low rate of reproduction).  However, once every generation or so, the ogre race is blessed with the birth of a two-headed Ogre Magi, who is immediately given the traditional name of Aggron Stonebreak, the name of the first and perhaps only wise ogre in their line's history.\r\n\t\t\t\t<br><br>With two heads, Ogre Magi finds it possible to function at a level most other creatures manage with one. And while the Ogre Magi will win no debates (even with itself), it is graced with a divine quality known as Dumb Luck--a propensity for serendipitous strokes of fortune which have allowed the ogre race to flourish in spite of enemies, harsh weather, and an inability to feed itself.  It's as if the Goddess of Luck, filled with pity for the sadly inept species, has taken Ogre Magi under her wing. And who could blame her? Poor things.",
           "hype_loc": "With a chance to <b>multiply the outcome</b> of each spell they cast, a bit of <b>luck</b> is all Ogre Magi needs to burn enemies to cinder, or <b>boost the power of his allies</b>. Of course, luck can be difficult to rely upon...",
           "npe_desc_loc": "Uses a touch of luck to amplify his skills",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Fat Chance",
-              "description_loc": "Each point of Ogre Magi's Strength adds {s:bonus_strength_mult}% to Ogre Magi's Multicast chance.",
-              "name": "ogre_magi_fat_chance",
-              "icon": "rng",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Learning Curve",
-              "description_loc": "Level requirement of all spells and talents reduced by {s:bonus_required_level_reduction}. You get {s:bonus_level_one_ability_points} Ability Points at level one and {s:bonus_level_two_ability_points} Ability Points at level two.",
-              "name": "ogre_magi_learning_curve",
-              "icon": "ogre",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 25,
           "str_gain": 4.2,
           "agi_base": 14,
@@ -76,7 +57,7 @@
                 "When Multicast, Fireblast hits the same target each time with a %multicast_delay% seconds interval."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Fireblast is refined, reducing cooldown by %bonus_AbilityCooldown%s and increasing cast speed by %bonus_cast_speed%%%.",
               "facets_loc": [
                 "",
                 ""
@@ -170,7 +151,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_ogre_magi_2",
-                      "value": 220,
+                      "value": 175,
                       "operation": 0
                     }
                   ],
@@ -197,6 +178,25 @@
                   ],
                   "values_shard": [],
                   "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_cast_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    25
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -268,15 +268,11 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_ogre_magi_5",
-                      "value": 1,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    1
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -286,7 +282,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -389,7 +385,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_ogre_magi_4",
-                      "value": 12,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -562,7 +558,7 @@
               "id": 5440,
               "name": "ogre_magi_bloodlust",
               "name_loc": "Bloodlust",
-              "desc_loc": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attacks speed if cast on Ogre himself. Can be cast on towers.",
+              "desc_loc": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attack speed if cast on Ogre himself. Can be cast on towers.",
               "lore_loc": "'Running's not as fun as hitting... Not one bit fun.'",
               "notes_loc": [
                 "When multicast, nearby allies will be selected randomly in an %multicast_bloodlust_aoe% area of effect to receive Bloodlust."
@@ -665,7 +661,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_ogre_magi",
-                      "value": 35,
+                      "value": 20,
                       "operation": 0
                     }
                   ],
@@ -860,7 +856,7 @@
                 0
               ],
               "cooldowns": [
-                6
+                7
               ],
               "durations": [
                 0
@@ -1016,17 +1012,11 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    6
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_ogre_magi_5",
-                      "value": 1,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1299,7 +1289,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "4406636445698",
+              "behavior": "567356589867011",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1455,7 +1445,7 @@
               "id": 5441,
               "name": "ogre_magi_multicast",
               "name_loc": "Multicast",
-              "desc_loc": "Enables Ogre Magi to cast his abilities and items multiple times with each use.",
+              "desc_loc": "Enables Ogre Magi to cast his abilities and items multiple times with each use. Each point of Strength adds to Multicast chance. Every %strength_for_one_pct% Strength adds %one_tooltip%%%.",
               "lore_loc": "Despite being largely incapacitated by his IQ, the Ogre Magi's success in battle is attributed to pure skill.",
               "notes_loc": [
                 "Only targeted abilities and items have a chance to be multicast.",
@@ -1510,14 +1500,18 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "2X CAST CHANCE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_ogre_magi_multicast_chance",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "ogre_magi_fat_chance",
-                    "values": [
-                      0
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1531,14 +1525,18 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "3X CAST CHANCE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_ogre_magi_multicast_chance",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "ogre_magi_fat_chance",
-                    "values": [
-                      0
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1552,22 +1550,26 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "4X CAST CHANCE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_ogre_magi_multicast_chance",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "ogre_magi_fat_chance",
-                    "values": [
-                      0
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
-                  "name": "strength_mult",
+                  "name": "strength_for_one_pct",
                   "values_float": [
-                    0
+                    16
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1575,13 +1577,28 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "ogre_magi_fat_chance",
-                    "values": [
-                      0.06
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "ogre_magi_fat_chance"
+                  "required_facet": ""
+                },
+                {
+                  "name": "one_tooltip",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1602,7 +1619,7 @@
             {
               "id": 403,
               "name": "special_bonus_unique_ogre_magi_4",
-              "name_loc": "+{s:bonus_burn_damage} Ignite DPS",
+              "name_loc": "+{s:bonus_burn_damage} Ignite Burn Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1662,10 +1679,10 @@
               "item_quality": 0
             },
             {
-              "id": 801,
-              "name": "special_bonus_unique_ogre_magi_5",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Fireblast Cooldown",
-              "desc_loc": "Also reduces cooldown of Unrefined Fireblast",
+              "id": 1181,
+              "name": "special_bonus_unique_ogre_magi_dumb_luck_mana",
+              "name_loc": "+{s:bonus_mana_per_str}/{s:bonus_mana_regen_per_str} Dumb Luck Mana/Mana Regen Per Strength",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1804,9 +1821,9 @@
               "item_quality": 0
             },
             {
-              "id": 1181,
-              "name": "special_bonus_unique_ogre_magi_dumb_luck_mana",
-              "name_loc": "+{s:bonus_mana_per_str}/{s:bonus_mana_regen_per_str} Dumb Luck Mana/Mana Regen Per Strength",
+              "id": 6183,
+              "name": "special_bonus_unique_ogre_magi",
+              "name_loc": "+{s:bonus_bonus_attack_speed}/{s:bonus_self_bonus} Bloodlust / Self Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1946,9 +1963,9 @@
               "item_quality": 0
             },
             {
-              "id": 6183,
-              "name": "special_bonus_unique_ogre_magi",
-              "name_loc": "+{s:bonus_bonus_attack_speed} Bloodlust Attack Speed",
+              "id": 6707,
+              "name": "special_bonus_unique_ogre_magi_2",
+              "name_loc": "+{s:bonus_fireblast_damage} Fireblast Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2070,9 +2087,9 @@
               "item_quality": 0
             },
             {
-              "id": 6707,
-              "name": "special_bonus_unique_ogre_magi_2",
-              "name_loc": "+{s:bonus_fireblast_damage} Fireblast Damage",
+              "id": 1829,
+              "name": "special_bonus_unique_ogre_magi_multicast_chance",
+              "name_loc": "+{s:bonus_multicast_2_times}% Multicast Chance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2132,14 +2149,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "Aiushtha appears to be an innocent, carefree creature of the woods, and while this is certainly true, it is hardly the sum of her story. She well understands the suffering of the natural world. She has wandered far, and fared through forests bright and drear, in every clime and every season, gathering friends, sharing news, bringing laughter and healing wherever she goes. For in worlds wracked by war, forests are leveled for the building of ships and siege engines; and even in places of peace, the woods are stripped for the building of homes, and as fuel for countless hearths.\r\n\t\t\t\t<br><br>Aiushtha hears the pleas of the small creatures, the furtive folk who need green shade and a leafy canopy to thrive. She lends her ears to those who have no other listeners. She carries their stories from the wood to the world, believing that her own good cheer is a kind of Enchantment, that can itself fulfill the promise of a verdant future.",
           "hype_loc": "Harmful up close and lethal at a distance, Enchantress <b>skewers foes</b> with attacks imbued to become more damaging the further they fly. Whether inflicting <b>powerful slows</b> on her enemies or <b>charming forest creatures</b> to fight her battles, she is never short of tools to win a fight.",
           "npe_desc_loc": "Enchants neutral creeps to do her bidding",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Overprotective Wisps",
-              "description_loc": "Summon Healing Wisps upon receiving damage.",
-              "name": "enchantress_overprotective_wisps",
-              "icon": "healing",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Spellbound",
-              "description_loc": "Enchant and attacks on Enchanted targets have extra range.",
-              "name": "enchantress_spellbound",
-              "icon": "range",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 17,
           "str_gain": 2,
           "agi_base": 19,
@@ -280,7 +261,7 @@
               "id": 5268,
               "name": "enchantress_enchant",
               "name_loc": "Enchant",
-              "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty.  Enchantress can control creeps for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
+              "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s, and Enchantress and her units gain bonus attack range against the target.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty.  Enchantress can control creeps for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
               "lore_loc": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
               "notes_loc": [
                 "Illusions can be converted."
@@ -302,9 +283,9 @@
               "max_level": 4,
               "cast_ranges": [
                 500,
-                550,
                 600,
-                650
+                700,
+                800
               ],
               "cast_points": [
                 0.3,
@@ -379,10 +360,10 @@
                 {
                   "name": "attack_range_bonus",
                   "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    50,
+                    100,
+                    150,
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK RANGE BONUS:",
@@ -390,16 +371,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "enchantress_spellbound",
-                    "values": [
-                      100,
-                      150,
-                      200,
-                      250
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "enchantress_spellbound"
+                  "required_facet": ""
                 },
                 {
                   "name": "dominate_duration",
@@ -605,23 +581,18 @@
                   "name": "AbilityCastRange",
                   "values_float": [
                     500,
-                    550,
                     600,
-                    650
+                    700,
+                    800
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CAST RANGE:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "enchantress_spellbound",
-                    "values": [
-                      50,
-                      100,
-                      150,
-                      200
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -872,101 +843,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "overprotective_damage_threshold",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "enchantress_overprotective_wisps",
-                    "values": [
-                      275
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "enchantress_overprotective_wisps"
-                },
-                {
-                  "name": "overprotective_damage_reset_interval",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "enchantress_overprotective_wisps",
-                    "values": [
-                      7
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "enchantress_overprotective_wisps"
-                },
-                {
-                  "name": "overprotective_wisp_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "enchantress_overprotective_wisps",
-                    "values": [
-                      4
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "enchantress_overprotective_wisps"
-                },
-                {
-                  "name": "overprotective_wisp_count",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "enchantress_overprotective_wisps",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "enchantress_overprotective_wisps"
-                },
-                {
-                  "name": "overprotective_max_wisps",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "enchantress_overprotective_wisps",
-                    "values": [
-                      3
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "enchantress_overprotective_wisps"
                 },
                 {
                   "name": "total_max_heal",
@@ -1529,7 +1405,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_enchantress_3",
-                      "value": 70,
+                      "value": 80,
                       "operation": 2
                     }
                   ],
@@ -1577,7 +1453,7 @@
               "id": 1464,
               "name": "enchantress_rabblerouser",
               "name_loc": "Rabble-Rouser",
-              "desc_loc": "All neutral camps and Creeps under Enchantress' control deal more damage to enemy heroes.",
+              "desc_loc": "Enchantress causes neutral creeps or any unit under her control to deal additional damage to enemy Heroes.",
               "lore_loc": "",
               "notes_loc": [
                 "Does not affect converted neutrals, Tormentor, or Roshan."
@@ -1627,10 +1503,10 @@
                 {
                   "name": "damage_amp",
                   "values_float": [
-                    4
+                    0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "DAMAGE INCREASE:",
+                  "heading_loc": "DAMAGE AMPLIFICATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1661,7 +1537,7 @@
               "id": 1174,
               "name": "special_bonus_unique_enchantress_enchant_armor",
               "name_loc": "+{s:bonus_bonus_armor} Armor for Enchantress and her units",
-              "desc_loc": "Requires at least 1 level of Enchant",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1785,7 +1661,7 @@
               "id": 1541,
               "name": "special_bonus_unique_enchantress_enchant_attackspeed",
               "name_loc": "+{s:bonus_bonus_attackspeed} Attack Speed for Enchantress and her units",
-              "desc_loc": "Requires at least 1 level of Enchant",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1971,7 +1847,7 @@
               "id": 1130,
               "name": "special_bonus_unique_enchantress_enchant_health_damage",
               "name_loc": "+{s:bonus_bonus_health} Health / +{s:bonus_bonus_damage} Damage  for Enchantress and her units",
-              "desc_loc": "Requires at least 1 level of Enchant",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -2154,14 +2030,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

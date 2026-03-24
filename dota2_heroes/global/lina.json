@@ -10,26 +10,7 @@
           "bio_loc": "The sibling rivalries between Lina the Slayer, and her younger sister Rylai, the Crystal Maiden, were the stuff of legend in the temperate region where they spent their quarrelsome childhoods together. Lina always had the advantage, however, for while Crystal was guileless and naive, Lina's fiery ardor was tempered by cleverness and conniving. The exasperated parents of these incompatible offspring went through half a dozen homesteads, losing one to fire, the next to ice, before they realized life would be simpler if the children were separated. As the oldest, Lina was sent far south to live with a patient aunt in the blazing Desert of Misrule, a climate that proved more than comfortable for the fiery Slayer. Her arrival made quite an impression on the somnolent locals, and more than one would-be suitor scorched his fingers or went away with singed eyebrows, his advances spurned. Lina is proud and confident, and nothing can dampen her flame.",
           "hype_loc": "As deadly as she is fragile, Lina effortlessly strikes down any foe foolish enough to be caught alone. Gaining <b>attack speed</b> with each spell she casts, she scours enemies with <b>flame and heat lightning</b>, ensuring few can survive her assaults.",
           "npe_desc_loc": "Increases attack and speed with every spell",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Thermal Runaway",
-              "description_loc": "Casting Laguna Blade temporarily supercharges Lina, granting her stacks of Fiery Soul.",
-              "name": "lina_supercharge",
-              "icon": "damage",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Slow Burn",
-              "description_loc": "Lina's spells deal extra damage over time.",
-              "name": "lina_dot",
-              "icon": "nuke",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 20,
           "str_gain": 2.4,
           "agi_base": 23,
@@ -130,10 +111,10 @@
                 {
                   "name": "dragon_slave_damage",
                   "values_float": [
-                    85,
-                    165,
-                    245,
-                    325
+                    65,
+                    125,
+                    185,
+                    245
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -443,17 +424,17 @@
                 {
                   "name": "light_strike_array_damage",
                   "values_float": [
-                    110,
+                    80,
+                    120,
                     160,
-                    210,
-                    260
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_lina_3",
-                      "value": 150,
+                      "value": 110,
                       "operation": 0
                     }
                   ],
@@ -712,48 +693,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "target_crit_multiplier",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lina_crit_debuff",
-                      "value": 150,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "target_crit_debuff_duration",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lina_crit_debuff",
-                      "value": 3,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -952,10 +891,10 @@
               "item_quality": 0
             },
             {
-              "id": 1454,
-              "name": "lina_combustion",
-              "name_loc": "Combustion",
-              "desc_loc": "Every %damage_threshold% damage Lina does to an enemy hero causes them to overheat, doing damage to their nearby allies. This effect can trigger multiple times off a single instance of damage. Overheated illusions do less damage.",
+              "id": 1244,
+              "name": "lina_slow_burn",
+              "name_loc": "Slow Burn",
+              "desc_loc": "Lina's abilities deal an additional %burn_damage_pct%%% damage as burn damage over %burn_duration%s.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -967,12 +906,12 @@
               "type": 0,
               "behavior": "13194139533378",
               "target_team": 0,
-              "target_type": 1,
+              "target_type": 0,
               "flags": 0,
               "damage": 2,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1001,9 +940,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage_threshold",
+                  "name": "impact_damage_pct",
                   "values_float": [
-                    175
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1018,82 +957,84 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage",
+                  "name": "burn_damage_pct",
                   "values_float": [
-                    15,
-                    35,
-                    55,
-                    75
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "OVERHEAT DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lina_7",
-                      "value": 60,
-                      "operation": 3
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_illusions",
-                  "values_float": [
-                    10,
-                    15,
-                    20,
-                    25
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "OVERHEAT DAMAGE (ILLUSION):",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lina_7",
-                      "value": 60,
-                      "operation": 3
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_aoe",
-                  "values_float": [
-                    400
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "OVERHEAT RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "duration",
-                  "values_float": [
-                    6
+                    64
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lina_7",
+                      "value": 16,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "burn_duration",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lina_7",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "additional_tick_total_damage_tooltip",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lina_7",
+                      "value": 80,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "target_crit_multiplier",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lina_crit_debuff",
+                      "value": 150,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1126,7 +1067,7 @@
               "notes_loc": [
                 "Laguna Blade has a %damage_delay% delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage."
               ],
-              "shard_loc": "%barrier_pct%%% of the damage dealt is converted to an all damage barrier for Lina. Barrier lasts for %barrier_duration%s.",
+              "shard_loc": "Casting Laguna Blade temporarily supercharges Lina, granting her stacks of Fiery Soul.",
               "scepter_loc": "",
               "facets_loc": [
                 "Casting Laguna Blade temporarily supercharges Lina, granting her stacks of Fiery Soul.",
@@ -1175,9 +1116,9 @@
                 {
                   "name": "damage",
                   "values_float": [
-                    500,
-                    750,
-                    1000
+                    380,
+                    565,
+                    750
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -1216,50 +1157,8 @@
                   "is_percentage": false,
                   "heading_loc": "SUPERCHARGE DURATION:",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lina_supercharge",
-                    "values": [
-                      5
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lina_supercharge"
-                },
-                {
-                  "name": "supercharge_stacks",
-                  "values_float": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SUPERCHARGE STACKS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lina_supercharge",
-                    "values": [
-                      10,
-                      11,
-                      12
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "lina_supercharge"
-                },
-                {
-                  "name": "barrier_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
                   "values_shard": [
-                    100
+                    5
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1270,15 +1169,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "barrier_duration",
+                  "name": "supercharge_stacks",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "SUPERCHARGE STACKS:",
                   "bonuses": [],
                   "values_shard": [
-                    10
+                    12
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1775,8 +1674,8 @@
             {
               "id": 961,
               "name": "special_bonus_unique_lina_7",
-              "name_loc": "+{s:bonus_damage_illusions}% Combustion Overheat Damage",
-              "desc_loc": "",
+              "name_loc": "+{s:bonus_burn_duration}s Slow Burn Duration",
+              "desc_loc": "Increases Slow Burn Damage to {s:bonus_additional_tick_total_damage_tooltip}%",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1837,8 +1736,8 @@
             {
               "id": 1442,
               "name": "special_bonus_unique_lina_crit_debuff",
-              "name_loc": "+{s:bonus_target_crit_multiplier}% Crit On Targets Affected By Spells",
-              "desc_loc": "Only applies to Lina's attacks. Lasts {s:bonus_target_crit_debuff_duration}s.",
+              "name_loc": "{s:bonus_target_crit_multiplier}% Attack Crit On Targets Affected By Slow Burn",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1897,148 +1796,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1244,
-                  "name": "lina_slow_burn",
-                  "name_loc": "Slow Burn",
-                  "desc_loc": "Lina's spells deal %total_damage_tooltip%%% total damage. %impact_damage_pct%%% is dealt on impact and %burn_damage_pct%%% is dealt as burn damage over %burn_duration%s.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "4398046511107",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 2,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "impact_damage_pct",
-                      "values_float": [
-                        60
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "burn_damage_pct",
-                      "values_float": [
-                        65
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "total_damage_tooltip",
-                      "values_float": [
-                        125
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "burn_duration",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "lina_dot",
-                        "values": [
-                          3
-                        ],
-                        "operation": 0
-                      },
-                      "required_facet": "lina_dot"
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

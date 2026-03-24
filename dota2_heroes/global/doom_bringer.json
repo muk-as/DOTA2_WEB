@@ -10,26 +10,7 @@
           "bio_loc": "He that burns and is not consumed, devours and is never sated, kills and is beyond all judgment--Lucifer brings doom to all who would stand against him. Bearing away souls on the tip of a fiery sword, he is the Fallen One, a once-favored general from the realm behind the light, cast out for the sin of defiance: he would not kneel. \r\n\t\t\t\t<br><br>Six times his name was tolled from the great bell of Vashundol. Six and sixty times his wings were branded, until only smoking stumps remained. Without wings, he slipped loose from the tethers that bound him within the light and he fell screaming to earth. A crater in the desert, Paradise lost.  Now he attacks without mercy, without motive, the only living being able to move freely between the seven dark dominions. Lashed by inescapable needs, twisted by unimaginable talents, Doom carries his own hell with him wherever he goes. Defiant to the last. Eventually, the world will belong to Doom.",
           "hype_loc": "One way or another, Doom <b>shuts down his enemies</b>. Devouring creeps to claim the various skills they had in life, he can place a <b>lingering silence</b> upon a foe's spells and items with his ultimate as he <b>torches his foes</b>.",
           "npe_desc_loc": "Can prevent a single enemy from casting spells or healing in any way",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Gluttony",
-              "description_loc": "Devour now has {s:bonus_AbilityCharges} charges and stolen creep abilities are upgraded by one level.",
-              "name": "doom_bringer_gluttony",
-              "icon": "meat",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Impending Doom",
-              "description_loc": "Every {s:bonus_upgrade_interval} minutes, Doom's duration is increased by {s:bonus_upgrade_amount}s.",
-              "name": "doom_bringer_impending_doom",
-              "icon": "cooldown",
-              "gradient_id": 0,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 24,
           "str_gain": 3.6,
           "agi_base": 15,
@@ -70,16 +51,16 @@
               "id": 5339,
               "name": "doom_bringer_devour",
               "name_loc": "Devour",
-              "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
+              "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cast is activated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
               "lore_loc": "Lucifer's appetite and greed are never sated.",
               "notes_loc": [
                 "Gives Doom the original bounty of the creep, along with the bonus gold.",
                 "If you devour a creep without abilities, you'll keep the abilities you had previously."
               ],
-              "shard_loc": "",
+              "shard_loc": "Devour has %AbilityCharges% charges and can target Ancients. Stolen creep abilities have %bonus_aoe_pct%%% increased AoE and %bonus_spell_amp_pct%%% increased spell amplification.",
               "scepter_loc": "",
               "facets_loc": [
-                "Devour now has %AbilityCharges% charges and stolen creep abilities are upgraded by one level.",
+                "",
                 "",
                 ""
               ],
@@ -108,7 +89,7 @@
                 0
               ],
               "cooldowns": [
-                70
+                66
               ],
               "durations": [
                 0
@@ -169,25 +150,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "ability_bonus_level",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "doom_bringer_gluttony",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "doom_bringer_gluttony"
-                },
-                {
                   "name": "hero_ability_steal_time",
                   "values_float": [
                     99999
@@ -227,17 +189,53 @@
                 },
                 {
                   "name": "can_target_ancient",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_doom_2",
-                      "value": 1,
-                      "operation": 5
-                    }
+                  "bonuses": [],
+                  "values_shard": [
+                    1
                   ],
-                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_aoe_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    20
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_spell_amp_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    40
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -288,16 +286,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    2
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "doom_bringer_gluttony",
-                    "values": [
-                      2
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "doom_bringer_gluttony"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityChargeRestoreTime",
@@ -307,16 +305,16 @@
                   "is_percentage": false,
                   "heading_loc": "BASE CHARGE RESTORE TIME:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    66
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "doom_bringer_gluttony",
-                    "values": [
-                      80
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "doom_bringer_gluttony"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityManaCost",
@@ -341,26 +339,26 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    70
+                    66
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    0
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "doom_bringer_gluttony",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 }
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -375,12 +373,12 @@
               "id": 5340,
               "name": "doom_bringer_scorched_earth",
               "name_loc": "Scorched Earth",
-              "desc_loc": "Carpets the nearby earth in flames which damage enemies, while also granting him increased movement speed.",
+              "desc_loc": "Carpets the nearby earth in flames which damage enemies, while also granting Doom increased movement speed and health regeneration.",
               "lore_loc": "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him.",
               "notes_loc": [
                 "Scorched Earth follows Doom, centered on his location."
               ],
-              "shard_loc": "Heals Doom and his controlled units for %heal_pct%%% of the damage value.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -397,10 +395,10 @@
               "dispellable": 3,
               "max_level": 4,
               "cast_ranges": [
-                600,
-                600,
-                600,
-                600
+                666,
+                666,
+                666,
+                666
               ],
               "cast_points": [
                 0,
@@ -456,9 +454,29 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "bonus_health_regen",
+                  "values_float": [
+                    7,
+                    8,
+                    9,
+                    10
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS HP REGEN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "radius",
                   "values_float": [
-                    600
+                    666
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -485,30 +503,11 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_doom_6",
-                      "value": 5,
+                      "value": 7,
                       "operation": 0
                     }
                   ],
                   "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "heal_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    60
-                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -538,9 +537,30 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "is_permanent",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_doom_11",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    600
+                    666
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -564,7 +584,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_doom_11",
+                      "value": 100,
+                      "operation": 4
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -586,9 +612,9 @@
                   "heading_loc": "",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_doom_9",
-                      "value": 10,
-                      "operation": 2
+                      "name": "special_bonus_unique_doom_11",
+                      "value": 2.5,
+                      "operation": 5
                     }
                   ],
                   "values_shard": [],
@@ -603,7 +629,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -738,7 +764,7 @@
                 {
                   "name": "ministun_duration",
                   "values_float": [
-                    0.6
+                    0.66
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN DURATION:",
@@ -750,63 +776,6 @@
                     }
                   ],
                   "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_ministun_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_bonus_stun_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1.45
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_bonus_damage",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    125
-                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -891,7 +860,7 @@
               "lore_loc": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Allies in a %scepter_aura_radius% radius around the doomed target also suffer the effects of Doom. Allows Doom to be self-cast to affect enemies around himself with Doom. Increases Doom's damage per second.",
+              "scepter_loc": "Doom applies Break to enemies. Allies in a %scepter_aura_radius% radius around the doomed target also suffer the effects of Doom. Allows Doom to be self-cast to affect enemies around himself with Doom.",
               "facets_loc": [
                 "",
                 "",
@@ -946,14 +915,18 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_doom_11",
+                      "value": 0,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "doom_bringer_impending_doom",
-                    "values": [
-                      0
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -963,15 +936,13 @@
                   "values_float": [
                     25,
                     45,
-                    65
+                    66
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    15
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -998,18 +969,16 @@
                 },
                 {
                   "name": "does_break",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_doom_11",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    1
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1077,44 +1046,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "upgrade_interval",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "doom_bringer_impending_doom",
-                    "values": [
-                      6.66
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "doom_bringer_impending_doom"
-                },
-                {
-                  "name": "upgrade_amount",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "doom_bringer_impending_doom",
-                    "values": [
-                      0.66
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "doom_bringer_impending_doom"
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     400
@@ -1176,7 +1107,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_doom_9",
+                      "value": 10,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1204,7 +1141,7 @@
               "id": 1324,
               "name": "doom_bringer_lvl_pain",
               "name_loc": "Lvl ? Pain",
-              "desc_loc": "Doom's attacks deal %bonus_damage%%% bonus damage to heroes whose level is lower than Doom's level.",
+              "desc_loc": "Doom's attacks curse enemy heroes. After %damage_debuff_duration%s, the cursed hero bursts with a pillar of fire, damaging itself and all units in a %spread_radius% AoE for %bonus_damage_pct_base%%% of the damage taken from Doom during the curse. The damage and radius of the curse is %bonus_at_level_pct%%% stronger if the enemy's level is a multiple of %level_multiplier%.",
               "lore_loc": "",
               "notes_loc": [
                 "Also applies to all attacks when Doom is at max level."
@@ -1217,7 +1154,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "4406636445698",
+              "behavior": "567356589867011",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1253,9 +1190,77 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_damage",
+                  "name": "bonus_damage_pct_base",
                   "values_float": [
-                    25
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_debuff_duration",
+                  "values_float": [
+                    2.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spread_radius",
+                  "values_float": [
+                    66
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "level_multiplier",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_at_level_pct",
+                  "values_float": [
+                    66
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1475,9 +1480,9 @@
               "item_quality": 0
             },
             {
-              "id": 6314,
-              "name": "special_bonus_unique_doom_2",
-              "name_loc": "Devour Can Target Ancients",
+              "id": 1676,
+              "name": "special_bonus_attack_damage_66",
+              "name_loc": "+{s:value} Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1523,7 +1528,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    66
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1540,7 +1563,7 @@
             {
               "id": 733,
               "name": "special_bonus_unique_doom_9",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Scorched Earth Cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Doom Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1729,7 +1752,7 @@
             {
               "id": 971,
               "name": "special_bonus_unique_doom_11",
-              "name_loc": "Doom applies Break",
+              "name_loc": "Permanent Scorched Earth",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1790,14 +1813,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

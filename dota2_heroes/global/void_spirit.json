@@ -10,26 +10,7 @@
           "bio_loc": "Not even the other spirits claim to understand the mind and machinations of the eldest amongst them, Inai the Void Spirit. Privy to secrets that would shatter a mortal mind, the Void Spirit observes the workings of the universe from an unknowable vantage, choosing to let carefully groomed servants do his bidding -- only emerging from his Hidden Temple into the material plane when he deems that he alone can steer the course of reality along its proper path.<br><br>With an expansive perspective on existence, Inai is focused intently on a point in time beyond which he cannot see, when the fabrics of multiple realities are fated to collide. Now he steps from the aether to personally resolve the battle of the Ancients and prepare his allies for what he views as a greater conflict to come.",
           "hype_loc": "Privy to secrets that would shatter a mortal mind, the Void Spirit emerges from his Hidden Temple to stand guard over <b>multiple areas of the battlefield</b> at once. Able to step into and out of the mortal plane at will, he easily <b>outmaneuvers opponents</b> to strike from wherever he desires, calling upon the powers of the aether to <b>shield him</b> in times of need.",
           "npe_desc_loc": "Steps in and out of the mortal plane to strike his foes",
-          "facets": [
-            {
-              "color": 4,
-              "title_loc": "Sanctuary",
-              "description_loc": "Resonant Pulse creates a larger all damage barrier instead of a physical barrier.",
-              "name": "void_spirit_sanctuary",
-              "icon": "armor",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Call of the Void",
-              "description_loc": "Upon exiting Dissimilate, Aether Remnants are created at the {s:bonus_aether_remnant_count} portals furthest from Void Spirit.",
-              "name": "void_spirit_aether_artifice",
-              "icon": "illusion",
-              "gradient_id": 3,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 2.6,
           "agi_base": 21,
@@ -50,8 +31,8 @@
             0,
             0
           ],
-          "damage_min": 22,
-          "damage_max": 26,
+          "damage_min": 18,
+          "damage_max": 22,
           "attack_rate": 1.7,
           "attack_range": 200,
           "projectile_speed": 900,
@@ -73,7 +54,7 @@
               "desc_loc": "Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
               "lore_loc": "Inai exists far beyond the scope of a single point in space and time.",
               "notes_loc": [],
-              "shard_loc": "Creates an additional watcher path that rotates around the remnant.  The remnant now provides True Sight, and no longer triggers on creeps, instead dealing %creep_damage_pct%%% damage to them every second in both paths.",
+              "shard_loc": "Creates an additional watcher path that rotates around the remnant.  The remnant now provides True Sight, and no longer triggers on creeps, instead dealing %creep_damage_pct%%% damage to them every second in both paths. Does not reveal wards.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -838,7 +819,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "AbilityDamage",
                   "values_float": [
                     120,
                     200,
@@ -1084,10 +1065,10 @@
                 {
                   "name": "absorb_per_hero_hit",
                   "values_float": [
-                    35,
                     50,
-                    65,
-                    80
+                    70,
+                    90,
+                    110
                   ],
                   "is_percentage": false,
                   "heading_loc": "BARRIER AMOUNT PER HERO HIT:",
@@ -1101,13 +1082,8 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "void_spirit_sanctuary",
-                    "values": [
-                      15,
-                      20,
-                      25,
-                      30
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1260,7 +1236,7 @@
               "id": 1420,
               "name": "void_spirit_intrinsic_edge",
               "name_loc": "Intrinsic Edge",
-              "desc_loc": "Void Spirit gains %secondary_stat_bonus_pct%%% more HP regen from Strength, armor from Agility, and mana regen and magic resistance from Intelligence.",
+              "desc_loc": "Void Spirit gains %damage_stat_bonus_pct%%% more attack damage per point of each attribute, and %secondary_stat_bonus_pct%%% more HP regen from Strength, attack speed from Agility, and mana regen from Intelligence.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1309,10 +1285,44 @@
                 {
                   "name": "secondary_stat_bonus_pct",
                   "values_float": [
-                    25
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_stat_bonus_pct",
+                  "values_float": [
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_damage",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ATTACK DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1346,7 +1356,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ARMOR:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1379,8 +1389,25 @@
                   "values_float": [
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "MAGIC RESIST:",
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attackspeed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ATTACK SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -2201,14 +2228,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "In a time of great plague, an obscure monk of dark inclinations, one Rotund'jere, found himself promoted to the rank of Cardinal by the swift death of all his superiors. While others of the order went out to succor the ill, the newly ordained cardinal secluded himself within the Cathedral of Rumusque, busily scheming to acquire the property of dying nobles, promising them spiritual rewards if they signed over their terrestrial domains. As the plague receded to a few stubborn pockets, his behavior came to the attention of the greater order, which found him guilty of heresy and sentenced him to serve in the plague ward, ensorcelled with spells that would ensure him a slow and lingering illness. But they had not counted on his natural immunity. Rotund'jere caught the pox, but instead of dying, found it feeding his power, transforming him into a veritable plague-mage, a Pope of Pestilence. Proclaiming himself Necrophos, he travels the world, spreading plague wherever he goes, and growing in terrible power with every village his pestilential presence obliterates.",
           "hype_loc": "Wherever Necrophos goes, enemies wither as allies thrive. <b>Restoring health</b> to his friends and harming enemies with each <b>death pulse</b>, once his very presence has eaten away at an enemy, he <b>summons the reaper</b> to lengthen their stay in the afterlife.",
           "npe_desc_loc": "Damages enemies and heals allies simultaneously",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Profane Potency",
-              "description_loc": "Sadist also grants Necrophos' AoE abilities and items bonus Radius per kill.",
-              "name": "necrolyte_profane_potency",
-              "icon": "area_of_effect",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 2,
-              "title_loc": "Rapid Decay",
-              "description_loc": "Ghost Shroud steals speed from his enemies and decreases their restorative powers.",
-              "name": "necrolyte_rapid_decay",
-              "icon": "speed",
-              "gradient_id": 3,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 18,
           "str_gain": 2.3,
           "agi_base": 12,
@@ -187,7 +168,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "AbilityDamage",
                   "values_float": [
                     100,
                     160,
@@ -342,19 +323,13 @@
                   "name": "heal_bonus",
                   "values_float": [
                     55,
-                    60,
                     65,
-                    70
+                    75,
+                    85
                   ],
                   "is_percentage": true,
                   "heading_loc": "RESTORATION AMPLIFICATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_necrophos_sadist_heal_bonus",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -363,25 +338,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "enemies_negative_heal_bonus_as_pct_of_self",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "necrolyte_rapid_decay",
-                    "values": [
-                      100
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "necrolyte_rapid_decay"
                 },
                 {
                   "name": "movement_speed",
@@ -408,25 +364,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "movement_transfer",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "necrolyte_rapid_decay",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "necrolyte_rapid_decay"
                 },
                 {
                   "name": "slow_aoe",
@@ -865,11 +802,11 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Sadist also grants Necrophos' AoE abilities and items bonus Radius per kill.",
+                "",
                 ""
               ],
               "type": 0,
-              "behavior": "66",
+              "behavior": "562949953421379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -905,15 +842,12 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "health_regen",
+                  "name": "regen",
                   "values_float": [
-                    3.5,
-                    5,
-                    6.5,
-                    8
+                    3.7
                   ],
                   "is_percentage": false,
-                  "heading_loc": "HEALTH REGEN PER KILL:",
+                  "heading_loc": "HP/MANA REGEN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -923,45 +857,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "mana_regen",
-                  "values_float": [
-                    3.5,
-                    5,
-                    6.5,
-                    8
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "MANA REGEN PER KILL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "bonus_aoe",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "AOE BONUS PER KILL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "necrolyte_profane_potency",
-                    "values": [
-                      35
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "necrolyte_profane_potency"
                 },
                 {
                   "name": "hero_multiplier",
@@ -1079,7 +974,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER MISSING HP:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_necrophos_reaper_scythe_damage_per_health",
+                      "value": 0.3,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1114,7 +1015,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "HP REGEN PER KILL:",
+                  "heading_loc": "HP REGEN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1133,7 +1034,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "MANA REGEN PER KILL:",
+                  "heading_loc": "MANA REGEN:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1479,9 +1380,9 @@
               "item_quality": 0
             },
             {
-              "id": 1050,
-              "name": "special_bonus_unique_necrophos_sadist_heal_bonus",
-              "name_loc": "+{s:bonus_heal_bonus}% Ghost Shroud Self Restoration Amp",
+              "id": 1445,
+              "name": "special_bonus_spell_aoe_75",
+              "name_loc": "+{s:value} Spell Area of Effect",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1526,7 +1427,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    75
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1603,9 +1522,9 @@
               "item_quality": 0
             },
             {
-              "id": 6703,
-              "name": "special_bonus_unique_necrophos_2",
-              "name_loc": "+{s:bonus_aura_damage}% Heartstopper Aura Damage",
+              "id": 1798,
+              "name": "special_bonus_unique_necrophos_reaper_scythe_damage_per_health",
+              "name_loc": "+{s:bonus_damage_per_health} Reaper's Scythe Damage Per Missing HP",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1727,14 +1646,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

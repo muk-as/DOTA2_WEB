@@ -10,32 +10,13 @@
           "bio_loc": "In life, the frost-mage Ethreain (not yet a Lich) had used the threat of destructive ice to enslave entire kingdoms. His subjects, aided by a few desperate magicians, eventually grew bold enough to ambush him. Armed with enough charmed rope to bind him forever, they tied the frost mage to adamant weights and dropped him in a pool known chiefly for being bottomless. It wasn't.\r\n\t\t\t\t<br><br>He only fell for a year or so before an outcrop snagged him. There he rested, dead but undecaying, until the geomancer Anhil thought to verify the legend of the supposedly bottomless Black Pool. Anhil's plumbline snarled with the ropes that bound the drowned magician, and up he hauled an unexpected prize. Thinking that by rendering the dead undead, he could question the Lich about the properties of the pool, he removed the bindings and commenced a simple rite of resurrection. Even the descendants of Ethreain's enemies were long forgotten by time, so there were none to warn Anhil against imprudence. But he learned the error of his judgment almost immediately, as Lich threw off the shackles and consumed him.",
           "hype_loc": "Drifting from battle to battle and <b>sacrificing creeps</b> to fuel his assaults, Lich is always ready to help his fellow heroes destroy their enemies with <b>slowing frost</b>. Should his foes be foolish enough to gather, his <b>bouncing ultimate</b> will ensure their demise.",
           "npe_desc_loc": "Unleashes a powerful attack that bounces between enemies",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Growing Cold",
-              "description_loc": "When an enemy is killed by Chain Frost or while under the effect of Frost Shield, the duration of these abilities is extended.",
-              "name": "lich_growing_cold",
-              "icon": "cooldown",
-              "gradient_id": 0,
-              "index": 1
-            },
-            {
-              "color": 0,
-              "title_loc": "Evil Eye",
-              "description_loc": "Sinister Gaze applies a lingering effect to the target, causing it to take extra magic damage from Lich and amplify incoming movement slows.",
-              "name": "lich_cryophobia",
-              "icon": "vision",
-              "gradient_id": 0,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 20,
           "str_gain": 2.1,
           "agi_base": 17,
           "agi_gain": 1.7,
           "int_base": 28,
-          "int_gain": 3.8,
+          "int_gain": 3.4,
           "primary_attr": 2,
           "complexity": 1,
           "attack_capability": 2,
@@ -64,7 +45,7 @@
           "max_health": 560,
           "health_regen": 2.5,
           "max_mana": 411,
-          "mana_regen": 2.15,
+          "mana_regen": 0.39999998,
           "abilities": [
             {
               "id": 5134,
@@ -525,13 +506,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BUFF DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lich_4",
-                      "value": 4,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -563,44 +538,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_duration_per_hero_killed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS DURATION ON HERO KILL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lich_growing_cold",
-                    "values": [
-                      4
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lich_growing_cold"
-                },
-                {
-                  "name": "bonus_duration_per_creep_killed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS DURATION ON CREEP KILL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lich_growing_cold",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lich_growing_cold"
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     800
@@ -621,6 +558,47 @@
                   "name": "AbilityCastPoint",
                   "values_float": [
                     0.2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lich_4",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    30,
+                    25,
+                    20,
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -700,7 +678,7 @@
               "facets_loc": [
                 "",
                 "",
-                "Sinister Gaze applies an Evil Eye debuff that will deal additional damage every time Lich deals magic damage to the target, and amplifies received movement slows by %slow_resistance%%%. The Evil Eye debuff duration lingers up to %post_gaze_debuff_duration_multiplier%x the elapsed Sinister Gaze duration."
+                ""
               ],
               "type": 0,
               "behavior": "136",
@@ -825,69 +803,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "damage",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lich_cryophobia",
-                    "values": [
-                      15,
-                      20,
-                      25,
-                      30
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lich_cryophobia"
-                },
-                {
-                  "name": "slow_resistance",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SLOW RESISTANCE REDUCTION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lich_cryophobia",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lich_cryophobia"
-                },
-                {
-                  "name": "post_gaze_debuff_duration_multiplier",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lich_cryophobia",
-                    "values": [
-                      2
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "lich_cryophobia"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1220,10 +1135,13 @@
             {
               "id": 1245,
               "name": "lich_death_charge",
-              "name_loc": "Death Charge",
-              "desc_loc": "Lich cannot gain passive mana regeneration, but any unit dying within %radius% range of Lich restores %mana_restore_pct_from_creep%%% of his Max Mana (Dying heroes restore %mana_restore_pct_from_hero%%% of Lich's Max Mana). Instant mana restoration from items and abilities apply to Lich as normal.",
+              "name_loc": "Sacrifice",
+              "desc_loc": "Sacrifice an allied creep to convert its current health into mana for Lich and give Lich its experience bounty.<br><br>Begins the game on cooldown and with no charges.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Cannot sacrifice ancients or creep-heroes.",
+                "Sacrificed creeps count as denies and can give experience to enemy heroes. Lich's experience bounty and enemy heroes' deny experience are independent."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1232,28 +1150,25 @@
                 ""
               ],
               "type": 0,
-              "behavior": "65603",
+              "behavior": "72",
               "target_team": 1,
-              "target_type": 0,
-              "flags": 0,
+              "target_type": 18,
+              "flags": 131584,
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
-                1500
+                700
               ],
               "cast_points": [
-                0
+                0.4
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                60,
-                50,
-                40,
-                30
+                0
               ],
               "durations": [
                 0
@@ -1271,82 +1186,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "radius",
+                  "name": "active_mana_restore_pct_of_health",
                   "values_float": [
-                    1500
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "mana_restore_pct_from_creep",
-                  "values_float": [
-                    2.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "mana_restore_pct_from_hero",
-                  "values_float": [
-                    25
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_level",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [
-                      4
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "health_conversion",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    42
                   ],
                   "is_percentage": true,
                   "heading_loc": "CURRENT HEALTH CONVERTED:",
@@ -1355,45 +1197,32 @@
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
-                    "values": [
-                      0,
-                      70,
-                      85,
-                      100
-                    ],
-                    "operation": 5
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
-                  "name": "xp_multiplier",
+                  "name": "xp_pct",
                   "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    69
                   ],
                   "is_percentage": true,
-                  "heading_loc": "XP MULTIPLIER:",
+                  "heading_loc": "EXPERIENCE BOUNTY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
-                    "values": [
-                      0,
-                      100,
-                      125,
-                      150
-                    ],
-                    "operation": 5
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    1500
+                    700
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1408,12 +1237,43 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "AbilityCooldown",
+                  "name": "AbilityCastPoint",
                   "values_float": [
-                    60,
-                    50,
-                    40,
-                    30
+                    0.4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    120
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1680,6 +1540,27 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "has_unlimited_jumps",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lich_5",
+                      "value": 1,
+                      "operation": 5
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "should_fire_chain_frost_on_death",
                   "values_float": [],
                   "is_percentage": false,
@@ -1701,48 +1582,8 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_jumps_per_hero_killed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS JUMPS ON HERO KILL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lich_growing_cold",
-                    "values": [
-                      3
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lich_growing_cold"
-                },
-                {
-                  "name": "bonus_jumps_per_creep_killed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS JUMPS ON CREEP KILL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lich_growing_cold",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lich_growing_cold"
-                },
-                {
                   "name": "frostbound_duration",
                   "values_float": [
-                    2,
-                    2,
                     2
                   ],
                   "is_percentage": false,
@@ -1751,13 +1592,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "lich_frostbound",
-                    "values": [
-                      2,
-                      2.75,
-                      3.5
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -2102,9 +1939,9 @@
               "item_quality": 0
             },
             {
-              "id": 531,
-              "name": "special_bonus_unique_lich_7",
-              "name_loc": "Chain Frost on Death",
+              "id": 7360,
+              "name": "special_bonus_unique_lich_4",
+              "name_loc": "{s:bonus_AbilityCharges} Frost Shield Charges",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2165,9 +2002,9 @@
               "item_quality": 0
             },
             {
-              "id": 7360,
-              "name": "special_bonus_unique_lich_4",
-              "name_loc": "+{s:bonus_duration}s Frost Shield Duration",
+              "id": 531,
+              "name": "special_bonus_unique_lich_7",
+              "name_loc": "Chain Frost on Death",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2291,9 +2128,9 @@
               "item_quality": 0
             },
             {
-              "id": 1543,
-              "name": "special_bonus_unique_lich_jump_damage",
-              "name_loc": "+{s:bonus_bonus_jump_damage} Chain Frost Incremental Damage",
+              "id": 318,
+              "name": "special_bonus_unique_lich_5",
+              "name_loc": "Chain Frost Unlimited Bounces",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2354,14 +2191,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

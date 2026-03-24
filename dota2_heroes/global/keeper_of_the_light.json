@@ -10,26 +10,7 @@
           "bio_loc": "Upon a pale horse he rides, this spark of endless suns, this Keeper of the Light.  Ezalor long ago escaped the Fundamental plane, separating from the other ancient forces to which he was bound within the great Primordial harmony.  He is a power grown sentient in the dawn of the universe, and now rides forth in all planes at once, one step ahead of pursuing chaos, bearing his gift with him at the end of a radiant staff.  His majestic truth lies hidden beneath the outward appearance of a slightly doddering old man who barely stays in the saddle.  However, when faced with the challenge of chaos, or the forces of darkness, his primordial light bursts forth, and his full power is revealed, transforming him once again into a force to be reckoned with.",
           "hype_loc": "Keeper of the Light is a helpful addition to any team. <b>Manipulating the mana</b> of both his allies and enemies, he effortlessly destroys lesser foes with <b>waves of illumination</b>, then enters his spirit form to gather his team to press the assault.",
           "npe_desc_loc": "Provides instant mana to allies",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "",
-              "description_loc": "Grants the Solar Bind ability while active.",
-              "name": "keeper_of_the_light_facet_solar_bind",
-              "icon": "slow",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Recall",
-              "description_loc": "This facet grants the ability <span class=\"AttributeHighlight\">{s:facet_ability_name}</span>.",
-              "name": "keeper_of_the_light_facet_recall",
-              "icon": "teleport",
-              "gradient_id": 3,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 18,
           "str_gain": 2.3,
           "agi_base": 15,
@@ -57,7 +38,7 @@
           "projectile_speed": 900,
           "armor": 2.5,
           "magic_resistance": 25,
-          "movement_speed": 320,
+          "movement_speed": 315,
           "turn_rate": 0.7,
           "sight_range_day": 1800,
           "sight_range_night": 800,
@@ -414,7 +395,7 @@
               "id": 5476,
               "name": "keeper_of_the_light_blinding_light",
               "name_loc": "Blinding Light",
-              "desc_loc": "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is %knockback_distance% range over %knockback_duration% seconds.",
+              "desc_loc": "A blinding light flashes over the targeted area, knocking back units to the edge of the area and blinding them, causing them to miss some attacks. Minimum knockback distance is %knockback_distance% range over %knockback_duration% seconds.",
               "lore_loc": "The Primordial light turns the tides of battle in favor of Ezalor and his allies.",
               "notes_loc": [
                 "Upon landing, units will destroy trees in a 150 radius."
@@ -435,10 +416,10 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                400,
                 500,
-                600,
-                700
+                575,
+                650,
+                725
               ],
               "cast_points": [
                 0.3,
@@ -553,7 +534,7 @@
                 {
                   "name": "knockback_distance",
                   "values_float": [
-                    400
+                    175
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -596,10 +577,10 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    400,
                     500,
-                    600,
-                    700
+                    575,
+                    650,
+                    725
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -724,10 +705,10 @@
                 0
               ],
               "cooldowns": [
-                18,
+                19,
                 16,
-                14,
-                12
+                13,
+                10
               ],
               "durations": [
                 0
@@ -747,20 +728,14 @@
                 {
                   "name": "mana_restore",
                   "values_float": [
-                    90,
-                    160,
-                    230,
+                    105,
+                    170,
+                    235,
                     300
                   ],
                   "is_percentage": false,
                   "heading_loc": "MANA RESTORE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_keeper_of_the_light_2",
-                      "value": 200,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -902,20 +877,14 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    18,
+                    19,
                     16,
-                    14,
-                    12
+                    13,
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_keeper_of_the_light_7",
-                      "value": 2,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -929,6 +898,236 @@
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1372,
+              "name": "keeper_of_the_light_radiant_bind",
+              "name_loc": "Solar Bind",
+              "desc_loc": "Weakens an enemy's magical resistance, and applies a slow that increases in strength the more the target moves.",
+              "lore_loc": "Even a glimpse of the First Light is enough to rob enemies of their senses.",
+              "notes_loc": [],
+              "shard_loc": "Grants %AbilityCharges% charges.",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "1125908496777225",
+              "target_team": 2,
+              "target_type": 19,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 4,
+              "dispellable": 2,
+              "max_level": 1,
+              "cast_ranges": [
+                850
+              ],
+              "cast_points": [
+                0.2
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                14
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                120
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "duration",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "slow",
+                  "values_float": [
+                    10
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SLOW PER 100 UNITS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "magic_resistance",
+                  "values_float": [
+                    20,
+                    30,
+                    40
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAGIC RESISTANCE REDUCTION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_keeper_of_the_light_3",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    850
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    2
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    14
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    120
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    14
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    0
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1229,7 +1428,7 @@
               "id": 5474,
               "name": "keeper_of_the_light_spirit_form",
               "name_loc": "Spirit Form",
-              "desc_loc": "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, and allows Illuminate to be channeled by a separate spirit and heal allies.",
+              "desc_loc": "Ezalor temporarily turns his body luminescent, gaining cast range, increasing the speed bonus from Bright Speed, and allows Illuminate to be channeled by a separate spirit and heal allies.",
               "lore_loc": "In a flash of light, Ezalor reveals his true nature.",
               "notes_loc": [],
               "shard_loc": "Increases illuminate heal.",
@@ -1287,7 +1486,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_keeper_of_the_light_2",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1300,16 +1505,14 @@
                 {
                   "name": "movement_speed",
                   "values_float": [
-                    10,
-                    15,
-                    20
+                    50
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MOVEMENT SPEED BONUS:",
+                  "heading_loc": "BRIGHT SPEED BONUS MOVEMENT:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_keeper_of_the_light_11",
-                      "value": 10,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -1413,10 +1616,10 @@
               "item_quality": 0
             },
             {
-              "id": 1558,
-              "name": "keeper_of_the_light_special_reserve",
-              "name_loc": "Special Reserve",
-              "desc_loc": "Keeper of the Light cannot go below %minimum_mana% mana.",
+              "id": 1769,
+              "name": "keeper_of_the_light_bright_speed",
+              "name_loc": "Bright Speed",
+              "desc_loc": "Keeper of the Light gains <span class=\"GameplayVariable\">1</span> movement speed for every %intelligence_per_speed% Intelligence.<br><br>Whenever Keeper of the Light moves %movement_per_vision% distance, he leaves behind light that allows him to see %vision_radius% range for %vision_duration% seconds.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1462,12 +1665,80 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "minimum_mana",
+                  "name": "intelligence_per_speed",
                   "values_float": [
-                    75
+                    2.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_per_vision",
+                  "values_float": [
+                    300
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "vision_radius",
+                  "values_float": [
+                    400
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "vision_duration",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MOVEMENT SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1619,9 +1890,9 @@
               "item_quality": 0
             },
             {
-              "id": 527,
-              "name": "special_bonus_unique_keeper_of_the_light_7",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Chakra Magic Cooldown",
+              "id": 664,
+              "name": "special_bonus_unique_keeper_of_the_light_11",
+              "name_loc": "+{s:bonus_movement_speed}% Spirit Form Bright Speed Bonus",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1743,9 +2014,9 @@
               "item_quality": 0
             },
             {
-              "id": 664,
-              "name": "special_bonus_unique_keeper_of_the_light_11",
-              "name_loc": "+{s:bonus_movement_speed}% Spirit Form Movement Speed Bonus",
+              "id": 6527,
+              "name": "special_bonus_unique_keeper_of_the_light_2",
+              "name_loc": "+{s:bonus_duration}s Spirit Form Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1805,9 +2076,9 @@
               "item_quality": 0
             },
             {
-              "id": 6527,
-              "name": "special_bonus_unique_keeper_of_the_light_2",
-              "name_loc": "+{s:bonus_mana_restore} Chakra Magic Mana",
+              "id": 6665,
+              "name": "special_bonus_unique_keeper_of_the_light_3",
+              "name_loc": "+{s:bonus_magic_resistance}% Solar Bind Magic Resistance Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1991,462 +2262,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1372,
-                  "name": "keeper_of_the_light_radiant_bind",
-                  "name_loc": "Solar Bind",
-                  "desc_loc": "Weakens an enemy's magical resistance, and applies a slow that increases in strength the more the target moves.",
-                  "lore_loc": "Even a glimpse of the First Light is enough to rob enemies of their senses.",
-                  "notes_loc": [],
-                  "shard_loc": "Grants %AbilityCharges% charges.",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "1125908496777225",
-                  "target_team": 2,
-                  "target_type": 19,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 4,
-                  "dispellable": 2,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    850
-                  ],
-                  "cast_points": [
-                    0.2
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    14
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    120
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        6
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "slow",
-                      "values_float": [
-                        10
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "SLOW PER 100 UNITS:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "magic_resistance",
-                      "values_float": [
-                        20,
-                        30,
-                        40
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "MAGIC RESISTANCE REDUCTION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastRange",
-                      "values_float": [
-                        850
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0.2
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCharges",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [
-                        2
-                      ],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChargeRestoreTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [
-                        14
-                      ],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        120
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        14
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [
-                        0
-                      ],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": true,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": [
-                {
-                  "id": 5475,
-                  "name": "keeper_of_the_light_recall",
-                  "name_loc": "Recall",
-                  "desc_loc": "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted. When cast, the teleport target's movement speed is increased. Upon teleporting, the increased movement speed buff are applied to both Keeper of the Light and the teleport target, and the latter also receives a Chakra Magic.<br><br> If alt-cast, teleports Keeper of the Light to the target Ally instead. <br><br> Ability Level increases with levels of Spirit Form.",
-                  "lore_loc": "Walk towards the light.",
-                  "notes_loc": [
-                    "If Keeper of the Light dies, the spell effect is interrupted.",
-                    "Recall will interrupt channeling spells.",
-                    "You can disable help to prevent Keeper from casting this spell on you.",
-                    "Can be cast through the minimap, choosing the nearest friendly hero."
-                  ],
-                  "shard_loc": "Grants %AbilityCharges% ability charges.",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "1108135116893",
-                  "target_team": 1,
-                  "target_type": 128,
-                  "flags": 64,
-                  "damage": 0,
-                  "immunity": 1,
-                  "dispellable": 2,
-                  "max_level": 3,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0.3,
-                    0.3,
-                    0.3
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    21,
-                    18,
-                    15
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    150
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "teleport_delay",
-                      "values_float": [
-                        6,
-                        5,
-                        4
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "TELEPORT DELAY:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "movespeed_bonus_duration",
-                      "values_float": [
-                        4
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "ally_movespeed_pct",
-                      "values_float": [
-                        12,
-                        16,
-                        20
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "MOVESPEED BONUS:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCastPoint",
-                      "values_float": [
-                        0.3
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCharges",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [
-                        2
-                      ],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityChargeRestoreTime",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [
-                        21,
-                        18,
-                        15
-                      ],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        150
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        21,
-                        18,
-                        15
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [
-                        0
-                      ],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": true,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

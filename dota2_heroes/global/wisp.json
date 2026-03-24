@@ -10,26 +10,7 @@
           "bio_loc": "Io is everywhere, and in all things.  Denounced by enemies as the great unmaker, worshiped by scholars as the twinkling of a divine eye, this strange Wisp of life-force occupies all planes at once, the merest fraction of its being crossing into physical existence at any one moment.  \r\n\t\t\t\t<br><br>Like the great twin riders Dark and Light, and yet another ancient traveler whose true history is lost to the ages, Io the Wisp is a Fundamental of the universe, a force older than time, a wanderer from realms far beyond mortal understanding. Io is nothing less than the sum of all attractive and repulsive forces within the material field, a sentient manifestation of the charge that bind existence together. It is only in the controlled warping of these electrical waylines that Io's presence can be experienced on the physical plane. A benevolent, cooperative force, Io bonds its strange magnetism to others so that the power of allies might be enhanced.  Its motives inscrutable, its strength unimaginable, Io moves through the physical plane, the perfect expression of the mysteries of the universe.",
           "hype_loc": "Io has a talent for <b>making allies more effective</b>. A powerful companion, the wisp's tether <b>speeds allies and stops enemies</b>. Capable of linking to and <b>teleporting</b> across the battlefield with an ally, Io can make a dangerous ally even deadlier.",
           "npe_desc_loc": "Links to its allies to buff them",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Kritzkrieg",
-              "description_loc": "Overcharge grants attack speed and spell amplification to Io and any Tethered allies.",
-              "name": "wisp_kritzkrieg",
-              "icon": "damage",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Medigun",
-              "description_loc": "Overcharge grants armor and magic resistance to Io and any Tethered allies.",
-              "name": "wisp_medigun",
-              "icon": "armor",
-              "gradient_id": 3,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 3,
           "agi_base": 14,
@@ -114,7 +95,6 @@
                 0
               ],
               "mana_costs": [
-                40,
                 40,
                 40,
                 40,
@@ -250,13 +230,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "ENEMY MOVE/ATTACK SLOW:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_wisp_11",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -348,27 +322,6 @@
                       "name": "special_bonus_unique_wisp_4",
                       "value": 75,
                       "operation": 5
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "tethered_unit_damage",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_wisp_8",
-                      "value": 12,
-                      "operation": 0
                     }
                   ],
                   "values_shard": [],
@@ -743,6 +696,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "spirit_spawn_time",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityDuration",
                   "values_float": [
                     15
@@ -816,7 +786,7 @@
               "id": 5487,
               "name": "wisp_overcharge",
               "name_loc": "Overcharge",
-              "desc_loc": "Io gains health regeneration based on max health.  If Io is Tethered to an ally, that unit also gains any bonuses granted by Overcharge.",
+              "desc_loc": "Io gains attack speed, spell amplification, and health regeneration based on max health. If Io is Tethered to an ally, that unit also gains any bonuses granted by Overcharge.",
               "lore_loc": "Drawing on the energy of matter from all worlds, Io begins the unravelling of time.",
               "notes_loc": [],
               "shard_loc": "",
@@ -873,102 +843,48 @@
                 {
                   "name": "bonus_attack_speed",
                   "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    35,
+                    60,
+                    85,
+                    110
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK SPEED:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_wisp_8",
+                      "value": 40,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "wisp_kritzkrieg",
-                    "values": [
-                      35,
-                      60,
-                      85,
-                      110
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "wisp_kritzkrieg"
+                  "required_facet": ""
                 },
                 {
                   "name": "bonus_spell_amp",
                   "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    8,
+                    10,
+                    12,
+                    14
                   ],
                   "is_percentage": true,
-                  "heading_loc": "SPELL AMPLIFICATION:",
+                  "heading_loc": "BONUS SPELL AMP:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "wisp_kritzkrieg",
-                    "values": [
-                      8,
-                      10,
-                      12,
-                      14
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "wisp_kritzkrieg"
-                },
-                {
-                  "name": "bonus_armor",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS ARMOR:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "wisp_medigun",
-                    "values": [
-                      4,
-                      7,
-                      10,
-                      13
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "wisp_medigun"
-                },
-                {
-                  "name": "bonus_mres",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "BONUS MAGIC RESISTANCE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "wisp_medigun",
-                    "values": [
-                      12,
-                      18,
-                      24,
-                      30
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "wisp_medigun"
+                  "required_facet": ""
                 },
                 {
                   "name": "hp_regen",
@@ -1292,7 +1208,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_wisp_relocate_delay",
-                      "value": 1.5,
+                      "value": 2,
                       "operation": 2
                     }
                   ],
@@ -1379,15 +1295,12 @@
               "item_quality": 0
             },
             {
-              "id": 1626,
-              "name": "wisp_essence_conduction",
-              "name_loc": "Wellspring",
-              "desc_loc": "Io regenerates from consumables and certain items %consume_speed%x faster.",
+              "id": 1770,
+              "name": "wisp_equilibrium",
+              "name_loc": "Equilibrium",
+              "desc_loc": "Io gains outgoing damage amplification the closer it is to full health, and Health Restoration and Healing Amplification the closer it is to zero health.",
               "lore_loc": "",
-              "notes_loc": [
-                "Total amount of restored health or mana remains the same.\n",
-                "Only applies to Healing Salve, Tango, Clarity, Bottle, Urn of Shadows, Spirit Vessel, Mana Draught, and Pollywog Charm."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1395,7 +1308,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "2",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1431,12 +1344,63 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "consume_speed",
+                  "name": "damage_amplification",
                   "values_float": [
-                    2
+                    5
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "MAX DAMAGE AMP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "heal_amplification",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX HEAL AMP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_damage_amp",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CURRENT DAMAGE AMP:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_heal_amp",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CURRENT HEAL AMP:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1526,8 +1490,8 @@
               "item_quality": 0
             },
             {
-              "id": 6115,
-              "name": "special_bonus_strength_7",
+              "id": 5982,
+              "name": "special_bonus_strength_8",
               "name_loc": "+{s:value} Strength",
               "desc_loc": "",
               "lore_loc": "",
@@ -1577,7 +1541,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    7
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1670,7 +1634,7 @@
             {
               "id": 6265,
               "name": "special_bonus_unique_wisp",
-              "name_loc": "+{s:bonus_hero_damage}% Spirits Damage",
+              "name_loc": "+{s:bonus_hero_damage} Spirits Hero Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1978,14 +1942,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

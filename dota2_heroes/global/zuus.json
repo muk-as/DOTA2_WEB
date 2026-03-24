@@ -10,27 +10,8 @@
           "bio_loc": "Lord of Heaven, father of gods, Zeus treats all the Heroes as if they are his rambunctious, rebellious children. After being caught unnumbered times in the midst of trysts with countless mortal women, his divine wife finally gave him an ultimatum: 'If you love mortals so much, go and become one. If you can prove yourself faithful, then return to me as my immortal husband. Otherwise, go and die among your creatures.' Zeus found her logic (and her magic) irrefutable, and agreed to her plan. He has been on his best behavior ever since, being somewhat fonder of immortality than he is of mortals. But to prove himself worthy of his eternal spouse, he must continue to pursue victory on the field of battle.",
           "hype_loc": "None can hide from Zeus, whether he's calling down a bolt to <b>reveal the surroundings</b>, sending an arc coursing through his nearest enemies, or summoning a <b>terrifying volley of lightning</b> upon all enemies. Wherever his foes are, Zeus will find them.",
           "npe_desc_loc": "Strikes enemies near and far with lightning",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Livewire",
-              "description_loc": "Static Field deals more damage to nearby enemies.",
-              "name": "zuus_livewire",
-              "icon": "range",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Divine Rampage",
-              "description_loc": "When Thundergod's Wrath kills an enemy, it deals more damage to the other enemies.",
-              "name": "zuus_divine_rampage",
-              "icon": "nuke",
-              "gradient_id": 3,
-              "index": 1
-            }
-          ],
-          "str_base": 19,
+          "facets": [],
+          "str_base": 21,
           "str_gain": 2.1,
           "agi_base": 11,
           "agi_gain": 1.2,
@@ -50,19 +31,19 @@
             0,
             0
           ],
-          "damage_min": 52,
-          "damage_max": 60,
+          "damage_min": 53,
+          "damage_max": 63,
           "attack_rate": 1.7,
           "attack_range": 380,
           "projectile_speed": 1100,
-          "armor": 3.8333335,
+          "armor": 2.8333335,
           "magic_resistance": 25,
-          "movement_speed": 315,
+          "movement_speed": 305,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
-          "health_regen": 2.15,
+          "max_health": 582,
+          "health_regen": 2.3500001,
           "max_mana": 351,
           "mana_regen": 1.15,
           "abilities": [
@@ -110,10 +91,10 @@
                 0
               ],
               "mana_costs": [
-                75,
                 85,
+                90,
                 95,
-                105
+                100
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -121,13 +102,13 @@
                 {
                   "name": "arc_damage",
                   "values_float": [
-                    90,
-                    120,
-                    150,
+                    105,
+                    130,
+                    155,
                     180
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BASE DAMAGE:",
+                  "heading_loc": "DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_zeus_2",
@@ -235,14 +216,20 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    75,
                     85,
+                    90,
                     95,
-                    105
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_zeus_6",
+                      "value": 20,
+                      "operation": 4
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -262,8 +249,8 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_zeus_6",
-                      "value": 0.4,
-                      "operation": 2
+                      "value": 20,
+                      "operation": 4
                     }
                   ],
                   "values_shard": [],
@@ -372,7 +359,7 @@
                 {
                   "name": "true_sight_radius",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -389,7 +376,7 @@
                 {
                   "name": "sight_radius_day",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "SIGHT RADIUS:",
@@ -406,7 +393,7 @@
                 {
                   "name": "sight_radius_night",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -791,7 +778,7 @@
                   "values_float": [
                     80
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "MOVE SPEED SLOW:",
                   "bonuses": [],
                   "values_shard": [],
@@ -844,14 +831,14 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "postjump_movespeed_duration",
+                  "name": "AbilityCharges",
                   "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_zeus_jump_postjump_movespeed",
-                      "value": 1.6,
+                      "name": "special_bonus_unique_zeus_jump_charges",
+                      "value": 3,
                       "operation": 0
                     }
                   ],
@@ -865,17 +852,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "postjump_movespeed",
-                  "values_float": [],
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    26,
+                    22,
+                    18,
+                    14
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_zeus_jump_postjump_movespeed",
-                      "value": 25,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -915,13 +901,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_zeus_jump_cooldown",
-                      "value": 4,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1236,7 +1216,7 @@
                   "values_float": [
                     50
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "ARC LIGHTNING DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
@@ -1283,7 +1263,7 @@
               "id": 5113,
               "name": "zuus_thundergods_wrath",
               "name_loc": "Thundergod's Wrath",
-              "desc_loc": "Strikes all enemy heroes with a bolt of lightning, dealing damage, no matter where they may be.<br><br>Thundergod's Wrath also provides True Sight around each hero struck.  If an enemy hero is invisible, it takes no damage, but the True Sight is still created at that hero's location.",
+              "desc_loc": "Strikes all enemy heroes with a bolt of lightning, dealing damage no matter where they may be. Provides True Sight around each hero before they are struck.",
               "lore_loc": "The Lord of Heaven smites all who oppose him, near or far.",
               "notes_loc": [],
               "shard_loc": "",
@@ -1336,7 +1316,7 @@
                 {
                   "name": "sight_radius_day",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "TRUE SIGHT RADIUS:",
@@ -1353,7 +1333,7 @@
                 {
                   "name": "sight_radius_night",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1408,44 +1388,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "growing_delay",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DELAY BETWEEN BOLTS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "zuus_divine_rampage",
-                    "values": [
-                      0.2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "zuus_divine_rampage"
-                },
-                {
-                  "name": "grow_kill_amp",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "AMPLIFICATION PER KILL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "zuus_divine_rampage",
-                    "values": [
-                      25
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "zuus_divine_rampage"
                 },
                 {
                   "name": "AbilityCastPoint",
@@ -1535,7 +1477,7 @@
               "damage": 2,
               "immunity": 4,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1566,13 +1508,10 @@
                 {
                   "name": "damage_health_pct",
                   "values_float": [
-                    2.5,
-                    3.25,
-                    4,
-                    4.75
+                    3.45
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "CURRENT HP DAMAGE:",
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_zeus_static_field_dmg",
@@ -1583,101 +1522,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "zuus_livewire",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "damage_health_pct_max_close",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAX DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "zuus_livewire",
-                    "values": [
-                      5,
-                      6,
-                      7,
-                      8
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "zuus_livewire"
-                },
-                {
-                  "name": "damage_health_pct_min_close",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MIN DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "zuus_livewire",
-                    "values": [
-                      2.5,
-                      3,
-                      3.5,
-                      4
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "zuus_livewire"
-                },
-                {
-                  "name": "distance_threshold_min",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "MAX DAMAGE RANGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "zuus_livewire",
-                    "values": [
-                      200
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "zuus_livewire"
-                },
-                {
-                  "name": "distance_threshold_max",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "MIN DAMAGE RANGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "zuus_livewire",
-                    "values": [
-                      1200
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "zuus_livewire"
                 }
               ],
               "is_item": false,
@@ -1902,7 +1751,7 @@
             {
               "id": 1615,
               "name": "special_bonus_unique_zeus_6",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Arc Lightning Cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}% Arc Lightning Mana Cost / Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2148,9 +1997,9 @@
               "item_quality": 0
             },
             {
-              "id": 1539,
-              "name": "special_bonus_unique_zeus_static_field_dmg",
-              "name_loc": "+{s:bonus_damage_health_pct}% Static Field Damage",
+              "id": 1791,
+              "name": "special_bonus_unique_zeus_jump_charges",
+              "name_loc": "{s:bonus_AbilityCharges} Heavenly Jump Charges",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2210,14 +2059,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

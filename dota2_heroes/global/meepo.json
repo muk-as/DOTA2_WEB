@@ -10,26 +10,7 @@
           "bio_loc": "\"If you ask me, life is all about who you know and what you can find. When you live up in the Riftshadow Ruins, just finding food can be tough. So you need to cut corners, you need to scrounge, you need to know your strengths. Some of the beasts up there can kill you, so you need a way to trap the weak and duck the strong. On the upside, the ruins have history, and history is worth a lot to some people. There used to be a palace there, where they had all these dark rituals. Bad stuff. If you survived the ceremony, they would shatter a crystal and split your soul into pieces. They made great art though! Sculptures and such. Let me tell you: sometimes you stumble onto some of those old carvings. Take a pack full of those to town and sell them, then get yourself food for a few weeks. If luck is really on your side, you might find a Riftshadow crystal. Get it appraised and start asking around. Someone always knows some crazy fool looking for this kind of thing. If all else fails, sell it to a Magus the next time one's in town. They love that stuff. Still, whatever you do, be careful handling those crystals. You do not want one to go off on you. It really hurts.\"",
           "hype_loc": "By summoning up to five permanent copies of himself, Meepo can fight from every front at once. Spreading his clones throughout the battlefield, when an enemy is found, he binds his foe, gathers his selves with an <b>explosive teleport</b>, then buries what remains.",
           "npe_desc_loc": "Five are stronger than one",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "More Meepo",
-              "description_loc": "Obtain extra Meepos sooner and get 1 extra Meepo.",
-              "name": "meepo_more_meepo",
-              "icon": "summons",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Codependent",
-              "description_loc": "Meepos increase other Meepos' attack speed and armor.",
-              "name": "meepo_codependent",
-              "icon": "illusion",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 24,
           "str_gain": 2.2,
           "agi_base": 17,
@@ -57,7 +38,7 @@
           "projectile_speed": 900,
           "armor": 5.8333335,
           "magic_resistance": 25,
-          "movement_speed": 320,
+          "movement_speed": 315,
           "turn_rate": 0.9,
           "sight_range_day": 1800,
           "sight_range_night": 800,
@@ -325,7 +306,7 @@
                 "Can teleport to Meepo illusions."
               ],
               "shard_loc": "",
-              "scepter_loc": "Each additional Meepo in the tower when poofing increases the damage done by %megameepo_poof_scaling%%%",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
@@ -527,7 +508,7 @@
               "id": 7318,
               "name": "meepo_ransack",
               "name_loc": "Ransack",
-              "desc_loc": "Steals health from the enemy with each strike and heals all other Meepos for that amount.",
+              "desc_loc": "Steals health from the enemy with each strike and heals all other Meepos for that amount.<br><br>Reduced to <span class=\"GameplayVariable\">60%</span> against creeps.",
               "lore_loc": "So you gonna need that, or...?",
               "notes_loc": [
                 "Amount healed is amplified by Lifesteal Amplification"
@@ -545,7 +526,7 @@
               "target_type": 0,
               "flags": 0,
               "damage": 4,
-              "immunity": 4,
+              "immunity": 3,
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
@@ -585,32 +566,6 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "HEALTH STEAL (HEROES):",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_meepo_6",
-                      "value": 7,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "health_steal_creeps",
-                  "values_float": [
-                    3,
-                    5,
-                    7,
-                    9
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "HEALTH STEAL (CREEPS):",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_meepo_6",
@@ -794,7 +749,7 @@
               "id": 1109,
               "name": "meepo_megameepo",
               "name_loc": "MegaMeepo",
-              "desc_loc": "Primary Meepo mounts all other Meepos in a %radius% radius around him on top of his shoulders. While in this form, he gains %stats_pct%%% of the other Meepo stats and can Fling them at enemies, dealing damage and slowing them.\n\n When cast, Earthbind generates additional nets and Poof deals bonus damage based on the amount of Meepos riding on top.",
+              "desc_loc": "Primary Meepo mounts all other Meepos in a %radius% radius around him on top of his shoulders. While in this form, he gains %stats_pct%%% of the other Meepo stats and can Fling them at enemies, dealing damage and slowing them.\n\n When cast, Earthbind generates additional nets and Poof deals %poof_damage_factor%%% more damage for each Meepo on top.",
               "lore_loc": "Hi, Meepos!",
               "notes_loc": [],
               "shard_loc": "",
@@ -943,6 +898,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "poof_damage_factor",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCooldown",
                   "values_float": [
                     60
@@ -977,12 +949,10 @@
               "id": 5433,
               "name": "meepo_divided_we_stand",
               "name_loc": "Divided We Stand",
-              "desc_loc": "Meepo summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. However, the clones cannot wield any items but the boots that Meepo himself wears.  If any of the clones die, they all die. Divided We Stand grants all Meepos bonus Magic Resistance.",
+              "desc_loc": "Meepo summons another Meepo, which levels up and shares items with the main Meepo. Ability cooldowns are independent, but items share cooldowns between Meepos. Damage, attack speed, health / mana regeneration, mana burn, and proc chance bonuses from items are distributed equally among the amount of Meepos.<br><br>If any Meepo dies, they all die.",
               "lore_loc": "Do I know you?",
-              "notes_loc": [
-                "Of boot abilities, clones can only use the active ability from Phase Boots."
-              ],
-              "shard_loc": "Divided We Stand can be cast as long as there's a Meepo within %fling_radius% radius of yourself. Causes that Meepo to fling you towards a target within a %AbilityCastRange% range, dealing damage and slowing their movement speed. Mana Cost: %AbilityManaCost%",
+              "notes_loc": [],
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "Can now be upgraded at level %required_level% and every %bonus_levels_between_upgrades% levels afterwards to a max level of %max_level%. Duplicate Meepos receive %main_meepo_stats_pct%%% of the main Meepo's bonus attributes.",
@@ -1027,7 +997,8 @@
                   "values_float": [
                     1,
                     2,
-                    3
+                    3,
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "NUMBER OF DUPLICATES:",
@@ -1035,156 +1006,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "meepo_more_meepo",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "tooltip_clones_multiplicity",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "NUMBER OF DUPLICATES:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "meepo_more_meepo",
-                    "values": [
-                      1,
-                      2,
-                      3,
-                      4
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "meepo_more_meepo"
-                },
-                {
-                  "name": "tooltip_share_percentage",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
                     "name": "",
                     "values": [],
                     "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "tooltip_share_percentage_scepter",
-                  "values_float": [
-                    100
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "tooltip_respawn",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "magic_resist",
-                  "values_float": [
-                    10,
-                    15,
-                    20
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "BONUS MAGIC RESIST:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "tooltip_magic_resist",
-                  "values_float": [
-                    10,
-                    15,
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "meepo_more_meepo",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "tooltip_magic_resist_multiplicity",
-                  "values_float": [
-                    10,
-                    15,
-                    20,
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "meepo_pack_rat",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
                   },
                   "required_facet": ""
                 },
                 {
                   "name": "required_level",
                   "values_float": [
-                    4
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1192,11 +1023,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "meepo_more_meepo",
-                    "values": [
-                      3
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -1211,18 +1040,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "meepo_more_meepo",
-                    "values": [
-                      7
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
                   "name": "max_level",
                   "values_float": [
-                    3
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1230,18 +1057,19 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "meepo_more_meepo",
-                    "values": [
-                      4
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
-                  "name": "main_meepo_stats_pct",
+                  "name": "dps_penalty_pct",
                   "values_float": [
-                    100
+                    50,
+                    66,
+                    75,
+                    80
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1249,70 +1077,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "meepo_more_meepo",
-                    "values": [
-                      90
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "support_radius",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "meepo_codependent",
-                    "values": [
-                      600
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "meepo_codependent"
-                },
-                {
-                  "name": "support_group_attack_speed_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "meepo_codependent",
-                    "values": [
-                      5
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "meepo_codependent"
-                },
-                {
-                  "name": "support_group_armor",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "meepo_codependent",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "meepo_codependent"
                 }
               ],
               "is_item": false,
@@ -1321,6 +1090,157 @@
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1763,
+              "name": "meepo_geomancy",
+              "name_loc": "Geomancy",
+              "desc_loc": "Meepo grants stacking bonuses to himself and his clones based on their terrain.  Each Meepo grants his bonus to the other Meepos.<br><br>If there is a tree within %tree_radius% range, he receives %tree_regen% HP regen.<br><br>If he is standing on dirt, he receives %dirt_move_speed%%% bonus movement speed.<br><br>If he is in the water, his attacks slow the target by %water_move_slow%%% for %water_slow_duration% seconds.",
+              "lore_loc": "",
+              "notes_loc": [
+                "Dirt includes any terrain that is not water."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "3",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 3,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "tree_radius",
+                  "values_float": [
+                    250
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "tree_regen",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "dirt_move_speed",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "water_move_slow",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "water_slow_duration",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": true,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -1526,87 +1446,6 @@
               "ability_is_granted_by_scepter": true,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 1356,
-              "name": "meepo_sticky_fingers",
-              "name_loc": "Sticky Fingers",
-              "desc_loc": "Has an extra choice of neutral item to select from.",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 3,
-              "max_level": 1,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "bonus_choice",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -2031,8 +1870,8 @@
               "item_quality": 0
             },
             {
-              "id": 6195,
-              "name": "special_bonus_hp_350",
+              "id": 5976,
+              "name": "special_bonus_hp_400",
               "name_loc": "+{s:value} Health",
               "desc_loc": "",
               "lore_loc": "",
@@ -2083,7 +1922,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    350
+                    400
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2175,14 +2014,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

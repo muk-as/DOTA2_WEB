@@ -10,26 +10,7 @@
           "bio_loc": "Nothing is known of Enigma's background. There are only stories and legends, most of them apocryphal, passed down through the ages. In truth, Enigma is a mystery for whom the only true biography is description: he is a universal force, a consumer of worlds. He is a being of the void, at times corporeal, other times ethereal. A beast between the planes. \r\n\t\t\t\t<br><br>There are stories that say he was once a great alchemist who tried to unlock the secrets of the universe and was cursed for his arrogance. Other legends tell that he is an ancient being of strange gravity, the abyss personified--a twisted voice from out the original darkness, before the first light in the universe. And there are older legends that say he is the first collapsed star, a black hole grown complicated and sentient--his motivations unknowable, his power inexorable, a force of destruction unleashed upon existence itself.",
           "hype_loc": "Widely feared for his ultimate ability, Enigma can <b>summon a black hole</b> capable of entrapping enemy forces, so that allies can then destroy them. An ever-present contingent of <b>eidolons at his side</b>, he pummels foes with ranged attacks.",
           "npe_desc_loc": "Traps and damages enemies in a black hole",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Event Horizon",
-              "description_loc": "Units in a %radius% radius moving away from Enigma have a %speed_bonus%%% movespeed penalty.",
-              "name": "enigma_gravity",
-              "icon": "slow",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Splitting Image",
-              "description_loc": "Enigma spawns Eidolons upon receiving damage.",
-              "name": "enigma_fragment",
-              "icon": "summons",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.5,
           "agi_base": 14,
@@ -193,13 +174,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER INSTANCE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_enigma_5",
-                      "value": 60,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -775,6 +750,40 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "damage_threshold",
+                  "values_float": [
+                    375
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_reset_interval",
+                  "values_float": [
+                    7
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     400
@@ -903,7 +912,7 @@
               "id": 5148,
               "name": "enigma_midnight_pulse",
               "name_loc": "Midnight Pulse",
-              "desc_loc": "Steeps an area in dark resonance, dealing damage to enemies every %tick_rate%s.",
+              "desc_loc": "Steeps an area in dark resonance, dealing %base_damage% + a percentage of the enemies current HP as damage.",
               "lore_loc": "A section of the world slowly descends into the void.",
               "notes_loc": [
                 "This ability destroys trees in its area.",
@@ -989,7 +998,7 @@
                     20
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BASE DPS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1009,7 +1018,7 @@
                     10
                   ],
                   "is_percentage": true,
-                  "heading_loc": "CURRENT HP DPS:",
+                  "heading_loc": "CURRENT HEALTH AS DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1146,10 +1155,10 @@
               "item_quality": 0
             },
             {
-              "id": 1259,
-              "name": "enigma_gravity_well",
-              "name_loc": "Gravity Well",
-              "desc_loc": "Allies within %max_dist% distance from Enigma have up to %damage_reduction%%% Damage Reduction. Effect starts at 0% at max distance and increases to its maximum strength when the ally is at %min_dist% distance. Does not affect Enigma itself.",
+              "id": 1261,
+              "name": "enigma_event_horizon",
+              "name_loc": "Event Horizon",
+              "desc_loc": "Units in a %radius% radius moving away from Enigma have a movespeed penalty.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1159,14 +1168,14 @@
                 ""
               ],
               "type": 0,
-              "behavior": "13202729467970",
+              "behavior": "13194139533379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
+              "dispellable": 3,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1195,12 +1204,35 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "max_dist",
+                  "name": "radius",
                   "values_float": [
-                    500
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_enigma_5",
+                      "value": 100,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "speed_bonus",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1212,29 +1244,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "min_dist",
+                  "name": "vision_cone",
                   "values_float": [
-                    200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_reduction",
-                  "values_float": [
-                    9,
-                    11,
-                    13,
-                    15
+                    0.08715
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1849,7 +1861,7 @@
             {
               "id": 7658,
               "name": "special_bonus_unique_enigma_5",
-              "name_loc": "+{s:bonus_damage} Malefice Instance Damage",
+              "name_loc": "+{s:bonus_radius} Event Horizon Radius",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2157,266 +2169,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1261,
-                  "name": "enigma_event_horizon",
-                  "name_loc": "Event Horizon",
-                  "desc_loc": "Units in a %radius% radius moving away from Enigma have a %speed_bonus%%% movespeed penalty.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "radius",
-                      "values_float": [
-                        600
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "speed_bonus",
-                      "values_float": [
-                        8,
-                        12,
-                        16,
-                        20
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "vision_cone",
-                      "values_float": [
-                        0.08715
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1260,
-                  "name": "enigma_splitting_image",
-                  "name_loc": "Splitting Image",
-                  "desc_loc": "Enigma spawns Eidolons upon receiving damage.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Whenever Enigma takes more than %damage_threshold% damage from any source, he spawns an Eidolon next to him. Damage counter resets to zero after %damage_reset_interval%s. Eidolons created in this fashion grant %non_splitting_bounty_reduction_tooltip%%% experience and gold."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "damage_threshold",
-                      "values_float": [
-                        375
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "damage_reset_interval",
-                      "values_float": [
-                        7
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "eidolon_spawns",
-                      "values_float": [
-                        1
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "non_splitting_bounty_reduction_tooltip",
-                      "values_float": [
-                        50
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "Never one to turn his back on a fight, Rigwarl was known for battling the biggest, meanest scrappers he could get his hands on. Christened Bristleback by the drunken crowds, he waded into backroom brawls in every road tavern between Slom and Elze, until his exploits finally caught the eye of a barkeep in need of an enforcer. For a bit of brew, Bristleback was hired to collect tabs, keep the peace, and break the occasional leg or two (or five, in the case of one unfortunate web-hund).\r\n\t\t\t\t<br><br>After indulging in a night of merriment during which bodily harm was meted out in equal parts upon both delinquent patrons and his own liver, Bristleback finally met his match. \"Your tusks offend me, sir,\" he was heard to drunkenly slur to one particularly large fellow from the northern wastes whose bill had come due. What followed was a fight for the ages. A dozen fighters jumped in. No stool was left unbroken, and in the end, the impossible happened: the tab went unpaid. Over the weeks that followed, Bristleback's wounds healed, and his quills grew back; but an enforcer's honor can be a prickly thing. He paid the tab from his own coin, vowing to track down this northerner and extract redemption. And then he did something he'd never done before: he actually trained, and in so doing made a startling discovery about himself. A smile peeled back from his teeth as he flexed his quills. Turning his back to a fight might be just the thing.",
           "hype_loc": "When it comes to a fight, Bristleback really puts his back into it. <b>Reducing all damage</b> arriving from the rear or from the sides, he wades into battle with barely a care, spraying enemies with <b>damaging quills</b> and <b>slowing snot.</b>",
           "npe_desc_loc": "Takes reduced damage when facing away from enemies",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Snot Rocket",
-              "description_loc": "Bristleback now fires Viscous Nasal Goo instead of Quills when damaged. Viscous Nasal Goo effects are stronger.",
-              "name": "bristleback_snot_rocket",
-              "icon": "snot",
-              "gradient_id": 0,
-              "index": 1
-            },
-            {
-              "color": 0,
-              "title_loc": "Seeing Red",
-              "description_loc": "Warpath can be activated to gain extra bonuses. While Seeing Red, Bristleback's vision is limited and he does not receive vision from his allies.",
-              "name": "bristleback_seeing_red",
-              "icon": "no_vision",
-              "gradient_id": 0,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 2.8,
           "agi_base": 17,
@@ -77,7 +58,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Max stacks increased.",
+                "Max stacks and armor reduction per stack increased.",
                 ""
               ],
               "type": 0,
@@ -233,29 +214,10 @@
                 {
                   "name": "stack_limit",
                   "values_float": [
-                    4
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "STACK LIMIT:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bristleback_snot_rocket",
-                    "values": [
-                      2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "goo_duration_creep",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -581,11 +543,12 @@
               "id": 5550,
               "name": "bristleback_bristleback",
               "name_loc": "Bristleback",
-              "desc_loc": "Bristleback takes less damage if hit on the sides or rear.  If Bristleback takes %quill_release_threshold% damage from the rear, he releases a Quill Spray of the current level.",
+              "desc_loc": "Bristleback takes less damage if hit on the sides or rear. If Bristleback takes enough damage from the rear, he releases a Quill Spray of the current level.",
               "lore_loc": "Turning his back to a fight might be just the thing.",
               "notes_loc": [
                 "Bristleback's rear is considered to be within 70 degrees from the back.",
-                "Bristleback's side is considered to be within 110 degrees from the back."
+                "Bristleback's side is considered to be within 110 degrees from the back.",
+                "Damage done by Quill Sprays released by this ability passively is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
               ],
               "shard_loc": "",
               "scepter_loc": "Adds active ability to Bristleback. Bristleback rotates towards the targeted direction and, after %activation_delay%s, forcefully ejects %activation_num_quill_sprays% sequential Quill Sprays in a tight conical pattern out of his back every %activation_spray_interval%s. Bristleback's facing is locked during this time, he is disarmed, and his speed is reduced by %activation_movement_speed_pct%%%.",
@@ -726,7 +689,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE THRESHOLD:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bristleback",
+                      "value": 25,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1211,12 +1180,10 @@
                 0
               ],
               "cooldowns": [
-                45
+                0
               ],
               "durations": [
-                10,
-                10,
-                10
+                0
               ],
               "damages": [
                 0,
@@ -1336,143 +1303,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "active_bonus_attack_percent",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "ACTIVE BONUS DAMAGE PER STACK:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bristleback_seeing_red",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "bristleback_seeing_red"
-                },
-                {
-                  "name": "active_bonus_movement_percent",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "ACTIVE BONUS MOVEMENT PER STACK:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bristleback_seeing_red",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "bristleback_seeing_red"
-                },
-                {
-                  "name": "active_duration",
-                  "values_float": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bristleback_seeing_red",
-                    "values": [
-                      4,
-                      5,
-                      6
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "bristleback_seeing_red"
-                },
-                {
-                  "name": "active_view_angle_restriction",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bristleback_seeing_red",
-                    "values": [
-                      110
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "bristleback_seeing_red"
-                },
-                {
-                  "name": "AbilityDuration",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bristleback_seeing_red",
-                    "values": [
-                      55,
-                      65,
-                      75
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "bristleback_seeing_red"
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    45
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1541,7 +1371,7 @@
                 {
                   "name": "amp_pct",
                   "values_float": [
-                    10
+                    4.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2021,9 +1851,9 @@
               "item_quality": 0
             },
             {
-              "id": 434,
-              "name": "special_bonus_spell_lifesteal_12",
-              "name_loc": "+{s:value}% Spell Lifesteal",
+              "id": 6083,
+              "name": "special_bonus_unique_bristleback",
+              "name_loc": "-{s:bonus_quill_release_threshold} Bristleback Damage Threshold",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2069,25 +1899,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    12
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -2165,14 +1977,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

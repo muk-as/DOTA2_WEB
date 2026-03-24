@@ -10,26 +10,7 @@
           "bio_loc": "Once a Grandmaster of the Demon Witch tradition of sorcery, Lion earned fame among his brethren for fighting on the side of light and righteousness. But adulation corrupts. With powers surpassed only by his ambition, the mage was seduced by a demon and turned to evil, trading his soul for prestige. After committing horrible crimes that marred his soul, he was abandoned. The demon betrayed him, striking better deals with his enemies. Such was Lion's rage that he followed the demon back to hell and slew it, ripping it limb from limb, taking its demonic hand for his own. However, such demonoplasty comes at a cost. Lion was transfigured by the process, his body transformed into something unrecognizable. He rose from hell, rage incarnate, slaying even those who had once called him master, and laying waste to the lands where he had once been so adored. He survives now as the sole practitioner of the Demon Witch tradition, and those who present themselves as acolytes or students are soon relieved of their mana and carried off by the faintest gust of wind.",
           "hype_loc": "Lion gives enemies little chance to retaliate. <b>Stunning targets</b> with a damaging row of spikes, or temporarily <b>transforming them into a harmless critter</b>, even if his powerful spells aren't enough, he and his allies should still have all the time they need to slay their foes.",
           "npe_desc_loc": "Steals enemy mana to fuel his own abilities",
-          "facets": [
-            {
-              "color": 4,
-              "title_loc": "Essence Eater",
-              "description_loc": "Mana Drain deals damage equal to {s:bonus_damage_pct}% of mana stolen.",
-              "name": "lion_essence_eater",
-              "icon": "nuke",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Fist of Death",
-              "description_loc": "Lion gains a strong Melee cleaving attack after casting Finger of Death.",
-              "name": "lion_fist_of_death",
-              "icon": "fist",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 18,
           "str_gain": 2.4,
           "agi_base": 15,
@@ -137,13 +118,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lion_3",
-                      "value": 65,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -734,25 +709,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_essence_eater",
-                    "values": [
-                      100
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_essence_eater"
-                },
-                {
                   "name": "magic_resist",
                   "values_float": [
                     0
@@ -877,7 +833,7 @@
               "id": 1249,
               "name": "lion_to_hell_and_back",
               "name_loc": "To Hell and Back",
-              "desc_loc": "Lion gains %debuff_amp%%% debuff duration and %spell_amp%%% spell amplification for %duration%s after respawning.",
+              "desc_loc": "Lion gains %debuff_amp%%% debuff duration after killing or assisting in a Hero kill while that Hero is dead.<br><br>Lion gains %spell_amp%%% spell amplification for %duration%s after respawning or resurrecting or until he gets a kill or assist.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -926,6 +882,23 @@
                   "name": "duration",
                   "values_float": [
                     90
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_window",
+                  "values_float": [
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1003,20 +976,20 @@
               "id": 5047,
               "name": "lion_finger_of_death",
               "name_loc": "Finger of Death",
-              "desc_loc": "Rips at an enemy unit, trying to turn it inside-out. Deals massive damage and grows stronger with each life it consumes.",
+              "desc_loc": "Rips at an enemy unit, trying to turn it inside-out, dealing massive damage to the target.<br><br>After using Finger of Death, Lion's hand becomes empowered, allowing him to use a cleaving melee attack with %punch_attack_range% range with bonus movement speed.<br><br>Finger of Death gains permanent bonus damage for it and the fist for each enemy Hero it or the fist kills. <br><br>The melee attack may be disabled by setting the ability to Alt Cast.",
               "lore_loc": "Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force.",
               "notes_loc": [
                 "Finger of Death has a %damage_delay% delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage.",
                 "Finger of Death only gains damage if the enemy hero dies within %grace_period% seconds of being affected by Finger of Death."
               ],
               "shard_loc": "",
-              "scepter_loc": "Increases damage. Decreases cooldown. Finger of Death hits all units in a small area.",
+              "scepter_loc": "Finger of Death gains area of effect damage on the initial cast, and increases duration and cleave damage on its subsequent melee attacks.",
               "facets_loc": [
                 "",
-                "After casting Finger of Death, Lion switches from ranged to melee attacks and gains bonus damage and cleave. Enemy heroes killed within %punch_grace_period%s of being punched will add Finger of Death stacks."
+                ""
               ],
               "type": 1,
-              "behavior": "40",
+              "behavior": "1099511627816",
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
@@ -1036,9 +1009,9 @@
                 0
               ],
               "cooldowns": [
-                120,
-                80,
-                40
+                110,
+                70,
+                30
               ],
               "durations": [
                 0
@@ -1068,9 +1041,7 @@
                   "heading_loc": "DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    100
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1081,7 +1052,7 @@
                 {
                   "name": "damage_per_kill",
                   "values_float": [
-                    40
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER KILL:",
@@ -1136,18 +1107,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "cooldown_scepter",
+                  "name": "punch_duration",
                   "values_float": [
-                    0
+                    20
                   ],
                   "is_percentage": false,
-                  "heading_loc": "COOLDOWN:",
+                  "heading_loc": "MELEE DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    90,
-                    60,
-                    30
+                    10
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -1157,7 +1126,130 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "splash_radius_scepter",
+                  "name": "punch_bonus_movespeed",
+                  "values_float": [
+                    30
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MELEE BONUS MOVE SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "punch_attack_range",
+                  "values_float": [
+                    250
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "punch_bonus_damage_base",
+                  "values_float": [
+                    20,
+                    30,
+                    40
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MELEE BONUS DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cleave_damage",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CLEAVE DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    25
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cleave_starting_width",
+                  "values_float": [
+                    150
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CLEAVE STARTING WIDTH:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cleave_ending_width",
+                  "values_float": [
+                    350
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CLEAVE ENDING WIDTH:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cleave_distance",
+                  "values_float": [
+                    650
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CLEAVE DISTANCE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "splash_radius",
                   "values_float": [
                     0
                   ],
@@ -1174,177 +1266,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "punch_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "FIST DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      20
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "punch_attack_range",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      250
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "punch_bonus_damage_base",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "FIST DAMAGE BONUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      40
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "punch_bonus_damage_per_stack",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "FIST DAMAGE BONUS PER STACK:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      30
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "punch_grace_period",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      3
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "cleave_starting_width",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      150
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "cleave_ending_width",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      360
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "cleave_distance",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      650
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
-                },
-                {
-                  "name": "cleave_damage",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "CLEAVE DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "lion_fist_of_death",
-                    "values": [
-                      50
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "lion_fist_of_death"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1402,9 +1323,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    120,
-                    80,
-                    40
+                    110,
+                    70,
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1825,68 +1746,6 @@
               "item_quality": 0
             },
             {
-              "id": 6389,
-              "name": "special_bonus_unique_lion_2",
-              "name_loc": "+{s:bonus_AbilityCastRange} Earth Spike cast range/travel distance",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
               "id": 6678,
               "name": "special_bonus_unique_lion_4",
               "name_loc": "+{s:bonus_radius} AoE Hex",
@@ -1947,16 +1806,71 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
-            }
-          ],
-          "facet_abilities": [
-            {
-              "abilities": []
             },
             {
-              "abilities": []
+              "id": 6389,
+              "name": "special_bonus_unique_lion_2",
+              "name_loc": "+{s:bonus_AbilityCastRange} Earth Spike cast range/travel distance",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
             }
-          ]
+          ],
+          "facet_abilities": []
         }
       ]
     },

@@ -10,17 +10,7 @@
           "bio_loc": "Far to the west, in the mountains beyond the Vale of Augury, lie the remains of an ancient power, a fount of eldritch energy nestled deep in the high woods. It is said that the things that grow here, grow strangely. To the forces of nature this is a sacred place, made to stay hidden and unknown. Many are the traps and dangers of this land.  There are all-consuming grasses, crossbred fauna and poisonous flowers, but none are so fierce as the mighty Treant Protectors.\r\n\t\t\t\t<br><br>These ageless, titanic beings, charged with keeping the peace in this dangerous land, ensure that none within encroach without reason, and none without poach their secrets. For time untold they tended to their holy ground, uninterrupted, only dimly aware of the changing world beyond. Yet inevitably the wider world grew aware of this untamed land, and with each passing winter the outsiders grew bolder. Soon they arrived with tools to cut and with flames to burn, and often the Treants would ponder: who are these fragile, industrious creatures? What now had become of the wild, green world? There came and went an age of questions and of doubts, a thousand summers of long traditions set to scrutiny, while more and more the outsiders died and fed their earth.\r\n\t\t\t\t<br><br>When all that bloomed had finally finished their say, curiosity had overcome caution. It was decided: a lone Protector would be sent into the wider world, and instructed to wander until the glaciers arose once more, to observe the changing land and its creatures, and to discover what unknown dangers could threaten their sacred ground.",
           "hype_loc": "Treant Protector is ever the benevolent ally, sprouting <b>regenerating armor</b> for his cohorts and their fortifications alike. Emerging unseen from among the trees, he <b>binds foes</b> with overgrowth as he <b>leeches health</b> from enemies and into nearby allies.",
           "npe_desc_loc": "Calls upon the forest to root his foes",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Uprooted",
-              "description_loc": "This facet doesn't do anything. Treant Protector is still finding his roots...",
-              "name": "treant_treant",
-              "icon": "tree",
-              "gradient_id": 2,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 25,
           "str_gain": 3.4,
           "agi_base": 15,
@@ -367,7 +357,7 @@
               "id": 5435,
               "name": "treant_leech_seed",
               "name_loc": "Leech Seed",
-              "desc_loc": "Treant's attack plants a life-sapping seed in an enemy unit, dealing additional magic damage. The unit is then bound for a short duration and emits %healing_pulse_count% healing pulses to up to %max_heal_units% nearby allies of Treant Protector based on a flat amount and the damage dealt by the attack.",
+              "desc_loc": "Treant's attack plants a life-sapping seed in an enemy unit. That unit takes additional magic damage, is rooted and disarmed for a short duration, and emits %healing_pulse_count% healing pulses to up to %max_heal_units% nearby allies of Treant Protector based on the damage dealt by the attack.",
               "lore_loc": "Rooftrellen nurtures the beings under his stewardship, sustained by the lifeforce of trespassers into his sacred ground.",
               "notes_loc": [],
               "shard_loc": "",
@@ -445,7 +435,7 @@
                     45
                   ],
                   "is_percentage": false,
-                  "heading_loc": "FLAT HEALING:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -634,7 +624,7 @@
               "id": 5436,
               "name": "treant_living_armor",
               "name_loc": "Living Armor",
-              "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Each time this spell blocks damage, the block amount is decreased. If the damage block is decreased to 0, the buff is removed early.",
+              "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Every time damage is blocked this way, the damage block amount is decreased.",
               "lore_loc": "The roots and tendrils of the Treant Protectors are far-reaching, stimulating the growth and rejuvenation of all of nature.",
               "notes_loc": [
                 "Instances of damage less than %damage_block_threshold% are ignored."
@@ -680,10 +670,10 @@
                 0
               ],
               "mana_costs": [
-                40,
-                45,
-                50,
-                55
+                65,
+                70,
+                75,
+                80
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -720,7 +710,7 @@
                     12
                   ],
                   "is_percentage": false,
-                  "heading_loc": "MAX DURATION:",
+                  "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -755,10 +745,13 @@
                 {
                   "name": "damage_block_base",
                   "values_float": [
+                    60,
+                    80,
+                    100,
                     120
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE BLOCKED:",
+                  "heading_loc": "MAX DAMAGE BLOCKED:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_treant_13",
@@ -797,9 +790,6 @@
                 {
                   "name": "damage_block_loss",
                   "values_float": [
-                    35,
-                    30,
-                    25,
                     20
                   ],
                   "is_percentage": false,
@@ -851,10 +841,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    40,
-                    45,
-                    50,
-                    55
+                    65,
+                    70,
+                    75,
+                    80
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -992,7 +982,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    300
+                    360
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1043,7 +1033,7 @@
                 {
                   "name": "AbilityCharges",
                   "values_float": [
-                    3
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1060,7 +1050,7 @@
                 {
                   "name": "AbilityChargeRestoreTime",
                   "values_float": [
-                    55
+                    135
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1142,7 +1132,7 @@
                 0
               ],
               "cooldowns": [
-                35
+                36
               ],
               "durations": [
                 0
@@ -1236,7 +1226,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    35
+                    36
                   ],
                   "is_percentage": false,
                   "heading_loc": "COOLDOWN:",
@@ -1274,7 +1264,7 @@
                 "Works on Debuff Immune units, but if units gain debuff immunity after the effect starts, they'll break free."
               ],
               "shard_loc": "",
-              "scepter_loc": "Decreases Cooldown to %AbilityCooldown% seconds. When casting Overgrowth, Treant Protector draws power from the soil, gaining an undispellable buff that greatly increasing his size for %bloom_duration% seconds. While enlarged, he gains phased movement with a fixed speed of %movement_speed%, %strength_bonus%%% bonus Strength, and a splashing attack that deals %splash_pct%%% of his attack damage in a %splash_radius% unit radius.",
+              "scepter_loc": "Decreases Cooldown to %AbilityCooldown% seconds. When casting Overgrowth, Treant Protector draws power from the soil, greatly increasing his size for %bloom_duration% seconds. While enlarged, he gains phased movement with a fixed speed of %movement_speed%, %strength_bonus%%% bonus Strength, and a splashing attack that deals %splash_pct%%% of his attack damage in a %splash_radius% unit radius.",
               "facets_loc": [
                 "",
                 "",
@@ -2067,11 +2057,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "Each young acolyte to the Dezun order must complete a series of rites before becoming a shadow priest. The final rite, the rite of shades, is a harrowing spiritual journey through the Nothl Realm, an unpredictable domain from which not all visitants return.  Of those who do, some return mad. Others return with strange aptitudes. But all who go there are changed by their experiences.\r\n\t\t\t\t<br><br>Driven by the need for enlightenment, Dazzle was the youngest of his tribe ever to request the sacred ritual. At first the order refused him, saying he was too young. But Dazzle was not to be dissuaded. Sensing something special in the headstrong young acolyte, the elders relented. Dazzle drank down the sacred potion and sat by the fire while the rest of his tribe danced through the night.\r\n\t\t\t\t<br><br>In this ethereal dimension of the Nothl Realm, the properties of light and dark are inverted. Thus his brilliant healing light, beautiful to our eye, is actually a sinister kind of evil; and the darkest deeds are done in a dazzling glow. The elders' intuition was prophetic: Dazzle returned to his people as a Shadow Priest like none seen before, with the power to heal as well as to destroy. Now he uses his gift to cut down his enemies and mend his friends.",
           "hype_loc": "Born to support his cohorts in battle, Dazzle <b>keeps wounded allies alive</b> so they might later rain death upon the enemy. His <b>strange magic</b> weaves its way into <b>nearby armor</b>, weakening enemies and strengthening friends.",
           "npe_desc_loc": "Powerful healer who can briefly prevent death",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Nothl Boon",
-              "description_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies and amplifies incoming heals from Dazzle.",
-              "name": "dazzle_facet_nothl_boon",
-              "icon": "armor",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Poison Bloom",
-              "description_loc": "Dazzle can spread his Poison Touch when attacking enemies. Weave is stronger on enemies.",
-              "name": "dazzle_poison_bloom",
-              "icon": "ricochet",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 2.3,
           "agi_base": 20,
@@ -75,11 +56,11 @@
               "notes_loc": [
                 "The damage is not reduced by damage block abilities."
               ],
-              "shard_loc": "Causes Poison Touch to hex affected targets for %hex_duration% seconds.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Every %attacks_to_split% attacks, the poison will deal additional damage and split to additional enemy units in a %split_radius% AoE."
+                ""
               ],
               "type": 0,
               "behavior": "8",
@@ -332,69 +313,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "split_radius",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "dazzle_poison_bloom",
-                    "values": [
-                      450
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "dazzle_poison_bloom"
-                },
-                {
-                  "name": "split_damage",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SPLIT DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "dazzle_poison_bloom",
-                    "values": [
-                      30,
-                      60,
-                      90,
-                      120
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "dazzle_poison_bloom"
-                },
-                {
-                  "name": "attacks_to_split",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "dazzle_poison_bloom",
-                    "values": [
-                      4
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "dazzle_poison_bloom"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -982,21 +900,21 @@
               "desc_loc": "Dazzle's abilities apply Weave to both allies and enemies they affect, increasing allied armor and reducing enemy armor. Multiple instances of this effect stack.",
               "lore_loc": "His ethereal journey into the Nothl realm has allowed Dazzle to mend together the powers of light and dark, creating shifting waves of enchantments.",
               "notes_loc": [],
-              "shard_loc": "",
+              "shard_loc": "Applying Weave to an ally heals them for %ally_heal% per stack of Weave.",
               "scepter_loc": "",
               "facets_loc": [
                 "Weave applies %ally_multiplier%x stacks to allies. Weave amplifies incoming heals from Dazzle by %heal_amplification_pct%%% per stack.",
                 "Weave applies %enemy_multiplier%x stacks to enemies."
               ],
               "type": 0,
-              "behavior": "66",
+              "behavior": "562949953421379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1027,10 +945,7 @@
                 {
                   "name": "armor_change",
                   "values_float": [
-                    0.5,
-                    0.75,
-                    1,
-                    1.25
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "ARMOR CHANGE PER STACK:",
@@ -1053,7 +968,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    8
+                    6.9
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1157,11 +1072,30 @@
                     "operation": 5
                   },
                   "required_facet": "dazzle_poison_bloom"
+                },
+                {
+                  "name": "ally_heal",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    60
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": true,
@@ -1428,44 +1362,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "castable_while_disabled",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "healing_amp",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "HEALING AMPLIFICATION:",
-                  "bonuses": [],
-                  "values_shard": [
-                    15
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     450
@@ -1540,7 +1436,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -2068,97 +1964,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1294,
-                  "name": "dazzle_nothl_boon",
-                  "name_loc": "Nothl Boon",
-                  "desc_loc": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies and amplifies incoming heals from Dazzle.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Whenever Dazzle overheals himself or an ally, it grants that hero a physical damage barrier equal to the amount overhealed for %duration% seconds. If the overhealed target already has a larger barrier its duration will be refreshed instead."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 4,
-                  "dispellable": 0,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        12
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "As Chief Curator and Head of Acquisitions for the Arcane Archives of the Ultimyr Academy, Demnok Lannik was tireless in his pursuit of lost, rare and forbidden tomes. No cursed temple was so foreboding, no cavern path so treacherous, that any concern for his own survival could dissuade him from entering if rumors hinted that some pamphlet of primordial lore might still survive in its depths. However, so often did his investigations trigger the wrath of protector entities, that he finally found it necessary to master the arts of magic. He bent himself to learning sorcery with the same thorough obsessiveness that marked his quest for incunabula, becoming the most powerful Warlock of the Academy in less time than most practitioners required to complete a course of undergraduate work. Almost as an afterthought, he carved a staff of Dreadwood and summoned into it a captive spirit from the Outer Hells. And anticipating the day when he will have recovered every last lost spellbook, he has commenced writing his own Black Grimoire. It will undoubtedly be instructive.",
           "hype_loc": "Summoning forth his <b>demonic golem</b>, Warlock brings ruin to enemies and destroys their defenses. Yet even without his golem, his <b>dark spells</b> can still wreak havoc, whether <b>healing allies</b> and <b>harming enemies</b> with a word, or binding foes together to share their agony.",
           "npe_desc_loc": "Summons powerful demons to fight at his side",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Champion of Gorroth",
-              "description_loc": "Chaotic Offering Golems deal more burn damage based on Warlock's health and mana regeneration.",
-              "name": "warlock_golem",
-              "icon": "summons",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Black Grimoire",
-              "description_loc": "Grants Warlock the item Black Grimoire, which can be consumed to gain experience for each kill Warlock participated in. Starts with 1 charge.",
-              "name": "warlock_grimoire",
-              "icon": "xp",
-              "gradient_id": 3,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 2.4,
           "agi_base": 10,
@@ -73,7 +54,8 @@
               "desc_loc": "Binds several visible enemy units together, causing a percentage of the damage dealt to one of them to be felt by the others.",
               "lore_loc": "An ancient incantation that links the vital energies of multiple lifeforms into one collective body.",
               "notes_loc": [
-                "The shared damage type is the same as the type of damage inflicted."
+                "The shared damage type is the same as the type of damage inflicted.",
+                "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -926,11 +908,8 @@
               "name_loc": "Eldritch Summoning",
               "desc_loc": "Whenever an enemy unit dies while afflicted by one or more of Warlock's abilities, a minor imp is summoned that lasts for %minor_imp_duration% seconds and explodes on death. Imps will automatically seek out nearby units, favoring fatally bonded heroes, and will explode when reaching their prey.",
               "lore_loc": "",
-              "notes_loc": [
-                "Minor imps have %tooltip_imp_health% health and explode for %tooltip_imp_explode% damage in a %tooltip_imp_explode_radius% radius.",
-                "Minor imps do not explode if killed by enemy heroes."
-              ],
-              "shard_loc": "Increases the power of all imps summoned by Warlock.",
+              "notes_loc": [],
+              "shard_loc": "Increases the health and explosion damage of minor imps.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -944,7 +923,7 @@
               "damage": 2,
               "immunity": 4,
               "dispellable": 2,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -990,18 +969,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "imp_level",
+                  "name": "imp_health",
                   "values_float": [
-                    1,
-                    2,
-                    3,
-                    4
+                    5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "IMP HEALTH:",
                   "bonuses": [],
                   "values_shard": [
-                    1
+                    80
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1012,18 +988,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "tooltip_imp_health",
+                  "name": "imp_explode",
                   "values_float": [
-                    50,
-                    130,
-                    210,
-                    290,
-                    370
+                    20
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "EXPLOSION DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    45
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1033,13 +1007,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "tooltip_imp_explode",
+                  "name": "imp_speed",
                   "values_float": [
-                    20,
-                    65,
-                    110,
-                    155,
-                    200
+                    297
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1486,25 +1456,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "tooltip_manahealthboost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "HP/MANA REGEN TO BURN DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "warlock_golem",
-                    "values": [
-                      90
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "warlock_golem"
                 },
                 {
                   "name": "golem_on_death",
@@ -2110,112 +2061,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1275,
-                  "name": "warlock_black_grimoire",
-                  "name_loc": "Black Grimoire",
-                  "desc_loc": "Grants Warlock the item Black Grimoire, which can be consumed to gain experience for each kill Warlock participated in. Starts with 1 charge.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "8796093022211",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "tooltip_xp",
-                      "values_float": [
-                        200
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "XP PER KILL/ASSIST:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "tooltip_seconds",
-                      "values_float": [
-                        420
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "STARTING COOLDOWN:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

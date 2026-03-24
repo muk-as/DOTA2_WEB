@@ -10,26 +10,7 @@
           "bio_loc": "How had she been reduced to this?  She was once the Scourge of the Plains, a merciless leader of men and beasts, and able to sow terror wherever she dared.  Now she was far from her homeland, driven half mad from starvation and months of wandering, her army long dead or worse.  As she stood at the edge of an ancient forest, a pair of glowing eyes spied on from an elder branch.  Something beautiful and deadly sought a meal in the wilting dusk.  Without a sound, it turned and left.  Fury overtook her.  Clutching a rust-eaten dagger, she charged after the beast determined to reclaim even a shred of her past glory, but her quarry would not be caught.  Three times she cornered the creature among the rocks and trees, and three times she pounced only to witness its fading shadow darting further into the woods.  Yet the full moon shone brightly, and the creature's trail was easy to follow.\r\n\t\t\t\t<br><br>Arriving in a clearing atop a high hill, the beast's massive feline form sat in the open, attentive and waiting.  When the woman brandished her dagger, the creature reared and roared and charged.  Death, it seemed, had come for her at long last in this strange place.  She stood, calm and ready.  A flash of movement, and the beast snatched the dagger from her hand before vanishing into the forest.  Stillness.  Hooded figures approached. In reverent tones they revealed that Selemene, Goddess of the Moon, had chosen her, had guided her, had tested her. Unwittingly she had endured the sacred rites of the Dark Moon, warriors of the Nightsilver Woods.\r\n\t\t\t\t<br><br>She was offered a choice: join the Dark Moon and pledge herself to the service of Selemene, or leave and never return. She did not hesitate. Embracing her absolution, she renounced her bloody past, and took up a new mantle as Luna of the Dark Moon, the dreaded Moon Rider, ruthless and ever-loyal guardian of the Nightsilver Woods.",
           "hype_loc": "<b>Riding swiftly</b> into battle, Luna tears into her enemies with attacks able to <b>bounce between targets</b>. When foes threaten, she calls down <b>the power of the moon</b> as a single searing beam or as a <b>lunar barrage</b>, crushing those who stand against her.",
           "npe_desc_loc": "Tears into her enemies with bouncing attacks",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Moonshield",
-              "description_loc": "Lunar Orbit provide damage reduction while active.",
-              "name": "luna_moonshield",
-              "icon": "armor",
-              "gradient_id": 3,
-              "index": 1
-            },
-            {
-              "color": 3,
-              "title_loc": "Moonstorm",
-              "description_loc": "Hitting enemies with Lucent Beams or Eclipse grants Luna bonus attack damage.",
-              "name": "luna_moonstorm",
-              "icon": "damage",
-              "gradient_id": 1,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.2,
           "agi_base": 24,
@@ -73,12 +54,12 @@
               "desc_loc": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
               "lore_loc": "Selemene smites those who encroach upon the Nightsilver Woods.",
               "notes_loc": [],
-              "shard_loc": "",
+              "shard_loc": "Grants Luna an attack damage bonus buff every time an enemy hero is hit by Lucent Beam. Lucent Beams created by Eclipse grant %damage_buff_from_eclipse_pct%%% of the damage amount.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
-                "Grants Luna an attack damage bonus buff every time an enemy hero is hit by Lucent Beam. Lucent Beams created by Eclipse grant %damage_buff_from_eclipse_pct%%% of the damage amount."
+                ""
               ],
               "type": 0,
               "behavior": "8",
@@ -398,7 +379,7 @@
               "desc_loc": "Creates %rotating_glaives% glaives that rotate %rotating_glaives_movement_radius% radius around Luna. Any enemy unit that collides with a glaive will take a percentage of Luna's Attack Damage.",
               "lore_loc": "None may approach Selemene's chosen without favor from the goddess herself.",
               "notes_loc": [],
-              "shard_loc": "Increases collision damage. Glaives rotate %rotating_glaives_shard_speed_bonus_tooltip%%% faster.",
+              "shard_loc": "Increases damage reduction. While active, Luna gains %bonus_movement_speed%%% bonus movement speed.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -551,10 +532,14 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "COLLISION DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [
-                    20
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
+                      "value": 50,
+                      "operation": 3
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -570,10 +555,14 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    50
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
+                      "value": 50,
+                      "operation": 3
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -583,16 +572,18 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "rotating_glaives_shard_speed_bonus_tooltip",
-                  "values_float": [
-                    0
-                  ],
+                  "name": "rotating_glaive_collision_speed_damage_tooltip",
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    50
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
+                      "value": 1.5,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -604,27 +595,43 @@
                 {
                   "name": "rotating_glaives_damage_reduction",
                   "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
+                    8,
+                    12,
+                    16,
+                    20
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE REDUCTION:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    10
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "luna_moonshield",
-                    "values": [
-                      15,
-                      20,
-                      25,
-                      30
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "luna_moonshield"
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_movement_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    20
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityManaCost",
@@ -813,7 +820,7 @@
               "id": 5224,
               "name": "luna_lunar_blessing",
               "name_loc": "Lunar Blessing",
-              "desc_loc": "Grants attack damage to Luna and nearby allied heroes, with Luna receiving double the attack damage bonuses. At night, Lunar Blessing is global, and Luna is blessed with additional night vision.",
+              "desc_loc": "Grants attack damage to Luna and nearby allied heroes within %radius% range, with Luna receiving double the attack damage bonuses. At night, Lunar Blessing is global, and Luna is blessed with bonus night vision.",
               "lore_loc": "The Goddess of the Moon smiles upon her kin.",
               "notes_loc": [],
               "shard_loc": "",
@@ -865,7 +872,7 @@
                     1200
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BLESSING RADIUS:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -879,14 +886,14 @@
                 {
                   "name": "bonus_damage",
                   "values_float": [
-                    1
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS DAMAGE:",
+                  "heading_loc": "BONUS DAMAGE (ALLIES):",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_luna_3",
-                      "value": 30,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -902,14 +909,14 @@
                 {
                   "name": "self_bonus_damage",
                   "values_float": [
-                    2
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "BONUS DAMAGE (SELF):",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_luna_3",
-                      "value": 60,
+                      "value": 50,
                       "operation": 0
                     }
                   ],
@@ -925,7 +932,7 @@
                 {
                   "name": "bonus_night_vision",
                   "values_float": [
-                    250
+                    225
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS NIGHT VISION:",
@@ -1557,9 +1564,9 @@
               "item_quality": 0
             },
             {
-              "id": 6127,
-              "name": "special_bonus_unique_luna_2",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Lucent Beam Cooldown",
+              "id": 1812,
+              "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
+              "name_loc": "{s:bonus_rotating_glaive_collision_speed_damage_tooltip}x Lunar Orbit Damage / Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1622,7 +1629,7 @@
             {
               "id": 6682,
               "name": "special_bonus_unique_luna_3",
-              "name_loc": "+{s:bonus_bonus_damage} Lunar Blessing Damage",
+              "name_loc": "+{s:bonus_bonus_damage}/{s:bonus_self_bonus_damage} Lunar Blessing Allied/Self Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1746,14 +1753,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "The fabric of creation needs constant care, lest it grow tattered; for when it unravels, whole worlds come undone. It is the work of the Weavers to keep the fabric tight, to repair worn spots in the mesh of reality. They also defend from the things that gnaw and lay their eggs in frayed regions, whose young can quickly devour an entire universe if the Weavers let their attention lapse. Skitskurr was a master Weaver, charged with keeping one small patch of creation tightly woven and unfaded. But the job was not enough to satisfy. It nagged him that the original work of creation all lay in the past; the Loom had done its work and travelled on. He wanted to create rather than merely maintain--to weave worlds of his own devising.  He began making small changes to his domain, but the thrill of creation proved addictive, and his strokes became bolder, pulling against the pattern that the Loom had woven.\r\n\t\t\t\t<br><br>The guardians came, with their scissors, and Weaver's world was pared off, snipped from the cosmic tapestry, which they rewove without him in it. Skitskurr found himself alone, apart from his kind, a state that would have been torment for any other Weaver. But Skitskurr rejoiced, for now he was free. Free to create for himself, to begin anew. The raw materials he needed to weave a new reality were all around him. All he had to do was tear apart this old world at the seams.",
           "hype_loc": "Weaver has no trouble <b>evading enemies</b> to position himself for another strike. Slipping in and out of sight, he avoids death by <b>rewinding himself to an earlier position and health state</b>. His arsenal of elusive skills ensures he is always a critical nuisance to his foes.",
           "npe_desc_loc": "Rewinds time to reverse damage and position",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Skitterstep",
-              "description_loc": "Shukuchi movespeed increased and slows enemies when passing through them.",
-              "name": "weaver_skitterstep",
-              "icon": "speed",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Hivemind",
-              "description_loc": "Weaver gains experience when The Swarm beetles attack heroes.",
-              "name": "weaver_hivemind",
-              "icon": "xp",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 16,
           "str_gain": 2,
           "agi_base": 17,
@@ -319,31 +300,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "experience_gain",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "XP PER ATTACK:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "weaver_hivemind",
-                    "values": [
-                      5,
-                      8,
-                      11,
-                      14
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "weaver_hivemind"
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     3000
@@ -432,7 +388,7 @@
               "id": 5290,
               "name": "weaver_shukuchi",
               "name_loc": "Shukuchi",
-              "desc_loc": "Weaver shifts out of visibility, gaining max movement speed --doing harm to any enemies it passes through.",
+              "desc_loc": "Weaver shifts out of visibility, gaining max movement speed and doing harm to any enemies it passes through.",
               "lore_loc": "As the Weavers worked in the fabric of creation, small wormholes allowed them to slip through time to better work their craft.",
               "notes_loc": [
                 "Can only damage the same unit once per cast."
@@ -498,7 +454,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_weaver_1",
-                      "value": 60,
+                      "value": 90,
                       "operation": 0
                     }
                   ],
@@ -608,15 +564,19 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MOVESPEED:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_weaver_shukuchi_movespeed",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "weaver_skitterstep",
-                    "values": [
-                      600
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -657,44 +617,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "slow_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "weaver_skitterstep",
-                    "values": [
-                      0.2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "weaver_skitterstep"
-                },
-                {
-                  "name": "slow_percent",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "weaver_skitterstep",
-                    "values": [
-                      100
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "weaver_skitterstep"
                 },
                 {
                   "name": "AbilityManaCost",
@@ -861,7 +783,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_weaver_2",
-                      "value": 70,
+                      "value": 60,
                       "operation": 0
                     }
                   ],
@@ -955,7 +877,7 @@
                 "Time Lapse disjoints projectiles."
               ],
               "shard_loc": "",
-              "scepter_loc": "Time Lapse may target allied Heroes with %abilitycastrange% cast range. Reduces cooldown.",
+              "scepter_loc": "Time Lapse may target allied Heroes with %abilitycastrange% cast range.",
               "facets_loc": [
                 "",
                 ""
@@ -1083,7 +1005,7 @@
                     40
                   ],
                   "is_percentage": false,
-                  "heading_loc": "COOLDOWN:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
@@ -1111,15 +1033,12 @@
               "item_quality": 0
             },
             {
-              "id": 1465,
-              "name": "weaver_rewoven",
-              "name_loc": "Rewoven",
-              "desc_loc": "Every time Weaver casts an ability, he gains %attack_range_increase_per_stack% attack range for %duration%s. This effect stacks independently.",
+              "id": 1754,
+              "name": "weaver_threads_of_fate",
+              "name_loc": "Threads of Fate",
+              "desc_loc": "Whenever Weaver deals damage to an enemy hero with an attack or ability, if he remains within %thread_setup_distance% range of them for %thread_setup_time%s, he establishes a Thread of Fate that briefly slows the enemy and ties Weaver and the enemy together. Each established thread of fate grants bonus damage to Weaver.",
               "lore_loc": "",
-              "notes_loc": [
-                "Break disables the gaining of new stacks.",
-                "Break does not disable the bonuses from existing stacks."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1163,9 +1082,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "attack_range_increase_per_stack",
+                  "name": "thread_setup_distance",
                   "values_float": [
-                    50
+                    700
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1180,12 +1099,114 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "duration",
+                  "name": "thread_setup_time",
                   "values_float": [
-                    7
+                    1.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "established_thread_duration",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "THREAD DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "established_thread_break_distance",
+                  "values_float": [
+                    900
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "THREAD BREAK DISTANCE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_per_thread_hero",
+                  "values_float": [
+                    10
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "DAMAGE PER THREAD:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "death_linger_duration",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "slow_duration",
+                  "values_float": [
+                    0.2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SLOW DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "slow_percent",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1213,9 +1234,9 @@
           ],
           "talents": [
             {
-              "id": 6200,
-              "name": "special_bonus_unique_weaver_1",
-              "name_loc": "+{s:bonus_damage} Shukuchi Damage",
+              "id": 1817,
+              "name": "special_bonus_unique_weaver_shukuchi_movespeed",
+              "name_loc": "+{s:bonus_min_movespeed_override} Shukuchi Movement Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1355,9 +1376,9 @@
               "item_quality": 0
             },
             {
-              "id": 6987,
-              "name": "special_bonus_mana_break_20",
-              "name_loc": "+{s:value} Mana Break",
+              "id": 6200,
+              "name": "special_bonus_unique_weaver_1",
+              "name_loc": "+{s:bonus_damage} Shukuchi Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1402,76 +1423,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "burn_illusions_ranged",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "burn_illusions_melee",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_per_burn",
-                  "values_float": [
-                    0.8
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1612,7 +1564,7 @@
             {
               "id": 6988,
               "name": "special_bonus_unique_weaver_3",
-              "name_loc": "+{s:bonus_armor_reduction} The Swarm Armor Reduction",
+              "name_loc": "+{s:bonus_armor_reduction} Swarm Armor Reduction Per Attack",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1796,14 +1748,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

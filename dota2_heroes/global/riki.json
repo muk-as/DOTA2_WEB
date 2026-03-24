@@ -10,17 +10,7 @@
           "bio_loc": "Riki was born middle child to the great dynasty of Tahlin. With an older brother groomed for the throne, and a younger brother coddled and kept, Riki, the small middle son, seemed born for the art of invisibility.  It was an art he cultivated, and one which ultimately saved his life on the night that his people were betrayed and his family slaughtered. Of all the royal line, he alone escaped, small and agile, unassuming, using smoke as cover. He cut his way out of the royal grounds, using the advantage of surprise, quietly slitting the throats of one enemy warrior after another. Now free of his royal responsibilities, Riki uses his talents in service to a new trade: Stealth Assassin. He silences his enemies, sharpening his skills, hoping to one day take revenge on those who killed his family and robbed him of his birthright.",
           "hype_loc": "Riki stalks the battlefield, <b>unseen</b> by the enemy. He chooses his moment carefully and bursts forth in a puff of <b>silencing smoke</b>, stabbing at his foes before they even know he's there.",
           "npe_desc_loc": "Remains permanently invisible until the moment to strike",
-          "facets": [
-            {
-              "color": 4,
-              "title_loc": "Cutthroat",
-              "description_loc": "This facet doesn't do anything. Riki is still looking to avenge the House of Tahlin...",
-              "name": "riki_riki",
-              "icon": "execute",
-              "gradient_id": 2,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 18,
           "str_gain": 2,
           "agi_base": 30,
@@ -108,10 +98,7 @@
                 0
               ],
               "mana_costs": [
-                65,
-                70,
-                75,
-                80
+                75
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -142,10 +129,10 @@
                 {
                   "name": "miss_rate",
                   "values_float": [
-                    30,
-                    45,
+                    40,
+                    50,
                     60,
-                    75
+                    70
                   ],
                   "is_percentage": true,
                   "heading_loc": "MISS RATE:",
@@ -251,10 +238,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    65,
-                    70,
-                    75,
-                    80
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -312,7 +296,7 @@
               "id": 5143,
               "name": "riki_blink_strike",
               "name_loc": "Blink Strike",
-              "desc_loc": "Teleports behind the target unit, momentarily slowing them and attacking them with bonus damage if it is an enemy.",
+              "desc_loc": "Teleports behind the target unit, momentarily slowing them by %slow_pct_tooltip%%% and attacking them with bonus damage if it is an enemy.",
               "lore_loc": "The Stealth Assassin's agile movement makes him impossible to escape.",
               "notes_loc": [],
               "shard_loc": "",
@@ -390,10 +374,27 @@
                 {
                   "name": "slow",
                   "values_float": [
-                    0.5
+                    0.75
                   ],
                   "is_percentage": false,
                   "heading_loc": "SLOW DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "slow_pct_tooltip",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -515,7 +516,7 @@
               "lore_loc": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Increases Cast Range. Allows you to target an allied unit, hiding inside them for the duration. While hiding in an allied unit, they have %scepter_movespeed%%% bonus movement speed, and Tricks of the Trade lasts %scepter_bonus_duration%s longer and does an additional %scepter_bonus_attacks% attacks.",
+              "scepter_loc": "Increases Cast Range to %AbilityCastRange%. Allows you to target an allied unit, hiding inside them for the duration. While hiding in an allied unit, they have %scepter_movespeed%%% bonus movement speed, and Tricks of the Trade lasts %scepter_bonus_duration%s longer and does an additional %scepter_bonus_attacks% attacks.",
               "facets_loc": [
                 "",
                 "Tricks of the Trade has %creep_agility_multiplier%x Agility Bonus when attacking non-hero units. When Riki kills a non-hero unit during Tricks of the Trade, the cooldown is reduced by %cooldown_reduction_per_creep_kill%s.",
@@ -793,7 +794,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    300
+                    500
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -911,7 +912,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "67",
+              "behavior": "562949953421379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -949,7 +950,7 @@
                 {
                   "name": "damage_multiplier",
                   "values_float": [
-                    0.6
+                    0.55
                   ],
                   "is_percentage": false,
                   "heading_loc": "AGILITY MULTIPLIER:",
@@ -1739,11 +1740,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

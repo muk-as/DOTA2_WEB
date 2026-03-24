@@ -10,35 +10,7 @@
           "bio_loc": "Lanaya, the Templar Assassin, came to her calling by a path of curious inquiry. Possessed of a scientific bent, she spent her early years engaged in meticulous study of nature's laws--peering into grimoires of magic and alchemy, recreating experiments from charred fragments of the Violet Archives, and memorizing observations of the Keen recordkeepers. Already quiet and secretive by nature, the difficulty of acquiring these objects further reinforced her skills of stealth. Had she been less retiring, she might have become notorious among the guilds as a thief-scholar. Instead her investigations led her into far more obscure corners.\r\n\t\t\t\t<br><br>As she devoted her furtive talents to unlocking the secrets of the universe, she instead unlocked a secret door that exists in nature itself: the entryway to the most Hidden Temple. The intelligences that waited beyond that portal, proved to be expecting her, and whatever mysteries they revealed in the moment of their discovery was nothing compared to the answers they held out to Lanaya should she continue in their service. She swore to protect the mysteries, but more to the point, in service to the Hidden Temple she satisfies her endless craving for understanding. In the eyes of each foe she expunges, a bit more of the mystery is revealed.",
           "hype_loc": "Peppering the battlefield with <b>slowing traps</b>, Templar Assassin <b>hides invisibly</b>, ready to ambush her prey. Once she springs her attack, she shreds enemies with piercing psionic blades, and <b>deflects counterattacks</b> with her refracting shield.",
           "npe_desc_loc": "Slows down enemies with traps",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Voidblades",
-              "description_loc": "Meld bonus damage and armor reductions are applied to all enemies in the Psi Blades split range.",
-              "name": "templar_assassin_voidblades",
-              "icon": "ricochet",
-              "gradient_id": 3,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Refractor",
-              "description_loc": "Refraction gains a damage charge every time a shield charge gets consumed.",
-              "name": "templar_assassin_refractor",
-              "icon": "damage",
-              "gradient_id": 0,
-              "index": 1
-            },
-            {
-              "color": 3,
-              "title_loc": "Hidden Reach",
-              "description_loc": "When in Meld, Templar increases her attack range by up to an additional {s:bonus_attack_range_increase_max} range over {s:bonus_attack_range_increase_time}s.",
-              "name": "templar_assassin_hidden_reach",
-              "icon": "range",
-              "gradient_id": 1,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.4,
           "agi_base": 23,
@@ -71,7 +43,7 @@
           "sight_range_day": 1800,
           "sight_range_night": 800,
           "max_health": 582,
-          "health_regen": 3.1000001,
+          "health_regen": 2.1000001,
           "max_mana": 315,
           "mana_regen": 1,
           "abilities": [
@@ -84,11 +56,11 @@
               "notes_loc": [
                 "Damage as HP Removal bypasses Refraction (it won't reduce the charges)."
               ],
-              "shard_loc": "",
+              "shard_loc": "Increases bonus damage. Refraction can be cast while disabled.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Whenever a shield instance is consumed, Templar Assassin gains a damage instance.",
+                "",
                 ""
               ],
               "type": 0,
@@ -183,14 +155,10 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_templar_assassin_refraction_damage",
-                      "value": 40,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [
+                    30
                   ],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -237,17 +205,15 @@
                 },
                 {
                   "name": "cast_while_disabled",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_templar_assassin_refraction_disable_cast",
-                      "value": 1,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [
+                    1
                   ],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -314,7 +280,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -329,7 +295,7 @@
               "id": 5195,
               "name": "templar_assassin_meld",
               "name_loc": "Meld",
-              "desc_loc": "Templar Assassin conceals herself, becoming invisible as long as she remains still.  If Meld's invisibility is broken by attacking an enemy, Lanaya's attack will deal bonus damage to the enemy and reduce their armor for %debuff_duration% seconds.",
+              "desc_loc": "Templar Assassin conceals herself, becoming invisible as long as she remains still. If Meld's invisibility is broken by attacking an enemy, Lanaya's attack will deal bonus damage to the enemy and reduce their armor for %debuff_duration% seconds. Bonus damage and armor reductions are applied to all enemies in the Psi Blades split range.",
               "lore_loc": "Lanaya is as elusive as her covenant with the Hidden Temple.",
               "notes_loc": [
                 "Meld is broken by any action other than staying in position or channeling Psionic Projection.",
@@ -420,7 +386,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_templar_assassin_8",
-                      "value": 3,
+                      "value": 4,
                       "operation": 2
                     }
                   ],
@@ -455,42 +421,25 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "attack_range_increase_max",
-                  "values_float": [
-                    0
-                  ],
+                  "name": "attack_range_bonus",
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_templar_assassin_meld_attack_range_bonus",
+                      "value": 225,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "templar_assassin_hidden_reach",
-                    "values": [
-                      400
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "templar_assassin_hidden_reach"
-                },
-                {
-                  "name": "attack_range_increase_time",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "templar_assassin_hidden_reach",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "templar_assassin_hidden_reach"
+                  "required_facet": ""
                 },
                 {
                   "name": "debuff_duration",
@@ -702,7 +651,7 @@
                 {
                   "name": "meld_strike_spills",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -710,13 +659,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "templar_assassin_voidblades",
-                    "values": [
-                      1
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "templar_assassin_voidblades"
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -885,15 +832,15 @@
               "id": 5197,
               "name": "templar_assassin_psionic_trap",
               "name_loc": "Psionic Trap",
-              "desc_loc": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they deal a small amount of damage and exert a slowing influence of %movement_speed_min%%% in a %trap_radius% radius. Traps charge up to slow %movement_speed_max%%% after %trap_max_charge_duration% seconds. Deals bonus damage when fully charged.",
+              "desc_loc": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they exert a slowing influence of %movement_speed_min%%% in a %trap_radius% radius. Trap movement slow charges up to %movement_speed_max%%% after %trap_max_charge_duration% seconds. Deals damage after %trap_max_charge_duration%s.",
               "lore_loc": "Calling upon the reach of the Hidden Temple, none escape the eye of the Templar.",
               "notes_loc": [
                 "Traps last indefinitely.",
                 "They have invisibility that fades in over %trap_fade_time% seconds and spell immunity. They take 2 hits to kill by ranged heroes, 1 by melee heroes, and 4 by creeps.",
                 "Traps have 250/250 vision range and don't prevent neutral camps from spawning."
               ],
-              "shard_loc": "Increases max trap count and trap vision range.  When activated, traps now silence affected enemies.",
-              "scepter_loc": "",
+              "shard_loc": "",
+              "scepter_loc": "When activated, traps now silence affected enemies.",
               "facets_loc": [
                 "",
                 "",
@@ -985,10 +932,14 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX TRAPS:",
-                  "bonuses": [],
-                  "values_shard": [
-                    4
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_templar_assassin_6",
+                      "value": 3,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1068,7 +1019,7 @@
                     400
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS DAMAGE:",
+                  "heading_loc": "DAMAGE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1138,10 +1089,10 @@
                   "is_percentage": false,
                   "heading_loc": "MIN SILENCE DURATION:",
                   "bonuses": [],
-                  "values_shard": [
+                  "values_shard": [],
+                  "values_scepter": [
                     0.25
                   ],
-                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1157,10 +1108,10 @@
                   "is_percentage": false,
                   "heading_loc": "MAX SILENCE DURATION:",
                   "bonuses": [],
-                  "values_shard": [
+                  "values_shard": [],
+                  "values_scepter": [
                     3
                   ],
-                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1174,12 +1125,12 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS TRAP VISION:",
+                  "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    125
+                  "values_shard": [],
+                  "values_scepter": [
+                    0
                   ],
-                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1259,8 +1210,8 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_scepter": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1272,10 +1223,10 @@
               "item_quality": 0
             },
             {
-              "id": 1460,
-              "name": "templar_assassin_third_eye",
-              "name_loc": "Third Eye",
-              "desc_loc": "Templar Assassin and her teammates can see Roshan's respawn timer.",
+              "id": 1750,
+              "name": "templar_assassin_inner_peace",
+              "name_loc": "Inner Peace",
+              "desc_loc": "When remaining stationary and not taking damage for %time_until_meditation%s, Templar Assassin begins meditating, gaining health and mana regeneration, reaching the maximum bonus after %time_until_max_bonus%s of meditating.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1286,13 +1237,13 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8796093022210",
+              "behavior": "8796093022274",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
-              "dispellable": 3,
+              "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
                 0
@@ -1320,7 +1271,76 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "max_hp_regen",
+                  "values_float": [
+                    2.7
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX HEALTH REGEN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_mana_regen",
+                  "values_float": [
+                    2.2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX MANA REGEN:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "time_until_meditation",
+                  "values_float": [
+                    0.25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "time_until_max_bonus",
+                  "values_float": [
+                    2.05
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MEDITATION TIME UNTIL MAX BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1463,9 +1483,9 @@
               "item_quality": 0
             },
             {
-              "id": 1060,
-              "name": "special_bonus_unique_templar_assassin_refraction_disable_cast",
-              "name_loc": "Refraction Can Be Cast While Disabled",
+              "id": 1811,
+              "name": "special_bonus_unique_templar_assassin_meld_attack_range_bonus",
+              "name_loc": "+{s:bonus_attack_range_bonus} Meld Attack Range",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1526,9 +1546,9 @@
               "item_quality": 0
             },
             {
-              "id": 757,
-              "name": "special_bonus_unique_templar_assassin_8",
-              "name_loc": "+{s:bonus_bonus_armor} Meld Armor Reduction",
+              "id": 7058,
+              "name": "special_bonus_unique_templar_assassin_6",
+              "name_loc": "+{s:bonus_max_traps} Psionic Traps",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1652,9 +1672,9 @@
               "item_quality": 0
             },
             {
-              "id": 1059,
-              "name": "special_bonus_unique_templar_assassin_refraction_damage",
-              "name_loc": "+{s:bonus_bonus_damage} Refraction Damage",
+              "id": 757,
+              "name": "special_bonus_unique_templar_assassin_8",
+              "name_loc": "+{s:bonus_bonus_armor} Meld Armor Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1841,17 +1861,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

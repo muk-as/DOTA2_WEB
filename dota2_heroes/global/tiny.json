@@ -10,26 +10,7 @@
           "bio_loc": "Coming to life as a chunk of stone, Tiny's origins are a mystery on which he continually speculates.  He is a Stone Giant now, but what did he used to be?  A splinter broken from a Golem's heel?  A shard swept from a gargoyle-sculptor's workshop?  A fragment of the Oracular Visage of Garthos?  A deep curiosity drives him, and he travels the world tirelessly seeking his origins, his parentage, his people.  As he roams, he gathers weight and size; the forces that weather lesser rocks, instead cause Tiny to grow and ever grow.",
           "hype_loc": "Growing to <b>tremendous size and strength</b> as the battle progresses, Tiny's power can quickly become terrifying. He <b>tosses heroes and creeps</b> at his enemies, or <b>stuns</b> them beneath an avalanche. Should he gather his full strength, he can demolish the enemy's base with ease.",
           "npe_desc_loc": "Grows in size and strength as battle ensues",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Crash Landing",
-              "description_loc": "Tossed units slow and deal bonus damage to other targets at the Toss destination.",
-              "name": "tiny_crash_landing",
-              "icon": "nuke",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 2,
-              "title_loc": "Insurmountable",
-              "description_loc": "Tiny gains Status and Slow Resistance from Strength. Slow Resistance also reduces the impact of Attack Speed slows.",
-              "name": "tiny_insurmountable",
-              "icon": "armor",
-              "gradient_id": 4,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 30,
           "str_gain": 4.2,
           "agi_base": 0,
@@ -116,10 +97,10 @@
                 0
               ],
               "mana_costs": [
-                95,
-                110,
-                125,
-                140
+                105,
+                120,
+                135,
+                150
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -232,17 +213,17 @@
                 {
                   "name": "avalanche_damage",
                   "values_float": [
-                    100,
-                    190,
-                    280,
-                    370
+                    90,
+                    180,
+                    270,
+                    360
                   ],
                   "is_percentage": false,
                   "heading_loc": "AVALANCHE DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_tiny",
-                      "value": 100,
+                      "value": 90,
                       "operation": 0
                     }
                   ],
@@ -265,7 +246,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_tiny_4",
-                      "value": 200,
+                      "value": 150,
                       "operation": 0
                     }
                   ],
@@ -281,10 +262,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    95,
-                    110,
-                    125,
-                    140
+                    105,
+                    120,
+                    135,
+                    150
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -353,7 +334,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Tossed units slow and deal bonus damage to other targets at the Toss destination.",
+                "",
                 ""
               ],
               "type": 0,
@@ -396,10 +377,7 @@
                 0
               ],
               "mana_costs": [
-                110,
-                125,
-                140,
-                155
+                125
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -446,14 +424,14 @@
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    400
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "tiny_crash_landing",
-                    "values": [
-                      400
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -478,92 +456,23 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "land_movement_slow",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "tiny_crash_landing",
-                    "values": [
-                      20,
-                      25,
-                      30,
-                      35
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "tiny_crash_landing"
-                },
-                {
-                  "name": "land_attack_slow",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ATTACK SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "tiny_crash_landing",
-                    "values": [
-                      15,
-                      25,
-                      35,
-                      45
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "tiny_crash_landing"
-                },
-                {
-                  "name": "bonus_land_damage_pct",
+                  "name": "toss_land_damage_pct",
                   "values_float": [
                     0
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS LANDING DAMAGE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    20
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "tiny_crash_landing",
-                    "values": [
-                      20
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "tiny_crash_landing"
-                },
-                {
-                  "name": "land_debuff_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "tiny_crash_landing",
-                    "values": [
-                      2.5
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "tiny_crash_landing"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -609,10 +518,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    110,
-                    125,
-                    140,
-                    155
+                    125
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -664,12 +570,12 @@
               "id": 5108,
               "name": "tiny_tree_grab",
               "name_loc": "Tree Grab",
-              "desc_loc": "Grabs a tree to whack enemies on the head for a limited number of attacks. Grants bonus attack range. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, to deal your attack to a unit at a distance.",
+              "desc_loc": "Grabs a tree and causes Tiny to have bonus range, damage, and a splashing attack for a limited number of attacks.  The tree can be thrown, to deal your attack to a unit at a distance.",
               "lore_loc": "Sticks and stones break all the bones, with structures sure to follow.",
               "notes_loc": [
                 "The cooldown begins when the tree is thrown."
               ],
-              "shard_loc": "Causes Tree Grab to have no charge limit.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -685,7 +591,7 @@
               "dispellable": 3,
               "max_level": 4,
               "cast_ranges": [
-                165
+                200
               ],
               "cast_points": [
                 0.2
@@ -694,10 +600,10 @@
                 0
               ],
               "cooldowns": [
-                16,
                 15,
-                14,
-                13
+                12,
+                9,
+                6
               ],
               "durations": [
                 0
@@ -709,7 +615,10 @@
                 0
               ],
               "mana_costs": [
-                40
+                40,
+                35,
+                30,
+                25
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -717,14 +626,15 @@
                 {
                   "name": "attack_count",
                   "values_float": [
-                    5
+                    4,
+                    5,
+                    6,
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "NUMBER OF ATTACKS:",
                   "bonuses": [],
-                  "values_shard": [
-                    0
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -853,7 +763,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    165
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -887,7 +797,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    40
+                    40,
+                    35,
+                    30,
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -904,10 +817,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    16,
                     15,
-                    14,
-                    13
+                    12,
+                    9,
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -924,7 +837,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -939,7 +852,7 @@
               "id": 7850,
               "name": "tiny_tree_channel",
               "name_loc": "Tree Volley",
-              "desc_loc": "CHANNELED - Tiny channels to throw random trees within range towards the targeted area. Deals Tiny's attack damage to enemies in that area with each tree thrown.",
+              "desc_loc": "CHANNELED - Tiny channels to throw random trees within range towards the targeted area. Deals Tiny's attack with Tree Throw bonuses.",
               "lore_loc": "Sticks thrown from stones are like to shatter many bones.",
               "notes_loc": [],
               "shard_loc": "",
@@ -1169,14 +1082,13 @@
               "item_quality": 0
             },
             {
-              "id": 296,
-              "name": "tiny_craggy_exterior",
-              "name_loc": "Craggy Exterior",
-              "desc_loc": "Enemies that attack Tiny receive a stacking debuff that lowers their attack damage with each stack.",
+              "id": 1236,
+              "name": "tiny_insurmountable",
+              "name_loc": "Insurmountable",
+              "desc_loc": "Tiny gains Status and Slow Resistance from Strength. Slow Resistance also reduces the impact of Attack Speed slows.",
               "lore_loc": "",
               "notes_loc": [
-                "Break disables the application of new stacks.",
-                "Break does not disable the effects of existing stacks."
+                "Insurmountable does not reduce the effect of Grow's Attack Speed Reduction."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1185,14 +1097,14 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8589934658",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 2,
+              "damage": 0,
               "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
+              "dispellable": 3,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1221,12 +1133,12 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "debuff_duration",
+                  "name": "str_to_slow_resist_pct",
                   "values_float": [
-                    5
+                    20
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "DEBUFF DURATION:",
+                  "is_percentage": true,
+                  "heading_loc": "STRENGTH TO SLOW RESIST:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1238,32 +1150,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "max_stacks",
+                  "name": "str_to_status_resist_pct",
                   "values_float": [
                     10
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "MAX STACKS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_reduction_per_stack",
-                  "values_float": [
-                    2,
-                    3,
-                    4,
-                    5
-                  ],
                   "is_percentage": true,
-                  "heading_loc": "DAMAGE REDUCTION PER STACK:",
+                  "heading_loc": "STRENGTH TO STATUS RESIST:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1295,7 +1187,7 @@
               "desc_loc": "Tiny gains craggy mass, increasing his attack damage, movement speed and armor, and toss power while slowing his attack speed.",
               "lore_loc": "Watching a hill become a mountain is awe-inspiring - especially if the mountain begins laying waste to adversaries.",
               "notes_loc": [],
-              "shard_loc": "",
+              "shard_loc": "Units tossed by Toss or trees tossed by Tree Throw or Tree Volley now deal additional damage and slow in a larger area of effect at their landing location.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1435,11 +1327,125 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "land_movement_slow",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SLOW:",
+                  "bonuses": [],
+                  "values_shard": [
+                    25
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "land_attack_slow",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ATTACK SLOW:",
+                  "bonuses": [],
+                  "values_shard": [
+                    45
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "land_debuff_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SLOW DURATION:",
+                  "bonuses": [],
+                  "values_shard": [
+                    2.5
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "land_radius_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "LAND RADIUS BONUS:",
+                  "bonuses": [],
+                  "values_shard": [
+                    125
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "land_toss_damage_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "TOSS LANDING BONUS DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [
+                    20
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "land_tree_damage_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "TREE THROW BONUS DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [
+                    50
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -1457,7 +1463,7 @@
               "desc_loc": "Throws the tree at the target unit, proccing your attack on it and splashing damage around the target.",
               "lore_loc": "Even enemies can share in Tiny's arbor ardor.",
               "notes_loc": [],
-              "shard_loc": "Increases damage dealt by thrown trees by %bonus_bonus_damage%.",
+              "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1542,10 +1548,16 @@
                     40
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
+                  "heading_loc": "BONUS DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_tiny_7",
+                      "value": 60,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [
-                    100
+                    50
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1563,41 +1575,9 @@
                   "is_percentage": false,
                   "heading_loc": "SPLASH RADIUS:",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movement_slow",
-                  "values_float": [
-                    25
+                  "values_shard": [
+                    400
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "slow_duration",
-                  "values_float": [
-                    2.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "SLOW DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1643,7 +1623,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -2171,114 +2151,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1236,
-                  "name": "tiny_insurmountable",
-                  "name_loc": "Insurmountable",
-                  "desc_loc": "Tiny gains Status and Slow Resistance from Strength. Slow Resistance also reduces the impact of Attack Speed slows.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Insurmountable does not reduce the effect of Grow's Attack Speed Reduction."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "str_to_slow_resist_pct",
-                      "values_float": [
-                        20
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "STRENGTH TO SLOW RESIST:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "str_to_status_resist_pct",
-                      "values_float": [
-                        10
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "STRENGTH TO STATUS RESIST:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": true,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

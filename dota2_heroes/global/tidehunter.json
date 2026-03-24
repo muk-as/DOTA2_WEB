@@ -10,28 +10,9 @@
           "bio_loc": "The Tidehunter known as Leviathan was once the champion of the Sunken Isles, but his motives are as mysterious as those of his people. We all know the importance of the Drylanders' shipping lanes, how empires may rise and fall according to who controls the open water. Far less is known of the submarine lanes, and how the warring tribes of the Meranthic Diaspora have carved out habitations through endless undersea skirmishes. In the fragile treaties between the Mer and Men, we can glimpse the extent of the drowned empires, but their politics appear complex and opaque. It would seem that Leviathan tired of such petty strife, and set off on his own, loyal only to his abyssal god, Maelrawn the Tentacular. He stalks the shallows now in search of men or meranths who stray into his path, and with a particular loathing for Admiral Kunkka, who has long been his nemesis for reasons lost in the deepest trenches of the sea.",
           "hype_loc": "Stalking ahead of his team, Tidehunter is always on the lookout for the <b>right time to strike</b>. When the moment comes, he unleashes his massive and devastating ultimate, paving the way for his allies to slay their <b>stunned enemies.</b>",
           "npe_desc_loc": "Durable hero who shrugs off enemy damage",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Kraken Swell",
-              "description_loc": "Kraken Shell gains permanent Damage Block when an enemy hero dies under the effects of Anchor Smash.",
-              "name": "tidehunter_kraken_swell",
-              "icon": "armor",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 2,
-              "title_loc": "Krill Eater",
-              "description_loc": "Tidehunter grows larger and gains extra bonuses per level.",
-              "name": "tidehunter_sizescale",
-              "icon": "overshadow",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 26,
-          "str_gain": 3.6,
+          "str_gain": 3.7,
           "agi_base": 15,
           "agi_gain": 1.5,
           "int_base": 20,
@@ -389,7 +370,7 @@
               "id": 5119,
               "name": "tidehunter_kraken_shell",
               "name_loc": "Kraken Shell",
-              "desc_loc": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. Reduced block amount versus creeps.\n\nCan be activated to double the block amount at the cost of %active_move_speed_penalty_pct%%% movement speed. Lasts %active_duration%s.",
+              "desc_loc": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. Reduced block amount versus creeps. The hide also removes negative status effects if the damage taken crosses a threshold.\n\nCan be activated to double the block amount at the cost of %active_move_speed_penalty_pct%%% movement speed. Lasts %active_duration%s.\n\nDISPEL TYPE: Strong Dispel",
               "lore_loc": "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet.",
               "notes_loc": [
                 "Break disables the gaining of new Kraken Swell stacks.",
@@ -555,6 +536,64 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "damage_cleanse",
+                  "values_float": [
+                    600,
+                    550,
+                    500,
+                    450
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE CLEANSE THRESHOLD:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_reset_interval",
+                  "values_float": [
+                    7
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE RESET INTERVAL:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "smash_on_purge",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_tidehunter_smash_on_blubber",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityManaCost",
                   "values_float": [
                     45
@@ -606,10 +645,11 @@
               "id": 5120,
               "name": "tidehunter_anchor_smash",
               "name_loc": "Anchor Smash",
-              "desc_loc": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
+              "desc_loc": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage. The radius of Anchor Smash is Tidehunter's attack range plus %additional_range% units.",
               "lore_loc": "Stolen from one of Admiral Kunkka's flagships, Leviathan's heavy anchor proves useful as a melee weapon.",
               "notes_loc": [
-                "Anchor Smash works on all Ancient creeps except for Roshan."
+                "Anchor Smash works on all Ancient creeps except for Roshan.",
+                "Damage done by Anchor Smashes triggered by Kraken Shell Cleanse is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -723,23 +763,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "radius",
-                  "values_float": [
-                    375
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "targets_buildings",
                   "values_float": [],
                   "is_percentage": false,
@@ -772,6 +795,23 @@
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "additional_range",
+                  "values_float": [
+                    225
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1182,7 +1222,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "AbilityDamage",
                   "values_float": [
                     275,
                     375,
@@ -1276,14 +1316,14 @@
               "item_quality": 0
             },
             {
-              "id": 1255,
-              "name": "tidehunter_blubber",
-              "name_loc": "Blubber",
-              "desc_loc": "Tidehunter's hide removes negative status effects if he takes more than %damage_cleanse% damage. Removes most debuffs, even if they are generally not purgable.\n\nDISPEL TYPE: Strong Dispel",
+              "id": 1254,
+              "name": "tidehunter_krill_eater",
+              "name_loc": "Leviathan's Catch",
+              "desc_loc": "Whenever an enemy hero is killed by Tidehunter or dies under his debuffs, a fish appears in their place for %fish_duration% seconds. Tidehunter can eat the fish to permanently gain %fish_health_bonus% Health, %fish_attack_range% Attack Range, and %fish_damage_block% Bonus Damage Block. Tidehunter eats a fish every level up.",
               "lore_loc": "",
               "notes_loc": [
-                "Only damage from player owned sources is counted towards debuff removal.",
-                "The counter will reset if no player owned damage is taken for %damage_reset_interval% seconds."
+                "After %fish_duration%s the fish will disappear.",
+                "Bonus Damage Block only applies if another source of Damage Block will be affecting the incoming physical attack."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1298,7 +1338,7 @@
               "flags": 0,
               "damage": 0,
               "immunity": 0,
-              "dispellable": 0,
+              "dispellable": 3,
               "max_level": 1,
               "cast_ranges": [
                 0
@@ -1328,9 +1368,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage_cleanse",
+                  "name": "fish_duration",
                   "values_float": [
-                    450
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1345,17 +1385,13 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "smash_on_purge",
-                  "values_float": [],
+                  "name": "fish_attack_range",
+                  "values_float": [
+                    2
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_tidehunter_smash_on_blubber",
-                      "value": 50,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1366,12 +1402,148 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_reset_interval",
+                  "name": "fish_damage_block",
                   "values_float": [
-                    7
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "fish_health_bonus",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "fish_model_scale",
+                  "values_float": [
+                    1.1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_fish_spawn_distance",
+                  "values_float": [
+                    400
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "health_bar_offset_base",
+                  "values_float": [
+                    160
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "health_bar_offset_per_level",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "permanent_health_gain",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "HEALTH GAINED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "permanent_attack_range_gain",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ATTACK RANGE GAINED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "permanent_damage_block_gain",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS DAMAGE BLOCK GAINED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1649,7 +1821,7 @@
             {
               "id": 1701,
               "name": "special_bonus_unique_tidehunter_smash_on_blubber",
-              "name_loc": "Blubber effect triggers Anchor Smash",
+              "name_loc": "Kraken Shell Cleanse triggers Anchor Smash",
               "desc_loc": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage.",
               "lore_loc": "",
               "notes_loc": [],
@@ -1895,265 +2067,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1254,
-                  "name": "tidehunter_krill_eater",
-                  "name_loc": "Krill Eater",
-                  "desc_loc": "Tidehunter begins the game much smaller and with -%attack_range_base% attack range and -%anchor_smash_radius_base% Anchor Smash radius. Tidehunter grows larger with experience, gaining attacking range and Anchor Smash radius per level. Strength Gain increased.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "model_scale_base",
-                      "values_float": [
-                        -25
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "model_scale_per_level",
-                      "values_float": [
-                        3
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "attack_range_base",
-                      "values_float": [
-                        -60
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "attack_range_per_level",
-                      "values_float": [
-                        5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "ATTACK RANGE PER LEVEL:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "anchor_smash_radius_base",
-                      "values_float": [
-                        -60
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "anchor_smash_radius_per_level",
-                      "values_float": [
-                        5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "ANCHOR SMASH RADIUS PER LEVEL:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "health_bar_offset_base",
-                      "values_float": [
-                        160
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "health_bar_offset_per_level",
-                      "values_float": [
-                        5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "strength_gain_tooltip",
-                      "values_float": [
-                        3.9
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "STRENGTH GAIN:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "attack_range_tooltip",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "ATTACK RANGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "anchor_smash_range_tooltip",
-                      "values_float": [
-                        0
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "ANCHOR SMASH RANGE:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

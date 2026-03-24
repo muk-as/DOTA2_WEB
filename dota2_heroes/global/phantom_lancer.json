@@ -10,17 +10,7 @@
           "bio_loc": "The remote village of Pole had no knowledge of the wars raging in the heart of the kingdom. For them, the quiet of spear fishing, and a family meal were all that a full life required. Yet war came for them nonetheless. Joining the able-bodied conscripts as they filed passed their homes, the humble lancer Azwraith vowed to bring peace to his kingdom, and in so doing, his people. Placed with his kin in the vanguard of the final assault against the Dread Magus Vorn, the cost to his fellows was absolute. As the charging force battled toward the fortress, Azwraith alone among his kind remained standing, and he alone was able to infiltrate the keep.\r\n\t\t\t\t<br><br>Focused and infuriated by the slaughter of his brothers, Azwraith bested each of the wizard's deadly traps and conjured guardians. Soon the simple fisherman arrived at Vorn's tower sanctum. The pair dueled through the night, pike to staff, as chaos raged below, and with a deafening cry Azwraith pierced his enemy. But the wizard did not simply expire; he exploded into uncountable shards of light, penetrating his killer with power. As the dust settled and the smoke of combat began to clear, Azwraith found himself standing among a throng of his kin. Each seemed to be dressed as he was, each seemed armed as he was, and he could sense that each thought as he did. Aware that his allies were approaching, he willed these phantoms to hide themselves, and one by one they began to vanish into nothingness. As the soldiers came upon the sanctum, they found the warrior that had bested the wizard. When they approached their champion, the lancer vanished. The pikeman who had stood before them was no more than another phantom.",
           "hype_loc": "Phantom Lancer storms enemy forces with an <b>endless supply of clones</b>. Leading his illusory army, he can cut foes apart in a breathtaking <b>flurry of attacks</b>, send clones to push into enemy territory, or use his doppelgangers to <b>mislead and elude foes</b> if cornered.",
           "npe_desc_loc": "Creates illusions of himself to trick or attack foes",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Fractured",
-              "description_loc": "This facet doesn't do anything. Azwraith is out spear fishing...",
-              "name": "phantom_lancer_lancer",
-              "icon": "phantom_lance",
-              "gradient_id": 2,
-              "index": 3
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.2,
           "agi_base": 26,
@@ -813,7 +803,7 @@
               "id": 1221,
               "name": "phantom_lancer_phantom_edge",
               "name_loc": "Phantom Rush",
-              "desc_loc": "When targeting an enemy for an attack, Phantom Lancer quickly charges into range, gaining bonus movement speed and evasion. Phantom Lancer's illusions also have this ability.",
+              "desc_loc": "When targeting an enemy for an attack, Phantom Lancer quickly charges into range, gaining increased movement speed and evasion.",
               "lore_loc": "Azwraith knows that on the field of battle, speed can mean everything.",
               "notes_loc": [
                 "If the attack order is cancelled, the movement speed bonus is lost.",
@@ -990,7 +980,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_phantom_rush_cooldown",
+                      "value": 2,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1030,7 +1026,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8796093022274",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1153,7 +1149,7 @@
                 0
               ],
               "cooldowns": [
-                15
+                0
               ],
               "durations": [
                 0
@@ -1165,7 +1161,7 @@
                 0
               ],
               "mana_costs": [
-                75
+                0
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1238,7 +1234,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_juxtapose_duration",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1255,7 +1257,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_phantom_lancer_juxtapose_duration",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1447,12 +1455,14 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    75
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    75
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1464,12 +1474,14 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    15
+                    0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    15
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -2007,11 +2019,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

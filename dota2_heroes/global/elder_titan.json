@@ -10,26 +10,7 @@
           "bio_loc": "Well may you ask, \"How did this world take its form?\" Why of all the worlds in creation, has this one its strange properties, its diverse and motley collection of creatures, cultures and lore? \"The answer,\" One whispers, \"lies with the Titans.\"\r\n\t\t\t\t<br><br>These original progenitors were there near the Beginning--if not actual witnesses to the creation, then born with it still echoing in their ears. Stamped with the earliest energies of the universe, they wished nothing more than to continue as creators themselves. Thus they bent to the task of shaping matter to their will: hammering and heating, bending and blasting. And when matter proved less challenging than they liked, they turned their tools upon themselves, reshaping their minds and reforging their spirits until they had become beings of great endurance. Reality itself became the ultimate object of their smithing. Yet, along the way, they sometimes erred. In cases of great ambition, mistakes are unavoidable.\r\n\t\t\t\t<br><br>The one we know as the Elder Titan was a great innovator, one who studied at the forge of creation. In honing his skills, he shattered something that could never be repaired, only thrown aside. He fell into his own broken world, a shattered soul himself. There he dwelt among the jagged shards and fissured planes, along with other lost fragments that had sifted down through the cracks in the early universe. And this is why the world we know resembles an isle of castaways, survivors of a wreck now long forgotten. Forgotten, that is, by all but the One who blames himself. He spends his time forever seeking a way to accomplish the repairs, that he might rejoin the parts of his broken soul, that we and the world alike might all be mended. This is the One we know as Elder Titan.",
           "hype_loc": "Scouting the way with his <b>astral spirit</b>, Elder Titan can strike from any direction. <b>Halting foes</b> with a stomp of his hoof while his presence <b>eats away at their defenses</b>, he splits the earth itself to bring his enemies low.",
           "npe_desc_loc": "Damages and disables with his astral spirit",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Deconstruction",
-              "description_loc": "Natural Order drains Magic Resistance and Armor over time.",
-              "name": "elder_titan_deconstruction",
-              "icon": "armor_broken",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Momentum",
-              "description_loc": "Elder Titan's Base Attack Speed is reduced but his Movement Speed also grants Attack Speed.",
-              "name": "elder_titan_boost_atkspd",
-              "icon": "damage",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 26,
           "str_gain": 3,
           "agi_base": 16,
@@ -230,11 +211,30 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_elder_titan_4",
-                      "value": 350,
+                      "value": 150,
                       "operation": 0
                     }
                   ],
                   "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "can_swap_places",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -351,11 +351,11 @@
               "id": 1392,
               "name": "elder_titan_ancestral_spirit",
               "name_loc": "Astral Spirit",
-              "desc_loc": "Elder Titan sends forth his Astral Spirit, damaging any units it passes through.  When the spirit rejoins the Titan, it grants bonus damage, armor, and movement speed for each unit it passed through.\n\nThe Astral Spirit possesses the Echo Stomp, Return Spirit, and Natural Order abilities.",
+              "desc_loc": "Elder Titan sends forth his Astral Spirit, damaging any units it passes through.  When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it passed through.\n\nThe Astral Spirit possesses the Echo Stomp, Return Spirit, and Natural Order abilities.",
               "lore_loc": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Causes Elder Titan to become debuff immune and gain 50%% magic resistance for %scepter_magic_immune_per_hero% seconds per affected enemy Hero when the spirit returns.",
+              "scepter_loc": "Causes Elder Titan to become debuff immune and gain %immunity_resist%%% magic resistance for %scepter_magic_immune_per_hero% seconds per affected enemy Hero when the spirit returns.",
               "facets_loc": [
                 "",
                 ""
@@ -583,47 +583,10 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_elder_titan",
-                      "value": 25,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "armor_creeps",
-                  "values_float": [
-                    0.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS ARMOR (CREEPS):",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "armor_heroes",
-                  "values_float": [
-                    1.5,
-                    3,
-                    4.5,
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "BONUS ARMOR (HEROES):",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -662,6 +625,23 @@
                   "values_scepter": [
                     2
                   ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "immunity_resist",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -766,7 +746,7 @@
               "notes_loc": [
                 "When the Astral Spirit isn't present, both the armor and magic armor reduction is centered around Elder Titan."
               ],
-              "shard_loc": "",
+              "shard_loc": "Every %tick_rate%s that enemy heroes stay under the effect of Natural Order, their armor is reduced by %armor_per_tick%, and magic resistance is reduced by %magic_resistance_per_tick%%%. Stacks up to %max_stacks% times.",
               "scepter_loc": "",
               "facets_loc": [
                 "Every %tick_rate%s that enemy heroes stay under the effect of Natural Order, their armor is reduced by %armor_per_tick%, and magic resistance is reduced by %magic_resistance_per_tick%%%. Stacks up to %max_stacks% times.",
@@ -870,82 +850,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "max_stacks",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "elder_titan_deconstruction",
-                    "values": [
-                      20
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "elder_titan_deconstruction"
-                },
-                {
-                  "name": "magic_resistance_per_tick",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "elder_titan_deconstruction",
-                    "values": [
-                      0.8
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "elder_titan_deconstruction"
-                },
-                {
-                  "name": "armor_per_tick",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "elder_titan_deconstruction",
-                    "values": [
-                      0.8
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "elder_titan_deconstruction"
-                },
-                {
-                  "name": "tick_rate",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "elder_titan_deconstruction",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "elder_titan_deconstruction"
                 }
               ],
               "is_item": false,
@@ -954,6 +858,110 @@
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1393,
+              "name": "elder_titan_momentum",
+              "name_loc": "Momentum",
+              "desc_loc": "Elder Titan gains armor equal to a percentage of his bonus movement speed.",
+              "lore_loc": "",
+              "notes_loc": [
+                "Bonus movement speed is any movement speed above his base movement speed.",
+                "Momentum does not reduce Elder Titan's Armor if he is slowed below his base movement speed."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8796093022274",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 4,
+              "dispellable": 0,
+              "max_level": 1,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "armor_from_movespeed",
+                  "values_float": [
+                    3.6
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "BONUS SPEED TO ARMOR:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_speed_from_movespeed",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_elder_titan_momentum_attack_speed",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": true,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -995,7 +1003,9 @@
                 0
               ],
               "cooldowns": [
-                100
+                100,
+                95,
+                90
               ],
               "durations": [
                 0
@@ -1225,25 +1235,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "slow_duration_scepter",
-                  "values_float": [
-                    4,
-                    5,
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     2400
@@ -1299,7 +1290,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    100
+                    100,
+                    95,
+                    90
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1332,93 +1325,13 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
-            },
-            {
-              "id": 1482,
-              "name": "elder_titan_tip_the_scales",
-              "name_loc": "Tip the Scales",
-              "desc_loc": "Allied creeps and buildings affected by Glyph of Fortification or Roshan's Banner deal %damage_bonus%%% bonus damage.",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8796093022210",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 4,
-              "dispellable": 0,
-              "max_level": 1,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "damage_bonus",
-                  "values_float": [
-                    100
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
             }
           ],
           "talents": [
             {
               "id": 917,
               "name": "special_bonus_unique_elder_titan_bonus_spirit_speed",
-              "name_loc": "+{s:bonus_move_pct_heroes}% Astral Spirit Move Speed Per Hero",
+              "name_loc": "+{s:bonus_move_pct_heroes}% Astral Spirit Bonus Move Speed Per Hero",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1478,9 +1391,9 @@
               "item_quality": 0
             },
             {
-              "id": 6016,
-              "name": "special_bonus_attack_speed_25",
-              "name_loc": "+{s:value} Attack Speed",
+              "id": 7350,
+              "name": "special_bonus_unique_elder_titan_4",
+              "name_loc": "+{s:bonus_wake_damage_limit} Echo Stomp Wake Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1525,25 +1438,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    25
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1620,9 +1515,9 @@
               "item_quality": 0
             },
             {
-              "id": 6171,
-              "name": "special_bonus_unique_elder_titan",
-              "name_loc": "+{s:bonus_damage_heroes} Astral Spirit Hero Attack",
+              "id": 1836,
+              "name": "special_bonus_unique_elder_titan_momentum_attack_speed",
+              "name_loc": "{s:bonus_attack_speed_from_movespeed}% of Bonus Movement Speed as Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1682,9 +1577,9 @@
               "item_quality": 0
             },
             {
-              "id": 7350,
-              "name": "special_bonus_unique_elder_titan_4",
-              "name_loc": "+{s:bonus_wake_damage_limit} Echo Stomp Wake Damage",
+              "id": 6171,
+              "name": "special_bonus_unique_elder_titan",
+              "name_loc": "+{s:bonus_damage_heroes} Astral Spirit Bonus Damage per Hero",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1948,112 +1843,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1393,
-                  "name": "elder_titan_momentum",
-                  "name_loc": "Momentum",
-                  "desc_loc": "Elder Titan's Base Attack Speed is reduced but his Movement Speed also grants Attack Speed.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "attack_speed_from_movespeed",
-                      "values_float": [
-                        25
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "MOVEMENT SPEED AS ATTACK SPEED:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "attack_speed_penalty",
-                      "values_float": [
-                        85
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "ATTACK SPEED PENALTY:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

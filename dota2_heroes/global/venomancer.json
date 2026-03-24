@@ -10,26 +10,7 @@
           "bio_loc": "In the Acid Jungles of Jidi Isle, poison runs in the veins and bubbles in the guts of every creature that scuttles, climbs or swoops between fluorescent vines dripping with caustic sap. Yet even in this toxic menagerie, Venomancer is acknowledged as the most venomous. Ages ago, an Herbalist named Lesale crossed the Bay of Fradj by coracle, searching for potent essences that might be extracted from bark and root, and found instead a nightmare transformation. Two leagues into Jidi's jungle, Lesale encountered a reptile camouflaged as an epiphyte, which stung him as he mistakenly plucked it. In desperation, he used his partial knowledge of the jungle's herbal bounty, mixing the venom of the (swiftly throttled) reptile with the nectar of an armored orchid, to compound an antidote. In the moments before a black paralysis claimed him completely, he injected himself by orchid-thorn, and instantly fell into a coma.\r\n\t\t\t\t<br><br>Seventeen years later, something stirred in the spot where he had fallen, throwing off the years' accumulation of humus: Venomancer. Lesale the Herbalist no longer--but Lesale the Deathbringer. His mind was all but erased, and his flesh had been consumed and replaced by a new type of matter--one fusing the venom of the reptile with the poisonous integument of the orchid. Jidi's Acid Jungles knew a new master, one before whom even the most vicious predators soon learned to bow or burrow for their lives. The lurid isle proved too confining, and some human hunger deep in the heart of the Venomancer drove Lesale out in search of new poisons--and new deaths to bring.",
           "hype_loc": "Venomancer brings slow death to his enemies. Sprouting an <b>endless army of toxin-spitting watchers</b> to defend his territory, should foes draw near he can release a massive <b>cloud of lingering poison</b> to weaken enemies.",
           "npe_desc_loc": "Deals damage over time with venomous attacks",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Patient Zero",
-              "description_loc": "Noxious Plague spreads again.",
-              "name": "venomancer_patient_zero",
-              "icon": "snot",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Plague Carrier",
-              "description_loc": "When Venomous Gale impacts enemy heroes, {s:bonus_num_created_wards_tooltip} Plague Wards are created around them. Plague Wards also deal Septic Shock damage based on their attack damage.",
-              "name": "venomancer_plague_carrier",
-              "icon": "summons",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 19,
           "str_gain": 2.1,
           "agi_base": 25,
@@ -77,11 +58,11 @@
                 "Duration damage is dealt every %tick_interval% seconds.",
                 "Slow starts at %movement_slow%%%, and decreases as time passes."
               ],
-              "shard_loc": "If Venomous Gale is dispelled in any way, the target will receive %explosion_damage% damage and be stunned for %explosion_stun_duration% seconds.",
+              "shard_loc": "Increases cast range and projectile speed by %shard_travel_tooltip%%%. When Venomous Gale impacts enemy heroes, %num_created_wards_tooltip% Plague Wards are created around them.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "When Venomous Gale impacts enemy heroes, %num_created_wards_tooltip% Plague Wards that have %ward_hp_dmg_pct%%% health and damage are created around them based on the current level of Plague Ward."
+                ""
               ],
               "type": 0,
               "behavior": "48",
@@ -245,9 +226,11 @@
                     1200
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "PROJECTILE SPEED:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    300
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -264,65 +247,8 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "venomancer_plague_carrier"
-                },
-                {
-                  "name": "num_created_wards_tooltip",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      2
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "venomancer_plague_carrier"
-                },
-                {
-                  "name": "ward_hp_dmg_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      75
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "venomancer_plague_carrier"
-                },
-                {
-                  "name": "explosion_damage",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
                   "values_shard": [
-                    300
+                    1
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -333,7 +259,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "explosion_stun_duration",
+                  "name": "shard_travel_tooltip",
                   "values_float": [
                     0
                   ],
@@ -341,7 +267,45 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    1.6
+                    25
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "num_created_wards_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    2
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "ward_hp_dmg_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    100
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -359,7 +323,9 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    200
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -429,15 +395,12 @@
               "item_quality": 0
             },
             {
-              "id": 5179,
-              "name": "venomancer_poison_sting",
-              "name_loc": "Poison Sting",
-              "desc_loc": "Adds poison damage to Venomancer's normal attacks and slowing movement speed.",
-              "lore_loc": "The paralytic sting of the creature which caused his transformation now belongs to the Venomancer.",
-              "notes_loc": [
-                "Poison Sting damage can be lethal.",
-                "Damage from Poison Sting does not interrupt healing from items, nor does it activate the cooldown on Blink Dagger."
-              ],
+              "id": 1749,
+              "name": "venomancer_snakebite",
+              "name_loc": "Snakebite",
+              "desc_loc": "Venomancer summons a Spawn of Aktok to sink its fangs into a target, dealing magic damage and applying a toxin that does damage every second. When the target attacks while infected, they take the initial damage again.",
+              "lore_loc": "",
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -445,25 +408,28 @@
                 ""
               ],
               "type": 0,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
+              "behavior": "8",
+              "target_team": 2,
+              "target_type": 19,
               "flags": 0,
               "damage": 2,
-              "immunity": 4,
+              "immunity": 0,
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                0
+                600
               ],
               "cast_points": [
-                0
+                0.2
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                0
+                20,
+                18,
+                16,
+                14
               ],
               "durations": [
                 0
@@ -475,18 +441,70 @@
                 0
               ],
               "mana_costs": [
-                0
+                70,
+                80,
+                90,
+                100
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
+                  "name": "base_damage",
+                  "values_float": [
+                    40,
+                    60,
+                    80,
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "INITIAL DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_venomancer_4",
+                      "value": 40,
+                      "operation": 3
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "tick_damage",
+                  "values_float": [
+                    20,
+                    25,
+                    30,
+                    35
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE PER SECOND:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_venomancer_4",
+                      "value": 40,
+                      "operation": 3
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "duration",
                   "values_float": [
-                    6,
-                    9,
-                    12,
-                    15
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -501,15 +519,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage",
+                  "name": "damage_interval",
                   "values_float": [
-                    8,
-                    16,
-                    24,
-                    32
+                    0.5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE PER SECOND:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -521,20 +536,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "movement_speed",
-                  "values_float": [
-                    -8,
-                    -10,
-                    -12,
-                    -14
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SLOW:",
+                  "name": "undispellable",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_venomancer_2",
-                      "value": 5,
-                      "operation": 2
+                      "name": "special_bonus_unique_venomancer_5",
+                      "value": 1,
+                      "operation": 5
                     }
                   ],
                   "values_shard": [],
@@ -547,17 +557,70 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "hp_regen_reduction",
-                  "values_float": [],
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    600
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_venomancer_poisonsting_regen_reduction",
-                      "value": 15,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.2
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    70,
+                    80,
+                    90,
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    20,
+                    18,
+                    16,
+                    14
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -815,7 +878,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_venomancer_8",
-                      "value": 1,
+                      "value": 2,
                       "operation": 2
                     }
                   ],
@@ -843,22 +906,23 @@
               "item_quality": 0
             },
             {
-              "id": 1457,
-              "name": "venomancer_sepsis",
-              "name_loc": "Septic Shock",
-              "desc_loc": "Venomancer's attacks deal extra damage based on how many debuffs the attack target has. Extra damage is dealt as magical damage. Only counts debuffs from Venomancer or his Plague Wards.",
-              "lore_loc": "",
+              "id": 5179,
+              "name": "venomancer_poison_sting",
+              "name_loc": "Poison Sting",
+              "desc_loc": "Venomancer's attacks slow enemies and deal damage over time.",
+              "lore_loc": "The paralytic sting of the creature which caused his transformation now belongs to the Venomancer.",
               "notes_loc": [
-                "Break only disables the bonus damage for Venomancer's attacks."
+                "Poison Sting damage can be lethal.",
+                "Damage from Poison Sting does not interrupt healing from items, nor does it activate the cooldown on Blink Dagger."
               ],
-              "shard_loc": "",
-              "scepter_loc": "Increases base damage per debuff.",
+              "shard_loc": "Whenever Poison Sting is applied, it deals extra damage equal to %debuff_dmg%%% of the attacker's base damage for every debuff the enemy has from Venomancer or a unit he controls.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Plague Wards also deal Septic Shock damage based on their attack damage."
+                ""
               ],
               "type": 0,
-              "behavior": "66",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -894,17 +958,15 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_dmg_per_debuff_pct",
+                  "name": "duration",
                   "values_float": [
-                    8
+                    4.5
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "BASE DAMAGE PER DEBUFF:",
+                  "is_percentage": false,
+                  "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    15
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -913,27 +975,69 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "apply_from_ward_attacks",
+                  "name": "damage",
                   "values_float": [
-                    0
+                    9
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "venomancer_plague_carrier",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "venomancer_plague_carrier"
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_speed",
+                  "values_float": [
+                    10
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SLOW:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_venomancer_2",
+                      "value": 7,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "hp_regen_reduction",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_venomancer_poisonsting_regen_reduction",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -949,13 +1053,15 @@
               "id": 1105,
               "name": "venomancer_noxious_plague",
               "name_loc": "Noxious Plague",
-              "desc_loc": "Infects an enemy with a deadly plague that does an initial burst of damage and additional damage over time based on the unit's maximum health. The plague slows the target and nearby enemies based on their distance to the target. When the target dies or the debuff expires, all nearby enemies are infected with a noncommunicable version of the plague.",
+              "desc_loc": "Infects an enemy with a plague that does damage on application then slows the target and deals damage over time based on their maximum health. When the debuff ends for any reason, all debuffs from Venomancer on the initial target and the plague are spread to nearby targets. Additional spreads beyond the first do not deal impact damage.",
               "lore_loc": "Deep in the heart of the jungles of Jidi, the seeds of extermination freely grow.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Spread debuffs have fixed duration and are not modified by status resistance or debuff amplification."
+              ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Decreases cooldown by %bonus_AbilityCooldown% seconds. Infected units have decreased magic resistance. Additional spreads from hero targets deal full impact damage.",
               "facets_loc": [
-                "Noxious Plague spreads %spread_count% times. Impact damage for spreads after the first one is reduced by %impact_damage_reduce%%%.",
+                "",
                 ""
               ],
               "type": 1,
@@ -965,7 +1071,7 @@
               "flags": 0,
               "damage": 2,
               "immunity": 4,
-              "dispellable": 3,
+              "dispellable": 0,
               "max_level": 3,
               "cast_ranges": [
                 900
@@ -992,8 +1098,8 @@
               ],
               "mana_costs": [
                 200,
-                300,
-                400
+                250,
+                300
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1001,7 +1107,7 @@
                 {
                   "name": "debuff_duration",
                   "values_float": [
-                    5
+                    4
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1018,9 +1124,9 @@
                 {
                   "name": "impact_damage",
                   "values_float": [
+                    150,
                     200,
-                    300,
-                    400
+                    250
                   ],
                   "is_percentage": false,
                   "heading_loc": "INITIAL DAMAGE:",
@@ -1035,21 +1141,66 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "health_damage",
+                  "name": "damage_per_second",
                   "values_float": [
+                    2,
                     3,
-                    4,
-                    5
+                    4
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MAX HP AS DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_venomancer_4",
-                      "value": 1,
-                      "operation": 0
-                    }
+                  "heading_loc": "MAX HEALTH DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_tick_rate",
+                  "values_float": [
+                    0.25
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "debuff_time_transfer",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_slow",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "SLOW:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1062,63 +1213,14 @@
                 {
                   "name": "debuff_radius",
                   "values_float": [
-                    800
+                    700
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DEBUFF RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movement_slow_max",
-                  "values_float": [
-                    50
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAX SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movement_slow_min",
-                  "values_float": [
-                    15
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MIN SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "attack_slow",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "SPREAD RADIUS:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_venomancer_5",
-                      "value": 200,
+                      "name": "special_bonus_unique_venomancer_plague_spread",
+                      "value": 75,
                       "operation": 0
                     }
                   ],
@@ -1134,18 +1236,35 @@
                 {
                   "name": "spread_count",
                   "values_float": [
-                    1
+                    2
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "SPREAD COUNT:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "venomancer_patient_zero",
-                    "values": [
-                      1
-                    ],
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mres_reduce",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAGIC RESIST REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    20
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1153,21 +1272,21 @@
                 {
                   "name": "impact_damage_reduce",
                   "values_float": [
-                    0
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    0
+                  ],
                   "facet_bonus": {
-                    "name": "venomancer_patient_zero",
-                    "values": [
-                      100
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "venomancer_patient_zero"
+                  "required_facet": ""
                 },
                 {
                   "name": "projectile_speed",
@@ -1224,8 +1343,8 @@
                   "name": "AbilityManaCost",
                   "values_float": [
                     200,
-                    300,
-                    400
+                    250,
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1250,7 +1369,9 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    35
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1260,7 +1381,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1399,9 +1520,9 @@
               "item_quality": 0
             },
             {
-              "id": 811,
-              "name": "special_bonus_unique_venomancer_8",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Plague Ward Cooldown",
+              "id": 1799,
+              "name": "special_bonus_unique_venomancer_plague_spread",
+              "name_loc": "+{s:bonus_debuff_radius} Noxious Plague Spread Radius",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1525,7 +1646,7 @@
             {
               "id": 6980,
               "name": "special_bonus_unique_venomancer_4",
-              "name_loc": "+{s:bonus_health_damage}% Noxious Plague Max HP Damage",
+              "name_loc": "+{s:bonus_tick_damage}% Snakebite Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1585,9 +1706,9 @@
               "item_quality": 0
             },
             {
-              "id": 548,
-              "name": "special_bonus_attack_base_damage_50",
-              "name_loc": "+{s:value} Base Damage",
+              "id": 811,
+              "name": "special_bonus_unique_venomancer_8",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Plague Ward Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1632,25 +1753,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    50
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1667,7 +1770,7 @@
             {
               "id": 6981,
               "name": "special_bonus_unique_venomancer_5",
-              "name_loc": "Noxious Plague Aura reduces {s:bonus_attack_slow} Attack Speed",
+              "name_loc": "Snakebite Undispellable",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1789,14 +1892,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,35 +10,7 @@
           "bio_loc": "The sacred science of Chymistry was a Darkbrew family tradition, but no Darkbrew had ever shown the kind of creativity, ambition, and recklessness of young Razzil. However, when adulthood came calling he pushed aside the family trade to try his hand at manufacturing gold through Alchemy.\r\n\t\t\t\t<br><br>In an act of audacity befitting his reputation, Razzil announced he would transmute an entire mountain into gold. Following two decades of research and spending and preparation, he failed spectacularly, quickly finding himself imprisoned for the widespread destruction his experiment wrought. Yet Razzil was never one to take a setback lightly, and sought escape to continue his research.\r\n\t\t\t\t<br><br>When his new cellmate turned out to be a fierce ogre, he found just the opportunity he needed. After convincing the ogre not to eat him, Razzil set about carefully concocting a tincture for it to drink, made from the moulds and mosses growing in the prison stone work. In a week's time, it seemed ready. When the ogre drank the potion, it flew into an unstoppable berserker rage, destroying the cell bars and exploding through walls and guards alike.\r\n\t\t\t\t<br><br>They soon found themselves lost somewhere in the forest surrounding the city with a trail of wreckage in their wake and no signs of pursuit.  In the tonic's afterglow, the ogre seemed serene, happy, and even eager. Resolving to work together, the pair set off to collect the materials needed to attempt Razzil's Alchemic transmutation once more.",
           "hype_loc": "Synthesizing <b>extra resources</b> from each and every kill, Alchemist has no trouble gathering the tools needed to destroy his foes. Ambushing enemies with <b>corrosive acid</b> and a host of <b>unstable chemicals</b>, he battles to ensure his greedy escapades can remain uninterrupted.",
           "npe_desc_loc": "Earns extra gold from unit kills and bounty runes",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Seed Money",
-              "description_loc": "Alchemist starts with {s:bonus_starting_gold_bonus} more gold.",
-              "name": "alchemist_seed_money",
-              "icon": "gold",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Mixologist",
-              "description_loc": "Unstable Concoction and Berserk Potion recharge faster when in Chemical Rage.",
-              "name": "alchemist_mixologist",
-              "icon": "cooldown",
-              "gradient_id": 2,
-              "index": 1
-            },
-            {
-              "color": 2,
-              "title_loc": "Dividends",
-              "description_loc": "Alchemist gains +{s:bonus_gpm_increase_per_stack} GPM for each Aghanim's Scepter he has granted to allies.",
-              "name": "alchemist_dividends",
-              "icon": "aghs",
-              "gradient_id": 2,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 23,
           "str_gain": 2.7,
           "agi_base": 22,
@@ -497,7 +469,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_alchemist",
-                      "value": 125,
+                      "value": 150,
                       "operation": 0
                     }
                   ],
@@ -518,7 +490,7 @@
                     12,
                     16
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "MOVE SPEED BONUS:",
                   "bonuses": [],
                   "values_shard": [],
@@ -529,25 +501,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "chemical_rage_cooldown_reduction_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "alchemist_mixologist",
-                    "values": [
-                      35
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "alchemist_mixologist"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -704,14 +657,20 @@
                 {
                   "name": "slow_per_stack",
                   "values_float": [
-                    2,
                     2.5,
                     3,
-                    3.5
+                    3.5,
+                    4
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "MOVEMENT SLOW PER STACK:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_alchemist_weaponry_power",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -724,14 +683,20 @@
                 {
                   "name": "attack_dmg_per_stack",
                   "values_float": [
-                    2,
                     2.5,
                     3,
-                    3.5
+                    3.5,
+                    4
                   ],
-                  "is_percentage": true,
+                  "is_percentage": false,
                   "heading_loc": "BASE ATTACK DAMAGE REDUCTION PER STACK:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_alchemist_weaponry_power",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -925,25 +890,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "chemical_rage_cooldown_reduction_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "alchemist_mixologist",
-                    "values": [
-                      50
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "alchemist_mixologist"
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     800
@@ -1033,14 +979,14 @@
               "lore_loc": "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. Alchemist will gain %scepter_bonus_damage% bonus damage for each gifted Scepter.",
+              "scepter_loc": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. Alchemist will gain bonus damage and %bonus_gold_per_scepter% additional base and max Greevil's Greed Extra Gold for each melted Scepter.",
               "facets_loc": [
                 "",
                 "",
                 "Alchemist gains %gpm_increase_per_stack% GPM for each Aghanim's Scepter he has granted to allies."
               ],
               "type": 0,
-              "behavior": "8796093022210",
+              "behavior": "562949953421315",
               "target_team": 1,
               "target_type": 257,
               "flags": 0,
@@ -1127,6 +1073,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "bonus_gold_per_scepter",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "bounty_multiplier",
                   "values_float": [
                     2
@@ -1151,7 +1114,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_alchemist_7",
-                      "value": 2.5,
+                      "value": 3,
                       "operation": 0
                     }
                   ],
@@ -1182,9 +1145,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "starting_gold_bonus",
+                  "name": "scepter_bonus_damage",
                   "values_float": [
-                    0
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1192,24 +1155,24 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "alchemist_seed_money",
-                    "values": [
-                      250
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "alchemist_seed_money"
+                  "required_facet": ""
                 },
                 {
-                  "name": "scepter_bonus_damage",
+                  "name": "scepter_bonus_damage_tooltip",
                   "values_float": [
-                    25
+                    0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS DAMAGE PER SCEPTER:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    25
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1235,25 +1198,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "gpm_increase_per_stack",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "alchemist_dividends",
-                    "values": [
-                      70
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "alchemist_dividends"
                 },
                 {
                   "name": "AbilityCastPoint",
@@ -1628,9 +1572,9 @@
               "item_quality": 0
             },
             {
-              "id": 6604,
-              "name": "special_bonus_unique_alchemist_3",
-              "name_loc": "Acid Spray grants armor to allies",
+              "id": 1823,
+              "name": "special_bonus_unique_alchemist_weaponry_power",
+              "name_loc": "+{s:bonus_slow_per_stack}% Corrosive Weaponry Slow / Damage Reduction Per Stack",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1693,7 +1637,7 @@
             {
               "id": 1002,
               "name": "special_bonus_unique_alchemist_7",
-              "name_loc": "+{s:bonus_damage} Damage per Greevil's Greed stack",
+              "name_loc": "Greevil's Greed provides +{s:bonus_damage} Damage per stack",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2006,17 +1950,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

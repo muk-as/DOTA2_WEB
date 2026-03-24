@@ -10,26 +10,7 @@
           "bio_loc": "Storm Spirit is literally a force of nature--the wild power of wind and weather, bottled in human form. And a boisterous, jovial, irrepressible form it is! As jolly as a favorite uncle, he injects every scene with crackling energy. But it was not always thus, and there was tragedy in his creation. Generations ago, in the plains beyond the Wailing Mountains, a good people lay starving in drought and famine. A simple elementalist, Thunderkeg by name, used a forbidden spell to summon the spirit of the storm, asking for rain. Enraged at this mortal's presumption, the Storm Celestial known as Raijin lay waste to the land, scouring it bare with winds and flood. Thunderkeg was no match for the Celestial--at least until he cast a suicidal spell that forged their fates into one: he captured the Celestial in the cage of his own body. Trapped together, Thunderkeg's boundless good humor fused with Raijin's crazed energy, creating the jovial Raijin Thunderkeg, a Celestial who walks the world in physical form. ",
           "hype_loc": "Storm Spirit is never one to miss a fight. <b>Zipping</b> from across the battlefield in a bolt of lightning, he strikes enemies from every direction with <b>exploding remnants</b> and <b>charged attacks</b>, then disappears while his enemies are still scrambling to react.",
           "npe_desc_loc": "Zips across the map to engage in fights",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Shock Collar",
-              "description_loc": "Electric Vortex applies a debuff that triggers an Overload Charge if they attack.",
-              "name": "storm_spirit_shock_collar",
-              "icon": "nuke",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Static Slide",
-              "description_loc": "Static Remnants spawn at Storm Spirit and move to the target position.",
-              "name": "storm_spirit_static_slide",
-              "icon": "movement",
-              "gradient_id": 3,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2,
           "agi_base": 22,
@@ -70,7 +51,7 @@
               "id": 5098,
               "name": "storm_spirit_static_remnant",
               "name_loc": "Static Remnant",
-              "desc_loc": "Creates an explosively charged image of Storm Spirit that lasts %abilityduration% seconds and will detonate and deal damage if an enemy unit comes near it.",
+              "desc_loc": "Creates an explosively charged image of Storm Spirit that walks to the target position and lasts for %abilityduration% seconds. Will detonate and deal damage if an enemy unit comes near it.",
               "lore_loc": "Raijin Thunderkeg's duality allows him to admire himself in shocking fashion.",
               "notes_loc": [
                 "Remnants take %static_remnant_delay% second to materialize after the spell is cast.",
@@ -82,7 +63,7 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Static Remnants spawn at Storm Spirit and move to the target position."
+                ""
               ],
               "type": 0,
               "behavior": "4",
@@ -94,7 +75,7 @@
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                0
+                800
               ],
               "cast_points": [
                 0,
@@ -206,7 +187,7 @@
                 {
                   "name": "is_point_targeted",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -214,18 +195,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "storm_spirit_static_slide",
-                    "values": [
-                      1
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "storm_spirit_static_slide"
+                  "required_facet": ""
                 },
                 {
                   "name": "static_remnant_travel_speed",
                   "values_float": [
-                    0
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "REMNANT SPEED:",
@@ -233,13 +212,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "storm_spirit_static_slide",
-                    "values": [
-                      300
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "storm_spirit_static_slide"
+                  "required_facet": ""
                 },
                 {
                   "name": "static_remnant_vision_radius_day",
@@ -252,11 +229,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "storm_spirit_static_slide",
-                    "values": [
-                      100
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -271,18 +246,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "storm_spirit_static_slide",
-                    "values": [
-                      100
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    0
+                    800
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -290,13 +263,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "storm_spirit_static_slide",
-                    "values": [
-                      800
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "storm_spirit_static_slide"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityDuration",
@@ -522,25 +493,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "enemy_overload_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "storm_spirit_shock_collar",
-                    "values": [
-                      5
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "storm_spirit_shock_collar"
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1209,7 +1161,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "AbilityDamage",
                   "values_float": [
                     6,
                     10,
@@ -1279,7 +1231,7 @@
               "id": 1231,
               "name": "storm_spirit_galvanized",
               "name_loc": "Galvanized",
-              "desc_loc": "Storm Spirit gains a charge of %mp_per_kill% mana regeneration per kill. Loses %charges_per_death% charges per death. Leveling Ball Lightning gives Storm Spirit %charges_per_ult% bonus charges. Additionally every time he gains a charge he also gains %perma_mp_per_kill% Mana Regen permanently.",
+              "desc_loc": "Storm Spirit gains a charge of %mp_per_kill% mana regeneration per kill. Loses %charges_per_death% charges per death. Additionally every time he gains a charge he also gains %perma_mp_per_kill% Mana Regen permanently.",
               "lore_loc": "",
               "notes_loc": [
                 "Break disables the gaining of new stacks from kills."
@@ -1347,23 +1299,6 @@
                   "name": "mp_per_kill",
                   "values_float": [
                     0.2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "charges_per_ult",
-                  "values_float": [
-                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1960,14 +1895,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

@@ -10,26 +10,7 @@
           "bio_loc": "Leshrac, Tormented Soul, is an entity torn from the heart of nature, a liminal being that exists half in one plane of existence, half in another. His penetrating intelligence is such that he can never ignore for a moment the agonizing horror at the heart of all creation. Once a great philosopher who sought the meaning of existence, he plumbed the depths of nature with the haunted Chronoptic Crystals, and was forever altered by the hideous mysteries thereby revealed to him. Now the darkest depths of his enlightenment are illumined only by the fitful glare of his arrogance. Like other elemental characters, he is completely at one with nature, but in his case it is a nature lurid and vile. He alone sees the evil truth of reality, and has no use for those who believe the cosmos reserves a special reward for those who practice benevolence.",
           "hype_loc": "Leshrac's powerful spells lay waste to enemies and their defenses alike. Pushing deep into enemy territory with his <b>devastating edict</b>, careful timing of his ability to split the earth will <b>stun foes</b>, allowing his merciless allies to finish them off.",
           "npe_desc_loc": "Can deal heavy damage in an aura around himself",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Chronoptic Nourishment",
-              "description_loc": "Leshrac's attacks restore mana.",
-              "name": "leshrac_attacks_mana",
-              "icon": "mana",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Misanthropy",
-              "description_loc": "Diabolic Edict explosion rate increased but it no longer damages buildings.",
-              "name": "leshrac_misanthropy",
-              "icon": "nuke",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 20,
           "str_gain": 2.8,
           "agi_base": 17,
@@ -236,7 +217,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "AbilityDamage",
                   "values_float": [
                     115,
                     170,
@@ -397,7 +378,7 @@
                 19
               ],
               "durations": [
-                10
+                8
               ],
               "damages": [
                 0,
@@ -465,11 +446,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "leshrac_misanthropy",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -519,7 +498,7 @@
                 {
                   "name": "AbilityDuration",
                   "values_float": [
-                    10
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -527,11 +506,9 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "leshrac_misanthropy",
-                    "values": [
-                      7.5
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -1050,7 +1027,7 @@
               "id": 1297,
               "name": "leshrac_defilement",
               "name_loc": "Defilement",
-              "desc_loc": "Leshrac gains AoE per intelligence.",
+              "desc_loc": "Leshrac gains %aoe_per_int% Area of Effect Bonus per Intelligence.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1101,7 +1078,24 @@
                     0.7
                   ],
                   "is_percentage": false,
-                  "heading_loc": "AOE PER INTELLIGENCE:",
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_aoe_bonus",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS AOE:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1726,68 +1720,6 @@
               "item_quality": 0
             },
             {
-              "id": 1145,
-              "name": "special_bonus_unique_leshrac_pulse_nova_lightning",
-              "name_loc": "Pulse Nova triggers Lightning Storm",
-              "desc_loc": "Lightning Storm hits a random enemy in Pulse Nova radius every {s:bonus_pulse_nova_lightning_interval}s with a single bolt. Prioritizes heroes.",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
               "id": 6063,
               "name": "special_bonus_unique_leshrac_1",
               "name_loc": "+{s:bonus_num_explosions} Diabolic Edict Explosions",
@@ -1848,114 +1780,71 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
-            }
-          ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1296,
-                  "name": "leshrac_chronoptic_nourishment",
-                  "name_loc": "Chronoptic Nourishment",
-                  "desc_loc": "Leshrac restores mana equal to %mana_pct_per_hit%%% of damage dealt by his attacks. Only grants mana when attacking enemies that have mana. %creep_penalty_reduction_pct%%% mana restoration penalty when attacking creeps.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "4398046511107",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "mana_pct_per_hit",
-                      "values_float": [
-                        25
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "creep_penalty_reduction_pct",
-                      "values_float": [
-                        50
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
             },
             {
-              "abilities": []
+              "id": 1145,
+              "name": "special_bonus_unique_leshrac_pulse_nova_lightning",
+              "name_loc": "Pulse Nova triggers Lightning Storm",
+              "desc_loc": "Lightning Storm hits a random enemy in Pulse Nova radius every {s:bonus_pulse_nova_lightning_interval}s with a single bolt. Prioritizes heroes.",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
             }
-          ]
+          ],
+          "facet_abilities": []
         }
       ]
     },

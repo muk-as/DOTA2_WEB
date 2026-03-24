@@ -10,26 +10,7 @@
           "bio_loc": "Of the Night Stalker, there is no history, only stories. There are ancient tales woven into the lore of every race and every culture, of an impossible time before sunlight and daytime, when night reigned alone and the world was covered with the creatures of darkness--creatures like Balanar the Night Stalker. \r\n\t\t\t\t<br><br>It is said that on the dawn of the First Day, all the night creatures perished. All, that is, save one. Evil's embodiment, Night Stalker delights in his malevolence. He created the primal role of the Night Terror, the Boogeyman, and as long as there have been younglings, his is the specter summoned to terrify them. This is a role he relishes; nor are these empty theatrics. He does indeed stalk the unwary, the defenseless, those who have strayed beyond the lighted paths or denied the warnings of their communities. Night Stalker serves as living proof that every child's worst nightmare....is true.",
           "hype_loc": "Once the sun goes down, Night Stalker's hunt begins. Charging through the shadowy forests, he snares prey in a <b>slowing void</b> as he tears them to shreds. Should sunrise threaten to end his terror, he can <b>darken the skies</b> to extend his onslaught.",
           "npe_desc_loc": "Enpowered by the shadows of nightfall",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Night Reign",
-              "description_loc": "The game now starts at night instead of day. Night is longer than day. Night Stalker starts with a bonus level of Hunter in the Night.",
-              "name": "night_stalker_dayswap",
-              "icon": "moon",
-              "gradient_id": 0,
-              "index": 1
-            },
-            {
-              "color": 3,
-              "title_loc": "Voidbringer",
-              "description_loc": "Increases the max level of Void. Level {s:bonus_max_level_tooltip} Void at night becomes ground targeted and applies to an area.",
-              "name": "night_stalker_voidbringer",
-              "icon": "area_of_effect",
-              "gradient_id": 0,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 23,
           "str_gain": 3,
           "agi_base": 18,
@@ -75,7 +56,7 @@
               "notes_loc": [
                 "Void does not ministun enemies during the day."
               ],
-              "shard_loc": "",
+              "shard_loc": "Void now affects all units in a radius around the target.",
               "scepter_loc": "",
               "facets_loc": [
                 "Enemies affected by Void do not share vision with their allies. Affected enemies take damage per second when they are not visible to their allies.",
@@ -133,8 +114,7 @@
                     80,
                     160,
                     240,
-                    320,
-                    400
+                    320
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -173,8 +153,7 @@
                     1.6,
                     2.2,
                     2.8,
-                    3.4,
-                    4
+                    3.4
                   ],
                   "is_percentage": false,
                   "heading_loc": "NIGHT DURATION:",
@@ -321,29 +300,21 @@
                 {
                   "name": "cast_radius",
                   "values_float": [
-                    0,
-                    0,
-                    0,
-                    0,
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "RADIUS:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    400
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "night_stalker_voidbringer",
-                    "values": [
-                      0,
-                      0,
-                      0,
-                      0,
-                      350
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "night_stalker_voidbringer"
+                  "required_facet": ""
                 },
                 {
                   "name": "cast_radius_tooltip",
@@ -447,7 +418,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -466,7 +437,7 @@
               "lore_loc": "A vision of the twisted maw of Balanar etches itself into the minds of the poor souls unlucky enough to cross his path.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Reduces cooldown of Crippling Fear and it becomes a toggled ability that takes a percentage of max mana per second to maintain after the initial duration time.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
@@ -549,25 +520,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "mana_pct_cost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MANA COST:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    6
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "mana_interval",
                   "values_float": [
                     1
@@ -585,32 +537,19 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "toggled",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    1
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "radius",
                   "values_float": [
                     375
                   ],
                   "is_percentage": false,
                   "heading_loc": "AURA RADIUS:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_night_stalker_crippling_fear_radius",
+                      "value": 75,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -633,7 +572,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_night_stalker_crippling_fear_damage",
-                      "value": 40,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -692,9 +631,7 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [
-                    5
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -704,7 +641,179 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1753,
+              "name": "night_stalker_midnight_feast",
+              "name_loc": "Midnight Feast",
+              "desc_loc": "Night Stalker heals himself when attacking enemy units. At night, the ability can be activated to instantly destroy a non-ancient creep and restore a percentage of Night Stalker's maximum health and mana.",
+              "lore_loc": "",
+              "notes_loc": [
+                "Amount of health gained from attacking is affecting by Health Restoration and is decreased when attacking non-hero targets."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 18,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 4,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                125
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                39,
+                36,
+                33,
+                30
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "attack_heal",
+                  "values_float": [
+                    12,
+                    16,
+                    20,
+                    24
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "LIFESTEAL:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_night_stalker_2",
+                      "value": 100,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "hp_restore",
+                  "values_float": [
+                    10,
+                    15,
+                    20,
+                    25
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX HEALTH RESTORE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mp_restore",
+                  "values_float": [
+                    10,
+                    12,
+                    14,
+                    16
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAX MANA RESTORE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    125
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    39,
+                    36,
+                    33,
+                    30
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -724,21 +833,21 @@
               "lore_loc": "The hunting prowess of Balanar improves as the night beckons.",
               "notes_loc": [],
               "shard_loc": "Hunter in the Night may be cast on a creep, instantly killing it and restoring some of Night Stalker's maximum health and mana. Cannot target ancients during the daytime.",
-              "scepter_loc": "",
+              "scepter_loc": "Increases bonus movement speed and attack speed. Killing an enemy hero resets all basic ability cooldowns.",
               "facets_loc": [
                 "",
                 "Increases the max level of Hunter in the Night to %max_level_tooltip%. Night Stalker starts with a bonus level of Hunter in the Night.",
                 ""
               ],
               "type": 0,
-              "behavior": "2",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -769,60 +878,57 @@
                 {
                   "name": "bonus_movement_speed_pct_night",
                   "values_float": [
-                    22,
-                    28,
-                    34,
-                    40,
-                    40
+                    24
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVE SPEED:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    15
+                  ],
                   "facet_bonus": {
-                    "name": "night_stalker_dayswap",
-                    "values": [
-                      10,
-                      22,
-                      28,
-                      34,
-                      40
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
                 {
                   "name": "bonus_attack_speed_night",
                   "values_float": [
-                    20,
-                    40,
-                    60,
-                    80,
-                    80
+                    38
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK SPEED:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_night_stalker_2",
-                      "value": 100,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    50
+                  ],
                   "facet_bonus": {
-                    "name": "night_stalker_dayswap",
-                    "values": [
-                      15,
-                      35,
-                      55,
-                      75,
-                      95
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "reset_cooldowns",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -846,166 +952,14 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "shard_hp_restore_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAX HEALTH RESTORE:",
-                  "bonuses": [],
-                  "values_shard": [
-                    25
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_mana_restore_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "MAX MANA RESTORE:",
-                  "bonuses": [],
-                  "values_shard": [
-                    25
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_cooldown",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "COOLDOWN:",
-                  "bonuses": [],
-                  "values_shard": [
-                    35
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_cast_range",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "CAST RANGE:",
-                  "bonuses": [],
-                  "values_shard": [
-                    125
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_level",
-                  "values_float": [
-                    4
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "night_stalker_dayswap",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_level_tooltip",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "night_stalker_dayswap",
-                    "values": [
-                      5
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "night_stalker_dayswap"
-                },
-                {
-                  "name": "gives_free_level",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "night_stalker_dayswap",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "night_stalker_dayswap"
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    50
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_scepter": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
+              "ability_is_innate": true,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -1076,13 +1030,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_night_stalker_7",
-                      "value": 5,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1191,87 +1139,6 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
-            },
-            {
-              "id": 1310,
-              "name": "night_stalker_heart_of_darkness",
-              "name_loc": "Heart of Darkness",
-              "desc_loc": "During the night, Night Stalker's health regeneration is increased by %hp_regen_during_night_pct%%%.",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 0,
-              "behavior": "8796093022210",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 1,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "hp_regen_during_night_pct",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": true,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
             }
           ],
           "talents": [
@@ -1339,9 +1206,9 @@
               "item_quality": 0
             },
             {
-              "id": 816,
-              "name": "special_bonus_unique_night_stalker_7",
-              "name_loc": "+{s:bonus_duration}s Dark Ascension Duration",
+              "id": 1312,
+              "name": "special_bonus_unique_night_stalker_crippling_fear_damage",
+              "name_loc": "+{s:bonus_dps} Crippling Fear DPS",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1467,7 +1334,7 @@
             {
               "id": 1048,
               "name": "special_bonus_unique_night_stalker_hunter_status_resist",
-              "name_loc": "+{s:bonus_bonus_status_resist_night}% Hunter in the Night Status Resistance",
+              "name_loc": "{s:bonus_bonus_status_resist_night}% Hunter in the Night Status Resistance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1528,9 +1395,9 @@
               "item_quality": 0
             },
             {
-              "id": 1312,
-              "name": "special_bonus_unique_night_stalker_crippling_fear_damage",
-              "name_loc": "+{s:bonus_dps} Crippling Fear DPS",
+              "id": 1816,
+              "name": "special_bonus_unique_night_stalker_crippling_fear_radius",
+              "name_loc": "+{s:bonus_radius} Crippling Fear Radius",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1674,7 +1541,7 @@
             {
               "id": 6704,
               "name": "special_bonus_unique_night_stalker_2",
-              "name_loc": "+{s:bonus_bonus_attack_speed_night} Hunter In The Night Attack Speed",
+              "name_loc": "+{s:bonus_attack_heal} Midnight Feast Lifesteal",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1798,147 +1665,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1311,
-                  "name": "night_stalker_night_reign",
-                  "name_loc": "Night Reign",
-                  "desc_loc": "The game now starts at night instead of day. Night is longer than day. Night Stalker starts with a bonus level of Hunter in the Night.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "daytime_start",
-                      "values_float": [
-                        0.75
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "daytime_change",
-                      "values_float": [
-                        -15
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DAYTIME REDUCTION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "roshan_initial_move_timer_override",
-                      "values_float": [
-                        1199
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "tooltip_nighttime_change",
-                      "values_float": [
-                        15
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "NIGHTTIME EXTENSION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

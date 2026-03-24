@@ -10,32 +10,13 @@
           "bio_loc": "When the gods have nightmares, it is Bane Elemental who brings them.  Also known as Atropos, Bane was born from the midnight terrors of the goddess Nyctasha.  A force of terror too powerful to be contained by sleep, he surfaced from her slumbers, fed upon her immortality, and stole his vaporous form from her inky blood.  He is the essence of fear.  Mortals who hear his voice hear their darkest secrets whispered in their ear.  He calls to the hidden fear in every Hero's heart.  Wakefulness is no protection, for Bane's black blood, continuously dripping, is a tar that traps his enemies in nightmare.  In the presence of Bane, every Hero remembers to fear the dark.",
           "hype_loc": "Bane brings terror to his enemies with his arsenal of <b>disabling abilities</b>. Whether trapping a foe within a contagious nightmare, or gripping an enemy in place, he gives allies all the time they need to slay their enemy.",
           "npe_desc_loc": "Puts his enemies to sleep, incapacitating them",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "Dream Stalker",
-              "description_loc": "Bane has increased attack speed when attacking Nightmared units.",
-              "name": "bane_dream_stalker",
-              "icon": "damage",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 4,
-              "title_loc": "Sleepwalk",
-              "description_loc": "Nightmared units walk in Bane's chosen direction.",
-              "name": "bane_sleepwalk",
-              "icon": "movement",
-              "gradient_id": 1,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 23,
-          "str_gain": 2.7,
+          "str_gain": 2.5,
           "agi_base": 23,
-          "agi_gain": 2.7,
+          "agi_gain": 2.5,
           "int_base": 23,
-          "int_gain": 2.7,
+          "int_gain": 2.5,
           "primary_attr": 3,
           "complexity": 2,
           "attack_capability": 2,
@@ -53,7 +34,7 @@
           "damage_min": 24,
           "damage_max": 30,
           "attack_rate": 1.7,
-          "attack_range": 400,
+          "attack_range": 425,
           "projectile_speed": 900,
           "armor": 4.8333335,
           "magic_resistance": 25,
@@ -537,7 +518,7 @@
               "id": 5014,
               "name": "bane_nightmare",
               "name_loc": "Nightmare",
-              "desc_loc": "Puts the target enemy or friendly Hero to sleep. Sleeping units are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack and damage Nightmared targets freely.",
+              "desc_loc": "Puts the target enemy or friendly Hero to sleep. Sleeping units walk in Bane's chosen direction and are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack and damage Nightmared targets freely.<br><br> Can be put on alt-cast to have the target stand still.",
               "lore_loc": "A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep.",
               "notes_loc": [
                 "In the first second of Nightmare, the unit is invulnerable.",
@@ -551,7 +532,7 @@
                 "Nightmared units walk in Bane's chosen direction."
               ],
               "type": 0,
-              "behavior": "33554440",
+              "behavior": "1099545182216",
               "target_team": 3,
               "target_type": 3,
               "flags": 32,
@@ -633,67 +614,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_attack_speed",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ATTACK SPEED BONUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bane_dream_stalker",
-                    "values": [
-                      40,
-                      60,
-                      80,
-                      100
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "bane_dream_stalker"
-                },
-                {
-                  "name": "is_vector_targeted",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "bane_sleepwalk",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "bane_sleepwalk"
-                },
-                {
-                  "name": "vector_render_distance",
-                  "values_float": [
-                    600
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "vector_render_radius",
                   "values_float": [
                     120
@@ -713,7 +633,7 @@
                 {
                   "name": "walk_speed",
                   "values_float": [
-                    0
+                    110
                   ],
                   "is_percentage": false,
                   "heading_loc": "WALK SPEED:",
@@ -721,13 +641,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "bane_sleepwalk",
-                    "values": [
-                      110
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "bane_sleepwalk"
+                  "required_facet": ""
                 },
                 {
                   "name": "turn_rate",
@@ -1132,7 +1050,7 @@
               "id": 1202,
               "name": "bane_ichor_of_nyctasha",
               "name_loc": "Ichor of Nyctasha",
-              "desc_loc": "Bane's attribute gains are always evenly distributed across all three attributes (items that grant +3 Strength will now grant +1 Str/Agi/Int).",
+              "desc_loc": "Every time Bane kills an enemy hero or they die under the effect of Bane's debuff, they receive a Terror for the rest of the game that decreases their status resistance to Bane's subsequent debuffs.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1146,7 +1064,7 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
+              "damage": 4,
               "immunity": 0,
               "dispellable": 0,
               "max_level": 1,
@@ -1176,7 +1094,59 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "damage_tick_rate",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_terrors",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX TERRORS PER HERO:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "status_resistance",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "STATUS RESISTANCE PER TERROR:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1707,14 +1677,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

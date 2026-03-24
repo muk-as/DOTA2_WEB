@@ -10,26 +10,7 @@
           "bio_loc": "Among the high-sworn of the Slithereen Guard there is a solemn vow oft repeated before battle: No Slithereen may fail.  In truth, these words are equal parts oath and enforceable covenant, for those who fall short of their duty are banished from the order.  To fail is to be other than Slithereen.\r\n\t\t\t\t<br><br>Once most highly esteemed of her race, Slithice for many years commanded a battalion of her fellows, using her formidable voice as her greatest weapon.  Powerful, sinuous, serpentine, she led her deadly Guard in defense of the Deep Ones, and the great wealth of the sunken cities.  But in the final battle of Crey, her forces were driven back by a marauding army of levianths intent on finding tribute for their god Maelrawn.  After the long and bloody onslaught, as the bodies were cleared from the sunken halls, a single jeweled chalice was found missing from the trove.  Of her hundred Guard, only a handful survived, but their bravery and sacrifice were of little consequence.  What mattered was that treasure was taken.  Honor destroyed.  And so Naga Siren was cast out.  Banished to search for the stolen chalice.  Though she might add a hundred times her weight to the golden trove, she is doomed to live apart until that day she returns that which was taken.  For no amount of gold is equal in honor to the honor she lost.",
           "hype_loc": "Sending squads of <b>mirrored clones</b> against her foes, Naga Siren ensnares and slays enemies as she leads her forces to victory. With the sound of her voice, she <b>disables nearby foes</b> to spring an ambush or crafting a hasty escape.",
           "npe_desc_loc": "Able to capitivate and disable enemies with her song",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Rip Tide",
-              "description_loc": "Every 6 attacks from Naga and her illusions, enemies around them are damaged and their Armor is reduced.",
-              "name": "naga_siren_passive_riptide",
-              "icon": "armor_broken",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 2,
-              "title_loc": "Deluge",
-              "description_loc": "Naga Siren can create a splash around herself and her illusions, damaging enemies and capping their max movement speed.",
-              "name": "naga_siren_active_riptide",
-              "icon": "nuke",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.4,
           "agi_base": 22,
@@ -204,7 +185,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_naga_siren_3",
-                      "value": 50,
+                      "value": 75,
                       "operation": 2
                     }
                   ],
@@ -227,7 +208,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_naga_siren_3",
-                      "value": 50,
+                      "value": 75,
                       "operation": 2
                     }
                   ],
@@ -609,10 +590,175 @@
               "item_quality": 0
             },
             {
+              "id": 5469,
+              "name": "naga_siren_rip_tide",
+              "name_loc": "Rip Tide",
+              "desc_loc": "Naga Siren and her illusions deal bonus damage to enemies and reduce their armor for %duration% seconds every %hits% attacks.",
+              "lore_loc": "A torrent from the Deep Ones crushes the defenses of the Siren's enemies.",
+              "notes_loc": [
+                "Using Rip Tide doesn't interrupt channeling."
+              ],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 2,
+              "immunity": 4,
+              "dispellable": 2,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "hits",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "armor_reduction",
+                  "values_float": [
+                    -2,
+                    -4,
+                    -6,
+                    -8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ARMOR REDUCTION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage",
+                  "values_float": [
+                    30,
+                    40,
+                    50,
+                    60
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_naga_siren_2",
+                      "value": 30,
+                      "operation": 3
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "radius",
+                  "values_float": [
+                    300
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "duration",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
               "id": 1370,
               "name": "naga_siren_eelskin",
               "name_loc": "Eelskin",
-              "desc_loc": "Naga Siren gets %evasion_per_naga%%% evasion per other Naga Siren within %radius% radius.",
+              "desc_loc": "Naga Siren has bonus evasion, increased per every other Naga Siren within %radius% radius.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -660,10 +806,10 @@
                 {
                   "name": "evasion_per_naga",
                   "values_float": [
-                    8
+                    4.9
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "EVASION PER NAGA:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -709,13 +855,13 @@
               "id": 5470,
               "name": "naga_siren_song_of_the_siren",
               "name_loc": "Song of the Siren",
-              "desc_loc": "All enemies in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked. Allies in range recover a percentage of their health per second. Using Song of the Siren again will end the duration early.",
+              "desc_loc": "All enemies in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked. Using Song of the Siren again will end the duration early.",
               "lore_loc": "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need.",
               "notes_loc": [
                 "Units affected by Song of the Siren are invulnerable and cannot take damage from any source.",
                 "The area of the song follows Naga, so if she moves far enough away from affected units, they will wake up."
               ],
-              "shard_loc": "Increases Song of the Siren's regen and adds mana regeneration for allies.",
+              "shard_loc": "Allies in range of Song of the Siren recover a percentage of their health and mana per second.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -923,7 +1069,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_naga_siren_5",
-                      "value": 20,
+                      "value": 25,
                       "operation": 2
                     }
                   ],
@@ -1467,369 +1613,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 5469,
-                  "name": "naga_siren_rip_tide",
-                  "name_loc": "Rip Tide",
-                  "desc_loc": "Naga Siren and her illusions deal bonus damage to enemies and reduce their armor for %duration% seconds every %hits% attacks.",
-                  "lore_loc": "A torrent from the Deep Ones crushes the defenses of the Siren's enemies.",
-                  "notes_loc": [
-                    "Using Rip Tide doesn't interrupt channeling."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "2",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 2,
-                  "immunity": 4,
-                  "dispellable": 2,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "hits",
-                      "values_float": [
-                        6
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "armor_reduction",
-                      "values_float": [
-                        -2,
-                        -4,
-                        -6,
-                        -8
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "ARMOR REDUCTION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "damage",
-                      "values_float": [
-                        30,
-                        40,
-                        50,
-                        60
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DAMAGE:",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_naga_siren_2",
-                          "value": 30,
-                          "operation": 3
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "radius",
-                      "values_float": [
-                        300
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        4
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1369,
-                  "name": "naga_siren_deluge",
-                  "name_loc": "Deluge",
-                  "desc_loc": "Naga Siren and all of her images hit nearby units with a damaging wave of water that caps their max movement speed.",
-                  "lore_loc": "There's no use trying to run through deep water.",
-                  "notes_loc": [
-                    "Casting Deluge doesn't interrupt channeling."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "138414084",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 2,
-                  "immunity": 4,
-                  "dispellable": 2,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    13,
-                    11,
-                    9,
-                    7
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    80
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "damage",
-                      "values_float": [
-                        80,
-                        140,
-                        200,
-                        260
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DAMAGE:",
-                      "bonuses": [
-                        {
-                          "name": "special_bonus_unique_naga_siren_2",
-                          "value": 30,
-                          "operation": 3
-                        }
-                      ],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "radius",
-                      "values_float": [
-                        300
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        2.6,
-                        2.9,
-                        3.2,
-                        3.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "max_movement_speed",
-                      "values_float": [
-                        230
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "MAX MOVEMENT SPEED:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityManaCost",
-                      "values_float": [
-                        80
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        13,
-                        11,
-                        9,
-                        7
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

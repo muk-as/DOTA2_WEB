@@ -10,26 +10,7 @@
           "bio_loc": "As The Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the demons of the Cataract made a concerted grab at the lands of men. After years of small sorties, and increasingly bold and devastating attacks, the demon fleet flung all its carnivorous ships at the Trembling Isle. Desperate, the Suicide-Mages of Cladd committed their ultimate rite, summoning a host of ancestral spirits to protect the fleet. Against the demons, this was just barely enough to turn the tide.\r\n\t\t\t\t<br><br>As Kunkka watched the demons take his ships down one by one, he had the satisfaction of wearing away their fleet with his ancestral magic. But at the battle's peak, something in the clash of demons, men and atavistic spirits must have stirred a fourth power that had been slumbering in the depths. The waves rose up in towering spouts around the few remaining ships, and Maelrawn the Tentacular appeared amid the fray. His tendrils wove among the ships, drawing demon and human craft together, churning the water and wind into a raging chaos.\r\n\t\t\t\t<br><br>What happened in the crucible of that storm, none may truly say. The Cataract roars off into the void, deserted by its former denizens. Kunkka is now The Admiral of but one ship, a ghostly rig which endlessly replays the final seconds of its destruction. Whether he died in that crash is anyone's guess. Not even Tidehunter, who summoned Maelrawn, knows for sure.",
           "hype_loc": "Kunkka is always predicting where his enemies will go next. Able to attack a location with a <b>geyser of water</b> or a <b>ghostly shipwreck</b>, should his aim prove true, he and his allies will have no trouble cleaning up whatever is left.",
           "npe_desc_loc": "Disrupts enemy positioning and disables them",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "High Tide",
-              "description_loc": "Tidebringer cooldown is reduced per enemy hero it hits.",
-              "name": "kunkka_high_tide",
-              "icon": "cooldown",
-              "gradient_id": 2,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Grog Blossom",
-              "description_loc": "When X Marks the Spot returns its target, Kunkka and all nearby allies gain Ghostship's Admiral's Rum buff.",
-              "name": "kunkka_grog",
-              "icon": "armor",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 24,
           "str_gain": 3.6,
           "agi_base": 14,
@@ -474,7 +455,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_kunkka_2",
-                      "value": 70,
+                      "value": 75,
                       "operation": 0
                     }
                   ],
@@ -497,7 +478,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_kunkka_4",
-                      "value": 130,
+                      "value": 80,
                       "operation": 0
                     }
                   ],
@@ -553,23 +534,25 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "cooldown_reduction_per_hero_hit",
-                  "values_float": [
-                    0
-                  ],
+                  "name": "pierces_armor",
+                  "values_float": [],
                   "is_percentage": false,
-                  "heading_loc": "HERO HIT COOLDOWN REDUCTION:",
-                  "bonuses": [],
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kunkka_tidebringer_armor_pierce",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "kunkka_high_tide",
-                    "values": [
-                      0.8
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "kunkka_high_tide"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -589,6 +572,48 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "AbilityCharges",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kunkka_tidebringer_charges",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kunkka_tidebringer_charges",
+                      "value": 4,
+                      "operation": 5
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCooldown",
                   "values_float": [
                     13,
@@ -598,7 +623,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kunkka_tidebringer_charges",
+                      "value": 0.1,
+                      "operation": 5
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -918,10 +949,10 @@
               "id": 1452,
               "name": "kunkka_admirals_rum",
               "name_loc": "Admiral's Rum",
-              "desc_loc": "Damage from enemy heroes, buildings, or Roshan that would reduce Kunkka below a threshold causes him to douse himself with The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
+              "desc_loc": "Damage from enemy heroes, buildings, or Roshan that would reduce Kunkka below %damage_threshold%%% threshold causes him to douse himself with The Admiral's Rum, receiving bonus movement speed and a delayed reaction to %ghostship_absorb%%% of incoming damage for %buff_duration%s.",
               "lore_loc": "Deleterious to landlubbers, no one holds their rum like a sailor.",
               "notes_loc": [
-                "Stacks additively with other sources of Admiral's Rum"
+                "Damage dealt after Rum wears off is non-lethal and can never kill a hero."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -948,7 +979,7 @@
                 0
               ],
               "cooldowns": [
-                60
+                60.5
               ],
               "durations": [
                 0
@@ -970,8 +1001,8 @@
                   "values_float": [
                     65
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "HEALTH THRESHOLD:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -985,14 +1016,14 @@
                 {
                   "name": "ghostship_absorb",
                   "values_float": [
-                    20
+                    18
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "DAMAGE DELAYED:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_kunkka_rum",
-                      "value": 15,
+                      "value": 8,
                       "operation": 0
                     }
                   ],
@@ -1008,11 +1039,17 @@
                 {
                   "name": "buff_duration",
                   "values_float": [
-                    6
+                    5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "RUM DURATION:",
-                  "bonuses": [],
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_kunkka_rum_duration",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1025,10 +1062,10 @@
                 {
                   "name": "movespeed_bonus",
                   "values_float": [
-                    10
+                    7.75
                   ],
                   "is_percentage": true,
-                  "heading_loc": "RUM BONUS SPEED:",
+                  "heading_loc": "BONUS MOVESPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1042,17 +1079,11 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    60
+                    60.5
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_kunkka_3",
-                      "value": 15,
-                      "operation": 2
-                    }
-                  ],
+                  "heading_loc": "COOLDOWN:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1313,10 +1344,9 @@
               "id": 5035,
               "name": "kunkka_ghostship",
               "name_loc": "Ghostship",
-              "desc_loc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a strong swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
+              "desc_loc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage.<br><br>Allied heroes touched by the Ghostship are given a %rum_factor%x strong swig of The Admiral's Rum.",
               "lore_loc": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral.",
               "notes_loc": [
-                "Damage dealt after Rum wears off is non-lethal and can never kill a hero.",
                 "Actual area of effect of ship's collision is larger than the boat itself.",
                 "The boat has a movement speed of %ghostship_speed%."
               ],
@@ -1417,40 +1447,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "movespeed_bonus",
-                  "values_float": [
-                    15
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "RUM BONUS SPEED:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "buff_duration",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "RUM DURATION:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "stun_duration",
                   "values_float": [
                     1.2
@@ -1485,19 +1481,13 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "ghostship_absorb",
+                  "name": "rum_factor",
                   "values_float": [
-                    35
+                    2
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "DAMAGE DELAYED:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_kunkka_rum",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1764,7 +1754,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "AbilityDamage",
                   "values_float": [
                     350,
                     475,
@@ -1871,9 +1861,9 @@
           ],
           "talents": [
             {
-              "id": 1015,
-              "name": "special_bonus_unique_kunkka_tidebringer_slow",
-              "name_loc": "Tidebringer applies {s:bonus_movespeed_slow}% slow for {s:bonus_movespeed_slow_duration}s",
+              "id": 1792,
+              "name": "special_bonus_unique_kunkka_rum_duration",
+              "name_loc": "+{s:bonus_buff_duration}s Admiral's Rum Buff Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1933,9 +1923,9 @@
               "item_quality": 0
             },
             {
-              "id": 6666,
-              "name": "special_bonus_unique_kunkka_3",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Admiral's Rum Cooldown",
+              "id": 1015,
+              "name": "special_bonus_unique_kunkka_tidebringer_slow",
+              "name_loc": "Tidebringer applies {s:bonus_movespeed_slow}% slow for {s:bonus_movespeed_slow_duration}s",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2181,9 +2171,9 @@
               "item_quality": 0
             },
             {
-              "id": 1241,
-              "name": "special_bonus_unique_kunkka_rum",
-              "name_loc": "+{s:bonus_ghostship_absorb}% Rum Damage Delay",
+              "id": 6667,
+              "name": "special_bonus_unique_kunkka_4",
+              "name_loc": "+{s:bonus_cleave_damage}% Tidebringer Cleave Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2245,7 +2235,7 @@
             {
               "id": 1446,
               "name": "special_bonus_spell_aoe_100",
-              "name_loc": "+{s:value} Spell AoE",
+              "name_loc": "+{s:value} Spell Area of Effect",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2323,9 +2313,9 @@
               "item_quality": 0
             },
             {
-              "id": 6667,
-              "name": "special_bonus_unique_kunkka_4",
-              "name_loc": "+{s:bonus_cleave_damage}% Tidebringer Cleave Damage",
+              "id": 1793,
+              "name": "special_bonus_unique_kunkka_tidebringer_armor_pierce",
+              "name_loc": "Tidebringer Ignores {s:bonus_pierces_armor}% Armor",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2385,14 +2375,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

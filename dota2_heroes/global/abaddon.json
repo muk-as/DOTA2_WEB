@@ -10,26 +10,7 @@
           "bio_loc": "The Font of Avernus is the source of a family's strength, a crack in primal stones from which vapors of prophetic power have issued for generations. Each newborn of the cavernous House Avernus is bathed in the black mist, and by this baptism they are given an innate connection to the mystic energies of the land. They grow up believing themselves fierce protectors of their lineal traditions, the customs of the realm--but what they really are protecting is the Font itself. And the motives of the mist are unclear.\r\n\t\t\t\t<br><br>When the infant Abaddon was bathed in the Font, they say something went awry. In the child's eyes there flared a light of comprehension that startled all present and set the sacerdotes to whispering. He was raised with every expectation of following the path all scions of Avernus took--to train in war, that in times of need he might lead the family's army in defense of the ancestral lands. But Abaddon was always one apart. Where others trained with weapons, he bent himself to meditation in the presence of the mist. He drank deep from the vapors that welled from the Font, learning to blend his spirit with the potency that flowed from far beneath the House; he became a creature of the black mist.\r\n\t\t\t\t<br><br>There was bitterness within the House Avernus--elders and young alike accusing him of neglecting his responsibilities. But all such accusations stopped when Abaddon rode into battle, and they saw how the powers of the mist had given him mastery over life and death beyond those of any lord the House had ever known.",
           "hype_loc": "Able to transform enemy attacks into <b>self-healing</b>, Abaddon can survive almost any assault. <b>Shielding allies</b> and launching his <b>double-edged coil</b> at a friend or foe, he is always ready to ride into the thick of battle.",
           "npe_desc_loc": "Shields his allies or himself from attacks",
-          "facets": [
-            {
-              "color": 5,
-              "title_loc": "The Quickening",
-              "description_loc": "Units dying nearby Abaddon lower his cooldowns.",
-              "name": "abaddon_death_dude",
-              "icon": "cooldown",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Malignant Mist",
-              "description_loc": "Mist Coil also deals {s:bonus_damage_percentage_on_perform_attack}% attack damage and applies effects from items and abilities. Self Damage increased when targeting enemies.",
-              "name": "abaddon_mists_of_fate",
-              "icon": "phantom_ass_dagger",
-              "gradient_id": 1,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 21,
           "str_gain": 2.6,
           "agi_base": 22,
@@ -146,17 +127,15 @@
                   "values_float": [
                     40
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "SELF DAMAGE (ENEMY CAST):",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "abaddon_mists_of_fate",
-                    "values": [
-                      70
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -178,41 +157,15 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "target_damage",
+                  "name": "damage_heal",
                   "values_float": [
                     95,
-                    160,
-                    225,
-                    290
+                    170,
+                    245,
+                    320
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE/HEAL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_abaddon_2",
-                      "value": 35,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "heal_amount",
-                  "values_float": [
-                    95,
-                    160,
-                    225,
-                    290
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_abaddon_2",
@@ -252,47 +205,45 @@
                 },
                 {
                   "name": "perform_attack",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_2",
+                      "value": 0,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "abaddon_mists_of_fate",
-                    "values": [
-                      1
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "abaddon_mists_of_fate"
+                  "required_facet": ""
                 },
                 {
                   "name": "damage_percentage_on_perform_attack",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_2",
+                      "value": 0,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "abaddon_mists_of_fate",
-                    "values": [
-                      40,
-                      60,
-                      80,
-                      100
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "abaddon_mists_of_fate"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -808,7 +759,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_abaddon_5",
-                      "value": 40,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -884,7 +835,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "66",
+              "behavior": "562949953421379",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -939,17 +890,11 @@
                 {
                   "name": "heal_reduction_pct",
                   "values_float": [
-                    35
+                    24.5
                   ],
                   "is_percentage": true,
                   "heading_loc": "HEALTH RESTORATION REDUCTION:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_abaddon_6",
-                      "value": 10,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1027,9 +972,9 @@
                 0
               ],
               "cooldowns": [
-                90,
                 85,
-                80
+                75,
+                65
               ],
               "durations": [
                 0
@@ -1186,13 +1131,19 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    90,
                     85,
-                    80
+                    75,
+                    65
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_borrowed_time_cd",
+                      "value": 10,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1219,9 +1170,9 @@
           ],
           "talents": [
             {
-              "id": 972,
-              "name": "special_bonus_unique_abaddon_6",
-              "name_loc": "+{s:bonus_heal_reduction_pct}% Withering Mist Health Restoration Reduction",
+              "id": 7340,
+              "name": "special_bonus_unique_abaddon_5",
+              "name_loc": "+{s:bonus_curse_dps} Curse of Avernus DPS",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1345,9 +1296,9 @@
               "item_quality": 0
             },
             {
-              "id": 7340,
-              "name": "special_bonus_unique_abaddon_5",
-              "name_loc": "+{s:bonus_curse_dps} Curse of Avernus DPS",
+              "id": 1835,
+              "name": "special_bonus_unique_abaddon_borrowed_time_cd",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Borrowed Time Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1410,7 +1361,7 @@
             {
               "id": 6601,
               "name": "special_bonus_unique_abaddon_2",
-              "name_loc": "+{s:bonus_target_damage} Mist Coil Heal/Damage",
+              "name_loc": "+{s:bonus_damage_heal} Mist Coil Damage / Heal",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1723,132 +1674,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1389,
-                  "name": "abaddon_the_quickening",
-                  "name_loc": "The Quickening",
-                  "desc_loc": "Units dying nearby Abaddon lower his cooldowns.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Every time a unit dies within %radius% range of Abaddon, reduce all of his Cooldowns by %cooldown_reduction_creeps% seconds if they are a creep or %cooldown_reduction_heroes% seconds if they are a hero."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "cooldown_reduction_creeps",
-                      "values_float": [
-                        0.2
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "cooldown_reduction_heroes",
-                      "values_float": [
-                        5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "radius",
-                      "values_float": [
-                        900
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

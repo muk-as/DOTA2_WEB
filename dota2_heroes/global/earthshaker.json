@@ -10,26 +10,7 @@
           "bio_loc": "Like a golem or gargoyle, Earthshaker was one with the earth but now walks freely upon it. Unlike those other entities, he created himself through an act of will, and serves no other master. In restless slumbers, encased in a deep seam of stone, he became aware of the life drifting freely above him. He grew curious.\r\n\t\t\t\t<br><br>During a season of tremors, the peaks of Nishai shook themselves loose of avalanches, shifting the course of rivers and turning shallow valleys into bottomless chasms. When the land finally ceased quaking, Earthshaker stepped from the settling dust, tossing aside massive boulders as if throwing off a light blanket.\r\n\t\t\t\t<br><br>He had shaped himself in the image of a mortal beast, and named himself Raigor Stonehoof. He bleeds now, and breathes, and therefore he can die. But his spirit is still that of the earth; he carries its power in the magical totem that never leaves him. And on the day he returns to dust, the earth will greet him as a prodigal son.",
           "hype_loc": "Whether <b>blocking an enemy's escape</b>, dividing their forces, or <b>shattering the ground</b> beneath gathered foes, Earthshaker is at his best when he strikes without warning. Whatever survives the <b>aftershocks</b> still has a swing from his <b>mighty totem</b> to look forward to.",
           "npe_desc_loc": "Disrupts enemy team with his chain stuns",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Tectonic Buildup",
-              "description_loc": "Aftershock radius is increased by {s:bonus_aftershock_range_increase_per_level_interval} for every level of Echo Slam.",
-              "name": "earthshaker_tectonic_buildup",
-              "icon": "area_of_effect",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 5,
-              "title_loc": "Resonating Ridge",
-              "description_loc": "Enemy heroes stunned by Fissure emit an echo to each nearby unit.",
-              "name": "earthshaker_reverberating_ridge",
-              "icon": "ricochet",
-              "gradient_id": 2,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 22,
           "str_gain": 3.7,
           "agi_base": 12,
@@ -168,10 +149,10 @@
                 {
                   "name": "stun_duration",
                   "values_float": [
-                    0.8,
                     1,
                     1.2,
-                    1.4
+                    1.4,
+                    1.6
                   ],
                   "is_percentage": false,
                   "heading_loc": "STUN DURATION:",
@@ -798,7 +779,7 @@
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
-                "Aftershock radius is increased by %aftershock_range_increase_per_level_interval% for every level of Echo Slam.",
+                "",
                 "",
                 ""
               ],
@@ -844,10 +825,10 @@
                 {
                   "name": "aftershock_range",
                   "values_float": [
-                    300
+                    350
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -880,44 +861,6 @@
                   "facet_bonus": {
                     "name": "",
                     "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "aftershock_range_increase_per_level_interval",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "earthshaker_tectonic_buildup",
-                    "values": [
-                      30
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "earthshaker_tectonic_buildup"
-                },
-                {
-                  "name": "aftershock_range_tooltip",
-                  "values_float": [
-                    300
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "RADIUS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "earthshaker_tectonic_buildup",
-                    "values": [
-                      0
-                    ],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -1188,7 +1131,7 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 3,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -1338,13 +1281,10 @@
                 {
                   "name": "projectile_body_damage_creep",
                   "values_float": [
-                    30,
-                    45,
-                    60,
-                    75
+                    27
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE (CREEP DEATH):",
+                  "heading_loc": "DAMAGE (CREEPS):",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1358,13 +1298,10 @@
                 {
                   "name": "projectile_body_damage_hero",
                   "values_float": [
-                    150,
-                    250,
-                    350,
-                    450
+                    135
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE (HERO DEATH):",
+                  "heading_loc": "DAMAGE (HEROES):",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1931,14 +1868,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

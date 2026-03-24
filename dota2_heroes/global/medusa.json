@@ -10,35 +10,7 @@
           "bio_loc": "Beauty is power. This thought comforted Medusa--the youngest and loveliest of three beautiful Gorgon sisters, born to a sea goddess--because she alone of the sisters was mortal. It comforted her, that is, until the day masked assailants invaded the Gorgon realm and tore the two immortal sisters from their home, unmoved by their beauty or by their tears. One of the invaders seized Medusa as well, but then cast her aside with a disgusted look: 'This one has the mortal stink upon her. We have no use for that which dies.' Humiliated, enraged, Medusa fled to the temple of her mother and cast herself before the goddess, crying, 'You denied me eternal life--therefore I beg you, give me power! Power, so I can dedicate what life I have to rescuing my sisters and avenging this injustice!' After long thought, the goddess granted her daughter's request, allowing Medusa to trade her legendary beauty for a face and form of terrifying strength. Never for a moment has Medusa regretted her choice. She understands that power is the only beauty worth possessing--for only power can change the world.",
           "hype_loc": "Constant attack is the key to Medusa's success. Using her <b>mana shield</b> to stave off assault, she employs <b>split shots</b> to mow down waves of enemies. Once she gathers her full strength, she becomes a force powerful enough to stop anyone in their tracks.",
           "npe_desc_loc": "Immobilizes her enemies with her stone gaze",
-          "facets": [
-            {
-              "color": 2,
-              "title_loc": "Engorged",
-              "description_loc": "Mystic Snake grants Medusa attack damage.",
-              "name": "medusa_engorged",
-              "icon": "snake",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 1,
-              "title_loc": "Venomous Volley",
-              "description_loc": "Every %attack_count% attacks, Medusa applies poison to her arrow that briefly reduces movement speed and attack speed.",
-              "name": "medusa_slow_attacks",
-              "icon": "slow",
-              "gradient_id": 2,
-              "index": 2
-            },
-            {
-              "color": 0,
-              "title_loc": "Undulation",
-              "description_loc": "Medusa's movement speed is fixed at %fixed_movespeed% (%stone_gaze_ms_tooltip_only% during Stone Gaze). Medusa is unslowable and does not benefit from movement speed increases.",
-              "name": "medusa_undulation",
-              "icon": "speed",
-              "gradient_id": 0,
-              "index": 3
-            }
-          ],
+          "facets": [],
           "str_base": 0,
           "str_gain": 0,
           "agi_base": 22,
@@ -79,7 +51,7 @@
               "id": 5504,
               "name": "medusa_split_shot",
               "name_loc": "Split Shot",
-              "desc_loc": "Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.\n\nThe extra targets will not receive other attack effects (such as critical strike).",
+              "desc_loc": "Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.<br/><br/>The extra targets will not receive other attack effects (such as critical strike).",
               "lore_loc": "All who encounter the cursed Gorgon will feel her rage.",
               "notes_loc": [
                 "Secondary targets will be the closest enemy units excluding the primary target.",
@@ -145,7 +117,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_medusa_2",
-                      "value": 8,
+                      "value": 12,
                       "operation": 0
                     }
                   ],
@@ -171,7 +143,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_medusa_2",
-                      "value": 8,
+                      "value": 12,
                       "operation": 0
                     }
                   ],
@@ -403,7 +375,7 @@
                     {
                       "name": "special_bonus_unique_medusa_snake_damage",
                       "value": 40,
-                      "operation": 0
+                      "operation": 3
                     }
                   ],
                   "values_shard": [],
@@ -422,7 +394,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MANA GAIN:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_medusa_snake_damage",
+                      "value": 40,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -662,7 +640,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_medusa_5",
-                      "value": 3,
+                      "value": 4,
                       "operation": 2
                     }
                   ],
@@ -724,9 +702,9 @@
               ],
               "cooldowns": [
                 30,
-                27,
-                24,
-                21
+                26,
+                22,
+                18
               ],
               "durations": [
                 0
@@ -998,9 +976,9 @@
                   "name": "AbilityCooldown",
                   "values_float": [
                     30,
-                    27,
-                    24,
-                    21
+                    26,
+                    22,
+                    18
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1131,7 +1109,7 @@
               "id": 5506,
               "name": "medusa_mana_shield",
               "name_loc": "Mana Shield",
-              "desc_loc": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana that increases with each level of Medusa. Illusions absorb %illusion_percentage%%% less damage per point of mana.",
+              "desc_loc": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana. Illusions absorb %illusion_percentage%%% less damage per point of mana.",
               "lore_loc": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
               "notes_loc": [
                 "Absorbs damage before any damage reduction takes place, meaning that armor will not reduce the amount of mana needed to absorb damage."
@@ -1145,7 +1123,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8796093022278",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1186,24 +1164,7 @@
                     2
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BASE DAMAGE PER MANA:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_per_mana_per_level",
-                  "values_float": [
-                    0.1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DAMAGE PER MANA PER LEVEL:",
+                  "heading_loc": "DAMAGE PER MANA:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1238,23 +1199,6 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "damage_per_mana_total",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "TOTAL DAMAGE PER MANA:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1511,7 +1455,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_medusa",
-                      "value": 2,
+                      "value": 2.5,
                       "operation": 0
                     }
                   ],
@@ -1606,7 +1550,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_medusa_8",
-                      "value": 10,
+                      "value": 12,
                       "operation": 0
                     }
                   ],
@@ -1861,9 +1805,9 @@
               "item_quality": 0
             },
             {
-              "id": 6392,
-              "name": "special_bonus_unique_medusa_2",
-              "name_loc": "+{s:bonus_damage_modifier}% Split Shot Outgoing Damage",
+              "id": 1574,
+              "name": "special_bonus_unique_medusa_gorgons_grasp_volleys",
+              "name_loc": "+{s:bonus_volley_count} Gorgon's Grasp Volley",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1989,9 +1933,9 @@
               "item_quality": 0
             },
             {
-              "id": 6687,
-              "name": "special_bonus_unique_medusa_3",
-              "name_loc": "+{s:bonus_snake_jumps} Mystic Snake Bounces",
+              "id": 1376,
+              "name": "special_bonus_unique_medusa_snake_damage",
+              "name_loc": "+{s:bonus_snake_damage}% Mystic Snake Damage / Mana Gain",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2053,9 +1997,9 @@
               "item_quality": 0
             },
             {
-              "id": 1574,
-              "name": "special_bonus_unique_medusa_gorgons_grasp_volleys",
-              "name_loc": "+{s:bonus_volley_count} Gorgon's Grasp Volley",
+              "id": 6392,
+              "name": "special_bonus_unique_medusa_2",
+              "name_loc": "+{s:bonus_damage_modifier}% Split Shot Outgoing Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2263,263 +2207,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1477,
-                  "name": "medusa_venomed_volley",
-                  "name_loc": "Venomous Volley",
-                  "desc_loc": "Every %attack_count% attacks, Medusa applies poison to her arrow that briefly reduces movement speed and attack speed.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Poisoned attack is considered an on-hit effect for Split Shot."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 2,
-                  "max_level": 5,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "duration",
-                      "values_float": [
-                        1.5
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "DURATION:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "move_slow",
-                      "values_float": [
-                        15,
-                        20,
-                        25,
-                        30,
-                        35
-                      ],
-                      "is_percentage": true,
-                      "heading_loc": "MOVE SLOW:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "attack_slow",
-                      "values_float": [
-                        20,
-                        35,
-                        50,
-                        65,
-                        80
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "ATTACK SLOW:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "attack_count",
-                      "values_float": [
-                        6
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1560,
-                  "name": "medusa_undulation",
-                  "name_loc": "Undulation",
-                  "desc_loc": "Medusa's movement speed is fixed at %fixed_movespeed% (%stone_gaze_ms_tooltip_only% during Stone Gaze). Medusa is unslowable and does not benefit from movement speed increases.",
-                  "lore_loc": "",
-                  "notes_loc": [
-                    "Medusa can still benefit from movement speed bonuses from stream currents."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "3",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 3,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "fixed_movespeed",
-                      "values_float": [
-                        310
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "stone_gaze_ms_tooltip_only",
-                      "values_float": [
-                        465
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

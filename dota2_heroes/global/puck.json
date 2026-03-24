@@ -10,26 +10,7 @@
           "bio_loc": "While Puck seems at first glance a mischievous, childish character, this quality masks an alien personality. The juvenile form of a Faerie Dragon, a creature that lives for eons, Puck spends countless millennia in its childish form. So while it is technically true that Puck is juvenile, it will continue to be so when the cities of the present age have sloughed away into dust. Its motives are therefore inscrutable, and what appears to be play may in fact hide a darker purpose. Its endless fondness for mischief is the true indicator of Puck's true nature.",
           "hype_loc": "Puck has a talent for confounding its enemies with playfully <b>elusive</b> mischief. By teleporting to its <b>damaging orb</b> in order to hop short distances, it attacks foes with bursts of <b>silencing dust</b>. By the time its enemies can react, Puck has long since escaped.",
           "npe_desc_loc": "Orbs to enemies and silences them",
-          "facets": [
-            {
-              "color": 4,
-              "title_loc": "Jostling Rift",
-              "description_loc": "Waning Rift can push or pull targets.",
-              "name": "puck_jostling_rift",
-              "icon": "movement",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Curveball",
-              "description_loc": "Puck's Illusory Orb can be curved in any direction, moves faster, deals more damage and lasts longer.",
-              "name": "puck_curveball",
-              "icon": "curve_ball",
-              "gradient_id": 2,
-              "index": 1
-            }
-          ],
+          "facets": [],
           "str_base": 17,
           "str_gain": 2.4,
           "agi_base": 14,
@@ -70,7 +51,7 @@
               "id": 5069,
               "name": "puck_illusory_orb",
               "name_loc": "Illusory Orb",
-              "desc_loc": "Puck launches a magic orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the orb's location using Ethereal Jaunt.",
+              "desc_loc": "Vector Targeted. Puck launches a magic orb that travels along the path, damaging enemy units along the way. The orb deals an additional %damage_over_time_pct%%% of its impact damage every %damage_interval%s in its area of effect, but if it exceeds the max cast range it will be destroyed.\n\n At any point, Puck may teleport to the orb's location using Ethereal Jaunt.<br><br> Can be put on alt-cast to launch the Orb straight ahead.",
               "lore_loc": "The playful Faerie Dragon delights in confusing others, vanishing and reappearing where unexpected.",
               "notes_loc": [
                 "The Illusory Orb grants unobstructed vision around its location while it travels.",
@@ -80,10 +61,10 @@
               "scepter_loc": "",
               "facets_loc": [
                 "",
-                "Illusory Orb can now be vector targeted to manipulate the orb's travel path. The orb moves faster, lasts longer, and deals an additional %damage_over_time_pct%%% of it's damage every %damage_interval%s in it's area of effect, but if it exceeds the max cast range it will be destroyed."
+                ""
               ],
               "type": 0,
-              "behavior": "16",
+              "behavior": "1099511627792",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -165,7 +146,7 @@
                 {
                   "name": "orb_speed",
                   "values_float": [
-                    550
+                    750
                   ],
                   "is_percentage": false,
                   "heading_loc": "SPEED:",
@@ -173,10 +154,8 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      200
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
                   "required_facet": ""
@@ -224,7 +203,7 @@
                     300
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE:",
+                  "heading_loc": "IMPACT DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_puck_orb_damage",
@@ -261,7 +240,7 @@
                 {
                   "name": "curve_orb",
                   "values_float": [
-                    0
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -269,37 +248,33 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      1
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
                 },
                 {
                   "name": "curve_orb_duration_multiplier",
                   "values_float": [
-                    0
+                    100
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "DURATION MULTIPLIER:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      100
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
                 },
                 {
                   "name": "curve_orb_max_acceleration",
                   "values_float": [
-                    0
+                    0.0015
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -307,18 +282,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      0.0015
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
                 },
                 {
                   "name": "curve_orb_pullback_bonus_launch_speed",
                   "values_float": [
-                    0
+                    0.25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -326,18 +299,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      0.25
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
                 },
                 {
                   "name": "curve_strength",
                   "values_float": [
-                    0
+                    0.6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -345,18 +316,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      0.6
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
                 },
                 {
                   "name": "vector_reticle_distance",
                   "values_float": [
-                    0
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -364,56 +333,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      200
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "puck_curveball"
-                },
-                {
-                  "name": "vector_reticle_radius",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      0
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "puck_curveball"
-                },
-                {
-                  "name": "increase_per_sec",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      0
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
                 },
                 {
                   "name": "damage_over_time_pct",
                   "values_float": [
-                    0
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -421,18 +350,16 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      3
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
                 },
                 {
                   "name": "damage_interval",
                   "values_float": [
-                    0
+                    0.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -440,13 +367,28 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "puck_curveball",
-                    "values": [
-                      0.5
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "puck_curveball"
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_orb_duration_tooltip",
+                  "values_float": [
+                    5.2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX ORB DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityCastRange",
@@ -1068,7 +1010,7 @@
               "id": 1222,
               "name": "puck_puckish",
               "name_loc": "Puckish",
-              "desc_loc": "Whenever Puck disjoints an attack, it restores %mana_restore_base% + %mana_restore_pct%%% of its max mana and %hp_restore_base% + %hp_restore_pct%%% of its max health. Dodging a targeted spell projectile restores %dodged_spell_multiplier%x that amount. Does not apply to attacks by Towers.",
+              "desc_loc": "Whenever Puck disjoints an attack, it restores %mana_and_health_restore_pct%%% of its max health and mana. Dodging a targeted spell projectile restores %dodged_spell_multiplier%x that amount. Does not apply to attacks by Towers.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1114,60 +1056,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "mana_restore_base",
+                  "name": "mana_and_health_restore_pct",
                   "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "hp_restore_base",
-                  "values_float": [
-                    10
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "mana_restore_pct",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "hp_restore_pct",
-                  "values_float": [
-                    2
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1184,7 +1075,7 @@
                 {
                   "name": "dodged_spell_multiplier",
                   "values_float": [
-                    3.5
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2071,14 +1962,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

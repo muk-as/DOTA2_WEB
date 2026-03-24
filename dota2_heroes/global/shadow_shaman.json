@@ -10,26 +10,7 @@
           "bio_loc": "Born in the Bleeding Hills, Rhasta was just a starving youngling when picked up by a travelling con-man.  For two pins of copper, the old con-man would tell your fortune. For three, he'd castrate your pig, for five, he'd circumcise your sons. For a good meal, he'd don his shaman garb, read from his ancient books, and lay a curse upon your enemies. His strange new youngling, part hill troll, part...something else, worked as assistant and lent an air of the exotic to the con-man's trade. \r\n\t\t\t\t<br><br>Always one step ahead of cheated customers, one town ahead of a pursuing patronage, the two trekked across the blighted lands until one day the con-man realized that the little youngling could actually do what he only pretended at. His ward had a gift--a gift that customers valued. And so the youngling Rhasta was thrust before the crowds, and the trade-name Shadow Shaman was born. The two continued from town to town, conjuring for money as Shadow Shaman's reputation grew. Eventually, the pair's duplicitous past caught up with them, and they were ambushed by a mob of swindled ex-clients. The con-man was slain, and for the first time, Rhasta used his powers for darkness, massacring the attackers. He buried his beloved master, and now uses his powers to destroy any who would seek to do him harm.",
           "hype_loc": "Shadow Shaman quickly clears the way for his team's forces to march on the enemy base. Blasting enemies with <b>shocking spells</b> and <b>interrupting attackers</b> with hexes, his powerful <b>serpent wards</b> destroy enemy defenses with ease.",
           "npe_desc_loc": "Summons powerful serpent wards to deal damage",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Chicken Fingers",
-              "description_loc": "Shadow Shaman's attacks can transform enemies into a chicken.",
-              "name": "shadow_shaman_voodoo_hands",
-              "icon": "chicken",
-              "gradient_id": 1,
-              "index": 1
-            },
-            {
-              "color": 0,
-              "title_loc": "Massive Serpent Ward",
-              "description_loc": "Summons a single massive Serpent Ward with {s:bonus_mega_ward_multiplier_damage}x damage and {s:bonus_mega_ward_multiplier_health}x health and bounty values.",
-              "name": "shadow_shaman_massive_serpent_ward",
-              "icon": "snake",
-              "gradient_id": 1,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 20,
           "str_gain": 2.3,
           "agi_base": 16,
@@ -879,13 +860,13 @@
               "id": 1250,
               "name": "shadow_shaman_fowl_play",
               "name_loc": "Fowl Play",
-              "desc_loc": "When taking lethal damage, Shadow Shaman receives a strong dispel and survives as a 1 HP chicken. Incoming damage is reduced to zero for %damage_reduction_duration%s.<br/><br/>Cooldown is reset upon respawning.\n\nDISPEL TYPE: Strong Dispel",
+              "desc_loc": "When taking lethal damage, Shadow Shaman receives a strong dispel and survives as a 1 HP chicken with increased movement speed. Incoming damage is reduced to zero for a short duration and additional chickens are created to confuse the enemy. Cooldown resets when Shadow Shaman respawns.\n\nDISPEL TYPE: Strong Dispel",
               "lore_loc": "Rhasta had to learn early on how to stay one step ahead of those who (rightfully or wrongfully) wished him harm.",
               "notes_loc": [
                 "Lethal Damage from Axe's Culling Blade and Necrophos's Reaper's Scythe will not be prevented.",
                 "Incoming damage reduction buff will prevent certain sources of HP removal from killing Shadow Shaman."
               ],
-              "shard_loc": "Increases the amount of time incoming damage is reduced to %damage_reduction_duration% seconds. When Fowl Play is triggered, Shadow Shaman becomes invulnerable for %invuln_duration% seconds and %ally_chicken_images_count% additional uncontrollable chickens are created that last for %ally_voodoo_duration% seconds. While Shadow Shaman is transformed, he can now use items.",
+              "shard_loc": "Increases the amount of time incoming damage is reduced to %damage_reduction_duration% seconds. When Fowl Play is triggered, Shadow Shaman becomes invulnerable for %invuln_duration% seconds. %chicken_illusions% additional uncontrollable chickens are created that last for %ally_voodoo_duration% seconds. While Shadow Shaman is transformed, he can now use items.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -946,16 +927,48 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "movespeed_bonus_pct",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVESPEED BONUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "total_chickens",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "TOTAL CHICKENS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "damage_reduction_duration",
                   "values_float": [
                     1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "INVULNERABLE TIME:",
                   "bonuses": [],
-                  "values_shard": [
-                    0.5
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -982,16 +995,14 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "allow_items",
+                  "name": "levels_per_chicken",
                   "values_float": [
-                    0
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    1
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1003,33 +1014,12 @@
                 {
                   "name": "invuln_duration",
                   "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
                     0.1
                   ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "invuln_vision_radius",
-                  "values_float": [
-                    0
-                  ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    1000
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1041,52 +1031,12 @@
                 {
                   "name": "ally_chicken_images_take_damage_percent",
                   "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
                     200
                   ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "ally_chicken_images_count",
-                  "values_float": [
-                    0
-                  ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    3
-                  ],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "ally_voodoo_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    3
-                  ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1115,10 +1065,227 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": true,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1743,
+              "name": "shadow_shaman_urnaconda",
+              "name_loc": "Urnaconda",
+              "desc_loc": "Throw a snake jar at the target location, damaging all enemies in the AoE and creating a Massive Serpent Ward that has %megaward_multiplier_tooltip%x the base Serpent Ward damage and health there that lasts %ward_duration%s.",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "8589934705",
+              "target_team": 2,
+              "target_type": 0,
+              "flags": 16,
+              "damage": 0,
+              "immunity": 3,
+              "dispellable": 0,
+              "max_level": 1,
+              "cast_ranges": [
+                650
+              ],
+              "cast_points": [
+                0.3
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                50
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                115
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "ward_duration",
+                  "values_float": [
+                    15
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "speed",
+                  "values_float": [
+                    1000
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "impact_radius",
+                  "values_float": [
+                    225
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "IMPACT RADIUS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "impact_damage",
+                  "values_float": [
+                    275
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "IMPACT DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "megaward_multiplier_tooltip",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    650
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    115
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": true,
+              "ability_is_innate": false,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,
@@ -1133,7 +1300,7 @@
               "desc_loc": "Summons %ward_count% Serpent Wards to attack enemy units and structures. The Wards are immune to magic. Creeps deal half damage to the Serpent Ward.",
               "lore_loc": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the snakes to do his bidding.",
               "notes_loc": [],
-              "shard_loc": "",
+              "shard_loc": "Allows to create a Mega Ward using the Urnaconda ability.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1269,38 +1436,11 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "shadow_shaman_massive_serpent_ward",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "hits_to_destroy_mega_ward_tooltip",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "HITS TO DESTROY:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_shadow_shaman_1",
-                      "value": 50,
-                      "operation": 3
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "shadow_shaman_massive_serpent_ward",
-                    "values": [
-                      18
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "shadow_shaman_massive_serpent_ward"
                 },
                 {
                   "name": "ward_health",
@@ -1347,82 +1487,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "is_mega_ward",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "shadow_shaman_massive_serpent_ward",
-                    "values": [
-                      1
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "shadow_shaman_massive_serpent_ward"
-                },
-                {
-                  "name": "mega_ward_multiplier_damage",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "shadow_shaman_massive_serpent_ward",
-                    "values": [
-                      12
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "shadow_shaman_massive_serpent_ward"
-                },
-                {
-                  "name": "mega_ward_multiplier_health",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "shadow_shaman_massive_serpent_ward",
-                    "values": [
-                      9
-                    ],
-                    "operation": 5
-                  },
-                  "required_facet": "shadow_shaman_massive_serpent_ward"
-                },
-                {
-                  "name": "mega_ward_model_scale_multiplier",
-                  "values_float": [
-                    2.3,
-                    3,
-                    3.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "ward_damage_tooltip",
                   "values_float": [
                     50,
@@ -1435,11 +1499,110 @@
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "shadow_shaman_massive_serpent_ward",
-                    "values": [
-                      12
-                    ],
-                    "operation": 1
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mega_ward_multiplier_damage",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    4
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mega_ward_multiplier_health",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    4
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mega_ward_health_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MEGA WARD HEALTH:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_shadow_shaman_1",
+                      "value": 50,
+                      "operation": 3
+                    }
+                  ],
+                  "values_shard": [
+                    8
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mega_ward_damage_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MEGA WARD DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [
+                    200,
+                    340,
+                    480
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "mega_ward_model_scale_multiplier",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -1518,7 +1681,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -2054,132 +2217,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": [
-                {
-                  "id": 1544,
-                  "name": "shadow_shaman_voodoo_hands",
-                  "name_loc": "Chicken Fingers",
-                  "desc_loc": "Your next attack on an enemy hero transforms them into a chicken for %voodoo_duration%s.",
-                  "lore_loc": "Even a brief moment as a chicken is long enough to make most would-be aggressors rethink their mark.",
-                  "notes_loc": [
-                    "Talents that affect Hex also affects enemies transformed by Chicken Fingers."
-                  ],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "4398046511170",
-                  "target_team": 0,
-                  "target_type": 19,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 4,
-                  "dispellable": 1,
-                  "max_level": 1,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    15
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "voodoo_duration",
-                      "values_float": [
-                        1
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "movespeed",
-                      "values_float": [
-                        100
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    },
-                    {
-                      "name": "AbilityCooldown",
-                      "values_float": [
-                        15
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

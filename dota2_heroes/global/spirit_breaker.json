@@ -10,26 +10,7 @@
           "bio_loc": "Barathrum the Spirit Breaker is a lordly and powerful being, a fierce and elemental intelligence which chose to plane-shift into the world of matter to take part in events with repercussions in the elemental realm that is his home. To that end, he assembled a form that would serve him well, both in our world and out of it. His physical form borrows from the strengths of this world, blending features both bovine and simian--horns, hooves and hands--as outward emblems of his inner qualities of strength, speed and cunning. He wears a ring in his nose, as a reminder that he serves a hidden master, and that this world in which he works is but a shadow of the real one.",
           "hype_loc": "<b>Highly mobile</b> and <b>always aggressive</b>, Spirit Breaker charges across the map to bring the fight to his enemies. With each bash of his heavy lantern, he knocks his foes senseless. His enemies may run, but with the help of a few wards, they cannot hide.",
           "npe_desc_loc": "Charges down enemies from anywhere on the map",
-          "facets": [
-            {
-              "color": 0,
-              "title_loc": "Bull Rush",
-              "description_loc": "Charge of Darkness bonus movement speed lingers after charge ends.",
-              "name": "spirit_breaker_bull_rush",
-              "icon": "speed",
-              "gradient_id": 1,
-              "index": 0
-            },
-            {
-              "color": 3,
-              "title_loc": "Bull's Hit",
-              "description_loc": "Greater Bash chance is increased if you've bashed more than one hero recently.",
-              "name": "spirit_breaker_bulls_hit",
-              "icon": "rng",
-              "gradient_id": 2,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 28,
           "str_gain": 3.3,
           "agi_base": 17,
@@ -136,10 +117,14 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "CHARGE BONUS SPEED:",
-                  "bonuses": [],
-                  "values_shard": [
-                    85
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_spirit_breaker_increased_charge_speed",
+                      "value": 60,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -254,63 +239,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "linger_time_min",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "MIN LINGER TIME:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "spirit_breaker_bull_rush",
-                    "values": [
-                      0.5
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "spirit_breaker_bull_rush"
-                },
-                {
-                  "name": "linger_time_max",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "MAX LINGER TIME:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "spirit_breaker_bull_rush",
-                    "values": [
-                      2.5
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "spirit_breaker_bull_rush"
-                },
-                {
-                  "name": "charge_for_max_linger",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "CHARGE FOR MAX LINGER:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "spirit_breaker_bull_rush",
-                    "values": [
-                      5
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "spirit_breaker_bull_rush"
-                },
-                {
                   "name": "AbilityCastPoint",
                   "values_float": [
                     0.1
@@ -376,7 +304,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -592,7 +520,7 @@
                 "Break disables the passive percent Chance to Bash. Does not disable Greater Bash application from Charge of Darkness or Nether Strike."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases knockback. If a knocked-back enemy collides with another enemy, the second enemy is bashed (creeps only receive %cascading_bashes_creep_penalty%%% damage), and the original target takes %cascading_bashes_damage_multiplier%%% of Greater Bash's damage again.",
               "facets_loc": [
                 "",
                 "",
@@ -753,6 +681,120 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "cascading_bash_cooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.6
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cascading_bashes_damage_multiplier",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    25
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cascading_bashes_creep_penalty",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    25
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cascading_bashes_nether_strike_additional_cooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.6
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cascading_bashes_hero_hitbox",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    185
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "cascading_bashes_creep_hitbox",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    100
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "knockback_distance",
                   "values_float": [
                     143,
@@ -761,10 +803,12 @@
                     162
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "KNOCKBACK DISTANCE:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    50
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -781,7 +825,45 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
+                  "values_scepter": [
+                    30
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "projectile_body_vision",
+                  "values_float": [
+                    175
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
                   "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_knockback_multiplier",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -865,7 +947,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -883,7 +965,9 @@
               "name_loc": "Planar Pocket",
               "desc_loc": "Barathrum gains magic resistance and distorts reality around the selected hero, making any unit-targeted spells cast by enemy heroes get redirected towards Spirit Breaker. Can be cast on both allied and enemy heroes, but only spells cast by enemies of Spirit Breaker will be redirected.",
               "lore_loc": "Barathrum's unyielding focus forms a pocket of planar convergence from which not even the most powerful arcane energies can escape.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Planar Pocket's effect stops if Barathrum moves %break_distance% units away from the target."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -892,7 +976,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8589934601",
+              "behavior": "8589936649",
               "target_team": 3,
               "target_type": 1,
               "flags": 0,
@@ -913,7 +997,7 @@
                 0
               ],
               "cooldowns": [
-                25
+                30
               ],
               "durations": [
                 0
@@ -967,10 +1051,27 @@
                 {
                   "name": "magic_resistance",
                   "values_float": [
-                    75
+                    40
                   ],
                   "is_percentage": true,
                   "heading_loc": "SELF MAGIC RESISTANCE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "break_distance",
+                  "values_float": [
+                    900
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1018,7 +1119,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    25
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1036,8 +1137,8 @@
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
-              "ability_is_granted_by_scepter": true,
-              "ability_is_granted_by_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": true,
               "ability_is_innate": false,
               "item_cost": 0,
               "item_initial_charges": 0,
@@ -1047,12 +1148,14 @@
               "item_quality": 0
             },
             {
-              "id": 1330,
-              "name": "spirit_breaker_herd_mentality",
-              "name_loc": "Herd Mentality",
-              "desc_loc": "The hero on your team whose level is lower than anybody else's on your team gains %xp_gain_rate%%% more experience.",
+              "id": 1757,
+              "name": "spirit_breaker_bull_rush",
+              "name_loc": "Empowering Haste",
+              "desc_loc": "Spirit Breaker gains bonus Movement Speed for a duration whenever he stuns an enemy. Effects from multiple stuns stack and have independent durations. Duration pauses during Charge of Darkness.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Empowering Haste buff allows Spirit Breaker to go over the max movement speed limit."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1061,7 +1164,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "2",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1097,13 +1200,76 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "xp_gain_rate",
+                  "name": "hero_duration",
                   "values_float": [
-                    50
+                    2
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "HERO DURATION:",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "creep_duration",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CREEP DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "hero_movespeed_percent",
+                  "values_float": [
+                    8
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "HERO MOVESPEED:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bull_rush_movement_increase",
+                      "value": 8,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "creep_movespeed_percent",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "CREEP MOVESPEED:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_bull_rush_movement_increase",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1137,7 +1303,7 @@
                 "Spirit Breaker appears behind the target to deliver the bash."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases knockback.\n\nIf the knocked back victim collides with another unit, that unit is bashed and the original target takes an additional instance of Greater Bash damage (%cascading_bashes_creep_multiplier%%% if the unit is a creep).",
               "facets_loc": [
                 "",
                 "Enemy targets hit by Nether Strike will be moved further by allied knockback effects.",
@@ -1628,9 +1794,9 @@
               "item_quality": 0
             },
             {
-              "id": 6253,
-              "name": "special_bonus_attack_damage_45",
-              "name_loc": "+{s:value} Damage",
+              "id": 1821,
+              "name": "special_bonus_unique_spirit_breaker_increased_charge_speed",
+              "name_loc": "+{s:bonus_movement_speed} Charge of Darkness Bonus Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1676,25 +1842,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    45
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1709,9 +1857,9 @@
               "item_quality": 0
             },
             {
-              "id": 6149,
-              "name": "special_bonus_unique_spirit_breaker_1",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Greater Bash Cooldown",
+              "id": 1822,
+              "name": "special_bonus_unique_bull_rush_movement_increase",
+              "name_loc": "+{s:bonus_hero_movespeed_percent}%/+{s:bonus_creep_movespeed_percent}% Empowering Haste Movespeed Bonus",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1961,14 +2109,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": []
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },

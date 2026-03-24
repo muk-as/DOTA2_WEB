@@ -10,26 +10,7 @@
           "bio_loc": "Hoodwink's earliest years were spent in the idyllic expanse of green that once filled the edges of Krimwohl. But as that kingdom grew, and the needs of both her citizens and her armies became ravenous, rival ore and timber barons scratched and clawed to outpace each other in devouring the natural beauty of the border forests, gorging themselves to meet the demands of the changing land.<br><br>To those living in the ancient timberlands, the choice came down to following the line of refugees into the pacified zones, falling to Krimwohl's black powder and steel while defending their homes, or fleeing further north to tempt fate in the haunted glens and groves of the misty Wood Tomo'kan.<br><br>So it was in those treacherous northern mistwoods that Hoodwink came of age, dodging the horrific predators of the Tomo'kan, ingratiating herself with some of the local banditry whilst antagonizing others, and finding absolutely every which way to be underfoot whenever some interesting mischief arose--often <i>allegedly</i> the cause of it.<br><br>But when the faintest whiff of Krimwohl's fires eventually drifted into her adopted home, Hoodwink's thoughts turned to any family and friends who might have survived the invasion--now made to eke out lives in the razed lands whose wounds scarred her very soul--and she couldn't help but approach the edges of civilization to get a glimpse of the devils that had destroyed her old life.<br><br>There, she saw that the monsters from her childhood weren't monsters at all. They were just...people. Soldiers, laborers, merchants...and refugees. And the soldiers, even with their black powder and steel, were nothing compared to the dangers of the Tomo'kan--real dangers with tentacles and teeth--dangers she danced around like a twirling maple seed.<br><br>Knowing she can always find safe passage in the tangles of the Tomo'kan, where most warm-blooded folk wisely fear to tread, Hoodwink now strikes out against those who dare try to further pacify the wilds, happily taking what she likes from their belongings, destroying what she has no use for, and helping guide any kindred survivors back to a life in the green once again.",
           "hype_loc": "Always at hand when trouble's afoot, Hoodwink lives to tangle with the threats that fill the haunted forest she adopted as her home. Toting a <b>massive crossbow</b> while still able to <b>scurry through the woodland</b> with the greatest of ease, Hoodwink is nearly impossible to keep tabs on in battle. Lose track and she'll pop out behind you -- your stunned carcass already dangling in one of her <b>nets.</b>",
           "npe_desc_loc": "Shackles her enemies to trees",
-          "facets": [
-            {
-              "color": 1,
-              "title_loc": "Go Nuts",
-              "description_loc": "Scurry also provides bonus attack and cast range.",
-              "name": "hoodwink_hunter",
-              "icon": "range",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 2,
-              "title_loc": "Hipshot",
-              "description_loc": "Sharpshooter has a greatly reduced cooldown. Damage, debuff duration, turn time, and wind-up times are also reduced.",
-              "name": "hoodwink_hipshot",
-              "icon": "cooldown",
-              "gradient_id": 0,
-              "index": 2
-            }
-          ],
+          "facets": [],
           "str_base": 17,
           "str_gain": 2,
           "agi_base": 25,
@@ -75,8 +56,7 @@
               "notes_loc": [
                 "The same target can be hit more than once.",
                 "Bounces will seek units in the fog of war in a 525 radius, but not invisible units.",
-                "The planted tree lasts for 20 seconds.",
-                "Acorn Shot benefits from attack range bonuses."
+                "The planted tree lasts for 20 seconds."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -95,7 +75,10 @@
               "dispellable": 0,
               "max_level": 4,
               "cast_ranges": [
-                575
+                675,
+                700,
+                725,
+                750
               ],
               "cast_points": [
                 0.2
@@ -133,7 +116,7 @@
                     100
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS ATTACK RANGE:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -194,7 +177,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_hoodwink_acorn_shot_bounces",
-                      "value": 1,
+                      "value": 2,
                       "operation": 0
                     }
                   ],
@@ -333,7 +316,10 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    575
+                    675,
+                    700,
+                    725,
+                    750
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -466,7 +452,7 @@
               "dispellable": 1,
               "max_level": 4,
               "cast_ranges": [
-                1000
+                1100
               ],
               "cast_points": [
                 0.2
@@ -615,7 +601,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    1000
+                    1100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -710,11 +696,9 @@
               "id": 9501,
               "name": "hoodwink_scurry",
               "name_loc": "Scurry",
-              "desc_loc": "Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time. All sources of evasion are doubled for the duration.",
+              "desc_loc": "Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time. While active, the redirect chance of Mistwoods Wayfarer is multiplied by %evasion_multiplier%.",
               "lore_loc": "There's not a nook or cranny in the Wood Tomo'kan out of reach of Hoodwink's paws.",
-              "notes_loc": [
-                "Redirect chance from Mistwoods Wayfarer is also doubled for the duration."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -805,9 +789,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "decoy_duration",
+                  "name": "radius",
                   "values_float": [
-                    6
+                    275
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -820,141 +804,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "decoy_detonate_radius",
-                  "values_float": [
-                    250
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "decoy_stun_duration",
-                  "values_float": [
-                    1.6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "images_take_damage_percent",
-                  "values_float": [
-                    100
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "projectile_speed",
-                  "values_float": [
-                    1200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "movement_speed",
-                  "values_float": [
-                    15
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "cast_range",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ACTIVE CAST RANGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "hoodwink_hunter",
-                    "values": [
-                      50,
-                      100,
-                      150,
-                      200
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "hoodwink_hunter"
-                },
-                {
-                  "name": "attack_range",
-                  "values_float": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ACTIVE ATTACK RANGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "hoodwink_hunter",
-                    "values": [
-                      50,
-                      100,
-                      150,
-                      200
-                    ],
-                    "operation": 0
-                  },
-                  "required_facet": "hoodwink_hunter"
                 },
                 {
                   "name": "evasion_multiplier",
@@ -2110,7 +1959,7 @@
               "damage": 0,
               "immunity": 0,
               "dispellable": 0,
-              "max_level": 4,
+              "max_level": 1,
               "cast_ranges": [
                 0
               ],
@@ -2158,10 +2007,7 @@
                 {
                   "name": "redirect_chance",
                   "values_float": [
-                    14,
-                    21,
-                    28,
-                    35
+                    14
                   ],
                   "is_percentage": true,
                   "heading_loc": "REDIRECT CHANCE:",
@@ -2255,8 +2101,8 @@
               "item_quality": 0
             },
             {
-              "id": 5902,
-              "name": "special_bonus_hp_150",
+              "id": 6034,
+              "name": "special_bonus_hp_175",
               "name_loc": "+{s:value} Health",
               "desc_loc": "",
               "lore_loc": "",
@@ -2307,7 +2153,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    150
+                    175
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2399,9 +2245,9 @@
               "item_quality": 0
             },
             {
-              "id": 9513,
-              "name": "special_bonus_unique_hoodwink_acorn_shot_bounces",
-              "name_loc": "+{s:bonus_bounce_count} Acorn Shot Bounce",
+              "id": 6029,
+              "name": "special_bonus_agility_10",
+              "name_loc": "+{s:value} Agility",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2447,7 +2293,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    10
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -2525,90 +2389,9 @@
               "item_quality": 0
             },
             {
-              "id": 7383,
-              "name": "special_bonus_corruption_3",
-              "name_loc": "-{s:value} Armor Corruption",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 9509,
-              "name": "special_bonus_unique_hoodwink_acorn_shot_charges",
-              "name_loc": "{s:bonus_AbilityCharges} Acorn Shot Charges",
+              "id": 9513,
+              "name": "special_bonus_unique_hoodwink_acorn_shot_bounces",
+              "name_loc": "+{s:bonus_bounce_count} Acorn Shot Bounces",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -2730,16 +2513,72 @@
               "item_stock_max": 0,
               "item_stock_time": 0,
               "item_quality": 0
-            }
-          ],
-          "facet_abilities": [
-            {
-              "abilities": []
             },
             {
-              "abilities": []
+              "id": 9509,
+              "name": "special_bonus_unique_hoodwink_acorn_shot_charges",
+              "name_loc": "{s:bonus_AbilityCharges} Acorn Shot Charges",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
             }
-          ]
+          ],
+          "facet_abilities": []
         }
       ]
     },

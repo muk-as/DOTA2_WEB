@@ -10,27 +10,8 @@
           "bio_loc": "Sven is the bastard son of a Vigil Knight, born of a Pallid Meranth, raised in the Shadeshore Ruins.  With his father executed for violating the Vigil Codex, and his mother shunned by her wild race, Sven believes that honor is to be found in no social order, but only in himself.  After tending his mother through a lingering death, he offered himself as a novice to the Vigil Knights, never revealing his identity.  For thirteen years he studied in his father's school, mastering the rigid code that declared his existence an abomination.  Then, on the day that should have been his In-Swearing, he seized the Outcast Blade, shattered the Sacred Helm, and burned the Codex in the Vigil's Holy Flame.  He strode from Vigil Keep, forever solitary, following his private code to the last strict rune. Still a knight, yes...but a Rogue Knight. He answers only to himself.",
           "hype_loc": "Sven is always eager to charge into a fight. He <b>stuns grouped enemies</b> as he wades into battle, and once he ignites his <b>damage-boosting ultimate</b>, a few swings of his massive sword are often more than enough to slay his foes.",
           "npe_desc_loc": "Cleaves down enemies with his incredible strength",
-          "facets": [
-            {
-              "color": 3,
-              "title_loc": "Heavy Plate",
-              "description_loc": "Warcry provides a physical damage barrier.",
-              "name": "sven_heavy_plate",
-              "icon": "armor",
-              "gradient_id": 0,
-              "index": 0
-            },
-            {
-              "color": 0,
-              "title_loc": "Wrath of God",
-              "description_loc": "Sven gains additional attack damage from Strength.",
-              "name": "sven_strscaling",
-              "icon": "strength",
-              "gradient_id": 0,
-              "index": 1
-            }
-          ],
-          "str_base": 23,
+          "facets": [],
+          "str_base": 24,
           "str_gain": 3.5,
           "agi_base": 18,
           "agi_gain": 2.2,
@@ -50,8 +31,8 @@
             0,
             2
           ],
-          "damage_min": 60,
-          "damage_max": 62,
+          "damage_min": 61,
+          "damage_max": 63,
           "attack_rate": 1.9,
           "attack_range": 150,
           "projectile_speed": 0,
@@ -61,8 +42,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 626,
-          "health_regen": 3.05,
+          "max_health": 648,
+          "health_regen": 3.15,
           "max_mana": 267,
           "mana_regen": 0.8,
           "abilities": [
@@ -72,11 +53,9 @@
               "name_loc": "Storm Hammer",
               "desc_loc": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target.",
               "lore_loc": "The Rogue Knight's iron gauntlet, taken from the school of his father, strikes his foes to their core.",
-              "notes_loc": [
-                "Aghanim's Scepter upgrade does not allow Storm Hammer to target invulnerable targets."
-              ],
+              "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Increases cast range, projectile speed and applies a basic dispel to affected enemies. Allows Storm Hammer to affect invulnerable enemies in the radius. If alt-cast, it deals an additional %scepter_bonus_damage% damage and Sven travels with the Storm Hammer.",
+              "scepter_loc": "Increases cast range and applies a basic dispel on the target. Affects invulnerable units. If alt-cast, it deals an additional %scepter_bonus_damage% damage and Sven travels with the Storm Hammer.",
               "facets_loc": [
                 "",
                 ""
@@ -132,7 +111,7 @@
                     1000
                   ],
                   "is_percentage": false,
-                  "heading_loc": "PROJECTILE SPEED:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
@@ -226,7 +205,28 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "#AbilityDamage",
+                  "name": "bonus_damage_pct",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_sven",
+                      "value": 20,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityDamage",
                   "values_float": [
                     80,
                     160,
@@ -251,7 +251,7 @@
                     600
                   ],
                   "is_percentage": false,
-                  "heading_loc": "CAST RANGE:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
@@ -291,7 +291,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_sven_stormhammer_cooldown",
+                      "value": 25,
+                      "operation": 4
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -311,7 +317,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_sven_stormhammer_cooldown",
+                      "value": 25,
+                      "operation": 4
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -488,10 +500,10 @@
               "desc_loc": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. Lasts %duration% seconds.",
               "lore_loc": "Calling a few lines from the Vigil Codex fortifies Sven's obedience to his rogue code. So poetic!",
               "notes_loc": [],
-              "shard_loc": "Warcry is now undispellable and passively grants %shard_passive_armor% armor to all allies near Sven. Increases active movement speed bonus.",
+              "shard_loc": "Increases radius and bonus movement speed. Warcry is now undispellable and provides a %base_barrier_amount% physical damage barrier.",
               "scepter_loc": "",
               "facets_loc": [
-                "Warcry provides a physical damage barrier.",
+                "",
                 ""
               ],
               "type": 0,
@@ -595,7 +607,9 @@
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    200
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -636,7 +650,7 @@
                   "heading_loc": "PASSIVE BONUS ARMOR:",
                   "bonuses": [],
                   "values_shard": [
-                    6
+                    0
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -666,6 +680,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "undispellable",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "shard_radius",
                   "values_float": [
                     0
@@ -674,7 +707,7 @@
                   "heading_loc": "PASSIVE RADIUS:",
                   "bonuses": [],
                   "values_shard": [
-                    1200
+                    0
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -687,27 +720,21 @@
                 {
                   "name": "base_barrier_amount",
                   "values_float": [
-                    0,
-                    0,
-                    0,
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "PHYSICAL BARRIER AMOUNT:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    300
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "sven_heavy_plate",
-                    "values": [
-                      70,
-                      140,
-                      210,
-                      280
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "sven_heavy_plate"
+                  "required_facet": ""
                 },
                 {
                   "name": "barrier_per_strength",
@@ -717,16 +744,16 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    0
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "sven_heavy_plate",
-                    "values": [
-                      0
-                    ],
-                    "operation": 5
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
-                  "required_facet": "sven_heavy_plate"
+                  "required_facet": ""
                 },
                 {
                   "name": "AbilityManaCost",
@@ -980,10 +1007,10 @@
               "item_quality": 0
             },
             {
-              "id": 1232,
-              "name": "sven_vanquisher",
-              "name_loc": "Vanquisher",
-              "desc_loc": "Sven's attacks deal %bonus_damage_pct%%% bonus damage to stunned enemies.",
+              "id": 1234,
+              "name": "sven_wrath_of_god",
+              "name_loc": "Wrath of God",
+              "desc_loc": "Sven gains additional attack damage from Strength.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -993,7 +1020,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8796093022210",
+              "behavior": "562949953421315",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1029,19 +1056,30 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "bonus_damage_pct",
+                  "name": "bonus_damage_per_str",
                   "values_float": [
-                    20
+                    0.08
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_sven",
-                      "value": 10,
-                      "operation": 0
-                    }
+                  "heading_loc": "DAMAGE PER STRENGTH:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_bonus_damage_tooltip",
+                  "values_float": [
+                    0
                   ],
+                  "is_percentage": false,
+                  "heading_loc": "CURRENT DAMAGE BONUS:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1130,9 +1168,9 @@
               "item_quality": 0
             },
             {
-              "id": 6045,
-              "name": "special_bonus_unique_sven",
-              "name_loc": "+{s:bonus_bonus_damage_pct}% Vanquisher Bonus Damage",
+              "id": 1188,
+              "name": "special_bonus_unique_sven_gods_strength_slow_resist",
+              "name_loc": "+{s:bonus_bonus_slow_resistance}% God's Strength Slow Resistance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1316,9 +1354,9 @@
               "item_quality": 0
             },
             {
-              "id": 1188,
-              "name": "special_bonus_unique_sven_gods_strength_slow_resist",
-              "name_loc": "+{s:bonus_bonus_slow_resistance}% God's Strength Slow Resistance",
+              "id": 1790,
+              "name": "special_bonus_unique_sven_stormhammer_cooldown",
+              "name_loc": "-{s:bonus_AbilityCooldown}% Storm Hammer Cooldown and Mana Cost",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1564,98 +1602,7 @@
               "item_quality": 0
             }
           ],
-          "facet_abilities": [
-            {
-              "abilities": []
-            },
-            {
-              "abilities": [
-                {
-                  "id": 1234,
-                  "name": "sven_wrath_of_god",
-                  "name_loc": "Wrath of God",
-                  "desc_loc": "Sven gains additional attack damage from Strength.",
-                  "lore_loc": "",
-                  "notes_loc": [],
-                  "shard_loc": "",
-                  "scepter_loc": "",
-                  "facets_loc": [
-                    "",
-                    ""
-                  ],
-                  "type": 0,
-                  "behavior": "67",
-                  "target_team": 0,
-                  "target_type": 0,
-                  "flags": 0,
-                  "damage": 0,
-                  "immunity": 0,
-                  "dispellable": 0,
-                  "max_level": 4,
-                  "cast_ranges": [
-                    0
-                  ],
-                  "cast_points": [
-                    0
-                  ],
-                  "channel_times": [
-                    0
-                  ],
-                  "cooldowns": [
-                    0
-                  ],
-                  "durations": [
-                    0
-                  ],
-                  "damages": [
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "mana_costs": [
-                    0
-                  ],
-                  "gold_costs": [],
-                  "health_costs": [],
-                  "special_values": [
-                    {
-                      "name": "bonus_damage_per_str",
-                      "values_float": [
-                        0,
-                        0.2,
-                        0.3,
-                        0.4
-                      ],
-                      "is_percentage": false,
-                      "heading_loc": "BONUS DAMAGE PER STR:",
-                      "bonuses": [],
-                      "values_shard": [],
-                      "values_scepter": [],
-                      "facet_bonus": {
-                        "name": "",
-                        "values": [],
-                        "operation": 0
-                      },
-                      "required_facet": ""
-                    }
-                  ],
-                  "is_item": false,
-                  "ability_has_scepter": false,
-                  "ability_has_shard": false,
-                  "ability_is_granted_by_scepter": false,
-                  "ability_is_granted_by_shard": false,
-                  "ability_is_innate": false,
-                  "item_cost": 0,
-                  "item_initial_charges": 0,
-                  "item_neutral_tier": 4294967295,
-                  "item_stock_max": 0,
-                  "item_stock_time": 0,
-                  "item_quality": 0
-                }
-              ]
-            }
-          ]
+          "facet_abilities": []
         }
       ]
     },
