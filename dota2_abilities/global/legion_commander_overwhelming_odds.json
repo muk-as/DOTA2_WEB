@@ -6,10 +6,10 @@
           "id": 5595,
           "name": "legion_commander_overwhelming_odds",
           "name_loc": "Overwhelming Odds",
-          "desc_loc": "Turns the foes' numbers against them, dealing damage to all enemies in the area. Damage increases with each enemy unit or hero in the area. Also grants bonus Attack Speed to Legion Commander. Can be cast during Duel.",
+          "desc_loc": "Turns the foes' numbers against them, dealing a %movement_slow%%% impact slow for %slow_duration%s and damage to all enemies in the area. Damage increases with each enemy unit or hero in the area, and grants Legion Commander bonus attack speed.",
           "lore_loc": "The archers of Stonehall are ready at Tresdin's command.",
           "notes_loc": [],
-          "shard_loc": "Gives %duel_radius_bonus% bonus radius when cast during Duel.",
+          "shard_loc": "Overwhelming Odds has larger radius and grants an all damage barrier based on the damage it deals to enemy heroes.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -55,17 +55,16 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "damage",
+              "name": "radius",
               "values_float": [
-                40,
-                70,
-                100,
-                130
+                600
               ],
               "is_percentage": false,
-              "heading_loc": "BASE DAMAGE:",
+              "heading_loc": "RADIUS:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                100
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -75,15 +74,15 @@
               "required_facet": ""
             },
             {
-              "name": "damage_per_unit",
+              "name": "damage",
               "values_float": [
-                14,
-                16,
-                18,
-                20
+                40,
+                70,
+                100,
+                130
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE PER CREEP:",
+              "heading_loc": "BASE DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -121,6 +120,26 @@
               "required_facet": ""
             },
             {
+              "name": "damage_per_unit",
+              "values_float": [
+                14,
+                16,
+                18,
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE PER CREEP:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "bonus_attack_speed",
               "values_float": [
                 50,
@@ -146,7 +165,7 @@
                 6
               ],
               "is_percentage": false,
-              "heading_loc": "SPEED DURATION:",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -158,12 +177,12 @@
               "required_facet": ""
             },
             {
-              "name": "radius",
+              "name": "slow_duration",
               "values_float": [
-                600
+                0.3
               ],
               "is_percentage": false,
-              "heading_loc": "RADIUS:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -175,73 +194,14 @@
               "required_facet": ""
             },
             {
-              "name": "armor_per_creep",
+              "name": "movement_slow",
               "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                1
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "armor_per_hero",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                5
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_duration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                8
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "duel_radius_bonus",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "RADIUS BONUS IN DUEL:",
-              "bonuses": [],
-              "values_shard": [
                 100
               ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -258,7 +218,9 @@
               "is_percentage": true,
               "heading_loc": "DAMAGE TO BARRIER:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -275,7 +237,9 @@
               "is_percentage": false,
               "heading_loc": "BARRIER DURATION:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                6
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

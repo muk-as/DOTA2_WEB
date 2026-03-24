@@ -6,10 +6,10 @@
           "id": 1504,
           "name": "kez_shodo_sai",
           "name_loc": "Shodo Sai",
-          "desc_loc": "Kez's attacks and abilities with the Sai have a chance to Mark enemies. The next attack or ability damage from Kez will stun the enemy and deal a critical strike, consuming the buff.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned and gains a stronger Mark that stuns for longer and deals %parry_bonus_crit%%% * <span class=\"GameplayVariable\">Target Hero Level</span> bonus critical strike.<br><br>The sub-ability may be used to cancel the blocking early.",
+          "desc_loc": "Kez has a chance to critically strike the target when attacking with Sais.<br><br>Kez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for %parry_duration% seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned for %parry_stun_duration%s and gains a Mark.  When a Marked target is attacked by Kez, it will guarantee a critical strike and stun the target.<br><br>The sub-ability may be used to cancel the blocking early.",
           "lore_loc": "The Shodo may have lost their way, but Kez and the Kazurai can still use Shodo knowledge for the good of the people.",
           "notes_loc": [],
-          "shard_loc": "",
+          "shard_loc": "Parrying creates a stronger Mark that deals additional stun and critical damage.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -57,27 +57,10 @@
             {
               "name": "sai_proc_vuln_chance",
               "values_float": [
-                18
+                20
               ],
               "is_percentage": true,
-              "heading_loc": "CHANCE TO MARK:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "vuln_duration",
-              "values_float": [
-                8
-              ],
-              "is_percentage": false,
-              "heading_loc": "MARKED DURATION:",
+              "heading_loc": "CRITICAL CHANCE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -97,11 +80,11 @@
                 200
               ],
               "is_percentage": true,
-              "heading_loc": "MARKED CRITICAL STRIKE:",
+              "heading_loc": "CRITICAL DAMAGE:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_kez_mark_damage",
-                  "value": 100,
+                  "value": 80,
                   "operation": 0
                 }
               ],
@@ -117,10 +100,30 @@
             {
               "name": "stun_duration",
               "values_float": [
-                0.4
+                0.5,
+                0.6,
+                0.7,
+                0.8
               ],
               "is_percentage": false,
-              "heading_loc": "MARKED STUN DURATION:",
+              "heading_loc": "MARK STUN DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "vuln_duration",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "MARK DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -185,18 +188,33 @@
             {
               "name": "parry_bonus_crit",
               "values_float": [
-                4
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "PARRY BONUS CRITICAL STRIKE:",
+              "bonuses": [],
+              "values_shard": [
+                50
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "parry_bonus_stun_duration",
+              "values_float": [
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_kez_mark_damage",
-                  "value": 0,
-                  "operation": 0
-                }
+              "heading_loc": "PARRY BONUS MARK STUN:",
+              "bonuses": [],
+              "values_shard": [
+                0.2
               ],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -209,23 +227,6 @@
               "name": "parry_stun_duration",
               "values_float": [
                 0.4
-              ],
-              "is_percentage": false,
-              "heading_loc": "PARRY STUN DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "sai_swap_bonus_movement_speed",
-              "values_float": [
-                12
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -282,7 +283,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

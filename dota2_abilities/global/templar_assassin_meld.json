@@ -6,7 +6,7 @@
           "id": 5195,
           "name": "templar_assassin_meld",
           "name_loc": "Meld",
-          "desc_loc": "Templar Assassin conceals herself, becoming invisible as long as she remains still.  If Meld's invisibility is broken by attacking an enemy, Lanaya's attack will deal bonus damage to the enemy and reduce their armor for %debuff_duration% seconds.",
+          "desc_loc": "Templar Assassin conceals herself, becoming invisible as long as she remains still. If Meld's invisibility is broken by attacking an enemy, Lanaya's attack will deal bonus damage to the enemy and reduce their armor for %debuff_duration% seconds. Bonus damage and armor reductions are applied to all enemies in the Psi Blades split range.",
           "lore_loc": "Lanaya is as elusive as her covenant with the Hidden Temple.",
           "notes_loc": [
             "Meld is broken by any action other than staying in position or channeling Psionic Projection.",
@@ -93,7 +93,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_templar_assassin_8",
-                  "value": 3,
+                  "value": 4,
                   "operation": 2
                 }
               ],
@@ -128,30 +128,17 @@
               "required_facet": ""
             },
             {
-              "name": "attack_range_increase_max",
-              "values_float": [
-                0
-              ],
+              "name": "attack_range_bonus",
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "attack_range_increase_time",
-              "values_float": [
-                0
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_templar_assassin_meld_attack_range_bonus",
+                  "value": 225,
+                  "operation": 0
+                }
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

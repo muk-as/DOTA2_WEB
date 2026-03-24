@@ -6,12 +6,12 @@
           "id": 5061,
           "name": "nevermore_shadowraze3",
           "name_loc": "Shadowraze",
-          "desc_loc": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
+          "desc_loc": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area, dealing bonus damage based on his current Necromastery Soul amount. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
           "lore_loc": "Nevermore's trademark for harvesting souls.",
           "notes_loc": [
             "Stack duration refreshes on stack gain."
           ],
-          "shard_loc": "Cooldown reduced by %cooldown_reduction_on_hero_hit%s per enemy hero.",
+          "shard_loc": "Cooldown reduced by %cooldown_reduction_on_hero_hit%s per enemy hero hit. Applies a stacking %movement_speed_debuff%%% movement speed debuff on enemies hit.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -53,20 +53,14 @@
             {
               "name": "shadowraze_damage",
               "values_float": [
-                90,
-                160,
-                230,
-                300
+                85,
+                150,
+                215,
+                280
               ],
               "is_percentage": false,
               "heading_loc": "BASE DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_nevermore_2",
-                  "value": 120,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -194,15 +188,14 @@
             {
               "name": "movement_speed_debuff",
               "values_float": [
-                0,
-                0,
-                0,
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                12
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -222,6 +215,23 @@
               "values_shard": [
                 2
               ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_per_soul",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS DAMAGE PER SOUL:",
+              "bonuses": [],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

@@ -6,7 +6,7 @@
           "id": 5452,
           "name": "rubick_spell_steal",
           "name_loc": "Spell Steal",
-          "desc_loc": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies, and stolen spells last longer on enemies.",
+          "desc_loc": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies.",
           "lore_loc": "...but even their lesser magics can be a source of much utility.",
           "notes_loc": [
             "Cannot steal item abilities.",
@@ -61,6 +61,25 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "cast_range_scepter",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "CAST RANGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1400
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "projectile_speed",
               "values_float": [
                 1500
@@ -78,14 +97,35 @@
               "required_facet": ""
             },
             {
-              "name": "stolen_debuff_amp",
+              "name": "stolen_mana_reduction",
+              "values_float": [],
+              "is_percentage": true,
+              "heading_loc": "STOLEN MANA COST REDUCTION:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_rubick_6",
+                  "value": 50,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "stolen_spell_cooldown_percent",
               "values_float": [
                 10,
                 20,
                 30
               ],
               "is_percentage": true,
-              "heading_loc": "STOLEN DEBUFF AMP:",
+              "heading_loc": "STOLEN SPELL COOLDOWN REDUCTION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -97,17 +137,19 @@
               "required_facet": ""
             },
             {
-              "name": "cast_range_scepter",
-              "values_float": [
-                0
-              ],
+              "name": "spell_amp_percent",
+              "values_float": [],
               "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                1400
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_rubick_5",
+                  "value": 40,
+                  "operation": 0
+                }
               ],
+              "values_shard": [],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -135,57 +177,13 @@
               "required_facet": ""
             },
             {
-              "name": "stolen_mana_reduction",
+              "name": "curiosity_steal_factor",
               "values_float": [
-                0,
-                0,
-                0
+                1
               ],
-              "is_percentage": true,
-              "heading_loc": "STOLEN MANA COST REDUCTION:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "stolen_spell_cooldown_percent",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_rubick_6",
-                  "value": 25,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spell_amp_percent",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_rubick_5",
-                  "value": 40,
-                  "operation": 0
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

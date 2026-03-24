@@ -6,7 +6,7 @@
           "id": 5238,
           "name": "rattletrap_power_cogs",
           "name_loc": "Power Cogs",
-          "desc_loc": "Forms a ring of energized cogs around Clockwerk, trapping any units that are near. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down. Damage is increased by %mana_burn_as_damage_pct%%% of the mana burned.<br><br> Cogs can be destroyed by enemy attacks, but Clockwerk can push them up to %projectile_distance% distance away with one hit.",
+          "desc_loc": "Forms a ring of energized cogs around Clockwerk, trapping any units that are near. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down. Damage is increased by %mana_burn_as_damage_pct%%% of the mana burned.<br><br> Cogs can be destroyed by enemy attacks, but Clockwerk can push them up to %projectile_distance% distance away with one hit. Clockwerk can move through the cogs freely, disabling them as he passes over.",
           "lore_loc": "One of Clockwerk's inventions of which he is most proud is the power cog - though it is sometimes despised by his allies.",
           "notes_loc": [
             "Cogs can shock invisible units."
@@ -48,7 +48,10 @@
             0
           ],
           "mana_costs": [
-            70
+            60,
+            65,
+            70,
+            75
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -97,9 +100,9 @@
               "name": "mana_burn",
               "values_float": [
                 35,
-                70,
-                105,
-                140
+                75,
+                115,
+                155
               ],
               "is_percentage": false,
               "heading_loc": "MANA BURN:",
@@ -143,13 +146,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "ATTACKS REQUIRED:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_clockwerk_5",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -211,9 +208,9 @@
               "required_facet": ""
             },
             {
-              "name": "cogs_pullin",
+              "name": "trigger_distance",
               "values_float": [
-                0
+                185
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -228,9 +225,9 @@
               "required_facet": ""
             },
             {
-              "name": "trigger_distance",
+              "name": "inside_cogs_distance_reduction",
               "values_float": [
-                185
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -317,6 +314,57 @@
               "required_facet": ""
             },
             {
+              "name": "push_duration_overclock",
+              "values_float": [
+                0.6
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cogs_radius_overclock",
+              "values_float": [
+                330
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "trigger_distance_overclock",
+              "values_float": [
+                115
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastPoint",
               "values_float": [
                 0.2
@@ -336,7 +384,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                70
+                60,
+                65,
+                70,
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",

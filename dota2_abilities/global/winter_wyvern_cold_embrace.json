@@ -9,7 +9,7 @@
           "desc_loc": "Encases an ally in an icy cocoon, freezing them solid while healing a base amount as well as a percentage of their maximum health each second. The cocoon blocks all physical damage.",
           "lore_loc": "From winter's heart comes a cold, healing embrace. The ice slows the blood and allows the spell to better work its curative magic.",
           "notes_loc": [],
-          "shard_loc": "When Cold Embrace ends, a Splinter Blast goes off at that location, hitting enemies within %shard_splinter_range% range. Reduces cooldown by %shard_cooldown_reduction% seconds.",
+          "shard_loc": "Reduces cooldown by %shard_cooldown_reduction% seconds. Allied units gain bonus attack damage when emerging from the icy cocoon.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -143,25 +143,6 @@
               "required_facet": ""
             },
             {
-              "name": "shard_splinter_range",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                1150
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "tick_interval",
               "values_float": [
                 0.25
@@ -203,7 +184,9 @@
               "is_percentage": true,
               "heading_loc": "BONUS ATTACK DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                60
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -220,7 +203,9 @@
               "is_percentage": false,
               "heading_loc": "DAMAGE BUFF DURATION:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                6
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

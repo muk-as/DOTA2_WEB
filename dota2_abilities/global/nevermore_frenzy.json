@@ -6,11 +6,9 @@
           "id": 1216,
           "name": "nevermore_frenzy",
           "name_loc": "Feast of Souls",
-          "desc_loc": "Shadow Fiend gains Bonus Attack Speed and Movement Speed for %duration% seconds. For the duration of the effect, Necromastery's Max Soul count is increased by %max_soul_increase%, but he loses that amount of souls after it is done.",
+          "desc_loc": "Shadow Fiend gains Bonus Movement and Attack Speed for %duration% seconds. For the duration of the effect, every %soul_collection_interval%s he collects souls from %soul_collection_per_interval% enemies in a %soul_collection_radius% radius. After the effect is over, he loses the souls whose owners are still alive, retaining the rest for %linger_duration%s, after which souls that are over the Necromastery max stack count are also lost.\n\n Can only collect souls once from each individual enemy.",
           "lore_loc": "For Nevermore, there's as much delight in the harvest as there is in the feast.",
-          "notes_loc": [
-            "Cannot be cast unless Shadow Fiend has enough souls to pay the cost."
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -56,10 +54,10 @@
             {
               "name": "bonus_attack_speed",
               "values_float": [
-                40,
-                55,
-                70,
-                85
+                35,
+                50,
+                65,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "BONUS ATTACK SPEED:",
@@ -82,10 +80,10 @@
             {
               "name": "bonus_move_speed",
               "values_float": [
-                5,
-                7,
-                9,
-                11
+                4,
+                6,
+                8,
+                10
               ],
               "is_percentage": true,
               "heading_loc": "BONUS MOVE SPEED:",
@@ -161,12 +159,15 @@
               "required_facet": ""
             },
             {
-              "name": "soul_cost",
+              "name": "max_collection_count",
               "values_float": [
-                5
+                4,
+                6,
+                8,
+                10
               ],
               "is_percentage": false,
-              "heading_loc": "SOUL COST:",
+              "heading_loc": "MAX COLLECTION TARGETS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -178,9 +179,100 @@
               "required_facet": ""
             },
             {
-              "name": "max_soul_increase",
+              "name": "soul_collection_per_interval",
               "values_float": [
-                5
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "soul_collection_radius",
+              "values_float": [
+                600
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "soul_collection_interval",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "soul_collection_per_hero",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "SOULS PER HERO:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_nevermore_frenzy_max_collection_count",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "soul_collection_per_creep",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "SOULS PER CREEP:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "linger_duration",
+              "values_float": [
+                8
               ],
               "is_percentage": false,
               "heading_loc": "",

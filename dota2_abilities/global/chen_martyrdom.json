@@ -6,7 +6,7 @@
           "id": 951,
           "name": "chen_martyrdom",
           "name_loc": "Martyrdom",
-          "desc_loc": "Sacrifice the life of this unit to instantly heal an ally for %current_hp_pct%%% of this unit's current health.",
+          "desc_loc": "Sacrifice the life of this unit to damage an enemy for %base_value% + %current_hp_pct%%% of this unit's current health.  Allies may also be targeted for a heal with %heal_factor%%% of the damage value.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -14,7 +14,7 @@
           "facets_loc": [],
           "type": 0,
           "behavior": "8",
-          "target_team": 1,
+          "target_team": 3,
           "target_type": 3,
           "flags": 0,
           "damage": 0,
@@ -22,18 +22,16 @@
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
-            1200
+            500
           ],
           "cast_points": [
-            0.3,
-            0.3,
             0.3
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            4
+            0
           ],
           "durations": [
             0
@@ -51,9 +49,60 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "speed",
+              "values_float": [
+                1000
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "current_hp_pct",
               "values_float": [
-                30
+                20
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_value",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "heal_factor",
+              "values_float": [
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -70,7 +119,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                1200
+                500
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -88,23 +137,6 @@
               "name": "AbilityCastPoint",
               "values_float": [
                 0.3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                4
               ],
               "is_percentage": false,
               "heading_loc": "",

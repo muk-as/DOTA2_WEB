@@ -6,10 +6,10 @@
           "id": 909,
           "name": "tinker_warp_grenade",
           "name_loc": "Warp Flare",
-          "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, rooting them and reducing their Cast and Attack Range for %debuff_duration% seconds.<br><br> The teleport location is always the ability's current cast range + %bonus_distance% from Tinker's position when he threw the flare.",
+          "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, rooting them and reducing their Cast and Attack Range for %debuff_duration% seconds.<br><br>The target is teleported further the closer they are to Tinker.",
           "lore_loc": "Tinker's deadliest weapon instantly turns an enemy into space dust. Research to resolve the annoying 'perfect copy' side effect... is ongoing.",
           "notes_loc": [
-            "Will not teleport enemies if the distance is over %max_distance% units away."
+            "Max teleportation distance is %warp_distance_pct_tooltip%%% of Warp Flare's cast range, which decreases down to 0 at max cast range."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -68,9 +68,9 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_distance",
+              "name": "max_distance",
               "values_float": [
-                100
+                2000
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -85,9 +85,26 @@
               "required_facet": ""
             },
             {
-              "name": "max_distance",
+              "name": "warp_distance_factor",
               "values_float": [
-                2000
+                0.6
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "warp_distance_pct_tooltip",
+              "values_float": [
+                60
               ],
               "is_percentage": false,
               "heading_loc": "",

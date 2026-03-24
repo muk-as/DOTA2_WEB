@@ -6,7 +6,7 @@
           "id": 5483,
           "name": "visage_summon_familiars",
           "name_loc": "Summon Familiars",
-          "desc_loc": "Conjures %familiar_count% blind Familiars to fight for Visage.  Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing.  While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health.  Familiars grant high bounty when killed.",
+          "desc_loc": "Conjures %familiar_count% blind Familiars to fight for Visage.  Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing.  While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health.  Familiars grant high bounty when killed.\n\nThe ability can be cast in the alt-cast state to recall Visages familiars after %recall_duration%s, during which they cannot attack or act.",
           "lore_loc": "Guardians of the Narrow Maze, Necro'lic's Familiars stand watch over his domain.",
           "notes_loc": [
             "Casting Summon Familiars will replace any existing Familiars.",
@@ -36,9 +36,9 @@
             0
           ],
           "cooldowns": [
-            130,
             120,
-            110
+            110,
+            100
           ],
           "durations": [
             0
@@ -60,13 +60,19 @@
             {
               "name": "familiar_hp",
               "values_float": [
-                500,
+                450,
                 600,
-                700
+                750
               ],
               "is_percentage": false,
               "heading_loc": "FAMILIAR HEALTH:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_visage_familiar_armor_hp",
+                  "value": 25,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -85,7 +91,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "FAMILIAR ARMOR:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_visage_familiar_armor_hp",
+                  "value": 25,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -155,7 +167,34 @@
               ],
               "is_percentage": false,
               "heading_loc": "FAMILIAR ATTACK DAMAGE:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_visage_7",
+                  "value": 6,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "visage_base_damage",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_visage_7",
+                  "value": 6,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -173,7 +212,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_visage_7",
-                  "value": 6,
+                  "value": 0,
                   "operation": 0
                 }
               ],
@@ -407,9 +446,9 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                130,
                 120,
-                110
+                110,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",

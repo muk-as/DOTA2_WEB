@@ -6,7 +6,7 @@
           "id": 1280,
           "name": "faceless_void_distortion_field",
           "name_loc": "Distortion Field",
-          "desc_loc": "Enemy Attack Projectiles within %slow_distance_max% radius are slowed by %attack_projectile_slow%%%.",
+          "desc_loc": "Enemy Attack Projectiles targetting Faceless Void or allied heroes within a %friendly_hero_distance% radius of him get slowed by %attack_projectile_slow%%%, when they get  within %slow_distance_max% distance of their target.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -20,7 +20,7 @@
           "damage": 0,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -51,10 +51,7 @@
             {
               "name": "attack_projectile_slow",
               "values_float": [
-                35,
-                40,
-                45,
-                50
+                40
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -71,7 +68,24 @@
             {
               "name": "slow_distance_max",
               "values_float": [
-                600
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "friendly_hero_distance",
+              "values_float": [
+                1200
               ],
               "is_percentage": false,
               "heading_loc": "",

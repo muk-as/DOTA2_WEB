@@ -15,7 +15,7 @@
             "Can be self-cast to move forward.",
             "The first two strikes will slow enemy movement speed by %swipe_slow%%% for %sweep_stun_duration%s."
           ],
-          "shard_loc": "Dawnbreaker gains debuff immunity, 50%% magic resistance, and free movement during Starbreaker. Dawnbreaker is slowed by %shard_movement_penalty%%% down to a minimum of %movement_speed%.",
+          "shard_loc": "Dawnbreaker gains debuff immunity with %immunity_resist%%% magic resistance and free movement during Starbreaker. Dawnbreaker is slowed by %shard_movement_penalty%%% down to a minimum of %movement_speed%.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -192,7 +192,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "SMASH STUN DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dawnbreaker_fire_wreath_stun_duration",
+                  "value": 0.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -389,6 +395,25 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "immunity_resist",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                50
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

@@ -6,24 +6,24 @@
           "id": 5179,
           "name": "venomancer_poison_sting",
           "name_loc": "Poison Sting",
-          "desc_loc": "Adds poison damage to Venomancer's normal attacks and slowing movement speed.",
+          "desc_loc": "Venomancer's attacks slow enemies and deal damage over time.",
           "lore_loc": "The paralytic sting of the creature which caused his transformation now belongs to the Venomancer.",
           "notes_loc": [
             "Poison Sting damage can be lethal.",
             "Damage from Poison Sting does not interrupt healing from items, nor does it activate the cooldown on Blink Dagger."
           ],
-          "shard_loc": "",
+          "shard_loc": "Whenever Poison Sting is applied, it deals extra damage equal to %debuff_dmg%%% of the attacker's base damage for every debuff the enemy has from Venomancer or a unit he controls.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
+          "behavior": "562949953421315",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 2,
           "immunity": 4,
           "dispellable": 2,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -54,10 +54,7 @@
             {
               "name": "duration",
               "values_float": [
-                6,
-                9,
-                12,
-                15
+                4.5
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -74,10 +71,7 @@
             {
               "name": "damage",
               "values_float": [
-                8,
-                16,
-                24,
-                32
+                9
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SECOND:",
@@ -94,18 +88,15 @@
             {
               "name": "movement_speed",
               "values_float": [
-                -8,
-                -10,
-                -12,
-                -14
+                10
               ],
               "is_percentage": true,
-              "heading_loc": "SLOW:",
+              "heading_loc": "MOVEMENT SLOW:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_venomancer_2",
-                  "value": 5,
-                  "operation": 2
+                  "value": 7,
+                  "operation": 0
                 }
               ],
               "values_shard": [],
@@ -144,7 +135,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

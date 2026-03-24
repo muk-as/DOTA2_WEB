@@ -6,7 +6,7 @@
           "id": 1432,
           "name": "primal_beast_colossal",
           "name_loc": "Colossal",
-          "desc_loc": "Primal Beast deals %bonus_building_damage%%% more damage to buildings.",
+          "desc_loc": "Primal Beast has %base_slow_resist%%% base Slow Resistance and gains %aoe_per_threshold%%% bonus Area of Effect and %slow_resistance_per_threshold%%% Slow Resistance for every %hp_per_threshold% Max Health.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -49,13 +49,119 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_building_damage",
+              "name": "hp_per_threshold",
               "values_float": [
-                40
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "base_slow_resist",
+              "values_float": [
+                10
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "slow_resistance_per_threshold",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "aoe_per_threshold",
+              "values_float": [
+                0.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "current_slow_resistance",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "SLOW RESISTANCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "current_aoe",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "AREA OF EFFECT BONUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "trample_bonus",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_primal_beast_colossal_trample",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

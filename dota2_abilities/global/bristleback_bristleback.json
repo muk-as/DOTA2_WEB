@@ -6,11 +6,12 @@
           "id": 5550,
           "name": "bristleback_bristleback",
           "name_loc": "Bristleback",
-          "desc_loc": "Bristleback takes less damage if hit on the sides or rear.  If Bristleback takes %quill_release_threshold% damage from the rear, he releases a Quill Spray of the current level.",
+          "desc_loc": "Bristleback takes less damage if hit on the sides or rear. If Bristleback takes enough damage from the rear, he releases a Quill Spray of the current level.",
           "lore_loc": "Turning his back to a fight might be just the thing.",
           "notes_loc": [
             "Bristleback's rear is considered to be within 70 degrees from the back.",
-            "Bristleback's side is considered to be within 110 degrees from the back."
+            "Bristleback's side is considered to be within 110 degrees from the back.",
+            "Damage done by Quill Sprays released by this ability passively is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
           ],
           "shard_loc": "",
           "scepter_loc": "Adds active ability to Bristleback. Bristleback rotates towards the targeted direction and, after %activation_delay%s, forcefully ejects %activation_num_quill_sprays% sequential Quill Sprays in a tight conical pattern out of his back every %activation_spray_interval%s. Bristleback's facing is locked during this time, he is disarmed, and his speed is reduced by %activation_movement_speed_pct%%%.",
@@ -147,7 +148,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE THRESHOLD:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_bristleback",
+                  "value": 25,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

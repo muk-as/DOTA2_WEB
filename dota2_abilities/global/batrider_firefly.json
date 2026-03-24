@@ -6,7 +6,7 @@
           "id": 5322,
           "name": "batrider_firefly",
           "name_loc": "Firefly",
-          "desc_loc": "Batrider takes to the skies, laying down a trail of flames from the air.  The fire damages any enemies it touches, and destroys trees below Batrider.",
+          "desc_loc": "Batrider takes to the skies, moving increasingly fast and laying down a trail of flames from the air. The fire damages any enemies it touches and destroys trees below Batrider. Maximum movement speed bonus is reached at the end of Firefly's duration.",
           "lore_loc": "When an enemy escapes into the Yama Raskav Jungle, most would cut through the brush to find the fugitive.  Batrider just chooses to destroy the jungle along with his foes.",
           "notes_loc": [
             "During this the Batrider can fly above units, trees and impassable terrain.",
@@ -68,7 +68,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SECOND:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_batrider_4",
+                  "value": 30,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -102,13 +108,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_batrider_1",
-                  "value": 4.5,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -153,67 +153,22 @@
               "required_facet": ""
             },
             {
-              "name": "self_burn_buff",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "movement_speed_pct_total",
               "values_float": [
-                0,
-                0,
-                0,
-                0
+                12,
+                18,
+                24,
+                30
               ],
               "is_percentage": true,
               "heading_loc": "MAX MOVEMENT SPEED BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spell_amplification_total",
-              "values_float": [
-                0
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_batrider_3",
+                  "value": 5,
+                  "operation": 0
+                }
               ],
-              "is_percentage": true,
-              "heading_loc": "MAX SPELL AMPLIFICATION BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "hp_cost_per_second",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "MAX HEALTH AS DAMAGE PER SECOND:",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

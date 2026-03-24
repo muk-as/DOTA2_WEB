@@ -6,7 +6,7 @@
           "id": 5345,
           "name": "ancient_apparition_cold_feet",
           "name_loc": "Cold Feet",
-          "desc_loc": "Places Death Rime Stacks on an enemy that can be dispelled by moving away from the initial cast point.  If the enemy unit doesn't move outside of the given range, it will be stunned and frozen in place after 4 seconds.",
+          "desc_loc": "Places a curse on an enemy, dealing damage over time.  If the enemy unit doesn't move outside of the given range from the initial location, it will be stunned and frozen in place after %AbilityDuration% seconds.",
           "lore_loc": "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity.",
           "notes_loc": [
             "Deals damage every half second."
@@ -66,19 +66,19 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "frost_stacks",
+              "name": "damage_per_second",
               "values_float": [
-                2,
-                4,
-                6,
-                8
+                20,
+                40,
+                60,
+                80
               ],
               "is_percentage": false,
-              "heading_loc": "DEATH RIME STACKS:",
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_ancient_apparition_8",
-                  "value": 2,
+                  "name": "special_bonus_unique_ancient_apparition_cold_feet_dps",
+                  "value": 30,
                   "operation": 0
                 }
               ],
@@ -103,8 +103,8 @@
               "heading_loc": "BREAK DISTANCE:",
               "bonuses": [
                 {
-                  "name": "special_bonus_unique_ancient_apparition_1",
-                  "value": 300,
+                  "name": "special_bonus_unique_ancient_apparition_cold_feet_distance",
+                  "value": 250,
                   "operation": 0
                 }
               ],
@@ -128,6 +128,27 @@
               "is_percentage": false,
               "heading_loc": "STUN DURATION:",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "area_of_effect",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_ancient_apparition_1",
+                  "value": 450,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

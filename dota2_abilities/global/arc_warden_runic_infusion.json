@@ -6,16 +6,14 @@
           "id": 1407,
           "name": "arc_warden_runic_infusion",
           "name_loc": "Runic Infusion",
-          "desc_loc": "Upon activating any rune, gain the Regeneration Rune buff for %duration%s.",
+          "desc_loc": "Runes of Power fuse to the Self. Arc Warden gains +%all_attribute_bonus_per_stack% all attributes permanently whenever Arc Warden or the Tempest Double activates a Power Rune.",
           "lore_loc": "",
-          "notes_loc": [
-            "Has %water_bounty_rune_duration_pct%%% duration when activating a Bounty or Water rune."
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "13194139533314",
+          "behavior": "567347999932419",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -51,40 +49,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "regeneration_effect",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "duration",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "water_bounty_rune_duration_pct",
               "values_float": [
                 67
@@ -104,7 +68,7 @@
             {
               "name": "bonus_stacks_per_rune_pickup",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -121,11 +85,17 @@
             {
               "name": "all_attribute_bonus_per_stack",
               "values_float": [
-                0
+                1.5
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_arc_warden_8",
+                  "value": 1.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

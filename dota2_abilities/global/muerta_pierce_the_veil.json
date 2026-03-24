@@ -6,7 +6,7 @@
           "id": 5754,
           "name": "muerta_pierce_the_veil",
           "name_loc": "Pierce the Veil",
-          "desc_loc": "Muerta transforms, becoming immune to physical damage. All of her attack damage is dealt as magical damage and Muerta gains bonus attack damage and phased movement.<br><br>DISPEL TYPE: Basic Dispel",
+          "desc_loc": "Muerta transforms, becoming ethereal, gaining bonus base damage and phased movement.<br><br>Passively allows Muerta to always attack ethereal targets and attack when she is ethereal. When either she or her target is ethereal, all of her attack damage is dealt as magical damage and her physical lifesteal is treated as spell lifesteal.<br><br>DISPEL TYPE: Basic Dispel",
           "lore_loc": "Muerta sheds her corporeal form, crossing the spirit veil and striking her enemies with the fury of the damned.",
           "notes_loc": [
             "Muerta will dodge projectiles upon transformation.",
@@ -96,12 +96,12 @@
               "required_facet": ""
             },
             {
-              "name": "base_damage_pct",
+              "name": "base_damage_percent",
               "values_float": [
-                100
+                75
               ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "BASE DAMAGE BONUS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -116,78 +116,6 @@
               "name": "modelscale",
               "values_float": [
                 30
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_damage",
-              "values_float": [
-                70,
-                100,
-                130
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS ATTACK DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spell_lifesteal",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                30
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spell_amp_steal",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "spell_amp_steal_range",
-              "values_float": [
-                925
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -242,7 +170,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

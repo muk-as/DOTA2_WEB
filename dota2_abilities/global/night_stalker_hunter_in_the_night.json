@@ -10,17 +10,17 @@
           "lore_loc": "The hunting prowess of Balanar improves as the night beckons.",
           "notes_loc": [],
           "shard_loc": "Hunter in the Night may be cast on a creep, instantly killing it and restoring some of Night Stalker's maximum health and mana. Cannot target ancients during the daytime.",
-          "scepter_loc": "",
+          "scepter_loc": "Increases bonus movement speed and attack speed. Killing an enemy hero resets all basic ability cooldowns.",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
+          "behavior": "562949953421315",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -51,17 +51,15 @@
             {
               "name": "bonus_movement_speed_pct_night",
               "values_float": [
-                22,
-                28,
-                34,
-                40,
-                40
+                24
               ],
               "is_percentage": true,
               "heading_loc": "MOVE SPEED:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                15
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -72,23 +70,34 @@
             {
               "name": "bonus_attack_speed_night",
               "values_float": [
-                20,
-                40,
-                60,
-                80,
-                80
+                38
               ],
               "is_percentage": false,
               "heading_loc": "ATTACK SPEED:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_night_stalker_2",
-                  "value": 100,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                50
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "reset_cooldowns",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -116,160 +125,14 @@
                 "operation": 0
               },
               "required_facet": ""
-            },
-            {
-              "name": "shard_hp_restore_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "MAX HEALTH RESTORE:",
-              "bonuses": [],
-              "values_shard": [
-                25
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_mana_restore_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "MAX MANA RESTORE:",
-              "bonuses": [],
-              "values_shard": [
-                25
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_cooldown",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "COOLDOWN:",
-              "bonuses": [],
-              "values_shard": [
-                35
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "shard_cast_range",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
-              "bonuses": [],
-              "values_shard": [
-                125
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "max_level",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "max_level_tooltip",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "gives_free_level",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                50
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_scepter": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

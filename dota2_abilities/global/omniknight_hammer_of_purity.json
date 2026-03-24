@@ -6,7 +6,7 @@
           "id": 656,
           "name": "omniknight_hammer_of_purity",
           "name_loc": "Hammer of Purity",
-          "desc_loc": "Omniknight imbues his hammer with holy power, causing his attack to have increased range, deal pure damage based on a percentage of his base damage and slow his target for a short duration.",
+          "desc_loc": "Omniknight imbues his hammer with holy power, causing his attack to have increased range, deal pure damage based on a percentage of his base damage and slow his target for a short duration.<br><br> Omniknight heals for %heal_pct%%% of the damage dealt over %heal_duration%s.",
           "lore_loc": "The knight is merely a means to move the hammer.",
           "notes_loc": [],
           "shard_loc": "",
@@ -18,7 +18,7 @@
           "target_type": 19,
           "flags": 0,
           "damage": 4,
-          "immunity": 4,
+          "immunity": 3,
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
@@ -31,10 +31,10 @@
             0
           ],
           "cooldowns": [
-            20,
-            15,
+            13,
             10,
-            5
+            7,
+            4
           ],
           "durations": [
             0
@@ -57,10 +57,10 @@
             {
               "name": "base_damage",
               "values_float": [
-                55,
+                30,
+                50,
                 70,
-                85,
-                100
+                90
               ],
               "is_percentage": true,
               "heading_loc": "BONUS BASE DAMAGE:",
@@ -83,13 +83,47 @@
             {
               "name": "bonus_damage",
               "values_float": [
-                25,
-                50,
-                75,
-                100
+                20,
+                40,
+                60,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "heal_pct",
+              "values_float": [
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "heal_duration",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -188,14 +222,20 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                20,
-                15,
+                13,
                 10,
-                5
+                7,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_omniknight_3",
+                  "value": 0.5,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

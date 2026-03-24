@@ -8,11 +8,8 @@
           "name_loc": "Eldritch Summoning",
           "desc_loc": "Whenever an enemy unit dies while afflicted by one or more of Warlock's abilities, a minor imp is summoned that lasts for %minor_imp_duration% seconds and explodes on death. Imps will automatically seek out nearby units, favoring fatally bonded heroes, and will explode when reaching their prey.",
           "lore_loc": "",
-          "notes_loc": [
-            "Minor imps have %tooltip_imp_health% health and explode for %tooltip_imp_explode% damage in a %tooltip_imp_explode_radius% radius.",
-            "Minor imps do not explode if killed by enemy heroes."
-          ],
-          "shard_loc": "Increases the power of all imps summoned by Warlock.",
+          "notes_loc": [],
+          "shard_loc": "Increases the health and explosion damage of minor imps.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -23,7 +20,7 @@
           "damage": 2,
           "immunity": 4,
           "dispellable": 2,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -69,18 +66,15 @@
               "required_facet": ""
             },
             {
-              "name": "imp_level",
+              "name": "imp_health",
               "values_float": [
-                1,
-                2,
-                3,
-                4
+                5
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "IMP HEALTH:",
               "bonuses": [],
               "values_shard": [
-                1
+                80
               ],
               "values_scepter": [],
               "facet_bonus": {
@@ -91,18 +85,16 @@
               "required_facet": ""
             },
             {
-              "name": "tooltip_imp_health",
+              "name": "imp_explode",
               "values_float": [
-                50,
-                130,
-                210,
-                290,
-                370
+                20
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "EXPLOSION DAMAGE:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                45
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -112,13 +104,9 @@
               "required_facet": ""
             },
             {
-              "name": "tooltip_imp_explode",
+              "name": "imp_speed",
               "values_float": [
-                20,
-                65,
-                110,
-                155,
-                200
+                297
               ],
               "is_percentage": false,
               "heading_loc": "",

@@ -6,23 +6,23 @@
           "id": 886,
           "name": "techies_reactive_tazer",
           "name_loc": "Reactive Tazer",
-          "desc_loc": "Techies trigger an electric charge giving them bonus movement speed for a short period of time. Enemies attacking Techies are temporarily disarmed and get a Basic Dispel. At the end of the effect, the charge explodes, disarming all enemies within the radius.",
+          "desc_loc": "Techies trigger an electric charge on the target ally, giving them bonus movement speed for a short period of time. Enemies attacking the target take damage and are temporarily disarmed and get a Basic Dispel.<br><br>At the end of the effect or if detonated early with the sub-ability, the charge explodes, disarming all enemies within the radius and dealing damage.",
           "lore_loc": "A steady bomb hand prefers an abundance of personal space.",
           "notes_loc": [],
-          "shard_loc": "Reactive Tazer can be cast on allies and deals damage on detonation. Also deals damage to any enemy that attacks the affected ally.",
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "4",
+          "behavior": "8",
           "target_team": 1,
-          "target_type": 3,
+          "target_type": 1,
           "flags": 0,
-          "damage": 0,
+          "damage": 2,
           "immunity": 4,
           "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            500
+            600
           ],
           "cast_points": [
             0.1
@@ -58,7 +58,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "BUFF DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_techies_tazer_duration",
+                  "value": 25,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -78,7 +84,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "DISARM DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_techies_tazer_duration",
+                  "value": 25,
+                  "operation": 3
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -109,7 +121,7 @@
               "required_facet": ""
             },
             {
-              "name": "stun_radius",
+              "name": "explosion_radius",
               "values_float": [
                 450
               ],
@@ -126,16 +138,17 @@
               "required_facet": ""
             },
             {
-              "name": "shard_damage",
+              "name": "damage",
               "values_float": [
-                0
+                60,
+                110,
+                160,
+                210
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
               "bonuses": [],
-              "values_shard": [
-                300
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -147,7 +160,7 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                500
+                600
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -218,7 +231,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

@@ -6,7 +6,7 @@
           "id": 5268,
           "name": "enchantress_enchant",
           "name_loc": "Enchant",
-          "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty.  Enchantress can control creeps for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
+          "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for %slow_duration%s, and Enchantress and her units gain bonus attack range against the target.\n\n If the enemy is a creep, she brings it under her control and receives %xp_gain_pct%%% of their experience bounty.  Enchantress can control creeps for up to %dominate_duration%s. \n\nDISPEL TYPE: Basic Dispel",
           "lore_loc": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
           "notes_loc": [
             "Illusions can be converted."
@@ -25,9 +25,9 @@
           "max_level": 4,
           "cast_ranges": [
             500,
-            550,
             600,
-            650
+            700,
+            800
           ],
           "cast_points": [
             0.3,
@@ -102,10 +102,10 @@
             {
               "name": "attack_range_bonus",
               "values_float": [
-                0,
-                0,
-                0,
-                0
+                50,
+                100,
+                150,
+                200
               ],
               "is_percentage": false,
               "heading_loc": "ATTACK RANGE BONUS:",
@@ -323,12 +323,12 @@
               "name": "AbilityCastRange",
               "values_float": [
                 500,
-                550,
                 600,
-                650
+                700,
+                800
               ],
               "is_percentage": false,
-              "heading_loc": "CAST RANGE:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

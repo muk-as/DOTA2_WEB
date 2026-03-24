@@ -6,12 +6,13 @@
           "id": 5691,
           "name": "faceless_void_time_dilation",
           "name_loc": "Time Dilation",
-          "desc_loc": "Faceless Void traps all nearby enemies in a time dilation field for %duration% seconds, extending their cooldowns and slowing their movement and attack speed by %slow%%%, amplified by each cooldown extended. Deals bonus damage per second for each cooldown.",
+          "desc_loc": "Faceless Void envelops nearby enemies with time dilating fields to slow cooldown progression of their abilities. Each enveloped enemy gains one Time Dilation stack when applied, and one stack per ability they have on cooldown. Each stack deals damage per second and slows movement and attack speed. The duration is paused while affected by Chronosphere.",
           "lore_loc": "For those facing off against Darkterror, each moment seems to stretch into eternity.",
           "notes_loc": [
-            "Does not affect item cooldowns."
+            "Does not affect item cooldowns.",
+            "Number of stacks can change during the effect. Casting an ability will provide a stack if it goes on cooldown. If an ability cooldown ends during Time Dilation, a stack will be removed."
           ],
-          "shard_loc": "",
+          "shard_loc": "Increases slow per stack. Provides Faceless Void with stacks that increase his attack and movement speed. Amount of stacks is equal to the total amount of Time Dilation stacks applied to enemies at the moment of the cast and linearly fades out over the duration.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -99,15 +100,33 @@
                 7
               ],
               "is_percentage": true,
-              "heading_loc": "SLOW PER COOLDOWN:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_faceless_void_8",
-                  "value": 8,
-                  "operation": 0
-                }
+              "heading_loc": "MOVEMENT SLOW PER STACK:",
+              "bonuses": [],
+              "values_shard": [
+                5
               ],
-              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "attack_slow_tooltip_only",
+              "values_float": [
+                4,
+                5,
+                6,
+                7
+              ],
+              "is_percentage": false,
+              "heading_loc": "ATTACK SLOW PER STACK:",
+              "bonuses": [],
+              "values_shard": [
+                5
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -145,7 +164,7 @@
                 10
               ],
               "is_percentage": false,
-              "heading_loc": "DPS PER COOLDOWN:",
+              "heading_loc": "BONUS DPS PER STACK:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_faceless_void_6",
@@ -154,6 +173,69 @@
                 }
               ],
               "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_movespeed_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": true,
+              "heading_loc": "SELF MOVESPEED PER STACK:",
+              "bonuses": [],
+              "values_shard": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_attackspeed_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "SELF ATTACK SPEED PER STACK:",
+              "bonuses": [],
+              "values_shard": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "self_buff",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                1
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -219,7 +301,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

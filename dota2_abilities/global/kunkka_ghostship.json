@@ -6,10 +6,9 @@
           "id": 5035,
           "name": "kunkka_ghostship",
           "name_loc": "Ghostship",
-          "desc_loc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a strong swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
+          "desc_loc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage.<br><br>Allied heroes touched by the Ghostship are given a %rum_factor%x strong swig of The Admiral's Rum.",
           "lore_loc": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral.",
           "notes_loc": [
-            "Damage dealt after Rum wears off is non-lethal and can never kill a hero.",
             "Actual area of effect of ship's collision is larger than the boat itself.",
             "The boat has a movement speed of %ghostship_speed%."
           ],
@@ -107,40 +106,6 @@
               "required_facet": ""
             },
             {
-              "name": "movespeed_bonus",
-              "values_float": [
-                15
-              ],
-              "is_percentage": true,
-              "heading_loc": "RUM BONUS SPEED:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "buff_duration",
-              "values_float": [
-                10
-              ],
-              "is_percentage": false,
-              "heading_loc": "RUM DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "stun_duration",
               "values_float": [
                 1.2
@@ -175,19 +140,13 @@
               "required_facet": ""
             },
             {
-              "name": "ghostship_absorb",
+              "name": "rum_factor",
               "values_float": [
-                35
+                2
               ],
-              "is_percentage": true,
-              "heading_loc": "DAMAGE DELAYED:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_kunkka_rum",
-                  "value": 15,
-                  "operation": 0
-                }
-              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -454,7 +413,7 @@
               "required_facet": ""
             },
             {
-              "name": "#AbilityDamage",
+              "name": "AbilityDamage",
               "values_float": [
                 350,
                 475,

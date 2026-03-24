@@ -6,12 +6,10 @@
           "id": 5433,
           "name": "meepo_divided_we_stand",
           "name_loc": "Divided We Stand",
-          "desc_loc": "Meepo summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. However, the clones cannot wield any items but the boots that Meepo himself wears.  If any of the clones die, they all die. Divided We Stand grants all Meepos bonus Magic Resistance.",
+          "desc_loc": "Meepo summons another Meepo, which levels up and shares items with the main Meepo. Ability cooldowns are independent, but items share cooldowns between Meepos. Damage, attack speed, health / mana regeneration, mana burn, and proc chance bonuses from items are distributed equally among the amount of Meepos.<br><br>If any Meepo dies, they all die.",
           "lore_loc": "Do I know you?",
-          "notes_loc": [
-            "Of boot abilities, clones can only use the active ability from Phase Boots."
-          ],
-          "shard_loc": "Divided We Stand can be cast as long as there's a Meepo within %fling_radius% radius of yourself. Causes that Meepo to fling you towards a target within a %AbilityCastRange% range, dealing damage and slowing their movement speed. Mana Cost: %AbilityManaCost%",
+          "notes_loc": [],
+          "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 1,
@@ -52,139 +50,11 @@
               "values_float": [
                 1,
                 2,
-                3
+                3,
+                4
               ],
               "is_percentage": false,
               "heading_loc": "NUMBER OF DUPLICATES:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_clones_multiplicity",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "NUMBER OF DUPLICATES:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_share_percentage",
-              "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_share_percentage_scepter",
-              "values_float": [
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_respawn",
-              "values_float": [
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "magic_resist",
-              "values_float": [
-                10,
-                15,
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "BONUS MAGIC RESIST:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_magic_resist",
-              "values_float": [
-                10,
-                15,
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "tooltip_magic_resist_multiplicity",
-              "values_float": [
-                10,
-                15,
-                20,
-                20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -198,7 +68,7 @@
             {
               "name": "required_level",
               "values_float": [
-                4
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -232,7 +102,7 @@
             {
               "name": "max_level",
               "values_float": [
-                3
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -247,60 +117,12 @@
               "required_facet": ""
             },
             {
-              "name": "main_meepo_stats_pct",
+              "name": "dps_penalty_pct",
               "values_float": [
-                100
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "support_radius",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "support_group_attack_speed_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "support_group_armor",
-              "values_float": [
-                0
+                50,
+                66,
+                75,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",

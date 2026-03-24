@@ -5,15 +5,18 @@
         {
           "id": 1254,
           "name": "tidehunter_krill_eater",
-          "name_loc": "Krill Eater",
-          "desc_loc": "Tidehunter begins the game much smaller and with -%attack_range_base% attack range and -%anchor_smash_radius_base% Anchor Smash radius. Tidehunter grows larger with experience, gaining attacking range and Anchor Smash radius per level. Strength Gain increased.",
+          "name_loc": "Leviathan's Catch",
+          "desc_loc": "Whenever an enemy hero is killed by Tidehunter or dies under his debuffs, a fish appears in their place for %fish_duration% seconds. Tidehunter can eat the fish to permanently gain %fish_health_bonus% Health, %fish_attack_range% Attack Range, and %fish_damage_block% Bonus Damage Block. Tidehunter eats a fish every level up.",
           "lore_loc": "",
-          "notes_loc": [],
+          "notes_loc": [
+            "After %fish_duration%s the fish will disappear.",
+            "Bonus Damage Block only applies if another source of Damage Block will be affecting the incoming physical attack."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "3",
+          "behavior": "8796093022210",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -49,9 +52,9 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "model_scale_base",
+              "name": "fish_duration",
               "values_float": [
-                -25
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -66,7 +69,41 @@
               "required_facet": ""
             },
             {
-              "name": "model_scale_per_level",
+              "name": "fish_attack_range",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fish_damage_block",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fish_health_bonus",
               "values_float": [
                 3
               ],
@@ -83,9 +120,9 @@
               "required_facet": ""
             },
             {
-              "name": "attack_range_base",
+              "name": "fish_model_scale",
               "values_float": [
-                -60
+                1.1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -100,46 +137,12 @@
               "required_facet": ""
             },
             {
-              "name": "attack_range_per_level",
+              "name": "max_fish_spawn_distance",
               "values_float": [
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "ATTACK RANGE PER LEVEL:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "anchor_smash_radius_base",
-              "values_float": [
-                -60
+                400
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "anchor_smash_radius_per_level",
-              "values_float": [
-                5
-              ],
-              "is_percentage": false,
-              "heading_loc": "ANCHOR SMASH RADIUS PER LEVEL:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -185,12 +188,12 @@
               "required_facet": ""
             },
             {
-              "name": "strength_gain_tooltip",
+              "name": "permanent_health_gain",
               "values_float": [
-                3.9
+                0
               ],
               "is_percentage": false,
-              "heading_loc": "STRENGTH GAIN:",
+              "heading_loc": "HEALTH GAINED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -202,12 +205,12 @@
               "required_facet": ""
             },
             {
-              "name": "attack_range_tooltip",
+              "name": "permanent_attack_range_gain",
               "values_float": [
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "ATTACK RANGE:",
+              "heading_loc": "ATTACK RANGE GAINED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -219,12 +222,12 @@
               "required_facet": ""
             },
             {
-              "name": "anchor_smash_range_tooltip",
+              "name": "permanent_damage_block_gain",
               "values_float": [
                 0
               ],
               "is_percentage": false,
-              "heading_loc": "ANCHOR SMASH RANGE:",
+              "heading_loc": "BONUS DAMAGE BLOCK GAINED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -241,7 +244,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

@@ -6,11 +6,12 @@
           "id": 8235,
           "name": "marci_companion_run",
           "name_loc": "Rebound",
-          "desc_loc": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies in a %landing_radius% radius where she lands.\n\n The ally receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s.",
+          "desc_loc": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies where she lands.\n\nWhen Rebound is set to alt-cast, Marci brings the target ally with her to her final destination.\n\n The ally receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s.",
           "lore_loc": "With a friendly or brazen boost, Marci can find her way into the midst of any fight.",
           "notes_loc": [
             "Marci's initial run to her target unit can be disjointed.",
-            "Does not trigger spell reflect."
+            "Does not trigger spell reflect.",
+            "Does not bring allies who are Rooted or Leashed when alt-cast."
           ],
           "shard_loc": "Increases damage. Rebound can be cast on enemies, and causes Marci to also get the speed boost when she casts it.",
           "scepter_loc": "",
@@ -411,24 +412,7 @@
             {
               "name": "ally_arc_offset",
               "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ally_impact_damage_pct",
-              "values_float": [
-                0
+                150
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -460,48 +444,16 @@
               "required_facet": ""
             },
             {
-              "name": "max_level_tooltip",
+              "name": "can_jump_off_allies",
               "values_float": [
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "postjump_unleash_duration",
-              "values_float": [
-                0
+              "values_shard": [
+                1
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "postjump_flurry_charges",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

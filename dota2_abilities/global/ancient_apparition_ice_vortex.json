@@ -6,7 +6,7 @@
           "id": 5346,
           "name": "ancient_apparition_ice_vortex",
           "name_loc": "Ice Vortex",
-          "desc_loc": "Creates a vortex of icy energy that applies Death Rime Stacks and increases magic damage done to enemies in its range.",
+          "desc_loc": "Creates a vortex of icy energy that slows, deals damage, and increases magic damage done to enemies in its range.",
           "lore_loc": "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle.",
           "notes_loc": [
             "Provides vision in a small area where it is placed."
@@ -19,7 +19,7 @@
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 0,
+          "damage": 2,
           "immunity": 4,
           "dispellable": 3,
           "max_level": 4,
@@ -105,13 +105,10 @@
             {
               "name": "movement_speed_pct",
               "values_float": [
-                -16,
-                -19,
-                -22,
-                -25
+                -8
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "MOVEMENT SLOW:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -130,7 +127,7 @@
                 -22,
                 -25
               ],
-              "is_percentage": true,
+              "is_percentage": false,
               "heading_loc": "INCREASED MAGIC DAMAGE:",
               "bonuses": [],
               "values_shard": [],
@@ -163,15 +160,15 @@
               "required_facet": ""
             },
             {
-              "name": "frost_stacks",
+              "name": "damage_per_second",
               "values_float": [
-                1,
-                2,
-                3,
-                4
+                10,
+                20,
+                30,
+                40
               ],
               "is_percentage": false,
-              "heading_loc": "DEATH RIME STACKS:",
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

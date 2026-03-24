@@ -9,7 +9,7 @@
           "desc_loc": "Summons %ward_count% Serpent Wards to attack enemy units and structures. The Wards are immune to magic. Creeps deal half damage to the Serpent Ward.",
           "lore_loc": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the snakes to do his bidding.",
           "notes_loc": [],
-          "shard_loc": "",
+          "shard_loc": "Allows to create a Mega Ward using the Urnaconda ability.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 1,
@@ -148,29 +148,6 @@
               "required_facet": ""
             },
             {
-              "name": "hits_to_destroy_mega_ward_tooltip",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "HITS TO DESTROY:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_shadow_shaman_1",
-                  "value": 50,
-                  "operation": 3
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "ward_health",
               "values_float": [
                 4
@@ -215,12 +192,14 @@
               "required_facet": ""
             },
             {
-              "name": "is_mega_ward",
+              "name": "ward_damage_tooltip",
               "values_float": [
-                0
+                50,
+                85,
+                120
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "WARD DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -239,7 +218,9 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                4
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -256,7 +237,55 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                4
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mega_ward_health_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "MEGA WARD HEALTH:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_shadow_shaman_1",
+                  "value": 50,
+                  "operation": 3
+                }
+              ],
+              "values_shard": [
+                8
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "mega_ward_damage_tooltip",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "MEGA WARD DAMAGE:",
+              "bonuses": [],
+              "values_shard": [
+                200,
+                340,
+                480
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -268,31 +297,10 @@
             {
               "name": "mega_ward_model_scale_multiplier",
               "values_float": [
-                2.3,
-                3,
-                3.5
+                2
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ward_damage_tooltip",
-              "values_float": [
-                50,
-                85,
-                120
-              ],
-              "is_percentage": false,
-              "heading_loc": "WARD DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -378,7 +386,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

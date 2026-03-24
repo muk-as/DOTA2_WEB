@@ -6,7 +6,7 @@
           "id": 6582,
           "name": "mars_bulwark",
           "name_loc": "Bulwark",
-          "desc_loc": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides.<br><br> Can be toggled, granting phased movement, removing Mars's ability to attack, and locking the direction he is facing. When active, reduces movement speed and re-directs %redirect_chance%%% of the attack projectiles aimed at Mars's allies towards Mars instead.",
+          "desc_loc": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides.<br><br> Can be toggled, granting phased movement, removing Mars's ability to attack, and locking the direction he is facing. When active, reduces movement speed and re-directs %redirect_chance%%% of the attack projectiles aimed at allies towards himself.",
           "lore_loc": "Only the very foolish dare to fight fair with the god of war.",
           "notes_loc": [
             "Redirect only works if the projectile targets are in a cone behind Mars or within 100 range of him.",
@@ -16,7 +16,7 @@
           "scepter_loc": "Creates %soldier_count% invulnerable soldiers on both sides of Mars front while Bulwark is toggled on. Soldiers move alongside Mars, dealing his attacks that have bonus damage, knock back and slow approaching enemies. An enemy can only be attacked by one soldier at a time.",
           "facets_loc": [],
           "type": 0,
-          "behavior": "516",
+          "behavior": "134219792",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -212,150 +212,19 @@
               "required_facet": ""
             },
             {
-              "name": "soldier_count",
-              "values_float": [
-                0
-              ],
+              "name": "forced_movement_immunity",
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_mars_bulwark_forced_movement_immunity",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
-              "values_scepter": [
-                4
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "soldier_offset",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                150
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_movement_slow_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "HIT MOVEMENT SLOW:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                30
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_movement_slow_duration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "SLOW DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                1
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_bonus_damage",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                75
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "stationary_attack_delay",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                0
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "knockback_distance",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                325
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "soldier_attack_range",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "SOLDIER ATTACK RANGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                275
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -365,7 +234,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

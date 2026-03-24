@@ -6,7 +6,7 @@
           "id": 5069,
           "name": "puck_illusory_orb",
           "name_loc": "Illusory Orb",
-          "desc_loc": "Puck launches a magic orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the orb's location using Ethereal Jaunt.",
+          "desc_loc": "Vector Targeted. Puck launches a magic orb that travels along the path, damaging enemy units along the way. The orb deals an additional %damage_over_time_pct%%% of its impact damage every %damage_interval%s in its area of effect, but if it exceeds the max cast range it will be destroyed.\n\n At any point, Puck may teleport to the orb's location using Ethereal Jaunt.<br><br> Can be put on alt-cast to launch the Orb straight ahead.",
           "lore_loc": "The playful Faerie Dragon delights in confusing others, vanishing and reappearing where unexpected.",
           "notes_loc": [
             "The Illusory Orb grants unobstructed vision around its location while it travels.",
@@ -16,7 +16,7 @@
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "16",
+          "behavior": "1099511627792",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -98,7 +98,7 @@
             {
               "name": "orb_speed",
               "values_float": [
-                550
+                750
               ],
               "is_percentage": false,
               "heading_loc": "SPEED:",
@@ -155,7 +155,7 @@
                 300
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE:",
+              "heading_loc": "IMPACT DAMAGE:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_puck_orb_damage",
@@ -192,7 +192,7 @@
             {
               "name": "curve_orb",
               "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -209,10 +209,10 @@
             {
               "name": "curve_orb_duration_multiplier",
               "values_float": [
-                0
+                100
               ],
-              "is_percentage": true,
-              "heading_loc": "DURATION MULTIPLIER:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -226,7 +226,7 @@
             {
               "name": "curve_orb_max_acceleration",
               "values_float": [
-                0
+                0.0015
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -243,7 +243,7 @@
             {
               "name": "curve_orb_pullback_bonus_launch_speed",
               "values_float": [
-                0
+                0.25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -260,7 +260,7 @@
             {
               "name": "curve_strength",
               "values_float": [
-                0
+                0.6
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -277,41 +277,7 @@
             {
               "name": "vector_reticle_distance",
               "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "vector_reticle_radius",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "increase_per_sec",
-              "values_float": [
-                0
+                200
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -328,7 +294,7 @@
             {
               "name": "damage_over_time_pct",
               "values_float": [
-                0
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -345,10 +311,27 @@
             {
               "name": "damage_interval",
               "values_float": [
-                0
+                0.5
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_orb_duration_tooltip",
+              "values_float": [
+                5.2
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX ORB DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

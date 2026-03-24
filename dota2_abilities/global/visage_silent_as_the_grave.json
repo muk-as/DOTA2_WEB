@@ -6,14 +6,14 @@
           "id": 683,
           "name": "visage_silent_as_the_grave",
           "name_loc": "Silent as the Grave",
-          "desc_loc": "Turns Visage and familiars invisible, granting Visage bonus movement speed and upgrading its movement type to flying. When Visage or its familiars leave invisibility they deal more damage for a short duration. Lasts %invis_duration% seconds. Invisibility ends when attacking or casting.",
+          "desc_loc": "Visage gains flying movement and bonus movement speed.  Upon attacking or casting, the speed and flying movement are lost and Visage and his familiars deal additional attack damage for %bonus_duration%s.",
           "lore_loc": "Those on the mortal plane are blind to the stirrings of the agents of the afterlife.",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Increases movement speed, damage, and duration. Turns Visage and familiars invisible for the duration until the flying movement is lost.",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8594130949",
+          "behavior": "4196356",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -31,7 +31,7 @@
             0
           ],
           "cooldowns": [
-            45
+            45.75
           ],
           "durations": [
             0
@@ -43,55 +43,23 @@
             0
           ],
           "mana_costs": [
-            115
+            50
           ],
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_duration",
-              "values_float": [
-                4
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS DAMAGE DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_damage",
+              "name": "flight_duration",
               "values_float": [
                 20
               ],
-              "is_percentage": true,
-              "heading_loc": "BONUS DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "invis_duration",
-              "values_float": [
-                30
-              ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "FLIGHT DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                10
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -102,13 +70,91 @@
             {
               "name": "movespeed_bonus",
               "values_float": [
-                20
+                12
               ],
               "is_percentage": true,
               "heading_loc": "BONUS MOVESPEED:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                12
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_duration",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS DAMAGE DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                2
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_damage",
+              "values_float": [
+                10
+              ],
+              "is_percentage": true,
+              "heading_loc": "BONUS DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                10
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "invis",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "fly_timer",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                0
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -119,7 +165,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                115
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -136,10 +182,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                45
+                45.75
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "COOLDOWN:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -152,11 +198,11 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
+          "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

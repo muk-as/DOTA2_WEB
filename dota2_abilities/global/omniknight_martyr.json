@@ -6,7 +6,7 @@
           "id": 895,
           "name": "omniknight_martyr",
           "name_loc": "Repel",
-          "desc_loc": "Grants Debuff Immunity with %magic_resist%%% magic resistance to the target, as well as bonus Strength and HP Regen based on the amount of Debuffs on them.",
+          "desc_loc": "Grants Debuff Immunity with %magic_resist%%% magic resistance, as well as bonus HP Regen.",
           "lore_loc": "The All Seeing One casts down his protection over those that Purist calls friend.",
           "notes_loc": [],
           "shard_loc": "",
@@ -31,10 +31,10 @@
             0
           ],
           "cooldowns": [
-            50,
-            45,
             40,
-            35
+            36,
+            32,
+            28
           ],
           "durations": [
             0
@@ -55,26 +55,6 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "base_strength",
-              "values_float": [
-                6,
-                12,
-                18,
-                24
-              ],
-              "is_percentage": false,
-              "heading_loc": "BASE STRENGTH:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "base_hpregen",
               "values_float": [
                 8,
@@ -83,34 +63,8 @@
                 20
               ],
               "is_percentage": false,
-              "heading_loc": "BASE HP REGEN:",
+              "heading_loc": "BONUS HP REGEN:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "strength_bonus",
-              "values_float": [
-                3,
-                4,
-                5,
-                6
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS STRENGTH/HP REGEN PER DEBUFF:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_omniknight_2",
-                  "value": 5,
-                  "operation": 0
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -167,7 +121,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_omniknight_2",
+                  "value": 200,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -217,10 +177,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                50,
-                45,
                 40,
-                35
+                36,
+                32,
+                28
               ],
               "is_percentage": false,
               "heading_loc": "",

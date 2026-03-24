@@ -10,7 +10,7 @@
           "lore_loc": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Allies in a %scepter_aura_radius% radius around the doomed target also suffer the effects of Doom. Allows Doom to be self-cast to affect enemies around himself with Doom. Increases Doom's damage per second.",
+          "scepter_loc": "Doom applies Break to enemies. Allies in a %scepter_aura_radius% radius around the doomed target also suffer the effects of Doom. Allows Doom to be self-cast to affect enemies around himself with Doom.",
           "facets_loc": [],
           "type": 1,
           "behavior": "8",
@@ -61,7 +61,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_doom_11",
+                  "value": 0,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -76,15 +82,13 @@
               "values_float": [
                 25,
                 45,
-                65
+                66
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                15
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -111,18 +115,16 @@
             },
             {
               "name": "does_break",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_doom_11",
-                  "value": 1,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                1
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -182,40 +184,6 @@
               "values_scepter": [
                 0
               ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "upgrade_interval",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "upgrade_amount",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -285,7 +253,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_doom_9",
+                  "value": 10,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

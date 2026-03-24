@@ -6,7 +6,7 @@
           "id": 5436,
           "name": "treant_living_armor",
           "name_loc": "Living Armor",
-          "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Each time this spell blocks damage, the block amount is decreased. If the damage block is decreased to 0, the buff is removed early.",
+          "desc_loc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Every time damage is blocked this way, the damage block amount is decreased.",
           "lore_loc": "The roots and tendrils of the Treant Protectors are far-reaching, stimulating the growth and rejuvenation of all of nature.",
           "notes_loc": [
             "Instances of damage less than %damage_block_threshold% are ignored."
@@ -48,10 +48,10 @@
             0
           ],
           "mana_costs": [
-            40,
-            45,
-            50,
-            55
+            65,
+            70,
+            75,
+            80
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -88,7 +88,7 @@
                 12
               ],
               "is_percentage": false,
-              "heading_loc": "MAX DURATION:",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -123,10 +123,13 @@
             {
               "name": "damage_block_base",
               "values_float": [
+                60,
+                80,
+                100,
                 120
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE BLOCKED:",
+              "heading_loc": "MAX DAMAGE BLOCKED:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_treant_13",
@@ -165,9 +168,6 @@
             {
               "name": "damage_block_loss",
               "values_float": [
-                35,
-                30,
-                25,
                 20
               ],
               "is_percentage": false,
@@ -219,10 +219,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                40,
-                45,
-                50,
-                55
+                65,
+                70,
+                75,
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",

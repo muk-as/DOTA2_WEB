@@ -6,12 +6,12 @@
           "id": 1427,
           "name": "marci_bodyguard",
           "name_loc": "Bodyguard",
-          "desc_loc": "Passively grants Marci lifesteal and bonus attack damage.\n\nMarci protects an allied hero. For %bodyguard_duration%s, the ally also gains %max_partner_penalty%%% of lifesteal and attack damage bonus. Whenever the ally attacks or is attacked by an enemy, Marci counter-attacks that target if they are within her attack range plus %bodyguard_attack_range_buffer%.",
+          "desc_loc": "Passively grants Marci lifesteal and bonus attack damage.\n\nWhen cast on an ally, she provides them with %max_partner_penalty%%% of her passive lifesteal and attack damage bonus. Additionally Marci creates a shared all damage barrier for herself and her partner. As Marci attacks heroes, %shared_barrier_replenish_amount%%% of the damage dealt restores the barrier.",
           "lore_loc": "Marci learned at a young age that the best asset in a scrap is a steady companion.",
           "notes_loc": [
             "Marci cannot cast Bodyguard on herself.",
             "Lifesteal effectiveness gets a %creep_lifesteal_reduction_pct%%% penalty against creeps.",
-            "Marci's counter-attack has a %counter_cooldown%s cooldown."
+            "The shared barrier is reduced by damage on either Marci or her partner."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -23,13 +23,13 @@
           "flags": 0,
           "damage": 1,
           "immunity": 1,
-          "dispellable": 3,
+          "dispellable": 2,
           "max_level": 4,
           "cast_ranges": [
-            1000
+            500
           ],
           "cast_points": [
-            0
+            0.2
           ],
           "channel_times": [
             0
@@ -47,7 +47,10 @@
             0
           ],
           "mana_costs": [
-            50
+            60,
+            65,
+            70,
+            75
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -55,10 +58,10 @@
             {
               "name": "bodyguard_duration",
               "values_float": [
-                6
+                7
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -108,7 +111,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_marci_guardian_damage",
-                  "value": 20,
+                  "value": 12,
                   "operation": 0
                 }
               ],
@@ -190,9 +193,50 @@
               "required_facet": ""
             },
             {
-              "name": "shared_healing_percent",
+              "name": "shared_barrier",
               "values_float": [
-                0
+                90,
+                160,
+                230,
+                300
+              ],
+              "is_percentage": false,
+              "heading_loc": "SHARED BARRIER AMOUNT:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "strong_dispel",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_marci_guardian_strong_dispel",
+                  "value": 1,
+                  "operation": 5
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "shared_barrier_replenish_amount",
+              "values_float": [
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -209,7 +253,24 @@
             {
               "name": "AbilityCastRange",
               "values_float": [
-                1000
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                0.2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -226,7 +287,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                50
+                60,
+                65,
+                70,
+                75
               ],
               "is_percentage": false,
               "heading_loc": "",

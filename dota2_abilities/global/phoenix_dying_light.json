@@ -6,14 +6,16 @@
           "id": 1397,
           "name": "phoenix_dying_light",
           "name_loc": "Dying Light",
-          "desc_loc": "Phoenix deals %damage_pct%%% of his missing health as magic damage to all enemies in a %radius% radius every second.",
+          "desc_loc": "Phoenix deals %damage_pct%%% of its missing health as magic damage to all enemies in a %radius% radius every second.",
           "lore_loc": "",
-          "notes_loc": [],
+          "notes_loc": [
+            "Dying Light deals damage while Phoenix is transformed during Supernova."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "3",
+          "behavior": "562949953421379",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -68,7 +70,30 @@
             {
               "name": "damage_pct",
               "values_float": [
-                4.5
+                4
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_phoenix_dying_light_damage",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "tick_interval",
+              "values_float": [
+                0.2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -88,7 +113,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

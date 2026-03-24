@@ -9,7 +9,7 @@
           "desc_loc": "Wraith King passively deals bonus damage on an attack with a cooldown.",
           "lore_loc": "One blow to crush a foe.",
           "notes_loc": [],
-          "shard_loc": "Mortal Strike deals %wraith_crit_bonus%%% bonus damage when in Wraith form.",
+          "shard_loc": "Mortal Strike hits curse their target, causing them to take %curse_damage_pct%%% of the initial attack damage again as <font color=\"#d8ae53\">Pure</font> damage after a %curse_delay% second delay. Vampiric Spirit's lifesteal applies to the curse damage.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -18,7 +18,7 @@
           "target_type": 1,
           "flags": 0,
           "damage": 0,
-          "immunity": 0,
+          "immunity": 3,
           "dispellable": 0,
           "max_level": 4,
           "cast_ranges": [
@@ -89,7 +89,7 @@
               "required_facet": ""
             },
             {
-              "name": "wraith_crit_bonus",
+              "name": "curse_damage_pct",
               "values_float": [
                 0
               ],
@@ -97,7 +97,45 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [
-                50
+                75
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "curse_delay",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                3
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "curse_cooldown",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                0
               ],
               "values_scepter": [],
               "facet_bonus": {

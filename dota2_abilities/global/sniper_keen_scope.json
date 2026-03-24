@@ -6,7 +6,7 @@
           "id": 1268,
           "name": "sniper_keen_scope",
           "name_loc": "Keen Scope",
-          "desc_loc": "Increases Sniper's attack range.",
+          "desc_loc": "Sniper’s attacks deal bonus damage for every %bonus_damage_distance% units of distance Sniper is from the target.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -20,7 +20,7 @@
           "damage": 0,
           "immunity": 0,
           "dispellable": 0,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -49,15 +49,29 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_range",
+              "name": "bonus_damage_for_range",
               "values_float": [
-                160,
-                260,
-                360,
-                460
+                1.5
+              ],
+              "is_percentage": true,
+              "heading_loc": "BONUS DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_damage_distance",
+              "values_float": [
+                100
               ],
               "is_percentage": false,
-              "heading_loc": "ATTACK RANGE BONUS:",
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

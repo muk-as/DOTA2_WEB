@@ -9,7 +9,7 @@
           "desc_loc": "Creates %rotating_glaives% glaives that rotate %rotating_glaives_movement_radius% radius around Luna. Any enemy unit that collides with a glaive will take a percentage of Luna's Attack Damage.",
           "lore_loc": "None may approach Selemene's chosen without favor from the goddess herself.",
           "notes_loc": [],
-          "shard_loc": "Increases collision damage. Glaives rotate %rotating_glaives_shard_speed_bonus_tooltip%%% faster.",
+          "shard_loc": "Increases damage reduction. While active, Luna gains %bonus_movement_speed%%% bonus movement speed.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -158,10 +158,14 @@
               ],
               "is_percentage": true,
               "heading_loc": "COLLISION DAMAGE:",
-              "bonuses": [],
-              "values_shard": [
-                20
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
+                  "value": 50,
+                  "operation": 3
+                }
               ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -177,10 +181,14 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                50
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
+                  "value": 50,
+                  "operation": 3
+                }
               ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -190,16 +198,18 @@
               "required_facet": ""
             },
             {
-              "name": "rotating_glaives_shard_speed_bonus_tooltip",
-              "values_float": [
-                0
-              ],
+              "name": "rotating_glaive_collision_speed_damage_tooltip",
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                50
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
+                  "value": 1.5,
+                  "operation": 0
+                }
               ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -211,15 +221,36 @@
             {
               "name": "rotating_glaives_damage_reduction",
               "values_float": [
-                0,
-                0,
-                0,
-                0
+                8,
+                12,
+                16,
+                20
               ],
               "is_percentage": true,
               "heading_loc": "DAMAGE REDUCTION:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                10
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_movement_speed",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                20
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",

@@ -12,7 +12,7 @@
             "Activating Windrun will evade incoming projectiles."
           ],
           "shard_loc": "",
-          "scepter_loc": "Windrun reduces physical damage taken by %physical_damage_pct%%%, and grants invisibility that is not broken by attacking or casting spells.",
+          "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
           "behavior": "2052",
@@ -36,10 +36,10 @@
             0
           ],
           "cooldowns": [
-            15,
             14,
             13,
-            12
+            12,
+            11
           ],
           "durations": [
             3,
@@ -62,7 +62,7 @@
             {
               "name": "movespeed_bonus_pct",
               "values_float": [
-                60
+                50
               ],
               "is_percentage": true,
               "heading_loc": "MOVE SPEED BONUS:",
@@ -94,99 +94,6 @@
               "required_facet": ""
             },
             {
-              "name": "radius",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "scepter_movespeed_bonus_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                0
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "physical_damage_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                35
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "cannot_be_dispelled",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_windranger_windrun_undispellable",
-                  "value": 1,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "ally_movespeed_bonus_pct",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "duration",
               "values_float": [
                 3,
@@ -196,7 +103,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_windranger_4",
+                  "value": 0.75,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -263,20 +176,14 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                15,
                 14,
                 13,
-                12
+                12,
+                11
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_windranger_4",
-                  "value": 2,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -288,7 +195,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

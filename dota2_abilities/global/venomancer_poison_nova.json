@@ -5,22 +5,22 @@
         {
           "id": 5181,
           "name": "venomancer_poison_nova",
-          "name_loc": "",
-          "desc_loc": "",
-          "lore_loc": "",
+          "name_loc": "Poison Nova",
+          "desc_loc": "Venomancer emits a spreading ring of poison that does nonlethal damage over time to enemy units. Damage done is a base amount plus a percentage of the target's max health.",
+          "lore_loc": "In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
-          "type": 0,
-          "behavior": "2",
+          "type": 1,
+          "behavior": "4",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 2,
           "immunity": 4,
           "dispellable": 3,
-          "max_level": 1,
+          "max_level": 3,
           "cast_ranges": [
             0
           ],
@@ -31,7 +31,9 @@
             0
           ],
           "cooldowns": [
-            0
+            120,
+            110,
+            100
           ],
           "durations": [
             0
@@ -43,7 +45,9 @@
             0
           ],
           "mana_costs": [
-            0
+            200,
+            300,
+            400
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -51,10 +55,10 @@
             {
               "name": "radius",
               "values_float": [
-                900
+                950
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "END RADIUS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -71,7 +75,45 @@
                 255
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "START RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_base",
+              "values_float": [
+                35,
+                50,
+                65
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE PER SECOND:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "hp_damage",
+              "values_float": [
+                3,
+                3.5,
+                4
+              ],
+              "is_percentage": true,
+              "heading_loc": "MAX HEALTH DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -85,44 +127,10 @@
             {
               "name": "duration",
               "values_float": [
-                10
+                12
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "damage",
-              "values_float": [
-                3
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "magic_resist",
-              "values_float": [
-                -20
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DURATION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -151,9 +159,51 @@
               "required_facet": ""
             },
             {
-              "name": "trigger_cd",
+              "name": "attack_slow",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "ATTACK SLOW:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_venomancer_5",
+                  "value": 100,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityManaCost",
               "values_float": [
-                10
+                200,
+                300,
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCooldown",
+              "values_float": [
+                120,
+                110,
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",

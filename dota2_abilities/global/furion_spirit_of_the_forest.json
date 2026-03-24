@@ -6,21 +6,24 @@
           "id": 1298,
           "name": "furion_spirit_of_the_forest",
           "name_loc": "Spirit of the Forest",
-          "desc_loc": "Nature's Prophet gains %damage_per_tree_pct%%% bonus damage for each tree within %radius% and a multiplier of that same bonus for each treant within %radius_treant% distance of him.",
+          "desc_loc": "Nature's Prophet gains %damage_per_tree_pct%%% bonus damage for each nearby tree. Treants also provide this bonus with multiplied values and with larger radius. Treants also possess this ability.",
           "lore_loc": "",
-          "notes_loc": [],
+          "notes_loc": [
+            "Treants gain bonuses from trees and other treants around them.",
+            "Treant Protector does not provide any bonuses."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8796093022275",
+          "behavior": "562949953421379",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
           "damage": 0,
           "immunity": 0,
           "dispellable": 3,
-          "max_level": 4,
+          "max_level": 1,
           "cast_ranges": [
             0
           ],
@@ -66,15 +69,29 @@
               "required_facet": ""
             },
             {
-              "name": "radius",
+              "name": "radius_base",
               "values_float": [
-                300,
-                400,
-                500,
-                600
+                300
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "TREE RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "multiplier",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "TREANT MULTIPLIER:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -91,31 +108,8 @@
                 1200
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "TREANT RADIUS:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "multiplier",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "MULTIPLIER:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_furion",
-                  "value": 3,
-                  "operation": 1
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

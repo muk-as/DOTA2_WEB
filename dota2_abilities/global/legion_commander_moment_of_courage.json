@@ -6,9 +6,11 @@
           "id": 5597,
           "name": "legion_commander_moment_of_courage",
           "name_loc": "Moment of Courage",
-          "desc_loc": "When attacked, Legion Commander has a chance to immediately counterattack with bonus lifesteal.",
+          "desc_loc": "When attacked a number of times, Legion Commander will counter-attack her target with bonus lifesteal.",
           "lore_loc": "Tresdin knows that an enemy's most vulnerable moment often follows their fiercest stroke.",
-          "notes_loc": [],
+          "notes_loc": [
+            "The lifestealing strike is only triggered if being attacked."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -31,10 +33,7 @@
             0
           ],
           "cooldowns": [
-            1.7,
-            1.4,
-            1.1,
-            0.8
+            0.3
           ],
           "durations": [
             0
@@ -52,17 +51,20 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "trigger_chance",
+              "name": "trigger_attacks",
               "values_float": [
-                25
+                7,
+                6,
+                5,
+                4
               ],
-              "is_percentage": true,
-              "heading_loc": "CHANCE TO COUNTERATTACK:",
+              "is_percentage": false,
+              "heading_loc": "ATTACKS TO TRIGGER:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_legion_commander_3",
-                  "value": 8,
-                  "operation": 0
+                  "value": 1,
+                  "operation": 2
                 }
               ],
               "values_shard": [],
@@ -78,6 +80,23 @@
               "name": "buff_duration",
               "values_float": [
                 1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "secondary_attack_damage",
+              "values_float": [
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -120,10 +139,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                1.7,
-                1.4,
-                1.1,
-                0.8
+                0.3
               ],
               "is_percentage": false,
               "heading_loc": "",

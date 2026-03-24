@@ -6,17 +6,17 @@
           "id": 5047,
           "name": "lion_finger_of_death",
           "name_loc": "Finger of Death",
-          "desc_loc": "Rips at an enemy unit, trying to turn it inside-out. Deals massive damage and grows stronger with each life it consumes.",
+          "desc_loc": "Rips at an enemy unit, trying to turn it inside-out, dealing massive damage to the target.<br><br>After using Finger of Death, Lion's hand becomes empowered, allowing him to use a cleaving melee attack with %punch_attack_range% range with bonus movement speed.<br><br>Finger of Death gains permanent bonus damage for it and the fist for each enemy Hero it or the fist kills. <br><br>The melee attack may be disabled by setting the ability to Alt Cast.",
           "lore_loc": "Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force.",
           "notes_loc": [
             "Finger of Death has a %damage_delay% delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage.",
             "Finger of Death only gains damage if the enemy hero dies within %grace_period% seconds of being affected by Finger of Death."
           ],
           "shard_loc": "",
-          "scepter_loc": "Increases damage. Decreases cooldown. Finger of Death hits all units in a small area.",
+          "scepter_loc": "Finger of Death gains area of effect damage on the initial cast, and increases duration and cleave damage on its subsequent melee attacks.",
           "facets_loc": [],
           "type": 1,
-          "behavior": "40",
+          "behavior": "1099511627816",
           "target_team": 2,
           "target_type": 19,
           "flags": 0,
@@ -36,9 +36,9 @@
             0
           ],
           "cooldowns": [
-            120,
-            80,
-            40
+            110,
+            70,
+            30
           ],
           "durations": [
             0
@@ -68,9 +68,7 @@
               "heading_loc": "DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                100
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -81,7 +79,7 @@
             {
               "name": "damage_per_kill",
               "values_float": [
-                40
+                30
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER KILL:",
@@ -136,52 +134,31 @@
               "required_facet": ""
             },
             {
-              "name": "cooldown_scepter",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "COOLDOWN:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                90,
-                60,
-                30
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "splash_radius_scepter",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "AREA OF EFFECT:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [
-                325
-              ],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "punch_duration",
               "values_float": [
-                0
+                20
               ],
               "is_percentage": false,
-              "heading_loc": "FIST DURATION:",
+              "heading_loc": "MELEE DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                10
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "punch_bonus_movespeed",
+              "values_float": [
+                30
+              ],
+              "is_percentage": false,
+              "heading_loc": "MELEE BONUS MOVE SPEED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -195,7 +172,7 @@
             {
               "name": "punch_attack_range",
               "values_float": [
-                0
+                250
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -212,95 +189,12 @@
             {
               "name": "punch_bonus_damage_base",
               "values_float": [
-                0
+                20,
+                30,
+                40
               ],
               "is_percentage": false,
-              "heading_loc": "FIST DAMAGE BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "punch_bonus_damage_per_stack",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "FIST DAMAGE BONUS PER STACK:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "punch_grace_period",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "cleave_starting_width",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "cleave_ending_width",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "cleave_distance",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "MELEE BONUS DAMAGE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -314,13 +208,85 @@
             {
               "name": "cleave_damage",
               "values_float": [
-                0
+                25
               ],
               "is_percentage": true,
               "heading_loc": "CLEAVE DAMAGE:",
               "bonuses": [],
               "values_shard": [],
+              "values_scepter": [
+                25
+              ],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cleave_starting_width",
+              "values_float": [
+                150
+              ],
+              "is_percentage": false,
+              "heading_loc": "CLEAVE STARTING WIDTH:",
+              "bonuses": [],
+              "values_shard": [],
               "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cleave_ending_width",
+              "values_float": [
+                350
+              ],
+              "is_percentage": false,
+              "heading_loc": "CLEAVE ENDING WIDTH:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "cleave_distance",
+              "values_float": [
+                650
+              ],
+              "is_percentage": false,
+              "heading_loc": "CLEAVE DISTANCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "splash_radius",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "AREA OF EFFECT:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                325
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -384,9 +350,9 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                120,
-                80,
-                40
+                110,
+                70,
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",

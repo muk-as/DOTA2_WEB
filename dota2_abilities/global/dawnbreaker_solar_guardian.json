@@ -6,7 +6,7 @@
           "id": 7906,
           "name": "dawnbreaker_solar_guardian",
           "name_loc": "Solar Guardian",
-          "desc_loc": "CHANNELED - Dawnbreaker creates a pulsing effect at a location within %max_offset_distance% units of an allied hero anywhere on the map, damaging enemies and healing allies with each pulse. After a short duration, she flies to the target location, dealing additional damage and stunning enemies upon landing. Once channeled, Dawnbreaker cannot stop the ability.",
+          "desc_loc": "CHANNELED - Dawnbreaker creates a pulsing effect at a location within %max_offset_distance% units of an allied hero anywhere on the map and creates daylight for %daytime_duration%s. Each pulse damages enemies and heals allies.<br><br>After a short duration, she flies to the target location and deals additional damage and stuns enemies upon landing.<br><br>Once channeled, Dawnbreaker cannot stop the ability.",
           "lore_loc": "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight.",
           "notes_loc": [
             "Pulse interval is %pulse_interval%s.",
@@ -14,7 +14,7 @@
             "Cannot be cast without the Hammer."
           ],
           "shard_loc": "",
-          "scepter_loc": "Increases Solar Guardian's heal per pulse. Solar Guardian's aura follows Dawnbreaker for %scepter_aura_duration%s after landing.",
+          "scepter_loc": "Solar Guardian's aura follows Dawnbreaker for %scepter_aura_duration%s after landing.",
           "facets_loc": [],
           "type": 1,
           "behavior": "144",
@@ -38,8 +38,8 @@
             1.7
           ],
           "cooldowns": [
-            120,
-            105,
+            110,
+            100,
             90
           ],
           "durations": [
@@ -108,11 +108,7 @@
               "heading_loc": "HEAL PER PULSE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                15,
-                20,
-                25
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -307,6 +303,23 @@
               "required_facet": ""
             },
             {
+              "name": "daytime_duration",
+              "values_float": [
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "AbilityChannelTime",
               "values_float": [
                 1.7
@@ -362,8 +375,8 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                120,
-                105,
+                110,
+                100,
                 90
               ],
               "is_percentage": false,
@@ -371,7 +384,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_dawnbreaker_solar_guardian_cooldown",
-                  "value": 15,
+                  "value": 20,
                   "operation": 2
                 }
               ],

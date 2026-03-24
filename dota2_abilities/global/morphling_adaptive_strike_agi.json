@@ -6,7 +6,7 @@
           "id": 5053,
           "name": "morphling_adaptive_strike_agi",
           "name_loc": "Adaptive Strike",
-          "desc_loc": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used.\n\nThe target is also knocked back and stunned based on Morphling's strength. If his strength is 50% higher than his agility, the maximum knockback distance and stun is used.",
+          "desc_loc": "Launches a surge of water toward an enemy unit, stunning them, knocking them back, and dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used.\n\nKnockback distance and stun duration are based on Morphling's strength. If his strength is 50% higher than his agility, the maximum knockback distance and stun duration is used.",
           "lore_loc": "The Morphling calls upon his elements to crush his opponents with waves.",
           "notes_loc": [
             "Projectile moves at %projectile_speed% speed."
@@ -62,10 +62,10 @@
             {
               "name": "damage_base",
               "values_float": [
-                25,
                 50,
-                75,
-                100
+                70,
+                90,
+                110
               ],
               "is_percentage": false,
               "heading_loc": "BASE DAMAGE:",
@@ -136,7 +136,10 @@
             {
               "name": "stun_max",
               "values_float": [
-                2.4
+                1.4,
+                1.8,
+                2.2,
+                2.6
               ],
               "is_percentage": false,
               "heading_loc": "STUN MAX:",

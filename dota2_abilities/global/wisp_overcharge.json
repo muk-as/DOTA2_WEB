@@ -6,7 +6,7 @@
           "id": 5487,
           "name": "wisp_overcharge",
           "name_loc": "Overcharge",
-          "desc_loc": "Io gains health regeneration based on max health.  If Io is Tethered to an ally, that unit also gains any bonuses granted by Overcharge.",
+          "desc_loc": "Io gains attack speed, spell amplification, and health regeneration based on max health. If Io is Tethered to an ally, that unit also gains any bonuses granted by Overcharge.",
           "lore_loc": "Drawing on the energy of matter from all worlds, Io begins the unravelling of time.",
           "notes_loc": [],
           "shard_loc": "",
@@ -60,14 +60,20 @@
             {
               "name": "bonus_attack_speed",
               "values_float": [
-                0,
-                0,
-                0,
-                0
+                35,
+                60,
+                85,
+                110
               ],
               "is_percentage": false,
               "heading_loc": "BONUS ATTACK SPEED:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_wisp_8",
+                  "value": 40,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -80,53 +86,13 @@
             {
               "name": "bonus_spell_amp",
               "values_float": [
-                0,
-                0,
-                0,
-                0
+                8,
+                10,
+                12,
+                14
               ],
               "is_percentage": true,
-              "heading_loc": "SPELL AMPLIFICATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_armor",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "BONUS ARMOR:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_mres",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "BONUS MAGIC RESISTANCE:",
+              "heading_loc": "BONUS SPELL AMP:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

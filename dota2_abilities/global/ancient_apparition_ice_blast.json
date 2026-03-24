@@ -6,7 +6,7 @@
           "id": 5348,
           "name": "ancient_apparition_ice_blast",
           "name_loc": "Ice Blast",
-          "desc_loc": "Launches a tracer toward any location on the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touch the icy ball of hail as it travels, are Frostbitten, gaining Death Rime Stacks and prevented from regenerating or healing. If a Frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
+          "desc_loc": "Launches a tracer toward any location on the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touch the icy ball of hail as it travels, are Frostbitten, taking damage over time and prevented from regenerating or healing. If a Frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
           "lore_loc": "Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power.",
           "notes_loc": [
             "Upon cast, this ability is replaced by Release, used to stop the tracer on the target area.",
@@ -151,23 +151,6 @@
               "required_facet": ""
             },
             {
-              "name": "frost_stacks",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "DEATH RIME STACKS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "speed",
               "values_float": [
                 1500
@@ -191,7 +174,7 @@
                 13,
                 14
               ],
-              "is_percentage": true,
+              "is_percentage": false,
               "heading_loc": "SHATTER HEALTH THRESHOLD:",
               "bonuses": [
                 {
@@ -229,25 +212,6 @@
               "required_facet": ""
             },
             {
-              "name": "cold_feet_aoe",
-              "values_float": [
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "COLD FEET AOE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "target_sight_radius",
               "values_float": [
                 500
@@ -265,7 +229,26 @@
               "required_facet": ""
             },
             {
-              "name": "#AbilityDamage",
+              "name": "damage_per_second",
+              "values_float": [
+                12,
+                24,
+                36
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE PER SECOND:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityDamage",
               "values_float": [
                 250,
                 325,

@@ -6,7 +6,7 @@
           "id": 1202,
           "name": "bane_ichor_of_nyctasha",
           "name_loc": "Ichor of Nyctasha",
-          "desc_loc": "Bane's attribute gains are always evenly distributed across all three attributes (items that grant +3 Strength will now grant +1 Str/Agi/Int).",
+          "desc_loc": "Every time Bane kills an enemy hero or they die under the effect of Bane's debuff, they receive a Terror for the rest of the game that decreases their status resistance to Bane's subsequent debuffs.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -17,7 +17,7 @@
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
-          "damage": 0,
+          "damage": 4,
           "immunity": 0,
           "dispellable": 0,
           "max_level": 1,
@@ -47,7 +47,59 @@
           ],
           "gold_costs": [],
           "health_costs": [],
-          "special_values": [],
+          "special_values": [
+            {
+              "name": "damage_tick_rate",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "max_terrors",
+              "values_float": [
+                5
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX TERRORS PER HERO:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "status_resistance",
+              "values_float": [
+                5
+              ],
+              "is_percentage": true,
+              "heading_loc": "STATUS RESISTANCE PER TERROR:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            }
+          ],
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,

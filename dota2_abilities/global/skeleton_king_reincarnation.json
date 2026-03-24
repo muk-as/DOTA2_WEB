@@ -6,14 +6,14 @@
           "id": 5089,
           "name": "skeleton_king_reincarnation",
           "name_loc": "Reincarnation",
-          "desc_loc": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle.  Upon death, enemy units in a %slow_radius% radius are slowed. Can be self-cast to kill Wraith King instantly.",
+          "desc_loc": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle.  Upon death, enemy units in a %slow_radius% radius are slowed. Skeletons spawn and attack each nearby enemy hero. Can be self-cast to kill Wraith King instantly.",
           "lore_loc": "Conspirators against the Wraith King wonder why he never stays dead.",
           "notes_loc": [
             "Wraith King won't revive if he doesn't have enough mana.",
             "If Wraith King has an Aegis and Reincarnation off cooldown, Reincarnation will trigger first.",
             "Revives with full HP and Mana."
           ],
-          "shard_loc": "Causes Reincarnation to have no mana cost.",
+          "shard_loc": "",
           "scepter_loc": "Reduces cooldown.",
           "facets_loc": [],
           "type": 1,
@@ -49,7 +49,9 @@
             0
           ],
           "mana_costs": [
-            225
+            220,
+            110,
+            0
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -159,12 +161,12 @@
             {
               "name": "shard_skeleton_count",
               "values_float": [
-                0,
-                0,
-                0
+                2,
+                3,
+                4
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "SKELETON COUNT PER HERO:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -199,14 +201,14 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                225
+                220,
+                110,
+                0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                0
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -239,7 +241,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": true,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

@@ -9,10 +9,10 @@
           "desc_loc": "Burns an opponent's mana on each attack and deals damage equal to a percentage of the mana burnt.",
           "lore_loc": "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner.",
           "notes_loc": [
-            "Mana Break has %illusion_percentage%%% effect if caused by illusions."
+            "Mana Break has %illusion_percentage%%% mana burn effect if caused by illusions."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Increases Max Mana Burned per Hit.",
           "facets_loc": [],
           "type": 0,
           "behavior": "2",
@@ -55,7 +55,7 @@
               "values_float": [
                 50
               ],
-              "is_percentage": true,
+              "is_percentage": false,
               "heading_loc": "MANA BURNED AS DAMAGE:",
               "bonuses": [],
               "values_shard": [],
@@ -95,17 +95,13 @@
                 3.2,
                 4
               ],
-              "is_percentage": true,
+              "is_percentage": false,
               "heading_loc": "MAX MANA BURNED PER HIT:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_antimage_7",
-                  "value": 1,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                1.5
+              ],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -116,7 +112,7 @@
             {
               "name": "illusion_percentage",
               "values_float": [
-                50
+                25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -170,7 +166,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

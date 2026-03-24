@@ -6,11 +6,13 @@
           "id": 5175,
           "name": "queenofpain_scream_of_pain",
           "name_loc": "Scream Of Pain",
-          "desc_loc": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies.",
+          "desc_loc": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies.<br><br>%damage_reflected_to_self%%% of the damage dealt to heroes is reflected back to her.",
           "lore_loc": "The sultry voice of Akasha beckons her opponents while stealing their souls.",
           "notes_loc": [
             "Scream Of Pain will hit invisible units.",
-            "Scream Of Pain cannot be disjointed."
+            "Scream Of Pain cannot be disjointed.",
+            "Damage to illusions is not reflected. Damage reflected is before reduction and non-lethal.",
+            "Reflected damage does not provide any lifesteal and cannot be reflected."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -94,20 +96,37 @@
             {
               "name": "damage",
               "values_float": [
-                75,
-                150,
-                225,
-                300
+                90,
+                175,
+                260,
+                345
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_queen_of_pain_2",
-                  "value": 100,
+                  "value": 115,
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_reflected_to_self",
+              "values_float": [
+                25
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

@@ -6,7 +6,7 @@
           "id": 1324,
           "name": "doom_bringer_lvl_pain",
           "name_loc": "Lvl ? Pain",
-          "desc_loc": "Doom's attacks deal %bonus_damage%%% bonus damage to heroes whose level is lower than Doom's level.",
+          "desc_loc": "Doom's attacks curse enemy heroes. After %damage_debuff_duration%s, the cursed hero bursts with a pillar of fire, damaging itself and all units in a %spread_radius% AoE for %bonus_damage_pct_base%%% of the damage taken from Doom during the curse. The damage and radius of the curse is %bonus_at_level_pct%%% stronger if the enemy's level is a multiple of %level_multiplier%.",
           "lore_loc": "",
           "notes_loc": [
             "Also applies to all attacks when Doom is at max level."
@@ -15,7 +15,7 @@
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "4406636445698",
+          "behavior": "567356589867011",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -51,9 +51,77 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "bonus_damage",
+              "name": "bonus_damage_pct_base",
               "values_float": [
-                25
+                15
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_debuff_duration",
+              "values_float": [
+                2.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "spread_radius",
+              "values_float": [
+                66
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "level_multiplier",
+              "values_float": [
+                6
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_at_level_pct",
+              "values_float": [
+                66
               ],
               "is_percentage": false,
               "heading_loc": "",

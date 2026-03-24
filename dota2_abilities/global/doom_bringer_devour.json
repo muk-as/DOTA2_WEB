@@ -6,13 +6,13 @@
           "id": 5339,
           "name": "doom_bringer_devour",
           "name_loc": "Devour",
-          "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
+          "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cast is activated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
           "lore_loc": "Lucifer's appetite and greed are never sated.",
           "notes_loc": [
             "Gives Doom the original bounty of the creep, along with the bonus gold.",
             "If you devour a creep without abilities, you'll keep the abilities you had previously."
           ],
-          "shard_loc": "",
+          "shard_loc": "Devour has %AbilityCharges% charges and can target Ancients. Stolen creep abilities have %bonus_aoe_pct%%% increased AoE and %bonus_spell_amp_pct%%% increased spell amplification.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -40,7 +40,7 @@
             0
           ],
           "cooldowns": [
-            70
+            66
           ],
           "durations": [
             0
@@ -101,23 +101,6 @@
               "required_facet": ""
             },
             {
-              "name": "ability_bonus_level",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
               "name": "hero_ability_steal_time",
               "values_float": [
                 99999
@@ -157,17 +140,53 @@
             },
             {
               "name": "can_target_ancient",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_doom_2",
-                  "value": 1,
-                  "operation": 5
-                }
+              "bonuses": [],
+              "values_shard": [
+                1
               ],
-              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_aoe_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                20
+              ],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_spell_amp_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                40
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -218,7 +237,9 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                2
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -235,7 +256,9 @@
               "is_percentage": false,
               "heading_loc": "BASE CHARGE RESTORE TIME:",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                66
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -267,12 +290,14 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                70
+                66
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
+              "values_shard": [
+                0
+              ],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -284,7 +309,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

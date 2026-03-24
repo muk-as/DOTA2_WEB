@@ -6,14 +6,14 @@
           "id": 5028,
           "name": "juggernaut_blade_fury",
           "name_loc": "Blade Fury",
-          "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune, increasing his magic resistance by 80%%, and dealing damage every %blade_fury_damage_tick%s to nearby enemy units. Applies a strong dispel at the end of the spin.",
+          "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune with %immunity_resist%%% magic resistance and dealing damage every %blade_fury_damage_tick%s to nearby enemy units. Applies a strong dispel at the end of the spin.",
           "lore_loc": "Yurnero's renowned katana techniques are feared by warriors and sorcerors alike.",
           "notes_loc": [
             "You can use items during Blade Fury.",
             "Juggernaut can still perform attacks while in Blade Fury. However, only units that are not affected by Blade Fury, such as wards or structures, will take damage from these attacks."
           ],
-          "shard_loc": "Increases Blade Fury radius, and slows enemies by %bonus_movement_slow%%%.",
-          "scepter_loc": "",
+          "shard_loc": "",
+          "scepter_loc": "Increases radius and slows enemies in the area of effect.<br><br> Juggernaut preforms an attack on affected enemies every %attack_interval%s.",
           "facets_loc": [],
           "type": 0,
           "behavior": "4196356",
@@ -70,7 +70,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_juggernaut",
-                  "value": 90,
+                  "value": 100,
                   "operation": 0
                 }
               ],
@@ -89,7 +89,7 @@
                 0.2
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "DAMAGE RATE:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -108,9 +108,7 @@
               "is_percentage": false,
               "heading_loc": "RADIUS:",
               "bonuses": [],
-              "values_shard": [
-                100
-              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -144,7 +142,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_juggernaut_blade_fury_movespeed",
-                  "value": 40,
+                  "value": 45,
                   "operation": 0
                 }
               ],
@@ -158,28 +156,9 @@
               "required_facet": ""
             },
             {
-              "name": "movement_slow",
+              "name": "immunity_resist",
               "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [
-                35
-              ],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "can_crit",
-              "values_float": [
-                0
+                80
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -220,13 +199,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_juggernaut_blade_fury_cooldown",
-                  "value": 3,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -239,7 +212,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

@@ -6,14 +6,14 @@
           "id": 1244,
           "name": "lina_slow_burn",
           "name_loc": "Slow Burn",
-          "desc_loc": "Lina's spells deal %total_damage_tooltip%%% total damage. %impact_damage_pct%%% is dealt on impact and %burn_damage_pct%%% is dealt as burn damage over %burn_duration%s.",
+          "desc_loc": "Lina's abilities deal an additional %burn_damage_pct%%% damage as burn damage over %burn_duration%s.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "4398046511107",
+          "behavior": "13194139533378",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -51,7 +51,7 @@
             {
               "name": "impact_damage_pct",
               "values_float": [
-                60
+                100
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -68,28 +68,17 @@
             {
               "name": "burn_damage_pct",
               "values_float": [
-                65
+                64
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "total_damage_tooltip",
-              "values_float": [
-                125
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lina_7",
+                  "value": 16,
+                  "operation": 0
+                }
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -102,11 +91,59 @@
             {
               "name": "burn_duration",
               "values_float": [
-                0
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lina_7",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "additional_tick_total_damage_tooltip",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lina_7",
+                  "value": 80,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "target_crit_multiplier",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_lina_crit_debuff",
+                  "value": 150,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -122,7 +159,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

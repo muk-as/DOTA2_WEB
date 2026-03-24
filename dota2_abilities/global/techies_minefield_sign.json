@@ -6,14 +6,14 @@
           "id": 5644,
           "name": "techies_minefield_sign",
           "name_loc": "Minefield Sign",
-          "desc_loc": "Plant a warning sign, causing Sticky Bombs and Proximity Mines within its radius to be invulnerable and deal %bonus_mine_damage_pct%%% more damage. Only one sign can exist at a time. Lasts %lifetime% seconds. ",
+          "desc_loc": "Plant a warning sign, causing Proximity Mines within its radius to be invulnerable and deal %bonus_mine_damage_pct%%% more damage. Only one sign can exist at a time. Lasts %lifetime% seconds.<br><br>When an enemy Hero walks within %trigger_radius% units of a minefield sign, the %aura_radius% units area around the sign will become a minefield for %minefield_duration% seconds, dealing damage to enemy Heroes any time they move within its area. Minefield Sign is destroyed after this effect ends.",
           "lore_loc": "Watch your step!",
           "notes_loc": [],
           "shard_loc": "",
-          "scepter_loc": "Increases radius and duration of Minefield Sign. When an enemy hero walks within %trigger_radius% units of a minefield sign, the %aura_radius% units area around the sign will become a minefield for %minefield_duration% seconds, dealing damage to enemy units any time they move within its area. Minefield Sign is destroyed after this effect ends.",
+          "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8589934704",
+          "behavior": "8589934705",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -51,15 +51,13 @@
             {
               "name": "aura_radius",
               "values_float": [
-                500
+                1000
               ],
               "is_percentage": false,
               "heading_loc": "EFFECT RADIUS:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                500
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -70,15 +68,13 @@
             {
               "name": "lifetime",
               "values_float": [
-                60
+                240
               ],
               "is_percentage": false,
               "heading_loc": "SIGN DURATION:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                180
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -123,15 +119,13 @@
             {
               "name": "scepter_move_damage",
               "values_float": [
-                0
+                300
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                300
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -142,15 +136,13 @@
             {
               "name": "scepter_move_amt",
               "values_float": [
-                0
+                200
               ],
               "is_percentage": false,
               "heading_loc": "MOVEMENT TRIGGER AMOUNT:",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [
-                200
-              ],
+              "values_scepter": [],
               "facet_bonus": {
                 "name": "",
                 "values": [],
@@ -228,11 +220,11 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": true,
+          "ability_has_scepter": false,
           "ability_has_shard": false,
-          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_scepter": true,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

@@ -6,7 +6,7 @@
           "id": 5377,
           "name": "silencer_curse_of_the_silent",
           "name_loc": "Arcane Curse",
-          "desc_loc": "Curses the target area, dealing damage and causing enemy heroes to take damage over time and slowing their movement speed. Silenced enemies take %penalty_multiplier%x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The duration is paused as long as the target is silenced.",
+          "desc_loc": "Curses the target area, dealing damage and causing enemies to take damage over time and slowing their movement speed.<br><br>Anytime affected enemies cast a spell, the duration is increased. The duration is paused as long as the target is silenced.",
           "lore_loc": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
           "notes_loc": [
             "Affects creeps."
@@ -106,7 +106,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "RADIUS:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_arcane_curse_radius",
+                  "value": 200,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -206,30 +212,7 @@
             {
               "name": "penalty_multiplier",
               "values_float": [
-                1.25
-              ],
-              "is_percentage": false,
-              "heading_loc": "SILENCED MULTIPLIER:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer",
-                  "value": 0.25,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "duration_percent_per_stolen_int",
-              "values_float": [
-                0
+                1
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -268,27 +251,6 @@
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCharges",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_silencer_arcane_curse_charges",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

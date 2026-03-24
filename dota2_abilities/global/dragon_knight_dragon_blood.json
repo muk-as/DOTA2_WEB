@@ -5,15 +5,15 @@
         {
           "id": 5228,
           "name": "dragon_knight_dragon_blood",
-          "name_loc": "Wyrm's Wrath",
-          "desc_loc": "The life blood of the Dragon improves Dragon Knight's attacks. When in Dragon form, these effects are stronger.",
+          "name_loc": "Dragon Blood",
+          "desc_loc": "The life blood of the Dragon improves Dragon Knight's health regeneration and armor.  <br><br>Regen and armor are increased by %regen_and_armor_multiplier_during_dragon_form%%% during Elder Dragon Form.",
           "lore_loc": "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
+          "behavior": "8589934658",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -49,220 +49,58 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "is_green_dragon",
+              "name": "health_regen",
               "values_float": [
-                0
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS HP REGEN:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight",
+                  "value": 12,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "armor",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS ARMOR:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_dragon_knight",
+                  "value": 12,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "regen_and_armor_multiplier_during_dragon_form",
+              "values_float": [
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "corrosive_breath_damage",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "CORROSIVE DAMAGE PER SECOND:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "corrosive_breath_duration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "CORROSIVE DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "corrosive_breath_armor_reduction",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "CORROSIVE ARMOR REDUCTION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "is_red_dragon",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "magic_damage",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "MAGIC DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "bonus_aoe",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "AOE BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "is_blue_dragon",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "frost_bonus_movement_speed",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "FROST MOVESPEED SLOW:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "frost_bonus_attack_speed",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "FROST ATTACK SPEED SLOW:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "frost_duration",
-              "values_float": [
-                0
-              ],
-              "is_percentage": false,
-              "heading_loc": "FROST DURATION:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "frost_healing_reduction",
-              "values_float": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "is_percentage": true,
-              "heading_loc": "FROST HEALTH RESTORATION REDUCTION:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -279,7 +117,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

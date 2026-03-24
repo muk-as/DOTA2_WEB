@@ -6,11 +6,9 @@
           "id": 1693,
           "name": "slark_saltwater_shiv",
           "name_loc": "Saltwater Shiv",
-          "desc_loc": "Slark slices the target with his salty shiv, stealing a portion of the target's movement speed, Health Regen and Health Restoration.  This effect stacks.",
+          "desc_loc": "Slark slices the target with his salty shiv, stealing a portion of the target's movement speed, Health Regen and Health Restoration.<br><br>These effects stack independently.",
           "lore_loc": "",
-          "notes_loc": [
-            "Subsequent use of Saltwater Shiv refreshes the duration of all Shiv stacks."
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -33,10 +31,10 @@
             0
           ],
           "cooldowns": [
+            14,
+            12,
             10,
-            8,
-            6,
-            4
+            8
           ],
           "durations": [
             0
@@ -48,7 +46,10 @@
             0
           ],
           "mana_costs": [
-            20
+            25,
+            30,
+            35,
+            40
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -73,13 +74,13 @@
             {
               "name": "health_rest_steal",
               "values_float": [
-                2,
                 4,
-                6,
-                8
+                8,
+                12,
+                16
               ],
               "is_percentage": true,
-              "heading_loc": "STACK RESTORATION STEAL:",
+              "heading_loc": "RESTORATION STEAL:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -93,13 +94,13 @@
             {
               "name": "regen_steal",
               "values_float": [
-                2,
                 4,
-                6,
-                8
+                8,
+                12,
+                16
               ],
               "is_percentage": false,
-              "heading_loc": "STACK REGEN STEAL:",
+              "heading_loc": "REGEN STEAL:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -113,13 +114,30 @@
             {
               "name": "ms_steal",
               "values_float": [
-                2,
                 4,
-                6,
-                8
+                8,
+                12,
+                16
               ],
               "is_percentage": false,
-              "heading_loc": "STACK SPEED STEAL:",
+              "heading_loc": "SPEED STEAL:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "melee_range_buffer",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -150,7 +168,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                20
+                25,
+                30,
+                35,
+                40
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -167,10 +188,10 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
+                14,
+                12,
                 10,
-                8,
-                6,
-                4
+                8
               ],
               "is_percentage": false,
               "heading_loc": "",

@@ -8,12 +8,14 @@
           "name_loc": "Planar Pocket",
           "desc_loc": "Barathrum gains magic resistance and distorts reality around the selected hero, making any unit-targeted spells cast by enemy heroes get redirected towards Spirit Breaker. Can be cast on both allied and enemy heroes, but only spells cast by enemies of Spirit Breaker will be redirected.",
           "lore_loc": "Barathrum's unyielding focus forms a pocket of planar convergence from which not even the most powerful arcane energies can escape.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Planar Pocket's effect stops if Barathrum moves %break_distance% units away from the target."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8589934601",
+          "behavior": "8589936649",
           "target_team": 3,
           "target_type": 1,
           "flags": 0,
@@ -34,7 +36,7 @@
             0
           ],
           "cooldowns": [
-            25
+            30
           ],
           "durations": [
             0
@@ -88,10 +90,27 @@
             {
               "name": "magic_resistance",
               "values_float": [
-                75
+                40
               ],
               "is_percentage": true,
               "heading_loc": "SELF MAGIC RESISTANCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "break_distance",
+              "values_float": [
+                900
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -139,7 +158,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                25
+                30
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -157,8 +176,8 @@
           "is_item": false,
           "ability_has_scepter": false,
           "ability_has_shard": false,
-          "ability_is_granted_by_scepter": true,
-          "ability_is_granted_by_shard": false,
+          "ability_is_granted_by_scepter": false,
+          "ability_is_granted_by_shard": true,
           "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,

@@ -6,10 +6,10 @@
           "id": 1452,
           "name": "kunkka_admirals_rum",
           "name_loc": "Admiral's Rum",
-          "desc_loc": "Damage from enemy heroes, buildings, or Roshan that would reduce Kunkka below a threshold causes him to douse himself with The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
+          "desc_loc": "Damage from enemy heroes, buildings, or Roshan that would reduce Kunkka below %damage_threshold%%% threshold causes him to douse himself with The Admiral's Rum, receiving bonus movement speed and a delayed reaction to %ghostship_absorb%%% of incoming damage for %buff_duration%s.",
           "lore_loc": "Deleterious to landlubbers, no one holds their rum like a sailor.",
           "notes_loc": [
-            "Stacks additively with other sources of Admiral's Rum"
+            "Damage dealt after Rum wears off is non-lethal and can never kill a hero."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -33,7 +33,7 @@
             0
           ],
           "cooldowns": [
-            60
+            60.5
           ],
           "durations": [
             0
@@ -55,8 +55,8 @@
               "values_float": [
                 65
               ],
-              "is_percentage": true,
-              "heading_loc": "HEALTH THRESHOLD:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -70,14 +70,14 @@
             {
               "name": "ghostship_absorb",
               "values_float": [
-                20
+                18
               ],
-              "is_percentage": true,
-              "heading_loc": "DAMAGE DELAYED:",
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_kunkka_rum",
-                  "value": 15,
+                  "value": 8,
                   "operation": 0
                 }
               ],
@@ -93,11 +93,17 @@
             {
               "name": "buff_duration",
               "values_float": [
-                6
+                5
               ],
               "is_percentage": false,
-              "heading_loc": "RUM DURATION:",
-              "bonuses": [],
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_kunkka_rum_duration",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
@@ -110,10 +116,10 @@
             {
               "name": "movespeed_bonus",
               "values_float": [
-                10
+                7.75
               ],
               "is_percentage": true,
-              "heading_loc": "RUM BONUS SPEED:",
+              "heading_loc": "BONUS MOVESPEED:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -127,17 +133,11 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                60
+                60.5
               ],
               "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_kunkka_3",
-                  "value": 15,
-                  "operation": 2
-                }
-              ],
+              "heading_loc": "COOLDOWN:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {

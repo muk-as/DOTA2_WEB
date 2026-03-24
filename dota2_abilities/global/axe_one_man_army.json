@@ -6,11 +6,9 @@
           "id": 1166,
           "name": "axe_one_man_army",
           "name_loc": "One Man Army",
-          "desc_loc": "Axe gains Strength based on his armor as long as he's away from his allies.",
+          "desc_loc": "Axe gains Strength based on %armor_pct_as_strength%%% of his Armor as long as there are no allied heroes within %radius% distance from Axe.  The effect fades over %bonus_linger_duration%s after approaching an ally.",
           "lore_loc": "",
-          "notes_loc": [
-            "%armor_pct_as_strength%%% of Axe's armor is gained as strength as long as there are no allied heroes within %radius% distance from Axe. Lingers for an additional %bonus_linger_duration%s after approaching an ally."
-          ],
+          "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -53,10 +51,27 @@
             {
               "name": "armor_pct_as_strength",
               "values_float": [
-                40
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "current_max_str_bonus",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "MAX BONUS STRENGTH:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -107,7 +122,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": false,
+          "ability_is_innate": true,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

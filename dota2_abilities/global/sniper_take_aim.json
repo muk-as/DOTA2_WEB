@@ -6,7 +6,7 @@
           "id": 5156,
           "name": "sniper_take_aim",
           "name_loc": "Take Aim",
-          "desc_loc": "Increases vision range, Headshot chance, and attack range. Slows you by %slow%%% for the duration and restricts your vision to a frontal cone.",
+          "desc_loc": "Passively increases Sniper's attack range by %passive_attack_range_bonus%.\n\nOn cast, Sniper gains increased vision, Headshot chance, and attack range. Slows you by %slow%%% for the duration and restricts your vision to a frontal cone.",
           "lore_loc": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
           "notes_loc": [],
           "shard_loc": "",
@@ -114,17 +114,37 @@
             {
               "name": "active_attack_range_bonus",
               "values_float": [
-                100,
+                75,
                 150,
-                200,
-                250
+                225,
+                300
               ],
               "is_percentage": false,
-              "heading_loc": "BONUS ATTACK RANGE:",
+              "heading_loc": "ACTIVE BONUS ATTACK RANGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "passive_attack_range_bonus",
+              "values_float": [
+                160,
+                240,
+                320,
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_sniper_5",
-                  "value": 55,
+                  "value": 50,
                   "operation": 0
                 }
               ],
@@ -161,23 +181,6 @@
               "name": "view_restrict",
               "values_float": [
                 140
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "no_reveal",
-              "values_float": [
-                0
               ],
               "is_percentage": false,
               "heading_loc": "",

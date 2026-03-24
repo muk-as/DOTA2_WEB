@@ -6,12 +6,11 @@
           "id": 5250,
           "name": "life_stealer_feast",
           "name_loc": "Feast",
-          "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. Allows Lifestealer to attack allied creeps at %creep_deny_percent%%% health. Lifestealer gains permanent max HP whenever he kills a creep or hero.",
+          "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. He gains permanent max HP whenever he kills a unit.",
           "lore_loc": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path.",
           "notes_loc": [
             "Works on allies and enemies. Does not affect Roshan.",
             "The heal is independent of the damage.",
-            "Amount healed is amplified by Lifesteal Amplification.",
             "Break disables the gaining of new stacks.",
             "Break does not disable the bonuses from existing stacks."
           ],
@@ -19,7 +18,7 @@
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "66",
+          "behavior": "2",
           "target_team": 0,
           "target_type": 0,
           "flags": 0,
@@ -57,10 +56,10 @@
             {
               "name": "hp_leech_percent",
               "values_float": [
-                2,
-                2.25,
-                2.5,
-                2.75
+                1.45,
+                2.05,
+                2.65,
+                3.25
               ],
               "is_percentage": true,
               "heading_loc": "HEAL FROM TARGET'S MAX HEALTH:",
@@ -83,10 +82,10 @@
             {
               "name": "hp_damage_percent",
               "values_float": [
-                2,
-                2.25,
-                2.5,
-                2.75
+                1.45,
+                2.05,
+                2.65,
+                3.25
               ],
               "is_percentage": true,
               "heading_loc": "MAX HEALTH DAMAGE:",
@@ -107,12 +106,29 @@
               "required_facet": ""
             },
             {
+              "name": "creep_deny_percent",
+              "values_float": [
+                50
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
               "name": "bonus_hp_per_hero",
               "values_float": [
                 10,
-                10,
-                10,
-                10
+                15,
+                20,
+                25
               ],
               "is_percentage": false,
               "heading_loc": "MAX HP PER HERO KILL:",
@@ -133,23 +149,6 @@
               ],
               "is_percentage": false,
               "heading_loc": "MAX HP PER CREEP KILL:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "facet_bonus": {
-                "name": "",
-                "values": [],
-                "operation": 0
-              },
-              "required_facet": ""
-            },
-            {
-              "name": "creep_deny_percent",
-              "values_float": [
-                75
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -183,7 +182,7 @@
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
-          "ability_is_innate": true,
+          "ability_is_innate": false,
           "item_cost": 0,
           "item_initial_charges": 0,
           "item_neutral_tier": 4294967295,

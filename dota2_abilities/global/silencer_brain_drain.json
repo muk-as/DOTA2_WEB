@@ -5,12 +5,10 @@
         {
           "id": 1335,
           "name": "silencer_brain_drain",
-          "name_loc": "Brain Drain",
-          "desc_loc": "If Silencer kills an enemy hero, he permanently steals Intelligence.",
+          "name_loc": "Suffer In Silence",
+          "desc_loc": "Silencer takes less damage from and deals more damage to silenced targets.<br><br>If an enemy Hero dies within %permanent_int_steal_range% range of Silencer or was debuffed by Silencer at the time of death, Silencer permanently steals %permanent_int_steal_amount% Intelligence from them.  If the victim was silenced, steal an extra %silenced_bonus_int_steal_amount% Intelligence.",
           "lore_loc": "",
-          "notes_loc": [
-            "To permanently steal Intelligence, Silencer doesn't need to land the killing blow, as long as the enemy hero is killed within %permanent_int_steal_range% range of Silencer or was debuffed by Silencer at the time of death."
-          ],
+          "notes_loc": [],
           "shard_loc": "Increases the Intelligence stolen per kill.",
           "scepter_loc": "",
           "facets_loc": [],
@@ -73,11 +71,49 @@
                 1
               ],
               "is_percentage": false,
-              "heading_loc": "PERMANENT INT STEAL:",
+              "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                2
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "silenced_bonus_int_steal_amount",
+              "values_float": [
+                1
               ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "damage_pct",
+              "values_float": [
+                5
+              ],
+              "is_percentage": true,
+              "heading_loc": "SILENCED TARGET DAMAGE:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_silencer_brain_drain_damage",
+                  "value": 7,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
               "values_scepter": [],
               "facet_bonus": {
                 "name": "",
@@ -89,7 +125,7 @@
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": true,
