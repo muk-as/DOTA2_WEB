@@ -91,770 +91,731 @@
         rotate: "_1p9Cl9uMfdzrFHL1TlSkAB",
       };
     },
-    722: (e, a, l) => {
+    722: (e, a, i) => {
       "use strict";
-      l.d(a, { U: () => m });
-      var t = l(7552),
-        r = l(11417),
-        i = l.n(r),
-        c = l(89506);
-      const m = () =>
-        t.createElement("div", {
-          className: i().RightArrow,
+      i.d(a, { U: () => o });
+      var l = i(69500),
+        r = i(11417),
+        s = i.n(r),
+        c = i(89506);
+      const o = () =>
+        (0, l.jsx)("div", {
+          className: s().RightArrow,
           style: {
             backgroundImage: `url( ${c.r.IMG_URL}/icons/arrow_right.svg )`,
           },
         });
     },
-    36899: (e, a, l) => {
+    36899: (e, a, i) => {
       "use strict";
-      l.d(a, { C: () => p, _: () => t });
-      var t,
-        r = l(7552),
-        i = l(68542),
-        c = l.n(i),
-        m = l(89506),
-        o = l(27866),
-        s = l(21384),
-        n = l(86085);
+      i.d(a, { C: () => p, _: () => l });
+      var l,
+        r = i(69500),
+        s = i(7552),
+        c = i(68542),
+        o = i.n(c),
+        t = i(89506),
+        d = i(40045),
+        n = i(21384),
+        m = i(86085);
       !(function (e) {
         (e[(e.TOP = 0)] = "TOP"),
           (e[(e.BOTTOM = 1)] = "BOTTOM"),
           (e[(e.LEFT = 2)] = "LEFT"),
           (e[(e.RIGHT = 3)] = "RIGHT");
-      })(t || (t = {}));
+      })(l || (l = {}));
       const p = (e) => {
-        const [a, l] = (0, r.useState)(!1),
-          [i, p] = (0, r.useState)(null == e.strYouTubeVideoID),
-          d = (0, r.useRef)(null);
-        let _ =
+        const [a, i] = (0, s.useState)(!1),
+          [c, p] = (0, s.useState)(null == e.strYouTubeVideoID),
+          _ = (0, s.useRef)(null);
+        let x =
           ".LabelStyleHack { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; ";
         e.labelColors &&
           (e.labelColors.length > 1
-            ? (_ += `background-image: -webkit-linear-gradient( left, ${e.labelColors.join(", ")} ); `)
-            : (_ += `background-image: -webkit-linear-gradient( left, ${e.labelColors[0]}, ${e.labelColors[0]} ); `));
-        const E = e.glowDetails?.sort((e, a) => e.size - a.size);
+            ? (x += `background-image: -webkit-linear-gradient( left, ${e.labelColors.join(", ")} ); `)
+            : (x += `background-image: -webkit-linear-gradient( left, ${e.labelColors[0]}, ${e.labelColors[0]} ); `));
+        const j = e.glowDetails?.sort((e, a) => e.size - a.size);
         return (
-          E &&
-            ((_ += `-webkit-filter: ${E.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `),
-            (_ += `filter: ${E.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `)),
-          r.createElement(
-            "div",
-            { className: c().TrailerOverlay },
-            r.createElement("div", { className: c().FadeBottom }),
-            e.strBackgroundImage &&
-              !e.strBackgroundVideo &&
-              r.createElement("img", {
-                className: c().BackgroundImage,
-                src: `${m.r.IMG_URL}${e.strBackgroundImage}`,
+          j &&
+            ((x += `-webkit-filter: ${j.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `),
+            (x += `filter: ${j.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `)),
+          (0, r.jsxs)("div", {
+            className: o().TrailerOverlay,
+            children: [
+              (0, r.jsx)("div", { className: o().FadeBottom }),
+              e.strBackgroundImage &&
+                !e.strBackgroundVideo &&
+                (0, r.jsx)("img", {
+                  className: o().BackgroundImage,
+                  src: `${t.r.IMG_URL}${e.strBackgroundImage}`,
+                }),
+              e.strBackgroundVideo &&
+                (0, r.jsx)("div", {
+                  className: o().BackgroundVideo,
+                  children: (0, r.jsxs)("video", {
+                    className: o().BackgroundVideo,
+                    autoPlay: !0,
+                    preload: "auto",
+                    muted: !0,
+                    loop: !0,
+                    playsInline: !0,
+                    poster: `${t.r.IMG_URL}${e.strBackgroundImage}`,
+                    children: [
+                      (0, r.jsx)("source", {
+                        type: "video/webm",
+                        src: `${t.r.VIDEO_URL}${e.strBackgroundVideo}.webm`,
+                      }),
+                      (0, r.jsx)("source", {
+                        type: "video/mp4",
+                        src: `${t.r.VIDEO_URL}${e.strBackgroundVideo}.mp4`,
+                      }),
+                    ],
+                  }),
+                }),
+              (0, r.jsxs)("div", {
+                className: (0, n.A)(o().TrailerContainer, a && o().Playing),
+                children: [
+                  e.strYouTubeVideoID &&
+                    (0, r.jsx)(m.N1, {
+                      video: e.strYouTubeVideoID,
+                      autoplay: !1,
+                      playsInline: !0,
+                      controls: !0,
+                      ref: _,
+                      onPlayerReady: () => p(!0),
+                      onBuffering: () => i(!0),
+                      onPlaying: () => i(!0),
+                      onPaused: () => i(!1),
+                      onMovieEnd: () => i(!1),
+                    }),
+                  e.strForegroundVideo &&
+                    (0, r.jsxs)("video", {
+                      className: o().BackgroundVideo,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: `${t.r.IMG_URL}${e.strBackgroundImage}`,
+                      children: [
+                        (0, r.jsx)("source", {
+                          type: "video/webm",
+                          src: `${t.r.VIDEO_URL}${e.strForegroundVideo}.webm`,
+                        }),
+                        (0, r.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${t.r.VIDEO_URL}${e.strForegroundVideo}.mp4`,
+                        }),
+                      ],
+                    }),
+                ],
               }),
-            e.strBackgroundVideo &&
-              r.createElement(
-                "div",
-                { className: c().BackgroundVideo },
-                r.createElement(
-                  "video",
-                  {
-                    className: c().BackgroundVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: `${m.r.IMG_URL}${e.strBackgroundImage}`,
-                  },
-                  r.createElement("source", {
-                    type: "video/webm",
-                    src: `${m.r.VIDEO_URL}${e.strBackgroundVideo}.webm`,
-                  }),
-                  r.createElement("source", {
-                    type: "video/mp4",
-                    src: `${m.r.VIDEO_URL}${e.strBackgroundVideo}.mp4`,
-                  }),
+              (0, r.jsxs)("div", {
+                className: (0, n.A)(
+                  o().LogoElementContainer,
+                  e.eLogoPosition == l.TOP && o().LogoTop,
+                  e.eLogoPosition == l.BOTTOM && o().LogoBottom,
+                  e.eLogoPosition == l.LEFT && o().LogoLeft,
+                  e.eLogoPosition == l.RIGHT && o().LogoRight,
                 ),
-              ),
-            r.createElement(
-              "div",
-              { className: (0, s.A)(c().TrailerContainer, a && c().Playing) },
-              e.strYouTubeVideoID &&
-                r.createElement(n.N1, {
-                  video: e.strYouTubeVideoID,
-                  autoplay: !1,
-                  playsInline: !0,
-                  controls: !0,
-                  ref: d,
-                  onPlayerReady: () => p(!0),
-                  onBuffering: () => l(!0),
-                  onPlaying: () => l(!0),
-                  onPaused: () => l(!1),
-                  onMovieEnd: () => l(!1),
-                }),
-              e.strForegroundVideo &&
-                r.createElement(
-                  "video",
-                  {
-                    className: c().BackgroundVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: `${m.r.IMG_URL}${e.strBackgroundImage}`,
-                  },
-                  r.createElement("source", {
-                    type: "video/webm",
-                    src: `${m.r.VIDEO_URL}${e.strForegroundVideo}.webm`,
+                children: [
+                  e.logoElement,
+                  (0, r.jsxs)("div", {
+                    className: (0, n.A)(
+                      o().PlayButtonContainer,
+                      (a || !c) && o().Hide,
+                    ),
+                    onClick: () => {
+                      i(!0), _.current?.PlayVideo(!1);
+                    },
+                    children: [
+                      (0, r.jsx)("div", {
+                        className: o().Button,
+                        style: {
+                          backgroundImage: `url( ${t.r.IMG_URL}${e.strPlayButton} )`,
+                        },
+                      }),
+                      (0, r.jsx)("style", { children: x }),
+                      (0, r.jsx)("div", {
+                        className: (0, n.A)(o().Label, "LabelStyleHack"),
+                        children: (0, d.Wn)(e.strPlayButtonLabel),
+                      }),
+                    ],
                   }),
-                  r.createElement("source", {
-                    type: "video/mp4",
-                    src: `${m.r.VIDEO_URL}${e.strForegroundVideo}.mp4`,
-                  }),
-                ),
-            ),
-            r.createElement(
-              "div",
-              {
-                className: (0, s.A)(
-                  c().LogoElementContainer,
-                  e.eLogoPosition == t.TOP && c().LogoTop,
-                  e.eLogoPosition == t.BOTTOM && c().LogoBottom,
-                  e.eLogoPosition == t.LEFT && c().LogoLeft,
-                  e.eLogoPosition == t.RIGHT && c().LogoRight,
-                ),
-              },
-              e.logoElement,
-              r.createElement(
-                "div",
-                {
-                  className: (0, s.A)(
-                    c().PlayButtonContainer,
-                    (a || !i) && c().Hide,
-                  ),
-                  onClick: () => {
-                    l(!0), d.current?.PlayVideo(!1);
-                  },
-                },
-                r.createElement("div", {
-                  className: c().Button,
-                  style: {
-                    backgroundImage: `url( ${m.r.IMG_URL}${e.strPlayButton} )`,
-                  },
-                }),
-                r.createElement("style", null, _),
-                r.createElement(
-                  "div",
-                  { className: (0, s.A)(c().Label, "LabelStyleHack") },
-                  (0, o.Wn)(e.strPlayButtonLabel),
-                ),
-              ),
-            ),
-          )
+                ],
+              }),
+            ],
+          })
         );
       };
     },
-    76858: (e, a, l) => {
+    76858: (e, a, i) => {
       "use strict";
-      l.r(a), l.d(a, { default: () => I });
-      var t = l(85608),
-        r = l(89506),
-        i = l(55651),
-        c = l(27866),
-        m = l(68446),
-        o = l(32389),
-        s = l(7552),
-        n = l(73202),
-        p = l(45237),
-        d = l(21384),
-        _ = l(56698),
-        E = l(47202),
-        g = l(36305),
-        u = l(15185),
-        b = l.n(u),
-        N = l(722),
-        v = l(36899),
-        y = l(90622);
-      let L = class extends s.Component {
+      i.r(a), i.d(a, { default: () => L });
+      var l = i(85608),
+        r = i(69500),
+        s = i(89506),
+        c = i(55651),
+        o = i(40045),
+        t = i(68446),
+        d = i(32389),
+        n = i(7552),
+        m = i(73202),
+        p = i(45237),
+        _ = i(21384),
+        x = i(70595),
+        j = i(47202),
+        g = i(36305),
+        h = i(15185),
+        u = i.n(h),
+        b = i(722),
+        N = i(36899),
+        v = i(90622);
+      let y = class extends n.Component {
         render() {
-          _.o.getPatchNotes("7.29", r.r.LANGUAGE);
-          return s.createElement(
-            "div",
-            { className: b().MarciPage },
-            s.createElement(E.A, { bOverlapping: !0 }),
-            s.createElement(
-              n.mg,
-              null,
-              s.createElement("title", null, (0, c.Wn)("#marci_title")),
-            ),
-            s.createElement(
-              "div",
-              { className: b().HeaderSection },
-              s.createElement(y.z, {
-                left: !0,
-                color: "#000000",
-                startPct: 90,
-                midPct: 100,
-                endPct: 90,
-              }),
-              s.createElement(y.z, {
-                right: !0,
-                color: "#000000",
-                startPct: 90,
-                midPct: 100,
-                endPct: 90,
-              }),
-              s.createElement(y.z, {
-                top: !0,
-                color: "#000000",
-                startPct: 0,
-                midPct: 100,
-                endPct: 20,
-              }),
-              s.createElement(
-                "div",
-                {
-                  className: b().TitleContainer,
-                  "data-aos": "fade-up",
-                  "data-aos-delay": "200",
-                  "data-aos-duration": "2000",
-                },
-                s.createElement(v.C, {
-                  strBackgroundVideo: "marci/marci",
-                  strPlayButton: "marci/play_button.png",
-                  strPlayButtonLabel: "#marci_play_trailer",
-                  strYouTubeVideoID: "CJuoqAi9ugA",
-                  labelColors: ["#fff5c2"],
-                  glowDetails: [{ size: 8, color: "#ff6b27" }],
-                  eLogoPosition: v._.BOTTOM,
+          x.o.getPatchNotes("7.29", s.r.LANGUAGE);
+          return (0, r.jsxs)("div", {
+            className: u().MarciPage,
+            children: [
+              (0, r.jsx)(j.A, { bOverlapping: !0 }),
+              (0, r.jsx)(m.mg, {
+                children: (0, r.jsx)("title", {
+                  children: (0, o.Wn)("#marci_title"),
                 }),
-                s.createElement(
-                  "div",
-                  { className: b().TitleIntro },
-                  (0, c.Wn)("#marci_intro"),
-                ),
-                s.createElement("img", {
-                  className: (0, d.A)(b().HeroLogo, b().Img1),
-                  onError: (e) =>
-                    (e.target.src = `${r.r.IMG_URL}/marci/marci_logo_english.png`),
-                  src: `${r.r.IMG_URL}/marci/marci_logo_${r.r.LANGUAGE}.png`,
-                }),
-                s.createElement(
-                  "div",
-                  { className: b().Complexity },
-                  s.createElement("img", {
-                    src: `${r.r.IMG_URL}/marci/difficulty.png`,
+              }),
+              (0, r.jsxs)("div", {
+                className: u().HeaderSection,
+                children: [
+                  (0, r.jsx)(v.z, {
+                    left: !0,
+                    color: "#000000",
+                    startPct: 90,
+                    midPct: 100,
+                    endPct: 90,
                   }),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().Roles },
-                  s.createElement(
-                    "div",
-                    { className: b().HeroRole },
-                    (0, c.Wn)("#marci_role1"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: b().HeroRole },
-                    (0, c.Wn)("#marci_role2"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: b().HeroRole },
-                    (0, c.Wn)("#marci_role3"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: b().HeroRole },
-                    (0, c.Wn)("#marci_role4"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: b().HeroRole },
-                    (0, c.Wn)("#marci_role5"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: b().HeroRole },
-                    (0, c.Wn)("#marci_role6"),
-                  ),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().HeroHype },
-                  (0, c.Wn)("#marci_hype"),
-                ),
-              ),
-            ),
-            s.createElement(
-              "div",
-              { className: b().LoreSection },
-              s.createElement("div", { className: b().Divider }),
-              s.createElement("div", { className: b().DividerBottom }),
-              s.createElement(
-                "div",
-                { className: b().Quote },
-                s.createElement(
-                  "div",
-                  { className: b().LoreHeader },
-                  (0, c.Wn)("#marci_lore_title"),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().LoreText },
-                  (0, c.Wn)("#marci_lore_desc"),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().LoreText },
-                  (0, c.Wn)("#marci_lore_desc2"),
-                ),
-              ),
-            ),
-            s.createElement(
-              "div",
-              { className: b().AbilitySection },
-              s.createElement(
-                o.gi,
-                {
-                  className: b().AbilityCarousel,
+                  (0, r.jsx)(v.z, {
+                    right: !0,
+                    color: "#000000",
+                    startPct: 90,
+                    midPct: 100,
+                    endPct: 90,
+                  }),
+                  (0, r.jsx)(v.z, {
+                    top: !0,
+                    color: "#000000",
+                    startPct: 0,
+                    midPct: 100,
+                    endPct: 20,
+                  }),
+                  (0, r.jsxs)("div", {
+                    className: u().TitleContainer,
+                    "data-aos": "fade-up",
+                    "data-aos-delay": "200",
+                    "data-aos-duration": "2000",
+                    children: [
+                      (0, r.jsx)(N.C, {
+                        strBackgroundVideo: "marci/marci",
+                        strPlayButton: "marci/play_button.png",
+                        strPlayButtonLabel: "#marci_play_trailer",
+                        strYouTubeVideoID: "CJuoqAi9ugA",
+                        labelColors: ["#fff5c2"],
+                        glowDetails: [{ size: 8, color: "#ff6b27" }],
+                        eLogoPosition: N._.BOTTOM,
+                      }),
+                      (0, r.jsx)("div", {
+                        className: u().TitleIntro,
+                        children: (0, o.Wn)("#marci_intro"),
+                      }),
+                      (0, r.jsx)("img", {
+                        className: (0, _.A)(u().HeroLogo, u().Img1),
+                        onError: (e) =>
+                          (e.target.src = `${s.r.IMG_URL}/marci/marci_logo_english.png`),
+                        src: `${s.r.IMG_URL}/marci/marci_logo_${s.r.LANGUAGE}.png`,
+                      }),
+                      (0, r.jsx)("div", {
+                        className: u().Complexity,
+                        children: (0, r.jsx)("img", {
+                          src: `${s.r.IMG_URL}/marci/difficulty.png`,
+                        }),
+                      }),
+                      (0, r.jsxs)("div", {
+                        className: u().Roles,
+                        children: [
+                          (0, r.jsx)("div", {
+                            className: u().HeroRole,
+                            children: (0, o.Wn)("#marci_role1"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: u().HeroRole,
+                            children: (0, o.Wn)("#marci_role2"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: u().HeroRole,
+                            children: (0, o.Wn)("#marci_role3"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: u().HeroRole,
+                            children: (0, o.Wn)("#marci_role4"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: u().HeroRole,
+                            children: (0, o.Wn)("#marci_role5"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: u().HeroRole,
+                            children: (0, o.Wn)("#marci_role6"),
+                          }),
+                        ],
+                      }),
+                      (0, r.jsx)("div", {
+                        className: u().HeroHype,
+                        children: (0, o.Wn)("#marci_hype"),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, r.jsxs)("div", {
+                className: u().LoreSection,
+                children: [
+                  (0, r.jsx)("div", { className: u().Divider }),
+                  (0, r.jsx)("div", { className: u().DividerBottom }),
+                  (0, r.jsxs)("div", {
+                    className: u().Quote,
+                    children: [
+                      (0, r.jsx)("div", {
+                        className: u().LoreHeader,
+                        children: (0, o.Wn)("#marci_lore_title"),
+                      }),
+                      (0, r.jsx)("div", {
+                        className: u().LoreText,
+                        children: (0, o.Wn)("#marci_lore_desc"),
+                      }),
+                      (0, r.jsx)("div", {
+                        className: u().LoreText,
+                        children: (0, o.Wn)("#marci_lore_desc2"),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, r.jsx)("div", {
+                className: u().AbilitySection,
+                children: (0, r.jsxs)(d.gi, {
+                  className: u().AbilityCarousel,
                   naturalSlideWidth: 100,
                   naturalSlideHeight: 56.25,
                   totalSlides: 4,
-                },
-                s.createElement(
-                  o.Ap,
-                  null,
-                  s.createElement(
-                    o.q7,
-                    { index: 0 },
-                    s.createElement(
-                      "div",
-                      { className: b().SlideContainer },
-                      s.createElement(
-                        "video",
-                        {
-                          className: b().AbilityVideo,
-                          autoPlay: !0,
-                          preload: "auto",
-                          muted: !0,
-                          loop: !0,
-                          playsInline: !0,
-                          poster: `${r.r.VIDEO_URL}/abilities/marci/marci_dispose.jpg`,
-                        },
-                        s.createElement("source", {
-                          type: "video/webm",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_dispose.webm`,
+                  children: [
+                    (0, r.jsxs)(d.Ap, {
+                      children: [
+                        (0, r.jsx)(d.q7, {
+                          index: 0,
+                          children: (0, r.jsxs)("div", {
+                            className: u().SlideContainer,
+                            children: [
+                              (0, r.jsxs)("video", {
+                                className: u().AbilityVideo,
+                                autoPlay: !0,
+                                preload: "auto",
+                                muted: !0,
+                                loop: !0,
+                                playsInline: !0,
+                                poster: `${s.r.VIDEO_URL}/abilities/marci/marci_dispose.jpg`,
+                                children: [
+                                  (0, r.jsx)("source", {
+                                    type: "video/webm",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_dispose.webm`,
+                                  }),
+                                  (0, r.jsx)("source", {
+                                    type: "video/mp4",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_dispose.mp4`,
+                                  }),
+                                ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                className: u().SlideAbilityContainer,
+                                children: [
+                                  (0, r.jsx)("img", {
+                                    className: u().SlideAbilityIcon,
+                                    src: `${s.r.IMG_URL}/marci/marci_dispose.png`,
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                    className: u().AbilityText,
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityName,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability1_title",
+                                        ),
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityDesc,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability1_desc",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
                         }),
-                        s.createElement("source", {
-                          type: "video/mp4",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_dispose.mp4`,
+                        (0, r.jsx)(d.q7, {
+                          index: 1,
+                          children: (0, r.jsxs)("div", {
+                            className: u().SlideContainer,
+                            children: [
+                              (0, r.jsxs)("video", {
+                                className: u().AbilityVideo,
+                                autoPlay: !0,
+                                preload: "auto",
+                                muted: !0,
+                                loop: !0,
+                                playsInline: !0,
+                                poster: `${s.r.VIDEO_URL}/abilities/marci/marci_companion_run.jpg`,
+                                children: [
+                                  (0, r.jsx)("source", {
+                                    type: "video/webm",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_companion_run.webm`,
+                                  }),
+                                  (0, r.jsx)("source", {
+                                    type: "video/mp4",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_companion_run.mp4`,
+                                  }),
+                                ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                className: u().SlideAbilityContainer,
+                                children: [
+                                  (0, r.jsx)("img", {
+                                    className: u().SlideAbilityIcon,
+                                    src: `${s.r.IMG_URL}/marci/marci_rebound.png`,
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                    className: u().AbilityText,
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityName,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability2_title",
+                                        ),
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityDesc,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability2_desc",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
                         }),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: b().SlideAbilityContainer },
-                        s.createElement("img", {
-                          className: b().SlideAbilityIcon,
-                          src: `${r.r.IMG_URL}/marci/marci_dispose.png`,
+                        (0, r.jsx)(d.q7, {
+                          index: 2,
+                          children: (0, r.jsxs)("div", {
+                            className: u().SlideContainer,
+                            children: [
+                              (0, r.jsxs)("video", {
+                                className: u().AbilityVideo,
+                                autoPlay: !0,
+                                preload: "auto",
+                                muted: !0,
+                                loop: !0,
+                                playsInline: !0,
+                                poster: `${s.r.VIDEO_URL}/abilities/marci/marci_sidekick.jpg`,
+                                children: [
+                                  (0, r.jsx)("source", {
+                                    type: "video/webm",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_guardian.webm`,
+                                  }),
+                                  (0, r.jsx)("source", {
+                                    type: "video/mp4",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_guardian.mp4`,
+                                  }),
+                                ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                className: u().SlideAbilityContainer,
+                                children: [
+                                  (0, r.jsx)("img", {
+                                    className: u().SlideAbilityIcon,
+                                    src: `${s.r.IMG_URL}/marci/marci_sidekick.png`,
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                    className: u().AbilityText,
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityName,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability3_title",
+                                        ),
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityDesc,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability3_desc",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
                         }),
-                        s.createElement(
-                          "div",
-                          { className: b().AbilityText },
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityName },
-                            (0, c.Wn)("#marci_ability1_title"),
-                          ),
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityDesc },
-                            (0, c.Wn)("#marci_ability1_desc"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  s.createElement(
-                    o.q7,
-                    { index: 1 },
-                    s.createElement(
-                      "div",
-                      { className: b().SlideContainer },
-                      s.createElement(
-                        "video",
-                        {
-                          className: b().AbilityVideo,
-                          autoPlay: !0,
-                          preload: "auto",
-                          muted: !0,
-                          loop: !0,
-                          playsInline: !0,
-                          poster: `${r.r.VIDEO_URL}/abilities/marci/marci_companion_run.jpg`,
-                        },
-                        s.createElement("source", {
-                          type: "video/webm",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_companion_run.webm`,
+                        (0, r.jsx)(d.q7, {
+                          index: 3,
+                          children: (0, r.jsxs)("div", {
+                            className: u().SlideContainer,
+                            children: [
+                              (0, r.jsxs)("video", {
+                                className: u().AbilityVideo,
+                                autoPlay: !0,
+                                preload: "auto",
+                                muted: !0,
+                                loop: !0,
+                                playsInline: !0,
+                                poster: `${s.r.VIDEO_URL}/abilities/marci/marci_unleash.jpg`,
+                                children: [
+                                  (0, r.jsx)(v.z, {
+                                    left: !0,
+                                    color: "#000000",
+                                    startPct: 50,
+                                    midPct: 75,
+                                    endPct: 100,
+                                  }),
+                                  (0, r.jsx)(v.z, {
+                                    right: !0,
+                                    color: "#000000",
+                                    startPct: 90,
+                                    midPct: 100,
+                                    endPct: 90,
+                                  }),
+                                  (0, r.jsx)("source", {
+                                    type: "video/webm",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_unleash.webm`,
+                                  }),
+                                  (0, r.jsx)("source", {
+                                    type: "video/mp4",
+                                    src: `${s.r.VIDEO_URL}/abilities/marci/marci_unleash.mp4`,
+                                  }),
+                                ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                className: u().SlideAbilityContainer,
+                                children: [
+                                  (0, r.jsx)("img", {
+                                    className: u().SlideAbilityIcon,
+                                    src: `${s.r.IMG_URL}/marci/marci_unleash.png`,
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                    className: u().AbilityText,
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityName,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability4_title",
+                                        ),
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        className: u().AbilityDesc,
+                                        children: (0, o.Wn)(
+                                          "#marci_ability4_desc",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
                         }),
-                        s.createElement("source", {
-                          type: "video/mp4",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_companion_run.mp4`,
+                      ],
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: u().CarouselDots,
+                      children: [
+                        (0, r.jsx)(d.cL, {
+                          className: (0, _.A)(u().AbilitySelector, u().Slide0),
+                          slide: 0,
+                          children: (0, r.jsx)("div", {}),
                         }),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: b().SlideAbilityContainer },
-                        s.createElement("img", {
-                          className: b().SlideAbilityIcon,
-                          src: `${r.r.IMG_URL}/marci/marci_rebound.png`,
+                        (0, r.jsx)(d.cL, {
+                          className: (0, _.A)(u().AbilitySelector, u().Slide1),
+                          slide: 1,
+                          children: (0, r.jsx)("div", {}),
                         }),
-                        s.createElement(
-                          "div",
-                          { className: b().AbilityText },
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityName },
-                            (0, c.Wn)("#marci_ability2_title"),
-                          ),
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityDesc },
-                            (0, c.Wn)("#marci_ability2_desc"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  s.createElement(
-                    o.q7,
-                    { index: 2 },
-                    s.createElement(
-                      "div",
-                      { className: b().SlideContainer },
-                      s.createElement(
-                        "video",
-                        {
-                          className: b().AbilityVideo,
-                          autoPlay: !0,
-                          preload: "auto",
-                          muted: !0,
-                          loop: !0,
-                          playsInline: !0,
-                          poster: `${r.r.VIDEO_URL}/abilities/marci/marci_sidekick.jpg`,
-                        },
-                        s.createElement("source", {
-                          type: "video/webm",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_guardian.webm`,
+                        (0, r.jsx)(d.cL, {
+                          className: (0, _.A)(u().AbilitySelector, u().Slide2),
+                          slide: 2,
+                          children: (0, r.jsx)("div", {}),
                         }),
-                        s.createElement("source", {
-                          type: "video/mp4",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_guardian.mp4`,
+                        (0, r.jsx)(d.cL, {
+                          className: (0, _.A)(u().AbilitySelector, u().Slide3),
+                          slide: 3,
+                          children: (0, r.jsx)("div", {}),
                         }),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: b().SlideAbilityContainer },
-                        s.createElement("img", {
-                          className: b().SlideAbilityIcon,
-                          src: `${r.r.IMG_URL}/marci/marci_sidekick.png`,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: b().AbilityText },
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityName },
-                            (0, c.Wn)("#marci_ability3_title"),
-                          ),
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityDesc },
-                            (0, c.Wn)("#marci_ability3_desc"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  s.createElement(
-                    o.q7,
-                    { index: 3 },
-                    s.createElement(
-                      "div",
-                      { className: b().SlideContainer },
-                      s.createElement(
-                        "video",
-                        {
-                          className: b().AbilityVideo,
-                          autoPlay: !0,
-                          preload: "auto",
-                          muted: !0,
-                          loop: !0,
-                          playsInline: !0,
-                          poster: `${r.r.VIDEO_URL}/abilities/marci/marci_unleash.jpg`,
-                        },
-                        s.createElement(y.z, {
-                          left: !0,
-                          color: "#000000",
-                          startPct: 50,
-                          midPct: 75,
-                          endPct: 100,
-                        }),
-                        s.createElement(y.z, {
-                          right: !0,
-                          color: "#000000",
-                          startPct: 90,
-                          midPct: 100,
-                          endPct: 90,
-                        }),
-                        s.createElement("source", {
-                          type: "video/webm",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_unleash.webm`,
-                        }),
-                        s.createElement("source", {
-                          type: "video/mp4",
-                          src: `${r.r.VIDEO_URL}/abilities/marci/marci_unleash.mp4`,
-                        }),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: b().SlideAbilityContainer },
-                        s.createElement("img", {
-                          className: b().SlideAbilityIcon,
-                          src: `${r.r.IMG_URL}/marci/marci_unleash.png`,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: b().AbilityText },
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityName },
-                            (0, c.Wn)("#marci_ability4_title"),
-                          ),
-                          s.createElement(
-                            "div",
-                            { className: b().AbilityDesc },
-                            (0, c.Wn)("#marci_ability4_desc"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().CarouselDots },
-                  s.createElement(
-                    o.cL,
-                    {
-                      className: (0, d.A)(b().AbilitySelector, b().Slide0),
-                      slide: 0,
-                    },
-                    s.createElement("div", null),
-                  ),
-                  s.createElement(
-                    o.cL,
-                    {
-                      className: (0, d.A)(b().AbilitySelector, b().Slide1),
-                      slide: 1,
-                    },
-                    s.createElement("div", null),
-                  ),
-                  s.createElement(
-                    o.cL,
-                    {
-                      className: (0, d.A)(b().AbilitySelector, b().Slide2),
-                      slide: 2,
-                    },
-                    s.createElement("div", null),
-                  ),
-                  s.createElement(
-                    o.cL,
-                    {
-                      className: (0, d.A)(b().AbilitySelector, b().Slide3),
-                      slide: 3,
-                    },
-                    s.createElement("div", null),
-                  ),
-                ),
-              ),
-            ),
-            s.createElement(
-              "div",
-              { className: b().HeropediaSection },
-              s.createElement(
-                "div",
-                { className: b().HeropediaText },
-                (0, c.Wn)("#marci_heroes_title"),
-                s.createElement(
-                  p.N_,
-                  { to: i.J.hero("marci") },
-                  s.createElement(
-                    "div",
-                    { className: b().StandardButton },
-                    s.createElement(
-                      "div",
-                      { className: b().ButtonText },
-                      (0, c.Wn)("#marci_heroes_btn"),
-                    ),
-                    s.createElement(N.U, null),
-                  ),
-                ),
-              ),
-              s.createElement(
-                "div",
-                null,
-                s.createElement("img", {
-                  className: b().HeropediaImage,
-                  src: `${r.r.IMG_URL}/heroes/crops/marci.png`,
+                      ],
+                    }),
+                  ],
                 }),
-              ),
-            ),
-            s.createElement(
-              "div",
-              { className: b().WallpaperSection },
-              s.createElement(
-                "div",
-                { className: b().WallpaperTitle },
-                (0, c.Wn)("#marci_wallpapers"),
-              ),
-              s.createElement(
-                "div",
-                { className: b().Wallpapers },
-                s.createElement(
-                  "div",
-                  { className: b().WallpaperGroup },
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_1.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_1_thumb.jpg`,
+              }),
+              (0, r.jsxs)("div", {
+                className: u().HeropediaSection,
+                children: [
+                  (0, r.jsxs)("div", {
+                    className: u().HeropediaText,
+                    children: [
+                      (0, o.Wn)("#marci_heroes_title"),
+                      (0, r.jsx)(p.N_, {
+                        to: c.J.hero("marci"),
+                        children: (0, r.jsxs)("div", {
+                          className: u().StandardButton,
+                          children: [
+                            (0, r.jsx)("div", {
+                              className: u().ButtonText,
+                              children: (0, o.Wn)("#marci_heroes_btn"),
+                            }),
+                            (0, r.jsx)(b.U, {}),
+                          ],
+                        }),
                       }),
-                    ),
-                  ),
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_1_mobile.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_1_mobile_thumb.jpg`,
+                    ],
+                  }),
+                  (0, r.jsx)("div", {
+                    children: (0, r.jsx)("img", {
+                      className: u().HeropediaImage,
+                      src: `${s.r.IMG_URL}/heroes/crops/marci.png`,
+                    }),
+                  }),
+                ],
+              }),
+              (0, r.jsxs)("div", {
+                className: u().WallpaperSection,
+                children: [
+                  (0, r.jsx)("div", {
+                    className: u().WallpaperTitle,
+                    children: (0, o.Wn)("#marci_wallpapers"),
+                  }),
+                  (0, r.jsxs)("div", {
+                    className: u().Wallpapers,
+                    children: [
+                      (0, r.jsxs)("div", {
+                        className: u().WallpaperGroup,
+                        children: [
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_1.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_1_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_1_mobile.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_1_mobile_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                        ],
                       }),
-                    ),
-                  ),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().WallpaperGroup },
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_2.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_2_thumb.jpg`,
+                      (0, r.jsxs)("div", {
+                        className: u().WallpaperGroup,
+                        children: [
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_2.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_2_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_2_mobile.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_2_mobile_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                        ],
                       }),
-                    ),
-                  ),
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_2_mobile.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_2_mobile_thumb.jpg`,
+                      (0, r.jsxs)("div", {
+                        className: u().WallpaperGroup,
+                        children: [
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_3.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_3_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_3_mobile.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_3_mobile_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                        ],
                       }),
-                    ),
-                  ),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().WallpaperGroup },
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_3.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_3_thumb.jpg`,
+                      (0, r.jsxs)("div", {
+                        className: u().WallpaperGroup,
+                        children: [
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_4.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_4_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                          (0, r.jsx)("a", {
+                            href: `${s.r.IMG_URL}marci/wallpapers/marci_wallpaper_4_mobile.png`,
+                            children: (0, r.jsx)("div", {
+                              className: u().Wallpaper,
+                              children: (0, r.jsx)("img", {
+                                className: u().WallpaperImgDesktop,
+                                src: `${s.r.IMG_URL}/marci/wallpapers/marci_wallpaper_4_mobile_thumb.jpg`,
+                              }),
+                            }),
+                          }),
+                        ],
                       }),
-                    ),
-                  ),
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_3_mobile.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_3_mobile_thumb.jpg`,
-                      }),
-                    ),
-                  ),
-                ),
-                s.createElement(
-                  "div",
-                  { className: b().WallpaperGroup },
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_4.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_4_thumb.jpg`,
-                      }),
-                    ),
-                  ),
-                  s.createElement(
-                    "a",
-                    {
-                      href: `${r.r.IMG_URL}marci/wallpapers/marci_wallpaper_4_mobile.png`,
-                    },
-                    s.createElement(
-                      "div",
-                      { className: b().Wallpaper },
-                      s.createElement("img", {
-                        className: b().WallpaperImgDesktop,
-                        src: `${r.r.IMG_URL}/marci/wallpapers/marci_wallpaper_4_mobile_thumb.jpg`,
-                      }),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            s.createElement(g.K, null),
-          );
+                    ],
+                  }),
+                ],
+              }),
+              (0, r.jsx)(g.K, {}),
+            ],
+          });
         }
       };
-      L = (0, t.Cg)([m.PA], L);
-      const I = L;
+      y = (0, l.Cg)([t.PA], y);
+      const L = y;
     },
   },
 ]);

@@ -260,640 +260,624 @@
         Treant: "_2gxEdRsoob8FjlUtWSRf1U",
       };
     },
-    722: (e, a, t) => {
+    722: (e, a, s) => {
       "use strict";
-      t.d(a, { U: () => s });
-      var r = t(7552),
-        l = t(11417),
-        i = t.n(l),
-        n = t(89506);
-      const s = () =>
-        r.createElement("div", {
-          className: i().RightArrow,
+      s.d(a, { U: () => o });
+      var i = s(69500),
+        r = s(11417),
+        l = s.n(r),
+        t = s(89506);
+      const o = () =>
+        (0, i.jsx)("div", {
+          className: l().RightArrow,
           style: {
-            backgroundImage: `url( ${n.r.IMG_URL}/icons/arrow_right.svg )`,
+            backgroundImage: `url( ${t.r.IMG_URL}/icons/arrow_right.svg )`,
           },
         });
     },
-    95224: (e, a, t) => {
+    95224: (e, a, s) => {
       "use strict";
-      t.d(a, { U: () => c, v: () => m });
-      var r = t(7552),
-        l = t(85655),
-        i = t.n(l),
-        n = t(21384),
-        s = t(89506),
-        o = t(27866);
-      const m = ({ image: e, is_new: a }) =>
-          r.createElement(
-            "div",
-            { className: i().ComparisonImage },
-            r.createElement(
-              "div",
-              { className: (0, n.A)(i().ImageLabel, a && i().IsNew) },
-              (0, o.Wn)(a ? "#729_new_image" : "#729_old_image"),
-            ),
-            r.createElement("img", { src: `${s.r.IMG_URL}${e}` }),
-          ),
-        c = (e) => {
-          const [a, t] = (0, r.useState)(0);
-          return r.createElement(
-            "div",
-            { className: i().TabbedMapComparison },
-            r.createElement(
-              "div",
-              { className: i().TabHeader },
-              e.labels.map((e, l) =>
-                r.createElement(
-                  "div",
-                  {
-                    key: "tab_" + l,
-                    className: (0, n.A)(i().Tab, a == l && i().Active),
-                    onClick: () => t(l),
-                  },
-                  (0, o.Wn)(e),
+      s.d(a, { U: () => _, v: () => d });
+      var i = s(69500),
+        r = s(7552),
+        l = s(85655),
+        t = s.n(l),
+        o = s(21384),
+        n = s(89506),
+        c = s(40045);
+      const d = ({ image: e, is_new: a }) =>
+          (0, i.jsxs)("div", {
+            className: t().ComparisonImage,
+            children: [
+              (0, i.jsx)("div", {
+                className: (0, o.A)(t().ImageLabel, a && t().IsNew),
+                children: (0, c.Wn)(a ? "#729_new_image" : "#729_old_image"),
+              }),
+              (0, i.jsx)("img", { src: `${n.r.IMG_URL}${e}` }),
+            ],
+          }),
+        _ = (e) => {
+          const [a, s] = (0, r.useState)(0);
+          return (0, i.jsxs)("div", {
+            className: t().TabbedMapComparison,
+            children: [
+              (0, i.jsx)("div", {
+                className: t().TabHeader,
+                children: e.labels.map((e, r) =>
+                  (0, i.jsx)(
+                    "div",
+                    {
+                      className: (0, o.A)(t().Tab, a == r && t().Active),
+                      onClick: () => s(r),
+                      children: (0, c.Wn)(e),
+                    },
+                    "tab_" + r,
+                  ),
                 ),
-              ),
-            ),
-            r.createElement(
-              "div",
-              { className: i().TabContents },
-              r.Children.map(e.children, (e, t) =>
-                r.createElement(
-                  "div",
-                  {
-                    key: "tabelement_" + t,
-                    className: (0, n.A)(
-                      i().TabContentContainer,
-                      t == a && i().Active,
-                    ),
-                  },
-                  e,
+              }),
+              (0, i.jsx)("div", {
+                className: t().TabContents,
+                children: r.Children.map(e.children, (e, s) =>
+                  (0, i.jsx)(
+                    "div",
+                    {
+                      className: (0, o.A)(
+                        t().TabContentContainer,
+                        s == a && t().Active,
+                      ),
+                      children: e,
+                    },
+                    "tabelement_" + s,
+                  ),
                 ),
-              ),
-            ),
-          );
+              }),
+            ],
+          });
         };
     },
-    98685: (e, a, t) => {
+    98685: (e, a, s) => {
       "use strict";
-      t.r(a),
-        t.d(a, {
+      s.r(a),
+        s.d(a, {
           DownloadIcon: () => w,
           InnateIconSmall: () => H,
           PlayIcon: () => R,
-          default: () => V,
+          default: () => q,
         });
-      var r = t(85608),
-        l = t(89506),
-        i = t(33706),
-        n = t(27866),
-        s = t(68446),
-        o = t(7552),
-        m = t(73202),
-        c = t(35927),
-        _ = t(21384),
-        d = t(56698),
-        g = t(47202),
-        p = t(36305),
-        E = t(49728),
-        u = t.n(E),
-        N = t(61840),
-        h = t(32389),
-        b = t(54159),
-        v = t(45237),
-        y = t(722),
-        S = t(55651),
-        C = t(82101),
-        T = t(85286),
-        I = t.n(T),
-        L = t(4665),
-        A = t(95224);
+      var i = s(85608),
+        r = s(69500),
+        l = s(89506),
+        t = s(33706),
+        o = s(40045),
+        n = s(68446),
+        c = s(7552),
+        d = s(73202),
+        _ = s(35927),
+        m = s(21384),
+        g = s(70595),
+        h = s(47202),
+        p = s(36305),
+        x = s(49728),
+        j = s.n(x),
+        u = s(61840),
+        N = s(32389),
+        b = s(54159),
+        v = s(45237),
+        y = s(722),
+        S = s(55651),
+        C = s(82101),
+        T = s(85286),
+        I = s.n(T),
+        L = s(4665),
+        A = s(95224);
       const R = () =>
-          o.createElement("div", {
-            className: u().ControlIcon,
+          (0, r.jsx)("div", {
+            className: j().ControlIcon,
             style: { backgroundImage: `url( ${l.r.IMG_URL}/icons/play.svg )` },
           }),
         w = () =>
-          o.createElement("div", {
-            className: u().ControlIcon,
+          (0, r.jsx)("div", {
+            className: j().ControlIcon,
             style: {
               backgroundImage: `url( ${l.r.IMG_URL}/icons/download.svg )`,
             },
           }),
         H = () =>
-          o.createElement("div", {
-            className: (0, _.A)(u().InnateIconSmall, u().ControlIcon),
+          (0, r.jsx)("div", {
+            className: (0, m.A)(j().InnateIconSmall, j().ControlIcon),
             style: {
               backgroundImage: `url( ${l.r.IMG_URL}/icons/innate_icon_small.svg )`,
             },
           });
-      const f = (e) => {
-        const a = (0, o.useRef)(void 0);
+      function f() {
+        const e = s(99769),
+          a =
+            -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
+            -1 != navigator.userAgent.toLowerCase().indexOf("macintosh");
+        return e || a;
+      }
+      const D = (e) => {
+        const a = (0, c.useRef)(void 0);
         return e.video
-          ? o.createElement(
-              "video",
-              {
-                className: (0, _.A)(e.additionalClassName),
-                ref: a,
-                muted: !0,
-                autoPlay: !0,
-                preload: "auto",
-                loop: !0,
-                playsInline: !0,
-                poster: `${l.r.IMG_URL}${e.image}`,
-              },
-              o.createElement("source", {
+          ? (0, r.jsx)("video", {
+              className: (0, m.A)(e.additionalClassName),
+              ref: a,
+              muted: !0,
+              autoPlay: !0,
+              preload: "auto",
+              loop: !0,
+              playsInline: !0,
+              poster: `${l.r.IMG_URL}${e.image}`,
+              children: (0, r.jsx)("source", {
                 type: "video/webm",
                 src: `${l.r.VIDEO_URL}${e.video}`,
               }),
-            )
-          : o.createElement("img", {
-              className: (0, _.A)(e.additionalClassName),
+            })
+          : (0, r.jsx)("img", {
+              className: (0, m.A)(e.additionalClassName),
               src: `${l.r.IMG_URL}/` + e.image,
             });
       };
       function k(e) {
         let a = "",
-          t = !0;
-        for (let r = 0; r < e.length; ++r)
-          "_" != e[r]
-            ? t
-              ? ((a += e[r].toUpperCase()), (t = !1))
-              : (a += e[r])
-            : (t = !0);
+          s = !0;
+        for (let i = 0; i < e.length; ++i)
+          "_" != e[i]
+            ? s
+              ? ((a += e[i].toUpperCase()), (s = !1))
+              : (a += e[i])
+            : (s = !0);
         return a;
       }
-      const D = (0, s.PA)(({ patchnotes: e, heroname: a }) => {
-          const t = i.B5.Get().getHeroList(),
-            r = t?.heroes.find(
+      const W = (0, n.PA)(({ patchnotes: e, heroname: a }) => {
+          const s = t.B5.Get().getHeroList(),
+            i = s?.heroes.find(
               (e) => e.name.replace("npc_dota_hero_", "") == a,
             );
-          r?.name.replace("npc_dota_hero_", "");
-          let s = "";
-          switch (r?.primary_attr) {
+          i?.name.replace("npc_dota_hero_", "");
+          let n = "";
+          switch (i?.primary_attr) {
             case 0:
-              s = "strength";
+              n = "strength";
               break;
             case 1:
-              s = "agility";
+              n = "agility";
               break;
             case 2:
-              s = "intelligence";
+              n = "intelligence";
               break;
             case 3:
-              s = "universal";
+              n = "universal";
           }
-          return r
-            ? o.createElement(
-                "div",
-                { className: (0, _.A)(u().HeroReworkCondensed, u()[k(a)]) },
-                o.createElement(
-                  "div",
-                  { className: (0, _.A)(u().ReworkBackgroundContainer) },
-                  o.createElement("div", {
-                    className: (0, _.A)(u().ReworkBackground),
-                  }),
-                  o.createElement("div", {
-                    className: (0, _.A)(u().ReworkBackgroundBlur),
-                  }),
-                ),
-                o.createElement(
-                  "div",
-                  { className: u().HeroReworkContents },
-                  o.createElement(
-                    "div",
-                    { className: (0, _.A)(u().HeroNameContainer, u().Large) },
-                    o.createElement("img", {
-                      src: `${l.r.IMG_URL}icons/hero_${s}.svg`,
-                      className: u().PrimaryStatIcon,
-                    }),
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(
-                          u().HeroName,
-                          u().TitleFont,
-                          u().TitleSmall,
-                        ),
-                      },
-                      (0, n.Wn)(r.name_loc),
-                    ),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: u().HeroImageContainer },
-                    o.createElement("div", { className: u().HeroShadow }),
-                    o.createElement(C.sG, {
-                      heroname: a,
-                      portraitClassName: u().HeroReworkPortrait,
-                      videoClassName: u().HeroReworkPortraitVideo,
-                    }),
-                  ),
-                  o.createElement("div", { className: u().Dash }),
-                  o.createElement(
-                    "div",
-                    { className: (0, _.A)(u().ReworkHighlightsContainer) },
-                    o.createElement(
-                      "div",
-                      { className: (0, _.A)(u().HeroNameContainer, u().Small) },
-                      o.createElement("img", {
-                        src: `${l.r.IMG_URL}icons/hero_${s}.svg`,
-                        className: u().PrimaryStatIcon,
+          return i
+            ? (0, r.jsxs)("div", {
+                className: (0, m.A)(j().HeroReworkCondensed, j()[k(a)]),
+                children: [
+                  (0, r.jsxs)("div", {
+                    className: (0, m.A)(j().ReworkBackgroundContainer),
+                    children: [
+                      (0, r.jsx)("div", {
+                        className: (0, m.A)(j().ReworkBackground),
                       }),
-                      o.createElement(
-                        "div",
-                        {
-                          className: (0, _.A)(
-                            u().HeroName,
-                            u().TitleFont,
-                            u().TitleSmall,
-                          ),
-                        },
-                        (0, n.Wn)(r.name_loc),
-                      ),
-                    ),
-                    o.createElement(
-                      "p",
-                      {
-                        className: (0, _.A)(
-                          u().ReworkHighlight,
-                          u().DisplayFont,
-                          u().BodyMedium,
-                        ),
-                      },
-                      (0, n.Wn)("#largo_gameplay_heroes_" + a + "_highlight_1"),
-                    ),
-                  ),
-                ),
-              )
+                      (0, r.jsx)("div", {
+                        className: (0, m.A)(j().ReworkBackgroundBlur),
+                      }),
+                    ],
+                  }),
+                  (0, r.jsxs)("div", {
+                    className: j().HeroReworkContents,
+                    children: [
+                      (0, r.jsxs)("div", {
+                        className: (0, m.A)(j().HeroNameContainer, j().Large),
+                        children: [
+                          (0, r.jsx)("img", {
+                            src: `${l.r.IMG_URL}icons/hero_${n}.svg`,
+                            className: j().PrimaryStatIcon,
+                          }),
+                          (0, r.jsx)("div", {
+                            className: (0, m.A)(
+                              j().HeroName,
+                              j().TitleFont,
+                              j().TitleSmall,
+                            ),
+                            children: (0, o.Wn)(i.name_loc),
+                          }),
+                        ],
+                      }),
+                      (0, r.jsxs)("div", {
+                        className: j().HeroImageContainer,
+                        children: [
+                          (0, r.jsx)("div", { className: j().HeroShadow }),
+                          (0, r.jsx)(C.sG, {
+                            heroname: a,
+                            portraitClassName: j().HeroReworkPortrait,
+                            videoClassName: j().HeroReworkPortraitVideo,
+                          }),
+                        ],
+                      }),
+                      (0, r.jsx)("div", { className: j().Dash }),
+                      (0, r.jsxs)("div", {
+                        className: (0, m.A)(j().ReworkHighlightsContainer),
+                        children: [
+                          (0, r.jsxs)("div", {
+                            className: (0, m.A)(
+                              j().HeroNameContainer,
+                              j().Small,
+                            ),
+                            children: [
+                              (0, r.jsx)("img", {
+                                src: `${l.r.IMG_URL}icons/hero_${n}.svg`,
+                                className: j().PrimaryStatIcon,
+                              }),
+                              (0, r.jsx)("div", {
+                                className: (0, m.A)(
+                                  j().HeroName,
+                                  j().TitleFont,
+                                  j().TitleSmall,
+                                ),
+                                children: (0, o.Wn)(i.name_loc),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsx)("p", {
+                            className: (0, m.A)(
+                              j().ReworkHighlight,
+                              j().DisplayFont,
+                              j().BodyMedium,
+                            ),
+                            children: (0, o.Wn)(
+                              "#largo_gameplay_heroes_" + a + "_highlight_1",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              })
             : null;
         }),
-        W = (e) => {
+        B = (e) => {
           if (!e.special.heading_loc) return null;
           let a = e.special.values_float.map((e, a) =>
-              o.createElement(
+              (0, r.jsx)(
                 "span",
-                { key: a, className: u().SingleValue },
-                (0, b.F)(e),
+                { className: j().SingleValue, children: (0, b.F)(e) },
+                a,
               ),
             ),
-            t = !1,
-            r = null;
+            s = !1,
+            i = null;
           return (
             "+" == e.special.heading_loc[0]
-              ? ((r = e.special.heading_loc.slice(1)), (t = !0))
-              : (r = e.special.heading_loc),
-            "$" == r[0] && (r = "#dota_ability_variable_" + r.slice(1)),
-            t
-              ? o.createElement(
-                  "div",
-                  { className: u().Stat },
-                  "+ ",
-                  a,
-                  " ",
-                  (0, n.Wn)(r),
-                )
-              : o.createElement(
-                  "div",
-                  { className: u().Stat },
-                  (0, n.Wn)(r),
-                  " ",
-                  a,
-                )
+              ? ((i = e.special.heading_loc.slice(1)), (s = !0))
+              : (i = e.special.heading_loc),
+            "$" == i[0] && (i = "#dota_ability_variable_" + i.slice(1)),
+            s
+              ? (0, r.jsxs)("div", {
+                  className: j().Stat,
+                  children: ["+ ", a, " ", (0, o.Wn)(i)],
+                })
+              : (0, r.jsxs)("div", {
+                  className: j().Stat,
+                  children: [(0, o.Wn)(i), " ", a],
+                })
           );
         },
-        B = (0, s.PA)(
+        G = (0, n.PA)(
           ({
             name: e,
             components: a,
-            recipeCost: t,
-            isNew: r,
-            isReturning: s,
+            recipeCost: s,
+            isNew: i,
+            isReturning: n,
           }) => {
-            const m = i.B5.Get().getItemList(),
-              c = m?.itemabilities.find((a) => a.name == e),
-              d = i.B5.Get().getItemData(c?.id);
-            if (!d) return null;
-            let g = d.desc_loc;
-            d.special_values.forEach((e) => {
+            const c = t.B5.Get().getItemList(),
+              d = c?.itemabilities.find((a) => a.name == e),
+              _ = t.B5.Get().getItemData(d?.id);
+            if (!_) return null;
+            let g = _.desc_loc;
+            _.special_values.forEach((e) => {
               let a =
                 e.values_float.length > 0 ? (0, b.F)(e.values_float[0]) : "0";
               (g = g.replace("%" + e.name + "%", a)),
                 (g = g.replace("%" + e.name.toLowerCase() + "%", a));
             }),
               (g = g.replace(/\%\%/g, "%"));
-            let p = d.special_values?.map((e, a) =>
-                o.createElement(W, { key: a, special: e }),
+            let h = _.special_values?.map((e, a) =>
+                (0, r.jsx)(B, { special: e }, a),
               ),
-              E = d.name.replace("item_", ""),
-              N = d.item_cost,
-              h =
-                d.item_neutral_tier >= 0 && d.item_neutral_tier < 5
-                  ? d.item_neutral_tier + 1
+              p = _.name.replace("item_", ""),
+              x = _.item_cost,
+              u =
+                _.item_neutral_tier >= 0 && _.item_neutral_tier < 5
+                  ? _.item_neutral_tier + 1
                   : -1,
-              v = u()["Tier" + h],
-              y = d.cooldowns.reduce((e, a) => e + a) > 0,
-              S = d.mana_costs.reduce((e, a) => e + a) > 0,
-              C =
-                !!(d.health_costs && d.health_costs.length > 0) &&
-                d.health_costs.reduce((e, a) => e + a) > 0,
-              T = a
+              N = j()["Tier" + u],
+              v = _.cooldowns.reduce((e, a) => e + a) > 0,
+              y = _.mana_costs.reduce((e, a) => e + a) > 0,
+              S =
+                !!(_.health_costs && _.health_costs.length > 0) &&
+                _.health_costs.reduce((e, a) => e + a) > 0,
+              C = a
                 ? a.map((e, a) =>
-                    o.createElement("img", {
-                      key: a,
-                      className: u().RecipeComponentImage,
-                      src: `${l.r.IMG_URL}/items/${e}.png`,
-                    }),
+                    (0, r.jsx)(
+                      "img",
+                      {
+                        className: j().RecipeComponentImage,
+                        src: `${l.r.IMG_URL}/items/${e}.png`,
+                      },
+                      a,
+                    ),
                   )
                 : [];
-            return o.createElement(
-              "div",
-              {
-                className: r
-                  ? (0, _.A)(u().GameItemDetails, u().IsNew)
-                  : (0, _.A)(u().GameItemDetails),
-              },
-              o.createElement("div", { className: u().ItemBorder }),
-              o.createElement(
-                "div",
-                { className: (0, _.A)(u().HeaderContainer) },
-                h > 0 &&
-                  o.createElement("div", {
-                    className: (0, _.A)(u().HeaderTierColor, v),
-                  }),
-                o.createElement(
-                  "div",
-                  { className: (0, _.A)(u().Header) },
-                  o.createElement("img", {
-                    className: u().ItemImage,
-                    src: `${l.r.IMG_URL}/items/${E}.png`,
-                  }),
-                  o.createElement(
-                    "div",
-                    { className: u().HeaderText },
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(
-                          u().ItemName,
-                          u().TitleFont,
-                          u().TitleExtraSmall,
-                        ),
-                      },
-                      d.name_loc,
-                    ),
-                    N > 0 &&
-                      o.createElement(
-                        "div",
-                        {
-                          className: (0, _.A)(
-                            u().GoldPrice,
-                            u().LabelFont,
-                            u().LabelMedium,
-                          ),
-                        },
-                        o.createElement("img", {
-                          className: u().GoldIcon,
-                          src: `${l.r.IMG_URL}/icons/gold.png`,
-                        }),
-                        N,
-                      ),
-                    h > 0 &&
-                      o.createElement(
-                        "div",
-                        { className: (0, _.A)(u().NeutralItemTier, v) },
-                        (0, n.Wn)("#neutral_item_tier", h),
-                      ),
-                  ),
-                ),
-              ),
-              r &&
-                o.createElement(
-                  "p",
-                  {
-                    className: (0, _.A)(
-                      u().NewBadge,
-                      u().LabelFont,
-                      u().LabelSmall,
-                    ),
-                  },
-                  (0, n.Wn)("#patchnotes_new_facet"),
-                ),
-              s &&
-                o.createElement(
-                  "p",
-                  {
-                    className: (0, _.A)(
-                      u().ReturningBadge,
-                      u().LabelFont,
-                      u().LabelSmall,
-                    ),
-                  },
-                  (0, n.Wn)("#patchnotes_returning_facet"),
-                ),
-              o.createElement(
-                "div",
-                { className: u().Body },
-                o.createElement("div", { className: u().Stats }, p),
-                g &&
-                  o.createElement(
-                    "div",
-                    { className: u().DescriptionContainer },
-                    o.createElement("div", {
-                      className: u().Description,
-                      dangerouslySetInnerHTML: { __html: g },
-                    }),
-                    (y || S || C) &&
-                      o.createElement(
-                        "div",
-                        { className: (0, _.A)(u().DescriptionHeader) },
-                        S &&
-                          o.createElement(
-                            "div",
-                            { className: u().ManaContainer },
-                            o.createElement("div", { className: u().ManaIcon }),
-                            o.createElement(
-                              "div",
-                              { className: u().ManaText },
-                              d.mana_costs.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, b.F)(e),
-                              ),
-                            ),
-                          ),
-                        C &&
-                          o.createElement(
-                            "div",
-                            { className: u().HealthContainer },
-                            o.createElement("div", {
-                              className: u().HealthIcon,
-                            }),
-                            o.createElement(
-                              "div",
-                              { className: u().HealthText },
-                              d.health_costs.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, b.F)(e),
-                              ),
-                            ),
-                          ),
-                        y &&
-                          o.createElement(
-                            "div",
-                            { className: u().CooldownContainer },
-                            o.createElement("div", {
-                              className: u().CooldownIcon,
-                              style: {
-                                backgroundImage: `url( ${l.r.IMG_URL}icons/cooldown.png )`,
-                              },
-                            }),
-                            o.createElement(
-                              "div",
-                              { className: u().CooldownText },
-                              d.cooldowns.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, b.F)(e),
-                              ),
-                            ),
-                          ),
-                      ),
-                  ),
-              ),
-              T.length > 0 &&
-                o.createElement(
-                  "div",
-                  { className: u().Recipe },
-                  o.createElement(
-                    "p",
-                    {
-                      className: (0, _.A)(
-                        u().RecipeLabel,
-                        u().LabelFont,
-                        u().LabelSmall,
-                        u().LightGrayText,
-                      ),
-                    },
-                    " ",
-                    (0, n.Wn)("#templatepage_recipe"),
-                    " ",
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: u().RecipeImagesContainer },
-                    T,
-                    t &&
-                      t > 0 &&
-                      o.createElement(
-                        "div",
-                        { className: u().RecipeCost },
-                        " + ",
-                        t,
-                        " ",
-                      ),
-                    t &&
-                      t > 0 &&
-                      o.createElement("img", {
-                        className: u().RecipeComponentImage,
-                        src: `${l.r.IMG_URL}/items/recipe.png`,
+            return (0, r.jsxs)("div", {
+              className: i
+                ? (0, m.A)(j().GameItemDetails, j().IsNew)
+                : (0, m.A)(j().GameItemDetails),
+              children: [
+                (0, r.jsx)("div", { className: j().ItemBorder }),
+                (0, r.jsxs)("div", {
+                  className: (0, m.A)(j().HeaderContainer),
+                  children: [
+                    u > 0 &&
+                      (0, r.jsx)("div", {
+                        className: (0, m.A)(j().HeaderTierColor, N),
                       }),
-                  ),
-                ),
-            );
+                    (0, r.jsxs)("div", {
+                      className: (0, m.A)(j().Header),
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: j().ItemImage,
+                          src: `${l.r.IMG_URL}/items/${p}.png`,
+                        }),
+                        (0, r.jsxs)("div", {
+                          className: j().HeaderText,
+                          children: [
+                            (0, r.jsx)("div", {
+                              className: (0, m.A)(
+                                j().ItemName,
+                                j().TitleFont,
+                                j().TitleExtraSmall,
+                              ),
+                              children: _.name_loc,
+                            }),
+                            x > 0 &&
+                              (0, r.jsxs)("div", {
+                                className: (0, m.A)(
+                                  j().GoldPrice,
+                                  j().LabelFont,
+                                  j().LabelMedium,
+                                ),
+                                children: [
+                                  (0, r.jsx)("img", {
+                                    className: j().GoldIcon,
+                                    src: `${l.r.IMG_URL}/icons/gold.png`,
+                                  }),
+                                  x,
+                                ],
+                              }),
+                            u > 0 &&
+                              (0, r.jsx)("div", {
+                                className: (0, m.A)(j().NeutralItemTier, N),
+                                children: (0, o.Wn)("#neutral_item_tier", u),
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                i &&
+                  (0, r.jsx)("p", {
+                    className: (0, m.A)(
+                      j().NewBadge,
+                      j().LabelFont,
+                      j().LabelSmall,
+                    ),
+                    children: (0, o.Wn)("#patchnotes_new_facet"),
+                  }),
+                n &&
+                  (0, r.jsx)("p", {
+                    className: (0, m.A)(
+                      j().ReturningBadge,
+                      j().LabelFont,
+                      j().LabelSmall,
+                    ),
+                    children: (0, o.Wn)("#patchnotes_returning_facet"),
+                  }),
+                (0, r.jsxs)("div", {
+                  className: j().Body,
+                  children: [
+                    (0, r.jsx)("div", { className: j().Stats, children: h }),
+                    g &&
+                      (0, r.jsxs)("div", {
+                        className: j().DescriptionContainer,
+                        children: [
+                          (0, r.jsx)("div", {
+                            className: j().Description,
+                            dangerouslySetInnerHTML: { __html: g },
+                          }),
+                          (v || y || S) &&
+                            (0, r.jsxs)("div", {
+                              className: (0, m.A)(j().DescriptionHeader),
+                              children: [
+                                y &&
+                                  (0, r.jsxs)("div", {
+                                    className: j().ManaContainer,
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: j().ManaIcon,
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        className: j().ManaText,
+                                        children: _.mana_costs.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, b.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                S &&
+                                  (0, r.jsxs)("div", {
+                                    className: j().HealthContainer,
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: j().HealthIcon,
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        className: j().HealthText,
+                                        children: _.health_costs.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, b.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                v &&
+                                  (0, r.jsxs)("div", {
+                                    className: j().CooldownContainer,
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: j().CooldownIcon,
+                                        style: {
+                                          backgroundImage: `url( ${l.r.IMG_URL}icons/cooldown.png )`,
+                                        },
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        className: j().CooldownText,
+                                        children: _.cooldowns.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, b.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                              ],
+                            }),
+                        ],
+                      }),
+                  ],
+                }),
+                C.length > 0 &&
+                  (0, r.jsxs)("div", {
+                    className: j().Recipe,
+                    children: [
+                      (0, r.jsxs)("p", {
+                        className: (0, m.A)(
+                          j().RecipeLabel,
+                          j().LabelFont,
+                          j().LabelSmall,
+                          j().LightGrayText,
+                        ),
+                        children: [" ", (0, o.Wn)("#templatepage_recipe"), " "],
+                      }),
+                      (0, r.jsxs)("div", {
+                        className: j().RecipeImagesContainer,
+                        children: [
+                          C,
+                          s &&
+                            s > 0 &&
+                            (0, r.jsxs)("div", {
+                              className: j().RecipeCost,
+                              children: [" + ", s, " "],
+                            }),
+                          s &&
+                            s > 0 &&
+                            (0, r.jsx)("img", {
+                              className: j().RecipeComponentImage,
+                              src: `${l.r.IMG_URL}/items/recipe.png`,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            });
           },
         ),
-        G = (e) =>
-          o.createElement(
-            "div",
-            { className: (0, _.A)(u().BugFix) },
-            o.createElement(
-              "p",
-              { className: (0, _.A)(u().BodyFont, u().BodyLarge) },
-              (0, n.Wn)(e.description),
-            ),
-          ),
-        x = ({
+        F = (e) =>
+          (0, r.jsx)("div", {
+            className: (0, m.A)(j().BugFix),
+            children: (0, r.jsx)("p", {
+              className: (0, m.A)(j().BodyFont, j().BodyLarge),
+              children: (0, o.Wn)(e.description),
+            }),
+          }),
+        M = ({
           index: e,
           video: a,
-          name: r,
+          name: s,
           heroname: i,
-          autoplay: n,
-          onSlideIn: s,
+          autoplay: t,
+          onSlideIn: o,
         }) => {
-          const m = (0, o.useContext)(h.Yc),
-            c = (0, o.useRef)(void 0);
+          const n = (0, c.useContext)(N.Yc),
+            d = (0, c.useRef)(void 0);
           return (
-            (0, o.useEffect)(() => {
+            (0, c.useEffect)(() => {
               function a() {
-                c && c.current && m.state.currentSlide == e
-                  ? c.current.play()
-                  : c && c.current && c.current.pause(),
-                  m.state.currentSlide == e && s(r, i);
+                d && d.current && n.state.currentSlide == e
+                  ? d.current.play()
+                  : d && d.current && d.current.pause(),
+                  n.state.currentSlide == e && o(s, i);
               }
-              return m.subscribe(a), () => m.unsubscribe(a);
-            }, [m, e, r, i, s]),
-            o.createElement(
-              "div",
-              { className: u().SlideContainer },
-              (function () {
-                const e = t(99769),
-                  a =
-                    -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
-                    -1 !=
-                      navigator.userAgent.toLowerCase().indexOf("macintosh");
-                return e || a;
-              })()
-                ? o.createElement("img", {
-                    className: u().TreasureVideo,
+              return n.subscribe(a), () => n.unsubscribe(a);
+            }, [n, e, s, i, o]),
+            (0, r.jsx)("div", {
+              className: j().SlideContainer,
+              children: f()
+                ? (0, r.jsx)("img", {
+                    className: j().TreasureVideo,
                     src: `${l.r.VIDEO_URL}/treasures_winter2025/${a}.png`,
                   })
-                : o.createElement(
-                    "video",
-                    {
-                      ref: c,
-                      className: u().TreasureVideo,
-                      muted: !0,
-                      autoPlay: n,
-                      preload: "auto",
-                      loop: !0,
-                      playsInline: !0,
-                      poster: `${l.r.VIDEO_URL}/treasures_winter2025/${a}.png`,
-                    },
-                    o.createElement("source", {
+                : (0, r.jsx)("video", {
+                    ref: d,
+                    className: j().TreasureVideo,
+                    muted: !0,
+                    autoPlay: t,
+                    preload: "auto",
+                    loop: !0,
+                    playsInline: !0,
+                    poster: `${l.r.VIDEO_URL}/treasures_winter2025/${a}.png`,
+                    children: (0, r.jsx)("source", {
                       type: "video/webm",
                       src: `${l.r.VIDEO_URL}/treasures_winter2025/${a}.webm`,
                     }),
-                  ),
-            )
+                  }),
+            })
           );
         },
-        F = (e) =>
-          o.createElement(
-            "div",
-            {
-              className: e
-                ? (0, _.A)(u().SectionDivider, e)
-                : (0, _.A)(u().SectionDivider),
-            },
-            o.createElement("div", {
-              className: (0, _.A)(u().ArrowPattern, u().Left),
-            }),
-            o.createElement("div", { className: u().CenterEmblem }),
-            o.createElement("div", {
-              className: (0, _.A)(u().ArrowPattern, u().Right),
-            }),
-            o.createElement("div", {
-              className: (0, _.A)(u().DarkEdge, u().Left),
-            }),
-            o.createElement("div", {
-              className: (0, _.A)(u().DarkEdge, u().Right),
-            }),
-          ),
-        M = () =>
-          o.createElement(
-            "div",
-            { className: u().SubsectionDivider },
-            o.createElement("div", { className: u().TopDash }),
-            o.createElement("div", { className: u().Background }),
-          ),
-        U = [
+        U = (e) =>
+          (0, r.jsxs)("div", {
+            className: e
+              ? (0, m.A)(j().SectionDivider, e)
+              : (0, m.A)(j().SectionDivider),
+            children: [
+              (0, r.jsx)("div", {
+                className: (0, m.A)(j().ArrowPattern, j().Left),
+              }),
+              (0, r.jsx)("div", { className: j().CenterEmblem }),
+              (0, r.jsx)("div", {
+                className: (0, m.A)(j().ArrowPattern, j().Right),
+              }),
+              (0, r.jsx)("div", {
+                className: (0, m.A)(j().DarkEdge, j().Left),
+              }),
+              (0, r.jsx)("div", {
+                className: (0, m.A)(j().DarkEdge, j().Right),
+              }),
+            ],
+          }),
+        E = () =>
+          (0, r.jsxs)("div", {
+            className: j().SubsectionDivider,
+            children: [
+              (0, r.jsx)("div", { className: j().TopDash }),
+              (0, r.jsx)("div", { className: j().Background }),
+            ],
+          }),
+        P = [
           {
             abilityId: 1659,
             posterDir: "abilities/largo/largo_catchy_lick.jpg",
@@ -923,13 +907,13 @@
             hotKey: "R",
           },
         ];
-      let P = class extends o.Component {
-        parallaxContainerRef = o.createRef();
-        videoRef = o.createRef();
-        navbarRef = o.createRef();
-        newHeroRef = o.createRef();
-        gameplayRef = o.createRef();
-        treasureRef = o.createRef();
+      let V = class extends c.Component {
+        parallaxContainerRef = c.createRef();
+        videoRef = c.createRef();
+        navbarRef = c.createRef();
+        newHeroRef = c.createRef();
+        gameplayRef = c.createRef();
+        treasureRef = c.createRef();
         constructor(e) {
           super(e),
             (this.state = {
@@ -952,10 +936,10 @@
               a > 0 ? "hidden" : "visible"),
             I().refresh();
         };
-        remapValue(e, a, t, r, l) {
-          return r + ((l - r) * (e - a)) / (t - a);
+        remapValue(e, a, s, i, r) {
+          return i + ((r - i) * (e - a)) / (s - a);
         }
-        clamp = (e, a, t) => Math.min(Math.max(e, a), t);
+        clamp = (e, a, s) => Math.min(Math.max(e, a), s);
         componentDidMount() {
           window.addEventListener("scroll", this.handleScroll),
             this.handleScroll(void 0);
@@ -968,10 +952,10 @@
           let a = e.desc_loc;
           return (
             e.special_values.forEach((e) => {
-              let t =
+              let s =
                 e.values_float.length > 0 ? (0, b.F)(e.values_float[0]) : "0";
-              (a = a.replace("%" + e.name + "%", t)),
-                (a = a.replace("%" + e.name.toLowerCase() + "%", t));
+              (a = a.replace("%" + e.name + "%", s)),
+                (a = a.replace("%" + e.name.toLowerCase() + "%", s));
             }),
             (a = a.replace(/\%\%/g, "%")),
             (a = a.replace(/<h2>/g, "<b>")),
@@ -979,1552 +963,1510 @@
             (a = a.replace(/<h1>/g, "<b>")),
             (a = a.replace(/<\/h1>/g, "</b>\n\n")),
             (a = a.replace(/\n\n/g, " ")),
-            (0, n.Wn)(a)
+            (0, o.Wn)(a)
           );
         }
         render() {
-          const e = d.o.getPatchNotes("7.40", l.r.LANGUAGE),
-            a = i.B5.Get().getHeroData(155);
-          let t = (0, c.ww)((0, c.sf)(l.r.LANGUAGE));
-          "zh-cn" === t ? (t = "zh-Hans") : "zh-tw" === t && (t = "zh-Hant");
-          let r = "largo_logo_en";
+          const e = g.o.getPatchNotes("7.40", l.r.LANGUAGE),
+            a = t.B5.Get().getHeroData(155);
+          let s = (0, _.ww)((0, _.sf)(l.r.LANGUAGE));
+          "zh-cn" === s ? (s = "zh-Hans") : "zh-tw" === s && (s = "zh-Hant");
+          let i = "largo_logo_en";
           return (
-            "schinese" == l.r.LANGUAGE && (r = "largo_logo_cn"),
-            o.createElement(
-              "div",
-              { id: "Largo", className: u().Largo },
-              o.createElement(
-                "div",
-                {
-                  className: (0, _.A)(
-                    u().TrailerContainer,
-                    this.state.bPlayingVideo ? null : u().Hidden,
+            "schinese" == l.r.LANGUAGE && (i = "largo_logo_cn"),
+            (0, r.jsxs)("div", {
+              id: "Largo",
+              className: j().Largo,
+              children: [
+                (0, r.jsxs)("div", {
+                  className: (0, m.A)(
+                    j().TrailerContainer,
+                    this.state.bPlayingVideo ? null : j().Hidden,
                   ),
-                },
-                o.createElement(
-                  "video",
-                  {
-                    ref: this.videoRef,
-                    className: (0, _.A)(u().TrailerVideo),
-                    poster: `${l.r.VIDEO_URL}/largo/largo_trailer_poster.jpg`,
-                    autoPlay: !1,
-                    preload: "none",
-                    muted: !1,
-                    loop: !1,
-                    playsInline: !1,
-                    controls: !0,
-                    crossOrigin: "anonymous",
-                  },
-                  o.createElement("source", {
-                    type: "video/mp4",
-                    src: `${l.r.VIDEO_URL}/largo/largo_trailer.mp4`,
-                  }),
-                ),
-                o.createElement(
-                  "div",
-                  {
-                    className: u().CloseButton,
-                    onClick: () => this.setPlayingVideo(!1),
-                  },
-                  o.createElement("img", {
-                    className: u().CloseButtonImage,
-                    src: `${l.r.IMG_URL}/close.png`,
-                  }),
-                ),
-              ),
-              o.createElement(
-                m.mg,
-                null,
-                o.createElement(
-                  "title",
-                  null,
-                  (0, n.Wn)("#largo_website_title"),
-                ),
-              ),
-              o.createElement(
-                "div",
-                {
-                  ref: this.parallaxContainerRef,
-                  className: (0, _.A)(u().PageContainer, u().Parallax),
-                },
-                o.createElement(g.A, { bOverlapping: !0 }),
-                o.createElement(
-                  "div",
-                  { ref: this.navbarRef, className: u().AnchorNavigation },
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, _.A)(
-                        u().AnchorLink,
-                        u().LabelFont,
-                        u().LabelMedium,
-                      ),
-                      onClick: () => this.scrollToTarget(this.newHeroRef),
-                    },
-                    (0, n.Wn)("#largo_archor_new_hero"),
-                  ),
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, _.A)(
-                        u().AnchorLink,
-                        u().LabelFont,
-                        u().LabelMedium,
-                      ),
-                      onClick: () => this.scrollToTarget(this.treasureRef),
-                    },
-                    (0, n.Wn)("#largo_archor_new_treasure"),
-                  ),
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, _.A)(
-                        u().AnchorLink,
-                        u().LabelFont,
-                        u().LabelMedium,
-                      ),
-                      onClick: () => this.scrollToTarget(this.gameplayRef),
-                    },
-                    (0, n.Wn)("#largo_archor_new_gameplay"),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  {
-                    id: "HeaderSection",
-                    className: (0, _.A)(u().WebsiteSection, u().HeaderSection),
-                  },
-                  o.createElement(f, {
-                    video: "largo/largo_header_loop.webm",
-                    image: "largo/largo_header.jpg",
-                    additionalClassName: u().LargoHeaderImage,
-                  }),
-                  o.createElement("div", { className: u().HeaderTopGradient }),
-                  o.createElement(
-                    "div",
-                    {
-                      ref: this.newHeroRef,
-                      className: u().WebsiteSectionInner,
-                    },
-                    o.createElement(f, {
-                      image: "largo/foliage.png",
-                      additionalClassName: u().LargoHeaderFoliageImage,
+                  children: [
+                    (0, r.jsx)("video", {
+                      ref: this.videoRef,
+                      className: (0, m.A)(j().TrailerVideo),
+                      poster: `${l.r.VIDEO_URL}/largo/largo_trailer_poster.jpg`,
+                      autoPlay: !1,
+                      preload: "none",
+                      muted: !1,
+                      loop: !1,
+                      playsInline: !1,
+                      controls: !0,
+                      crossOrigin: "anonymous",
+                      children: (0, r.jsx)("source", {
+                        type: "video/mp4",
+                        src: `${l.r.VIDEO_URL}/largo/largo_trailer.mp4`,
+                      }),
                     }),
-                    o.createElement(
-                      "div",
-                      { className: u().WebsiteSectionHeader },
-                      o.createElement(
-                        "div",
-                        { className: u().UpdateSummary },
-                        o.createElement(
-                          "h1",
-                          {
-                            className: (0, _.A)(u().TitleFont, u().TitleSmall),
-                          },
-                          (0, n.Wn)("#largo_website_subtitle"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().DisplayFont,
-                              u().DisplaySmall,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_website_summary"),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: (0, _.A)(u().LogoContainer) },
-                        o.createElement("img", {
-                          className: u().LogoImage,
-                          src: `${l.r.IMG_URL}/largo/${r}.png`,
-                        }),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().HeroRolesContainer },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().HeroRole,
-                              u().LabelFont,
-                              u().LabelLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_attack_type_melee"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().HeroRole,
-                              u().LabelFont,
-                              u().LabelLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_durable"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().HeroRole,
-                              u().LabelFont,
-                              u().LabelLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_disabler"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().HeroRole,
-                              u().LabelFont,
-                              u().LabelLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_support"),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().HeroAttributesContainer },
-                        o.createElement("div", {
-                          className: (0, _.A)(
-                            u().HeroAttributeIcon,
-                            u().Strength,
-                          ),
-                        }),
-                        o.createElement("div", {
-                          className: (0, _.A)(
-                            u().HeroComplexityIcon,
-                            u().Filled,
-                          ),
-                        }),
-                        o.createElement("div", {
-                          className: (0, _.A)(
-                            u().HeroComplexityIcon,
-                            u().Filled,
-                          ),
-                        }),
-                        o.createElement("div", {
-                          className: (0, _.A)(u().HeroComplexityIcon),
-                        }),
-                      ),
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().WebsiteIntro,
-                            u().DisplayFont,
-                            u().DisplaySmall,
-                            u().LightGrayText,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_website_introduction"),
-                      ),
-                      o.createElement(
-                        "div",
-                        {
-                          className: u().StandardButton,
-                          onClick: () => this.setPlayingVideo(!0),
-                        },
-                        o.createElement(
-                          "div",
-                          { className: u().ButtonText },
-                          (0, n.Wn)("#play_trailer"),
-                        ),
-                        o.createElement(R, null),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(
-                          u().ActionTextImageBlock,
-                          u().ComicContainer,
-                        ),
-                      },
-                      o.createElement(
-                        "div",
-                        { className: (0, _.A)(u().ComicCoverImageContainer) },
-                        o.createElement(f, {
-                          image: "largo/largo_comic_cover.png",
-                          additionalClassName: u().ComicCoverImage,
-                        }),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().TextBlock },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockLabel,
-                              u().LabelFont,
-                              u().LabelMedium,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_comic_label"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockTitle,
-                              u().DisplayFont,
-                              u().DisplayLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_comic_title"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockDescription,
-                              u().BodyFont,
-                              u().BodyLarge,
-                              u().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_comic_description"),
-                        ),
-                        o.createElement(
-                          v.N_,
-                          { to: S.J.largo_comic(), target: "_blank" },
-                          o.createElement(
-                            "div",
-                            { className: u().StandardButton },
-                            o.createElement(
-                              "div",
-                              { className: u().ButtonText },
-                              (0, n.Wn)("#comics_view_comic"),
-                            ),
-                            o.createElement(y.U, null),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                F(),
-                o.createElement(
-                  "div",
-                  { className: u().AbilitySection },
-                  o.createElement(
-                    h.gi,
-                    {
-                      className: u().AbilityCarousel,
-                      naturalSlideWidth: 100,
-                      naturalSlideHeight: 56.25,
-                      totalSlides: U.length,
-                    },
-                    o.createElement(
-                      h.Ap,
-                      { className: u().AbilitySlider },
-                      U.map((e, t) =>
-                        o.createElement(
-                          h.q7,
-                          {
-                            className: u().AbilitySlide,
-                            key: `HeroAbilitySlide-${t}`,
-                            index: t,
-                          },
-                          o.createElement(
-                            "video",
-                            {
-                              className: u().AbilityVideo,
-                              autoPlay: !0,
-                              preload: "auto",
-                              muted: !0,
-                              loop: !0,
-                              playsInline: !0,
-                              poster: `${l.r.VIDEO_URL}/${e.posterDir}`,
-                            },
-                            e.videoSrcWebm &&
-                              o.createElement("source", {
-                                type: "video/webm",
-                                src: `${l.r.VIDEO_URL}/${e.videoSrcWebm}`,
-                              }),
-                            e.videoSrcMp4 &&
-                              o.createElement("source", {
-                                type: "video/mp4",
-                                src: `${l.r.VIDEO_URL}/${e.videoSrcMp4}`,
-                              }),
-                          ),
-                          o.createElement(
-                            "div",
-                            { className: u().SlideAbilityInfoContainer },
-                            o.createElement(
-                              "div",
-                              { className: u().AbilityText },
-                              o.createElement(
-                                "div",
-                                {
-                                  className: (0, _.A)(
-                                    u().AbilityName,
-                                    u().TitleFont,
-                                    u().TitleSmall,
-                                  ),
-                                },
-                                a?.abilities.find((a) => a.id == e.abilityId)
-                                  .name_loc,
-                              ),
-                              o.createElement(
-                                "div",
-                                {
-                                  className: (0, _.A)(
-                                    u().AbilityDesc,
-                                    u().BodyFont,
-                                    u().BodyMedium,
-                                  ),
-                                },
-                                this.convertAbilityDesc(
-                                  a?.abilities.find((a) => a.id == e.abilityId),
-                                ),
-                              ),
-                              3 == t &&
-                                o.createElement(
-                                  "div",
-                                  { className: u().UltimateAbilitiesContainer },
-                                  o.createElement(C.cT, {
-                                    heroData: a,
-                                    abilityData: a?.abilities.find(
-                                      (e) => 1663 == e.id,
-                                    ),
-                                    bShowVideo: !1,
-                                    abilityHotKey: "Q",
-                                    additionalClassName: u().HeroesAbility,
-                                    abilityType: u().Active,
-                                    tooltipFlipped: !0,
-                                  }),
-                                  o.createElement(C.cT, {
-                                    heroData: a,
-                                    abilityData: a?.abilities.find(
-                                      (e) => 1664 == e.id,
-                                    ),
-                                    bShowVideo: !1,
-                                    abilityHotKey: "W",
-                                    additionalClassName: u().HeroesAbility,
-                                    abilityType: u().Active,
-                                    tooltipFlipped: !0,
-                                  }),
-                                  o.createElement(C.cT, {
-                                    heroData: a,
-                                    abilityData: a?.abilities.find(
-                                      (e) => 1665 == e.id,
-                                    ),
-                                    bShowVideo: !1,
-                                    abilityHotKey: "E",
-                                    additionalClassName: u().HeroesAbility,
-                                    abilityType: u().Active,
-                                    tooltipFlipped: !0,
-                                  }),
-                                ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: u().CarouselDotsSection },
-                      o.createElement(
-                        "div",
-                        { className: u().CarouselDotsContainer },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().CarouselDotsHeading,
-                              u().LabelFont,
-                              u().LabelLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_abilities"),
-                        ),
-                        o.createElement(
-                          "div",
-                          { className: (0, _.A)(u().CarouselDots) },
-                          U.map((e, t) =>
-                            o.createElement(
-                              h.cL,
-                              {
-                                key: `HeroAbilityDot-${t}`,
-                                slide: t,
-                                className: u().AbilitySelectorDot,
-                              },
-                              o.createElement(C.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (a) => a.id == e.abilityId,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: e.hotKey,
-                                additionalClassName: u().HeroesAbility,
-                                abilityType: u().Active,
-                              }),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  {
-                    className: (0, _.A)(
-                      u().WebsiteSection,
-                      u().WallpaperSection,
-                    ),
-                  },
-                  o.createElement("div", {
-                    className: u().WallpaperBackground,
+                    (0, r.jsx)("div", {
+                      className: j().CloseButton,
+                      onClick: () => this.setPlayingVideo(!1),
+                      children: (0, r.jsx)("img", {
+                        className: j().CloseButtonImage,
+                        src: `${l.r.IMG_URL}/close.png`,
+                      }),
+                    }),
+                  ],
+                }),
+                (0, r.jsx)(d.mg, {
+                  children: (0, r.jsx)("title", {
+                    children: (0, o.Wn)("#largo_website_title"),
                   }),
-                  o.createElement(
-                    "div",
-                    { className: u().WebsiteSectionInner },
-                    o.createElement(
-                      "div",
-                      { className: u().WebsiteSectionHeader },
-                      o.createElement("img", {
-                        className: u().LargoEmblem,
-                        src: `${l.r.IMG_URL}/largo/largo_emblem.png`,
+                }),
+                (0, r.jsxs)("div", {
+                  ref: this.parallaxContainerRef,
+                  className: (0, m.A)(j().PageContainer, j().Parallax),
+                  children: [
+                    (0, r.jsx)(h.A, { bOverlapping: !0 }),
+                    (0, r.jsxs)("div", {
+                      ref: this.navbarRef,
+                      className: j().AnchorNavigation,
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: (0, m.A)(
+                            j().AnchorLink,
+                            j().LabelFont,
+                            j().LabelMedium,
+                          ),
+                          onClick: () => this.scrollToTarget(this.newHeroRef),
+                          children: (0, o.Wn)("#largo_archor_new_hero"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: (0, m.A)(
+                            j().AnchorLink,
+                            j().LabelFont,
+                            j().LabelMedium,
+                          ),
+                          onClick: () => this.scrollToTarget(this.treasureRef),
+                          children: (0, o.Wn)("#largo_archor_new_treasure"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: (0, m.A)(
+                            j().AnchorLink,
+                            j().LabelFont,
+                            j().LabelMedium,
+                          ),
+                          onClick: () => this.scrollToTarget(this.gameplayRef),
+                          children: (0, o.Wn)("#largo_archor_new_gameplay"),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("div", {
+                      id: "HeaderSection",
+                      className: (0, m.A)(
+                        j().WebsiteSection,
+                        j().HeaderSection,
+                      ),
+                      children: [
+                        (0, r.jsx)(D, {
+                          video: "largo/largo_header_loop.webm",
+                          image: "largo/largo_header.jpg",
+                          additionalClassName: j().LargoHeaderImage,
+                        }),
+                        (0, r.jsx)("div", { className: j().HeaderTopGradient }),
+                        (0, r.jsxs)("div", {
+                          ref: this.newHeroRef,
+                          className: j().WebsiteSectionInner,
+                          children: [
+                            (0, r.jsx)(D, {
+                              image: "largo/foliage.png",
+                              additionalClassName: j().LargoHeaderFoliageImage,
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: j().WebsiteSectionHeader,
+                              children: [
+                                (0, r.jsxs)("div", {
+                                  className: j().UpdateSummary,
+                                  children: [
+                                    (0, r.jsx)("h1", {
+                                      className: (0, m.A)(
+                                        j().TitleFont,
+                                        j().TitleSmall,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_website_subtitle",
+                                      ),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().DisplayFont,
+                                        j().DisplaySmall,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_website_summary",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsx)("div", {
+                                  className: (0, m.A)(j().LogoContainer),
+                                  children: (0, r.jsx)("img", {
+                                    className: j().LogoImage,
+                                    src: `${l.r.IMG_URL}/largo/${i}.png`,
+                                  }),
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().HeroRolesContainer,
+                                  children: [
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().LabelFont,
+                                        j().LabelLarge,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#hero_attack_type_melee",
+                                      ),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().LabelFont,
+                                        j().LabelLarge,
+                                      ),
+                                      children: (0, o.Wn)("#hero_durable"),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().LabelFont,
+                                        j().LabelLarge,
+                                      ),
+                                      children: (0, o.Wn)("#hero_disabler"),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().LabelFont,
+                                        j().LabelLarge,
+                                      ),
+                                      children: (0, o.Wn)("#hero_support"),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().HeroAttributesContainer,
+                                  children: [
+                                    (0, r.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroAttributeIcon,
+                                        j().Strength,
+                                      ),
+                                    }),
+                                    (0, r.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroComplexityIcon,
+                                        j().Filled,
+                                      ),
+                                    }),
+                                    (0, r.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroComplexityIcon,
+                                        j().Filled,
+                                      ),
+                                    }),
+                                    (0, r.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroComplexityIcon,
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().WebsiteIntro,
+                                    j().DisplayFont,
+                                    j().DisplaySmall,
+                                    j().LightGrayText,
+                                  ),
+                                  children: (0, o.Wn)(
+                                    "#largo_website_introduction",
+                                  ),
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().StandardButton,
+                                  onClick: () => this.setPlayingVideo(!0),
+                                  children: [
+                                    (0, r.jsx)("div", {
+                                      className: j().ButtonText,
+                                      children: (0, o.Wn)("#play_trailer"),
+                                    }),
+                                    (0, r.jsx)(R, {}),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: (0, m.A)(
+                                j().ActionTextImageBlock,
+                                j().ComicContainer,
+                              ),
+                              children: [
+                                (0, r.jsx)("div", {
+                                  className: (0, m.A)(
+                                    j().ComicCoverImageContainer,
+                                  ),
+                                  children: (0, r.jsx)(D, {
+                                    image: "largo/largo_comic_cover.png",
+                                    additionalClassName: j().ComicCoverImage,
+                                  }),
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockLabel,
+                                        j().LabelFont,
+                                        j().LabelMedium,
+                                      ),
+                                      children: (0, o.Wn)("#largo_comic_label"),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockTitle,
+                                        j().DisplayFont,
+                                        j().DisplayLarge,
+                                      ),
+                                      children: (0, o.Wn)("#largo_comic_title"),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_comic_description",
+                                      ),
+                                    }),
+                                    (0, r.jsx)(v.N_, {
+                                      to: S.J.largo_comic(),
+                                      target: "_blank",
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().StandardButton,
+                                        children: [
+                                          (0, r.jsx)("div", {
+                                            className: j().ButtonText,
+                                            children: (0, o.Wn)(
+                                              "#comics_view_comic",
+                                            ),
+                                          }),
+                                          (0, r.jsx)(y.U, {}),
+                                        ],
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    U(),
+                    (0, r.jsx)("div", {
+                      className: j().AbilitySection,
+                      children: (0, r.jsxs)(N.gi, {
+                        className: j().AbilityCarousel,
+                        naturalSlideWidth: 100,
+                        naturalSlideHeight: 56.25,
+                        totalSlides: P.length,
+                        children: [
+                          (0, r.jsx)(N.Ap, {
+                            className: j().AbilitySlider,
+                            children: P.map((e, s) =>
+                              (0, r.jsxs)(
+                                N.q7,
+                                {
+                                  className: j().AbilitySlide,
+                                  index: s,
+                                  children: [
+                                    (0, r.jsxs)("video", {
+                                      className: j().AbilityVideo,
+                                      autoPlay: !0,
+                                      preload: "auto",
+                                      muted: !0,
+                                      loop: !0,
+                                      playsInline: !0,
+                                      poster: `${l.r.VIDEO_URL}/${e.posterDir}`,
+                                      children: [
+                                        e.videoSrcWebm &&
+                                          (0, r.jsx)("source", {
+                                            type: "video/webm",
+                                            src: `${l.r.VIDEO_URL}/${e.videoSrcWebm}`,
+                                          }),
+                                        e.videoSrcMp4 &&
+                                          (0, r.jsx)("source", {
+                                            type: "video/mp4",
+                                            src: `${l.r.VIDEO_URL}/${e.videoSrcMp4}`,
+                                          }),
+                                      ],
+                                    }),
+                                    (0, r.jsx)("div", {
+                                      className: j().SlideAbilityInfoContainer,
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().AbilityText,
+                                        children: [
+                                          (0, r.jsx)("div", {
+                                            className: (0, m.A)(
+                                              j().AbilityName,
+                                              j().TitleFont,
+                                              j().TitleSmall,
+                                            ),
+                                            children: a?.abilities.find(
+                                              (a) => a.id == e.abilityId,
+                                            ).name_loc,
+                                          }),
+                                          (0, r.jsx)("div", {
+                                            className: (0, m.A)(
+                                              j().AbilityDesc,
+                                              j().BodyFont,
+                                              j().BodyMedium,
+                                            ),
+                                            children: this.convertAbilityDesc(
+                                              a?.abilities.find(
+                                                (a) => a.id == e.abilityId,
+                                              ),
+                                            ),
+                                          }),
+                                          3 == s &&
+                                            (0, r.jsxs)("div", {
+                                              className:
+                                                j().UltimateAbilitiesContainer,
+                                              children: [
+                                                (0, r.jsx)(C.cT, {
+                                                  heroData: a,
+                                                  abilityData:
+                                                    a?.abilities.find(
+                                                      (e) => 1663 == e.id,
+                                                    ),
+                                                  bShowVideo: !1,
+                                                  abilityHotKey: "Q",
+                                                  additionalClassName:
+                                                    j().HeroesAbility,
+                                                  abilityType: j().Active,
+                                                  tooltipFlipped: !0,
+                                                }),
+                                                (0, r.jsx)(C.cT, {
+                                                  heroData: a,
+                                                  abilityData:
+                                                    a?.abilities.find(
+                                                      (e) => 1664 == e.id,
+                                                    ),
+                                                  bShowVideo: !1,
+                                                  abilityHotKey: "W",
+                                                  additionalClassName:
+                                                    j().HeroesAbility,
+                                                  abilityType: j().Active,
+                                                  tooltipFlipped: !0,
+                                                }),
+                                                (0, r.jsx)(C.cT, {
+                                                  heroData: a,
+                                                  abilityData:
+                                                    a?.abilities.find(
+                                                      (e) => 1665 == e.id,
+                                                    ),
+                                                  bShowVideo: !1,
+                                                  abilityHotKey: "E",
+                                                  additionalClassName:
+                                                    j().HeroesAbility,
+                                                  abilityType: j().Active,
+                                                  tooltipFlipped: !0,
+                                                }),
+                                              ],
+                                            }),
+                                        ],
+                                      }),
+                                    }),
+                                  ],
+                                },
+                                `HeroAbilitySlide-${s}`,
+                              ),
+                            ),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: j().CarouselDotsSection,
+                            children: (0, r.jsxs)("div", {
+                              className: j().CarouselDotsContainer,
+                              children: [
+                                (0, r.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().CarouselDotsHeading,
+                                    j().LabelFont,
+                                    j().LabelLarge,
+                                  ),
+                                  children: (0, o.Wn)("#hero_abilities"),
+                                }),
+                                (0, r.jsx)("div", {
+                                  className: (0, m.A)(j().CarouselDots),
+                                  children: P.map((e, s) =>
+                                    (0, r.jsx)(
+                                      N.cL,
+                                      {
+                                        slide: s,
+                                        className: j().AbilitySelectorDot,
+                                        children: (0, r.jsx)(C.cT, {
+                                          heroData: a,
+                                          abilityData: a?.abilities.find(
+                                            (a) => a.id == e.abilityId,
+                                          ),
+                                          bShowVideo: !1,
+                                          abilityHotKey: e.hotKey,
+                                          additionalClassName:
+                                            j().HeroesAbility,
+                                          abilityType: j().Active,
+                                        }),
+                                      },
+                                      `HeroAbilityDot-${s}`,
+                                    ),
+                                  ),
+                                }),
+                              ],
+                            }),
+                          }),
+                        ],
                       }),
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().SectionHeaderLabel,
-                            u().LabelFont,
-                            u().LabelMedium,
-                            u().LightGrayText,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_hero_name"),
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: (0, m.A)(
+                        j().WebsiteSection,
+                        j().WallpaperSection,
                       ),
-                      o.createElement(
-                        "h2",
-                        {
-                          className: (0, _.A)(
-                            u().SectionHeaderTitle,
-                            u().TitleFont,
-                            u().TitleLarge,
-                          ),
-                        },
-                        (0, n.Wn)("#wallpapers"),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: u().Wallpapers },
-                      o.createElement(
-                        "div",
-                        { className: u().WallpaperGroup },
-                        o.createElement(
-                          "a",
-                          {
-                            href: `${l.r.IMG_URL}/largo/largo_wallpaper_1_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          o.createElement(
-                            "div",
-                            { className: u().Wallpaper },
-                            o.createElement("img", {
-                              src: `${l.r.IMG_URL}/largo/largo_wallpaper_1_desktop_thumbnail.jpg`,
-                            }),
-                            o.createElement(w, null),
-                          ),
-                        ),
-                        o.createElement(
-                          "a",
-                          {
-                            href: `${l.r.IMG_URL}/largo/largo_wallpaper_1_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          o.createElement(
-                            "div",
-                            { className: u().Wallpaper },
-                            o.createElement("img", {
-                              src: `${l.r.IMG_URL}/largo/largo_wallpaper_1_mobile_thumbnail.jpg`,
-                            }),
-                            o.createElement(w, null),
-                          ),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().WallpaperGroup },
-                        o.createElement(
-                          "a",
-                          {
-                            href: `${l.r.IMG_URL}/largo/largo_wallpaper_2_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          o.createElement(
-                            "div",
-                            { className: u().Wallpaper },
-                            o.createElement("img", {
-                              src: `${l.r.IMG_URL}/largo/largo_wallpaper_2_desktop_thumbnail.jpg`,
-                            }),
-                            o.createElement(w, null),
-                          ),
-                        ),
-                        o.createElement(
-                          "a",
-                          {
-                            href: `${l.r.IMG_URL}/largo/largo_wallpaper_2_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          o.createElement(
-                            "div",
-                            { className: u().Wallpaper },
-                            o.createElement("img", {
-                              src: `${l.r.IMG_URL}/largo/largo_wallpaper_2_mobile_thumbnail.jpg`,
-                            }),
-                            o.createElement(w, null),
-                          ),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().WallpaperGroup },
-                        o.createElement(
-                          "a",
-                          {
-                            href: `${l.r.IMG_URL}/largo/largo_wallpaper_3_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          o.createElement(
-                            "div",
-                            { className: u().Wallpaper },
-                            o.createElement("img", {
-                              src: `${l.r.IMG_URL}/largo/largo_wallpaper_3_desktop_thumbnail.jpg`,
-                            }),
-                            o.createElement(w, null),
-                          ),
-                        ),
-                        o.createElement(
-                          "a",
-                          {
-                            href: `${l.r.IMG_URL}/largo/largo_wallpaper_3_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          o.createElement(
-                            "div",
-                            { className: u().Wallpaper },
-                            o.createElement("img", {
-                              src: `${l.r.IMG_URL}/largo/largo_wallpaper_3_mobile_thumbnail.jpg`,
-                            }),
-                            o.createElement(w, null),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  {
-                    id: "HeroDetailsSection",
-                    className: (0, _.A)(u().HeroDetailsSection),
-                  },
-                  o.createElement(
-                    "div",
-                    { className: u().HeroDetailsSectionInner },
-                    o.createElement(
-                      "div",
-                      { className: u().TextBlock },
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().BlockTitle,
-                            u().TitleFont,
-                            u().TitleSmall,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_herodetails_section_subheader"),
-                      ),
-                      o.createElement(
-                        v.N_,
-                        { to: S.J.hero("largo") },
-                        o.createElement(
-                          "div",
-                          { className: u().StandardButton },
-                          o.createElement(
-                            "div",
-                            { className: u().ButtonText },
-                            (0, n.Wn)("#view_hero_detail_page"),
-                          ),
-                          o.createElement(y.U, null),
-                        ),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: u().HeroImageContainer },
-                      o.createElement("img", {
-                        className: u().HeroImage,
-                        src: `${l.r.IMG_URL}/heroes/crops/largo.png`,
-                      }),
-                    ),
-                  ),
-                ),
-                F(),
-                o.createElement(
-                  "div",
-                  {
-                    ref: this.treasureRef,
-                    id: "TreasureSection",
-                    className: (0, _.A)(
-                      u().WebsiteSection,
-                      u().TreasureSection,
-                    ),
-                  },
-                  o.createElement(
-                    "div",
-                    { className: u().WebsiteSectionInner },
-                    o.createElement(
-                      "div",
-                      { className: u().WebsiteSectionHeader },
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().SectionHeaderLabel,
-                            u().LabelFont,
-                            u().LabelMedium,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_treasure_section_label"),
-                      ),
-                      o.createElement(
-                        "h2",
-                        {
-                          className: (0, _.A)(
-                            u().SectionHeaderTitle,
-                            u().TitleFont,
-                            u().TitleExtraLarge,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_treasure_section_title"),
-                      ),
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().WebsiteDescription,
-                            u().DisplayFont,
-                            u().DisplaySmall,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_treasure_section_introduction"),
-                      ),
-                    ),
-                    o.createElement(
-                      h.gi,
-                      {
-                        className: u().TreasureCarousel,
-                        naturalSlideWidth: 600,
-                        naturalSlideHeight: 960,
-                        totalSlides: 9,
-                        currentSlide: 8,
-                        infinite: !0,
-                        touchEnabled: !0,
-                        dragEnabled: !1,
-                      },
-                      o.createElement(
-                        h.Ap,
-                        { className: u().TreasureSlider },
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 0,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 0,
-                            video: "set_shadowfiend",
-                            name: "#largo_treasure_hero_shadow_fiend_set",
-                            heroname: "#largo_treasure_hero_shadow_fiend",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 1,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 1,
-                            video: "set_primal_beast",
-                            name: "#largo_treasure_hero_primal_beast_set",
-                            heroname: "#largo_treasure_hero_primal_beast",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 2,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 2,
-                            video: "set_broodmother",
-                            name: "#largo_treasure_hero_broodmother_set",
-                            heroname: "#largo_treasure_hero_broodmother",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 3,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 3,
-                            video: "set_enigma",
-                            name: "#largo_treasure_hero_enigma_set",
-                            heroname: "#largo_treasure_hero_enigma",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 4,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 4,
-                            video: "set_ringmaster",
-                            name: "#largo_treasure_hero_ringmaster_set",
-                            heroname: "#largo_treasure_hero_ringmaster",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 5,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 5,
-                            video: "set_morphling",
-                            name: "#largo_treasure_hero_morphling_set",
-                            heroname: "#largo_treasure_hero_morphling",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 6,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 6,
-                            video: "set_silencer",
-                            name: "#largo_treasure_hero_silencer_set",
-                            heroname: "#largo_treasure_hero_silencer",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 7,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 7,
-                            video: "set_centaur",
-                            name: "#largo_treasure_hero_centaur_warrunner_set",
-                            heroname: "#largo_treasure_hero_centaur_warrunner",
-                            autoplay: !1,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                        o.createElement(
-                          h.q7,
-                          {
-                            index: 8,
-                            className: u().TreasureSlide,
-                            innerClassName: u().TreasureInnerSlide,
-                            classNameHidden: u().TreasureSlideHidden,
-                          },
-                          o.createElement(x, {
-                            index: 8,
-                            video: "set_tiny",
-                            name: "#largo_treasure_hero_tiny_set",
-                            heroname: "#largo_treasure_hero_tiny",
-                            autoplay: !0,
-                            onSlideIn: (e, a) => {
-                              this.setState({ treasureName: e, heroName: a });
-                            },
-                          }),
-                        ),
-                      ),
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().HeroName,
-                            u().LabelFont,
-                            u().LabelSmall,
-                          ),
-                        },
-                        (0, n.Wn)(this.state.heroName),
-                      ),
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().TreasureName,
-                            u().DisplayFont,
-                            u().DisplaySmall,
-                          ),
-                        },
-                        (0, n.Wn)(this.state.treasureName),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().CarouselDots },
-                        o.createElement(
-                          h._X,
-                          {
-                            className: (0, _.A)(
-                              u().TreasurePaginationButton,
-                              u().Prev,
-                            ),
-                          },
-                          o.createElement("div", { className: u().PrevArrow }),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 0 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 1 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 2 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 3 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 4 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 5 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 6 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 7 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.cL,
-                          { className: u().TreasureSelector, slide: 8 },
-                          o.createElement("div", null),
-                        ),
-                        o.createElement(
-                          h.CC,
-                          {
-                            className: (0, _.A)(
-                              u().TreasurePaginationButton,
-                              u().Next,
-                            ),
-                          },
-                          o.createElement("div", { className: u().NextArrow }),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                F(),
-                o.createElement(
-                  "div",
-                  {
-                    ref: this.gameplayRef,
-                    id: "GameplayUpdateContainer",
-                    className: (0, _.A)(
-                      u().WebsiteSection,
-                      u().GameplayUpdateContainer,
-                    ),
-                  },
-                  o.createElement("div", { className: u().GameplayBackground }),
-                  o.createElement(
-                    "div",
-                    { className: u().WebsiteSectionInner },
-                    o.createElement(
-                      "div",
-                      { className: u().WebsiteSectionHeader },
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().SectionSubHeaderLabel,
-                            u().LabelFont,
-                            u().LabelMedium,
-                            u().LightGrayText,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_gameplay_subtitle"),
-                      ),
-                      o.createElement(
-                        "h2",
-                        {
-                          className: (0, _.A)(
-                            u().SectionHeaderLabel,
-                            u().TitleFont,
-                            u().TitleExtraLarge,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_gameplay_title"),
-                      ),
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().SectionDescriptionLabel,
-                            u().DisplayFont,
-                            u().DisplayMedium,
-                            u().LightGrayText,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_gameplay_description"),
-                      ),
-                    ),
-                    " ",
-                    M(),
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(u().GameplaySubSection, u().Heroes),
-                      },
-                      o.createElement(
-                        "div",
-                        { className: u().TextSection },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockTitle,
-                              u().TitleFont,
-                              u().TitleLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_gameplay_heroes_title"),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().HeroReworkContainer },
-                        o.createElement(D, {
-                          patchnotes: e?.heroes,
-                          heroname: "lone_druid",
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: j().WallpaperBackground,
                         }),
-                        o.createElement(D, {
-                          patchnotes: e?.heroes,
-                          heroname: "slark",
+                        (0, r.jsxs)("div", {
+                          className: j().WebsiteSectionInner,
+                          children: [
+                            (0, r.jsxs)("div", {
+                              className: j().WebsiteSectionHeader,
+                              children: [
+                                (0, r.jsx)("img", {
+                                  className: j().LargoEmblem,
+                                  src: `${l.r.IMG_URL}/largo/largo_emblem.png`,
+                                }),
+                                (0, r.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().SectionHeaderLabel,
+                                    j().LabelFont,
+                                    j().LabelMedium,
+                                    j().LightGrayText,
+                                  ),
+                                  children: (0, o.Wn)("#largo_hero_name"),
+                                }),
+                                (0, r.jsx)("h2", {
+                                  className: (0, m.A)(
+                                    j().SectionHeaderTitle,
+                                    j().TitleFont,
+                                    j().TitleLarge,
+                                  ),
+                                  children: (0, o.Wn)("#wallpapers"),
+                                }),
+                              ],
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: j().Wallpapers,
+                              children: [
+                                (0, r.jsxs)("div", {
+                                  className: j().WallpaperGroup,
+                                  children: [
+                                    (0, r.jsx)("a", {
+                                      href: `${l.r.IMG_URL}/largo/largo_wallpaper_1_desktop.jpg`,
+                                      target: "_blank",
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().Wallpaper,
+                                        children: [
+                                          (0, r.jsx)("img", {
+                                            src: `${l.r.IMG_URL}/largo/largo_wallpaper_1_desktop_thumbnail.jpg`,
+                                          }),
+                                          (0, r.jsx)(w, {}),
+                                        ],
+                                      }),
+                                    }),
+                                    (0, r.jsx)("a", {
+                                      href: `${l.r.IMG_URL}/largo/largo_wallpaper_1_mobile.jpg`,
+                                      target: "_blank",
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().Wallpaper,
+                                        children: [
+                                          (0, r.jsx)("img", {
+                                            src: `${l.r.IMG_URL}/largo/largo_wallpaper_1_mobile_thumbnail.jpg`,
+                                          }),
+                                          (0, r.jsx)(w, {}),
+                                        ],
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().WallpaperGroup,
+                                  children: [
+                                    (0, r.jsx)("a", {
+                                      href: `${l.r.IMG_URL}/largo/largo_wallpaper_2_desktop.jpg`,
+                                      target: "_blank",
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().Wallpaper,
+                                        children: [
+                                          (0, r.jsx)("img", {
+                                            src: `${l.r.IMG_URL}/largo/largo_wallpaper_2_desktop_thumbnail.jpg`,
+                                          }),
+                                          (0, r.jsx)(w, {}),
+                                        ],
+                                      }),
+                                    }),
+                                    (0, r.jsx)("a", {
+                                      href: `${l.r.IMG_URL}/largo/largo_wallpaper_2_mobile.jpg`,
+                                      target: "_blank",
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().Wallpaper,
+                                        children: [
+                                          (0, r.jsx)("img", {
+                                            src: `${l.r.IMG_URL}/largo/largo_wallpaper_2_mobile_thumbnail.jpg`,
+                                          }),
+                                          (0, r.jsx)(w, {}),
+                                        ],
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().WallpaperGroup,
+                                  children: [
+                                    (0, r.jsx)("a", {
+                                      href: `${l.r.IMG_URL}/largo/largo_wallpaper_3_desktop.jpg`,
+                                      target: "_blank",
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().Wallpaper,
+                                        children: [
+                                          (0, r.jsx)("img", {
+                                            src: `${l.r.IMG_URL}/largo/largo_wallpaper_3_desktop_thumbnail.jpg`,
+                                          }),
+                                          (0, r.jsx)(w, {}),
+                                        ],
+                                      }),
+                                    }),
+                                    (0, r.jsx)("a", {
+                                      href: `${l.r.IMG_URL}/largo/largo_wallpaper_3_mobile.jpg`,
+                                      target: "_blank",
+                                      children: (0, r.jsxs)("div", {
+                                        className: j().Wallpaper,
+                                        children: [
+                                          (0, r.jsx)("img", {
+                                            src: `${l.r.IMG_URL}/largo/largo_wallpaper_3_mobile_thumbnail.jpg`,
+                                          }),
+                                          (0, r.jsx)(w, {}),
+                                        ],
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
                         }),
-                        o.createElement(D, {
-                          patchnotes: e?.heroes,
-                          heroname: "treant",
-                        }),
-                      ),
-                    ),
-                    " ",
-                    M(),
-                    o.createElement(
-                      "div",
-                      { className: u().GameplaySubSection },
-                      o.createElement(
-                        "div",
-                        { className: u().TextSection },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockTitle,
-                              u().TitleFont,
-                              u().TitleLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_gameplay_neutral_items_title"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockDescription,
-                              u().DisplayFont,
-                              u().DisplaySmall,
-                              u().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#largo_gameplay_neutral_items_description",
-                          ),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().GameItemsContainer },
-                        o.createElement(B, {
-                          name: "item_weighted_dice",
-                          isNew: !0,
-                        }),
-                        o.createElement(B, {
-                          name: "item_idol_of_screeauk",
-                          isNew: !0,
-                        }),
-                        o.createElement(B, {
-                          name: "item_riftshadow_prism",
-                          isNew: !0,
-                        }),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().TextSection },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockTitle,
-                              u().TitleFont,
-                              u().TitleSmall,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#largo_gameplay_neutral_items_removed_title",
-                          ),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockDescription,
-                              u().DisplayFont,
-                              u().DisplaySmall,
-                              u().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#largo_gameplay_neutral_items_removed_description",
-                          ),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: u().RemovedNeutralItemsContainer },
-                        o.createElement(
-                          "div",
-                          { className: u().RemovedNeutralItem },
-                          o.createElement("img", {
-                            className: (0, _.A)(u().RemovedNeutralItemImage),
-                            src: `${l.r.IMG_URL}/largo/helm_of_the_undying_tombstone.png`,
-                          }),
-                          o.createElement(B, {
-                            name: "item_helm_of_the_undying",
-                          }),
-                        ),
-                        o.createElement(
-                          "div",
-                          { className: u().RemovedNeutralItem },
-                          o.createElement("img", {
-                            className: (0, _.A)(u().RemovedNeutralItemImage),
-                            src: `${l.r.IMG_URL}/largo/sisters_shroud_tombstone.png`,
-                          }),
-                          o.createElement(B, { name: "item_sisters_shroud" }),
-                        ),
-                        o.createElement(
-                          "div",
-                          { className: u().RemovedNeutralItem },
-                          o.createElement("img", {
-                            className: (0, _.A)(u().RemovedNeutralItemImage),
-                            src: `${l.r.IMG_URL}/largo/pyrrhic_cloak_tombstone.png`,
-                          }),
-                          o.createElement(B, { name: "item_pyrrhic_cloak" }),
-                        ),
-                      ),
-                    ),
-                    " ",
-                    M(),
-                    o.createElement(
-                      "div",
-                      { className: u().GameplaySubSection },
-                      o.createElement(
-                        "div",
-                        { className: u().TextSection },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockTitle,
-                              u().TitleFont,
-                              u().TitleLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_gameplay_terrain_title"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockDescription,
-                              u().DisplayFont,
-                              u().DisplaySmall,
-                              u().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_gameplay_terrain_description"),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: (0, _.A)(u().ComparisonContainer) },
-                        o.createElement(
-                          A.U,
-                          {
-                            labels: [
-                              "#largo_gameplay_terrain_comparison_widsom_radiant",
-                              "#largo_gameplay_terrain_comparison_gates_radiant",
-                              "#largo_gameplay_terrain_comparison_bridge_radiant",
-                              "#largo_gameplay_terrain_comparison_widsom_dire",
-                              "#largo_gameplay_terrain_comparison_gates_dire",
-                              "#largo_gameplay_terrain_comparison_bridge_dire",
+                      ],
+                    }),
+                    (0, r.jsx)("div", {
+                      id: "HeroDetailsSection",
+                      className: (0, m.A)(j().HeroDetailsSection),
+                      children: (0, r.jsxs)("div", {
+                        className: j().HeroDetailsSectionInner,
+                        children: [
+                          (0, r.jsxs)("div", {
+                            className: j().TextBlock,
+                            children: [
+                              (0, r.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().BlockTitle,
+                                  j().TitleFont,
+                                  j().TitleSmall,
+                                ),
+                                children: (0, o.Wn)(
+                                  "#largo_herodetails_section_subheader",
+                                ),
+                              }),
+                              (0, r.jsx)(v.N_, {
+                                to: S.J.hero("largo"),
+                                children: (0, r.jsxs)("div", {
+                                  className: j().StandardButton,
+                                  children: [
+                                    (0, r.jsx)("div", {
+                                      className: j().ButtonText,
+                                      children: (0, o.Wn)(
+                                        "#view_hero_detail_page",
+                                      ),
+                                    }),
+                                    (0, r.jsx)(y.U, {}),
+                                  ],
+                                }),
+                              }),
                             ],
-                          },
-                          o.createElement(L.EW, {
-                            itemOne: o.createElement(A.v, {
-                              is_new: !0,
-                              image:
-                                "largo/terrain/wisdom_shrine_radiant_old.jpg",
-                            }),
-                            itemTwo: o.createElement(A.v, {
-                              is_new: !1,
-                              image:
-                                "largo/terrain/wisdom_shrine_radiant_new.jpg",
+                          }),
+                          (0, r.jsx)("div", {
+                            className: j().HeroImageContainer,
+                            children: (0, r.jsx)("img", {
+                              className: j().HeroImage,
+                              src: `${l.r.IMG_URL}/heroes/crops/largo.png`,
                             }),
                           }),
-                          o.createElement(L.EW, {
-                            itemOne: o.createElement(A.v, {
-                              is_new: !0,
-                              image:
-                                "largo/terrain/defenders_gate_radiant_old.jpg",
-                            }),
-                            itemTwo: o.createElement(A.v, {
-                              is_new: !1,
-                              image:
-                                "largo/terrain/defenders_gate_radiant_new.jpg",
-                            }),
-                          }),
-                          o.createElement(L.EW, {
-                            itemOne: o.createElement(A.v, {
-                              is_new: !0,
-                              image: "largo/terrain/bridge_radiant_old.jpg",
-                            }),
-                            itemTwo: o.createElement(A.v, {
-                              is_new: !1,
-                              image: "largo/terrain/bridge_radiant_new.jpg",
-                            }),
-                          }),
-                          o.createElement(L.EW, {
-                            itemOne: o.createElement(A.v, {
-                              is_new: !0,
-                              image: "largo/terrain/wisdom_shrine_dire_old.jpg",
-                            }),
-                            itemTwo: o.createElement(A.v, {
-                              is_new: !1,
-                              image: "largo/terrain/wisdom_shrine_dire_new.jpg",
-                            }),
-                          }),
-                          o.createElement(L.EW, {
-                            itemOne: o.createElement(A.v, {
-                              is_new: !0,
-                              image:
-                                "largo/terrain/defenders_gate_dire_old.jpg",
-                            }),
-                            itemTwo: o.createElement(A.v, {
-                              is_new: !1,
-                              image:
-                                "largo/terrain/defenders_gate_dire_new.jpg",
-                            }),
-                          }),
-                          o.createElement(L.EW, {
-                            itemOne: o.createElement(A.v, {
-                              is_new: !0,
-                              image: "largo/terrain/bridge_dire_old.jpg",
-                            }),
-                            itemTwo: o.createElement(A.v, {
-                              is_new: !1,
-                              image: "largo/terrain/bridge_dire_new.jpg",
-                            }),
-                          }),
-                        ),
-                      ),
-                    ),
-                    " ",
-                    M(),
-                    o.createElement(
-                      "div",
-                      { className: u().TextSection },
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().BlockTitle,
-                            u().TitleFont,
-                            u().TitleLarge,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_gameplay_subtitle"),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: u().PatchnotesContainer },
-                      o.createElement(N.fs, {
-                        patchnotes: e?.general_notes,
-                        headerClassName: u().PatchNotesHeaderLabel,
-                        notesListClassName: u().PatchNotesList,
+                        ],
                       }),
-                      o.createElement(N.wL, {
-                        patchnotes: e?.neutral_creeps,
-                        headerClassName: u().PatchNotesHeaderLabel,
-                        notesListClassName: u().PatchNotesList,
+                    }),
+                    U(),
+                    (0, r.jsx)("div", {
+                      ref: this.treasureRef,
+                      id: "TreasureSection",
+                      className: (0, m.A)(
+                        j().WebsiteSection,
+                        j().TreasureSection,
+                      ),
+                      children: (0, r.jsxs)("div", {
+                        className: j().WebsiteSectionInner,
+                        children: [
+                          (0, r.jsxs)("div", {
+                            className: j().WebsiteSectionHeader,
+                            children: [
+                              (0, r.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().SectionHeaderLabel,
+                                  j().LabelFont,
+                                  j().LabelMedium,
+                                ),
+                                children: (0, o.Wn)(
+                                  "#largo_treasure_section_label",
+                                ),
+                              }),
+                              (0, r.jsx)("h2", {
+                                className: (0, m.A)(
+                                  j().SectionHeaderTitle,
+                                  j().TitleFont,
+                                  j().TitleExtraLarge,
+                                ),
+                                children: (0, o.Wn)(
+                                  "#largo_treasure_section_title",
+                                ),
+                              }),
+                              (0, r.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().WebsiteDescription,
+                                  j().DisplayFont,
+                                  j().DisplaySmall,
+                                ),
+                                children: (0, o.Wn)(
+                                  "#largo_treasure_section_introduction",
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)(N.gi, {
+                            className: j().TreasureCarousel,
+                            naturalSlideWidth: 600,
+                            naturalSlideHeight: 960,
+                            totalSlides: 9,
+                            currentSlide: 8,
+                            infinite: !0,
+                            touchEnabled: !0,
+                            dragEnabled: !1,
+                            children: [
+                              (0, r.jsxs)(N.Ap, {
+                                className: j().TreasureSlider,
+                                children: [
+                                  (0, r.jsx)(N.q7, {
+                                    index: 0,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 0,
+                                      video: "set_shadowfiend",
+                                      name: "#largo_treasure_hero_shadow_fiend_set",
+                                      heroname:
+                                        "#largo_treasure_hero_shadow_fiend",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 1,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 1,
+                                      video: "set_primal_beast",
+                                      name: "#largo_treasure_hero_primal_beast_set",
+                                      heroname:
+                                        "#largo_treasure_hero_primal_beast",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 2,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 2,
+                                      video: "set_broodmother",
+                                      name: "#largo_treasure_hero_broodmother_set",
+                                      heroname:
+                                        "#largo_treasure_hero_broodmother",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 3,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 3,
+                                      video: "set_enigma",
+                                      name: "#largo_treasure_hero_enigma_set",
+                                      heroname: "#largo_treasure_hero_enigma",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 4,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 4,
+                                      video: "set_ringmaster",
+                                      name: "#largo_treasure_hero_ringmaster_set",
+                                      heroname:
+                                        "#largo_treasure_hero_ringmaster",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 5,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 5,
+                                      video: "set_morphling",
+                                      name: "#largo_treasure_hero_morphling_set",
+                                      heroname:
+                                        "#largo_treasure_hero_morphling",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 6,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 6,
+                                      video: "set_silencer",
+                                      name: "#largo_treasure_hero_silencer_set",
+                                      heroname: "#largo_treasure_hero_silencer",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 7,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 7,
+                                      video: "set_centaur",
+                                      name: "#largo_treasure_hero_centaur_warrunner_set",
+                                      heroname:
+                                        "#largo_treasure_hero_centaur_warrunner",
+                                      autoplay: !1,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.q7, {
+                                    index: 8,
+                                    className: j().TreasureSlide,
+                                    innerClassName: j().TreasureInnerSlide,
+                                    classNameHidden: j().TreasureSlideHidden,
+                                    children: (0, r.jsx)(M, {
+                                      index: 8,
+                                      video: "set_tiny",
+                                      name: "#largo_treasure_hero_tiny_set",
+                                      heroname: "#largo_treasure_hero_tiny",
+                                      autoplay: !0,
+                                      onSlideIn: (e, a) => {
+                                        this.setState({
+                                          treasureName: e,
+                                          heroName: a,
+                                        });
+                                      },
+                                    }),
+                                  }),
+                                ],
+                              }),
+                              (0, r.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().HeroName,
+                                  j().LabelFont,
+                                  j().LabelSmall,
+                                ),
+                                children: (0, o.Wn)(this.state.heroName),
+                              }),
+                              (0, r.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().TreasureName,
+                                  j().DisplayFont,
+                                  j().DisplaySmall,
+                                ),
+                                children: (0, o.Wn)(this.state.treasureName),
+                              }),
+                              (0, r.jsxs)("div", {
+                                className: j().CarouselDots,
+                                children: [
+                                  (0, r.jsx)(N._X, {
+                                    className: (0, m.A)(
+                                      j().TreasurePaginationButton,
+                                      j().Prev,
+                                    ),
+                                    children: (0, r.jsx)("div", {
+                                      className: j().PrevArrow,
+                                    }),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 0,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 1,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 2,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 3,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 4,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 5,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 6,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 7,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.cL, {
+                                    className: j().TreasureSelector,
+                                    slide: 8,
+                                    children: (0, r.jsx)("div", {}),
+                                  }),
+                                  (0, r.jsx)(N.CC, {
+                                    className: (0, m.A)(
+                                      j().TreasurePaginationButton,
+                                      j().Next,
+                                    ),
+                                    children: (0, r.jsx)("div", {
+                                      className: j().NextArrow,
+                                    }),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
                       }),
-                      o.createElement(N.ZV, {
-                        patchnotes: e?.items,
-                        headerClassName: u().PatchNotesHeaderLabel,
-                        notesListClassName: u().PatchNotesList,
-                      }),
-                      o.createElement(N.ZV, {
-                        patchnotes: e?.neutral_items,
-                        is_neutrals: !0,
-                        headerClassName: u().PatchNotesHeaderLabel,
-                        notesListClassName: u().PatchNotesList,
-                      }),
-                      o.createElement(N.ob, {
-                        patchnotes: e?.heroes,
-                        headerClassName: u().PatchNotesHeaderLabel,
-                        notesListClassName: u().PatchNotesList,
-                      }),
-                    ),
-                    " ",
-                    M(),
-                    o.createElement(
-                      "div",
-                      { className: u().WebsiteSectionHeader },
-                      o.createElement(
-                        "h2",
-                        {
-                          className: (0, _.A)(
-                            u().SectionHeaderLabel,
-                            u().TitleFont,
-                            u().TitleMedium,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_gameplay_qol_title"),
+                    }),
+                    U(),
+                    (0, r.jsxs)("div", {
+                      ref: this.gameplayRef,
+                      id: "GameplayUpdateContainer",
+                      className: (0, m.A)(
+                        j().WebsiteSection,
+                        j().GameplayUpdateContainer,
                       ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: (0, _.A)(u().TextImageBlockHorizontal) },
-                      o.createElement(f, { image: "largo/demo_hero.jpg" }),
-                      o.createElement(
-                        "div",
-                        { className: u().TextBlock },
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockTitle,
-                              u().TitleFont,
-                              u().TitleSmall,
-                            ),
-                          },
-                          (0, n.Wn)("#largo_gameplay_qol_demo_hero_title"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              u().BlockDescription,
-                              u().BodyFont,
-                              u().BodyLarge,
-                            ),
-                          },
-                          (0, n.Wn)(
-                            "#largo_gameplay_qol_demo_hero_description",
-                          ),
-                        ),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: (0, _.A)(u().BugfixListContainer) },
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().BugFixCategoryTitle,
-                            u().LabelFont,
-                            u().LabelMedium,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_gameplay_qol_general_title"),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: (0, _.A)(u().BugfixListColumn) },
-                        o.createElement(G, {
-                          description: "#largo_gameplay_qol_buffs_description",
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: j().GameplayBackground,
                         }),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: (0, _.A)(u().BugfixListContainer) },
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            u().BugFixCategoryTitle,
-                            u().LabelFont,
-                            u().LabelMedium,
-                          ),
-                        },
-                        (0, n.Wn)("#largo_gameplay_qol_ability_draft_title"),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: (0, _.A)(u().BugfixListColumn) },
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_1",
+                        (0, r.jsxs)("div", {
+                          className: j().WebsiteSectionInner,
+                          children: [
+                            (0, r.jsxs)("div", {
+                              className: j().WebsiteSectionHeader,
+                              children: [
+                                (0, r.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().SectionSubHeaderLabel,
+                                    j().LabelFont,
+                                    j().LabelMedium,
+                                    j().LightGrayText,
+                                  ),
+                                  children: (0, o.Wn)(
+                                    "#largo_gameplay_subtitle",
+                                  ),
+                                }),
+                                (0, r.jsx)("h2", {
+                                  className: (0, m.A)(
+                                    j().SectionHeaderLabel,
+                                    j().TitleFont,
+                                    j().TitleExtraLarge,
+                                  ),
+                                  children: (0, o.Wn)("#largo_gameplay_title"),
+                                }),
+                                (0, r.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().SectionDescriptionLabel,
+                                    j().DisplayFont,
+                                    j().DisplayMedium,
+                                    j().LightGrayText,
+                                  ),
+                                  children: (0, o.Wn)(
+                                    "#largo_gameplay_description",
+                                  ),
+                                }),
+                              ],
+                            }),
+                            " ",
+                            E(),
+                            (0, r.jsxs)("div", {
+                              className: (0, m.A)(
+                                j().GameplaySubSection,
+                                j().Heroes,
+                              ),
+                              children: [
+                                (0, r.jsx)("div", {
+                                  className: j().TextSection,
+                                  children: (0, r.jsx)("p", {
+                                    className: (0, m.A)(
+                                      j().BlockTitle,
+                                      j().TitleFont,
+                                      j().TitleLarge,
+                                    ),
+                                    children: (0, o.Wn)(
+                                      "#largo_gameplay_heroes_title",
+                                    ),
+                                  }),
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().HeroReworkContainer,
+                                  children: [
+                                    (0, r.jsx)(W, {
+                                      patchnotes: e?.heroes,
+                                      heroname: "lone_druid",
+                                    }),
+                                    (0, r.jsx)(W, {
+                                      patchnotes: e?.heroes,
+                                      heroname: "slark",
+                                    }),
+                                    (0, r.jsx)(W, {
+                                      patchnotes: e?.heroes,
+                                      heroname: "treant",
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            " ",
+                            E(),
+                            (0, r.jsxs)("div", {
+                              className: j().GameplaySubSection,
+                              children: [
+                                (0, r.jsxs)("div", {
+                                  className: j().TextSection,
+                                  children: [
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleLarge,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_neutral_items_title",
+                                      ),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockDescription,
+                                        j().DisplayFont,
+                                        j().DisplaySmall,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_neutral_items_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().GameItemsContainer,
+                                  children: [
+                                    (0, r.jsx)(G, {
+                                      name: "item_weighted_dice",
+                                      isNew: !0,
+                                    }),
+                                    (0, r.jsx)(G, {
+                                      name: "item_idol_of_screeauk",
+                                      isNew: !0,
+                                    }),
+                                    (0, r.jsx)(G, {
+                                      name: "item_riftshadow_prism",
+                                      isNew: !0,
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().TextSection,
+                                  children: [
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleSmall,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_neutral_items_removed_title",
+                                      ),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockDescription,
+                                        j().DisplayFont,
+                                        j().DisplaySmall,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_neutral_items_removed_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: j().RemovedNeutralItemsContainer,
+                                  children: [
+                                    (0, r.jsxs)("div", {
+                                      className: j().RemovedNeutralItem,
+                                      children: [
+                                        (0, r.jsx)("img", {
+                                          className: (0, m.A)(
+                                            j().RemovedNeutralItemImage,
+                                          ),
+                                          src: `${l.r.IMG_URL}/largo/helm_of_the_undying_tombstone.png`,
+                                        }),
+                                        (0, r.jsx)(G, {
+                                          name: "item_helm_of_the_undying",
+                                        }),
+                                      ],
+                                    }),
+                                    (0, r.jsxs)("div", {
+                                      className: j().RemovedNeutralItem,
+                                      children: [
+                                        (0, r.jsx)("img", {
+                                          className: (0, m.A)(
+                                            j().RemovedNeutralItemImage,
+                                          ),
+                                          src: `${l.r.IMG_URL}/largo/sisters_shroud_tombstone.png`,
+                                        }),
+                                        (0, r.jsx)(G, {
+                                          name: "item_sisters_shroud",
+                                        }),
+                                      ],
+                                    }),
+                                    (0, r.jsxs)("div", {
+                                      className: j().RemovedNeutralItem,
+                                      children: [
+                                        (0, r.jsx)("img", {
+                                          className: (0, m.A)(
+                                            j().RemovedNeutralItemImage,
+                                          ),
+                                          src: `${l.r.IMG_URL}/largo/pyrrhic_cloak_tombstone.png`,
+                                        }),
+                                        (0, r.jsx)(G, {
+                                          name: "item_pyrrhic_cloak",
+                                        }),
+                                      ],
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            " ",
+                            E(),
+                            (0, r.jsxs)("div", {
+                              className: j().GameplaySubSection,
+                              children: [
+                                (0, r.jsxs)("div", {
+                                  className: j().TextSection,
+                                  children: [
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleLarge,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_terrain_title",
+                                      ),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockDescription,
+                                        j().DisplayFont,
+                                        j().DisplaySmall,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_terrain_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                                (0, r.jsx)("div", {
+                                  className: (0, m.A)(j().ComparisonContainer),
+                                  children: (0, r.jsxs)(A.U, {
+                                    labels: [
+                                      "#largo_gameplay_terrain_comparison_widsom_radiant",
+                                      "#largo_gameplay_terrain_comparison_gates_radiant",
+                                      "#largo_gameplay_terrain_comparison_bridge_radiant",
+                                      "#largo_gameplay_terrain_comparison_widsom_dire",
+                                      "#largo_gameplay_terrain_comparison_gates_dire",
+                                      "#largo_gameplay_terrain_comparison_bridge_dire",
+                                    ],
+                                    children: [
+                                      (0, r.jsx)(L.EW, {
+                                        itemOne: (0, r.jsx)(A.v, {
+                                          is_new: !0,
+                                          image:
+                                            "largo/terrain/wisdom_shrine_radiant_old.jpg",
+                                        }),
+                                        itemTwo: (0, r.jsx)(A.v, {
+                                          is_new: !1,
+                                          image:
+                                            "largo/terrain/wisdom_shrine_radiant_new.jpg",
+                                        }),
+                                      }),
+                                      (0, r.jsx)(L.EW, {
+                                        itemOne: (0, r.jsx)(A.v, {
+                                          is_new: !0,
+                                          image:
+                                            "largo/terrain/defenders_gate_radiant_old.jpg",
+                                        }),
+                                        itemTwo: (0, r.jsx)(A.v, {
+                                          is_new: !1,
+                                          image:
+                                            "largo/terrain/defenders_gate_radiant_new.jpg",
+                                        }),
+                                      }),
+                                      (0, r.jsx)(L.EW, {
+                                        itemOne: (0, r.jsx)(A.v, {
+                                          is_new: !0,
+                                          image:
+                                            "largo/terrain/bridge_radiant_old.jpg",
+                                        }),
+                                        itemTwo: (0, r.jsx)(A.v, {
+                                          is_new: !1,
+                                          image:
+                                            "largo/terrain/bridge_radiant_new.jpg",
+                                        }),
+                                      }),
+                                      (0, r.jsx)(L.EW, {
+                                        itemOne: (0, r.jsx)(A.v, {
+                                          is_new: !0,
+                                          image:
+                                            "largo/terrain/wisdom_shrine_dire_old.jpg",
+                                        }),
+                                        itemTwo: (0, r.jsx)(A.v, {
+                                          is_new: !1,
+                                          image:
+                                            "largo/terrain/wisdom_shrine_dire_new.jpg",
+                                        }),
+                                      }),
+                                      (0, r.jsx)(L.EW, {
+                                        itemOne: (0, r.jsx)(A.v, {
+                                          is_new: !0,
+                                          image:
+                                            "largo/terrain/defenders_gate_dire_old.jpg",
+                                        }),
+                                        itemTwo: (0, r.jsx)(A.v, {
+                                          is_new: !1,
+                                          image:
+                                            "largo/terrain/defenders_gate_dire_new.jpg",
+                                        }),
+                                      }),
+                                      (0, r.jsx)(L.EW, {
+                                        itemOne: (0, r.jsx)(A.v, {
+                                          is_new: !0,
+                                          image:
+                                            "largo/terrain/bridge_dire_old.jpg",
+                                        }),
+                                        itemTwo: (0, r.jsx)(A.v, {
+                                          is_new: !1,
+                                          image:
+                                            "largo/terrain/bridge_dire_new.jpg",
+                                        }),
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                              ],
+                            }),
+                            " ",
+                            E(),
+                            (0, r.jsx)("div", {
+                              className: j().TextSection,
+                              children: (0, r.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().BlockTitle,
+                                  j().TitleFont,
+                                  j().TitleLarge,
+                                ),
+                                children: (0, o.Wn)("#largo_gameplay_subtitle"),
+                              }),
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: j().PatchnotesContainer,
+                              children: [
+                                (0, r.jsx)(u.fs, {
+                                  patchnotes: e?.general_notes,
+                                  headerClassName: j().PatchNotesHeaderLabel,
+                                  notesListClassName: j().PatchNotesList,
+                                }),
+                                (0, r.jsx)(u.wL, {
+                                  patchnotes: e?.neutral_creeps,
+                                  headerClassName: j().PatchNotesHeaderLabel,
+                                  notesListClassName: j().PatchNotesList,
+                                }),
+                                (0, r.jsx)(u.ZV, {
+                                  patchnotes: e?.items,
+                                  headerClassName: j().PatchNotesHeaderLabel,
+                                  notesListClassName: j().PatchNotesList,
+                                }),
+                                (0, r.jsx)(u.ZV, {
+                                  patchnotes: e?.neutral_items,
+                                  is_neutrals: !0,
+                                  headerClassName: j().PatchNotesHeaderLabel,
+                                  notesListClassName: j().PatchNotesList,
+                                }),
+                                (0, r.jsx)(u.ob, {
+                                  patchnotes: e?.heroes,
+                                  headerClassName: j().PatchNotesHeaderLabel,
+                                  notesListClassName: j().PatchNotesList,
+                                }),
+                              ],
+                            }),
+                            " ",
+                            E(),
+                            (0, r.jsx)("div", {
+                              className: j().WebsiteSectionHeader,
+                              children: (0, r.jsx)("h2", {
+                                className: (0, m.A)(
+                                  j().SectionHeaderLabel,
+                                  j().TitleFont,
+                                  j().TitleMedium,
+                                ),
+                                children: (0, o.Wn)(
+                                  "#largo_gameplay_qol_title",
+                                ),
+                              }),
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: (0, m.A)(j().TextImageBlockHorizontal),
+                              children: [
+                                (0, r.jsx)(D, { image: "largo/demo_hero.jpg" }),
+                                (0, r.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleSmall,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_qol_demo_hero_title",
+                                      ),
+                                    }),
+                                    (0, r.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#largo_gameplay_qol_demo_hero_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: (0, m.A)(j().BugfixListContainer),
+                              children: [
+                                (0, r.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().BugFixCategoryTitle,
+                                    j().LabelFont,
+                                    j().LabelMedium,
+                                  ),
+                                  children: (0, o.Wn)(
+                                    "#largo_gameplay_qol_general_title",
+                                  ),
+                                }),
+                                (0, r.jsx)("div", {
+                                  className: (0, m.A)(j().BugfixListColumn),
+                                  children: (0, r.jsx)(F, {
+                                    description:
+                                      "#largo_gameplay_qol_buffs_description",
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: (0, m.A)(j().BugfixListContainer),
+                              children: [
+                                (0, r.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().BugFixCategoryTitle,
+                                    j().LabelFont,
+                                    j().LabelMedium,
+                                  ),
+                                  children: (0, o.Wn)(
+                                    "#largo_gameplay_qol_ability_draft_title",
+                                  ),
+                                }),
+                                (0, r.jsxs)("div", {
+                                  className: (0, m.A)(j().BugfixListColumn),
+                                  children: [
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_1",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_2",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_3",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_4",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_5",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_6",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_7",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_8",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_9",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_10",
+                                    }),
+                                    (0, r.jsx)(F, {
+                                      description:
+                                        "#largo_gameplay_qol_ability_draft_description_11",
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
                         }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_2",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_3",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_4",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_5",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_6",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_7",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_8",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_9",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_10",
-                        }),
-                        o.createElement(G, {
-                          description:
-                            "#largo_gameplay_qol_ability_draft_description_11",
-                        }),
-                      ),
-                    ),
-                  ),
-                ),
-                o.createElement(p.K, null),
-              ),
-            )
+                      ],
+                    }),
+                    (0, r.jsx)(p.K, {}),
+                  ],
+                }),
+              ],
+            })
           );
         }
       };
-      P = (0, r.Cg)([s.PA], P);
-      const V = P;
+      V = (0, i.Cg)([n.PA], V);
+      const q = V;
     },
   },
 ]);

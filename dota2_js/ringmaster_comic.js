@@ -24,28 +24,29 @@
         ReturnLink: "VEVvxQIiK5yjZUsYyHIZ5",
       };
     },
-    40657: (e, t, n) => {
+    40657: (e, n, r) => {
       "use strict";
-      n.r(t), n.d(t, { COMIC_LANGUAGE: () => E, default: () => v });
-      var r = n(85608),
-        a = n(4248),
-        s = n(89506),
-        i = n(68613),
-        c = n(68446),
-        o = n(7552),
-        l = n(73202),
-        u = n(21384),
-        m = n(88351),
-        A = n(47202),
-        h = n(36305),
-        g = n(45237),
-        d = n(55651),
-        p = n(91908),
-        C = n.n(p),
-        w = n(85286),
-        f = n.n(w);
-      const E = (() => {
-          switch (s.r.LANGUAGE) {
+      r.r(n), r.d(n, { COMIC_LANGUAGE: () => k, default: () => I });
+      var t = r(85608),
+        a = r(69500),
+        s = r(4248),
+        i = r(89506),
+        c = r(68613),
+        o = r(68446),
+        u = r(7552),
+        l = r(73202),
+        A = r(21384),
+        h = r(88351),
+        m = r(47202),
+        d = r(36305),
+        g = r(45237),
+        p = r(55651),
+        C = r(91908),
+        w = r.n(C),
+        f = r(85286),
+        x = r.n(f);
+      const k = (() => {
+          switch (i.r.LANGUAGE) {
             case "brazilian":
               return "brazilian";
             case "bulgarian":
@@ -105,20 +106,20 @@
               return "vietnamese";
           }
         })(),
-        k = ({ onIndexChanged: e, comicImageURLs: t }) => {
-          const [n, r] = (0, o.useState)(void 0),
-            [a, s] = (0, o.useState)(
-              Array.from({ length: t.length }, () => new Image()),
+        b = ({ onIndexChanged: e, comicImageURLs: n }) => {
+          const [r, t] = (0, u.useState)(void 0),
+            [s, i] = (0, u.useState)(
+              Array.from({ length: n.length }, () => new Image()),
             ),
-            c = (0, m.zy)(),
-            l = (0, o.useCallback)(() => {
-              r((e) => {
-                if ((void 0 === e && (e = 0), e + 1 >= t.length)) return e;
-                const n = e + 1;
-                return window.history.pushState({}, "", `#p=${n}`), n;
+            o = (0, h.zy)(),
+            l = (0, u.useCallback)(() => {
+              t((e) => {
+                if ((void 0 === e && (e = 0), e + 1 >= n.length)) return e;
+                const r = e + 1;
+                return window.history.pushState({}, "", `#p=${r}`), r;
               });
-            }, [t]);
-          (0, o.useEffect)(() => {
+            }, [n]);
+          (0, u.useEffect)(() => {
             const e = (e) => {
               ("Space" !== e.code && " " !== e.key) ||
                 (e.preventDefault(), l());
@@ -128,106 +129,101 @@
               () => window.removeEventListener("keydown", e)
             );
           }, [l]),
-            (0, o.useEffect)(() => {
+            (0, u.useEffect)(() => {
               let e = 0;
-              const t = new URLSearchParams(c.hash.substring(1)).get("p");
-              null !== t && (e = parseInt(t)), r(e);
-            }, [c]),
-            (0, o.useEffect)(() => {
-              if (void 0 === n) return;
+              const n = new URLSearchParams(o.hash.substring(1)).get("p");
+              null !== n && (e = parseInt(n)), t(e);
+            }, [o]),
+            (0, u.useEffect)(() => {
+              if (void 0 === r) return;
               for (let e = 1; e <= 5; e++) {
-                const r = n + e;
-                if (r >= t.length) break;
-                let i = a;
-                i[r].src || ((i[r].src = t[r]), s(i));
+                const t = r + e;
+                if (t >= n.length) break;
+                let a = s;
+                a[t].src || ((a[t].src = n[t]), i(a));
               }
-            }, [n, a, t]),
-            (0, o.useEffect)(() => {
-              e?.(n);
-            }, [e, n]);
-          const A = !n,
-            h = n + 1 >= t.length;
-          return o.createElement(
-            o.Fragment,
-            null,
-            o.createElement(
-              "div",
-              { className: C().ComicViewer },
-              o.createElement("img", {
-                src:
-                  void 0 !== n
-                    ? t[n]
-                    : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
-                onClick: (e) => {
-                  e.preventDefault(), l();
-                },
-                onMouseUp: (e) => {
-                  0 == e.button && e.preventDefault();
-                },
+            }, [r, s, n]),
+            (0, u.useEffect)(() => {
+              e?.(r);
+            }, [e, r]);
+          const m = !r,
+            d = r + 1 >= n.length;
+          return (0, a.jsxs)(a.Fragment, {
+            children: [
+              (0, a.jsx)("div", {
+                className: w().ComicViewer,
+                children: (0, a.jsx)("img", {
+                  src:
+                    void 0 !== r
+                      ? n[r]
+                      : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
+                  onClick: (e) => {
+                    e.preventDefault(), l();
+                  },
+                  onMouseUp: (e) => {
+                    0 == e.button && e.preventDefault();
+                  },
+                }),
               }),
-            ),
-            o.createElement(
-              "div",
-              {
-                className: (0, u.A)(C().ComicViewerHelpText, h && C().Disabled),
-              },
-              (0, i.we)("#ringmastercomic_help_text"),
-            ),
-            o.createElement(
-              g.N_,
-              {
-                className: (0, u.A)(C().ReturnLink, A && C().Disabled),
-                to: d.J.ringmaster_comic(),
-              },
-              (0, i.we)("#ringmastercomic_return_button"),
-            ),
-          );
+              (0, a.jsx)("div", {
+                className: (0, A.A)(w().ComicViewerHelpText, d && w().Disabled),
+                children: (0, c.we)("#ringmastercomic_help_text"),
+              }),
+              (0, a.jsx)(g.N_, {
+                className: (0, A.A)(w().ReturnLink, m && w().Disabled),
+                to: p.J.ringmaster_comic(),
+                children: (0, c.we)("#ringmastercomic_return_button"),
+              }),
+            ],
+          });
         };
-      let b = class extends o.Component {
+      let v = class extends u.Component {
         constructor(e) {
           super(e);
           this.state = {
             pageTitlePattern: "#ringmastercomic_title",
             comicImageURLs: Array.from(Array(53).keys()).map((e) => {
-              const t = e.toString().padStart(3, "0");
-              return `${a.TS.IMG_URL}comics/ringmaster/${E}/${t}.webp`;
+              const n = e.toString().padStart(3, "0");
+              return `${s.TS.IMG_URL}comics/ringmaster/${k}/${n}.webp`;
             }),
           };
         }
         handleScroll = (e) => {
-          f().refresh();
+          x().refresh();
         };
         componentDidMount() {
           this.handleScroll(void 0);
         }
         render() {
-          return o.createElement(
-            "div",
-            { id: "RingmasterComic", className: C().RingmasterComic },
-            o.createElement(l.mg, null),
-            o.createElement(
-              "div",
-              { className: (0, u.A)(C().PageContainer) },
-              o.createElement(A.A, { bOverlapping: !0 }),
-              o.createElement(
-                "div",
-                { className: (0, u.A)(C().ComicContainer) },
-                o.createElement(k, {
-                  onIndexChanged: (e) => {
-                    document.title = e
-                      ? (0, i.we)(this.state.pageTitlePattern, e)
-                      : (0, i.we)(`${this.state.pageTitlePattern}_cover`);
-                  },
-                  comicImageURLs: this.state.comicImageURLs,
-                }),
-              ),
-              o.createElement(h.K, null),
-            ),
-          );
+          return (0, a.jsxs)("div", {
+            id: "RingmasterComic",
+            className: w().RingmasterComic,
+            children: [
+              (0, a.jsx)(l.mg, {}),
+              (0, a.jsxs)("div", {
+                className: (0, A.A)(w().PageContainer),
+                children: [
+                  (0, a.jsx)(m.A, { bOverlapping: !0 }),
+                  (0, a.jsx)("div", {
+                    className: (0, A.A)(w().ComicContainer),
+                    children: (0, a.jsx)(b, {
+                      onIndexChanged: (e) => {
+                        document.title = e
+                          ? (0, c.we)(this.state.pageTitlePattern, e)
+                          : (0, c.we)(`${this.state.pageTitlePattern}_cover`);
+                      },
+                      comicImageURLs: this.state.comicImageURLs,
+                    }),
+                  }),
+                  (0, a.jsx)(d.K, {}),
+                ],
+              }),
+            ],
+          });
         }
       };
-      b = (0, r.Cg)([c.PA], b);
-      const v = b;
+      v = (0, t.Cg)([o.PA], v);
+      const I = v;
     },
   },
 ]);

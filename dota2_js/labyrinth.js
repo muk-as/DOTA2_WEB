@@ -5,8 +5,8 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [151],
   {
-    68542: (e) => {
-      e.exports = {
+    68542: (a) => {
+      a.exports = {
         Tooltip: "vPqsoxB4SZ5OaBfKiEydA",
         CarouselFade: "hAvyIwR8b1rZkMv7x6W0R",
         StandardButton: "_2Zab103565xl_xT1cVpQEs",
@@ -34,8 +34,8 @@
         LogoRight: "_20t2EwtIHCrooSxJDRyzLO",
       };
     },
-    56490: (e) => {
-      e.exports = {
+    56490: (a) => {
+      a.exports = {
         Tooltip: "mbsiXD3ICUN6dbpct4LqF",
         CarouselFade: "_2LPkM1YFTeZmb28zZVBQ63",
         StandardButton: "_3iTWlBjFXu2v_EGM6rvZSs",
@@ -137,1431 +137,1400 @@
         rotate: "_1rFNego7QlIkvT2BFNdYRI",
       };
     },
-    36899: (e, a, t) => {
+    36899: (a, e, s) => {
       "use strict";
-      t.d(a, { C: () => d, _: () => r });
+      s.d(e, { C: () => m, _: () => r });
       var r,
-        l = t(7552),
-        n = t(68542),
-        s = t.n(n),
-        o = t(89506),
-        i = t(27866),
-        c = t(21384),
-        m = t(86085);
-      !(function (e) {
-        (e[(e.TOP = 0)] = "TOP"),
-          (e[(e.BOTTOM = 1)] = "BOTTOM"),
-          (e[(e.LEFT = 2)] = "LEFT"),
-          (e[(e.RIGHT = 3)] = "RIGHT");
+        l = s(69500),
+        i = s(7552),
+        o = s(68542),
+        t = s.n(o),
+        n = s(89506),
+        d = s(40045),
+        c = s(21384),
+        _ = s(86085);
+      !(function (a) {
+        (a[(a.TOP = 0)] = "TOP"),
+          (a[(a.BOTTOM = 1)] = "BOTTOM"),
+          (a[(a.LEFT = 2)] = "LEFT"),
+          (a[(a.RIGHT = 3)] = "RIGHT");
       })(r || (r = {}));
-      const d = (e) => {
-        const [a, t] = (0, l.useState)(!1),
-          [n, d] = (0, l.useState)(null == e.strYouTubeVideoID),
-          _ = (0, l.useRef)(null);
+      const m = (a) => {
+        const [e, s] = (0, i.useState)(!1),
+          [o, m] = (0, i.useState)(null == a.strYouTubeVideoID),
+          h = (0, i.useRef)(null);
         let p =
           ".LabelStyleHack { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; ";
-        e.labelColors &&
-          (e.labelColors.length > 1
-            ? (p += `background-image: -webkit-linear-gradient( left, ${e.labelColors.join(", ")} ); `)
-            : (p += `background-image: -webkit-linear-gradient( left, ${e.labelColors[0]}, ${e.labelColors[0]} ); `));
-        const b = e.glowDetails?.sort((e, a) => e.size - a.size);
+        a.labelColors &&
+          (a.labelColors.length > 1
+            ? (p += `background-image: -webkit-linear-gradient( left, ${a.labelColors.join(", ")} ); `)
+            : (p += `background-image: -webkit-linear-gradient( left, ${a.labelColors[0]}, ${a.labelColors[0]} ); `));
+        const b = a.glowDetails?.sort((a, e) => a.size - e.size);
         return (
           b &&
-            ((p += `-webkit-filter: ${b.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `),
-            (p += `filter: ${b.map((e) => `drop-shadow( 0px 0px ${e.size}px ${e.color} )`).join(" ")}; `)),
-          l.createElement(
-            "div",
-            { className: s().TrailerOverlay },
-            l.createElement("div", { className: s().FadeBottom }),
-            e.strBackgroundImage &&
-              !e.strBackgroundVideo &&
-              l.createElement("img", {
-                className: s().BackgroundImage,
-                src: `${o.r.IMG_URL}${e.strBackgroundImage}`,
+            ((p += `-webkit-filter: ${b.map((a) => `drop-shadow( 0px 0px ${a.size}px ${a.color} )`).join(" ")}; `),
+            (p += `filter: ${b.map((a) => `drop-shadow( 0px 0px ${a.size}px ${a.color} )`).join(" ")}; `)),
+          (0, l.jsxs)("div", {
+            className: t().TrailerOverlay,
+            children: [
+              (0, l.jsx)("div", { className: t().FadeBottom }),
+              a.strBackgroundImage &&
+                !a.strBackgroundVideo &&
+                (0, l.jsx)("img", {
+                  className: t().BackgroundImage,
+                  src: `${n.r.IMG_URL}${a.strBackgroundImage}`,
+                }),
+              a.strBackgroundVideo &&
+                (0, l.jsx)("div", {
+                  className: t().BackgroundVideo,
+                  children: (0, l.jsxs)("video", {
+                    className: t().BackgroundVideo,
+                    autoPlay: !0,
+                    preload: "auto",
+                    muted: !0,
+                    loop: !0,
+                    playsInline: !0,
+                    poster: `${n.r.IMG_URL}${a.strBackgroundImage}`,
+                    children: [
+                      (0, l.jsx)("source", {
+                        type: "video/webm",
+                        src: `${n.r.VIDEO_URL}${a.strBackgroundVideo}.webm`,
+                      }),
+                      (0, l.jsx)("source", {
+                        type: "video/mp4",
+                        src: `${n.r.VIDEO_URL}${a.strBackgroundVideo}.mp4`,
+                      }),
+                    ],
+                  }),
+                }),
+              (0, l.jsxs)("div", {
+                className: (0, c.A)(t().TrailerContainer, e && t().Playing),
+                children: [
+                  a.strYouTubeVideoID &&
+                    (0, l.jsx)(_.N1, {
+                      video: a.strYouTubeVideoID,
+                      autoplay: !1,
+                      playsInline: !0,
+                      controls: !0,
+                      ref: h,
+                      onPlayerReady: () => m(!0),
+                      onBuffering: () => s(!0),
+                      onPlaying: () => s(!0),
+                      onPaused: () => s(!1),
+                      onMovieEnd: () => s(!1),
+                    }),
+                  a.strForegroundVideo &&
+                    (0, l.jsxs)("video", {
+                      className: t().BackgroundVideo,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: `${n.r.IMG_URL}${a.strBackgroundImage}`,
+                      children: [
+                        (0, l.jsx)("source", {
+                          type: "video/webm",
+                          src: `${n.r.VIDEO_URL}${a.strForegroundVideo}.webm`,
+                        }),
+                        (0, l.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${n.r.VIDEO_URL}${a.strForegroundVideo}.mp4`,
+                        }),
+                      ],
+                    }),
+                ],
               }),
-            e.strBackgroundVideo &&
-              l.createElement(
-                "div",
-                { className: s().BackgroundVideo },
-                l.createElement(
-                  "video",
-                  {
-                    className: s().BackgroundVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: `${o.r.IMG_URL}${e.strBackgroundImage}`,
-                  },
-                  l.createElement("source", {
-                    type: "video/webm",
-                    src: `${o.r.VIDEO_URL}${e.strBackgroundVideo}.webm`,
-                  }),
-                  l.createElement("source", {
-                    type: "video/mp4",
-                    src: `${o.r.VIDEO_URL}${e.strBackgroundVideo}.mp4`,
-                  }),
-                ),
-              ),
-            l.createElement(
-              "div",
-              { className: (0, c.A)(s().TrailerContainer, a && s().Playing) },
-              e.strYouTubeVideoID &&
-                l.createElement(m.N1, {
-                  video: e.strYouTubeVideoID,
-                  autoplay: !1,
-                  playsInline: !0,
-                  controls: !0,
-                  ref: _,
-                  onPlayerReady: () => d(!0),
-                  onBuffering: () => t(!0),
-                  onPlaying: () => t(!0),
-                  onPaused: () => t(!1),
-                  onMovieEnd: () => t(!1),
-                }),
-              e.strForegroundVideo &&
-                l.createElement(
-                  "video",
-                  {
-                    className: s().BackgroundVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: `${o.r.IMG_URL}${e.strBackgroundImage}`,
-                  },
-                  l.createElement("source", {
-                    type: "video/webm",
-                    src: `${o.r.VIDEO_URL}${e.strForegroundVideo}.webm`,
-                  }),
-                  l.createElement("source", {
-                    type: "video/mp4",
-                    src: `${o.r.VIDEO_URL}${e.strForegroundVideo}.mp4`,
-                  }),
-                ),
-            ),
-            l.createElement(
-              "div",
-              {
+              (0, l.jsxs)("div", {
                 className: (0, c.A)(
-                  s().LogoElementContainer,
-                  e.eLogoPosition == r.TOP && s().LogoTop,
-                  e.eLogoPosition == r.BOTTOM && s().LogoBottom,
-                  e.eLogoPosition == r.LEFT && s().LogoLeft,
-                  e.eLogoPosition == r.RIGHT && s().LogoRight,
+                  t().LogoElementContainer,
+                  a.eLogoPosition == r.TOP && t().LogoTop,
+                  a.eLogoPosition == r.BOTTOM && t().LogoBottom,
+                  a.eLogoPosition == r.LEFT && t().LogoLeft,
+                  a.eLogoPosition == r.RIGHT && t().LogoRight,
                 ),
-              },
-              e.logoElement,
-              l.createElement(
-                "div",
-                {
-                  className: (0, c.A)(
-                    s().PlayButtonContainer,
-                    (a || !n) && s().Hide,
-                  ),
-                  onClick: () => {
-                    t(!0), _.current?.PlayVideo(!1);
-                  },
-                },
-                l.createElement("div", {
-                  className: s().Button,
-                  style: {
-                    backgroundImage: `url( ${o.r.IMG_URL}${e.strPlayButton} )`,
-                  },
-                }),
-                l.createElement("style", null, p),
-                l.createElement(
-                  "div",
-                  { className: (0, c.A)(s().Label, "LabelStyleHack") },
-                  (0, i.Wn)(e.strPlayButtonLabel),
-                ),
-              ),
-            ),
-          )
+                children: [
+                  a.logoElement,
+                  (0, l.jsxs)("div", {
+                    className: (0, c.A)(
+                      t().PlayButtonContainer,
+                      (e || !o) && t().Hide,
+                    ),
+                    onClick: () => {
+                      s(!0), h.current?.PlayVideo(!1);
+                    },
+                    children: [
+                      (0, l.jsx)("div", {
+                        className: t().Button,
+                        style: {
+                          backgroundImage: `url( ${n.r.IMG_URL}${a.strPlayButton} )`,
+                        },
+                      }),
+                      (0, l.jsx)("style", { children: p }),
+                      (0, l.jsx)("div", {
+                        className: (0, c.A)(t().Label, "LabelStyleHack"),
+                        children: (0, d.Wn)(a.strPlayButtonLabel),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          })
         );
       };
     },
-    40151: (e, a, t) => {
+    40151: (a, e, s) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => y });
-      var r = t(89506),
-        l = t(7552),
-        n = t(56490),
-        s = t.n(n),
-        o = t(21384),
-        i = t(56698),
-        c = t(68446),
-        m = t(27866),
-        d = t(47202),
-        _ = t(36305),
-        p = t(24953),
-        b = t(20373),
-        g = t(73202),
-        E = t(36899);
-      const y = (0, c.PA)(() => {
-        i.o.RequestBPPrices([17707, 17708, 17709]);
-        const e = [
+      s.r(e), s.d(e, { default: () => y });
+      var r = s(69500),
+        l = s(89506),
+        i = s(56490),
+        o = s.n(i),
+        t = s(21384),
+        n = s(70595),
+        d = s(68446),
+        c = s(40045),
+        _ = s(47202),
+        m = s(36305),
+        h = s(24953),
+        p = s(20373),
+        b = s(73202),
+        g = s(36899);
+      const y = (0, d.PA)(() => {
+        n.o.RequestBPPrices([17707, 17708, 17709]);
+        const a = [
           {
             bEnabled: !0,
             arrImmortals: [
               {
                 strHeroName: "lone_druid",
-                eRarity: b.yP.Normal,
-                eImageLoc: b.gv.Left,
+                eRarity: p.yP.Normal,
+                eImageLoc: p.gv.Left,
               },
               {
                 strHeroName: "huskar",
-                eRarity: b.yP.Normal,
-                eImageLoc: b.gv.Right,
+                eRarity: p.yP.Normal,
+                eImageLoc: p.gv.Right,
               },
               {
                 strHeroName: "zuus",
-                eRarity: b.yP.Normal,
-                eImageLoc: b.gv.Right,
+                eRarity: p.yP.Normal,
+                eImageLoc: p.gv.Right,
               },
               {
                 strHeroName: "abyssal_underlord",
-                eRarity: b.yP.Normal,
-                eImageLoc: b.gv.Left,
+                eRarity: p.yP.Normal,
+                eImageLoc: p.gv.Left,
               },
               {
                 strHeroName: "venomancer",
-                eRarity: b.yP.Normal,
-                eImageLoc: b.gv.Right,
+                eRarity: p.yP.Normal,
+                eImageLoc: p.gv.Right,
               },
               {
                 strHeroName: "naga_siren",
-                eRarity: b.yP.Normal,
-                eImageLoc: b.gv.Left,
+                eRarity: p.yP.Normal,
+                eImageLoc: p.gv.Left,
               },
               {
                 strHeroName: "omniknight",
                 strTooltip: "#battlepass_tooltip_rare",
-                eRarity: b.yP.Rare,
-                eImageLoc: b.gv.Right,
+                eRarity: p.yP.Rare,
+                eImageLoc: p.gv.Right,
               },
               {
                 strHeroName: "zuus",
                 strTooltip: "#battlepass_tooltip_very_rare",
-                eRarity: b.yP.Very,
-                eImageLoc: b.gv.Left,
+                eRarity: p.yP.Very,
+                eImageLoc: p.gv.Left,
                 bGold: !0,
               },
               {
                 strHeroName: "huskar",
                 strTooltip: "#battlepass_tooltip_very_rare",
-                eRarity: b.yP.Very,
-                eImageLoc: b.gv.Right,
+                eRarity: p.yP.Very,
+                eImageLoc: p.gv.Right,
                 bGold: !0,
               },
               {
                 strHeroName: "doom_bringer",
                 strTooltip: "#battlepass_tooltip_ultra_rare",
-                eRarity: b.yP.Ultra,
-                eImageLoc: b.gv.Left,
+                eRarity: p.yP.Ultra,
+                eImageLoc: p.gv.Left,
               },
             ],
           },
         ];
-        return l.createElement(
-          "div",
-          { className: s().HomePage },
-          l.createElement(d.A, { bOverlapping: !0 }),
-          l.createElement(
-            g.mg,
-            null,
-            l.createElement("title", null, (0, m.Wn)("#labyrinth_title")),
-          ),
-          l.createElement(
-            "div",
-            { className: s().HeaderSection },
-            l.createElement(
-              "div",
-              { className: s().TitleContainer },
-              l.createElement(E.C, {
-                strBackgroundVideo: "labyrinth/agh_header_right",
-                strPlayButton: "labyrinth/play_button.png",
-                strPlayButtonLabel: "#labyrinth_trailer",
-                strYouTubeVideoID: "BuR9Bf5-034",
-                labelColors: ["#A6EAFF", "#FFFFFF", "#A6EAFF"],
-                glowDetails: [
-                  { size: 3, color: "#00000091" },
-                  { size: 10, color: "#0066ff" },
-                  { size: 8, color: "#b566ff" },
-                ],
-                eLogoPosition: E._.LEFT,
-                logoElement: l.createElement("img", {
-                  className: (0, o.A)(s().Logo, s().Img1),
-                  onError: (e) =>
-                    (e.target.src = `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
-                  src: `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${r.r.LANGUAGE}.png`,
-                }),
+        return (0, r.jsxs)("div", {
+          className: o().HomePage,
+          children: [
+            (0, r.jsx)(_.A, { bOverlapping: !0 }),
+            (0, r.jsx)(b.mg, {
+              children: (0, r.jsx)("title", {
+                children: (0, c.Wn)("#labyrinth_title"),
               }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_lore_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_lore_desc"),
-              ),
-            ),
-          ),
-          l.createElement(
-            "div",
-            { className: s().PurchaseBanner },
-            l.createElement(
-              "div",
-              { className: s().Headline },
-              (0, m.Wn)("#labyrinth_battlepass"),
-            ),
-            l.createElement(
-              "div",
-              { className: s().ButtonRow },
-              l.createElement(p.$x, {
-                colorTopEdge: "#7A7096",
-                colorTop: "#4F496050 ",
-                colorMiddle: "#4F4960",
-                colorBottom: "#4F4960",
-                level: 1,
-                itemid: 17707,
-                capsuleImageLocation: "labyrinth/bp_logo_",
-                capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
-              }),
-              l.createElement(p.$x, {
-                colorTopEdge: "#3C6AFB",
-                colorTop: "#2D4EB450 ",
-                colorMiddle: "#2D4EB4",
-                colorBottom: "#2D4EB4",
-                level: 50,
-                discountPct: 4,
-                itemid: 17708,
-                capsuleImageLocation: "labyrinth/bp_logo_",
-                capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
-              }),
-              l.createElement(p.$x, {
-                colorTopEdge: "#7e57ff",
-                colorTop: "#5741A250 ",
-                colorMiddle: "#5741A2",
-                colorBottom: "#5741A2",
-                level: 100,
-                discountPct: 19,
-                itemid: 17709,
-                capsuleImageLocation: "labyrinth/bp_logo_",
-                capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
-              }),
-            ),
-          ),
-          l.createElement(
-            "div",
-            { className: s().EventGame },
-            l.createElement(
-              "div",
-              { className: s().Subhead },
-              (0, m.Wn)("#labyrinth_event_label"),
-            ),
-            l.createElement("img", {
-              className: s().Logo,
-              onError: (e) =>
-                (e.target.src = `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
-              src: `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${r.r.LANGUAGE}.png`,
             }),
-            l.createElement(
-              "div",
-              { className: s().Headline },
-              (0, m.Wn)("#labyrinth_event_game"),
-            ),
-            l.createElement(
-              "div",
-              { className: s().EventIntro },
-              (0, m.Wn)("#labyrinth_event_title"),
-            ),
-            l.createElement(
-              "div",
-              { className: s().Description },
-              (0, m.Wn)("#labyrinth_event_desc"),
-            ),
-            l.createElement(
-              "div",
-              {
-                className: (0, o.A)(s().HowToPlayRow, s().HowToPlay1),
-                "data-aos": "fade-left",
-                "data-aos-duration": "1500",
-              },
-              l.createElement(
-                "div",
-                { className: s().HowToPlayText },
-                l.createElement(
-                  "div",
-                  { className: s().Headline },
-                  (0, m.Wn)("#labyrinth_event_howtoplay1_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().Description },
-                  (0, m.Wn)("#labyrinth_event_howtoplay1_desc"),
-                ),
-              ),
-              l.createElement("img", {
-                className: s().HowToPlayImg,
-                src: `${r.r.IMG_URL}/labyrinth/htp_explore.png`,
-              }),
-            ),
-            l.createElement(
-              "div",
-              {
-                className: (0, o.A)(s().HowToPlayRow, s().HowToPlay2),
-                "data-aos": "fade-right",
-                "data-aos-duration": "1500",
-              },
-              l.createElement("img", {
-                className: s().HowToPlayImg,
-                src: `${r.r.IMG_URL}/labyrinth/htp_path.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().HowToPlayText },
-                l.createElement(
-                  "div",
-                  { className: s().Headline },
-                  (0, m.Wn)("#labyrinth_event_howtoplay2_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().Description },
-                  (0, m.Wn)("#labyrinth_event_howtoplay2_desc"),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              {
-                className: (0, o.A)(s().HowToPlayRow, s().HowToPlay3),
-                "data-aos": "fade-left",
-                "data-aos-duration": "1500",
-              },
-              l.createElement(
-                "div",
-                { className: s().HowToPlayText },
-                l.createElement(
-                  "div",
-                  { className: s().Headline },
-                  (0, m.Wn)("#labyrinth_event_howtoplay3_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().Description },
-                  (0, m.Wn)("#labyrinth_event_howtoplay3_desc"),
-                ),
-              ),
-              l.createElement("img", {
-                className: s().HowToPlayImg,
-                src: `${r.r.IMG_URL}/labyrinth/htp_roster.png`,
-              }),
-            ),
-          ),
-          l.createElement(
-            "div",
-            { className: s().BlessingsRow },
-            l.createElement("div", { className: s().TopFade }),
-            l.createElement(
-              "div",
-              {
-                className: s().BlessingsText,
-                "data-aos": "fade-up",
-                "data-aos-duration": "1500",
-              },
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_event_blessings_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Label },
-                (0, m.Wn)("#labyrinth_event_blessings_label"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_event_blessings_desc"),
-              ),
-            ),
-            l.createElement("div", { className: s().DividerBottom }),
-          ),
-          l.createElement(
-            "div",
-            { className: s().BattlePass },
-            l.createElement(
-              "div",
-              { className: s().Rewards },
-              l.createElement("img", {
-                className: s().Logo,
-                onError: (e) =>
-                  (e.target.src = `${r.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_en.png`),
-                src: `${r.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_${r.r.LANGUAGE}.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_intro_desc"),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().CavernCrawl },
-              l.createElement("img", {
-                className: s().Logo,
-                onError: (e) =>
-                  (e.target.src = `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
-                src: `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${r.r.LANGUAGE}.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_cavern_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_cavern_desc"),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().WeeklyQuests },
-              l.createElement("img", {
-                className: s().Img,
-                "data-aos": "fade-right",
-                "data-aos-delay": "200",
-                "data-aos-duration": "2000",
-                src: `${r.r.IMG_URL}/labyrinth/weekly_quests.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().Text },
-                l.createElement(
-                  "div",
-                  { className: s().Headline },
-                  (0, m.Wn)("#labyrinth_bp_quests_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().Description },
-                  (0, m.Wn)("#labyrinth_bp_quests_desc"),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().AssistantFeatures },
-              l.createElement("div", { className: s().DividerTop }),
-              l.createElement("div", { className: s().DividerBottom }),
-              l.createElement("img", {
-                className: s().Logo,
-                onError: (e) =>
-                  (e.target.src = `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
-                src: `${r.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${r.r.LANGUAGE}.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_additional_title"),
-              ),
-              l.createElement(
-                "div",
-                {
-                  className: (0, o.A)(s().HowToPlayRow, s().HowToPlay1),
-                  "data-aos": "fade-left",
-                  "data-aos-duration": "1500",
-                },
-                l.createElement(
-                  "div",
-                  { className: s().HowToPlayText },
-                  l.createElement(
-                    "div",
-                    { className: s().Label },
-                    (0, m.Wn)("#labyrinth_bp_assistant_feat1_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_assistant_feat1_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_assistant_feat1_desc"),
-                  ),
-                ),
-                l.createElement("img", {
-                  className: s().AssistantImg,
-                  src: `${r.r.IMG_URL}/labyrinth/assistant_neutrals.jpg`,
-                }),
-              ),
-              l.createElement(
-                "div",
-                {
-                  className: (0, o.A)(s().HowToPlayRow, s().HowToPlay1),
-                  "data-aos": "fade-right",
-                  "data-aos-duration": "1500",
-                },
-                l.createElement("img", {
-                  className: s().AssistantImg,
-                  src: `${r.r.IMG_URL}/labyrinth/assistant_rune.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().HowToPlayText2 },
-                  l.createElement(
-                    "div",
-                    { className: s().Label },
-                    (0, m.Wn)("#labyrinth_bp_assistant_rune_spawn_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_assistant_rune_spawn_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_assistant_rune_spawn_desc"),
-                  ),
-                ),
-              ),
-              l.createElement(
-                "div",
-                {
-                  className: (0, o.A)(s().HowToPlayRow, s().HowToPlay1),
-                  "data-aos": "fade-left",
-                  "data-aos-duration": "1500",
-                },
-                l.createElement(
-                  "div",
-                  { className: s().HowToPlayText },
-                  l.createElement(
-                    "div",
-                    { className: s().Label },
-                    (0, m.Wn)("#labyrinth_bp_assistant_avg_bounty_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_assistant_avg_bounty_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_assistant_avg_bounty_desc"),
-                  ),
-                ),
-                l.createElement("img", {
-                  className: s().AssistantImg,
-                  src: `${r.r.IMG_URL}/labyrinth/assistant_bounty.png`,
-                }),
-              ),
-              l.createElement(
-                "div",
-                { className: (0, o.A)(s().HowToPlayRow, s().HowToPlay1) },
-                l.createElement(
-                  "div",
-                  { className: s().HowToPlayText3 },
-                  l.createElement(
-                    "div",
-                    { className: s().Label },
-                    (0, m.Wn)("#labyrinth_bp_assistant_feat2_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_assistant_feat2_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_assistant_feat2_desc"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().StandardButton },
-                    l.createElement(
-                      "a",
-                      { href: "https://www.dota2.com/controllerfaq" },
-                      l.createElement(
-                        "div",
-                        { className: s().ButtonText },
-                        (0, m.Wn)("#labyrinth_bp_assistant_feat2_btn"),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().Rewards },
-              l.createElement("img", {
-                className: s().Img,
-                "data-aos": "fade-up",
-                "data-aos-delay": "200",
-                "data-aos-duration": "2000",
-                src: `${r.r.IMG_URL}/labyrinth/reward_line.png`,
-              }),
-              l.createElement("img", {
-                className: s().Logo,
-                onError: (e) =>
-                  (e.target.src = `${r.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_en.png`),
-                src: `${r.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_${r.r.LANGUAGE}.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_rewards_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_rewards_desc"),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().DrowArcana },
-              l.createElement(
-                "div",
-                {
-                  className: s().BPLevelContainer,
-                  "data-aos": "fade-right",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement("img", {
-                  className: s().BPShieldSmall,
-                  src: `${r.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().LevelLabel },
-                  (0, m.Wn)("#labyrinth_bp_drow_label"),
-                ),
-              ),
-              l.createElement(
-                "video",
-                {
-                  className: s().BackgroundVideo,
-                  autoPlay: !0,
-                  preload: "auto",
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                  poster: `${r.r.IMG_URL}/labyrinth/rewards/drow_hero.jpg`,
-                },
-                l.createElement("source", {
-                  type: "video/webm",
-                  src: `${r.r.VIDEO_URL}labyrinth/rewards/drow_hero.webm`,
-                }),
-                l.createElement("source", {
-                  type: "video/mp4",
-                  src: `${r.r.VIDEO_URL}labyrinth/rewards/drow_hero.mp4`,
-                }),
-              ),
-              l.createElement("img", {
-                className: s().Logo,
-                onError: (e) =>
-                  (e.target.src = `${r.r.IMG_URL}/labyrinth/arcana_drow_logo_en.png`),
-                src: `${r.r.IMG_URL}/labyrinth/arcana_drow_logo_${r.r.LANGUAGE}.png`,
-                "data-aos": "fade-up",
-                "data-aos-duration": "2000",
-              }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_drow_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_drow_desc"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().VideoContainer },
-                l.createElement(
-                  "video",
-                  {
-                    className: s().ShowcaseVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: `${r.r.VIDEO_URL}labyrinth/drow_ranger_arcana.jpg`,
-                  },
-                  l.createElement("source", {
-                    type: "video/webm",
-                    src: `${r.r.VIDEO_URL}labyrinth/drow_ranger_arcana.webm`,
+            (0, r.jsx)("div", {
+              className: o().HeaderSection,
+              children: (0, r.jsxs)("div", {
+                className: o().TitleContainer,
+                children: [
+                  (0, r.jsx)(g.C, {
+                    strBackgroundVideo: "labyrinth/agh_header_right",
+                    strPlayButton: "labyrinth/play_button.png",
+                    strPlayButtonLabel: "#labyrinth_trailer",
+                    strYouTubeVideoID: "BuR9Bf5-034",
+                    labelColors: ["#A6EAFF", "#FFFFFF", "#A6EAFF"],
+                    glowDetails: [
+                      { size: 3, color: "#00000091" },
+                      { size: 10, color: "#0066ff" },
+                      { size: 8, color: "#b566ff" },
+                    ],
+                    eLogoPosition: g._.LEFT,
+                    logoElement: (0, r.jsx)("img", {
+                      className: (0, t.A)(o().Logo, o().Img1),
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${l.r.LANGUAGE}.png`,
+                    }),
                   }),
-                  l.createElement("source", {
-                    type: "video/mp4",
-                    src: `${r.r.VIDEO_URL}labyrinth/drow_ranger_arcana.webm`,
+                  (0, r.jsx)("div", {
+                    className: o().Headline,
+                    children: (0, c.Wn)("#labyrinth_lore_title"),
                   }),
-                ),
-                l.createElement("img", {
-                  className: s().Cloud1,
+                  (0, r.jsx)("div", {
+                    className: o().Description,
+                    children: (0, c.Wn)("#labyrinth_lore_desc"),
+                  }),
+                ],
+              }),
+            }),
+            (0, r.jsxs)("div", {
+              className: o().PurchaseBanner,
+              children: [
+                (0, r.jsx)("div", {
+                  className: o().Headline,
+                  children: (0, c.Wn)("#labyrinth_battlepass"),
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().ButtonRow,
+                  children: [
+                    (0, r.jsx)(h.$x, {
+                      colorTopEdge: "#7A7096",
+                      colorTop: "#4F496050 ",
+                      colorMiddle: "#4F4960",
+                      colorBottom: "#4F4960",
+                      level: 1,
+                      itemid: 17707,
+                      capsuleImageLocation: "labyrinth/bp_logo_",
+                      capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
+                    }),
+                    (0, r.jsx)(h.$x, {
+                      colorTopEdge: "#3C6AFB",
+                      colorTop: "#2D4EB450 ",
+                      colorMiddle: "#2D4EB4",
+                      colorBottom: "#2D4EB4",
+                      level: 50,
+                      discountPct: 4,
+                      itemid: 17708,
+                      capsuleImageLocation: "labyrinth/bp_logo_",
+                      capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
+                    }),
+                    (0, r.jsx)(h.$x, {
+                      colorTopEdge: "#7e57ff",
+                      colorTop: "#5741A250 ",
+                      colorMiddle: "#5741A2",
+                      colorBottom: "#5741A2",
+                      level: 100,
+                      discountPct: 19,
+                      itemid: 17709,
+                      capsuleImageLocation: "labyrinth/bp_logo_",
+                      capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, r.jsxs)("div", {
+              className: o().EventGame,
+              children: [
+                (0, r.jsx)("div", {
+                  className: o().Subhead,
+                  children: (0, c.Wn)("#labyrinth_event_label"),
+                }),
+                (0, r.jsx)("img", {
+                  className: o().Logo,
+                  onError: (a) =>
+                    (a.target.src = `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
+                  src: `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${l.r.LANGUAGE}.png`,
+                }),
+                (0, r.jsx)("div", {
+                  className: o().Headline,
+                  children: (0, c.Wn)("#labyrinth_event_game"),
+                }),
+                (0, r.jsx)("div", {
+                  className: o().EventIntro,
+                  children: (0, c.Wn)("#labyrinth_event_title"),
+                }),
+                (0, r.jsx)("div", {
+                  className: o().Description,
+                  children: (0, c.Wn)("#labyrinth_event_desc"),
+                }),
+                (0, r.jsxs)("div", {
+                  className: (0, t.A)(o().HowToPlayRow, o().HowToPlay1),
                   "data-aos": "fade-left",
-                  "data-aos-delay": "300",
-                  "data-aos-duration": "2000",
-                  src: `${r.r.IMG_URL}/labyrinth/cloud1.png`,
-                }),
-                l.createElement("img", {
-                  className: s().Cloud2,
-                  "data-aos": "fade-right",
-                  "data-aos-delay": "300",
-                  "data-aos-duration": "2000",
-                  src: `${r.r.IMG_URL}/labyrinth/cloud2.png`,
-                }),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Minigame },
-                l.createElement(
-                  "div",
-                  { className: s().MinigameText },
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_drow_minigame_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().EventIntro },
-                    (0, m.Wn)("#labyrinth_bp_drow_minigame_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_drow_minigame_desc"),
-                  ),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().ArcanaBreakdown },
-              l.createElement(
-                "video",
-                {
-                  className: s().ArcanaVideo,
-                  autoPlay: !0,
-                  preload: "auto",
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                  poster: `${r.r.VIDEO_URL}labyrinth/drow_loadout.jpg`,
-                },
-                l.createElement("source", {
-                  type: "video/webm",
-                  src: `${r.r.VIDEO_URL}labyrinth/drow_loadout.webm`,
-                }),
-                l.createElement("source", {
-                  type: "video/mp4",
-                  src: `${r.r.VIDEO_URL}labyrinth/drow_loadout.mp4`,
-                }),
-              ),
-              l.createElement(
-                "div",
-                { className: s().BreakdownText },
-                l.createElement(
-                  "div",
-                  { className: s().Headline },
-                  (0, m.Wn)("#labyrinth_bp_drow_includes"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureTitle },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat1_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureDesc },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat1_desc"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureTitle },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat2_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureDesc },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat2_desc"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureTitle },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat3_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureDesc },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat3_desc"),
-                ),
-                l.createElement("img", {
-                  className: s().FeatureImgs,
-                  src: `${r.r.IMG_URL}/labyrinth/drow_icons.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureTitle },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat4_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureDesc },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat4_desc"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureTitle },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat5_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureDesc },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat5_desc"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureTitle },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat6_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureDesc },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat6_desc"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().FeatureTitle },
-                  (0, m.Wn)("#labyrinth_bp_drow_feat7_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().Wallpapers },
-                  l.createElement(
-                    "div",
-                    { className: s().WallpaperGroup },
-                    l.createElement(
-                      "a",
-                      {
-                        href: `${r.r.IMG_URL}labyrinth/wallpapers/wallpaper_1_${"schinese" == r.r.LANGUAGE ? "schinese" : "en"}.jpg`,
-                      },
-                      l.createElement(
-                        "div",
-                        { className: s().Wallpaper },
-                        l.createElement("img", {
-                          className: s().WallpaperImgDesktop,
-                          onError: (e) =>
-                            (e.target.src = `${r.r.IMG_URL}/labyrinth/wallpapers/wallpaper_1_thumb_en.jpg`),
-                          src: `${r.r.IMG_URL}/labyrinth/wallpapers/wallpaper_1_thumb_${r.r.LANGUAGE}.jpg`,
+                  "data-aos-duration": "1500",
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().HowToPlayText,
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: o().Headline,
+                          children: (0, c.Wn)(
+                            "#labyrinth_event_howtoplay1_title",
+                          ),
                         }),
-                      ),
-                    ),
-                    l.createElement(
-                      "a",
-                      {
-                        href: `${r.r.IMG_URL}labyrinth/wallpapers/mobile_1_${"schinese" == r.r.LANGUAGE ? "schinese" : "en"}.jpg`,
-                      },
-                      l.createElement(
-                        "div",
-                        { className: s().Wallpaper },
-                        l.createElement("img", {
-                          className: s().WallpaperImgDesktop,
-                          onError: (e) =>
-                            (e.target.src = `${r.r.IMG_URL}/labyrinth/wallpapers/mobile_1_thumb_en.jpg`),
-                          src: `${r.r.IMG_URL}/labyrinth/wallpapers/mobile_1_thumb_${r.r.LANGUAGE}.jpg`,
+                        (0, r.jsx)("div", {
+                          className: o().Description,
+                          children: (0, c.Wn)(
+                            "#labyrinth_event_howtoplay1_desc",
+                          ),
                         }),
+                      ],
+                    }),
+                    (0, r.jsx)("img", {
+                      className: o().HowToPlayImg,
+                      src: `${l.r.IMG_URL}/labyrinth/htp_explore.png`,
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: (0, t.A)(o().HowToPlayRow, o().HowToPlay2),
+                  "data-aos": "fade-right",
+                  "data-aos-duration": "1500",
+                  children: [
+                    (0, r.jsx)("img", {
+                      className: o().HowToPlayImg,
+                      src: `${l.r.IMG_URL}/labyrinth/htp_path.png`,
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: o().HowToPlayText,
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: o().Headline,
+                          children: (0, c.Wn)(
+                            "#labyrinth_event_howtoplay2_title",
+                          ),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().Description,
+                          children: (0, c.Wn)(
+                            "#labyrinth_event_howtoplay2_desc",
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: (0, t.A)(o().HowToPlayRow, o().HowToPlay3),
+                  "data-aos": "fade-left",
+                  "data-aos-duration": "1500",
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().HowToPlayText,
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: o().Headline,
+                          children: (0, c.Wn)(
+                            "#labyrinth_event_howtoplay3_title",
+                          ),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().Description,
+                          children: (0, c.Wn)(
+                            "#labyrinth_event_howtoplay3_desc",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("img", {
+                      className: o().HowToPlayImg,
+                      src: `${l.r.IMG_URL}/labyrinth/htp_roster.png`,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, r.jsxs)("div", {
+              className: o().BlessingsRow,
+              children: [
+                (0, r.jsx)("div", { className: o().TopFade }),
+                (0, r.jsxs)("div", {
+                  className: o().BlessingsText,
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1500",
+                  children: [
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_event_blessings_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Label,
+                      children: (0, c.Wn)("#labyrinth_event_blessings_label"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_event_blessings_desc"),
+                    }),
+                  ],
+                }),
+                (0, r.jsx)("div", { className: o().DividerBottom }),
+              ],
+            }),
+            (0, r.jsxs)("div", {
+              className: o().BattlePass,
+              children: [
+                (0, r.jsxs)("div", {
+                  className: o().Rewards,
+                  children: [
+                    (0, r.jsx)("img", {
+                      className: o().Logo,
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_${l.r.LANGUAGE}.png`,
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_intro_desc"),
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().CavernCrawl,
+                  children: [
+                    (0, r.jsx)("img", {
+                      className: o().Logo,
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${l.r.LANGUAGE}.png`,
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_cavern_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_cavern_desc"),
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().WeeklyQuests,
+                  children: [
+                    (0, r.jsx)("img", {
+                      className: o().Img,
+                      "data-aos": "fade-right",
+                      "data-aos-delay": "200",
+                      "data-aos-duration": "2000",
+                      src: `${l.r.IMG_URL}/labyrinth/weekly_quests.png`,
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: o().Text,
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: o().Headline,
+                          children: (0, c.Wn)("#labyrinth_bp_quests_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().Description,
+                          children: (0, c.Wn)("#labyrinth_bp_quests_desc"),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().AssistantFeatures,
+                  children: [
+                    (0, r.jsx)("div", { className: o().DividerTop }),
+                    (0, r.jsx)("div", { className: o().DividerBottom }),
+                    (0, r.jsx)("img", {
+                      className: o().Logo,
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/agh_logo_plus_bp_${l.r.LANGUAGE}.png`,
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_additional_title"),
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: (0, t.A)(o().HowToPlayRow, o().HowToPlay1),
+                      "data-aos": "fade-left",
+                      "data-aos-duration": "1500",
+                      children: [
+                        (0, r.jsxs)("div", {
+                          className: o().HowToPlayText,
+                          children: [
+                            (0, r.jsx)("div", {
+                              className: o().Label,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_feat1_label",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Headline,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_feat1_title",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Description,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_feat1_desc",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, r.jsx)("img", {
+                          className: o().AssistantImg,
+                          src: `${l.r.IMG_URL}/labyrinth/assistant_neutrals.jpg`,
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: (0, t.A)(o().HowToPlayRow, o().HowToPlay1),
+                      "data-aos": "fade-right",
+                      "data-aos-duration": "1500",
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().AssistantImg,
+                          src: `${l.r.IMG_URL}/labyrinth/assistant_rune.png`,
+                        }),
+                        (0, r.jsxs)("div", {
+                          className: o().HowToPlayText2,
+                          children: [
+                            (0, r.jsx)("div", {
+                              className: o().Label,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_rune_spawn_label",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Headline,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_rune_spawn_title",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Description,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_rune_spawn_desc",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: (0, t.A)(o().HowToPlayRow, o().HowToPlay1),
+                      "data-aos": "fade-left",
+                      "data-aos-duration": "1500",
+                      children: [
+                        (0, r.jsxs)("div", {
+                          className: o().HowToPlayText,
+                          children: [
+                            (0, r.jsx)("div", {
+                              className: o().Label,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_avg_bounty_label",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Headline,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_avg_bounty_title",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Description,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_assistant_avg_bounty_desc",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, r.jsx)("img", {
+                          className: o().AssistantImg,
+                          src: `${l.r.IMG_URL}/labyrinth/assistant_bounty.png`,
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("div", {
+                      className: (0, t.A)(o().HowToPlayRow, o().HowToPlay1),
+                      children: (0, r.jsxs)("div", {
+                        className: o().HowToPlayText3,
+                        children: [
+                          (0, r.jsx)("div", {
+                            className: o().Label,
+                            children: (0, c.Wn)(
+                              "#labyrinth_bp_assistant_feat2_label",
+                            ),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().Headline,
+                            children: (0, c.Wn)(
+                              "#labyrinth_bp_assistant_feat2_title",
+                            ),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().Description,
+                            children: (0, c.Wn)(
+                              "#labyrinth_bp_assistant_feat2_desc",
+                            ),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().StandardButton,
+                            children: (0, r.jsx)("a", {
+                              href: "https://www.dota2.com/controllerfaq",
+                              children: (0, r.jsx)("div", {
+                                className: o().ButtonText,
+                                children: (0, c.Wn)(
+                                  "#labyrinth_bp_assistant_feat2_btn",
+                                ),
+                              }),
+                            }),
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().Rewards,
+                  children: [
+                    (0, r.jsx)("img", {
+                      className: o().Img,
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "200",
+                      "data-aos-duration": "2000",
+                      src: `${l.r.IMG_URL}/labyrinth/reward_line.png`,
+                    }),
+                    (0, r.jsx)("img", {
+                      className: o().Logo,
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_${l.r.LANGUAGE}.png`,
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_rewards_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_rewards_desc"),
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().DrowArcana,
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().BPLevelContainer,
+                      "data-aos": "fade-right",
+                      "data-aos-delay": "400",
+                      "data-aos-duration": "2000",
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().BPShieldSmall,
+                          src: `${l.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().LevelLabel,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_label"),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("video", {
+                      className: o().BackgroundVideo,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: `${l.r.IMG_URL}/labyrinth/rewards/drow_hero.jpg`,
+                      children: [
+                        (0, r.jsx)("source", {
+                          type: "video/webm",
+                          src: `${l.r.VIDEO_URL}labyrinth/rewards/drow_hero.webm`,
+                        }),
+                        (0, r.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${l.r.VIDEO_URL}labyrinth/rewards/drow_hero.mp4`,
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("img", {
+                      className: o().Logo,
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/arcana_drow_logo_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/arcana_drow_logo_${l.r.LANGUAGE}.png`,
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "2000",
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_drow_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_drow_desc"),
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: o().VideoContainer,
+                      children: [
+                        (0, r.jsxs)("video", {
+                          className: o().ShowcaseVideo,
+                          autoPlay: !0,
+                          preload: "auto",
+                          muted: !0,
+                          loop: !0,
+                          playsInline: !0,
+                          poster: `${l.r.VIDEO_URL}labyrinth/drow_ranger_arcana.jpg`,
+                          children: [
+                            (0, r.jsx)("source", {
+                              type: "video/webm",
+                              src: `${l.r.VIDEO_URL}labyrinth/drow_ranger_arcana.webm`,
+                            }),
+                            (0, r.jsx)("source", {
+                              type: "video/mp4",
+                              src: `${l.r.VIDEO_URL}labyrinth/drow_ranger_arcana.webm`,
+                            }),
+                          ],
+                        }),
+                        (0, r.jsx)("img", {
+                          className: o().Cloud1,
+                          "data-aos": "fade-left",
+                          "data-aos-delay": "300",
+                          "data-aos-duration": "2000",
+                          src: `${l.r.IMG_URL}/labyrinth/cloud1.png`,
+                        }),
+                        (0, r.jsx)("img", {
+                          className: o().Cloud2,
+                          "data-aos": "fade-right",
+                          "data-aos-delay": "300",
+                          "data-aos-duration": "2000",
+                          src: `${l.r.IMG_URL}/labyrinth/cloud2.png`,
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Minigame,
+                      children: (0, r.jsxs)("div", {
+                        className: o().MinigameText,
+                        children: [
+                          (0, r.jsx)("div", {
+                            className: o().Headline,
+                            children: (0, c.Wn)(
+                              "#labyrinth_bp_drow_minigame_title",
+                            ),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().EventIntro,
+                            children: (0, c.Wn)(
+                              "#labyrinth_bp_drow_minigame_label",
+                            ),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().Description,
+                            children: (0, c.Wn)(
+                              "#labyrinth_bp_drow_minigame_desc",
+                            ),
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().ArcanaBreakdown,
+                  children: [
+                    (0, r.jsxs)("video", {
+                      className: o().ArcanaVideo,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: `${l.r.VIDEO_URL}labyrinth/drow_loadout.jpg`,
+                      children: [
+                        (0, r.jsx)("source", {
+                          type: "video/webm",
+                          src: `${l.r.VIDEO_URL}labyrinth/drow_loadout.webm`,
+                        }),
+                        (0, r.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${l.r.VIDEO_URL}labyrinth/drow_loadout.mp4`,
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: o().BreakdownText,
+                      children: [
+                        (0, r.jsx)("div", {
+                          className: o().Headline,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_includes"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureTitle,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat1_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureDesc,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat1_desc"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureTitle,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat2_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureDesc,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat2_desc"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureTitle,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat3_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureDesc,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat3_desc"),
+                        }),
+                        (0, r.jsx)("img", {
+                          className: o().FeatureImgs,
+                          src: `${l.r.IMG_URL}/labyrinth/drow_icons.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureTitle,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat4_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureDesc,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat4_desc"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureTitle,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat5_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureDesc,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat5_desc"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureTitle,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat6_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureDesc,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat6_desc"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().FeatureTitle,
+                          children: (0, c.Wn)("#labyrinth_bp_drow_feat7_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().Wallpapers,
+                          children: (0, r.jsxs)("div", {
+                            className: o().WallpaperGroup,
+                            children: [
+                              (0, r.jsx)("a", {
+                                href: `${l.r.IMG_URL}labyrinth/wallpapers/wallpaper_1_${"schinese" == l.r.LANGUAGE ? "schinese" : "en"}.jpg`,
+                                children: (0, r.jsx)("div", {
+                                  className: o().Wallpaper,
+                                  children: (0, r.jsx)("img", {
+                                    className: o().WallpaperImgDesktop,
+                                    onError: (a) =>
+                                      (a.target.src = `${l.r.IMG_URL}/labyrinth/wallpapers/wallpaper_1_thumb_en.jpg`),
+                                    src: `${l.r.IMG_URL}/labyrinth/wallpapers/wallpaper_1_thumb_${l.r.LANGUAGE}.jpg`,
+                                  }),
+                                }),
+                              }),
+                              (0, r.jsx)("a", {
+                                href: `${l.r.IMG_URL}labyrinth/wallpapers/mobile_1_${"schinese" == l.r.LANGUAGE ? "schinese" : "en"}.jpg`,
+                                children: (0, r.jsx)("div", {
+                                  className: o().Wallpaper,
+                                  children: (0, r.jsx)("img", {
+                                    className: o().WallpaperImgDesktop,
+                                    onError: (a) =>
+                                      (a.target.src = `${l.r.IMG_URL}/labyrinth/wallpapers/mobile_1_thumb_en.jpg`),
+                                    src: `${l.r.IMG_URL}/labyrinth/wallpapers/mobile_1_thumb_${l.r.LANGUAGE}.jpg`,
+                                  }),
+                                }),
+                              }),
+                            ],
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().MiranaPersona,
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().BPLevelContainer,
+                      "data-aos": "fade-right",
+                      "data-aos-delay": "400",
+                      "data-aos-duration": "2000",
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().BPShieldSmall,
+                          src: `${l.r.IMG_URL}nemestice/bp_level_shield_silver.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().LevelLabel,
+                          children: (0, c.Wn)("#labyrinth_bp_mirana_label"),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("video", {
+                      className: o().BackgroundVideo,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: `${l.r.IMG_URL}/labyrinth/mirana_persona2.jpg`,
+                      children: [
+                        (0, r.jsx)("source", {
+                          type: "video/webm",
+                          src: `${l.r.VIDEO_URL}labyrinth/mirana_persona2.webm`,
+                        }),
+                        (0, r.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${l.r.VIDEO_URL}labyrinth/mirana_persona2.mp4`,
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("img", {
+                      className: o().Logo,
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/persona_mirana_logo_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/persona_mirana_logo_${l.r.LANGUAGE}.png`,
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "2000",
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_mirana_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_mirana_desc"),
+                    }),
+                    (0, r.jsxs)("video", {
+                      className: o().ShowcaseVideo,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: `${l.r.VIDEO_URL}labyrinth/mirana_persona.jpg`,
+                      children: [
+                        (0, r.jsx)("source", {
+                          type: "video/webm",
+                          src: `${l.r.VIDEO_URL}labyrinth/mirana_persona.webm`,
+                        }),
+                        (0, r.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${l.r.VIDEO_URL}labyrinth/mirana_persona.mp4`,
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: o().SecondStyle,
+                      children: [
+                        (0, r.jsxs)("div", {
+                          className: o().SecondStyleText,
+                          children: [
+                            (0, r.jsx)("div", {
+                              className: o().Intro,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_mirana_sword_level",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Headline,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_mirana_sword_title",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().EventIntro,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_mirana_sword_label",
+                              ),
+                            }),
+                            (0, r.jsx)("div", {
+                              className: o().Description,
+                              children: (0, c.Wn)(
+                                "#labyrinth_bp_mirana_sword_desc",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, r.jsx)("img", {
+                          className: o().SecondStyleArt,
+                          src: `${l.r.IMG_URL}/labyrinth/rewards/persona_mirana_flat.png`,
+                          "data-aos": "fade-left",
+                          "data-aos-delay": "400",
+                          "data-aos-duration": "2000",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().Hoodwink,
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().BPLevelContainer,
+                      "data-aos": "fade-right",
+                      "data-aos-delay": "400",
+                      "data-aos-duration": "2000",
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().BPShieldSmall,
+                          src: `${l.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().LevelLabel,
+                          children: (0, c.Wn)("#labyrinth_bp_hoodwink_level"),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_hoodwink_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Subhead,
+                      children: (0, c.Wn)("#labyrinth_bp_hoodwink_label"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_hoodwink_desc"),
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: o().VideoContainer,
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().Image,
+                          src: `${l.r.IMG_URL}labyrinth/rewards/hoodwink_prestige_crop.png`,
+                          "data-aos": "fade-up",
+                          "data-aos-delay": "400",
+                          "data-aos-duration": "2000",
+                        }),
+                        (0, r.jsxs)("video", {
+                          className: o().ShowcaseVideo,
+                          autoPlay: !0,
+                          preload: "auto",
+                          muted: !0,
+                          loop: !0,
+                          playsInline: !0,
+                          poster: `${l.r.VIDEO_URL}nemestice/rewards/attack_modifier.jpg`,
+                          children: [
+                            (0, r.jsx)("source", {
+                              type: "video/webm",
+                              src: `${l.r.VIDEO_URL}labyrinth/immortals/hoodwink.webm`,
+                            }),
+                            (0, r.jsx)("source", {
+                              type: "video/mp4",
+                              src: `${l.r.VIDEO_URL}labyrinth/immortals/hoodwink.mp4`,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().Immortals,
+                  children: [
+                    (0, r.jsx)("img", {
+                      className: o().Logo,
+                      onError: (a) =>
+                        (a.target.src = `${l.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_en.png`),
+                      src: `${l.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_${l.r.LANGUAGE}.png`,
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_immortals__title"),
+                    }),
+                    (0, r.jsx)(p.Zk, {
+                      strContentDir: "labyrinth",
+                      strPrimaryColor: "#edd3ff",
+                      strSecondaryColor: "#da69e4",
+                      strTertiaryColor: "#555555",
+                      arrImmortalTreasures: a,
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().Towers,
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().BPLevelContainer,
+                      "data-aos": "fade-right",
+                      "data-aos-delay": "400",
+                      "data-aos-duration": "2000",
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().BPShieldSmall,
+                          src: `${l.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().LevelLabel,
+                          children: (0, c.Wn)("#labyrinth_bp_towers_level"),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_towers_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Subhead,
+                      children: (0, c.Wn)("#labyrinth_bp_towers_label"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_towers_desc"),
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: o().VideoContainer,
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().Image,
+                          "data-aos": "fade-right",
+                          "data-aos-duration": "1500",
+                          src: `${l.r.IMG_URL}labyrinth/rewards/tower_dire.png`,
+                        }),
+                        (0, r.jsx)("img", {
+                          className: o().Image2,
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1500",
+                          src: `${l.r.IMG_URL}labyrinth/rewards/tower_radiant.png`,
+                        }),
+                        (0, r.jsxs)("video", {
+                          className: o().ShowcaseVideo,
+                          autoPlay: !0,
+                          preload: "auto",
+                          muted: !0,
+                          loop: !0,
+                          playsInline: !0,
+                          poster: `${l.r.VIDEO_URL}labyrinth/rewards/towers.jpg`,
+                          children: [
+                            (0, r.jsx)("source", {
+                              type: "video/webm",
+                              src: `${l.r.VIDEO_URL}labyrinth/rewards/towers.webm`,
+                            }),
+                            (0, r.jsx)("source", {
+                              type: "video/mp4",
+                              src: `${l.r.VIDEO_URL}labyrinth/rewards/towers.mp4`,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().Creeps,
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().BPLevelContainer,
+                      "data-aos": "fade-right",
+                      "data-aos-delay": "400",
+                      "data-aos-duration": "2000",
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().BPShieldSmall,
+                          src: `${l.r.IMG_URL}nemestice/bp_level_shield_silver.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().LevelLabel,
+                          children: (0, c.Wn)("#labyrinth_bp_creeps_level"),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("img", {
+                      className: o().Img,
+                      src: `${l.r.IMG_URL}labyrinth/rewards/creeps_and_siege.png`,
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Headline,
+                      children: (0, c.Wn)("#labyrinth_bp_creeps_title"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Subhead,
+                      children: (0, c.Wn)("#labyrinth_bp_creeps_label"),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: o().Description,
+                      children: (0, c.Wn)("#labyrinth_bp_creeps_desc"),
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: o().MoreRewards,
+                  children: [
+                    (0, r.jsxs)("div", {
+                      className: o().BPLevelContainer,
+                      "data-aos": "fade-right",
+                      "data-aos-delay": "400",
+                      "data-aos-duration": "2000",
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().BPShieldSmall,
+                          src: `${l.r.IMG_URL}nemestice/bp_level_shield_bronze.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().LevelLabel,
+                          children: (0, c.Wn)("#labyrinth_bp_courier_level"),
+                        }),
+                      ],
+                    }),
+                    (0, r.jsx)("div", {
+                      className: (0, t.A)(
+                        o().MoreRewardsRow,
+                        o().MoreRewardsRow1,
                       ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().MiranaPersona },
-              l.createElement(
-                "div",
-                {
-                  className: s().BPLevelContainer,
-                  "data-aos": "fade-right",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement("img", {
-                  className: s().BPShieldSmall,
-                  src: `${r.r.IMG_URL}nemestice/bp_level_shield_silver.png`,
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "2000",
+                      children: (0, r.jsxs)("div", {
+                        className: (0, t.A)(o().RewardItem, o().RewardItem1),
+                        children: [
+                          (0, r.jsx)("img", {
+                            className: o().Img,
+                            src: `${l.r.IMG_URL}/labyrinth/rewards/handward.png`,
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().Headline,
+                            children: (0, c.Wn)("#labyrinth_bp_wards_title"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().EventIntro,
+                            children: (0, c.Wn)("#labyrinth_bp_wards_label"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().Description,
+                            children: (0, c.Wn)("#labyrinth_bp_wards_desc"),
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, r.jsx)("div", {
+                      className: (0, t.A)(
+                        o().MoreRewardsRow,
+                        o().MoreRewardsRow2,
+                      ),
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "2000",
+                      children: (0, r.jsxs)("div", {
+                        className: (0, t.A)(o().RewardItem, o().RewardItem2),
+                        children: [
+                          (0, r.jsx)("img", {
+                            className: o().Img,
+                            src: `${l.r.IMG_URL}/labyrinth/rewards/handcourier.png`,
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().Headline,
+                            children: (0, c.Wn)("#labyrinth_bp_courier_title"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().EventIntro,
+                            children: (0, c.Wn)("#labyrinth_bp_courier_label"),
+                          }),
+                          (0, r.jsx)("div", {
+                            className: o().Description,
+                            children: (0, c.Wn)("#labyrinth_bp_courier_desc"),
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, r.jsx)("div", { className: o().ThinDivider }),
+                    (0, r.jsxs)("div", {
+                      className: o().RewardsMontage,
+                      children: [
+                        (0, r.jsx)("img", {
+                          className: o().MontageImg,
+                          src: `${l.r.IMG_URL}/labyrinth/rewards/2021_treasures_updated.png`,
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().Headline,
+                          children: (0, c.Wn)("#labyrinth_bp_montage_title"),
+                        }),
+                        (0, r.jsx)("div", {
+                          className: o().Description,
+                          children: (0, c.Wn)("#labyrinth_bp_montage_desc"),
+                        }),
+                      ],
+                    }),
+                  ],
                 }),
-                l.createElement(
-                  "div",
-                  { className: s().LevelLabel },
-                  (0, m.Wn)("#labyrinth_bp_mirana_label"),
-                ),
-              ),
-              l.createElement(
-                "video",
-                {
-                  className: s().BackgroundVideo,
-                  autoPlay: !0,
-                  preload: "auto",
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                  poster: `${r.r.IMG_URL}/labyrinth/mirana_persona2.jpg`,
-                },
-                l.createElement("source", {
-                  type: "video/webm",
-                  src: `${r.r.VIDEO_URL}labyrinth/mirana_persona2.webm`,
+              ],
+            }),
+            (0, r.jsxs)("div", {
+              className: o().PurchaseBanner,
+              children: [
+                (0, r.jsx)("div", {
+                  className: o().Headline,
+                  children: (0, c.Wn)("#labyrinth_battlepass"),
                 }),
-                l.createElement("source", {
-                  type: "video/mp4",
-                  src: `${r.r.VIDEO_URL}labyrinth/mirana_persona2.mp4`,
+                (0, r.jsxs)("div", {
+                  className: o().ButtonRow,
+                  children: [
+                    (0, r.jsx)(h.$x, {
+                      colorTopEdge: "#7A7096",
+                      colorTop: "#4F496050 ",
+                      colorMiddle: "#4F4960",
+                      colorBottom: "#4F4960",
+                      level: 1,
+                      itemid: 17707,
+                      capsuleImageLocation: "labyrinth/bp_logo_",
+                      capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
+                    }),
+                    (0, r.jsx)(h.$x, {
+                      colorTopEdge: "#3C6AFB",
+                      colorTop: "#2D4EB450 ",
+                      colorMiddle: "#2D4EB4",
+                      colorBottom: "#2D4EB4",
+                      level: 50,
+                      discountPct: 4,
+                      itemid: 17708,
+                      capsuleImageLocation: "labyrinth/bp_logo_",
+                      capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
+                    }),
+                    (0, r.jsx)(h.$x, {
+                      colorTopEdge: "#7e57ff",
+                      colorTop: "#5741A250 ",
+                      colorMiddle: "#5741A2",
+                      colorBottom: "#5741A2",
+                      level: 100,
+                      discountPct: 19,
+                      itemid: 17709,
+                      capsuleImageLocation: "labyrinth/bp_logo_",
+                      capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
+                    }),
+                  ],
                 }),
-              ),
-              l.createElement("img", {
-                className: s().Logo,
-                onError: (e) =>
-                  (e.target.src = `${r.r.IMG_URL}/labyrinth/persona_mirana_logo_en.png`),
-                src: `${r.r.IMG_URL}/labyrinth/persona_mirana_logo_${r.r.LANGUAGE}.png`,
-                "data-aos": "fade-up",
-                "data-aos-duration": "2000",
-              }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_mirana_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_mirana_desc"),
-              ),
-              l.createElement(
-                "video",
-                {
-                  className: s().ShowcaseVideo,
-                  autoPlay: !0,
-                  preload: "auto",
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                  poster: `${r.r.VIDEO_URL}labyrinth/mirana_persona.jpg`,
-                },
-                l.createElement("source", {
-                  type: "video/webm",
-                  src: `${r.r.VIDEO_URL}labyrinth/mirana_persona.webm`,
-                }),
-                l.createElement("source", {
-                  type: "video/mp4",
-                  src: `${r.r.VIDEO_URL}labyrinth/mirana_persona.mp4`,
-                }),
-              ),
-              l.createElement(
-                "div",
-                { className: s().SecondStyle },
-                l.createElement(
-                  "div",
-                  { className: s().SecondStyleText },
-                  l.createElement(
-                    "div",
-                    { className: s().Intro },
-                    (0, m.Wn)("#labyrinth_bp_mirana_sword_level"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_mirana_sword_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().EventIntro },
-                    (0, m.Wn)("#labyrinth_bp_mirana_sword_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_mirana_sword_desc"),
-                  ),
-                ),
-                l.createElement("img", {
-                  className: s().SecondStyleArt,
-                  src: `${r.r.IMG_URL}/labyrinth/rewards/persona_mirana_flat.png`,
-                  "data-aos": "fade-left",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                }),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().Hoodwink },
-              l.createElement(
-                "div",
-                {
-                  className: s().BPLevelContainer,
-                  "data-aos": "fade-right",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement("img", {
-                  className: s().BPShieldSmall,
-                  src: `${r.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().LevelLabel },
-                  (0, m.Wn)("#labyrinth_bp_hoodwink_level"),
-                ),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_hoodwink_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Subhead },
-                (0, m.Wn)("#labyrinth_bp_hoodwink_label"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_hoodwink_desc"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().VideoContainer },
-                l.createElement("img", {
-                  className: s().Image,
-                  src: `${r.r.IMG_URL}labyrinth/rewards/hoodwink_prestige_crop.png`,
-                  "data-aos": "fade-up",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                }),
-                l.createElement(
-                  "video",
-                  {
-                    className: s().ShowcaseVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: `${r.r.VIDEO_URL}nemestice/rewards/attack_modifier.jpg`,
-                  },
-                  l.createElement("source", {
-                    type: "video/webm",
-                    src: `${r.r.VIDEO_URL}labyrinth/immortals/hoodwink.webm`,
-                  }),
-                  l.createElement("source", {
-                    type: "video/mp4",
-                    src: `${r.r.VIDEO_URL}labyrinth/immortals/hoodwink.mp4`,
-                  }),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().Immortals },
-              l.createElement("img", {
-                className: s().Logo,
-                onError: (e) =>
-                  (e.target.src = `${r.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_en.png`),
-                src: `${r.r.IMG_URL}/labyrinth/aghlab_battlepass_logo_${r.r.LANGUAGE}.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_immortals__title"),
-              ),
-              l.createElement(b.Zk, {
-                strContentDir: "labyrinth",
-                strPrimaryColor: "#edd3ff",
-                strSecondaryColor: "#da69e4",
-                strTertiaryColor: "#555555",
-                arrImmortalTreasures: e,
-              }),
-            ),
-            l.createElement(
-              "div",
-              { className: s().Towers },
-              l.createElement(
-                "div",
-                {
-                  className: s().BPLevelContainer,
-                  "data-aos": "fade-right",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement("img", {
-                  className: s().BPShieldSmall,
-                  src: `${r.r.IMG_URL}nemestice/bp_level_shield_gold.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().LevelLabel },
-                  (0, m.Wn)("#labyrinth_bp_towers_level"),
-                ),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_towers_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Subhead },
-                (0, m.Wn)("#labyrinth_bp_towers_label"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_towers_desc"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().VideoContainer },
-                l.createElement("img", {
-                  className: s().Image,
-                  "data-aos": "fade-right",
-                  "data-aos-duration": "1500",
-                  src: `${r.r.IMG_URL}labyrinth/rewards/tower_dire.png`,
-                }),
-                l.createElement("img", {
-                  className: s().Image2,
-                  "data-aos": "fade-left",
-                  "data-aos-duration": "1500",
-                  src: `${r.r.IMG_URL}labyrinth/rewards/tower_radiant.png`,
-                }),
-                l.createElement(
-                  "video",
-                  {
-                    className: s().ShowcaseVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: `${r.r.VIDEO_URL}labyrinth/rewards/towers.jpg`,
-                  },
-                  l.createElement("source", {
-                    type: "video/webm",
-                    src: `${r.r.VIDEO_URL}labyrinth/rewards/towers.webm`,
-                  }),
-                  l.createElement("source", {
-                    type: "video/mp4",
-                    src: `${r.r.VIDEO_URL}labyrinth/rewards/towers.mp4`,
-                  }),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().Creeps },
-              l.createElement(
-                "div",
-                {
-                  className: s().BPLevelContainer,
-                  "data-aos": "fade-right",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement("img", {
-                  className: s().BPShieldSmall,
-                  src: `${r.r.IMG_URL}nemestice/bp_level_shield_silver.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().LevelLabel },
-                  (0, m.Wn)("#labyrinth_bp_creeps_level"),
-                ),
-              ),
-              l.createElement("img", {
-                className: s().Img,
-                src: `${r.r.IMG_URL}labyrinth/rewards/creeps_and_siege.png`,
-              }),
-              l.createElement(
-                "div",
-                { className: s().Headline },
-                (0, m.Wn)("#labyrinth_bp_creeps_title"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Subhead },
-                (0, m.Wn)("#labyrinth_bp_creeps_label"),
-              ),
-              l.createElement(
-                "div",
-                { className: s().Description },
-                (0, m.Wn)("#labyrinth_bp_creeps_desc"),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: s().MoreRewards },
-              l.createElement(
-                "div",
-                {
-                  className: s().BPLevelContainer,
-                  "data-aos": "fade-right",
-                  "data-aos-delay": "400",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement("img", {
-                  className: s().BPShieldSmall,
-                  src: `${r.r.IMG_URL}nemestice/bp_level_shield_bronze.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().LevelLabel },
-                  (0, m.Wn)("#labyrinth_bp_courier_level"),
-                ),
-              ),
-              l.createElement(
-                "div",
-                {
-                  className: (0, o.A)(s().MoreRewardsRow, s().MoreRewardsRow1),
-                  "data-aos": "fade-up",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement(
-                  "div",
-                  { className: (0, o.A)(s().RewardItem, s().RewardItem1) },
-                  l.createElement("img", {
-                    className: s().Img,
-                    src: `${r.r.IMG_URL}/labyrinth/rewards/handward.png`,
-                  }),
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_wards_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().EventIntro },
-                    (0, m.Wn)("#labyrinth_bp_wards_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_wards_desc"),
-                  ),
-                ),
-              ),
-              l.createElement(
-                "div",
-                {
-                  className: (0, o.A)(s().MoreRewardsRow, s().MoreRewardsRow2),
-                  "data-aos": "fade-up",
-                  "data-aos-duration": "2000",
-                },
-                l.createElement(
-                  "div",
-                  { className: (0, o.A)(s().RewardItem, s().RewardItem2) },
-                  l.createElement("img", {
-                    className: s().Img,
-                    src: `${r.r.IMG_URL}/labyrinth/rewards/handcourier.png`,
-                  }),
-                  l.createElement(
-                    "div",
-                    { className: s().Headline },
-                    (0, m.Wn)("#labyrinth_bp_courier_title"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().EventIntro },
-                    (0, m.Wn)("#labyrinth_bp_courier_label"),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: s().Description },
-                    (0, m.Wn)("#labyrinth_bp_courier_desc"),
-                  ),
-                ),
-              ),
-              l.createElement("div", { className: s().ThinDivider }),
-              l.createElement(
-                "div",
-                { className: s().RewardsMontage },
-                l.createElement("img", {
-                  className: s().MontageImg,
-                  src: `${r.r.IMG_URL}/labyrinth/rewards/2021_treasures_updated.png`,
-                }),
-                l.createElement(
-                  "div",
-                  { className: s().Headline },
-                  (0, m.Wn)("#labyrinth_bp_montage_title"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: s().Description },
-                  (0, m.Wn)("#labyrinth_bp_montage_desc"),
-                ),
-              ),
-            ),
-          ),
-          l.createElement(
-            "div",
-            { className: s().PurchaseBanner },
-            l.createElement(
-              "div",
-              { className: s().Headline },
-              (0, m.Wn)("#labyrinth_battlepass"),
-            ),
-            l.createElement(
-              "div",
-              { className: s().ButtonRow },
-              l.createElement(p.$x, {
-                colorTopEdge: "#7A7096",
-                colorTop: "#4F496050 ",
-                colorMiddle: "#4F4960",
-                colorBottom: "#4F4960",
-                level: 1,
-                itemid: 17707,
-                capsuleImageLocation: "labyrinth/bp_logo_",
-                capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
-              }),
-              l.createElement(p.$x, {
-                colorTopEdge: "#3C6AFB",
-                colorTop: "#2D4EB450 ",
-                colorMiddle: "#2D4EB4",
-                colorBottom: "#2D4EB4",
-                level: 50,
-                discountPct: 4,
-                itemid: 17708,
-                capsuleImageLocation: "labyrinth/bp_logo_",
-                capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
-              }),
-              l.createElement(p.$x, {
-                colorTopEdge: "#7e57ff",
-                colorTop: "#5741A250 ",
-                colorMiddle: "#5741A2",
-                colorBottom: "#5741A2",
-                level: 100,
-                discountPct: 19,
-                itemid: 17709,
-                capsuleImageLocation: "labyrinth/bp_logo_",
-                capsuleImageOnErrorLocation: "labyrinth/bp_logo_en.png",
-              }),
-            ),
-          ),
-          l.createElement(_.K, null),
-        );
+              ],
+            }),
+            (0, r.jsx)(m.K, {}),
+          ],
+        });
       });
     },
   },

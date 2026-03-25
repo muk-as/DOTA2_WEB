@@ -203,471 +203,447 @@
         rotate: "_3mr5RSSXg5Y53OICoHzzeO",
       };
     },
-    722: (e, t, a) => {
+    722: (e, i, s) => {
       "use strict";
-      a.d(t, { U: () => s });
-      var i = a(7552),
-        n = a(11417),
-        r = a.n(n),
-        l = a(89506);
-      const s = () =>
-        i.createElement("div", {
-          className: r().RightArrow,
+      s.d(i, { U: () => l });
+      var t = s(69500),
+        a = s(11417),
+        n = s.n(a),
+        r = s(89506);
+      const l = () =>
+        (0, t.jsx)("div", {
+          className: n().RightArrow,
           style: {
-            backgroundImage: `url( ${l.r.IMG_URL}/icons/arrow_right.svg )`,
+            backgroundImage: `url( ${r.r.IMG_URL}/icons/arrow_right.svg )`,
           },
         });
     },
-    24953: (e, t, a) => {
+    24953: (e, i, s) => {
       "use strict";
-      a.d(t, { $x: () => c, Jh: () => _, c: () => d });
-      var i = a(7552),
-        n = a(32484),
-        r = a.n(n),
-        l = a(21384),
-        s = a(27866),
-        o = a(89506),
-        m = a(56698);
-      const c = ({
+      s.d(i, { $x: () => d, Jh: () => _, c: () => m });
+      var t = s(69500),
+        a = s(32484),
+        n = s.n(a),
+        r = s(21384),
+        l = s(40045),
+        o = s(89506),
+        c = s(70595);
+      const d = ({
           colorTopEdge: e,
-          colorTop: t,
-          colorMiddle: a,
-          colorBottom: n,
-          level: c,
-          discountPct: d,
+          colorTop: i,
+          colorMiddle: s,
+          colorBottom: a,
+          level: d,
+          discountPct: m,
           itemid: _,
           capsuleImageLocation: p = "labyrinth/bp_logo_",
           capsuleImageOnErrorLocation: u = "labyrinth/bp_logo_en.png",
         }) =>
-          i.createElement(
-            "div",
-            {
-              className: r().BuyBattlePassCapsule,
-              style: {
-                borderTop: `2px solid ${e}`,
-                backgroundImage: `linear-gradient( ${t}, ${n} )`,
-              },
+          (0, t.jsxs)("div", {
+            className: n().BuyBattlePassCapsule,
+            style: {
+              borderTop: `2px solid ${e}`,
+              backgroundImage: `linear-gradient( ${i}, ${a} )`,
             },
-            i.createElement("img", {
-              className: r().CapsuleTitle,
-              onError: (e) => (e.target.src = `${o.r.IMG_URL}${u}`),
-              src: `${o.r.IMG_URL}${p}${o.r.LANGUAGE}.png`,
-            }),
-            i.createElement(
-              "div",
-              { className: (0, l.A)(r().TextStyleOverline) },
-              (0, s.Wn)("#battlepass_purchase_level", c),
-            ),
-            i.createElement(
-              "a",
-              {
+            children: [
+              (0, t.jsx)("img", {
+                className: n().CapsuleTitle,
+                onError: (e) => (e.target.src = `${o.r.IMG_URL}${u}`),
+                src: `${o.r.IMG_URL}${p}${o.r.LANGUAGE}.png`,
+              }),
+              (0, t.jsx)("div", {
+                className: (0, r.A)(n().TextStyleOverline),
+                children: (0, l.Wn)("#battlepass_purchase_level", d),
+              }),
+              (0, t.jsx)("a", {
                 href: `${o.r.BASE_URL}store/itemdetails/${_}`,
-                className: (0, l.A)(
-                  r().TextStyleButton,
-                  r().TextColorWhite,
-                  r().CapsulePurchaseButton,
+                className: (0, r.A)(
+                  n().TextStyleButton,
+                  n().TextColorWhite,
+                  n().CapsulePurchaseButton,
                 ),
                 style: {
                   borderTop: `1px solid ${e}`,
                   backgroundImage: `linear-gradient( ${e}, ${e} )`,
                 },
-              },
-              (0, s.Wn)("#battlepass_purchase_label", m.o.GetBPPrice(_)),
-            ),
-            i.createElement(
-              "div",
-              {
-                className: (0, l.A)(
-                  r().TextStyleFootnote,
-                  r().TextColorGreenGlow,
-                  r().CapsuleDiscount,
+                children: (0, l.Wn)(
+                  "#battlepass_purchase_label",
+                  c.o.GetBPPrice(_),
                 ),
-              },
-              d && (0, s.Wn)("#battlepass_purchase_discount", d, c),
+              }),
+              (0, t.jsx)("div", {
+                className: (0, r.A)(
+                  n().TextStyleFootnote,
+                  n().TextColorGreenGlow,
+                  n().CapsuleDiscount,
+                ),
+                children: m && (0, l.Wn)("#battlepass_purchase_discount", m, d),
+              }),
+            ],
+          }),
+        m = (e) =>
+          (0, t.jsxs)("div", {
+            className: (0, r.A)(
+              n().BuyCompendiumCapsule,
+              n().BuyCompendiumCapsule2023,
             ),
-          ),
-        d = (e) =>
-          i.createElement(
-            "div",
-            {
-              className: (0, l.A)(
-                r().BuyCompendiumCapsule,
-                r().BuyCompendiumCapsule2023,
-              ),
-              style: {
-                borderTop: `2px solid ${e.colorTopEdge}`,
-                backgroundImage: `linear-gradient( ${e.colorTop}, ${e.colorBottom} )`,
-              },
+            style: {
+              borderTop: `2px solid ${e.colorTopEdge}`,
+              backgroundImage: `linear-gradient( ${e.colorTop}, ${e.colorBottom} )`,
             },
-            e.title &&
-              i.createElement(
-                "div",
-                {
-                  className: r().CapsuleTitle,
+            children: [
+              e.title &&
+                (0, t.jsx)("div", {
+                  className: n().CapsuleTitle,
                   style: {
                     backgroundImage: "linear-gradient( to bottom, #FFF, #FFF",
                   },
-                },
-                (0, s.Wn)(e.title),
-              ),
-            e.capsuleImageLocation &&
-              i.createElement("img", {
-                className: r().CapsuleTitle,
-                onError: (t) =>
-                  (t.target.src = `${o.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
-                src: `${o.r.IMG_URL}${e.capsuleImageLocation}${o.r.LANGUAGE}.png`,
+                  children: (0, l.Wn)(e.title),
+                }),
+              e.capsuleImageLocation &&
+                (0, t.jsx)("img", {
+                  className: n().CapsuleTitle,
+                  onError: (i) =>
+                    (i.target.src = `${o.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                  src: `${o.r.IMG_URL}${e.capsuleImageLocation}${o.r.LANGUAGE}.png`,
+                }),
+              (0, t.jsx)("div", {
+                className: (0, r.A)(n().CompendiumLevels),
+                children: (0, l.Wn)("#compendium_purchase_levels", e.level),
               }),
-            i.createElement(
-              "div",
-              { className: (0, l.A)(r().CompendiumLevels) },
-              (0, s.Wn)("#compendium_purchase_levels", e.level),
-            ),
-            i.createElement(
-              "div",
-              { className: (0, l.A)(r().BoosterLevels) },
-              (0, s.Wn)("#compendium_purchase_booster_levels", e.booster_level),
-            ),
-            i.createElement("div", { className: r().SmoothLine }),
-            i.createElement(
-              "div",
-              { className: (0, l.A)(r().EarnTheFollowing) },
-              (0, s.Wn)("#compendium_purchase_earn_the_following"),
-            ),
-            i.createElement(
-              "ul",
-              null,
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)("#compendium_purchase_all_access"),
-              ),
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)("#compendium_purchase_aegis_emoticon"),
-              ),
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)(
-                  "#compendium_purchase_rtti_culling_blades",
-                  e.cullingBlades,
+              (0, t.jsx)("div", {
+                className: (0, r.A)(n().BoosterLevels),
+                children: (0, l.Wn)(
+                  "#compendium_purchase_booster_levels",
+                  e.booster_level,
                 ),
-              ),
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)(
-                  "#compendium_purchase_rtti_reroll_tokens",
-                  e.rerollTokens,
-                ),
-              ),
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)(
-                  "#compendium_purchase_fantasy_tokens",
-                  e.fantasyTokens,
-                ),
-              ),
-              1 == e.voicelines &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)("#compendium_purchase_one_random_voiceline"),
-                ),
-              e.voicelines > 1 &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)("#compendium_purchase_voicelines", e.voicelines),
-                ),
-              1 == e.playerStickers &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)("#compendium_purchase_one_player_sticker"),
-                ),
-              e.playerStickers > 1 &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#compendium_purchase_player_stickers",
-                    e.playerStickers,
-                  ),
-                ),
-              e.teamStickers &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#compendium_purchase_team_stickers",
-                    e.teamStickers,
-                  ),
-                ),
-              e.teamLoadingScreens &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#compendium_purchase_team_loading_screens",
-                    e.teamLoadingScreens,
-                  ),
-                ),
-              e.tiLoadingScreens &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#compendium_purchase_ti_loading_screens",
-                    e.tiLoadingScreens,
-                  ),
-                ),
-              e.tpFX &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)("#compendium_purchase_tp_fx"),
-                ),
-            ),
-            i.createElement(
-              "div",
-              { className: r().BoostersFootnoteContainer },
-              !e.isUpgraded &&
-                i.createElement(
-                  "div",
-                  { className: (0, l.A)(r().BoostersFootnote) },
-                  (0, s.Wn)("#compendium_purchase_boosters_footnote"),
-                ),
-              e.isUpgraded &&
-                i.createElement(
-                  "div",
-                  { className: (0, l.A)(r().BoostersFootnote) },
-                  (0, s.Wn)("#compendium_purchase_upgraded_boosters_footnote"),
-                ),
-            ),
-          ),
+              }),
+              (0, t.jsx)("div", { className: n().SmoothLine }),
+              (0, t.jsx)("div", {
+                className: (0, r.A)(n().EarnTheFollowing),
+                children: (0, l.Wn)("#compendium_purchase_earn_the_following"),
+              }),
+              (0, t.jsxs)("ul", {
+                children: [
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)("#compendium_purchase_all_access"),
+                  }),
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)("#compendium_purchase_aegis_emoticon"),
+                  }),
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)(
+                      "#compendium_purchase_rtti_culling_blades",
+                      e.cullingBlades,
+                    ),
+                  }),
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)(
+                      "#compendium_purchase_rtti_reroll_tokens",
+                      e.rerollTokens,
+                    ),
+                  }),
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)(
+                      "#compendium_purchase_fantasy_tokens",
+                      e.fantasyTokens,
+                    ),
+                  }),
+                  1 == e.voicelines &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_one_random_voiceline",
+                      ),
+                    }),
+                  e.voicelines > 1 &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_voicelines",
+                        e.voicelines,
+                      ),
+                    }),
+                  1 == e.playerStickers &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_one_player_sticker",
+                      ),
+                    }),
+                  e.playerStickers > 1 &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_player_stickers",
+                        e.playerStickers,
+                      ),
+                    }),
+                  e.teamStickers &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_team_stickers",
+                        e.teamStickers,
+                      ),
+                    }),
+                  e.teamLoadingScreens &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_team_loading_screens",
+                        e.teamLoadingScreens,
+                      ),
+                    }),
+                  e.tiLoadingScreens &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_ti_loading_screens",
+                        e.tiLoadingScreens,
+                      ),
+                    }),
+                  e.tpFX &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)("#compendium_purchase_tp_fx"),
+                    }),
+                ],
+              }),
+              (0, t.jsxs)("div", {
+                className: n().BoostersFootnoteContainer,
+                children: [
+                  !e.isUpgraded &&
+                    (0, t.jsx)("div", {
+                      className: (0, r.A)(n().BoostersFootnote),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_boosters_footnote",
+                      ),
+                    }),
+                  e.isUpgraded &&
+                    (0, t.jsx)("div", {
+                      className: (0, r.A)(n().BoostersFootnote),
+                      children: (0, l.Wn)(
+                        "#compendium_purchase_upgraded_boosters_footnote",
+                      ),
+                    }),
+                ],
+              }),
+            ],
+          }),
         _ = (e) =>
-          i.createElement(
-            "div",
-            {
-              className: (0, l.A)(
-                r().BuyCompendiumCapsule,
-                r().BuyCompendiumCapsule2024,
-              ),
-              style: {
-                backgroundImage: e.isUpgraded
-                  ? `url( ${o.r.IMG_URL}/international2024/compendium/panel_upgraded_compendium.jpg )`
-                  : `url( ${o.r.IMG_URL}/international2024/compendium/panel_standard_compendium.jpg )`,
-              },
-            },
-            i.createElement(
-              "div",
-              { className: r().FlourishContainer },
-              i.createElement("img", {
-                src: e.isUpgraded
-                  ? `${o.r.IMG_URL}international2024/dividers_and_flourishes/flourish_upgraded_compendium.png`
-                  : `${o.r.IMG_URL}international2024/dividers_and_flourishes/flourish_standard_compendium.png`,
-              }),
+          (0, t.jsxs)("div", {
+            className: (0, r.A)(
+              n().BuyCompendiumCapsule,
+              n().BuyCompendiumCapsule2024,
             ),
-            e.title &&
-              i.createElement(
-                "div",
-                {
-                  className: r().CapsuleTitle,
+            style: {
+              backgroundImage: e.isUpgraded
+                ? `url( ${o.r.IMG_URL}/international2024/compendium/panel_upgraded_compendium.jpg )`
+                : `url( ${o.r.IMG_URL}/international2024/compendium/panel_standard_compendium.jpg )`,
+            },
+            children: [
+              (0, t.jsx)("div", {
+                className: n().FlourishContainer,
+                children: (0, t.jsx)("img", {
+                  src: e.isUpgraded
+                    ? `${o.r.IMG_URL}international2024/dividers_and_flourishes/flourish_upgraded_compendium.png`
+                    : `${o.r.IMG_URL}international2024/dividers_and_flourishes/flourish_standard_compendium.png`,
+                }),
+              }),
+              e.title &&
+                (0, t.jsx)("div", {
+                  className: n().CapsuleTitle,
                   style: {
                     backgroundImage: e.isUpgraded
                       ? "linear-gradient( to bottom, #E1CC9A, #E1CC9A"
                       : "linear-gradient( to bottom, #FFF, #FFF",
                   },
+                  children: (0, l.Wn)(e.title),
+                }),
+              e.capsuleImageLocation &&
+                (0, t.jsx)("img", {
+                  className: n().CapsuleTitle,
+                  onError: (i) =>
+                    (i.target.src = `${o.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
+                  src: `${o.r.IMG_URL}${e.capsuleImageLocation}${o.r.LANGUAGE}.png`,
+                }),
+              (0, t.jsx)("div", {
+                className: (0, r.A)(n().CompendiumLevels),
+                style: {
+                  backgroundImage: e.isUpgraded
+                    ? "linear-gradient( to bottom, #E1CC9A, #E1CC9A"
+                    : "linear-gradient( to bottom, #FFF, #FFF",
                 },
-                (0, s.Wn)(e.title),
-              ),
-            e.capsuleImageLocation &&
-              i.createElement("img", {
-                className: r().CapsuleTitle,
-                onError: (t) =>
-                  (t.target.src = `${o.r.IMG_URL}${e.capsuleImageOnErrorLocation}`),
-                src: `${o.r.IMG_URL}${e.capsuleImageLocation}${o.r.LANGUAGE}.png`,
+                children: (0, l.Wn)(
+                  "#ti13_compendium_purchase_levels",
+                  e.level,
+                ),
               }),
-            i.createElement(
-              "div",
-              {
-                className: (0, l.A)(r().CompendiumLevels),
+              (0, t.jsx)("div", {
+                className: (0, r.A)(n().BoosterLevels),
                 style: {
                   backgroundImage: e.isUpgraded
                     ? "linear-gradient( to bottom, #E1CC9A, #E1CC9A"
                     : "linear-gradient( to bottom, #FFF, #FFF",
                 },
-              },
-              (0, s.Wn)("#ti13_compendium_purchase_levels", e.level),
-            ),
-            i.createElement(
-              "div",
-              {
-                className: (0, l.A)(r().BoosterLevels),
-                style: {
-                  backgroundImage: e.isUpgraded
-                    ? "linear-gradient( to bottom, #E1CC9A, #E1CC9A"
-                    : "linear-gradient( to bottom, #FFF, #FFF",
-                },
-              },
-              (0, s.Wn)(
-                "#ti13_compendium_purchase_booster_levels",
-                e.booster_level,
-              ),
-            ),
-            i.createElement("div", { className: r().SmoothLine }),
-            i.createElement(
-              "div",
-              { className: (0, l.A)(r().EarnTheFollowing) },
-              (0, s.Wn)("#ti13_compendium_purchase_earn_the_following"),
-            ),
-            i.createElement(
-              "ul",
-              null,
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                e.isUpgraded
-                  ? (0, s.Wn)("#ti13_compendium_upgraded_subtitle")
-                  : (0, s.Wn)("#ti13_compendium_standard_subtitle"),
-              ),
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)("#ti13_compendium_purchase_aegis_emoticon"),
-              ),
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)(
-                  "#ti13_compendium_purchase_bingo_tokens",
-                  e.bingoTokens,
+                children: (0, l.Wn)(
+                  "#ti13_compendium_purchase_booster_levels",
+                  e.booster_level,
                 ),
-              ),
-              i.createElement(
-                "li",
-                { className: (0, l.A)(r().OtherRewards) },
-                (0, s.Wn)(
-                  "#ti13_compendium_purchase_fantasy_tokens",
-                  e.fantasyTokens,
+              }),
+              (0, t.jsx)("div", { className: n().SmoothLine }),
+              (0, t.jsx)("div", {
+                className: (0, r.A)(n().EarnTheFollowing),
+                children: (0, l.Wn)(
+                  "#ti13_compendium_purchase_earn_the_following",
                 ),
-              ),
-              1 == e.playerStickers &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)("#ti13_compendium_purchase_one_player_sticker"),
-                ),
-              e.playerStickers > 1 &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#ti13_compendium_purchase_player_stickers",
-                    e.playerStickers,
-                  ),
-                ),
-              e.teamStickers &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#ti13_compendium_purchase_team_stickers",
-                    e.teamStickers,
-                  ),
-                ),
-              e.teamLoadingScreens &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#ti13_compendium_purchase_team_loading_screens",
-                    e.teamLoadingScreens,
-                  ),
-                ),
-              e.tiLoadingScreens &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#ti13_compendium_purchase_ti_loading_screens",
-                    e.tiLoadingScreens,
-                  ),
-                ),
-              e.effigyBlocks &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)(
-                    "#ti13_compendium_purchase_effigy_blocks",
-                    e.effigyBlocks,
-                  ),
-                ),
-              e.tpFX &&
-                i.createElement(
-                  "li",
-                  { className: (0, l.A)(r().OtherRewards) },
-                  (0, s.Wn)("#ti13_compendium_purchase_tp_fx"),
-                ),
-            ),
-            i.createElement(
-              "div",
-              { className: r().BoostersFootnoteContainer },
-              !e.isUpgraded &&
-                i.createElement(
-                  "div",
-                  { className: (0, l.A)(r().BoostersFootnote) },
-                  (0, s.Wn)("#ti13_compendium_purchase_boosters_footnote"),
-                ),
-              e.isUpgraded &&
-                i.createElement(
-                  "div",
-                  { className: (0, l.A)(r().BoostersFootnote) },
-                  (0, s.Wn)(
-                    "#ti13_compendium_purchase_upgraded_boosters_footnote",
-                  ),
-                ),
-            ),
-          );
+              }),
+              (0, t.jsxs)("ul", {
+                children: [
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: e.isUpgraded
+                      ? (0, l.Wn)("#ti13_compendium_upgraded_subtitle")
+                      : (0, l.Wn)("#ti13_compendium_standard_subtitle"),
+                  }),
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)(
+                      "#ti13_compendium_purchase_aegis_emoticon",
+                    ),
+                  }),
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)(
+                      "#ti13_compendium_purchase_bingo_tokens",
+                      e.bingoTokens,
+                    ),
+                  }),
+                  (0, t.jsx)("li", {
+                    className: (0, r.A)(n().OtherRewards),
+                    children: (0, l.Wn)(
+                      "#ti13_compendium_purchase_fantasy_tokens",
+                      e.fantasyTokens,
+                    ),
+                  }),
+                  1 == e.playerStickers &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_one_player_sticker",
+                      ),
+                    }),
+                  e.playerStickers > 1 &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_player_stickers",
+                        e.playerStickers,
+                      ),
+                    }),
+                  e.teamStickers &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_team_stickers",
+                        e.teamStickers,
+                      ),
+                    }),
+                  e.teamLoadingScreens &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_team_loading_screens",
+                        e.teamLoadingScreens,
+                      ),
+                    }),
+                  e.tiLoadingScreens &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_ti_loading_screens",
+                        e.tiLoadingScreens,
+                      ),
+                    }),
+                  e.effigyBlocks &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_effigy_blocks",
+                        e.effigyBlocks,
+                      ),
+                    }),
+                  e.tpFX &&
+                    (0, t.jsx)("li", {
+                      className: (0, r.A)(n().OtherRewards),
+                      children: (0, l.Wn)("#ti13_compendium_purchase_tp_fx"),
+                    }),
+                ],
+              }),
+              (0, t.jsxs)("div", {
+                className: n().BoostersFootnoteContainer,
+                children: [
+                  !e.isUpgraded &&
+                    (0, t.jsx)("div", {
+                      className: (0, r.A)(n().BoostersFootnote),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_boosters_footnote",
+                      ),
+                    }),
+                  e.isUpgraded &&
+                    (0, t.jsx)("div", {
+                      className: (0, r.A)(n().BoostersFootnote),
+                      children: (0, l.Wn)(
+                        "#ti13_compendium_purchase_upgraded_boosters_footnote",
+                      ),
+                    }),
+                ],
+              }),
+            ],
+          });
     },
-    84398: (e, t, a) => {
+    84398: (e, i, s) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => F });
-      var i = a(85608),
-        n = a(89506),
-        r = a(55651),
-        l = a(27866),
-        s = a(68446),
-        o = a(7552),
-        m = a(73202),
-        c = a(35927),
-        d = a(21384),
-        _ = a(56698),
-        p = a(47202),
-        u = a(36305),
-        g = a(45237),
-        E = a(722),
-        b = a(93125),
-        v = a.n(b),
-        h = a(88351),
-        N = a(92444),
-        y = a(24953),
-        C = a(32389);
-      const { detect: A } = a(51744),
+      s.r(i), s.d(i, { default: () => k });
+      var t = s(85608),
+        a = s(69500),
+        n = s(89506),
+        r = s(55651),
+        l = s(40045),
+        o = s(68446),
+        c = s(7552),
+        d = s(73202),
+        m = s(35927),
+        _ = s(21384),
+        p = s(70595),
+        u = s(47202),
+        g = s(36305),
+        h = s(45237),
+        x = s(722),
+        b = s(93125),
+        j = s.n(b),
+        v = s(88351),
+        N = s(92444),
+        y = s(24953),
+        C = s(32389);
+      const { detect: A } = s(51744),
         S = (A(), "International2024Page");
       const I = ({ children: e }) => {
-          const { hash: t } = (0, h.zy)();
+          const { hash: i } = (0, v.zy)();
           return (
-            (0, o.useEffect)(() => {
-              t &&
+            (0, c.useEffect)(() => {
+              i &&
                 setTimeout(() => {
-                  const e = t.replace("#", "");
+                  const e = i.replace("#", "");
                   (0, N.A)(e, S);
                 }, 500);
-            }, [t]),
+            }, [i]),
             null
           );
         },
@@ -733,300 +709,275 @@
           },
         ],
         T = (e) => {
-          const t =
+          const i =
               e.bulletLine1 &&
               (0, l.Wn)(e.bulletLine1) &&
               (0, l.Wn)(e.bulletLine1).toString() !== e.bulletLine1,
-            a =
+            s =
               e.bulletLine2 &&
               (0, l.Wn)(e.bulletLine2) &&
               (0, l.Wn)(e.bulletLine2).toString() !== e.bulletLine2,
-            i = t || a;
-          return o.createElement(
-            "div",
-            {
-              className: (0, d.A)(
-                v().Text,
-                e.bFlexColumn ? v().LargerMaxWidth : "",
-                e.bNoGapInTextCapsule ? v().NoGap : "",
-              ),
-            },
-            o.createElement(
-              "div",
-              { className: v().HeaderContainer },
-              e.icon &&
-                o.createElement(
-                  "div",
-                  { className: v().Icon },
-                  o.createElement("img", { src: `${n.r.IMG_URL}/` + e.icon }),
-                ),
-              o.createElement(
-                "div",
-                { className: v().Headline },
-                (0, l.Wn)(e.title),
-              ),
+            t = i || s;
+          return (0, a.jsxs)("div", {
+            className: (0, _.A)(
+              j().Text,
+              e.bFlexColumn ? j().LargerMaxWidth : "",
+              e.bNoGapInTextCapsule ? j().NoGap : "",
             ),
-            e.description &&
-              o.createElement(
-                "div",
-                {
-                  className: (0, d.A)(
-                    v().Description,
-                    e.bCenterText ? v().CenterText : "",
+            children: [
+              (0, a.jsxs)("div", {
+                className: j().HeaderContainer,
+                children: [
+                  e.icon &&
+                    (0, a.jsx)("div", {
+                      className: j().Icon,
+                      children: (0, a.jsx)("img", {
+                        src: `${n.r.IMG_URL}/` + e.icon,
+                      }),
+                    }),
+                  (0, a.jsx)("div", {
+                    className: j().Headline,
+                    children: (0, l.Wn)(e.title),
+                  }),
+                ],
+              }),
+              e.description &&
+                (0, a.jsx)("div", {
+                  className: (0, _.A)(
+                    j().Description,
+                    e.bCenterText ? j().CenterText : "",
                   ),
-                },
-                (0, l.Wn)(e.description),
-              ),
-            i &&
-              o.createElement(
-                "ul",
-                null,
-                t &&
-                  o.createElement(
-                    "li",
-                    null,
-                    o.createElement(
-                      "span",
-                      {
-                        className: (0, d.A)(
-                          v().Description,
-                          e.bCenterText ? v().CenterText : "",
-                        ),
-                      },
-                      `${(0, l.Wn)(e.bulletLine1)}`,
-                    ),
+                  children: (0, l.Wn)(e.description),
+                }),
+              t &&
+                (0, a.jsxs)("ul", {
+                  children: [
+                    i &&
+                      (0, a.jsx)("li", {
+                        children: (0, a.jsx)("span", {
+                          className: (0, _.A)(
+                            j().Description,
+                            e.bCenterText ? j().CenterText : "",
+                          ),
+                          children: `${(0, l.Wn)(e.bulletLine1)}`,
+                        }),
+                      }),
+                    s &&
+                      (0, a.jsx)("li", {
+                        children: (0, a.jsx)("span", {
+                          className: (0, _.A)(
+                            j().Description,
+                            e.bCenterText ? j().CenterText : "",
+                          ),
+                          children: `${(0, l.Wn)(e.bulletLine2)}`,
+                        }),
+                      }),
+                  ],
+                }),
+              e.contents &&
+                (0, a.jsx)("div", {
+                  className: (0, _.A)(
+                    j().Description,
+                    e.bCenterText ? j().CenterText : "",
                   ),
-                a &&
-                  o.createElement(
-                    "li",
-                    null,
-                    o.createElement(
-                      "span",
-                      {
-                        className: (0, d.A)(
-                          v().Description,
-                          e.bCenterText ? v().CenterText : "",
-                        ),
-                      },
-                      `${(0, l.Wn)(e.bulletLine2)}`,
-                    ),
-                  ),
-              ),
-            e.contents &&
-              o.createElement(
-                "div",
-                {
-                  className: (0, d.A)(
-                    v().Description,
-                    e.bCenterText ? v().CenterText : "",
-                  ),
-                },
-                e.contents,
-              ),
-          );
+                  children: e.contents,
+                }),
+            ],
+          });
         },
         w = (e) =>
-          o.createElement(
-            "div",
-            { className: v().RingmasterCapsuleText },
-            o.createElement(
-              "div",
-              { className: v().HeaderContainer },
-              e.icon &&
-                o.createElement(
-                  "div",
-                  { className: v().Icon },
-                  o.createElement("img", { src: `${n.r.IMG_URL}/` + e.icon }),
-                ),
-              o.createElement(
-                "div",
-                { className: v().Headline },
-                (0, l.Wn)(e.title),
-              ),
-            ),
-            e.description &&
-              o.createElement(
-                "div",
-                {
-                  className: (0, d.A)(
-                    v().RingmasterCapsuleDescription,
-                    e.bCenterText ? v().CenterText : "",
+          (0, a.jsxs)("div", {
+            className: j().RingmasterCapsuleText,
+            children: [
+              (0, a.jsxs)("div", {
+                className: j().HeaderContainer,
+                children: [
+                  e.icon &&
+                    (0, a.jsx)("div", {
+                      className: j().Icon,
+                      children: (0, a.jsx)("img", {
+                        src: `${n.r.IMG_URL}/` + e.icon,
+                      }),
+                    }),
+                  (0, a.jsx)("div", {
+                    className: j().Headline,
+                    children: (0, l.Wn)(e.title),
+                  }),
+                ],
+              }),
+              e.description &&
+                (0, a.jsx)("div", {
+                  className: (0, _.A)(
+                    j().RingmasterCapsuleDescription,
+                    e.bCenterText ? j().CenterText : "",
                   ),
-                },
-                (0, l.Wn)(e.description),
-              ),
-            e.contents &&
-              o.createElement(
-                "div",
-                {
-                  className: (0, d.A)(
-                    v().Description,
-                    e.bCenterText ? v().CenterText : "",
+                  children: (0, l.Wn)(e.description),
+                }),
+              e.contents &&
+                (0, a.jsx)("div", {
+                  className: (0, _.A)(
+                    j().Description,
+                    e.bCenterText ? j().CenterText : "",
                   ),
-                },
-                e.contents,
-              ),
-          ),
+                  children: e.contents,
+                }),
+            ],
+          }),
         D = (e) =>
-          o.createElement(
-            "div",
-            {
-              className: (0, d.A)(
-                v().FeatureCapsule,
-                v().RingmasterFeatureCapsule,
-                e.bSwapImageSide ? v().FeatureCapsuleSwapOrder : "",
-              ),
-              "data-aos": "fade-left",
-              "data-aos-delay": "100",
-              "data-aos-duration": "1000",
-            },
-            o.createElement(w, {
-              title: e.title,
-              description: e.description,
-              contents: e.contents,
-              bIsLetsGetStarted: e.bIsLetsGetStarted,
-            }),
-            e.image &&
-              o.createElement("img", {
-                className: (0, d.A)(
-                  v().RingmasterFeatureImage,
-                  e.bTranslateImageUp ? v().TranslateImageUp : "",
-                  e.imageStyle ? e.imageStyle : "",
-                ),
-                src: `${n.r.IMG_URL}/` + e.image,
+          (0, a.jsxs)("div", {
+            className: (0, _.A)(
+              j().FeatureCapsule,
+              j().RingmasterFeatureCapsule,
+              e.bSwapImageSide ? j().FeatureCapsuleSwapOrder : "",
+            ),
+            "data-aos": "fade-left",
+            "data-aos-delay": "100",
+            "data-aos-duration": "1000",
+            children: [
+              (0, a.jsx)(w, {
+                title: e.title,
+                description: e.description,
+                contents: e.contents,
+                bIsLetsGetStarted: e.bIsLetsGetStarted,
               }),
-          ),
+              e.image &&
+                (0, a.jsx)("img", {
+                  className: (0, _.A)(
+                    j().RingmasterFeatureImage,
+                    e.bTranslateImageUp ? j().TranslateImageUp : "",
+                    e.imageStyle ? e.imageStyle : "",
+                  ),
+                  src: `${n.r.IMG_URL}/` + e.image,
+                }),
+            ],
+          }),
         W = (e) =>
-          o.createElement(
-            "div",
-            {
-              className: (0, d.A)(
-                v().FeatureCapsule,
-                e.bSwapImageSide ? v().FeatureCapsuleSwapOrder : "",
-                e.bFlexColumn ? v().FlexColumn : "",
-              ),
-              "data-aos": "fade-left",
-              "data-aos-delay": "100",
-              "data-aos-duration": "1000",
-            },
-            o.createElement(T, {
-              title: e.title,
-              description: e.description,
-              bulletLine1: e.bulletLine1,
-              bulletLine2: e.bulletLine1 ? e.bulletLine1 + "2" : "",
-              bFlexColumn: e.bFlexColumn,
-              contents: e.contents,
-            }),
-            e.image &&
-              o.createElement("img", {
-                className: (0, d.A)(
-                  v().Image,
-                  e.bTranslateImageUp ? v().TranslateImageUp : "",
-                  e.imageStyle ? e.imageStyle : "",
-                ),
-                src: `${n.r.IMG_URL}/` + e.image,
+          (0, a.jsxs)("div", {
+            className: (0, _.A)(
+              j().FeatureCapsule,
+              e.bSwapImageSide ? j().FeatureCapsuleSwapOrder : "",
+              e.bFlexColumn ? j().FlexColumn : "",
+            ),
+            "data-aos": "fade-left",
+            "data-aos-delay": "100",
+            "data-aos-duration": "1000",
+            children: [
+              (0, a.jsx)(T, {
+                title: e.title,
+                description: e.description,
+                bulletLine1: e.bulletLine1,
+                bulletLine2: e.bulletLine1 ? e.bulletLine1 + "2" : "",
+                bFlexColumn: e.bFlexColumn,
+                contents: e.contents,
               }),
-          ),
+              e.image &&
+                (0, a.jsx)("img", {
+                  className: (0, _.A)(
+                    j().Image,
+                    e.bTranslateImageUp ? j().TranslateImageUp : "",
+                    e.imageStyle ? e.imageStyle : "",
+                  ),
+                  src: `${n.r.IMG_URL}/` + e.image,
+                }),
+            ],
+          }),
         f = (e) =>
-          o.createElement(
-            "div",
-            {
-              className: (0, d.A)(
-                v().SmallFeatureCapsule,
-                e.bUseFlexSpaceBetween ? v().SpaceBetween : "",
-                e.bUseJustifyContentEnd ? v().JustifyContentEnd : "",
-                e.bNoGapBetweenPicAndText ? v().NoGap : "",
-              ),
-              "data-aos": "fade-up",
-              "data-aos-delay": "100",
-              "data-aos-duration": "1000",
-            },
-            o.createElement(
-              "div",
-              { className: v().ImageContainer },
-              o.createElement("img", {
-                className: (0, d.A)(
-                  v().Image,
-                  e.imageStyle ? e.imageStyle : "",
-                ),
-                src: `${n.r.IMG_URL}/` + e.image,
-              }),
+          (0, a.jsxs)("div", {
+            className: (0, _.A)(
+              j().SmallFeatureCapsule,
+              e.bUseFlexSpaceBetween ? j().SpaceBetween : "",
+              e.bUseJustifyContentEnd ? j().JustifyContentEnd : "",
+              e.bNoGapBetweenPicAndText ? j().NoGap : "",
             ),
-            o.createElement(T, {
-              title: e.title,
-              description: e.description,
-              contents: e.contents,
-              bCenterText: e.bCenterText,
-              bNoGapInTextCapsule: e.bNoGapInTextCapsule,
-            }),
-          ),
+            "data-aos": "fade-up",
+            "data-aos-delay": "100",
+            "data-aos-duration": "1000",
+            children: [
+              (0, a.jsx)("div", {
+                className: j().ImageContainer,
+                children: (0, a.jsx)("img", {
+                  className: (0, _.A)(
+                    j().Image,
+                    e.imageStyle ? e.imageStyle : "",
+                  ),
+                  src: `${n.r.IMG_URL}/` + e.image,
+                }),
+              }),
+              (0, a.jsx)(T, {
+                title: e.title,
+                description: e.description,
+                contents: e.contents,
+                bCenterText: e.bCenterText,
+                bNoGapInTextCapsule: e.bNoGapInTextCapsule,
+              }),
+            ],
+          }),
         B = ({ bShowLearnMore: e = !1 }) =>
-          o.createElement(
-            "div",
-            { className: v().PurchaseSection },
-            o.createElement(
-              "div",
-              { className: v().BuyCompendiumButtons },
-              o.createElement(y.Jh, {
-                colorTopEdge: "#237EA5",
-                colorTop: "#00172C ",
-                colorMiddle: "#010E1A",
-                colorBottom: "#010E1A",
-                colorButtonOverride: "#3EAC40",
-                title: "#ti13_compendium_standard",
-                level: 6,
-                booster_level: 6,
-                itemid: 30237,
-                eventid: x,
-                bingoTokens: 51,
-                fantasyTokens: 36,
-                playerStickers: 1,
+          (0, a.jsxs)("div", {
+            className: j().PurchaseSection,
+            children: [
+              (0, a.jsxs)("div", {
+                className: j().BuyCompendiumButtons,
+                children: [
+                  (0, a.jsx)(y.Jh, {
+                    colorTopEdge: "#237EA5",
+                    colorTop: "#00172C ",
+                    colorMiddle: "#010E1A",
+                    colorBottom: "#010E1A",
+                    colorButtonOverride: "#3EAC40",
+                    title: "#ti13_compendium_standard",
+                    level: 6,
+                    booster_level: 6,
+                    itemid: 30237,
+                    eventid: U,
+                    bingoTokens: 51,
+                    fantasyTokens: 36,
+                    playerStickers: 1,
+                  }),
+                  (0, a.jsx)(y.Jh, {
+                    colorTopEdge: "#BDB099",
+                    colorTop: "#175F8A ",
+                    colorMiddle: "#002948",
+                    colorBottom: "#002948",
+                    colorButtonOverride: "#3EAC40",
+                    title: "#ti13_compendium_upgraded",
+                    level: 50,
+                    booster_level: 28,
+                    itemid: 30240,
+                    eventid: U,
+                    bingoTokens: 93,
+                    fantasyTokens: 78,
+                    playerStickers: 12,
+                    teamStickers: 5,
+                    teamLoadingScreens: 4,
+                    tiLoadingScreens: 3,
+                    effigyBlocks: 2,
+                    tpFX: 1,
+                    isUpgraded: !0,
+                  }),
+                ],
               }),
-              o.createElement(y.Jh, {
-                colorTopEdge: "#BDB099",
-                colorTop: "#175F8A ",
-                colorMiddle: "#002948",
-                colorBottom: "#002948",
-                colorButtonOverride: "#3EAC40",
-                title: "#ti13_compendium_upgraded",
-                level: 50,
-                booster_level: 28,
-                itemid: 30240,
-                eventid: x,
-                bingoTokens: 93,
-                fantasyTokens: 78,
-                playerStickers: 12,
-                teamStickers: 5,
-                teamLoadingScreens: 4,
-                tiLoadingScreens: 3,
-                effigyBlocks: 2,
-                tpFX: 1,
-                isUpgraded: !0,
+              (0, a.jsx)("div", {
+                className: j().ContributionContainer,
+                children: (0, a.jsx)("div", {
+                  className: (0, _.A)(j().ContributionText),
+                  children: (0, l.Wn)("#ti13_compendium_contribution"),
+                }),
               }),
-            ),
-            o.createElement(
-              "div",
-              { className: v().ContributionContainer },
-              o.createElement(
-                "div",
-                { className: (0, d.A)(v().ContributionText) },
-                (0, l.Wn)("#ti13_compendium_contribution"),
-              ),
-            ),
-            e &&
-              o.createElement(
-                "a",
-                {
-                  className: v().TournamentLearnMore,
+              e &&
+                (0, a.jsx)("a", {
+                  className: j().TournamentLearnMore,
                   href: `${n.r.BASE_URL}esports/ti13/watch`,
-                },
-                (0, l.Wn)("#international2024_tournament_learn_more"),
-              ),
-          ),
-        x = 49,
-        U = [30237, 30240];
-      let k = class extends o.Component {
-        videoRef = o.createRef();
+                  children: (0, l.Wn)(
+                    "#international2024_tournament_learn_more",
+                  ),
+                }),
+            ],
+          }),
+        U = 49,
+        F = [30237, 30240];
+      let G = class extends c.Component {
+        videoRef = c.createRef();
         constructor(e) {
           super(e), (this.state = { bPlayingVideo: !1 });
         }
@@ -1038,1082 +989,1102 @@
           e.current.scrollIntoView({ behavior: "smooth" });
         }
         render() {
-          _.o.RequestBPPrices(U);
+          p.o.RequestBPPrices(F);
           const e =
               "schinese" == n.r.LANGUAGE || "tchinese" == n.r.LANGUAGE
                 ? "cn_logo_ti_compendium_01"
                 : "logo_ti_compendium_01",
-            t =
+            i =
               "schinese" == n.r.LANGUAGE || "tchinese" == n.r.LANGUAGE
                 ? "cn_logo_ringmaster"
                 : "logo_ringmaster",
-            a =
+            s =
               "schinese" == n.r.LANGUAGE || "tchinese" == n.r.LANGUAGE
                 ? "ringmaster_trailer_schinese"
                 : "ringmaster_trailer_english";
-          let i = (0, c.ww)((0, c.sf)(n.r.LANGUAGE));
+          let t = (0, m.ww)((0, m.sf)(n.r.LANGUAGE));
           return (
-            "zh-cn" === i ? (i = "zh-Hans") : "zh-tw" === i && (i = "zh-Hant"),
-            o.createElement(
-              "div",
-              { id: S, className: v().International2024Page },
-              o.createElement(
-                "div",
-                {
-                  className: (0, d.A)(
-                    v().TrailerContainer,
-                    this.state.bPlayingVideo ? null : v().Hidden,
+            "zh-cn" === t ? (t = "zh-Hans") : "zh-tw" === t && (t = "zh-Hant"),
+            (0, a.jsxs)("div", {
+              id: S,
+              className: j().International2024Page,
+              children: [
+                (0, a.jsxs)("div", {
+                  className: (0, _.A)(
+                    j().TrailerContainer,
+                    this.state.bPlayingVideo ? null : j().Hidden,
                   ),
-                },
-                o.createElement(
-                  "video",
-                  {
-                    ref: this.videoRef,
-                    className: (0, d.A)(v().TrailerVideo),
-                    autoPlay: !1,
-                    preload: "none",
-                    muted: !1,
-                    loop: !1,
-                    playsInline: !1,
-                    controls: !0,
-                    crossOrigin: "anonymous",
-                  },
-                  o.createElement("source", {
-                    type: "video/mp4",
-                    src: `${n.r.VIDEO_URL}/international2024/${a}.mp4`,
-                  }),
-                  o.createElement("source", {
-                    type: "video/mp4",
-                    src: `${n.r.VIDEO_URL}/international2024/ringmaster_trailer_english.mp4`,
-                  }),
-                  o.createElement("track", {
-                    label: `${n.r.LANGUAGE}`,
-                    kind: "captions",
-                    srcLang: i,
-                    src: `${n.r.VIDEO_URL}/international2024/ringmaster_${n.r.LANGUAGE}.vtt`,
-                    default: !0,
-                  }),
-                ),
-                o.createElement(
-                  "div",
-                  {
-                    className: v().CloseButton,
-                    onClick: () => this.setPlayingVideo(!1),
-                  },
-                  o.createElement("img", {
-                    className: v().CloseButtonImage,
-                    src: `${n.r.IMG_URL}/close.png`,
-                  }),
-                ),
-              ),
-              o.createElement(
-                m.mg,
-                null,
-                o.createElement(
-                  "title",
-                  null,
-                  (0, l.Wn)("#international2024_update_title"),
-                ),
-              ),
-              o.createElement(
-                "div",
-                {
-                  className: (0, d.A)(
-                    v().PageContainer,
-                    this.state.bPlayingVideo ? v().Hidden : null,
-                  ),
-                },
-                o.createElement(p.A, { bOverlapping: !0 }),
-                o.createElement(
-                  "div",
-                  { className: v().RingmasterHeaderSection },
-                  o.createElement(
-                    "div",
-                    { className: v().BackgroundVideoContainer },
-                    o.createElement(
-                      "video",
-                      {
-                        className: v().BackgroundVideo,
-                        autoPlay: !0,
-                        preload: "auto",
-                        muted: !0,
-                        loop: !0,
-                        playsInline: !0,
-                        poster: `${n.r.IMG_URL}international2024/ringmaster/ringmaster_poster.png`,
-                      },
-                      o.createElement("source", {
-                        type: 'video/mp4; codecs="hvc1"',
-                        src: `${n.r.VIDEO_URL}/international2024/ringmaster_debut_anim.mov?v5`,
-                      }),
-                      o.createElement("source", {
-                        type: "video/webm",
-                        src: `${n.r.VIDEO_URL}international2024/ringmaster_debut_anim.webm`,
-                      }),
-                    ),
-                    !1,
-                  ),
-                  o.createElement(
-                    "div",
-                    {
-                      className: v().TitleContainer,
-                      "data-aos": "fade-up",
-                      "data-aos-delay": "200",
-                      "data-aos-duration": "2000",
-                    },
-                    o.createElement(
-                      "div",
-                      { className: v().TitleIntro },
-                      (0, l.Wn)("#ringmaster_introducing"),
-                    ),
-                    o.createElement("img", {
-                      className: (0, d.A)(v().HeroLogo, v().Img1),
-                      src: `${n.r.IMG_URL}/international2024/ringmaster/${t}.png`,
+                  children: [
+                    (0, a.jsxs)("video", {
+                      ref: this.videoRef,
+                      className: (0, _.A)(j().TrailerVideo),
+                      autoPlay: !1,
+                      preload: "none",
+                      muted: !1,
+                      loop: !1,
+                      playsInline: !1,
+                      controls: !0,
+                      crossOrigin: "anonymous",
+                      children: [
+                        (0, a.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${n.r.VIDEO_URL}/international2024/${s}.mp4`,
+                        }),
+                        (0, a.jsx)("source", {
+                          type: "video/mp4",
+                          src: `${n.r.VIDEO_URL}/international2024/ringmaster_trailer_english.mp4`,
+                        }),
+                        (0, a.jsx)("track", {
+                          label: `${n.r.LANGUAGE}`,
+                          kind: "captions",
+                          srcLang: t,
+                          src: `${n.r.VIDEO_URL}/international2024/ringmaster_${n.r.LANGUAGE}.vtt`,
+                          default: !0,
+                        }),
+                      ],
                     }),
+                    (0, a.jsx)("div", {
+                      className: j().CloseButton,
+                      onClick: () => this.setPlayingVideo(!1),
+                      children: (0, a.jsx)("img", {
+                        className: j().CloseButtonImage,
+                        src: `${n.r.IMG_URL}/close.png`,
+                      }),
+                    }),
+                  ],
+                }),
+                (0, a.jsx)(d.mg, {
+                  children: (0, a.jsx)("title", {
+                    children: (0, l.Wn)("#international2024_update_title"),
+                  }),
+                }),
+                (0, a.jsxs)("div", {
+                  className: (0, _.A)(
+                    j().PageContainer,
+                    this.state.bPlayingVideo ? j().Hidden : null,
                   ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: v().RingmasterDescriptionContainer },
-                  o.createElement(
-                    "div",
-                    { className: v().Roles },
-                    o.createElement(
-                      "div",
-                      { className: v().HeroRole },
-                      (0, l.Wn)("#hero_attack_type_ranged"),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: v().HeroRole },
-                      (0, l.Wn)("#hero_support"),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: v().HeroRole },
-                      (0, l.Wn)("#hero_disabler"),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: v().HeroRole },
-                      (0, l.Wn)("#hero_escape"),
-                    ),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: v().HeroHype },
-                    (0, l.Wn)("#ringmaster_hype"),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: v().AbilitySection },
-                  o.createElement(
-                    C.gi,
-                    {
-                      className: v().AbilityCarousel,
-                      naturalSlideWidth: 100,
-                      naturalSlideHeight: 56.25,
-                      totalSlides: R.length + L.length,
-                    },
-                    o.createElement(
-                      C.Ap,
-                      { className: v().AbilitySlider },
-                      R.map((e, t) =>
-                        o.createElement(
-                          C.q7,
-                          { key: `HeroAbilitySlide-${t}`, index: t },
-                          o.createElement(
-                            "video",
-                            {
-                              className: v().AbilityVideo,
+                  children: [
+                    (0, a.jsx)(u.A, { bOverlapping: !0 }),
+                    (0, a.jsxs)("div", {
+                      className: j().RingmasterHeaderSection,
+                      children: [
+                        (0, a.jsxs)("div", {
+                          className: j().BackgroundVideoContainer,
+                          children: [
+                            (0, a.jsxs)("video", {
+                              className: j().BackgroundVideo,
                               autoPlay: !0,
                               preload: "auto",
                               muted: !0,
                               loop: !0,
                               playsInline: !0,
-                              poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
-                            },
-                            e.videoSrcWebm &&
-                              o.createElement("source", {
-                                type: "video/webm",
-                                src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
-                              }),
-                            e.videoSrcMp4 &&
-                              o.createElement("source", {
-                                type: "video/mp4",
-                                src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
-                              }),
-                          ),
-                          o.createElement(
-                            "div",
-                            { className: v().SlideAbilityContainer },
-                            o.createElement("img", {
-                              className: v().SlideAbilityIcon,
-                              src: `${n.r.IMG_URL}/${e.imgSrc}`,
+                              poster: `${n.r.IMG_URL}international2024/ringmaster/ringmaster_poster.png`,
+                              children: [
+                                (0, a.jsx)("source", {
+                                  type: 'video/mp4; codecs="hvc1"',
+                                  src: `${n.r.VIDEO_URL}/international2024/ringmaster_debut_anim.mov?v5`,
+                                }),
+                                (0, a.jsx)("source", {
+                                  type: "video/webm",
+                                  src: `${n.r.VIDEO_URL}international2024/ringmaster_debut_anim.webm`,
+                                }),
+                              ],
                             }),
-                            o.createElement(
-                              "div",
-                              { className: v().AbilityText },
-                              o.createElement(
-                                "div",
-                                { className: v().AbilityName },
-                                (0, l.Wn)(`${e.abilityName}`),
-                              ),
-                              o.createElement(
-                                "div",
-                                { className: v().AbilityDesc },
-                                (0, l.Wn)(`${e.abilityDesc}`),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      L.map((e, t) =>
-                        o.createElement(
-                          C.q7,
-                          {
-                            key: `HeroAbilitySlide-${R.length + t}`,
-                            index: R.length + t,
-                          },
-                          o.createElement(
-                            "video",
-                            {
-                              className: v().AbilityVideo,
-                              autoPlay: !0,
-                              preload: "auto",
-                              muted: !0,
-                              loop: !0,
-                              playsInline: !0,
-                              poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
-                            },
-                            e.videoSrcWebm &&
-                              o.createElement("source", {
-                                type: "video/webm",
-                                src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
-                              }),
-                            e.videoSrcMp4 &&
-                              o.createElement("source", {
-                                type: "video/mp4",
-                                src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
-                              }),
-                          ),
-                          o.createElement(
-                            "div",
-                            { className: v().SlideAbilityContainer },
-                            o.createElement("img", {
-                              className: v().SlideAbilityIcon,
-                              src: `${n.r.IMG_URL}/${e.imgSrc}`,
+                            !1,
+                          ],
+                        }),
+                        (0, a.jsxs)("div", {
+                          className: j().TitleContainer,
+                          "data-aos": "fade-up",
+                          "data-aos-delay": "200",
+                          "data-aos-duration": "2000",
+                          children: [
+                            (0, a.jsx)("div", {
+                              className: j().TitleIntro,
+                              children: (0, l.Wn)("#ringmaster_introducing"),
                             }),
-                            o.createElement(
-                              "div",
-                              { className: v().AbilityText },
-                              o.createElement(
-                                "div",
-                                { className: v().AbilityName },
-                                (0, l.Wn)(`${e.abilityName}`),
-                              ),
-                              o.createElement(
-                                "div",
-                                { className: v().AbilityDesc },
-                                (0, l.Wn)(`${e.abilityDesc}`),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: v().CarouselDotsSection },
-                      o.createElement(
-                        "div",
-                        { className: v().CarouselDotsLeft },
-                        o.createElement(
-                          "div",
-                          { className: v().CarouselDotsHeading },
-                          (0, l.Wn)("#ringmaster_abilities_heading"),
-                        ),
-                        o.createElement(
-                          "div",
-                          { className: (0, d.A)(v().CarouselDots) },
-                          R.map((e, t) =>
-                            o.createElement(
-                              C.cL,
-                              {
-                                key: `HeroAbilityDot-${t}`,
-                                slide: t,
-                                className: v().AbilitySelector,
-                                style: {
-                                  backgroundImage: e.bIsShard
-                                    ? `url(${n.r.IMG_URL}heroes/stats/aghs_shard.png ), url( ${n.r.IMG_URL}/${e.imgSrc} )`
-                                    : `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
-                                  backgroundSize: e.bIsShard
-                                    ? "cover, cover"
-                                    : "cover",
-                                },
-                              },
-                              o.createElement("div", null),
-                            ),
-                          ),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: v().CarouselDotsRight },
-                        o.createElement(
-                          "div",
-                          { className: v().CarouselDotsHeading },
-                          o.createElement("img", {
-                            className: v().InnateIcon,
-                            src: `${n.r.IMG_URL}icons/innate_icon.png`,
-                          }),
-                          " ",
-                          (0, l.Wn)("#ringmaster_souvenirs_heading"),
-                          o.createElement(
-                            "div",
-                            { className: v().AbilityTooltip },
-                            o.createElement(
-                              "div",
-                              { className: v().TooltipBody },
-                              o.createElement(
-                                "div",
-                                { className: v().Description },
-                                o.createElement(
-                                  "div",
-                                  { className: v().TooltipTitle },
-                                  (0, l.Wn)(
-                                    "#ringmaster_ability_dark_carnival_trinkets",
-                                  ),
-                                  " ",
-                                ),
-                                o.createElement(
-                                  "div",
-                                  { className: v().TooltipDescription },
-                                  (0, l.Wn)(
-                                    "#ringmaster_ability_dark_carnival_trinkets_Description",
-                                  ),
-                                  " ",
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        o.createElement(
-                          "div",
-                          { className: (0, d.A)(v().CarouselDots) },
-                          L.map((e, t) =>
-                            o.createElement(
-                              C.cL,
-                              {
-                                key: `HeroAbilityDot-${R.length + t}`,
-                                slide: R.length + t,
-                                className: v().AbilitySelector,
-                                style: {
-                                  backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
-                                  backgroundSize: "cover",
-                                },
-                              },
-                              o.createElement("div", null),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: v().AbilitySectionMobileView },
-                  o.createElement(
-                    C.gi,
-                    {
-                      className: v().AbilityCarousel,
-                      naturalSlideWidth: 100,
-                      naturalSlideHeight: 56.25,
-                      totalSlides: R.length + L.length,
-                    },
-                    o.createElement(
-                      C.Ap,
-                      { className: v().AbilitySlider },
-                      R.map((e, t) =>
-                        o.createElement(
-                          C.q7,
-                          { key: `HeroAbilitySlide-${t}`, index: t },
-                          o.createElement(
-                            "div",
-                            { className: v().AbilitySlideContainerMobile },
-                            o.createElement(
-                              "div",
-                              { className: v().AbilityVideoContainer },
-                              o.createElement(
-                                "video",
-                                {
-                                  className: v().AbilityVideo,
-                                  autoPlay: !0,
-                                  preload: "auto",
-                                  muted: !0,
-                                  loop: !0,
-                                  playsInline: !0,
-                                  poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
-                                },
-                                e.videoSrcWebm &&
-                                  o.createElement("source", {
-                                    type: "video/webm",
-                                    src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
-                                  }),
-                                e.videoSrcMp4 &&
-                                  o.createElement("source", {
-                                    type: "video/mp4",
-                                    src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
-                                  }),
-                              ),
-                            ),
-                            o.createElement(
-                              "div",
-                              { className: v().SlideAbilityContainer },
-                              o.createElement("img", {
-                                className: v().SlideAbilityIcon,
-                                src: `${n.r.IMG_URL}/${e.imgSrc}`,
-                              }),
-                              o.createElement(
-                                "div",
-                                { className: v().AbilityText },
-                                o.createElement(
-                                  "div",
-                                  { className: v().AbilityName },
-                                  (0, l.Wn)(`${e.abilityName}`),
-                                ),
-                                o.createElement(
-                                  "div",
-                                  { className: v().AbilityDesc },
-                                  (0, l.Wn)(`${e.abilityDesc}`),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      L.map((e, t) =>
-                        o.createElement(
-                          C.q7,
-                          {
-                            key: `HeroAbilitySlide-${R.length + t}`,
-                            index: R.length + t,
-                          },
-                          o.createElement(
-                            "div",
-                            { className: v().AbilitySlideContainerMobile },
-                            o.createElement(
-                              "div",
-                              { className: v().AbilityVideoContainer },
-                              o.createElement(
-                                "video",
-                                {
-                                  className: v().AbilityVideo,
-                                  autoPlay: !0,
-                                  preload: "auto",
-                                  muted: !0,
-                                  loop: !0,
-                                  playsInline: !0,
-                                  poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
-                                },
-                                e.videoSrcWebm &&
-                                  o.createElement("source", {
-                                    type: "video/webm",
-                                    src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
-                                  }),
-                                e.videoSrcMp4 &&
-                                  o.createElement("source", {
-                                    type: "video/mp4",
-                                    src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
-                                  }),
-                              ),
-                            ),
-                            o.createElement(
-                              "div",
-                              { className: v().SlideAbilityContainer },
-                              o.createElement("img", {
-                                className: v().SlideAbilityIcon,
-                                src: `${n.r.IMG_URL}/${e.imgSrc}`,
-                              }),
-                              o.createElement(
-                                "div",
-                                { className: v().AbilityText },
-                                o.createElement(
-                                  "div",
-                                  { className: v().AbilityName },
-                                  (0, l.Wn)(`${e.abilityName}`),
-                                ),
-                                o.createElement(
-                                  "div",
-                                  { className: v().AbilityDesc },
-                                  (0, l.Wn)(`${e.abilityDesc}`),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: v().CarouselDotsSection },
-                      o.createElement(
-                        "div",
-                        { className: v().CarouselDotsLeft },
-                        o.createElement(
-                          "div",
-                          { className: v().CarouselDotsHeading },
-                          (0, l.Wn)("#ringmaster_abilities_heading"),
-                        ),
-                        o.createElement(
-                          "div",
-                          { className: (0, d.A)(v().CarouselDotsMobile) },
-                          R.map((e, t) =>
-                            o.createElement(
-                              C.cL,
-                              {
-                                key: `HeroAbilityDot-${t}`,
-                                slide: t,
-                                className: v().AbilitySelector,
-                                style: {
-                                  backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
-                                  backgroundSize: "cover",
-                                },
-                              },
-                              o.createElement("div", null),
-                            ),
-                          ),
-                        ),
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: v().CarouselDotsRight },
-                        o.createElement(
-                          "div",
-                          { className: v().CarouselDotsHeading },
-                          o.createElement("img", {
-                            className: v().InnateIcon,
-                            src: `${n.r.IMG_URL}icons/innate_icon.png`,
-                          }),
-                          " ",
-                          (0, l.Wn)("#ringmaster_souvenirs_heading"),
-                        ),
-                        o.createElement(
-                          "div",
-                          { className: (0, d.A)(v().CarouselDotsMobile) },
-                          L.map((e, t) =>
-                            o.createElement(
-                              C.cL,
-                              {
-                                key: `HeroAbilityDot-${R.length + t}`,
-                                slide: R.length + t,
-                                className: v().AbilitySelector,
-                                style: {
-                                  backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
-                                  backgroundSize: "cover",
-                                },
-                              },
-                              o.createElement("div", null),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: v().RingmasterDescription2Container },
-                  o.createElement(
-                    "div",
-                    { className: v().HeroHype },
-                    (0, l.Wn)("#ringmaster_comic"),
-                  ),
-                  o.createElement(
-                    "div",
-                    null,
-                    o.createElement("img", {
-                      src: `${n.r.IMG_URL}/international2024/ringmaster/flourish_top.png`,
-                      className: v().ComicFlourishTop,
+                            (0, a.jsx)("img", {
+                              className: (0, _.A)(j().HeroLogo, j().Img1),
+                              src: `${n.r.IMG_URL}/international2024/ringmaster/${i}.png`,
+                            }),
+                          ],
+                        }),
+                      ],
                     }),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: v().Comic },
-                    o.createElement(
-                      "div",
-                      { className: v().Inside },
-                      o.createElement("img", {
-                        src: `${n.r.IMG_URL}/international2024/ringmaster/thumb_ringmaster_thepuppet.jpg`,
-                        className: v().Thumbnail,
+                    (0, a.jsxs)("div", {
+                      className: j().RingmasterDescriptionContainer,
+                      children: [
+                        (0, a.jsxs)("div", {
+                          className: j().Roles,
+                          children: [
+                            (0, a.jsx)("div", {
+                              className: j().HeroRole,
+                              children: (0, l.Wn)("#hero_attack_type_ranged"),
+                            }),
+                            (0, a.jsx)("div", {
+                              className: j().HeroRole,
+                              children: (0, l.Wn)("#hero_support"),
+                            }),
+                            (0, a.jsx)("div", {
+                              className: j().HeroRole,
+                              children: (0, l.Wn)("#hero_disabler"),
+                            }),
+                            (0, a.jsx)("div", {
+                              className: j().HeroRole,
+                              children: (0, l.Wn)("#hero_escape"),
+                            }),
+                          ],
+                        }),
+                        (0, a.jsx)("div", {
+                          className: j().HeroHype,
+                          children: (0, l.Wn)("#ringmaster_hype"),
+                        }),
+                      ],
+                    }),
+                    (0, a.jsx)("div", {
+                      className: j().AbilitySection,
+                      children: (0, a.jsxs)(C.gi, {
+                        className: j().AbilityCarousel,
+                        naturalSlideWidth: 100,
+                        naturalSlideHeight: 56.25,
+                        totalSlides: R.length + L.length,
+                        children: [
+                          (0, a.jsxs)(C.Ap, {
+                            className: j().AbilitySlider,
+                            children: [
+                              R.map((e, i) =>
+                                (0, a.jsxs)(
+                                  C.q7,
+                                  {
+                                    index: i,
+                                    children: [
+                                      (0, a.jsxs)("video", {
+                                        className: j().AbilityVideo,
+                                        autoPlay: !0,
+                                        preload: "auto",
+                                        muted: !0,
+                                        loop: !0,
+                                        playsInline: !0,
+                                        poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
+                                        children: [
+                                          e.videoSrcWebm &&
+                                            (0, a.jsx)("source", {
+                                              type: "video/webm",
+                                              src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
+                                            }),
+                                          e.videoSrcMp4 &&
+                                            (0, a.jsx)("source", {
+                                              type: "video/mp4",
+                                              src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
+                                            }),
+                                        ],
+                                      }),
+                                      (0, a.jsxs)("div", {
+                                        className: j().SlideAbilityContainer,
+                                        children: [
+                                          (0, a.jsx)("img", {
+                                            className: j().SlideAbilityIcon,
+                                            src: `${n.r.IMG_URL}/${e.imgSrc}`,
+                                          }),
+                                          (0, a.jsxs)("div", {
+                                            className: j().AbilityText,
+                                            children: [
+                                              (0, a.jsx)("div", {
+                                                className: j().AbilityName,
+                                                children: (0, l.Wn)(
+                                                  `${e.abilityName}`,
+                                                ),
+                                              }),
+                                              (0, a.jsx)("div", {
+                                                className: j().AbilityDesc,
+                                                children: (0, l.Wn)(
+                                                  `${e.abilityDesc}`,
+                                                ),
+                                              }),
+                                            ],
+                                          }),
+                                        ],
+                                      }),
+                                    ],
+                                  },
+                                  `HeroAbilitySlide-${i}`,
+                                ),
+                              ),
+                              L.map((e, i) =>
+                                (0, a.jsxs)(
+                                  C.q7,
+                                  {
+                                    index: R.length + i,
+                                    children: [
+                                      (0, a.jsxs)("video", {
+                                        className: j().AbilityVideo,
+                                        autoPlay: !0,
+                                        preload: "auto",
+                                        muted: !0,
+                                        loop: !0,
+                                        playsInline: !0,
+                                        poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
+                                        children: [
+                                          e.videoSrcWebm &&
+                                            (0, a.jsx)("source", {
+                                              type: "video/webm",
+                                              src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
+                                            }),
+                                          e.videoSrcMp4 &&
+                                            (0, a.jsx)("source", {
+                                              type: "video/mp4",
+                                              src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
+                                            }),
+                                        ],
+                                      }),
+                                      (0, a.jsxs)("div", {
+                                        className: j().SlideAbilityContainer,
+                                        children: [
+                                          (0, a.jsx)("img", {
+                                            className: j().SlideAbilityIcon,
+                                            src: `${n.r.IMG_URL}/${e.imgSrc}`,
+                                          }),
+                                          (0, a.jsxs)("div", {
+                                            className: j().AbilityText,
+                                            children: [
+                                              (0, a.jsx)("div", {
+                                                className: j().AbilityName,
+                                                children: (0, l.Wn)(
+                                                  `${e.abilityName}`,
+                                                ),
+                                              }),
+                                              (0, a.jsx)("div", {
+                                                className: j().AbilityDesc,
+                                                children: (0, l.Wn)(
+                                                  `${e.abilityDesc}`,
+                                                ),
+                                              }),
+                                            ],
+                                          }),
+                                        ],
+                                      }),
+                                    ],
+                                  },
+                                  `HeroAbilitySlide-${R.length + i}`,
+                                ),
+                              ),
+                            ],
+                          }),
+                          (0, a.jsxs)("div", {
+                            className: j().CarouselDotsSection,
+                            children: [
+                              (0, a.jsxs)("div", {
+                                className: j().CarouselDotsLeft,
+                                children: [
+                                  (0, a.jsx)("div", {
+                                    className: j().CarouselDotsHeading,
+                                    children: (0, l.Wn)(
+                                      "#ringmaster_abilities_heading",
+                                    ),
+                                  }),
+                                  (0, a.jsx)("div", {
+                                    className: (0, _.A)(j().CarouselDots),
+                                    children: R.map((e, i) =>
+                                      (0, a.jsx)(
+                                        C.cL,
+                                        {
+                                          slide: i,
+                                          className: j().AbilitySelector,
+                                          style: {
+                                            backgroundImage: e.bIsShard
+                                              ? `url(${n.r.IMG_URL}heroes/stats/aghs_shard.png ), url( ${n.r.IMG_URL}/${e.imgSrc} )`
+                                              : `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
+                                            backgroundSize: e.bIsShard
+                                              ? "cover, cover"
+                                              : "cover",
+                                          },
+                                          children: (0, a.jsx)("div", {}),
+                                        },
+                                        `HeroAbilityDot-${i}`,
+                                      ),
+                                    ),
+                                  }),
+                                ],
+                              }),
+                              (0, a.jsxs)("div", {
+                                className: j().CarouselDotsRight,
+                                children: [
+                                  (0, a.jsxs)("div", {
+                                    className: j().CarouselDotsHeading,
+                                    children: [
+                                      (0, a.jsx)("img", {
+                                        className: j().InnateIcon,
+                                        src: `${n.r.IMG_URL}icons/innate_icon.png`,
+                                      }),
+                                      " ",
+                                      (0, l.Wn)(
+                                        "#ringmaster_souvenirs_heading",
+                                      ),
+                                      (0, a.jsx)("div", {
+                                        className: j().AbilityTooltip,
+                                        children: (0, a.jsx)("div", {
+                                          className: j().TooltipBody,
+                                          children: (0, a.jsxs)("div", {
+                                            className: j().Description,
+                                            children: [
+                                              (0, a.jsxs)("div", {
+                                                className: j().TooltipTitle,
+                                                children: [
+                                                  (0, l.Wn)(
+                                                    "#ringmaster_ability_dark_carnival_trinkets",
+                                                  ),
+                                                  " ",
+                                                ],
+                                              }),
+                                              (0, a.jsxs)("div", {
+                                                className:
+                                                  j().TooltipDescription,
+                                                children: [
+                                                  (0, l.Wn)(
+                                                    "#ringmaster_ability_dark_carnival_trinkets_Description",
+                                                  ),
+                                                  " ",
+                                                ],
+                                              }),
+                                            ],
+                                          }),
+                                        }),
+                                      }),
+                                    ],
+                                  }),
+                                  (0, a.jsx)("div", {
+                                    className: (0, _.A)(j().CarouselDots),
+                                    children: L.map((e, i) =>
+                                      (0, a.jsx)(
+                                        C.cL,
+                                        {
+                                          slide: R.length + i,
+                                          className: j().AbilitySelector,
+                                          style: {
+                                            backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
+                                            backgroundSize: "cover",
+                                          },
+                                          children: (0, a.jsx)("div", {}),
+                                        },
+                                        `HeroAbilityDot-${R.length + i}`,
+                                      ),
+                                    ),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
                       }),
-                      o.createElement(
-                        "div",
-                        { className: v().Description },
-                        o.createElement(
-                          "h2",
-                          {
-                            className: (0, d.A)(
-                              v().DisplayText,
-                              v().Large,
-                              v().AllUppercase,
-                            ),
-                          },
-                          (0, l.Wn)("#ringmaster_comic_title"),
-                        ),
-                        o.createElement(
-                          "p",
-                          {
-                            className: (0, d.A)(
-                              v().ComicBodyText,
-                              v().Large,
-                              v().LightGreyText,
-                            ),
-                          },
-                          (0, l.Wn)("#ringmaster_comic_desc"),
-                        ),
-                        o.createElement(
-                          g.N_,
-                          {
-                            to: r.J.ringmaster_comic(),
-                            target: "_blank",
-                            className: (0, d.A)(
-                              v().ReadComicButton,
-                              v().ButtonText,
-                              v().Large,
-                            ),
-                          },
-                          (0, l.Wn)("#ringmaster_comic_button"),
-                        ),
-                      ),
-                    ),
-                  ),
-                  o.createElement(
-                    "div",
-                    null,
-                    o.createElement("img", {
-                      src: `${n.r.IMG_URL}/international2024/ringmaster/flourish_bottom.png`,
-                      className: v().ComicFlourishBottom,
                     }),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: v().ButtonsSection },
-                    o.createElement(
-                      g.N_,
-                      { to: r.J.hero("ringmaster") },
-                      o.createElement(
-                        "div",
-                        { className: v().StandardButton },
-                        o.createElement(
-                          "div",
-                          { className: v().ButtonText },
-                          (0, l.Wn)("#ringmaster_hero_detail_button"),
-                        ),
-                        o.createElement(E.U, null),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      {
-                        className: v().StandardButton,
-                        onClick: () => this.setPlayingVideo(!0),
-                      },
-                      o.createElement(
-                        "div",
-                        { className: v().ButtonText },
-                        (0, l.Wn)("#ringmaster_play_trailer_button"),
-                      ),
-                      o.createElement(E.U, null),
-                    ),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  {
-                    id: "LetsGetStarted",
-                    className: (0, d.A)(v().WebsiteSection, v().CompendiumDark),
-                  },
-                  o.createElement(
-                    "div",
-                    { className: (0, d.A)(v().FlourishContainerEffigies) },
-                    o.createElement(D, {
-                      description: "#ringmaster_guide",
-                      bIsLetsGetStarted: !0,
-                      image:
-                        "international2024/compendium/ringmaster_pullquote_letsgetstarted.png",
+                    (0, a.jsx)("div", {
+                      className: j().AbilitySectionMobileView,
+                      children: (0, a.jsxs)(C.gi, {
+                        className: j().AbilityCarousel,
+                        naturalSlideWidth: 100,
+                        naturalSlideHeight: 56.25,
+                        totalSlides: R.length + L.length,
+                        children: [
+                          (0, a.jsxs)(C.Ap, {
+                            className: j().AbilitySlider,
+                            children: [
+                              R.map((e, i) =>
+                                (0, a.jsx)(
+                                  C.q7,
+                                  {
+                                    index: i,
+                                    children: (0, a.jsxs)("div", {
+                                      className:
+                                        j().AbilitySlideContainerMobile,
+                                      children: [
+                                        (0, a.jsx)("div", {
+                                          className: j().AbilityVideoContainer,
+                                          children: (0, a.jsxs)("video", {
+                                            className: j().AbilityVideo,
+                                            autoPlay: !0,
+                                            preload: "auto",
+                                            muted: !0,
+                                            loop: !0,
+                                            playsInline: !0,
+                                            poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
+                                            children: [
+                                              e.videoSrcWebm &&
+                                                (0, a.jsx)("source", {
+                                                  type: "video/webm",
+                                                  src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
+                                                }),
+                                              e.videoSrcMp4 &&
+                                                (0, a.jsx)("source", {
+                                                  type: "video/mp4",
+                                                  src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
+                                                }),
+                                            ],
+                                          }),
+                                        }),
+                                        (0, a.jsxs)("div", {
+                                          className: j().SlideAbilityContainer,
+                                          children: [
+                                            (0, a.jsx)("img", {
+                                              className: j().SlideAbilityIcon,
+                                              src: `${n.r.IMG_URL}/${e.imgSrc}`,
+                                            }),
+                                            (0, a.jsxs)("div", {
+                                              className: j().AbilityText,
+                                              children: [
+                                                (0, a.jsx)("div", {
+                                                  className: j().AbilityName,
+                                                  children: (0, l.Wn)(
+                                                    `${e.abilityName}`,
+                                                  ),
+                                                }),
+                                                (0, a.jsx)("div", {
+                                                  className: j().AbilityDesc,
+                                                  children: (0, l.Wn)(
+                                                    `${e.abilityDesc}`,
+                                                  ),
+                                                }),
+                                              ],
+                                            }),
+                                          ],
+                                        }),
+                                      ],
+                                    }),
+                                  },
+                                  `HeroAbilitySlide-${i}`,
+                                ),
+                              ),
+                              L.map((e, i) =>
+                                (0, a.jsx)(
+                                  C.q7,
+                                  {
+                                    index: R.length + i,
+                                    children: (0, a.jsxs)("div", {
+                                      className:
+                                        j().AbilitySlideContainerMobile,
+                                      children: [
+                                        (0, a.jsx)("div", {
+                                          className: j().AbilityVideoContainer,
+                                          children: (0, a.jsxs)("video", {
+                                            className: j().AbilityVideo,
+                                            autoPlay: !0,
+                                            preload: "auto",
+                                            muted: !0,
+                                            loop: !0,
+                                            playsInline: !0,
+                                            poster: `${n.r.VIDEO_URL}/${e.posterDir}`,
+                                            children: [
+                                              e.videoSrcWebm &&
+                                                (0, a.jsx)("source", {
+                                                  type: "video/webm",
+                                                  src: `${n.r.VIDEO_URL}/${e.videoSrcWebm}`,
+                                                }),
+                                              e.videoSrcMp4 &&
+                                                (0, a.jsx)("source", {
+                                                  type: "video/mp4",
+                                                  src: `${n.r.VIDEO_URL}/${e.videoSrcMp4}`,
+                                                }),
+                                            ],
+                                          }),
+                                        }),
+                                        (0, a.jsxs)("div", {
+                                          className: j().SlideAbilityContainer,
+                                          children: [
+                                            (0, a.jsx)("img", {
+                                              className: j().SlideAbilityIcon,
+                                              src: `${n.r.IMG_URL}/${e.imgSrc}`,
+                                            }),
+                                            (0, a.jsxs)("div", {
+                                              className: j().AbilityText,
+                                              children: [
+                                                (0, a.jsx)("div", {
+                                                  className: j().AbilityName,
+                                                  children: (0, l.Wn)(
+                                                    `${e.abilityName}`,
+                                                  ),
+                                                }),
+                                                (0, a.jsx)("div", {
+                                                  className: j().AbilityDesc,
+                                                  children: (0, l.Wn)(
+                                                    `${e.abilityDesc}`,
+                                                  ),
+                                                }),
+                                              ],
+                                            }),
+                                          ],
+                                        }),
+                                      ],
+                                    }),
+                                  },
+                                  `HeroAbilitySlide-${R.length + i}`,
+                                ),
+                              ),
+                            ],
+                          }),
+                          (0, a.jsxs)("div", {
+                            className: j().CarouselDotsSection,
+                            children: [
+                              (0, a.jsxs)("div", {
+                                className: j().CarouselDotsLeft,
+                                children: [
+                                  (0, a.jsx)("div", {
+                                    className: j().CarouselDotsHeading,
+                                    children: (0, l.Wn)(
+                                      "#ringmaster_abilities_heading",
+                                    ),
+                                  }),
+                                  (0, a.jsx)("div", {
+                                    className: (0, _.A)(j().CarouselDotsMobile),
+                                    children: R.map((e, i) =>
+                                      (0, a.jsx)(
+                                        C.cL,
+                                        {
+                                          slide: i,
+                                          className: j().AbilitySelector,
+                                          style: {
+                                            backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
+                                            backgroundSize: "cover",
+                                          },
+                                          children: (0, a.jsx)("div", {}),
+                                        },
+                                        `HeroAbilityDot-${i}`,
+                                      ),
+                                    ),
+                                  }),
+                                ],
+                              }),
+                              (0, a.jsxs)("div", {
+                                className: j().CarouselDotsRight,
+                                children: [
+                                  (0, a.jsxs)("div", {
+                                    className: j().CarouselDotsHeading,
+                                    children: [
+                                      (0, a.jsx)("img", {
+                                        className: j().InnateIcon,
+                                        src: `${n.r.IMG_URL}icons/innate_icon.png`,
+                                      }),
+                                      " ",
+                                      (0, l.Wn)(
+                                        "#ringmaster_souvenirs_heading",
+                                      ),
+                                    ],
+                                  }),
+                                  (0, a.jsx)("div", {
+                                    className: (0, _.A)(j().CarouselDotsMobile),
+                                    children: L.map((e, i) =>
+                                      (0, a.jsx)(
+                                        C.cL,
+                                        {
+                                          slide: R.length + i,
+                                          className: j().AbilitySelector,
+                                          style: {
+                                            backgroundImage: `url( ${n.r.IMG_URL}/${e.imgSrc} )`,
+                                            backgroundSize: "cover",
+                                          },
+                                          children: (0, a.jsx)("div", {}),
+                                        },
+                                        `HeroAbilityDot-${R.length + i}`,
+                                      ),
+                                    ),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
                     }),
-                  ),
-                ),
-                o.createElement("div", {
-                  className: (0, d.A)(v().SectionDivider),
+                    (0, a.jsxs)("div", {
+                      className: j().RingmasterDescription2Container,
+                      children: [
+                        (0, a.jsx)("div", {
+                          className: j().HeroHype,
+                          children: (0, l.Wn)("#ringmaster_comic"),
+                        }),
+                        (0, a.jsx)("div", {
+                          children: (0, a.jsx)("img", {
+                            src: `${n.r.IMG_URL}/international2024/ringmaster/flourish_top.png`,
+                            className: j().ComicFlourishTop,
+                          }),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: j().Comic,
+                          children: (0, a.jsxs)("div", {
+                            className: j().Inside,
+                            children: [
+                              (0, a.jsx)("img", {
+                                src: `${n.r.IMG_URL}/international2024/ringmaster/thumb_ringmaster_thepuppet.jpg`,
+                                className: j().Thumbnail,
+                              }),
+                              (0, a.jsxs)("div", {
+                                className: j().Description,
+                                children: [
+                                  (0, a.jsx)("h2", {
+                                    className: (0, _.A)(
+                                      j().DisplayText,
+                                      j().Large,
+                                      j().AllUppercase,
+                                    ),
+                                    children: (0, l.Wn)(
+                                      "#ringmaster_comic_title",
+                                    ),
+                                  }),
+                                  (0, a.jsx)("p", {
+                                    className: (0, _.A)(
+                                      j().ComicBodyText,
+                                      j().Large,
+                                      j().LightGreyText,
+                                    ),
+                                    children: (0, l.Wn)(
+                                      "#ringmaster_comic_desc",
+                                    ),
+                                  }),
+                                  (0, a.jsx)(h.N_, {
+                                    to: r.J.ringmaster_comic(),
+                                    target: "_blank",
+                                    className: (0, _.A)(
+                                      j().ReadComicButton,
+                                      j().ButtonText,
+                                      j().Large,
+                                    ),
+                                    children: (0, l.Wn)(
+                                      "#ringmaster_comic_button",
+                                    ),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        }),
+                        (0, a.jsx)("div", {
+                          children: (0, a.jsx)("img", {
+                            src: `${n.r.IMG_URL}/international2024/ringmaster/flourish_bottom.png`,
+                            className: j().ComicFlourishBottom,
+                          }),
+                        }),
+                        (0, a.jsxs)("div", {
+                          className: j().ButtonsSection,
+                          children: [
+                            (0, a.jsx)(h.N_, {
+                              to: r.J.hero("ringmaster"),
+                              children: (0, a.jsxs)("div", {
+                                className: j().StandardButton,
+                                children: [
+                                  (0, a.jsx)("div", {
+                                    className: j().ButtonText,
+                                    children: (0, l.Wn)(
+                                      "#ringmaster_hero_detail_button",
+                                    ),
+                                  }),
+                                  (0, a.jsx)(x.U, {}),
+                                ],
+                              }),
+                            }),
+                            (0, a.jsxs)("div", {
+                              className: j().StandardButton,
+                              onClick: () => this.setPlayingVideo(!0),
+                              children: [
+                                (0, a.jsx)("div", {
+                                  className: j().ButtonText,
+                                  children: (0, l.Wn)(
+                                    "#ringmaster_play_trailer_button",
+                                  ),
+                                }),
+                                (0, a.jsx)(x.U, {}),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, a.jsx)("div", {
+                      id: "LetsGetStarted",
+                      className: (0, _.A)(
+                        j().WebsiteSection,
+                        j().CompendiumDark,
+                      ),
+                      children: (0, a.jsx)("div", {
+                        className: (0, _.A)(j().FlourishContainerEffigies),
+                        children: (0, a.jsx)(D, {
+                          description: "#ringmaster_guide",
+                          bIsLetsGetStarted: !0,
+                          image:
+                            "international2024/compendium/ringmaster_pullquote_letsgetstarted.png",
+                        }),
+                      }),
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, _.A)(j().SectionDivider),
+                    }),
+                    (0, a.jsxs)("div", {
+                      id: "Effigies",
+                      className: (0, _.A)(
+                        j().WebsiteSection,
+                        j().CompendiumDark,
+                        j().EffigiesTopper,
+                      ),
+                      children: [
+                        (0, a.jsx)("h1", {
+                          children: (0, l.Wn)(
+                            "#international2024_effigies_title",
+                          ),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: j().Subtitle,
+                          children: (0, l.Wn)(
+                            "#international2024_effigies_subtitle",
+                          ),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().SubDivider),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().FlourishContainerEffigies),
+                          children: (0, a.jsx)(D, {
+                            description: "#international2024_effigies_intro",
+                            image:
+                              "international2024/compendium/ringmaster_pullquote_effigy.png",
+                            bSwapImageSide: !0,
+                            bCenterText: !1,
+                          }),
+                        }),
+                        (0, a.jsx)(W, {
+                          description: "#international2024_effigies_desc",
+                          image:
+                            "international2024/effigy/effigy_splash_art3.png",
+                          bSwapImageSide: !0,
+                        }),
+                      ],
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, _.A)(j().SectionDivider, j().Compendium),
+                    }),
+                    (0, a.jsxs)("div", {
+                      id: "Compendium",
+                      className: (0, _.A)(
+                        j().WebsiteSection,
+                        j().CompendiumDark,
+                        j().CompendiumIntro,
+                      ),
+                      children: [
+                        (0, a.jsx)("img", {
+                          className: j().CompendiumLogo,
+                          src: `${n.r.IMG_URL}international2024/compendium/5hero_lockup.png`,
+                        }),
+                        (0, a.jsx)("img", {
+                          className: j().CompendiumStars,
+                          src: `${n.r.IMG_URL}international2024/compendium/${e}.png`,
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().FlourishContainerPurchaseTop),
+                          children: (0, a.jsx)(D, {
+                            description: "#international2024_purchase_intro",
+                            image:
+                              "international2024/compendium/ringmaster_pullquote_compendium.png",
+                            bSwapImageSide: !1,
+                          }),
+                        }),
+                        (0, a.jsx)(B, {}),
+                      ],
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, _.A)(j().SectionDivider, j().Compendium),
+                    }),
+                    (0, a.jsxs)("div", {
+                      id: "Activities",
+                      className: (0, _.A)(
+                        j().WebsiteSection,
+                        j().CompendiumDark,
+                        j().BokehTopper,
+                      ),
+                      children: [
+                        (0, a.jsx)("h1", {
+                          children: (0, l.Wn)("#international2024_activities"),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: j().Subtitle,
+                          children: (0, l.Wn)(
+                            "#international2024_activities_subtitle",
+                          ),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().SubDivider),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().FlourishContainerActivities),
+                          children: (0, a.jsx)(D, {
+                            description: "#international2024_activities_intro",
+                            image:
+                              "international2024/compendium/ringmaster_pullquote_compendiumactivities.png",
+                            bSwapImageSide: !0,
+                          }),
+                        }),
+                        (0, a.jsxs)("div", {
+                          className: (0, _.A)(
+                            j().FeatureRow,
+                            j().TwoColumn,
+                            j().CompendiumActivities,
+                          ),
+                          children: [
+                            (0, a.jsx)(f, {
+                              title: "#international2024_activities_play_title",
+                              description:
+                                "#international2024_activities_play_desc",
+                              image:
+                                "international2024/compendium/ti2024_rewards_points.png",
+                            }),
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_activities_fantasy_title",
+                              description:
+                                "#international2024_activities_fantasy_desc",
+                              image:
+                                "international2024/compendium/ti2024_fantasy_reroll_stats.png",
+                            }),
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_activities_oracles_title",
+                              description:
+                                "#international2024_activities_oracles_desc",
+                              image:
+                                "international2024/compendium/ti2024_oracles_challenge_predict_group_stage.png",
+                            }),
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_activities_bingo_title",
+                              description:
+                                "#international2024_activities_bingo_desc",
+                              image:
+                                "international2024/compendium/ti2024_bingo.png",
+                            }),
+                          ],
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(
+                            j().FlourishContainerActivitiesBottom,
+                          ),
+                          children: (0, a.jsx)(D, {
+                            description: "#international2024_activities_outro",
+                            image:
+                              "international2024/compendium/ringmaster_pullquote_supportthecommunity.png",
+                            bSwapImageSide: !0,
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, _.A)(j().SectionDivider, j().Compendium),
+                    }),
+                    (0, a.jsxs)("div", {
+                      id: "Rewards",
+                      className: (0, _.A)(
+                        j().WebsiteSection,
+                        j().CompendiumDark,
+                        j().BokehTopper,
+                      ),
+                      children: [
+                        (0, a.jsx)("h1", {
+                          children: (0, l.Wn)(
+                            "#international2024_rewards_title",
+                          ),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: j().Subtitle,
+                          children: (0, l.Wn)(
+                            "#international2024_rewards_subtitle",
+                          ),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().SubDivider),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().FlourishContainerRewards),
+                          children: (0, a.jsx)(D, {
+                            description: "#international2024_rewards_intro",
+                            image:
+                              "international2024/compendium/ringmaster_pullquote_compendiumrewards.png",
+                            bSwapImageSide: !1,
+                          }),
+                        }),
+                        (0, a.jsx)("br", {}),
+                        (0, a.jsx)(W, {
+                          title:
+                            "#international2024_rewards_physical_aegis_title",
+                          description:
+                            "#international2024_rewards_physical_aegis_desc",
+                          image:
+                            "international2024/compendium/rewards_aegis2024.png",
+                          imageStyle: j().Image75Percent,
+                          bSwapImageSide: !0,
+                        }),
+                        (0, a.jsxs)("div", {
+                          className: (0, _.A)(
+                            j().FeatureRow,
+                            j().TwoColumn,
+                            j().CompendiumRewardsLarge,
+                          ),
+                          children: [
+                            (0, a.jsx)(f, {
+                              title: "#international2024_rewards_hud_title",
+                              description:
+                                "#international2024_rewards_hud_desc",
+                              image:
+                                "international2024/compendium/ti2024_rewards_hud.png",
+                              bNoGapBetweenPicAndText: !0,
+                              bNoGapInTextCapsule: !0,
+                            }),
+                            (0, a.jsx)(f, {
+                              title: "#international2024_rewards_versus_title",
+                              description:
+                                "#international2024_rewards_versus_desc",
+                              image:
+                                "international2024/compendium/ti2024_rewards_versus_screen.png",
+                              bNoGapBetweenPicAndText: !0,
+                              bNoGapInTextCapsule: !0,
+                            }),
+                          ],
+                        }),
+                        (0, a.jsxs)("div", {
+                          className: (0, _.A)(
+                            j().FeatureRow,
+                            j().ThreeColumn,
+                            j().CompendiumRewardsSmall,
+                          ),
+                          children: [
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_rewards_stickers_title",
+                              image:
+                                "international2024/compendium/ti2024_team_player_stickers.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_rewards_chat_wheels_title",
+                              image:
+                                "international2024/compendium/ti2024_rewards_permenent_chatwheels.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                            (0, a.jsx)(f, {
+                              title: "#international2024_rewards_effigy_title",
+                              image:
+                                "international2024/compendium/ti2024_team_effigy_block.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_rewards_materials_title",
+                              image:
+                                "international2024/compendium/ti2024_rewards_fantasy_token.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_rewards_teleport_fx_title",
+                              image:
+                                "international2024/compendium/ti2024_rewards_teleport.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_rewards_loading_screens_title",
+                              image:
+                                "international2024/compendium/ti2024_rewards_loading_screens.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, _.A)(j().SectionDivider, j().Compendium),
+                    }),
+                    (0, a.jsxs)("div", {
+                      id: "SupportersClubs",
+                      className: (0, _.A)(
+                        j().WebsiteSection,
+                        j().CompendiumDark,
+                        j().BokehTopper,
+                        j().SupportTheCommunity,
+                      ),
+                      children: [
+                        (0, a.jsx)("h1", {
+                          children: (0, l.Wn)(
+                            "#international2024_supporters_clubs_title",
+                          ),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: j().Subtitle,
+                          children: (0, l.Wn)(
+                            "#international2024_supporters_clubs_subtitle",
+                          ),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().SubDivider),
+                        }),
+                        (0, a.jsx)("div", {
+                          className: (0, _.A)(j().FlourishContainerSupporters),
+                          children: (0, a.jsx)(D, {
+                            description:
+                              "#international2024_supporters_clubs_intro",
+                            image:
+                              "international2024/compendium/ringmaster_pullquote_compendiumrewards_bottom.png",
+                            bSwapImageSide: !0,
+                          }),
+                        }),
+                        (0, a.jsxs)("div", {
+                          className: (0, _.A)(
+                            j().FeatureRow,
+                            j().TwoColumn,
+                            j().CompendiumSupporterClubs,
+                          ),
+                          children: [
+                            (0, a.jsx)(f, {
+                              title:
+                                "#international2024_supporters_clubs_tiers_title",
+                              description:
+                                "#international2024_supporters_clubs_tiers_desc",
+                              image:
+                                "international2024/compendium/ti2024_supporters_club.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                            (0, a.jsx)(f, {
+                              title: "#international2024_talent_tiers_title",
+                              description:
+                                "#international2024_talent_tiers_desc",
+                              image:
+                                "international2024/compendium/ti2024_talent_stickers.png",
+                              bNoGapBetweenPicAndText: !0,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, _.A)(j().SectionDivider, j().Compendium),
+                    }),
+                    (0, a.jsx)("div", {
+                      id: "Footer",
+                      className: (0, _.A)(
+                        j().WebsiteSection,
+                        j().CompendiumDark,
+                        j().FooterSection,
+                      ),
+                      children: (0, a.jsx)(B, { bShowLearnMore: !0 }),
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, _.A)(j().SectionDivider, j().Compendium),
+                    }),
+                  ],
                 }),
-                o.createElement(
-                  "div",
-                  {
-                    id: "Effigies",
-                    className: (0, d.A)(
-                      v().WebsiteSection,
-                      v().CompendiumDark,
-                      v().EffigiesTopper,
-                    ),
-                  },
-                  o.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#international2024_effigies_title"),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: v().Subtitle },
-                    (0, l.Wn)("#international2024_effigies_subtitle"),
-                  ),
-                  o.createElement("div", {
-                    className: (0, d.A)(v().SubDivider),
-                  }),
-                  o.createElement(
-                    "div",
-                    { className: (0, d.A)(v().FlourishContainerEffigies) },
-                    o.createElement(D, {
-                      description: "#international2024_effigies_intro",
-                      image:
-                        "international2024/compendium/ringmaster_pullquote_effigy.png",
-                      bSwapImageSide: !0,
-                      bCenterText: !1,
-                    }),
-                  ),
-                  o.createElement(W, {
-                    description: "#international2024_effigies_desc",
-                    image: "international2024/effigy/effigy_splash_art3.png",
-                    bSwapImageSide: !0,
-                  }),
-                ),
-                o.createElement("div", {
-                  className: (0, d.A)(v().SectionDivider, v().Compendium),
-                }),
-                o.createElement(
-                  "div",
-                  {
-                    id: "Compendium",
-                    className: (0, d.A)(
-                      v().WebsiteSection,
-                      v().CompendiumDark,
-                      v().CompendiumIntro,
-                    ),
-                  },
-                  o.createElement("img", {
-                    className: v().CompendiumLogo,
-                    src: `${n.r.IMG_URL}international2024/compendium/5hero_lockup.png`,
-                  }),
-                  o.createElement("img", {
-                    className: v().CompendiumStars,
-                    src: `${n.r.IMG_URL}international2024/compendium/${e}.png`,
-                  }),
-                  o.createElement(
-                    "div",
-                    { className: (0, d.A)(v().FlourishContainerPurchaseTop) },
-                    o.createElement(D, {
-                      description: "#international2024_purchase_intro",
-                      image:
-                        "international2024/compendium/ringmaster_pullquote_compendium.png",
-                      bSwapImageSide: !1,
-                    }),
-                  ),
-                  o.createElement(B, null),
-                ),
-                o.createElement("div", {
-                  className: (0, d.A)(v().SectionDivider, v().Compendium),
-                }),
-                o.createElement(
-                  "div",
-                  {
-                    id: "Activities",
-                    className: (0, d.A)(
-                      v().WebsiteSection,
-                      v().CompendiumDark,
-                      v().BokehTopper,
-                    ),
-                  },
-                  o.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#international2024_activities"),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: v().Subtitle },
-                    (0, l.Wn)("#international2024_activities_subtitle"),
-                  ),
-                  o.createElement("div", {
-                    className: (0, d.A)(v().SubDivider),
-                  }),
-                  o.createElement(
-                    "div",
-                    { className: (0, d.A)(v().FlourishContainerActivities) },
-                    o.createElement(D, {
-                      description: "#international2024_activities_intro",
-                      image:
-                        "international2024/compendium/ringmaster_pullquote_compendiumactivities.png",
-                      bSwapImageSide: !0,
-                    }),
-                  ),
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, d.A)(
-                        v().FeatureRow,
-                        v().TwoColumn,
-                        v().CompendiumActivities,
-                      ),
-                    },
-                    o.createElement(f, {
-                      title: "#international2024_activities_play_title",
-                      description: "#international2024_activities_play_desc",
-                      image:
-                        "international2024/compendium/ti2024_rewards_points.png",
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_activities_fantasy_title",
-                      description: "#international2024_activities_fantasy_desc",
-                      image:
-                        "international2024/compendium/ti2024_fantasy_reroll_stats.png",
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_activities_oracles_title",
-                      description: "#international2024_activities_oracles_desc",
-                      image:
-                        "international2024/compendium/ti2024_oracles_challenge_predict_group_stage.png",
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_activities_bingo_title",
-                      description: "#international2024_activities_bingo_desc",
-                      image: "international2024/compendium/ti2024_bingo.png",
-                    }),
-                  ),
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, d.A)(
-                        v().FlourishContainerActivitiesBottom,
-                      ),
-                    },
-                    o.createElement(D, {
-                      description: "#international2024_activities_outro",
-                      image:
-                        "international2024/compendium/ringmaster_pullquote_supportthecommunity.png",
-                      bSwapImageSide: !0,
-                    }),
-                  ),
-                ),
-                o.createElement("div", {
-                  className: (0, d.A)(v().SectionDivider, v().Compendium),
-                }),
-                o.createElement(
-                  "div",
-                  {
-                    id: "Rewards",
-                    className: (0, d.A)(
-                      v().WebsiteSection,
-                      v().CompendiumDark,
-                      v().BokehTopper,
-                    ),
-                  },
-                  o.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#international2024_rewards_title"),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: v().Subtitle },
-                    (0, l.Wn)("#international2024_rewards_subtitle"),
-                  ),
-                  o.createElement("div", {
-                    className: (0, d.A)(v().SubDivider),
-                  }),
-                  o.createElement(
-                    "div",
-                    { className: (0, d.A)(v().FlourishContainerRewards) },
-                    o.createElement(D, {
-                      description: "#international2024_rewards_intro",
-                      image:
-                        "international2024/compendium/ringmaster_pullquote_compendiumrewards.png",
-                      bSwapImageSide: !1,
-                    }),
-                  ),
-                  o.createElement("br", null),
-                  o.createElement(W, {
-                    title: "#international2024_rewards_physical_aegis_title",
-                    description:
-                      "#international2024_rewards_physical_aegis_desc",
-                    image: "international2024/compendium/rewards_aegis2024.png",
-                    imageStyle: v().Image75Percent,
-                    bSwapImageSide: !0,
-                  }),
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, d.A)(
-                        v().FeatureRow,
-                        v().TwoColumn,
-                        v().CompendiumRewardsLarge,
-                      ),
-                    },
-                    o.createElement(f, {
-                      title: "#international2024_rewards_hud_title",
-                      description: "#international2024_rewards_hud_desc",
-                      image:
-                        "international2024/compendium/ti2024_rewards_hud.png",
-                      bNoGapBetweenPicAndText: !0,
-                      bNoGapInTextCapsule: !0,
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_rewards_versus_title",
-                      description: "#international2024_rewards_versus_desc",
-                      image:
-                        "international2024/compendium/ti2024_rewards_versus_screen.png",
-                      bNoGapBetweenPicAndText: !0,
-                      bNoGapInTextCapsule: !0,
-                    }),
-                  ),
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, d.A)(
-                        v().FeatureRow,
-                        v().ThreeColumn,
-                        v().CompendiumRewardsSmall,
-                      ),
-                    },
-                    o.createElement(f, {
-                      title: "#international2024_rewards_stickers_title",
-                      image:
-                        "international2024/compendium/ti2024_team_player_stickers.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_rewards_chat_wheels_title",
-                      image:
-                        "international2024/compendium/ti2024_rewards_permenent_chatwheels.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_rewards_effigy_title",
-                      image:
-                        "international2024/compendium/ti2024_team_effigy_block.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_rewards_materials_title",
-                      image:
-                        "international2024/compendium/ti2024_rewards_fantasy_token.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_rewards_teleport_fx_title",
-                      image:
-                        "international2024/compendium/ti2024_rewards_teleport.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_rewards_loading_screens_title",
-                      image:
-                        "international2024/compendium/ti2024_rewards_loading_screens.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                  ),
-                ),
-                o.createElement("div", {
-                  className: (0, d.A)(v().SectionDivider, v().Compendium),
-                }),
-                o.createElement(
-                  "div",
-                  {
-                    id: "SupportersClubs",
-                    className: (0, d.A)(
-                      v().WebsiteSection,
-                      v().CompendiumDark,
-                      v().BokehTopper,
-                      v().SupportTheCommunity,
-                    ),
-                  },
-                  o.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#international2024_supporters_clubs_title"),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: v().Subtitle },
-                    (0, l.Wn)("#international2024_supporters_clubs_subtitle"),
-                  ),
-                  o.createElement("div", {
-                    className: (0, d.A)(v().SubDivider),
-                  }),
-                  o.createElement(
-                    "div",
-                    { className: (0, d.A)(v().FlourishContainerSupporters) },
-                    o.createElement(D, {
-                      description: "#international2024_supporters_clubs_intro",
-                      image:
-                        "international2024/compendium/ringmaster_pullquote_compendiumrewards_bottom.png",
-                      bSwapImageSide: !0,
-                    }),
-                  ),
-                  o.createElement(
-                    "div",
-                    {
-                      className: (0, d.A)(
-                        v().FeatureRow,
-                        v().TwoColumn,
-                        v().CompendiumSupporterClubs,
-                      ),
-                    },
-                    o.createElement(f, {
-                      title: "#international2024_supporters_clubs_tiers_title",
-                      description:
-                        "#international2024_supporters_clubs_tiers_desc",
-                      image:
-                        "international2024/compendium/ti2024_supporters_club.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                    o.createElement(f, {
-                      title: "#international2024_talent_tiers_title",
-                      description: "#international2024_talent_tiers_desc",
-                      image:
-                        "international2024/compendium/ti2024_talent_stickers.png",
-                      bNoGapBetweenPicAndText: !0,
-                    }),
-                  ),
-                ),
-                o.createElement("div", {
-                  className: (0, d.A)(v().SectionDivider, v().Compendium),
-                }),
-                o.createElement(
-                  "div",
-                  {
-                    id: "Footer",
-                    className: (0, d.A)(
-                      v().WebsiteSection,
-                      v().CompendiumDark,
-                      v().FooterSection,
-                    ),
-                  },
-                  o.createElement(B, { bShowLearnMore: !0 }),
-                ),
-                o.createElement("div", {
-                  className: (0, d.A)(v().SectionDivider, v().Compendium),
-                }),
-              ),
-              o.createElement(I, null),
-              o.createElement(u.K, null),
-            )
+                (0, a.jsx)(I, {}),
+                (0, a.jsx)(g.K, {}),
+              ],
+            })
           );
         }
       };
-      k = (0, i.Cg)([s.PA], k);
-      const F = k;
+      G = (0, t.Cg)([o.PA], G);
+      const k = G;
     },
   },
 ]);

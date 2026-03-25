@@ -199,73 +199,74 @@
         CloseButtonImage: "_1x-D_8bS8rbs1QXn0GuWUI",
       };
     },
-    722: (e, a, t) => {
+    722: (e, a, i) => {
       "use strict";
-      t.d(a, { U: () => s });
-      var l = t(7552),
-        i = t(11417),
-        r = t.n(i),
-        n = t(89506);
-      const s = () =>
-        l.createElement("div", {
-          className: r().RightArrow,
+      i.d(a, { U: () => o });
+      var s = i(69500),
+        l = i(11417),
+        t = i.n(l),
+        r = i(89506);
+      const o = () =>
+        (0, s.jsx)("div", {
+          className: t().RightArrow,
           style: {
-            backgroundImage: `url( ${n.r.IMG_URL}/icons/arrow_right.svg )`,
+            backgroundImage: `url( ${r.r.IMG_URL}/icons/arrow_right.svg )`,
           },
         });
     },
-    12896: (e, a, t) => {
+    12896: (e, a, i) => {
       "use strict";
-      t.r(a),
-        t.d(a, {
+      i.r(a),
+        i.d(a, {
           DownloadIcon: () => A,
           InnateIconSmall: () => D,
           PlayIcon: () => I,
-          default: () => x,
+          default: () => R,
         });
-      var l = t(85608),
-        i = t(89506),
-        r = t(33706),
-        n = t(27866),
-        s = t(68446),
-        c = t(7552),
-        o = t(73202),
-        m = t(35927),
-        _ = t(21384),
-        d = t(56698),
-        p = t(47202),
-        b = t(36305),
-        E = t(7423),
-        g = t.n(E),
-        k = t(32389),
-        y = t(54159),
-        u = t(45237),
-        h = t(722),
-        v = t(55651),
-        z = t(82101),
-        N = t(85286),
-        S = t.n(N);
+      var s = i(85608),
+        l = i(69500),
+        t = i(89506),
+        r = i(33706),
+        o = i(40045),
+        n = i(68446),
+        c = i(7552),
+        d = i(73202),
+        _ = i(35927),
+        m = i(21384),
+        p = i(70595),
+        h = i(47202),
+        x = i(36305),
+        b = i(7423),
+        j = i.n(b),
+        g = i(32389),
+        k = i(54159),
+        y = i(45237),
+        v = i(722),
+        u = i(55651),
+        z = i(82101),
+        N = i(85286),
+        S = i.n(N);
       const I = () =>
-          c.createElement("div", {
-            className: g().ControlIcon,
-            style: { backgroundImage: `url( ${i.r.IMG_URL}/icons/play.svg )` },
+          (0, l.jsx)("div", {
+            className: j().ControlIcon,
+            style: { backgroundImage: `url( ${t.r.IMG_URL}/icons/play.svg )` },
           }),
         A = () =>
-          c.createElement("div", {
-            className: g().ControlIcon,
+          (0, l.jsx)("div", {
+            className: j().ControlIcon,
             style: {
-              backgroundImage: `url( ${i.r.IMG_URL}/icons/download.svg )`,
+              backgroundImage: `url( ${t.r.IMG_URL}/icons/download.svg )`,
             },
           }),
         D = () =>
-          c.createElement("div", {
-            className: (0, _.A)(g().InnateIconSmall, g().ControlIcon),
+          (0, l.jsx)("div", {
+            className: (0, m.A)(j().InnateIconSmall, j().ControlIcon),
             style: {
-              backgroundImage: `url( ${i.r.IMG_URL}/icons/innate_icon_small.svg )`,
+              backgroundImage: `url( ${t.r.IMG_URL}/icons/innate_icon_small.svg )`,
             },
           });
       function C() {
-        const e = t(99769),
+        const e = i(99769),
           a =
             -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
             -1 != navigator.userAgent.toLowerCase().indexOf("macintosh");
@@ -274,281 +275,271 @@
       const L = (e) => {
           const a = (0, c.useRef)(void 0);
           return e.video && !C()
-            ? c.createElement(
-                "video",
-                {
-                  className: e.capsuleClassName,
-                  ref: a,
-                  muted: !0,
-                  autoPlay: !0,
-                  preload: "auto",
-                  loop: !0,
-                  playsInline: !0,
-                  poster: `${i.r.IMG_URL}${e.image}`,
-                },
-                c.createElement("source", {
-                  type: "video/webm",
-                  src: `${i.r.VIDEO_URL}${e.video}`,
-                }),
-              )
-            : c.createElement("img", {
+            ? (0, l.jsx)("video", {
                 className: e.capsuleClassName,
-                src: `${i.r.IMG_URL}/` + e.image,
+                ref: a,
+                muted: !0,
+                autoPlay: !0,
+                preload: "auto",
+                loop: !0,
+                playsInline: !0,
+                poster: `${t.r.IMG_URL}${e.image}`,
+                children: (0, l.jsx)("source", {
+                  type: "video/webm",
+                  src: `${t.r.VIDEO_URL}${e.video}`,
+                }),
+              })
+            : (0, l.jsx)("img", {
+                className: e.capsuleClassName,
+                src: `${t.r.IMG_URL}/` + e.image,
               });
         },
         H = (e) => {
           if (!e.special.heading_loc) return null;
           let a = e.special.values_float.map((e, a) =>
-              c.createElement(
+              (0, l.jsx)(
                 "span",
-                { key: a, className: g().SingleValue },
-                (0, y.F)(e),
+                { className: j().SingleValue, children: (0, k.F)(e) },
+                a,
               ),
             ),
-            t = !1,
-            l = null;
+            i = !1,
+            s = null;
           return (
             "+" == e.special.heading_loc[0]
-              ? ((l = e.special.heading_loc.slice(1)), (t = !0))
-              : (l = e.special.heading_loc),
-            "$" == l[0] && (l = "#dota_ability_variable_" + l.slice(1)),
-            t
-              ? c.createElement(
-                  "div",
-                  { className: g().Stat },
-                  "+ ",
-                  a,
-                  " ",
-                  (0, n.Wn)(l),
-                )
-              : c.createElement(
-                  "div",
-                  { className: g().Stat },
-                  (0, n.Wn)(l),
-                  " ",
-                  a,
-                )
+              ? ((s = e.special.heading_loc.slice(1)), (i = !0))
+              : (s = e.special.heading_loc),
+            "$" == s[0] && (s = "#dota_ability_variable_" + s.slice(1)),
+            i
+              ? (0, l.jsxs)("div", {
+                  className: j().Stat,
+                  children: ["+ ", a, " ", (0, o.Wn)(s)],
+                })
+              : (0, l.jsxs)("div", {
+                  className: j().Stat,
+                  children: [(0, o.Wn)(s), " ", a],
+                })
           );
         },
         w =
-          ((0, s.PA)(({ name: e, components: a, recipeCost: t }) => {
-            const l = r.B5.Get().getItemList(),
-              s = l?.itemabilities.find((a) => a.name == e),
-              o = r.B5.Get().getItemData(s?.id);
-            if (!o) return null;
-            let m = o.desc_loc;
-            o.special_values.forEach((e) => {
+          ((0, n.PA)(({ name: e, components: a, recipeCost: i }) => {
+            const s = r.B5.Get().getItemList(),
+              n = s?.itemabilities.find((a) => a.name == e),
+              c = r.B5.Get().getItemData(n?.id);
+            if (!c) return null;
+            let d = c.desc_loc;
+            c.special_values.forEach((e) => {
               let a =
-                e.values_float.length > 0 ? (0, y.F)(e.values_float[0]) : "0";
-              (m = m.replace("%" + e.name + "%", a)),
-                (m = m.replace("%" + e.name.toLowerCase() + "%", a));
+                e.values_float.length > 0 ? (0, k.F)(e.values_float[0]) : "0";
+              (d = d.replace("%" + e.name + "%", a)),
+                (d = d.replace("%" + e.name.toLowerCase() + "%", a));
             }),
-              (m = m.replace(/\%\%/g, "%"));
-            let d = o.special_values?.map((e, a) =>
-                c.createElement(H, { key: a, special: e }),
+              (d = d.replace(/\%\%/g, "%"));
+            let _ = c.special_values?.map((e, a) =>
+                (0, l.jsx)(H, { special: e }, a),
               ),
-              p = o.name.replace("item_", ""),
-              b = o.item_cost,
-              E =
-                o.item_neutral_tier >= 0 && o.item_neutral_tier < 5
-                  ? o.item_neutral_tier + 1
+              p = c.name.replace("item_", ""),
+              h = c.item_cost,
+              x =
+                c.item_neutral_tier >= 0 && c.item_neutral_tier < 5
+                  ? c.item_neutral_tier + 1
                   : -1,
-              k = g()["Tier" + E],
-              u = o.cooldowns.reduce((e, a) => e + a) > 0,
-              h = o.mana_costs.reduce((e, a) => e + a) > 0,
+              b = j()["Tier" + x],
+              g = c.cooldowns.reduce((e, a) => e + a) > 0,
+              y = c.mana_costs.reduce((e, a) => e + a) > 0,
               v =
-                !!(o.health_costs && o.health_costs.length > 0) &&
-                o.health_costs.reduce((e, a) => e + a) > 0,
-              z = a
+                !!(c.health_costs && c.health_costs.length > 0) &&
+                c.health_costs.reduce((e, a) => e + a) > 0,
+              u = a
                 ? a.map((e, a) =>
-                    c.createElement("img", {
-                      key: a,
-                      className: g().RecipeComponentImage,
-                      src: `${i.r.IMG_URL}/items/${e}.png`,
-                    }),
+                    (0, l.jsx)(
+                      "img",
+                      {
+                        className: j().RecipeComponentImage,
+                        src: `${t.r.IMG_URL}/items/${e}.png`,
+                      },
+                      a,
+                    ),
                   )
                 : [];
-            return c.createElement(
-              "div",
-              { className: g().GameItemDetails },
-              c.createElement(
-                "div",
-                { className: g().Header },
-                c.createElement("img", {
-                  className: g().ItemImage,
-                  src: `${i.r.IMG_URL}/items/${p}.png`,
-                }),
-                c.createElement(
-                  "div",
-                  { className: g().HeaderText },
-                  c.createElement(
-                    "div",
-                    {
-                      className: (0, _.A)(
-                        g().ItemName,
-                        g().TitleFont,
-                        g().TitleExtraSmall,
-                      ),
-                    },
-                    o.name_loc,
-                  ),
-                  b > 0 &&
-                    c.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(
-                          g().GoldPrice,
-                          g().LabelFont,
-                          g().LabelMedium,
-                        ),
-                      },
-                      c.createElement("img", {
-                        className: g().GoldIcon,
-                        src: `${i.r.IMG_URL}/icons/gold.png`,
-                      }),
-                      b,
-                    ),
-                  E > 0 &&
-                    c.createElement(
-                      "div",
-                      { className: (0, _.A)(g().NeutralItemTier, k) },
-                      (0, n.Wn)("#neutral_item_tier", E),
-                    ),
-                ),
-              ),
-              c.createElement(
-                "div",
-                { className: g().Body },
-                c.createElement("div", { className: g().Stats }, d),
-                m &&
-                  c.createElement(
-                    "div",
-                    { className: g().DescriptionContainer },
-                    c.createElement("div", {
-                      className: g().Description,
-                      dangerouslySetInnerHTML: { __html: m },
+            return (0, l.jsxs)("div", {
+              className: j().GameItemDetails,
+              children: [
+                (0, l.jsxs)("div", {
+                  className: j().Header,
+                  children: [
+                    (0, l.jsx)("img", {
+                      className: j().ItemImage,
+                      src: `${t.r.IMG_URL}/items/${p}.png`,
                     }),
-                    (u || h || v) &&
-                      c.createElement(
-                        "div",
-                        { className: (0, _.A)(g().DescriptionHeader) },
-                        h &&
-                          c.createElement(
-                            "div",
-                            { className: g().ManaContainer },
-                            c.createElement("div", { className: g().ManaIcon }),
-                            c.createElement(
-                              "div",
-                              { className: g().ManaText },
-                              o.mana_costs.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
-                              ),
-                            ),
+                    (0, l.jsxs)("div", {
+                      className: j().HeaderText,
+                      children: [
+                        (0, l.jsx)("div", {
+                          className: (0, m.A)(
+                            j().ItemName,
+                            j().TitleFont,
+                            j().TitleExtraSmall,
                           ),
-                        v &&
-                          c.createElement(
-                            "div",
-                            { className: g().HealthContainer },
-                            c.createElement("div", {
-                              className: g().HealthIcon,
+                          children: c.name_loc,
+                        }),
+                        h > 0 &&
+                          (0, l.jsxs)("div", {
+                            className: (0, m.A)(
+                              j().GoldPrice,
+                              j().LabelFont,
+                              j().LabelMedium,
+                            ),
+                            children: [
+                              (0, l.jsx)("img", {
+                                className: j().GoldIcon,
+                                src: `${t.r.IMG_URL}/icons/gold.png`,
+                              }),
+                              h,
+                            ],
+                          }),
+                        x > 0 &&
+                          (0, l.jsx)("div", {
+                            className: (0, m.A)(j().NeutralItemTier, b),
+                            children: (0, o.Wn)("#neutral_item_tier", x),
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, l.jsxs)("div", {
+                  className: j().Body,
+                  children: [
+                    (0, l.jsx)("div", { className: j().Stats, children: _ }),
+                    d &&
+                      (0, l.jsxs)("div", {
+                        className: j().DescriptionContainer,
+                        children: [
+                          (0, l.jsx)("div", {
+                            className: j().Description,
+                            dangerouslySetInnerHTML: { __html: d },
+                          }),
+                          (g || y || v) &&
+                            (0, l.jsxs)("div", {
+                              className: (0, m.A)(j().DescriptionHeader),
+                              children: [
+                                y &&
+                                  (0, l.jsxs)("div", {
+                                    className: j().ManaContainer,
+                                    children: [
+                                      (0, l.jsx)("div", {
+                                        className: j().ManaIcon,
+                                      }),
+                                      (0, l.jsx)("div", {
+                                        className: j().ManaText,
+                                        children: c.mana_costs.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, k.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                v &&
+                                  (0, l.jsxs)("div", {
+                                    className: j().HealthContainer,
+                                    children: [
+                                      (0, l.jsx)("div", {
+                                        className: j().HealthIcon,
+                                      }),
+                                      (0, l.jsx)("div", {
+                                        className: j().HealthText,
+                                        children: c.health_costs.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, k.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                g &&
+                                  (0, l.jsxs)("div", {
+                                    className: j().CooldownContainer,
+                                    children: [
+                                      (0, l.jsx)("div", {
+                                        className: j().CooldownIcon,
+                                        style: {
+                                          backgroundImage: `url( ${t.r.IMG_URL}icons/cooldown.png )`,
+                                        },
+                                      }),
+                                      (0, l.jsx)("div", {
+                                        className: j().CooldownText,
+                                        children: c.cooldowns.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, k.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                              ],
                             }),
-                            c.createElement(
-                              "div",
-                              { className: g().HealthText },
-                              o.health_costs.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
-                              ),
-                            ),
-                          ),
-                        u &&
-                          c.createElement(
-                            "div",
-                            { className: g().CooldownContainer },
-                            c.createElement("div", {
-                              className: g().CooldownIcon,
-                              style: {
-                                backgroundImage: `url( ${i.r.IMG_URL}icons/cooldown.png )`,
-                              },
-                            }),
-                            c.createElement(
-                              "div",
-                              { className: g().CooldownText },
-                              o.cooldowns.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, y.F)(e),
-                              ),
-                            ),
-                          ),
-                      ),
-                  ),
-              ),
-              z.length > 0 &&
-                c.createElement(
-                  "div",
-                  { className: g().Recipe },
-                  c.createElement(
-                    "p",
-                    {
-                      className: (0, _.A)(
-                        g().RecipeLabel,
-                        g().LabelFont,
-                        g().LabelSmall,
-                        g().LightGrayText,
-                      ),
-                    },
-                    " ",
-                    (0, n.Wn)("#kez_recipe"),
-                    " ",
-                  ),
-                  c.createElement(
-                    "div",
-                    { className: g().RecipeImagesContainer },
-                    z,
-                    t &&
-                      t > 0 &&
-                      c.createElement(
-                        "div",
-                        { className: g().RecipeCost },
-                        " + ",
-                        t,
-                        " ",
-                      ),
-                    t &&
-                      t > 0 &&
-                      c.createElement("img", {
-                        className: g().RecipeComponentImage,
-                        src: `${i.r.IMG_URL}/items/recipe.png`,
+                        ],
                       }),
-                  ),
-                ),
-            );
+                  ],
+                }),
+                u.length > 0 &&
+                  (0, l.jsxs)("div", {
+                    className: j().Recipe,
+                    children: [
+                      (0, l.jsxs)("p", {
+                        className: (0, m.A)(
+                          j().RecipeLabel,
+                          j().LabelFont,
+                          j().LabelSmall,
+                          j().LightGrayText,
+                        ),
+                        children: [" ", (0, o.Wn)("#kez_recipe"), " "],
+                      }),
+                      (0, l.jsxs)("div", {
+                        className: j().RecipeImagesContainer,
+                        children: [
+                          u,
+                          i &&
+                            i > 0 &&
+                            (0, l.jsxs)("div", {
+                              className: j().RecipeCost,
+                              children: [" + ", i, " "],
+                            }),
+                          i &&
+                            i > 0 &&
+                            (0, l.jsx)("img", {
+                              className: j().RecipeComponentImage,
+                              src: `${t.r.IMG_URL}/items/recipe.png`,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            });
           }),
           (e) =>
-            c.createElement(
-              "div",
-              {
-                className: e
-                  ? (0, _.A)(g().SectionDivider, e)
-                  : (0, _.A)(g().SectionDivider),
-              },
-              c.createElement("div", { className: g().Pattern }),
-              c.createElement("div", { className: g().Overlay }),
-              c.createElement("div", { className: g().TopDash }),
-              c.createElement("div", { className: g().BottomDash }),
-            )),
+            (0, l.jsxs)("div", {
+              className: e
+                ? (0, m.A)(j().SectionDivider, e)
+                : (0, m.A)(j().SectionDivider),
+              children: [
+                (0, l.jsx)("div", { className: j().Pattern }),
+                (0, l.jsx)("div", { className: j().Overlay }),
+                (0, l.jsx)("div", { className: j().TopDash }),
+                (0, l.jsx)("div", { className: j().BottomDash }),
+              ],
+            })),
         T = (e) =>
-          c.createElement(
-            "div",
-            { className: g().DashedSectionSubHeader },
-            c.createElement("div", { className: g().DashLeft }),
-            c.createElement(
-              "p",
-              {
-                className: (0, _.A)(g().LabelFont, g().LabelMedium, g().Label),
-              },
-              (0, n.Wn)("#kez_newhero_name"),
-            ),
-            c.createElement("div", { className: g().DashRight }),
-          ),
+          (0, l.jsxs)("div", {
+            className: j().DashedSectionSubHeader,
+            children: [
+              (0, l.jsx)("div", { className: j().DashLeft }),
+              (0, l.jsx)("p", {
+                className: (0, m.A)(j().LabelFont, j().LabelMedium, j().Label),
+                children: (0, o.Wn)("#kez_newhero_name"),
+              }),
+              (0, l.jsx)("div", { className: j().DashRight }),
+            ],
+          }),
         W = [
           {
             abilityId: 1498,
@@ -606,23 +597,23 @@
           },
         ],
         G = (e) => {
-          const a = (0, c.useContext)(k.Yc),
-            [t, l] = (0, c.useState)(a.state.currentSlide);
+          const a = (0, c.useContext)(g.Yc),
+            [i, s] = (0, c.useState)(a.state.currentSlide);
           (0, c.useEffect)(() => {
             function e() {
-              l(a.state.currentSlide);
+              s(a.state.currentSlide);
             }
             return a.subscribe(e), () => a.unsubscribe(e);
           }, [a]);
-          const i = e.abilityData;
+          const t = e.abilityData;
           return (
-            i && (i.name = "kez_switch_weapons_sai"),
-            c.createElement(z.cT, {
+            t && (t.name = "kez_switch_weapons_sai"),
+            (0, l.jsx)(z.cT, {
               heroData: e.heroData,
-              abilityData: i,
+              abilityData: t,
               bShowVideo: !1,
               abilityHotKey: "D",
-              additionalClassName: g().KezAbility,
+              additionalClassName: j().KezAbility,
             })
           );
         };
@@ -662,905 +653,870 @@
           let a = e.desc_loc;
           return (
             e.special_values.forEach((e) => {
-              let t =
-                e.values_float.length > 0 ? (0, y.F)(e.values_float[0]) : "0";
-              (a = a.replace("%" + e.name + "%", t)),
-                (a = a.replace("%" + e.name.toLowerCase() + "%", t));
+              let i =
+                e.values_float.length > 0 ? (0, k.F)(e.values_float[0]) : "0";
+              (a = a.replace("%" + e.name + "%", i)),
+                (a = a.replace("%" + e.name.toLowerCase() + "%", i));
             }),
             (a = a.replace(/\%\%/g, "%")),
             (a = a.replace(/<h2>/g, "<b>")),
             (a = a.replace(/<\/h2>/g, "</b>")),
             (a = a.replace(/<h1>/g, "<b>")),
             (a = a.replace(/<\/h1>/g, "</b>\n\n")),
-            (0, n.Wn)(a)
+            (0, o.Wn)(a)
           );
         }
         render() {
-          d.o.getPatchNotes("7.35", i.r.LANGUAGE);
+          p.o.getPatchNotes("7.35", t.r.LANGUAGE);
           const e =
-              ("schinese" == i.r.LANGUAGE || i.r.LANGUAGE,
+              ("schinese" == t.r.LANGUAGE || t.r.LANGUAGE,
               "kez_reveal_1920x1080_en"),
             a = r.B5.Get().getHeroData(145);
-          let t = (0, m.ww)((0, m.sf)(i.r.LANGUAGE));
-          "zh-cn" === t ? (t = "zh-Hans") : "zh-tw" === t && (t = "zh-Hant");
-          let l = "kez_logo_en";
+          let i = (0, _.ww)((0, _.sf)(t.r.LANGUAGE));
+          "zh-cn" === i ? (i = "zh-Hans") : "zh-tw" === i && (i = "zh-Hant");
+          let s = "kez_logo_en";
           return (
-            "schinese" == i.r.LANGUAGE && (l = "kez_logo_cn"),
-            c.createElement(
-              "div",
-              { id: "Kez", className: g().Kez },
-              c.createElement(
-                "div",
-                {
-                  className: (0, _.A)(
-                    g().TrailerContainer,
-                    this.state.bPlayingVideo ? null : g().Hidden,
+            "schinese" == t.r.LANGUAGE && (s = "kez_logo_cn"),
+            (0, l.jsxs)("div", {
+              id: "Kez",
+              className: j().Kez,
+              children: [
+                (0, l.jsxs)("div", {
+                  className: (0, m.A)(
+                    j().TrailerContainer,
+                    this.state.bPlayingVideo ? null : j().Hidden,
                   ),
-                },
-                c.createElement(
-                  "video",
-                  {
-                    ref: this.videoRef,
-                    className: (0, _.A)(g().TrailerVideo),
-                    autoPlay: !1,
-                    preload: "none",
-                    muted: !1,
-                    loop: !1,
-                    playsInline: !1,
-                    controls: !0,
-                    crossOrigin: "anonymous",
-                  },
-                  c.createElement("source", {
-                    type: "video/mp4",
-                    src: `${i.r.VIDEO_URL}/kez/${e}.mp4`,
+                  children: [
+                    (0, l.jsx)("video", {
+                      ref: this.videoRef,
+                      className: (0, m.A)(j().TrailerVideo),
+                      autoPlay: !1,
+                      preload: "none",
+                      muted: !1,
+                      loop: !1,
+                      playsInline: !1,
+                      controls: !0,
+                      crossOrigin: "anonymous",
+                      children: (0, l.jsx)("source", {
+                        type: "video/mp4",
+                        src: `${t.r.VIDEO_URL}/kez/${e}.mp4`,
+                      }),
+                    }),
+                    (0, l.jsx)("div", {
+                      className: j().CloseButton,
+                      onClick: () => this.setPlayingVideo(!1),
+                      children: (0, l.jsx)("img", {
+                        className: j().CloseButtonImage,
+                        src: `${t.r.IMG_URL}/close.png`,
+                      }),
+                    }),
+                  ],
+                }),
+                (0, l.jsx)(d.mg, {
+                  children: (0, l.jsx)("title", {
+                    children: (0, o.Wn)("#kez_website_title"),
                   }),
-                ),
-                c.createElement(
-                  "div",
-                  {
-                    className: g().CloseButton,
-                    onClick: () => this.setPlayingVideo(!1),
-                  },
-                  c.createElement("img", {
-                    className: g().CloseButtonImage,
-                    src: `${i.r.IMG_URL}/close.png`,
-                  }),
-                ),
-              ),
-              c.createElement(
-                o.mg,
-                null,
-                c.createElement("title", null, (0, n.Wn)("#kez_website_title")),
-              ),
-              c.createElement(
-                "div",
-                {
+                }),
+                (0, l.jsxs)("div", {
                   ref: this.parallaxContainerRef,
-                  className: (0, _.A)(g().PageContainer, g().Parallax),
-                },
-                c.createElement(p.A, { bOverlapping: !0 }),
-                c.createElement(
-                  "div",
-                  {
-                    id: "NewHeroSection",
-                    className: (0, _.A)(g().WebsiteSection, g().NewHeroSection),
-                  },
-                  c.createElement(L, {
-                    image: "kez/kez_header_loop_poster.png",
-                    video: "kez/kez_header_loop.webm",
-                    capsuleClassName: g().KezHeaderLoop,
-                  }),
-                  c.createElement("div", { className: g().HeaderTopGradient }),
-                  c.createElement(
-                    "div",
-                    { className: g().WebsiteSectionInner },
-                    c.createElement(
-                      "div",
-                      { className: (0, _.A)(g().LogoContainer) },
-                      c.createElement("img", {
-                        className: g().LogoImage,
-                        src: `${i.r.IMG_URL}/kez/${l}.png`,
-                      }),
-                    ),
-                    c.createElement(
-                      "div",
-                      { className: g().TextSection },
-                      c.createElement(
-                        "div",
-                        { className: g().HeroRolesContainer },
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().HeroRole,
-                              g().TitleFont,
-                              g().TitleSmall,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_attack_type_melee"),
-                        ),
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().HeroRole,
-                              g().TitleFont,
-                              g().TitleSmall,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_carry"),
-                        ),
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().HeroRole,
-                              g().TitleFont,
-                              g().TitleSmall,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_escape"),
-                        ),
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().HeroRole,
-                              g().TitleFont,
-                              g().TitleSmall,
-                            ),
-                          },
-                          (0, n.Wn)("#hero_disabler"),
-                        ),
+                  className: (0, m.A)(j().PageContainer, j().Parallax),
+                  children: [
+                    (0, l.jsx)(h.A, { bOverlapping: !0 }),
+                    (0, l.jsxs)("div", {
+                      id: "NewHeroSection",
+                      className: (0, m.A)(
+                        j().WebsiteSection,
+                        j().NewHeroSection,
                       ),
-                      c.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            g().SectionDescriptionLabel,
-                            g().DisplayFont,
-                            g().DisplaySmall,
-                          ),
-                        },
-                        (0, n.Wn)("#kez_newhero_description"),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().HeroAttributesContainer },
-                        c.createElement("div", {
-                          className: (0, _.A)(
-                            g().HeroAttributeIcon,
-                            g().Agility,
-                          ),
+                      children: [
+                        (0, l.jsx)(L, {
+                          image: "kez/kez_header_loop_poster.png",
+                          video: "kez/kez_header_loop.webm",
+                          capsuleClassName: j().KezHeaderLoop,
                         }),
-                        c.createElement("div", {
-                          className: (0, _.A)(
-                            g().HeroComplexityIcon,
-                            g().Filled,
-                          ),
-                        }),
-                        c.createElement("div", {
-                          className: (0, _.A)(
-                            g().HeroComplexityIcon,
-                            g().Filled,
-                          ),
-                        }),
-                        c.createElement("div", {
-                          className: (0, _.A)(
-                            g().HeroComplexityIcon,
-                            g().Filled,
-                          ),
-                        }),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().ButtonsSection },
-                        c.createElement(
-                          "div",
-                          {
-                            className: g().StandardButton,
-                            onClick: () => this.setPlayingVideo(!0),
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().ButtonText },
-                            (0, n.Wn)("#kez_play_trailer_button"),
-                          ),
-                          c.createElement(I, null),
-                        ),
-                      ),
-                    ),
-                    c.createElement(
-                      "div",
-                      { className: (0, _.A)(g().ActionTextImageBlock) },
-                      c.createElement(L, { image: "kez/kez_comic_cover.jpg" }),
-                      c.createElement(
-                        "div",
-                        { className: g().TextBlock },
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().BlockLabel,
-                              g().LabelFont,
-                              g().LabelMedium,
-                            ),
-                          },
-                          (0, n.Wn)("#kez_comic_section_catchup"),
-                        ),
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().BlockTitle,
-                              g().DisplayFont,
-                              g().DisplayLarge,
-                            ),
-                          },
-                          (0, n.Wn)("#kez_comic_section_comic_title"),
-                        ),
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().BlockDescription,
-                              g().BodyFont,
-                              g().BodyLarge,
-                              g().LightGrayText,
-                            ),
-                          },
-                          (0, n.Wn)("#kez_comic_section_comic_blub"),
-                        ),
-                        c.createElement(
-                          u.N_,
-                          { to: v.J.kez_comic(), target: "_blank" },
-                          c.createElement(
-                            "div",
-                            { className: g().StandardButton },
-                            c.createElement(
-                              "div",
-                              { className: g().ButtonText },
-                              (0, n.Wn)("#kez_comic_section_read_comic"),
-                            ),
-                            c.createElement(h.U, null),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                w(),
-                c.createElement(
-                  "div",
-                  {
-                    className: (0, _.A)(
-                      g().WebsiteSection,
-                      g().AbilityExplainationSection,
-                    ),
-                  },
-                  c.createElement(
-                    "div",
-                    { className: g().WebsiteSectionInner },
-                    c.createElement(
-                      "div",
-                      { className: g().WebsiteSectionHeader },
-                      c.createElement("img", {
-                        className: g().KezEmblem,
-                        src: `${i.r.IMG_URL}/kez/kez_emblem.png`,
-                      }),
-                      c.createElement(T, { subHeader: "Kez" }),
-                      c.createElement(
-                        "h2",
-                        {
-                          className: (0, _.A)(
-                            g().DisplayFont,
-                            g().DisplayExtraLarge,
-                          ),
-                        },
-                        (0, n.Wn)("#kez_abilities_heading"),
-                      ),
-                      c.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            g().DisplayFont,
-                            g().DisplaySmall,
-                          ),
-                        },
-                        (0, n.Wn)("#kez_ability_description"),
-                      ),
-                    ),
-                    c.createElement(
-                      "div",
-                      { className: g().HeroStancesContainer },
-                      c.createElement(
-                        "div",
-                        { className: g().HeroStancesContainerBackground },
-                        c.createElement(L, { image: "kez/loadout_floor.png" }),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().HeroStanceKatanaContainer },
-                        c.createElement(
-                          "div",
-                          { className: g().HeroStanceImage },
-                          c.createElement(L, {
-                            video: "kez/kez_katana_stance.webm",
-                            image: "kez/kez_katana_stance.png",
-                          }),
-                        ),
-                        c.createElement(
-                          "h2",
-                          {
-                            className: (0, _.A)(g().TitleFont, g().TitleMedium),
-                          },
-                          (0, n.Wn)("#kez_ability_set_katana"),
-                        ),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().HeroAbilitySwitcher },
-                        c.createElement(
-                          "p",
-                          {
-                            className: (0, _.A)(
-                              g().LabelFont,
-                              g().LabelMedium,
-                              g().SwitchWeapon,
-                            ),
-                          },
-                          (0, n.Wn)("#kez_ability_switch_weapons"),
-                        ),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().HeroStanceSaiContainer },
-                        c.createElement(
-                          "div",
-                          { className: g().HeroStanceImage },
-                          c.createElement(L, {
-                            video: "kez/kez_sai_stance.webm",
-                            image: "kez/kez_sai_stance.png",
-                          }),
-                        ),
-                        c.createElement(
-                          "h2",
-                          {
-                            className: (0, _.A)(g().TitleFont, g().TitleMedium),
-                          },
-                          (0, n.Wn)("#kez_ability_set_sai"),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                c.createElement(
-                  "div",
-                  { className: g().AbilitySection },
-                  c.createElement(
-                    k.gi,
-                    {
-                      className: g().AbilityCarousel,
-                      naturalSlideWidth: 100,
-                      naturalSlideHeight: 56.25,
-                      totalSlides: W.length,
-                    },
-                    c.createElement(
-                      k.Ap,
-                      { className: g().AbilitySlider },
-                      W.map((e, t) =>
-                        c.createElement(
-                          k.q7,
-                          {
-                            className: g().AbilitySlide,
-                            key: `HeroAbilitySlide-${t}`,
-                            index: t,
-                          },
-                          c.createElement(
-                            "video",
-                            {
-                              className: g().AbilityVideo,
-                              autoPlay: !0,
-                              preload: "auto",
-                              muted: !0,
-                              loop: !0,
-                              playsInline: !0,
-                              poster: `${i.r.VIDEO_URL}/${e.posterDir}`,
-                            },
-                            e.videoSrcWebm &&
-                              c.createElement("source", {
-                                type: "video/webm",
-                                src: `${i.r.VIDEO_URL}/${e.videoSrcWebm}`,
+                        (0, l.jsx)("div", { className: j().HeaderTopGradient }),
+                        (0, l.jsxs)("div", {
+                          className: j().WebsiteSectionInner,
+                          children: [
+                            (0, l.jsx)("div", {
+                              className: (0, m.A)(j().LogoContainer),
+                              children: (0, l.jsx)("img", {
+                                className: j().LogoImage,
+                                src: `${t.r.IMG_URL}/kez/${s}.png`,
                               }),
-                            e.videoSrcMp4 &&
-                              c.createElement("source", {
-                                type: "video/mp4",
-                                src: `${i.r.VIDEO_URL}/${e.videoSrcMp4}`,
+                            }),
+                            (0, l.jsxs)("div", {
+                              className: j().TextSection,
+                              children: [
+                                (0, l.jsxs)("div", {
+                                  className: j().HeroRolesContainer,
+                                  children: [
+                                    (0, l.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().TitleFont,
+                                        j().TitleSmall,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#hero_attack_type_melee",
+                                      ),
+                                    }),
+                                    (0, l.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().TitleFont,
+                                        j().TitleSmall,
+                                      ),
+                                      children: (0, o.Wn)("#hero_carry"),
+                                    }),
+                                    (0, l.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().TitleFont,
+                                        j().TitleSmall,
+                                      ),
+                                      children: (0, o.Wn)("#hero_escape"),
+                                    }),
+                                    (0, l.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().HeroRole,
+                                        j().TitleFont,
+                                        j().TitleSmall,
+                                      ),
+                                      children: (0, o.Wn)("#hero_disabler"),
+                                    }),
+                                  ],
+                                }),
+                                (0, l.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().SectionDescriptionLabel,
+                                    j().DisplayFont,
+                                    j().DisplaySmall,
+                                  ),
+                                  children: (0, o.Wn)(
+                                    "#kez_newhero_description",
+                                  ),
+                                }),
+                                (0, l.jsxs)("div", {
+                                  className: j().HeroAttributesContainer,
+                                  children: [
+                                    (0, l.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroAttributeIcon,
+                                        j().Agility,
+                                      ),
+                                    }),
+                                    (0, l.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroComplexityIcon,
+                                        j().Filled,
+                                      ),
+                                    }),
+                                    (0, l.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroComplexityIcon,
+                                        j().Filled,
+                                      ),
+                                    }),
+                                    (0, l.jsx)("div", {
+                                      className: (0, m.A)(
+                                        j().HeroComplexityIcon,
+                                        j().Filled,
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                                (0, l.jsx)("div", {
+                                  className: j().ButtonsSection,
+                                  children: (0, l.jsxs)("div", {
+                                    className: j().StandardButton,
+                                    onClick: () => this.setPlayingVideo(!0),
+                                    children: [
+                                      (0, l.jsx)("div", {
+                                        className: j().ButtonText,
+                                        children: (0, o.Wn)(
+                                          "#kez_play_trailer_button",
+                                        ),
+                                      }),
+                                      (0, l.jsx)(I, {}),
+                                    ],
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, l.jsxs)("div", {
+                              className: (0, m.A)(j().ActionTextImageBlock),
+                              children: [
+                                (0, l.jsx)(L, {
+                                  image: "kez/kez_comic_cover.jpg",
+                                }),
+                                (0, l.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, l.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockLabel,
+                                        j().LabelFont,
+                                        j().LabelMedium,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#kez_comic_section_catchup",
+                                      ),
+                                    }),
+                                    (0, l.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockTitle,
+                                        j().DisplayFont,
+                                        j().DisplayLarge,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#kez_comic_section_comic_title",
+                                      ),
+                                    }),
+                                    (0, l.jsx)("p", {
+                                      className: (0, m.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, o.Wn)(
+                                        "#kez_comic_section_comic_blub",
+                                      ),
+                                    }),
+                                    (0, l.jsx)(y.N_, {
+                                      to: u.J.kez_comic(),
+                                      target: "_blank",
+                                      children: (0, l.jsxs)("div", {
+                                        className: j().StandardButton,
+                                        children: [
+                                          (0, l.jsx)("div", {
+                                            className: j().ButtonText,
+                                            children: (0, o.Wn)(
+                                              "#kez_comic_section_read_comic",
+                                            ),
+                                          }),
+                                          (0, l.jsx)(v.U, {}),
+                                        ],
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    w(),
+                    (0, l.jsx)("div", {
+                      className: (0, m.A)(
+                        j().WebsiteSection,
+                        j().AbilityExplainationSection,
+                      ),
+                      children: (0, l.jsxs)("div", {
+                        className: j().WebsiteSectionInner,
+                        children: [
+                          (0, l.jsxs)("div", {
+                            className: j().WebsiteSectionHeader,
+                            children: [
+                              (0, l.jsx)("img", {
+                                className: j().KezEmblem,
+                                src: `${t.r.IMG_URL}/kez/kez_emblem.png`,
                               }),
-                          ),
-                          c.createElement(
-                            "div",
-                            { className: g().SlideAbilityInfoContainer },
-                            c.createElement(
-                              "div",
-                              { className: g().AbilityText },
-                              c.createElement(
-                                "div",
-                                {
-                                  className: (0, _.A)(
-                                    g().AbilityName,
-                                    g().TitleFont,
-                                    g().TitleSmall,
-                                  ),
-                                },
-                                a?.abilities.find((a) => a.id == e.abilityId)
-                                  .name_loc,
-                              ),
-                              c.createElement(
-                                "div",
-                                {
-                                  className: (0, _.A)(
-                                    g().AbilityDesc,
-                                    g().BodyFont,
-                                    g().BodyMedium,
-                                  ),
-                                },
-                                this.convertAbilityDesc(
-                                  a?.abilities.find((a) => a.id == e.abilityId),
+                              (0, l.jsx)(T, { subHeader: "Kez" }),
+                              (0, l.jsx)("h2", {
+                                className: (0, m.A)(
+                                  j().DisplayFont,
+                                  j().DisplayExtraLarge,
                                 ),
+                                children: (0, o.Wn)("#kez_abilities_heading"),
+                              }),
+                              (0, l.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().DisplayFont,
+                                  j().DisplaySmall,
+                                ),
+                                children: (0, o.Wn)("#kez_ability_description"),
+                              }),
+                            ],
+                          }),
+                          (0, l.jsxs)("div", {
+                            className: j().HeroStancesContainer,
+                            children: [
+                              (0, l.jsx)("div", {
+                                className: j().HeroStancesContainerBackground,
+                                children: (0, l.jsx)(L, {
+                                  image: "kez/loadout_floor.png",
+                                }),
+                              }),
+                              (0, l.jsxs)("div", {
+                                className: j().HeroStanceKatanaContainer,
+                                children: [
+                                  (0, l.jsx)("div", {
+                                    className: j().HeroStanceImage,
+                                    children: (0, l.jsx)(L, {
+                                      video: "kez/kez_katana_stance.webm",
+                                      image: "kez/kez_katana_stance.png",
+                                    }),
+                                  }),
+                                  (0, l.jsx)("h2", {
+                                    className: (0, m.A)(
+                                      j().TitleFont,
+                                      j().TitleMedium,
+                                    ),
+                                    children: (0, o.Wn)(
+                                      "#kez_ability_set_katana",
+                                    ),
+                                  }),
+                                ],
+                              }),
+                              (0, l.jsx)("div", {
+                                className: j().HeroAbilitySwitcher,
+                                children: (0, l.jsx)("p", {
+                                  className: (0, m.A)(
+                                    j().LabelFont,
+                                    j().LabelMedium,
+                                    j().SwitchWeapon,
+                                  ),
+                                  children: (0, o.Wn)(
+                                    "#kez_ability_switch_weapons",
+                                  ),
+                                }),
+                              }),
+                              (0, l.jsxs)("div", {
+                                className: j().HeroStanceSaiContainer,
+                                children: [
+                                  (0, l.jsx)("div", {
+                                    className: j().HeroStanceImage,
+                                    children: (0, l.jsx)(L, {
+                                      video: "kez/kez_sai_stance.webm",
+                                      image: "kez/kez_sai_stance.png",
+                                    }),
+                                  }),
+                                  (0, l.jsx)("h2", {
+                                    className: (0, m.A)(
+                                      j().TitleFont,
+                                      j().TitleMedium,
+                                    ),
+                                    children: (0, o.Wn)("#kez_ability_set_sai"),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, l.jsx)("div", {
+                      className: j().AbilitySection,
+                      children: (0, l.jsxs)(g.gi, {
+                        className: j().AbilityCarousel,
+                        naturalSlideWidth: 100,
+                        naturalSlideHeight: 56.25,
+                        totalSlides: W.length,
+                        children: [
+                          (0, l.jsx)(g.Ap, {
+                            className: j().AbilitySlider,
+                            children: W.map((e, i) =>
+                              (0, l.jsxs)(
+                                g.q7,
+                                {
+                                  className: j().AbilitySlide,
+                                  index: i,
+                                  children: [
+                                    (0, l.jsxs)("video", {
+                                      className: j().AbilityVideo,
+                                      autoPlay: !0,
+                                      preload: "auto",
+                                      muted: !0,
+                                      loop: !0,
+                                      playsInline: !0,
+                                      poster: `${t.r.VIDEO_URL}/${e.posterDir}`,
+                                      children: [
+                                        e.videoSrcWebm &&
+                                          (0, l.jsx)("source", {
+                                            type: "video/webm",
+                                            src: `${t.r.VIDEO_URL}/${e.videoSrcWebm}`,
+                                          }),
+                                        e.videoSrcMp4 &&
+                                          (0, l.jsx)("source", {
+                                            type: "video/mp4",
+                                            src: `${t.r.VIDEO_URL}/${e.videoSrcMp4}`,
+                                          }),
+                                      ],
+                                    }),
+                                    (0, l.jsx)("div", {
+                                      className: j().SlideAbilityInfoContainer,
+                                      children: (0, l.jsxs)("div", {
+                                        className: j().AbilityText,
+                                        children: [
+                                          (0, l.jsx)("div", {
+                                            className: (0, m.A)(
+                                              j().AbilityName,
+                                              j().TitleFont,
+                                              j().TitleSmall,
+                                            ),
+                                            children: a?.abilities.find(
+                                              (a) => a.id == e.abilityId,
+                                            ).name_loc,
+                                          }),
+                                          (0, l.jsx)("div", {
+                                            className: (0, m.A)(
+                                              j().AbilityDesc,
+                                              j().BodyFont,
+                                              j().BodyMedium,
+                                            ),
+                                            children: this.convertAbilityDesc(
+                                              a?.abilities.find(
+                                                (a) => a.id == e.abilityId,
+                                              ),
+                                            ),
+                                          }),
+                                        ],
+                                      }),
+                                    }),
+                                  ],
+                                },
+                                `HeroAbilitySlide-${i}`,
                               ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    c.createElement(
-                      "div",
-                      { className: g().CarouselDotsSection },
-                      c.createElement(
-                        "div",
-                        { className: g().WebsiteSectionInner },
-                        c.createElement(
-                          "div",
-                          { className: g().CarouselDotsContainer },
-                          c.createElement("div", {
-                            className: (0, _.A)(g().Dash),
                           }),
-                          c.createElement(
-                            "div",
-                            { className: (0, _.A)(g().CarouselDotsGroup) },
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-0",
-                                slide: 0,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1498 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: "Q",
-                                additionalClassName: g().KezAbility,
-                                abilityType: g().Active,
+                          (0, l.jsx)("div", {
+                            className: j().CarouselDotsSection,
+                            children: (0, l.jsx)("div", {
+                              className: j().WebsiteSectionInner,
+                              children: (0, l.jsxs)("div", {
+                                className: j().CarouselDotsContainer,
+                                children: [
+                                  (0, l.jsx)("div", {
+                                    className: (0, m.A)(j().Dash),
+                                  }),
+                                  (0, l.jsxs)("div", {
+                                    className: (0, m.A)(j().CarouselDotsGroup),
+                                    children: [
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 0,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1498 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            abilityHotKey: "Q",
+                                            additionalClassName: j().KezAbility,
+                                            abilityType: j().Active,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-0",
+                                      ),
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 1,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1499 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            abilityHotKey: "W",
+                                            additionalClassName: j().KezAbility,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-1",
+                                      ),
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 2,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1500 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            additionalClassName: j().KezAbility,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-2",
+                                      ),
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 3,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1501 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            abilityHotKey: "R",
+                                            additionalClassName: j().KezAbility,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-3",
+                                      ),
+                                    ],
+                                  }),
+                                  (0, l.jsx)("div", {
+                                    className: (0, m.A)(j().Dash, j().Left),
+                                  }),
+                                  (0, l.jsxs)("div", {
+                                    className: (0, m.A)(j().InnateContainer),
+                                    children: [
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 4,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(G, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1497 == e.id,
+                                            ),
+                                          }),
+                                        },
+                                        "HeroAbilityDot-4",
+                                      ),
+                                      (0, l.jsx)(D, {}),
+                                    ],
+                                  }),
+                                  (0, l.jsx)("div", {
+                                    className: (0, m.A)(j().Dash, j().Right),
+                                  }),
+                                  (0, l.jsxs)("div", {
+                                    className: (0, m.A)(j().CarouselDotsGroup),
+                                    children: [
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 5,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1502 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            abilityHotKey: "Q",
+                                            additionalClassName: j().KezAbility,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-5",
+                                      ),
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 6,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1503 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            abilityHotKey: "W",
+                                            additionalClassName: j().KezAbility,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-6",
+                                      ),
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 7,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1504 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            abilityHotKey: "E",
+                                            additionalClassName: j().KezAbility,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-7",
+                                      ),
+                                      (0, l.jsx)(
+                                        g.cL,
+                                        {
+                                          slide: 8,
+                                          className: j().AbilitySelectorDot,
+                                          children: (0, l.jsx)(z.cT, {
+                                            heroData: a,
+                                            abilityData: a?.abilities.find(
+                                              (e) => 1506 == e.id,
+                                            ),
+                                            bShowVideo: !1,
+                                            abilityHotKey: "R",
+                                            additionalClassName: j().KezAbility,
+                                          }),
+                                        },
+                                        "HeroAbilityDot-8",
+                                      ),
+                                    ],
+                                  }),
+                                  (0, l.jsx)("div", {
+                                    className: (0, m.A)(j().Dash),
+                                  }),
+                                ],
                               }),
-                            ),
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-1",
-                                slide: 1,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1499 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: "W",
-                                additionalClassName: g().KezAbility,
-                              }),
-                            ),
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-2",
-                                slide: 2,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1500 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                additionalClassName: g().KezAbility,
-                              }),
-                            ),
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-3",
-                                slide: 3,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1501 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: "R",
-                                additionalClassName: g().KezAbility,
-                              }),
-                            ),
-                          ),
-                          c.createElement("div", {
-                            className: (0, _.A)(g().Dash, g().Left),
+                            }),
                           }),
-                          c.createElement(
-                            "div",
-                            { className: (0, _.A)(g().InnateContainer) },
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-4",
-                                slide: 4,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(G, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1497 == e.id,
-                                ),
-                              }),
-                            ),
-                            c.createElement(D, null),
-                          ),
-                          c.createElement("div", {
-                            className: (0, _.A)(g().Dash, g().Right),
-                          }),
-                          c.createElement(
-                            "div",
-                            { className: (0, _.A)(g().CarouselDotsGroup) },
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-5",
-                                slide: 5,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1502 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: "Q",
-                                additionalClassName: g().KezAbility,
-                              }),
-                            ),
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-6",
-                                slide: 6,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1503 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: "W",
-                                additionalClassName: g().KezAbility,
-                              }),
-                            ),
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-7",
-                                slide: 7,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1504 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: "E",
-                                additionalClassName: g().KezAbility,
-                              }),
-                            ),
-                            c.createElement(
-                              k.cL,
-                              {
-                                key: "HeroAbilityDot-8",
-                                slide: 8,
-                                className: g().AbilitySelectorDot,
-                              },
-                              c.createElement(z.cT, {
-                                heroData: a,
-                                abilityData: a?.abilities.find(
-                                  (e) => 1506 == e.id,
-                                ),
-                                bShowVideo: !1,
-                                abilityHotKey: "R",
-                                additionalClassName: g().KezAbility,
-                              }),
-                            ),
-                          ),
-                          c.createElement("div", {
-                            className: (0, _.A)(g().Dash),
-                          }),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                w(),
-                c.createElement(
-                  "div",
-                  {
-                    className: (0, _.A)(
-                      g().WebsiteSection,
-                      g().WallpaperSection,
-                    ),
-                  },
-                  c.createElement(
-                    "div",
-                    { className: g().WebsiteSectionInner },
-                    c.createElement(
-                      "div",
-                      { className: g().WebsiteSectionHeader },
-                      c.createElement("img", {
-                        className: g().KezEmblem,
-                        src: `${i.r.IMG_URL}/kez/kez_emblem.png`,
+                        ],
                       }),
-                      c.createElement(T, { subHeader: "Kez" }),
-                      c.createElement(
-                        "h2",
-                        { className: (0, _.A)(g().TitleFont, g().TitleLarge) },
-                        (0, n.Wn)("#kez_wallpapers"),
+                    }),
+                    w(),
+                    (0, l.jsx)("div", {
+                      className: (0, m.A)(
+                        j().WebsiteSection,
+                        j().WallpaperSection,
                       ),
-                    ),
-                    c.createElement(
-                      "div",
-                      { className: g().Wallpapers },
-                      c.createElement(
-                        "div",
-                        { className: g().WallpaperGroup },
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_1_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_1_desktop_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_1_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_1_mobile_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().WallpaperGroup },
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_2_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_2_desktop_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_2_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_2_mobile_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().WallpaperGroup },
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_3_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_3_desktop_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_3_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_3_mobile_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().WallpaperGroup },
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_4_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_4_desktop_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_4_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_4_mobile_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                      ),
-                      c.createElement(
-                        "div",
-                        { className: g().WallpaperGroup },
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_5_desktop.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_5_desktop_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                        c.createElement(
-                          "a",
-                          {
-                            href: `${i.r.IMG_URL}/kez/kez_wallpaper_5_mobile.jpg`,
-                            target: "_blank",
-                          },
-                          c.createElement(
-                            "div",
-                            { className: g().Wallpaper },
-                            c.createElement("img", {
-                              src: `${i.r.IMG_URL}/kez/kez_wallpaper_5_mobile_thumbnail.jpg`,
-                            }),
-                            c.createElement(A, null),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                c.createElement(
-                  "div",
-                  {
-                    id: "HeroDetailsSection",
-                    className: (0, _.A)(g().HeroDetailsSection),
-                  },
-                  c.createElement(
-                    "div",
-                    { className: g().HeroDetailsSectionInner },
-                    c.createElement(
-                      "div",
-                      { className: g().TextBlock },
-                      c.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            g().BlockTitle,
-                            g().TitleFont,
-                            g().TitleSmall,
-                          ),
-                        },
-                        (0, n.Wn)("#kez_details_more_info"),
-                      ),
-                      c.createElement(
-                        u.N_,
-                        { to: v.J.hero("kez") },
-                        c.createElement(
-                          "div",
-                          { className: g().StandardButton },
-                          c.createElement(
-                            "div",
-                            { className: g().ButtonText },
-                            (0, n.Wn)("#kez_hero_detail_button"),
-                          ),
-                          c.createElement(h.U, null),
-                        ),
-                      ),
-                    ),
-                    c.createElement(
-                      "div",
-                      { className: g().HeroImageContainer },
-                      c.createElement("img", {
-                        className: g().HeroImage,
-                        src: `${i.r.IMG_URL}/heroes/crops/kez.png`,
+                      children: (0, l.jsxs)("div", {
+                        className: j().WebsiteSectionInner,
+                        children: [
+                          (0, l.jsxs)("div", {
+                            className: j().WebsiteSectionHeader,
+                            children: [
+                              (0, l.jsx)("img", {
+                                className: j().KezEmblem,
+                                src: `${t.r.IMG_URL}/kez/kez_emblem.png`,
+                              }),
+                              (0, l.jsx)(T, { subHeader: "Kez" }),
+                              (0, l.jsx)("h2", {
+                                className: (0, m.A)(
+                                  j().TitleFont,
+                                  j().TitleLarge,
+                                ),
+                                children: (0, o.Wn)("#kez_wallpapers"),
+                              }),
+                            ],
+                          }),
+                          (0, l.jsxs)("div", {
+                            className: j().Wallpapers,
+                            children: [
+                              (0, l.jsxs)("div", {
+                                className: j().WallpaperGroup,
+                                children: [
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_1_desktop.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_1_desktop_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_1_mobile.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_1_mobile_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                ],
+                              }),
+                              (0, l.jsxs)("div", {
+                                className: j().WallpaperGroup,
+                                children: [
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_2_desktop.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_2_desktop_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_2_mobile.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_2_mobile_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                ],
+                              }),
+                              (0, l.jsxs)("div", {
+                                className: j().WallpaperGroup,
+                                children: [
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_3_desktop.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_3_desktop_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_3_mobile.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_3_mobile_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                ],
+                              }),
+                              (0, l.jsxs)("div", {
+                                className: j().WallpaperGroup,
+                                children: [
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_4_desktop.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_4_desktop_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_4_mobile.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_4_mobile_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                ],
+                              }),
+                              (0, l.jsxs)("div", {
+                                className: j().WallpaperGroup,
+                                children: [
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_5_desktop.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_5_desktop_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                  (0, l.jsx)("a", {
+                                    href: `${t.r.IMG_URL}/kez/kez_wallpaper_5_mobile.jpg`,
+                                    target: "_blank",
+                                    children: (0, l.jsxs)("div", {
+                                      className: j().Wallpaper,
+                                      children: [
+                                        (0, l.jsx)("img", {
+                                          src: `${t.r.IMG_URL}/kez/kez_wallpaper_5_mobile_thumbnail.jpg`,
+                                        }),
+                                        (0, l.jsx)(A, {}),
+                                      ],
+                                    }),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
                       }),
-                    ),
-                  ),
-                ),
-                c.createElement(b.K, null),
-              ),
-            )
+                    }),
+                    (0, l.jsx)("div", {
+                      id: "HeroDetailsSection",
+                      className: (0, m.A)(j().HeroDetailsSection),
+                      children: (0, l.jsxs)("div", {
+                        className: j().HeroDetailsSectionInner,
+                        children: [
+                          (0, l.jsxs)("div", {
+                            className: j().TextBlock,
+                            children: [
+                              (0, l.jsx)("p", {
+                                className: (0, m.A)(
+                                  j().BlockTitle,
+                                  j().TitleFont,
+                                  j().TitleSmall,
+                                ),
+                                children: (0, o.Wn)("#kez_details_more_info"),
+                              }),
+                              (0, l.jsx)(y.N_, {
+                                to: u.J.hero("kez"),
+                                children: (0, l.jsxs)("div", {
+                                  className: j().StandardButton,
+                                  children: [
+                                    (0, l.jsx)("div", {
+                                      className: j().ButtonText,
+                                      children: (0, o.Wn)(
+                                        "#kez_hero_detail_button",
+                                      ),
+                                    }),
+                                    (0, l.jsx)(v.U, {}),
+                                  ],
+                                }),
+                              }),
+                            ],
+                          }),
+                          (0, l.jsx)("div", {
+                            className: j().HeroImageContainer,
+                            children: (0, l.jsx)("img", {
+                              className: j().HeroImage,
+                              src: `${t.r.IMG_URL}/heroes/crops/kez.png`,
+                            }),
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, l.jsx)(x.K, {}),
+                  ],
+                }),
+              ],
+            })
           );
         }
       };
-      f = (0, l.Cg)([s.PA], f);
-      const x = f;
+      f = (0, s.Cg)([n.PA], f);
+      const R = f;
     },
   },
 ]);

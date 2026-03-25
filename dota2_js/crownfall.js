@@ -134,225 +134,230 @@
         ReturnLink: "_3X6mBfDQxYcx_aIgdi4OK8",
       };
     },
-    17460: (e, a, t) => {
+    17460: (e, a, s) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => S });
-      var r = t(85608),
-        l = t(4248),
-        n = t(89506),
-        c = t(27866),
-        s = t(68446),
-        o = t(7552),
-        i = t(55651),
-        m = t(73202),
-        _ = t(21384),
-        u = t(56698),
-        d = t(47202),
-        E = t(36305),
-        w = t(55595),
-        p = t.n(w),
-        A = t(32389),
-        h = t(85286),
-        N = t.n(h),
-        g = t(45237),
-        f = t(11649),
-        v = t(68613);
+      s.r(a), s.d(a, { default: () => B });
+      var r = s(85608),
+        l = s(69500),
+        n = s(4248),
+        c = s(89506),
+        t = s(40045),
+        i = s(68446),
+        o = s(7552),
+        d = s(55651),
+        _ = s(73202),
+        m = s(21384),
+        h = s(70595),
+        u = s(47202),
+        x = s(36305),
+        w = s(55595),
+        p = s.n(w),
+        A = s(32389),
+        N = s(85286),
+        g = s.n(N),
+        j = s(45237),
+        f = s(11649),
+        v = s(68613);
       function T(e) {
-        return o.createElement(
-          "div",
-          { className: p().Reward },
-          o.createElement("img", {
-            className: p().RewardImage,
-            src: `${n.r.IMG_URL}/crownfall/${e.image}`,
-          }),
-          o.createElement(
-            "div",
-            { className: p().Text },
-            o.createElement(
-              "h2",
-              { className: (0, _.A)(p().DisplayText, p().Medium) },
-              e.label,
-            ),
-            o.createElement(
-              "p",
-              { className: (0, _.A)(p().BodyText, p().Medium) },
-              e.text,
-            ),
-          ),
-        );
+        return (0, l.jsxs)("div", {
+          className: p().Reward,
+          children: [
+            (0, l.jsx)("img", {
+              className: p().RewardImage,
+              src: `${c.r.IMG_URL}/crownfall/${e.image}`,
+            }),
+            (0, l.jsxs)("div", {
+              className: p().Text,
+              children: [
+                (0, l.jsx)("h2", {
+                  className: (0, m.A)(p().DisplayText, p().Medium),
+                  children: e.label,
+                }),
+                (0, l.jsx)("p", {
+                  className: (0, m.A)(p().BodyText, p().Medium),
+                  children: e.text,
+                }),
+              ],
+            }),
+          ],
+        });
       }
-      function x(e) {
+      function y(e) {
         const {
           children: a,
-          main_video: t,
+          main_video: s,
           ability_video: r,
-          hero_name: l,
-          hero_id: c,
-          alternate_style_abbrev: s,
-          ...i
+          hero_name: n,
+          hero_id: t,
+          alternate_style_abbrev: i,
+          ...o
         } = e;
-        return o.createElement(
-          o.Fragment,
-          null,
-          o.createElement(
-            "div",
-            { ...i, className: (0, _.A)(p().Arcana, e.hero_id) },
-            o.createElement("div", { className: p().ArcanaBackground }),
-            o.createElement(
-              "div",
-              { className: p().Contents },
-              o.createElement(
-                "div",
-                { className: p().VerticalHeader },
-                o.createElement(
-                  "h2",
-                  { className: (0, _.A)(p().DisplayText, p().ExtraLarge) },
-                  l,
-                ),
-              ),
-              o.createElement(
-                "div",
-                { className: p().MainVideoContainer },
-                o.createElement(
-                  "video",
-                  {
-                    className: p().MainVideo,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                  },
-                  o.createElement("source", {
-                    type: 'video/mp4; codecs="hvc1"',
-                    src: `${n.r.VIDEO_URL}/${t}.mov`,
+        return (0, l.jsx)(l.Fragment, {
+          children: (0, l.jsxs)("div", {
+            ...o,
+            className: (0, m.A)(p().Arcana, e.hero_id),
+            children: [
+              (0, l.jsx)("div", { className: p().ArcanaBackground }),
+              (0, l.jsxs)("div", {
+                className: p().Contents,
+                children: [
+                  (0, l.jsx)("div", {
+                    className: p().VerticalHeader,
+                    children: (0, l.jsx)("h2", {
+                      className: (0, m.A)(p().DisplayText, p().ExtraLarge),
+                      children: n,
+                    }),
                   }),
-                  o.createElement("source", {
-                    type: "video/webm",
-                    src: `${n.r.VIDEO_URL}/${t}.webm`,
+                  (0, l.jsxs)("div", {
+                    className: p().MainVideoContainer,
+                    children: [
+                      (0, l.jsxs)("video", {
+                        className: p().MainVideo,
+                        autoPlay: !0,
+                        preload: "auto",
+                        muted: !0,
+                        loop: !0,
+                        playsInline: !0,
+                        children: [
+                          (0, l.jsx)("source", {
+                            type: 'video/mp4; codecs="hvc1"',
+                            src: `${c.r.VIDEO_URL}/${s}.mov`,
+                          }),
+                          (0, l.jsx)("source", {
+                            type: "video/webm",
+                            src: `${c.r.VIDEO_URL}/${s}.webm`,
+                          }),
+                        ],
+                      }),
+                      !1,
+                    ],
                   }),
-                ),
-                !1,
-              ),
-              o.createElement(
-                "div",
-                { className: p().Details },
-                o.createElement(
-                  "h2",
-                  { className: (0, _.A)(p().DisplayText, p().ExtraLarge) },
-                  l,
-                ),
-                a,
-              ),
-            ),
-            o.createElement(
-              "video",
-              {
+                  (0, l.jsxs)("div", {
+                    className: p().Details,
+                    children: [
+                      (0, l.jsx)("h2", {
+                        className: (0, m.A)(p().DisplayText, p().ExtraLarge),
+                        children: n,
+                      }),
+                      a,
+                    ],
+                  }),
+                ],
+              }),
+              (0, l.jsxs)("video", {
                 className: p().AbilityVideo,
                 autoPlay: !0,
                 preload: "auto",
                 muted: !0,
                 loop: !0,
                 playsInline: !0,
-              },
-              o.createElement("source", {
-                type: "video/mp4",
-                src: `${n.r.VIDEO_URL}/${r}.mp4`,
+                children: [
+                  (0, l.jsx)("source", {
+                    type: "video/mp4",
+                    src: `${c.r.VIDEO_URL}/${r}.mp4`,
+                  }),
+                  (0, l.jsx)("source", {
+                    type: "video/webm",
+                    src: `${c.r.VIDEO_URL}/${r}.webm`,
+                  }),
+                ],
               }),
-              o.createElement("source", {
-                type: "video/webm",
-                src: `${n.r.VIDEO_URL}/${r}.webm`,
+              (0, l.jsxs)("div", {
+                className: p().AlternateStyle,
+                children: [
+                  (0, l.jsx)("img", {
+                    className: p().AlternateStyleImage,
+                    src: `${c.r.IMG_URL}/crownfall/${i}_alternate_style.png`,
+                  }),
+                  (0, l.jsxs)("div", {
+                    className: p().AlternateStyleInfo,
+                    children: [
+                      (0, l.jsx)("h3", {
+                        className: (0, m.A)(p().LabelText, p().Medium),
+                        children: (0, v.we)(
+                          `#crownfall_arcana_${i}_alternate_header`,
+                        ),
+                      }),
+                      (0, l.jsx)("h2", {
+                        className: (0, m.A)(p().TitleText, p().Small),
+                        children: (0, v.we)(
+                          `#crownfall_arcana_${i}_alternate_title`,
+                        ),
+                      }),
+                      (0, l.jsx)("p", {
+                        className: (0, m.A)(p().DisplayText, p().Small),
+                        children: (0, v.we)(
+                          `#crownfall_arcana_${i}_alternate_desc`,
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
               }),
-            ),
-            o.createElement(
-              "div",
-              { className: p().AlternateStyle },
-              o.createElement("img", {
-                className: p().AlternateStyleImage,
-                src: `${n.r.IMG_URL}/crownfall/${s}_alternate_style.png`,
-              }),
-              o.createElement(
-                "div",
-                { className: p().AlternateStyleInfo },
-                o.createElement(
-                  "h3",
-                  { className: (0, _.A)(p().LabelText, p().Medium) },
-                  (0, v.we)(`#crownfall_arcana_${s}_alternate_header`),
-                ),
-                o.createElement(
-                  "h2",
-                  { className: (0, _.A)(p().TitleText, p().Small) },
-                  (0, v.we)(`#crownfall_arcana_${s}_alternate_title`),
-                ),
-                o.createElement(
-                  "p",
-                  { className: (0, _.A)(p().DisplayText, p().Small) },
-                  (0, v.we)(`#crownfall_arcana_${s}_alternate_desc`),
-                ),
-              ),
-            ),
-          ),
-        );
+            ],
+          }),
+        });
       }
-      function y() {
-        return o.createElement(
-          "div",
-          { className: p().DashDotDash },
-          o.createElement("div", { className: (0, _.A)(p().Dash, p().Left) }),
-          o.createElement("div", { className: p().Dot }),
-          o.createElement("div", { className: (0, _.A)(p().Dash, p().Right) }),
-        );
+      function L() {
+        return (0, l.jsxs)("div", {
+          className: p().DashDotDash,
+          children: [
+            (0, l.jsx)("div", { className: (0, m.A)(p().Dash, p().Left) }),
+            (0, l.jsx)("div", { className: p().Dot }),
+            (0, l.jsx)("div", { className: (0, m.A)(p().Dash, p().Right) }),
+          ],
+        });
       }
-      const L = ({
+      const b = ({
         index: e,
         video: a,
-        name: t,
+        name: s,
         heroname: r,
-        subtext: l,
-        autoplay: c,
-        onSlideIn: s,
+        subtext: n,
+        autoplay: t,
+        onSlideIn: i,
       }) => {
-        const i = (0, o.useContext)(A.Yc),
-          m = (0, o.useRef)(void 0);
+        const d = (0, o.useContext)(A.Yc),
+          _ = (0, o.useRef)(void 0);
         return (
           (0, o.useEffect)(() => {
             function a() {
-              m && m.current && i.state.currentSlide == e
-                ? m.current.play()
-                : m && m.current && m.current.pause(),
-                i.state.currentSlide == e && s(t, r, l);
+              _ && _.current && d.state.currentSlide == e
+                ? _.current.play()
+                : _ && _.current && _.current.pause(),
+                d.state.currentSlide == e && i(s, r, n);
             }
-            return i.subscribe(a), () => i.unsubscribe(a);
-          }, [i, e, t, r, l, s]),
-          o.createElement(
-            "div",
-            { className: p().SlideContainer },
-            o.createElement(
-              "video",
-              {
-                ref: m,
+            return d.subscribe(a), () => d.unsubscribe(a);
+          }, [d, e, s, r, n, i]),
+          (0, l.jsxs)("div", {
+            className: p().SlideContainer,
+            children: [
+              (0, l.jsxs)("video", {
+                ref: _,
                 className: p().TreasureVideo,
                 muted: !0,
-                autoPlay: c,
+                autoPlay: t,
                 preload: "auto",
                 loop: !0,
                 playsInline: !0,
-                poster: `${n.r.VIDEO_URL}/crownfall/${a}.png`,
-              },
-              o.createElement("source", {
-                type: 'video/mp4; codecs="hvc1"',
-                src: `${n.r.VIDEO_URL}/crownfall/${a}.mov`,
+                poster: `${c.r.VIDEO_URL}/crownfall/${a}.png`,
+                children: [
+                  (0, l.jsx)("source", {
+                    type: 'video/mp4; codecs="hvc1"',
+                    src: `${c.r.VIDEO_URL}/crownfall/${a}.mov`,
+                  }),
+                  (0, l.jsx)("source", {
+                    type: "video/webm",
+                    src: `${c.r.VIDEO_URL}/crownfall/${a}.webm`,
+                  }),
+                ],
               }),
-              o.createElement("source", {
-                type: "video/webm",
-                src: `${n.r.VIDEO_URL}/crownfall/${a}.webm`,
-              }),
-            ),
-            !1,
-          )
+              !1,
+            ],
+          })
         );
       };
-      let b = class extends o.Component {
+      let S = class extends o.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -362,859 +367,811 @@
             });
         }
         handleScroll = (e) => {
-          N().refresh();
+          g().refresh();
         };
         componentDidMount() {
           this.handleScroll(void 0);
         }
         render() {
-          const e = `${l.TS.IMG_URL}crownfall/comic_part1/${f.COMIC_LANGUAGE}/000.webp`,
-            a = (e, a, t) => {
-              this.setState({ treasureName: e, heroName: a, subText: t });
+          const e = `${n.TS.IMG_URL}crownfall/comic_part1/${f.COMIC_LANGUAGE}/000.webp`,
+            a = (e, a, s) => {
+              this.setState({ treasureName: e, heroName: a, subText: s });
             };
-          return o.createElement(
-            "div",
-            {
-              id: "CrownfallPage",
-              className: (0, _.A)(
-                p().CrownfallPage,
-                "schinese" == n.r.LANGUAGE && p().Language_SChinese,
-                "tchinese" == n.r.LANGUAGE && p().Language_TChinese,
-                "italian" == n.r.LANGUAGE && p().Language_Italian,
-                "thai" == n.r.LANGUAGE && p().Language_Italian,
-                "turkish" == n.r.LANGUAGE && p().Language_Turkish,
-                "latam" == n.r.LANGUAGE && p().Language_LatAm,
-                "spanish" == n.r.LANGUAGE && p().Language_Spanish,
-              ),
-            },
-            o.createElement(
-              m.mg,
-              null,
-              o.createElement("title", null, (0, v.we)("#crownfall_title")),
+          return (0, l.jsxs)("div", {
+            id: "CrownfallPage",
+            className: (0, m.A)(
+              p().CrownfallPage,
+              "schinese" == c.r.LANGUAGE && p().Language_SChinese,
+              "tchinese" == c.r.LANGUAGE && p().Language_TChinese,
+              "italian" == c.r.LANGUAGE && p().Language_Italian,
+              "thai" == c.r.LANGUAGE && p().Language_Italian,
+              "turkish" == c.r.LANGUAGE && p().Language_Turkish,
+              "latam" == c.r.LANGUAGE && p().Language_LatAm,
+              "spanish" == c.r.LANGUAGE && p().Language_Spanish,
             ),
-            o.createElement(d.A, { bOverlapping: !0 }),
-            o.createElement(
-              "div",
-              { className: p().HeaderSection },
-              o.createElement(
-                "video",
-                {
-                  className: p().HeaderVideoBG,
-                  autoPlay: !0,
-                  preload: "auto",
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                },
-                o.createElement("source", {
-                  type: "video/webm",
-                  src: `${n.r.VIDEO_URL}/crownfall/header_bg.webm`,
+            children: [
+              (0, l.jsx)(_.mg, {
+                children: (0, l.jsx)("title", {
+                  children: (0, v.we)("#crownfall_title"),
                 }),
-              ),
-              o.createElement(
-                "video",
-                {
-                  className: p().SkyVengeVideo,
-                  autoPlay: !0,
-                  preload: "auto",
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                },
-                o.createElement("source", {
-                  type: 'video/mp4; codecs="hvc1"',
-                  src: `${n.r.VIDEO_URL}/crownfall/header_fg.mov`,
-                }),
-                o.createElement("source", {
-                  type: "video/webm",
-                  src: `${n.r.VIDEO_URL}/crownfall/header_fg.webm`,
-                }),
-              ),
-              !1,
-              o.createElement(
-                "video",
-                {
-                  className: p().HeaderLogoVideo,
-                  autoPlay: !0,
-                  preload: "auto",
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                },
-                o.createElement("source", {
-                  type: 'video/mp4; codecs="hvc1"',
-                  src: `${n.r.VIDEO_URL}/crownfall/logo_${"schinese" == n.r.LANGUAGE ? "schinese" : "english"}.mov`,
-                }),
-                o.createElement("source", {
-                  type: "video/webm",
-                  src: `${n.r.VIDEO_URL}/crownfall/logo_${"schinese" == n.r.LANGUAGE ? "schinese" : "english"}.webm`,
-                }),
-              ),
-              !1,
-              o.createElement(
-                "div",
-                { className: p().EventDescriptionBlock },
-                o.createElement(
-                  "h2",
-                  { className: (0, _.A)(p().DisplayText, p().Large) },
-                  (0, v.we)("#crownfall_welcome"),
-                ),
-              ),
-              o.createElement("div", { className: p().TopGradient }),
-            ),
-            o.createElement("hr", null),
-            o.createElement(
-              "div",
-              { className: (0, _.A)(p().NewStory, p().SectionWrapper) },
-              o.createElement(
-                "div",
-                { className: p().InnerContainer },
-                o.createElement(
-                  "div",
-                  { className: p().TextBlock },
-                  o.createElement(
-                    "h1",
-                    { className: (0, _.A)(p().TitleText, p().Medium) },
-                    (0, v.we)("#crownfall_newstory_title"),
-                  ),
-                  o.createElement(y, null),
-                  o.createElement(
-                    "h2",
-                    { className: (0, _.A)(p().DisplayText, p().Medium) },
-                    (0, c.Wn)("#crownfall_newstory_description"),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: p().Comic },
-                  o.createElement(
-                    "div",
-                    { className: p().Inside },
-                    o.createElement("img", {
-                      src: e,
-                      className: p().Thumbnail,
-                    }),
-                    o.createElement(
-                      "div",
-                      { className: p().Description },
-                      o.createElement(
-                        "h2",
-                        { className: (0, _.A)(p().DisplayText, p().Large) },
-                        (0, v.we)("#crownfall_comic_title"),
-                      ),
-                      o.createElement(
-                        "p",
-                        {
-                          className: (0, _.A)(
-                            p().BodyText,
-                            p().Medium,
-                            p().LightGreyText,
-                          ),
-                        },
-                        (0, v.we)("#crownfall_comic_description"),
-                      ),
-                      o.createElement(
-                        g.N_,
-                        {
-                          to: i.J.crownfall_comic(),
-                          target: "_blank",
-                          className: (0, _.A)(
-                            p().ReadButton,
-                            p().ButtonPrimary,
-                            p().LabelText,
-                            p().Large,
-                          ),
-                        },
-                        (0, v.we)("#crownfall_comic_button"),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            o.createElement("hr", null),
-            o.createElement(
-              "div",
-              { className: (0, _.A)(p().EventSection, p().SectionWrapper) },
-              o.createElement(
-                "div",
-                { className: p().InnerContainer },
-                o.createElement(
-                  "div",
-                  { className: p().TextBlock },
-                  o.createElement(
-                    "h1",
-                    {
-                      className: (0, _.A)(
-                        p().TitleText,
-                        p().Large,
-                        p().GoldText,
-                      ),
-                    },
-                    (0, v.we)("#crownfall_howtoplay_title"),
-                  ),
-                  o.createElement(y, null),
-                  o.createElement(
-                    "p",
-                    { className: (0, _.A)(p().DisplayText, p().Large) },
-                    (0, v.we)("#crownfall_howtoplay_description"),
-                  ),
-                ),
-                o.createElement(
-                  "video",
-                  {
-                    className: p().ProgressionMap,
+              }),
+              (0, l.jsx)(u.A, { bOverlapping: !0 }),
+              (0, l.jsxs)("div", {
+                className: p().HeaderSection,
+                children: [
+                  (0, l.jsx)("video", {
+                    className: p().HeaderVideoBG,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                  },
-                  o.createElement("source", {
-                    type: "video/webm",
-                    src: `${n.r.VIDEO_URL}/crownfall/how_to_play.webm?1`,
+                    children: (0, l.jsx)("source", {
+                      type: "video/webm",
+                      src: `${c.r.VIDEO_URL}/crownfall/header_bg.webm`,
+                    }),
                   }),
-                ),
-                o.createElement(
-                  "div",
-                  {
-                    className: (0, _.A)(
-                      p().TextBlock,
-                      p().QuickExplainersDescription,
-                    ),
-                  },
-                  o.createElement(
-                    "p",
-                    { className: (0, _.A)(p().BodyText, p().Medium) },
-                    (0, c.Wn)("#crownfall_explainer_a_long"),
-                  ),
-                  o.createElement(
-                    "p",
-                    { className: (0, _.A)(p().BodyText, p().Medium) },
-                    (0, c.Wn)("#crownfall_explainer_b_long"),
-                  ),
-                  o.createElement(
-                    "p",
-                    { className: (0, _.A)(p().BodyText, p().Medium) },
-                    (0, c.Wn)("#crownfall_explainer_c_long"),
-                  ),
-                ),
-                o.createElement(y, null),
-                o.createElement(
-                  "div",
-                  { className: p().RewardsBlock },
-                  o.createElement(
-                    "h1",
-                    {
-                      className: (0, _.A)(
+                  (0, l.jsxs)("video", {
+                    className: p().SkyVengeVideo,
+                    autoPlay: !0,
+                    preload: "auto",
+                    muted: !0,
+                    loop: !0,
+                    playsInline: !0,
+                    children: [
+                      (0, l.jsx)("source", {
+                        type: 'video/mp4; codecs="hvc1"',
+                        src: `${c.r.VIDEO_URL}/crownfall/header_fg.mov`,
+                      }),
+                      (0, l.jsx)("source", {
+                        type: "video/webm",
+                        src: `${c.r.VIDEO_URL}/crownfall/header_fg.webm`,
+                      }),
+                    ],
+                  }),
+                  !1,
+                  (0, l.jsxs)("video", {
+                    className: p().HeaderLogoVideo,
+                    autoPlay: !0,
+                    preload: "auto",
+                    muted: !0,
+                    loop: !0,
+                    playsInline: !0,
+                    children: [
+                      (0, l.jsx)("source", {
+                        type: 'video/mp4; codecs="hvc1"',
+                        src: `${c.r.VIDEO_URL}/crownfall/logo_${"schinese" == c.r.LANGUAGE ? "schinese" : "english"}.mov`,
+                      }),
+                      (0, l.jsx)("source", {
+                        type: "video/webm",
+                        src: `${c.r.VIDEO_URL}/crownfall/logo_${"schinese" == c.r.LANGUAGE ? "schinese" : "english"}.webm`,
+                      }),
+                    ],
+                  }),
+                  !1,
+                  (0, l.jsx)("div", {
+                    className: p().EventDescriptionBlock,
+                    children: (0, l.jsx)("h2", {
+                      className: (0, m.A)(p().DisplayText, p().Large),
+                      children: (0, v.we)("#crownfall_welcome"),
+                    }),
+                  }),
+                  (0, l.jsx)("div", { className: p().TopGradient }),
+                ],
+              }),
+              (0, l.jsx)("hr", {}),
+              (0, l.jsx)("div", {
+                className: (0, m.A)(p().NewStory, p().SectionWrapper),
+                children: (0, l.jsxs)("div", {
+                  className: p().InnerContainer,
+                  children: [
+                    (0, l.jsxs)("div", {
+                      className: p().TextBlock,
+                      children: [
+                        (0, l.jsx)("h1", {
+                          className: (0, m.A)(p().TitleText, p().Medium),
+                          children: (0, v.we)("#crownfall_newstory_title"),
+                        }),
+                        (0, l.jsx)(L, {}),
+                        (0, l.jsx)("h2", {
+                          className: (0, m.A)(p().DisplayText, p().Medium),
+                          children: (0, t.Wn)(
+                            "#crownfall_newstory_description",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, l.jsx)("div", {
+                      className: p().Comic,
+                      children: (0, l.jsxs)("div", {
+                        className: p().Inside,
+                        children: [
+                          (0, l.jsx)("img", {
+                            src: e,
+                            className: p().Thumbnail,
+                          }),
+                          (0, l.jsxs)("div", {
+                            className: p().Description,
+                            children: [
+                              (0, l.jsx)("h2", {
+                                className: (0, m.A)(p().DisplayText, p().Large),
+                                children: (0, v.we)("#crownfall_comic_title"),
+                              }),
+                              (0, l.jsx)("p", {
+                                className: (0, m.A)(
+                                  p().BodyText,
+                                  p().Medium,
+                                  p().LightGreyText,
+                                ),
+                                children: (0, v.we)(
+                                  "#crownfall_comic_description",
+                                ),
+                              }),
+                              (0, l.jsx)(j.N_, {
+                                to: d.J.crownfall_comic(),
+                                target: "_blank",
+                                className: (0, m.A)(
+                                  p().ReadButton,
+                                  p().ButtonPrimary,
+                                  p().LabelText,
+                                  p().Large,
+                                ),
+                                children: (0, v.we)("#crownfall_comic_button"),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+              (0, l.jsx)("hr", {}),
+              (0, l.jsx)("div", {
+                className: (0, m.A)(p().EventSection, p().SectionWrapper),
+                children: (0, l.jsxs)("div", {
+                  className: p().InnerContainer,
+                  children: [
+                    (0, l.jsxs)("div", {
+                      className: p().TextBlock,
+                      children: [
+                        (0, l.jsx)("h1", {
+                          className: (0, m.A)(
+                            p().TitleText,
+                            p().Large,
+                            p().GoldText,
+                          ),
+                          children: (0, v.we)("#crownfall_howtoplay_title"),
+                        }),
+                        (0, l.jsx)(L, {}),
+                        (0, l.jsx)("p", {
+                          className: (0, m.A)(p().DisplayText, p().Large),
+                          children: (0, v.we)(
+                            "#crownfall_howtoplay_description",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, l.jsx)("video", {
+                      className: p().ProgressionMap,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      children: (0, l.jsx)("source", {
+                        type: "video/webm",
+                        src: `${c.r.VIDEO_URL}/crownfall/how_to_play.webm?1`,
+                      }),
+                    }),
+                    (0, l.jsxs)("div", {
+                      className: (0, m.A)(
+                        p().TextBlock,
+                        p().QuickExplainersDescription,
+                      ),
+                      children: [
+                        (0, l.jsx)("p", {
+                          className: (0, m.A)(p().BodyText, p().Medium),
+                          children: (0, t.Wn)("#crownfall_explainer_a_long"),
+                        }),
+                        (0, l.jsx)("p", {
+                          className: (0, m.A)(p().BodyText, p().Medium),
+                          children: (0, t.Wn)("#crownfall_explainer_b_long"),
+                        }),
+                        (0, l.jsx)("p", {
+                          className: (0, m.A)(p().BodyText, p().Medium),
+                          children: (0, t.Wn)("#crownfall_explainer_c_long"),
+                        }),
+                      ],
+                    }),
+                    (0, l.jsx)(L, {}),
+                    (0, l.jsxs)("div", {
+                      className: p().RewardsBlock,
+                      children: [
+                        (0, l.jsx)("h1", {
+                          className: (0, m.A)(
+                            p().TitleText,
+                            p().Medium,
+                            p().GoldText,
+                          ),
+                          children: (0, v.we)("#crownfall_rewards_title"),
+                        }),
+                        (0, l.jsxs)("div", {
+                          className: p().Rewards,
+                          children: [
+                            (0, l.jsx)(T, {
+                              label: (0, v.we)("#crownfall_rewards_b"),
+                              text: (0, v.we)("#crownfall_rewards_b_long"),
+                              image: "rewards_treasures.png",
+                            }),
+                            (0, l.jsx)(T, {
+                              label: (0, v.we)("#crownfall_rewards_c"),
+                              text: (0, v.we)("#crownfall_rewards_c_long"),
+                              image: "rewards_candy_sacks.png",
+                            }),
+                            (0, l.jsx)(T, {
+                              label: (0, v.we)("#crownfall_rewards_a"),
+                              text: (0, v.we)(
+                                "#crownfall_rewards_a_long_new",
+                                "undefined" !== h.o.GetBPPrice(27458)
+                                  ? h.o.GetBPPrice(27458)
+                                  : "",
+                              ),
+                              image: "rewards_coins.png",
+                            }),
+                          ],
+                        }),
+                        (0, l.jsx)("p", {
+                          className: (0, m.A)(
+                            p().DisplayText,
+                            p().Medium,
+                            p().AllRewards,
+                          ),
+                          children: (0, v.we)("#crownfall_rewards_andmanymore"),
+                        }),
+                      ],
+                    }),
+                    (0, l.jsx)(L, {}),
+                    (0, l.jsx)("div", {
+                      className: p().TextBlock,
+                      children: (0, l.jsx)("h1", {
+                        className: (0, m.A)(
+                          p().TitleText,
+                          p().Medium,
+                          p().GoldText,
+                        ),
+                        children: (0, v.we)("#crownfall_explorerpack_title"),
+                      }),
+                    }),
+                    (0, l.jsxs)("div", {
+                      className: p().ExplorerPackContainer,
+                      children: [
+                        (0, l.jsx)("div", { className: p().ExplorerPack }),
+                        (0, l.jsx)("img", {
+                          className: p().ExplorerPackImage,
+                          src: `${c.r.IMG_URL}/crownfall/explorer_pack.png`,
+                        }),
+                        (0, l.jsxs)("div", {
+                          className: p().ExplorerPackDetails,
+                          children: [
+                            (0, l.jsx)("h2", {
+                              className: (0, m.A)(p().DisplayText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_explorerpack_description",
+                              ),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(
+                                p().BodyText,
+                                p().Medium,
+                                p().LightGreyText,
+                              ),
+                              children: (0, v.we)(
+                                "#crownfall_explorerpack_description_long",
+                              ),
+                            }),
+                            (0, l.jsx)("a", {
+                              href: "#",
+                              onClick: (e) => {
+                                h.o.PurchaseOnSteamStore(
+                                  30943,
+                                  1,
+                                  window.location.href,
+                                ),
+                                  e.preventDefault();
+                              },
+                              className: (0, m.A)(
+                                p().PurchaseButton,
+                                p().ButtonPrimary,
+                                p().LabelText,
+                                p().Large,
+                              ),
+                              children: (0, t.Wn)(
+                                "#crownfall_explorerpack_purchase",
+                                "undefined" !== h.o.GetBPPrice(30943)
+                                  ? h.o.GetBPPrice(30943)
+                                  : "",
+                              ),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(
+                                p().PurchaseDiscount,
+                                p().LightGreyText,
+                              ),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_sm_purchase_note",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+              (0, l.jsx)("hr", {}),
+              (0, l.jsx)("div", {
+                className: (0, m.A)(p().StoreSection, p().SectionWrapper),
+                children: (0, l.jsxs)("div", {
+                  className: p().InnerContainer,
+                  children: [
+                    (0, l.jsxs)("div", {
+                      className: p().TextBlock,
+                      children: [
+                        (0, l.jsx)("h1", {
+                          className: (0, m.A)(
+                            p().TitleText,
+                            p().Large,
+                            p().GoldText,
+                          ),
+                          children: (0, v.we)("#crownfall_arcanas_title"),
+                        }),
+                        (0, l.jsx)(L, {}),
+                        (0, l.jsx)("p", {
+                          className: (0, m.A)(p().DisplayText, p().Large),
+                          children: (0, v.we)("#crownfall_arcanas_description"),
+                        }),
+                      ],
+                    }),
+                    (0, l.jsxs)("div", {
+                      className: p().Arcanas,
+                      children: [
+                        (0, l.jsxs)(y, {
+                          main_video: "crownfall/skywrath_arcana_0320_1",
+                          ability_video: "crownfall/abilities_skywrath_0320",
+                          hero_name: (0, v.we)("#crownfall_arcana_sm_hero"),
+                          hero_id: "Skywrath",
+                          alternate_style_abbrev: "sm",
+                          children: [
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_sm_a"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_sm_a_long",
+                              ),
+                            }),
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_sm_b"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_sm_b_long",
+                              ),
+                            }),
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_sm_c"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_sm_c_long",
+                              ),
+                            }),
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_sm_d"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_sm_d_long",
+                              ),
+                            }),
+                            (0, l.jsx)("img", {
+                              className: p().HeroAssetsImage,
+                              src: `${c.r.IMG_URL}/crownfall/sm_arcana_assets.png`,
+                            }),
+                            (0, l.jsxs)("div", {
+                              className: p().PurchaseBlock,
+                              children: [
+                                (0, l.jsx)("a", {
+                                  href: "#",
+                                  onClick: (e) => {
+                                    h.o.PurchaseOnSteamStore(
+                                      22277,
+                                      1,
+                                      window.location.href,
+                                    ),
+                                      e.preventDefault();
+                                  },
+                                  className: (0, m.A)(
+                                    p().PurchaseButton,
+                                    p().ButtonPrimary,
+                                    p().LabelText,
+                                    p().Large,
+                                  ),
+                                  children: (0, t.Wn)(
+                                    "#crownfall_arcana_sm_purchase",
+                                    "undefined" !== h.o.GetBPPrice(22277)
+                                      ? h.o.GetBPPrice(22277)
+                                      : "",
+                                  ),
+                                }),
+                                (0, l.jsx)("p", {
+                                  className: (0, m.A)(p().PurchaseDiscount),
+                                  children: (0, v.we)(
+                                    "#crownfall_arcana_sm_purchase_note",
+                                  ),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, l.jsx)(L, {}),
+                        (0, l.jsxs)(y, {
+                          main_video: "crownfall/venge_imperia_0319a",
+                          ability_video: "crownfall/venge_ability_0321alt",
+                          hero_name: (0, v.we)("#crownfall_arcana_vs_hero"),
+                          hero_id: "Venge",
+                          alternate_style_abbrev: "vs",
+                          children: [
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_vs_a"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_vs_a_long",
+                              ),
+                            }),
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_vs_b"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_vs_b_long",
+                              ),
+                            }),
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_vs_c"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_vs_c_long",
+                              ),
+                            }),
+                            (0, l.jsx)("h3", {
+                              className: (0, m.A)(p().LabelText, p().Large),
+                              children: (0, v.we)("#crownfall_arcana_vs_d"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: (0, m.A)(p().BodyText, p().Medium),
+                              children: (0, v.we)(
+                                "#crownfall_arcana_vs_d_long",
+                              ),
+                            }),
+                            (0, l.jsx)("img", {
+                              className: p().HeroAssetsImage,
+                              src: `${c.r.IMG_URL}/crownfall/vs_arcana_assets.png`,
+                            }),
+                            (0, l.jsxs)("div", {
+                              className: p().PurchaseBlock,
+                              children: [
+                                (0, l.jsx)("a", {
+                                  href: "#",
+                                  onClick: (e) => {
+                                    h.o.PurchaseOnSteamStore(
+                                      22722,
+                                      1,
+                                      window.location.href,
+                                    ),
+                                      e.preventDefault();
+                                  },
+                                  className: (0, m.A)(
+                                    p().PurchaseButton,
+                                    p().ButtonPrimary,
+                                    p().LabelText,
+                                    p().Large,
+                                  ),
+                                  children: (0, t.Wn)(
+                                    "#crownfall_arcana_vs_purchase",
+                                    "undefined" !== h.o.GetBPPrice(22722)
+                                      ? h.o.GetBPPrice(22722)
+                                      : "",
+                                  ),
+                                }),
+                                (0, l.jsx)("p", {
+                                  className: (0, m.A)(p().PurchaseDiscount),
+                                  children: (0, v.we)(
+                                    "#crownfall_arcana_vs_purchase_note",
+                                  ),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, l.jsx)(L, {}),
+                    (0, l.jsx)("h1", {
+                      className: (0, m.A)(
                         p().TitleText,
                         p().Medium,
                         p().GoldText,
                       ),
-                    },
-                    (0, v.we)("#crownfall_rewards_title"),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: p().Rewards },
-                    o.createElement(T, {
-                      label: (0, v.we)("#crownfall_rewards_b"),
-                      text: (0, v.we)("#crownfall_rewards_b_long"),
-                      image: "rewards_treasures.png",
+                      children: (0, v.we)("#crownfall_treasures_title"),
                     }),
-                    o.createElement(T, {
-                      label: (0, v.we)("#crownfall_rewards_c"),
-                      text: (0, v.we)("#crownfall_rewards_c_long"),
-                      image: "rewards_candy_sacks.png",
-                    }),
-                    o.createElement(T, {
-                      label: (0, v.we)("#crownfall_rewards_a"),
-                      text: (0, v.we)(
-                        "#crownfall_rewards_a_long_new",
-                        "undefined" !== u.o.GetBPPrice(27458)
-                          ? u.o.GetBPPrice(27458)
-                          : "",
-                      ),
-                      image: "rewards_coins.png",
-                    }),
-                  ),
-                  o.createElement(
-                    "p",
-                    {
-                      className: (0, _.A)(
-                        p().DisplayText,
-                        p().Medium,
-                        p().AllRewards,
-                      ),
-                    },
-                    (0, v.we)("#crownfall_rewards_andmanymore"),
-                  ),
-                ),
-                o.createElement(y, null),
-                o.createElement(
-                  "div",
-                  { className: p().TextBlock },
-                  o.createElement(
-                    "h1",
-                    {
-                      className: (0, _.A)(
-                        p().TitleText,
-                        p().Medium,
-                        p().GoldText,
-                      ),
-                    },
-                    (0, v.we)("#crownfall_explorerpack_title"),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: p().ExplorerPackContainer },
-                  o.createElement("div", { className: p().ExplorerPack }),
-                  o.createElement("img", {
-                    className: p().ExplorerPackImage,
-                    src: `${n.r.IMG_URL}/crownfall/explorer_pack.png`,
-                  }),
-                  o.createElement(
-                    "div",
-                    { className: p().ExplorerPackDetails },
-                    o.createElement(
-                      "h2",
-                      { className: (0, _.A)(p().DisplayText, p().Medium) },
-                      (0, v.we)("#crownfall_explorerpack_description"),
-                    ),
-                    o.createElement(
-                      "p",
-                      {
-                        className: (0, _.A)(
-                          p().BodyText,
+                    (0, l.jsx)("div", {
+                      className: p().TextBlock,
+                      children: (0, l.jsx)("p", {
+                        className: (0, m.A)(
+                          p().DisplayText,
                           p().Medium,
                           p().LightGreyText,
                         ),
-                      },
-                      (0, v.we)("#crownfall_explorerpack_description_long"),
-                    ),
-                    o.createElement(
-                      "a",
-                      {
-                        href: "#",
-                        onClick: (e) => {
-                          u.o.PurchaseOnSteamStore(
-                            30943,
-                            1,
-                            window.location.href,
-                          ),
-                            e.preventDefault();
-                        },
-                        className: (0, _.A)(
-                          p().PurchaseButton,
-                          p().ButtonPrimary,
-                          p().LabelText,
-                          p().Large,
-                        ),
-                      },
-                      (0, c.Wn)(
-                        "#crownfall_explorerpack_purchase",
-                        "undefined" !== u.o.GetBPPrice(30943)
-                          ? u.o.GetBPPrice(30943)
-                          : "",
-                      ),
-                    ),
-                    o.createElement(
-                      "p",
-                      {
-                        className: (0, _.A)(
-                          p().PurchaseDiscount,
-                          p().LightGreyText,
-                        ),
-                      },
-                      (0, v.we)("#crownfall_arcana_sm_purchase_note"),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            o.createElement("hr", null),
-            o.createElement(
-              "div",
-              { className: (0, _.A)(p().StoreSection, p().SectionWrapper) },
-              o.createElement(
-                "div",
-                { className: p().InnerContainer },
-                o.createElement(
-                  "div",
-                  { className: p().TextBlock },
-                  o.createElement(
-                    "h1",
-                    {
-                      className: (0, _.A)(
-                        p().TitleText,
-                        p().Large,
-                        p().GoldText,
-                      ),
-                    },
-                    (0, v.we)("#crownfall_arcanas_title"),
-                  ),
-                  o.createElement(y, null),
-                  o.createElement(
-                    "p",
-                    { className: (0, _.A)(p().DisplayText, p().Large) },
-                    (0, v.we)("#crownfall_arcanas_description"),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: p().Arcanas },
-                  o.createElement(
-                    x,
-                    {
-                      main_video: "crownfall/skywrath_arcana_0320_1",
-                      ability_video: "crownfall/abilities_skywrath_0320",
-                      hero_name: (0, v.we)("#crownfall_arcana_sm_hero"),
-                      hero_id: "Skywrath",
-                      alternate_style_abbrev: "sm",
-                    },
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_sm_a"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_sm_a_long"),
-                    ),
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_sm_b"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_sm_b_long"),
-                    ),
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_sm_c"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_sm_c_long"),
-                    ),
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_sm_d"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_sm_d_long"),
-                    ),
-                    o.createElement("img", {
-                      className: p().HeroAssetsImage,
-                      src: `${n.r.IMG_URL}/crownfall/sm_arcana_assets.png`,
+                        children: (0, v.we)("#crownfall_treasures_description"),
+                      }),
                     }),
-                    o.createElement(
-                      "div",
-                      { className: p().PurchaseBlock },
-                      o.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (e) => {
-                            u.o.PurchaseOnSteamStore(
-                              22277,
-                              1,
-                              window.location.href,
+                    (0, l.jsx)("div", {
+                      className: p().Treasures,
+                      children: (0, l.jsxs)(A.gi, {
+                        className: p().TreasureCarousel,
+                        naturalSlideWidth: 600,
+                        naturalSlideHeight: 960,
+                        totalSlides: 12,
+                        currentSlide: 0,
+                        infinite: !0,
+                        touchEnabled: !0,
+                        dragEnabled: !1,
+                        children: [
+                          (0, l.jsx)(A.Ap, {
+                            className: p().TreasureSlider,
+                            children: Array.from(
+                              { length: 12 },
+                              (e, a) => a,
+                            ).map((e) =>
+                              (0, l.jsx)(
+                                A.q7,
+                                {
+                                  index: e,
+                                  className: p().TreasureSlide,
+                                  innerClassName: p().TreasureInnerSlide,
+                                  classNameHidden: p().TreasureSlideHidden,
+                                  children: (0, l.jsx)(b, {
+                                    index: e,
+                                    video: `treasure_item_${e}`,
+                                    name: `#crownfall_treasure_item_${e}_name`,
+                                    heroname: `#crownfall_treasure_item_${e}_hero`,
+                                    subtext: `#crownfall_treasure_item_${e}_sub`,
+                                    autoplay: 0 == e,
+                                    onSlideIn: a,
+                                  }),
+                                },
+                                e,
+                              ),
                             ),
-                              e.preventDefault();
-                          },
-                          className: (0, _.A)(
-                            p().PurchaseButton,
-                            p().ButtonPrimary,
-                            p().LabelText,
-                            p().Large,
-                          ),
-                        },
-                        (0, c.Wn)(
-                          "#crownfall_arcana_sm_purchase",
-                          "undefined" !== u.o.GetBPPrice(22277)
-                            ? u.o.GetBPPrice(22277)
-                            : "",
-                        ),
-                      ),
-                      o.createElement(
-                        "p",
-                        { className: (0, _.A)(p().PurchaseDiscount) },
-                        (0, v.we)("#crownfall_arcana_sm_purchase_note"),
-                      ),
-                    ),
-                  ),
-                  o.createElement(y, null),
-                  o.createElement(
-                    x,
-                    {
-                      main_video: "crownfall/venge_imperia_0319a",
-                      ability_video: "crownfall/venge_ability_0321alt",
-                      hero_name: (0, v.we)("#crownfall_arcana_vs_hero"),
-                      hero_id: "Venge",
-                      alternate_style_abbrev: "vs",
-                    },
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_vs_a"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_vs_a_long"),
-                    ),
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_vs_b"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_vs_b_long"),
-                    ),
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_vs_c"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_vs_c_long"),
-                    ),
-                    o.createElement(
-                      "h3",
-                      { className: (0, _.A)(p().LabelText, p().Large) },
-                      (0, v.we)("#crownfall_arcana_vs_d"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: (0, _.A)(p().BodyText, p().Medium) },
-                      (0, v.we)("#crownfall_arcana_vs_d_long"),
-                    ),
-                    o.createElement("img", {
-                      className: p().HeroAssetsImage,
-                      src: `${n.r.IMG_URL}/crownfall/vs_arcana_assets.png`,
-                    }),
-                    o.createElement(
-                      "div",
-                      { className: p().PurchaseBlock },
-                      o.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (e) => {
-                            u.o.PurchaseOnSteamStore(
-                              22722,
-                              1,
-                              window.location.href,
-                            ),
-                              e.preventDefault();
-                          },
-                          className: (0, _.A)(
-                            p().PurchaseButton,
-                            p().ButtonPrimary,
-                            p().LabelText,
-                            p().Large,
-                          ),
-                        },
-                        (0, c.Wn)(
-                          "#crownfall_arcana_vs_purchase",
-                          "undefined" !== u.o.GetBPPrice(22722)
-                            ? u.o.GetBPPrice(22722)
-                            : "",
-                        ),
-                      ),
-                      o.createElement(
-                        "p",
-                        { className: (0, _.A)(p().PurchaseDiscount) },
-                        (0, v.we)("#crownfall_arcana_vs_purchase_note"),
-                      ),
-                    ),
-                  ),
-                ),
-                o.createElement(y, null),
-                o.createElement(
-                  "h1",
-                  {
-                    className: (0, _.A)(
-                      p().TitleText,
-                      p().Medium,
-                      p().GoldText,
-                    ),
-                  },
-                  (0, v.we)("#crownfall_treasures_title"),
-                ),
-                o.createElement(
-                  "div",
-                  { className: p().TextBlock },
-                  o.createElement(
-                    "p",
-                    {
-                      className: (0, _.A)(
-                        p().DisplayText,
-                        p().Medium,
-                        p().LightGreyText,
-                      ),
-                    },
-                    (0, v.we)("#crownfall_treasures_description"),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: p().Treasures },
-                  o.createElement(
-                    A.gi,
-                    {
-                      className: p().TreasureCarousel,
-                      naturalSlideWidth: 600,
-                      naturalSlideHeight: 960,
-                      totalSlides: 12,
-                      currentSlide: 0,
-                      infinite: !0,
-                      touchEnabled: !0,
-                      dragEnabled: !1,
-                    },
-                    o.createElement(
-                      A.Ap,
-                      { className: p().TreasureSlider },
-                      Array.from({ length: 12 }, (e, a) => a).map((e) =>
-                        o.createElement(
-                          A.q7,
-                          {
-                            key: e,
-                            index: e,
-                            className: p().TreasureSlide,
-                            innerClassName: p().TreasureInnerSlide,
-                            classNameHidden: p().TreasureSlideHidden,
-                          },
-                          o.createElement(L, {
-                            index: e,
-                            video: `treasure_item_${e}`,
-                            name: `#crownfall_treasure_item_${e}_name`,
-                            heroname: `#crownfall_treasure_item_${e}_hero`,
-                            subtext: `#crownfall_treasure_item_${e}_sub`,
-                            autoplay: 0 == e,
-                            onSlideIn: a,
                           }),
-                        ),
-                      ),
-                    ),
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(
-                          p().TreasureName,
-                          p().DisplayText,
-                          p().Small,
-                        ),
-                      },
-                      (0, c.Wn)(this.state.treasureName),
-                    ),
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(
-                          p().HeroName,
-                          p().LabelText,
-                          p().Small,
-                        ),
-                      },
-                      (0, c.Wn)(this.state.heroName),
-                    ),
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, _.A)(
-                          p().TreasureSubText,
-                          p().LabelText,
-                          p().Small,
-                        ),
-                      },
-                      (0, c.Wn)(this.state.subText),
-                    ),
-                    o.createElement(
-                      "div",
-                      { className: p().CarouselDots },
-                      o.createElement(
-                        A._X,
-                        {
-                          className: (0, _.A)(
-                            p().TreasurePaginationButton,
-                            p().Prev,
+                          (0, l.jsx)("div", {
+                            className: (0, m.A)(
+                              p().TreasureName,
+                              p().DisplayText,
+                              p().Small,
+                            ),
+                            children: (0, t.Wn)(this.state.treasureName),
+                          }),
+                          (0, l.jsx)("div", {
+                            className: (0, m.A)(
+                              p().HeroName,
+                              p().LabelText,
+                              p().Small,
+                            ),
+                            children: (0, t.Wn)(this.state.heroName),
+                          }),
+                          (0, l.jsx)("div", {
+                            className: (0, m.A)(
+                              p().TreasureSubText,
+                              p().LabelText,
+                              p().Small,
+                            ),
+                            children: (0, t.Wn)(this.state.subText),
+                          }),
+                          (0, l.jsxs)("div", {
+                            className: p().CarouselDots,
+                            children: [
+                              (0, l.jsx)(A._X, {
+                                className: (0, m.A)(
+                                  p().TreasurePaginationButton,
+                                  p().Prev,
+                                ),
+                                children: (0, l.jsx)("div", {
+                                  className: p().PrevArrow,
+                                }),
+                              }),
+                              Array.from({ length: 12 }, (e, a) => a).map((e) =>
+                                (0, l.jsx)(
+                                  A.cL,
+                                  { className: p().TreasureSelector, slide: e },
+                                  e,
+                                ),
+                              ),
+                              (0, l.jsx)(A.CC, {
+                                className: (0, m.A)(
+                                  p().TreasurePaginationButton,
+                                  p().Next,
+                                ),
+                                children: (0, l.jsx)("div", {
+                                  className: p().NextArrow,
+                                }),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, l.jsx)(L, {}),
+                    (0, l.jsxs)("div", {
+                      className: p().TextBlock,
+                      children: [
+                        (0, l.jsx)("h1", {
+                          className: (0, m.A)(
+                            p().TitleText,
+                            p().Medium,
+                            p().GoldText,
                           ),
-                        },
-                        o.createElement("div", { className: p().PrevArrow }),
-                      ),
-                      Array.from({ length: 12 }, (e, a) => a).map((e) =>
-                        o.createElement(A.cL, {
-                          className: p().TreasureSelector,
-                          key: e,
-                          slide: e,
+                          children: (0, v.we)("#crownfall_fouracts_title"),
                         }),
-                      ),
-                      o.createElement(
-                        A.CC,
-                        {
-                          className: (0, _.A)(
-                            p().TreasurePaginationButton,
-                            p().Next,
+                        (0, l.jsx)("p", {
+                          className: (0, m.A)(
+                            p().DisplayText,
+                            p().Medium,
+                            p().LightGreyText,
                           ),
-                        },
-                        o.createElement("div", { className: p().NextArrow }),
-                      ),
-                    ),
-                  ),
-                ),
-                o.createElement(y, null),
-                o.createElement(
-                  "div",
-                  { className: p().TextBlock },
-                  o.createElement(
-                    "h1",
-                    {
-                      className: (0, _.A)(
-                        p().TitleText,
-                        p().Medium,
-                        p().GoldText,
-                      ),
-                    },
-                    (0, v.we)("#crownfall_fouracts_title"),
-                  ),
-                  o.createElement(
-                    "p",
-                    {
-                      className: (0, _.A)(
-                        p().DisplayText,
-                        p().Medium,
-                        p().LightGreyText,
-                      ),
-                    },
-                    (0, c.Wn)("#crownfall_fouracts_description"),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: p().FourActsImage },
-                  o.createElement(
-                    "div",
-                    { className: (0, _.A)(p().Act, p().Act1) },
-                    o.createElement(
-                      "p",
-                      { className: p().ActNumber },
-                      (0, c.Wn)("#crownfall_footer_act_1"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().ActName },
-                      (0, c.Wn)("#crownfall_footer_act_1_name"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().Action },
-                      (0, c.Wn)("#crownfall_footer_act_play"),
-                    ),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: (0, _.A)(p().Act, p().Act2) },
-                    o.createElement(
-                      "p",
-                      { className: p().ActNumber },
-                      (0, c.Wn)("#crownfall_footer_act_2"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().ActName },
-                      (0, c.Wn)("#crownfall_footer_act_2_name"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().Action },
-                      (0, c.Wn)("#crownfall_footer_act_play"),
-                    ),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: (0, _.A)(p().Act, p().Act3) },
-                    o.createElement(
-                      "p",
-                      { className: p().ActNumber },
-                      (0, c.Wn)("#crownfall_footer_act_3"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().ActName },
-                      (0, c.Wn)("#crownfall_footer_act_3_name"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().Action },
-                      (0, c.Wn)("#crownfall_footer_act_locked"),
-                    ),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: (0, _.A)(p().Act, p().Act4) },
-                    o.createElement(
-                      "p",
-                      { className: p().ActNumber },
-                      (0, c.Wn)("#crownfall_footer_act_4"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().ActName },
-                      (0, c.Wn)("#crownfall_footer_act_4_name"),
-                    ),
-                    o.createElement(
-                      "p",
-                      { className: p().Action },
-                      (0, c.Wn)("#crownfall_footer_act_locked"),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            o.createElement(E.K, null),
-          );
+                          children: (0, t.Wn)(
+                            "#crownfall_fouracts_description",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, l.jsxs)("div", {
+                      className: p().FourActsImage,
+                      children: [
+                        (0, l.jsxs)("div", {
+                          className: (0, m.A)(p().Act, p().Act1),
+                          children: [
+                            (0, l.jsx)("p", {
+                              className: p().ActNumber,
+                              children: (0, t.Wn)("#crownfall_footer_act_1"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().ActName,
+                              children: (0, t.Wn)(
+                                "#crownfall_footer_act_1_name",
+                              ),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().Action,
+                              children: (0, t.Wn)("#crownfall_footer_act_play"),
+                            }),
+                          ],
+                        }),
+                        (0, l.jsxs)("div", {
+                          className: (0, m.A)(p().Act, p().Act2),
+                          children: [
+                            (0, l.jsx)("p", {
+                              className: p().ActNumber,
+                              children: (0, t.Wn)("#crownfall_footer_act_2"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().ActName,
+                              children: (0, t.Wn)(
+                                "#crownfall_footer_act_2_name",
+                              ),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().Action,
+                              children: (0, t.Wn)("#crownfall_footer_act_play"),
+                            }),
+                          ],
+                        }),
+                        (0, l.jsxs)("div", {
+                          className: (0, m.A)(p().Act, p().Act3),
+                          children: [
+                            (0, l.jsx)("p", {
+                              className: p().ActNumber,
+                              children: (0, t.Wn)("#crownfall_footer_act_3"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().ActName,
+                              children: (0, t.Wn)(
+                                "#crownfall_footer_act_3_name",
+                              ),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().Action,
+                              children: (0, t.Wn)(
+                                "#crownfall_footer_act_locked",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, l.jsxs)("div", {
+                          className: (0, m.A)(p().Act, p().Act4),
+                          children: [
+                            (0, l.jsx)("p", {
+                              className: p().ActNumber,
+                              children: (0, t.Wn)("#crownfall_footer_act_4"),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().ActName,
+                              children: (0, t.Wn)(
+                                "#crownfall_footer_act_4_name",
+                              ),
+                            }),
+                            (0, l.jsx)("p", {
+                              className: p().Action,
+                              children: (0, t.Wn)(
+                                "#crownfall_footer_act_locked",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+              (0, l.jsx)(x.K, {}),
+            ],
+          });
         }
       };
-      b = (0, r.Cg)([s.PA], b);
-      const S = b;
+      S = (0, r.Cg)([i.PA], S);
+      const B = S;
     },
-    11649: (e, a, t) => {
+    11649: (e, a, s) => {
       "use strict";
-      t.r(a), t.d(a, { COMIC_LANGUAGE: () => g, default: () => T });
-      var r = t(85608),
-        l = t(4248),
-        n = t(89506),
-        c = t(68613),
-        s = t(68446),
-        o = t(7552),
-        i = t(73202),
-        m = t(21384),
-        _ = t(88351),
-        u = t(47202),
-        d = t(36305),
-        E = t(45237),
-        w = t(55651),
-        p = t(77220),
-        A = t.n(p),
-        h = t(85286),
-        N = t.n(h);
-      const g = (() => {
-          switch (n.r.LANGUAGE) {
+      s.r(a), s.d(a, { COMIC_LANGUAGE: () => j, default: () => T });
+      var r = s(85608),
+        l = s(69500),
+        n = s(4248),
+        c = s(89506),
+        t = s(68613),
+        i = s(68446),
+        o = s(7552),
+        d = s(73202),
+        _ = s(21384),
+        m = s(88351),
+        h = s(47202),
+        u = s(36305),
+        x = s(45237),
+        w = s(55651),
+        p = s(77220),
+        A = s.n(p),
+        N = s(85286),
+        g = s.n(N);
+      const j = (() => {
+          switch (c.r.LANGUAGE) {
             case "brazilian":
               return "brazilian";
             case "bulgarian":
@@ -1275,82 +1232,75 @@
           }
         })(),
         f = ({ onIndexChanged: e, comicImageURLs: a }) => {
-          const [t, r] = (0, o.useState)(void 0),
-            [l, n] = (0, o.useState)(
+          const [s, r] = (0, o.useState)(void 0),
+            [n, c] = (0, o.useState)(
               Array.from({ length: a.length }, () => new Image()),
             ),
-            s = (0, _.zy)(),
-            i = (0, o.useCallback)(() => {
+            i = (0, m.zy)(),
+            d = (0, o.useCallback)(() => {
               r((e) => {
                 if ((void 0 === e && (e = 0), e + 1 >= a.length)) return e;
-                const t = e + 1;
-                return window.history.pushState({}, "", `#p=${t}`), t;
+                const s = e + 1;
+                return window.history.pushState({}, "", `#p=${s}`), s;
               });
             }, [a]);
           (0, o.useEffect)(() => {
             const e = (e) => {
               ("Space" !== e.code && " " !== e.key) ||
-                (e.preventDefault(), i());
+                (e.preventDefault(), d());
             };
             return (
               window.addEventListener("keydown", e),
               () => window.removeEventListener("keydown", e)
             );
-          }, [i]),
+          }, [d]),
             (0, o.useEffect)(() => {
               let e = 0;
-              const a = new URLSearchParams(s.hash.substring(1)).get("p");
+              const a = new URLSearchParams(i.hash.substring(1)).get("p");
               null !== a && (e = parseInt(a)), r(e);
-            }, [s]),
+            }, [i]),
             (0, o.useEffect)(() => {
-              if (void 0 === t) return;
+              if (void 0 === s) return;
               for (let e = 1; e <= 5; e++) {
-                const r = t + e;
+                const r = s + e;
                 if (r >= a.length) break;
-                let c = l;
-                c[r].src || ((c[r].src = a[r]), n(c));
+                let l = n;
+                l[r].src || ((l[r].src = a[r]), c(l));
               }
-            }, [t, l, a]),
+            }, [s, n, a]),
             (0, o.useEffect)(() => {
-              e?.(t);
-            }, [e, t]);
-          const u = !t,
-            d = t + 1 >= a.length;
-          return o.createElement(
-            o.Fragment,
-            null,
-            o.createElement(
-              "div",
-              { className: A().ComicViewer },
-              o.createElement("img", {
-                src:
-                  void 0 !== t
-                    ? a[t]
-                    : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
-                onClick: (e) => {
-                  e.preventDefault(), i();
-                },
-                onMouseUp: (e) => {
-                  0 == e.button && e.preventDefault();
-                },
+              e?.(s);
+            }, [e, s]);
+          const h = !s,
+            u = s + 1 >= a.length;
+          return (0, l.jsxs)(l.Fragment, {
+            children: [
+              (0, l.jsx)("div", {
+                className: A().ComicViewer,
+                children: (0, l.jsx)("img", {
+                  src:
+                    void 0 !== s
+                      ? a[s]
+                      : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
+                  onClick: (e) => {
+                    e.preventDefault(), d();
+                  },
+                  onMouseUp: (e) => {
+                    0 == e.button && e.preventDefault();
+                  },
+                }),
               }),
-            ),
-            o.createElement(
-              "div",
-              {
-                className: (0, m.A)(A().ComicViewerHelpText, d && A().Disabled),
-              },
-              (0, c.we)("#crownfallcomic_help_text"),
-            ),
-            o.createElement(
-              E.N_,
-              {
-                className: (0, m.A)(A().ReturnLink, u && A().Disabled),
+              (0, l.jsx)("div", {
+                className: (0, _.A)(A().ComicViewerHelpText, u && A().Disabled),
+                children: (0, t.we)("#crownfallcomic_help_text"),
+              }),
+              (0, l.jsx)(x.N_, {
+                className: (0, _.A)(A().ReturnLink, h && A().Disabled),
                 to: w.J.crownfall_comic(),
-              },
-              (0, c.we)("#crownfallcomic_return_button"),
-            ),
-          );
+                children: (0, t.we)("#crownfallcomic_return_button"),
+              }),
+            ],
+          });
         };
       let v = class extends o.Component {
         constructor(e) {
@@ -1361,48 +1311,50 @@
               ["act3_intro", { url: "act3_intro", pageCount: 29 }],
               ["act4_intro", { url: "act4_intro", pageCount: 29 }],
             ]),
-            t = a.get(e.comic_id) || a.get("act1_intro");
+            s = a.get(e.comic_id) || a.get("act1_intro");
           this.state = {
             pageTitlePattern: `#crownfallcomic_${e.comic_id}_title`,
-            comicImageURLs: Array.from(Array(t.pageCount).keys()).map((e) => {
+            comicImageURLs: Array.from(Array(s.pageCount).keys()).map((e) => {
               const a = e.toString().padStart(3, "0");
-              return `${l.TS.IMG_URL}crownfall/${t.url}/${g}/${a}.webp?v=2`;
+              return `${n.TS.IMG_URL}crownfall/${s.url}/${j}/${a}.webp?v=2`;
             }),
           };
         }
         handleScroll = (e) => {
-          N().refresh();
+          g().refresh();
         };
         componentDidMount() {
           this.handleScroll(void 0);
         }
         render() {
-          return o.createElement(
-            "div",
-            { id: "CrownfallComic", className: A().CrownfallComic },
-            o.createElement(i.mg, null),
-            o.createElement(
-              "div",
-              { className: (0, m.A)(A().PageContainer) },
-              o.createElement(u.A, { bOverlapping: !0 }),
-              o.createElement(
-                "div",
-                { className: (0, m.A)(A().ComicContainer) },
-                o.createElement(f, {
-                  onIndexChanged: (e) => {
-                    document.title = e
-                      ? (0, c.we)(this.state.pageTitlePattern, e)
-                      : (0, c.we)(`${this.state.pageTitlePattern}_cover`);
-                  },
-                  comicImageURLs: this.state.comicImageURLs,
-                }),
-              ),
-              o.createElement(d.K, null),
-            ),
-          );
+          return (0, l.jsxs)("div", {
+            id: "CrownfallComic",
+            className: A().CrownfallComic,
+            children: [
+              (0, l.jsx)(d.mg, {}),
+              (0, l.jsxs)("div", {
+                className: (0, _.A)(A().PageContainer),
+                children: [
+                  (0, l.jsx)(h.A, { bOverlapping: !0 }),
+                  (0, l.jsx)("div", {
+                    className: (0, _.A)(A().ComicContainer),
+                    children: (0, l.jsx)(f, {
+                      onIndexChanged: (e) => {
+                        document.title = e
+                          ? (0, t.we)(this.state.pageTitlePattern, e)
+                          : (0, t.we)(`${this.state.pageTitlePattern}_cover`);
+                      },
+                      comicImageURLs: this.state.comicImageURLs,
+                    }),
+                  }),
+                  (0, l.jsx)(u.K, {}),
+                ],
+              }),
+            ],
+          });
         }
       };
-      v = (0, r.Cg)([s.PA], v);
+      v = (0, r.Cg)([i.PA], v);
       const T = v;
     },
   },

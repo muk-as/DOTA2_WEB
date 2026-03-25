@@ -24,28 +24,29 @@
         ReturnLink: "_3X6mBfDQxYcx_aIgdi4OK8",
       };
     },
-    11649: (e, t, a) => {
+    11649: (e, t, n) => {
       "use strict";
-      a.r(t), a.d(t, { COMIC_LANGUAGE: () => C, default: () => k });
-      var n = a(85608),
-        r = a(4248),
-        c = a(89506),
-        i = a(68613),
-        s = a(68446),
-        o = a(7552),
-        l = a(73202),
-        u = a(21384),
-        m = a(88351),
-        A = a(47202),
-        g = a(36305),
-        h = a(45237),
-        d = a(55651),
-        p = a(77220),
-        w = a.n(p),
-        _ = a(85286),
-        f = a.n(_);
-      const C = (() => {
-          switch (c.r.LANGUAGE) {
+      n.r(t), n.d(t, { COMIC_LANGUAGE: () => v, default: () => b });
+      var r = n(85608),
+        a = n(69500),
+        s = n(4248),
+        i = n(89506),
+        c = n(68613),
+        o = n(68446),
+        u = n(7552),
+        l = n(73202),
+        A = n(21384),
+        h = n(88351),
+        d = n(47202),
+        m = n(36305),
+        g = n(45237),
+        p = n(55651),
+        w = n(77220),
+        _ = n.n(w),
+        f = n(85286),
+        C = n.n(f);
+      const v = (() => {
+          switch (i.r.LANGUAGE) {
             case "brazilian":
               return "brazilian";
             case "bulgarian":
@@ -105,20 +106,20 @@
               return "vietnamese";
           }
         })(),
-        E = ({ onIndexChanged: e, comicImageURLs: t }) => {
-          const [a, n] = (0, o.useState)(void 0),
-            [r, c] = (0, o.useState)(
+        x = ({ onIndexChanged: e, comicImageURLs: t }) => {
+          const [n, r] = (0, u.useState)(void 0),
+            [s, i] = (0, u.useState)(
               Array.from({ length: t.length }, () => new Image()),
             ),
-            s = (0, m.zy)(),
-            l = (0, o.useCallback)(() => {
-              n((e) => {
+            o = (0, h.zy)(),
+            l = (0, u.useCallback)(() => {
+              r((e) => {
                 if ((void 0 === e && (e = 0), e + 1 >= t.length)) return e;
-                const a = e + 1;
-                return window.history.pushState({}, "", `#p=${a}`), a;
+                const n = e + 1;
+                return window.history.pushState({}, "", `#p=${n}`), n;
               });
             }, [t]);
-          (0, o.useEffect)(() => {
+          (0, u.useEffect)(() => {
             const e = (e) => {
               ("Space" !== e.code && " " !== e.key) ||
                 (e.preventDefault(), l());
@@ -128,62 +129,55 @@
               () => window.removeEventListener("keydown", e)
             );
           }, [l]),
-            (0, o.useEffect)(() => {
+            (0, u.useEffect)(() => {
               let e = 0;
-              const t = new URLSearchParams(s.hash.substring(1)).get("p");
-              null !== t && (e = parseInt(t)), n(e);
-            }, [s]),
-            (0, o.useEffect)(() => {
-              if (void 0 === a) return;
+              const t = new URLSearchParams(o.hash.substring(1)).get("p");
+              null !== t && (e = parseInt(t)), r(e);
+            }, [o]),
+            (0, u.useEffect)(() => {
+              if (void 0 === n) return;
               for (let e = 1; e <= 5; e++) {
-                const n = a + e;
-                if (n >= t.length) break;
-                let i = r;
-                i[n].src || ((i[n].src = t[n]), c(i));
+                const r = n + e;
+                if (r >= t.length) break;
+                let a = s;
+                a[r].src || ((a[r].src = t[r]), i(a));
               }
-            }, [a, r, t]),
-            (0, o.useEffect)(() => {
-              e?.(a);
-            }, [e, a]);
-          const A = !a,
-            g = a + 1 >= t.length;
-          return o.createElement(
-            o.Fragment,
-            null,
-            o.createElement(
-              "div",
-              { className: w().ComicViewer },
-              o.createElement("img", {
-                src:
-                  void 0 !== a
-                    ? t[a]
-                    : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
-                onClick: (e) => {
-                  e.preventDefault(), l();
-                },
-                onMouseUp: (e) => {
-                  0 == e.button && e.preventDefault();
-                },
+            }, [n, s, t]),
+            (0, u.useEffect)(() => {
+              e?.(n);
+            }, [e, n]);
+          const d = !n,
+            m = n + 1 >= t.length;
+          return (0, a.jsxs)(a.Fragment, {
+            children: [
+              (0, a.jsx)("div", {
+                className: _().ComicViewer,
+                children: (0, a.jsx)("img", {
+                  src:
+                    void 0 !== n
+                      ? t[n]
+                      : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJAQMAAAAB5D5xAAAABlBMVEUAAAAAAAClZ7nPAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAC0lEQVQImWNgwAkAABsAAdI307oAAAAASUVORK5CYII=",
+                  onClick: (e) => {
+                    e.preventDefault(), l();
+                  },
+                  onMouseUp: (e) => {
+                    0 == e.button && e.preventDefault();
+                  },
+                }),
               }),
-            ),
-            o.createElement(
-              "div",
-              {
-                className: (0, u.A)(w().ComicViewerHelpText, g && w().Disabled),
-              },
-              (0, i.we)("#crownfallcomic_help_text"),
-            ),
-            o.createElement(
-              h.N_,
-              {
-                className: (0, u.A)(w().ReturnLink, A && w().Disabled),
-                to: d.J.crownfall_comic(),
-              },
-              (0, i.we)("#crownfallcomic_return_button"),
-            ),
-          );
+              (0, a.jsx)("div", {
+                className: (0, A.A)(_().ComicViewerHelpText, m && _().Disabled),
+                children: (0, c.we)("#crownfallcomic_help_text"),
+              }),
+              (0, a.jsx)(g.N_, {
+                className: (0, A.A)(_().ReturnLink, d && _().Disabled),
+                to: p.J.crownfall_comic(),
+                children: (0, c.we)("#crownfallcomic_return_button"),
+              }),
+            ],
+          });
         };
-      let v = class extends o.Component {
+      let k = class extends u.Component {
         constructor(e) {
           super(e);
           const t = new Map([
@@ -192,49 +186,51 @@
               ["act3_intro", { url: "act3_intro", pageCount: 29 }],
               ["act4_intro", { url: "act4_intro", pageCount: 29 }],
             ]),
-            a = t.get(e.comic_id) || t.get("act1_intro");
+            n = t.get(e.comic_id) || t.get("act1_intro");
           this.state = {
             pageTitlePattern: `#crownfallcomic_${e.comic_id}_title`,
-            comicImageURLs: Array.from(Array(a.pageCount).keys()).map((e) => {
+            comicImageURLs: Array.from(Array(n.pageCount).keys()).map((e) => {
               const t = e.toString().padStart(3, "0");
-              return `${r.TS.IMG_URL}crownfall/${a.url}/${C}/${t}.webp?v=2`;
+              return `${s.TS.IMG_URL}crownfall/${n.url}/${v}/${t}.webp?v=2`;
             }),
           };
         }
         handleScroll = (e) => {
-          f().refresh();
+          C().refresh();
         };
         componentDidMount() {
           this.handleScroll(void 0);
         }
         render() {
-          return o.createElement(
-            "div",
-            { id: "CrownfallComic", className: w().CrownfallComic },
-            o.createElement(l.mg, null),
-            o.createElement(
-              "div",
-              { className: (0, u.A)(w().PageContainer) },
-              o.createElement(A.A, { bOverlapping: !0 }),
-              o.createElement(
-                "div",
-                { className: (0, u.A)(w().ComicContainer) },
-                o.createElement(E, {
-                  onIndexChanged: (e) => {
-                    document.title = e
-                      ? (0, i.we)(this.state.pageTitlePattern, e)
-                      : (0, i.we)(`${this.state.pageTitlePattern}_cover`);
-                  },
-                  comicImageURLs: this.state.comicImageURLs,
-                }),
-              ),
-              o.createElement(g.K, null),
-            ),
-          );
+          return (0, a.jsxs)("div", {
+            id: "CrownfallComic",
+            className: _().CrownfallComic,
+            children: [
+              (0, a.jsx)(l.mg, {}),
+              (0, a.jsxs)("div", {
+                className: (0, A.A)(_().PageContainer),
+                children: [
+                  (0, a.jsx)(d.A, { bOverlapping: !0 }),
+                  (0, a.jsx)("div", {
+                    className: (0, A.A)(_().ComicContainer),
+                    children: (0, a.jsx)(x, {
+                      onIndexChanged: (e) => {
+                        document.title = e
+                          ? (0, c.we)(this.state.pageTitlePattern, e)
+                          : (0, c.we)(`${this.state.pageTitlePattern}_cover`);
+                      },
+                      comicImageURLs: this.state.comicImageURLs,
+                    }),
+                  }),
+                  (0, a.jsx)(m.K, {}),
+                ],
+              }),
+            ],
+          });
         }
       };
-      v = (0, n.Cg)([s.PA], v);
-      const k = v;
+      k = (0, r.Cg)([o.PA], k);
+      const b = k;
     },
   },
 ]);

@@ -194,568 +194,553 @@
         DotaPlusBadgeMobile: "_3Tmn1T0cPjGU2btUECFXdR",
       };
     },
-    95224: (e, a, t) => {
+    95224: (e, a, s) => {
       "use strict";
-      t.d(a, { U: () => m, v: () => c });
-      var l = t(7552),
-        n = t(85655),
-        i = t.n(n),
-        o = t(21384),
-        r = t(89506),
-        s = t(27866);
-      const c = ({ image: e, is_new: a }) =>
-          l.createElement(
-            "div",
-            { className: i().ComparisonImage },
-            l.createElement(
-              "div",
-              { className: (0, o.A)(i().ImageLabel, a && i().IsNew) },
-              (0, s.Wn)(a ? "#729_new_image" : "#729_old_image"),
-            ),
-            l.createElement("img", { src: `${r.r.IMG_URL}${e}` }),
-          ),
+      s.d(a, { U: () => m, v: () => d });
+      var t = s(69500),
+        i = s(7552),
+        o = s(85655),
+        l = s.n(o),
+        n = s(21384),
+        r = s(89506),
+        c = s(40045);
+      const d = ({ image: e, is_new: a }) =>
+          (0, t.jsxs)("div", {
+            className: l().ComparisonImage,
+            children: [
+              (0, t.jsx)("div", {
+                className: (0, n.A)(l().ImageLabel, a && l().IsNew),
+                children: (0, c.Wn)(a ? "#729_new_image" : "#729_old_image"),
+              }),
+              (0, t.jsx)("img", { src: `${r.r.IMG_URL}${e}` }),
+            ],
+          }),
         m = (e) => {
-          const [a, t] = (0, l.useState)(0);
-          return l.createElement(
-            "div",
-            { className: i().TabbedMapComparison },
-            l.createElement(
-              "div",
-              { className: i().TabHeader },
-              e.labels.map((e, n) =>
-                l.createElement(
-                  "div",
-                  {
-                    key: "tab_" + n,
-                    className: (0, o.A)(i().Tab, a == n && i().Active),
-                    onClick: () => t(n),
-                  },
-                  (0, s.Wn)(e),
+          const [a, s] = (0, i.useState)(0);
+          return (0, t.jsxs)("div", {
+            className: l().TabbedMapComparison,
+            children: [
+              (0, t.jsx)("div", {
+                className: l().TabHeader,
+                children: e.labels.map((e, i) =>
+                  (0, t.jsx)(
+                    "div",
+                    {
+                      className: (0, n.A)(l().Tab, a == i && l().Active),
+                      onClick: () => s(i),
+                      children: (0, c.Wn)(e),
+                    },
+                    "tab_" + i,
+                  ),
                 ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: i().TabContents },
-              l.Children.map(e.children, (e, t) =>
-                l.createElement(
-                  "div",
-                  {
-                    key: "tabelement_" + t,
-                    className: (0, o.A)(
-                      i().TabContentContainer,
-                      t == a && i().Active,
-                    ),
-                  },
-                  e,
+              }),
+              (0, t.jsx)("div", {
+                className: l().TabContents,
+                children: i.Children.map(e.children, (e, s) =>
+                  (0, t.jsx)(
+                    "div",
+                    {
+                      className: (0, n.A)(
+                        l().TabContentContainer,
+                        s == a && l().Active,
+                      ),
+                      children: e,
+                    },
+                    "tabelement_" + s,
+                  ),
                 ),
-              ),
-            ),
-          );
+              }),
+            ],
+          });
         };
     },
-    84172: (e, a, t) => {
+    84172: (e, a, s) => {
       "use strict";
-      t.r(a),
-        t.d(a, {
-          DownloadIcon: () => B,
-          HotSpotArrowIcon: () => S,
-          InnateIconSmall: () => C,
-          PlayIcon: () => y,
-          default: () => D,
+      s.r(a),
+        s.d(a, {
+          DownloadIcon: () => C,
+          HotSpotArrowIcon: () => y,
+          InnateIconSmall: () => S,
+          PlayIcon: () => B,
+          default: () => P,
         });
-      var l = t(85608),
-        n = t(89506),
-        i = t(33706),
-        o = t(27866),
-        r = t(68446),
-        s = t(7552),
-        c = t(73202),
-        m = t(35927),
-        p = t(21384),
-        _ = t(56698),
-        d = t(47202),
-        g = t(36305),
-        h = t(59387),
-        E = t.n(h),
-        N = t(61840),
-        u = t(54159),
-        T = t(82101),
-        v = t(85286),
-        L = t.n(v),
-        I = t(4665),
-        b = t(95224);
-      const y = () =>
-          s.createElement("div", {
-            className: E().ControlIcon,
-            style: { backgroundImage: `url( ${n.r.IMG_URL}/icons/play.svg )` },
-          }),
-        B = () =>
-          s.createElement("div", {
-            className: E().ControlIcon,
-            style: {
-              backgroundImage: `url( ${n.r.IMG_URL}/icons/download.svg )`,
-            },
+      var t = s(85608),
+        i = s(69500),
+        o = s(89506),
+        l = s(33706),
+        n = s(40045),
+        r = s(68446),
+        c = s(7552),
+        d = s(73202),
+        m = s(35927),
+        p = s(21384),
+        _ = s(70595),
+        h = s(47202),
+        g = s(36305),
+        x = s(59387),
+        j = s.n(x),
+        N = s(61840),
+        u = s(54159),
+        T = s(82101),
+        v = s(85286),
+        L = s.n(v),
+        I = s(4665),
+        b = s(95224);
+      const B = () =>
+          (0, i.jsx)("div", {
+            className: j().ControlIcon,
+            style: { backgroundImage: `url( ${o.r.IMG_URL}/icons/play.svg )` },
           }),
         C = () =>
-          s.createElement("div", {
-            className: (0, p.A)(E().InnateIconSmall, E().ControlIcon),
+          (0, i.jsx)("div", {
+            className: j().ControlIcon,
             style: {
-              backgroundImage: `url( ${n.r.IMG_URL}/icons/innate_icon_small.svg )`,
+              backgroundImage: `url( ${o.r.IMG_URL}/icons/download.svg )`,
             },
           }),
         S = () =>
-          s.createElement("div", {
-            className: (0, p.A)(E().HotSpotArrowIcon),
+          (0, i.jsx)("div", {
+            className: (0, p.A)(j().InnateIconSmall, j().ControlIcon),
             style: {
-              backgroundImage: `url( ${n.r.IMG_URL}/patch738/map_updates/map_icons/hotspot_arrow.svg )`,
+              backgroundImage: `url( ${o.r.IMG_URL}/icons/innate_icon_small.svg )`,
+            },
+          }),
+        y = () =>
+          (0, i.jsx)("div", {
+            className: (0, p.A)(j().HotSpotArrowIcon),
+            style: {
+              backgroundImage: `url( ${o.r.IMG_URL}/patch738/map_updates/map_icons/hotspot_arrow.svg )`,
             },
           });
       const w = (e) => {
-          const a = (0, s.useRef)(void 0);
+          const a = (0, c.useRef)(void 0);
           return e.video
-            ? s.createElement(
-                "video",
-                {
-                  className: (0, p.A)(e.additionalClassName),
-                  ref: a,
-                  muted: !0,
-                  autoPlay: !0,
-                  preload: "auto",
-                  loop: !0,
-                  playsInline: !0,
-                  poster: `${n.r.IMG_URL}${e.image}`,
-                },
-                s.createElement("source", {
-                  type: "video/webm",
-                  src: `${n.r.VIDEO_URL}${e.video}`,
-                }),
-              )
-            : s.createElement("img", {
+            ? (0, i.jsx)("video", {
                 className: (0, p.A)(e.additionalClassName),
-                src: `${n.r.IMG_URL}/` + e.image,
+                ref: a,
+                muted: !0,
+                autoPlay: !0,
+                preload: "auto",
+                loop: !0,
+                playsInline: !0,
+                poster: `${o.r.IMG_URL}${e.image}`,
+                children: (0, i.jsx)("source", {
+                  type: "video/webm",
+                  src: `${o.r.VIDEO_URL}${e.video}`,
+                }),
+              })
+            : (0, i.jsx)("img", {
+                className: (0, p.A)(e.additionalClassName),
+                src: `${o.r.IMG_URL}/` + e.image,
               });
         },
-        k = (e) =>
-          s.createElement(
-            "div",
-            {
-              style: { left: `${e.xPos}%`, top: `${e.yPos}%` },
-              className: (0, p.A)(E().HotSpot),
-              onClick: () => {
-                e.anchorRef.current.scrollIntoView({ behavior: "smooth" });
-              },
-              onMouseEnter: e.onMouseEnter,
-              onMouseLeave: e.onMouseLeave,
+        A = (e) =>
+          (0, i.jsxs)("div", {
+            style: { left: `${e.xPos}%`, top: `${e.yPos}%` },
+            className: (0, p.A)(j().HotSpot),
+            onClick: () => {
+              e.anchorRef.current.scrollIntoView({ behavior: "smooth" });
             },
-            s.createElement(
-              "div",
-              { className: E().HotSpotMarker },
-              s.createElement("img", {
-                className: (0, p.A)(E().HotSpotMarkerImage),
-                src:
-                  `${n.r.IMG_URL}/patch738/map_updates/map_icons/` +
-                  e.image +
-                  ".jpg",
+            onMouseEnter: e.onMouseEnter,
+            onMouseLeave: e.onMouseLeave,
+            children: [
+              (0, i.jsxs)("div", {
+                className: j().HotSpotMarker,
+                children: [
+                  (0, i.jsx)("img", {
+                    className: (0, p.A)(j().HotSpotMarkerImage),
+                    src:
+                      `${o.r.IMG_URL}/patch738/map_updates/map_icons/` +
+                      e.image +
+                      ".jpg",
+                  }),
+                  (0, i.jsx)(y, {}),
+                ],
               }),
-              s.createElement(S, null),
-            ),
-            s.createElement(
-              "div",
-              { className: E().HotSpotTooltip },
-              s.createElement(w, {
-                image: "patch738/map_updates/" + e.image + ".jpg",
-                additionalClassName: E().HotSpotTooltipImage,
+              (0, i.jsxs)("div", {
+                className: j().HotSpotTooltip,
+                children: [
+                  (0, i.jsx)(w, {
+                    image: "patch738/map_updates/" + e.image + ".jpg",
+                    additionalClassName: j().HotSpotTooltipImage,
+                  }),
+                  (0, i.jsxs)("div", {
+                    className: j().HotSpotTooltipTextContainer,
+                    children: [
+                      (0, i.jsx)("p", {
+                        className: (0, p.A)(
+                          j().HotSpotTooltipTitle,
+                          j().LabelFont,
+                          j().LabelMedium,
+                        ),
+                        children: (0, n.Wn)(e.title),
+                      }),
+                      (0, i.jsx)("p", {
+                        className: (0, p.A)(
+                          j().HotSpotTooltipDescription,
+                          j().BodyFont,
+                          j().BodySmall,
+                        ),
+                        children: (0, n.Wn)(e.description),
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              s.createElement(
-                "div",
-                { className: E().HotSpotTooltipTextContainer },
-                s.createElement(
-                  "p",
-                  {
-                    className: (0, p.A)(
-                      E().HotSpotTooltipTitle,
-                      E().LabelFont,
-                      E().LabelMedium,
-                    ),
-                  },
-                  (0, o.Wn)(e.title),
-                ),
-                s.createElement(
-                  "p",
-                  {
-                    className: (0, p.A)(
-                      E().HotSpotTooltipDescription,
-                      E().BodyFont,
-                      E().BodySmall,
-                    ),
-                  },
-                  (0, o.Wn)(e.description),
-                ),
-              ),
-            ),
-          ),
-        A = (e) => {
-          const [a, t] = (0, s.useState)(!1),
-            l = () => {
-              t(!0);
+            ],
+          }),
+        k = (e) => {
+          const [a, s] = (0, c.useState)(!1),
+            t = () => {
+              s(!0);
             },
-            n = () => {
-              t(!1);
+            o = () => {
+              s(!1);
             };
-          return s.createElement(
-            "div",
-            {
-              className: (0, p.A)(
-                E().LinkedHotSpotContainer,
-                a ? E().LinkedHotSpotHovered : null,
-              ),
-            },
-            s.createElement(k, {
-              xPos: e.direXPos,
-              yPos: e.direYPos,
-              image: e.image,
-              title: e.title,
-              description: e.description,
-              anchorRef: e.anchorRef,
-              onMouseEnter: l,
-              onMouseLeave: n,
-            }),
-            s.createElement(k, {
-              xPos: e.radiantXPos,
-              yPos: e.radiantYPos,
-              image: e.image,
-              title: e.title,
-              description: e.description,
-              anchorRef: e.anchorRef,
-              onMouseEnter: l,
-              onMouseLeave: n,
-            }),
-          );
+          return (0, i.jsxs)("div", {
+            className: (0, p.A)(
+              j().LinkedHotSpotContainer,
+              a ? j().LinkedHotSpotHovered : null,
+            ),
+            children: [
+              (0, i.jsx)(A, {
+                xPos: e.direXPos,
+                yPos: e.direYPos,
+                image: e.image,
+                title: e.title,
+                description: e.description,
+                anchorRef: e.anchorRef,
+                onMouseEnter: t,
+                onMouseLeave: o,
+              }),
+              (0, i.jsx)(A, {
+                xPos: e.radiantXPos,
+                yPos: e.radiantYPos,
+                image: e.image,
+                title: e.title,
+                description: e.description,
+                anchorRef: e.anchorRef,
+                onMouseEnter: t,
+                onMouseLeave: o,
+              }),
+            ],
+          });
         };
       function f(e) {
         let a = "",
-          t = !0;
-        for (let l = 0; l < e.length; ++l)
-          "_" != e[l]
-            ? t
-              ? ((a += e[l].toUpperCase()), (t = !1))
-              : (a += e[l])
-            : (t = !0);
+          s = !0;
+        for (let t = 0; t < e.length; ++t)
+          "_" != e[t]
+            ? s
+              ? ((a += e[t].toUpperCase()), (s = !1))
+              : (a += e[t])
+            : (s = !0);
         return a;
       }
       (0, r.PA)(({ patchnotes: e, heroname: a }) => {
-        const t = i.B5.Get().getHeroList(),
-          l = t?.heroes.find((e) => e.name.replace("npc_dota_hero_", "") == a);
-        return l
-          ? s.createElement(
-              "div",
-              { className: (0, p.A)(E().HeroRework, E()[f(a)]) },
-              s.createElement(
-                "div",
-                { className: (0, p.A)(E().HeroDetails) },
-                s.createElement(
-                  "div",
-                  {
-                    className: (0, p.A)(
-                      E().HeroName,
-                      E().TitleFont,
-                      E().TitleSmall,
-                    ),
-                  },
-                  (0, o.Wn)(l.name_loc),
-                ),
-                s.createElement(
-                  "div",
-                  {
-                    className: (0, p.A)(
-                      E().ReworkDescription,
-                      E().DisplayFont,
-                      E().DisplayExtraSmall,
-                      E().LightGrayText,
-                    ),
-                  },
-                  (0, o.Wn)("#patch738_heroes_hero_rework_" + a),
-                ),
-                s.createElement(
-                  "div",
-                  { className: E().HeroImageContainer },
-                  s.createElement("div", { className: E().HeroShadow }),
-                  s.createElement(T.sG, {
-                    heroname: a,
-                    portraitClassName: E().HeroReworkPortrait,
-                    videoClassName: E().HeroReworkPortraitVideo,
-                  }),
-                ),
-              ),
-              s.createElement(
-                "div",
-                { className: E().HeroReworkPatchNotes },
-                s.createElement(N.fX, {
-                  patchnotes: e,
-                  heroname: a,
-                  heroClassName: E().HeroReworkPatchNotesInner,
+        const s = l.B5.Get().getHeroList(),
+          t = s?.heroes.find((e) => e.name.replace("npc_dota_hero_", "") == a);
+        return t
+          ? (0, i.jsxs)("div", {
+              className: (0, p.A)(j().HeroRework, j()[f(a)]),
+              children: [
+                (0, i.jsxs)("div", {
+                  className: (0, p.A)(j().HeroDetails),
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: (0, p.A)(
+                        j().HeroName,
+                        j().TitleFont,
+                        j().TitleSmall,
+                      ),
+                      children: (0, n.Wn)(t.name_loc),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, p.A)(
+                        j().ReworkDescription,
+                        j().DisplayFont,
+                        j().DisplayExtraSmall,
+                        j().LightGrayText,
+                      ),
+                      children: (0, n.Wn)("#patch738_heroes_hero_rework_" + a),
+                    }),
+                    (0, i.jsxs)("div", {
+                      className: j().HeroImageContainer,
+                      children: [
+                        (0, i.jsx)("div", { className: j().HeroShadow }),
+                        (0, i.jsx)(T.sG, {
+                          heroname: a,
+                          portraitClassName: j().HeroReworkPortrait,
+                          videoClassName: j().HeroReworkPortraitVideo,
+                        }),
+                      ],
+                    }),
+                  ],
                 }),
-              ),
-            )
+                (0, i.jsx)("div", {
+                  className: j().HeroReworkPatchNotes,
+                  children: (0, i.jsx)(N.fX, {
+                    patchnotes: e,
+                    heroname: a,
+                    heroClassName: j().HeroReworkPatchNotesInner,
+                  }),
+                }),
+              ],
+            })
           : null;
       });
-      const x = (e) => {
+      const W = (e) => {
           if (!e.special.heading_loc) return null;
           let a = e.special.values_float.map((e, a) =>
-              s.createElement(
+              (0, i.jsx)(
                 "span",
-                { key: a, className: E().SingleValue },
-                (0, u.F)(e),
+                { className: j().SingleValue, children: (0, u.F)(e) },
+                a,
               ),
             ),
-            t = !1,
-            l = null;
+            s = !1,
+            t = null;
           return (
             "+" == e.special.heading_loc[0]
-              ? ((l = e.special.heading_loc.slice(1)), (t = !0))
-              : (l = e.special.heading_loc),
-            "$" == l[0] && (l = "#dota_ability_variable_" + l.slice(1)),
-            t
-              ? s.createElement(
-                  "div",
-                  { className: E().Stat },
-                  "+ ",
-                  a,
-                  " ",
-                  (0, o.Wn)(l),
-                )
-              : s.createElement(
-                  "div",
-                  { className: E().Stat },
-                  (0, o.Wn)(l),
-                  " ",
-                  a,
-                )
+              ? ((t = e.special.heading_loc.slice(1)), (s = !0))
+              : (t = e.special.heading_loc),
+            "$" == t[0] && (t = "#dota_ability_variable_" + t.slice(1)),
+            s
+              ? (0, i.jsxs)("div", {
+                  className: j().Stat,
+                  children: ["+ ", a, " ", (0, n.Wn)(t)],
+                })
+              : (0, i.jsxs)("div", {
+                  className: j().Stat,
+                  children: [(0, n.Wn)(t), " ", a],
+                })
           );
         },
-        W =
-          ((0, r.PA)(({ name: e, components: a, recipeCost: t }) => {
-            const l = i.B5.Get().getItemList(),
-              r = l?.itemabilities.find((a) => a.name == e),
-              c = i.B5.Get().getItemData(r?.id);
+        R =
+          ((0, r.PA)(({ name: e, components: a, recipeCost: s }) => {
+            const t = l.B5.Get().getItemList(),
+              r = t?.itemabilities.find((a) => a.name == e),
+              c = l.B5.Get().getItemData(r?.id);
             if (!c) return null;
-            let m = c.desc_loc;
+            let d = c.desc_loc;
             c.special_values.forEach((e) => {
               let a =
                 e.values_float.length > 0 ? (0, u.F)(e.values_float[0]) : "0";
-              (m = m.replace("%" + e.name + "%", a)),
-                (m = m.replace("%" + e.name.toLowerCase() + "%", a));
+              (d = d.replace("%" + e.name + "%", a)),
+                (d = d.replace("%" + e.name.toLowerCase() + "%", a));
             }),
-              (m = m.replace(/\%\%/g, "%"));
-            let _ = c.special_values?.map((e, a) =>
-                s.createElement(x, { key: a, special: e }),
+              (d = d.replace(/\%\%/g, "%"));
+            let m = c.special_values?.map((e, a) =>
+                (0, i.jsx)(W, { special: e }, a),
               ),
-              d = c.name.replace("item_", ""),
-              g = c.item_cost,
-              h =
+              _ = c.name.replace("item_", ""),
+              h = c.item_cost,
+              g =
                 c.item_neutral_tier >= 0 && c.item_neutral_tier < 5
                   ? c.item_neutral_tier + 1
                   : -1,
-              N = E()["Tier" + h],
-              T = c.cooldowns.reduce((e, a) => e + a) > 0,
-              v = c.mana_costs.reduce((e, a) => e + a) > 0,
-              L =
+              x = j()["Tier" + g],
+              N = c.cooldowns.reduce((e, a) => e + a) > 0,
+              T = c.mana_costs.reduce((e, a) => e + a) > 0,
+              v =
                 !!(c.health_costs && c.health_costs.length > 0) &&
                 c.health_costs.reduce((e, a) => e + a) > 0,
-              I = a
+              L = a
                 ? a.map((e, a) =>
-                    s.createElement("img", {
-                      key: a,
-                      className: E().RecipeComponentImage,
-                      src: `${n.r.IMG_URL}/items/${e}.png`,
-                    }),
+                    (0, i.jsx)(
+                      "img",
+                      {
+                        className: j().RecipeComponentImage,
+                        src: `${o.r.IMG_URL}/items/${e}.png`,
+                      },
+                      a,
+                    ),
                   )
                 : [];
-            return s.createElement(
-              "div",
-              { className: E().GameItemDetails },
-              s.createElement(
-                "div",
-                { className: E().Header },
-                s.createElement("img", {
-                  className: E().ItemImage,
-                  src: `${n.r.IMG_URL}/items/${d}.png`,
-                }),
-                s.createElement(
-                  "div",
-                  { className: E().HeaderText },
-                  s.createElement(
-                    "div",
-                    {
-                      className: (0, p.A)(
-                        E().ItemName,
-                        E().TitleFont,
-                        E().TitleExtraSmall,
-                      ),
-                    },
-                    c.name_loc,
-                  ),
-                  g > 0 &&
-                    s.createElement(
-                      "div",
-                      {
-                        className: (0, p.A)(
-                          E().GoldPrice,
-                          E().LabelFont,
-                          E().LabelMedium,
-                        ),
-                      },
-                      s.createElement("img", {
-                        className: E().GoldIcon,
-                        src: `${n.r.IMG_URL}/icons/gold.png`,
-                      }),
-                      g,
-                    ),
-                  h > 0 &&
-                    s.createElement(
-                      "div",
-                      { className: (0, p.A)(E().NeutralItemTier, N) },
-                      (0, o.Wn)("#neutral_item_tier", h),
-                    ),
-                ),
-              ),
-              s.createElement(
-                "div",
-                { className: E().Body },
-                s.createElement("p", null, "New item"),
-                s.createElement("div", { className: E().Stats }, _),
-                m &&
-                  s.createElement(
-                    "div",
-                    { className: E().DescriptionContainer },
-                    s.createElement("div", {
-                      className: E().Description,
-                      dangerouslySetInnerHTML: { __html: m },
+            return (0, i.jsxs)("div", {
+              className: j().GameItemDetails,
+              children: [
+                (0, i.jsxs)("div", {
+                  className: j().Header,
+                  children: [
+                    (0, i.jsx)("img", {
+                      className: j().ItemImage,
+                      src: `${o.r.IMG_URL}/items/${_}.png`,
                     }),
-                    (T || v || L) &&
-                      s.createElement(
-                        "div",
-                        { className: (0, p.A)(E().DescriptionHeader) },
-                        v &&
-                          s.createElement(
-                            "div",
-                            { className: E().ManaContainer },
-                            s.createElement("div", { className: E().ManaIcon }),
-                            s.createElement(
-                              "div",
-                              { className: E().ManaText },
-                              c.mana_costs.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, u.F)(e),
-                              ),
-                            ),
+                    (0, i.jsxs)("div", {
+                      className: j().HeaderText,
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: (0, p.A)(
+                            j().ItemName,
+                            j().TitleFont,
+                            j().TitleExtraSmall,
                           ),
-                        L &&
-                          s.createElement(
-                            "div",
-                            { className: E().HealthContainer },
-                            s.createElement("div", {
-                              className: E().HealthIcon,
+                          children: c.name_loc,
+                        }),
+                        h > 0 &&
+                          (0, i.jsxs)("div", {
+                            className: (0, p.A)(
+                              j().GoldPrice,
+                              j().LabelFont,
+                              j().LabelMedium,
+                            ),
+                            children: [
+                              (0, i.jsx)("img", {
+                                className: j().GoldIcon,
+                                src: `${o.r.IMG_URL}/icons/gold.png`,
+                              }),
+                              h,
+                            ],
+                          }),
+                        g > 0 &&
+                          (0, i.jsx)("div", {
+                            className: (0, p.A)(j().NeutralItemTier, x),
+                            children: (0, n.Wn)("#neutral_item_tier", g),
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, i.jsxs)("div", {
+                  className: j().Body,
+                  children: [
+                    (0, i.jsx)("p", { children: "New item" }),
+                    (0, i.jsx)("div", { className: j().Stats, children: m }),
+                    d &&
+                      (0, i.jsxs)("div", {
+                        className: j().DescriptionContainer,
+                        children: [
+                          (0, i.jsx)("div", {
+                            className: j().Description,
+                            dangerouslySetInnerHTML: { __html: d },
+                          }),
+                          (N || T || v) &&
+                            (0, i.jsxs)("div", {
+                              className: (0, p.A)(j().DescriptionHeader),
+                              children: [
+                                T &&
+                                  (0, i.jsxs)("div", {
+                                    className: j().ManaContainer,
+                                    children: [
+                                      (0, i.jsx)("div", {
+                                        className: j().ManaIcon,
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: j().ManaText,
+                                        children: c.mana_costs.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, u.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                v &&
+                                  (0, i.jsxs)("div", {
+                                    className: j().HealthContainer,
+                                    children: [
+                                      (0, i.jsx)("div", {
+                                        className: j().HealthIcon,
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: j().HealthText,
+                                        children: c.health_costs.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, u.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                N &&
+                                  (0, i.jsxs)("div", {
+                                    className: j().CooldownContainer,
+                                    children: [
+                                      (0, i.jsx)("div", {
+                                        className: j().CooldownIcon,
+                                        style: {
+                                          backgroundImage: `url( ${o.r.IMG_URL}icons/cooldown.png )`,
+                                        },
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: j().CooldownText,
+                                        children: c.cooldowns.map(
+                                          (e, a) =>
+                                            (a > 0 ? " / " : "") + (0, u.F)(e),
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                              ],
                             }),
-                            s.createElement(
-                              "div",
-                              { className: E().HealthText },
-                              c.health_costs.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, u.F)(e),
-                              ),
-                            ),
-                          ),
-                        T &&
-                          s.createElement(
-                            "div",
-                            { className: E().CooldownContainer },
-                            s.createElement("div", {
-                              className: E().CooldownIcon,
-                              style: {
-                                backgroundImage: `url( ${n.r.IMG_URL}icons/cooldown.png )`,
-                              },
-                            }),
-                            s.createElement(
-                              "div",
-                              { className: E().CooldownText },
-                              c.cooldowns.map(
-                                (e, a) => (a > 0 ? " / " : "") + (0, u.F)(e),
-                              ),
-                            ),
-                          ),
-                      ),
-                  ),
-              ),
-              I.length > 0 &&
-                s.createElement(
-                  "div",
-                  { className: E().Recipe },
-                  s.createElement(
-                    "p",
-                    {
-                      className: (0, p.A)(
-                        E().RecipeLabel,
-                        E().LabelFont,
-                        E().LabelSmall,
-                        E().LightGrayText,
-                      ),
-                    },
-                    " ",
-                    (0, o.Wn)("#patch738_recipe"),
-                    " ",
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: E().RecipeImagesContainer },
-                    I,
-                    t &&
-                      t > 0 &&
-                      s.createElement(
-                        "div",
-                        { className: E().RecipeCost },
-                        " + ",
-                        t,
-                        " ",
-                      ),
-                    t &&
-                      t > 0 &&
-                      s.createElement("img", {
-                        className: E().RecipeComponentImage,
-                        src: `${n.r.IMG_URL}/items/recipe.png`,
+                        ],
                       }),
-                  ),
-                ),
-            );
+                  ],
+                }),
+                L.length > 0 &&
+                  (0, i.jsxs)("div", {
+                    className: j().Recipe,
+                    children: [
+                      (0, i.jsxs)("p", {
+                        className: (0, p.A)(
+                          j().RecipeLabel,
+                          j().LabelFont,
+                          j().LabelSmall,
+                          j().LightGrayText,
+                        ),
+                        children: [" ", (0, n.Wn)("#patch738_recipe"), " "],
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: j().RecipeImagesContainer,
+                        children: [
+                          L,
+                          s &&
+                            s > 0 &&
+                            (0, i.jsxs)("div", {
+                              className: j().RecipeCost,
+                              children: [" + ", s, " "],
+                            }),
+                          s &&
+                            s > 0 &&
+                            (0, i.jsx)("img", {
+                              className: j().RecipeComponentImage,
+                              src: `${o.r.IMG_URL}/items/recipe.png`,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            });
           }),
           (e) =>
-            s.createElement(
-              "div",
-              {
-                className: e
-                  ? (0, p.A)(E().SectionDivider, e)
-                  : (0, p.A)(E().SectionDivider),
-              },
-              s.createElement("div", { className: E().Pattern }),
-              s.createElement("div", { className: E().Overlay }),
-              s.createElement("div", { className: E().TopDash }),
-              s.createElement("div", { className: E().BottomDash }),
-            )),
-        R = () =>
-          s.createElement(
-            "div",
-            { className: E().SubsectionDivider },
-            s.createElement("div", { className: E().TopDash }),
-            s.createElement("div", { className: E().Background }),
-          );
-      let H = class extends s.Component {
-        parallaxContainerRef = s.createRef();
-        videoRef = s.createRef();
-        riverRef = s.createRef();
-        wisdomRef = s.createRef();
-        neutralsRef = s.createRef();
-        roshanRef = s.createRef();
-        tormentorRef = s.createRef();
-        lotusRef = s.createRef();
+            (0, i.jsxs)("div", {
+              className: e
+                ? (0, p.A)(j().SectionDivider, e)
+                : (0, p.A)(j().SectionDivider),
+              children: [
+                (0, i.jsx)("div", { className: j().Pattern }),
+                (0, i.jsx)("div", { className: j().Overlay }),
+                (0, i.jsx)("div", { className: j().TopDash }),
+                (0, i.jsx)("div", { className: j().BottomDash }),
+              ],
+            })),
+        H = () =>
+          (0, i.jsxs)("div", {
+            className: j().SubsectionDivider,
+            children: [
+              (0, i.jsx)("div", { className: j().TopDash }),
+              (0, i.jsx)("div", { className: j().Background }),
+            ],
+          });
+      let D = class extends c.Component {
+        parallaxContainerRef = c.createRef();
+        videoRef = c.createRef();
+        riverRef = c.createRef();
+        wisdomRef = c.createRef();
+        neutralsRef = c.createRef();
+        roshanRef = c.createRef();
+        tormentorRef = c.createRef();
+        lotusRef = c.createRef();
         constructor(e) {
           super(e),
             (this.state = {
@@ -789,1417 +774,1351 @@
           let a = e.desc_loc;
           return (
             e.special_values.forEach((e) => {
-              let t =
+              let s =
                 e.values_float.length > 0 ? (0, u.F)(e.values_float[0]) : "0";
-              (a = a.replace("%" + e.name + "%", t)),
-                (a = a.replace("%" + e.name.toLowerCase() + "%", t));
+              (a = a.replace("%" + e.name + "%", s)),
+                (a = a.replace("%" + e.name.toLowerCase() + "%", s));
             }),
             (a = a.replace(/\%\%/g, "%")),
             (a = a.replace(/<h2>/g, "<b>")),
             (a = a.replace(/<\/h2>/g, "</b>")),
             (a = a.replace(/<h1>/g, "<b>")),
             (a = a.replace(/<\/h1>/g, "</b>\n\n")),
-            (0, o.Wn)(a)
+            (0, n.Wn)(a)
           );
         }
         render() {
-          const e = _.o.getPatchNotes("7.38", n.r.LANGUAGE);
-          let a = (0, m.ww)((0, m.sf)(n.r.LANGUAGE));
+          const e = _.o.getPatchNotes("7.38", o.r.LANGUAGE);
+          let a = (0, m.ww)((0, m.sf)(o.r.LANGUAGE));
           "zh-cn" === a ? (a = "zh-Hans") : "zh-tw" === a && (a = "zh-Hant");
-          let t = "patch738_logo_en";
+          let s = "patch738_logo_en";
           return (
-            "schinese" == n.r.LANGUAGE && (t = "patch738_logo_cn"),
-            s.createElement(
-              "div",
-              { id: "Patch738", className: E().Patch738 },
-              s.createElement(
-                c.mg,
-                null,
-                s.createElement(
-                  "title",
-                  null,
-                  (0, o.Wn)("#patch738_website_title"),
-                ),
-              ),
-              s.createElement(
-                "div",
-                {
+            "schinese" == o.r.LANGUAGE && (s = "patch738_logo_cn"),
+            (0, i.jsxs)("div", {
+              id: "Patch738",
+              className: j().Patch738,
+              children: [
+                (0, i.jsx)(d.mg, {
+                  children: (0, i.jsx)("title", {
+                    children: (0, n.Wn)("#patch738_website_title"),
+                  }),
+                }),
+                (0, i.jsxs)("div", {
                   ref: this.parallaxContainerRef,
-                  className: (0, p.A)(E().PageContainer, E().Parallax),
-                },
-                s.createElement(d.A, { bOverlapping: !0 }),
-                s.createElement(
-                  "div",
-                  {
-                    id: "HeaderSection",
-                    className: (0, p.A)(E().HeaderSection),
-                  },
-                  s.createElement(w, {
-                    image: "patch738/map_updates/new_map.jpg",
-                    video: "patch738/patch738_header.mp4",
-                    additionalClassName: E().MapHeaderImage,
-                  }),
-                  s.createElement(
-                    "div",
-                    { className: E().HeaderTextSection },
-                    s.createElement(
-                      "p",
-                      { className: (0, p.A)(E().TitleFont, E().TitleSmall) },
-                      (0, o.Wn)("#patch738_website_subheader"),
-                    ),
-                    s.createElement(
-                      "p",
-                      {
-                        className: (0, p.A)(
-                          E().WebsiteTitle,
-                          E().TitleFont,
-                          E().TitleExtraLarge,
-                        ),
-                      },
-                      (0, o.Wn)("#patch738_website_title"),
-                    ),
-                    s.createElement(
-                      "p",
-                      {
-                        className: (0, p.A)(
-                          E().WebsiteIntro,
-                          E().DisplayFont,
-                          E().DisplayMedium,
-                        ),
-                      },
-                      (0, o.Wn)("#patch738_website_introduction"),
-                    ),
-                  ),
-                ),
-                W(),
-                s.createElement(
-                  "div",
-                  {
-                    id: "MapSection",
-                    className: (0, p.A)(E().WebsiteSection, E().MapSection),
-                  },
-                  s.createElement(w, {
-                    image: "patch738/map_updates/new_map_art_background.png",
-                    additionalClassName: E().MapBackgroundImage,
-                  }),
-                  s.createElement(
-                    "div",
-                    { className: E().WebsiteSectionInner },
-                    s.createElement(
-                      "div",
-                      { className: E().WebsiteSectionHeader },
-                      s.createElement(
-                        "h2",
-                        {
-                          className: (0, p.A)(
-                            E().SectionHeaderLabel,
-                            E().TitleFont,
-                            E().TitleExtraLarge,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_map_title"),
-                      ),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().SectionDescriptionLabel,
-                            E().DisplayFont,
-                            E().DisplayMedium,
-                            E().LightGrayText,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_map_introduction"),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: E().NewMapImageContainer },
-                      s.createElement(w, {
-                        image: "patch738/map_updates/new_map_art.png",
-                        additionalClassName: E().NewMapImage,
-                      }),
-                      s.createElement(A, {
-                        direXPos: 29.6,
-                        direYPos: 23.8,
-                        radiantXPos: 78.2,
-                        radiantYPos: 56.5,
-                        image: "lotus_pool",
-                        title: "#patch738_map_majorchanges_lotus_title",
-                        description:
-                          "#patch738_map_majorchanges_lotus_description",
-                        anchorRef: this.lotusRef,
-                      }),
-                      s.createElement(A, {
-                        direXPos: 32.4,
-                        direYPos: 15.2,
-                        radiantXPos: 79,
-                        radiantYPos: 70.4,
-                        image: "tormentor",
-                        title: "#patch738_map_majorchanges_tormentor_title",
-                        description:
-                          "#patch738_map_majorchanges_tormentor_description",
-                        anchorRef: this.tormentorRef,
-                      }),
-                      s.createElement(A, {
-                        direXPos: 41.5,
-                        direYPos: 28.5,
-                        radiantXPos: 60.2,
-                        radiantYPos: 46.8,
-                        image: "roshan",
-                        title: "#patch738_map_majorchanges_roshan_title",
-                        description:
-                          "#patch738_map_majorchanges_roshan_description",
-                        anchorRef: this.roshanRef,
-                      }),
-                      s.createElement(A, {
-                        direXPos: 49.3,
-                        direYPos: 15.5,
-                        radiantXPos: 48.4,
-                        radiantYPos: 74.5,
-                        image: "creeps",
-                        title: "#patch738_map_majorchanges_creeps_title",
-                        description:
-                          "#patch738_map_majorchanges_creeps_description",
-                        anchorRef: this.neutralsRef,
-                      }),
-                      s.createElement(A, {
-                        direXPos: 48.2,
-                        direYPos: 24.9,
-                        radiantXPos: 54.4,
-                        radiantYPos: 62.9,
-                        image: "river",
-                        title: "#patch738_map_majorchanges_river_title",
-                        description:
-                          "#patch738_map_majorchanges_river_description",
-                        anchorRef: this.riverRef,
-                      }),
-                      s.createElement(A, {
-                        direXPos: 76.2,
-                        direYPos: 39.7,
-                        radiantXPos: 26.1,
-                        radiantYPos: 35.1,
-                        image: "wisdom_shrine",
-                        title: "#patch738_map_majorchanges_wisdom_title",
-                        description:
-                          "#patch738_map_majorchanges_wisdom_description",
-                        anchorRef: this.wisdomRef,
-                      }),
-                    ),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: E().WebsiteSectionInner },
-                    R(),
-                    s.createElement(
-                      "div",
-                      {
-                        ref: this.riverRef,
-                        className: (0, p.A)(E().TextBlock, E().Narrow),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/map_updates/map_icons/river.jpg",
-                        additionalClassName: E().InlineHotSpotImage,
-                      }),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().BlockTitle,
-                            E().TitleFont,
-                            E().TitleLarge,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_map_majorchanges_river_title"),
-                      ),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().BlockDescription,
-                            E().BodyFont,
-                            E().BodyLarge,
-                            E().LightGrayText,
-                          ),
-                        },
-                        (0, o.Wn)(
-                          "#patch738_map_majorchanges_river_description",
-                        ),
-                      ),
-                    ),
-                    s.createElement(w, {
-                      image: "patch738/map_updates/river.jpg",
-                      video: "patch738/river.mp4",
-                      additionalClassName: E().MapUpdateImageBig,
+                  className: (0, p.A)(j().PageContainer, j().Parallax),
+                  children: [
+                    (0, i.jsx)(h.A, { bOverlapping: !0 }),
+                    (0, i.jsxs)("div", {
+                      id: "HeaderSection",
+                      className: (0, p.A)(j().HeaderSection),
+                      children: [
+                        (0, i.jsx)(w, {
+                          image: "patch738/map_updates/new_map.jpg",
+                          video: "patch738/patch738_header.mp4",
+                          additionalClassName: j().MapHeaderImage,
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: j().HeaderTextSection,
+                          children: [
+                            (0, i.jsx)("p", {
+                              className: (0, p.A)(
+                                j().TitleFont,
+                                j().TitleSmall,
+                              ),
+                              children: (0, n.Wn)(
+                                "#patch738_website_subheader",
+                              ),
+                            }),
+                            (0, i.jsx)("p", {
+                              className: (0, p.A)(
+                                j().WebsiteTitle,
+                                j().TitleFont,
+                                j().TitleExtraLarge,
+                              ),
+                              children: (0, n.Wn)("#patch738_website_title"),
+                            }),
+                            (0, i.jsx)("p", {
+                              className: (0, p.A)(
+                                j().WebsiteIntro,
+                                j().DisplayFont,
+                                j().DisplayMedium,
+                              ),
+                              children: (0, n.Wn)(
+                                "#patch738_website_introduction",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
                     }),
                     R(),
-                    s.createElement(
-                      "div",
-                      {
-                        ref: this.neutralsRef,
-                        className: (0, p.A)(E().TextBlock, E().Narrow),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/map_updates/map_icons/creeps.jpg",
-                        additionalClassName: E().InlineHotSpotImage,
-                      }),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().BlockTitle,
-                            E().TitleFont,
-                            E().TitleLarge,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_map_majorchanges_creeps_title"),
-                      ),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().BlockDescription,
-                            E().BodyFont,
-                            E().BodyLarge,
-                            E().LightGrayText,
-                          ),
-                        },
-                        (0, o.Wn)(
-                          "#patch738_map_majorchanges_creeps_description",
-                        ),
-                      ),
-                    ),
-                    s.createElement(w, {
-                      image: "patch738/map_updates/creeps.png",
-                      additionalClassName: E().CreepsImage,
-                    }),
-                    R(),
-                    s.createElement(
-                      "div",
-                      {
-                        ref: this.wisdomRef,
-                        className: (0, p.A)(
-                          E().TextImageBlockHorizontal,
-                          E().Flipped,
-                          E().WideImage,
-                        ),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/map_updates/wisdom_shrine.jpg",
-                        video: "patch738/wisdom_shrine.mp4",
-                        additionalClassName: E().MapUpdateImage,
-                      }),
-                      s.createElement(
-                        "div",
-                        { className: E().TextBlock },
-                        s.createElement(w, {
+                    (0, i.jsxs)("div", {
+                      id: "MapSection",
+                      className: (0, p.A)(j().WebsiteSection, j().MapSection),
+                      children: [
+                        (0, i.jsx)(w, {
                           image:
-                            "patch738/map_updates/map_icons/wisdom_shrine.jpg",
-                          additionalClassName: E().InlineHotSpotImage,
+                            "patch738/map_updates/new_map_art_background.png",
+                          additionalClassName: j().MapBackgroundImage,
                         }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockTitle,
-                              E().TitleFont,
-                              E().TitleMedium,
-                            ),
-                          },
-                          (0, o.Wn)("#patch738_map_majorchanges_wisdom_title"),
-                        ),
-                        s.createElement("div", { className: E().Dash }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockDescription,
-                              E().BodyFont,
-                              E().BodyLarge,
-                              E().LightGrayText,
-                            ),
-                          },
-                          (0, o.Wn)(
-                            "#patch738_map_majorchanges_wisdom_description",
-                          ),
-                        ),
-                      ),
-                    ),
-                    R(),
-                    s.createElement(
-                      "div",
-                      {
-                        ref: this.lotusRef,
-                        className: (0, p.A)(
-                          E().TextImageBlockHorizontal,
-                          E().WideImage,
-                        ),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/map_updates/lotus_pool.jpg",
-                        video: "patch738/lotus_pool.mp4",
-                        additionalClassName: E().MapUpdateImage,
-                      }),
-                      s.createElement(
-                        "div",
-                        { className: E().TextBlock },
-                        s.createElement(w, {
-                          image:
-                            "patch738/map_updates/map_icons/lotus_pool.jpg",
-                          additionalClassName: E().InlineHotSpotImage,
-                        }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockTitle,
-                              E().TitleFont,
-                              E().TitleMedium,
-                            ),
-                          },
-                          (0, o.Wn)("#patch738_map_majorchanges_lotus_title"),
-                        ),
-                        s.createElement("div", { className: E().Dash }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockDescription,
-                              E().BodyFont,
-                              E().BodyLarge,
-                              E().LightGrayText,
-                            ),
-                          },
-                          (0, o.Wn)(
-                            "#patch738_map_majorchanges_lotus_description",
-                          ),
-                        ),
-                      ),
-                    ),
-                    R(),
-                    s.createElement(
-                      "div",
-                      {
-                        ref: this.roshanRef,
-                        className: (0, p.A)(
-                          E().TextImageBlockHorizontal,
-                          E().Flipped,
-                          E().WideImage,
-                        ),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/map_updates/roshan.jpg",
-                        video: "patch738/roshan.mp4",
-                        additionalClassName: E().MapUpdateImage,
-                      }),
-                      s.createElement(
-                        "div",
-                        { className: E().TextBlock },
-                        s.createElement(w, {
-                          image: "patch738/map_updates/map_icons/roshan.jpg",
-                          additionalClassName: E().InlineHotSpotImage,
-                        }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockTitle,
-                              E().TitleFont,
-                              E().TitleMedium,
-                            ),
-                          },
-                          (0, o.Wn)("#patch738_map_majorchanges_roshan_title"),
-                        ),
-                        s.createElement("div", { className: E().Dash }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockDescription,
-                              E().BodyFont,
-                              E().BodyLarge,
-                              E().LightGrayText,
-                            ),
-                          },
-                          (0, o.Wn)(
-                            "#patch738_map_majorchanges_roshan_description",
-                          ),
-                        ),
-                      ),
-                    ),
-                    R(),
-                    s.createElement(
-                      "div",
-                      {
-                        ref: this.tormentorRef,
-                        className: (0, p.A)(
-                          E().TextImageBlockHorizontal,
-                          E().WideImage,
-                        ),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/map_updates/tormentor.jpg",
-                        video: "patch738/tormentor.mp4",
-                        additionalClassName: E().MapUpdateImage,
-                      }),
-                      s.createElement(
-                        "div",
-                        { className: E().TextBlock },
-                        s.createElement(w, {
-                          image: "patch738/map_updates/map_icons/tormentor.jpg",
-                          additionalClassName: E().InlineHotSpotImage,
-                        }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockTitle,
-                              E().TitleFont,
-                              E().TitleMedium,
-                            ),
-                          },
-                          (0, o.Wn)(
-                            "#patch738_map_majorchanges_tormentor_title",
-                          ),
-                        ),
-                        s.createElement("div", { className: E().Dash }),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockDescription,
-                              E().BodyFont,
-                              E().BodyLarge,
-                              E().LightGrayText,
-                            ),
-                          },
-                          (0, o.Wn)(
-                            "#patch738_map_majorchanges_tormentor_description",
-                          ),
-                        ),
-                      ),
-                    ),
-                    R(),
-                    s.createElement(
-                      "div",
-                      { className: (0, p.A)(E().TextBlock, E().Narrow) },
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().BlockTitle,
-                            E().TitleFont,
-                            E().TitleMedium,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_map_majorchanges_otherchanges"),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: (0, p.A)(
-                          E().ComparisonContainer,
-                          E().Radiant,
-                        ),
-                      },
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().DisplayFont,
-                            E().DisplayMedium,
-                            E().CarouselGroupTitle,
-                          ),
-                        },
-                        (0, o.Wn)("#radiant"),
-                      ),
-                      s.createElement(
-                        b.U,
-                        { labels: ["1", "2", "3", "4", "5", "6", "7"] },
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/radiant/old/WisdomShrine_R.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/radiant/new/WisdomShrine_R.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/radiant/old/LotusPool_R.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/radiant/new/LotusPool_R.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/radiant/old/RoshPit_South.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/radiant/new/RoshPit_South.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/radiant/old/MapCorner_R.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/radiant/new/MapCorner_R.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/radiant/old/T1Gutter_R.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/radiant/new/T1Gutter_R.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/radiant/old/T2Approach_R.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/radiant/new/T2Approach_R.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/radiant/old/BaseCorner_R.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/radiant/new/BaseCorner_R.jpg",
-                          }),
-                        }),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: (0, p.A)(E().ComparisonContainer, E().Dire),
-                      },
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().DisplayFont,
-                            E().DisplayMedium,
-                            E().CarouselGroupTitle,
-                          ),
-                        },
-                        (0, o.Wn)("#dire"),
-                      ),
-                      s.createElement(
-                        b.U,
-                        { labels: ["1", "2", "3", "4", "5", "6", "7"] },
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/dire/old/WisdomShrine_D.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/dire/new/WisdomShrine_D.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/dire/old/LotusPool_D.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/dire/new/LotusPool_D.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/dire/old/RoshPit_North.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/dire/new/RoshPit_North.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/dire/old/MapCorner_D.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/dire/new/MapCorner_D.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/dire/old/T1Gutter_D.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/dire/new/T1Gutter_D.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/dire/old/T2Approach_D.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/dire/new/T2Approach_D.jpg",
-                          }),
-                        }),
-                        s.createElement(I.EW, {
-                          itemOne: s.createElement(b.v, {
-                            is_new: !0,
-                            image:
-                              "patch738/comparison/dire/old/BaseCorner_D.jpg",
-                          }),
-                          itemTwo: s.createElement(b.v, {
-                            is_new: !1,
-                            image:
-                              "patch738/comparison/dire/new/BaseCorner_D.jpg",
-                          }),
-                        }),
-                      ),
-                    ),
-                  ),
-                ),
-                W(),
-                s.createElement(
-                  "div",
-                  {
-                    id: "NeutralsSection",
-                    className: (0, p.A)(
-                      E().WebsiteSection,
-                      E().NeutralsSection,
-                    ),
-                  },
-                  s.createElement(w, {
-                    image: "patch738/neutrals/neutrals_background.png",
-                    additionalClassName: E().NeutralsBackgroundImage,
-                  }),
-                  s.createElement(
-                    "div",
-                    { className: E().WebsiteSectionInner },
-                    s.createElement(
-                      "div",
-                      { className: E().WebsiteSectionHeader },
-                      s.createElement(
-                        "h2",
-                        {
-                          className: (0, p.A)(
-                            E().SectionHeaderLabel,
-                            E().TitleFont,
-                            E().TitleExtraLarge,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_neutrals_title"),
-                      ),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().SectionDescriptionLabel,
-                            E().DisplayFont,
-                            E().DisplayMedium,
-                            E().LightGrayText,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_neutrals_introduction"),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: (0, p.A)(
-                          E().TextImageBlockHorizontal,
-                          E().WideImage,
-                        ),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/neutrals/madstone.jpg",
-                        additionalClassName: E().NeutralsImage,
-                      }),
-                      s.createElement(
-                        "div",
-                        { className: E().TextBlock },
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockTitle,
-                              E().TitleFont,
-                              E().TitleMedium,
-                            ),
-                          },
-                          (0, o.Wn)("#patch738_neutrals_lumber_title"),
-                        ),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockDescription,
-                              E().BodyFont,
-                              E().BodyLarge,
-                              E().LightGrayText,
-                            ),
-                          },
-                          (0, o.Wn)("#patch738_neutrals_lumber_description"),
-                        ),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      {
-                        className: (0, p.A)(
-                          E().TextImageBlockHorizontal,
-                          E().Flipped,
-                          E().WideImage,
-                        ),
-                      },
-                      s.createElement(w, {
-                        image: "patch738/neutrals/crafting.jpg",
-                        additionalClassName: E().NeutralsImage,
-                      }),
-                      s.createElement(
-                        "div",
-                        { className: E().TextBlock },
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockTitle,
-                              E().TitleFont,
-                              E().TitleMedium,
-                            ),
-                          },
-                          (0, o.Wn)("#patch738_neutrals_crafting_title"),
-                        ),
-                        s.createElement(
-                          "p",
-                          {
-                            className: (0, p.A)(
-                              E().BlockDescription,
-                              E().BodyFont,
-                              E().BodyLarge,
-                              E().LightGrayText,
-                            ),
-                          },
-                          (0, o.Wn)("#patch738_neutrals_crafting_description"),
-                        ),
-                      ),
-                    ),
-                    R(),
-                    s.createElement(
-                      "div",
-                      { className: E().Grid_2 },
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/neutrals/neutrals_timings.jpg",
-                          additionalClassName: E().NeutralsImage,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
-                              ),
-                            },
-                            (0, o.Wn)("#patch738_neutrals_timings_title"),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
-                              ),
-                            },
-                            (0, o.Wn)("#patch738_neutrals_timings_description"),
-                          ),
-                        ),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/neutrals/neutrals_tab.jpg",
-                          additionalClassName: E().NeutralsImage,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
-                              ),
-                            },
-                            (0, o.Wn)("#patch738_neutrals_tab_title"),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
-                              ),
-                            },
-                            (0, o.Wn)("#patch738_neutrals_tab_description"),
-                          ),
-                        ),
-                      ),
-                    ),
-                    R(),
-                    s.createElement(
-                      "div",
-                      { className: E().WebsiteSectionHeader },
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().SectionDescriptionLabel,
-                            E().DisplayFont,
-                            E().DisplayMedium,
-                            E().LightGrayText,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_neutrals_changes_moreinfo"),
-                      ),
-                    ),
-                  ),
-                ),
-                W(),
-                s.createElement(
-                  "div",
-                  {
-                    id: "QOLSection",
-                    className: (0, p.A)(E().WebsiteSection, E().QOLSection),
-                  },
-                  s.createElement(
-                    "div",
-                    { className: E().WebsiteSectionInner },
-                    s.createElement(
-                      "div",
-                      { className: E().WebsiteSectionHeader },
-                      s.createElement(
-                        "h2",
-                        {
-                          className: (0, p.A)(
-                            E().SectionHeaderLabel,
-                            E().TitleFont,
-                            E().TitleExtraLarge,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_qol_title"),
-                      ),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().SectionDescriptionLabel,
-                            E().DisplayFont,
-                            E().DisplayMedium,
-                            E().LightGrayText,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_qol_introduction"),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: E().Grid_3 },
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/qol/qol_rosh_timer.jpg",
-                          additionalClassName: E().QOLImage,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_roshan_timer_title",
-                            ),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_roshan_timer_description",
-                            ),
-                          ),
-                        ),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/qol/qol_mark_for_sell.jpg",
-                          additionalClassName: E().QOLImage,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_markforsell_title",
-                            ),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_markforsell_description",
-                            ),
-                          ),
-                        ),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/qol/qol_item_effects.jpg",
-                          additionalClassName: E().QOLImage,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_item_effects_title",
-                            ),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_item_effects_description",
-                            ),
-                          ),
-                          s.createElement(
-                            "div",
-                            { className: E().FXInfoButton },
-                            s.createElement(
-                              "p",
-                              {
-                                className: (0, p.A)(
-                                  E().LabelFont,
-                                  E().LabelSmall,
-                                  E().LightGrayText,
-                                  E().SeeListLabel,
-                                ),
-                              },
-                              (0, o.Wn)(
-                                "#patch738_qol_feature_item_effects_list_label",
-                              ),
-                            ),
-                            s.createElement(
-                              "div",
-                              { className: E().FXList },
-                              s.createElement(
-                                "p",
-                                {
+                        (0, i.jsxs)("div", {
+                          className: j().WebsiteSectionInner,
+                          children: [
+                            (0, i.jsxs)("div", {
+                              className: j().WebsiteSectionHeader,
+                              children: [
+                                (0, i.jsx)("h2", {
                                   className: (0, p.A)(
-                                    E().LabelFont,
-                                    E().LabelMedium,
-                                    E().LightGrayText,
-                                    E().TooltipHeader,
+                                    j().SectionHeaderLabel,
+                                    j().TitleFont,
+                                    j().TitleExtraLarge,
                                   ),
-                                },
-                                (0, o.Wn)(
-                                  "#patch738_qol_feature_item_effects_title",
-                                ),
-                              ),
-                              s.createElement(
-                                "div",
-                                { className: E().FXListColums },
-                                s.createElement(
-                                  "p",
-                                  {
-                                    className: (0, p.A)(
-                                      E().BodyFont,
-                                      E().BodyMedium,
-                                      E().LightGrayText,
-                                    ),
-                                  },
-                                  (0, o.Wn)(
-                                    "#patch738_qol_feature_item_effects_list_col1",
+                                  children: (0, n.Wn)("#patch738_map_title"),
+                                }),
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().SectionDescriptionLabel,
+                                    j().DisplayFont,
+                                    j().DisplayMedium,
+                                    j().LightGrayText,
                                   ),
-                                ),
-                                s.createElement(
-                                  "p",
-                                  {
-                                    className: (0, p.A)(
-                                      E().BodyFont,
-                                      E().BodyMedium,
-                                      E().LightGrayText,
-                                    ),
-                                  },
-                                  (0, o.Wn)(
-                                    "#patch738_qol_feature_item_effects_list_col2",
+                                  children: (0, n.Wn)(
+                                    "#patch738_map_introduction",
                                   ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: E().Grid_3 },
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/qol/qol_attribute_pips.jpg",
-                          additionalClassName: E().QOLImage,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_attributes_pips_title",
-                            ),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_attributes_pips_description",
-                            ),
-                          ),
-                        ),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/qol/qol_hud_timers.jpg",
-                          additionalClassName: E().QOLImage,
-                        }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
-                              ),
-                            },
-                            (0, o.Wn)("#patch738_qol_feature_hud_timers_title"),
-                          ),
-                          s.createElement(
-                            "div",
-                            { className: E().DotaPlusBadgeMobile },
-                            s.createElement("img", {
-                              src: `${n.r.IMG_URL}/icons/dota_plus.png`,
+                                }),
+                              ],
                             }),
-                            s.createElement(
-                              "p",
-                              {
-                                className: (0, p.A)(
-                                  E().LabelFont,
-                                  E().LabelSmall,
-                                ),
-                              },
-                              (0, o.Wn)("#dota_plus"),
-                            ),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
-                              className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
-                                E().LastOnMobile,
-                              ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_hud_timers_description",
-                            ),
-                          ),
-                          s.createElement(
-                            "div",
-                            { className: E().DotaPlusBadge },
-                            s.createElement("img", {
-                              src: `${n.r.IMG_URL}/icons/dota_plus.png`,
+                            (0, i.jsxs)("div", {
+                              className: j().NewMapImageContainer,
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image: "patch738/map_updates/new_map_art.png",
+                                  additionalClassName: j().NewMapImage,
+                                }),
+                                (0, i.jsx)(k, {
+                                  direXPos: 29.6,
+                                  direYPos: 23.8,
+                                  radiantXPos: 78.2,
+                                  radiantYPos: 56.5,
+                                  image: "lotus_pool",
+                                  title:
+                                    "#patch738_map_majorchanges_lotus_title",
+                                  description:
+                                    "#patch738_map_majorchanges_lotus_description",
+                                  anchorRef: this.lotusRef,
+                                }),
+                                (0, i.jsx)(k, {
+                                  direXPos: 32.4,
+                                  direYPos: 15.2,
+                                  radiantXPos: 79,
+                                  radiantYPos: 70.4,
+                                  image: "tormentor",
+                                  title:
+                                    "#patch738_map_majorchanges_tormentor_title",
+                                  description:
+                                    "#patch738_map_majorchanges_tormentor_description",
+                                  anchorRef: this.tormentorRef,
+                                }),
+                                (0, i.jsx)(k, {
+                                  direXPos: 41.5,
+                                  direYPos: 28.5,
+                                  radiantXPos: 60.2,
+                                  radiantYPos: 46.8,
+                                  image: "roshan",
+                                  title:
+                                    "#patch738_map_majorchanges_roshan_title",
+                                  description:
+                                    "#patch738_map_majorchanges_roshan_description",
+                                  anchorRef: this.roshanRef,
+                                }),
+                                (0, i.jsx)(k, {
+                                  direXPos: 49.3,
+                                  direYPos: 15.5,
+                                  radiantXPos: 48.4,
+                                  radiantYPos: 74.5,
+                                  image: "creeps",
+                                  title:
+                                    "#patch738_map_majorchanges_creeps_title",
+                                  description:
+                                    "#patch738_map_majorchanges_creeps_description",
+                                  anchorRef: this.neutralsRef,
+                                }),
+                                (0, i.jsx)(k, {
+                                  direXPos: 48.2,
+                                  direYPos: 24.9,
+                                  radiantXPos: 54.4,
+                                  radiantYPos: 62.9,
+                                  image: "river",
+                                  title:
+                                    "#patch738_map_majorchanges_river_title",
+                                  description:
+                                    "#patch738_map_majorchanges_river_description",
+                                  anchorRef: this.riverRef,
+                                }),
+                                (0, i.jsx)(k, {
+                                  direXPos: 76.2,
+                                  direYPos: 39.7,
+                                  radiantXPos: 26.1,
+                                  radiantYPos: 35.1,
+                                  image: "wisdom_shrine",
+                                  title:
+                                    "#patch738_map_majorchanges_wisdom_title",
+                                  description:
+                                    "#patch738_map_majorchanges_wisdom_description",
+                                  anchorRef: this.wisdomRef,
+                                }),
+                              ],
                             }),
-                            s.createElement(
-                              "p",
-                              {
-                                className: (0, p.A)(
-                                  E().LabelFont,
-                                  E().LabelSmall,
-                                ),
-                              },
-                              (0, o.Wn)("#dota_plus"),
-                            ),
-                          ),
-                        ),
-                      ),
-                      s.createElement(
-                        "div",
-                        { className: E().TextImageBlockVertical },
-                        s.createElement(w, {
-                          image: "patch738/qol/qol_backpack_grace.jpg",
-                          additionalClassName: E().QOLImage,
+                          ],
                         }),
-                        s.createElement(
-                          "div",
-                          { className: E().TextBlock },
-                          s.createElement(
-                            "p",
-                            {
+                        (0, i.jsxs)("div", {
+                          className: j().WebsiteSectionInner,
+                          children: [
+                            H(),
+                            (0, i.jsxs)("div", {
+                              ref: this.riverRef,
+                              className: (0, p.A)(j().TextBlock, j().Narrow),
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image:
+                                    "patch738/map_updates/map_icons/river.jpg",
+                                  additionalClassName: j().InlineHotSpotImage,
+                                }),
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().BlockTitle,
+                                    j().TitleFont,
+                                    j().TitleLarge,
+                                  ),
+                                  children: (0, n.Wn)(
+                                    "#patch738_map_majorchanges_river_title",
+                                  ),
+                                }),
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().BlockDescription,
+                                    j().BodyFont,
+                                    j().BodyLarge,
+                                    j().LightGrayText,
+                                  ),
+                                  children: (0, n.Wn)(
+                                    "#patch738_map_majorchanges_river_description",
+                                  ),
+                                }),
+                              ],
+                            }),
+                            (0, i.jsx)(w, {
+                              image: "patch738/map_updates/river.jpg",
+                              video: "patch738/river.mp4",
+                              additionalClassName: j().MapUpdateImageBig,
+                            }),
+                            H(),
+                            (0, i.jsxs)("div", {
+                              ref: this.neutralsRef,
+                              className: (0, p.A)(j().TextBlock, j().Narrow),
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image:
+                                    "patch738/map_updates/map_icons/creeps.jpg",
+                                  additionalClassName: j().InlineHotSpotImage,
+                                }),
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().BlockTitle,
+                                    j().TitleFont,
+                                    j().TitleLarge,
+                                  ),
+                                  children: (0, n.Wn)(
+                                    "#patch738_map_majorchanges_creeps_title",
+                                  ),
+                                }),
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().BlockDescription,
+                                    j().BodyFont,
+                                    j().BodyLarge,
+                                    j().LightGrayText,
+                                  ),
+                                  children: (0, n.Wn)(
+                                    "#patch738_map_majorchanges_creeps_description",
+                                  ),
+                                }),
+                              ],
+                            }),
+                            (0, i.jsx)(w, {
+                              image: "patch738/map_updates/creeps.png",
+                              additionalClassName: j().CreepsImage,
+                            }),
+                            H(),
+                            (0, i.jsxs)("div", {
+                              ref: this.wisdomRef,
                               className: (0, p.A)(
-                                E().BlockTitle,
-                                E().LabelFont,
-                                E().LabelExtraLarge,
+                                j().TextImageBlockHorizontal,
+                                j().Flipped,
+                                j().WideImage,
                               ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_backpack_grace_title",
-                            ),
-                          ),
-                          s.createElement(
-                            "p",
-                            {
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image:
+                                    "patch738/map_updates/wisdom_shrine.jpg",
+                                  video: "patch738/wisdom_shrine.mp4",
+                                  additionalClassName: j().MapUpdateImage,
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, i.jsx)(w, {
+                                      image:
+                                        "patch738/map_updates/map_icons/wisdom_shrine.jpg",
+                                      additionalClassName:
+                                        j().InlineHotSpotImage,
+                                    }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleMedium,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_wisdom_title",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("div", { className: j().Dash }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_wisdom_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            H(),
+                            (0, i.jsxs)("div", {
+                              ref: this.lotusRef,
                               className: (0, p.A)(
-                                E().BlockDescription,
-                                E().BodyFont,
-                                E().BodyLarge,
-                                E().LightGrayText,
+                                j().TextImageBlockHorizontal,
+                                j().WideImage,
                               ),
-                            },
-                            (0, o.Wn)(
-                              "#patch738_qol_feature_backpack_grace_description",
-                            ),
-                          ),
-                        ),
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image: "patch738/map_updates/lotus_pool.jpg",
+                                  video: "patch738/lotus_pool.mp4",
+                                  additionalClassName: j().MapUpdateImage,
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, i.jsx)(w, {
+                                      image:
+                                        "patch738/map_updates/map_icons/lotus_pool.jpg",
+                                      additionalClassName:
+                                        j().InlineHotSpotImage,
+                                    }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleMedium,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_lotus_title",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("div", { className: j().Dash }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_lotus_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            H(),
+                            (0, i.jsxs)("div", {
+                              ref: this.roshanRef,
+                              className: (0, p.A)(
+                                j().TextImageBlockHorizontal,
+                                j().Flipped,
+                                j().WideImage,
+                              ),
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image: "patch738/map_updates/roshan.jpg",
+                                  video: "patch738/roshan.mp4",
+                                  additionalClassName: j().MapUpdateImage,
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, i.jsx)(w, {
+                                      image:
+                                        "patch738/map_updates/map_icons/roshan.jpg",
+                                      additionalClassName:
+                                        j().InlineHotSpotImage,
+                                    }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleMedium,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_roshan_title",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("div", { className: j().Dash }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_roshan_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            H(),
+                            (0, i.jsxs)("div", {
+                              ref: this.tormentorRef,
+                              className: (0, p.A)(
+                                j().TextImageBlockHorizontal,
+                                j().WideImage,
+                              ),
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image: "patch738/map_updates/tormentor.jpg",
+                                  video: "patch738/tormentor.mp4",
+                                  additionalClassName: j().MapUpdateImage,
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, i.jsx)(w, {
+                                      image:
+                                        "patch738/map_updates/map_icons/tormentor.jpg",
+                                      additionalClassName:
+                                        j().InlineHotSpotImage,
+                                    }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleMedium,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_tormentor_title",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("div", { className: j().Dash }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_map_majorchanges_tormentor_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            H(),
+                            (0, i.jsx)("div", {
+                              className: (0, p.A)(j().TextBlock, j().Narrow),
+                              children: (0, i.jsx)("p", {
+                                className: (0, p.A)(
+                                  j().BlockTitle,
+                                  j().TitleFont,
+                                  j().TitleMedium,
+                                ),
+                                children: (0, n.Wn)(
+                                  "#patch738_map_majorchanges_otherchanges",
+                                ),
+                              }),
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: (0, p.A)(
+                                j().ComparisonContainer,
+                                j().Radiant,
+                              ),
+                              children: [
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().DisplayFont,
+                                    j().DisplayMedium,
+                                    j().CarouselGroupTitle,
+                                  ),
+                                  children: (0, n.Wn)("#radiant"),
+                                }),
+                                (0, i.jsxs)(b.U, {
+                                  labels: ["1", "2", "3", "4", "5", "6", "7"],
+                                  children: [
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/radiant/old/WisdomShrine_R.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/radiant/new/WisdomShrine_R.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/radiant/old/LotusPool_R.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/radiant/new/LotusPool_R.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/radiant/old/RoshPit_South.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/radiant/new/RoshPit_South.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/radiant/old/MapCorner_R.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/radiant/new/MapCorner_R.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/radiant/old/T1Gutter_R.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/radiant/new/T1Gutter_R.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/radiant/old/T2Approach_R.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/radiant/new/T2Approach_R.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/radiant/old/BaseCorner_R.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/radiant/new/BaseCorner_R.jpg",
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: (0, p.A)(
+                                j().ComparisonContainer,
+                                j().Dire,
+                              ),
+                              children: [
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().DisplayFont,
+                                    j().DisplayMedium,
+                                    j().CarouselGroupTitle,
+                                  ),
+                                  children: (0, n.Wn)("#dire"),
+                                }),
+                                (0, i.jsxs)(b.U, {
+                                  labels: ["1", "2", "3", "4", "5", "6", "7"],
+                                  children: [
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/dire/old/WisdomShrine_D.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/dire/new/WisdomShrine_D.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/dire/old/LotusPool_D.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/dire/new/LotusPool_D.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/dire/old/RoshPit_North.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/dire/new/RoshPit_North.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/dire/old/MapCorner_D.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/dire/new/MapCorner_D.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/dire/old/T1Gutter_D.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/dire/new/T1Gutter_D.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/dire/old/T2Approach_D.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/dire/new/T2Approach_D.jpg",
+                                      }),
+                                    }),
+                                    (0, i.jsx)(I.EW, {
+                                      itemOne: (0, i.jsx)(b.v, {
+                                        is_new: !0,
+                                        image:
+                                          "patch738/comparison/dire/old/BaseCorner_D.jpg",
+                                      }),
+                                      itemTwo: (0, i.jsx)(b.v, {
+                                        is_new: !1,
+                                        image:
+                                          "patch738/comparison/dire/new/BaseCorner_D.jpg",
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    R(),
+                    (0, i.jsxs)("div", {
+                      id: "NeutralsSection",
+                      className: (0, p.A)(
+                        j().WebsiteSection,
+                        j().NeutralsSection,
                       ),
-                    ),
-                  ),
-                ),
-                W(),
-                s.createElement(
-                  "div",
-                  {
-                    id: "GameplayUpdateContainer",
-                    className: (0, p.A)(
-                      E().WebsiteSection,
-                      E().GameplayUpdateContainer,
-                    ),
-                  },
-                  s.createElement(
-                    "div",
-                    { className: E().WebsiteSectionInner },
-                    s.createElement(
-                      "div",
-                      { className: E().WebsiteSectionHeader },
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().SectionSubHeaderLabel,
-                            E().LabelFont,
-                            E().LabelMedium,
-                          ),
-                        },
-                        (0, o.Wn)("#patchnotes_update"),
+                      children: [
+                        (0, i.jsx)(w, {
+                          image: "patch738/neutrals/neutrals_background.png",
+                          additionalClassName: j().NeutralsBackgroundImage,
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: j().WebsiteSectionInner,
+                          children: [
+                            (0, i.jsxs)("div", {
+                              className: j().WebsiteSectionHeader,
+                              children: [
+                                (0, i.jsx)("h2", {
+                                  className: (0, p.A)(
+                                    j().SectionHeaderLabel,
+                                    j().TitleFont,
+                                    j().TitleExtraLarge,
+                                  ),
+                                  children: (0, n.Wn)(
+                                    "#patch738_neutrals_title",
+                                  ),
+                                }),
+                                (0, i.jsx)("p", {
+                                  className: (0, p.A)(
+                                    j().SectionDescriptionLabel,
+                                    j().DisplayFont,
+                                    j().DisplayMedium,
+                                    j().LightGrayText,
+                                  ),
+                                  children: (0, n.Wn)(
+                                    "#patch738_neutrals_introduction",
+                                  ),
+                                }),
+                              ],
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: (0, p.A)(
+                                j().TextImageBlockHorizontal,
+                                j().WideImage,
+                              ),
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image: "patch738/neutrals/madstone.jpg",
+                                  additionalClassName: j().NeutralsImage,
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleMedium,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_neutrals_lumber_title",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_neutrals_lumber_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: (0, p.A)(
+                                j().TextImageBlockHorizontal,
+                                j().Flipped,
+                                j().WideImage,
+                              ),
+                              children: [
+                                (0, i.jsx)(w, {
+                                  image: "patch738/neutrals/crafting.jpg",
+                                  additionalClassName: j().NeutralsImage,
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: j().TextBlock,
+                                  children: [
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockTitle,
+                                        j().TitleFont,
+                                        j().TitleMedium,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_neutrals_crafting_title",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("p", {
+                                      className: (0, p.A)(
+                                        j().BlockDescription,
+                                        j().BodyFont,
+                                        j().BodyLarge,
+                                        j().LightGrayText,
+                                      ),
+                                      children: (0, n.Wn)(
+                                        "#patch738_neutrals_crafting_description",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            H(),
+                            (0, i.jsxs)("div", {
+                              className: j().Grid_2,
+                              children: [
+                                (0, i.jsxs)("div", {
+                                  className: j().TextImageBlockVertical,
+                                  children: [
+                                    (0, i.jsx)(w, {
+                                      image:
+                                        "patch738/neutrals/neutrals_timings.jpg",
+                                      additionalClassName: j().NeutralsImage,
+                                    }),
+                                    (0, i.jsxs)("div", {
+                                      className: j().TextBlock,
+                                      children: [
+                                        (0, i.jsx)("p", {
+                                          className: (0, p.A)(
+                                            j().BlockTitle,
+                                            j().LabelFont,
+                                            j().LabelExtraLarge,
+                                          ),
+                                          children: (0, n.Wn)(
+                                            "#patch738_neutrals_timings_title",
+                                          ),
+                                        }),
+                                        (0, i.jsx)("p", {
+                                          className: (0, p.A)(
+                                            j().BlockDescription,
+                                            j().BodyFont,
+                                            j().BodyLarge,
+                                            j().LightGrayText,
+                                          ),
+                                          children: (0, n.Wn)(
+                                            "#patch738_neutrals_timings_description",
+                                          ),
+                                        }),
+                                      ],
+                                    }),
+                                  ],
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: j().TextImageBlockVertical,
+                                  children: [
+                                    (0, i.jsx)(w, {
+                                      image:
+                                        "patch738/neutrals/neutrals_tab.jpg",
+                                      additionalClassName: j().NeutralsImage,
+                                    }),
+                                    (0, i.jsxs)("div", {
+                                      className: j().TextBlock,
+                                      children: [
+                                        (0, i.jsx)("p", {
+                                          className: (0, p.A)(
+                                            j().BlockTitle,
+                                            j().LabelFont,
+                                            j().LabelExtraLarge,
+                                          ),
+                                          children: (0, n.Wn)(
+                                            "#patch738_neutrals_tab_title",
+                                          ),
+                                        }),
+                                        (0, i.jsx)("p", {
+                                          className: (0, p.A)(
+                                            j().BlockDescription,
+                                            j().BodyFont,
+                                            j().BodyLarge,
+                                            j().LightGrayText,
+                                          ),
+                                          children: (0, n.Wn)(
+                                            "#patch738_neutrals_tab_description",
+                                          ),
+                                        }),
+                                      ],
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            H(),
+                            (0, i.jsx)("div", {
+                              className: j().WebsiteSectionHeader,
+                              children: (0, i.jsx)("p", {
+                                className: (0, p.A)(
+                                  j().SectionDescriptionLabel,
+                                  j().DisplayFont,
+                                  j().DisplayMedium,
+                                  j().LightGrayText,
+                                ),
+                                children: (0, n.Wn)(
+                                  "#patch738_neutrals_changes_moreinfo",
+                                ),
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    R(),
+                    (0, i.jsx)("div", {
+                      id: "QOLSection",
+                      className: (0, p.A)(j().WebsiteSection, j().QOLSection),
+                      children: (0, i.jsxs)("div", {
+                        className: j().WebsiteSectionInner,
+                        children: [
+                          (0, i.jsxs)("div", {
+                            className: j().WebsiteSectionHeader,
+                            children: [
+                              (0, i.jsx)("h2", {
+                                className: (0, p.A)(
+                                  j().SectionHeaderLabel,
+                                  j().TitleFont,
+                                  j().TitleExtraLarge,
+                                ),
+                                children: (0, n.Wn)("#patch738_qol_title"),
+                              }),
+                              (0, i.jsx)("p", {
+                                className: (0, p.A)(
+                                  j().SectionDescriptionLabel,
+                                  j().DisplayFont,
+                                  j().DisplayMedium,
+                                  j().LightGrayText,
+                                ),
+                                children: (0, n.Wn)(
+                                  "#patch738_qol_introduction",
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, i.jsxs)("div", {
+                            className: j().Grid_3,
+                            children: [
+                              (0, i.jsxs)("div", {
+                                className: j().TextImageBlockVertical,
+                                children: [
+                                  (0, i.jsx)(w, {
+                                    image: "patch738/qol/qol_rosh_timer.jpg",
+                                    additionalClassName: j().QOLImage,
+                                  }),
+                                  (0, i.jsxs)("div", {
+                                    className: j().TextBlock,
+                                    children: [
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockTitle,
+                                          j().LabelFont,
+                                          j().LabelExtraLarge,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_roshan_timer_title",
+                                        ),
+                                      }),
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockDescription,
+                                          j().BodyFont,
+                                          j().BodyLarge,
+                                          j().LightGrayText,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_roshan_timer_description",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                              (0, i.jsxs)("div", {
+                                className: j().TextImageBlockVertical,
+                                children: [
+                                  (0, i.jsx)(w, {
+                                    image: "patch738/qol/qol_mark_for_sell.jpg",
+                                    additionalClassName: j().QOLImage,
+                                  }),
+                                  (0, i.jsxs)("div", {
+                                    className: j().TextBlock,
+                                    children: [
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockTitle,
+                                          j().LabelFont,
+                                          j().LabelExtraLarge,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_markforsell_title",
+                                        ),
+                                      }),
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockDescription,
+                                          j().BodyFont,
+                                          j().BodyLarge,
+                                          j().LightGrayText,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_markforsell_description",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                              (0, i.jsxs)("div", {
+                                className: j().TextImageBlockVertical,
+                                children: [
+                                  (0, i.jsx)(w, {
+                                    image: "patch738/qol/qol_item_effects.jpg",
+                                    additionalClassName: j().QOLImage,
+                                  }),
+                                  (0, i.jsxs)("div", {
+                                    className: j().TextBlock,
+                                    children: [
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockTitle,
+                                          j().LabelFont,
+                                          j().LabelExtraLarge,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_item_effects_title",
+                                        ),
+                                      }),
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockDescription,
+                                          j().BodyFont,
+                                          j().BodyLarge,
+                                          j().LightGrayText,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_item_effects_description",
+                                        ),
+                                      }),
+                                      (0, i.jsxs)("div", {
+                                        className: j().FXInfoButton,
+                                        children: [
+                                          (0, i.jsx)("p", {
+                                            className: (0, p.A)(
+                                              j().LabelFont,
+                                              j().LabelSmall,
+                                              j().LightGrayText,
+                                              j().SeeListLabel,
+                                            ),
+                                            children: (0, n.Wn)(
+                                              "#patch738_qol_feature_item_effects_list_label",
+                                            ),
+                                          }),
+                                          (0, i.jsxs)("div", {
+                                            className: j().FXList,
+                                            children: [
+                                              (0, i.jsx)("p", {
+                                                className: (0, p.A)(
+                                                  j().LabelFont,
+                                                  j().LabelMedium,
+                                                  j().LightGrayText,
+                                                  j().TooltipHeader,
+                                                ),
+                                                children: (0, n.Wn)(
+                                                  "#patch738_qol_feature_item_effects_title",
+                                                ),
+                                              }),
+                                              (0, i.jsxs)("div", {
+                                                className: j().FXListColums,
+                                                children: [
+                                                  (0, i.jsx)("p", {
+                                                    className: (0, p.A)(
+                                                      j().BodyFont,
+                                                      j().BodyMedium,
+                                                      j().LightGrayText,
+                                                    ),
+                                                    children: (0, n.Wn)(
+                                                      "#patch738_qol_feature_item_effects_list_col1",
+                                                    ),
+                                                  }),
+                                                  (0, i.jsx)("p", {
+                                                    className: (0, p.A)(
+                                                      j().BodyFont,
+                                                      j().BodyMedium,
+                                                      j().LightGrayText,
+                                                    ),
+                                                    children: (0, n.Wn)(
+                                                      "#patch738_qol_feature_item_effects_list_col2",
+                                                    ),
+                                                  }),
+                                                ],
+                                              }),
+                                            ],
+                                          }),
+                                        ],
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                          (0, i.jsxs)("div", {
+                            className: j().Grid_3,
+                            children: [
+                              (0, i.jsxs)("div", {
+                                className: j().TextImageBlockVertical,
+                                children: [
+                                  (0, i.jsx)(w, {
+                                    image:
+                                      "patch738/qol/qol_attribute_pips.jpg",
+                                    additionalClassName: j().QOLImage,
+                                  }),
+                                  (0, i.jsxs)("div", {
+                                    className: j().TextBlock,
+                                    children: [
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockTitle,
+                                          j().LabelFont,
+                                          j().LabelExtraLarge,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_attributes_pips_title",
+                                        ),
+                                      }),
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockDescription,
+                                          j().BodyFont,
+                                          j().BodyLarge,
+                                          j().LightGrayText,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_attributes_pips_description",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                              (0, i.jsxs)("div", {
+                                className: j().TextImageBlockVertical,
+                                children: [
+                                  (0, i.jsx)(w, {
+                                    image: "patch738/qol/qol_hud_timers.jpg",
+                                    additionalClassName: j().QOLImage,
+                                  }),
+                                  (0, i.jsxs)("div", {
+                                    className: j().TextBlock,
+                                    children: [
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockTitle,
+                                          j().LabelFont,
+                                          j().LabelExtraLarge,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_hud_timers_title",
+                                        ),
+                                      }),
+                                      (0, i.jsxs)("div", {
+                                        className: j().DotaPlusBadgeMobile,
+                                        children: [
+                                          (0, i.jsx)("img", {
+                                            src: `${o.r.IMG_URL}/icons/dota_plus.png`,
+                                          }),
+                                          (0, i.jsx)("p", {
+                                            className: (0, p.A)(
+                                              j().LabelFont,
+                                              j().LabelSmall,
+                                            ),
+                                            children: (0, n.Wn)("#dota_plus"),
+                                          }),
+                                        ],
+                                      }),
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockDescription,
+                                          j().BodyFont,
+                                          j().BodyLarge,
+                                          j().LightGrayText,
+                                          j().LastOnMobile,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_hud_timers_description",
+                                        ),
+                                      }),
+                                      (0, i.jsxs)("div", {
+                                        className: j().DotaPlusBadge,
+                                        children: [
+                                          (0, i.jsx)("img", {
+                                            src: `${o.r.IMG_URL}/icons/dota_plus.png`,
+                                          }),
+                                          (0, i.jsx)("p", {
+                                            className: (0, p.A)(
+                                              j().LabelFont,
+                                              j().LabelSmall,
+                                            ),
+                                            children: (0, n.Wn)("#dota_plus"),
+                                          }),
+                                        ],
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                              (0, i.jsxs)("div", {
+                                className: j().TextImageBlockVertical,
+                                children: [
+                                  (0, i.jsx)(w, {
+                                    image:
+                                      "patch738/qol/qol_backpack_grace.jpg",
+                                    additionalClassName: j().QOLImage,
+                                  }),
+                                  (0, i.jsxs)("div", {
+                                    className: j().TextBlock,
+                                    children: [
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockTitle,
+                                          j().LabelFont,
+                                          j().LabelExtraLarge,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_backpack_grace_title",
+                                        ),
+                                      }),
+                                      (0, i.jsx)("p", {
+                                        className: (0, p.A)(
+                                          j().BlockDescription,
+                                          j().BodyFont,
+                                          j().BodyLarge,
+                                          j().LightGrayText,
+                                        ),
+                                        children: (0, n.Wn)(
+                                          "#patch738_qol_feature_backpack_grace_description",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    }),
+                    R(),
+                    (0, i.jsx)("div", {
+                      id: "GameplayUpdateContainer",
+                      className: (0, p.A)(
+                        j().WebsiteSection,
+                        j().GameplayUpdateContainer,
                       ),
-                      s.createElement(
-                        "h2",
-                        {
-                          className: (0, p.A)(
-                            E().SectionHeaderLabel,
-                            E().TitleFont,
-                            E().TitleExtraLarge,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_gameplayupdate_title"),
-                      ),
-                      s.createElement(
-                        "p",
-                        {
-                          className: (0, p.A)(
-                            E().SectionDescriptionLabel,
-                            E().DisplayFont,
-                            E().DisplayMedium,
-                            E().LightGrayText,
-                          ),
-                        },
-                        (0, o.Wn)("#patch738_gameplayupdate_introduction"),
-                      ),
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: E().PatchnotesContainer },
-                      s.createElement(N.fs, {
-                        patchnotes: e?.general_notes,
-                        headerClassName: E().PatchNotesHeaderLabel,
-                        notesListClassName: E().PatchNotesList,
+                      children: (0, i.jsxs)("div", {
+                        className: j().WebsiteSectionInner,
+                        children: [
+                          (0, i.jsxs)("div", {
+                            className: j().WebsiteSectionHeader,
+                            children: [
+                              (0, i.jsx)("p", {
+                                className: (0, p.A)(
+                                  j().SectionSubHeaderLabel,
+                                  j().LabelFont,
+                                  j().LabelMedium,
+                                ),
+                                children: (0, n.Wn)("#patchnotes_update"),
+                              }),
+                              (0, i.jsx)("h2", {
+                                className: (0, p.A)(
+                                  j().SectionHeaderLabel,
+                                  j().TitleFont,
+                                  j().TitleExtraLarge,
+                                ),
+                                children: (0, n.Wn)(
+                                  "#patch738_gameplayupdate_title",
+                                ),
+                              }),
+                              (0, i.jsx)("p", {
+                                className: (0, p.A)(
+                                  j().SectionDescriptionLabel,
+                                  j().DisplayFont,
+                                  j().DisplayMedium,
+                                  j().LightGrayText,
+                                ),
+                                children: (0, n.Wn)(
+                                  "#patch738_gameplayupdate_introduction",
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, i.jsxs)("div", {
+                            className: j().PatchnotesContainer,
+                            children: [
+                              (0, i.jsx)(N.fs, {
+                                patchnotes: e?.general_notes,
+                                headerClassName: j().PatchNotesHeaderLabel,
+                                notesListClassName: j().PatchNotesList,
+                              }),
+                              (0, i.jsx)(N.wL, {
+                                patchnotes: e?.neutral_creeps,
+                                headerClassName: j().PatchNotesHeaderLabel,
+                                notesListClassName: j().PatchNotesList,
+                              }),
+                              (0, i.jsx)(N.ZV, {
+                                patchnotes: e?.items,
+                                headerClassName: j().PatchNotesHeaderLabel,
+                                notesListClassName: j().PatchNotesList,
+                              }),
+                              (0, i.jsx)(N.ZV, {
+                                patchnotes: e?.neutral_items,
+                                is_neutrals: !0,
+                                headerClassName: j().PatchNotesHeaderLabel,
+                                notesListClassName: j().PatchNotesList,
+                              }),
+                              (0, i.jsx)(N.ob, {
+                                patchnotes: e?.heroes,
+                                headerClassName: j().PatchNotesHeaderLabel,
+                                notesListClassName: j().PatchNotesList,
+                              }),
+                            ],
+                          }),
+                        ],
                       }),
-                      s.createElement(N.wL, {
-                        patchnotes: e?.neutral_creeps,
-                        headerClassName: E().PatchNotesHeaderLabel,
-                        notesListClassName: E().PatchNotesList,
-                      }),
-                      s.createElement(N.ZV, {
-                        patchnotes: e?.items,
-                        headerClassName: E().PatchNotesHeaderLabel,
-                        notesListClassName: E().PatchNotesList,
-                      }),
-                      s.createElement(N.ZV, {
-                        patchnotes: e?.neutral_items,
-                        is_neutrals: !0,
-                        headerClassName: E().PatchNotesHeaderLabel,
-                        notesListClassName: E().PatchNotesList,
-                      }),
-                      s.createElement(N.ob, {
-                        patchnotes: e?.heroes,
-                        headerClassName: E().PatchNotesHeaderLabel,
-                        notesListClassName: E().PatchNotesList,
-                      }),
-                    ),
-                  ),
-                ),
-                s.createElement(g.K, null),
-              ),
-            )
+                    }),
+                    (0, i.jsx)(g.K, {}),
+                  ],
+                }),
+              ],
+            })
           );
         }
       };
-      H = (0, l.Cg)([r.PA], H);
-      const D = H;
+      D = (0, t.Cg)([r.PA], D);
+      const P = D;
     },
   },
 ]);

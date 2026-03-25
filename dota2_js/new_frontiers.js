@@ -144,126 +144,125 @@
         MapFeatureTooltip: "_2N4jMn3-Q14nSdBOz-AEuI",
       };
     },
-    71831: (e, t, a) => {
+    71831: (e, a, s) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => A });
-      var n = a(85608),
-        r = a(85286),
-        s = a.n(r),
-        i = a(89506),
-        o = a(33706),
-        l = a(27866),
-        c = a(68446),
-        _ = a(7552),
-        m = a(73202),
-        d = a(35927),
-        p = a(92225),
-        h = a(21384),
-        u = a(56698),
-        g = a(47202),
-        v = a(36305),
-        f = a(82101),
-        w = a(89642),
-        E = a.n(w),
-        N = a(61840),
-        R = a(88351),
-        I = a(92444),
-        C = a(54159);
+      s.r(a), s.d(a, { default: () => F });
+      var t = s(85608),
+        i = s(69500),
+        r = s(85286),
+        n = s.n(r),
+        o = s(89506),
+        l = s(33706),
+        _ = s(40045),
+        c = s(68446),
+        d = s(7552),
+        m = s(73202),
+        h = s(35927),
+        p = s(92225),
+        u = s(21384),
+        j = s(70595),
+        g = s(47202),
+        x = s(36305),
+        v = s(82101),
+        f = s(89642),
+        w = s.n(f),
+        N = s(61840),
+        R = s(88351),
+        I = s(92444),
+        C = s(54159);
       const M = "NewFrontiersPage",
         b = ({ children: e }) => {
-          const { hash: t } = (0, R.zy)();
+          const { hash: a } = (0, R.zy)();
           return (
-            (0, _.useEffect)(() => {
-              t &&
+            (0, d.useEffect)(() => {
+              a &&
                 setTimeout(() => {
-                  const e = t.replace("#", "");
+                  const e = a.replace("#", "");
                   (0, I.A)(e, M);
                 }, 500);
-            }, [t]),
+            }, [a]),
             null
           );
         };
       function W(e) {
-        let t = "",
-          a = !0;
-        for (let n = 0; n < e.length; ++n)
-          "_" != e[n]
-            ? a
-              ? ((t += e[n].toUpperCase()), (a = !1))
-              : (t += e[n])
-            : (a = !0);
-        return t;
+        let a = "",
+          s = !0;
+        for (let t = 0; t < e.length; ++t)
+          "_" != e[t]
+            ? s
+              ? ((a += e[t].toUpperCase()), (s = !1))
+              : (a += e[t])
+            : (s = !0);
+        return a;
       }
       const y = (e) =>
-          _.createElement(
-            "div",
-            { className: E().Text },
-            _.createElement(
-              "div",
-              { className: E().HeaderContainer },
-              e.icon &&
-                _.createElement(
-                  "div",
-                  { className: E().Icon },
-                  _.createElement("img", { src: `${i.r.IMG_URL}/` + e.icon }),
-                ),
-              _.createElement(
-                "div",
-                { className: E().Headline },
-                (0, l.Wn)(e.title),
-              ),
-            ),
-            e.description &&
-              _.createElement(
-                "div",
-                { className: E().Description },
-                (0, l.Wn)(e.description),
-              ),
-            e.contents &&
-              _.createElement(
-                "div",
-                { className: E().Description },
-                e.contents,
-              ),
-          ),
+          (0, i.jsxs)("div", {
+            className: w().Text,
+            children: [
+              (0, i.jsxs)("div", {
+                className: w().HeaderContainer,
+                children: [
+                  e.icon &&
+                    (0, i.jsx)("div", {
+                      className: w().Icon,
+                      children: (0, i.jsx)("img", {
+                        src: `${o.r.IMG_URL}/` + e.icon,
+                      }),
+                    }),
+                  (0, i.jsx)("div", {
+                    className: w().Headline,
+                    children: (0, _.Wn)(e.title),
+                  }),
+                ],
+              }),
+              e.description &&
+                (0, i.jsx)("div", {
+                  className: w().Description,
+                  children: (0, _.Wn)(e.description),
+                }),
+              e.contents &&
+                (0, i.jsx)("div", {
+                  className: w().Description,
+                  children: e.contents,
+                }),
+            ],
+          }),
         P = (e) =>
-          _.createElement(
-            "div",
-            {
-              className: E().FeatureCapsule,
-              "data-aos": "fade-left",
-              "data-aos-delay": "100",
-              "data-aos-duration": "1000",
-            },
-            _.createElement(y, {
-              title: e.title,
-              description: e.description,
-              contents: e.contents,
-            }),
-            _.createElement("img", {
-              className: E().Image,
-              src: `${i.r.IMG_URL}/` + e.image,
-            }),
-          ),
+          (0, i.jsxs)("div", {
+            className: w().FeatureCapsule,
+            "data-aos": "fade-left",
+            "data-aos-delay": "100",
+            "data-aos-duration": "1000",
+            children: [
+              (0, i.jsx)(y, {
+                title: e.title,
+                description: e.description,
+                contents: e.contents,
+              }),
+              (0, i.jsx)("img", {
+                className: w().Image,
+                src: `${o.r.IMG_URL}/` + e.image,
+              }),
+            ],
+          }),
         T = (e) =>
-          _.createElement(
-            "div",
-            {
-              className: E().SmallFeatureCapsule,
-              "data-aos": "fade-up",
-              "data-aos-delay": "100",
-              "data-aos-duration": "1000",
-            },
-            _.createElement("img", {
-              className: E().Image,
-              src: `${i.r.IMG_URL}/` + e.image,
-            }),
-            _.createElement(y, {
-              title: e.title,
-              description: e.description,
-              contents: e.contents,
-            }),
-          );
+          (0, i.jsxs)("div", {
+            className: w().SmallFeatureCapsule,
+            "data-aos": "fade-up",
+            "data-aos-delay": "100",
+            "data-aos-duration": "1000",
+            children: [
+              (0, i.jsx)("img", {
+                className: w().Image,
+                src: `${o.r.IMG_URL}/` + e.image,
+              }),
+              (0, i.jsx)(y, {
+                title: e.title,
+                description: e.description,
+                contents: e.contents,
+              }),
+            ],
+          });
       let S = {
         roshan: {
           title: "#new_frontiers_map_roshan_title",
@@ -337,278 +336,284 @@
         },
       };
       const k = (e) => {
-          let t = S[e.feature_id];
-          return t
-            ? _.createElement(
-                "div",
-                { className: E().MapFeatureTooltip },
-                _.createElement(
-                  "video",
-                  {
-                    className: E().Video,
+          let a = S[e.feature_id];
+          return a
+            ? (0, i.jsxs)("div", {
+                className: w().MapFeatureTooltip,
+                children: [
+                  (0, i.jsxs)("video", {
+                    className: w().Video,
                     autoPlay: !0,
                     preload: "none",
                     muted: !0,
                     loop: !0,
                     playsInline: !1,
                     controls: !1,
-                  },
-                  _.createElement("source", {
-                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${t.video}.webm`,
-                    type: "video/webm",
+                    children: [
+                      (0, i.jsx)("source", {
+                        src: `${o.r.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.webm`,
+                        type: "video/webm",
+                      }),
+                      (0, i.jsx)("source", {
+                        src: `${o.r.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.mp4`,
+                        type: "video/mp4",
+                      }),
+                    ],
                   }),
-                  _.createElement("source", {
-                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${t.video}.mp4`,
-                    type: "video/mp4",
+                  (0, i.jsxs)("div", {
+                    className: w().Text,
+                    children: [
+                      (0, i.jsx)("div", {
+                        className: w().Title,
+                        children: (0, _.Wn)(a.title),
+                      }),
+                      (0, i.jsx)("div", {
+                        className: w().Description,
+                        children: (0, _.Wn)(a.description),
+                      }),
+                    ],
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  { className: E().Text },
-                  _.createElement(
-                    "div",
-                    { className: E().Title },
-                    (0, l.Wn)(t.title),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().Description },
-                    (0, l.Wn)(t.description),
-                  ),
-                ),
-              )
+                ],
+              })
             : null;
         },
         D = (e) =>
           S[e.feature_id]
-            ? _.createElement(
-                p.he,
-                {
-                  toolTipContent: e.revealed
-                    ? _.createElement(k, { feature_id: e.feature_id })
-                    : null,
-                  strTooltipClassname: E().MapFeatureTooltipContainer,
-                  className: (0, h.A)(E().MapFeature, e.featureClass),
-                },
-                _.createElement("img", {
-                  className: (0, h.A)(
-                    E().MapFeatureImage,
-                    e.revealed && E().Revealed,
+            ? (0, i.jsx)(p.he, {
+                toolTipContent: e.revealed
+                  ? (0, i.jsx)(k, { feature_id: e.feature_id })
+                  : null,
+                strTooltipClassname: w().MapFeatureTooltipContainer,
+                className: (0, u.A)(w().MapFeature, e.featureClass),
+                children: (0, i.jsx)("img", {
+                  className: (0, u.A)(
+                    w().MapFeatureImage,
+                    e.revealed && w().Revealed,
                   ),
-                  src: `${i.r.IMG_URL}/new_frontiers/interactive-map/${e.image}`,
+                  src: `${o.r.IMG_URL}/new_frontiers/interactive-map/${e.image}`,
                 }),
-              )
+              })
             : null,
-        L = (0, c.PA)(({ patchnotes: e, heroname: t }) => {
-          const a = o.B5.Get().getHeroList(),
-            n = a?.heroes.find(
-              (e) => e.name.replace("npc_dota_hero_", "") == t,
+        L = (0, c.PA)(({ patchnotes: e, heroname: a }) => {
+          const s = l.B5.Get().getHeroList(),
+            t = s?.heroes.find(
+              (e) => e.name.replace("npc_dota_hero_", "") == a,
             );
-          return n
-            ? _.createElement(
-                "div",
-                { className: (0, h.A)(E().HeroRework, E()[W(t)]) },
-                _.createElement(
-                  "div",
-                  { className: E().HeroName },
-                  (0, l.Wn)(n.name_loc),
-                ),
-                _.createElement(
-                  "div",
-                  { className: E().ReworkDescription },
-                  (0, l.Wn)("#new_frontiers_major_gameplay_hero_rework_" + t),
-                ),
-                _.createElement(
-                  "div",
-                  { className: E().HeroImageContainer },
-                  _.createElement("div", { className: E().HeroShadow }),
-                  _.createElement(f.sG, {
-                    heroname: t,
-                    portraitClassName: E().HeroReworkPortrait,
-                    videoClassName: E().HeroReworkPortraitVideo,
+          return t
+            ? (0, i.jsxs)("div", {
+                className: (0, u.A)(w().HeroRework, w()[W(a)]),
+                children: [
+                  (0, i.jsx)("div", {
+                    className: w().HeroName,
+                    children: (0, _.Wn)(t.name_loc),
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  { className: E().HeroReworkPatchNotes },
-                  _.createElement(N.fX, {
-                    patchnotes: e,
-                    heroname: t,
-                    heroClassName: E().HeroReworkPatchNotesInner,
+                  (0, i.jsx)("div", {
+                    className: w().ReworkDescription,
+                    children: (0, _.Wn)(
+                      "#new_frontiers_major_gameplay_hero_rework_" + a,
+                    ),
                   }),
-                ),
-              )
+                  (0, i.jsxs)("div", {
+                    className: w().HeroImageContainer,
+                    children: [
+                      (0, i.jsx)("div", { className: w().HeroShadow }),
+                      (0, i.jsx)(v.sG, {
+                        heroname: a,
+                        portraitClassName: w().HeroReworkPortrait,
+                        videoClassName: w().HeroReworkPortraitVideo,
+                      }),
+                    ],
+                  }),
+                  (0, i.jsx)("div", {
+                    className: w().HeroReworkPatchNotes,
+                    children: (0, i.jsx)(N.fX, {
+                      patchnotes: e,
+                      heroname: a,
+                      heroClassName: w().HeroReworkPatchNotesInner,
+                    }),
+                  }),
+                ],
+              })
             : null;
         }),
         H = (e) => {
           if (!e.special.heading_loc) return null;
-          let t = e.special.values_float.map((e, t) =>
-              _.createElement(
+          let a = e.special.values_float.map((e, a) =>
+              (0, i.jsx)(
                 "span",
-                { key: t, className: E().SingleValue },
-                (0, C.F)(e),
+                { className: w().SingleValue, children: (0, C.F)(e) },
+                a,
               ),
             ),
-            a = !1,
-            n = null;
+            s = !1,
+            t = null;
           return (
             "+" == e.special.heading_loc[0]
-              ? ((n = e.special.heading_loc.slice(1)), (a = !0))
-              : (n = e.special.heading_loc),
-            "$" == n[0] && (n = "#dota_ability_variable_" + n.slice(1)),
-            a
-              ? _.createElement(
-                  "div",
-                  { className: E().Stat },
-                  "+ ",
-                  t,
-                  " ",
-                  (0, l.Wn)(n),
-                )
-              : _.createElement(
-                  "div",
-                  { className: E().Stat },
-                  (0, l.Wn)(n),
-                  " ",
-                  t,
-                )
+              ? ((t = e.special.heading_loc.slice(1)), (s = !0))
+              : (t = e.special.heading_loc),
+            "$" == t[0] && (t = "#dota_ability_variable_" + t.slice(1)),
+            s
+              ? (0, i.jsxs)("div", {
+                  className: w().Stat,
+                  children: ["+ ", a, " ", (0, _.Wn)(t)],
+                })
+              : (0, i.jsxs)("div", {
+                  className: w().Stat,
+                  children: [(0, _.Wn)(t), " ", a],
+                })
           );
         },
         G = (0, c.PA)(({ name: e }) => {
-          const t = o.B5.Get().getItemList(),
-            a = t?.itemabilities.find((t) => t.name == e),
-            n = o.B5.Get().getItemData(a?.id);
-          if (!n) return null;
-          let r = n.desc_loc;
-          n.special_values.forEach((e) => {
-            let t =
+          const a = l.B5.Get().getItemList(),
+            s = a?.itemabilities.find((a) => a.name == e),
+            t = l.B5.Get().getItemData(s?.id);
+          if (!t) return null;
+          let r = t.desc_loc;
+          t.special_values.forEach((e) => {
+            let a =
               e.values_float.length > 0 ? (0, C.F)(e.values_float[0]) : "0";
-            (r = r.replace("%" + e.name + "%", t)),
-              (r = r.replace("%" + e.name.toLowerCase() + "%", t));
+            (r = r.replace("%" + e.name + "%", a)),
+              (r = r.replace("%" + e.name.toLowerCase() + "%", a));
           }),
             (r = r.replace(/\%\%/g, "%"));
-          let s = n.special_values?.map((e, t) =>
-              _.createElement(H, { key: t, special: e }),
+          let n = t.special_values?.map((e, a) =>
+              (0, i.jsx)(H, { special: e }, a),
             ),
-            c = n.name.replace("item_", ""),
-            m = n.item_cost,
-            d =
-              n.item_neutral_tier >= 0 && n.item_neutral_tier < 5
-                ? n.item_neutral_tier + 1
+            c = t.name.replace("item_", ""),
+            d = t.item_cost,
+            m =
+              t.item_neutral_tier >= 0 && t.item_neutral_tier < 5
+                ? t.item_neutral_tier + 1
                 : -1,
-            p = E()["Tier" + d],
-            u = n.cooldowns.reduce((e, t) => e + t) > 0,
-            g = n.mana_costs.reduce((e, t) => e + t) > 0,
-            v =
-              !!(n.health_costs && n.health_costs.length > 0) &&
-              n.health_costs.reduce((e, t) => e + t) > 0;
-          return _.createElement(
-            "div",
-            { className: E().GameItemDetails },
-            _.createElement(
-              "div",
-              { className: E().Header },
-              _.createElement("img", {
-                className: E().ItemImage,
-                src: `${i.r.IMG_URL}/items/${c}.png`,
-              }),
-              _.createElement(
-                "div",
-                { className: E().HeaderText },
-                _.createElement("div", { className: E().ItemName }, n.name_loc),
-                m > 0 &&
-                  _.createElement(
-                    "div",
-                    { className: E().GoldPrice },
-                    _.createElement("img", {
-                      className: E().GoldIcon,
-                      src: `${i.r.IMG_URL}/icons/gold.png`,
-                    }),
-                    m,
-                  ),
-                d > 0 &&
-                  _.createElement(
-                    "div",
-                    { className: (0, h.A)(E().NeutralItemTier, p) },
-                    (0, l.Wn)("#neutral_item_tier", d),
-                  ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              { className: E().Body },
-              _.createElement("div", { className: E().Stats }, s),
-              r &&
-                _.createElement(
-                  "div",
-                  { className: E().DescriptionContainer },
-                  _.createElement("div", {
-                    className: E().Description,
-                    dangerouslySetInnerHTML: { __html: r },
+            h = w()["Tier" + m],
+            p = t.cooldowns.reduce((e, a) => e + a) > 0,
+            j = t.mana_costs.reduce((e, a) => e + a) > 0,
+            g =
+              !!(t.health_costs && t.health_costs.length > 0) &&
+              t.health_costs.reduce((e, a) => e + a) > 0;
+          return (0, i.jsxs)("div", {
+            className: w().GameItemDetails,
+            children: [
+              (0, i.jsxs)("div", {
+                className: w().Header,
+                children: [
+                  (0, i.jsx)("img", {
+                    className: w().ItemImage,
+                    src: `${o.r.IMG_URL}/items/${c}.png`,
                   }),
-                  (u || g || v) &&
-                    _.createElement(
-                      "div",
-                      { className: (0, h.A)(E().DescriptionHeader) },
-                      g &&
-                        _.createElement(
-                          "div",
-                          { className: E().ManaContainer },
-                          _.createElement("div", { className: E().ManaIcon }),
-                          _.createElement(
-                            "div",
-                            { className: E().ManaText },
-                            n.mana_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, C.F)(e),
-                            ),
-                          ),
-                        ),
-                      v &&
-                        _.createElement(
-                          "div",
-                          { className: E().HealthContainer },
-                          _.createElement("div", { className: E().HealthIcon }),
-                          _.createElement(
-                            "div",
-                            { className: E().HealthText },
-                            n.health_costs.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, C.F)(e),
-                            ),
-                          ),
-                        ),
-                      u &&
-                        _.createElement(
-                          "div",
-                          { className: E().CooldownContainer },
-                          _.createElement("div", {
-                            className: E().CooldownIcon,
-                            style: {
-                              backgroundImage: `url( ${i.r.IMG_URL}icons/cooldown.png )`,
-                            },
+                  (0, i.jsxs)("div", {
+                    className: w().HeaderText,
+                    children: [
+                      (0, i.jsx)("div", {
+                        className: w().ItemName,
+                        children: t.name_loc,
+                      }),
+                      d > 0 &&
+                        (0, i.jsxs)("div", {
+                          className: w().GoldPrice,
+                          children: [
+                            (0, i.jsx)("img", {
+                              className: w().GoldIcon,
+                              src: `${o.r.IMG_URL}/icons/gold.png`,
+                            }),
+                            d,
+                          ],
+                        }),
+                      m > 0 &&
+                        (0, i.jsx)("div", {
+                          className: (0, u.A)(w().NeutralItemTier, h),
+                          children: (0, _.Wn)("#neutral_item_tier", m),
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, i.jsxs)("div", {
+                className: w().Body,
+                children: [
+                  (0, i.jsx)("div", { className: w().Stats, children: n }),
+                  r &&
+                    (0, i.jsxs)("div", {
+                      className: w().DescriptionContainer,
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: w().Description,
+                          dangerouslySetInnerHTML: { __html: r },
+                        }),
+                        (p || j || g) &&
+                          (0, i.jsxs)("div", {
+                            className: (0, u.A)(w().DescriptionHeader),
+                            children: [
+                              j &&
+                                (0, i.jsxs)("div", {
+                                  className: w().ManaContainer,
+                                  children: [
+                                    (0, i.jsx)("div", {
+                                      className: w().ManaIcon,
+                                    }),
+                                    (0, i.jsx)("div", {
+                                      className: w().ManaText,
+                                      children: t.mana_costs.map(
+                                        (e, a) =>
+                                          (a > 0 ? " / " : "") + (0, C.F)(e),
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              g &&
+                                (0, i.jsxs)("div", {
+                                  className: w().HealthContainer,
+                                  children: [
+                                    (0, i.jsx)("div", {
+                                      className: w().HealthIcon,
+                                    }),
+                                    (0, i.jsx)("div", {
+                                      className: w().HealthText,
+                                      children: t.health_costs.map(
+                                        (e, a) =>
+                                          (a > 0 ? " / " : "") + (0, C.F)(e),
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              p &&
+                                (0, i.jsxs)("div", {
+                                  className: w().CooldownContainer,
+                                  children: [
+                                    (0, i.jsx)("div", {
+                                      className: w().CooldownIcon,
+                                      style: {
+                                        backgroundImage: `url( ${o.r.IMG_URL}icons/cooldown.png )`,
+                                      },
+                                    }),
+                                    (0, i.jsx)("div", {
+                                      className: w().CooldownText,
+                                      children: t.cooldowns.map(
+                                        (e, a) =>
+                                          (a > 0 ? " / " : "") + (0, C.F)(e),
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                            ],
                           }),
-                          _.createElement(
-                            "div",
-                            { className: E().CooldownText },
-                            n.cooldowns.map(
-                              (e, t) => (t > 0 ? " / " : "") + (0, C.F)(e),
-                            ),
-                          ),
-                        ),
-                    ),
-                ),
-            ),
-          );
+                      ],
+                    }),
+                ],
+              }),
+            ],
+          });
         });
-      let j = class extends _.Component {
-        videoRef = _.createRef();
-        NewMapVideoRef = _.createRef();
-        NewMapVideoContainerRef = _.createRef();
-        navbarRef = _.createRef();
-        mapRef = _.createRef();
-        majorGameplayRef = _.createRef();
-        matchmakingRef = _.createRef();
-        uiRef = _.createRef();
-        gameplayRef = _.createRef();
+      let A = class extends d.Component {
+        videoRef = d.createRef();
+        NewMapVideoRef = d.createRef();
+        NewMapVideoContainerRef = d.createRef();
+        navbarRef = d.createRef();
+        mapRef = d.createRef();
+        majorGameplayRef = d.createRef();
+        matchmakingRef = d.createRef();
+        uiRef = d.createRef();
+        gameplayRef = d.createRef();
         interactiveMapHighlightIndex;
         constructor(e) {
           super(e),
@@ -627,10 +632,10 @@
           e.current.scrollIntoView({ behavior: "smooth" });
         }
         handleScroll = (e) => {
-          const t = this.mapRef.current.getBoundingClientRect().top;
-          (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(t, 0, -100, 0, 1), 0, 1)}`),
+          const a = this.mapRef.current.getBoundingClientRect().top;
+          (this.navbarRef.current.style.opacity = `${this.clamp(this.remapValue(a, 0, -100, 0, 1), 0, 1)}`),
             (this.navbarRef.current.style.visibility =
-              t > 0 ? "hidden" : "visible"),
+              a > 0 ? "hidden" : "visible"),
             this.NewMapVideoContainerRef.current.getBoundingClientRect().top <
               400 &&
               !this.state.bMapVideoHasPlayed &&
@@ -646,15 +651,15 @@
                 () => this.setState({ nMapIconRevealPhase: 7 }),
                 2800,
               )),
-            s().refresh();
+            n().refresh();
         };
-        remapValue(e, t, a, n, r) {
-          return n + ((r - n) * (e - t)) / (a - t);
+        remapValue(e, a, s, t, i) {
+          return t + ((i - t) * (e - a)) / (s - a);
         }
-        remapValueClamped(e, t, a, n, r) {
-          return Math.max(n, Math.min(r, this.remapValue(e, t, a, n, r)));
+        remapValueClamped(e, a, s, t, i) {
+          return Math.max(t, Math.min(i, this.remapValue(e, a, s, t, i)));
         }
-        clamp = (e, t, a) => Math.min(Math.max(e, t), a);
+        clamp = (e, a, s) => Math.min(Math.max(e, a), s);
         componentDidMount() {
           window.addEventListener("scroll", this.handleScroll),
             this.handleScroll(void 0);
@@ -663,802 +668,863 @@
           window.removeEventListener("scroll", this.handleScroll);
         }
         render() {
-          const e = u.o.getPatchNotes("7.33", i.r.LANGUAGE);
-          let t = [];
+          const e = j.o.getPatchNotes("7.33", o.r.LANGUAGE);
+          let a = [];
           for (let e in S) {
-            let a = S[e];
-            t.push(
-              _.createElement(
+            let s = S[e];
+            a.push(
+              (0, i.jsxs)(
                 "div",
-                { key: e, className: E().MapFeatureContainer },
-                _.createElement(
-                  "video",
-                  {
-                    className: E().Video,
-                    autoPlay: !0,
-                    preload: "none",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !1,
-                    controls: !1,
-                    poster: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${a.poster}`,
-                  },
-                  _.createElement("source", {
-                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.webm`,
-                    type: "video/webm",
-                  }),
-                  _.createElement("source", {
-                    src: `${i.r.IMG_URL}new_frontiers/interactive-map/videos/${a.video}.mp4`,
-                    type: "video/mp4",
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  { className: E().Text },
-                  _.createElement(
-                    "div",
-                    { className: E().TitleContainer },
-                    _.createElement(
-                      "div",
-                      { className: E().Icon },
-                      _.createElement("img", {
-                        src: `${i.r.IMG_URL}new_frontiers/interactive-map/icons/${a.icon}`,
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().Title },
-                      (0, l.Wn)(a.title),
-                    ),
-                  ),
-                  _.createElement("div", { className: E().Dash }),
-                  _.createElement(
-                    "div",
-                    { className: E().Description },
-                    (0, l.Wn)(a.description),
-                  ),
-                ),
+                {
+                  className: w().MapFeatureContainer,
+                  children: [
+                    (0, i.jsxs)("video", {
+                      className: w().Video,
+                      autoPlay: !0,
+                      preload: "none",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !1,
+                      controls: !1,
+                      poster: `${o.r.IMG_URL}new_frontiers/interactive-map/videos/${s.poster}`,
+                      children: [
+                        (0, i.jsx)("source", {
+                          src: `${o.r.IMG_URL}new_frontiers/interactive-map/videos/${s.video}.webm`,
+                          type: "video/webm",
+                        }),
+                        (0, i.jsx)("source", {
+                          src: `${o.r.IMG_URL}new_frontiers/interactive-map/videos/${s.video}.mp4`,
+                          type: "video/mp4",
+                        }),
+                      ],
+                    }),
+                    (0, i.jsxs)("div", {
+                      className: w().Text,
+                      children: [
+                        (0, i.jsxs)("div", {
+                          className: w().TitleContainer,
+                          children: [
+                            (0, i.jsx)("div", {
+                              className: w().Icon,
+                              children: (0, i.jsx)("img", {
+                                src: `${o.r.IMG_URL}new_frontiers/interactive-map/icons/${s.icon}`,
+                              }),
+                            }),
+                            (0, i.jsx)("div", {
+                              className: w().Title,
+                              children: (0, _.Wn)(s.title),
+                            }),
+                          ],
+                        }),
+                        (0, i.jsx)("div", { className: w().Dash }),
+                        (0, i.jsx)("div", {
+                          className: w().Description,
+                          children: (0, _.Wn)(s.description),
+                        }),
+                      ],
+                    }),
+                  ],
+                },
+                e,
               ),
             );
           }
-          let a = (0, d.ww)((0, d.sf)(i.r.LANGUAGE));
+          let s = (0, h.ww)((0, h.sf)(o.r.LANGUAGE));
           return (
-            "zh-cn" === a ? (a = "zh-Hans") : "zh-tw" === a && (a = "zh-Hant"),
-            _.createElement(
-              "div",
-              { id: M, className: E().NewFrontiersPage },
-              _.createElement(
-                m.mg,
-                null,
-                _.createElement(
-                  "title",
-                  null,
-                  (0, l.Wn)("#new_frontiers_title"),
-                  " - ",
-                  (0, l.Wn)("#new_frontiers_gameplay_number"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, h.A)(
-                    E().TrailerContainer,
-                    this.state.bPlayingVideo ? null : E().Hidden,
-                  ),
-                },
-                _.createElement(
-                  "video",
-                  {
-                    ref: this.videoRef,
-                    className: (0, h.A)(E().TrailerVideo),
-                    autoPlay: !1,
-                    preload: "none",
-                    muted: !1,
-                    loop: !1,
-                    playsInline: !1,
-                    controls: !0,
-                    poster: `${i.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_poster.jpg`,
-                    crossOrigin: "anonymous",
-                  },
-                  _.createElement("source", {
-                    type: "video/webm",
-                    src: `${i.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_${i.r.LANGUAGE}.webm`,
+            "zh-cn" === s ? (s = "zh-Hans") : "zh-tw" === s && (s = "zh-Hant"),
+            (0, i.jsxs)("div", {
+              id: M,
+              className: w().NewFrontiersPage,
+              children: [
+                (0, i.jsx)(m.mg, {
+                  children: (0, i.jsxs)("title", {
+                    children: [
+                      (0, _.Wn)("#new_frontiers_title"),
+                      " - ",
+                      (0, _.Wn)("#new_frontiers_gameplay_number"),
+                    ],
                   }),
-                  _.createElement("source", {
-                    type: "video/webm",
-                    src: `${i.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_english.webm`,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: E().CloseButton,
-                    onClick: () => this.setPlayingVideo(!1),
-                  },
-                  _.createElement("img", {
-                    className: E().CloseButtonImage,
-                    src: `${i.r.IMG_URL}/close.png`,
-                  }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, h.A)(
-                    E().PageContainer,
-                    this.state.bPlayingVideo ? E().Hidden : null,
+                }),
+                (0, i.jsxs)("div", {
+                  className: (0, u.A)(
+                    w().TrailerContainer,
+                    this.state.bPlayingVideo ? null : w().Hidden,
                   ),
-                },
-                _.createElement(g.A, { bOverlapping: !0 }),
-                _.createElement(
-                  "div",
-                  { className: E().HeaderSection },
-                  _.createElement(
-                    "div",
-                    { className: E().TitleContainer },
-                    _.createElement(
-                      "div",
-                      { className: E().TheContainer },
-                      _.createElement("div", { className: E().Dash }),
-                      _.createElement(
-                        "div",
-                        { className: E().The },
-                        (0, l.Wn)("#new_frontiers_gameplay_number"),
-                      ),
-                      _.createElement("div", { className: E().Dash }),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().Title },
-                      (0, l.Wn)("#new_frontiers_title_short"),
-                    ),
-                  ),
-                  _.createElement("div", { className: E().Dash }),
-                  _.createElement(
-                    "div",
-                    { className: E().Subtitle },
-                    (0, l.Wn)("#new_frontiers_subtitle"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().ButtonsSection },
-                    _.createElement(
-                      "div",
-                      {
-                        className: E().StandardButton,
-                        onClick: () => this.setPlayingVideo(!0),
-                      },
-                      _.createElement("div", {
-                        className: (0, h.A)(E().Icon, E().Play),
+                  children: [
+                    (0, i.jsxs)("video", {
+                      ref: this.videoRef,
+                      className: (0, u.A)(w().TrailerVideo),
+                      autoPlay: !1,
+                      preload: "none",
+                      muted: !1,
+                      loop: !1,
+                      playsInline: !1,
+                      controls: !0,
+                      poster: `${o.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_poster.jpg`,
+                      crossOrigin: "anonymous",
+                      children: [
+                        (0, i.jsx)("source", {
+                          type: "video/webm",
+                          src: `${o.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_${o.r.LANGUAGE}.webm`,
+                        }),
+                        (0, i.jsx)("source", {
+                          type: "video/webm",
+                          src: `${o.r.VIDEO_URL}new_frontiers/new_frontiers_trailer_english.webm`,
+                        }),
+                      ],
+                    }),
+                    (0, i.jsx)("div", {
+                      className: w().CloseButton,
+                      onClick: () => this.setPlayingVideo(!1),
+                      children: (0, i.jsx)("img", {
+                        className: w().CloseButtonImage,
+                        src: `${o.r.IMG_URL}/close.png`,
                       }),
-                      _.createElement(
-                        "div",
-                        { className: E().ButtonText },
-                        (0, l.Wn)("#new_frontiers_play_trailer"),
-                      ),
-                    ),
+                    }),
+                  ],
+                }),
+                (0, i.jsxs)("div", {
+                  className: (0, u.A)(
+                    w().PageContainer,
+                    this.state.bPlayingVideo ? w().Hidden : null,
                   ),
-                ),
-                _.createElement("div", { className: E().SectionDivider }),
-                _.createElement(
-                  "div",
-                  { className: E().IntroductionSection },
-                  _.createElement(
-                    "p",
-                    { className: E().Body },
-                    (0, l.Wn)("#new_frontiers_dota_team_intro"),
-                  ),
-                ),
-                _.createElement("div", { className: E().SectionDivider }),
-                _.createElement(
-                  "div",
-                  { ref: this.navbarRef, className: E().AnchorNavigation },
-                  _.createElement(
-                    "div",
-                    {
-                      className: E().AnchorLink,
-                      onClick: () => this.scrollToTarget(this.mapRef),
-                    },
-                    (0, l.Wn)("#new_frontiers_section_title_map"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: E().AnchorLink,
-                      onClick: () => this.scrollToTarget(this.majorGameplayRef),
-                    },
-                    (0, l.Wn)("#new_frontiers_section_title_major_gameplay"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: E().AnchorLink,
-                      onClick: () => this.scrollToTarget(this.matchmakingRef),
-                    },
-                    (0, l.Wn)("#new_frontiers_section_title_matchmaking"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: E().AnchorLink,
-                      onClick: () => this.scrollToTarget(this.uiRef),
-                    },
-                    (0, l.Wn)("#new_frontiers_section_title_ui"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: E().AnchorLink,
-                      onClick: () => this.scrollToTarget(this.gameplayRef),
-                    },
-                    (0, l.Wn)("#new_frontiers_section_title_gameplay_update"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    id: "Map",
-                    ref: this.mapRef,
-                    className: (0, h.A)(E().WebsiteSection, E().NewMap),
-                  },
-                  _.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#new_frontiers_section_title_map"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().Introduction },
-                    (0, l.Wn)("#new_frontiers_map_introduction"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: E().InteractiveMap,
-                      ref: this.NewMapVideoContainerRef,
-                    },
-                    _.createElement(
-                      "div",
-                      { className: E().MapStickyContainer },
-                      _.createElement(
-                        "div",
-                        { className: E().MapImageContainer },
-                        _.createElement(
-                          "video",
-                          {
-                            ref: this.NewMapVideoRef,
-                            className: E().MapImage,
-                            autoPlay: !1,
-                            preload: "auto",
-                            muted: !0,
-                            loop: !1,
-                            playsInline: !0,
-                            poster: `${i.r.VIDEO_URL}/new_frontiers/map_update_2023_embiggening_poster.jpg`,
-                          },
-                          _.createElement("source", {
-                            type: "video/webm",
-                            src: `${i.r.VIDEO_URL}/new_frontiers/map_update_2023_embiggening.webm`,
+                  children: [
+                    (0, i.jsx)(g.A, { bOverlapping: !0 }),
+                    (0, i.jsxs)("div", {
+                      className: w().HeaderSection,
+                      children: [
+                        (0, i.jsxs)("div", {
+                          className: w().TitleContainer,
+                          children: [
+                            (0, i.jsxs)("div", {
+                              className: w().TheContainer,
+                              children: [
+                                (0, i.jsx)("div", { className: w().Dash }),
+                                (0, i.jsx)("div", {
+                                  className: w().The,
+                                  children: (0, _.Wn)(
+                                    "#new_frontiers_gameplay_number",
+                                  ),
+                                }),
+                                (0, i.jsx)("div", { className: w().Dash }),
+                              ],
+                            }),
+                            (0, i.jsx)("div", {
+                              className: w().Title,
+                              children: (0, _.Wn)("#new_frontiers_title_short"),
+                            }),
+                          ],
+                        }),
+                        (0, i.jsx)("div", { className: w().Dash }),
+                        (0, i.jsx)("div", {
+                          className: w().Subtitle,
+                          children: (0, _.Wn)("#new_frontiers_subtitle"),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().ButtonsSection,
+                          children: (0, i.jsxs)("div", {
+                            className: w().StandardButton,
+                            onClick: () => this.setPlayingVideo(!0),
+                            children: [
+                              (0, i.jsx)("div", {
+                                className: (0, u.A)(w().Icon, w().Play),
+                              }),
+                              (0, i.jsx)("div", {
+                                className: w().ButtonText,
+                                children: (0, _.Wn)(
+                                  "#new_frontiers_play_trailer",
+                                ),
+                              }),
+                            ],
                           }),
-                        ),
-                        _.createElement(
-                          "div",
-                          { className: E().MapOverlay },
-                          _.createElement(D, {
-                            feature_id: "roshan",
-                            image: "dashboard_map_room_roshan_icon.png",
-                            featureClass: E().RoshanNorthwest,
-                            revealed: this.state.nMapIconRevealPhase >= 1,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "roshan",
-                            image: "dashboard_map_room_roshan_icon.png",
-                            featureClass: E().RoshanSoutheast,
-                            revealed: this.state.nMapIconRevealPhase >= 1,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "lotus_pools",
-                            image: "dashboard_map_room_orchard_icon.png",
-                            featureClass: E().LotusPoolsNorthwest,
-                            revealed: this.state.nMapIconRevealPhase >= 2,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "lotus_pools",
-                            image: "dashboard_map_room_orchard_icon.png",
-                            featureClass: E().LotusPoolsSoutheast,
-                            revealed: this.state.nMapIconRevealPhase >= 2,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "tormentors",
-                            image: "dashboard_map_room_sentinel_icon.png",
-                            featureClass: E().TormentorsRadiant,
-                            revealed: this.state.nMapIconRevealPhase >= 3,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "tormentors",
-                            image: "dashboard_map_room_sentinel_icon.png",
-                            featureClass: E().TormentorsDire,
-                            revealed: this.state.nMapIconRevealPhase >= 3,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherRadiant1,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherRadiant2,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherRadiant3,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherRadiant4,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherDire1,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherDire2,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherDire3,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "watchers",
-                            image: "dashboard_map_room_watcher_icon.png",
-                            featureClass: E().WatcherDire4,
-                            revealed: this.state.nMapIconRevealPhase >= 4,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "wisdom_runes",
-                            image: "dashboard_map_room_rune_icon.png",
-                            featureClass: E().WisdomRuneRadiant,
-                            revealed: this.state.nMapIconRevealPhase >= 5,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "wisdom_runes",
-                            image: "dashboard_map_room_rune_icon.png",
-                            featureClass: E().WisdomRuneDire,
-                            revealed: this.state.nMapIconRevealPhase >= 5,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "shield_runes",
-                            image: "dashboard_map_room_shield_rune_icon.png",
-                            featureClass: E().ShieldRuneNorthWest,
-                            revealed: this.state.nMapIconRevealPhase >= 5,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "shield_runes",
-                            image: "dashboard_map_room_shield_rune_icon.png",
-                            featureClass: E().ShieldRuneSouthEast,
-                            revealed: this.state.nMapIconRevealPhase >= 5,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "twin_gates",
-                            image: "dashboard_map_room_portal_icon.png",
-                            featureClass: E().TwinGatesNorthwest,
-                            revealed: this.state.nMapIconRevealPhase >= 6,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "twin_gates",
-                            image: "dashboard_map_room_portal_icon.png",
-                            featureClass: E().TwinGatesSoutheast,
-                            revealed: this.state.nMapIconRevealPhase >= 6,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "barriers",
-                            image: "defenders_gates_radiant.png",
-                            featureClass: E().DefendersGatesRadiant,
-                            revealed: this.state.nMapIconRevealPhase >= 6,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "barriers",
-                            image: "defenders_gates_dire.png",
-                            featureClass: E().DefendersGatesDire,
-                            revealed: this.state.nMapIconRevealPhase >= 6,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "outpost",
-                            image: "dashboard_map_room_outpost_icon.png",
-                            featureClass: E().OutpostRadiant1,
-                            revealed: this.state.nMapIconRevealPhase >= 7,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "outpost",
-                            image: "dashboard_map_room_outpost_icon.png",
-                            featureClass: E().OutpostRadiant2,
-                            revealed: this.state.nMapIconRevealPhase >= 7,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "outpost",
-                            image: "dashboard_map_room_outpost_icon.png",
-                            featureClass: E().OutpostDire1,
-                            revealed: this.state.nMapIconRevealPhase >= 7,
-                          }),
-                          _.createElement(D, {
-                            feature_id: "outpost",
-                            image: "dashboard_map_room_outpost_icon.png",
-                            featureClass: E().OutpostDire2,
-                            revealed: this.state.nMapIconRevealPhase >= 7,
-                          }),
-                        ),
-                        _.createElement(
-                          "div",
-                          { className: E().TitleContainer },
-                          _.createElement(
-                            "div",
-                            { className: E().Title },
-                            (0, l.Wn)("#new_frontiers_map_subtitle"),
+                        }),
+                      ],
+                    }),
+                    (0, i.jsx)("div", { className: w().SectionDivider }),
+                    (0, i.jsx)("div", {
+                      className: w().IntroductionSection,
+                      children: (0, i.jsx)("p", {
+                        className: w().Body,
+                        children: (0, _.Wn)("#new_frontiers_dota_team_intro"),
+                      }),
+                    }),
+                    (0, i.jsx)("div", { className: w().SectionDivider }),
+                    (0, i.jsxs)("div", {
+                      ref: this.navbarRef,
+                      className: w().AnchorNavigation,
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: w().AnchorLink,
+                          onClick: () => this.scrollToTarget(this.mapRef),
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_map",
                           ),
-                          _.createElement("div", { className: E().Dash }),
-                        ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().AnchorLink,
+                          onClick: () =>
+                            this.scrollToTarget(this.majorGameplayRef),
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_major_gameplay",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().AnchorLink,
+                          onClick: () =>
+                            this.scrollToTarget(this.matchmakingRef),
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_matchmaking",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().AnchorLink,
+                          onClick: () => this.scrollToTarget(this.uiRef),
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_ui",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().AnchorLink,
+                          onClick: () => this.scrollToTarget(this.gameplayRef),
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_gameplay_update",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, i.jsxs)("div", {
+                      id: "Map",
+                      ref: this.mapRef,
+                      className: (0, u.A)(w().WebsiteSection, w().NewMap),
+                      children: [
+                        (0, i.jsx)("h1", {
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_map",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().Introduction,
+                          children: (0, _.Wn)(
+                            "#new_frontiers_map_introduction",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().InteractiveMap,
+                          ref: this.NewMapVideoContainerRef,
+                          children: (0, i.jsx)("div", {
+                            className: w().MapStickyContainer,
+                            children: (0, i.jsxs)("div", {
+                              className: w().MapImageContainer,
+                              children: [
+                                (0, i.jsx)("video", {
+                                  ref: this.NewMapVideoRef,
+                                  className: w().MapImage,
+                                  autoPlay: !1,
+                                  preload: "auto",
+                                  muted: !0,
+                                  loop: !1,
+                                  playsInline: !0,
+                                  poster: `${o.r.VIDEO_URL}/new_frontiers/map_update_2023_embiggening_poster.jpg`,
+                                  children: (0, i.jsx)("source", {
+                                    type: "video/webm",
+                                    src: `${o.r.VIDEO_URL}/new_frontiers/map_update_2023_embiggening.webm`,
+                                  }),
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: w().MapOverlay,
+                                  children: [
+                                    (0, i.jsx)(D, {
+                                      feature_id: "roshan",
+                                      image:
+                                        "dashboard_map_room_roshan_icon.png",
+                                      featureClass: w().RoshanNorthwest,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 1,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "roshan",
+                                      image:
+                                        "dashboard_map_room_roshan_icon.png",
+                                      featureClass: w().RoshanSoutheast,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 1,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "lotus_pools",
+                                      image:
+                                        "dashboard_map_room_orchard_icon.png",
+                                      featureClass: w().LotusPoolsNorthwest,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 2,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "lotus_pools",
+                                      image:
+                                        "dashboard_map_room_orchard_icon.png",
+                                      featureClass: w().LotusPoolsSoutheast,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 2,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "tormentors",
+                                      image:
+                                        "dashboard_map_room_sentinel_icon.png",
+                                      featureClass: w().TormentorsRadiant,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 3,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "tormentors",
+                                      image:
+                                        "dashboard_map_room_sentinel_icon.png",
+                                      featureClass: w().TormentorsDire,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 3,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherRadiant1,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherRadiant2,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherRadiant3,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherRadiant4,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherDire1,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherDire2,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherDire3,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "watchers",
+                                      image:
+                                        "dashboard_map_room_watcher_icon.png",
+                                      featureClass: w().WatcherDire4,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 4,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "wisdom_runes",
+                                      image: "dashboard_map_room_rune_icon.png",
+                                      featureClass: w().WisdomRuneRadiant,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 5,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "wisdom_runes",
+                                      image: "dashboard_map_room_rune_icon.png",
+                                      featureClass: w().WisdomRuneDire,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 5,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "shield_runes",
+                                      image:
+                                        "dashboard_map_room_shield_rune_icon.png",
+                                      featureClass: w().ShieldRuneNorthWest,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 5,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "shield_runes",
+                                      image:
+                                        "dashboard_map_room_shield_rune_icon.png",
+                                      featureClass: w().ShieldRuneSouthEast,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 5,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "twin_gates",
+                                      image:
+                                        "dashboard_map_room_portal_icon.png",
+                                      featureClass: w().TwinGatesNorthwest,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 6,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "twin_gates",
+                                      image:
+                                        "dashboard_map_room_portal_icon.png",
+                                      featureClass: w().TwinGatesSoutheast,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 6,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "barriers",
+                                      image: "defenders_gates_radiant.png",
+                                      featureClass: w().DefendersGatesRadiant,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 6,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "barriers",
+                                      image: "defenders_gates_dire.png",
+                                      featureClass: w().DefendersGatesDire,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 6,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "outpost",
+                                      image:
+                                        "dashboard_map_room_outpost_icon.png",
+                                      featureClass: w().OutpostRadiant1,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 7,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "outpost",
+                                      image:
+                                        "dashboard_map_room_outpost_icon.png",
+                                      featureClass: w().OutpostRadiant2,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 7,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "outpost",
+                                      image:
+                                        "dashboard_map_room_outpost_icon.png",
+                                      featureClass: w().OutpostDire1,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 7,
+                                    }),
+                                    (0, i.jsx)(D, {
+                                      feature_id: "outpost",
+                                      image:
+                                        "dashboard_map_room_outpost_icon.png",
+                                      featureClass: w().OutpostDire2,
+                                      revealed:
+                                        this.state.nMapIconRevealPhase >= 7,
+                                    }),
+                                  ],
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: w().TitleContainer,
+                                  children: [
+                                    (0, i.jsx)("div", {
+                                      className: w().Title,
+                                      children: (0, _.Wn)(
+                                        "#new_frontiers_map_subtitle",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("div", { className: w().Dash }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          }),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().MapFeatures,
+                          children: a,
+                        }),
+                      ],
+                    }),
+                    (0, i.jsx)("div", { className: w().SectionDivider }),
+                    (0, i.jsxs)("div", {
+                      id: "MajorGameplay",
+                      ref: this.majorGameplayRef,
+                      className: (0, u.A)(w().WebsiteSection, w().Main),
+                      children: [
+                        (0, i.jsx)("h1", {
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_major_gameplay",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().Introduction,
+                          children: (0, _.Wn)(
+                            "#new_frontiers_major_gameplay_features_desc",
+                          ),
+                        }),
+                        (0, i.jsx)(P, {
+                          title:
+                            "#new_frontiers_major_gameplay_all_stat_heroes_title",
+                          description:
+                            "#new_frontiers_major_gameplay_all_stat_heroes_desc",
+                          image: "new_frontiers/balance_heroes.png",
+                        }),
+                        (0, i.jsx)(P, {
+                          title: "#new_frontiers_major_gameplay_bkb_title",
+                          description: "#new_frontiers_major_gameplay_bkb_desc",
+                          image: "new_frontiers/bkb_changes.png",
+                        }),
+                        (0, i.jsx)(P, {
+                          title:
+                            "#new_frontiers_major_gameplay_neutral_item_token_title",
+                          description:
+                            "#new_frontiers_major_gameplay_neutral_item_token_desc",
+                          image: "new_frontiers/neutral_item_tokens.png",
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: w().FeatureRow,
+                          children: [
+                            (0, i.jsx)(T, {
+                              title:
+                                "#new_frontiers_major_gameplay_neutral_creep_scaling_title",
+                              description:
+                                "#new_frontiers_major_gameplay_neutral_creep_scaling_desc",
+                              image: "new_frontiers/neutral_creep_scaling.png",
+                            }),
+                            (0, i.jsx)(T, {
+                              title:
+                                "#new_frontiers_major_gameplay_kill_formula_title",
+                              description:
+                                "#new_frontiers_major_gameplay_kill_formula_desc",
+                              image: "new_frontiers/kill_formula.png",
+                            }),
+                            (0, i.jsx)(T, {
+                              title:
+                                "#new_frontiers_major_gameplay_unstunning_stuns_title",
+                              description:
+                                "#new_frontiers_major_gameplay_unstunning_stuns_desc",
+                              image: "new_frontiers/stun_reduction.png",
+                            }),
+                          ],
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: w().WebsiteSubSection,
+                          children: [
+                            (0, i.jsx)("h2", {
+                              children: (0, _.Wn)(
+                                "#new_frontiers_major_gameplay_hero_reworks_title",
+                              ),
+                            }),
+                            (0, i.jsx)("div", {
+                              className: w().Introduction,
+                              children: (0, _.Wn)(
+                                "#new_frontiers_major_gameplay_hero_reworks_desc",
+                              ),
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: w().HeroReworkContainer,
+                              children: [
+                                (0, i.jsx)(L, {
+                                  patchnotes: e?.heroes,
+                                  heroname: "muerta",
+                                }),
+                                (0, i.jsx)(L, {
+                                  patchnotes: e?.heroes,
+                                  heroname: "clinkz",
+                                }),
+                                (0, i.jsx)(L, {
+                                  patchnotes: e?.heroes,
+                                  heroname: "arc_warden",
+                                }),
+                                (0, i.jsx)(L, {
+                                  patchnotes: e?.heroes,
+                                  heroname: "ogre_magi",
+                                }),
+                                (0, i.jsx)(L, {
+                                  patchnotes: e?.heroes,
+                                  heroname: "medusa",
+                                }),
+                                (0, i.jsx)(L, {
+                                  patchnotes: e?.heroes,
+                                  heroname: "alchemist",
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: w().WebsiteSubSection,
+                          children: [
+                            (0, i.jsx)("h2", {
+                              children: (0, _.Wn)(
+                                "#new_frontiers_major_gameplay_new_items_title",
+                              ),
+                            }),
+                            (0, i.jsx)("div", {
+                              className: w().Introduction,
+                              children: (0, _.Wn)(
+                                "#new_frontiers_major_gameplay_new_items_desc",
+                              ),
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: w().ItemsContainer,
+                              children: [
+                                (0, i.jsx)(G, { name: "item_blood_grenade" }),
+                                (0, i.jsx)(G, { name: "item_diadem" }),
+                                (0, i.jsx)(G, { name: "item_cornucopia" }),
+                                (0, i.jsx)(G, { name: "item_pavise" }),
+                                (0, i.jsx)(G, { name: "item_phylactery" }),
+                                (0, i.jsx)(G, { name: "item_harpoon" }),
+                                (0, i.jsx)(G, { name: "item_disperser" }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: w().WebsiteSubSection,
+                          children: [
+                            (0, i.jsx)("h2", {
+                              children: (0, _.Wn)(
+                                "#new_frontiers_major_gameplay_new_neutral_items_title",
+                              ),
+                            }),
+                            (0, i.jsx)("div", {
+                              className: w().Introduction,
+                              children: (0, _.Wn)(
+                                "#new_frontiers_major_gameplay_new_neutral_items_desc",
+                              ),
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: w().ItemsContainer,
+                              children: [
+                                (0, i.jsx)(G, { name: "item_duelist_gloves" }),
+                                (0, i.jsx)(G, {
+                                  name: "item_spark_of_courage",
+                                }),
+                                (0, i.jsx)(G, { name: "item_gossamer_cape" }),
+                                (0, i.jsx)(G, { name: "item_defiant_shell" }),
+                                (0, i.jsx)(G, { name: "item_vindicators_axe" }),
+                                (0, i.jsx)(G, {
+                                  name: "item_dandelion_amulet",
+                                }),
+                                (0, i.jsx)(G, { name: "item_martyrs_plate" }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, i.jsx)("div", { className: w().WebsiteSubSection }),
+                      ],
+                    }),
+                    (0, i.jsx)("div", { className: w().SectionDivider }),
+                    (0, i.jsxs)("div", {
+                      id: "Matchmaking",
+                      ref: this.matchmakingRef,
+                      className: (0, u.A)(w().WebsiteSection, w().MatchMaking),
+                      children: [
+                        (0, i.jsx)("h1", {
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_matchmaking",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().Introduction,
+                          children: (0, _.Wn)(
+                            "#new_frontiers_matchmaking_desc",
+                          ),
+                        }),
+                        (0, i.jsx)("img", {
+                          className: (0, u.A)(
+                            w().FeatureImage,
+                            w().BottomBorder,
+                          ),
+                          src: `${o.r.IMG_URL}/new_frontiers/matchmaking.png`,
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: w().FeatureText,
+                          children: [
+                            (0, i.jsx)("h2", {
+                              children: (0, _.Wn)(
+                                "#new_frontiers_matchmaking_intro_title",
+                              ),
+                            }),
+                            (0, _.Wn)("#new_frontiers_matchmaking_intro_desc"),
+                            (0, i.jsx)("h2", {
+                              children: (0, _.Wn)(
+                                "#new_frontiers_matchmaking_details_old_title",
+                              ),
+                            }),
+                            (0, _.Wn)(
+                              "#new_frontiers_matchmaking_details_old_desc",
+                            ),
+                            (0, i.jsx)("h2", {
+                              children: (0, _.Wn)(
+                                "#new_frontiers_matchmaking_details_new_title",
+                              ),
+                            }),
+                            (0, _.Wn)(
+                              "#new_frontiers_matchmaking_details_new_desc",
+                            ),
+                          ],
+                        }),
+                        (0, i.jsx)(P, {
+                          title: "#new_frontiers_matchmaking_immortals_title",
+                          description:
+                            "#new_frontiers_matchmaking_immortals_desc",
+                          image: "new_frontiers/immortal_matchmaking_ui.png",
+                        }),
+                      ],
+                    }),
+                    (0, i.jsx)("div", { className: w().SectionDivider }),
+                    (0, i.jsxs)("div", {
+                      id: "UserInterface",
+                      ref: this.uiRef,
+                      className: w().WebsiteSection,
+                      children: [
+                        (0, i.jsx)("h1", {
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_ui",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().Introduction,
+                          children: (0, _.Wn)("#new_frontiers_ui_desc"),
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: w().FeatureRow,
+                          children: [
+                            (0, i.jsx)(T, {
+                              title: "#new_frontiers_ui_shields_title",
+                              description: "#new_frontiers_ui_shields_desc",
+                              image: "new_frontiers/health_bar_shields.png",
+                            }),
+                            (0, i.jsx)(T, {
+                              title: "#new_frontiers_ui_health_pips_title",
+                              description: "#new_frontiers_ui_health_pips_desc",
+                              image: "new_frontiers/health_bar_pips.png",
+                            }),
+                            (0, i.jsx)(T, {
+                              title: "#new_frontiers_ui_health_cost_title",
+                              description: "#new_frontiers_ui_health_cost_desc",
+                              image: "new_frontiers/health_cost_abilities.png",
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, i.jsx)("div", { className: w().SectionDivider }),
+                    (0, i.jsxs)("div", {
+                      id: "BalanceChanges",
+                      ref: this.gameplayRef,
+                      className: (0, u.A)(
+                        w().WebsiteSection,
+                        w().BalanceChanges,
                       ),
-                    ),
-                  ),
-                  _.createElement("div", { className: E().MapFeatures }, t),
-                ),
-                _.createElement("div", { className: E().SectionDivider }),
-                _.createElement(
-                  "div",
-                  {
-                    id: "MajorGameplay",
-                    ref: this.majorGameplayRef,
-                    className: (0, h.A)(E().WebsiteSection, E().Main),
-                  },
-                  _.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#new_frontiers_section_title_major_gameplay"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().Introduction },
-                    (0, l.Wn)("#new_frontiers_major_gameplay_features_desc"),
-                  ),
-                  _.createElement(P, {
-                    title:
-                      "#new_frontiers_major_gameplay_all_stat_heroes_title",
-                    description:
-                      "#new_frontiers_major_gameplay_all_stat_heroes_desc",
-                    image: "new_frontiers/balance_heroes.png",
-                  }),
-                  _.createElement(P, {
-                    title: "#new_frontiers_major_gameplay_bkb_title",
-                    description: "#new_frontiers_major_gameplay_bkb_desc",
-                    image: "new_frontiers/bkb_changes.png",
-                  }),
-                  _.createElement(P, {
-                    title:
-                      "#new_frontiers_major_gameplay_neutral_item_token_title",
-                    description:
-                      "#new_frontiers_major_gameplay_neutral_item_token_desc",
-                    image: "new_frontiers/neutral_item_tokens.png",
-                  }),
-                  _.createElement(
-                    "div",
-                    { className: E().FeatureRow },
-                    _.createElement(T, {
-                      title:
-                        "#new_frontiers_major_gameplay_neutral_creep_scaling_title",
-                      description:
-                        "#new_frontiers_major_gameplay_neutral_creep_scaling_desc",
-                      image: "new_frontiers/neutral_creep_scaling.png",
+                      children: [
+                        (0, i.jsx)("h1", {
+                          children: (0, _.Wn)(
+                            "#new_frontiers_section_title_gameplay_update",
+                          ),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: w().Introduction,
+                          children: (0, _.Wn)(
+                            "#new_frontiers_gameplay_update_desc",
+                          ),
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: w().GameplayUpdate,
+                          children: [
+                            (0, i.jsx)(N.fs, {
+                              patchnotes: e?.general_notes,
+                              headerClassName: w().PatchNotesHeaderLabel,
+                              notesListClassName: w().PatchNotesList,
+                            }),
+                            (0, i.jsx)(N.wL, {
+                              patchnotes: e?.neutral_creeps,
+                              headerClassName: w().PatchNotesHeaderLabel,
+                              notesListClassName: w().PatchNotesList,
+                            }),
+                            (0, i.jsx)(N.ZV, {
+                              patchnotes: e?.items,
+                              headerClassName: w().PatchNotesHeaderLabel,
+                              notesListClassName: w().PatchNotesList,
+                            }),
+                            (0, i.jsx)(N.ZV, {
+                              patchnotes: e?.neutral_items,
+                              is_neutrals: !0,
+                              headerClassName: w().PatchNotesHeaderLabel,
+                              notesListClassName: w().PatchNotesList,
+                            }),
+                            (0, i.jsx)(N.ob, {
+                              patchnotes: e?.heroes,
+                              headerClassName: w().PatchNotesHeaderLabel,
+                              notesListClassName: w().PatchNotesList,
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: w().MiscSection,
+                              children: [
+                                (0, i.jsx)("h1", {
+                                  children: (0, _.Wn)(
+                                    "#new_frontiers_misc_title",
+                                  ),
+                                }),
+                                (0, i.jsxs)("ul", {
+                                  children: [
+                                    (0, i.jsx)("li", {
+                                      children: (0, _.Wn)(
+                                        "#new_frontiers_misc_role_tokens",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("li", {
+                                      children: (0, _.Wn)(
+                                        "#new_frontiers_misc_removed_roles",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("li", {
+                                      children: (0, _.Wn)(
+                                        "#new_frontiers_misc_model_editor",
+                                      ),
+                                    }),
+                                    (0, i.jsx)("li", {
+                                      children: (0, _.Wn)(
+                                        "#new_frontiers_misc_hold_animation",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
                     }),
-                    _.createElement(T, {
-                      title: "#new_frontiers_major_gameplay_kill_formula_title",
-                      description:
-                        "#new_frontiers_major_gameplay_kill_formula_desc",
-                      image: "new_frontiers/kill_formula.png",
-                    }),
-                    _.createElement(T, {
-                      title:
-                        "#new_frontiers_major_gameplay_unstunning_stuns_title",
-                      description:
-                        "#new_frontiers_major_gameplay_unstunning_stuns_desc",
-                      image: "new_frontiers/stun_reduction.png",
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().WebsiteSubSection },
-                    _.createElement(
-                      "h2",
-                      null,
-                      (0, l.Wn)(
-                        "#new_frontiers_major_gameplay_hero_reworks_title",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().Introduction },
-                      (0, l.Wn)(
-                        "#new_frontiers_major_gameplay_hero_reworks_desc",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().HeroReworkContainer },
-                      _.createElement(L, {
-                        patchnotes: e?.heroes,
-                        heroname: "muerta",
-                      }),
-                      _.createElement(L, {
-                        patchnotes: e?.heroes,
-                        heroname: "clinkz",
-                      }),
-                      _.createElement(L, {
-                        patchnotes: e?.heroes,
-                        heroname: "arc_warden",
-                      }),
-                      _.createElement(L, {
-                        patchnotes: e?.heroes,
-                        heroname: "ogre_magi",
-                      }),
-                      _.createElement(L, {
-                        patchnotes: e?.heroes,
-                        heroname: "medusa",
-                      }),
-                      _.createElement(L, {
-                        patchnotes: e?.heroes,
-                        heroname: "alchemist",
-                      }),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().WebsiteSubSection },
-                    _.createElement(
-                      "h2",
-                      null,
-                      (0, l.Wn)(
-                        "#new_frontiers_major_gameplay_new_items_title",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().Introduction },
-                      (0, l.Wn)("#new_frontiers_major_gameplay_new_items_desc"),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().ItemsContainer },
-                      _.createElement(G, { name: "item_blood_grenade" }),
-                      _.createElement(G, { name: "item_diadem" }),
-                      _.createElement(G, { name: "item_cornucopia" }),
-                      _.createElement(G, { name: "item_pavise" }),
-                      _.createElement(G, { name: "item_phylactery" }),
-                      _.createElement(G, { name: "item_harpoon" }),
-                      _.createElement(G, { name: "item_disperser" }),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().WebsiteSubSection },
-                    _.createElement(
-                      "h2",
-                      null,
-                      (0, l.Wn)(
-                        "#new_frontiers_major_gameplay_new_neutral_items_title",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().Introduction },
-                      (0, l.Wn)(
-                        "#new_frontiers_major_gameplay_new_neutral_items_desc",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      { className: E().ItemsContainer },
-                      _.createElement(G, { name: "item_duelist_gloves" }),
-                      _.createElement(G, { name: "item_spark_of_courage" }),
-                      _.createElement(G, { name: "item_gossamer_cape" }),
-                      _.createElement(G, { name: "item_defiant_shell" }),
-                      _.createElement(G, { name: "item_vindicators_axe" }),
-                      _.createElement(G, { name: "item_dandelion_amulet" }),
-                      _.createElement(G, { name: "item_martyrs_plate" }),
-                    ),
-                  ),
-                  _.createElement("div", { className: E().WebsiteSubSection }),
-                ),
-                _.createElement("div", { className: E().SectionDivider }),
-                _.createElement(
-                  "div",
-                  {
-                    id: "Matchmaking",
-                    ref: this.matchmakingRef,
-                    className: (0, h.A)(E().WebsiteSection, E().MatchMaking),
-                  },
-                  _.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#new_frontiers_section_title_matchmaking"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().Introduction },
-                    (0, l.Wn)("#new_frontiers_matchmaking_desc"),
-                  ),
-                  _.createElement("img", {
-                    className: (0, h.A)(E().FeatureImage, E().BottomBorder),
-                    src: `${i.r.IMG_URL}/new_frontiers/matchmaking.png`,
-                  }),
-                  _.createElement(
-                    "div",
-                    { className: E().FeatureText },
-                    _.createElement(
-                      "h2",
-                      null,
-                      (0, l.Wn)("#new_frontiers_matchmaking_intro_title"),
-                    ),
-                    (0, l.Wn)("#new_frontiers_matchmaking_intro_desc"),
-                    _.createElement(
-                      "h2",
-                      null,
-                      (0, l.Wn)("#new_frontiers_matchmaking_details_old_title"),
-                    ),
-                    (0, l.Wn)("#new_frontiers_matchmaking_details_old_desc"),
-                    _.createElement(
-                      "h2",
-                      null,
-                      (0, l.Wn)("#new_frontiers_matchmaking_details_new_title"),
-                    ),
-                    (0, l.Wn)("#new_frontiers_matchmaking_details_new_desc"),
-                  ),
-                  _.createElement(P, {
-                    title: "#new_frontiers_matchmaking_immortals_title",
-                    description: "#new_frontiers_matchmaking_immortals_desc",
-                    image: "new_frontiers/immortal_matchmaking_ui.png",
-                  }),
-                ),
-                _.createElement("div", { className: E().SectionDivider }),
-                _.createElement(
-                  "div",
-                  {
-                    id: "UserInterface",
-                    ref: this.uiRef,
-                    className: E().WebsiteSection,
-                  },
-                  _.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#new_frontiers_section_title_ui"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().Introduction },
-                    (0, l.Wn)("#new_frontiers_ui_desc"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().FeatureRow },
-                    _.createElement(T, {
-                      title: "#new_frontiers_ui_shields_title",
-                      description: "#new_frontiers_ui_shields_desc",
-                      image: "new_frontiers/health_bar_shields.png",
-                    }),
-                    _.createElement(T, {
-                      title: "#new_frontiers_ui_health_pips_title",
-                      description: "#new_frontiers_ui_health_pips_desc",
-                      image: "new_frontiers/health_bar_pips.png",
-                    }),
-                    _.createElement(T, {
-                      title: "#new_frontiers_ui_health_cost_title",
-                      description: "#new_frontiers_ui_health_cost_desc",
-                      image: "new_frontiers/health_cost_abilities.png",
-                    }),
-                  ),
-                ),
-                _.createElement("div", { className: E().SectionDivider }),
-                _.createElement(
-                  "div",
-                  {
-                    id: "BalanceChanges",
-                    ref: this.gameplayRef,
-                    className: (0, h.A)(E().WebsiteSection, E().BalanceChanges),
-                  },
-                  _.createElement(
-                    "h1",
-                    null,
-                    (0, l.Wn)("#new_frontiers_section_title_gameplay_update"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().Introduction },
-                    (0, l.Wn)("#new_frontiers_gameplay_update_desc"),
-                  ),
-                  _.createElement(
-                    "div",
-                    { className: E().GameplayUpdate },
-                    _.createElement(N.fs, {
-                      patchnotes: e?.general_notes,
-                      headerClassName: E().PatchNotesHeaderLabel,
-                      notesListClassName: E().PatchNotesList,
-                    }),
-                    _.createElement(N.wL, {
-                      patchnotes: e?.neutral_creeps,
-                      headerClassName: E().PatchNotesHeaderLabel,
-                      notesListClassName: E().PatchNotesList,
-                    }),
-                    _.createElement(N.ZV, {
-                      patchnotes: e?.items,
-                      headerClassName: E().PatchNotesHeaderLabel,
-                      notesListClassName: E().PatchNotesList,
-                    }),
-                    _.createElement(N.ZV, {
-                      patchnotes: e?.neutral_items,
-                      is_neutrals: !0,
-                      headerClassName: E().PatchNotesHeaderLabel,
-                      notesListClassName: E().PatchNotesList,
-                    }),
-                    _.createElement(N.ob, {
-                      patchnotes: e?.heroes,
-                      headerClassName: E().PatchNotesHeaderLabel,
-                      notesListClassName: E().PatchNotesList,
-                    }),
-                    _.createElement(
-                      "div",
-                      { className: E().MiscSection },
-                      _.createElement(
-                        "h1",
-                        null,
-                        (0, l.Wn)("#new_frontiers_misc_title"),
-                      ),
-                      _.createElement(
-                        "ul",
-                        null,
-                        _.createElement(
-                          "li",
-                          null,
-                          (0, l.Wn)("#new_frontiers_misc_role_tokens"),
-                        ),
-                        _.createElement(
-                          "li",
-                          null,
-                          (0, l.Wn)("#new_frontiers_misc_removed_roles"),
-                        ),
-                        _.createElement(
-                          "li",
-                          null,
-                          (0, l.Wn)("#new_frontiers_misc_model_editor"),
-                        ),
-                        _.createElement(
-                          "li",
-                          null,
-                          (0, l.Wn)("#new_frontiers_misc_hold_animation"),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                _.createElement(b, null),
-                _.createElement(v.K, null),
-              ),
-            )
+                    (0, i.jsx)(b, {}),
+                    (0, i.jsx)(x.K, {}),
+                  ],
+                }),
+              ],
+            })
           );
         }
       };
-      j = (0, n.Cg)([c.PA], j);
-      const A = j;
+      A = (0, t.Cg)([c.PA], A);
+      const F = A;
     },
   },
 ]);
