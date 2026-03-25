@@ -33,215 +33,210 @@
         ThePatch: "_2nksf-LCV41Ii_ATXqhre2",
       };
     },
-    44605: (e, a, t) => {
+    44605: (e, s, a) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => m });
-      var s = t(89506),
-        n = t(7552),
-        c = t(68613),
-        r = t(74704),
-        l = t.n(r),
-        _ = t(21384),
-        i = t(27866);
-      const m = () =>
-        n.createElement(
-          "div",
-          { className: l().Root },
-          n.createElement(
-            "div",
-            { className: (0, _.A)(l().KeyArt) },
-            n.createElement(
-              "div",
-              { className: l().HeaderTitleContainer },
-              n.createElement("h2", null, (0, c.we)("#736_patch_header")),
-              n.createElement(
-                "h1",
-                null,
-                (0, c.we)("#736_patch_header_number"),
-              ),
-            ),
-            n.createElement(
-              "video",
-              {
-                className: l().GameplayTeaserVideo,
-                autoPlay: !0,
-                preload: "auto",
-                muted: !0,
-                loop: !0,
-                playsInline: !0,
-              },
-              n.createElement("source", {
-                type: "video/mp4",
-                src: `${s.r.VIDEO_URL}seventhreesix/teaser.mp4?v=1`,
+      a.r(s), a.d(s, { default: () => l });
+      var n = a(69500),
+        c = a(89506),
+        r = a(68613),
+        i = a(74704),
+        t = a.n(i),
+        _ = a(21384),
+        h = a(40045);
+      const l = () =>
+        (0, n.jsxs)("div", {
+          className: t().Root,
+          children: [
+            (0, n.jsxs)("div", {
+              className: (0, _.A)(t().KeyArt),
+              children: [
+                (0, n.jsxs)("div", {
+                  className: t().HeaderTitleContainer,
+                  children: [
+                    (0, n.jsx)("h2", {
+                      children: (0, r.we)("#736_patch_header"),
+                    }),
+                    (0, n.jsx)("h1", {
+                      children: (0, r.we)("#736_patch_header_number"),
+                    }),
+                  ],
+                }),
+                (0, n.jsx)("video", {
+                  className: t().GameplayTeaserVideo,
+                  autoPlay: !0,
+                  preload: "auto",
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  children: (0, n.jsx)("source", {
+                    type: "video/mp4",
+                    src: `${c.r.VIDEO_URL}seventhreesix/teaser.mp4?v=1`,
+                  }),
+                }),
+              ],
+            }),
+            (0, n.jsxs)("div", {
+              className: (0, _.A)(t().Section, t().Innates),
+              children: [
+                (0, n.jsx)("div", { className: t().SectionBackgroundGradient }),
+                (0, n.jsx)("img", {
+                  className: t().SectionBackgroundImage,
+                  src: `${c.r.IMG_URL}seventhreesix/innates_header.png`,
+                }),
+                (0, n.jsxs)("div", {
+                  className: t().SectionContent,
+                  children: [
+                    (0, n.jsx)("span", {
+                      className: t().PreHeader,
+                      children: (0, r.we)("#736_patch_innates_preheader"),
+                    }),
+                    (0, n.jsx)("h2", {
+                      children: (0, r.we)("#736_patch_innates_header"),
+                    }),
+                    (0, n.jsx)("p", {
+                      className: t().Description,
+                      children: (0, h.Wn)("#736_patch_innates_description"),
+                    }),
+                    (0, n.jsxs)("div", {
+                      className: t().Screenshots,
+                      children: [
+                        (0, n.jsxs)("div", {
+                          children: [
+                            "russian" == c.r.LANGUAGE
+                              ? (0, n.jsx)("img", {
+                                  className: t().Screenshot,
+                                  src: `${c.r.IMG_URL}seventhreesix/innate_example_a_russian.png?v=5`,
+                                })
+                              : "schinese" == c.r.LANGUAGE
+                                ? (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/innate_example_a_schinese.png?v=5`,
+                                  })
+                                : (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/innate_example_a.png?v=5`,
+                                  }),
+                            (0, n.jsx)("p", {
+                              children: (0, h.Wn)(
+                                "#736_patch_innates_example_a_description",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, n.jsxs)("div", {
+                          children: [
+                            "russian" == c.r.LANGUAGE
+                              ? (0, n.jsx)("img", {
+                                  className: t().Screenshot,
+                                  src: `${c.r.IMG_URL}seventhreesix/innate_example_b_russian.png?v=5`,
+                                })
+                              : "schinese" == c.r.LANGUAGE
+                                ? (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/innate_example_b_schinese.png?v=5`,
+                                  })
+                                : (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/innate_example_b.png?v=5`,
+                                  }),
+                            (0, n.jsx)("p", {
+                              children: (0, h.Wn)(
+                                "#736_patch_innates_example_b_description",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, n.jsxs)("div", {
+              className: (0, _.A)(t().Section, t().Facets),
+              children: [
+                (0, n.jsx)("div", { className: t().SectionBackgroundGradient }),
+                (0, n.jsx)("img", {
+                  className: t().SectionBackgroundImage,
+                  src: `${c.r.IMG_URL}seventhreesix/facets_header.png`,
+                }),
+                (0, n.jsxs)("div", {
+                  className: t().SectionContent,
+                  children: [
+                    (0, n.jsx)("span", {
+                      className: t().PreHeader,
+                      children: (0, r.we)("#736_patch_facets_preheader"),
+                    }),
+                    (0, n.jsx)("h2", {
+                      children: (0, r.we)("#736_patch_facets_header"),
+                    }),
+                    (0, n.jsx)("p", {
+                      className: t().Description,
+                      children: (0, h.Wn)("#736_patch_facets_description"),
+                    }),
+                    (0, n.jsxs)("div", {
+                      className: t().Screenshots,
+                      children: [
+                        (0, n.jsxs)("div", {
+                          children: [
+                            "russian" == c.r.LANGUAGE
+                              ? (0, n.jsx)("img", {
+                                  className: t().Screenshot,
+                                  src: `${c.r.IMG_URL}seventhreesix/facet_example_a_russian.png?v=5`,
+                                })
+                              : "schinese" == c.r.LANGUAGE
+                                ? (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/facet_example_a_schinese.png?v=5`,
+                                  })
+                                : (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/facet_example_a.png?v=5`,
+                                  }),
+                            (0, n.jsx)("p", {
+                              children: (0, h.Wn)(
+                                "#736_patch_facets_example_a_description",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, n.jsxs)("div", {
+                          children: [
+                            "russian" == c.r.LANGUAGE
+                              ? (0, n.jsx)("img", {
+                                  className: t().Screenshot,
+                                  src: `${c.r.IMG_URL}seventhreesix/facet_example_b_russian.png?v=5`,
+                                })
+                              : "schinese" == c.r.LANGUAGE
+                                ? (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/facet_example_b_schinese.png?v=5`,
+                                  })
+                                : (0, n.jsx)("img", {
+                                    className: t().Screenshot,
+                                    src: `${c.r.IMG_URL}seventhreesix/facet_example_b.png?v=5`,
+                                  }),
+                            (0, n.jsx)("p", {
+                              children: (0, h.Wn)(
+                                "#736_patch_facets_example_b_description",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, n.jsx)("div", {
+              className: (0, _.A)(t().Section, t().ThePatch),
+              children: (0, n.jsx)("h2", {
+                children: (0, r.we)("#736_patch_thepatch"),
               }),
-            ),
-          ),
-          n.createElement(
-            "div",
-            { className: (0, _.A)(l().Section, l().Innates) },
-            n.createElement("div", {
-              className: l().SectionBackgroundGradient,
             }),
-            n.createElement("img", {
-              className: l().SectionBackgroundImage,
-              src: `${s.r.IMG_URL}seventhreesix/innates_header.png`,
-            }),
-            n.createElement(
-              "div",
-              { className: l().SectionContent },
-              n.createElement(
-                "span",
-                { className: l().PreHeader },
-                (0, c.we)("#736_patch_innates_preheader"),
-              ),
-              n.createElement(
-                "h2",
-                null,
-                (0, c.we)("#736_patch_innates_header"),
-              ),
-              n.createElement(
-                "p",
-                { className: l().Description },
-                (0, i.Wn)("#736_patch_innates_description"),
-              ),
-              n.createElement(
-                "div",
-                { className: l().Screenshots },
-                n.createElement(
-                  "div",
-                  null,
-                  "russian" == s.r.LANGUAGE
-                    ? n.createElement("img", {
-                        className: l().Screenshot,
-                        src: `${s.r.IMG_URL}seventhreesix/innate_example_a_russian.png?v=5`,
-                      })
-                    : "schinese" == s.r.LANGUAGE
-                      ? n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/innate_example_a_schinese.png?v=5`,
-                        })
-                      : n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/innate_example_a.png?v=5`,
-                        }),
-                  n.createElement(
-                    "p",
-                    null,
-                    (0, i.Wn)("#736_patch_innates_example_a_description"),
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  null,
-                  "russian" == s.r.LANGUAGE
-                    ? n.createElement("img", {
-                        className: l().Screenshot,
-                        src: `${s.r.IMG_URL}seventhreesix/innate_example_b_russian.png?v=5`,
-                      })
-                    : "schinese" == s.r.LANGUAGE
-                      ? n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/innate_example_b_schinese.png?v=5`,
-                        })
-                      : n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/innate_example_b.png?v=5`,
-                        }),
-                  n.createElement(
-                    "p",
-                    null,
-                    (0, i.Wn)("#736_patch_innates_example_b_description"),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          n.createElement(
-            "div",
-            { className: (0, _.A)(l().Section, l().Facets) },
-            n.createElement("div", {
-              className: l().SectionBackgroundGradient,
-            }),
-            n.createElement("img", {
-              className: l().SectionBackgroundImage,
-              src: `${s.r.IMG_URL}seventhreesix/facets_header.png`,
-            }),
-            n.createElement(
-              "div",
-              { className: l().SectionContent },
-              n.createElement(
-                "span",
-                { className: l().PreHeader },
-                (0, c.we)("#736_patch_facets_preheader"),
-              ),
-              n.createElement(
-                "h2",
-                null,
-                (0, c.we)("#736_patch_facets_header"),
-              ),
-              n.createElement(
-                "p",
-                { className: l().Description },
-                (0, i.Wn)("#736_patch_facets_description"),
-              ),
-              n.createElement(
-                "div",
-                { className: l().Screenshots },
-                n.createElement(
-                  "div",
-                  null,
-                  "russian" == s.r.LANGUAGE
-                    ? n.createElement("img", {
-                        className: l().Screenshot,
-                        src: `${s.r.IMG_URL}seventhreesix/facet_example_a_russian.png?v=5`,
-                      })
-                    : "schinese" == s.r.LANGUAGE
-                      ? n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/facet_example_a_schinese.png?v=5`,
-                        })
-                      : n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/facet_example_a.png?v=5`,
-                        }),
-                  n.createElement(
-                    "p",
-                    null,
-                    (0, i.Wn)("#736_patch_facets_example_a_description"),
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  null,
-                  "russian" == s.r.LANGUAGE
-                    ? n.createElement("img", {
-                        className: l().Screenshot,
-                        src: `${s.r.IMG_URL}seventhreesix/facet_example_b_russian.png?v=5`,
-                      })
-                    : "schinese" == s.r.LANGUAGE
-                      ? n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/facet_example_b_schinese.png?v=5`,
-                        })
-                      : n.createElement("img", {
-                          className: l().Screenshot,
-                          src: `${s.r.IMG_URL}seventhreesix/facet_example_b.png?v=5`,
-                        }),
-                  n.createElement(
-                    "p",
-                    null,
-                    (0, i.Wn)("#736_patch_facets_example_b_description"),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          n.createElement(
-            "div",
-            { className: (0, _.A)(l().Section, l().ThePatch) },
-            n.createElement("h2", null, (0, c.we)("#736_patch_thepatch")),
-          ),
-        );
+          ],
+        });
     },
   },
 ]);
