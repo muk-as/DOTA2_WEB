@@ -2857,6 +2857,7 @@
         CommunityLink: "_-1Ftwkq9SM_duAO7yEtha",
         TitleContainer: "_24V3XYwVt_AFylgNKP8LZN",
         TitleBackground: "_2JkngdWpZ0OKvLXwOdz-dC",
+        TitleContainerLessMargin: "_1C_9KLJaVYctmAHPONV2nA",
         TitleContainerInClient: "_37vS7MJ98ARGnG79UU08wh",
         BackToOverview: "_3yBA_EkyEh_7ziw1Lzz_a8",
         BackArrow: "mC3pIvRwPBjuXwVPYi_Td",
@@ -35430,33 +35431,34 @@
                 .catch((e) => d(!0)),
               (0, b.jsx)("div", {})
             );
-          const _ = "4238531900078333321";
-          let p = new Date(1e3 * o.GetStartTimeAndDateUnixSeconds());
-          o.GID == _ && (p = new Date(2024, 5, 11));
-          const h = (0, i.sf)(a.r.LANGUAGE);
-          let g = p.toLocaleDateString(F.pf.GetPreferredLocales(), {
+          const _ = "4238531900078333321",
+            p = ["512986184073347348"].includes(o.GID);
+          let h = new Date(1e3 * o.GetStartTimeAndDateUnixSeconds());
+          o.GID == _ && (h = new Date(2024, 5, 11));
+          const g = (0, i.sf)(a.r.LANGUAGE);
+          let f = h.toLocaleDateString(F.pf.GetPreferredLocales(), {
             month: "long",
             day: "numeric",
             year: "numeric",
           });
-          const f = o.GetDescriptionWithFallback(h);
-          o.GID == _ && (g = g.replace("11", "39"));
-          let v = [];
+          const v = o.GetDescriptionWithFallback(g);
+          o.GID == _ && (f = f.replace("11", "39"));
+          let x = [];
           for (const e of r)
             if (
               e != o &&
-              (qn(!1, e) && v.push((0, b.jsx)(Pn, { event: e }, e.GID)),
-              3 == v.length)
+              (qn(!1, e) && x.push((0, b.jsx)(Pn, { event: e }, e.GID)),
+              3 == x.length)
             )
               break;
-          const x = o.GetNameWithFallback(h),
-            T = o.GetImageURL("background"),
-            j = (0, B.Wn)((0, B.OK)(f));
+          const T = o.GetNameWithFallback(g),
+            j = o.GetImageURL("background"),
+            I = (0, B.Wn)((0, B.OK)(v));
           return (0, b.jsxs)("div", {
             className: Wn().BlogEntryPage,
             children: [
               (0, b.jsx)(O.mg, {
-                children: (0, b.jsx)("title", { children: x }),
+                children: (0, b.jsx)("title", { children: T }),
               }),
               (0, b.jsx)(Gn.A, {}),
               !u && (0, b.jsx)(Ye.A, { bOverlapping: !0 }),
@@ -35468,12 +35470,13 @@
                   children: "Admin Community Link",
                 }),
               (0, b.jsx)("div", {
-                className: u
-                  ? Wn().TitleContainerInClient
-                  : Wn().TitleContainer,
+                className: (0, N.A)(
+                  u ? Wn().TitleContainerInClient : Wn().TitleContainer,
+                  p && Wn().TitleContainerLessMargin,
+                ),
                 children: (0, b.jsx)("div", {
                   className: Wn().TitleBackground,
-                  style: { backgroundImage: T ? `url( ${T} )` : null },
+                  style: { backgroundImage: j ? `url( ${j} )` : null },
                 }),
               }),
               !u &&
@@ -35488,9 +35491,9 @@
                     (0, B.Wn)("#back_to_news"),
                   ],
                 }),
-              (0, b.jsx)("div", { className: Wn().Title, children: x }),
-              (0, b.jsx)("div", { className: Wn().Date, children: g }),
-              (0, b.jsx)("div", { className: Wn().Body, children: j }),
+              (0, b.jsx)("div", { className: Wn().Title, children: T }),
+              (0, b.jsx)("div", { className: Wn().Date, children: f }),
+              (0, b.jsx)("div", { className: Wn().Body, children: I }),
               !u &&
                 (0, b.jsxs)("div", {
                   className: Wn().LatestNews,
@@ -35501,7 +35504,7 @@
                     }),
                     (0, b.jsx)("div", {
                       className: Wn().LatestNewsContainer,
-                      children: v,
+                      children: x,
                     }),
                   ],
                 }),
