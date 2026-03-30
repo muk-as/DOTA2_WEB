@@ -1661,7 +1661,7 @@
     },
     54302: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => ye });
+      t.r(a), t.d(a, { default: () => je });
       var n = t(69500),
         r = t(75749),
         s = t.n(r),
@@ -1678,7 +1678,7 @@
         _ = t(20196),
         y = t(56529),
         j = t(42643),
-        g = t(25392),
+        g = t(29421),
         f = t(89506),
         A = t(21384),
         N = t(47202),
@@ -1854,21 +1854,22 @@
       }
       var L = t(92225),
         P = t(40753),
-        w = t.n(P);
-      const G = "red",
-        H = "orange",
-        $ = "goldenrod",
-        U = "#adff2f",
-        B = "darkgray",
-        K = "forestgreen",
-        Y = "crimson",
-        W = "#fa002e",
-        V = "#82ca9d",
-        J = "#888fd8",
-        X = "#3389ae",
-        z = "#FFBB28",
-        Z = "#FF8042",
-        q = (e) => {
+        w = t.n(P),
+        G = t(20018);
+      const H = "red",
+        $ = "orange",
+        U = "goldenrod",
+        B = "#adff2f",
+        K = "darkgray",
+        Y = "forestgreen",
+        W = "crimson",
+        V = "#fa002e",
+        J = "#82ca9d",
+        X = "#888fd8",
+        z = "#3389ae",
+        Z = "#FFBB28",
+        q = "#FF8042",
+        Q = (e) => {
           let a = "";
           const t = `${f.r.CDN_URL}/apps/dota2/images/`;
           return (
@@ -1882,7 +1883,7 @@
             a
           );
         },
-        Q = (e) => {
+        ee = (e) => {
           let a = "";
           return (
             2 == e && (a = "Text abuse"),
@@ -1894,7 +1895,7 @@
             a
           );
         },
-        ee = [
+        ae = [
           { key: "accountid", displayName: "Account ID" },
           {
             key: "guilds",
@@ -1913,13 +1914,13 @@
                     }),
                   })
                 : (0, n.jsx)("span", {
-                    style: { color: B },
+                    style: { color: K },
                     children: "No Guild",
                   });
             },
           },
         ],
-        ae = [
+        te = [
           {
             key: "comprank",
             secondaryKey: "comprankuncertainty",
@@ -1961,7 +1962,7 @@
               }),
           },
         ],
-        te = [
+        ne = [
           {
             key: "accountflags",
             displayName: "Account Flags",
@@ -1976,21 +1977,21 @@
                 (e & k.GR.BAN_WARNING) > 0 &&
                   t.push(
                     (0, n.jsx)("span", {
-                      style: { color: G },
+                      style: { color: H },
                       children: `${O(k.GR.BAN_WARNING)}${a}`,
                     }),
                   ),
                 (e & k.GR.RETURNING_PLAYER) > 0 &&
                   t.push(
                     (0, n.jsx)("span", {
-                      style: { color: $ },
+                      style: { color: U },
                       children: `${O(k.GR.RETURNING_PLAYER)}${a}`,
                     }),
                   ),
                 (e & k.GR.COMMS_DISRUPTIVE) > 0 &&
                   t.push(
                     (0, n.jsx)("span", {
-                      style: { color: G },
+                      style: { color: H },
                       children: `${O(k.GR.COMMS_DISRUPTIVE)}${a}`,
                     }),
                   ),
@@ -2004,23 +2005,23 @@
             tertiaryKey: "trustscore",
             displayName: "Behav, Comms, Trust",
             formatFunction: (e = 8e3, a = -1, t = -1) => {
-              let r = U;
+              let r = B;
               e < 0
-                ? (r = U)
+                ? (r = B)
                 : e <= 2e3
-                  ? (r = G)
+                  ? (r = H)
                   : e <= 4e3
-                    ? (r = H)
-                    : e <= 6e3 && (r = $);
-              let s = U;
+                    ? (r = $)
+                    : e <= 6e3 && (r = U);
+              let s = B;
               return (
                 a < 0
-                  ? (s = U)
+                  ? (s = B)
                   : a <= 2e3
-                    ? (s = G)
+                    ? (s = H)
                     : a <= 4e3
-                      ? (s = H)
-                      : a <= 6e3 && (s = $),
+                      ? (s = $)
+                      : a <= 6e3 && (s = U),
                 (0, n.jsxs)("div", {
                   children: [
                     (0, n.jsx)("span", {
@@ -2032,7 +2033,7 @@
                       children: `${a}, `,
                     }),
                     (0, n.jsx)("span", {
-                      style: { color: U },
+                      style: { color: B },
                       children: `${t}`,
                     }),
                   ],
@@ -2100,7 +2101,7 @@
                 : "",
           },
         ],
-        ne = [
+        re = [
           {
             key: "smurfcategory",
             displayName: "Smurf Category",
@@ -2108,17 +2109,17 @@
               switch (e) {
                 case k.V7.VERY_LIKELY:
                   return (0, n.jsx)("span", {
-                    style: { color: G },
+                    style: { color: H },
                     children: b(k.V7.VERY_LIKELY),
                   });
                 case k.V7.SOMEWHAT_LIKELY:
                   return (0, n.jsx)("span", {
-                    style: { color: H },
+                    style: { color: $ },
                     children: b(k.V7.SOMEWHAT_LIKELY),
                   });
                 case k.V7.UNCLEAR:
                   return (0, n.jsx)("span", {
-                    style: { color: $ },
+                    style: { color: U },
                     children: b(k.V7.UNCLEAR),
                   });
                 case k.V7.SOMEWHAT_UNLIKELY:
@@ -2141,7 +2142,7 @@
             displayName: "Plus Subscriber",
             formatFunction: (e = 0) =>
               e
-                ? (0, n.jsx)("div", { style: { color: U }, children: "YES" })
+                ? (0, n.jsx)("div", { style: { color: B }, children: "YES" })
                 : "NO",
           },
           {
@@ -2161,19 +2162,19 @@
               const r = Math.round((e / t) * 1e4) / 100;
               let s = "none";
               return (
-                r >= 70 || r <= 30 ? (s = H) : (r >= 60 || r <= 40) && (s = $),
+                r >= 70 || r <= 30 ? (s = $) : (r >= 60 || r <= 40) && (s = U),
                 (0, n.jsxs)(i.Fragment, {
                   children: [
                     (0, n.jsxs)("span", {
                       className: w().MarginRightSmall,
                       children: [
                         (0, n.jsx)("span", {
-                          style: { color: K },
+                          style: { color: Y },
                           children: `${e}`,
                         }),
                         (0, n.jsx)("span", { children: " - " }),
                         (0, n.jsx)("span", {
-                          style: { color: Y },
+                          style: { color: W },
                           children: `${a}`,
                         }),
                       ],
@@ -2197,19 +2198,19 @@
               const r = Math.round((e / t) * 1e4) / 100;
               let s = "none";
               return (
-                r >= 70 || r <= 30 ? (s = H) : (r >= 60 || r <= 40) && (s = $),
+                r >= 70 || r <= 30 ? (s = $) : (r >= 60 || r <= 40) && (s = U),
                 (0, n.jsxs)(i.Fragment, {
                   children: [
                     (0, n.jsxs)("span", {
                       className: w().MarginRightSmall,
                       children: [
                         (0, n.jsx)("span", {
-                          style: { color: K },
+                          style: { color: Y },
                           children: `${e}`,
                         }),
                         (0, n.jsx)("span", { children: " - " }),
                         (0, n.jsx)("span", {
-                          style: { color: Y },
+                          style: { color: W },
                           children: `${a}`,
                         }),
                       ],
@@ -2233,9 +2234,9 @@
                 (a = ((a >> 4) + a) & 252645135),
                 (a = ((a >> 8) + a) & 16711935),
                 (a = ((a >> 16) + a) & 65535);
-              let t = U;
+              let t = B;
               return (
-                a > 20 ? (t = G) : a > 10 ? (t = H) : a > 5 && (t = $),
+                a > 20 ? (t = H) : a > 10 ? (t = $) : a > 5 && (t = U),
                 (0, n.jsx)("span", {
                   style: { color: t },
                   children: `${a} / 32 games`,
@@ -2244,7 +2245,7 @@
             },
           },
         ],
-        re = [
+        se = [
           {
             key: "details",
             displayName: " ",
@@ -2276,7 +2277,7 @@
                               }),
                             !l && (0, n.jsx)("div", { children: `${r[e][0]}` }),
                             (0, n.jsx)("div", {
-                              style: { color: B },
+                              style: { color: K },
                               children: `(${r[e][1]} / ${s})`,
                             }),
                           ],
@@ -2307,7 +2308,7 @@
             },
           },
         ],
-        se = [
+        le = [
           {
             key: "reportslink",
             displayName: "Reports",
@@ -2339,13 +2340,13 @@
                 : "",
           },
         ],
-        le = [
+        ie = [
           {
             key: "beta_access_flags",
             displayName: C(k.TK.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & k.TK.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? (0, n.jsx)("div", { style: { color: U }, children: "YES" })
+                ? (0, n.jsx)("div", { style: { color: B }, children: "YES" })
                 : "NO",
           },
           {
@@ -2353,11 +2354,11 @@
             displayName: C(k.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & k.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? (0, n.jsx)("div", { style: { color: U }, children: "YES" })
+                ? (0, n.jsx)("div", { style: { color: B }, children: "YES" })
                 : "NO",
           },
         ],
-        ie = [
+        oe = [
           {
             key: "vac",
             displayName: " ",
@@ -2385,7 +2386,7 @@
             },
           },
         ],
-        oe = [
+        ce = [
           { key: "name", displayName: "Name" },
           { key: "real_name", displayName: "Real Name" },
           {
@@ -2441,7 +2442,7 @@
             formatFunction: (e) => (e ? "YES" : "NO"),
           },
         ],
-        ce = [
+        de = [
           {
             key: "teams",
             secondaryKey: "dotateamurl",
@@ -2463,7 +2464,7 @@
                           children: [
                             `${c} `,
                             (0, n.jsx)("span", {
-                              style: { color: B },
+                              style: { color: K },
                               children: `[${d}]`,
                             }),
                           ],
@@ -2484,7 +2485,7 @@
             },
           },
         ],
-        de = [
+        me = [
           {
             key: "eventpoints",
             displayName: " ",
@@ -2514,75 +2515,75 @@
             },
           },
         ],
-        me = () =>
+        he = () =>
           (0, n.jsxs)(i.Fragment, {
             children: [
-              (0, n.jsx)("span", { style: { color: H }, children: "YES" }),
+              (0, n.jsx)("span", { style: { color: $ }, children: "YES" }),
               (0, n.jsx)("span", { children: " (check V1 Link for details)" }),
             ],
           }),
-        he = [
+        ue = [
           {
             key: "exploiter_data",
             displayName: "Exploiter Warnings?",
-            formatFunction: me,
+            formatFunction: he,
           },
           {
             key: "smurf_data",
             displayName: "Smurf Warnings?",
-            formatFunction: me,
+            formatFunction: he,
           },
           {
             key: "cheater_data",
             displayName: "Cheater Warnings?",
-            formatFunction: me,
+            formatFunction: he,
           },
           {
             key: "booster_data",
             displayName: "Booster Warnings?",
-            formatFunction: me,
+            formatFunction: he,
           },
           {
             key: "known_mmr_exploiter",
             displayName: "Known Hacker / Exploiter?",
-            formatFunction: me,
+            formatFunction: he,
           },
           {
             key: "delayedbans",
             displayName: "Delayed Bans?",
-            formatFunction: me,
+            formatFunction: he,
           },
         ],
-        ue = (e) =>
+        pe = (e) =>
           (0, n.jsx)(i.Fragment, {
             children: (0, n.jsx)("span", {
-              style: { color: G },
+              style: { color: H },
               children: d()(1e3 * e).format("MMMM Do YYYY, h:mm:ss a"),
             }),
           }),
-        pe = [
+        xe = [
           {
             key: "matchdisableduntil",
             displayName: "MM Disabled Until",
-            formatFunction: ue,
+            formatFunction: pe,
           },
           {
             key: "rankeddisableduntil",
             displayName: "Ranked Disabled Until",
-            formatFunction: ue,
+            formatFunction: pe,
           },
           {
             key: "preventvoiceuntil",
             displayName: "Voice Disabled Until",
-            formatFunction: ue,
+            formatFunction: pe,
           },
           {
             key: "preventpublictextchatuntil",
             displayName: "Public Text Chat Disabled Until",
-            formatFunction: ue,
+            formatFunction: pe,
           },
         ],
-        xe = (e) => {
+        _e = (e) => {
           if (!e || !e.length) return "(No Bans)";
           e = e.slice(0, 5);
           return e.map((e) => {
@@ -2590,7 +2591,7 @@
             return (0, n.jsxs)(
               "tr",
               {
-                style: { color: a ? G : "" },
+                style: { color: a ? H : "" },
                 children: [
                   (0, n.jsx)("td", { children: e.bantype }),
                   (0, n.jsx)("td", {
@@ -2628,30 +2629,30 @@
             var t;
           });
         },
-        _e = (e) => {
+        ye = (e) => {
           const a = (0, l.g)(),
             t = a?.id,
             [r, c] = (0, i.useState)(null),
             [O, b] = (0, i.useState)(null),
             [C, M] = (0, i.useState)(null),
-            [P, U] = (0, i.useState)(null),
-            [me, ue] = (0, i.useState)(!1),
-            [_e, ye] = (0, i.useState)(!1),
-            [je, ge] = (0, i.useState)(!1),
-            [fe, Ae] = (0, i.useState)(!1),
-            [Ne, Ie] = (0, i.useState)(!0),
-            [Te, Se] = (0, i.useState)(!0),
-            [ke, ve] = (0, i.useState)(!1),
-            [Re, Fe] = (0, i.useState)(!0),
-            [De, Ee] = (0, i.useState)(!0),
-            [Oe, be] = (0, i.useState)(!1),
-            Ce = S.B5.Get().getHeroList(),
-            Me = S.B5.Get().getItemList();
+            [P, B] = (0, i.useState)(null),
+            [he, pe] = (0, i.useState)(!1),
+            [ye, je] = (0, i.useState)(!1),
+            [ge, fe] = (0, i.useState)(!1),
+            [Ae, Ne] = (0, i.useState)(!1),
+            [Ie, Te] = (0, i.useState)(!0),
+            [Se, ke] = (0, i.useState)(!0),
+            [ve, Re] = (0, i.useState)(!1),
+            [Fe, De] = (0, i.useState)(!0),
+            [Ee, Oe] = (0, i.useState)(!0),
+            [be, Ce] = (0, i.useState)(!1),
+            Me = S.B5.Get().getHeroList(),
+            Le = S.B5.Get().getItemList();
           (0, i.useEffect)(() => {
             try {
               !(async function () {
                 if (!f.r.DOTA_APP_ID || !t) return;
-                Ae(!1), ge(!1), ue(!1), ye(!1);
+                Ne(!1), fe(!1), pe(!1), je(!1);
                 const e = {
                   appid: f.r.DOTA_APP_ID,
                   u: R(f.r.DOTA_APP_ID),
@@ -2684,17 +2685,17 @@
                       const e = Object.values(
                         t.persona.history.matches,
                       ).reverse();
-                      M(e), U(e);
+                      M(e), B(e);
                     }
                   } catch (e) {
-                    ye(!0);
+                    je(!0);
                   }
                   a && a.data && c(t);
                 } catch (e) {
                   console.log("Error fetching individual persona info."),
-                    Ae(!0);
+                    Ne(!0);
                 }
-                ge(!0), ue(!0);
+                fe(!0), pe(!0);
               })();
             } catch (e) {
               console.log("Could not fetch persona info.");
@@ -2705,10 +2706,10 @@
               let e = C.slice();
               (e = e.filter(
                 (e) =>
-                  !(!Te && e.lobbytype == k.AP.CASUAL_MATCH) &&
-                  !(!Ne && e.lobbytype == k.AP.COMPETITIVE_MATCH) &&
+                  !(!Se && e.lobbytype == k.AP.CASUAL_MATCH) &&
+                  !(!Ie && e.lobbytype == k.AP.COMPETITIVE_MATCH) &&
                   !(
-                    !ke &&
+                    !ve &&
                     ![
                       k.AP.CASUAL_MATCH,
                       k.AP.COMPETITIVE_MATCH,
@@ -2716,23 +2717,23 @@
                       k.AP.FEATURED_GAMEMODE,
                     ].includes(e.lobbytype)
                   ) &&
-                  !(!Re && e.rankwassolo) &&
-                  !(!De && !e.rankwassolo),
+                  !(!Fe && e.rankwassolo) &&
+                  !(!Ee && !e.rankwassolo),
               )),
-                U(e);
-            }, [C, Ne, Te, ke, Re, De]);
-          let Le = null;
+                B(e);
+            }, [C, Ie, Se, ve, Fe, Ee]);
+          let Pe = null;
           if (
             (t
-              ? je && me
-                ? je && fe
-                  ? (Le = `Error loading persona information for account ID ${t}. Double check universe & account ID (or try refreshing).`)
-                  : me &&
-                    _e &&
-                    (Le = `Error loading match history for account ID ${t}.`)
-                : (Le = `Loading account ID ${t}...`)
-              : (Le = "Must pass in an account ID."),
-            Le)
+              ? ge && he
+                ? ge && Ae
+                  ? (Pe = `Error loading persona information for account ID ${t}. Double check universe & account ID (or try refreshing).`)
+                  : he &&
+                    ye &&
+                    (Pe = `Error loading match history for account ID ${t}.`)
+                : (Pe = `Loading account ID ${t}...`)
+              : (Pe = "Must pass in an account ID."),
+            Pe)
           )
             return (0, n.jsxs)("div", {
               className: w().PersonaDetails,
@@ -2748,13 +2749,13 @@
                   className: w().ContentFrame,
                   children: (0, n.jsx)("h2", {
                     className: w().Header,
-                    children: Le,
+                    children: Pe,
                   }),
                 }),
                 (0, n.jsx)(I.K, {}),
               ],
             });
-          const Pe = [
+          const we = [
             {
               dataKey: "date",
               label: "Match Date",
@@ -2782,7 +2783,7 @@
               label: "Hero",
               widthRelative: 5,
               cellRenderer: (e) => {
-                const a = Ce?.heroes.find((a) => a.id == e.cellData),
+                const a = Me?.heroes.find((a) => a.id == e.cellData),
                   t = a?.name?.replace("npc_dota_hero_", "");
                 return t
                   ? (0, n.jsx)("img", {
@@ -2803,7 +2804,7 @@
               cellRenderer: (e) => {
                 if (e.rowData?.lobbytype == k.AP.PRACTICE)
                   return (0, n.jsx)("span", {
-                    style: { color: X },
+                    style: { color: z },
                     children: D(k.AP.PRACTICE),
                   });
                 let a = e.cellData;
@@ -2814,7 +2815,7 @@
                   const a = e.cellData;
                   return a in k.rM
                     ? (0, n.jsx)("span", {
-                        style: { color: H },
+                        style: { color: $ },
                         children: E(a),
                       })
                     : E(k.rM.UNKNOWN);
@@ -2823,7 +2824,7 @@
                   const r = t == a,
                     s = [],
                     l = e?.rowData?.rankchange;
-                  let i = r ? (l >= 35 ? "#68c529" : K) : l <= -35 ? W : Y;
+                  let i = r ? (l >= 35 ? "#68c529" : Y) : l <= -35 ? V : W;
                   return (
                     s.push(
                       (0, n.jsx)(
@@ -2874,7 +2875,7 @@
                 const a = e.cellData || 0;
                 let t = "";
                 return (
-                  a >= 300 ? (t = G) : a >= 175 ? (t = H) : a >= 100 && (t = $),
+                  a >= 300 ? (t = H) : a >= 175 ? (t = $) : a >= 100 && (t = U),
                   (0, n.jsx)(
                     "span",
                     { style: { color: t }, children: `${a}` },
@@ -2908,11 +2909,11 @@
               cellRenderer: (e) => {
                 let a = isNaN(e.cellData) ? e.rowData.lobbytype : e.cellData;
                 a in k.AP || (a = -1);
-                let t = X;
+                let t = z;
                 return (
                   a == k.AP.CASUAL_MATCH
-                    ? (t = V)
-                    : a == k.AP.COMPETITIVE_MATCH && (t = J),
+                    ? (t = J)
+                    : a == k.AP.COMPETITIVE_MATCH && (t = X),
                   (0, n.jsx)("span", { style: { color: t }, children: D(a) })
                 );
               },
@@ -2926,13 +2927,13 @@
                           type: "checkbox",
                           name: "ranked",
                           id: "ranked",
-                          onChange: () => Ie(!Ne),
-                          checked: Ne,
+                          onChange: () => Te(!Ie),
+                          checked: Ie,
                         }),
                         (0, n.jsx)("label", {
                           htmlFor: "ranked",
                           children: (0, n.jsx)("span", {
-                            style: { color: J },
+                            style: { color: X },
                             children: "Ranked",
                           }),
                         }),
@@ -2945,13 +2946,13 @@
                           type: "checkbox",
                           name: "unranked",
                           id: "unranked",
-                          onChange: () => Se(!Te),
-                          checked: Te,
+                          onChange: () => ke(!Se),
+                          checked: Se,
                         }),
                         (0, n.jsx)("label", {
                           htmlFor: "unranked",
                           children: (0, n.jsx)("span", {
-                            style: { color: V },
+                            style: { color: J },
                             children: "Unranked",
                           }),
                         }),
@@ -2967,11 +2968,11 @@
               cellRenderer: (e) =>
                 e.cellData && e?.rowData?.lobbytype != k.AP.WEEKEND_TOURNEY
                   ? (0, n.jsx)("span", {
-                      style: { color: Z },
+                      style: { color: q },
                       children: "Solo",
                     })
                   : (0, n.jsx)("span", {
-                      style: { color: z },
+                      style: { color: Z },
                       children: "Party",
                     }),
               headerRenderer: (e) =>
@@ -2984,13 +2985,13 @@
                           type: "checkbox",
                           name: "solo",
                           id: "solo",
-                          onChange: () => Fe(!Re),
-                          checked: Re,
+                          onChange: () => De(!Fe),
+                          checked: Fe,
                         }),
                         (0, n.jsx)("label", {
                           htmlFor: "solo",
                           children: (0, n.jsx)("span", {
-                            style: { color: Z },
+                            style: { color: q },
                             children: "Solo",
                           }),
                         }),
@@ -3003,13 +3004,13 @@
                           type: "checkbox",
                           name: "party",
                           id: "party",
-                          onChange: () => Ee(!De),
-                          checked: De,
+                          onChange: () => Oe(!Ee),
+                          checked: Ee,
                         }),
                         (0, n.jsx)("label", {
                           htmlFor: "party",
                           children: (0, n.jsx)("span", {
-                            style: { color: z },
+                            style: { color: Z },
                             children: "Party",
                           }),
                         }),
@@ -3025,7 +3026,7 @@
               cellRenderer: (e) => {
                 if (e?.rowData?.searchdata?.partylowpri)
                   return (0, n.jsx)("span", {
-                    style: { color: W },
+                    style: { color: V },
                     children: "SD (LP)",
                   });
                 const a = `DOTA_GAMEMODE_${e.cellData}`;
@@ -3065,7 +3066,7 @@
               cellRenderer: (e) => {
                 const a = [];
                 for (let t = 0; t < 6; t++) {
-                  const r = Me?.itemabilities.find(
+                  const r = Le?.itemabilities.find(
                     (a) => a.id == e?.rowData[`item${t}`],
                   );
                   let s = r?.name.replace("item_", "");
@@ -3218,7 +3219,7 @@
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: w().PlayerReportTooltip,
                           children: (0, n.jsx)("span", {
-                            style: { color: W },
+                            style: { color: V },
                             children: "[Lvr] ",
                           }),
                         },
@@ -3254,8 +3255,8 @@
                               }),
                               (0, n.jsx)("tbody", {
                                 children: m.map((e) => {
-                                  const a = q(e.reportreason),
-                                    t = Q(e.reportreason);
+                                  const a = Q(e.reportreason),
+                                    t = ee(e.reportreason);
                                   return (0, n.jsxs)(
                                     "tr",
                                     {
@@ -3285,7 +3286,7 @@
                           strTooltipClassname: w().PlayerReportTooltip,
                           children: (0, n.jsx)(
                             "span",
-                            { style: { color: K }, children: `[${m.length}] ` },
+                            { style: { color: Y }, children: `[${m.length}] ` },
                             "playerCommends",
                           ),
                         },
@@ -3299,8 +3300,8 @@
                     a = [];
                   let t = 0;
                   for (let e of h) {
-                    const r = q(e.reportreason),
-                      s = Q(e.reportreason);
+                    const r = Q(e.reportreason),
+                      s = ee(e.reportreason);
                     t &&
                       t != e.reporteraccountid &&
                       a.push(
@@ -3365,7 +3366,7 @@
                         strTooltipClassname: w().PlayerReportTooltip,
                         children: (0, n.jsx)(
                           "span",
-                          { style: { color: G }, children: `[${e.length}]` },
+                          { style: { color: H }, children: `[${e.length}]` },
                           "playerReports",
                         ),
                       },
@@ -3442,7 +3443,7 @@
                           strTooltipClassname: w().PlayerReportTooltip,
                           children: (0, n.jsx)(
                             "span",
-                            { style: { color: G }, children: "[SUS]" },
+                            { style: { color: H }, children: "[SUS]" },
                             "playerReports",
                           ),
                         },
@@ -3498,7 +3499,7 @@
                           strTooltipClassname: w().PlayerReportTooltip,
                           children: (0, n.jsx)(
                             "span",
-                            { style: { color: G }, children: "[LP]" },
+                            { style: { color: H }, children: "[LP]" },
                             "playerReports",
                           ),
                         },
@@ -3518,7 +3519,7 @@
                           children: (0, n.jsx)(
                             "span",
                             {
-                              style: { color: H },
+                              style: { color: $ },
                               children: `[${c.slice(-2)}]`,
                             },
                             "langChange",
@@ -3539,7 +3540,7 @@
                           strTooltipClassname: w().PlayerReportTooltip,
                           children: (0, n.jsx)(
                             "span",
-                            { style: { color: H }, children: "[GEO]" },
+                            { style: { color: $ }, children: "[GEO]" },
                             "geoChange",
                           ),
                         },
@@ -3558,7 +3559,7 @@
                           strTooltipClassname: w().PlayerReportTooltip,
                           children: (0, n.jsx)(
                             "span",
-                            { style: { color: H }, children: "[HW]" },
+                            { style: { color: $ }, children: "[HW]" },
                             "hwidChange",
                           ),
                         },
@@ -3583,24 +3584,24 @@
               },
             },
           ];
-          let we = !0;
-          for (let e of he)
+          let Ge = !0;
+          for (let e of ue)
             if (r?.persona && r?.persona[e.key]) {
-              we = !1;
+              Ge = !1;
               break;
             }
-          let Ge = !1;
-          for (let e of pe)
+          let He = !1;
+          for (let e of xe)
             if (
               r?.persona &&
               r?.persona[e.key] &&
               d()(1e3 * r?.persona[e.key]).isAfter()
             ) {
-              Ge = !0;
+              He = !0;
               break;
             }
-          let He = 0,
-            $e = !1;
+          let $e = 0,
+            Ue = !1;
           if (r?.persona?.banhistory)
             for (let e of r.persona.banhistory) {
               const a = e.comment || "";
@@ -3611,7 +3612,7 @@
                 a.match(/.*(?:\D|^)(\d+)/)
               ) {
                 const e = a.match(/.*(?:\D|^)(\d+)/);
-                e && e.length && (He = e[1]);
+                e && e.length && ($e = e[1]);
               } else if (
                 /Streamer/i.test(a) &&
                 /Main/.test(a) &&
@@ -3619,17 +3620,17 @@
                 a.match(/.*(?:\D|^)(\d+)/)
               ) {
                 const e = a.match(/.*(?:\D|^)(\d+)/);
-                e && e.length && ((He = e[1]), ($e = !0));
+                e && e.length && (($e = e[1]), (Ue = !0));
               }
             }
-          const Ue = r?.persona?.personaname || "";
+          const Be = r?.persona?.personaname || "";
           return (0, n.jsxs)("div", {
             className: w().PersonaDetails,
             children: [
               (0, n.jsx)(N.A, { bOverlapping: !1 }),
               (0, n.jsx)(o.mg, {
                 children: (0, n.jsx)("title", {
-                  children: "Dota 2 Player" + (Ue ? " - " + Ue : ""),
+                  children: "Dota 2 Player" + (Be ? " - " + Be : ""),
                 }),
               }),
               (0, n.jsx)(v.A, {}),
@@ -3648,11 +3649,11 @@
                               w().Header,
                               w().HeaderFixedHeight,
                             ),
-                            children: `${Ue}`,
+                            children: `${Be}`,
                           }),
                           (0, n.jsx)("div", {
                             className: w().GeneralInfoGrid,
-                            children: ee.map((e) =>
+                            children: ae.map((e) =>
                               (0, n.jsxs)(
                                 i.Fragment,
                                 {
@@ -3681,7 +3682,7 @@
                           }),
                           (0, n.jsx)("div", {
                             className: w().RankInfoGrid,
-                            children: ae.map((e) =>
+                            children: te.map((e) =>
                               (0, n.jsxs)(
                                 i.Fragment,
                                 {
@@ -3711,7 +3712,7 @@
                           }),
                           (0, n.jsx)("div", {
                             className: w().SupportInfoTopGrid,
-                            children: te.map((e) =>
+                            children: ne.map((e) =>
                               (0, n.jsxs)(
                                 i.Fragment,
                                 {
@@ -3741,7 +3742,7 @@
                           }),
                           (0, n.jsx)("div", {
                             className: w().SmurfInfoGrid,
-                            children: ne.map((e) =>
+                            children: re.map((e) =>
                               (0, n.jsxs)(
                                 i.Fragment,
                                 {
@@ -3775,7 +3776,7 @@
                           }),
                           (0, n.jsx)("div", {
                             className: w().DetailedInfoOuterGrid,
-                            children: re.map((e) =>
+                            children: se.map((e) =>
                               (0, n.jsx)(
                                 i.Fragment,
                                 {
@@ -3862,7 +3863,7 @@
                                     type: "monotone",
                                     dataKey: "ranked",
                                     name: "Ranked",
-                                    dot: { fill: J, strokeWidth: 1, r: 3 },
+                                    dot: { fill: X, strokeWidth: 1, r: 3 },
                                     stroke: "#888fd8",
                                     strokeWidth: 2,
                                     connectNulls: !0,
@@ -3871,7 +3872,7 @@
                                     type: "monotone",
                                     dataKey: "casual",
                                     name: "Unranked",
-                                    dot: { fill: V, strokeWidth: 1, r: 3 },
+                                    dot: { fill: J, strokeWidth: 1, r: 3 },
                                     stroke: "#82ca9d",
                                     strokeWidth: 2,
                                     connectNulls: !0,
@@ -3889,11 +3890,11 @@
                   (0, n.jsx)("div", {
                     className: (0, A.A)(
                       w().SupportGrid,
-                      Oe && w().SupportGridHidden,
+                      be && w().SupportGridHidden,
                     ),
                     children: (0, n.jsx)("div", {
                       className: w().SupportColumn,
-                      onClick: () => be(!0),
+                      onClick: () => Ce(!0),
                       children: (0, n.jsxs)("h2", {
                         className: (0, A.A)(
                           w().HeaderNoMargin,
@@ -3915,7 +3916,7 @@
                   (0, n.jsxs)("div", {
                     className: (0, A.A)(
                       w().SupportGrid,
-                      !Oe && w().SupportGridHidden,
+                      !be && w().SupportGridHidden,
                     ),
                     children: [
                       (0, n.jsxs)("div", {
@@ -3926,7 +3927,7 @@
                               w().Header,
                               w().HeaderClickable,
                             ),
-                            onClick: () => be(!1),
+                            onClick: () => Ce(!1),
                             children: [
                               "Support, Bans, & Other Info",
                               (0, n.jsx)("img", {
@@ -3940,7 +3941,7 @@
                           }),
                           (0, n.jsx)("div", {
                             className: w().SupportInfoGrid,
-                            children: se.map((e) =>
+                            children: le.map((e) =>
                               (0, n.jsxs)(
                                 i.Fragment,
                                 {
@@ -3970,7 +3971,7 @@
                           (0, n.jsx)("br", {}),
                           (0, n.jsx)("div", {
                             className: w().AccessFlagsGrid,
-                            children: le.map((e) =>
+                            children: ie.map((e) =>
                               (0, n.jsxs)(
                                 i.Fragment,
                                 {
@@ -3997,10 +3998,10 @@
                               ),
                             ),
                           }),
-                          !we && (0, n.jsx)("br", {}),
+                          !Ge && (0, n.jsx)("br", {}),
                           (0, n.jsx)("div", {
                             className: w().WarningsGrid,
-                            children: he.map((e) =>
+                            children: ue.map((e) =>
                               (0, n.jsxs)(
                                 i.Fragment,
                                 {
@@ -4033,7 +4034,7 @@
                           (0, n.jsxs)("div", {
                             className: w().BansGrid,
                             children: [
-                              pe.map((e) =>
+                              xe.map((e) =>
                                 (0, n.jsxs)(
                                   i.Fragment,
                                   {
@@ -4067,14 +4068,14 @@
                                   `${e.key}-${e.displayName}-bansInfo-row`,
                                 ),
                               ),
-                              He > 0 &&
+                              $e > 0 &&
                                 (0, n.jsxs)(i.Fragment, {
                                   children: [
-                                    !$e &&
+                                    !Ue &&
                                       (0, n.jsx)("div", {
                                         children: "Main Account",
                                       }),
-                                    $e &&
+                                    Ue &&
                                       (0, n.jsx)("div", {
                                         children: "Streamer",
                                       }),
@@ -4082,8 +4083,8 @@
                                       children: (0, n.jsx)("a", {
                                         target: "_blank",
                                         rel: "noopener noreferrer",
-                                        href: `${f.r.BASE_URL}${T.J.personadetails(He).substr(1)}`,
-                                        children: He,
+                                        href: `${f.r.BASE_URL}${T.J.personadetails($e).substr(1)}`,
+                                        children: $e,
                                       }),
                                     }),
                                   ],
@@ -4093,7 +4094,7 @@
                           (0, n.jsx)("br", {}),
                           (0, n.jsx)("div", {
                             className: w().VacInfoOuterGrid,
-                            children: ie.map((e) =>
+                            children: oe.map((e) =>
                               (0, n.jsx)(
                                 i.Fragment,
                                 {
@@ -4129,7 +4130,7 @@
                             className: w().OfficialProfileOuterGrid,
                             children: [
                               r?.persona?.official_profile &&
-                                oe.map((e) =>
+                                ce.map((e) =>
                                   (0, n.jsxs)(
                                     i.Fragment,
                                     {
@@ -4164,7 +4165,7 @@
                               !r?.persona?.official_profile &&
                                 (0, n.jsx)(i.Fragment, {
                                   children: (0, n.jsx)("span", {
-                                    style: { color: B },
+                                    style: { color: K },
                                     children: "(None)",
                                   }),
                                 }),
@@ -4179,7 +4180,7 @@
                                 children: "Teams",
                               }),
                               r?.persona?.teams &&
-                                ce.map((e) =>
+                                de.map((e) =>
                                   (0, n.jsx)(
                                     i.Fragment,
                                     {
@@ -4204,7 +4205,7 @@
                               !r?.persona?.teams &&
                                 (0, n.jsx)(i.Fragment, {
                                   children: (0, n.jsx)("span", {
-                                    style: { color: B },
+                                    style: { color: K },
                                     children: "(None)",
                                   }),
                                 }),
@@ -4221,7 +4222,7 @@
                           }),
                           (0, n.jsx)("div", {
                             className: w().EventInfoOuterGrid,
-                            children: de.map((e) =>
+                            children: me.map((e) =>
                               (0, n.jsx)(
                                 i.Fragment,
                                 {
@@ -4248,7 +4249,7 @@
                     ],
                   }),
                   (0, n.jsxs)("div", {
-                    className: (0, A.A)(!Oe && w().SupportGridHidden),
+                    className: (0, A.A)(!be && w().SupportGridHidden),
                     children: [
                       (0, n.jsx)("div", { className: w().SmoothLine }),
                       (0, n.jsxs)("table", {
@@ -4307,7 +4308,7 @@
                               (0, n.jsx)("tr", {
                                 children: (0, n.jsx)("td", {}),
                               }),
-                              xe(r?.persona?.banhistory),
+                              _e(r?.persona?.banhistory),
                             ],
                           }),
                         ],
@@ -4324,8 +4325,8 @@
                           type: "checkbox",
                           name: "othermode",
                           id: "othermode",
-                          onChange: () => ve(!ke),
-                          checked: ke,
+                          onChange: () => Re(!ve),
+                          checked: ve,
                         }),
                         (0, n.jsx)("label", {
                           htmlFor: "othermode",
@@ -4364,16 +4365,23 @@
                                     children:
                                       "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
                                   }),
-                                children: Pe.map((a) =>
+                                children: we.map((a) =>
                                   (0, n.jsx)(
                                     g.VP,
                                     {
                                       label: a.label,
                                       dataKey: a.dataKey,
                                       width: e * a.widthRelative,
-                                      cellRenderer: a.cellRenderer,
+                                      cellRenderer: a.cellRenderer
+                                        ? a.cellRenderer
+                                        : G.RA,
                                       columnData: { strAccountId: t },
-                                      headerRenderer: a.headerRenderer,
+                                      headerRenderer: a.headerRenderer
+                                        ? a.headerRenderer
+                                        : g.o9,
+                                      cellDataGetter: G.fF,
+                                      flexGrow: 0,
+                                      flexShrink: 1,
                                     },
                                     a.dataKey,
                                   ),
@@ -4391,9 +4399,9 @@
             ],
           });
         };
-      class ye extends i.Component {
+      class je extends i.Component {
         render() {
-          return (0, n.jsx)(_e, {});
+          return (0, n.jsx)(ye, {});
         }
       }
     },
