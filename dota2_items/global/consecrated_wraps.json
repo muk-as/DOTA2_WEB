@@ -6,13 +6,12 @@
           "id": 1854,
           "name": "item_consecrated_wraps",
           "name_loc": "Consecrated Wraps",
-          "desc_loc": "<h1>Passive: Hallowed</h1> Gain a stack every %stack_gain_time%s, up to a maximum of %max_stacks% stacks. Upon gaining a stack, your movement speed is increased by %movement_speed_pct_on_stack_gain%%% for %duration%s.<br><br>Whenever you take damage from a player-controlled unit or Roshan, consume all stacks to gain an all damage barrier for %duration%s that absorbs %barrier_per_stack% damage per stack (%max_barrier_tooltip% max).",
+          "desc_loc": "<h1>Passive: Hallowed</h1> Gain a charge every %AbilityChargeRestoreTime%s, up to a maximum of %AbilityCharges% charges. Upon gaining a charge, your movement speed is increased by %movement_speed_pct_on_stack_gain%%% for %duration%s.<br><br>Whenever you take damage from a player-controlled unit or Roshan, consume all charges to gain an all damage barrier for %duration%s that absorbs %barrier_per_stack% damage per charge (%max_barrier_tooltip% max).",
           "lore_loc": "",
           "notes_loc": [
-            "Stacks cannot be gained for %stack_gain_time%s after you take damage from a player-controlled unit or Roshan.",
-            "Self-damage and HP Loss damage cannot remove stacks.",
-            "Movement speed buff does not stack.",
-            "Movement speed buff is only provided if you have reached maximum stacks at least once while the item is equipped."
+            "Charges cannot be gained for %stack_gain_time%s after you take damage from a player-controlled unit or Roshan.",
+            "Self-damage and HP Loss damage cannot remove charges.",
+            "Movement speed buff does not stack."
           ],
           "shard_loc": "",
           "scepter_loc": "",
@@ -73,7 +72,7 @@
             {
               "name": "bonus_all_stats",
               "values_float": [
-                6
+                5
               ],
               "is_percentage": false,
               "heading_loc": "+$all",
@@ -107,7 +106,7 @@
             {
               "name": "stack_gain_time",
               "values_float": [
-                3
+                4
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -205,6 +204,40 @@
                 "operation": 0
               },
               "required_facet": ""
+            },
+            {
+              "name": "AbilityCharges",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
             }
           ],
           "is_item": true,
@@ -214,7 +247,7 @@
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,
           "item_cost": 2600,
-          "item_initial_charges": 0,
+          "item_initial_charges": 3,
           "item_neutral_tier": 4294967295,
           "item_stock_max": 0,
           "item_stock_time": 0,
