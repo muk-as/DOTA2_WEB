@@ -107,13 +107,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX LEVEL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_invoker_orb_levels",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
                     1
@@ -305,13 +299,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX LEVEL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_invoker_orb_levels",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
                     1
@@ -535,13 +523,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAX LEVEL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_invoker_orb_levels",
-                      "value": 1,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
                     1
@@ -677,7 +659,7 @@
               "id": 5375,
               "name": "invoker_invoke",
               "name_loc": "Invoke",
-              "desc_loc": "Combines the properties of the elements currently being manipulated to create a new spell for Invoker to use. Invoke cooldown is reduced by %cooldown_reduction_per_orb% seconds for each orb level.<br><br>Invoker's vast knowledge of magic allows him to choose from Multiple Aghanim's Scepter and Shard options.  The items must be activated before they can be used, and cannot be changed after they are chosen.<br><br> Click the help button to see the list of possible spells.",
+              "desc_loc": "Combines the properties of the elements currently being manipulated to create a new spell for Invoker to use. Invoke cooldown is reduced by %cooldown_reduction_per_orb% seconds for each orb level.  Invoker gains a bonus ability point for his orbs at levels %first_ability_level%, %second_ability_level%, and %third_ability_level%.<br><br>Invoker's vast knowledge of magic allows him to choose from Multiple Aghanim's Scepter and Shard options.  The items must be activated before they can be used, and cannot be changed after they are chosen.<br><br> Click the help button to see the list of possible spells.",
               "lore_loc": "So begins a new age of knowledge.",
               "notes_loc": [
                 "The arrangement of instances does not matter.",
@@ -748,6 +730,57 @@
                   "name": "cooldown_reduction_per_orb",
                   "values_float": [
                     0.3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "first_ability_level",
+                  "values_float": [
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "second_ability_level",
+                  "values_float": [
+                    12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "third_ability_level",
+                  "values_float": [
+                    18
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -3164,7 +3197,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_invoker_forged_spirit_armor_reduction",
+                      "value": 50,
+                      "operation": 3
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -4330,9 +4369,9 @@
               "item_quality": 0
             },
             {
-              "id": 1634,
-              "name": "special_bonus_unique_invoker_orb_levels",
-              "name_loc": "+1 Orb Levels",
+              "id": 1747,
+              "name": "special_bonus_unique_invoker_forged_spirit_armor_reduction",
+              "name_loc": "+{s:bonus_armor_removed}% Forged Spirit Armor Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
