@@ -8,13 +8,12 @@
             "id": 1854,
             "name": "item_consecrated_wraps",
             "name_loc": "圣化护服",
-            "desc_loc": "<h1>被动：神圣化</h1>每%stack_gain_time%秒获得一层叠加效果，最多为%max_stacks%层。获得一层叠加效果时，移动速度提升%movement_speed_pct_on_stack_gain%%%，持续%duration%秒。<br><br>只要受到来自玩家控制单位或肉山的伤害，所有叠加效果都会被消耗，并获得全伤害护盾，持续%duration%秒，每层叠加效果可以吸收%barrier_per_stack%点伤害（最高为%max_barrier_tooltip%点）。",
+            "desc_loc": "<h1>被动：神圣化</h1>每%AbilityChargeRestoreTime%秒获得一点能量，最多为%AbilityCharges%点。获得一点能量时，移动速度提升%movement_speed_pct_on_stack_gain%%%，持续%duration%秒。<br><br>只要受到来自玩家控制单位或肉山的伤害，所有能量都会被消耗，并获得全伤害护盾，持续%duration%秒，每点能量可以吸收%barrier_per_stack%点伤害（最高为%max_barrier_tooltip%点）。",
             "lore_loc": "",
             "notes_loc": [
-              "受到来自玩家控制单位或肉山的伤害后%stack_gain_time%秒内无法获得叠加效果。",
-              "对自身的伤害和生命流失伤害无法移除叠加效果。",
-              "移动速度加成效果不会叠加。",
-              "只有在装备了这件物品后至少达到过一次最高叠加层数才会提供移动速度加成。"
+              "受到来自玩家控制单位或肉山的伤害后%stack_gain_time%秒内无法获得能量。",
+              "对自身的伤害和生命流失伤害无法移除能量。",
+              "移动速度加成效果不会叠加。"
             ],
             "shard_loc": "",
             "scepter_loc": "",
@@ -75,7 +74,7 @@
               {
                 "name": "bonus_all_stats",
                 "values_float": [
-                  6
+                  5
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$all",
@@ -109,7 +108,7 @@
               {
                 "name": "stack_gain_time",
                 "values_float": [
-                  3
+                  4
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -207,6 +206,40 @@
                   "operation": 0
                 },
                 "required_facet": ""
+              },
+              {
+                "name": "AbilityCharges",
+                "values_float": [
+                  3
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
+              },
+              {
+                "name": "AbilityChargeRestoreTime",
+                "values_float": [
+                  3
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "facet_bonus": {
+                  "name": "",
+                  "values": [],
+                  "operation": 0
+                },
+                "required_facet": ""
               }
             ],
             "is_item": true,
@@ -216,7 +249,7 @@
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
             "item_cost": 2600,
-            "item_initial_charges": 0,
+            "item_initial_charges": 3,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,
             "item_stock_time": 0,
