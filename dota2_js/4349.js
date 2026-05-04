@@ -417,7 +417,7 @@
         l = s(21384),
         i = s(40045),
         n = s(89506),
-        c = s(70595);
+        c = s(47496);
       const m = ({
           colorTopEdge: e,
           colorTop: r,
