@@ -497,6 +497,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "creep_lifesteal_penalty",
+                  "values_float": [
+                    40
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "lifesteal_both_ways",
                   "values_float": [
                     1
@@ -723,7 +740,7 @@
                   "heading_loc": "BONUS MOVEMENT SPEED:",
                   "bonuses": [],
                   "values_shard": [
-                    15
+                    10
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -761,7 +778,7 @@
                   "heading_loc": "DURATION:",
                   "bonuses": [],
                   "values_shard": [
-                    5
+                    4
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -897,7 +914,7 @@
                 0
               ],
               "mana_costs": [
-                75
+                100
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -1092,7 +1109,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    75
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1113,13 +1130,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lone_druid_2",
-                      "value": 25,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1285,7 +1296,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lone_druid_2",
+                      "value": 5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1407,7 +1424,7 @@
             {
               "id": 6262,
               "name": "special_bonus_unique_lone_druid_2",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Summon Spirit Bear Cooldown",
+              "name_loc": "+{s:bonus_duration}s True Form Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

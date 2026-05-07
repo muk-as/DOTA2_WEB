@@ -687,7 +687,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_storm_spirit_overload_aspd",
-                      "value": 20,
+                      "value": 25,
                       "operation": 2
                     }
                   ],
@@ -710,7 +710,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_storm_spirit_overload_aspd",
-                      "value": 20,
+                      "value": 25,
                       "operation": 2
                     }
                   ],
@@ -1231,7 +1231,7 @@
               "id": 1231,
               "name": "storm_spirit_galvanized",
               "name_loc": "Galvanized",
-              "desc_loc": "Storm Spirit gains a charge of %mp_per_kill% mana regeneration per kill. Loses %charges_per_death% charges per death. Additionally every time he gains a charge he also gains %perma_mp_per_kill% Mana Regen permanently.",
+              "desc_loc": "Storm Spirit gains a charge of %mp_per_kill% mana regeneration per kill, and a charge every %level_divisor% levels. Loses %charges_per_death% charges per death. Additionally every time he gains a charge he also gains %perma_mp_per_kill% Mana Regen permanently.",
               "lore_loc": "",
               "notes_loc": [
                 "Break disables the gaining of new stacks from kills."
@@ -1345,6 +1345,23 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "level_divisor",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1365,7 +1382,7 @@
             {
               "id": 1187,
               "name": "special_bonus_unique_storm_spirit_overload_aspd",
-              "name_loc": "-{s:bonus_overload_move_slow} Overload Attack/Movement Speed Slow",
+              "name_loc": "+{s:bonus_overload_move_slow}/{s:bonus_overload_move_slow}% Overload Attack/Movement Speed Slow",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
