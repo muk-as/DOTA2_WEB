@@ -35453,34 +35453,34 @@
                 .catch((e) => d(!0)),
               (0, b.jsx)("div", {})
             );
-          const _ = "4238531900078333321",
-            p = ["512986184073347348"].includes(o.GID);
-          let h = new Date(1e3 * o.GetStartTimeAndDateUnixSeconds());
-          o.GID == _ && (h = new Date(2024, 5, 11));
-          const g = (0, i.sf)(a.r.LANGUAGE);
-          let v = h.toLocaleDateString(F.pf.GetPreferredLocales(), {
+          const _ = "4238531900078333321";
+          let p = new Date(1e3 * o.GetStartTimeAndDateUnixSeconds());
+          o.GID == _ && (p = new Date(2024, 5, 11));
+          const h = (0, i.sf)(a.r.LANGUAGE);
+          let g = p.toLocaleDateString(F.pf.GetPreferredLocales(), {
             month: "long",
             day: "numeric",
             year: "numeric",
           });
-          const f = o.GetDescriptionWithFallback(g);
-          o.GID == _ && (v = v.replace("11", "39"));
-          let x = [];
+          const v = o.GetDescriptionWithFallback(h);
+          o.GID == _ && (g = g.replace("11", "39"));
+          let f = [];
           for (const e of r)
             if (
               e != o &&
-              (qn(!1, e) && x.push((0, b.jsx)(Pn, { event: e }, e.GID)),
-              3 == x.length)
+              (qn(!1, e) && f.push((0, b.jsx)(Pn, { event: e }, e.GID)),
+              3 == f.length)
             )
               break;
-          const T = o.GetNameWithFallback(g),
-            j = o.GetImageURL("background"),
-            I = (0, B.Wn)((0, B.OK)(f));
+          const x = o.GetNameWithFallback(h),
+            T = o.GetImageURL("background"),
+            j = ["512986184073347348"].includes(o.GID) || !T,
+            I = (0, B.Wn)((0, B.OK)(v));
           return (0, b.jsxs)("div", {
             className: Wn().BlogEntryPage,
             children: [
               (0, b.jsx)(O.mg, {
-                children: (0, b.jsx)("title", { children: T }),
+                children: (0, b.jsx)("title", { children: x }),
               }),
               (0, b.jsx)(Gn.A, {}),
               !u && (0, b.jsx)(Ye.A, { bOverlapping: !0 }),
@@ -35494,11 +35494,11 @@
               (0, b.jsx)("div", {
                 className: (0, N.A)(
                   u ? Wn().TitleContainerInClient : Wn().TitleContainer,
-                  p && Wn().TitleContainerLessMargin,
+                  j && Wn().TitleContainerLessMargin,
                 ),
                 children: (0, b.jsx)("div", {
                   className: Wn().TitleBackground,
-                  style: { backgroundImage: j ? `url( ${j} )` : null },
+                  style: { backgroundImage: T ? `url( ${T} )` : null },
                 }),
               }),
               !u &&
@@ -35513,8 +35513,8 @@
                     (0, B.Wn)("#back_to_news"),
                   ],
                 }),
-              (0, b.jsx)("div", { className: Wn().Title, children: T }),
-              (0, b.jsx)("div", { className: Wn().Date, children: v }),
+              (0, b.jsx)("div", { className: Wn().Title, children: x }),
+              (0, b.jsx)("div", { className: Wn().Date, children: g }),
               (0, b.jsx)("div", { className: Wn().Body, children: I }),
               !u &&
                 (0, b.jsxs)("div", {
@@ -35526,7 +35526,7 @@
                     }),
                     (0, b.jsx)("div", {
                       className: Wn().LatestNewsContainer,
-                      children: x,
+                      children: f,
                     }),
                   ],
                 }),
