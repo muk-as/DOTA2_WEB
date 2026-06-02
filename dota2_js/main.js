@@ -72973,16 +72973,19 @@
     33706: (e, t, r) => {
       "use strict";
       r.d(t, {
-        B5: () => N,
-        HJ: () => v,
-        JD: () => f,
-        MT: () => I,
-        k4: () => j,
-        lm: () => w,
-        mU: () => y,
-        nK: () => C,
-        qK: () => S,
-        wB: () => x,
+        B5: () => D,
+        HJ: () => y,
+        Hp: () => C,
+        JD: () => x,
+        MT: () => M,
+        dX: () => R,
+        k4: () => B,
+        lm: () => I,
+        mU: () => S,
+        nK: () => E,
+        qK: () => j,
+        wB: () => T,
+        zy: () => w,
       });
       var a = r(2593),
         s = r(75749),
@@ -72998,8 +73001,10 @@
         p = ["DotaGameDataAbilityListItem"],
         h = "AbilitiesQueryKey",
         g = "PregameItemQueryKey",
-        b = "MaingameItemQueryKey";
-      function v() {
+        b = "NeutralQueryKey",
+        v = "MaingameItemQueryKey",
+        f = ["NeutralDataKey"];
+      function y() {
         const e = (0, o.jE)();
         return (0, l.I)({
           queryKey: u,
@@ -73017,7 +73022,7 @@
           meta: { persist: !0 },
         });
       }
-      function f(e) {
+      function x(e) {
         const t = (0, o.jE)();
         return (0, l.I)({
           queryKey: [...p, e],
@@ -73036,7 +73041,7 @@
           meta: { persist: !0 },
         });
       }
-      function y(e) {
+      function S(e) {
         const t = (0, o.jE)();
         return (0, l.I)({
           queryKey: [..._, e],
@@ -73055,7 +73060,22 @@
           meta: { persist: !0 },
         });
       }
-      function x() {
+      function w(e) {
+        (0, o.jE)();
+        return (0, l.I)({
+          queryKey: [..._, ...e],
+          queryFn: () =>
+            (async function (e, t) {
+              const r = await i().get(n.r.BASE_URL + "datafeed/itemlist", {
+                  params: { language: n.r.LANGUAGE },
+                }),
+                a = r?.data?.result?.data;
+              return a ? a.itemabilities.filter((e) => t.includes(e.id)) : [];
+            })(0, e),
+          meta: { persist: !0 },
+        });
+      }
+      function T() {
         const e = (0, o.jE)();
         return (0, l.I)({
           queryKey: c,
@@ -73076,7 +73096,7 @@
           meta: { persist: !0 },
         });
       }
-      function S(e) {
+      function j(e) {
         return (0, l.I)({
           queryKey: [...m, e],
           queryFn: () =>
@@ -73091,7 +73111,7 @@
           meta: { persist: !0 },
         });
       }
-      function w(e) {
+      function I(e) {
         const t = (0, o.jE)();
         return (0, l.I)({
           queryKey: [...d, e],
@@ -73110,13 +73130,25 @@
           meta: { persist: !0 },
         });
       }
-      function T(e, t) {
+      function C(e, t) {
+        return (0, l.I)({
+          queryKey: [...f, e, t],
+          queryFn: () =>
+            (async function (e, t) {
+              const r = await i().get(n.r.BASE_URL + "datafeed/neutralitems", {
+                params: { language: n.r.LANGUAGE, hero_type: e, tier: t },
+              });
+              return r?.data?.result?.data;
+            })(e, t),
+        });
+      }
+      function N(e, t) {
         return {
           queryKey: [e, t],
           queryFn: () =>
             (async function (e) {
               let t;
-              console.log("inferenceRequest:", e);
+              console.log(e);
               for (let r = 0; r < 1; r++) {
                 const r = await i().post(n.r.BASE_URL + "react/inference", {
                   input_json: JSON.stringify(e),
@@ -73124,48 +73156,31 @@
                 });
                 t = r?.data?.response;
               }
-              return console.log("inferenceResponse:", t), t;
+              return console.log(t), t;
             })(t),
         };
       }
-      function j(e, t, r, a, s, i, n, o, c, d, m) {
-        const u = {
+      function B(e, t, r, a, s, i, n, o) {
+        const c = {
           project_id: 2,
-          published_version: 12,
+          published_version: 13,
           additional_data: [10],
           data: {
             data: [
               {
                 data_source_id: 2461332265,
                 data_object: {
-                  elements: [{ name: "skilled_abilities", data_int32s: m }],
+                  elements: [{ name: "skilled_abilities", data_int32s: o }],
                 },
               },
               {
-                data_source_id: 1123751809,
+                data_source_id: 1895458325,
                 data_object: {
                   elements: [
-                    { name: "hero_and_facet", data_int32s: [(e << 16) | t] },
-                    {
-                      name: "allied_hero_and_facet",
-                      data_int32s: [
-                        (a[0] << 16) | s[0],
-                        (a[1] << 16) | s[1],
-                        (a[2] << 16) | s[2],
-                        (a[3] << 16) | s[3],
-                      ],
-                    },
-                    { name: "position", data_int32s: [r] },
-                    {
-                      name: "enemy_hero_and_facet",
-                      data_int32s: [
-                        (i[0] << 16) | n[0],
-                        (i[1] << 16) | n[1],
-                        (i[2] << 16) | n[2],
-                        (i[3] << 16) | n[3],
-                        (i[4] << 16) | n[4],
-                      ],
-                    },
+                    { name: "hero_id", data_int32s: [e] },
+                    { name: "allied_heroes", data_int32s: r },
+                    { name: "position", data_int32s: [t] },
+                    { name: "enemy_heroes", data_int32s: a },
                   ],
                 },
               },
@@ -73173,21 +73188,21 @@
                 data_source_id: 2197406710,
                 data_object: {
                   elements: [
-                    { name: "player_mmr", data_int32s: [o] },
-                    { name: "game_mode", data_int32s: [c] },
-                    { name: "team_won", data_bools: [d] },
+                    { name: "player_mmr", data_int32s: [s] },
+                    { name: "game_mode", data_int32s: [i] },
+                    { name: "team_won", data_bools: [n] },
                   ],
                 },
               },
             ],
           },
         };
-        return (0, l.I)(T(h, u));
+        return (0, l.I)(N(h, c));
       }
-      function I(e, t, r, a, s, i, n, o, c, d) {
-        const m = {
+      function M(e, t, r, a, s, i, n) {
+        const o = {
           project_id: 54,
-          published_version: 1,
+          published_version: 2,
           additional_data: [1],
           data: {
             data: [
@@ -73198,30 +73213,13 @@
                 },
               },
               {
-                data_source_id: 1123751809,
+                data_source_id: 1895458325,
                 data_object: {
                   elements: [
-                    { name: "hero_and_facet", data_int32s: [(e << 16) | t] },
-                    {
-                      name: "allied_hero_and_facet",
-                      data_int32s: [
-                        (a[0] << 16) | s[0],
-                        (a[1] << 16) | s[1],
-                        (a[2] << 16) | s[2],
-                        (a[3] << 16) | s[3],
-                      ],
-                    },
-                    { name: "position", data_int32s: [r] },
-                    {
-                      name: "enemy_hero_and_facet",
-                      data_int32s: [
-                        (i[0] << 16) | n[0],
-                        (i[1] << 16) | n[1],
-                        (i[2] << 16) | n[2],
-                        (i[3] << 16) | n[3],
-                        (i[4] << 16) | n[4],
-                      ],
-                    },
+                    { name: "hero_id", data_int32s: [e] },
+                    { name: "allied_heroes", data_int32s: r },
+                    { name: "position", data_int32s: [t] },
+                    { name: "enemy_heroes", data_int32s: a },
                   ],
                 },
               },
@@ -73229,10 +73227,10 @@
                 data_source_id: 2197406710,
                 data_object: {
                   elements: [
-                    { name: "player_mmr", data_int32s: [o] },
-                    { name: "game_mode", data_int32s: [c] },
+                    { name: "player_mmr", data_int32s: [s] },
+                    { name: "game_mode", data_int32s: [i] },
                     { name: "lobby_type", data_int32s: [7] },
-                    { name: "team_won", data_bools: [d] },
+                    { name: "team_won", data_bools: [n] },
                   ],
                 },
               },
@@ -73244,47 +73242,33 @@
             repeat_multiplier: 1,
           },
         };
-        return (0, l.I)(T(g, m));
+        return (0, l.I)(N(g, o));
       }
-      function C(e, t, r, a, s, i, n, o, c, d, m, u, _) {
-        const p = {
-          project_id: 50,
+      function R(e, t, r, a, s, i, n, o, c, d) {
+        const m = {
+          project_id: 8,
           published_version: 10,
-          additional_data: [100],
-          debug_spew: 1,
+          additional_data: [10],
           data: {
             data: [
               {
-                data_source_id: 181151528,
+                data_source_id: 3658877370,
                 data_object: {
-                  elements: [{ name: "purchase_history", data_int32s: d }],
+                  elements: [
+                    { name: "enhancement_options", data_int32s: c },
+                    { name: "trinket_options", data_int32s: o },
+                    { name: "tier", data_int32s: [d] },
+                  ],
                 },
               },
               {
-                data_source_id: 1123751809,
+                data_source_id: 1895458325,
                 data_object: {
                   elements: [
-                    { name: "hero_and_facet", data_int32s: [(e << 16) | t] },
-                    {
-                      name: "allied_hero_and_facet",
-                      data_int32s: [
-                        (a[0] << 16) | s[0],
-                        (a[1] << 16) | s[1],
-                        (a[2] << 16) | s[2],
-                        (a[3] << 16) | s[3],
-                      ],
-                    },
-                    { name: "position", data_int32s: [r] },
-                    {
-                      name: "enemy_hero_and_facet",
-                      data_int32s: [
-                        (i[0] << 16) | n[0],
-                        (i[1] << 16) | n[1],
-                        (i[2] << 16) | n[2],
-                        (i[3] << 16) | n[3],
-                        (i[4] << 16) | n[4],
-                      ],
-                    },
+                    { name: "hero_id", data_int32s: [e] },
+                    { name: "allied_heroes", data_int32s: r },
+                    { name: "position", data_int32s: [t] },
+                    { name: "enemy_heroes", data_int32s: a },
                   ],
                 },
               },
@@ -73292,8 +73276,48 @@
                 data_source_id: 2197406710,
                 data_object: {
                   elements: [
-                    { name: "average_mmr", data_int32s: [o] },
-                    { name: "game_mode", data_int32s: [c] },
+                    { name: "player_mmr", data_int32s: [s] },
+                    { name: "game_mode", data_int32s: [i] },
+                    { name: "team_won", data_bools: [n] },
+                  ],
+                },
+              },
+            ],
+          },
+        };
+        return (0, l.I)(N(b, m));
+      }
+      function E(e, t, r, a, s, i, n, o, c, d) {
+        const m = {
+          project_id: 50,
+          published_version: 11,
+          additional_data: [100],
+          debug_spew: 1,
+          data: {
+            data: [
+              {
+                data_source_id: 181151528,
+                data_object: {
+                  elements: [{ name: "purchase_history", data_int32s: n }],
+                },
+              },
+              {
+                data_source_id: 1895458325,
+                data_object: {
+                  elements: [
+                    { name: "hero_id", data_int32s: [e] },
+                    { name: "allied_heroes", data_int32s: r },
+                    { name: "position", data_int32s: [t] },
+                    { name: "enemy_heroes", data_int32s: a },
+                  ],
+                },
+              },
+              {
+                data_source_id: 2197406710,
+                data_object: {
+                  elements: [
+                    { name: "average_mmr", data_int32s: [s] },
+                    { name: "game_mode", data_int32s: [i] },
                     { name: "lobby_type", data_int32s: [7] },
                   ],
                 },
@@ -73302,7 +73326,7 @@
           },
           iterate_beam_search: {
             beam_length: 50,
-            beam_width: m.size > 0 ? 20 : 0,
+            beam_width: o.size > 0 ? 20 : 0,
             item_decay: 1,
             next_item_count: 5,
             item_scalars: [],
@@ -73310,10 +73334,10 @@
             repeat_multiplier: 0.2,
           },
         };
-        m.forEach((e, t) => {
-          p.iterate_beam_search.item_scalars.push({ item: t, scale: e });
+        o.forEach((e, t) => {
+          m.iterate_beam_search.item_scalars.push({ item: t, scale: e });
         });
-        for (const e of u)
+        for (const e of c)
           for (
             let t = 0;
             t <
@@ -73324,25 +73348,26 @@
             const r =
                 e.backend_response.outputs[0].categorical_crossentropy
                   .value_sequence[0].value[t],
-              a = p.iterate_beam_search.item_scalars.findIndex(
+              a = m.iterate_beam_search.item_scalars.findIndex(
                 (e) => e.item == r,
               );
             -1 == a
-              ? p.iterate_beam_search.item_scalars.push({ item: r, scale: _ })
-              : (p.iterate_beam_search.item_scalars[a].scale *= _);
+              ? m.iterate_beam_search.item_scalars.push({ item: r, scale: d })
+              : (m.iterate_beam_search.item_scalars[a].scale *= d);
           }
-        return console.log(p), (0, l.I)(T(b, p));
+        return (0, l.I)(N(v, m));
       }
-      class N {
+      class D {
         m_asyncHeroList = new a.N();
         m_asyncAbilityList = new a.N();
         m_asyncItemList = new a.N();
+        m_asyncNeutralData = new a.N();
         m_asyncHeroData = new a.L();
         m_asyncAbilityData = new a.L();
         m_asyncItemData = new a.L();
         static g_Singleton;
         static Get() {
-          return N.g_Singleton || (N.g_Singleton = new N()), N.g_Singleton;
+          return D.g_Singleton || (D.g_Singleton = new D()), D.g_Singleton;
         }
         getHeroList() {
           return this.m_asyncHeroList.getData(
