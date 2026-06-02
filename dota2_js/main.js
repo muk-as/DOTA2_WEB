@@ -74878,7 +74878,8 @@
             (e[(e.INTERNATIONAL_2023_QUALIFIERS = 22)] =
               "INTERNATIONAL_2023_QUALIFIERS"),
             (e[(e.INTERNATIONAL_2024 = 23)] = "INTERNATIONAL_2024"),
-            (e[(e.INTERNATIONAL_2025 = 24)] = "INTERNATIONAL_2025");
+            (e[(e.INTERNATIONAL_2025 = 24)] = "INTERNATIONAL_2025"),
+            (e[(e.INTERNATIONAL_2026 = 25)] = "INTERNATIONAL_2026");
         })(b || (b = {})),
         (function (e) {
           (e[(e.INVALID = 0)] = "INVALID"),
