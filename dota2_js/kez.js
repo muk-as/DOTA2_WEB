@@ -1,9 +1,9 @@
-// 2896.js
+// 12896.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [2896],
+  [12896],
   {
     11417: (e) => {
       e.exports = {
@@ -227,13 +227,13 @@
         l = i(69500),
         t = i(89506),
         r = i(33706),
-        o = i(40045),
+        o = i(27866),
         n = i(68446),
         c = i(7552),
         d = i(73202),
         _ = i(35927),
         m = i(21384),
-        p = i(47496),
+        p = i(59095),
         h = i(47202),
         x = i(36305),
         b = i(7423),
@@ -672,7 +672,7 @@
               ("schinese" == t.r.LANGUAGE || t.r.LANGUAGE,
               "kez_reveal_1920x1080_en"),
             a = r.B5.Get().getHeroData(145);
-          let i = (0, _.ww)((0, _.sf)(t.r.LANGUAGE));
+          let i = (0, _.wwZ)((0, _.sfN)(t.r.LANGUAGE));
           "zh-cn" === i ? (i = "zh-Hans") : "zh-tw" === i && (i = "zh-Hant");
           let s = "kez_logo_en";
           return (

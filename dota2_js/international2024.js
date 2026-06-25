@@ -1,9 +1,9 @@
-// 4398.js
+// 84398.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [4398],
+  [84398],
   {
     11417: (e) => {
       e.exports = {
@@ -225,9 +225,9 @@
         a = s(32484),
         n = s.n(a),
         r = s(21384),
-        l = s(40045),
+        l = s(27866),
         o = s(89506),
-        c = s(47496);
+        c = s(59095);
       const d = ({
           colorTopEdge: e,
           colorTop: i,
@@ -615,13 +615,13 @@
         a = s(69500),
         n = s(89506),
         r = s(55651),
-        l = s(40045),
+        l = s(27866),
         o = s(68446),
         c = s(7552),
         d = s(73202),
         m = s(35927),
         _ = s(21384),
-        p = s(47496),
+        p = s(59095),
         u = s(47202),
         g = s(36305),
         h = s(45237),
@@ -1002,7 +1002,7 @@
               "schinese" == n.r.LANGUAGE || "tchinese" == n.r.LANGUAGE
                 ? "ringmaster_trailer_schinese"
                 : "ringmaster_trailer_english";
-          let t = (0, m.ww)((0, m.sf)(n.r.LANGUAGE));
+          let t = (0, m.wwZ)((0, m.sfN)(n.r.LANGUAGE));
           return (
             "zh-cn" === t ? (t = "zh-Hans") : "zh-tw" === t && (t = "zh-Hant"),
             (0, a.jsxs)("div", {

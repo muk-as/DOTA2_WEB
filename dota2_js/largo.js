@@ -1,9 +1,9 @@
-// 8685.js
+// 98685.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [8685],
+  [98685],
   {
     11417: (e) => {
       e.exports = {
@@ -284,7 +284,7 @@
         t = s.n(l),
         o = s(21384),
         n = s(89506),
-        c = s(40045);
+        c = s(27866);
       const d = ({ image: e, is_new: a }) =>
           (0, i.jsxs)("div", {
             className: t().ComparisonImage,
@@ -348,13 +348,13 @@
         r = s(69500),
         l = s(89506),
         t = s(33706),
-        o = s(40045),
+        o = s(27866),
         n = s(68446),
         c = s(7552),
         d = s(73202),
         _ = s(35927),
         m = s(21384),
-        g = s(47496),
+        g = s(59095),
         h = s(47202),
         p = s(36305),
         x = s(49728),
@@ -969,7 +969,7 @@
         render() {
           const e = g.o.getPatchNotes("7.40", l.r.LANGUAGE),
             a = t.B5.Get().getHeroData(155);
-          let s = (0, _.ww)((0, _.sf)(l.r.LANGUAGE));
+          let s = (0, _.wwZ)((0, _.sfN)(l.r.LANGUAGE));
           "zh-cn" === s ? (s = "zh-Hans") : "zh-tw" === s && (s = "zh-Hant");
           let i = "largo_logo_en";
           return (

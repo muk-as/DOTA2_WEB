@@ -1,9 +1,9 @@
-// 1831.js
+// 71831.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [1831],
+  [71831],
   {
     89642: (e) => {
       e.exports = {
@@ -153,14 +153,14 @@
         n = s.n(r),
         o = s(89506),
         l = s(33706),
-        _ = s(40045),
+        _ = s(27866),
         c = s(68446),
         d = s(7552),
         m = s(73202),
         h = s(35927),
-        p = s(92225),
+        p = s(70126),
         u = s(21384),
-        j = s(47496),
+        j = s(59095),
         g = s(47202),
         x = s(36305),
         v = s(82101),
@@ -729,7 +729,7 @@
               ),
             );
           }
-          let s = (0, h.ww)((0, h.sf)(o.r.LANGUAGE));
+          let s = (0, h.wwZ)((0, h.sfN)(o.r.LANGUAGE));
           return (
             "zh-cn" === s ? (s = "zh-Hans") : "zh-tw" === s && (s = "zh-Hant"),
             (0, i.jsxs)("div", {

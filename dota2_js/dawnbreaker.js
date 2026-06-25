@@ -1,9 +1,9 @@
-// 1448.js
+// 41448.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [1448],
+  [41448],
   {
     11417: (e) => {
       e.exports = {
@@ -126,7 +126,7 @@
         l = s.n(n),
         t = s(21384),
         d = s(89506),
-        _ = s(40045);
+        _ = s(27866);
       const c = ({ image: e, is_new: a }) =>
           (0, i.jsxs)("div", {
             className: l().ComparisonImage,
@@ -188,10 +188,10 @@
         d = s(51031),
         _ = s.n(d),
         c = s(21384),
-        p = s(47496),
+        p = s(59095),
         o = s(68446),
         m = s(55651),
-        h = s(40045),
+        h = s(27866),
         b = s(47202),
         w = s(36305),
         x = s(73202),

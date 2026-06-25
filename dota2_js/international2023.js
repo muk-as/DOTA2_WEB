@@ -1,9 +1,9 @@
-// 5665.js
+// 85665.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [5665],
+  [85665],
   {
     32484: (e) => {
       e.exports = {
@@ -125,9 +125,9 @@
         n = t(32484),
         s = t.n(n),
         r = t(21384),
-        o = t(40045),
+        o = t(27866),
         l = t(89506),
-        c = t(47496);
+        c = t(59095);
       const d = ({
           colorTopEdge: e,
           colorTop: i,
@@ -514,7 +514,7 @@
       var a = t(85608),
         n = t(69500),
         s = t(89506),
-        r = t(40045),
+        r = t(27866),
         o = t(68446),
         l = t(7552),
         c = t(73202),

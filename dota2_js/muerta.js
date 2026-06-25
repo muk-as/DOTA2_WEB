@@ -1,9 +1,9 @@
-// 9467.js
+// 71554.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [9467],
+  [71554],
   {
     11417: (e) => {
       e.exports = {
@@ -168,40 +168,48 @@
           },
         });
     },
-    69467: (e, s, a) => {
+    99406: (e, s, a) => {
+      "use strict";
+      a.d(s, { V: () => n });
+      var i = a(27866),
+        t = a(68446),
+        l = a(7552),
+        r = a(59095);
+      const n = (0, t.PA)((e) => {
+        const s = (function (e, s) {
+          (0, l.useEffect)(() => {
+            r.o.RequestBPPrices([e]);
+          }, [e]);
+          const a = r.o.GetBPPrice(e);
+          return a && "undefined" != a ? a : s;
+        })(e.nItemDefID, e.strDefaultPrice);
+        return (0, i.Wn)(e.strLocString, s);
+      });
+    },
+    71554: (e, s, a) => {
       "use strict";
       a.r(s), a.d(s, { default: () => f });
       var i = a(85608),
         t = a(69500),
         l = a(89506),
         r = a(55651),
-        n = a(40045),
+        n = a(27866),
         c = a(68446),
         d = a(32389),
         o = a(7552),
         m = a(73202),
         _ = a(45237),
         N = a(21384),
-        h = a(47496),
+        h = a(59095),
         x = a(47202),
         u = a(36305),
         j = a(42313),
         v = a.n(j),
         g = a(61840),
         p = a(722),
-        b = a(35927);
-      const S = (0, c.PA)((e) => {
-        const s =
-          ((a = e.nItemDefID),
-          (i = e.strDefaultPrice),
-          (0, o.useEffect)(() => {
-            h.o.RequestBPPrices([a]);
-          }, [a]),
-          h.o.GetBPPrice(a) || i);
-        var a, i;
-        return (0, n.Wn)(e.strLocString, s);
-      });
-      var I = a(85286),
+        b = a(35927),
+        S = a(99406),
+        I = a(85286),
         y = a.n(I);
       const D = [
           {
@@ -336,7 +344,7 @@
         }
         render() {
           const e = h.o.getPatchNotes("7.32e", l.r.LANGUAGE);
-          let s = (0, b.ww)((0, b.sf)(l.r.LANGUAGE));
+          let s = (0, b.wwZ)((0, b.sfN)(l.r.LANGUAGE));
           return (
             "zh-cn" === s ? (s = "zh-Hans") : "zh-tw" === s && (s = "zh-Hant"),
             (0, t.jsxs)("div", {
@@ -979,7 +987,7 @@
                                         }),
                                         (0, t.jsx)("div", {
                                           className: v().MinigameRulesDesc,
-                                          children: (0, t.jsx)(S, {
+                                          children: (0, t.jsx)(S.V, {
                                             strLocString:
                                               "#muerta_minigame_rules_desc3",
                                             nItemDefID: 23789,

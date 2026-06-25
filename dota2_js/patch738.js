@@ -1,9 +1,9 @@
-// 4172.js
+// 84172.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [4172],
+  [84172],
   {
     85655: (e) => {
       e.exports = {
@@ -203,7 +203,7 @@
         l = s.n(o),
         n = s(21384),
         r = s(89506),
-        c = s(40045);
+        c = s(27866);
       const d = ({ image: e, is_new: a }) =>
           (0, t.jsxs)("div", {
             className: l().ComparisonImage,
@@ -268,13 +268,13 @@
         i = s(69500),
         o = s(89506),
         l = s(33706),
-        n = s(40045),
+        n = s(27866),
         r = s(68446),
         c = s(7552),
         d = s(73202),
         m = s(35927),
         p = s(21384),
-        _ = s(47496),
+        _ = s(59095),
         h = s(47202),
         g = s(36305),
         x = s(59387),
@@ -789,7 +789,7 @@
         }
         render() {
           const e = _.o.getPatchNotes("7.38", o.r.LANGUAGE);
-          let a = (0, m.ww)((0, m.sf)(o.r.LANGUAGE));
+          let a = (0, m.wwZ)((0, m.sfN)(o.r.LANGUAGE));
           "zh-cn" === a ? (a = "zh-Hans") : "zh-tw" === a && (a = "zh-Hant");
           let s = "patch738_logo_en";
           return (

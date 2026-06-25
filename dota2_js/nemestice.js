@@ -1,9 +1,9 @@
-// 9863.js
+// 69863.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [9863],
+  [69863],
   {
     19890: (e) => {
       e.exports = {
@@ -111,9 +111,9 @@
         c = a(19890),
         t = a.n(c),
         l = a(21384),
-        n = a(47496),
+        n = a(59095),
         d = a(68446),
-        o = a(40045),
+        o = a(27866),
         m = a(47202),
         _ = a(36305),
         p = a(24953),

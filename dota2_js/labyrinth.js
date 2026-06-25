@@ -1,9 +1,9 @@
-// 151.js
+// 40151.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [151],
+  [40151],
   {
     68542: (a) => {
       a.exports = {
@@ -146,9 +146,9 @@
         o = s(68542),
         t = s.n(o),
         n = s(89506),
-        d = s(40045),
+        d = s(27866),
         c = s(21384),
-        _ = s(86085);
+        _ = s(65760);
       !(function (a) {
         (a[(a.TOP = 0)] = "TOP"),
           (a[(a.BOTTOM = 1)] = "BOTTOM"),
@@ -288,9 +288,9 @@
         i = s(56490),
         o = s.n(i),
         t = s(21384),
-        n = s(47496),
+        n = s(59095),
         d = s(68446),
-        c = s(40045),
+        c = s(27866),
         _ = s(47202),
         m = s(36305),
         h = s(24953),

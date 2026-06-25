@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [7084],
+  [87084],
   {
     2466: (e) => {
       e.exports = {
@@ -210,12 +210,12 @@
         i = t(7552),
         o = t(28485),
         c = t(88351),
-        d = t(48798),
-        m = t(92225),
+        d = t(91077),
+        m = t(70126),
         u = t(72674),
         h = t(21384),
         p = t(33743),
-        x = t(40045),
+        x = t(27866),
         _ = t(47202),
         j = t(2466),
         y = t.n(j);
@@ -1744,14 +1744,14 @@
         o = t(73202),
         c = t(73681),
         d = t.n(c),
-        m = t(57225),
-        u = t(56931),
-        h = t(33143),
-        p = t(81404),
-        x = t(26195),
-        _ = t(20196),
-        j = t(56529),
-        y = t(42643),
+        m = t(56902),
+        u = t(71129),
+        h = t(75368),
+        p = t(42783),
+        x = t(21112),
+        _ = t(49590),
+        j = t(71807),
+        y = t(83218),
         g = t(29421),
         f = t(89506),
         A = t(21384),
@@ -1926,7 +1926,7 @@
             return "Unknown";
         }
       }
-      var L = t(92225),
+      var L = t(70126),
         P = t(40753),
         w = t.n(P),
         G = t(20018);

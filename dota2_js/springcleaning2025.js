@@ -1,9 +1,9 @@
-// 8644.js
+// 88644.js
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [8644],
+  [88644],
   {
     85655: (e) => {
       e.exports = {
@@ -291,7 +291,7 @@
         t = i.n(r),
         l = i(21384),
         c = i(89506),
-        o = i(40045);
+        o = i(27866);
       const d = ({ image: e, is_new: s }) =>
           (0, a.jsxs)("div", {
             className: t().ComparisonImage,
@@ -356,13 +356,13 @@
         n = i(69500),
         r = i(89506),
         t = i(33706),
-        l = i(40045),
+        l = i(27866),
         c = i(68446),
         o = i(7552),
         d = i(73202),
         g = i(35927),
         _ = i(21384),
-        m = i(47496),
+        m = i(59095),
         x = i(47202),
         p = i(36305),
         h = i(26942),
@@ -1110,7 +1110,7 @@
         }
         render() {
           const e = m.o.getPatchNotes("7.39", r.r.LANGUAGE);
-          let s = (0, g.ww)((0, g.sf)(r.r.LANGUAGE));
+          let s = (0, g.wwZ)((0, g.sfN)(r.r.LANGUAGE));
           return (
             "zh-cn" === s ? (s = "zh-Hans") : "zh-tw" === s && (s = "zh-Hant"),
             (0, n.jsxs)("div", {
