@@ -1464,7 +1464,7 @@
         TeamTextContainer: "vPwn7qUCQPK36lNBhO3cM",
         TeamRegion: "VgZySySdbHZifFeWnTeQL",
         TeamName: "H-MfH1vgfcolosob4nk_y",
-        GoldTeamLogo: "_3y3ZzjsjZHCJzkrKTKcGyy",
+        EmbroideredTeamLogo: "_3ATBmUZ5ckE7Zu4vB3NbI0",
         DividerPronounced: "cmSXVqZG43aj8niWeGaj-",
         InternationalTeamList: "_1jeKRR5snTJNDT5h-Y01Jm",
         TeamGrid: "ZefQhEre8aSqoQ2Pbium0",
@@ -43925,9 +43925,9 @@
             c =
               r.event == No.Dq.INTERNATIONAL_2023 ||
               r.event == No.Dq.INTERNATIONAL_2024 ||
-              r.event == No.Dq.INTERNATIONAL_2025,
-            d = c && !r.is_event_upcoming,
-            m = r.event == No.Dq.INTERNATIONAL_2026 && r.is_event_upcoming;
+              r.event == No.Dq.INTERNATIONAL_2025 ||
+              r.event == No.Dq.INTERNATIONAL_2026,
+            d = c && !r.is_event_upcoming;
           return (0, b.jsxs)("div", {
             className: (0, I.A)(
               Mo().DPCMenuBar,
@@ -43946,7 +43946,7 @@
                         className: (0, I.A)(
                           Mo().SelectButton,
                           d ? Mo().SelectButtonTI2024 : "",
-                          m ? Mo().SelectButtonTI2026 : "",
+                          "",
                         ),
                         onClick: () => s(!0),
                         children: (0, C.Wn)("#dpc_select_league"),
@@ -52676,7 +52676,7 @@
                       Np().TextStyleOverline,
                       Np().KeepUpHeader,
                     ),
-                    children: (0, C.Wn)("#ti11_bp_social_title"),
+                    children: (0, C.Wn)("#ti15_social_title"),
                   }),
                   (0, b.jsxs)("div", {
                     className: (0, I.A)(Np().SocialIcons),
@@ -52721,119 +52721,53 @@
                 ],
               });
         }),
-        Dp =
-          ((0, S.PA)(() => {
-            const e = Dg();
-            Io.E.Get().GetEventInfo(e);
-            return null;
-          }),
-          (0, S.PA)(() => {
-            const e = Dg();
-            return Io.E.Get().GetEventInfo(e).event != No.Dq.INTERNATIONAL_2026
-              ? null
-              : (0, b.jsx)(n.Fragment, {
-                  children: (0, b.jsxs)("div", {
-                    className: Np().BPPlugImgContainer,
+        Dp = (0, S.PA)(() => {
+          const e = Dg(),
+            t = Io.E.Get().GetEventInfo(e);
+          if (t.event != No.Dq.INTERNATIONAL_2026) return null;
+          Io.E.Get().GetLeagueData(e, t.leagues[0].league_id);
+          const r = Ze(Rp);
+          return (0, b.jsx)("div", {
+            className: (0, I.A)(Np().InternationalCountdownContainer),
+            children: (0, b.jsxs)("div", {
+              className: Np().InternationalCountdown,
+              children: [
+                (0, b.jsx)("div", { className: (0, I.A)(Np().SubDividerTop) }),
+                !r &&
+                  (0, b.jsxs)(n.Fragment, {
                     children: [
-                      (0, b.jsx)("img", {
-                        className: Np().BPPlugImg,
-                        src: `${i.r.IMG_URL}international2024/esports_site/footer_bg01.png`,
+                      (0, b.jsx)("div", {
+                        className: (0, I.A)(
+                          Np().TextStyleOverline,
+                          Np().CountdownPreHeader,
+                        ),
+                        children: (0, C.Wn)("#ti15_countdown_preheader"),
                       }),
-                      (0, b.jsx)(Ep, {}),
+                      (0, b.jsx)("div", {
+                        className: (0, I.A)(
+                          Np().TextStyleOverline,
+                          Np().CountdownHeader,
+                        ),
+                        children: (0, C.Wn)("#ti15_countdown_header"),
+                      }),
                     ],
                   }),
-                });
-          }),
-          (0, S.PA)(() => {
-            const e = Dg(),
-              t = Io.E.Get().GetEventInfo(e);
-            if (t.event != No.Dq.INTERNATIONAL_2026) return null;
-            Io.E.Get().GetLeagueData(e, t.leagues[0].league_id);
-            const r = Ze(Rp);
-            return (0, b.jsx)("div", {
-              className: (0, I.A)(Np().InternationalCountdownContainer),
-              children: (0, b.jsxs)("div", {
-                className: Np().InternationalCountdown,
-                children: [
+                (0, b.jsx)("div", {
+                  className: (0, I.A)(Np().TextStyleBody, Np().CountdownDesc),
+                  children: (0, C.Wn)("#ti15_countdown_desc"),
+                }),
+                !r &&
                   (0, b.jsx)("div", {
-                    className: (0, I.A)(Np().SubDividerTop),
+                    className: (0, I.A)(
+                      Np().TextStyleDisplay,
+                      Np().CountdownTimer,
+                    ),
+                    children: (0, b.jsx)(Je, { timestampNoMs: Rp }),
                   }),
-                  !r &&
-                    (0, b.jsxs)(n.Fragment, {
-                      children: [
-                        (0, b.jsx)("div", {
-                          className: (0, I.A)(
-                            Np().TextStyleOverline,
-                            Np().CountdownPreHeader,
-                          ),
-                          children: (0, C.Wn)("#ti15_countdown_preheader"),
-                        }),
-                        (0, b.jsx)("div", {
-                          className: (0, I.A)(
-                            Np().TextStyleOverline,
-                            Np().CountdownHeader,
-                          ),
-                          children: (0, C.Wn)("#ti15_countdown_header"),
-                        }),
-                      ],
-                    }),
-                  (0, b.jsx)("div", {
-                    className: (0, I.A)(Np().TextStyleBody, Np().CountdownDesc),
-                    children: (0, C.Wn)("#ti15_countdown_desc"),
-                  }),
-                  !r &&
-                    (0, b.jsx)("div", {
-                      className: (0, I.A)(
-                        Np().TextStyleDisplay,
-                        Np().CountdownTimer,
-                      ),
-                      children: (0, b.jsx)(Je, { timestampNoMs: Rp }),
-                    }),
-                  r &&
-                    (0, b.jsxs)("div", {
-                      className: (0, I.A)(Np().SocialIcons),
-                      children: [
-                        (0, b.jsx)("a", {
-                          href: "https://twitter.com/dota2ti",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_twitter.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://facebook.com/dota2/",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_fb.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://instagram.com/dota2",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_insta.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://twitch.tv/directory/game/Dota%202",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_twitch.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://youtube.com/user/dota2",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_yt.png`,
-                          }),
-                        }),
-                      ],
-                    }),
-                ],
-              }),
-            });
-          })),
+              ],
+            }),
+          });
+        }),
         Ap = (0, S.PA)(({ nTeamID: e, strName: t, strRegion: r }) =>
           (0, b.jsxs)("div", {
             className: Np().InternationalTeamListTeam,
@@ -52841,7 +52775,7 @@
             "data-aos-duration": "2500",
             children: [
               (0, b.jsx)("div", {
-                className: Np().MagentaTeamLogo,
+                className: Np().EmbroideredTeamLogo,
                 style: {
                   backgroundImage: `url( ${i.r.IMG_URL}international2026/teamlogos/${e}.png )`,
                 },
@@ -52873,7 +52807,88 @@
           const e = Dg();
           if (Io.E.Get().GetEventInfo(e).event != No.Dq.INTERNATIONAL_2026)
             return null;
-          const t = [];
+          const t = [
+            {
+              nTeamID: 2163,
+              strTeamName: "Team Liquid",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 8255888,
+              strTeamName: "BoomBoys",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 8261500,
+              strTeamName: "Xtreme Gaming",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 9247354,
+              strTeamName: "Team Falcons",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 9467224,
+              strTeamName: "Aurora Gaming",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 9823272,
+              strTeamName: "Team Yandex",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 10150413,
+              strTeamName: "Iron Wing",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 726228,
+              strTeamName: "Vici Gaming",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 5017210,
+              strTeamName: "Team Resilience",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 10150538,
+              strTeamName: "LGD Gaming",
+              strTeamRegion: "#dpc_region_sa",
+            },
+            {
+              nTeamID: 2586976,
+              strTeamName: "OG",
+              strTeamRegion: "#dpc_region_sea",
+            },
+            {
+              nTeamID: 9964962,
+              strTeamName: "GamerLegion",
+              strTeamRegion: "#dpc_region_na",
+            },
+            {
+              nTeamID: 10136357,
+              strTeamName: "Nigma Galaxy",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 10149530,
+              strTeamName: "HULIGANI",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 9572001,
+              strTeamName: "TEAM VISION",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 7119388,
+              strTeamName: "Team Spirit",
+              strTeamRegion: "#dpc_region_eu",
+            },
+          ];
           return (
             (function (e) {
               for (let t = e.length - 1; t > 0; t--) {
@@ -52892,7 +52907,7 @@
                   children: [
                     t.length > 0 &&
                       (0, b.jsx)("div", {
-                        className: (0, I.A)(Np().TextStyleOverline, Np().Title),
+                        className: (0, I.A)(Np().Title),
                         children: (0, C.Wn)("#dpc_participating_teams"),
                       }),
                     t.length > 0 &&
@@ -52912,53 +52927,6 @@
                           ),
                         ),
                       }),
-                    (0, b.jsx)("div", {
-                      className: (0, I.A)(
-                        Np().TextStyleOverline,
-                        Np().KeepUpHeader,
-                      ),
-                      children: (0, C.Wn)("#ti15_social_title"),
-                    }),
-                    (0, b.jsxs)("div", {
-                      className: (0, I.A)(Np().SocialIcons),
-                      children: [
-                        (0, b.jsx)("a", {
-                          href: "https://twitter.com/dota2ti",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_twitter.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://facebook.com/dota2/",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_fb.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://instagram.com/dota2",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_insta.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://twitch.tv/directory/game/Dota%202",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_twitch.png`,
-                          }),
-                        }),
-                        (0, b.jsx)("a", {
-                          href: "https://youtube.com/user/dota2",
-                          children: (0, b.jsx)("img", {
-                            className: Np().IconImg,
-                            src: `${i.r.IMG_URL}international2023/icons/social_yt.png`,
-                          }),
-                        }),
-                      ],
-                    }),
                   ],
                 }),
               ],
@@ -52967,7 +52935,11 @@
         }),
         Pp = (0, S.PA)(() =>
           (0, b.jsxs)(n.Fragment, {
-            children: [(0, b.jsx)(Dp, {}), (0, b.jsx)(Lp, {})],
+            children: [
+              (0, b.jsx)(Dp, {}),
+              (0, b.jsx)(Lp, {}),
+              (0, b.jsx)(Ep, {}),
+            ],
           }),
         );
       var kp = r(87715),
@@ -55765,10 +55737,353 @@
                 }),
               }),
         ),
-        Ng = (0, S.PA)(() => {
-          Dg();
-          return No.Dq.INTERNATIONAL_2026, null;
-        }),
+        Ng = (0, S.PA)(() =>
+          Dg() != No.Dq.INTERNATIONAL_2026
+            ? null
+            : (0, b.jsx)("div", {
+                className: jg().InternationalRulesPage,
+                style: {
+                  backgroundImage: `url( ${i.r.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
+                },
+                children: (0, b.jsxs)("div", {
+                  className: jg().Header,
+                  style: {
+                    backgroundImage: `url( ${i.r.IMG_URL}dpc/top_block.jpg )`,
+                  },
+                  children: [
+                    (0, b.jsx)("div", {
+                      className: jg().Title,
+                      children: `${(0, C.Wn)("#dpc_event_ti15")}`,
+                    }),
+                    (0, b.jsxs)("div", {
+                      className: jg().Content,
+                      children: [
+                        (0, b.jsx)("div", {
+                          className: jg().SubHeader,
+                          children: (0, C.Wn)("#ti15_swiss_rules"),
+                        }),
+                        (0, b.jsxs)("ul", {
+                          children: [
+                            (0, b.jsx)("li", {
+                              children: (0, b.jsx)("div", {
+                                className: jg().Description,
+                                children: (0, C.Wn)("#ti15_swiss_rules1"),
+                              }),
+                            }),
+                            (0, b.jsxs)("ol", {
+                              children: [
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules1_1"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules1_2"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules1_3"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules1_4"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules1_5"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules1_6"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules1_7"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, b.jsx)("br", {}),
+                            (0, b.jsx)("li", {
+                              children: (0, b.jsx)("div", {
+                                className: jg().Description,
+                                children: (0, C.Wn)("#ti15_swiss_rules2"),
+                              }),
+                            }),
+                            (0, b.jsxs)("ul", {
+                              children: [
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules2_1"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules2_2"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules2_3"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, b.jsx)("br", {}),
+                            (0, b.jsx)("li", {
+                              children: (0, b.jsx)("div", {
+                                className: jg().Description,
+                                children: (0, C.Wn)("#ti15_swiss_rules3"),
+                              }),
+                            }),
+                            (0, b.jsxs)("ul", {
+                              children: [
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules3_1"),
+                                  }),
+                                }),
+                                (0, b.jsxs)("ul", {
+                                  children: [
+                                    (0, b.jsx)("li", {
+                                      children: (0, b.jsx)("div", {
+                                        className: jg().Description,
+                                        children: (0, C.Wn)(
+                                          "#ti15_swiss_rules3_1_1",
+                                        ),
+                                      }),
+                                    }),
+                                    (0, b.jsx)("li", {
+                                      children: (0, b.jsx)("div", {
+                                        className: jg().Description,
+                                        children: (0, C.Wn)(
+                                          "#ti15_swiss_rules3_1_2",
+                                        ),
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules3_2"),
+                                  }),
+                                }),
+                                (0, b.jsx)("ul", {
+                                  children: (0, b.jsx)("li", {
+                                    children: (0, b.jsx)("div", {
+                                      className: jg().Description,
+                                      children: (0, C.Wn)(
+                                        "#ti15_swiss_rules3_2_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules3_3"),
+                                  }),
+                                }),
+                                (0, b.jsx)("ul", {
+                                  children: (0, b.jsx)("li", {
+                                    children: (0, b.jsx)("div", {
+                                      className: jg().Description,
+                                      children: (0, C.Wn)(
+                                        "#ti15_swiss_rules3_3_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules3_4"),
+                                  }),
+                                }),
+                                (0, b.jsx)("ul", {
+                                  children: (0, b.jsx)("li", {
+                                    children: (0, b.jsx)("div", {
+                                      className: jg().Description,
+                                      children: (0, C.Wn)(
+                                        "#ti15_swiss_rules3_4_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules3_5"),
+                                  }),
+                                }),
+                                (0, b.jsx)("ul", {
+                                  children: (0, b.jsx)("li", {
+                                    children: (0, b.jsx)("div", {
+                                      className: jg().Description,
+                                      children: (0, C.Wn)(
+                                        "#ti15_swiss_rules3_5_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, b.jsx)("br", {}),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti15_swiss_rules3_6"),
+                                  }),
+                                }),
+                                (0, b.jsxs)("ul", {
+                                  children: [
+                                    (0, b.jsx)("li", {
+                                      children: (0, b.jsx)("div", {
+                                        className: jg().Description,
+                                        children: (0, C.Wn)(
+                                          "#ti15_swiss_rules3_6_1",
+                                        ),
+                                      }),
+                                    }),
+                                    (0, b.jsx)("li", {
+                                      children: (0, b.jsx)("div", {
+                                        className: jg().Description,
+                                        children: (0, C.Wn)(
+                                          "#ti15_swiss_rules3_6_2",
+                                        ),
+                                      }),
+                                    }),
+                                    (0, b.jsx)("li", {
+                                      children: (0, b.jsx)("div", {
+                                        className: jg().Description,
+                                        children: (0, C.Wn)(
+                                          "#ti15_swiss_rules3_6_3",
+                                        ),
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, b.jsx)("div", {
+                          className: jg().SubHeader,
+                          children: (0, C.Wn)("#ti14_seeding"),
+                        }),
+                        (0, b.jsx)("ul", {
+                          children: (0, b.jsx)("li", {
+                            children: (0, b.jsx)("div", {
+                              className: jg().Description,
+                              children: (0, C.Wn)("#ti14_seeding_1"),
+                            }),
+                          }),
+                        }),
+                        (0, b.jsx)("div", {
+                          className: jg().SubHeader,
+                          children: (0, C.Wn)("#ti14_sp_rules"),
+                        }),
+                        (0, b.jsxs)("ul", {
+                          children: [
+                            (0, b.jsx)("li", {
+                              children: (0, b.jsx)("div", {
+                                className: jg().Description,
+                                children: (0, C.Wn)("#ti14_best_of_three"),
+                              }),
+                            }),
+                            (0, b.jsxs)("ul", {
+                              children: [
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo3_1"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo3_2"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo3_3"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo3_4"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, b.jsx)("br", {}),
+                            (0, b.jsx)("li", {
+                              children: (0, b.jsx)("div", {
+                                className: jg().Description,
+                                children: (0, C.Wn)("#ti14_best_of_five"),
+                              }),
+                            }),
+                            (0, b.jsxs)("ul", {
+                              children: [
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo5_1"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo5_2"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo5_3"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo5_4"),
+                                  }),
+                                }),
+                                (0, b.jsx)("li", {
+                                  children: (0, b.jsx)("div", {
+                                    className: jg().Description,
+                                    children: (0, C.Wn)("#ti14_sp_rules_bo5_5"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+        ),
         Rg = (0, S.PA)(() =>
           (0, b.jsxs)(n.Fragment, {
             children: [
