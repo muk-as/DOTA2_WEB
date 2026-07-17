@@ -60639,72 +60639,78 @@
                           (0, b.jsx)("div", {
                             children: (() => {
                               let e;
-                              return p && p.team_autographs
-                                ? ((e = p.team_autographs),
-                                  e.forEach((t, r) => {
-                                    const i = t.autographs;
-                                    let a = !1;
-                                    for (let e = 0; e < i.length; e++)
-                                      i[e].file && (a = !0);
-                                    e[r].hasUploadedAutograph = a;
-                                  }),
-                                  (e = e.filter(
-                                    (e) => e?.autographs?.length >= 4,
-                                  )),
-                                  e.sort(P),
-                                  e.map((e, t) =>
-                                    (0, b.jsxs)(
-                                      "div",
-                                      {
+                              if (!p || !p.team_autographs)
+                                return (0, b.jsx)("div", {
+                                  children: "Could not load autographs",
+                                });
+                              (e = p.team_autographs),
+                                e.forEach((t, r) => {
+                                  const i = t.autographs;
+                                  let a = !1;
+                                  for (let e = 0; e < i.length; e++)
+                                    i[e].file && (a = !0);
+                                  e[r].hasUploadedAutograph = a;
+                                }),
+                                (e = e.filter(
+                                  (e) => e?.autographs?.length >= 4,
+                                )),
+                                e.sort(P);
+                              return e.map((e, t) => {
+                                return (0, b.jsxs)(
+                                  "div",
+                                  {
+                                    children: [
+                                      (0, b.jsxs)("div", {
+                                        className: Ch().TeamName,
                                         children: [
-                                          (0, b.jsxs)("div", {
-                                            className: Ch().TeamName,
-                                            children: [
-                                              e.name || "(Team name)",
-                                              e.team_id
-                                                ? ` (${e.team_id})`
-                                                : "",
-                                            ],
-                                          }),
-                                          (0, b.jsx)(
-                                            "div",
-                                            {
-                                              className: Ch().TeamAutographRow,
-                                              children: e.autographs.map(
-                                                (e, t) => {
-                                                  const {
-                                                    name: r,
-                                                    pro_name: i,
-                                                    account_id: a,
-                                                    file: s,
-                                                    timestamp: n,
-                                                  } = e;
-                                                  return Nh.includes(a)
-                                                    ? null
-                                                    : (0, b.jsx)(
-                                                        A,
-                                                        {
-                                                          proName: i,
-                                                          accountId: a,
-                                                          pos: null,
-                                                          fileName: s,
-                                                          timestamp: n,
-                                                        },
-                                                        a,
-                                                      );
-                                                },
-                                              ),
-                                            },
-                                            `${e.team_id}Row`,
-                                          ),
+                                          `${e.name} (`,
+                                          e.team_id
+                                            ? ((r = e.team_id),
+                                              (0, b.jsx)("a", {
+                                                href: `${i.r.BASE_URL}${v.J.teamdetails(r).substr(1)}`,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                                children: r,
+                                              }))
+                                            : "",
+                                          ")",
                                         ],
-                                      },
-                                      `${e.team_id}Container`,
-                                    ),
-                                  ))
-                                : (0, b.jsx)("div", {
-                                    children: "Could not load autographs",
-                                  });
+                                      }),
+                                      (0, b.jsx)(
+                                        "div",
+                                        {
+                                          className: Ch().TeamAutographRow,
+                                          children: e.autographs.map((e, t) => {
+                                            const {
+                                              name: r,
+                                              pro_name: i,
+                                              account_id: a,
+                                              file: s,
+                                              timestamp: n,
+                                            } = e;
+                                            return Nh.includes(a)
+                                              ? null
+                                              : (0, b.jsx)(
+                                                  A,
+                                                  {
+                                                    proName: i,
+                                                    accountId: a,
+                                                    pos: null,
+                                                    fileName: s,
+                                                    timestamp: n,
+                                                  },
+                                                  a,
+                                                );
+                                          }),
+                                        },
+                                        `${e.team_id}Row`,
+                                      ),
+                                    ],
+                                  },
+                                  `${e.team_id}Container`,
+                                );
+                                var r;
+                              });
                             })(),
                           }),
                         ],
@@ -60848,10 +60854,6 @@
                   children: (0, b.jsxs)("div", {
                     className: Dh().Page,
                     children: [
-                      (0, b.jsx)("img", {
-                        src: `${i.r.IMG_URL}dpc/dpc_logo.png`,
-                        className: Dh().DPCLogo,
-                      }),
                       (0, b.jsx)("div", {
                         className: Dh().Header,
                         children: (0, C.Wn)("#autograph_guidelines_top_header"),

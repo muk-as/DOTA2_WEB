@@ -549,7 +549,7 @@
               }),
             ],
           }),
-        E = (e) => {
+        D = (e) => {
           const [a, t] = i.useState(e.strMMR);
           return (
             i.useEffect(() => {
@@ -571,7 +571,7 @@
             })
           );
         };
-      function D(e) {
+      function E(e) {
         const a = new URLSearchParams();
         return (
           Object.keys(e).forEach((t) => {
@@ -613,7 +613,7 @@
                 nGameMode: h,
                 arrSkilledAbilities: m,
               };
-              t.push(l.J.dotaplustester(e.strFeature, D(a)));
+              t.push(l.J.dotaplustester(e.strFeature, E(a)));
             },
             x = (e, a) => {
               console.log("4"), (o[e] = a), p();
@@ -733,7 +733,7 @@
                         console.log("9"), (h = e), p();
                       },
                     }),
-                    (0, n.jsx)(E, {
+                    (0, n.jsx)(D, {
                       strMMR: u,
                       fnSetMMR: (e) => {
                         console.log("8"), (u = e), p();
@@ -821,7 +821,7 @@
                 nAverageMMR: parseInt(m),
                 nGameMode: u,
               };
-              t.push(l.J.dotaplustester(e.strFeature, D(a)));
+              t.push(l.J.dotaplustester(e.strFeature, E(a)));
             },
             p = (0, s.MT)(r, i, o, d, parseInt(m), u, !0).data;
           let x = [];
@@ -940,7 +940,7 @@
                             (u = e), h();
                           },
                         }),
-                        (0, n.jsx)(E, {
+                        (0, n.jsx)(D, {
                           strMMR: m,
                           fnSetMMR: (e) => {
                             (m = e), h();
@@ -993,7 +993,7 @@
               (d[e] = a), N();
             },
             N = () => {
-              const a = D({
+              const a = E({
                 nHeroID: r,
                 nPosition: i,
                 arrAlliedHeroIDs: o,
@@ -1127,7 +1127,7 @@
                         (h = e), N();
                       },
                     }),
-                    (0, n.jsx)(E, {
+                    (0, n.jsx)(D, {
                       strMMR: m,
                       fnSetMMR: (e) => {
                         (m = e), N();
@@ -1267,7 +1267,7 @@
             j = (a.get("arrLikedItems") || "0,0").split(",").map(Number),
             g = (a.get("arrDislikedItems") || "0,0").split(",").map(Number);
           const A = () => {
-            const a = D({
+            const a = E({
               nHeroID: r,
               nPosition: i,
               arrAlliedHeroIDs: o,
@@ -1442,7 +1442,7 @@
                         (u = e), A();
                       },
                     }),
-                    (0, n.jsx)(E, {
+                    (0, n.jsx)(D, {
                       strMMR: m,
                       fnSetMMR: (e) => {
                         (m = e), A();
@@ -1764,7 +1764,7 @@
       function R(e) {
         return 570 === e ? "public" : "beta";
       }
-      function E(e) {
+      function D(e) {
         switch (e) {
           case k.Fk.DOTA_GAMEMODE_NONE:
             return "-";
@@ -1822,7 +1822,7 @@
             return "Unknown";
         }
       }
-      function D(e) {
+      function E(e) {
         switch (e) {
           case k.AP.CASUAL_MATCH:
             return "Unranked";
@@ -2717,7 +2717,7 @@
             [Ie, Te] = (0, i.useState)(!0),
             [ve, ke] = (0, i.useState)(!0),
             [Se, Re] = (0, i.useState)(!1),
-            [Ee, De] = (0, i.useState)(!0),
+            [De, Ee] = (0, i.useState)(!0),
             [Oe, be] = (0, i.useState)(!0),
             [Fe, Ce] = (0, i.useState)(!1),
             Me = v.B5.Get().getHeroList(),
@@ -2791,11 +2791,11 @@
                       k.AP.FEATURED_GAMEMODE,
                     ].includes(e.lobbytype)
                   ) &&
-                  !(!Ee && e.rankwassolo) &&
+                  !(!De && e.rankwassolo) &&
                   !(!Oe && !e.rankwassolo),
               )),
                 B(e);
-            }, [C, Ie, ve, Se, Ee, Oe]);
+            }, [C, Ie, ve, Se, De, Oe]);
           let Pe = null;
           if (
             (t
@@ -2879,7 +2879,7 @@
                 if (e.rowData?.lobbytype == k.AP.PRACTICE)
                   return (0, n.jsx)("span", {
                     style: { color: z },
-                    children: D(k.AP.PRACTICE),
+                    children: E(k.AP.PRACTICE),
                   });
                 let a = e.cellData;
                 if ((a in k.rM || (a = 0), a <= 0)) return O(k.rM.UNKNOWN);
@@ -2988,7 +2988,7 @@
                   a == k.AP.CASUAL_MATCH
                     ? (t = J)
                     : a == k.AP.COMPETITIVE_MATCH && (t = X),
-                  (0, n.jsx)("span", { style: { color: t }, children: D(a) })
+                  (0, n.jsx)("span", { style: { color: t }, children: E(a) })
                 );
               },
               headerRenderer: (e) =>
@@ -3059,8 +3059,8 @@
                           type: "checkbox",
                           name: "solo",
                           id: "solo",
-                          onChange: () => De(!Ee),
-                          checked: Ee,
+                          onChange: () => Ee(!De),
+                          checked: De,
                         }),
                         (0, n.jsx)("label", {
                           htmlFor: "solo",
@@ -3104,7 +3104,7 @@
                     children: "SD (LP)",
                   });
                 const a = `DOTA_GAMEMODE_${e.cellData}`;
-                return a in k.Fk ? E(k.Fk[a]) : E(k.Fk.DOTA_GAMEMODE_NONE);
+                return a in k.Fk ? D(k.Fk[a]) : D(k.Fk.DOTA_GAMEMODE_NONE);
               },
             },
             {
@@ -4481,7 +4481,7 @@
     },
     4533: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => F });
+      t.r(a), t.d(a, { default: () => C });
       var n = t(69500),
         r = t(75749),
         s = t.n(r),
@@ -4503,8 +4503,9 @@
           (0, n.jsx)("a", {
             href: `${l.r.BASE_URL}personadetails/${e}?u=${y}&appid=${l.r.DOTA_APP_ID}`,
             children: e,
-          });
-      var A;
+          }),
+        A = [19785, 19894, 19890, 19891, 19892, 19893, 19101, 19696];
+      var N;
       !(function (e) {
         (e[(e.kTRAA_RegisterTeam = 0)] = "kTRAA_RegisterTeam"),
           (e[(e.kTRAA_InvitePlayer = 1)] = "kTRAA_InvitePlayer"),
@@ -4524,8 +4525,8 @@
           (e[(e.kTRAA_ValveUpdateName = 15)] = "kTRAA_ValveUpdateName"),
           (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
           (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
-      })(A || (A = {}));
-      const N = {
+      })(N || (N = {}));
+      const I = {
           0: "kTRAA_RegisterTeam",
           1: "kTRAA_InvitePlayer",
           2: "kTRAA_RemovePlayer",
@@ -4545,14 +4546,14 @@
           16: "kTRAA_ValveUpdateTeamName",
           20: "kTRAA_Penalty20",
         },
-        I = [
+        T = [
           {
-            enum: A.kTRAA_RegisterTeam,
+            enum: N.kTRAA_RegisterTeam,
             formatFunction: () =>
               "Registered a team or re-registered an existing team.",
           },
           {
-            enum: A.kTRAA_InvitePlayer,
+            enum: N.kTRAA_InvitePlayer,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4563,7 +4564,7 @@
               }),
           },
           {
-            enum: A.kTRAA_RemovePlayer,
+            enum: N.kTRAA_RemovePlayer,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4574,7 +4575,7 @@
               }),
           },
           {
-            enum: A.kTRAA_CancelInvite,
+            enum: N.kTRAA_CancelInvite,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4584,7 +4585,7 @@
               }),
           },
           {
-            enum: A.kTRAA_RegisterPlayer,
+            enum: N.kTRAA_RegisterPlayer,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4594,7 +4595,7 @@
               }),
           },
           {
-            enum: A.kTRAA_AcceptInvite,
+            enum: N.kTRAA_AcceptInvite,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4604,7 +4605,7 @@
               }),
           },
           {
-            enum: A.kTRAA_RejectInvite,
+            enum: N.kTRAA_RejectInvite,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4614,16 +4615,16 @@
               }),
           },
           {
-            enum: A.kTRAA_UnregisterTeam,
+            enum: N.kTRAA_UnregisterTeam,
             formatFunction: () => "Manager removed the team registration.",
           },
           {
-            enum: A.kTRAA_TransferTeam,
+            enum: N.kTRAA_TransferTeam,
             formatFunction: () =>
               "Manager transferred the team wholesale to new management.",
           },
           {
-            enum: A.kTRAA_TransferTeamAdmin,
+            enum: N.kTRAA_TransferTeamAdmin,
             formatFunction: (e = "", a = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4633,7 +4634,7 @@
               }),
           },
           {
-            enum: A.kTRAA_InviteCoach,
+            enum: N.kTRAA_InviteCoach,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4644,7 +4645,7 @@
               }),
           },
           {
-            enum: A.kTRAA_RemoveCoach,
+            enum: N.kTRAA_RemoveCoach,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4655,7 +4656,7 @@
               }),
           },
           {
-            enum: A.kTRAA_CancelInviteCoach,
+            enum: N.kTRAA_CancelInviteCoach,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4665,7 +4666,7 @@
               }),
           },
           {
-            enum: A.kTRAA_AcceptCoachInvite,
+            enum: N.kTRAA_AcceptCoachInvite,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4675,7 +4676,7 @@
               }),
           },
           {
-            enum: A.kTRAA_RejectCoachInvite,
+            enum: N.kTRAA_RejectCoachInvite,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4685,7 +4686,7 @@
               }),
           },
           {
-            enum: A.kTRAA_ValveUpdateName,
+            enum: N.kTRAA_ValveUpdateName,
             formatFunction: (e = "") =>
               (0, n.jsxs)(o.Fragment, {
                 children: [
@@ -4696,15 +4697,15 @@
               }),
           },
           {
-            enum: A.kTRAA_ValveUpdateTeamName,
+            enum: N.kTRAA_ValveUpdateTeamName,
             formatFunction: () => "Valve updated the team name.",
           },
           {
-            enum: A.kTRAA_Penalty20,
+            enum: N.kTRAA_Penalty20,
             formatFunction: () => "20% point penalty.",
           },
         ],
-        T = [
+        v = [
           {
             key: "pro",
             displayName: "Pro?",
@@ -4741,7 +4742,7 @@
             formatFunction: (e = "") => e.toUpperCase(),
           },
         ],
-        v = [
+        k = [
           {
             key: "account_id",
             displayName: "Account ID",
@@ -4785,7 +4786,7 @@
               }),
           },
         ],
-        k = [
+        S = [
           {
             key: "manager_account_id",
             displayName: "Manager Account ID",
@@ -4793,7 +4794,7 @@
           },
           { key: "manager_email", displayName: "Manager Email" },
         ],
-        S = [
+        R = [
           {
             key: "color_primary",
             displayName: "Color (Primary)",
@@ -4853,7 +4854,7 @@
               }),
           },
         ],
-        R = [
+        D = [
           {
             key: "ugc_logo_url",
             displayName: "Logo",
@@ -4916,16 +4917,16 @@
           {
             key: "action",
             displayName: "Action Enum",
-            formatFunction: (e) => `${N[e]} (${e})`,
+            formatFunction: (e) => `${I[e]} (${e})`,
           },
           {
             key: "action",
             displayName: "Audit Action",
             formatFunction: (e, a = "", t = "") =>
-              I.find((a) => a.enum === e).formatFunction.call(null, a, t),
+              T.find((a) => a.enum === e).formatFunction.call(null, a, t),
           },
         ],
-        D = [
+        O = [
           { key: "workshop_account_id", displayName: "Workshop Account ID" },
           {
             key: "comment",
@@ -4953,10 +4954,10 @@
                 : "",
           },
         ],
-        O = [
+        b = [
           { key: "series_id", displayName: "Series ID" },
           {
-            key: "scheduled_time",
+            key: "actual_time",
             displayName: "Series Date & Time",
             formatFunction: (e) =>
               e
@@ -5033,19 +5034,19 @@
             },
           },
         ],
-        b = (e) => {
+        F = (e) => {
           const a = (0, i.g)().id,
             [t, r] = (0, o.useState)([]),
             [h, x] = (0, o.useState)(!1),
             [j, f] = (0, o.useState)(!1),
-            [N, I] = (0, o.useState)({}),
-            [b, F] = (0, o.useState)(!1),
-            [C, M] = (0, o.useState)(!1),
-            [L, P] = (0, o.useState)({}),
-            [w, G] = (0, o.useState)([]),
-            [H, $] = (0, o.useState)(!0),
-            [U, B] = (0, o.useState)([]);
-          async function K() {
+            [I, T] = (0, o.useState)({}),
+            [F, C] = (0, o.useState)(!1),
+            [M, L] = (0, o.useState)(!1),
+            [P, w] = (0, o.useState)({}),
+            [G, H] = (0, o.useState)([]),
+            [$, U] = (0, o.useState)(!0),
+            [B, K] = (0, o.useState)([]);
+          async function Y() {
             if (
               !l.r.DOTA_APP_ID ||
               !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
@@ -5063,24 +5064,20 @@
               t = a?.data?.result?.teams || [];
             t.length && r(t), x(!0);
           }
-          async function Y() {
+          async function W() {
             if (
               !l.r.DOTA_APP_ID ||
               !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
               !a
             )
               return;
-            const e = {
-                appid: l.r.DOTA_APP_ID,
-                u: "public" !== l.r.WEB_UNIVERSE ? "beta" : y,
-                team_id: a,
-              },
+            const e = { appid: l.r.DOTA_APP_ID, u: y, team_id: a },
               t = await s().get(
                 l.r.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
                 { params: e },
               ),
               n = t?.data,
-              r = n.members || [];
+              r = n?.members || [];
             try {
               const e = await s().get(l.r.BASE_URL + "teams/getugcfilelinks/", {
                 params: { team_id: a },
@@ -5118,7 +5115,7 @@
             } catch (e) {
               console.log("Error fetching individual player info.");
             }
-            t && t.data && I(n), F(!0);
+            t && t.data && T(n), C(!0);
           }
           (0, o.useEffect)(() => {
             try {
@@ -5133,7 +5130,7 @@
                   n = t?.data?.team_status_list || [];
                 if (n.length && a) {
                   const e = n.find((e) => e.team_id.toString() == a);
-                  e && P(e);
+                  e && w(e);
                 }
               })();
             } catch (e) {
@@ -5142,16 +5139,16 @@
           }, [a]),
             (0, o.useEffect)(() => {
               try {
-                K();
+                Y();
               } catch (e) {
                 console.log("Could not fetch registered teams."), f(!0);
               }
             }, []),
             (0, o.useEffect)(() => {
               try {
-                Y();
+                W();
               } catch (e) {
-                console.log("Could not fetch single team info."), M(!0);
+                console.log("Could not fetch single team info."), L(!0);
               }
             }, [a]),
             (0, o.useEffect)(() => {
@@ -5178,7 +5175,7 @@
                   await Promise.all(
                     r.map(async (e) => {
                       if (
-                        e.action === A.kTRAA_TransferTeamAdmin &&
+                        e.action === N.kTRAA_TransferTeamAdmin &&
                         e.account_id
                       ) {
                         const a = await s().get(
@@ -5189,10 +5186,10 @@
                       }
                     }),
                   ),
-                    t && t.data && n.actions && B(n.actions);
+                    t && t.data && n.actions && K(n.actions);
                 })();
               } catch (e) {
-                console.log("Could not fetch single team info."), M(!0);
+                console.log("Could not fetch single team info."), L(!0);
               }
             }, [a]),
             (0, o.useEffect)(() => {
@@ -5207,11 +5204,12 @@
                   l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
               );
               let t = [];
+              t.push(...A);
               for (let a of e) {
                 const e = a.leagues.map((e) => e.league_id);
                 t.push(...e);
               }
-              t.sort(),
+              t.sort().reverse(),
                 (t = t.filter((e, a, t) => t.indexOf(e) == a)),
                 t.length > 50 && (t = t.slice(t.length - 50));
               try {
@@ -5251,20 +5249,20 @@
                                 (t.score = `${t.team_2_wins} - ${t.team_1_wins}`)),
                             0 === t.team_1_wins &&
                               0 === t.team_2_wins &&
-                              t.scheduled_time &&
-                              new Date().getTime() < 1e3 * t.scheduled_time &&
+                              t.actual_time &&
+                              new Date().getTime() < 1e3 * t.actual_time &&
                               (t.outcome = "Upcoming"),
                             o.push(t));
                   var c;
                   o.sort((e, a) =>
-                    e.scheduled_time > a.scheduled_time
+                    e.actual_time > a.actual_time
                       ? -1
-                      : e.scheduled_time < a.scheduled_time
+                      : e.actual_time < a.actual_time
                         ? 1
                         : 0,
                   ),
                     o.length &&
-                      G(
+                      H(
                         ((c = "league_name"),
                         o.reduce(
                           (e, a) => ({ ...e, [a[c]]: [...(e[a[c]] || []), a] }),
@@ -5276,21 +5274,21 @@
                 console.log("Could not fetch leagues data.");
               }
             }, [a]);
-          const W = t.find((e) => e.team_id == a) || {};
-          let V;
+          const V = t.find((e) => e.team_id == a) || {};
+          let J;
           if (
-            ((h && b) || (V = (0, n.jsx)("div", { children: "Loading..." })),
+            ((h && F) || (J = (0, n.jsx)("div", { children: "Loading..." })),
             h &&
               (0 == t.length || j) &&
-              (V = (0, n.jsx)("div", {
+              (J = (0, n.jsx)("div", {
                 children: "Error loading registered teams...",
               })),
-            b &&
-              (0 == Object.keys(N).length || C) &&
-              (V = (0, n.jsx)("div", {
+            F &&
+              (0 == Object.keys(I).length || M) &&
+              (J = (0, n.jsx)("div", {
                 children: `Error loading single team info for teamId ${a} `,
               })),
-            V)
+            J)
           )
             return (0, n.jsxs)("div", {
               className: _().TeamDetails,
@@ -5302,18 +5300,18 @@
                   }),
                 }),
                 (0, n.jsx)(p.A, {}),
-                (0, n.jsx)("div", { className: _().ContentFrame, children: V }),
+                (0, n.jsx)("div", { className: _().ContentFrame, children: J }),
                 (0, n.jsx)(u.K, {}),
               ],
             });
-          const J = N.members || [];
-          J.forEach((e) => {
+          const X = I.members || [];
+          X.forEach((e) => {
             (e.kick_link = `${l.r.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${y}&appid=${l.r.DOTA_APP_ID}&team_id=${a}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
                 ? ""
                 : `${l.r.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${y}&appid=${l.r.DOTA_APP_ID}&team_id=${a}&account_id=${e.account_id}`);
           });
-          const X = (e) => {
+          const z = (e) => {
             const a = t.find((a) => a.team_id == e);
             return a ? a.team_name : "";
           };
@@ -5332,12 +5330,12 @@
                 children: [
                   (0, n.jsx)("h1", {
                     className: _().Header,
-                    children: `Team Details for ${N?.name} (${N.team_id})`,
+                    children: `Team Details for ${I?.name} (${I.team_id})`,
                   }),
                   (0, n.jsxs)("div", {
                     className: _().MiscInfoGrid,
                     children: [
-                      T.map((e) =>
+                      v.map((e) =>
                         (0, n.jsxs)(
                           o.Fragment,
                           {
@@ -5347,9 +5345,9 @@
                               }),
                               (0, n.jsx)("div", {
                                 children: e.formatFunction
-                                  ? e.formatFunction.call(null, N[e.key])
+                                  ? e.formatFunction.call(null, I[e.key])
                                   : JSON.stringify(
-                                      N[e.key] || "",
+                                      I[e.key] || "",
                                       null,
                                       2,
                                     ).replace(/['"]+/g, ""),
@@ -5359,12 +5357,12 @@
                           `${e.key}-misc-row`,
                         ),
                       ),
-                      !H &&
+                      !$ &&
                         (0, n.jsxs)(o.Fragment, {
                           children: [
                             (0, n.jsx)("div", {
                               className: _().Link,
-                              onClick: () => $(!0),
+                              onClick: () => U(!0),
                               children: "Update Info / Add Member",
                             }),
                             (0, n.jsx)("div", {}),
@@ -5372,7 +5370,7 @@
                         }),
                     ],
                   }),
-                  H &&
+                  $ &&
                     (0, n.jsxs)(o.Fragment, {
                       children: [
                         (0, n.jsx)("div", { className: _().SmoothLine }),
@@ -5397,7 +5395,7 @@
                                   `${l.r.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
                                   { params: n },
                                 );
-                                Y(), setTimeout(() => u(!1), g);
+                                W(), setTimeout(() => u(!1), g);
                               },
                               children: [
                                 (0, n.jsx)("h2", {
@@ -5463,7 +5461,7 @@
                                   `${l.r.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
                                   { params: n },
                                 );
-                                Y(), setTimeout(() => i(!1), g);
+                                W(), setTimeout(() => i(!1), g);
                               },
                               children: [
                                 (0, n.jsx)("h2", {
@@ -5509,11 +5507,11 @@
                   (0, n.jsxs)("div", {
                     className: _().MembersGrid,
                     style: {
-                      gridTemplateColumns: `250px repeat(${v.length - 1}, auto)`,
+                      gridTemplateColumns: `250px repeat(${k.length - 1}, auto)`,
                     },
                     children: [
                       (0, n.jsx)(o.Fragment, {
-                        children: v.map((e) =>
+                        children: k.map((e) =>
                           (0, n.jsx)(
                             "div",
                             {
@@ -5527,14 +5525,14 @@
                       }),
                       (0, n.jsxs)(o.Fragment, {
                         children: [
-                          !!J.length &&
-                            J.map((e) =>
-                              v.map((a) =>
+                          !!X.length &&
+                            X.map((e) =>
+                              k.map((a) =>
                                 (0, n.jsx)(
                                   "div",
                                   {
                                     children: a.formatFunction
-                                      ? a.formatFunction.call(null, e[a.key], Y)
+                                      ? a.formatFunction.call(null, e[a.key], W)
                                       : JSON.stringify(
                                           e[a.key] || "",
                                           null,
@@ -5545,7 +5543,7 @@
                                 ),
                               ),
                             ),
-                          !J.length &&
+                          !X.length &&
                             (0, n.jsx)("div", { children: "No team members." }),
                         ],
                       }),
@@ -5555,11 +5553,11 @@
                   (0, n.jsxs)("div", {
                     className: _().ManagerGrid,
                     style: {
-                      gridTemplateColumns: `250px repeat(${k.length - 1}, auto)`,
+                      gridTemplateColumns: `250px repeat(${S.length - 1}, auto)`,
                     },
                     children: [
                       (0, n.jsx)(o.Fragment, {
-                        children: k.map((e) =>
+                        children: S.map((e) =>
                           (0, n.jsx)(
                             "div",
                             {
@@ -5573,15 +5571,15 @@
                       }),
                       (0, n.jsxs)(o.Fragment, {
                         children: [
-                          k.map((e) =>
+                          S.map((e) =>
                             (0, n.jsx)(
                               o.Fragment,
                               {
                                 children: (0, n.jsx)("div", {
                                   children: e.formatFunction
-                                    ? e.formatFunction.call(null, W[e.key])
+                                    ? e.formatFunction.call(null, V[e.key])
                                     : JSON.stringify(
-                                        W[e.key] || "",
+                                        V[e.key] || "",
                                         null,
                                         2,
                                       ).replace(/['"]+/g, ""),
@@ -5590,13 +5588,13 @@
                               `${e.key}-manager-row`,
                             ),
                           ),
-                          !k.length &&
+                          !S.length &&
                             (0, n.jsx)("div", { children: "No manager." }),
                         ],
                       }),
                     ],
                   }),
-                  H &&
+                  $ &&
                     (0, n.jsxs)(o.Fragment, {
                       children: [
                         (0, n.jsx)("div", { className: _().SmoothLine }),
@@ -5619,7 +5617,7 @@
                                   `${l.r.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${y}&appid=${l.r.DOTA_APP_ID}`,
                                   { params: t },
                                 );
-                                K(), setTimeout(() => d(!1), g);
+                                Y(), setTimeout(() => d(!1), g);
                               },
                               children: [
                                 (0, n.jsx)("h2", {
@@ -5674,7 +5672,7 @@
                   }),
                   (0, n.jsx)("div", {
                     className: _().LogoAndColorsGrid,
-                    children: S.map((e) =>
+                    children: R.map((e) =>
                       (0, n.jsxs)(
                         o.Fragment,
                         {
@@ -5686,11 +5684,11 @@
                               children: e.formatFunction
                                 ? e.formatFunction.call(
                                     null,
-                                    N[e.key],
-                                    N.team_id,
+                                    I[e.key],
+                                    I.team_id,
                                   )
                                 : JSON.stringify(
-                                    N[e.key] || "",
+                                    I[e.key] || "",
                                     null,
                                     2,
                                   ).replace(/['"]+/g, ""),
@@ -5704,10 +5702,10 @@
                   (0, n.jsx)("br", {}),
                   (0, n.jsxs)("div", {
                     className: _().UGCLogosGrid,
-                    style: { gridTemplateColumns: `repeat(${R.length}, auto)` },
+                    style: { gridTemplateColumns: `repeat(${D.length}, auto)` },
                     children: [
                       (0, n.jsx)(o.Fragment, {
-                        children: R.map((e) =>
+                        children: D.map((e) =>
                           (0, n.jsx)(
                             "div",
                             {
@@ -5720,14 +5718,14 @@
                         ),
                       }),
                       (0, n.jsx)(o.Fragment, {
-                        children: R.map((e) =>
+                        children: D.map((e) =>
                           (0, n.jsx)(
                             "div",
                             {
                               children: e.formatFunction
-                                ? e.formatFunction.call(null, N[e.key])
+                                ? e.formatFunction.call(null, I[e.key])
                                 : JSON.stringify(
-                                    N[e.key] || "",
+                                    I[e.key] || "",
                                     null,
                                     2,
                                   ).replace(/['"]+/g, ""),
@@ -5762,8 +5760,8 @@
                       }),
                       (0, n.jsxs)(o.Fragment, {
                         children: [
-                          !!U.length &&
-                            U.map((e) =>
+                          !!B.length &&
+                            B.map((e) =>
                               E.map((a) =>
                                 (0, n.jsx)(
                                   "div",
@@ -5785,7 +5783,7 @@
                                 ),
                               ),
                             ),
-                          !U.length &&
+                          !B.length &&
                             (0, n.jsx)("div", {
                               children: "No audit actions.",
                             }),
@@ -5800,7 +5798,7 @@
                   }),
                   (0, n.jsx)("div", {
                     className: _().WorkshopStatusGrid,
-                    children: D.map((e) =>
+                    children: O.map((e) =>
                       (0, n.jsxs)(
                         o.Fragment,
                         {
@@ -5810,9 +5808,9 @@
                             }),
                             (0, n.jsx)("div", {
                               children: e.formatFunction
-                                ? e.formatFunction.call(null, L[e.key])
+                                ? e.formatFunction.call(null, P[e.key])
                                 : JSON.stringify(
-                                    L[e.key] || "",
+                                    P[e.key] || "",
                                     null,
                                     2,
                                   ).replace(/['"]+/g, ""),
@@ -5830,25 +5828,25 @@
                   }),
                   (0, n.jsx)("div", {
                     className: _().MatchesGrid,
-                    style: { gridTemplateColumns: `repeat(${O.length}, auto)` },
+                    style: { gridTemplateColumns: `repeat(${b.length}, auto)` },
                     children: (0, n.jsxs)(o.Fragment, {
                       children: [
                         (() => {
                           const e = [];
                           return (
-                            Object.keys(w).forEach((a, t) => {
+                            Object.keys(G).forEach((a, t) => {
                               e.push(
                                 (0, n.jsx)(
                                   "h3",
                                   {
-                                    style: { gridColumn: `span ${O.length}` },
+                                    style: { gridColumn: `span ${b.length}` },
                                     children: (0, n.jsx)("b", { children: a }),
                                   },
                                   `league-name-row-${t}`,
                                 ),
                               ),
                                 e.push(
-                                  O.map((e) =>
+                                  b.map((e) =>
                                     (0, n.jsx)(
                                       "div",
                                       {
@@ -5860,9 +5858,9 @@
                                     ),
                                   ),
                                 );
-                              for (let t of w[a])
+                              for (let t of G[a])
                                 e.push(
-                                  O.map((e) =>
+                                  b.map((e) =>
                                     (0, n.jsx)(
                                       "div",
                                       {
@@ -5870,7 +5868,7 @@
                                           ? e.formatFunction.call(
                                               null,
                                               t[e.key],
-                                              X(t.opponent_team_id),
+                                              z(t.opponent_team_id),
                                             )
                                           : JSON.stringify(
                                               t[e.key] || "",
@@ -5882,11 +5880,12 @@
                                     ),
                                   ),
                                 );
+                              e.push((0, n.jsx)("br", {}));
                             }),
                             e
                           );
                         })(),
-                        !Object.keys(w).length &&
+                        !Object.keys(G).length &&
                           (0, n.jsxs)("div", {
                             children: [
                               (0, n.jsx)("br", {}),
@@ -5903,9 +5902,9 @@
             ],
           });
         };
-      class F extends o.Component {
+      class C extends o.Component {
         render() {
-          return (0, n.jsx)(b, {});
+          return (0, n.jsx)(F, {});
         }
       }
     },
