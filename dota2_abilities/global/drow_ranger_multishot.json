@@ -6,7 +6,7 @@
           "id": 343,
           "name": "drow_ranger_multishot",
           "name_loc": "Multishot",
-          "desc_loc": "CHANNELED - Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying Frost Arrows. Lasts up to %abilitychanneltime% seconds.<br><br>Drow can move slowly and use items while casting Multishot.",
+          "desc_loc": "CHANNELED - Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying Frost Arrows with a range of Drow's Attack Range + %arrow_range_base%. Lasts up to %abilitychanneltime% seconds.<br><br>Drow can move slowly and use items while casting Multishot.",
           "lore_loc": "In the ranger's youth, learning to fire multiple arrows at once was considered a distracting frivolity. In the war of the Ancients, such technique has become strange necessity.",
           "notes_loc": [
             "Arrow base damage pierces magic immunity.",
@@ -49,10 +49,10 @@
             0
           ],
           "mana_costs": [
-            50,
             70,
-            90,
-            110
+            85,
+            100,
+            115
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -106,10 +106,10 @@
             {
               "name": "arrow_damage_pct",
               "values_float": [
+                80,
                 100,
                 120,
-                140,
-                160
+                140
               ],
               "is_percentage": true,
               "heading_loc": "ARROW BASE DAMAGE BONUS:",
@@ -166,10 +166,27 @@
             {
               "name": "arrow_range_multiplier",
               "values_float": [
-                1.75
+                1
               ],
               "is_percentage": false,
-              "heading_loc": "ARROW RANGE MULTIPLIER:",
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "facet_bonus": {
+                "name": "",
+                "values": [],
+                "operation": 0
+              },
+              "required_facet": ""
+            },
+            {
+              "name": "arrow_range_base",
+              "values_float": [
+                475
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -251,10 +268,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                50,
                 70,
-                90,
-                110
+                85,
+                100,
+                115
               ],
               "is_percentage": false,
               "heading_loc": "",
