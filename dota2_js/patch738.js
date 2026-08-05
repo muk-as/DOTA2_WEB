@@ -38,7 +38,6 @@
         SteamLogo: "_1AHBIbGQrr6NONnrmk0oIK",
         ToolTip: "_1YKrbr8h5IsOz3JGoWLNRI",
         PlayerReportTooltip: "_1v3PMPSMz0oREfgwibRdjS",
-        LightGrayText: "VOWNFiTgbsT7rqkiEMc7o",
         GrayText: "_1CpX8hbVp4T-bXbxdcYVO1",
         TitleFont: "_2c_l6fMkZZdTmNHGYiK3JI",
         TitleExtraLarge: "_3vMsD4zq9d1f7x8XyUp0_X",
@@ -66,6 +65,11 @@
         Hidden: "jBYPVL-5mnMQ1rKTKJ1JQ",
         Patch738: "_2iI81TiQBNRlG223L73qNi",
         MobileOnly: "_2S-lxkFlcooO99bKJBOlUx",
+        HeroRole: "_3zNwS8pBRVbuZegd12b_ND",
+        TreasureName: "_3aOjQ9PEKdVbjZ4PDheCKX",
+        DisplayExtraSmall: "JeH7Km5n0EhTQWwweFMyZ",
+        ReworkHighlight: "_3EK_2wEMgRoIFt6Wscqv-H",
+        LightGrayText: "VOWNFiTgbsT7rqkiEMc7o",
         WebsiteSection: "_1sGQcOE_tO-U88VdWRiCgD",
         WebsiteSectionInner: "_3uJukzKOJgz_FzxWLZFXGJ",
         WebsiteSectionHeader: "_1DEnDAr_pTOUBowgxzv9K7",
@@ -258,9 +262,9 @@
       "use strict";
       s.r(a),
         s.d(a, {
-          DownloadIcon: () => C,
-          HotSpotArrowIcon: () => y,
-          InnateIconSmall: () => S,
+          DownloadIcon: () => S,
+          HotSpotArrowIcon: () => C,
+          InnateIconSmall: () => y,
           PlayIcon: () => B,
           default: () => P,
         });
@@ -291,21 +295,21 @@
             className: j().ControlIcon,
             style: { backgroundImage: `url( ${o.r.IMG_URL}/icons/play.svg )` },
           }),
-        C = () =>
+        S = () =>
           (0, i.jsx)("div", {
             className: j().ControlIcon,
             style: {
               backgroundImage: `url( ${o.r.IMG_URL}/icons/download.svg )`,
             },
           }),
-        S = () =>
+        y = () =>
           (0, i.jsx)("div", {
             className: (0, p.A)(j().InnateIconSmall, j().ControlIcon),
             style: {
               backgroundImage: `url( ${o.r.IMG_URL}/icons/innate_icon_small.svg )`,
             },
           }),
-        y = () =>
+        C = () =>
           (0, i.jsx)("div", {
             className: (0, p.A)(j().HotSpotArrowIcon),
             style: {
@@ -354,7 +358,7 @@
                       e.image +
                       ".jpg",
                   }),
-                  (0, i.jsx)(y, {}),
+                  (0, i.jsx)(C, {}),
                 ],
               }),
               (0, i.jsxs)("div", {
@@ -489,7 +493,7 @@
             })
           : null;
       });
-      const W = (e) => {
+      const R = (e) => {
           if (!e.special.heading_loc) return null;
           let a = e.special.values_float.map((e, a) =>
               (0, i.jsx)(
@@ -516,7 +520,7 @@
                 })
           );
         },
-        R =
+        W =
           ((0, r.PA)(({ name: e, components: a, recipeCost: s }) => {
             const t = l.B5.Get().getItemList(),
               r = t?.itemabilities.find((a) => a.name == e),
@@ -531,7 +535,7 @@
             }),
               (d = d.replace(/\%\%/g, "%"));
             let m = c.special_values?.map((e, a) =>
-                (0, i.jsx)(W, { special: e }, a),
+                (0, i.jsx)(R, { special: e }, a),
               ),
               _ = c.name.replace("item_", ""),
               h = c.item_cost,
@@ -851,7 +855,7 @@
                         }),
                       ],
                     }),
-                    R(),
+                    W(),
                     (0, i.jsxs)("div", {
                       id: "MapSection",
                       className: (0, p.A)(j().WebsiteSection, j().MapSection),
@@ -1472,7 +1476,7 @@
                         }),
                       ],
                     }),
-                    R(),
+                    W(),
                     (0, i.jsxs)("div", {
                       id: "NeutralsSection",
                       className: (0, p.A)(
@@ -1687,7 +1691,7 @@
                         }),
                       ],
                     }),
-                    R(),
+                    W(),
                     (0, i.jsx)("div", {
                       id: "QOLSection",
                       className: (0, p.A)(j().WebsiteSection, j().QOLSection),
@@ -2031,7 +2035,7 @@
                         ],
                       }),
                     }),
-                    R(),
+                    W(),
                     (0, i.jsx)("div", {
                       id: "GameplayUpdateContainer",
                       className: (0, p.A)(

@@ -44654,31 +44654,32 @@
             [a, s] = (0, n.useState)(0 == e.nAccountID),
             o = kg(),
             l = Do.E.Get().GetEventInfo(o);
-          if (!l || !l.event) return null;
+          if (
+            ((0, n.useEffect)(() => {
+              r(!1);
+            }, [e.nAccountID]),
+            !l || !l.event)
+          )
+            return null;
           let c = "";
           l.event == Lo.Dq.INTERNATIONAL_2025
             ? (c = "international2025")
             : l.event == Lo.Dq.INTERNATIONAL_2026 && (c = "international2026");
           const d = `${i.r.IMG_URL}${c}/players/${e.nAccountID}.png`,
             m = `${i.r.IMG_URL}player_unknown.png`;
-          return (
-            (0, n.useEffect)(() => {
-              r(!1);
-            }, [e.nAccountID]),
-            (0, b.jsx)("img", {
-              src: a ? m : d,
-              className: (0, I.A)(Au().TeamLogo, e.className),
-              style: {
-                width: e.nSize,
-                height: e.nSize,
-                minWidth: e.nSize,
-                minHeight: e.nSize,
-                opacity: t ? 1 : 0,
-              },
-              onError: () => s(!0),
-              onLoad: () => r(!0),
-            })
-          );
+          return (0, b.jsx)("img", {
+            src: a ? m : d,
+            className: (0, I.A)(Au().TeamLogo, e.className),
+            style: {
+              width: e.nSize,
+              height: e.nSize,
+              minWidth: e.nSize,
+              minHeight: e.nSize,
+              opacity: t ? 1 : 0,
+            },
+            onError: () => s(!0),
+            onLoad: () => r(!0),
+          });
         }),
         Pu = (0, S.PA)(({ nTeamID: e }) => {
           const t = Do.E.Get().GetTeamInfo(e),
@@ -64392,29 +64393,21 @@
       }
       let Nb = n.lazy(() => r.e(41448).then(r.bind(r, 41448))),
         Rb = n.lazy(() =>
-          Promise.all([r.e(66745), r.e(4349), r.e(69863)]).then(
-            r.bind(r, 69863),
-          ),
+          Promise.all([r.e(4349), r.e(69863)]).then(r.bind(r, 69863)),
         ),
         Eb = n.lazy(() => r.e(76858).then(r.bind(r, 76858))),
         Db = n.lazy(() =>
-          Promise.all([r.e(66745), r.e(4349), r.e(40151)]).then(
-            r.bind(r, 40151),
-          ),
+          Promise.all([r.e(4349), r.e(40151)]).then(r.bind(r, 40151)),
         ),
         Ab = n.lazy(() => r.e(65046).then(r.bind(r, 65046))),
         Lb = n.lazy(() => r.e(99831).then(r.bind(r, 99831))),
         Pb = n.lazy(() => r.e(71554).then(r.bind(r, 71554))),
         kb = n.lazy(() => r.e(71831).then(r.bind(r, 71831))),
-        Gb = n.lazy(() =>
-          Promise.all([r.e(66745), r.e(85665)]).then(r.bind(r, 85665)),
-        ),
+        Gb = n.lazy(() => r.e(85665).then(r.bind(r, 85665))),
         Wb = n.lazy(() => r.e(94848).then(r.bind(r, 94848))),
         zb = n.lazy(() => r.e(11649).then(r.bind(r, 11649))),
         Fb = n.lazy(() => r.e(17460).then(r.bind(r, 17460))),
-        Ob = n.lazy(() =>
-          Promise.all([r.e(66745), r.e(84398)]).then(r.bind(r, 84398)),
-        ),
+        Ob = n.lazy(() => r.e(84398).then(r.bind(r, 84398))),
         Ub = n.lazy(() => r.e(40657).then(r.bind(r, 40657))),
         qb = n.lazy(() => r.e(32805).then(r.bind(r, 32805))),
         Hb = n.lazy(() => r.e(12896).then(r.bind(r, 12896))),
@@ -81407,7 +81400,7 @@
                   n = i ? S.QJ : t.hero_id,
                   o = a?.heroes.find((e) => e.id == s),
                   l = a?.heroes.find((e) => e.id == n);
-                return o.id == S.QJ && l.id == S.QJ
+                return o && l && o.id == S.QJ && l.id == S.QJ
                   ? r
                     ? 1
                     : i

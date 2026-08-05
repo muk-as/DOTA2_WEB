@@ -24,6 +24,7 @@
         PlayerReportTooltip: "JaLdV_eQRsotNqjF8tV0X",
         LightGrayText: "uFzAyqYRSoRrFToB_K3Du",
         GrayText: "_1O6wLEBt_N2DZf1Qipxe7K",
+        WhiteText: "-NCsHZfapkCIeCC5WrJgD",
         TitleFont: "Vm4yZmaerlxTMhAiWb761",
         TitleExtraLarge: "_3I3dJnz-VJh51klY4GhaSi",
         TitleLarge: "_2TYSbDKNXYJM9Zlwqa8qVN",
@@ -52,6 +53,8 @@
         PageContainer: "_2wHjYA-YV6nzdQnjMU_qs4",
         Hidden: "JwPYYn5sHXjaj3_gP25cg",
         DarkCarnival: "_1V6iWjnq73OIGQcDLGmmQ_",
+        TreasureName: "_2j2JhwfTLNPUYmM75B0Ft",
+        DisplayExtraSmall: "_SvlZudObv4eJUK-zDzJv",
         MobileOnly: "_3L4G6M7_0FkDAknEwfSSNZ",
         WebsiteSection: "_4-l3koqkEzUMey6sMnflW",
         WebsiteSectionInner: "_2SFm3Int4ZM7rdS56sbj5M",
@@ -160,7 +163,6 @@
         MonkeyKing: "_1ajRbhR6J5lY3MbOtt5hh8",
         PrimalBeast: "_1WqWUYiT23U3Du2Z4ARjDK",
         TreasureSlideHidden: "_1AOJQewJYeZyaomi4GgYDz",
-        TreasureName: "_2j2JhwfTLNPUYmM75B0Ft",
         HeroName: "_1OFWSL41ttPl6hIkPas8-n",
         CarouselDots: "_3A3i1pEEqW5yvqkGq0mwK-",
         TreasureSelector: "_31w9ke-570YFAByycJi270",
@@ -306,7 +308,7 @@
               backgroundImage: `url( ${n.r.IMG_URL}/icons/innate_icon_small.svg )`,
             },
           });
-      const L = (a) => {
+      const C = (a) => {
           const e = (0, s.useRef)(void 0);
           return a.video
             ? (0, o.jsx)("video", {
@@ -328,7 +330,7 @@
                 src: `${n.r.IMG_URL}/` + a.image,
               });
         },
-        C = [
+        L = [
           { heroname: "drow" },
           { heroname: "undying" },
           { heroname: "qop" },
@@ -420,7 +422,7 @@
             children: [
               (0, o.jsx)("div", {
                 className: u().AutomatonBackground,
-                children: (0, o.jsx)(L, {
+                children: (0, o.jsx)(C, {
                   additionalClassName: u().AutomatonBackgroundImage,
                   image: "darkcarnival/backgrounds/automaton_background.jpg",
                 }),
@@ -455,7 +457,7 @@
                   (0, o.jsxs)("div", {
                     className: u().AutomatonNameContainer,
                     children: [
-                      (0, o.jsx)(L, {
+                      (0, o.jsx)(C, {
                         additionalClassName: u().AutomatonHeroPortraitLandscape,
                         image: `darkcarnival/automatons/${a.heroPortraitLandscape}`,
                       }),
@@ -498,44 +500,44 @@
                       (0, o.jsx)("div", {
                         className:
                           u().AutomatonHeroPortraitLandscapeIconContainer,
-                        children: (0, o.jsx)(L, {
+                        children: (0, o.jsx)(C, {
                           additionalClassName: u().AutomatonHeroPortraitIcon,
                           image: `darkcarnival/automatons/${a.heroPortraitIcon}`,
                         }),
                       }),
                       a.abilityIcon1 &&
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           additionalClassName: u().AutomatonHeroAbilityImage,
                           image: `darkcarnival/automatons/${a.abilityIcon1}`,
                         }),
                       a.abilityIcon2 &&
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           additionalClassName: u().AutomatonHeroAbilityImage,
                           image: `darkcarnival/automatons/${a.abilityIcon2}`,
                         }),
                       a.abilityIcon3 &&
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           additionalClassName: u().AutomatonHeroAbilityImage,
                           image: `darkcarnival/automatons/${a.abilityIcon3}`,
                         }),
                       a.abilityIcon4 &&
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           additionalClassName: u().AutomatonHeroAbilityImage,
                           image: `darkcarnival/automatons/${a.abilityIcon4}`,
                         }),
                       a.abilityIcon5 &&
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           additionalClassName: u().AutomatonHeroAbilityImage,
                           image: `darkcarnival/automatons/${a.abilityIcon5}`,
                         }),
                       a.abilityIcon6 &&
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           additionalClassName: u().AutomatonHeroAbilityImage,
                           image: `darkcarnival/automatons/${a.abilityIcon6}`,
                         }),
                     ],
                   }),
-                  (0, o.jsx)(L, {
+                  (0, o.jsx)(C, {
                     additionalClassName: u().AutomatonGameplayAsset,
                     image: `darkcarnival/automatons/${a.gameplayVideoPoster}`,
                     video: `darkcarnival/automatons/${a.gameplayVideo}`,
@@ -581,8 +583,8 @@
         constructor(a) {
           super(a),
             (this.state = {
-              treasureName: `#darkcarnival_treasure_${C[C.length - 1].heroname}_set`,
-              heroName: `#darkcarnival_treasure_${C[C.length - 1].heroname}`,
+              treasureName: `#darkcarnival_treasure_${L[L.length - 1].heroname}_set`,
+              heroName: `#darkcarnival_treasure_${L[L.length - 1].heroname}`,
               bPlayingVideo: !1,
             });
         }
@@ -635,7 +637,7 @@
                         u().HeaderSection,
                       ),
                       children: [
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           image:
                             "darkcarnival/header/dark_carnival_header_background.jpg",
                           video:
@@ -646,11 +648,11 @@
                         (0, o.jsxs)("div", {
                           className: u().WebsiteSectionInner,
                           children: [
-                            (0, o.jsx)(L, {
+                            (0, o.jsx)(C, {
                               additionalClassName: u().Gears,
                               image: "darkcarnival/header/gears.png",
                             }),
-                            (0, o.jsx)(L, {
+                            (0, o.jsx)(C, {
                               additionalClassName: u().Clouds,
                               image: "darkcarnival/header/clouds.png",
                             }),
@@ -672,7 +674,7 @@
                                 ),
                               }),
                             }),
-                            (0, o.jsx)(L, {
+                            (0, o.jsx)(C, {
                               additionalClassName: u().EventVideo,
                               image:
                                 "darkcarnival/overworld/dark_carnival_overworld_poster.jpg",
@@ -691,15 +693,15 @@
                         u().OverworldSection,
                       ),
                       children: [
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           image: "darkcarnival/header/star.png",
                           additionalClassName: u().Star3,
                         }),
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           image: "darkcarnival/header/star.png",
                           additionalClassName: u().Star2,
                         }),
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           image: "darkcarnival/header/star.png",
                           additionalClassName: u().Star1,
                         }),
@@ -807,7 +809,7 @@
                                 ],
                               }),
                             }),
-                            (0, o.jsx)(L, {
+                            (0, o.jsx)(C, {
                               additionalClassName: u().OverworldImage,
                               image:
                                 "darkcarnival/overworld/dark_carnival_train.png",
@@ -834,7 +836,7 @@
                                     u().TextImageBlockVertical,
                                   ),
                                   children: [
-                                    (0, o.jsx)(L, {
+                                    (0, o.jsx)(C, {
                                       image:
                                         "darkcarnival/overworld/howitworks_heroes.jpg",
                                       additionalClassName:
@@ -848,6 +850,7 @@
                                             u().BlockTitle,
                                             u().DisplayFont,
                                             u().DisplayLarge,
+                                            u().WhiteText,
                                           ),
                                           children: (0, t.Wn)(
                                             "#darkcarnival_howitworks_earn_tokens_title",
@@ -873,7 +876,7 @@
                                     u().TextImageBlockVertical,
                                   ),
                                   children: [
-                                    (0, o.jsx)(L, {
+                                    (0, o.jsx)(C, {
                                       image:
                                         "darkcarnival/overworld/howitworks_overworld.jpg",
                                       additionalClassName:
@@ -887,6 +890,7 @@
                                             u().BlockTitle,
                                             u().DisplayFont,
                                             u().DisplayLarge,
+                                            u().WhiteText,
                                           ),
                                           children: (0, t.Wn)(
                                             "#darkcarnival_howitworks_progress_the_story_title",
@@ -930,7 +934,7 @@
                             (0, o.jsxs)("div", {
                               className: (0, m.A)(u().Grid_3, u().RewardTypes),
                               children: [
-                                (0, o.jsx)(L, {
+                                (0, o.jsx)(C, {
                                   image:
                                     "darkcarnival/backgrounds/reward_types_background.png",
                                   additionalClassName:
@@ -939,7 +943,7 @@
                                 (0, o.jsxs)("div", {
                                   className: u().TextImageBlockVertical,
                                   children: [
-                                    (0, o.jsx)(L, {
+                                    (0, o.jsx)(C, {
                                       image:
                                         "darkcarnival/overworld/reward_treasure.png",
                                     }),
@@ -974,7 +978,7 @@
                                 (0, o.jsxs)("div", {
                                   className: u().TextImageBlockVertical,
                                   children: [
-                                    (0, o.jsx)(L, {
+                                    (0, o.jsx)(C, {
                                       image:
                                         "darkcarnival/overworld/reward_discount_coin.png",
                                     }),
@@ -1012,7 +1016,7 @@
                                 (0, o.jsxs)("div", {
                                   className: u().TextImageBlockVertical,
                                   children: [
-                                    (0, o.jsx)(L, {
+                                    (0, o.jsx)(C, {
                                       image:
                                         "darkcarnival/overworld/reward_candy.png",
                                     }),
@@ -1053,7 +1057,7 @@
                                 u().HeroCosmetics,
                               ),
                               children: [
-                                (0, o.jsx)(L, {
+                                (0, o.jsx)(C, {
                                   additionalClassName: u().MinigamesImage,
                                   image:
                                     "darkcarnival/overworld/overworld_sets.png",
@@ -1119,7 +1123,7 @@
                                     }),
                                   ],
                                 }),
-                                (0, o.jsx)(L, {
+                                (0, o.jsx)(C, {
                                   additionalClassName: u().MinigamesImage,
                                   image: "darkcarnival/overworld/goodies.png",
                                 }),
@@ -1143,13 +1147,13 @@
                                 u().SecretRoomPack,
                               ),
                               children: [
-                                (0, o.jsx)(L, {
+                                (0, o.jsx)(C, {
                                   image:
                                     "darkcarnival/backgrounds/secret_room_pack_floor.png",
                                   additionalClassName:
                                     u().SecretRoomPackBackground,
                                 }),
-                                (0, o.jsx)(L, {
+                                (0, o.jsx)(C, {
                                   image:
                                     "darkcarnival/overworld/secret_room_pack.png",
                                   additionalClassName: u().SecretRoomPackImage,
@@ -1162,6 +1166,7 @@
                                         u().BlockTitle,
                                         u().DisplayFont,
                                         u().DisplayMedium,
+                                        u().WhiteText,
                                       ),
                                       children: (0, t.Wn)(
                                         "#darkcarnival_secret_room_pack_introduction",
@@ -1219,7 +1224,7 @@
                         u().ContentSection,
                       ),
                       children: [
-                        (0, o.jsx)(L, {
+                        (0, o.jsx)(C, {
                           image:
                             "darkcarnival/backgrounds/clouds_background.png",
                           additionalClassName: u().FinalBackground,
@@ -1418,7 +1423,7 @@
                                 "bristleback/bristleback_hairball.png",
                             }),
                             B(),
-                            (0, o.jsx)(L, {
+                            (0, o.jsx)(C, {
                               additionalClassName: u().SubSectionDividerIcon,
                               image: "darkcarnival/content/icon_treasure.png",
                             }),
@@ -1453,20 +1458,20 @@
                               className: u().TreasureCarousel,
                               naturalSlideWidth: 600,
                               naturalSlideHeight: 960,
-                              totalSlides: C.length,
-                              currentSlide: C.length - 1,
+                              totalSlides: L.length,
+                              currentSlide: L.length - 1,
                               infinite: !0,
                               touchEnabled: !0,
                               dragEnabled: !1,
                               children: [
-                                (0, o.jsx)(L, {
+                                (0, o.jsx)(C, {
                                   image:
                                     "darkcarnival/backgrounds/carousel_floor.png",
                                   additionalClassName: u().CarouselFloor,
                                 }),
                                 (0, o.jsx)(h.Ap, {
                                   className: u().TreasureSlider,
-                                  children: C.map((a, e) =>
+                                  children: L.map((a, e) =>
                                     (0, o.jsx)(
                                       h.q7,
                                       {
@@ -1522,7 +1527,7 @@
                                         className: u().PrevArrow,
                                       }),
                                     }),
-                                    C.map((a, e) =>
+                                    L.map((a, e) =>
                                       (0, o.jsx)(
                                         h.cL,
                                         {
@@ -1581,7 +1586,7 @@
                                     }),
                                   ],
                                 }),
-                                (0, o.jsx)(L, {
+                                (0, o.jsx)(C, {
                                   image: "darkcarnival/logos/moon.png",
                                   additionalClassName: u().Emblem,
                                 }),
