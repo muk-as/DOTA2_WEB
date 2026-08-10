@@ -46519,7 +46519,7 @@
                     }
                     i = !0;
                   }
-                  24 == r?.event && ((i = !1), (a = !0));
+                  (24 != r?.event && 25 != r?.event) || ((i = !1), (a = !0));
                   break;
                 }
                 23 == r?.event &&
@@ -46872,58 +46872,60 @@
             s = i?.eNodeGroupType == Lo.Kq.ROUND_ROBIN,
             n =
               i?.eNodeGroupType == Lo.Kq.SWISS && t == Lo.Dq.INTERNATIONAL_2025,
-            o = Do.E.Get().GetNodeLabelStrings(
+            o =
+              i?.eNodeGroupType == Lo.Kq.SWISS && t == Lo.Dq.INTERNATIONAL_2026,
+            l = Do.E.Get().GetNodeLabelStrings(
               t,
               e.nLeagueID,
               e.nNodeID,
               Lo.LY.VERYLONG,
             ),
-            l = Do.E.Get().GetTeamNames(r?.team_id_1),
-            c = Do.E.Get().GetTeamNames(r?.team_id_2),
-            d = Do.E.Get().GetEventPhaseNodeGroupID(
+            c = Do.E.Get().GetTeamNames(r?.team_id_1),
+            d = Do.E.Get().GetTeamNames(r?.team_id_2),
+            m = Do.E.Get().GetEventPhaseNodeGroupID(
               t,
               i.ePhase,
               i.eDivision,
               i.eRegion,
             ),
-            m = Do.E.Get().GetTeamStanding(
-              d?.nLeagueID,
-              d.nNodeGroupID,
+            u = Do.E.Get().GetTeamStanding(
+              m?.nLeagueID,
+              m.nNodeGroupID,
               r?.team_id_1,
             ),
-            u = m ? `${m.wins} - ${m.losses}` : "",
-            _ = r?.name?.match(/(\d)/g),
-            p = "" == r?.name,
-            g = e.nNodeID >= 58 && e.nNodeID <= 62,
-            h = p ? "0 - 0" : _ && 2 == _.length ? `${_[0]} - ${_[1]}` : "",
-            f = Do.E.Get().GetTeamStanding(
-              d?.nLeagueID,
-              d.nNodeGroupID,
+            _ = u ? `${u.wins} - ${u.losses}` : "",
+            p = r?.name?.match(/(\d)/g),
+            g = "" == r?.name,
+            h = e.nNodeID >= 58 && e.nNodeID <= 62,
+            f = g ? "0 - 0" : p && 2 == p.length ? `${p[0]} - ${p[1]}` : "",
+            y = Do.E.Get().GetTeamStanding(
+              m?.nLeagueID,
+              m.nNodeGroupID,
               r?.team_id_2,
             ),
-            y = f ? `${f.wins} - ${f.losses}` : "",
-            S = Do.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
-            x = !S && r?.is_completed,
-            B = x && r?.team_1_wins > r?.team_2_wins,
-            T = x && r?.team_2_wins > r?.team_1_wins,
-            j = Do.E.Get().GetSpoilerBlockState(t) == Lo.h7.BLOCKED,
-            M =
-              !j ||
+            S = y ? `${y.wins} - ${y.losses}` : "",
+            x = Do.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
+            B = !x && r?.is_completed,
+            T = B && r?.team_1_wins > r?.team_2_wins,
+            j = B && r?.team_2_wins > r?.team_1_wins,
+            M = Do.E.Get().GetSpoilerBlockState(t) == Lo.h7.BLOCKED,
+            N =
+              !M ||
               !Do.E.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
               Do.E.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
-            N = !j || Do.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
-          let R = r ? `${r.team_1_wins} - ${r.team_2_wins}` : "";
-          const E =
-              0 == r?.team_id_1 ? "#dpc_tbd" : M ? l?.name : "#dpc_hidden",
-            D = 0 == r?.team_id_2 ? "#dpc_tbd" : M ? c?.name : "#dpc_hidden";
-          (N && x) || (R = "#dpc_vs");
-          const A = N
+            R = !M || Do.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
+          let E = r ? `${r.team_1_wins} - ${r.team_2_wins}` : "";
+          const D =
+              0 == r?.team_id_1 ? "#dpc_tbd" : N ? c?.name : "#dpc_hidden",
+            A = 0 == r?.team_id_2 ? "#dpc_tbd" : N ? d?.name : "#dpc_hidden";
+          (R && B) || (E = "#dpc_vs");
+          const L = R
             ? r?.matches.length
             : Do.E.Get().GetNodeTypeGameCount(r?.node_type);
           return (0, b.jsxs)("div", {
             className: (0, I.A)(
               a_().DPCScheduleEntry,
-              S && a_().Live,
+              x && a_().Live,
               e.bExpanded && a_().Expanded,
             ),
             children: [
@@ -46933,9 +46935,9 @@
                   (0, b.jsxs)("div", {
                     className: a_().LeftSection,
                     children: [
-                      o.map((t, r) => {
-                        const i = o.length > 1 && 0 == r,
-                          a = o.length > 1 && 1 == r;
+                      l.map((t, r) => {
+                        const i = l.length > 1 && 0 == r,
+                          a = l.length > 1 && 1 == r;
                         return (0, b.jsxs)(
                           "div",
                           {
@@ -46967,38 +46969,38 @@
                         className: (0, I.A)(
                           a_().TeamSection,
                           a_().Left,
-                          B && !j && a_().Winner,
+                          T && !M && a_().Winner,
                         ),
                         children: [
                           (0, b.jsx)("div", {
                             className: a_().TeamName,
-                            children: (0, C.Wn)(E),
+                            children: (0, C.Wn)(D),
                           }),
                           s &&
-                            !j &&
+                            !M &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
-                              children: u,
+                              children: _,
                             }),
-                          n &&
-                            !g &&
-                            !j &&
+                          (n || o) &&
+                            !h &&
+                            !M &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
-                              children: h,
+                              children: f,
                             }),
                         ],
                       }),
                       (0, b.jsx)(Gu, {
                         className: a_().TeamLogo,
-                        nTeamID: M ? r?.team_id_1 : 0,
+                        nTeamID: N ? r?.team_id_1 : 0,
                         nSize: 52,
                         bTooltip: !0,
                       }),
                       (0, b.jsxs)("div", {
                         className: a_().CenterContainer,
                         children: [
-                          S &&
+                          x &&
                             (0, b.jsxs)(w.N_, {
                               to: {
                                 state: { bAutoScroll: !0 },
@@ -47017,13 +47019,13 @@
                             }),
                           (0, b.jsx)("div", {
                             className: a_().Score,
-                            children: (0, C.Wn)(R),
+                            children: (0, C.Wn)(E),
                           }),
                         ],
                       }),
                       (0, b.jsx)(Gu, {
                         className: a_().TeamLogo,
-                        nTeamID: M ? r?.team_id_2 : 0,
+                        nTeamID: N ? r?.team_id_2 : 0,
                         nSize: 52,
                         bTooltip: !0,
                       }),
@@ -47031,25 +47033,25 @@
                         className: (0, I.A)(
                           a_().TeamSection,
                           a_().Right,
-                          T && !j && a_().Winner,
+                          j && !M && a_().Winner,
                         ),
                         children: [
                           (0, b.jsx)("div", {
                             className: a_().TeamName,
-                            children: (0, C.Wn)(D),
+                            children: (0, C.Wn)(A),
                           }),
                           s &&
-                            !j &&
+                            !M &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
-                              children: y,
+                              children: S,
                             }),
-                          n &&
-                            !g &&
-                            !j &&
+                          (n || o) &&
+                            !h &&
+                            !M &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
-                              children: h,
+                              children: f,
                             }),
                         ],
                       }),
@@ -47058,7 +47060,7 @@
                   (0, b.jsx)("div", {
                     className: a_().RightSection,
                     children:
-                      x &&
+                      B &&
                       (0, b.jsx)("div", {
                         className: (0, I.A)(
                           a_().MatchDetailsButton,
@@ -47080,10 +47082,10 @@
                   e.bExpanded && a_().Expanded,
                 ),
                 style: {
-                  height: e.bExpanded ? 120 * A : 0,
-                  minHeight: e.bExpanded ? 120 * A : 0,
+                  height: e.bExpanded ? 120 * L : 0,
+                  minHeight: e.bExpanded ? 120 * L : 0,
                 },
-                children: (0, Oo.bu)(1, A).map((t) => {
+                children: (0, Oo.bu)(1, L).map((t) => {
                   if (t <= r?.matches.length) {
                     const i = r.matches[t - 1];
                     return (0, b.jsx)(
@@ -49527,9 +49529,26 @@
             s = (0, Ao.JF)(r.strPhase);
           if (Do.E.Get().GetEventType(e) != Lo.J7.INTERNATIONAL) return null;
           if (!Lo.sI[s] || s == Lo.sI.INVALID)
-            return (0, b.jsx)(x.rd, {
-              to: v.J.dpc_standings((0, Ao.p$)(e), (0, Ao.w0)(Lo.sI.PLAYOFF)),
-            });
+            return new Date().getTime() < 17868024e5
+              ? (0, b.jsx)(x.rd, {
+                  to: v.J.dpc_standings(
+                    (0, Ao.p$)(e),
+                    (0, Ao.w0)(Lo.sI.GROUP_STAGE),
+                  ),
+                })
+              : new Date().getTime() < 17868888e5
+                ? (0, b.jsx)(x.rd, {
+                    to: v.J.dpc_standings(
+                      (0, Ao.p$)(e),
+                      (0, Ao.w0)(Lo.sI.ELIMINATION),
+                    ),
+                  })
+                : (0, b.jsx)(x.rd, {
+                    to: v.J.dpc_standings(
+                      (0, Ao.p$)(e),
+                      (0, Ao.w0)(Lo.sI.PLAYOFF),
+                    ),
+                  });
           const n = [
             {
               nMin: 1,
