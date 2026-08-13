@@ -48594,8 +48594,13 @@
               .GetLeagueNodeGroupTeams(a.nLeagueID, s?.node_group_id)
               ?.filter(
                 (e) =>
+                  0 != e &&
                   null !=
-                  Do.E.Get().GetTeamStanding(a.nLeagueID, s?.node_group_id, e),
+                    Do.E.Get().GetTeamStanding(
+                      a.nLeagueID,
+                      s?.node_group_id,
+                      e,
+                    ),
               );
           let l = o.sort((e, t) => {
             const r = Do.E.Get().GetTeamStanding(
@@ -48607,23 +48612,27 @@
             return r?.standing < i?.standing
               ? -1
               : r?.standing > i?.standing ||
-                  r?.tiebreak_game_win_pct < i?.tiebreak_game_win_pct
+                  r?.tiebreak_opponent_match_wins <
+                    i?.tiebreak_opponent_match_wins
                 ? 1
-                : r?.tiebreak_game_win_pct > i?.tiebreak_game_win_pct
+                : r?.tiebreak_opponent_match_wins >
+                    i?.tiebreak_opponent_match_wins
                   ? -1
-                  : r?.tiebreak_opponent_match_wins <
-                      i?.tiebreak_opponent_match_wins
+                  : r?.tiebreak_game_win_pct < i?.tiebreak_game_win_pct
                     ? 1
-                    : r?.tiebreak_opponent_match_wins >
-                        i?.tiebreak_opponent_match_wins
+                    : r?.tiebreak_game_win_pct > i?.tiebreak_game_win_pct
                       ? -1
                       : r?.tiebreak_opponent_game_win_pct <
                           i?.tiebreak_opponent_game_win_pct
                         ? 1
                         : r?.tiebreak_opponent_game_win_pct >
-                            i?.tiebreak_opponent_game_win_pct
+                              i?.tiebreak_opponent_game_win_pct ||
+                            r?.tiebereak_average_game_length <
+                              i?.tiebereak_average_game_length
                           ? -1
-                          : r?.tiebreak_coinflip < i?.tiebreak_coinflip
+                          : r?.tiebereak_average_game_length >
+                                i?.tiebereak_average_game_length ||
+                              r?.tiebreak_coinflip < i?.tiebreak_coinflip
                             ? 1
                             : r?.tiebreak_coinflip > i?.tiebreak_coinflip
                               ? -1
