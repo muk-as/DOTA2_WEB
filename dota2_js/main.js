@@ -46896,36 +46896,66 @@
             _ = u ? `${u.wins} - ${u.losses}` : "",
             p = r?.name?.match(/(\d)/g),
             g = "" == r?.name,
-            h = e.nNodeID >= 58 && e.nNodeID <= 62,
-            f = g ? "0 - 0" : p && 2 == p.length ? `${p[0]} - ${p[1]}` : "",
-            y = Do.E.Get().GetTeamStanding(
+            h = n && e.nNodeID >= 58 && e.nNodeID <= 62;
+          let f = g ? "0 - 0" : p && 2 == p.length ? `${p[0]} - ${p[1]}` : "";
+          var y;
+          o &&
+            (f =
+              (y = e.nNodeID) <= 8
+                ? "0 - 0"
+                : [28, 29, 32, 33].includes(y)
+                  ? "1 - 0"
+                  : [30, 31, 34, 35].includes(y)
+                    ? "0 - 1"
+                    : [36, 40].includes(y)
+                      ? "2 - 0"
+                      : [37, 38, 41, 42].includes(y)
+                        ? "1 - 1"
+                        : [39, 43].includes(y)
+                          ? "0 - 2"
+                          : [44].includes(y)
+                            ? "0 - 3"
+                            : [45, 46, 47].includes(y)
+                              ? "1 - 2"
+                              : [48].includes(y)
+                                ? "3 - 0"
+                                : [49, 50, 51].includes(y)
+                                  ? "2 - 1"
+                                  : [52, 53].includes(y)
+                                    ? "1 - 3"
+                                    : [54, 55, 58].includes(y)
+                                      ? "2 - 2"
+                                      : [56, 57].includes(y)
+                                        ? "3 - 1"
+                                        : "");
+          const S = Do.E.Get().GetTeamStanding(
               m?.nLeagueID,
               m.nNodeGroupID,
               r?.team_id_2,
             ),
-            S = y ? `${y.wins} - ${y.losses}` : "",
-            x = Do.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
-            B = !x && r?.is_completed,
-            T = B && r?.team_1_wins > r?.team_2_wins,
-            j = B && r?.team_2_wins > r?.team_1_wins,
-            M = Do.E.Get().GetSpoilerBlockState(t) == Lo.h7.BLOCKED,
-            N =
-              !M ||
+            x = S ? `${S.wins} - ${S.losses}` : "",
+            B = Do.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
+            T = !B && r?.is_completed,
+            j = T && r?.team_1_wins > r?.team_2_wins,
+            M = T && r?.team_2_wins > r?.team_1_wins,
+            N = Do.E.Get().GetSpoilerBlockState(t) == Lo.h7.BLOCKED,
+            R =
+              !N ||
               !Do.E.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
               Do.E.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
-            R = !M || Do.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
-          let E = r ? `${r.team_1_wins} - ${r.team_2_wins}` : "";
-          const D =
-              0 == r?.team_id_1 ? "#dpc_tbd" : N ? c?.name : "#dpc_hidden",
-            A = 0 == r?.team_id_2 ? "#dpc_tbd" : N ? d?.name : "#dpc_hidden";
-          (R && B) || (E = "#dpc_vs");
-          const L = R
+            E = !N || Do.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
+          let D = r ? `${r.team_1_wins} - ${r.team_2_wins}` : "";
+          const A =
+              0 == r?.team_id_1 ? "#dpc_tbd" : R ? c?.name : "#dpc_hidden",
+            L = 0 == r?.team_id_2 ? "#dpc_tbd" : R ? d?.name : "#dpc_hidden";
+          (E && T) || (D = "#dpc_vs");
+          const P = E
             ? r?.matches.length
             : Do.E.Get().GetNodeTypeGameCount(r?.node_type);
           return (0, b.jsxs)("div", {
             className: (0, I.A)(
               a_().DPCScheduleEntry,
-              x && a_().Live,
+              B && a_().Live,
               e.bExpanded && a_().Expanded,
             ),
             children: [
@@ -46969,22 +46999,21 @@
                         className: (0, I.A)(
                           a_().TeamSection,
                           a_().Left,
-                          T && !M && a_().Winner,
+                          j && !N && a_().Winner,
                         ),
                         children: [
                           (0, b.jsx)("div", {
                             className: a_().TeamName,
-                            children: (0, C.Wn)(D),
+                            children: (0, C.Wn)(A),
                           }),
                           s &&
-                            !M &&
+                            !N &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
                               children: _,
                             }),
-                          (n || o) &&
-                            !h &&
-                            !M &&
+                          ((n && !h) || o) &&
+                            !N &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
                               children: f,
@@ -46993,14 +47022,14 @@
                       }),
                       (0, b.jsx)(Gu, {
                         className: a_().TeamLogo,
-                        nTeamID: N ? r?.team_id_1 : 0,
+                        nTeamID: R ? r?.team_id_1 : 0,
                         nSize: 52,
                         bTooltip: !0,
                       }),
                       (0, b.jsxs)("div", {
                         className: a_().CenterContainer,
                         children: [
-                          x &&
+                          B &&
                             (0, b.jsxs)(w.N_, {
                               to: {
                                 state: { bAutoScroll: !0 },
@@ -47019,13 +47048,13 @@
                             }),
                           (0, b.jsx)("div", {
                             className: a_().Score,
-                            children: (0, C.Wn)(E),
+                            children: (0, C.Wn)(D),
                           }),
                         ],
                       }),
                       (0, b.jsx)(Gu, {
                         className: a_().TeamLogo,
-                        nTeamID: N ? r?.team_id_2 : 0,
+                        nTeamID: R ? r?.team_id_2 : 0,
                         nSize: 52,
                         bTooltip: !0,
                       }),
@@ -47033,22 +47062,21 @@
                         className: (0, I.A)(
                           a_().TeamSection,
                           a_().Right,
-                          j && !M && a_().Winner,
+                          M && !N && a_().Winner,
                         ),
                         children: [
                           (0, b.jsx)("div", {
                             className: a_().TeamName,
-                            children: (0, C.Wn)(A),
+                            children: (0, C.Wn)(L),
                           }),
                           s &&
-                            !M &&
+                            !N &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
-                              children: S,
+                              children: x,
                             }),
-                          (n || o) &&
-                            !h &&
-                            !M &&
+                          ((n && !h) || o) &&
+                            !N &&
                             (0, b.jsx)("div", {
                               className: a_().Record,
                               children: f,
@@ -47060,7 +47088,7 @@
                   (0, b.jsx)("div", {
                     className: a_().RightSection,
                     children:
-                      B &&
+                      T &&
                       (0, b.jsx)("div", {
                         className: (0, I.A)(
                           a_().MatchDetailsButton,
@@ -47082,10 +47110,10 @@
                   e.bExpanded && a_().Expanded,
                 ),
                 style: {
-                  height: e.bExpanded ? 120 * L : 0,
-                  minHeight: e.bExpanded ? 120 * L : 0,
+                  height: e.bExpanded ? 120 * P : 0,
+                  minHeight: e.bExpanded ? 120 * P : 0,
                 },
-                children: (0, Oo.bu)(1, L).map((t) => {
+                children: (0, Oo.bu)(1, P).map((t) => {
                   if (t <= r?.matches.length) {
                     const i = r.matches[t - 1];
                     return (0, b.jsx)(
