@@ -46733,6 +46733,11 @@
               .filter((t) => {
                 const r = Do.E.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
                 if (0 == r?.scheduled_time && 0 == r?.actual_time) return !1;
+                if (
+                  1786811785 == r?.scheduled_time &&
+                  1786811785 == r?.actual_time
+                )
+                  return !1;
                 const i = Do.E.Get().GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
                 if (e.eDivision != Lo.ke.UNSET && i.eDivision != e.eDivision)
                   return !1;
