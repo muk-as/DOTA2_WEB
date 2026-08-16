@@ -48724,34 +48724,38 @@
                       ),
                     ),
                     !r &&
-                      e.arrHighlights?.map((e) => {
-                        let t = 40,
-                          r = 40;
-                        for (const i of l) {
-                          const n = Do.E.Get().GetTeamStanding(
+                      e.arrHighlights?.map((t) => {
+                        let r = 40,
+                          i = 40;
+                        kg();
+                        const n =
+                          19719 == a.nLeagueID && e.ePhase == Lo.sI.ELIMINATION;
+                        for (const e of l) {
+                          const o = Do.E.Get().GetTeamStanding(
                               a.nLeagueID,
                               s?.node_group_id,
-                              i,
+                              e,
                             ),
-                            o = 70;
-                          n.wins + n.losses != 0 &&
-                            (n?.standing < e.nMin && (t += o),
-                            n?.standing <= e.nMax && (r += o));
+                            l = 70;
+                          o.wins + o.losses != 0
+                            ? (o?.standing < t.nMin && (r += l),
+                              o?.standing <= t.nMax && (i += l))
+                            : n && t.nMin >= 2 && ((r += l), (i += l));
                         }
-                        return t == r
+                        return r == i
                           ? null
                           : (0, b.jsx)(
                               "div",
                               {
                                 className: G_().HighlightOverlay,
                                 style: {
-                                  background: `linear-gradient( ${e.strColor}33, ${e.strColor}0F )`,
-                                  borderTop: `1px solid ${e.strColor}`,
-                                  top: t,
-                                  height: r - t,
+                                  background: `linear-gradient( ${t.strColor}33, ${t.strColor}0F )`,
+                                  borderTop: `1px solid ${t.strColor}`,
+                                  top: r,
+                                  height: i - r,
                                 },
                               },
-                              `h${t}_${r}`,
+                              `h${r}_${i}`,
                             );
                       }),
                   ],
@@ -49714,7 +49718,7 @@
                     },
                     {
                       nMin: 2,
-                      nMax: 2,
+                      nMax: 3,
                       strColor: "#922820",
                       strDescription: "#dpc_eliminated",
                     },
