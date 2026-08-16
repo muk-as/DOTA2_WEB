@@ -44926,8 +44926,10 @@
                 c?.ePhase,
                 c?.eDivision,
                 c?.eRegion,
-              ),
-              m = l?.team_id_1,
+              );
+            if (1786811785 == l?.scheduled_time && 1786811785 == l?.actual_time)
+              return !1;
+            const m = l?.team_id_1,
               u = l?.team_id_2,
               _ = Do.E.Get().GetTeamStanding(d?.nLeagueID, d?.nNodeGroupID, m),
               p = Do.E.Get().GetTeamStanding(d?.nLeagueID, d?.nNodeGroupID, u),
