@@ -45144,11 +45144,17 @@
               const t = Do.E.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
                 r = t?.actual_time ? t?.actual_time : t?.scheduled_time;
               let i = !1;
-              for (const e of p)
+              for (const e of p) {
+                if (
+                  1786811785 == t?.scheduled_time &&
+                  1786811785 == t?.actual_time
+                )
+                  break;
                 if (r > e && r < e + 86400) {
                   i = !0;
                   break;
                 }
+              }
               return i;
             });
           let h = 0;
