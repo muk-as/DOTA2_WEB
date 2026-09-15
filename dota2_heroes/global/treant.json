@@ -15,7 +15,7 @@
           "str_gain": 3.4,
           "agi_base": 15,
           "agi_gain": 1.8,
-          "int_base": 20,
+          "int_base": 17,
           "int_gain": 1.8,
           "primary_attr": 0,
           "complexity": 2,
@@ -44,8 +44,8 @@
           "sight_range_night": 800,
           "max_health": 670,
           "health_regen": 2.75,
-          "max_mana": 315,
-          "mana_regen": 1.25,
+          "max_mana": 279,
+          "mana_regen": 1.1,
           "abilities": [
             {
               "id": 338,
@@ -401,7 +401,7 @@
                 0
               ],
               "mana_costs": [
-                0
+                35
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -449,7 +449,10 @@
                 {
                   "name": "leech_heal",
                   "values_float": [
-                    20
+                    10,
+                    15,
+                    20,
+                    25
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE TO HEALING:",
@@ -581,6 +584,23 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    35
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCooldown",
                   "values_float": [
                     15,
@@ -685,13 +705,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "HEAL PER SECOND:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_treant_8",
-                      "value": 3,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -708,7 +722,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_treant_8",
+                      "value": 3,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -804,7 +824,7 @@
                 {
                   "name": "damage_block_threshold",
                   "values_float": [
-                    20
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1163,7 +1183,7 @@
                 {
                   "name": "grace_time",
                   "values_float": [
-                    2
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1531,7 +1551,7 @@
             {
               "id": 339,
               "name": "special_bonus_unique_treant_8",
-              "name_loc": "+{s:bonus_heal_per_second} Living Armor Heal Per Second",
+              "name_loc": "+{s:bonus_duration}s Living Armor Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
