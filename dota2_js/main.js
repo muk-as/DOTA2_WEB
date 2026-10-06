@@ -21638,12 +21638,6 @@
       function Ti(e, t) {
         return (
           t.BIsVisibleEvent() &&
-          !(function (e) {
-            return (
-              e.BHasTag("mod_hide_library_detail") ||
-              (e.BHasTag("hide_library_detail") && !e.BHasTag("auto_migrated"))
-            );
-          })(t) &&
           ((e && t.type == s.Fwr) ||
             (!e &&
               (t.type == s.u0 ||
@@ -21677,7 +21671,7 @@
                     570,
                     m,
                     100,
-                    ["mod_hide_library_detail"],
+                    di,
                   )
                   .then((e) => {
                     0 == e.length && l(!0),
