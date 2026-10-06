@@ -3064,6 +3064,7 @@
         PageNumber: "FafYQImrtPrIK52eA_0fU",
         Hidden: "_106H5NcjWibbSFxZU-fE6R",
         SelectedPage: "_16vx6rigjj5vlzogn6MEFU",
+        PageEllipsis: "_1rBzBqQlZ7u-UtxTz0BeYV",
       };
     },
     46566: (e) => {
@@ -21637,6 +21638,12 @@
       function Ti(e, t) {
         return (
           t.BIsVisibleEvent() &&
+          !(function (e) {
+            return (
+              e.BHasTag("mod_hide_library_detail") ||
+              (e.BHasTag("hide_library_detail") && !e.BHasTag("auto_migrated"))
+            );
+          })(t) &&
           ((e && t.type == s.Fwr) ||
             (!e &&
               (t.type == s.u0 ||
@@ -21656,11 +21663,12 @@
             [_, p] = (0, n.useState)(0),
             g = !!t.updates;
           (0, n.useEffect)(() => p(0), [t]);
-          const h = r ? r.filter((e) => Ti(g, e)).length : 0,
-            f = !r || (!o && h <= 15 * (_ + 2));
+          const h = Math.max(0, _ - Math.floor(2.5)) + 5 - 1,
+            f = r ? r.filter((e) => Ti(g, e)).length : 0,
+            y = !r || (!o && f <= 15 * (h + 1));
           if (
             ((0, n.useEffect)(() => {
-              f &&
+              y &&
                 !c &&
                 (d(!0),
                 _i
@@ -21669,7 +21677,7 @@
                     570,
                     m,
                     100,
-                    di,
+                    ["mod_hide_library_detail"],
                   )
                   .then((e) => {
                     0 == e.length && l(!0),
@@ -21677,16 +21685,16 @@
                       u((e) => e + 100),
                       d(!1);
                   }));
-            }, [f, c, m]),
+            }, [y, c, m]),
             !r)
           )
             return (0, b.jsx)($e.A, { bOverlapping: !0 });
-          const y = (0, s.sfN)(i.r.LANGUAGE);
-          let S;
+          const S = (0, s.sfN)(i.r.LANGUAGE);
+          let B;
           for (const e of r)
             if (Ti(!1, e)) {
               const t = new Date(1e3 * e.GetStartTimeAndDateUnixSeconds());
-              S = (0, b.jsxs)(
+              B = (0, b.jsxs)(
                 "div",
                 {
                   className: Bi().LargeEntry,
@@ -21721,7 +21729,7 @@
                         }),
                         (0, b.jsx)("div", {
                           className: Bi().Title,
-                          children: e.GetNameWithFallback(y),
+                          children: e.GetNameWithFallback(S),
                         }),
                         (0, b.jsxs)(w.N_, {
                           to: v.J.newsentry(e.GID),
@@ -21742,22 +21750,37 @@
               );
               break;
             }
-          let B = [],
-            T = [],
+          let T = [],
             j = [],
-            M = 0;
-          for (const e of r) Ti(g, e) && (M += 1);
-          let N = 0,
-            R = 0;
+            M = [],
+            N = 0;
+          for (const e of r) Ti(g, e) && (N += 1);
+          let R = 0,
+            E = 0;
           for (const e of r)
-            if (Ti(g, e) && ((N += 1), !(N <= 15 * _))) {
-              if (((R += 1), R > 15)) break;
+            if (Ti(g, e) && ((R += 1), !(R <= 15 * _))) {
+              if (((E += 1), E > 15)) break;
               g
-                ? T.push((0, b.jsx)(wi, { event: e }, e.GID))
-                : B.push((0, b.jsx)(hi, { event: e }, e.GID));
+                ? j.push((0, b.jsx)(wi, { event: e }, e.GID))
+                : T.push((0, b.jsx)(hi, { event: e }, e.GID));
             }
-          const E = Math.ceil(M / 15);
-          j.push(
+          const A = Math.ceil(N / 15),
+            D = o ? Math.min(h, A - 1) : h,
+            k = Math.max(0, D - 5 + 1),
+            G = (e) =>
+              (0, b.jsx)(
+                "div",
+                {
+                  className: (0, I.A)(
+                    Bi().PageNumber,
+                    e == _ && Bi().SelectedPage,
+                  ),
+                  onClick: () => p(e),
+                  children: e + 1,
+                },
+                `page_${e}`,
+              );
+          M.push(
             (0, b.jsx)(
               "div",
               {
@@ -21771,31 +21794,34 @@
               },
               "page_previous",
             ),
-          );
-          for (let e = 0; e < E; e += 1)
-            j.push(
-              (0, b.jsx)(
-                "div",
-                {
-                  className: (0, I.A)(
-                    Bi().PageNumber,
-                    e == _ && Bi().SelectedPage,
-                  ),
-                  onClick: () => p(e),
-                  children: e + 1,
-                },
-                `page_${e}`,
-              ),
-            );
+          ),
+            k > 0 && M.push(G(0)),
+            k > 1 &&
+              M.push(
+                (0, b.jsx)(
+                  "div",
+                  { className: Bi().PageEllipsis, children: "…" },
+                  "ellipsis_previous",
+                ),
+              );
+          for (let e = k; e <= D; e += 1) M.push(G(e));
           return (
-            j.push(
+            (!o || D < A - 1) &&
+              M.push(
+                (0, b.jsx)(
+                  "div",
+                  { className: Bi().PageEllipsis, children: "…" },
+                  "ellipsis_next",
+                ),
+              ),
+            M.push(
               (0, b.jsx)(
                 "div",
                 {
                   className: (0, I.A)(
                     Bi().PageNumber,
                     Bi().PageChange,
-                    o && _ >= E - 1 && Bi().Hidden,
+                    o && _ >= A - 1 && Bi().Hidden,
                   ),
                   onClick: () => p(_ + 1),
                   children: ">",
@@ -21815,7 +21841,7 @@
                 (0, b.jsxs)("div", {
                   className: Bi().Body,
                   children: [
-                    S,
+                    B,
                     (0, b.jsx)("div", {
                       className: Bi().TabContainer,
                       children: (0, b.jsxs)("div", {
@@ -21840,17 +21866,17 @@
                         !g &&
                           (0, b.jsx)("div", {
                             className: Bi().SubEntries,
-                            children: B,
+                            children: T,
                           }),
                         g &&
                           (0, b.jsx)("div", {
                             className: Bi().SubUpdates,
-                            children: T,
+                            children: j,
                           }),
                         !g &&
                           (0, b.jsx)("div", {
                             className: Bi().Pages,
-                            children: j,
+                            children: M,
                           }),
                         (0, b.jsx)(L.K, {}),
                       ],
