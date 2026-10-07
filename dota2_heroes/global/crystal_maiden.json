@@ -1039,11 +1039,11 @@
               "id": 5129,
               "name": "crystal_maiden_freezing_field",
               "name_loc": "Freezing Field",
-              "desc_loc": "CHANNELED - Surrounds Crystal Maiden with 100 random icy explosions that slow enemies and deal massive damage. Lasts %abilitychanneltime% seconds.",
+              "desc_loc": "CHANNELED - Surrounds Crystal Maiden with %num_explosions% random icy explosions that slow enemies and deal massive damage. Lasts %abilitychanneltime% seconds.",
               "lore_loc": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught.",
               "notes_loc": [
                 "The slow is applied on all enemies in the radius, even if they aren't hit by an explosion (lasts %slow_duration% second).",
-                "Explosions occur every %explosion_interval% seconds."
+                "Explosions occur every %explosion_interval_tooltip% seconds."
               ],
               "shard_loc": "",
               "scepter_loc": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move %shard_self_movement_speed_slow_pct%%% slower during this. Increases total number of explosions by %shard_bonus_explosion%%%. Applies Frostbite to any unit that has been standing in the Freezing Field for over %frostbite_delay%s.",
@@ -1128,9 +1128,26 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "explosion_interval",
+                  "name": "explosion_interval_tooltip",
                   "values_float": [
                     0.1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "num_explosions",
+                  "values_float": [
+                    100
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
