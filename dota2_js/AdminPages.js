@@ -1,5912 +1,6047 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [87084],
-  {
-    2466: (e) => {
-      e.exports = {
-        Tooltip: "_2IHKq8kE2FKkIkQ0uN1hI1",
-        CarouselFade: "_2jFWoHmtCDVmk-GJRBpunm",
-        StandardButton: "_3Vzjmf1OlnazpL0kLEaBk2",
-        ButtonText: "_1zE9KyknOxmGylbt0gT6G1",
-        Icon: "_2kUnsdlfHyidOkvHNRy-G5",
-        Play: "_3xQLJ4b-cm8IeXAoDPbn6R",
-        SteamLogo: "_1hoZQVEfsnXavdsZP34vJD",
-        ToolTip: "_3fIQnpYc0eNl9uXKBoSJam",
-        PlayerReportTooltip: "_13XzPZYgyQ52l8UHzh0EmH",
-        Facet: "_2479It67QW-Bm9uy6i44cg",
-        FacetColorRed0: "_2jAmS6ZJIahLUzOlKrjWpM",
-        BackgroundTexture: "Kt1MTBk5kBd4aK5CFW2BS",
-        FacetColorRed1: "_1VQ6_XxRXOarkHNtIZR9Bw",
-        FacetColorRed2: "_2npcwVYfERdNcBWrDZoEz0",
-        Background: "_3MfMXew7MDkO4ZAyjocp4l",
-        FacetColorYellow0: "_2dBam2Tl57qfOfNvHZ6ChQ",
-        FacetColorYellow1: "_28IIDyezxLgxIAUErmcPAh",
-        FacetColorYellow2: "_3jB4IMyM4FBN4ivpEPzbJd",
-        FacetColorYellow3: "_1Gjyr8DdaSBz6_43VEAz0d",
-        FacetColorGreen0: "_1c3NTvD5wY1eRXjzD8RPIe",
-        FacetColorGreen1: "_1-qGJ84BFxu0lBHUhb5BAi",
-        FacetColorGreen2: "_3sEfw4qhYeKQzhX1UOb60Z",
-        FacetColorGreen3: "_21o76udrdevLEWmI0ZuSCT",
-        FacetColorGreen4: "_3833UsaWsxduGGxeTuMWAC",
-        FacetColorBlue0: "_3gfEwvDy5HqyL6VGHoMRVO",
-        FacetColorBlue1: "_3O35_r4wm4_s7r6H_YdPCz",
-        FacetColorBlue2: "_3ejomd-TsjxlHuJOx2FYyf",
-        FacetColorBlue3: "_2HyBDMaS-B2ekmE3PItFMK",
-        FacetColorPurple0: "YXBKkoBCp4eQx9gFE-4GS",
-        FacetColorPurple1: "_1EmAB8GlcjfA1QEcuCJi6K",
-        FacetColorPurple2: "GNCP-xxNt9O4-ierkeGcM",
-        FacetColorGray0: "_2TRWZ2SI7jmu1RmANk84kq",
-        FacetColorGray1: "_2Z0PK6Dt5jIErUliJ1Nmcb",
-        FacetColorGray2: "_3wy1a1XvwtnmSkyJ_Uog4B",
-        FacetColorGray3: "_3CwxQRU26KizreV1hodszw",
-        DotaPlusTesterPage: "_3WgovHBiMUxsTea3MjGVj_",
-        SelectionHeader: "_1nNeHirsBILHpl2is8F5lW",
-        Option: "_2AFRQzgnX-YsecNy9XrxzY",
-        Selected: "wbLdHJ0ZWLvu8HF50SXla",
-        DotaPlusTesterSubPage: "_2CWEAN8f8RDC7hNnHa8Suk",
-        Content: "_3bNeyifasCN57MFYhqx6ZU",
-        HeroOption: "_2v0i2xJP4V-2Qpo3cyY1Nj",
-        Portrait: "_3i4UGSnvERSFqSVToiROro",
-        Name: "_1CHIkGehGqx3Ju9lDCMSL3",
-        HeroPickerPopupBackground: "BkuFnEL7cAyjCsMYhNyG3",
-        HeroPickerPopup: "_5HnIRB-JgFF82A3YeaDuq",
-        InvisibleBackground: "_2jAZ6RdYq6X6OeC7yk8dj3",
-        Title: "_3WFGlJosY89AeFD-YAn6gJ",
-        Grid: "_21gyki0jzxuKwN4H10o8X9",
-        HeroSelector: "_3fmy45UdjacZi73yO3E_uF",
-        ItemOption: "_6AJ-yI4g6fOtGfcDROYZt",
-        ItemPickerPopupBackground: "_145u0nzgVhn2-DZBoRWmsI",
-        ItemPickerPopup: "_1aNSszFcQFhi_uHGeZf8Rv",
-        ItemSelector: "_2SWf_NNmwQ7LWbLC4VYlOr",
-        Separator: "vvXhWtkA9z6wjvMnq8Cfh",
-        IncludExcludeItemOption: "_3Cu9n_EGnwgQDa94O5JQYa",
-        ItemOptionTitle: "_1KOTz4KFHV7evGoyiIIhmZ",
-        OptionColumn: "_29uhbNe06vW1DnR0UERABv",
-        Percent: "_3pU4B55o9M0cH7n06CQ15l",
-        ResultHeader: "_2Vl5GTvbioLQmgltncA3xD",
-        PenaltySelector: "_28XsJixV0GJwbwa0EysF95",
-        VariantTypes: "_3Zp2QG7HhI-jivO6IldhoV",
-        VariantType: "_219ADvdUd0lvulRTTvI5az",
-        ShowMore: "_1tx8GY0JVZNo7qQPdeDsTn",
-        HeroList: "AyejJ-aIiriywCHAZOeUo",
-        Allies: "_3Xuun95YKZ1YruK-b9hYEf",
-        Enemies: "_3FpjjT_dv_gp1luKSDDZhK",
-        MiscInfo: "_2PVHaq0Abzd8Vpp7ZSpR6X",
-        Results: "_1epogxsRPnR7xvn_EJk5ek",
-        Result: "_2aynAA7fYEBl7qeYdv4k7P",
-        Weight: "_1LCBQ-B3CRx5lvFPGuCCnL",
-        Score: "_3upfuZKsxFE7jDpMgQDHrF",
-        ScoreAdjust: "_1AWXivqjFK2i-xe23q043e",
-        SequenceID: "_2I5WaWpAnR7Xb9bJIjMAuB",
-        ItemList: "_1hs67D7V7zX-88hrbFgsay",
-        ItemIcon: "_1Wq63SoqJ5sm2AjU0GHg0G",
-        AbilityIcon: "_2jWYP5f6ScwPsEZ14cFB93",
-        Loading: "_2ie0WE5D9UyYhwIqhg8OUG",
-        ClearSkilledAbilities: "_2KHZb4-REKRB5a9tJlgkPK",
-        SkilledAbilityList: "_2U4uJQoF_QS4MJABMADMUe",
-        PurchasedItemList: "_1uTSEvOUBlQN2EaDV3Fj_K",
-        AbilitySuggestions: "_3vYlZs47O9z1ELF14LLEsV",
-        ScoredItems: "_2thRO1n5rmT_Vry4XHHkFu",
-        Level: "_3POW-ow0sU5DLsnpAxjZ4u",
-        Header: "_2pcHk7_VnLKZ4YPsfy3PPd",
-        Checkbox: "_1UYvWalxB-6TGfDko-EcKt",
-      };
-    },
-    40753: (e) => {
-      e.exports = {
-        Tooltip: "_3OELhBBscklv2IMdg5oomz",
-        CarouselFade: "_31I4llS_Lyhj5ATIkhm9Qt",
-        StandardButton: "_37aD3ynYPo1qUap4RVCcn1",
-        ButtonText: "_1kRqdz1Q6aw8DZs4fDMlS_",
-        Icon: "_3qIRiUalNYmwOuLpN0DODG",
-        Play: "_2vTU3GlbWNRYTktMAr4piA",
-        SteamLogo: "_1fP8sQd2eLdp1lnsGBSiIc",
-        ToolTip: "RYpRbQXFsKkHLprrRA1zi",
-        PlayerReportTooltip: "_3tRwpyEakf__WKj7w5jodF",
-        PersonaDetails: "_1zeGbjgrtzsTxpMX5En4ZN",
-        ContentFrame: "Z_Blbt7KKFTyy0LhWzqrd",
-        BansGrid: "_3V5pubLeXWOs7rDx7cGxI",
-        WarningsGrid: "_2THih7P04NzMQyRkSCU57p",
-        DetailedInfoInnerGrid: "_1hn0yQoWwUItL8u4npU1FJ",
-        DetailedInfoOuterGrid: "_1A5QRx9VlcVs-R0nrFE7ek",
-        VacInfoInnerGrid: "_2GLWyc9KftX65_eYbF9SbV",
-        VacInfoOuterGrid: "_3mMUpl5v4rdbX0Y3j6h9Vt",
-        TeamsInfoInnerGrid: "_1VvPwBnK6kaf04tlafgJzd",
-        TeamsInfoOuterGrid: "_3Yy6Z2mss8pTAjlVIJ7A9e",
-        OfficialProfileInnerGrid: "_3B-f5WgGwbIfjjQ79Ef-Nx",
-        OfficialProfileOuterGrid: "_3G-7dX2yZaIKFL9tnC0VkL",
-        EventInfoInnerGrid: "vvYl-3ZIeMPkGI94saJaY",
-        EventInfoOuterGrid: "e1kXopQGUfQO8ICcUgWT9",
-        TeamDetailsGrid: "_2qp3OE-MGle8fIYmzYo-mD",
-        AccessFlagsGrid: "_31PXUbr6Ft4mcgqJlnxbd4",
-        SupportInfoGrid: "_1OWRzmCzZ7Ff9zLvR0ij53",
-        SmurfExperimentalInfoGrid: "_2i8-FQlo99PtuRmUvtgurE",
-        SmurfInfoGrid: "_1ec2JlZSx2iKez9Tlm60Ho",
-        LinkedAccountsGrid: "_1CWPTeuaqNUawITjfayjh7",
-        SupportInfoTopGrid: "pEEkQfBPikqdsNi11lWM-",
-        RankInfoGrid: "xI5E6apwJIM7u3b5GpQHg",
-        GeneralInfoGrid: "_1fxrHZYArq4s_yW3AGlgLl",
-        Header: "DQGCOxrVoC7LBhM7mn-Js",
-        HeaderFixedHeight: "_2VaZtuM2kaB1JfOPNUHY7z",
-        HeaderNoMargin: "_26vpYMRjrF8IaAlDodSKYJ",
-        HeaderClickable: "_2OwWXhfu5Ir_RK5tZGdlV7",
-        TopContent: "_22K2AIz1_qxsa0prjSJght",
-        TopContentLeft: "AymWsmELt-04P2KDWP_ht",
-        TopContentRight: "_1_Nsd4gBtT24RXhTZX59hu",
-        ChartContainer: "NJ2SxLweSpIwwij01bEPa",
-        ChartTitle: "_2jj8F6TujCphllWG0mVZIR",
-        FilterGrid: "GCf_MpdLqqDAA2gYJy_OP",
-        RankedFilters: "_33ShEkw3vpxlYh9V4kq8vN",
-        MatchHistoryOuterContainer: "_3_r0BBZ53SWfDvtIYFmnVy",
-        MatchHistoryInnerContainer: "sL92M3TGZXFY52YJwBjqg",
-        MatchRowEven: "ux51myX2FubufpPVDr79F",
-        SupportGrid: "_2Y0XJ26SxbEz2ymss3IxT1",
-        SupportGridHidden: "fQ9JbuKILX6QcGliXkAAW",
-        BanHistoryTable: "_3WqIrnD55srvWk0usaiGU",
-        ReportRowElement: "_2D2t4sByBFxPdT19ZxDi2H",
-        Link: "_1ymUXcoOK9QMVUK3LqDNva",
-        MediumTextField: "eQUN1139S04UDBXZD9sj9",
-        SmallTextField: "_1NTGYvvayGBoCVLwOZeKqr",
-        SmoothLine: "TmbIeQaO211UMcS2rYilB",
-        HeroImage: "_3yyq7mdx9R7TGWugXYr-p1",
-        ItemContainer: "_2HKl4yY1a7E74CglG8uBUX",
-        ItemIcon: "_3fmaFLdu4JhnWu-pNzi4n_",
-        RankNumber: "_2DZJOGqgRmf8BXHrKl8NlI",
-        RankedUncertainty: "YGzF1cwttz9g-GD8lQa7u",
-        RankedBadgeIcon: "_1bjscpu27X92lwFnnDxuB-",
-        CheckBox: "_2YEZTwo84iD58hIg0yVu7c",
-        OtherModesCheckBox: "F2OsALGKET10BleQcREfT",
-        ArrowIcon: "_2409M7zgkG1YfIoKjf0xuW",
-        ArrowIconRight: "_2_9wfntkC3b3oqBh6DWQWS",
-        ArrowIconDown: "_3BwteZt73UOnhP1eZQzjLG",
-        MarginRightSmall: "_18x1jAkVSdDMbBRGE29U8Q",
-        TextCapitalize: "lT6nXg4T4nF_u8dPbxbLK",
-        TextUppercase: "_1zyxlvXRinV7kmTGr27_gu",
-      };
-    },
-    9784: (e) => {
-      e.exports = {
-        Tooltip: "_31hC1zqg_cK9fp6BCtDEz",
-        CarouselFade: "_2UcOFVBSgdG55jLKpxirAG",
-        StandardButton: "_1OiL0_UEMBNqnMh2NIyqgn",
-        ButtonText: "_3gcUnXWgY6QWkRKN1ClXpK",
-        Icon: "_17oKddncf6DrsSIQVgNvNG",
-        Play: "_1e79tla_NJpyJDcvbU9AF9",
-        SteamLogo: "_2Z206WYSu-kLFeeyQllJnA",
-        ToolTip: "_2w_iNwO7tcIXVjXubfdbpo",
-        PlayerReportTooltip: "_3oBx7dyVQTWVwPU7EuvqWT",
-        TeamDetails: "w3idBBCXL0rxnD6pwBRM6",
-        ContentFrame: "hjW9KalKzKYN16tpDQb7f",
-        MatchesGrid: "_3HPIK48slIcN5eHxvTSbKQ",
-        WorkshopStatusGrid: "_11m5MHnA6UknRRBsXpZ1rv",
-        AuditActionsGrid: "_1ohOp7TGfH5UAINZezcdxk",
-        LogoAndColorsGrid: "ndSeTE99iU-Ou7uTl5Si0",
-        UGCLogosGrid: "_1bbYnwq3o_lOjCCxe9iJaj",
-        MiscInfoGrid: "_1igOxRpLl7PyFY24wnePza",
-        MembersGrid: "_3tGp0SBmohvWD8Pzf5iiuc",
-        ManagerGrid: "_3GLmjRcbneW-hMwgcQ--3l",
-        TeamDetailsGrid: "_3V8yT6IOTf0yaOtb7uXfky",
-        EditInfoGrid: "_154vYGBrUHabGUpVtMn3B4",
-        Header: "_3gRz5dlEtd2bMEcJRISHKT",
-        SubmitButton: "_1RnAKrnaOcM3sRJ1ITONHN",
-        URLLogoContainer: "_2LgtuThAofytR-EoQUMOLR",
-        DPCLogoContainer: "_3uIWu7cqjGy0dv5tXwPZnF",
-        SeasonMatchHeader: "SV4lDRUSn4ErLJABsMRaN",
-        ColorBox: "_1Kvg9fL81Eb3WLk0EcFDTl",
-        Link: "_3Gjo1M2PApknKEf9Y8kZSI",
-        MediumTextField: "_2IXLMtIL66j_ePIFCMoMLn",
-        SmallTextField: "_1y2t9XMGl9stF97djWq0aK",
-        SmoothLine: "_3YaqJMKcvdAXYfVRX2W8PY",
-      };
-    },
-    77671: (e, a, t) => {
-      "use strict";
-      t.r(a), t.d(a, { default: () => G });
-      var n = t(69500),
-        r = t(89506),
-        s = t(33706),
-        l = t(55651),
-        i = t(7552),
-        o = t(28485),
-        c = t(88351),
-        d = t(1799),
-        m = t(70126),
-        u = t(72674),
-        h = t(21384),
-        p = t(33743),
-        x = t(27866),
-        _ = t(47202),
-        j = t(2466),
-        y = t.n(j);
-      const g = (e) => {
-          const [a, t] = (0, i.useState)(""),
-            l = (0, s.wB)();
-          if (l.isLoading)
-            return (0, n.jsx)("div", {
-              className: y().HeroPicker,
-              children: (0, n.jsx)("div", {
-                className: y().Loading,
-                children: "Loading...",
-              }),
-            });
-          if (!l.data) return null;
-          const o = l.data;
-          return (0, n.jsx)("div", {
-            className: y().HeroPickerPopupBackground,
-            onClick: () => e.fnSetSelectedHero(-1),
-            children: (0, n.jsxs)("div", {
-              className: y().HeroPickerPopup,
-              children: [
-                (0, n.jsx)("div", {
-                  className: y().Title,
-                  children: "Select Hero",
-                }),
-                (0, n.jsx)("div", {
-                  className: y().Grid,
-                  children: o.heroes.map((a) =>
-                    (0, n.jsxs)(
-                      "div",
-                      {
-                        className: y().HeroSelector,
-                        onClick: (t) => {
-                          e.fnSetSelectedHero(a.id), t.stopPropagation();
-                        },
-                        children: [
-                          (0, n.jsx)("div", {
-                            className: y().Portrait,
-                            style: {
-                              backgroundImage: `url( ${r.r.IMG_URL}heroes/${a.name.replace("npc_dota_hero_", "")}.png`,
-                            },
-                          }),
-                          (0, n.jsx)("div", {
-                            className: y().Name,
-                            children: (0, x.Wn)(a.name_loc),
-                          }),
-                        ],
-                      },
-                      a.id,
-                    ),
-                  ),
-                }),
-              ],
-            }),
-          });
-        },
-        f = (e) => {
-          const [a, t] = i.useState(!1),
-            l = (0, s.wB)(),
-            c = (0, s.lm)(e.nHeroID),
-            m = (0, s.qK)(e.nHeroID),
-            u = (0, d.R7)().ownerWindow;
-          i.useEffect(() => {
-            if (0 == e.nHeroID && l.data) {
-              const a = (0, p.Tg)(0, l.data.heroes.length - 1);
-              e.fnSetSelectedHero(l.data.heroes[a].id);
-            }
-          }, [e, l]);
-          const h = c.data,
-            _ = (m.data, u.document?.body);
-          return (0, n.jsxs)("div", {
-            className: y().HeroOption,
-            children: [
-              (0, n.jsx)("div", {
-                className: y().Name,
-                children: e.bShowName ? (0, x.Wn)(h?.name_loc) : e.strLabel,
-              }),
-              (0, n.jsx)("div", {
-                className: y().Portrait,
-                style: {
-                  backgroundImage: `url( ${r.r.IMG_URL}heroes/${h?.name.replace("npc_dota_hero_", "")}.png`,
-                },
-                onClick: () => t(!0),
-              }),
-              a &&
-                o.createPortal(
-                  (0, n.jsx)(g, {
-                    fnSetSelectedHero: (a) => {
-                      t(!1), -1 != a && e.fnSetSelectedHero(a);
-                    },
-                  }),
-                  _,
-                ),
-            ],
-          });
-        },
-        A = (e) => {
-          const a = (0, s.JD)(e.nAbilityID).data;
-          return (0, n.jsx)(m.he, {
-            toolTipContent: a?.name_loc,
-            direction: "top",
-            strTooltipClassname: y().ToolTip,
-            children: (0, n.jsx)("div", {
-              className: y().AbilityIcon,
-              style: {
-                backgroundImage: `url( ${r.r.IMG_URL}abilities/${a?.name?.replace("ability_", "")}.png`,
-              },
-            }),
-          });
-        },
-        N = (e) => {
-          const a = (0, s.mU)(e.nItemID).data;
-          return (0, n.jsx)(m.he, {
-            toolTipContent: a?.name_loc,
-            direction: "top",
-            strTooltipClassname: y().ToolTip,
-            children: (0, n.jsx)("div", {
-              className: y().ItemIcon,
-              style: {
-                backgroundImage: `url( ${r.r.IMG_URL}items/${a?.name?.replace("item_", "").replace("recipe_", "")}.png`,
-              },
-            }),
-          });
-        },
-        I = (e) => {
-          const [a, t] = (0, i.useState)(""),
-            l = (0, s.HJ)();
-          if (l.isLoading)
-            return (0, n.jsx)("div", {
-              className: y().ItemPickerPopupBackground,
-              children: (0, n.jsx)("div", {
-                className: y().ItemPickerPopup,
-                children: (0, n.jsx)("div", {
-                  className: y().Loading,
+(() => {
+  (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
+    [87084],
+    {
+      57200: (Re, ke, y) => {
+        "use strict";
+        y.r(ke), y.d(ke, { default: () => z });
+        var e = y(69500),
+          fe = y(2095),
+          R = y(84485),
+          I = y(11778),
+          j = y(7552),
+          x = y(28485),
+          oe = y(88351),
+          w = y(50954),
+          Ge = y(96213),
+          He = y(18497),
+          Ce = y(15001),
+          Ye = y(93368),
+          Le = y(8305),
+          D = y(63177),
+          Ne = y(2466),
+          r = y.n(Ne);
+        const Te = (i) => {
+            const [h, S] = (0, j.useState)(""),
+              E = (0, R.wB)();
+            if (E.isLoading)
+              return (0, e.jsx)("div", {
+                className: r().HeroPicker,
+                children: (0, e.jsx)("div", {
+                  className: r().Loading,
                   children: "Loading...",
                 }),
-              }),
-            });
-          if (!l.data) return null;
-          let o = l.data.itemabilities
-            .filter(
-              (e) => !e.name_loc.includes("Recipe") && e.name_loc.length > 0,
-            )
-            .sort((e, a) => (e.name_loc < a.name_loc ? -1 : 1));
-          return (0, n.jsx)("div", {
-            className: y().ItemPickerPopupBackground,
-            onClick: () => e.fnSetSelectedItem(-1),
-            children: (0, n.jsxs)("div", {
-              className: y().ItemPickerPopup,
-              children: [
-                (0, n.jsx)("div", {
-                  className: y().Title,
-                  children: "Select Item",
-                }),
-                (0, n.jsxs)("div", {
-                  className: y().Grid,
-                  children: [
-                    e.bAllowEmpty &&
-                      (0, n.jsxs)(
+              });
+            if (!E.data) return null;
+            const C = E.data;
+            return (0, e.jsx)("div", {
+              className: r().HeroPickerPopupBackground,
+              onClick: () => i.fnSetSelectedHero(-1),
+              children: (0, e.jsxs)("div", {
+                className: r().HeroPickerPopup,
+                children: [
+                  (0, e.jsx)("div", {
+                    className: r().Title,
+                    children: "Select Hero",
+                  }),
+                  (0, e.jsx)("div", {
+                    className: r().Grid,
+                    children: C.heroes.map((s) =>
+                      (0, e.jsxs)(
                         "div",
                         {
-                          className: y().ItemSelector,
-                          onClick: (a) => {
-                            e.fnSetSelectedItem(0), a.stopPropagation();
+                          className: r().HeroSelector,
+                          onClick: (p) => {
+                            i.fnSetSelectedHero(s.id), p.stopPropagation();
                           },
                           children: [
-                            (0, n.jsx)("div", { className: y().Icon }),
-                            (0, n.jsx)("div", {
-                              className: y().Name,
-                              children: "Clear",
+                            (0, e.jsx)("div", {
+                              className: r().Portrait,
+                              style: {
+                                backgroundImage: `url( ${fe.r.IMG_URL}heroes/${s.name.replace("npc_dota_hero_", "")}.png`,
+                              },
+                            }),
+                            (0, e.jsx)("div", {
+                              className: r().Name,
+                              children: (0, Le.Wn)(s.name_loc),
                             }),
                           ],
                         },
-                        0,
+                        s.id,
                       ),
-                    o
-                      .filter(
-                        (a) =>
-                          e.eItemFilter == T.ITEM_OPTIONS_ALL ||
-                          !(
-                            !a.is_lategame_suggested ||
-                            (e.eItemFilter != T.ITEM_OPTIONS_LATE &&
-                              e.eItemFilter != T.ITEM_OPTIONS_EARLY_LATE)
-                          ) ||
-                          !(
-                            !a.is_earlygame_suggested ||
-                            (e.eItemFilter != T.ITEM_OPTIONS_EARLY &&
-                              e.eItemFilter != T.ITEM_OPTIONS_EARLY_LATE)
-                          ) ||
-                          (!a.is_earlygame_suggested &&
-                            !a.is_lategame_suggested &&
-                            e.eItemFilter == T.ITEM_OPTIONS_NOT_EARLY_LATE) ||
-                          (e.eItemFilter == T.ITEM_OPTIONS_CUSTOM &&
-                            e.fnCustomFilter(a)),
-                      )
-                      .map((a) =>
-                        (0, n.jsxs)(
+                    ),
+                  }),
+                ],
+              }),
+            });
+          },
+          T = (i) => {
+            const [h, S] = j.useState(!1),
+              E = (0, R.wB)(),
+              C = (0, R.lm)(i.nHeroID),
+              s = (0, R.qK)(i.nHeroID),
+              p = (0, w.R7)().ownerWindow;
+            j.useEffect(() => {
+              if (i.nHeroID == 0 && E.data) {
+                const F = (0, Ye.Tg)(0, E.data.heroes.length - 1);
+                i.fnSetSelectedHero(E.data.heroes[F].id);
+              }
+            }, [i, E]);
+            const f = (F) => {
+                S(!1), F != -1 && i.fnSetSelectedHero(F);
+              },
+              L = C.data,
+              k = s.data,
+              H = p.document?.body;
+            return (0, e.jsxs)("div", {
+              className: r().HeroOption,
+              children: [
+                (0, e.jsx)("div", {
+                  className: r().Name,
+                  children: i.bShowName ? (0, Le.Wn)(L?.name_loc) : i.strLabel,
+                }),
+                (0, e.jsx)("div", {
+                  className: r().Portrait,
+                  style: {
+                    backgroundImage: `url( ${fe.r.IMG_URL}heroes/${L?.name.replace("npc_dota_hero_", "")}.png`,
+                  },
+                  onClick: () => S(!0),
+                }),
+                h &&
+                  x.createPortal((0, e.jsx)(Te, { fnSetSelectedHero: f }), H),
+              ],
+            });
+          },
+          ne = (i) => {
+            const S = (0, R.JD)(i.nAbilityID).data;
+            return (0, e.jsx)(Ge.he, {
+              toolTipContent: S?.name_loc,
+              direction: "top",
+              strTooltipClassname: r().ToolTip,
+              children: (0, e.jsx)("div", {
+                className: r().AbilityIcon,
+                style: {
+                  backgroundImage: `url( ${fe.r.IMG_URL}abilities/${S?.name?.replace("ability_", "")}.png`,
+                },
+              }),
+            });
+          },
+          Ee = (i) => {
+            const S = (0, R.mU)(i.nItemID).data;
+            return (0, e.jsx)(Ge.he, {
+              toolTipContent: S?.name_loc,
+              direction: "top",
+              strTooltipClassname: r().ToolTip,
+              children: (0, e.jsx)("div", {
+                className: r().ItemIcon,
+                style: {
+                  backgroundImage: `url( ${fe.r.IMG_URL}items/${S?.name?.replace("item_", "").replace("recipe_", "")}.png`,
+                },
+              }),
+            });
+          },
+          Ve = (i) => {
+            const [h, S] = (0, j.useState)(""),
+              E = (0, R.HJ)();
+            if (E.isLoading)
+              return (0, e.jsx)("div", {
+                className: r().ItemPickerPopupBackground,
+                children: (0, e.jsx)("div", {
+                  className: r().ItemPickerPopup,
+                  children: (0, e.jsx)("div", {
+                    className: r().Loading,
+                    children: "Loading...",
+                  }),
+                }),
+              });
+            if (!E.data) return null;
+            let s = E.data.itemabilities
+              .filter(
+                (p) => !p.name_loc.includes("Recipe") && p.name_loc.length > 0,
+              )
+              .sort((p, f) => (p.name_loc < f.name_loc ? -1 : 1));
+            return (0, e.jsx)("div", {
+              className: r().ItemPickerPopupBackground,
+              onClick: () => i.fnSetSelectedItem(-1),
+              children: (0, e.jsxs)("div", {
+                className: r().ItemPickerPopup,
+                children: [
+                  (0, e.jsx)("div", {
+                    className: r().Title,
+                    children: "Select Item",
+                  }),
+                  (0, e.jsxs)("div", {
+                    className: r().Grid,
+                    children: [
+                      i.bAllowEmpty &&
+                        (0, e.jsxs)(
                           "div",
                           {
-                            className: y().ItemSelector,
-                            onClick: (t) => {
-                              e.fnSetSelectedItem(a.id), t.stopPropagation();
+                            className: r().ItemSelector,
+                            onClick: (p) => {
+                              i.fnSetSelectedItem(0), p.stopPropagation();
                             },
                             children: [
-                              (0, n.jsx)("div", {
-                                className: y().Icon,
-                                style: {
-                                  backgroundImage: `url( ${r.r.IMG_URL}items/${a.name.replace("item_", "")}.png`,
-                                },
-                              }),
-                              (0, n.jsx)("div", {
-                                className: y().Name,
-                                children: (0, x.Wn)(a.name_loc),
+                              (0, e.jsx)("div", { className: r().Icon }),
+                              (0, e.jsx)("div", {
+                                className: r().Name,
+                                children: "Clear",
                               }),
                             ],
                           },
-                          a.id,
+                          0,
                         ),
-                      ),
-                  ],
-                }),
-              ],
-            }),
-          });
-        };
-      var T;
-      !(function (e) {
-        (e[(e.ITEM_OPTIONS_ALL = 1)] = "ITEM_OPTIONS_ALL"),
-          (e[(e.ITEM_OPTIONS_EARLY = 2)] = "ITEM_OPTIONS_EARLY"),
-          (e[(e.ITEM_OPTIONS_LATE = 3)] = "ITEM_OPTIONS_LATE"),
-          (e[(e.ITEM_OPTIONS_EARLY_LATE = 4)] = "ITEM_OPTIONS_EARLY_LATE"),
-          (e[(e.ITEM_OPTIONS_NOT_EARLY_LATE = 5)] =
-            "ITEM_OPTIONS_NOT_EARLY_LATE"),
-          (e[(e.ITEM_OPTIONS_CUSTOM = 6)] = "ITEM_OPTIONS_CUSTOM");
-      })(T || (T = {}));
-      const v = (e) => {
-          const [a, t] = i.useState(!1),
-            l = (0, s.mU)(e.nItemID),
-            c = (0, d.R7)().ownerWindow,
-            m = l.data,
-            u = c.document?.body;
-          return (0, n.jsxs)("div", {
-            className: y().ItemOption,
-            children: [
-              (0, n.jsx)("div", {
-                className: y().Name,
-                children: e.bShowName ? (0, x.Wn)(m?.name_loc) : e.strLabel,
-              }),
-              (0, n.jsx)("div", {
-                className: y().Icon,
-                style: {
-                  backgroundImage: `url( ${r.r.IMG_URL}items/${m?.name?.replace("item_", "")}.png`,
-                },
-                onClick: () => t(!0),
-              }),
-              a &&
-                o.createPortal(
-                  (0, n.jsx)(I, {
-                    fnSetSelectedItem: (a) => {
-                      t(!1), -1 != a && e.fnSetSelectedItem(a);
-                    },
-                    bAllowEmpty: e.bAllowEmpty,
-                    eItemFilter: e.eItemFilter,
-                    fnCustomFilter: e.fnCustomFilter,
-                  }),
-                  u,
-                ),
-            ],
-          });
-        },
-        k = (e) =>
-          (0, n.jsxs)("div", {
-            className: y().Option,
-            children: [
-              (0, n.jsx)("div", { className: y().Name, children: "Position" }),
-              (0, n.jsxs)("select", {
-                className: y().PositionSelector,
-                value: e.nPosition,
-                onChange: (a) => e.fnSetPosition(parseInt(a.target.value)),
-                children: [
-                  (0, n.jsx)("option", { value: 1, children: "Safe" }),
-                  (0, n.jsx)("option", { value: 2, children: "Off" }),
-                  (0, n.jsx)("option", { value: 4, children: "Mid" }),
-                  (0, n.jsx)("option", { value: 8, children: "Support" }),
-                  (0, n.jsx)("option", { value: 16, children: "Hard Support" }),
-                ],
-              }),
-            ],
-          }),
-        S = (e) =>
-          (0, n.jsxs)("div", {
-            className: y().Option,
-            children: [
-              (0, n.jsx)("div", { className: y().Name, children: "Tier" }),
-              (0, n.jsxs)("select", {
-                className: y().TierSelector,
-                value: e.nTier,
-                onChange: (a) => e.fnSetTier(parseInt(a.target.value)),
-                children: [
-                  (0, n.jsx)("option", { value: 0, children: "Tier 1" }),
-                  (0, n.jsx)("option", { value: 1, children: "Tier 2" }),
-                  (0, n.jsx)("option", { value: 2, children: "Tier 3" }),
-                  (0, n.jsx)("option", { value: 3, children: "Tier 4" }),
-                  (0, n.jsx)("option", { value: 4, children: "Tier 5" }),
-                ],
-              }),
-            ],
-          }),
-        R = (e) =>
-          (0, n.jsxs)("div", {
-            className: y().Option,
-            children: [
-              (0, n.jsx)("div", { className: y().Name, children: "Game Mode" }),
-              (0, n.jsxs)("select", {
-                className: y().GameModeSelector,
-                value: e.nGameMode,
-                onChange: (a) => e.fnSetGameMode(parseInt(a.target.value)),
-                children: [
-                  (0, n.jsx)("option", { value: 22, children: "All Draft" }),
-                  (0, n.jsx)("option", { value: 1, children: "All Pick" }),
-                  (0, n.jsx)("option", { value: 23, children: "Turbo" }),
-                  (0, n.jsx)("option", { value: 2, children: "Captains Mode" }),
-                  (0, n.jsx)("option", {
-                    value: 16,
-                    children: "Captains Draft",
-                  }),
-                  (0, n.jsx)("option", { value: 4, children: "Single Draft" }),
-                  (0, n.jsx)("option", { value: 13, children: "Hero Pool" }),
-                ],
-              }),
-            ],
-          }),
-        D = (e) => {
-          const [a, t] = i.useState(e.strMMR);
-          return (
-            i.useEffect(() => {
-              if (e.strMMR == a) return () => {};
-              const t = setTimeout(() => e.fnSetMMR(a), 400);
-              return () => clearTimeout(t);
-            }, [e, a]),
-            (0, n.jsxs)("div", {
-              className: y().Option,
-              children: [
-                (0, n.jsx)("div", { className: y().Name, children: "MMR" }),
-                (0, n.jsx)("input", {
-                  type: "text",
-                  className: y().AverageMMRInput,
-                  value: a,
-                  onChange: (e) => t(e.target.value),
-                }),
-              ],
-            })
-          );
-        };
-      function E(e) {
-        const a = new URLSearchParams();
-        return (
-          Object.keys(e).forEach((t) => {
-            Array.isArray(e[t])
-              ? a.append(t, e[t].join(","))
-              : a.append(t, e[t]);
-          }),
-          a.toString()
-        );
-      }
-      const O = "pregameitems",
-        b = "neutralitems",
-        F = "maingameitemsequence",
-        C = "abilities",
-        M = (e) => {
-          const a = new URLSearchParams(e.strConfig),
-            t = (0, c.W6)();
-          let r = parseInt(a.get("nHeroID") || "0"),
-            i = parseInt(a.get("nPosition") || "0"),
-            o = (a.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            d = (a.get("arrEnemyHeroIDs") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            m = (
-              a.get("arrSkilledAbilities") ||
-              "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            )
-              .split(",")
-              .map(Number),
-            u = a.get("nAverageMMR") || "2000",
-            h = parseInt(a.get("nGameMode") || "22");
-          const p = () => {
-              const a = {
-                nHeroID: r,
-                nPosition: i,
-                arrAlliedHeroIDs: o,
-                arrEnemyHeroIDs: d,
-                nAverageMMR: parseInt(u),
-                nGameMode: h,
-                arrSkilledAbilities: m,
-              };
-              t.push(l.J.dotaplustester(e.strFeature, E(a)));
-            },
-            x = (e, a) => {
-              console.log("4"), (o[e] = a), p();
-            },
-            _ = (e, a) => {
-              console.log("6"), (d[e] = a), p();
-            },
-            j = (0, s.k4)(r, i, o, d, parseInt(u), h, !0, m).data;
-          let g = [];
-          if (j && j.backend_response.outputs.length > 0)
-            for (
-              let e = 0;
-              e <
-              j.backend_response.outputs[0].categorical_crossentropy.value
-                .length;
-              e++
-            )
-              g.push({
-                nAbilityID:
-                  j.backend_response.outputs[0].categorical_crossentropy.value[
-                    e
-                  ],
-                fWeight:
-                  j.backend_response.outputs[0].categorical_crossentropy.weight[
-                    e
-                  ],
-              });
-          return (0, n.jsx)("div", {
-            className: y().DotaPlusTesterSubPage,
-            children: (0, n.jsxs)("div", {
-              className: y().Content,
-              children: [
-                (0, n.jsxs)("div", {
-                  className: y().HeroList,
-                  children: [
-                    (0, n.jsx)("div", {
-                      className: y().YourHero,
-                      children: (0, n.jsx)(f, {
-                        strLabel: "Your Hero",
-                        nHeroID: r,
-                        fnSetSelectedHero: (e) => {
-                          return (a = e), console.log("1"), (r = a), void p();
-                          var a;
-                        },
-                      }),
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: y().Allies,
-                      children: [
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #1",
-                          nHeroID: o[0],
-                          fnSetSelectedHero: (e) => x(0, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #2",
-                          nHeroID: o[1],
-                          fnSetSelectedHero: (e) => x(1, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #3",
-                          nHeroID: o[2],
-                          fnSetSelectedHero: (e) => x(2, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #4",
-                          nHeroID: o[3],
-                          fnSetSelectedHero: (e) => x(3, e),
-                        }),
-                      ],
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: y().Enemies,
-                      children: [
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #1",
-                          nHeroID: d[0],
-                          fnSetSelectedHero: (e) => _(0, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #2",
-                          nHeroID: d[1],
-                          fnSetSelectedHero: (e) => _(1, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #3",
-                          nHeroID: d[2],
-                          fnSetSelectedHero: (e) => _(2, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #4",
-                          nHeroID: d[3],
-                          fnSetSelectedHero: (e) => _(3, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #5",
-                          nHeroID: d[4],
-                          fnSetSelectedHero: (e) => _(4, e),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsxs)("div", {
-                  className: y().MiscInfo,
-                  children: [
-                    (0, n.jsx)(k, {
-                      nPosition: i,
-                      fnSetPosition: (e) => {
-                        console.log("3"), (i = e), p();
-                      },
-                    }),
-                    (0, n.jsx)(R, {
-                      nGameMode: h,
-                      fnSetGameMode: (e) => {
-                        console.log("9"), (h = e), p();
-                      },
-                    }),
-                    (0, n.jsx)(D, {
-                      strMMR: u,
-                      fnSetMMR: (e) => {
-                        console.log("8"), (u = e), p();
-                      },
-                    }),
-                  ],
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsx)("div", {
-                  className: y().Level,
-                  children: `Level ${m.indexOf(0) + 1} `,
-                }),
-                (0, n.jsx)("div", {
-                  className: y().SkilledAbilityList,
-                  children: m.map((e, a) =>
-                    (0, n.jsx)(A, { nAbilityID: e }, `${a}_${e}`),
-                  ),
-                }),
-                (0, n.jsx)("div", {
-                  className: y().ClearSkilledAbilities,
-                  onClick: () => (
-                    console.log("11"),
-                    (m = [
-                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    ]),
-                    void p()
-                  ),
-                  children: "Clear",
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsx)("div", {
-                  className: y().AbilitySuggestions,
-                  children: g.map((e) =>
-                    (0, n.jsxs)(
-                      "div",
-                      {
-                        className: y().Ability,
-                        onClick: () => {
-                          return (
-                            (a = e.nAbilityID),
-                            console.log("10"),
-                            (m[m.indexOf(0)] = a),
-                            void p()
-                          );
-                          var a;
-                        },
-                        children: [
-                          (0, n.jsx)(A, { nAbilityID: e.nAbilityID }),
-                          (0, n.jsx)("div", {
-                            className: y().ID,
-                            children: e.nAbilityID,
-                          }),
-                          (0, n.jsx)("div", {
-                            className: y().Weight,
-                            children: `${(100 * e.fWeight).toFixed(2)}%`,
-                          }),
-                        ],
-                      },
-                      e.nAbilityID,
-                    ),
-                  ),
-                }),
-              ],
-            }),
-          });
-        },
-        L = (e) => {
-          const a = new URLSearchParams(e.strConfig),
-            t = (0, c.W6)();
-          let r = parseInt(a.get("nHeroID") || "0"),
-            i = parseInt(a.get("nPosition") || "0"),
-            o = (a.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            d = (a.get("arrEnemyHeroIDs") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            m = a.get("nAverageMMR") || "2000",
-            u = parseInt(a.get("nGameMode") || "22");
-          const h = () => {
-              const a = {
-                nHeroID: r,
-                nPosition: i,
-                arrAlliedHeroIDs: o,
-                arrEnemyHeroIDs: d,
-                nAverageMMR: parseInt(m),
-                nGameMode: u,
-              };
-              t.push(l.J.dotaplustester(e.strFeature, E(a)));
-            },
-            p = (0, s.MT)(r, i, o, d, parseInt(m), u, !0).data;
-          let x = [];
-          if (
-            p &&
-            p.backend_response.outputs.length > 0 &&
-            p.backend_response.outputs[0].categorical_crossentropy
-              .value_sequence.length > 0
-          )
-            for (
-              let e = 0;
-              e <
-              p.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence[0].value.length;
-              e++
-            )
-              x.push(
-                p.backend_response.outputs[0].categorical_crossentropy
-                  .value_sequence[0].value[e],
-              );
-          const _ = (e, a) => {
-              (o[e] = a), h();
-            },
-            j = (e, a) => {
-              (d[e] = a), h();
-            },
-            g = (0, s.HJ)(),
-            A = (0, s.wB)();
-          return g.data && A.data
-            ? (0, n.jsx)("div", {
-                className: y().DotaPlusTesterSubPage,
-                children: (0, n.jsxs)("div", {
-                  className: y().Content,
-                  children: [
-                    (0, n.jsxs)("div", {
-                      className: y().HeroList,
-                      children: [
-                        (0, n.jsx)("div", {
-                          className: y().YourHero,
-                          children: (0, n.jsx)(f, {
-                            strLabel: "Your Hero",
-                            nHeroID: r,
-                            fnSetSelectedHero: (e) => ((r = e), void h()),
-                          }),
-                        }),
-                        (0, n.jsxs)("div", {
-                          className: y().Allies,
-                          children: [
-                            (0, n.jsx)(f, {
-                              strLabel: "Ally #1",
-                              nHeroID: o[0],
-                              fnSetSelectedHero: (e) => _(0, e),
-                            }),
-                            (0, n.jsx)(f, {
-                              strLabel: "Ally #2",
-                              nHeroID: o[1],
-                              fnSetSelectedHero: (e) => _(1, e),
-                            }),
-                            (0, n.jsx)(f, {
-                              strLabel: "Ally #3",
-                              nHeroID: o[2],
-                              fnSetSelectedHero: (e) => _(2, e),
-                            }),
-                            (0, n.jsx)(f, {
-                              strLabel: "Ally #4",
-                              nHeroID: o[3],
-                              fnSetSelectedHero: (e) => _(3, e),
-                            }),
-                          ],
-                        }),
-                        (0, n.jsxs)("div", {
-                          className: y().Enemies,
-                          children: [
-                            (0, n.jsx)(f, {
-                              strLabel: "Enemy #1",
-                              nHeroID: d[0],
-                              fnSetSelectedHero: (e) => j(0, e),
-                            }),
-                            (0, n.jsx)(f, {
-                              strLabel: "Enemy #2",
-                              nHeroID: d[1],
-                              fnSetSelectedHero: (e) => j(1, e),
-                            }),
-                            (0, n.jsx)(f, {
-                              strLabel: "Enemy #3",
-                              nHeroID: d[2],
-                              fnSetSelectedHero: (e) => j(2, e),
-                            }),
-                            (0, n.jsx)(f, {
-                              strLabel: "Enemy #4",
-                              nHeroID: d[3],
-                              fnSetSelectedHero: (e) => j(3, e),
-                            }),
-                            (0, n.jsx)(f, {
-                              strLabel: "Enemy #5",
-                              nHeroID: d[4],
-                              fnSetSelectedHero: (e) => j(4, e),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                    (0, n.jsx)("div", { className: y().Separator }),
-                    (0, n.jsxs)("div", {
-                      className: y().MiscInfo,
-                      children: [
-                        (0, n.jsx)(k, {
-                          nPosition: i,
-                          fnSetPosition: (e) => {
-                            (i = e), h();
-                          },
-                        }),
-                        (0, n.jsx)(R, {
-                          nGameMode: u,
-                          fnSetGameMode: (e) => {
-                            (u = e), h();
-                          },
-                        }),
-                        (0, n.jsx)(D, {
-                          strMMR: m,
-                          fnSetMMR: (e) => {
-                            (m = e), h();
-                          },
-                        }),
-                      ],
-                    }),
-                    (0, n.jsx)("div", { className: y().Separator }),
-                    x.length > 0 &&
-                      (0, n.jsx)("div", {
-                        className: y().Results,
-                        children: (0, n.jsx)("div", {
-                          className: y().ItemList,
-                          children: x.map((e, a) =>
-                            (0, n.jsx)(
-                              N,
-                              { nItemID: e },
-                              `InferenceReuslt_Item_${a}`,
-                            ),
-                          ),
-                        }),
-                      }),
-                  ],
-                }),
-              })
-            : (0, n.jsx)("div", {
-                className: y().Loading,
-                children: "Loading hero and item data...",
-              });
-        };
-      const P = (e) => {
-          const a = new URLSearchParams(e.strConfig),
-            t = (0, c.W6)();
-          let r = parseInt(a.get("nHeroID") || "0"),
-            i = parseInt(a.get("nPosition") || "0"),
-            o = (a.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            d = (a.get("arrEnemyHeroIDs") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            m = a.get("nAverageMMR") || "2000",
-            h = parseInt(a.get("nGameMode") || "22"),
-            p = parseInt(a.get("nTier") || "0"),
-            x = (a.get("arrTrinkets") || "0,0,0,0").split(",").map(Number),
-            _ = (a.get("arrEnchantments") || "0,0,0,0").split(",").map(Number);
-          let j = (0, s.zy)(x).data;
-          const g = (e, a) => {
-              (o[e] = a), N();
-            },
-            A = (e, a) => {
-              (d[e] = a), N();
-            },
-            N = () => {
-              const a = E({
-                nHeroID: r,
-                nPosition: i,
-                arrAlliedHeroIDs: o,
-                arrEnemyHeroIDs: d,
-                nAverageMMR: parseInt(m),
-                nGameMode: h,
-                nTier: p,
-                arrTrinkets: x,
-                arrEnchantments: _,
-              });
-              e.strConfig != a && t.push(l.J.dotaplustester(e.strFeature, a));
-            },
-            I = (0, s.HJ)(),
-            O = (0, s.wB)(),
-            b = (0, s.qK)(r);
-          let F;
-          switch (b.data?.primary_attr) {
-            case 0:
-              F = "strength";
-              break;
-            case 1:
-              F = "agility";
-              break;
-            case 2:
-              F = "intelligence";
-              break;
-            case 3:
-              F = "universal";
-          }
-          const C = (0, s.dX)(r, i, o, d, parseInt(m), h, !0, x, _, p).data,
-            M = (0, s.Hp)(F, p + 1);
-          if (!I.data || !O.data || !M.data)
-            return (0, n.jsx)("div", {
-              className: y().Loading,
-              children: "Loading hero and item data...",
-            });
-          const L = M.data,
-            P = L.tier[p].enhancements.map((e) => e.ability_id),
-            w = (e) =>
-              e.neutral_item_tier == p ||
-              (!(e.neutral_item_tier > p) &&
-                -1 != e.neutral_item_tier &&
-                e.neutral_item_tier < p &&
-                0 == j?.filter((e) => e.neutral_item_tier < p).length);
-          return (0, n.jsx)("div", {
-            className: y().DotaPlusTesterSubPage,
-            children: (0, n.jsxs)("div", {
-              className: y().Content,
-              children: [
-                (0, n.jsxs)("div", {
-                  className: y().HeroList,
-                  children: [
-                    (0, n.jsx)("div", {
-                      className: y().YourHero,
-                      children: (0, n.jsx)(f, {
-                        strLabel: "Your Hero",
-                        nHeroID: r,
-                        fnSetSelectedHero: (e) => ((r = e), void N()),
-                      }),
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: y().Allies,
-                      children: [
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #1",
-                          nHeroID: o[0],
-                          fnSetSelectedHero: (e) => g(0, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #2",
-                          nHeroID: o[1],
-                          fnSetSelectedHero: (e) => g(1, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #3",
-                          nHeroID: o[2],
-                          fnSetSelectedHero: (e) => g(2, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #4",
-                          nHeroID: o[3],
-                          fnSetSelectedHero: (e) => g(3, e),
-                        }),
-                      ],
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: y().Enemies,
-                      children: [
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #1",
-                          nHeroID: d[0],
-                          fnSetSelectedHero: (e) => A(0, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #2",
-                          nHeroID: d[1],
-                          fnSetSelectedHero: (e) => A(1, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #3",
-                          nHeroID: d[2],
-                          fnSetSelectedHero: (e) => A(2, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #4",
-                          nHeroID: d[3],
-                          fnSetSelectedHero: (e) => A(3, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #5",
-                          nHeroID: d[4],
-                          fnSetSelectedHero: (e) => A(4, e),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsxs)("div", {
-                  className: y().MiscInfo,
-                  children: [
-                    (0, n.jsx)(k, {
-                      nPosition: i,
-                      fnSetPosition: (e) => {
-                        (i = e), N();
-                      },
-                    }),
-                    (0, n.jsx)(R, {
-                      nGameMode: h,
-                      fnSetGameMode: (e) => {
-                        (h = e), N();
-                      },
-                    }),
-                    (0, n.jsx)(D, {
-                      strMMR: m,
-                      fnSetMMR: (e) => {
-                        (m = e), N();
-                      },
-                    }),
-                    (0, n.jsx)(S, {
-                      nTier: p,
-                      fnSetTier: (e) => {
-                        p != e &&
-                          ((x = [0, 0, 0, 0, 0]),
-                          (_ = [0, 0, 0, 0, 0]),
-                          (p = e),
-                          N());
-                      },
-                    }),
-                  ],
-                }),
-                (0, n.jsxs)("div", {
-                  className: y().IncludExcludeItemOption,
-                  children: [
-                    (0, n.jsx)("div", {
-                      className: y().ItemOptionTitle,
-                      children: "Trinkets",
-                    }),
-                    (0, u.bu)(0, L.tier[p].trinket_options - 1).map((e) => {
-                      const a =
-                        C?.backend_response.outputs[0].categorical_crossentropy.value.indexOf(
-                          x[e],
-                        );
-                      return (0, n.jsxs)(
-                        "div",
-                        {
-                          className: y().OptionColumn,
-                          children: [
-                            (0, n.jsx)(
-                              v,
-                              {
-                                nItemID: x[e],
-                                fnSetSelectedItem: (a) => {
-                                  return (t = a), (x[e] = t), void N();
-                                  var t;
-                                },
-                                bShowName: !0,
-                                bAllowEmpty: !0,
-                                eItemFilter: T.ITEM_OPTIONS_CUSTOM,
-                                fnCustomFilter: w,
-                                fnOverlayText: (e) =>
-                                  e.neutral_item_tier.toString(),
+                      s
+                        .filter((p) =>
+                          i.eItemFilter == 1 ||
+                          (p.is_lategame_suggested &&
+                            (i.eItemFilter == 3 || i.eItemFilter == 4)) ||
+                          (p.is_earlygame_suggested &&
+                            (i.eItemFilter == 2 || i.eItemFilter == 4)) ||
+                          (!p.is_earlygame_suggested &&
+                            !p.is_lategame_suggested &&
+                            i.eItemFilter == 5)
+                            ? !0
+                            : i.eItemFilter == 6
+                              ? i.fnCustomFilter(p)
+                              : !1,
+                        )
+                        .map((p) =>
+                          (0, e.jsxs)(
+                            "div",
+                            {
+                              className: r().ItemSelector,
+                              onClick: (f) => {
+                                i.fnSetSelectedItem(p.id), f.stopPropagation();
                               },
-                              `Trinket_${e}`,
-                            ),
-                            a >= 0 &&
-                              (0, n.jsx)("div", {
-                                className: y().Percent,
-                                children: `${(100 * C?.backend_response.outputs[0].categorical_crossentropy.weight[a]).toFixed(2)}%`,
-                              }),
-                          ],
-                        },
-                        `result_${e}`,
-                      );
-                    }),
-                  ],
-                }),
-                (0, n.jsxs)("div", {
-                  className: y().IncludExcludeItemOption,
-                  children: [
-                    (0, n.jsx)("div", {
-                      className: y().ItemOptionTitle,
-                      children: "Enhancements",
-                    }),
-                    (0, u.bu)(0, L.tier[p].enhancement_options - 1).map((e) => {
-                      const a =
-                        C?.backend_response.outputs[1].categorical_crossentropy.value.indexOf(
-                          _[e],
-                        );
-                      return (0, n.jsxs)(
-                        "div",
-                        {
-                          className: y().OptionColumn,
-                          children: [
-                            (0, n.jsx)(
-                              v,
-                              {
-                                nItemID: _[e],
-                                fnSetSelectedItem: (a) => {
-                                  return (t = a), (_[e] = t), void N();
-                                  var t;
-                                },
-                                bShowName: !0,
-                                bAllowEmpty: !0,
-                                eItemFilter: T.ITEM_OPTIONS_CUSTOM,
-                                fnCustomFilter: (e) => P.includes(e.id),
-                              },
-                              `Trinket_${e}`,
-                            ),
-                            a >= 0 &&
-                              (0, n.jsx)("div", {
-                                className: y().Percent,
-                                children: `${(100 * C?.backend_response.outputs[1].categorical_crossentropy.weight[a]).toFixed(2)}%`,
-                              }),
-                          ],
-                        },
-                        `result_${e}`,
-                      );
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        },
-        w = (e) => {
-          const a = new URLSearchParams(e.strConfig),
-            t = (0, c.W6)();
-          let r = parseInt(a.get("nHeroID") || "0"),
-            i = parseInt(a.get("nPosition") || "0"),
-            o = (a.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            d = (a.get("arrEnemyHeroIDs") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            m = a.get("nAverageMMR") || "2000",
-            u = parseInt(a.get("nGameMode") || "22"),
-            h = parseInt(a.get("nLobbyType") || "7"),
-            p = (
-              a.get("arrInventoryItems") ||
-              "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            )
-              .split(",")
-              .map(Number),
-            x = (
-              a.get("arrPurchasedItems") ||
-              "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            )
-              .split(",")
-              .map(Number),
-            _ = parseFloat(a.get("fRepeatWeight") || "0.2"),
-            j = (a.get("arrLikedItems") || "0,0").split(",").map(Number),
-            g = (a.get("arrDislikedItems") || "0,0").split(",").map(Number);
-          const A = () => {
-            const a = E({
-              nHeroID: r,
-              nPosition: i,
-              arrAlliedHeroIDs: o,
-              arrEnemyHeroIDs: d,
-              nAverageMMR: parseInt(m),
-              nGameMode: u,
-              nLobbyType: h,
-              arrPurchasedItems: x,
-              arrInventoryItems: p,
-              fRepeatWeight: _,
-              arrLikedItems: j,
-              arrDislikedItems: g,
-            });
-            e.strConfig != a && t.push(l.J.dotaplustester(e.strFeature, a));
-          };
-          let I = new Map(),
-            S = [],
-            O = [];
-          for (const e of j) 0 != e && I.set(e, 3e5);
-          for (const e of g) 0 != e && I.set(e, -1e6);
-          const b = (0, s.nK)(r, i, o, d, parseInt(m), u, x, I, [], _).data;
-          if (
-            b &&
-            b.backend_response.outputs.length > 0 &&
-            b.backend_response.outputs[0].categorical_crossentropy
-              .value_sequence
-          ) {
-            for (
-              let e = 0;
-              e <
-              b.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence[0].value.length;
-              e++
-            )
-              S.push({
-                nItemID:
-                  b.backend_response.outputs[0].categorical_crossentropy
-                    .value_sequence[0].value[e],
-                fScore: 0,
-              });
-            for (
-              let e = 0;
-              e <
-              b.backend_response.outputs[0].categorical_crossentropy.value
-                ?.length;
-              e++
-            ) {
-              const a =
-                  b.backend_response.outputs[0].categorical_crossentropy.value[
-                    e
-                  ],
-                t =
-                  b.backend_response.outputs[0].categorical_crossentropy.weight[
-                    e
-                  ];
-              O.push({ nItemID: a, fScore: t });
-            }
-          }
-          const F = (0, s.HJ)(),
-            C = (0, s.wB)(),
-            M = (e, a) => {
-              (o[e] = a), A();
-            },
-            L = (e, a) => {
-              (d[e] = a), A();
-            },
-            P = (e) => {
-              (x[x.indexOf(0)] = e), A();
-            },
-            w = (e, a) => {
-              (g[e] = a), A();
-            },
-            G = (e, a) => {
-              (j[e] = a), A();
-            };
-          if (!F.data || !C.data)
-            return (0, n.jsx)("div", {
-              className: y().Loading,
-              children: "Loading hero and item data...",
-            });
-          const H = (function (e, a) {
-            const t = [];
-            for (let n = 0; n < e.length; n += a) t.push(e.slice(n, n + a));
-            return t;
-          })(O, 5);
-          return (0, n.jsx)("div", {
-            className: y().DotaPlusTesterSubPage,
-            children: (0, n.jsxs)("div", {
-              className: y().Content,
-              children: [
-                (0, n.jsxs)("div", {
-                  className: y().HeroList,
-                  children: [
-                    (0, n.jsx)("div", {
-                      className: y().YourHero,
-                      children: (0, n.jsx)(f, {
-                        strLabel: "Your Hero",
-                        nHeroID: r,
-                        fnSetSelectedHero: (e) => ((r = e), void A()),
-                      }),
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: y().Allies,
-                      children: [
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #1",
-                          nHeroID: o[0],
-                          fnSetSelectedHero: (e) => M(0, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #2",
-                          nHeroID: o[1],
-                          fnSetSelectedHero: (e) => M(1, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #3",
-                          nHeroID: o[2],
-                          fnSetSelectedHero: (e) => M(2, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Ally #4",
-                          nHeroID: o[3],
-                          fnSetSelectedHero: (e) => M(3, e),
-                        }),
-                      ],
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: y().Enemies,
-                      children: [
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #1",
-                          nHeroID: d[0],
-                          fnSetSelectedHero: (e) => L(0, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #2",
-                          nHeroID: d[1],
-                          fnSetSelectedHero: (e) => L(1, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #3",
-                          nHeroID: d[2],
-                          fnSetSelectedHero: (e) => L(2, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #4",
-                          nHeroID: d[3],
-                          fnSetSelectedHero: (e) => L(3, e),
-                        }),
-                        (0, n.jsx)(f, {
-                          strLabel: "Enemy #5",
-                          nHeroID: d[4],
-                          fnSetSelectedHero: (e) => L(4, e),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsxs)("div", {
-                  className: y().MiscInfo,
-                  children: [
-                    (0, n.jsx)(k, {
-                      nPosition: i,
-                      fnSetPosition: (e) => {
-                        (i = e), A();
-                      },
-                    }),
-                    (0, n.jsx)(R, {
-                      nGameMode: u,
-                      fnSetGameMode: (e) => {
-                        (u = e), A();
-                      },
-                    }),
-                    (0, n.jsx)(D, {
-                      strMMR: m,
-                      fnSetMMR: (e) => {
-                        (m = e), A();
-                      },
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: y().Option,
-                      children: [
-                        (0, n.jsx)("div", {
-                          className: y().Name,
-                          children: "Repeat Weight",
-                        }),
-                        (0, n.jsxs)("select", {
-                          className: y().WeightSelector,
-                          value: _,
-                          onChange: (e) => {
-                            return (
-                              (a = parseFloat(e.target.value)),
-                              (_ = a),
-                              void A()
-                            );
-                            var a;
-                          },
-                          children: [
-                            (0, n.jsx)("option", { value: 1, children: "1.0" }),
-                            (0, n.jsx)("option", {
-                              value: 0.8,
-                              children: "0.8",
-                            }),
-                            (0, n.jsx)("option", {
-                              value: 0.6,
-                              children: "0.6",
-                            }),
-                            (0, n.jsx)("option", {
-                              value: 0.4,
-                              children: "0.4",
-                            }),
-                            (0, n.jsx)("option", {
-                              value: 0.2,
-                              children: "0.2",
-                            }),
-                            (0, n.jsx)("option", { value: 0, children: "0.0" }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                (0, n.jsxs)("div", {
-                  className: y().IncludExcludeItemOption,
-                  children: [
-                    (0, n.jsx)("div", {
-                      className: y().ItemOptionTitle,
-                      children: "Preferred Items",
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: j[0],
-                      fnSetSelectedItem: (e) => G(0, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: j[1],
-                      fnSetSelectedItem: (e) => G(1, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: j[2],
-                      fnSetSelectedItem: (e) => G(2, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: j[3],
-                      fnSetSelectedItem: (e) => G(3, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                  ],
-                }),
-                (0, n.jsxs)("div", {
-                  className: y().IncludExcludeItemOption,
-                  children: [
-                    (0, n.jsx)("div", {
-                      className: y().ItemOptionTitle,
-                      children: "Disliked Items",
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: g[0],
-                      fnSetSelectedItem: (e) => w(0, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: g[1],
-                      fnSetSelectedItem: (e) => w(1, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: g[2],
-                      fnSetSelectedItem: (e) => w(2, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                    (0, n.jsx)(v, {
-                      nItemID: g[3],
-                      fnSetSelectedItem: (e) => w(3, e),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: T.ITEM_OPTIONS_ALL,
-                    }),
-                  ],
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsx)("div", {
-                  className: y().PurchasedItemList,
-                  children: x.map((e, a) =>
-                    (0, n.jsx)(
-                      "div",
-                      {
-                        onClick: () => {
-                          x.splice(a, 1), x.push(0), A();
-                        },
-                        children: (0, n.jsx)(N, { nItemID: e }),
-                      },
-                      `${a}_${e}`,
-                    ),
-                  ),
-                }),
-                (0, n.jsx)("div", {
-                  className: y().ClearSkilledAbilities,
-                  onClick: () => (
-                    (x = [
-                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    ]),
-                    void A()
-                  ),
-                  children: "Clear",
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsx)("div", {
-                  className: y().Header,
-                  children: "Recommended Build Sequence",
-                }),
-                (0, n.jsx)("div", {
-                  className: y().ItemList,
-                  children: S.map((e, a) =>
-                    (0, n.jsxs)(
-                      "div",
-                      {
-                        className: y().Item,
-                        onClick: () => P(e.nItemID),
-                        children: [
-                          (0, n.jsx)(N, { nItemID: e.nItemID }),
-                          e.fScore > 0 &&
-                            (0, n.jsx)("div", {
-                              className: y().Weight,
-                              children: `${(100 * e.fScore).toFixed(2)}%`,
-                            }),
-                        ],
-                      },
-                      `${e.nItemID}_${a}`,
-                    ),
-                  ),
-                }),
-                (0, n.jsx)("div", { className: y().Separator }),
-                (0, n.jsx)("div", {
-                  className: y().Header,
-                  children: "Next Item Options",
-                }),
-                H.map((e, a) =>
-                  (0, n.jsx)(
-                    "div",
-                    {
-                      className: y().ItemList,
-                      children: e.map((e, a) =>
-                        (0, n.jsxs)(
-                          "div",
-                          {
-                            className: y().Item,
-                            onClick: () => P(e.nItemID),
-                            children: [
-                              (0, n.jsx)(N, { nItemID: e.nItemID }),
-                              e.fScore > 0 &&
-                                (0, n.jsx)("div", {
-                                  className: y().Weight,
-                                  children: `${(100 * e.fScore).toFixed(2)}%`,
+                              children: [
+                                (0, e.jsx)("div", {
+                                  className: r().Icon,
+                                  style: {
+                                    backgroundImage: `url( ${fe.r.IMG_URL}items/${p.name.replace("item_", "")}.png`,
+                                  },
                                 }),
-                            ],
-                          },
-                          `${e.nItemID}_${a}`,
+                                (0, e.jsx)("div", {
+                                  className: r().Name,
+                                  children: (0, Le.Wn)(p.name_loc),
+                                }),
+                              ],
+                            },
+                            p.id,
+                          ),
                         ),
-                      ),
-                    },
-                    `Step_${a}`,
-                  ),
-                ),
-              ],
-            }),
-          });
-        },
-        G = () => {
-          const e = (0, c.W6)(),
-            a = (0, c.g)();
-          let t;
-          switch (a.strFeature) {
-            case C:
-              t = (0, n.jsx)(M, {
-                strFeature: a.strFeature,
-                strConfig: a.strConfig,
-              });
-              break;
-            case O:
-              t = (0, n.jsx)(L, {
-                strFeature: a.strFeature,
-                strConfig: a.strConfig,
-              });
-              break;
-            case F:
-              t = (0, n.jsx)(w, {
-                strFeature: a.strFeature,
-                strConfig: a.strConfig,
-              });
-              break;
-            case b:
-              t = (0, n.jsx)(P, {
-                strFeature: a.strFeature,
-                strConfig: a.strConfig,
-              });
-          }
-          if (null == t) return (0, n.jsx)(c.rd, { to: l.J.dotaplustester(O) });
-          const r = (t) => {
-            e.push(l.J.dotaplustester(t, a.strConfig));
-          };
-          return (0, n.jsxs)("div", {
-            className: y().DotaPlusTesterPage,
-            children: [
-              (0, n.jsx)(_.A, { bOverlapping: !1 }),
-              (0, n.jsxs)("div", {
-                className: y().SelectionHeader,
-                children: [
-                  (0, n.jsx)("div", {
-                    className: (0, h.A)(
-                      y().Option,
-                      a.strFeature == C && y().Selected,
-                    ),
-                    onClick: () => r(C),
-                    children: "Abilities",
-                  }),
-                  (0, n.jsx)("div", {
-                    className: (0, h.A)(
-                      y().Option,
-                      a.strFeature == O && y().Selected,
-                    ),
-                    onClick: () => r(O),
-                    children: "Pregame Items",
-                  }),
-                  (0, n.jsx)("div", {
-                    className: (0, h.A)(
-                      y().Option,
-                      a.strFeature == F && y().Selected,
-                    ),
-                    onClick: () => r(F),
-                    children: "Main Game Items",
-                  }),
-                  (0, n.jsx)("div", {
-                    className: (0, h.A)(
-                      y().Option,
-                      a.strFeature == b && y().Selected,
-                    ),
-                    onClick: () => r(b),
-                    children: "Neutral Items",
-                  }),
-                ],
-              }),
-              t,
-            ],
-          });
-        };
-    },
-    54302: (e, a, t) => {
-      "use strict";
-      t.r(a), t.d(a, { default: () => ye });
-      var n = t(69500),
-        r = t(75749),
-        s = t.n(r),
-        l = t(88351),
-        i = t(7552),
-        o = t(73202),
-        c = t(73681),
-        d = t.n(c),
-        m = t(56902),
-        u = t(71129),
-        h = t(75368),
-        p = t(42783),
-        x = t(21112),
-        _ = t(49590),
-        j = t(71807),
-        y = t(83218),
-        g = t(29421),
-        f = t(89506),
-        A = t(21384),
-        N = t(47202),
-        I = t(36305),
-        T = t(55651),
-        v = t(33706),
-        k = t(89145),
-        S = t(94610);
-      function R(e) {
-        return 570 === e ? "public" : "beta";
-      }
-      function D(e) {
-        switch (e) {
-          case k.Fk.DOTA_GAMEMODE_NONE:
-            return "-";
-          case k.Fk.DOTA_GAMEMODE_AP:
-            return "AP";
-          case k.Fk.DOTA_GAMEMODE_CM:
-            return "CM";
-          case k.Fk.DOTA_GAMEMODE_RD:
-            return "RD";
-          case k.Fk.DOTA_GAMEMODE_SD:
-            return "SD";
-          case k.Fk.DOTA_GAMEMODE_AR:
-            return "AR";
-          case k.Fk.DOTA_GAMEMODE_INTRO:
-            return "INTRO";
-          case k.Fk.DOTA_GAMEMODE_HW:
-            return "OCT31";
-          case k.Fk.DOTA_GAMEMODE_REVERSE_CM:
-            return "Rev CM";
-          case k.Fk.DOTA_GAMEMODE_XMAS:
-            return "XMAS";
-          case k.Fk.DOTA_GAMEMODE_TUTORIAL:
-            return "Tutorial";
-          case k.Fk.DOTA_GAMEMODE_MO:
-            return "MID";
-          case k.Fk.DOTA_GAMEMODE_LP:
-            return "LP";
-          case k.Fk.DOTA_GAMEMODE_POOL1:
-            return "Pool1";
-          case k.Fk.DOTA_GAMEMODE_FH:
-            return "FH";
-          case k.Fk.DOTA_GAMEMODE_CUSTOM:
-            return "CUSTOM";
-          case k.Fk.DOTA_GAMEMODE_CD:
-            return "CD";
-          case k.Fk.DOTA_GAMEMODE_BD:
-            return "BD";
-          case k.Fk.DOTA_GAMEMODE_ABILITY_DRAFT:
-            return "AD";
-          case k.Fk.DOTA_GAMEMODE_EVENT:
-            return "EVENT";
-          case k.Fk.DOTA_GAMEMODE_ARDM:
-            return "ARDM";
-          case k.Fk.DOTA_GAMEMODE_1V1MID:
-            return "1v1";
-          case k.Fk.DOTA_GAMEMODE_ALL_DRAFT:
-            return "AP";
-          case k.Fk.DOTA_GAMEMODE_TURBO:
-            return "TURBO";
-          case k.Fk.DOTA_GAMEMODE_MUTATION:
-            return "MUT";
-          case k.Fk.DOTA_GAMEMODE_COACHES_CHALLENGE:
-            return "COACH";
-          default:
-            return "Unknown";
-        }
-      }
-      function E(e) {
-        switch (e) {
-          case k.AP.CASUAL_MATCH:
-            return "Unranked";
-          case k.AP.PRACTICE:
-            return "Practice";
-          case k.AP.COOP_BOT_MATCH:
-            return "Co-op Bot";
-          case k.AP.COMPETITIVE_MATCH:
-            return "Ranked";
-          case k.AP.WEEKEND_TOURNEY:
-            return "Battle Cup";
-          case k.AP.LOCAL_BOT_MATCH:
-            return "Local Bot";
-          case k.AP.SPECTATOR:
-            return "Spectator";
-          case k.AP.EVENT_MATCH:
-            return "Event";
-          case k.AP.NEW_PLAYER_POOL:
-            return "New Player Pool";
-          case k.AP.FEATURED_GAMEMODE:
-            return "Featured Gamemode";
-          default:
-            return "";
-        }
-      }
-      function O(e) {
-        switch (e) {
-          case k.rM.RADIANT_VICTORY:
-            return "Radiant Victory";
-          case k.rM.DIRE_VICTORY:
-            return "Dire Victory";
-          case k.rM.NOTSCORED_POOR_NETWORK:
-            return "Net";
-          case k.rM.NOTSCORED_LEAVER:
-            return "Lvr";
-          case k.rM.NOTSCORED_SERVER_CRASH:
-            return "Crsh";
-          case k.rM.NOTSCORED_NEVER_STARTED:
-            return "No start";
-          case k.rM.NOTSCORED_CANCELED:
-            return "Cancel";
-          case k.rM.NOTSCORED_SUSPICIOUS:
-            return "Suspicious";
-          default:
-            return "-";
-        }
-      }
-      function b(e) {
-        switch (e) {
-          case k.GR.RANK_ELIGIBLE:
-            return "Rank Eligible";
-          case k.GR.BATTLECUP:
-            return "Battlecup";
-          case k.GR.BAN_WARNING:
-            return "Ban Warning";
-          case k.GR.RETURNING_PLAYER:
-            return "Returning Player";
-          case k.GR.COMMS_DISRUPTIVE:
-            return "Comms Disruptive";
-          default:
-            return "Unknown";
-        }
-      }
-      function F(e) {
-        switch (e) {
-          case k.V7.VERY_LIKELY:
-            return "Very Likely";
-          case k.V7.SOMEWHAT_LIKELY:
-            return "Somewhat Likely";
-          case k.V7.UNCLEAR:
-            return "Unclear";
-          case k.V7.SOMEWHAT_UNLIKELY:
-            return "Somewhat Unlikely";
-          case k.V7.VERY_UNLIKELY:
-            return "Very Unlikely";
-          default:
-            return "Unknown";
-        }
-      }
-      function C(e) {
-        switch (e) {
-          case k.TK.DOTA_ACCESS_TOURNAMENT_ADMIN:
-            return "Tournament Admin";
-          case k.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
-            return "Tournament Broadcaster";
-          default:
-            return "Unknown";
-        }
-      }
-      function M(e) {
-        switch (e) {
-          case k.Ov.CORE:
-            return "Core";
-          case k.Ov.SUPPORT:
-            return "Support";
-          case k.Ov.OFFLANE:
-            return "Offlane";
-          case k.Ov.MID:
-            return "Mid";
-          default:
-            return "Unknown";
-        }
-      }
-      var L = t(70126),
-        P = t(40753),
-        w = t.n(P),
-        G = t(20018);
-      const H = "red",
-        $ = "orange",
-        U = "goldenrod",
-        B = "#adff2f",
-        K = "darkgray",
-        Y = "forestgreen",
-        W = "crimson",
-        V = "#fa002e",
-        J = "#82ca9d",
-        X = "#888fd8",
-        z = "#3389ae",
-        q = "#FFBB28",
-        Q = "#FF8042",
-        Z = (e) => {
-          let a = "";
-          const t = `${f.r.CDN_URL}/apps/dota2/images/`;
-          return (
-            2 == e && (a = `${t}player_reports/button_report_text_on.png`),
-            3 == e && (a = `${t}player_reports/button_report_voice_on.png`),
-            4 == e && (a = `${t}player_reports/smurf_icon.png`),
-            5 == e && (a = `${t}player_reports/disruptive_icon.png`),
-            6 == e && (a = `${t}player_reports/cheating_icon.png`),
-            7 == e &&
-              (a = `${t}player_reports/button_report_pre_game_role.png`),
-            a
-          );
-        },
-        ee = (e) => {
-          let a = "";
-          return (
-            2 == e && (a = "Text abuse"),
-            3 == e && (a = "Voice abuse"),
-            4 == e && (a = "Smurfing"),
-            5 == e && (a = "Griefing"),
-            6 == e && (a = "Cheating"),
-            7 == e && (a = "Did not play role"),
-            a
-          );
-        },
-        ae = [
-          { key: "accountid", displayName: "Account ID" },
-          {
-            key: "guilds",
-            secondaryKey: "dotaguildurl",
-            displayName: "Guild",
-            formatFunction: (e = {}, a = "") => {
-              const t = `${a}${e?.guild?.guild_id}`,
-                r = e?.guild?.guild_name || "";
-              return r && a
-                ? (0, n.jsx)(i.Fragment, {
-                    children: (0, n.jsx)("a", {
-                      href: t,
-                      target: "_blank",
-                      rel: "noopener",
-                      children: r,
-                    }),
-                  })
-                : (0, n.jsx)("span", {
-                    style: { color: K },
-                    children: "No Guild",
-                  });
-            },
-          },
-        ],
-        te = [
-          {
-            key: "comprank",
-            secondaryKey: "comprankuncertainty",
-            tertiaryKey: "compranktier",
-            displayName: "Ranked",
-            formatFunction: (e, a, t = 0) =>
-              (0, n.jsxs)(i.Fragment, {
-                children: [
-                  (0, n.jsx)("span", {
-                    className: w().RankNumber,
-                    children: `${e}`,
-                  }),
-                  (0, n.jsxs)("span", {
-                    className: w().RankedUncertainty,
-                    children: [
-                      `+/- ${a}`,
-                      (0, n.jsx)("img", {
-                        className: w().RankedBadgeIcon,
-                        src: `${f.r.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(t / 10)}.png`,
-                      }),
                     ],
                   }),
                 ],
               }),
+            });
+          };
+        var Ue = ((i) => (
+          (i[(i.ITEM_OPTIONS_ALL = 1)] = "ITEM_OPTIONS_ALL"),
+          (i[(i.ITEM_OPTIONS_EARLY = 2)] = "ITEM_OPTIONS_EARLY"),
+          (i[(i.ITEM_OPTIONS_LATE = 3)] = "ITEM_OPTIONS_LATE"),
+          (i[(i.ITEM_OPTIONS_EARLY_LATE = 4)] = "ITEM_OPTIONS_EARLY_LATE"),
+          (i[(i.ITEM_OPTIONS_NOT_EARLY_LATE = 5)] =
+            "ITEM_OPTIONS_NOT_EARLY_LATE"),
+          (i[(i.ITEM_OPTIONS_CUSTOM = 6)] = "ITEM_OPTIONS_CUSTOM"),
+          i
+        ))(Ue || {});
+        const ee = (i) => {
+            const [h, S] = j.useState(!1),
+              E = (0, R.mU)(i.nItemID),
+              C = (0, w.R7)().ownerWindow,
+              s = (L) => {
+                S(!1), L != -1 && i.fnSetSelectedItem(L);
+              },
+              p = E.data,
+              f = C.document?.body;
+            return (0, e.jsxs)("div", {
+              className: r().ItemOption,
+              children: [
+                (0, e.jsx)("div", {
+                  className: r().Name,
+                  children: i.bShowName ? (0, Le.Wn)(p?.name_loc) : i.strLabel,
+                }),
+                (0, e.jsx)("div", {
+                  className: r().Icon,
+                  style: {
+                    backgroundImage: `url( ${fe.r.IMG_URL}items/${p?.name?.replace("item_", "")}.png`,
+                  },
+                  onClick: () => S(!0),
+                }),
+                h &&
+                  x.createPortal(
+                    (0, e.jsx)(Ve, {
+                      fnSetSelectedItem: s,
+                      bAllowEmpty: i.bAllowEmpty,
+                      eItemFilter: i.eItemFilter,
+                      fnCustomFilter: i.fnCustomFilter,
+                    }),
+                    f,
+                  ),
+              ],
+            });
           },
-          {
-            key: "rank",
-            secondaryKey: "rankuncertainty",
-            displayName: "Unranked",
-            formatFunction: (e, a) =>
-              (0, n.jsxs)(i.Fragment, {
+          o = (i) =>
+            (0, e.jsxs)("div", {
+              className: r().Option,
+              children: [
+                (0, e.jsx)("div", {
+                  className: r().Name,
+                  children: "Position",
+                }),
+                (0, e.jsxs)("select", {
+                  className: r().PositionSelector,
+                  value: i.nPosition,
+                  onChange: (h) => i.fnSetPosition(parseInt(h.target.value)),
+                  children: [
+                    (0, e.jsx)("option", { value: 1, children: "Safe" }),
+                    (0, e.jsx)("option", { value: 2, children: "Off" }),
+                    (0, e.jsx)("option", { value: 4, children: "Mid" }),
+                    (0, e.jsx)("option", { value: 8, children: "Support" }),
+                    (0, e.jsx)("option", {
+                      value: 16,
+                      children: "Hard Support",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          Je = (i) =>
+            (0, e.jsxs)("div", {
+              className: r().Option,
+              children: [
+                (0, e.jsx)("div", { className: r().Name, children: "Tier" }),
+                (0, e.jsxs)("select", {
+                  className: r().TierSelector,
+                  value: i.nTier,
+                  onChange: (h) => i.fnSetTier(parseInt(h.target.value)),
+                  children: [
+                    (0, e.jsx)("option", { value: 0, children: "Tier 1" }),
+                    (0, e.jsx)("option", { value: 1, children: "Tier 2" }),
+                    (0, e.jsx)("option", { value: 2, children: "Tier 3" }),
+                    (0, e.jsx)("option", { value: 3, children: "Tier 4" }),
+                    (0, e.jsx)("option", { value: 4, children: "Tier 5" }),
+                  ],
+                }),
+              ],
+            }),
+          qe = (i) =>
+            jsxs("div", {
+              className: styles.Option,
+              children: [
+                jsx("div", { className: styles.Name, children: "Lane" }),
+                jsxs("select", {
+                  className: styles.LaneSelector,
+                  value: i.nLane,
+                  onChange: (h) => i.fnSetLane(parseInt(h.target.value)),
+                  children: [
+                    jsx("option", { value: 1, children: "Safe" }),
+                    jsx("option", { value: 2, children: "Off" }),
+                    jsx("option", { value: 3, children: "Mid" }),
+                  ],
+                }),
+              ],
+            }),
+          we = (i) =>
+            (0, e.jsxs)("div", {
+              className: r().Option,
+              children: [
+                (0, e.jsx)("div", {
+                  className: r().Name,
+                  children: "Game Mode",
+                }),
+                (0, e.jsxs)("select", {
+                  className: r().GameModeSelector,
+                  value: i.nGameMode,
+                  onChange: (h) => i.fnSetGameMode(parseInt(h.target.value)),
+                  children: [
+                    (0, e.jsx)("option", { value: 22, children: "All Draft" }),
+                    (0, e.jsx)("option", { value: 1, children: "All Pick" }),
+                    (0, e.jsx)("option", { value: 23, children: "Turbo" }),
+                    (0, e.jsx)("option", {
+                      value: 2,
+                      children: "Captains Mode",
+                    }),
+                    (0, e.jsx)("option", {
+                      value: 16,
+                      children: "Captains Draft",
+                    }),
+                    (0, e.jsx)("option", {
+                      value: 4,
+                      children: "Single Draft",
+                    }),
+                    (0, e.jsx)("option", { value: 13, children: "Hero Pool" }),
+                  ],
+                }),
+              ],
+            }),
+          De = (i) => {
+            const [h, S] = j.useState(i.strMMR);
+            return (
+              j.useEffect(() => {
+                if (i.strMMR == h) return () => {};
+                const E = setTimeout(() => i.fnSetMMR(h), 400);
+                return () => clearTimeout(E);
+              }, [i, h]),
+              (0, e.jsxs)("div", {
+                className: r().Option,
                 children: [
-                  (0, n.jsx)("span", {
-                    className: w().RankNumber,
-                    children: `${e}`,
+                  (0, e.jsx)("div", { className: r().Name, children: "MMR" }),
+                  (0, e.jsx)("input", {
+                    type: "text",
+                    className: r().AverageMMRInput,
+                    value: h,
+                    onChange: (E) => S(E.target.value),
                   }),
-                  (0, n.jsx)("span", { children: `+/- ${a}` }),
                 ],
-              }),
-          },
-        ],
-        ne = [
-          {
-            key: "accountflags",
-            displayName: "Account Flags",
-            formatFunction: (e) => {
-              const a = "; ";
-              let t = [];
-              return (
-                0 == e && t.push("None"),
-                (e & k.GR.RANK_ELIGIBLE) > 0 &&
-                  t.push(`${b(k.GR.RANK_ELIGIBLE)}${a}`),
-                (e & k.GR.BATTLECUP) > 0 && t.push(`${b(k.GR.BATTLECUP)}${a}`),
-                (e & k.GR.BAN_WARNING) > 0 &&
-                  t.push(
-                    (0, n.jsx)("span", {
-                      style: { color: H },
-                      children: `${b(k.GR.BAN_WARNING)}${a}`,
-                    }),
-                  ),
-                (e & k.GR.RETURNING_PLAYER) > 0 &&
-                  t.push(
-                    (0, n.jsx)("span", {
-                      style: { color: U },
-                      children: `${b(k.GR.RETURNING_PLAYER)}${a}`,
-                    }),
-                  ),
-                (e & k.GR.COMMS_DISRUPTIVE) > 0 &&
-                  t.push(
-                    (0, n.jsx)("span", {
-                      style: { color: H },
-                      children: `${b(k.GR.COMMS_DISRUPTIVE)}${a}`,
-                    }),
-                  ),
-                (0, n.jsx)("div", { children: t })
-              );
-            },
-          },
-          {
-            key: "behavscore",
-            secondaryKey: "commscore",
-            tertiaryKey: "trustscore",
-            displayName: "Behav, Comms, Trust",
-            formatFunction: (e = 8e3, a = -1, t = -1) => {
-              let r = B;
-              e < 0
-                ? (r = B)
-                : e <= 2e3
-                  ? (r = H)
-                  : e <= 4e3
-                    ? (r = $)
-                    : e <= 6e3 && (r = U);
-              let s = B;
-              return (
-                a < 0
-                  ? (s = B)
-                  : a <= 2e3
-                    ? (s = H)
-                    : a <= 4e3
-                      ? (s = $)
-                      : a <= 6e3 && (s = U),
-                (0, n.jsxs)("div", {
+              })
+            );
+          };
+        function Se(i) {
+          const h = new URLSearchParams();
+          return (
+            Object.keys(i).forEach((S) => {
+              Array.isArray(i[S])
+                ? h.append(S, i[S].join(","))
+                : h.append(S, i[S]);
+            }),
+            h.toString()
+          );
+        }
+        const $e = "pregameitems",
+          je = "neutralitems",
+          ue = "maingameitemsequence",
+          le = "abilities",
+          Qe = () => {
+            const i = (0, oe.W6)(),
+              h = (0, oe.g)();
+            let S;
+            switch (h.strFeature) {
+              case le:
+                S = (0, e.jsx)(Fe, {
+                  strFeature: h.strFeature,
+                  strConfig: h.strConfig,
+                });
+                break;
+              case $e:
+                S = (0, e.jsx)(ie, {
+                  strFeature: h.strFeature,
+                  strConfig: h.strConfig,
+                });
+                break;
+              case ue:
+                S = (0, e.jsx)(Xe, {
+                  strFeature: h.strFeature,
+                  strConfig: h.strConfig,
+                });
+                break;
+              case je:
+                S = (0, e.jsx)(d, {
+                  strFeature: h.strFeature,
+                  strConfig: h.strConfig,
+                });
+                break;
+            }
+            if (S == null)
+              return (0, e.jsx)(oe.rd, { to: I.J.dotaplustester($e) });
+            const E = (C) => {
+              i.push(I.J.dotaplustester(C, h.strConfig));
+            };
+            return (0, e.jsxs)("div", {
+              className: r().DotaPlusTesterPage,
+              children: [
+                (0, e.jsx)(D.A, { bOverlapping: !1 }),
+                (0, e.jsxs)("div", {
+                  className: r().SelectionHeader,
                   children: [
-                    (0, n.jsx)("span", {
-                      style: { color: r },
-                      children: `${e}, `,
+                    (0, e.jsx)("div", {
+                      className: (0, Ce.A)(
+                        r().Option,
+                        h.strFeature == le && r().Selected,
+                      ),
+                      onClick: () => E(le),
+                      children: "Abilities",
                     }),
-                    (0, n.jsx)("span", {
-                      style: { color: s },
-                      children: `${a}, `,
+                    (0, e.jsx)("div", {
+                      className: (0, Ce.A)(
+                        r().Option,
+                        h.strFeature == $e && r().Selected,
+                      ),
+                      onClick: () => E($e),
+                      children: "Pregame Items",
                     }),
-                    (0, n.jsx)("span", {
-                      style: { color: B },
-                      children: `${t}`,
+                    (0, e.jsx)("div", {
+                      className: (0, Ce.A)(
+                        r().Option,
+                        h.strFeature == ue && r().Selected,
+                      ),
+                      onClick: () => E(ue),
+                      children: "Main Game Items",
+                    }),
+                    (0, e.jsx)("div", {
+                      className: (0, Ce.A)(
+                        r().Option,
+                        h.strFeature == je && r().Selected,
+                      ),
+                      onClick: () => E(je),
+                      children: "Neutral Items",
                     }),
                   ],
-                })
-              );
-            },
+                }),
+                S,
+              ],
+            });
           },
-          {
-            key: "steamaccountlink",
-            displayName: "Steam Account 64",
-            formatFunction: (e) =>
-              e
-                ? (0, n.jsx)(i.Fragment, {
-                    children: (0, n.jsx)("a", {
-                      href: e,
-                      target: "_blank",
-                      rel: "noopener",
-                      children: e.split("/").pop(),
-                    }),
-                  })
-                : "",
-          },
-          {
-            key: "history",
-            secondaryKey: "steamsupporthwidbaseurl",
-            displayName: "Most Recent HWID",
-            formatFunction: (e = {}, a) => {
-              if (
-                !Object.keys(e).length ||
-                !e.matches ||
-                !Object.keys(e.matches).length
+          Fe = (i) => {
+            const h = new URLSearchParams(i.strConfig),
+              S = (0, oe.W6)();
+            let E = parseInt(h.get("nHeroID") || "0"),
+              C = parseInt(h.get("nPosition") || "0"),
+              s = (h.get("arrAlliedHeroIDs") || "0,0,0,0")
+                .split(",")
+                .map(Number),
+              p = (h.get("arrEnemyHeroIDs") || "0,0,0,0,0")
+                .split(",")
+                .map(Number),
+              f = (
+                h.get("arrSkilledAbilities") ||
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
               )
-                return "";
-              let t = "";
-              for (let a = Object.keys(e.matches).length - 1; a >= 0; a--)
-                if (e.matches[a]?.searchdata?.hwid) {
-                  t = e.matches[a]?.searchdata.hwid;
-                  break;
-                }
-              return t
-                ? (0, n.jsx)(i.Fragment, {
-                    children: (0, n.jsx)("a", {
-                      href: `${a}${t}`,
-                      target: "_blank",
-                      rel: "noopener",
-                      children: t,
-                    }),
-                  })
-                : "";
-            },
-          },
-          {
-            key: "personalink",
-            displayName: "Persona V1",
-            formatFunction: (e) =>
-              e
-                ? (0, n.jsx)(i.Fragment, {
-                    children: (0, n.jsx)("a", {
-                      href: e,
-                      target: "_blank",
-                      rel: "noopener",
-                      children: "Persona V1",
-                    }),
-                  })
-                : "",
-          },
-        ],
-        re = [
-          {
-            key: "smurfcategory",
-            displayName: "Smurf Category",
-            formatFunction: (e) => {
-              switch (e) {
-                case k.V7.VERY_LIKELY:
-                  return (0, n.jsx)("span", {
-                    style: { color: H },
-                    children: F(k.V7.VERY_LIKELY),
-                  });
-                case k.V7.SOMEWHAT_LIKELY:
-                  return (0, n.jsx)("span", {
-                    style: { color: $ },
-                    children: F(k.V7.SOMEWHAT_LIKELY),
-                  });
-                case k.V7.UNCLEAR:
-                  return (0, n.jsx)("span", {
-                    style: { color: U },
-                    children: F(k.V7.UNCLEAR),
-                  });
-                case k.V7.SOMEWHAT_UNLIKELY:
-                  return (0, n.jsx)("span", {
-                    style: {},
-                    children: F(k.V7.SOMEWHAT_UNLIKELY),
-                  });
-                case k.V7.VERY_UNLIKELY:
-                  return (0, n.jsx)("span", {
-                    style: {},
-                    children: F(k.V7.VERY_UNLIKELY),
-                  });
-                default:
-                  return (0, n.jsx)("span", { children: F(k.V7.INVALID) });
-              }
-            },
-          },
-          {
-            key: "plussubscriber",
-            displayName: "Plus Subscriber",
-            formatFunction: (e = 0) =>
-              e
-                ? (0, n.jsx)("div", { style: { color: B }, children: "YES" })
-                : "NO",
-          },
-          {
-            key: "wins",
-            secondaryKey: "losses",
-            displayName: "Total Games Played",
-            formatFunction: (e, a) =>
-              (0, n.jsx)("div", { children: e + a || 0 }),
-          },
-          {
-            key: "wins",
-            secondaryKey: "losses",
-            displayName: "Win Rate",
-            formatFunction: (e, a) => {
-              const t = e + a || 0;
-              if (!t) return (0, n.jsx)("div", { children: "" });
-              const r = Math.round((e / t) * 1e4) / 100;
-              let s = "none";
-              return (
-                r >= 70 || r <= 30 ? (s = $) : (r >= 60 || r <= 40) && (s = U),
-                (0, n.jsxs)(i.Fragment, {
-                  children: [
-                    (0, n.jsxs)("span", {
-                      className: w().MarginRightSmall,
-                      children: [
-                        (0, n.jsx)("span", {
-                          style: { color: Y },
-                          children: `${e}`,
+                .split(",")
+                .map(Number),
+              L = h.get("nAverageMMR") || "2000",
+              k = parseInt(h.get("nGameMode") || "22");
+            const H = () => {
+                const _ = {
+                  nHeroID: E,
+                  nPosition: C,
+                  arrAlliedHeroIDs: s,
+                  arrEnemyHeroIDs: p,
+                  nAverageMMR: parseInt(L),
+                  nGameMode: k,
+                  arrSkilledAbilities: f,
+                };
+                S.push(I.J.dotaplustester(i.strFeature, Se(_)));
+              },
+              F = (_) => {
+                console.log("1"), (E = _), H();
+              },
+              te = (_) => {
+                console.log("3"), (C = _), H();
+              },
+              Y = (_, W) => {
+                console.log("4"), (s[_] = W), H();
+              },
+              b = (_, W) => {
+                console.log("6"), (p[_] = W), H();
+              },
+              U = (_) => {
+                console.log("8"), (L = _), H();
+              },
+              J = (_) => {
+                console.log("9"), (k = _), H();
+              },
+              ae = (_) => {
+                console.log("10"), (f[f.indexOf(0)] = _), H();
+              },
+              se = () => {
+                console.log("11"),
+                  (f = [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  ]),
+                  H();
+              },
+              Z = (0, R.k4)(E, C, s, p, parseInt(L), k, !0, f).data;
+            let v = [];
+            if (Z && Z.backend_response.outputs.length > 0)
+              for (
+                let _ = 0;
+                _ <
+                Z.backend_response.outputs[0].categorical_crossentropy.value
+                  .length;
+                _++
+              )
+                v.push({
+                  nAbilityID:
+                    Z.backend_response.outputs[0].categorical_crossentropy
+                      .value[_],
+                  fWeight:
+                    Z.backend_response.outputs[0].categorical_crossentropy
+                      .weight[_],
+                });
+            return (0, e.jsx)("div", {
+              className: r().DotaPlusTesterSubPage,
+              children: (0, e.jsxs)("div", {
+                className: r().Content,
+                children: [
+                  (0, e.jsxs)("div", {
+                    className: r().HeroList,
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: r().YourHero,
+                        children: (0, e.jsx)(T, {
+                          strLabel: "Your Hero",
+                          nHeroID: E,
+                          fnSetSelectedHero: (_) => F(_),
                         }),
-                        (0, n.jsx)("span", { children: " - " }),
-                        (0, n.jsx)("span", {
-                          style: { color: W },
-                          children: `${a}`,
-                        }),
-                      ],
-                    }),
-                    (0, n.jsx)("span", {
-                      style: { color: s },
-                      children: `(${r}%)`,
-                    }),
-                  ],
-                })
-              );
-            },
-          },
-          {
-            key: "recentwincount",
-            secondaryKey: "recentlosscount",
-            displayName: "Win Rate (Recent)",
-            formatFunction: (e, a) => {
-              const t = e + a || 0;
-              if (!t) return (0, n.jsx)("div", { children: "" });
-              const r = Math.round((e / t) * 1e4) / 100;
-              let s = "none";
-              return (
-                r >= 70 || r <= 30 ? (s = $) : (r >= 60 || r <= 40) && (s = U),
-                (0, n.jsxs)(i.Fragment, {
-                  children: [
-                    (0, n.jsxs)("span", {
-                      className: w().MarginRightSmall,
-                      children: [
-                        (0, n.jsx)("span", {
-                          style: { color: Y },
-                          children: `${e}`,
-                        }),
-                        (0, n.jsx)("span", { children: " - " }),
-                        (0, n.jsx)("span", {
-                          style: { color: W },
-                          children: `${a}`,
-                        }),
-                      ],
-                    }),
-                    (0, n.jsx)("span", {
-                      style: { color: s },
-                      children: `(${r}%)`,
-                    }),
-                  ],
-                })
-              );
-            },
-          },
-          {
-            key: "overperformancehistory",
-            displayName: "Overperformance History",
-            formatFunction: (e = 0) => {
-              let a = 0;
-              (a = e - ((e >> 1) & 1431655765)),
-                (a = ((a >> 2) & 858993459) + (858993459 & a)),
-                (a = ((a >> 4) + a) & 252645135),
-                (a = ((a >> 8) + a) & 16711935),
-                (a = ((a >> 16) + a) & 65535);
-              let t = B;
-              return (
-                a > 20 ? (t = H) : a > 10 ? (t = $) : a > 5 && (t = U),
-                (0, n.jsx)("span", {
-                  style: { color: t },
-                  children: `${a} / 32 games`,
-                })
-              );
-            },
-          },
-        ],
-        se = [
-          {
-            key: "details",
-            displayName: " ",
-            formatFunction: (e = {}) => {
-              const a = [];
-              for (let t in e) {
-                const r = Object.entries(e[t]).reverse();
-                r.sort((e, a) => (e[1] > a[1] ? -1 : 1));
-                const s = r.length
-                  ? r.reduce((e, a) => e + Number(a[1]), 0)
-                  : 0;
-                if (s)
-                  for (let e = 0; e < Math.min(r.length, 2); e++) {
-                    const l =
-                        !!r[e][0] && /<\/?[a-z][\s\S]*>/i.test("" + r[e][0]),
-                      o = "string" == typeof r[e][0] ? r[e][0] : "";
-                    a.push(
-                      (0, n.jsxs)(
-                        i.Fragment,
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: r().Allies,
+                        children: [
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #1",
+                            nHeroID: s[0],
+                            fnSetSelectedHero: (_) => Y(0, _),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #2",
+                            nHeroID: s[1],
+                            fnSetSelectedHero: (_) => Y(1, _),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #3",
+                            nHeroID: s[2],
+                            fnSetSelectedHero: (_) => Y(2, _),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #4",
+                            nHeroID: s[3],
+                            fnSetSelectedHero: (_) => Y(3, _),
+                          }),
+                        ],
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: r().Enemies,
+                        children: [
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #1",
+                            nHeroID: p[0],
+                            fnSetSelectedHero: (_) => b(0, _),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #2",
+                            nHeroID: p[1],
+                            fnSetSelectedHero: (_) => b(1, _),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #3",
+                            nHeroID: p[2],
+                            fnSetSelectedHero: (_) => b(2, _),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #4",
+                            nHeroID: p[3],
+                            fnSetSelectedHero: (_) => b(3, _),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #5",
+                            nHeroID: p[4],
+                            fnSetSelectedHero: (_) => b(4, _),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsxs)("div", {
+                    className: r().MiscInfo,
+                    children: [
+                      (0, e.jsx)(o, { nPosition: C, fnSetPosition: te }),
+                      (0, e.jsx)(we, { nGameMode: k, fnSetGameMode: J }),
+                      (0, e.jsx)(De, { strMMR: L, fnSetMMR: U }),
+                    ],
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsx)("div", {
+                    className: r().Level,
+                    children: `Level ${f.indexOf(0) + 1} `,
+                  }),
+                  (0, e.jsx)("div", {
+                    className: r().SkilledAbilityList,
+                    children: f.map((_, W) =>
+                      (0, e.jsx)(ne, { nAbilityID: _ }, `${W}_${_}`),
+                    ),
+                  }),
+                  (0, e.jsx)("div", {
+                    className: r().ClearSkilledAbilities,
+                    onClick: () => se(),
+                    children: "Clear",
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsx)("div", {
+                    className: r().AbilitySuggestions,
+                    children: v.map((_) =>
+                      (0, e.jsxs)(
+                        "div",
                         {
+                          className: r().Ability,
+                          onClick: () => ae(_.nAbilityID),
                           children: [
-                            (0, n.jsx)("div", {
-                              className: w().TextCapitalize,
-                              children: `${0 == e ? t.replace(/_/g, " ") : ""}`,
+                            (0, e.jsx)(ne, { nAbilityID: _.nAbilityID }),
+                            (0, e.jsx)("div", {
+                              className: r().ID,
+                              children: _.nAbilityID,
                             }),
-                            l &&
-                              (0, n.jsx)("div", {
-                                dangerouslySetInnerHTML: { __html: o },
-                              }),
-                            !l && (0, n.jsx)("div", { children: `${r[e][0]}` }),
-                            (0, n.jsx)("div", {
-                              style: { color: K },
-                              children: `(${r[e][1]} / ${s})`,
+                            (0, e.jsx)("div", {
+                              className: r().Weight,
+                              children: `${(_.fWeight * 100).toFixed(2)}%`,
                             }),
                           ],
                         },
-                        `${t}-${e}`,
+                        _.nAbilityID,
                       ),
-                    );
-                  }
-                else
-                  a.push(
-                    (0, n.jsxs)(
-                      i.Fragment,
-                      {
-                        children: [
-                          (0, n.jsx)("div", {
-                            className: w().TextCapitalize,
-                            children: t.replace(/_/g, " "),
-                          }),
-                          (0, n.jsx)("div", {}),
-                          (0, n.jsx)("div", {}),
-                        ],
-                      },
-                      t,
-                    ),
-                  );
-              }
-              return a;
-            },
-          },
-        ],
-        le = [
-          {
-            key: "reportslink",
-            displayName: "Reports",
-            formatFunction: (e) =>
-              e
-                ? (0, n.jsx)(i.Fragment, {
-                    children: (0, n.jsx)("a", {
-                      href: e,
-                      target: "_blank",
-                      rel: "noopener",
-                      children: "Reports",
-                    }),
-                  })
-                : "",
-          },
-          {
-            key: "associateslink",
-            displayName: "Associates",
-            formatFunction: (e) =>
-              e
-                ? (0, n.jsx)(i.Fragment, {
-                    children: (0, n.jsx)("a", {
-                      href: e,
-                      target: "_blank",
-                      rel: "noopener",
-                      children: "Associates",
-                    }),
-                  })
-                : "",
-          },
-        ],
-        ie = [
-          {
-            key: "beta_access_flags",
-            displayName: C(k.TK.DOTA_ACCESS_TOURNAMENT_ADMIN),
-            formatFunction: (e = 0) =>
-              e & k.TK.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? (0, n.jsx)("div", { style: { color: B }, children: "YES" })
-                : "NO",
-          },
-          {
-            key: "beta_access_flags",
-            displayName: C(k.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
-            formatFunction: (e = 0) =>
-              e & k.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? (0, n.jsx)("div", { style: { color: B }, children: "YES" })
-                : "NO",
-          },
-        ],
-        oe = [
-          {
-            key: "vac",
-            displayName: " ",
-            formatFunction: (e = {}) => {
-              const a = [];
-              for (let t in e) {
-                const r = e[t];
-                a.push(
-                  (0, n.jsxs)(
-                    i.Fragment,
-                    {
-                      children: [
-                        (0, n.jsx)("div", {
-                          className: w().TextCapitalize,
-                          children: `VAC ${t.replace(/_/g, " ")}`,
-                        }),
-                        (0, n.jsx)("div", { children: r }),
-                      ],
-                    },
-                    t,
-                  ),
-                );
-              }
-              return a;
-            },
-          },
-        ],
-        ce = [
-          { key: "name", displayName: "Name" },
-          { key: "real_name", displayName: "Real Name" },
-          {
-            key: "role",
-            displayName: "Role",
-            formatFunction: (e = 0) => {
-              switch (e) {
-                case k.Ov.CORE:
-                  return M(k.Ov.CORE);
-                case k.Ov.SUPPORT:
-                  return M(k.Ov.SUPPORT);
-                case k.Ov.OFFLANE:
-                  return M(k.Ov.OFFLANE);
-                case k.Ov.MID:
-                  return M(k.Ov.MID);
-                default:
-                  return "Unknown";
-              }
-            },
-          },
-          {
-            key: "team",
-            secondaryKey: "dotateamurl",
-            displayName: "Team ID",
-            formatFunction: (e = 0, a = "") => {
-              if (!e || !a) return "";
-              const t = `${a}${e}`;
-              return (0, n.jsx)(i.Fragment, {
-                children: (0, n.jsx)("a", {
-                  href: t,
-                  target: "_blank",
-                  rel: "noopener",
-                  children: e,
-                }),
-              });
-            },
-          },
-          {
-            key: "country",
-            displayName: "Country",
-            formatFunction: (e) =>
-              (0, n.jsx)("span", { className: w().TextUppercase, children: e }),
-          },
-          { key: "sponsor", displayName: "Sponsor" },
-          {
-            key: "pro",
-            displayName: "Is Pro Team?",
-            formatFunction: (e) => (e ? "YES" : "NO"),
-          },
-          {
-            key: "locked",
-            displayName: "Is Locked?",
-            formatFunction: (e) => (e ? "YES" : "NO"),
-          },
-        ],
-        de = [
-          {
-            key: "teams",
-            secondaryKey: "dotateamurl",
-            displayName: " ",
-            formatFunction: (e = {}, a = "") => {
-              const t = [];
-              for (let r in e) {
-                const s = e[r],
-                  l = s.team_id,
-                  o = `${a}${l}`,
-                  c = s.team_name,
-                  d = s.team_tag;
-                t.push(
-                  (0, n.jsxs)(
-                    i.Fragment,
-                    {
-                      children: [
-                        (0, n.jsxs)("div", {
-                          children: [
-                            `${c} `,
-                            (0, n.jsx)("span", {
-                              style: { color: K },
-                              children: `[${d}]`,
-                            }),
-                          ],
-                        }),
-                        (0, n.jsx)("a", {
-                          href: o,
-                          target: "_blank",
-                          rel: "noopener",
-                          children: l,
-                        }),
-                      ],
-                    },
-                    l,
-                  ),
-                );
-              }
-              return t;
-            },
-          },
-        ],
-        me = [
-          {
-            key: "eventpoints",
-            displayName: " ",
-            formatFunction: (e = {}) => {
-              const a = e?.result,
-                t = a?.points || [],
-                r = [];
-              for (let a of t) {
-                const t = a.event_id,
-                  s = e[t]?.event_name,
-                  l = e[t]?.points_per_level || 1e3,
-                  o = Math.floor(a.event_points / l);
-                r.unshift(
-                  (0, n.jsxs)(
-                    i.Fragment,
-                    {
-                      children: [
-                        (0, n.jsx)("div", { children: s }),
-                        (0, n.jsx)("div", { children: o }),
-                      ],
-                    },
-                    s,
-                  ),
-                );
-              }
-              return r;
-            },
-          },
-        ],
-        ue = () =>
-          (0, n.jsxs)(i.Fragment, {
-            children: [
-              (0, n.jsx)("span", { style: { color: $ }, children: "YES" }),
-              (0, n.jsx)("span", { children: " (check V1 Link for details)" }),
-            ],
-          }),
-        he = [
-          {
-            key: "exploiter_data",
-            displayName: "Exploiter Warnings?",
-            formatFunction: ue,
-          },
-          {
-            key: "smurf_data",
-            displayName: "Smurf Warnings?",
-            formatFunction: ue,
-          },
-          {
-            key: "cheater_data",
-            displayName: "Cheater Warnings?",
-            formatFunction: ue,
-          },
-          {
-            key: "booster_data",
-            displayName: "Booster Warnings?",
-            formatFunction: ue,
-          },
-          {
-            key: "known_mmr_exploiter",
-            displayName: "Known Hacker / Exploiter?",
-            formatFunction: ue,
-          },
-          {
-            key: "delayedbans",
-            displayName: "Delayed Bans?",
-            formatFunction: ue,
-          },
-        ],
-        pe = (e) =>
-          (0, n.jsx)(i.Fragment, {
-            children: (0, n.jsx)("span", {
-              style: { color: H },
-              children: d()(1e3 * e).format("MMMM Do YYYY, h:mm:ss a"),
-            }),
-          }),
-        xe = [
-          {
-            key: "matchdisableduntil",
-            displayName: "MM Disabled Until",
-            formatFunction: pe,
-          },
-          {
-            key: "rankeddisableduntil",
-            displayName: "Ranked Disabled Until",
-            formatFunction: pe,
-          },
-          {
-            key: "preventvoiceuntil",
-            displayName: "Voice Disabled Until",
-            formatFunction: pe,
-          },
-          {
-            key: "preventpublictextchatuntil",
-            displayName: "Public Text Chat Disabled Until",
-            formatFunction: pe,
-          },
-        ],
-        _e = (e) => {
-          if (!e || !e.length) return "(No Bans)";
-          e = e.slice(0, 5);
-          return e.map((e) => {
-            const a = "Admin Permanent" == e.bantype;
-            return (0, n.jsxs)(
-              "tr",
-              {
-                style: { color: a ? H : "" },
-                children: [
-                  (0, n.jsx)("td", { children: e.bantype }),
-                  (0, n.jsx)("td", {
-                    children: d()(1e3 * e.starttime).format(
-                      "MMMM Do YYYY, h:mm:ss a",
                     ),
                   }),
-                  (0, n.jsx)("td", {
-                    children: d()(1e3 * (e.starttime + e.duration)).format(
-                      "MMMM Do YYYY, h:mm:ss a",
-                    ),
-                  }),
-                  (0, n.jsx)("td", {
-                    children: a
-                      ? "Permanent"
-                      : ((t = e.duration),
-                        t
-                          ? t < 60
-                            ? `${d().duration(t, "seconds").asSeconds()} seconds`
-                            : t < 3600
-                              ? `${d().duration(t, "seconds").asMinutes()} min`
-                              : t < 864e3
-                                ? `${d().duration(t, "seconds").asHours()} hours`
-                                : `${d().duration(t, "seconds").asDays()} days`
-                          : ""),
-                  }),
-                  (0, n.jsx)("td", {
-                    children: e.admin ? "ADMIN" : "Automated",
-                  }),
-                  (0, n.jsx)("td", { children: e.comment }),
                 ],
-              },
-              `${e.bantype} - ${e.starttime}`,
-            );
-            var t;
-          });
-        },
-        je = (e) => {
-          const a = (0, l.g)(),
-            t = a?.id,
-            [r, c] = (0, i.useState)(null),
-            [b, F] = (0, i.useState)(null),
-            [C, M] = (0, i.useState)(null),
-            [P, B] = (0, i.useState)(null),
-            [ue, pe] = (0, i.useState)(!1),
-            [je, ye] = (0, i.useState)(!1),
-            [ge, fe] = (0, i.useState)(!1),
-            [Ae, Ne] = (0, i.useState)(!1),
-            [Ie, Te] = (0, i.useState)(!0),
-            [ve, ke] = (0, i.useState)(!0),
-            [Se, Re] = (0, i.useState)(!1),
-            [De, Ee] = (0, i.useState)(!0),
-            [Oe, be] = (0, i.useState)(!0),
-            [Fe, Ce] = (0, i.useState)(!1),
-            Me = v.B5.Get().getHeroList(),
-            Le = v.B5.Get().getItemList();
-          (0, i.useEffect)(() => {
-            try {
-              !(async function () {
-                if (!f.r.DOTA_APP_ID || !t) return;
-                Ne(!1), fe(!1), pe(!1), ye(!1);
-                const e = {
-                  appid: f.r.DOTA_APP_ID,
-                  u: R(f.r.DOTA_APP_ID),
-                  account_id: t,
-                };
-                try {
-                  const a = await s().get(
-                      f.r.BASE_URL + "persona/showplayerreact/",
-                      { params: e },
-                    ),
-                    t = a?.data;
-                  if (!t?.persona || !t?.persona?.accountid)
-                    throw new Error(
-                      "GC could not find account details for this account",
-                    );
-                  try {
-                    t &&
-                      t.persona &&
-                      t.persona.elodatajson &&
-                      F(JSON.parse(t.persona.elodatajson).aggregate);
-                  } catch (e) {}
-                  try {
-                    if (
-                      t &&
-                      t.persona &&
-                      t.persona.history &&
-                      t.persona.history.matches &&
-                      Object.keys(t.persona.history.matches).length
-                    ) {
-                      const e = Object.values(
-                        t.persona.history.matches,
-                      ).reverse();
-                      M(e), B(e);
-                    }
-                  } catch (e) {
-                    ye(!0);
-                  }
-                  a && a.data && c(t);
-                } catch (e) {
-                  console.log("Error fetching individual persona info."),
-                    Ne(!0);
-                }
-                fe(!0), pe(!0);
-              })();
-            } catch (e) {
-              console.log("Could not fetch persona info.");
-            }
-          }, [t]),
-            (0, i.useEffect)(() => {
-              if (!C) return;
-              let e = C.slice();
-              (e = e.filter(
-                (e) =>
-                  !(!ve && e.lobbytype == k.AP.CASUAL_MATCH) &&
-                  !(!Ie && e.lobbytype == k.AP.COMPETITIVE_MATCH) &&
-                  !(
-                    !Se &&
-                    ![
-                      k.AP.CASUAL_MATCH,
-                      k.AP.COMPETITIVE_MATCH,
-                      k.AP.WEEKEND_TOURNEY,
-                      k.AP.FEATURED_GAMEMODE,
-                    ].includes(e.lobbytype)
-                  ) &&
-                  !(!De && e.rankwassolo) &&
-                  !(!Oe && !e.rankwassolo),
-              )),
-                B(e);
-            }, [C, Ie, ve, Se, De, Oe]);
-          let Pe = null;
-          if (
-            (t
-              ? ge && ue
-                ? ge && Ae
-                  ? (Pe = `Error loading persona information for account ID ${t}. Double check universe & account ID (or try refreshing).`)
-                  : ue &&
-                    je &&
-                    (Pe = `Error loading match history for account ID ${t}.`)
-                : (Pe = `Loading account ID ${t}...`)
-              : (Pe = "Must pass in an account ID."),
-            Pe)
-          )
-            return (0, n.jsxs)("div", {
-              className: w().PersonaDetails,
-              children: [
-                (0, n.jsx)(N.A, { bOverlapping: !1 }),
-                (0, n.jsx)(o.mg, {
-                  children: (0, n.jsx)("title", {
-                    children: "Dota 2 - Persona Details",
-                  }),
-                }),
-                (0, n.jsx)(S.A, {}),
-                (0, n.jsx)("div", {
-                  className: w().ContentFrame,
-                  children: (0, n.jsx)("h2", {
-                    className: w().Header,
-                    children: Pe,
-                  }),
-                }),
-                (0, n.jsx)(I.K, {}),
-              ],
+              }),
             });
-          const we = [
+          },
+          ie = (i) => {
+            const h = new URLSearchParams(i.strConfig),
+              S = (0, oe.W6)();
+            let E = parseInt(h.get("nHeroID") || "0"),
+              C = parseInt(h.get("nPosition") || "0"),
+              s = (h.get("arrAlliedHeroIDs") || "0,0,0,0")
+                .split(",")
+                .map(Number),
+              p = (h.get("arrEnemyHeroIDs") || "0,0,0,0,0")
+                .split(",")
+                .map(Number),
+              f = h.get("nAverageMMR") || "2000",
+              L = parseInt(h.get("nGameMode") || "22");
+            const k = () => {
+                const v = {
+                  nHeroID: E,
+                  nPosition: C,
+                  arrAlliedHeroIDs: s,
+                  arrEnemyHeroIDs: p,
+                  nAverageMMR: parseInt(f),
+                  nGameMode: L,
+                };
+                S.push(I.J.dotaplustester(i.strFeature, Se(v)));
+              },
+              F = (0, R.MT)(E, C, s, p, parseInt(f), L, !0).data;
+            let te = [];
+            if (
+              F &&
+              F.backend_response.outputs.length > 0 &&
+              F.backend_response.outputs[0].categorical_crossentropy
+                .value_sequence.length > 0
+            )
+              for (
+                let v = 0;
+                v <
+                F.backend_response.outputs[0].categorical_crossentropy
+                  .value_sequence[0].value.length;
+                v++
+              )
+                te.push(
+                  F.backend_response.outputs[0].categorical_crossentropy
+                    .value_sequence[0].value[v],
+                );
+            const Y = (v) => {
+                (E = v), k();
+              },
+              b = (v) => {
+                (C = v), k();
+              },
+              U = (v, _) => {
+                (s[v] = _), k();
+              },
+              J = (v, _) => {
+                (p[v] = _), k();
+              },
+              ae = (v) => {
+                (f = v), k();
+              },
+              se = (v) => {
+                (L = v), k();
+              },
+              ce = (0, R.HJ)(),
+              Z = (0, R.wB)();
+            return !ce.data || !Z.data
+              ? (0, e.jsx)("div", {
+                  className: r().Loading,
+                  children: "Loading hero and item data...",
+                })
+              : (0, e.jsx)("div", {
+                  className: r().DotaPlusTesterSubPage,
+                  children: (0, e.jsxs)("div", {
+                    className: r().Content,
+                    children: [
+                      (0, e.jsxs)("div", {
+                        className: r().HeroList,
+                        children: [
+                          (0, e.jsx)("div", {
+                            className: r().YourHero,
+                            children: (0, e.jsx)(T, {
+                              strLabel: "Your Hero",
+                              nHeroID: E,
+                              fnSetSelectedHero: (v) => Y(v),
+                            }),
+                          }),
+                          (0, e.jsxs)("div", {
+                            className: r().Allies,
+                            children: [
+                              (0, e.jsx)(T, {
+                                strLabel: "Ally #1",
+                                nHeroID: s[0],
+                                fnSetSelectedHero: (v) => U(0, v),
+                              }),
+                              (0, e.jsx)(T, {
+                                strLabel: "Ally #2",
+                                nHeroID: s[1],
+                                fnSetSelectedHero: (v) => U(1, v),
+                              }),
+                              (0, e.jsx)(T, {
+                                strLabel: "Ally #3",
+                                nHeroID: s[2],
+                                fnSetSelectedHero: (v) => U(2, v),
+                              }),
+                              (0, e.jsx)(T, {
+                                strLabel: "Ally #4",
+                                nHeroID: s[3],
+                                fnSetSelectedHero: (v) => U(3, v),
+                              }),
+                            ],
+                          }),
+                          (0, e.jsxs)("div", {
+                            className: r().Enemies,
+                            children: [
+                              (0, e.jsx)(T, {
+                                strLabel: "Enemy #1",
+                                nHeroID: p[0],
+                                fnSetSelectedHero: (v) => J(0, v),
+                              }),
+                              (0, e.jsx)(T, {
+                                strLabel: "Enemy #2",
+                                nHeroID: p[1],
+                                fnSetSelectedHero: (v) => J(1, v),
+                              }),
+                              (0, e.jsx)(T, {
+                                strLabel: "Enemy #3",
+                                nHeroID: p[2],
+                                fnSetSelectedHero: (v) => J(2, v),
+                              }),
+                              (0, e.jsx)(T, {
+                                strLabel: "Enemy #4",
+                                nHeroID: p[3],
+                                fnSetSelectedHero: (v) => J(3, v),
+                              }),
+                              (0, e.jsx)(T, {
+                                strLabel: "Enemy #5",
+                                nHeroID: p[4],
+                                fnSetSelectedHero: (v) => J(4, v),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, e.jsx)("div", { className: r().Separator }),
+                      (0, e.jsxs)("div", {
+                        className: r().MiscInfo,
+                        children: [
+                          (0, e.jsx)(o, { nPosition: C, fnSetPosition: b }),
+                          (0, e.jsx)(we, { nGameMode: L, fnSetGameMode: se }),
+                          (0, e.jsx)(De, { strMMR: f, fnSetMMR: ae }),
+                        ],
+                      }),
+                      (0, e.jsx)("div", { className: r().Separator }),
+                      te.length > 0 &&
+                        (0, e.jsx)("div", {
+                          className: r().Results,
+                          children: (0, e.jsx)("div", {
+                            className: r().ItemList,
+                            children: te.map((v, _) =>
+                              (0, e.jsx)(
+                                Ee,
+                                { nItemID: v },
+                                `InferenceReuslt_Item_${_}`,
+                              ),
+                            ),
+                          }),
+                        }),
+                    ],
+                  }),
+                });
+          };
+        function Be(i, h) {
+          const S = [];
+          for (let E = 0; E < i.length; E += h) S.push(i.slice(E, E + h));
+          return S;
+        }
+        const d = (i) => {
+            const h = new URLSearchParams(i.strConfig),
+              S = (0, oe.W6)();
+            let E = parseInt(h.get("nHeroID") || "0"),
+              C = parseInt(h.get("nPosition") || "0"),
+              s = (h.get("arrAlliedHeroIDs") || "0,0,0,0")
+                .split(",")
+                .map(Number),
+              p = (h.get("arrEnemyHeroIDs") || "0,0,0,0,0")
+                .split(",")
+                .map(Number),
+              f = h.get("nAverageMMR") || "2000",
+              L = parseInt(h.get("nGameMode") || "22"),
+              k = parseInt(h.get("nTier") || "0"),
+              H = (h.get("arrTrinkets") || "0,0,0,0").split(",").map(Number),
+              F = (h.get("arrEnchantments") || "0,0,0,0")
+                .split(",")
+                .map(Number),
+              Y = (0, R.zy)(H).data;
+            const b = (n) => {
+                (E = n), W();
+              },
+              U = (n) => {
+                (C = n), W();
+              },
+              J = (n, c) => {
+                (s[n] = c), W();
+              },
+              ae = (n, c) => {
+                (p[n] = c), W();
+              },
+              se = (n) => {
+                (f = n), W();
+              },
+              ce = (n) => {
+                (L = n), W();
+              },
+              Z = (n, c) => {
+                (H[n] = c), W();
+              },
+              v = (n, c) => {
+                (F[n] = c), W();
+              },
+              _ = (n) => {
+                k != n &&
+                  ((H = [0, 0, 0, 0, 0]), (F = [0, 0, 0, 0, 0]), (k = n), W());
+              },
+              W = () => {
+                const n = {
+                    nHeroID: E,
+                    nPosition: C,
+                    arrAlliedHeroIDs: s,
+                    arrEnemyHeroIDs: p,
+                    nAverageMMR: parseInt(f),
+                    nGameMode: L,
+                    nTier: k,
+                    arrTrinkets: H,
+                    arrEnchantments: F,
+                  },
+                  c = Se(n);
+                i.strConfig != c && S.push(I.J.dotaplustester(i.strFeature, c));
+              },
+              Ie = (0, R.HJ)(),
+              Ke = (0, R.wB)(),
+              ve = (0, R.qK)(E);
+            let Q;
+            switch (ve.data?.primary_attr) {
+              case 0:
+                Q = "strength";
+                break;
+              case 1:
+                Q = "agility";
+                break;
+              case 2:
+                Q = "intelligence";
+                break;
+              case 3:
+                Q = "universal";
+                break;
+            }
+            const re = (0, R.dX)(E, C, s, p, parseInt(f), L, !0, H, F, k).data,
+              Oe = (0, R.Hp)(Q, k + 1);
+            if (!Ie.data || !Ke.data || !Oe.data)
+              return (0, e.jsx)("div", {
+                className: r().Loading,
+                children: "Loading hero and item data...",
+              });
+            const pe = Oe.data,
+              ge = pe.tier[k].enhancements.map((n) => n.ability_id),
+              Pe = (n) =>
+                n.neutral_item_tier == k
+                  ? !0
+                  : n.neutral_item_tier > k
+                    ? !1
+                    : n.neutral_item_tier != -1 && n.neutral_item_tier < k
+                      ? Y?.filter((c) => c.neutral_item_tier < k).length == 0
+                      : !1;
+            return (0, e.jsx)("div", {
+              className: r().DotaPlusTesterSubPage,
+              children: (0, e.jsxs)("div", {
+                className: r().Content,
+                children: [
+                  (0, e.jsxs)("div", {
+                    className: r().HeroList,
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: r().YourHero,
+                        children: (0, e.jsx)(T, {
+                          strLabel: "Your Hero",
+                          nHeroID: E,
+                          fnSetSelectedHero: (n) => b(n),
+                        }),
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: r().Allies,
+                        children: [
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #1",
+                            nHeroID: s[0],
+                            fnSetSelectedHero: (n) => J(0, n),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #2",
+                            nHeroID: s[1],
+                            fnSetSelectedHero: (n) => J(1, n),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #3",
+                            nHeroID: s[2],
+                            fnSetSelectedHero: (n) => J(2, n),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #4",
+                            nHeroID: s[3],
+                            fnSetSelectedHero: (n) => J(3, n),
+                          }),
+                        ],
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: r().Enemies,
+                        children: [
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #1",
+                            nHeroID: p[0],
+                            fnSetSelectedHero: (n) => ae(0, n),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #2",
+                            nHeroID: p[1],
+                            fnSetSelectedHero: (n) => ae(1, n),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #3",
+                            nHeroID: p[2],
+                            fnSetSelectedHero: (n) => ae(2, n),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #4",
+                            nHeroID: p[3],
+                            fnSetSelectedHero: (n) => ae(3, n),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #5",
+                            nHeroID: p[4],
+                            fnSetSelectedHero: (n) => ae(4, n),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsxs)("div", {
+                    className: r().MiscInfo,
+                    children: [
+                      (0, e.jsx)(o, { nPosition: C, fnSetPosition: U }),
+                      (0, e.jsx)(we, { nGameMode: L, fnSetGameMode: ce }),
+                      (0, e.jsx)(De, { strMMR: f, fnSetMMR: se }),
+                      (0, e.jsx)(Je, { nTier: k, fnSetTier: _ }),
+                    ],
+                  }),
+                  (0, e.jsxs)("div", {
+                    className: r().IncludExcludeItemOption,
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: r().ItemOptionTitle,
+                        children: "Trinkets",
+                      }),
+                      (0, He.bu)(0, pe.tier[k].trinket_options - 1).map((n) => {
+                        const c =
+                          re?.backend_response.outputs[0].categorical_crossentropy.value.indexOf(
+                            H[n],
+                          );
+                        return (0, e.jsxs)(
+                          "div",
+                          {
+                            className: r().OptionColumn,
+                            children: [
+                              (0, e.jsx)(
+                                ee,
+                                {
+                                  nItemID: H[n],
+                                  fnSetSelectedItem: (m) => Z(n, m),
+                                  bShowName: !0,
+                                  bAllowEmpty: !0,
+                                  eItemFilter: 6,
+                                  fnCustomFilter: Pe,
+                                  fnOverlayText: (m) =>
+                                    m.neutral_item_tier.toString(),
+                                },
+                                `Trinket_${n}`,
+                              ),
+                              c >= 0 &&
+                                (0, e.jsx)("div", {
+                                  className: r().Percent,
+                                  children: `${(re?.backend_response.outputs[0].categorical_crossentropy.weight[c] * 100).toFixed(2)}%`,
+                                }),
+                            ],
+                          },
+                          `result_${n}`,
+                        );
+                      }),
+                    ],
+                  }),
+                  (0, e.jsxs)("div", {
+                    className: r().IncludExcludeItemOption,
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: r().ItemOptionTitle,
+                        children: "Enhancements",
+                      }),
+                      (0, He.bu)(0, pe.tier[k].enhancement_options - 1).map(
+                        (n) => {
+                          const c =
+                            re?.backend_response.outputs[1].categorical_crossentropy.value.indexOf(
+                              F[n],
+                            );
+                          return (0, e.jsxs)(
+                            "div",
+                            {
+                              className: r().OptionColumn,
+                              children: [
+                                (0, e.jsx)(
+                                  ee,
+                                  {
+                                    nItemID: F[n],
+                                    fnSetSelectedItem: (m) => v(n, m),
+                                    bShowName: !0,
+                                    bAllowEmpty: !0,
+                                    eItemFilter: 6,
+                                    fnCustomFilter: (m) => ge.includes(m.id),
+                                  },
+                                  `Trinket_${n}`,
+                                ),
+                                c >= 0 &&
+                                  (0, e.jsx)("div", {
+                                    className: r().Percent,
+                                    children: `${(re?.backend_response.outputs[1].categorical_crossentropy.weight[c] * 100).toFixed(2)}%`,
+                                  }),
+                              ],
+                            },
+                            `result_${n}`,
+                          );
+                        },
+                      ),
+                    ],
+                  }),
+                ],
+              }),
+            });
+          },
+          Xe = (i) => {
+            const h = new URLSearchParams(i.strConfig),
+              S = (0, oe.W6)();
+            let E = parseInt(h.get("nHeroID") || "0"),
+              C = parseInt(h.get("nPosition") || "0"),
+              s = (h.get("arrAlliedHeroIDs") || "0,0,0,0")
+                .split(",")
+                .map(Number),
+              p = (h.get("arrEnemyHeroIDs") || "0,0,0,0,0")
+                .split(",")
+                .map(Number),
+              f = h.get("nAverageMMR") || "2000",
+              L = parseInt(h.get("nGameMode") || "22"),
+              k = parseInt(h.get("nLobbyType") || "7"),
+              H = (
+                h.get("arrInventoryItems") ||
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              )
+                .split(",")
+                .map(Number),
+              F = (
+                h.get("arrPurchasedItems") ||
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              )
+                .split(",")
+                .map(Number),
+              te = parseFloat(h.get("fRepeatWeight") || "0.2"),
+              Y = (h.get("arrLikedItems") || "0,0").split(",").map(Number),
+              b = (h.get("arrDislikedItems") || "0,0").split(",").map(Number);
+            const U = () => {
+                const t = {
+                    nHeroID: E,
+                    nPosition: C,
+                    arrAlliedHeroIDs: s,
+                    arrEnemyHeroIDs: p,
+                    nAverageMMR: parseInt(f),
+                    nGameMode: L,
+                    nLobbyType: k,
+                    arrPurchasedItems: F,
+                    arrInventoryItems: H,
+                    fRepeatWeight: te,
+                    arrLikedItems: Y,
+                    arrDislikedItems: b,
+                  },
+                  u = Se(t);
+                i.strConfig != u && S.push(I.J.dotaplustester(i.strFeature, u));
+              },
+              J = 3e5,
+              ae = -1e6;
+            let se = new Map(),
+              ce = [],
+              Z = [];
+            for (const t of Y) t != 0 && se.set(t, J);
+            for (const t of b) t != 0 && se.set(t, ae);
+            const _ = (0, R.nK)(E, C, s, p, parseInt(f), L, F, se, [], te).data;
+            if (
+              _ &&
+              _.backend_response.outputs.length > 0 &&
+              _.backend_response.outputs[0].categorical_crossentropy
+                .value_sequence
+            ) {
+              for (
+                let t = 0;
+                t <
+                _.backend_response.outputs[0].categorical_crossentropy
+                  .value_sequence[0].value.length;
+                t++
+              )
+                ce.push({
+                  nItemID:
+                    _.backend_response.outputs[0].categorical_crossentropy
+                      .value_sequence[0].value[t],
+                  fScore: 0,
+                });
+              for (
+                let t = 0;
+                t <
+                _.backend_response.outputs[0].categorical_crossentropy.value
+                  ?.length;
+                t++
+              ) {
+                const u =
+                    _.backend_response.outputs[0].categorical_crossentropy
+                      .value[t],
+                  O =
+                    _.backend_response.outputs[0].categorical_crossentropy
+                      .weight[t];
+                Z.push({ nItemID: u, fScore: O });
+              }
+            }
+            const W = (0, R.HJ)(),
+              Ie = (0, R.wB)(),
+              Ke = (t) => {
+                (E = t), U();
+              },
+              ve = (t) => {
+                (C = t), U();
+              },
+              Q = (t, u) => {
+                (s[t] = u), U();
+              },
+              he = (t, u) => {
+                (p[t] = u), U();
+              },
+              re = (t) => {
+                (f = t), U();
+              },
+              Oe = (t) => {
+                (L = t), U();
+              },
+              pe = (t) => {
+                (F[F.indexOf(0)] = t), U();
+              },
+              ge = () => {
+                (F = [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ]),
+                  U();
+              },
+              Pe = (t) => {
+                (te = t), U();
+              },
+              n = (t, u) => {
+                (H[t] = u), U();
+              },
+              c = (t, u) => {
+                (b[t] = u), U();
+              },
+              m = (t, u) => {
+                (Y[t] = u), U();
+              };
+            if (!W.data || !Ie.data)
+              return (0, e.jsx)("div", {
+                className: r().Loading,
+                children: "Loading hero and item data...",
+              });
+            const l = Be(Z, 5);
+            return (0, e.jsx)("div", {
+              className: r().DotaPlusTesterSubPage,
+              children: (0, e.jsxs)("div", {
+                className: r().Content,
+                children: [
+                  (0, e.jsxs)("div", {
+                    className: r().HeroList,
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: r().YourHero,
+                        children: (0, e.jsx)(T, {
+                          strLabel: "Your Hero",
+                          nHeroID: E,
+                          fnSetSelectedHero: (t) => Ke(t),
+                        }),
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: r().Allies,
+                        children: [
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #1",
+                            nHeroID: s[0],
+                            fnSetSelectedHero: (t) => Q(0, t),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #2",
+                            nHeroID: s[1],
+                            fnSetSelectedHero: (t) => Q(1, t),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #3",
+                            nHeroID: s[2],
+                            fnSetSelectedHero: (t) => Q(2, t),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Ally #4",
+                            nHeroID: s[3],
+                            fnSetSelectedHero: (t) => Q(3, t),
+                          }),
+                        ],
+                      }),
+                      (0, e.jsxs)("div", {
+                        className: r().Enemies,
+                        children: [
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #1",
+                            nHeroID: p[0],
+                            fnSetSelectedHero: (t) => he(0, t),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #2",
+                            nHeroID: p[1],
+                            fnSetSelectedHero: (t) => he(1, t),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #3",
+                            nHeroID: p[2],
+                            fnSetSelectedHero: (t) => he(2, t),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #4",
+                            nHeroID: p[3],
+                            fnSetSelectedHero: (t) => he(3, t),
+                          }),
+                          (0, e.jsx)(T, {
+                            strLabel: "Enemy #5",
+                            nHeroID: p[4],
+                            fnSetSelectedHero: (t) => he(4, t),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsxs)("div", {
+                    className: r().MiscInfo,
+                    children: [
+                      (0, e.jsx)(o, { nPosition: C, fnSetPosition: ve }),
+                      (0, e.jsx)(we, { nGameMode: L, fnSetGameMode: Oe }),
+                      (0, e.jsx)(De, { strMMR: f, fnSetMMR: re }),
+                      (0, e.jsxs)("div", {
+                        className: r().Option,
+                        children: [
+                          (0, e.jsx)("div", {
+                            className: r().Name,
+                            children: "Repeat Weight",
+                          }),
+                          (0, e.jsxs)("select", {
+                            className: r().WeightSelector,
+                            value: te,
+                            onChange: (t) => Pe(parseFloat(t.target.value)),
+                            children: [
+                              (0, e.jsx)("option", {
+                                value: 1,
+                                children: "1.0",
+                              }),
+                              (0, e.jsx)("option", {
+                                value: 0.8,
+                                children: "0.8",
+                              }),
+                              (0, e.jsx)("option", {
+                                value: 0.6,
+                                children: "0.6",
+                              }),
+                              (0, e.jsx)("option", {
+                                value: 0.4,
+                                children: "0.4",
+                              }),
+                              (0, e.jsx)("option", {
+                                value: 0.2,
+                                children: "0.2",
+                              }),
+                              (0, e.jsx)("option", {
+                                value: 0,
+                                children: "0.0",
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, e.jsxs)("div", {
+                    className: r().IncludExcludeItemOption,
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: r().ItemOptionTitle,
+                        children: "Preferred Items",
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: Y[0],
+                        fnSetSelectedItem: (t) => m(0, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: Y[1],
+                        fnSetSelectedItem: (t) => m(1, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: Y[2],
+                        fnSetSelectedItem: (t) => m(2, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: Y[3],
+                        fnSetSelectedItem: (t) => m(3, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                    ],
+                  }),
+                  (0, e.jsxs)("div", {
+                    className: r().IncludExcludeItemOption,
+                    children: [
+                      (0, e.jsx)("div", {
+                        className: r().ItemOptionTitle,
+                        children: "Disliked Items",
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: b[0],
+                        fnSetSelectedItem: (t) => c(0, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: b[1],
+                        fnSetSelectedItem: (t) => c(1, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: b[2],
+                        fnSetSelectedItem: (t) => c(2, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                      (0, e.jsx)(ee, {
+                        nItemID: b[3],
+                        fnSetSelectedItem: (t) => c(3, t),
+                        bShowName: !1,
+                        bAllowEmpty: !0,
+                        eItemFilter: 1,
+                      }),
+                    ],
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsx)("div", {
+                    className: r().PurchasedItemList,
+                    children: F.map((t, u) =>
+                      (0, e.jsx)(
+                        "div",
+                        {
+                          onClick: () => {
+                            F.splice(u, 1), F.push(0), U();
+                          },
+                          children: (0, e.jsx)(Ee, { nItemID: t }),
+                        },
+                        `${u}_${t}`,
+                      ),
+                    ),
+                  }),
+                  (0, e.jsx)("div", {
+                    className: r().ClearSkilledAbilities,
+                    onClick: () => ge(),
+                    children: "Clear",
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsx)("div", {
+                    className: r().Header,
+                    children: "Recommended Build Sequence",
+                  }),
+                  (0, e.jsx)("div", {
+                    className: r().ItemList,
+                    children: ce.map((t, u) =>
+                      (0, e.jsxs)(
+                        "div",
+                        {
+                          className: r().Item,
+                          onClick: () => pe(t.nItemID),
+                          children: [
+                            (0, e.jsx)(Ee, { nItemID: t.nItemID }),
+                            t.fScore > 0 &&
+                              (0, e.jsx)("div", {
+                                className: r().Weight,
+                                children: `${(t.fScore * 100).toFixed(2)}%`,
+                              }),
+                          ],
+                        },
+                        `${t.nItemID}_${u}`,
+                      ),
+                    ),
+                  }),
+                  (0, e.jsx)("div", { className: r().Separator }),
+                  (0, e.jsx)("div", {
+                    className: r().Header,
+                    children: "Next Item Options",
+                  }),
+                  l.map((t, u) =>
+                    (0, e.jsx)(
+                      "div",
+                      {
+                        className: r().ItemList,
+                        children: t.map((O, g) =>
+                          (0, e.jsxs)(
+                            "div",
+                            {
+                              className: r().Item,
+                              onClick: () => pe(O.nItemID),
+                              children: [
+                                (0, e.jsx)(Ee, { nItemID: O.nItemID }),
+                                O.fScore > 0 &&
+                                  (0, e.jsx)("div", {
+                                    className: r().Weight,
+                                    children: `${(O.fScore * 100).toFixed(2)}%`,
+                                  }),
+                              ],
+                            },
+                            `${O.nItemID}_${g}`,
+                          ),
+                        ),
+                      },
+                      `Step_${u}`,
+                    ),
+                  ),
+                ],
+              }),
+            });
+          },
+          z = Qe;
+      },
+      14391: (Re, ke, y) => {
+        "use strict";
+        y.r(ke), y.d(ke, { default: () => Pe });
+        var e = y(69500),
+          fe = y(75749),
+          R = y.n(fe),
+          I = y(88351),
+          j = y(7552),
+          x = y(73202),
+          oe = y(73681),
+          w = y.n(oe),
+          Ge = y(56902),
+          He = y(71129),
+          Ce = y(75368),
+          Ye = y(42783),
+          Le = y(21112),
+          D = y(49590),
+          Ne = y(71807),
+          r = y(83218),
+          Te = y(29421),
+          T = y(2095),
+          ne = y(15001),
+          Ee = y(63177),
+          Ve = y(42616),
+          Ue = y(11778),
+          ee = y(84485),
+          o = y(83194),
+          Je = y(28471);
+        function qe(n) {
+          return n === 570 ? "public" : "beta";
+        }
+        function we(n) {
+          switch (n) {
+            case EGameMode.DOTA_GAMEMODE_NONE:
+              return "none";
+            case EGameMode.DOTA_GAMEMODE_AP:
+              return "All Pick";
+            case EGameMode.DOTA_GAMEMODE_CM:
+              return "Captain's Mode";
+            case EGameMode.DOTA_GAMEMODE_RD:
+              return "Random Draft";
+            case EGameMode.DOTA_GAMEMODE_SD:
+              return "Single Draft";
+            case EGameMode.DOTA_GAMEMODE_AR:
+              return "All Random";
+            case EGameMode.DOTA_GAMEMODE_INTRO:
+              return "Intro Mode";
+            case EGameMode.DOTA_GAMEMODE_HW:
+              return "Halloween";
+            case EGameMode.DOTA_GAMEMODE_REVERSE_CM:
+              return "Reverse Captain's Mode";
+            case EGameMode.DOTA_GAMEMODE_XMAS:
+              return "Holidays/Christmas";
+            case EGameMode.DOTA_GAMEMODE_TUTORIAL:
+              return "Tutorial";
+            case EGameMode.DOTA_GAMEMODE_MO:
+              return "Mid Only";
+            case EGameMode.DOTA_GAMEMODE_LP:
+              return "Least Picked";
+            case EGameMode.DOTA_GAMEMODE_POOL1:
+              return "Pool1";
+            case EGameMode.DOTA_GAMEMODE_FH:
+              return "Forced Heroes";
+            case EGameMode.DOTA_GAMEMODE_CUSTOM:
+              return "Custom";
+            case EGameMode.DOTA_GAMEMODE_CD:
+              return "Captain's Draft";
+            case EGameMode.DOTA_GAMEMODE_BD:
+              return "Balanced Draft";
+            case EGameMode.DOTA_GAMEMODE_ABILITY_DRAFT:
+              return "Ability Draft";
+            case EGameMode.DOTA_GAMEMODE_EVENT:
+              return "Event Game";
+            case EGameMode.DOTA_GAMEMODE_ARDM:
+              return "All Random Deathmatch";
+            case EGameMode.DOTA_GAMEMODE_1V1MID:
+              return "1v1 Mid";
+            case EGameMode.DOTA_GAMEMODE_ALL_DRAFT:
+              return "All Draft";
+            case EGameMode.DOTA_GAMEMODE_TURBO:
+              return "Turbo";
+            case EGameMode.DOTA_GAMEMODE_MUTATION:
+              return "Mutations";
+            case EGameMode.DOTA_GAMEMODE_COACHES_CHALLENGE:
+              return "TI9 Coaches Challenge";
+            default:
+              return "Unknown";
+          }
+        }
+        function De(n) {
+          switch (n) {
+            case o.Fk.DOTA_GAMEMODE_NONE:
+              return "-";
+            case o.Fk.DOTA_GAMEMODE_AP:
+              return "AP";
+            case o.Fk.DOTA_GAMEMODE_CM:
+              return "CM";
+            case o.Fk.DOTA_GAMEMODE_RD:
+              return "RD";
+            case o.Fk.DOTA_GAMEMODE_SD:
+              return "SD";
+            case o.Fk.DOTA_GAMEMODE_AR:
+              return "AR";
+            case o.Fk.DOTA_GAMEMODE_INTRO:
+              return "INTRO";
+            case o.Fk.DOTA_GAMEMODE_HW:
+              return "OCT31";
+            case o.Fk.DOTA_GAMEMODE_REVERSE_CM:
+              return "Rev CM";
+            case o.Fk.DOTA_GAMEMODE_XMAS:
+              return "XMAS";
+            case o.Fk.DOTA_GAMEMODE_TUTORIAL:
+              return "Tutorial";
+            case o.Fk.DOTA_GAMEMODE_MO:
+              return "MID";
+            case o.Fk.DOTA_GAMEMODE_LP:
+              return "LP";
+            case o.Fk.DOTA_GAMEMODE_POOL1:
+              return "Pool1";
+            case o.Fk.DOTA_GAMEMODE_FH:
+              return "FH";
+            case o.Fk.DOTA_GAMEMODE_CUSTOM:
+              return "CUSTOM";
+            case o.Fk.DOTA_GAMEMODE_CD:
+              return "CD";
+            case o.Fk.DOTA_GAMEMODE_BD:
+              return "BD";
+            case o.Fk.DOTA_GAMEMODE_ABILITY_DRAFT:
+              return "AD";
+            case o.Fk.DOTA_GAMEMODE_EVENT:
+              return "EVENT";
+            case o.Fk.DOTA_GAMEMODE_ARDM:
+              return "ARDM";
+            case o.Fk.DOTA_GAMEMODE_1V1MID:
+              return "1v1";
+            case o.Fk.DOTA_GAMEMODE_ALL_DRAFT:
+              return "AP";
+            case o.Fk.DOTA_GAMEMODE_TURBO:
+              return "TURBO";
+            case o.Fk.DOTA_GAMEMODE_MUTATION:
+              return "MUT";
+            case o.Fk.DOTA_GAMEMODE_COACHES_CHALLENGE:
+              return "COACH";
+            default:
+              return "Unknown";
+          }
+        }
+        function Se(n) {
+          switch (n) {
+            case o.AP.CASUAL_MATCH:
+              return "Unranked";
+            case o.AP.PRACTICE:
+              return "Practice";
+            case o.AP.COOP_BOT_MATCH:
+              return "Co-op Bot";
+            case o.AP.COMPETITIVE_MATCH:
+              return "Ranked";
+            case o.AP.WEEKEND_TOURNEY:
+              return "Battle Cup";
+            case o.AP.LOCAL_BOT_MATCH:
+              return "Local Bot";
+            case o.AP.SPECTATOR:
+              return "Spectator";
+            case o.AP.EVENT_MATCH:
+              return "Event";
+            case o.AP.NEW_PLAYER_POOL:
+              return "New Player Pool";
+            case o.AP.FEATURED_GAMEMODE:
+              return "Featured Gamemode";
+            default:
+              return "";
+          }
+        }
+        function $e(n) {
+          switch (n) {
+            case EMatchOutcome.RADIANT_VICTORY:
+              return "Radiant Victory";
+            case EMatchOutcome.DIRE_VICTORY:
+              return "Dire Victory";
+            case EMatchOutcome.NOTSCORED_POOR_NETWORK:
+              return "NOT SCORED: Poor Network";
+            case EMatchOutcome.NOTSCORED_LEAVER:
+              return "NOT SCORED: Leaver";
+            case EMatchOutcome.NOTSCORED_SERVER_CRASH:
+              return "NOT SCORED: Server Crash";
+            case EMatchOutcome.NOTSCORED_NEVER_STARTED:
+              return "NOT SCORED: Never Started";
+            case EMatchOutcome.NOTSCORED_CANCELED:
+              return "NOT SCORED: Canceled";
+            case EMatchOutcome.NOTSCORED_SUSPICIOUS:
+              return "NOT SCORED: Suspicious";
+            default:
+              return "Unknown";
+          }
+        }
+        function je(n) {
+          switch (n) {
+            case o.rM.RADIANT_VICTORY:
+              return "Radiant Victory";
+            case o.rM.DIRE_VICTORY:
+              return "Dire Victory";
+            case o.rM.NOTSCORED_POOR_NETWORK:
+              return "Net";
+            case o.rM.NOTSCORED_LEAVER:
+              return "Lvr";
+            case o.rM.NOTSCORED_SERVER_CRASH:
+              return "Crsh";
+            case o.rM.NOTSCORED_NEVER_STARTED:
+              return "No start";
+            case o.rM.NOTSCORED_CANCELED:
+              return "Cancel";
+            case o.rM.NOTSCORED_SUSPICIOUS:
+              return "Suspicious";
+            default:
+              return "-";
+          }
+        }
+        function ue(n) {
+          switch (n) {
+            case o.GR.RANK_ELIGIBLE:
+              return "Rank Eligible";
+            case o.GR.BATTLECUP:
+              return "Battlecup";
+            case o.GR.BAN_WARNING:
+              return "Ban Warning";
+            case o.GR.RETURNING_PLAYER:
+              return "Returning Player";
+            case o.GR.COMMS_DISRUPTIVE:
+              return "Comms Disruptive";
+            default:
+              return "Unknown";
+          }
+        }
+        function le(n) {
+          switch (n) {
+            case o.V7.VERY_LIKELY:
+              return "Very Likely";
+            case o.V7.SOMEWHAT_LIKELY:
+              return "Somewhat Likely";
+            case o.V7.UNCLEAR:
+              return "Unclear";
+            case o.V7.SOMEWHAT_UNLIKELY:
+              return "Somewhat Unlikely";
+            case o.V7.VERY_UNLIKELY:
+              return "Very Unlikely";
+            default:
+              return "Unknown";
+          }
+        }
+        function Qe(n) {
+          switch (n) {
+            case o.TK.DOTA_ACCESS_TOURNAMENT_ADMIN:
+              return "Tournament Admin";
+            case o.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
+              return "Tournament Broadcaster";
+            default:
+              return "Unknown";
+          }
+        }
+        function Fe(n) {
+          switch (n) {
+            case o.Ov.CORE:
+              return "Core";
+            case o.Ov.SUPPORT:
+              return "Support";
+            case o.Ov.OFFLANE:
+              return "Offlane";
+            case o.Ov.MID:
+              return "Mid";
+            default:
+              return "Unknown";
+          }
+        }
+        var ie = y(96213),
+          Be = y(40753),
+          d = y.n(Be),
+          Xe = y(20018);
+        const z = "red",
+          i = "orange",
+          h = "goldenrod",
+          S = "#adff2f",
+          E = "darkgray",
+          C = "forestgreen",
+          s = "#68c529",
+          p = "crimson",
+          f = "#fa002e",
+          L = "#82ca9d",
+          k = "#888fd8",
+          H = "#3389ae",
+          F = "#FFBB28",
+          te = "#FF8042",
+          Y = (n, c, m = "") =>
+            (0, e.jsx)(
+              "a",
+              {
+                href: `${T.r.BASE_URL}${`matches/match/${n}`}?u=${qe(T.r.DOTA_APP_ID)}&appid=${T.r.DOTA_APP_ID}&highlight=${c}`,
+                children: m || n,
+              },
+              n,
+            ),
+          b = (n) => {
+            let c = "";
+            const m = `${T.r.CDN_URL}/apps/dota2/images/`;
+            return (
+              n == 2 && (c = `${m}player_reports/button_report_text_on.png`),
+              n == 3 && (c = `${m}player_reports/button_report_voice_on.png`),
+              n == 4 && (c = `${m}player_reports/smurf_icon.png`),
+              n == 5 && (c = `${m}player_reports/disruptive_icon.png`),
+              n == 6 && (c = `${m}player_reports/cheating_icon.png`),
+              n == 7 &&
+                (c = `${m}player_reports/button_report_pre_game_role.png`),
+              c
+            );
+          },
+          U = (n) => {
+            let c = "";
+            return (
+              n == 2 && (c = "Text abuse"),
+              n == 3 && (c = "Voice abuse"),
+              n == 4 && (c = "Smurfing"),
+              n == 5 && (c = "Griefing"),
+              n == 6 && (c = "Cheating"),
+              n == 7 && (c = "Did not play role"),
+              c
+            );
+          },
+          J = [
+            { key: "accountid", displayName: "Account ID" },
             {
-              dataKey: "date",
-              label: "Match Date",
-              widthRelative: 13,
-              cellRenderer: (e) =>
-                d()(1e3 * e.cellData).format("MM/DD/YY HH:mm:ss"),
-            },
-            {
-              dataKey: "matchid",
-              label: "ID",
-              widthRelative: 10,
-              cellRenderer: (e) =>
-                ((e, a, t = "") =>
-                  (0, n.jsx)(
-                    "a",
-                    {
-                      href: `${f.r.BASE_URL}matches/match/${e}?u=${R(f.r.DOTA_APP_ID)}&appid=${f.r.DOTA_APP_ID}&highlight=${a}`,
-                      children: t || e,
-                    },
-                    e,
-                  ))(e.cellData, e.columnData.strAccountId),
-            },
-            {
-              dataKey: "heroid",
-              label: "Hero",
-              widthRelative: 5,
-              cellRenderer: (e) => {
-                const a = Me?.heroes.find((a) => a.id == e.cellData),
-                  t = a?.name?.replace("npc_dota_hero_", "");
-                return t
-                  ? (0, n.jsx)("img", {
-                      className: w().HeroImage,
-                      src: `${f.r.IMG_URL}heroes/wide/${t}.png`,
-                      alt: e.cellData,
+              key: "guilds",
+              secondaryKey: "dotaguildurl",
+              displayName: "Guild",
+              formatFunction: (n = {}, c = "") => {
+                const m = `${c}${n?.guild?.guild_id}`,
+                  l = n?.guild?.guild_name || "";
+                return l && c
+                  ? (0, e.jsx)(j.Fragment, {
+                      children: (0, e.jsx)("a", {
+                        href: m,
+                        target: "_blank",
+                        rel: "noopener",
+                        children: l,
+                      }),
                     })
-                  : (0, n.jsx)("img", {
-                      className: w().HeroImage,
-                      src: `${f.r.IMG_URL}heroes/wide/unknown.png`,
+                  : (0, e.jsx)("span", {
+                      style: { color: E },
+                      children: "No Guild",
                     });
               },
             },
+          ],
+          ae = [
             {
-              dataKey: "outcome",
-              label: "Outcome",
-              widthRelative: 7,
-              cellRenderer: (e) => {
-                if (e.rowData?.lobbytype == k.AP.PRACTICE)
-                  return (0, n.jsx)("span", {
-                    style: { color: z },
-                    children: E(k.AP.PRACTICE),
-                  });
-                let a = e.cellData;
-                if ((a in k.rM || (a = 0), a <= 0)) return O(k.rM.UNKNOWN);
-                const t = e?.rowData?.teamnumber + 2;
-                if (t < 2 || t > 3) return O(k.rM.UNKNOWN);
-                if (a < 2 || a > 3) {
-                  const a = e.cellData;
-                  return a in k.rM
-                    ? (0, n.jsx)("span", {
-                        style: { color: $ },
-                        children: O(a),
-                      })
-                    : O(k.rM.UNKNOWN);
-                }
-                {
-                  const r = t == a,
-                    s = [],
-                    l = e?.rowData?.rankchange;
-                  let i = r ? (l >= 35 ? "#68c529" : Y) : l <= -35 ? V : W;
-                  return (
-                    s.push(
-                      (0, n.jsx)(
-                        "span",
-                        { style: { color: i }, children: r ? "W" : "L" },
-                        "W-L",
-                      ),
+              key: "comprank",
+              secondaryKey: "comprankuncertainty",
+              tertiaryKey: "compranktier",
+              displayName: "Ranked",
+              formatFunction: (n, c, m = 0) =>
+                (0, e.jsxs)(j.Fragment, {
+                  children: [
+                    (0, e.jsx)("span", {
+                      className: d().RankNumber,
+                      children: `${n}`,
+                    }),
+                    (0, e.jsxs)("span", {
+                      className: d().RankedUncertainty,
+                      children: [
+                        `+/- ${c}`,
+                        (0, e.jsx)("img", {
+                          className: d().RankedBadgeIcon,
+                          src: `${T.r.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(m / 10)}.png`,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+            },
+            {
+              key: "rank",
+              secondaryKey: "rankuncertainty",
+              displayName: "Unranked",
+              formatFunction: (n, c) =>
+                (0, e.jsxs)(j.Fragment, {
+                  children: [
+                    (0, e.jsx)("span", {
+                      className: d().RankNumber,
+                      children: `${n}`,
+                    }),
+                    (0, e.jsx)("span", { children: `+/- ${c}` }),
+                  ],
+                }),
+            },
+          ],
+          se = [
+            {
+              key: "accountflags",
+              displayName: "Account Flags",
+              formatFunction: (n) => {
+                let m = [];
+                return (
+                  n == 0 && m.push("None"),
+                  (n & o.GR.RANK_ELIGIBLE) > 0 &&
+                    m.push(`${ue(o.GR.RANK_ELIGIBLE)}; `),
+                  (n & o.GR.BATTLECUP) > 0 && m.push(`${ue(o.GR.BATTLECUP)}; `),
+                  (n & o.GR.BAN_WARNING) > 0 &&
+                    m.push(
+                      (0, e.jsx)("span", {
+                        style: { color: z },
+                        children: `${ue(o.GR.BAN_WARNING)}; `,
+                      }),
                     ),
-                    r
-                      ? s.push(
-                          (0, n.jsx)(
-                            "span",
-                            { style: { color: i }, children: ` (+${l})` },
-                            "rankChange",
-                          ),
-                        )
-                      : l < 0
-                        ? s.push(
-                            (0, n.jsx)(
-                              "span",
-                              { style: { color: i }, children: ` (${l})` },
-                              "rankChange",
-                            ),
-                          )
-                        : s.push(
-                            (0, n.jsx)(
-                              "span",
-                              { style: { color: i }, children: ` (-${l})` },
-                              "rankChange",
-                            ),
-                          ),
-                    s
-                  );
-                }
-              },
-            },
-            {
-              dataKey: "previousrank",
-              label: "MMR",
-              widthRelative: 5,
-              cellRenderer: (e) => e.cellData,
-            },
-            {
-              dataKey: "overperformance_score",
-              label: "Perf",
-              widthRelative: 4,
-              cellRenderer: (e) => {
-                const a = e.cellData || 0;
-                let t = "";
-                return (
-                  a >= 300 ? (t = H) : a >= 175 ? (t = $) : a >= 100 && (t = U),
-                  (0, n.jsx)(
-                    "span",
-                    { style: { color: t }, children: `${a}` },
-                    "op",
-                  )
+                  (n & o.GR.RETURNING_PLAYER) > 0 &&
+                    m.push(
+                      (0, e.jsx)("span", {
+                        style: { color: h },
+                        children: `${ue(o.GR.RETURNING_PLAYER)}; `,
+                      }),
+                    ),
+                  (n & o.GR.COMMS_DISRUPTIVE) > 0 &&
+                    m.push(
+                      (0, e.jsx)("span", {
+                        style: { color: z },
+                        children: `${ue(o.GR.COMMS_DISRUPTIVE)}; `,
+                      }),
+                    ),
+                  (0, e.jsx)("div", { children: m })
                 );
               },
             },
             {
-              dataKey: "duration",
-              label: "Dur",
-              widthRelative: 6,
-              cellRenderer: (e) => {
-                const a = e.cellData;
-                return a
-                  ? a < 3600
-                    ? d()
-                        .utc(d().duration(a, "seconds").asMilliseconds())
-                        .format("mm:ss")
-                    : d()
-                        .utc(d().duration(a, "seconds").asMilliseconds())
-                        .format("h:mm:ss")
-                  : "-";
-              },
-            },
-            {
-              dataKey: "lobbytype",
-              label:
-                "Ranked/Unranked (this label isn't used, check headerRenderer)",
-              widthRelative: 8,
-              cellRenderer: (e) => {
-                let a = isNaN(e.cellData) ? e.rowData.lobbytype : e.cellData;
-                a in k.AP || (a = -1);
-                let t = z;
+              key: "behavscore",
+              secondaryKey: "commscore",
+              tertiaryKey: "trustscore",
+              displayName: "Behav, Comms, Trust",
+              formatFunction: (n = 8e3, c = -1, m = -1) => {
+                let l = S;
+                n < 0
+                  ? (l = S)
+                  : n <= 2e3
+                    ? (l = z)
+                    : n <= 4e3
+                      ? (l = i)
+                      : n <= 6e3 && (l = h);
+                let t = S;
                 return (
-                  a == k.AP.CASUAL_MATCH
-                    ? (t = J)
-                    : a == k.AP.COMPETITIVE_MATCH && (t = X),
-                  (0, n.jsx)("span", { style: { color: t }, children: E(a) })
-                );
-              },
-              headerRenderer: (e) =>
-                (0, n.jsxs)(i.Fragment, {
-                  children: [
-                    (0, n.jsxs)("div", {
-                      className: w().CheckBox,
-                      children: [
-                        (0, n.jsx)("input", {
-                          type: "checkbox",
-                          name: "ranked",
-                          id: "ranked",
-                          onChange: () => Te(!Ie),
-                          checked: Ie,
-                        }),
-                        (0, n.jsx)("label", {
-                          htmlFor: "ranked",
-                          children: (0, n.jsx)("span", {
-                            style: { color: X },
-                            children: "Ranked",
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: w().CheckBox,
-                      children: [
-                        (0, n.jsx)("input", {
-                          type: "checkbox",
-                          name: "unranked",
-                          id: "unranked",
-                          onChange: () => ke(!ve),
-                          checked: ve,
-                        }),
-                        (0, n.jsx)("label", {
-                          htmlFor: "unranked",
-                          children: (0, n.jsx)("span", {
-                            style: { color: J },
-                            children: "Unranked",
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-            },
-            {
-              dataKey: "rankwassolo",
-              label: "Solo/Party (this label isn't used, check headerRenderer)",
-              widthRelative: 6,
-              cellRenderer: (e) =>
-                e.cellData && e?.rowData?.lobbytype != k.AP.WEEKEND_TOURNEY
-                  ? (0, n.jsx)("span", {
-                      style: { color: Q },
-                      children: "Solo",
-                    })
-                  : (0, n.jsx)("span", {
-                      style: { color: q },
-                      children: "Party",
-                    }),
-              headerRenderer: (e) =>
-                (0, n.jsxs)(i.Fragment, {
-                  children: [
-                    (0, n.jsxs)("div", {
-                      className: w().CheckBox,
-                      children: [
-                        (0, n.jsx)("input", {
-                          type: "checkbox",
-                          name: "solo",
-                          id: "solo",
-                          onChange: () => Ee(!De),
-                          checked: De,
-                        }),
-                        (0, n.jsx)("label", {
-                          htmlFor: "solo",
-                          children: (0, n.jsx)("span", {
-                            style: { color: Q },
-                            children: "Solo",
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, n.jsxs)("div", {
-                      className: w().CheckBox,
-                      children: [
-                        (0, n.jsx)("input", {
-                          type: "checkbox",
-                          name: "party",
-                          id: "party",
-                          onChange: () => be(!Oe),
-                          checked: Oe,
-                        }),
-                        (0, n.jsx)("label", {
-                          htmlFor: "party",
-                          children: (0, n.jsx)("span", {
-                            style: { color: q },
-                            children: "Party",
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-            },
-            {
-              dataKey: "gamemode",
-              label: "Mode",
-              widthRelative: 6,
-              cellRenderer: (e) => {
-                if (e?.rowData?.searchdata?.partylowpri)
-                  return (0, n.jsx)("span", {
-                    style: { color: V },
-                    children: "SD (LP)",
-                  });
-                const a = `DOTA_GAMEMODE_${e.cellData}`;
-                return a in k.Fk ? D(k.Fk[a]) : D(k.Fk.DOTA_GAMEMODE_NONE);
-              },
-            },
-            {
-              dataKey: "kills",
-              label: "K/D/A",
-              widthRelative: 7,
-              cellRenderer: (e) =>
-                isNaN(e.cellData) ||
-                isNaN(e?.rowData?.deaths) ||
-                isNaN(e?.rowData?.assists)
-                  ? " - / - / - "
-                  : `${e.cellData}/${e?.rowData?.deaths}/${e?.rowData?.assists}`,
-            },
-            {
-              dataKey: "goldspent",
-              label: "NW",
-              widthRelative: 6,
-              cellRenderer: (e) => {
-                let a = e.cellData + e?.rowData?.gold;
-                return (
-                  isNaN(a) && (a = "-"),
-                  (0, n.jsx)("span", {
-                    style: { color: "darkgoldenrod" },
-                    children: `${a}`,
+                  c < 0
+                    ? (t = S)
+                    : c <= 2e3
+                      ? (t = z)
+                      : c <= 4e3
+                        ? (t = i)
+                        : c <= 6e3 && (t = h),
+                  (0, e.jsxs)("div", {
+                    children: [
+                      (0, e.jsx)("span", {
+                        style: { color: l },
+                        children: `${n}, `,
+                      }),
+                      (0, e.jsx)("span", {
+                        style: { color: t },
+                        children: `${c}, `,
+                      }),
+                      (0, e.jsx)("span", {
+                        style: { color: S },
+                        children: `${m}`,
+                      }),
+                    ],
                   })
                 );
               },
             },
             {
-              dataKey: "item0",
-              label: "Items",
-              widthRelative: 20,
-              cellRenderer: (e) => {
-                const a = [];
-                for (let t = 0; t < 6; t++) {
-                  const r = Le?.itemabilities.find(
-                    (a) => a.id == e?.rowData[`item${t}`],
-                  );
-                  let s = r?.name.replace("item_", "");
-                  (r && s) || (s = "emptyitembg"),
-                    a.push(
-                      (0, n.jsx)(
-                        "img",
+              key: "steamaccountlink",
+              displayName: "Steam Account 64",
+              formatFunction: (n) =>
+                n
+                  ? (0, e.jsx)(j.Fragment, {
+                      children: (0, e.jsx)("a", {
+                        href: n,
+                        target: "_blank",
+                        rel: "noopener",
+                        children: n.split("/").pop(),
+                      }),
+                    })
+                  : "",
+            },
+            {
+              key: "history",
+              secondaryKey: "steamsupporthwidbaseurl",
+              displayName: "Most Recent HWID",
+              formatFunction: (n = {}, c) => {
+                if (
+                  !Object.keys(n).length ||
+                  !n.matches ||
+                  !Object.keys(n.matches).length
+                )
+                  return "";
+                let m = "";
+                for (let l = Object.keys(n.matches).length - 1; l >= 0; l--)
+                  if (n.matches[l]?.searchdata?.hwid) {
+                    m = n.matches[l]?.searchdata.hwid;
+                    break;
+                  }
+                return m
+                  ? (0, e.jsx)(j.Fragment, {
+                      children: (0, e.jsx)("a", {
+                        href: `${c}${m}`,
+                        target: "_blank",
+                        rel: "noopener",
+                        children: m,
+                      }),
+                    })
+                  : "";
+              },
+            },
+            {
+              key: "personalink",
+              displayName: "Persona V1",
+              formatFunction: (n) =>
+                n
+                  ? (0, e.jsx)(j.Fragment, {
+                      children: (0, e.jsx)("a", {
+                        href: n,
+                        target: "_blank",
+                        rel: "noopener",
+                        children: "Persona V1",
+                      }),
+                    })
+                  : "",
+            },
+          ],
+          ce = [
+            {
+              key: "smurfcategory",
+              displayName: "Smurf Category",
+              formatFunction: (n) => {
+                switch (n) {
+                  case o.V7.VERY_LIKELY:
+                    return (0, e.jsx)("span", {
+                      style: { color: z },
+                      children: le(o.V7.VERY_LIKELY),
+                    });
+                  case o.V7.SOMEWHAT_LIKELY:
+                    return (0, e.jsx)("span", {
+                      style: { color: i },
+                      children: le(o.V7.SOMEWHAT_LIKELY),
+                    });
+                  case o.V7.UNCLEAR:
+                    return (0, e.jsx)("span", {
+                      style: { color: h },
+                      children: le(o.V7.UNCLEAR),
+                    });
+                  case o.V7.SOMEWHAT_UNLIKELY:
+                    return (0, e.jsx)("span", {
+                      style: {},
+                      children: le(o.V7.SOMEWHAT_UNLIKELY),
+                    });
+                  case o.V7.VERY_UNLIKELY:
+                    return (0, e.jsx)("span", {
+                      style: {},
+                      children: le(o.V7.VERY_UNLIKELY),
+                    });
+                  default:
+                    return (0, e.jsx)("span", { children: le(o.V7.INVALID) });
+                }
+              },
+            },
+            {
+              key: "plussubscriber",
+              displayName: "Plus Subscriber",
+              formatFunction: (n = 0) =>
+                n
+                  ? (0, e.jsx)("div", { style: { color: S }, children: "YES" })
+                  : "NO",
+            },
+            {
+              key: "wins",
+              secondaryKey: "losses",
+              displayName: "Total Games Played",
+              formatFunction: (n, c) =>
+                (0, e.jsx)("div", { children: n + c || 0 }),
+            },
+            {
+              key: "wins",
+              secondaryKey: "losses",
+              displayName: "Win Rate",
+              formatFunction: (n, c) => {
+                const m = n + c || 0;
+                if (!m) return (0, e.jsx)("div", { children: "" });
+                const l = Math.round((n / m) * 1e4) / 100;
+                let t = "none";
+                return (
+                  l >= 70 || l <= 30
+                    ? (t = i)
+                    : (l >= 60 || l <= 40) && (t = h),
+                  (0, e.jsxs)(j.Fragment, {
+                    children: [
+                      (0, e.jsxs)("span", {
+                        className: d().MarginRightSmall,
+                        children: [
+                          (0, e.jsx)("span", {
+                            style: { color: C },
+                            children: `${n}`,
+                          }),
+                          (0, e.jsx)("span", { children: " - " }),
+                          (0, e.jsx)("span", {
+                            style: { color: p },
+                            children: `${c}`,
+                          }),
+                        ],
+                      }),
+                      (0, e.jsx)("span", {
+                        style: { color: t },
+                        children: `(${l}%)`,
+                      }),
+                    ],
+                  })
+                );
+              },
+            },
+            {
+              key: "recentwincount",
+              secondaryKey: "recentlosscount",
+              displayName: "Win Rate (Recent)",
+              formatFunction: (n, c) => {
+                const m = n + c || 0;
+                if (!m) return (0, e.jsx)("div", { children: "" });
+                const l = Math.round((n / m) * 1e4) / 100;
+                let t = "none";
+                return (
+                  l >= 70 || l <= 30
+                    ? (t = i)
+                    : (l >= 60 || l <= 40) && (t = h),
+                  (0, e.jsxs)(j.Fragment, {
+                    children: [
+                      (0, e.jsxs)("span", {
+                        className: d().MarginRightSmall,
+                        children: [
+                          (0, e.jsx)("span", {
+                            style: { color: C },
+                            children: `${n}`,
+                          }),
+                          (0, e.jsx)("span", { children: " - " }),
+                          (0, e.jsx)("span", {
+                            style: { color: p },
+                            children: `${c}`,
+                          }),
+                        ],
+                      }),
+                      (0, e.jsx)("span", {
+                        style: { color: t },
+                        children: `(${l}%)`,
+                      }),
+                    ],
+                  })
+                );
+              },
+            },
+            {
+              key: "overperformancehistory",
+              displayName: "Overperformance History",
+              formatFunction: (n = 0) => {
+                let c = 0;
+                (c = n - ((n >> 1) & 1431655765)),
+                  (c = ((c >> 2) & 858993459) + (c & 858993459)),
+                  (c = ((c >> 4) + c) & 252645135),
+                  (c = ((c >> 8) + c) & 16711935),
+                  (c = ((c >> 16) + c) & 65535);
+                let m = S;
+                return (
+                  c > 20 ? (m = z) : c > 10 ? (m = i) : c > 5 && (m = h),
+                  (0, e.jsx)("span", {
+                    style: { color: m },
+                    children: `${c} / 32 games`,
+                  })
+                );
+              },
+            },
+          ],
+          Z = [
+            {
+              key: "details",
+              displayName: " ",
+              formatFunction: (n = {}) => {
+                const c = [];
+                for (let m in n) {
+                  const l = Object.entries(n[m]).reverse();
+                  l.sort((u, O) => (u[1] > O[1] ? -1 : 1));
+                  const t = l.length
+                    ? l.reduce((u, O) => u + Number(O[1]), 0)
+                    : 0;
+                  if (!t) {
+                    c.push(
+                      (0, e.jsxs)(
+                        j.Fragment,
                         {
-                          className: w().ItemIcon,
-                          src: `${f.r.IMG_URL}items/${s}.png`,
-                          alt: e.cellData,
+                          children: [
+                            (0, e.jsx)("div", {
+                              className: d().TextCapitalize,
+                              children: m.replace(/_/g, " "),
+                            }),
+                            (0, e.jsx)("div", {}),
+                            (0, e.jsx)("div", {}),
+                          ],
                         },
-                        `${e.rowIndex}_item${t}`,
+                        m,
                       ),
                     );
+                    continue;
+                  }
+                  for (let u = 0; u < Math.min(l.length, 2); u++) {
+                    const O = l[u][0]
+                        ? /<\/?[a-z][\s\S]*>/i.test("" + l[u][0])
+                        : !1,
+                      g = typeof l[u][0] == "string" ? l[u][0] : "";
+                    c.push(
+                      (0, e.jsxs)(
+                        j.Fragment,
+                        {
+                          children: [
+                            (0, e.jsx)("div", {
+                              className: d().TextCapitalize,
+                              children: `${u == 0 ? m.replace(/_/g, " ") : ""}`,
+                            }),
+                            O &&
+                              (0, e.jsx)("div", {
+                                dangerouslySetInnerHTML: { __html: g },
+                              }),
+                            !O && (0, e.jsx)("div", { children: `${l[u][0]}` }),
+                            (0, e.jsx)("div", {
+                              style: { color: E },
+                              children: `(${l[u][1]} / ${t})`,
+                            }),
+                          ],
+                        },
+                        `${m}-${u}`,
+                      ),
+                    );
+                  }
                 }
-                return (0, n.jsxs)("div", {
-                  className: w().ItemContainer,
-                  children: [a, " "],
+                return c;
+              },
+            },
+          ],
+          v = [
+            {
+              key: "reportslink",
+              displayName: "Reports",
+              formatFunction: (n) =>
+                n
+                  ? (0, e.jsx)(j.Fragment, {
+                      children: (0, e.jsx)("a", {
+                        href: n,
+                        target: "_blank",
+                        rel: "noopener",
+                        children: "Reports",
+                      }),
+                    })
+                  : "",
+            },
+            {
+              key: "associateslink",
+              displayName: "Associates",
+              formatFunction: (n) =>
+                n
+                  ? (0, e.jsx)(j.Fragment, {
+                      children: (0, e.jsx)("a", {
+                        href: n,
+                        target: "_blank",
+                        rel: "noopener",
+                        children: "Associates",
+                      }),
+                    })
+                  : "",
+            },
+          ],
+          _ = [
+            {
+              key: "beta_access_flags",
+              displayName: Qe(o.TK.DOTA_ACCESS_TOURNAMENT_ADMIN),
+              formatFunction: (n = 0) =>
+                n & o.TK.DOTA_ACCESS_TOURNAMENT_ADMIN
+                  ? (0, e.jsx)("div", { style: { color: S }, children: "YES" })
+                  : "NO",
+            },
+            {
+              key: "beta_access_flags",
+              displayName: Qe(o.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+              formatFunction: (n = 0) =>
+                n & o.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER
+                  ? (0, e.jsx)("div", { style: { color: S }, children: "YES" })
+                  : "NO",
+            },
+          ],
+          W = [
+            {
+              key: "vac",
+              displayName: " ",
+              formatFunction: (n = {}) => {
+                const c = [];
+                for (let m in n) {
+                  const l = n[m];
+                  c.push(
+                    (0, e.jsxs)(
+                      j.Fragment,
+                      {
+                        children: [
+                          (0, e.jsx)("div", {
+                            className: d().TextCapitalize,
+                            children: `VAC ${m.replace(/_/g, " ")}`,
+                          }),
+                          (0, e.jsx)("div", { children: l }),
+                        ],
+                      },
+                      m,
+                    ),
+                  );
+                }
+                return c;
+              },
+            },
+          ],
+          Ie = [
+            { key: "name", displayName: "Name" },
+            { key: "real_name", displayName: "Real Name" },
+            {
+              key: "role",
+              displayName: "Role",
+              formatFunction: (n = 0) => {
+                switch (n) {
+                  case o.Ov.CORE:
+                    return Fe(o.Ov.CORE);
+                  case o.Ov.SUPPORT:
+                    return Fe(o.Ov.SUPPORT);
+                  case o.Ov.OFFLANE:
+                    return Fe(o.Ov.OFFLANE);
+                  case o.Ov.MID:
+                    return Fe(o.Ov.MID);
+                  default:
+                    return "Unknown";
+                }
+              },
+            },
+            {
+              key: "team",
+              secondaryKey: "dotateamurl",
+              displayName: "Team ID",
+              formatFunction: (n = 0, c = "") => {
+                if (!n || !c) return "";
+                const m = `${c}${n}`;
+                return (0, e.jsx)(j.Fragment, {
+                  children: (0, e.jsx)("a", {
+                    href: m,
+                    target: "_blank",
+                    rel: "noopener",
+                    children: n,
+                  }),
                 });
               },
             },
             {
-              dataKey: "role_assignment",
-              label: "Role",
-              widthRelative: 6,
-              cellRenderer: (e) => {
-                switch (e.cellData) {
-                  case 1:
-                    return "Safe";
-                  case 2:
-                    return "Off";
-                  case 4:
-                    return "Mid";
-                  case 8:
-                    return "S Sup";
-                  case 16:
-                    return "H Sup";
-                  default:
-                    return "-";
-                }
-              },
+              key: "country",
+              displayName: "Country",
+              formatFunction: (n) =>
+                (0, e.jsx)("span", {
+                  className: d().TextUppercase,
+                  children: n,
+                }),
+            },
+            { key: "sponsor", displayName: "Sponsor" },
+            {
+              key: "pro",
+              displayName: "Is Pro Team?",
+              formatFunction: (n) => (n ? "YES" : "NO"),
             },
             {
-              dataKey: "reports",
-              label: "Reports / Notes",
-              widthRelative: 22,
-              cellRenderer: (e) => {
-                const a = Object.values(e.cellData || []),
-                  t = Object.values(e?.rowData?.leaver || []),
-                  r = Object.values(e?.rowData?.detections || []),
-                  s = Object.values(e?.rowData?.lowpribans || []),
-                  l = e?.rowData?.hwidchange,
-                  i = e?.rowData?.hwidchangelink,
-                  o = e?.rowData?.geolocchange,
-                  c = e?.rowData?.languagechange,
-                  m = [],
-                  u = [];
-                for (const e of a) u.push(e);
-                const h = [];
-                if (
-                  (t.length &&
-                    h.push(
-                      (0, n.jsx)(
-                        L.he,
-                        {
-                          toolTipContent: (0, n.jsxs)("table", {
-                            style: { borderSpacing: "5px" },
-                            children: [
-                              (0, n.jsx)("thead", {
-                                children: (0, n.jsxs)("tr", {
-                                  children: [
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Date",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Leaver Status",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "State Flags",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Game State",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Lobby State",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Actions",
-                                    }),
-                                  ],
-                                }),
-                              }),
-                              (0, n.jsx)("tbody", {
-                                children: t.map((e) =>
-                                  (0, n.jsxs)(
-                                    "tr",
-                                    {
-                                      children: [
-                                        (0, n.jsx)("td", {
-                                          children: e.time
-                                            ? d()(1e3 * e.time).format(
-                                                "MMMM Do YYYY, h:mm:ss a",
-                                              )
-                                            : "-",
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children: e.leaverstatusname,
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children:
-                                            e.flagnames &&
-                                            Object.values(e.flagnames).length
-                                              ? Object.values(e.flagnames).join(
-                                                  ", ",
-                                                )
-                                              : "-",
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children: e.gamestatename,
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children: e.lobbystatename,
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children:
-                                            e.actionnames &&
-                                            Object.values(e.actionnames).length
-                                              ? Object.values(
-                                                  e.actionnames,
-                                                ).join(", ")
-                                              : "-",
-                                        }),
-                                      ],
-                                    },
-                                    `${e.time}`,
-                                  ),
-                                ),
-                              }),
-                            ],
-                          }),
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: w().PlayerReportTooltip,
-                          children: (0, n.jsx)("span", {
-                            style: { color: V },
-                            children: "[Lvr] ",
-                          }),
-                        },
-                        "leaverTooltip",
-                      ),
-                    ),
-                  m.length &&
-                    h.push(
-                      (0, n.jsx)(
-                        L.he,
-                        {
-                          toolTipContent: (0, n.jsxs)("table", {
-                            style: { borderSpacing: "12px" },
-                            children: [
-                              (0, n.jsx)("thead", {
-                                children: (0, n.jsxs)("tr", {
-                                  children: [
-                                    (0, n.jsx)("th", { align: "left" }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Commend",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Player",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Comment",
-                                    }),
-                                  ],
-                                }),
-                              }),
-                              (0, n.jsx)("tbody", {
-                                children: m.map((e) => {
-                                  const a = Z(e.reportreason),
-                                    t = ee(e.reportreason);
-                                  return (0, n.jsxs)(
-                                    "tr",
-                                    {
-                                      children: [
-                                        (0, n.jsx)("td", {
-                                          children:
-                                            a && (0, n.jsx)("img", { src: a }),
-                                        }),
-                                        (0, n.jsx)("td", { children: t }),
-                                        (0, n.jsx)("td", {
-                                          children: e.reporteraccountid,
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children: e.comment || "",
-                                        }),
-                                      ],
-                                    },
-                                    `${e.reporteraccountid}`,
-                                  );
-                                }),
-                              }),
-                            ],
-                          }),
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: w().PlayerReportTooltip,
-                          children: (0, n.jsx)(
-                            "span",
-                            { style: { color: Y }, children: `[${m.length}] ` },
-                            "playerCommends",
-                          ),
-                        },
-                        "commendTooltip",
-                      ),
-                    ),
-                  u.length)
-                ) {
-                  u.sort((e, a) => e.reporteraccountid - a.reporteraccountid);
-                  const e = [...new Set(u.map((e) => e?.reporteraccountid))],
-                    a = [];
-                  let t = 0;
-                  for (let e of u) {
-                    const r = Z(e.reportreason),
-                      s = ee(e.reportreason);
-                    t &&
-                      t != e.reporteraccountid &&
-                      a.push(
-                        (0, n.jsx)(
-                          "tr",
-                          {
-                            children: (0, n.jsx)("td", {
-                              colSpan: 3,
-                              children: (0, n.jsx)("hr", {}),
-                            }),
-                          },
-                          `${t}-separator`,
-                        ),
-                      ),
-                      a.push(
-                        (0, n.jsxs)(
-                          "tr",
-                          {
-                            children: [
-                              (0, n.jsx)("td", {
-                                children: r && (0, n.jsx)("img", { src: r }),
-                              }),
-                              (0, n.jsx)("td", { children: s }),
-                              (0, n.jsx)("td", {
-                                children: e.reporteraccountid,
-                              }),
-                            ],
-                          },
-                          `${e.reporteraccountid}-${e.reportreason}`,
-                        ),
-                      ),
-                      (t = e.reporteraccountid);
-                  }
-                  h.push(
-                    (0, n.jsx)(
-                      L.he,
+              key: "locked",
+              displayName: "Is Locked?",
+              formatFunction: (n) => (n ? "YES" : "NO"),
+            },
+          ],
+          Ke = [
+            {
+              key: "teams",
+              secondaryKey: "dotateamurl",
+              displayName: " ",
+              formatFunction: (n = {}, c = "") => {
+                const m = [];
+                for (let l in n) {
+                  const t = n[l],
+                    u = t.team_id,
+                    O = `${c}${u}`,
+                    g = t.team_name,
+                    P = t.team_tag;
+                  m.push(
+                    (0, e.jsxs)(
+                      j.Fragment,
                       {
-                        toolTipContent: (0, n.jsxs)("table", {
-                          style: { borderSpacing: "12px" },
-                          children: [
-                            (0, n.jsx)("thead", {
-                              children: (0, n.jsxs)("tr", {
-                                children: [
-                                  (0, n.jsx)("th", { align: "left" }),
-                                  (0, n.jsx)("th", {
-                                    align: "left",
-                                    children: "Reason",
-                                  }),
-                                  (0, n.jsx)("th", {
-                                    align: "left",
-                                    children: "Reporter",
-                                  }),
-                                ],
+                        children: [
+                          (0, e.jsxs)("div", {
+                            children: [
+                              `${g} `,
+                              (0, e.jsx)("span", {
+                                style: { color: E },
+                                children: `[${P}]`,
                               }),
-                            }),
-                            (0, n.jsx)("tbody", { children: a }),
-                          ],
-                        }),
-                        direction: "left",
-                        nBodyAlignment: 1,
-                        nAllowOffscreenPx: 1200,
-                        strTooltipClassname: w().PlayerReportTooltip,
-                        children: (0, n.jsx)(
-                          "span",
-                          { style: { color: H }, children: `[${e.length}]` },
-                          "playerReports",
-                        ),
+                            ],
+                          }),
+                          (0, e.jsx)("a", {
+                            href: O,
+                            target: "_blank",
+                            rel: "noopener",
+                            children: u,
+                          }),
+                        ],
                       },
-                      "reportTooltip",
+                      u,
                     ),
                   );
                 }
-                return (
-                  r.length &&
-                    h.push(
-                      (0, n.jsx)(
-                        L.he,
-                        {
-                          toolTipContent: (0, n.jsxs)("table", {
-                            style: { borderSpacing: "12px" },
-                            children: [
-                              (0, n.jsx)("thead", {
-                                children: (0, n.jsxs)("tr", {
-                                  children: [
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Suspicion (Enum)",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Game Time",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Data 1",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Data 2",
-                                    }),
-                                  ],
-                                }),
-                              }),
-                              (0, n.jsx)("tbody", {
-                                children: r.map((e, a) =>
-                                  (0, n.jsxs)(
-                                    "tr",
-                                    {
-                                      children: [
-                                        (0, n.jsx)("td", {
-                                          children: `${e.suspicionname} (${e.suspicion})`,
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children: d()
-                                            .utc(
-                                              d()
-                                                .duration(e.gametime, "seconds")
-                                                .asMilliseconds(),
-                                            )
-                                            .format("mm:ss"),
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children: e.data1 || "",
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children: e.data2 || "",
-                                        }),
-                                      ],
-                                    },
-                                    `${e.matchid}-${a}`,
-                                  ),
-                                ),
-                              }),
-                            ],
-                          }),
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: w().PlayerReportTooltip,
-                          children: (0, n.jsx)(
-                            "span",
-                            { style: { color: H }, children: "[SUS]" },
-                            "playerReports",
-                          ),
-                        },
-                        "detectionsTooltip",
-                      ),
-                    ),
-                  s.length &&
-                    h.push(
-                      (0, n.jsx)(
-                        L.he,
-                        {
-                          toolTipContent: (0, n.jsxs)("table", {
-                            style: { borderSpacing: "12px" },
-                            children: [
-                              (0, n.jsx)("thead", {
-                                children: (0, n.jsxs)("tr", {
-                                  children: [
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Ban Type",
-                                    }),
-                                    (0, n.jsx)("th", {
-                                      align: "left",
-                                      children: "Games",
-                                    }),
-                                  ],
-                                }),
-                              }),
-                              (0, n.jsx)("tbody", {
-                                children: s.map((e, a) =>
-                                  (0, n.jsxs)(
-                                    "tr",
-                                    {
-                                      children: [
-                                        (0, n.jsx)("td", {
-                                          children: e.bantypename || "",
-                                        }),
-                                        (0, n.jsx)("td", {
-                                          children:
-                                            e.penaltylowprigamesapplied || "0",
-                                        }),
-                                      ],
-                                    },
-                                    `lp-${a}`,
-                                  ),
-                                ),
-                              }),
-                            ],
-                          }),
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: w().PlayerReportTooltip,
-                          children: (0, n.jsx)(
-                            "span",
-                            { style: { color: H }, children: "[LP]" },
-                            "playerReports",
-                          ),
-                        },
-                        "lowPriTooltip",
-                      ),
-                    ),
-                  c &&
-                    h.push(
-                      (0, n.jsx)(
-                        L.he,
-                        {
-                          toolTipContent: c,
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: w().PlayerReportTooltip,
-                          children: (0, n.jsx)(
-                            "span",
-                            {
-                              style: { color: $ },
-                              children: `[${c.slice(-2)}]`,
-                            },
-                            "langChange",
-                          ),
-                        },
-                        "langchange",
-                      ),
-                    ),
-                  o &&
-                    h.push(
-                      (0, n.jsx)(
-                        L.he,
-                        {
-                          toolTipContent: o,
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: w().PlayerReportTooltip,
-                          children: (0, n.jsx)(
-                            "span",
-                            { style: { color: $ }, children: "[GEO]" },
-                            "geoChange",
-                          ),
-                        },
-                        "geochange",
-                      ),
-                    ),
-                  l &&
-                    h.push(
-                      (0, n.jsx)(
-                        L.he,
-                        {
-                          toolTipContent: l,
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: w().PlayerReportTooltip,
-                          children: (0, n.jsx)(
-                            "span",
-                            { style: { color: $ }, children: "[HW]" },
-                            "hwidChange",
-                          ),
-                        },
-                        "hwchange",
-                      ),
-                    ),
-                  i &&
-                    h.push(
-                      (0, n.jsx)(
-                        "div",
-                        { dangerouslySetInnerHTML: { __html: i } },
-                        "hwidChange",
-                      ),
-                    ),
-                  0 == h.length
-                    ? ""
-                    : (0, n.jsx)("div", {
-                        className: w().ReportRowElement,
-                        children: h,
-                      })
-                );
+                return m;
               },
             },
-          ];
-          let Ge = !0;
-          for (let e of he)
-            if (r?.persona && r?.persona[e.key]) {
-              Ge = !1;
-              break;
-            }
-          let He = !1;
-          for (let e of xe)
-            if (
-              r?.persona &&
-              r?.persona[e.key] &&
-              d()(1e3 * r?.persona[e.key]).isAfter()
-            ) {
-              He = !0;
-              break;
-            }
-          let $e = 0,
-            Ue = !1;
-          if (r?.persona?.banhistory)
-            for (let e of r.persona.banhistory) {
-              const a = e.comment || "";
-              if (
-                /Smurf/.test(a) &&
-                /Main/.test(a) &&
-                a.match(/.*(?:\D|^)(\d+)/) &&
-                a.match(/.*(?:\D|^)(\d+)/)
-              ) {
-                const e = a.match(/.*(?:\D|^)(\d+)/);
-                e && e.length && ($e = e[1]);
-              } else if (
-                /Streamer/i.test(a) &&
-                /Main/.test(a) &&
-                a.match(/.*(?:\D|^)(\d+)/) &&
-                a.match(/.*(?:\D|^)(\d+)/)
-              ) {
-                const e = a.match(/.*(?:\D|^)(\d+)/);
-                e && e.length && (($e = e[1]), (Ue = !0));
-              }
-            }
-          const Be = r?.persona?.personaname || "";
-          return (0, n.jsxs)("div", {
-            className: w().PersonaDetails,
-            children: [
-              (0, n.jsx)(N.A, { bOverlapping: !1 }),
-              (0, n.jsx)(o.mg, {
-                children: (0, n.jsx)("title", {
-                  children: "Dota 2 Player" + (Be ? " - " + Be : ""),
-                }),
-              }),
-              (0, n.jsx)(S.A, {}),
-              (0, n.jsx)("br", {}),
-              (0, n.jsxs)("div", {
-                className: w().ContentFrame,
-                children: [
-                  (0, n.jsxs)("div", {
-                    className: w().TopContent,
-                    children: [
-                      (0, n.jsxs)("div", {
-                        className: w().TopContentLeft,
+          ],
+          ve = [
+            {
+              key: "eventpoints",
+              displayName: " ",
+              formatFunction: (n = {}) => {
+                const m = n?.result?.points || [],
+                  l = [];
+                for (let t of m) {
+                  const u = t.event_id,
+                    O = n[u]?.event_name,
+                    g = n[u]?.points_per_level || 1e3,
+                    P = Math.floor(t.event_points / g);
+                  l.unshift(
+                    (0, e.jsxs)(
+                      j.Fragment,
+                      {
                         children: [
-                          (0, n.jsx)("h1", {
-                            className: (0, A.A)(
-                              w().Header,
-                              w().HeaderFixedHeight,
+                          (0, e.jsx)("div", { children: O }),
+                          (0, e.jsx)("div", { children: P }),
+                        ],
+                      },
+                      O,
+                    ),
+                  );
+                }
+                return l;
+              },
+            },
+          ],
+          Q = () =>
+            (0, e.jsxs)(j.Fragment, {
+              children: [
+                (0, e.jsx)("span", { style: { color: i }, children: "YES" }),
+                (0, e.jsx)("span", {
+                  children: " (check V1 Link for details)",
+                }),
+              ],
+            }),
+          he = [
+            {
+              key: "exploiter_data",
+              displayName: "Exploiter Warnings?",
+              formatFunction: Q,
+            },
+            {
+              key: "smurf_data",
+              displayName: "Smurf Warnings?",
+              formatFunction: Q,
+            },
+            {
+              key: "cheater_data",
+              displayName: "Cheater Warnings?",
+              formatFunction: Q,
+            },
+            {
+              key: "booster_data",
+              displayName: "Booster Warnings?",
+              formatFunction: Q,
+            },
+            {
+              key: "known_mmr_exploiter",
+              displayName: "Known Hacker / Exploiter?",
+              formatFunction: Q,
+            },
+            {
+              key: "delayedbans",
+              displayName: "Delayed Bans?",
+              formatFunction: Q,
+            },
+          ],
+          re = (n) =>
+            (0, e.jsx)(j.Fragment, {
+              children: (0, e.jsx)("span", {
+                style: { color: z },
+                children: w()(n * 1e3).format("MMMM Do YYYY, h:mm:ss a"),
+              }),
+            }),
+          Oe = [
+            {
+              key: "matchdisableduntil",
+              displayName: "MM Disabled Until",
+              formatFunction: re,
+            },
+            {
+              key: "rankeddisableduntil",
+              displayName: "Ranked Disabled Until",
+              formatFunction: re,
+            },
+            {
+              key: "preventvoiceuntil",
+              displayName: "Voice Disabled Until",
+              formatFunction: re,
+            },
+            {
+              key: "preventpublictextchatuntil",
+              displayName: "Public Text Chat Disabled Until",
+              formatFunction: re,
+            },
+          ],
+          pe = (n) => {
+            if (!n || !n.length) return "(No Bans)";
+            n = n.slice(0, 5);
+            const c = (m) =>
+              m
+                ? m < 60
+                  ? `${w().duration(m, "seconds").asSeconds()} seconds`
+                  : m < 3600
+                    ? `${w().duration(m, "seconds").asMinutes()} min`
+                    : m < 86400 * 10
+                      ? `${w().duration(m, "seconds").asHours()} hours`
+                      : `${w().duration(m, "seconds").asDays()} days`
+                : "";
+            return n.map((m) => {
+              const l = m.bantype == "Admin Permanent";
+              return (0, e.jsxs)(
+                "tr",
+                {
+                  style: { color: l ? z : "" },
+                  children: [
+                    (0, e.jsx)("td", { children: m.bantype }),
+                    (0, e.jsx)("td", {
+                      children: w()(m.starttime * 1e3).format(
+                        "MMMM Do YYYY, h:mm:ss a",
+                      ),
+                    }),
+                    (0, e.jsx)("td", {
+                      children: w()((m.starttime + m.duration) * 1e3).format(
+                        "MMMM Do YYYY, h:mm:ss a",
+                      ),
+                    }),
+                    (0, e.jsx)("td", {
+                      children: l ? "Permanent" : c(m.duration),
+                    }),
+                    (0, e.jsx)("td", {
+                      children: m.admin ? "ADMIN" : "Automated",
+                    }),
+                    (0, e.jsx)("td", { children: m.comment }),
+                  ],
+                },
+                `${m.bantype} - ${m.starttime}`,
+              );
+            });
+          },
+          ge = (n) => {
+            const m = (0, I.g)()?.id,
+              [l, t] = (0, j.useState)(null),
+              [u, O] = (0, j.useState)(null),
+              [g, P] = (0, j.useState)(null),
+              [K, $] = (0, j.useState)(null),
+              [B, q] = (0, j.useState)(!1),
+              [Me, V] = (0, j.useState)(!1),
+              [de, be] = (0, j.useState)(!1),
+              [M, ht] = (0, j.useState)(!1),
+              [at, yt] = (0, j.useState)(!0),
+              [nt, ft] = (0, j.useState)(!0),
+              [st, jt] = (0, j.useState)(!1),
+              [rt, gt] = (0, j.useState)(!0),
+              [ot, At] = (0, j.useState)(!0),
+              [it, pt] = (0, j.useState)(!1),
+              Nt = ee.B5.Get().getHeroList(),
+              Tt = ee.B5.Get().getItemList();
+            async function Et() {
+              if (!T.r.DOTA_APP_ID || !m) return;
+              ht(!1), be(!1), q(!1), V(!1);
+              const a = {
+                appid: T.r.DOTA_APP_ID,
+                u: qe(T.r.DOTA_APP_ID),
+                account_id: m,
+              };
+              try {
+                const A = await R().get(
+                    T.r.BASE_URL + "persona/showplayerreact/",
+                    { params: a },
+                  ),
+                  N = A?.data;
+                if (!N?.persona || !N?.persona?.accountid)
+                  throw new Error(
+                    "GC could not find account details for this account",
+                  );
+                try {
+                  N &&
+                    N.persona &&
+                    N.persona.elodatajson &&
+                    O(JSON.parse(N.persona.elodatajson).aggregate);
+                } catch {}
+                try {
+                  if (
+                    N &&
+                    N.persona &&
+                    N.persona.history &&
+                    N.persona.history.matches &&
+                    Object.keys(N.persona.history.matches).length
+                  ) {
+                    const X = Object.values(
+                      N.persona.history.matches,
+                    ).reverse();
+                    P(X), $(X);
+                  }
+                } catch {
+                  V(!0);
+                }
+                A && A.data && t(N);
+              } catch {
+                console.log("Error fetching individual persona info."), ht(!0);
+              }
+              be(!0), q(!0);
+            }
+            (0, j.useEffect)(() => {
+              try {
+                Et();
+              } catch {
+                console.log("Could not fetch persona info.");
+              }
+            }, [m]),
+              (0, j.useEffect)(() => {
+                if (!g) return;
+                let a = g.slice();
+                (a = a.filter(
+                  (A) =>
+                    !(
+                      (!nt && A.lobbytype == o.AP.CASUAL_MATCH) ||
+                      (!at && A.lobbytype == o.AP.COMPETITIVE_MATCH) ||
+                      (!st &&
+                        ![
+                          o.AP.CASUAL_MATCH,
+                          o.AP.COMPETITIVE_MATCH,
+                          o.AP.WEEKEND_TOURNEY,
+                          o.AP.FEATURED_GAMEMODE,
+                        ].includes(A.lobbytype)) ||
+                      (!rt && A.rankwassolo) ||
+                      (!ot && !A.rankwassolo)
+                    ),
+                )),
+                  $(a);
+              }, [g, at, nt, st, rt, ot]);
+            let ze = null;
+            if (
+              (m
+                ? !de || !B
+                  ? (ze = `Loading account ID ${m}...`)
+                  : de && M
+                    ? (ze = `Error loading persona information for account ID ${m}. Double check universe & account ID (or try refreshing).`)
+                    : B &&
+                      Me &&
+                      (ze = `Error loading match history for account ID ${m}.`)
+                : (ze = "Must pass in an account ID."),
+              ze)
+            )
+              return (0, e.jsxs)("div", {
+                className: d().PersonaDetails,
+                children: [
+                  (0, e.jsx)(Ee.A, { bOverlapping: !1 }),
+                  (0, e.jsx)(x.mg, {
+                    children: (0, e.jsx)("title", {
+                      children: "Dota 2 - Persona Details",
+                    }),
+                  }),
+                  (0, e.jsx)(Je.A, {}),
+                  (0, e.jsx)("div", {
+                    className: d().ContentFrame,
+                    children: (0, e.jsx)("h2", {
+                      className: d().Header,
+                      children: ze,
+                    }),
+                  }),
+                  (0, e.jsx)(Ve.K, {}),
+                ],
+              });
+            const Dt = [
+              {
+                dataKey: "date",
+                label: "Match Date",
+                widthRelative: 13,
+                cellRenderer: (a) =>
+                  w()(a.cellData * 1e3).format("MM/DD/YY HH:mm:ss"),
+              },
+              {
+                dataKey: "matchid",
+                label: "ID",
+                widthRelative: 10,
+                cellRenderer: (a) => Y(a.cellData, a.columnData.strAccountId),
+              },
+              {
+                dataKey: "heroid",
+                label: "Hero",
+                widthRelative: 5,
+                cellRenderer: (a) => {
+                  const N = Nt?.heroes
+                    .find((X) => X.id == a.cellData)
+                    ?.name?.replace("npc_dota_hero_", "");
+                  return N
+                    ? (0, e.jsx)("img", {
+                        className: d().HeroImage,
+                        src: `${T.r.IMG_URL}heroes/wide/${N}.png`,
+                        alt: a.cellData,
+                      })
+                    : (0, e.jsx)("img", {
+                        className: d().HeroImage,
+                        src: `${T.r.IMG_URL}heroes/wide/unknown.png`,
+                      });
+                },
+              },
+              {
+                dataKey: "outcome",
+                label: "Outcome",
+                widthRelative: 7,
+                cellRenderer: (a) => {
+                  if (a.rowData?.lobbytype == o.AP.PRACTICE)
+                    return (0, e.jsx)("span", {
+                      style: { color: H },
+                      children: Se(o.AP.PRACTICE),
+                    });
+                  let A = a.cellData;
+                  if ((A in o.rM || (A = 0), A <= 0)) return je(o.rM.UNKNOWN);
+                  const N = a?.rowData?.teamnumber + 2;
+                  if (N < 2 || N > 3) return je(o.rM.UNKNOWN);
+                  if (A < 2 || A > 3) {
+                    const X = a.cellData;
+                    return X in o.rM
+                      ? (0, e.jsx)("span", {
+                          style: { color: i },
+                          children: je(X),
+                        })
+                      : je(o.rM.UNKNOWN);
+                  } else {
+                    const X = N == A,
+                      me = [],
+                      _e = a?.rowData?.rankchange;
+                    let We = X ? (_e >= 35 ? s : C) : _e <= -35 ? f : p;
+                    return (
+                      me.push(
+                        (0, e.jsx)(
+                          "span",
+                          { style: { color: We }, children: X ? "W" : "L" },
+                          "W-L",
+                        ),
+                      ),
+                      X
+                        ? me.push(
+                            (0, e.jsx)(
+                              "span",
+                              { style: { color: We }, children: ` (+${_e})` },
+                              "rankChange",
                             ),
-                            children: `${Be}`,
-                          }),
-                          (0, n.jsx)("div", {
-                            className: w().GeneralInfoGrid,
-                            children: ae.map((e) =>
-                              (0, n.jsxs)(
-                                i.Fragment,
-                                {
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: e.displayName || e.key,
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: e.formatFunction
-                                        ? e.formatFunction.call(
-                                            null,
-                                            r?.persona[e.key],
-                                            r?.persona[e.secondaryKey],
-                                          )
-                                        : JSON.stringify(
-                                            r?.persona[e.key] || "",
-                                            null,
-                                            2,
-                                          ).replace(/['"]+/g, ""),
-                                    }),
-                                  ],
-                                },
-                                `${e.key}-${e.displayName}-generalInfo-row`,
+                          )
+                        : _e < 0
+                          ? me.push(
+                              (0, e.jsx)(
+                                "span",
+                                { style: { color: We }, children: ` (${_e})` },
+                                "rankChange",
+                              ),
+                            )
+                          : me.push(
+                              (0, e.jsx)(
+                                "span",
+                                { style: { color: We }, children: ` (-${_e})` },
+                                "rankChange",
                               ),
                             ),
+                      me
+                    );
+                  }
+                },
+              },
+              {
+                dataKey: "previousrank",
+                label: "MMR",
+                widthRelative: 5,
+                cellRenderer: (a) => a.cellData,
+              },
+              {
+                dataKey: "overperformance_score",
+                label: "Perf",
+                widthRelative: 4,
+                cellRenderer: (a) => {
+                  const A = a.cellData || 0;
+                  let N = "";
+                  return (
+                    A >= 300
+                      ? (N = z)
+                      : A >= 175
+                        ? (N = i)
+                        : A >= 100 && (N = h),
+                    (0, e.jsx)(
+                      "span",
+                      { style: { color: N }, children: `${A}` },
+                      "op",
+                    )
+                  );
+                },
+              },
+              {
+                dataKey: "duration",
+                label: "Dur",
+                widthRelative: 6,
+                cellRenderer: (a) => {
+                  const A = a.cellData;
+                  return A
+                    ? A < 3600
+                      ? w()
+                          .utc(w().duration(A, "seconds").asMilliseconds())
+                          .format("mm:ss")
+                      : w()
+                          .utc(w().duration(A, "seconds").asMilliseconds())
+                          .format("h:mm:ss")
+                    : "-";
+                },
+              },
+              {
+                dataKey: "lobbytype",
+                label:
+                  "Ranked/Unranked (this label isn't used, check headerRenderer)",
+                widthRelative: 8,
+                cellRenderer: (a) => {
+                  let A = isNaN(a.cellData) ? a.rowData.lobbytype : a.cellData;
+                  A in o.AP || (A = -1);
+                  let N = H;
+                  return (
+                    A == o.AP.CASUAL_MATCH
+                      ? (N = L)
+                      : A == o.AP.COMPETITIVE_MATCH && (N = k),
+                    (0, e.jsx)("span", { style: { color: N }, children: Se(A) })
+                  );
+                },
+                headerRenderer: (a) =>
+                  (0, e.jsxs)(j.Fragment, {
+                    children: [
+                      (0, e.jsxs)("div", {
+                        className: d().CheckBox,
+                        children: [
+                          (0, e.jsx)("input", {
+                            type: "checkbox",
+                            name: "ranked",
+                            id: "ranked",
+                            onChange: () => yt(!at),
+                            checked: at,
                           }),
-                          (0, n.jsx)("div", {
-                            className: w().RankInfoGrid,
-                            children: te.map((e) =>
-                              (0, n.jsxs)(
-                                i.Fragment,
-                                {
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: e.displayName || e.key,
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: e.formatFunction
-                                        ? e.formatFunction.call(
-                                            null,
-                                            r?.persona[e.key],
-                                            r?.persona[e.secondaryKey],
-                                            r?.persona[e.tertiaryKey],
-                                          )
-                                        : JSON.stringify(
-                                            r?.persona[e.key] || "",
-                                            null,
-                                            2,
-                                          ).replace(/['"]+/g, ""),
-                                    }),
-                                  ],
-                                },
-                                `${e.key}-${e.displayName}-rankInfo-row`,
-                              ),
-                            ),
-                          }),
-                          (0, n.jsx)("div", {
-                            className: w().SupportInfoTopGrid,
-                            children: ne.map((e) =>
-                              (0, n.jsxs)(
-                                i.Fragment,
-                                {
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: e.displayName || e.key,
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: e.formatFunction
-                                        ? e.formatFunction.call(
-                                            null,
-                                            r?.persona[e.key],
-                                            r?.persona[e.secondaryKey],
-                                            r?.persona[e.tertiaryKey],
-                                          )
-                                        : JSON.stringify(
-                                            r?.persona[e.key] || "",
-                                            null,
-                                            2,
-                                          ).replace(/['"]+/g, ""),
-                                    }),
-                                  ],
-                                },
-                                `${e.key}-${e.displayName}-supportInfo-row`,
-                              ),
-                            ),
-                          }),
-                          (0, n.jsx)("div", {
-                            className: w().SmurfInfoGrid,
-                            children: re.map((e) =>
-                              (0, n.jsxs)(
-                                i.Fragment,
-                                {
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: e.displayName || e.key,
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: e.formatFunction
-                                        ? e.formatFunction.call(
-                                            null,
-                                            r?.persona[e.key],
-                                            r?.persona[e.secondaryKey],
-                                          )
-                                        : JSON.stringify(
-                                            r?.persona[e.key] || "",
-                                            null,
-                                            2,
-                                          ).replace(/['"]+/g, ""),
-                                    }),
-                                  ],
-                                },
-                                `${e.key}-${e.displayName}-smurfInfo-row`,
-                              ),
-                            ),
-                          }),
-                          (0, n.jsx)("div", { className: w().SmoothLine }),
-                          (0, n.jsx)("h2", {
-                            className: w().Header,
-                            children: "Recent (Last 32 games)",
-                          }),
-                          (0, n.jsx)("div", {
-                            className: w().DetailedInfoOuterGrid,
-                            children: se.map((e) =>
-                              (0, n.jsx)(
-                                i.Fragment,
-                                {
-                                  children: (0, n.jsx)("div", {
-                                    className: w().DetailedInfoInnerGrid,
-                                    children: e.formatFunction
-                                      ? e.formatFunction.call(
-                                          null,
-                                          r?.persona[e.key],
-                                          r?.persona[e.secondaryKey],
-                                        )
-                                      : JSON.stringify(
-                                          r?.persona[e.key] || "",
-                                          null,
-                                          2,
-                                        ).replace(/['"]+/g, ""),
-                                  }),
-                                },
-                                `${e.key}-${e.displayName}-vacInfo-row`,
-                              ),
-                            ),
+                          (0, e.jsx)("label", {
+                            htmlFor: "ranked",
+                            children: (0, e.jsx)("span", {
+                              style: { color: k },
+                              children: "Ranked",
+                            }),
                           }),
                         ],
                       }),
-                      (0, n.jsx)("div", {
-                        className: w().TopContentRight,
-                        children: (0, n.jsxs)("div", {
-                          className: w().ChartContainer,
-                          children: [
-                            b &&
-                              (0, n.jsx)("div", {
-                                className: w().ChartTitle,
-                                children: `Last ${b.length} games`,
-                              }),
-                            (0, n.jsx)(m.u, {
-                              width: "99%",
-                              aspect: 1.9,
-                              children: (0, n.jsxs)(u.b, {
-                                data: b,
-                                margin: {
-                                  top: 5,
-                                  right: 30,
-                                  left: 20,
-                                  bottom: 5,
-                                },
-                                children: [
-                                  (0, n.jsx)(h.d, {
-                                    strokeDasharray: "12 8",
-                                    stroke: "#424242",
-                                    fillOpacity: 0.2,
-                                  }),
-                                  (0, n.jsx)(p.W, {
-                                    stroke: "#808080",
-                                    dataKey: "time",
-                                    type: "number",
-                                    tickFormatter: (e) =>
-                                      d()(1e3 * e).format("MM/DD/YY"),
-                                    domain: [
-                                      "dataMin - 86400",
-                                      "dataMax + 43200",
-                                    ],
-                                  }),
-                                  (0, n.jsx)(x.h, {
-                                    stroke: "#808080",
-                                    domain: ["auto", "auto"],
-                                  }),
-                                  (0, n.jsx)(_.m, {
-                                    cursor: !1,
-                                    labelFormatter: (e) =>
-                                      d()(1e3 * Number(e)).format(
-                                        "MM/DD/YY HH:mm:ss",
-                                      ),
-                                    contentStyle: {
-                                      backgroundColor: "#0c1414",
-                                    },
-                                  }),
-                                  (0, n.jsx)(j.s, {
-                                    layout: "vertical",
-                                    verticalAlign: "middle",
-                                    align: "right",
-                                    wrapperStyle: { paddingLeft: "10px" },
-                                  }),
-                                  (0, n.jsx)(y.N, {
-                                    type: "monotone",
-                                    dataKey: "ranked",
-                                    name: "Ranked",
-                                    dot: { fill: X, strokeWidth: 1, r: 3 },
-                                    stroke: "#888fd8",
-                                    strokeWidth: 2,
-                                    connectNulls: !0,
-                                  }),
-                                  (0, n.jsx)(y.N, {
-                                    type: "monotone",
-                                    dataKey: "casual",
-                                    name: "Unranked",
-                                    dot: { fill: J, strokeWidth: 1, r: 3 },
-                                    stroke: "#82ca9d",
-                                    strokeWidth: 2,
-                                    connectNulls: !0,
-                                  }),
-                                ],
-                              }),
+                      (0, e.jsxs)("div", {
+                        className: d().CheckBox,
+                        children: [
+                          (0, e.jsx)("input", {
+                            type: "checkbox",
+                            name: "unranked",
+                            id: "unranked",
+                            onChange: () => ft(!nt),
+                            checked: nt,
+                          }),
+                          (0, e.jsx)("label", {
+                            htmlFor: "unranked",
+                            children: (0, e.jsx)("span", {
+                              style: { color: L },
+                              children: "Unranked",
                             }),
-                          ],
-                        }),
+                          }),
+                        ],
                       }),
                     ],
                   }),
-                  (0, n.jsx)("br", {}),
-                  (0, n.jsx)("div", { className: w().SmoothLine }),
-                  (0, n.jsx)("div", {
-                    className: (0, A.A)(
-                      w().SupportGrid,
-                      Fe && w().SupportGridHidden,
-                    ),
-                    children: (0, n.jsx)("div", {
-                      className: w().SupportColumn,
-                      onClick: () => Ce(!0),
-                      children: (0, n.jsxs)("h2", {
-                        className: (0, A.A)(
-                          w().HeaderNoMargin,
-                          w().HeaderClickable,
-                        ),
+              },
+              {
+                dataKey: "rankwassolo",
+                label:
+                  "Solo/Party (this label isn't used, check headerRenderer)",
+                widthRelative: 6,
+                cellRenderer: (a) =>
+                  a.cellData && a?.rowData?.lobbytype != o.AP.WEEKEND_TOURNEY
+                    ? (0, e.jsx)("span", {
+                        style: { color: te },
+                        children: "Solo",
+                      })
+                    : (0, e.jsx)("span", {
+                        style: { color: F },
+                        children: "Party",
+                      }),
+                headerRenderer: (a) =>
+                  (0, e.jsxs)(j.Fragment, {
+                    children: [
+                      (0, e.jsxs)("div", {
+                        className: d().CheckBox,
                         children: [
-                          "Support, Bans, & Other Info",
-                          (0, n.jsx)("img", {
-                            className: (0, A.A)(
-                              w().ArrowIcon,
-                              w().ArrowIconRight,
-                            ),
-                            src: `${f.r.IMG_URL}arrow_solid_right.png`,
+                          (0, e.jsx)("input", {
+                            type: "checkbox",
+                            name: "solo",
+                            id: "solo",
+                            onChange: () => gt(!rt),
+                            checked: rt,
+                          }),
+                          (0, e.jsx)("label", {
+                            htmlFor: "solo",
+                            children: (0, e.jsx)("span", {
+                              style: { color: te },
+                              children: "Solo",
+                            }),
                           }),
                         ],
                       }),
-                    }),
-                  }),
-                  (0, n.jsxs)("div", {
-                    className: (0, A.A)(
-                      w().SupportGrid,
-                      !Fe && w().SupportGridHidden,
-                    ),
-                    children: [
-                      (0, n.jsxs)("div", {
-                        className: w().SupportColumn,
+                      (0, e.jsxs)("div", {
+                        className: d().CheckBox,
                         children: [
-                          (0, n.jsxs)("h2", {
-                            className: (0, A.A)(
-                              w().Header,
-                              w().HeaderClickable,
+                          (0, e.jsx)("input", {
+                            type: "checkbox",
+                            name: "party",
+                            id: "party",
+                            onChange: () => At(!ot),
+                            checked: ot,
+                          }),
+                          (0, e.jsx)("label", {
+                            htmlFor: "party",
+                            children: (0, e.jsx)("span", {
+                              style: { color: F },
+                              children: "Party",
+                            }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              },
+              {
+                dataKey: "gamemode",
+                label: "Mode",
+                widthRelative: 6,
+                cellRenderer: (a) => {
+                  if (a?.rowData?.searchdata?.partylowpri)
+                    return (0, e.jsx)("span", {
+                      style: { color: f },
+                      children: "SD (LP)",
+                    });
+                  const A = `DOTA_GAMEMODE_${a.cellData}`;
+                  return A in o.Fk ? De(o.Fk[A]) : De(o.Fk.DOTA_GAMEMODE_NONE);
+                },
+              },
+              {
+                dataKey: "kills",
+                label: "K/D/A",
+                widthRelative: 7,
+                cellRenderer: (a) =>
+                  isNaN(a.cellData) ||
+                  isNaN(a?.rowData?.deaths) ||
+                  isNaN(a?.rowData?.assists)
+                    ? " - / - / - "
+                    : `${a.cellData}/${a?.rowData?.deaths}/${a?.rowData?.assists}`,
+              },
+              {
+                dataKey: "goldspent",
+                label: "NW",
+                widthRelative: 6,
+                cellRenderer: (a) => {
+                  let A = a.cellData + a?.rowData?.gold;
+                  return (
+                    isNaN(A) && (A = "-"),
+                    (0, e.jsx)("span", {
+                      style: { color: "darkgoldenrod" },
+                      children: `${A}`,
+                    })
+                  );
+                },
+              },
+              {
+                dataKey: "item0",
+                label: "Items",
+                widthRelative: 20,
+                cellRenderer: (a) => {
+                  const A = [];
+                  for (let N = 0; N < 6; N++) {
+                    const X = Tt?.itemabilities.find(
+                      (_e) => _e.id == a?.rowData[`item${N}`],
+                    );
+                    let me = X?.name.replace("item_", "");
+                    (!X || !me) && (me = "emptyitembg"),
+                      A.push(
+                        (0, e.jsx)(
+                          "img",
+                          {
+                            className: d().ItemIcon,
+                            src: `${T.r.IMG_URL}items/${me}.png`,
+                            alt: a.cellData,
+                          },
+                          `${a.rowIndex}_item${N}`,
+                        ),
+                      );
+                  }
+                  return (0, e.jsxs)("div", {
+                    className: d().ItemContainer,
+                    children: [A, " "],
+                  });
+                },
+              },
+              {
+                dataKey: "role_assignment",
+                label: "Role",
+                widthRelative: 6,
+                cellRenderer: (a) => {
+                  switch (a.cellData) {
+                    case 1:
+                      return "Safe";
+                    case 2:
+                      return "Off";
+                    case 4:
+                      return "Mid";
+                    case 8:
+                      return "S Sup";
+                    case 16:
+                      return "H Sup";
+                    default:
+                      return "-";
+                  }
+                },
+              },
+              {
+                dataKey: "reports",
+                label: "Reports / Notes",
+                widthRelative: 22,
+                cellRenderer: (a) => {
+                  const A = Object.values(a.cellData || []),
+                    N = Object.values(a?.rowData?.leaver || []),
+                    X = Object.values(a?.rowData?.detections || []),
+                    me = Object.values(a?.rowData?.lowpribans || []),
+                    _e = a?.rowData?.hwidchange,
+                    We = a?.rowData?.hwidchangelink,
+                    xt = a?.rowData?.geolocchange,
+                    mt = a?.rowData?.languagechange,
+                    ut = [],
+                    tt = [];
+                  for (const G of A) tt.push(G);
+                  const xe = [];
+                  if (
+                    (N.length &&
+                      xe.push(
+                        (0, e.jsx)(
+                          ie.he,
+                          {
+                            toolTipContent: (0, e.jsxs)("table", {
+                              style: { borderSpacing: "5px" },
+                              children: [
+                                (0, e.jsx)("thead", {
+                                  children: (0, e.jsxs)("tr", {
+                                    children: [
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Date",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Leaver Status",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "State Flags",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Game State",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Lobby State",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Actions",
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                                (0, e.jsx)("tbody", {
+                                  children: N.map((G) =>
+                                    (0, e.jsxs)(
+                                      "tr",
+                                      {
+                                        children: [
+                                          (0, e.jsx)("td", {
+                                            children: G.time
+                                              ? w()(G.time * 1e3).format(
+                                                  "MMMM Do YYYY, h:mm:ss a",
+                                                )
+                                              : "-",
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children: G.leaverstatusname,
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children:
+                                              G.flagnames &&
+                                              Object.values(G.flagnames).length
+                                                ? Object.values(
+                                                    G.flagnames,
+                                                  ).join(", ")
+                                                : "-",
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children: G.gamestatename,
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children: G.lobbystatename,
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children:
+                                              G.actionnames &&
+                                              Object.values(G.actionnames)
+                                                .length
+                                                ? Object.values(
+                                                    G.actionnames,
+                                                  ).join(", ")
+                                                : "-",
+                                          }),
+                                        ],
+                                      },
+                                      `${G.time}`,
+                                    ),
+                                  ),
+                                }),
+                              ],
+                            }),
+                            direction: "left",
+                            nBodyAlignment: 1,
+                            nAllowOffscreenPx: 1200,
+                            strTooltipClassname: d().PlayerReportTooltip,
+                            children: (0, e.jsx)("span", {
+                              style: { color: f },
+                              children: "[Lvr] ",
+                            }),
+                          },
+                          "leaverTooltip",
+                        ),
+                      ),
+                    ut.length &&
+                      xe.push(
+                        (0, e.jsx)(
+                          ie.he,
+                          {
+                            toolTipContent: (0, e.jsxs)("table", {
+                              style: { borderSpacing: "12px" },
+                              children: [
+                                (0, e.jsx)("thead", {
+                                  children: (0, e.jsxs)("tr", {
+                                    children: [
+                                      (0, e.jsx)("th", { align: "left" }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Commend",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Player",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Comment",
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                                (0, e.jsx)("tbody", {
+                                  children: ut.map((G) => {
+                                    const Ae = b(G.reportreason),
+                                      Ze = U(G.reportreason);
+                                    return (0, e.jsxs)(
+                                      "tr",
+                                      {
+                                        children: [
+                                          (0, e.jsx)("td", {
+                                            children:
+                                              Ae &&
+                                              (0, e.jsx)("img", { src: Ae }),
+                                          }),
+                                          (0, e.jsx)("td", { children: Ze }),
+                                          (0, e.jsx)("td", {
+                                            children: G.reporteraccountid,
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children: G.comment || "",
+                                          }),
+                                        ],
+                                      },
+                                      `${G.reporteraccountid}`,
+                                    );
+                                  }),
+                                }),
+                              ],
+                            }),
+                            direction: "left",
+                            nBodyAlignment: 1,
+                            nAllowOffscreenPx: 1200,
+                            strTooltipClassname: d().PlayerReportTooltip,
+                            children: (0, e.jsx)(
+                              "span",
+                              {
+                                style: { color: C },
+                                children: `[${ut.length}] `,
+                              },
+                              "playerCommends",
                             ),
-                            onClick: () => Ce(!1),
-                            children: [
-                              "Support, Bans, & Other Info",
-                              (0, n.jsx)("img", {
-                                className: (0, A.A)(
-                                  w().ArrowIcon,
-                                  w().ArrowIconDown,
-                                ),
-                                src: `${f.r.IMG_URL}arrow_over.png`,
+                          },
+                          "commendTooltip",
+                        ),
+                      ),
+                    tt.length)
+                  ) {
+                    tt.sort(
+                      (ye, lt) => ye.reporteraccountid - lt.reporteraccountid,
+                    );
+                    const G = [
+                        ...new Set(tt.map((ye) => ye?.reporteraccountid)),
+                      ],
+                      Ae = [];
+                    let Ze = 0;
+                    for (let ye of tt) {
+                      const lt = b(ye.reportreason),
+                        It = U(ye.reportreason);
+                      Ze &&
+                        Ze != ye.reporteraccountid &&
+                        Ae.push(
+                          (0, e.jsx)(
+                            "tr",
+                            {
+                              children: (0, e.jsx)("td", {
+                                colSpan: 3,
+                                children: (0, e.jsx)("hr", {}),
                               }),
+                            },
+                            `${Ze}-separator`,
+                          ),
+                        ),
+                        Ae.push(
+                          (0, e.jsxs)(
+                            "tr",
+                            {
+                              children: [
+                                (0, e.jsx)("td", {
+                                  children:
+                                    lt && (0, e.jsx)("img", { src: lt }),
+                                }),
+                                (0, e.jsx)("td", { children: It }),
+                                (0, e.jsx)("td", {
+                                  children: ye.reporteraccountid,
+                                }),
+                              ],
+                            },
+                            `${ye.reporteraccountid}-${ye.reportreason}`,
+                          ),
+                        ),
+                        (Ze = ye.reporteraccountid);
+                    }
+                    xe.push(
+                      (0, e.jsx)(
+                        ie.he,
+                        {
+                          toolTipContent: (0, e.jsxs)("table", {
+                            style: { borderSpacing: "12px" },
+                            children: [
+                              (0, e.jsx)("thead", {
+                                children: (0, e.jsxs)("tr", {
+                                  children: [
+                                    (0, e.jsx)("th", { align: "left" }),
+                                    (0, e.jsx)("th", {
+                                      align: "left",
+                                      children: "Reason",
+                                    }),
+                                    (0, e.jsx)("th", {
+                                      align: "left",
+                                      children: "Reporter",
+                                    }),
+                                  ],
+                                }),
+                              }),
+                              (0, e.jsx)("tbody", { children: Ae }),
                             ],
                           }),
-                          (0, n.jsx)("div", {
-                            className: w().SupportInfoGrid,
-                            children: le.map((e) =>
-                              (0, n.jsxs)(
-                                i.Fragment,
-                                {
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: e.displayName || e.key,
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: e.formatFunction
-                                        ? e.formatFunction.call(
-                                            null,
-                                            r?.persona[e.key],
-                                            r?.persona[e.secondaryKey],
-                                          )
-                                        : JSON.stringify(
-                                            r?.persona[e.key] || "",
-                                            null,
-                                            2,
-                                          ).replace(/['"]+/g, ""),
-                                    }),
-                                  ],
-                                },
-                                `${e.key}-${e.displayName}-supportInfo-row`,
-                              ),
-                            ),
-                          }),
-                          (0, n.jsx)("br", {}),
-                          (0, n.jsx)("div", {
-                            className: w().AccessFlagsGrid,
-                            children: ie.map((e) =>
-                              (0, n.jsxs)(
-                                i.Fragment,
-                                {
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: e.displayName || e.key,
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: e.formatFunction
-                                        ? e.formatFunction.call(
-                                            null,
-                                            r?.persona[e.key],
-                                            r?.persona[e.secondaryKey],
-                                          )
-                                        : JSON.stringify(
-                                            r?.persona[e.key] || "",
-                                            null,
-                                            2,
-                                          ).replace(/['"]+/g, ""),
-                                    }),
-                                  ],
-                                },
-                                `${e.key}-${e.displayName}-accountFlagGenericInfo-row`,
-                              ),
-                            ),
-                          }),
-                          !Ge && (0, n.jsx)("br", {}),
-                          (0, n.jsx)("div", {
-                            className: w().WarningsGrid,
-                            children: he.map((e) =>
-                              (0, n.jsxs)(
-                                i.Fragment,
-                                {
-                                  children: [
-                                    !!r?.persona[e.key] &&
-                                      (0, n.jsx)("div", {
-                                        children: e.displayName || e.key,
+                          direction: "left",
+                          nBodyAlignment: 1,
+                          nAllowOffscreenPx: 1200,
+                          strTooltipClassname: d().PlayerReportTooltip,
+                          children: (0, e.jsx)(
+                            "span",
+                            { style: { color: z }, children: `[${G.length}]` },
+                            "playerReports",
+                          ),
+                        },
+                        "reportTooltip",
+                      ),
+                    );
+                  }
+                  return (
+                    X.length &&
+                      xe.push(
+                        (0, e.jsx)(
+                          ie.he,
+                          {
+                            toolTipContent: (0, e.jsxs)("table", {
+                              style: { borderSpacing: "12px" },
+                              children: [
+                                (0, e.jsx)("thead", {
+                                  children: (0, e.jsxs)("tr", {
+                                    children: [
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Suspicion (Enum)",
                                       }),
-                                    !!r?.persona[e.key] &&
-                                      (0, n.jsx)("div", {
-                                        children: e.formatFunction
-                                          ? e.formatFunction.call(
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Game Time",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Data 1",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Data 2",
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                                (0, e.jsx)("tbody", {
+                                  children: X.map((G, Ae) =>
+                                    (0, e.jsxs)(
+                                      "tr",
+                                      {
+                                        children: [
+                                          (0, e.jsx)("td", {
+                                            children: `${G.suspicionname} (${G.suspicion})`,
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children: w()
+                                              .utc(
+                                                w()
+                                                  .duration(
+                                                    G.gametime,
+                                                    "seconds",
+                                                  )
+                                                  .asMilliseconds(),
+                                              )
+                                              .format("mm:ss"),
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children: G.data1 || "",
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children: G.data2 || "",
+                                          }),
+                                        ],
+                                      },
+                                      `${G.matchid}-${Ae}`,
+                                    ),
+                                  ),
+                                }),
+                              ],
+                            }),
+                            direction: "left",
+                            nBodyAlignment: 1,
+                            nAllowOffscreenPx: 1200,
+                            strTooltipClassname: d().PlayerReportTooltip,
+                            children: (0, e.jsx)(
+                              "span",
+                              { style: { color: z }, children: "[SUS]" },
+                              "playerReports",
+                            ),
+                          },
+                          "detectionsTooltip",
+                        ),
+                      ),
+                    me.length &&
+                      xe.push(
+                        (0, e.jsx)(
+                          ie.he,
+                          {
+                            toolTipContent: (0, e.jsxs)("table", {
+                              style: { borderSpacing: "12px" },
+                              children: [
+                                (0, e.jsx)("thead", {
+                                  children: (0, e.jsxs)("tr", {
+                                    children: [
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Ban Type",
+                                      }),
+                                      (0, e.jsx)("th", {
+                                        align: "left",
+                                        children: "Games",
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                                (0, e.jsx)("tbody", {
+                                  children: me.map((G, Ae) =>
+                                    (0, e.jsxs)(
+                                      "tr",
+                                      {
+                                        children: [
+                                          (0, e.jsx)("td", {
+                                            children: G.bantypename || "",
+                                          }),
+                                          (0, e.jsx)("td", {
+                                            children:
+                                              G.penaltylowprigamesapplied ||
+                                              "0",
+                                          }),
+                                        ],
+                                      },
+                                      `lp-${Ae}`,
+                                    ),
+                                  ),
+                                }),
+                              ],
+                            }),
+                            direction: "left",
+                            nBodyAlignment: 1,
+                            nAllowOffscreenPx: 1200,
+                            strTooltipClassname: d().PlayerReportTooltip,
+                            children: (0, e.jsx)(
+                              "span",
+                              { style: { color: z }, children: "[LP]" },
+                              "playerReports",
+                            ),
+                          },
+                          "lowPriTooltip",
+                        ),
+                      ),
+                    mt &&
+                      xe.push(
+                        (0, e.jsx)(
+                          ie.he,
+                          {
+                            toolTipContent: mt,
+                            direction: "left",
+                            nBodyAlignment: 1,
+                            nAllowOffscreenPx: 1200,
+                            strTooltipClassname: d().PlayerReportTooltip,
+                            children: (0, e.jsx)(
+                              "span",
+                              {
+                                style: { color: i },
+                                children: `[${mt.slice(-2)}]`,
+                              },
+                              "langChange",
+                            ),
+                          },
+                          "langchange",
+                        ),
+                      ),
+                    xt &&
+                      xe.push(
+                        (0, e.jsx)(
+                          ie.he,
+                          {
+                            toolTipContent: xt,
+                            direction: "left",
+                            nBodyAlignment: 1,
+                            nAllowOffscreenPx: 1200,
+                            strTooltipClassname: d().PlayerReportTooltip,
+                            children: (0, e.jsx)(
+                              "span",
+                              { style: { color: i }, children: "[GEO]" },
+                              "geoChange",
+                            ),
+                          },
+                          "geochange",
+                        ),
+                      ),
+                    _e &&
+                      xe.push(
+                        (0, e.jsx)(
+                          ie.he,
+                          {
+                            toolTipContent: _e,
+                            direction: "left",
+                            nBodyAlignment: 1,
+                            nAllowOffscreenPx: 1200,
+                            strTooltipClassname: d().PlayerReportTooltip,
+                            children: (0, e.jsx)(
+                              "span",
+                              { style: { color: i }, children: "[HW]" },
+                              "hwidChange",
+                            ),
+                          },
+                          "hwchange",
+                        ),
+                      ),
+                    We &&
+                      xe.push(
+                        (0, e.jsx)(
+                          "div",
+                          { dangerouslySetInnerHTML: { __html: We } },
+                          "hwidChange",
+                        ),
+                      ),
+                    xe.length == 0
+                      ? ""
+                      : (0, e.jsx)("div", {
+                          className: d().ReportRowElement,
+                          children: xe,
+                        })
+                  );
+                },
+              },
+            ];
+            let _t = !0;
+            for (let a of he)
+              if (l?.persona && l?.persona[a.key]) {
+                _t = !1;
+                break;
+              }
+            let St = !1;
+            for (let a of Oe)
+              if (
+                l?.persona &&
+                l?.persona[a.key] &&
+                w()(l?.persona[a.key] * 1e3).isAfter()
+              ) {
+                St = !0;
+                break;
+              }
+            let et = 0,
+              ct = !1;
+            if (l?.persona?.banhistory)
+              for (let a of l.persona.banhistory) {
+                const A = a.comment || "";
+                if (
+                  /Smurf/.test(A) &&
+                  /Main/.test(A) &&
+                  A.match(/.*(?:\D|^)(\d+)/) &&
+                  A.match(/.*(?:\D|^)(\d+)/)
+                ) {
+                  const N = A.match(/.*(?:\D|^)(\d+)/);
+                  N && N.length && (et = N[1]);
+                } else if (
+                  /Streamer/i.test(A) &&
+                  /Main/.test(A) &&
+                  A.match(/.*(?:\D|^)(\d+)/) &&
+                  A.match(/.*(?:\D|^)(\d+)/)
+                ) {
+                  const N = A.match(/.*(?:\D|^)(\d+)/);
+                  N && N.length && ((et = N[1]), (ct = !0));
+                }
+              }
+            const dt = l?.persona?.personaname || "";
+            return (0, e.jsxs)("div", {
+              className: d().PersonaDetails,
+              children: [
+                (0, e.jsx)(Ee.A, { bOverlapping: !1 }),
+                (0, e.jsx)(x.mg, {
+                  children: (0, e.jsx)("title", {
+                    children: `Dota 2 Player${dt ? " - " + dt : ""}`,
+                  }),
+                }),
+                (0, e.jsx)(Je.A, {}),
+                (0, e.jsx)("br", {}),
+                (0, e.jsxs)("div", {
+                  className: d().ContentFrame,
+                  children: [
+                    (0, e.jsxs)("div", {
+                      className: d().TopContent,
+                      children: [
+                        (0, e.jsxs)("div", {
+                          className: d().TopContentLeft,
+                          children: [
+                            (0, e.jsx)("h1", {
+                              className: (0, ne.A)(
+                                d().Header,
+                                d().HeaderFixedHeight,
+                              ),
+                              children: `${dt}`,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: d().GeneralInfoGrid,
+                              children: J.map((a) =>
+                                (0, e.jsxs)(
+                                  j.Fragment,
+                                  {
+                                    children: [
+                                      (0, e.jsx)("div", {
+                                        children: a.displayName || a.key,
+                                      }),
+                                      (0, e.jsx)("div", {
+                                        children: a.formatFunction
+                                          ? a.formatFunction.call(
                                               null,
-                                              r?.persona[e.key],
-                                              r?.persona[e.secondaryKey],
+                                              l?.persona[a.key],
+                                              l?.persona[a.secondaryKey],
                                             )
                                           : JSON.stringify(
-                                              r?.persona[e.key] || "",
+                                              l?.persona[a.key] || "",
                                               null,
                                               2,
                                             ).replace(/['"]+/g, ""),
                                       }),
-                                  ],
-                                },
-                                `${e.key}-${e.displayName}-warningsInfo-row`,
+                                    ],
+                                  },
+                                  `${a.key}-${a.displayName}-generalInfo-row`,
+                                ),
                               ),
-                            ),
-                          }),
-                          (0, n.jsx)("br", {}),
-                          (0, n.jsxs)("div", {
-                            className: w().BansGrid,
-                            children: [
-                              xe.map((e) =>
-                                (0, n.jsxs)(
-                                  i.Fragment,
+                            }),
+                            (0, e.jsx)("div", {
+                              className: d().RankInfoGrid,
+                              children: ae.map((a) =>
+                                (0, e.jsxs)(
+                                  j.Fragment,
                                   {
                                     children: [
-                                      !!r?.persona[e.key] &&
-                                        d()(
-                                          1e3 * r?.persona[e.key],
-                                        ).isAfter() &&
-                                        (0, n.jsx)("div", {
-                                          children: e.displayName || e.key,
+                                      (0, e.jsx)("div", {
+                                        children: a.displayName || a.key,
+                                      }),
+                                      (0, e.jsx)("div", {
+                                        children: a.formatFunction
+                                          ? a.formatFunction.call(
+                                              null,
+                                              l?.persona[a.key],
+                                              l?.persona[a.secondaryKey],
+                                              l?.persona[a.tertiaryKey],
+                                            )
+                                          : JSON.stringify(
+                                              l?.persona[a.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      }),
+                                    ],
+                                  },
+                                  `${a.key}-${a.displayName}-rankInfo-row`,
+                                ),
+                              ),
+                            }),
+                            (0, e.jsx)("div", {
+                              className: d().SupportInfoTopGrid,
+                              children: se.map((a) =>
+                                (0, e.jsxs)(
+                                  j.Fragment,
+                                  {
+                                    children: [
+                                      (0, e.jsx)("div", {
+                                        children: a.displayName || a.key,
+                                      }),
+                                      (0, e.jsx)("div", {
+                                        children: a.formatFunction
+                                          ? a.formatFunction.call(
+                                              null,
+                                              l?.persona[a.key],
+                                              l?.persona[a.secondaryKey],
+                                              l?.persona[a.tertiaryKey],
+                                            )
+                                          : JSON.stringify(
+                                              l?.persona[a.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      }),
+                                    ],
+                                  },
+                                  `${a.key}-${a.displayName}-supportInfo-row`,
+                                ),
+                              ),
+                            }),
+                            (0, e.jsx)("div", {
+                              className: d().SmurfInfoGrid,
+                              children: ce.map((a) =>
+                                (0, e.jsxs)(
+                                  j.Fragment,
+                                  {
+                                    children: [
+                                      (0, e.jsx)("div", {
+                                        children: a.displayName || a.key,
+                                      }),
+                                      (0, e.jsx)("div", {
+                                        children: a.formatFunction
+                                          ? a.formatFunction.call(
+                                              null,
+                                              l?.persona[a.key],
+                                              l?.persona[a.secondaryKey],
+                                            )
+                                          : JSON.stringify(
+                                              l?.persona[a.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      }),
+                                    ],
+                                  },
+                                  `${a.key}-${a.displayName}-smurfInfo-row`,
+                                ),
+                              ),
+                            }),
+                            (0, e.jsx)("div", { className: d().SmoothLine }),
+                            (0, e.jsx)("h2", {
+                              className: d().Header,
+                              children: "Recent (Last 32 games)",
+                            }),
+                            (0, e.jsx)("div", {
+                              className: d().DetailedInfoOuterGrid,
+                              children: Z.map((a) =>
+                                (0, e.jsx)(
+                                  j.Fragment,
+                                  {
+                                    children: (0, e.jsx)("div", {
+                                      className: d().DetailedInfoInnerGrid,
+                                      children: a.formatFunction
+                                        ? a.formatFunction.call(
+                                            null,
+                                            l?.persona[a.key],
+                                            l?.persona[a.secondaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            l?.persona[a.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  },
+                                  `${a.key}-${a.displayName}-vacInfo-row`,
+                                ),
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, e.jsx)("div", {
+                          className: d().TopContentRight,
+                          children: (0, e.jsxs)("div", {
+                            className: d().ChartContainer,
+                            children: [
+                              u &&
+                                (0, e.jsx)("div", {
+                                  className: d().ChartTitle,
+                                  children: `Last ${u.length} games`,
+                                }),
+                              (0, e.jsx)(Ge.u, {
+                                width: "99%",
+                                aspect: 1.9,
+                                children: (0, e.jsxs)(He.b, {
+                                  data: u,
+                                  margin: {
+                                    top: 5,
+                                    right: 30,
+                                    left: 20,
+                                    bottom: 5,
+                                  },
+                                  children: [
+                                    (0, e.jsx)(Ce.d, {
+                                      strokeDasharray: "12 8",
+                                      stroke: "#424242",
+                                      fillOpacity: 0.2,
+                                    }),
+                                    (0, e.jsx)(Ye.W, {
+                                      stroke: "#808080",
+                                      dataKey: "time",
+                                      type: "number",
+                                      tickFormatter: (a) =>
+                                        w()(a * 1e3).format("MM/DD/YY"),
+                                      domain: [
+                                        "dataMin - 86400",
+                                        "dataMax + 43200",
+                                      ],
+                                    }),
+                                    (0, e.jsx)(Le.h, {
+                                      stroke: "#808080",
+                                      domain: ["auto", "auto"],
+                                    }),
+                                    (0, e.jsx)(D.m, {
+                                      cursor: !1,
+                                      labelFormatter: (a) =>
+                                        w()(Number(a) * 1e3).format(
+                                          "MM/DD/YY HH:mm:ss",
+                                        ),
+                                      contentStyle: {
+                                        backgroundColor: "#0c1414",
+                                      },
+                                    }),
+                                    (0, e.jsx)(Ne.s, {
+                                      layout: "vertical",
+                                      verticalAlign: "middle",
+                                      align: "right",
+                                      wrapperStyle: { paddingLeft: "10px" },
+                                    }),
+                                    (0, e.jsx)(r.N, {
+                                      type: "monotone",
+                                      dataKey: "ranked",
+                                      name: "Ranked",
+                                      dot: { fill: k, strokeWidth: 1, r: 3 },
+                                      stroke: "#888fd8",
+                                      strokeWidth: 2,
+                                      connectNulls: !0,
+                                    }),
+                                    (0, e.jsx)(r.N, {
+                                      type: "monotone",
+                                      dataKey: "casual",
+                                      name: "Unranked",
+                                      dot: { fill: L, strokeWidth: 1, r: 3 },
+                                      stroke: "#82ca9d",
+                                      strokeWidth: 2,
+                                      connectNulls: !0,
+                                    }),
+                                  ],
+                                }),
+                              }),
+                            ],
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, e.jsx)("br", {}),
+                    (0, e.jsx)("div", { className: d().SmoothLine }),
+                    (0, e.jsx)("div", {
+                      className: (0, ne.A)(
+                        d().SupportGrid,
+                        it && d().SupportGridHidden,
+                      ),
+                      children: (0, e.jsx)("div", {
+                        className: d().SupportColumn,
+                        onClick: () => pt(!0),
+                        children: (0, e.jsxs)("h2", {
+                          className: (0, ne.A)(
+                            d().HeaderNoMargin,
+                            d().HeaderClickable,
+                          ),
+                          children: [
+                            "Support, Bans, & Other Info",
+                            (0, e.jsx)("img", {
+                              className: (0, ne.A)(
+                                d().ArrowIcon,
+                                d().ArrowIconRight,
+                              ),
+                              src: `${T.r.IMG_URL}arrow_solid_right.png`,
+                            }),
+                          ],
+                        }),
+                      }),
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: (0, ne.A)(
+                        d().SupportGrid,
+                        !it && d().SupportGridHidden,
+                      ),
+                      children: [
+                        (0, e.jsxs)("div", {
+                          className: d().SupportColumn,
+                          children: [
+                            (0, e.jsxs)("h2", {
+                              className: (0, ne.A)(
+                                d().Header,
+                                d().HeaderClickable,
+                              ),
+                              onClick: () => pt(!1),
+                              children: [
+                                "Support, Bans, & Other Info",
+                                (0, e.jsx)("img", {
+                                  className: (0, ne.A)(
+                                    d().ArrowIcon,
+                                    d().ArrowIconDown,
+                                  ),
+                                  src: `${T.r.IMG_URL}arrow_over.png`,
+                                }),
+                              ],
+                            }),
+                            (0, e.jsx)("div", {
+                              className: d().SupportInfoGrid,
+                              children: v.map((a) =>
+                                (0, e.jsxs)(
+                                  j.Fragment,
+                                  {
+                                    children: [
+                                      (0, e.jsx)("div", {
+                                        children: a.displayName || a.key,
+                                      }),
+                                      (0, e.jsx)("div", {
+                                        children: a.formatFunction
+                                          ? a.formatFunction.call(
+                                              null,
+                                              l?.persona[a.key],
+                                              l?.persona[a.secondaryKey],
+                                            )
+                                          : JSON.stringify(
+                                              l?.persona[a.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      }),
+                                    ],
+                                  },
+                                  `${a.key}-${a.displayName}-supportInfo-row`,
+                                ),
+                              ),
+                            }),
+                            (0, e.jsx)("br", {}),
+                            (0, e.jsx)("div", {
+                              className: d().AccessFlagsGrid,
+                              children: _.map((a) =>
+                                (0, e.jsxs)(
+                                  j.Fragment,
+                                  {
+                                    children: [
+                                      (0, e.jsx)("div", {
+                                        children: a.displayName || a.key,
+                                      }),
+                                      (0, e.jsx)("div", {
+                                        children: a.formatFunction
+                                          ? a.formatFunction.call(
+                                              null,
+                                              l?.persona[a.key],
+                                              l?.persona[a.secondaryKey],
+                                            )
+                                          : JSON.stringify(
+                                              l?.persona[a.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      }),
+                                    ],
+                                  },
+                                  `${a.key}-${a.displayName}-accountFlagGenericInfo-row`,
+                                ),
+                              ),
+                            }),
+                            !_t && (0, e.jsx)("br", {}),
+                            (0, e.jsx)("div", {
+                              className: d().WarningsGrid,
+                              children: he.map((a) =>
+                                (0, e.jsxs)(
+                                  j.Fragment,
+                                  {
+                                    children: [
+                                      !!l?.persona[a.key] &&
+                                        (0, e.jsx)("div", {
+                                          children: a.displayName || a.key,
                                         }),
-                                      !!r?.persona[e.key] &&
-                                        d()(
-                                          1e3 * r?.persona[e.key],
-                                        ).isAfter() &&
-                                        (0, n.jsx)("div", {
-                                          children: e.formatFunction
-                                            ? e.formatFunction.call(
+                                      !!l?.persona[a.key] &&
+                                        (0, e.jsx)("div", {
+                                          children: a.formatFunction
+                                            ? a.formatFunction.call(
                                                 null,
-                                                r?.persona[e.key],
-                                                r?.persona[e.secondaryKey],
+                                                l?.persona[a.key],
+                                                l?.persona[a.secondaryKey],
                                               )
                                             : JSON.stringify(
-                                                r?.persona[e.key] || "",
+                                                l?.persona[a.key] || "",
                                                 null,
                                                 2,
                                               ).replace(/['"]+/g, ""),
                                         }),
                                     ],
                                   },
-                                  `${e.key}-${e.displayName}-bansInfo-row`,
+                                  `${a.key}-${a.displayName}-warningsInfo-row`,
                                 ),
                               ),
-                              $e > 0 &&
-                                (0, n.jsxs)(i.Fragment, {
-                                  children: [
-                                    !Ue &&
-                                      (0, n.jsx)("div", {
-                                        children: "Main Account",
-                                      }),
-                                    Ue &&
-                                      (0, n.jsx)("div", {
-                                        children: "Streamer",
-                                      }),
-                                    (0, n.jsx)("div", {
-                                      children: (0, n.jsx)("a", {
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        href: `${f.r.BASE_URL}${T.J.personadetails($e).substr(1)}`,
-                                        children: $e,
-                                      }),
-                                    }),
-                                  ],
-                                }),
-                            ],
-                          }),
-                          (0, n.jsx)("br", {}),
-                          (0, n.jsx)("div", {
-                            className: w().VacInfoOuterGrid,
-                            children: oe.map((e) =>
-                              (0, n.jsx)(
-                                i.Fragment,
-                                {
-                                  children: (0, n.jsx)("div", {
-                                    className: w().VacInfoOuterGrid,
-                                    children: e.formatFunction
-                                      ? e.formatFunction.call(
-                                          null,
-                                          r?.persona[e.key],
-                                          r?.persona[e.secondaryKey],
-                                        )
-                                      : JSON.stringify(
-                                          r?.persona[e.key] || "",
-                                          null,
-                                          2,
-                                        ).replace(/['"]+/g, ""),
-                                  }),
-                                },
-                                `${e.key}-${e.displayName}-vacInfo-row`,
-                              ),
-                            ),
-                          }),
-                        ],
-                      }),
-                      (0, n.jsxs)("div", {
-                        className: w().OfficialInfoColumn,
-                        children: [
-                          (0, n.jsx)("h2", {
-                            className: w().Header,
-                            children: "Official Profile",
-                          }),
-                          (0, n.jsxs)("div", {
-                            className: w().OfficialProfileOuterGrid,
-                            children: [
-                              r?.persona?.official_profile &&
-                                ce.map((e) =>
-                                  (0, n.jsxs)(
-                                    i.Fragment,
+                            }),
+                            (0, e.jsx)("br", {}),
+                            (0, e.jsxs)("div", {
+                              className: d().BansGrid,
+                              children: [
+                                Oe.map((a) =>
+                                  (0, e.jsxs)(
+                                    j.Fragment,
                                     {
                                       children: [
-                                        (0, n.jsx)("div", {
-                                          children: e.displayName || e.key,
+                                        !!l?.persona[a.key] &&
+                                          w()(
+                                            l?.persona[a.key] * 1e3,
+                                          ).isAfter() &&
+                                          (0, e.jsx)("div", {
+                                            children: a.displayName || a.key,
+                                          }),
+                                        !!l?.persona[a.key] &&
+                                          w()(
+                                            l?.persona[a.key] * 1e3,
+                                          ).isAfter() &&
+                                          (0, e.jsx)("div", {
+                                            children: a.formatFunction
+                                              ? a.formatFunction.call(
+                                                  null,
+                                                  l?.persona[a.key],
+                                                  l?.persona[a.secondaryKey],
+                                                )
+                                              : JSON.stringify(
+                                                  l?.persona[a.key] || "",
+                                                  null,
+                                                  2,
+                                                ).replace(/['"]+/g, ""),
+                                          }),
+                                      ],
+                                    },
+                                    `${a.key}-${a.displayName}-bansInfo-row`,
+                                  ),
+                                ),
+                                et > 0 &&
+                                  (0, e.jsxs)(j.Fragment, {
+                                    children: [
+                                      !ct &&
+                                        (0, e.jsx)("div", {
+                                          children: "Main Account",
                                         }),
-                                        (0, n.jsx)("div", {
-                                          className:
-                                            w().OfficialProfileInnerGrid,
-                                          children: e.formatFunction
-                                            ? e.formatFunction.call(
+                                      ct &&
+                                        (0, e.jsx)("div", {
+                                          children: "Streamer",
+                                        }),
+                                      (0, e.jsx)("div", {
+                                        children: (0, e.jsx)("a", {
+                                          target: "_blank",
+                                          rel: "noopener noreferrer",
+                                          href: `${T.r.BASE_URL}${Ue.J.personadetails(et).substr(1)}`,
+                                          children: et,
+                                        }),
+                                      }),
+                                    ],
+                                  }),
+                              ],
+                            }),
+                            (0, e.jsx)("br", {}),
+                            (0, e.jsx)("div", {
+                              className: d().VacInfoOuterGrid,
+                              children: W.map((a) =>
+                                (0, e.jsx)(
+                                  j.Fragment,
+                                  {
+                                    children: (0, e.jsx)("div", {
+                                      className: d().VacInfoOuterGrid,
+                                      children: a.formatFunction
+                                        ? a.formatFunction.call(
+                                            null,
+                                            l?.persona[a.key],
+                                            l?.persona[a.secondaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            l?.persona[a.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  },
+                                  `${a.key}-${a.displayName}-vacInfo-row`,
+                                ),
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, e.jsxs)("div", {
+                          className: d().OfficialInfoColumn,
+                          children: [
+                            (0, e.jsx)("h2", {
+                              className: d().Header,
+                              children: "Official Profile",
+                            }),
+                            (0, e.jsxs)("div", {
+                              className: d().OfficialProfileOuterGrid,
+                              children: [
+                                l?.persona?.official_profile &&
+                                  Ie.map((a) =>
+                                    (0, e.jsxs)(
+                                      j.Fragment,
+                                      {
+                                        children: [
+                                          (0, e.jsx)("div", {
+                                            children: a.displayName || a.key,
+                                          }),
+                                          (0, e.jsx)("div", {
+                                            className:
+                                              d().OfficialProfileInnerGrid,
+                                            children: a.formatFunction
+                                              ? a.formatFunction.call(
+                                                  null,
+                                                  l?.persona?.official_profile[
+                                                    a.key
+                                                  ],
+                                                  l?.persona[a.secondaryKey],
+                                                )
+                                              : JSON.stringify(
+                                                  l?.persona?.official_profile[
+                                                    a.key
+                                                  ] || "",
+                                                  null,
+                                                  2,
+                                                ).replace(/['"]+/g, ""),
+                                          }),
+                                        ],
+                                      },
+                                      `${a.key}-${a.displayName}-officialProfileInfo-row`,
+                                    ),
+                                  ),
+                                !l?.persona?.official_profile &&
+                                  (0, e.jsx)(j.Fragment, {
+                                    children: (0, e.jsx)("span", {
+                                      style: { color: E },
+                                      children: "(None)",
+                                    }),
+                                  }),
+                              ],
+                            }),
+                            (0, e.jsxs)("div", {
+                              className: d().TeamsInfoInfoOuterGrid,
+                              children: [
+                                (0, e.jsx)("br", {}),
+                                (0, e.jsx)("h2", {
+                                  className: d().Header,
+                                  children: "Teams",
+                                }),
+                                l?.persona?.teams &&
+                                  Ke.map((a) =>
+                                    (0, e.jsx)(
+                                      j.Fragment,
+                                      {
+                                        children: (0, e.jsx)("div", {
+                                          className: d().TeamsInfoInnerGrid,
+                                          children: a.formatFunction
+                                            ? a.formatFunction.call(
                                                 null,
-                                                r?.persona?.official_profile[
-                                                  e.key
-                                                ],
-                                                r?.persona[e.secondaryKey],
+                                                l?.persona[a.key],
+                                                l?.persona[a.secondaryKey],
                                               )
                                             : JSON.stringify(
-                                                r?.persona?.official_profile[
-                                                  e.key
-                                                ] || "",
+                                                l?.persona[a.key] || "",
                                                 null,
                                                 2,
                                               ).replace(/['"]+/g, ""),
                                         }),
-                                      ],
-                                    },
-                                    `${e.key}-${e.displayName}-officialProfileInfo-row`,
+                                      },
+                                      `${a.key}-${a.displayName}-teamsInfo-row`,
+                                    ),
                                   ),
-                                ),
-                              !r?.persona?.official_profile &&
-                                (0, n.jsx)(i.Fragment, {
-                                  children: (0, n.jsx)("span", {
-                                    style: { color: K },
-                                    children: "(None)",
+                                !l?.persona?.teams &&
+                                  (0, e.jsx)(j.Fragment, {
+                                    children: (0, e.jsx)("span", {
+                                      style: { color: E },
+                                      children: "(None)",
+                                    }),
                                   }),
-                                }),
-                            ],
-                          }),
-                          (0, n.jsxs)("div", {
-                            className: w().TeamsInfoInfoOuterGrid,
-                            children: [
-                              (0, n.jsx)("br", {}),
-                              (0, n.jsx)("h2", {
-                                className: w().Header,
-                                children: "Teams",
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, e.jsxs)("div", {
+                          className: d().EventColumn,
+                          children: [
+                            (0, e.jsx)("h2", {
+                              className: d().Header,
+                              children: "Event Information",
+                            }),
+                            (0, e.jsx)("div", {
+                              className: d().EventInfoOuterGrid,
+                              children: ve.map((a) =>
+                                (0, e.jsx)(
+                                  j.Fragment,
+                                  {
+                                    children: (0, e.jsx)("div", {
+                                      className: d().EventInfoInnerGrid,
+                                      children: a.formatFunction
+                                        ? a.formatFunction.call(
+                                            null,
+                                            l?.persona[a.key],
+                                          )
+                                        : JSON.stringify(
+                                            l?.persona[a.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  },
+                                  `${a.key}-${a.displayName}-eventInfo-row`,
+                                ),
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: (0, ne.A)(!it && d().SupportGridHidden),
+                      children: [
+                        (0, e.jsx)("div", { className: d().SmoothLine }),
+                        (0, e.jsxs)("table", {
+                          className: d().BanHistoryTable,
+                          children: [
+                            (0, e.jsx)("thead", {
+                              children: (0, e.jsxs)("tr", {
+                                children: [
+                                  (0, e.jsx)("th", {
+                                    align: "left",
+                                    children: (0, e.jsx)("h3", {
+                                      className: d().HeaderNoMargin,
+                                      children: "Ban Type",
+                                    }),
+                                  }),
+                                  (0, e.jsx)("th", {
+                                    align: "left",
+                                    children: (0, e.jsx)("h3", {
+                                      className: d().HeaderNoMargin,
+                                      children: "Ban Start",
+                                    }),
+                                  }),
+                                  (0, e.jsx)("th", {
+                                    align: "left",
+                                    children: (0, e.jsx)("h3", {
+                                      className: d().HeaderNoMargin,
+                                      children: "Ban End",
+                                    }),
+                                  }),
+                                  (0, e.jsx)("th", {
+                                    align: "left",
+                                    children: (0, e.jsx)("h3", {
+                                      className: d().HeaderNoMargin,
+                                      children: "Duration",
+                                    }),
+                                  }),
+                                  (0, e.jsx)("th", {
+                                    align: "left",
+                                    children: (0, e.jsx)("h3", {
+                                      className: d().HeaderNoMargin,
+                                      children: "Admin",
+                                    }),
+                                  }),
+                                  (0, e.jsx)("th", {
+                                    align: "left",
+                                    children: (0, e.jsx)("h3", {
+                                      className: d().HeaderNoMargin,
+                                      children: "Comment",
+                                    }),
+                                  }),
+                                ],
                               }),
-                              r?.persona?.teams &&
-                                de.map((e) =>
-                                  (0, n.jsx)(
-                                    i.Fragment,
-                                    {
-                                      children: (0, n.jsx)("div", {
-                                        className: w().TeamsInfoInnerGrid,
-                                        children: e.formatFunction
-                                          ? e.formatFunction.call(
-                                              null,
-                                              r?.persona[e.key],
-                                              r?.persona[e.secondaryKey],
-                                            )
-                                          : JSON.stringify(
-                                              r?.persona[e.key] || "",
-                                              null,
-                                              2,
-                                            ).replace(/['"]+/g, ""),
-                                      }),
-                                    },
-                                    `${e.key}-${e.displayName}-teamsInfo-row`,
-                                  ),
-                                ),
-                              !r?.persona?.teams &&
-                                (0, n.jsx)(i.Fragment, {
-                                  children: (0, n.jsx)("span", {
-                                    style: { color: K },
-                                    children: "(None)",
-                                  }),
+                            }),
+                            (0, e.jsxs)("tbody", {
+                              children: [
+                                (0, e.jsx)("tr", {
+                                  children: (0, e.jsx)("td", {}),
                                 }),
-                            ],
+                                pe(l?.persona?.banhistory),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, e.jsx)("div", { className: d().SmoothLine }),
+                    g &&
+                      g.length &&
+                      (0, e.jsxs)("div", {
+                        className: d().OtherModesCheckBox,
+                        children: [
+                          (0, e.jsx)("input", {
+                            type: "checkbox",
+                            name: "othermode",
+                            id: "othermode",
+                            onChange: () => jt(!st),
+                            checked: st,
+                          }),
+                          (0, e.jsx)("label", {
+                            htmlFor: "othermode",
+                            children: (0, e.jsx)("span", {
+                              children:
+                                "Include custom games, practice games, and uncommon game modes",
+                            }),
                           }),
                         ],
                       }),
-                      (0, n.jsxs)("div", {
-                        className: w().EventColumn,
+                    (0, e.jsx)("div", {
+                      className: d().MatchHistoryOuterContainer,
+                      children: (0, e.jsxs)("div", {
+                        className: d().MatchHistoryInnerContainer,
                         children: [
-                          (0, n.jsx)("h2", {
-                            className: w().Header,
-                            children: "Event Information",
+                          g &&
+                            g.length &&
+                            (0, e.jsx)(Te.t$, {
+                              children: ({ width: a, height: A }) =>
+                                (0, e.jsx)(Te.XI, {
+                                  headerHeight: 70,
+                                  height: A,
+                                  width: a,
+                                  rowHeight: 33.33,
+                                  rowCount: K.length,
+                                  rowGetter: ({ index: N }) => K[N],
+                                  rowClassName: ({ index: N }) =>
+                                    N != -1
+                                      ? N % 2
+                                        ? d().MatchRowEven
+                                        : d().MatchRowOdd
+                                      : "",
+                                  overscanRowCount: 50,
+                                  noRowsRenderer: () =>
+                                    (0, e.jsx)("h3", {
+                                      children:
+                                        "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
+                                    }),
+                                  children: Dt.map((N) =>
+                                    (0, e.jsx)(
+                                      Te.VP,
+                                      {
+                                        label: N.label,
+                                        dataKey: N.dataKey,
+                                        width: a * N.widthRelative,
+                                        cellRenderer: N.cellRenderer
+                                          ? N.cellRenderer
+                                          : Xe.RA,
+                                        columnData: { strAccountId: m },
+                                        headerRenderer: N.headerRenderer
+                                          ? N.headerRenderer
+                                          : Te.o9,
+                                        cellDataGetter: Xe.fF,
+                                        flexGrow: 0,
+                                        flexShrink: 1,
+                                      },
+                                      N.dataKey,
+                                    ),
+                                  ),
+                                }),
+                            }),
+                          (!g || !g.length) &&
+                            (0, e.jsx)("div", { children: "No matches" }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+                (0, e.jsx)(Ve.K, {}),
+              ],
+            });
+          };
+        class Pe extends j.Component {
+          render() {
+            return (0, e.jsx)(ge, {});
+          }
+        }
+      },
+      83672: (Re, ke, y) => {
+        "use strict";
+        y.r(ke), y.d(ke, { default: () => C });
+        var e = y(69500),
+          fe = y(75749),
+          R = y.n(fe),
+          I = y(2095),
+          j = y(88351),
+          x = y(7552),
+          oe = y(73202),
+          w = y(15001),
+          Ge = y(63177),
+          He = y(42616),
+          Ce = y(11778),
+          Ye = y(28471),
+          Le = y(9784),
+          D = y.n(Le),
+          Ne = y(57693);
+        const r = "public",
+          Te = 50,
+          T = "green",
+          ne = "red",
+          Ee = "yellow",
+          Ve = "skyblue",
+          Ue = 5e3,
+          ee = 1e3,
+          o = (s) =>
+            (0, e.jsx)("a", {
+              href: `${I.r.BASE_URL}personadetails/${s}?u=${r}&appid=${I.r.DOTA_APP_ID}`,
+              children: s,
+            }),
+          Je = (s) =>
+            (0, e.jsx)("a", {
+              href: `${I.r.BASE_URL}${Ce.J.teamdetails(s).substr(1)}`,
+              children: s,
+            }),
+          qe = (s) =>
+            (0, e.jsx)(
+              "a",
+              {
+                href: `${I.r.BASE_URL}${`matches/match/${s}`}?u=${r}&appid=${I.r.DOTA_APP_ID}`,
+                children: s,
+              },
+              s,
+            ),
+          we = () => `${I.r.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
+          De = () => `${I.r.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
+          Se = () => `${I.r.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001`,
+          $e = () => `${I.r.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001`,
+          je = () =>
+            `${I.r.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${r}&appid=${I.r.DOTA_APP_ID}`,
+          ue = [19785, 19894, 19890, 19891, 19892, 19893, 19101, 19696];
+        var le = ((s) => (
+          (s[(s.kTRAA_RegisterTeam = 0)] = "kTRAA_RegisterTeam"),
+          (s[(s.kTRAA_InvitePlayer = 1)] = "kTRAA_InvitePlayer"),
+          (s[(s.kTRAA_RemovePlayer = 2)] = "kTRAA_RemovePlayer"),
+          (s[(s.kTRAA_CancelInvite = 3)] = "kTRAA_CancelInvite"),
+          (s[(s.kTRAA_RegisterPlayer = 4)] = "kTRAA_RegisterPlayer"),
+          (s[(s.kTRAA_AcceptInvite = 5)] = "kTRAA_AcceptInvite"),
+          (s[(s.kTRAA_RejectInvite = 6)] = "kTRAA_RejectInvite"),
+          (s[(s.kTRAA_UnregisterTeam = 7)] = "kTRAA_UnregisterTeam"),
+          (s[(s.kTRAA_TransferTeam = 8)] = "kTRAA_TransferTeam"),
+          (s[(s.kTRAA_TransferTeamAdmin = 9)] = "kTRAA_TransferTeamAdmin"),
+          (s[(s.kTRAA_InviteCoach = 10)] = "kTRAA_InviteCoach"),
+          (s[(s.kTRAA_RemoveCoach = 11)] = "kTRAA_RemoveCoach"),
+          (s[(s.kTRAA_CancelInviteCoach = 12)] = "kTRAA_CancelInviteCoach"),
+          (s[(s.kTRAA_AcceptCoachInvite = 13)] = "kTRAA_AcceptCoachInvite"),
+          (s[(s.kTRAA_RejectCoachInvite = 14)] = "kTRAA_RejectCoachInvite"),
+          (s[(s.kTRAA_ValveUpdateName = 15)] = "kTRAA_ValveUpdateName"),
+          (s[(s.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
+          (s[(s.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20"),
+          s
+        ))(le || {});
+        const Qe = {
+            0: "kTRAA_RegisterTeam",
+            1: "kTRAA_InvitePlayer",
+            2: "kTRAA_RemovePlayer",
+            3: "kTRAA_CancelInvite",
+            4: "kTRAA_RegisterPlayer",
+            5: "kTRAA_AcceptInvite",
+            6: "kTRAA_RejectInvite",
+            7: "kTRAA_UnregisterTeam",
+            8: "kTRAA_TransferTeam",
+            9: "kTRAA_TransferTeamAdmin",
+            10: "kTRAA_InviteCoach",
+            11: "kTRAA_RemoveCoach",
+            12: "kTRAA_CancelInviteCoach",
+            13: "kTRAA_AcceptCoachInvite",
+            14: "kTRAA_RejectCoachInvite",
+            15: "kTRAA_ValveUpdateName",
+            16: "kTRAA_ValveUpdateTeamName",
+            20: "kTRAA_Penalty20",
+          },
+          Fe = [
+            {
+              enum: 0,
+              formatFunction: () =>
+                "Registered a team or re-registered an existing team.",
+            },
+            {
+              enum: 1,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    "Invited a new/legacy player ",
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    ".",
+                  ],
+                }),
+            },
+            {
+              enum: 2,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    "Removed a legacy player ",
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    ".",
+                  ],
+                }),
+            },
+            {
+              enum: 3,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    " cancelled an issued invite.",
+                  ],
+                }),
+            },
+            {
+              enum: 4,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    " registered a new player.",
+                  ],
+                }),
+            },
+            {
+              enum: 5,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    " accepted an invite.",
+                  ],
+                }),
+            },
+            {
+              enum: 6,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    " rejected an invite.",
+                  ],
+                }),
+            },
+            {
+              enum: 7,
+              formatFunction: () => "Manager removed the team registration.",
+            },
+            {
+              enum: 8,
+              formatFunction: () =>
+                "Manager transferred the team wholesale to new management.",
+            },
+            {
+              enum: 9,
+              formatFunction: (s = "", p = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    "Manager transferred management to a new manager ",
+                    (0, e.jsxs)("b", { children: [`${p}`, "."] }),
+                  ],
+                }),
+            },
+            {
+              enum: 10,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    "Invited a coach ",
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    ".",
+                  ],
+                }),
+            },
+            {
+              enum: 11,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    "Removed a coach ",
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    ".",
+                  ],
+                }),
+            },
+            {
+              enum: 12,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    " cancelled an issued coach invite.",
+                  ],
+                }),
+            },
+            {
+              enum: 13,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    " (coach) accepted an invite.",
+                  ],
+                }),
+            },
+            {
+              enum: 14,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    " (coach) rejected an invite.",
+                  ],
+                }),
+            },
+            {
+              enum: 15,
+              formatFunction: (s = "") =>
+                (0, e.jsxs)(x.Fragment, {
+                  children: [
+                    "Valve fixed a name for player ",
+                    (0, e.jsx)("b", { children: `${s}` }),
+                    ".",
+                  ],
+                }),
+            },
+            { enum: 16, formatFunction: () => "Valve updated the team name." },
+            { enum: 20, formatFunction: () => "20% point penalty." },
+          ],
+          ie = [
+            {
+              key: "pro",
+              displayName: "Pro?",
+              formatFunction: (s) => (s ? "YES" : "NO"),
+            },
+            { key: "tag", displayName: "Tag" },
+            { key: "abbreviation", displayName: "Abbreviation" },
+            {
+              key: "time_created",
+              displayName: "Time Created",
+              formatFunction: (s) =>
+                s
+                  ? new Date(s * 1e3).toLocaleString(
+                      Ne.pf.GetPreferredLocales(),
+                    )
+                  : "",
+            },
+            {
+              key: "pickup_team",
+              displayName: "Pickup Team?",
+              formatFunction: (s) => (s ? "YES" : "NO"),
+            },
+            {
+              key: "url",
+              displayName: "URL",
+              formatFunction: (s) =>
+                s
+                  ? (0, e.jsx)(x.Fragment, {
+                      children: (0, e.jsx)("a", { href: s, children: s }),
+                    })
+                  : "",
+            },
+            {
+              key: "country_code",
+              displayName: "Country Code",
+              formatFunction: (s = "") => s.toUpperCase(),
+            },
+          ],
+          Be = [
+            {
+              key: "account_id",
+              displayName: "Account ID",
+              formatFunction: (s) => o(s),
+            },
+            { key: "name", displayName: "Name" },
+            { key: "persona_name", displayName: "Persona Name" },
+            {
+              key: "is_pro",
+              displayName: "Pro",
+              formatFunction: (s) => (s ? "YES" : "NO"),
+            },
+            {
+              key: "admin",
+              displayName: "Admin",
+              formatFunction: (s) => (s ? "YES" : "NO"),
+            },
+            {
+              key: "kick_link",
+              displayName: "KICK",
+              formatFunction: (s, p) =>
+                (0, e.jsx)("div", {
+                  className: D().Link,
+                  onClick: async () => {
+                    await R().get(`${s}`), setTimeout(() => p(), ee);
+                  },
+                  children: "KICK",
+                }),
+            },
+            {
+              key: "make_admin_link",
+              displayName: "MAKE ADMIN",
+              formatFunction: (s, p) =>
+                !!s &&
+                (0, e.jsx)("div", {
+                  className: D().Link,
+                  onClick: async () => {
+                    await R().get(`${s}`), setTimeout(() => p(), ee);
+                  },
+                  children: "MAKE ADMIN",
+                }),
+            },
+          ],
+          d = [
+            {
+              key: "manager_account_id",
+              displayName: "Manager Account ID",
+              formatFunction: (s) => o(s),
+            },
+            { key: "manager_email", displayName: "Manager Email" },
+          ],
+          Xe = [
+            {
+              key: "color_primary",
+              displayName: "Color (Primary)",
+              formatFunction: (s = "") =>
+                (0, e.jsx)(x.Fragment, {
+                  children:
+                    s &&
+                    (0, e.jsxs)("div", {
+                      children: [
+                        (0, e.jsx)("span", {
+                          className: D().ColorBox,
+                          style: { backgroundColor: s },
+                        }),
+                        "\xA0",
+                        s,
+                      ],
+                    }),
+                }),
+            },
+            {
+              key: "color_secondary",
+              displayName: "Color (Secondary)",
+              formatFunction: (s = "") =>
+                (0, e.jsx)(x.Fragment, {
+                  children:
+                    s &&
+                    (0, e.jsxs)("div", {
+                      children: [
+                        (0, e.jsx)("span", {
+                          className: D().ColorBox,
+                          style: { backgroundColor: s },
+                        }),
+                        "\xA0",
+                        s,
+                      ],
+                    }),
+                }),
+            },
+            {
+              key: "url_logo",
+              displayName: "DPC Logo",
+              formatFunction: (s = "", p = 0) =>
+                (0, e.jsx)(x.Fragment, {
+                  children:
+                    s &&
+                    p &&
+                    (0, e.jsx)("div", {
+                      className: D().DPCLogoContainer,
+                      children: (0, e.jsx)("img", {
+                        onError: ({ currentTarget: f }) => {
+                          (f.onerror = null),
+                            (f.src = `${I.r.IMG_URL}teams_override/team_unknown_web.png`);
+                        },
+                        src: `${I.r.CDN_URL}apps/dota2/teamlogos/${p}.png`,
+                      }),
+                    }),
+                }),
+            },
+          ],
+          z = [
+            {
+              key: "ugc_logo_url",
+              displayName: "Logo",
+              formatFunction: (s = "") =>
+                (0, e.jsx)(x.Fragment, {
+                  children: (0, e.jsx)("div", {
+                    className: D().URLLogoContainer,
+                    children: s && (0, e.jsx)("img", { src: s }),
+                  }),
+                }),
+            },
+            {
+              key: "ugc_base_logo_url",
+              displayName: "Base Logo",
+              formatFunction: (s = "") =>
+                (0, e.jsx)(x.Fragment, {
+                  children: (0, e.jsx)("div", {
+                    className: D().URLLogoContainer,
+                    children: s && (0, e.jsx)("img", { src: s }),
+                  }),
+                }),
+            },
+            {
+              key: "ugc_banner_logo_url",
+              displayName: "Banner Logo",
+              formatFunction: (s = "") =>
+                (0, e.jsx)(x.Fragment, {
+                  children: (0, e.jsx)("div", {
+                    className: D().URLLogoContainer,
+                    children: s && (0, e.jsx)("img", { src: s }),
+                  }),
+                }),
+            },
+            {
+              key: "ugc_sponsor_logo_url",
+              displayName: "Sponsor Logo",
+              formatFunction: (s = "") =>
+                (0, e.jsx)(x.Fragment, {
+                  children: (0, e.jsx)("div", {
+                    className: D().URLLogoContainer,
+                    children: s && (0, e.jsx)("img", { src: s }),
+                  }),
+                }),
+            },
+          ],
+          i = [
+            {
+              key: "account_id",
+              displayName: "Account ID",
+              formatFunction: (s) => o(s),
+            },
+            {
+              key: "timestamp",
+              displayName: "Timestamp",
+              formatFunction: (s) =>
+                s
+                  ? new Date(s * 1e3).toLocaleString(
+                      Ne.pf.GetPreferredLocales(),
+                    )
+                  : "",
+            },
+            {
+              key: "action",
+              displayName: "Action Enum",
+              formatFunction: (s) => `${Qe[s]} (${s})`,
+            },
+            {
+              key: "action",
+              displayName: "Audit Action",
+              formatFunction: (s, p = "", f = "") =>
+                Fe.find((k) => k.enum === s).formatFunction.call(null, p, f),
+            },
+          ],
+          h = [
+            { key: "workshop_account_id", displayName: "Workshop Account ID" },
+            {
+              key: "comment",
+              displayName: "Comment",
+              formatFunction: (s) => (s ? `"${s}"` : ""),
+            },
+            {
+              key: "comment_timestamp",
+              displayName: "Last Comment",
+              formatFunction: (s) =>
+                s
+                  ? new Date(s * 1e3).toLocaleString(
+                      Ne.pf.GetPreferredLocales(),
+                    )
+                  : "",
+            },
+            { key: "spray_count", displayName: "Sprays" },
+            { key: "wallpaper_count", displayName: "Wallpapers" },
+            { key: "emoticon_count", displayName: "Emoticons" },
+            { key: "voiceline_count", displayName: "Voicelines" },
+            {
+              key: "timestamp",
+              displayName: "Last Changed",
+              formatFunction: (s) =>
+                s
+                  ? new Date(s * 1e3).toLocaleString(
+                      Ne.pf.GetPreferredLocales(),
+                    )
+                  : "",
+            },
+          ],
+          S = [
+            { key: "series_id", displayName: "Series ID" },
+            {
+              key: "actual_time",
+              displayName: "Series Date & Time",
+              formatFunction: (s) =>
+                s
+                  ? new Date(s * 1e3).toLocaleString(
+                      Ne.pf.GetPreferredLocales(),
+                    )
+                  : "",
+            },
+            {
+              key: "outcome",
+              displayName: "Outcome",
+              formatFunction: (s) =>
+                (0, e.jsx)("div", {
+                  style: {
+                    color: `${s === "Win" ? T : s === "Loss" ? ne : s === "Tie" ? Ee : Ve}`,
+                  },
+                  children: s,
+                }),
+            },
+            { key: "score", displayName: "Score" },
+            {
+              key: "opponent_team_id",
+              displayName: "Opponent",
+              formatFunction: (s, p) =>
+                (0, e.jsxs)(x.Fragment, { children: [`${p} ( `, Je(s), " )"] }),
+            },
+            {
+              key: "matches",
+              displayName: "Match IDs",
+              formatFunction: (s) => {
+                const p = [];
+                return (
+                  p.push(
+                    s.map((f) => [
+                      qe(f.match_id),
+                      (0, e.jsx)(
+                        "span",
+                        { children: "\u2003" },
+                        `${f.match_id}-tab`,
+                      ),
+                    ]),
+                  ),
+                  p
+                );
+              },
+            },
+          ],
+          E = (s) => {
+            const f = (0, j.g)().id,
+              [L, k] = (0, x.useState)([]),
+              [H, F] = (0, x.useState)(!1),
+              [te, Y] = (0, x.useState)(!1),
+              [b, U] = (0, x.useState)({}),
+              [J, ae] = (0, x.useState)(!1),
+              [se, ce] = (0, x.useState)(!1),
+              [Z, v] = (0, x.useState)({}),
+              [_, W] = (0, x.useState)([]),
+              [Ie, Ke] = (0, x.useState)(!0),
+              [ve, Q] = (0, x.useState)([]),
+              he = ({ strTeamId: t }) => {
+                const [u, O] = (0, x.useState)(""),
+                  [g, P] = (0, x.useState)(""),
+                  [K, $] = (0, x.useState)(""),
+                  [B, q] = (0, x.useState)(!1),
+                  Me = async (V) => {
+                    if ((V.preventDefault(), !u && !g && !K)) return;
+                    q(!0);
+                    const de = {
+                        team_id: t,
+                        team_name: u,
+                        team_tag: g,
+                        team_abbreviation: K,
+                      },
+                      be = await R().get(we(), { params: de });
+                    ge(), setTimeout(() => q(!1), Ue);
+                  };
+                return (0, e.jsxs)("form", {
+                  onSubmit: Me,
+                  children: [
+                    (0, e.jsx)("h2", {
+                      className: D().Header,
+                      children: "Update Team Information",
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: D().EditInfoGrid,
+                      children: [
+                        (0, e.jsx)("div", { children: "Team Name" }),
+                        (0, e.jsx)("input", {
+                          className: D().MediumTextField,
+                          type: "text",
+                          name: "teamName",
+                          maxLength: 32,
+                          onChange: (V) => O(V.target.value),
+                        }),
+                        (0, e.jsx)("div", { children: "Tag" }),
+                        (0, e.jsx)("input", {
+                          className: D().SmallTextField,
+                          type: "text",
+                          name: "teamTag",
+                          maxLength: 8,
+                          onChange: (V) => P(V.target.value),
+                        }),
+                        (0, e.jsx)("div", { children: "Abbreviation" }),
+                        (0, e.jsx)("input", {
+                          className: D().SmallTextField,
+                          type: "text",
+                          name: "teamAbbreviation",
+                          maxLength: 4,
+                          onChange: (V) => $(V.target.value),
+                        }),
+                        (0, e.jsx)("div", {
+                          children: (0, e.jsx)("button", {
+                            className: D().SubmitButton,
+                            disabled: B,
+                            children: B ? "Updating..." : "Update",
                           }),
-                          (0, n.jsx)("div", {
-                            className: w().EventInfoOuterGrid,
-                            children: me.map((e) =>
-                              (0, n.jsx)(
-                                i.Fragment,
+                        }),
+                      ],
+                    }),
+                  ],
+                });
+              },
+              re = ({ strTeamId: t }) => {
+                const [u, O] = (0, x.useState)(""),
+                  [g, P] = (0, x.useState)(!1),
+                  K = async ($) => {
+                    if (($.preventDefault(), !u)) return;
+                    P(!0);
+                    const B = { team_id: t, account_id: u },
+                      q = await R().get(De(), { params: B });
+                    ge(), setTimeout(() => P(!1), Ue);
+                  };
+                return (0, e.jsxs)("form", {
+                  onSubmit: K,
+                  children: [
+                    (0, e.jsx)("h2", {
+                      className: D().Header,
+                      children: "Add Team Member",
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: D().EditInfoGrid,
+                      children: [
+                        (0, e.jsx)("div", { children: "Account ID" }),
+                        (0, e.jsx)("input", {
+                          className: D().MediumTextField,
+                          type: "text",
+                          name: "accountId",
+                          maxLength: 20,
+                          onChange: ($) => O($.target.value),
+                        }),
+                        (0, e.jsx)("div", {
+                          children: (0, e.jsx)("button", {
+                            className: D().SubmitButton,
+                            disabled: g,
+                            children: g ? "Adding..." : "Add Account",
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                });
+              },
+              Oe = ({ strTeamId: t }) => {
+                const [u, O] = (0, x.useState)(""),
+                  [g, P] = (0, x.useState)(""),
+                  [K, $] = (0, x.useState)(!1),
+                  B = async (q) => {
+                    if ((q.preventDefault(), !u || !g)) return;
+                    $(!0);
+                    const Me = {
+                        admin_account_id: parseInt(u),
+                        admin_email: g,
+                        registration_period:
+                          I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                      },
+                      V = await R().post(je(), { params: Me });
+                    pe(), setTimeout(() => $(!1), Ue);
+                  };
+                return (0, e.jsxs)("form", {
+                  onSubmit: B,
+                  children: [
+                    (0, e.jsx)("h2", {
+                      className: D().Header,
+                      children: "Update Manager Email",
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: D().EditInfoGrid,
+                      children: [
+                        (0, e.jsx)("div", { children: "Manager Account ID" }),
+                        (0, e.jsx)("input", {
+                          className: D().MediumTextField,
+                          type: "text",
+                          name: "adminAccountId",
+                          maxLength: 20,
+                          onChange: (q) => O(q.target.value),
+                        }),
+                        (0, e.jsx)("div", { children: "Manager Email" }),
+                        (0, e.jsx)("input", {
+                          className: D().MediumTextField,
+                          type: "email",
+                          name: "adminEmail",
+                          maxLength: 255,
+                          onChange: (q) => P(q.target.value),
+                        }),
+                        (0, e.jsx)("div", {
+                          children: (0, e.jsx)("button", {
+                            className: D().SubmitButton,
+                            disabled: K,
+                            children: K
+                              ? "Updating..."
+                              : "Update Manager Email",
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                });
+              };
+            (0, x.useEffect)(() => {
+              async function t() {
+                if (!I.r.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) return;
+                const u = { season: I.r.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON },
+                  g =
+                    (
+                      await R().get(
+                        I.r.BASE_URL +
+                          "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
+                        { params: u },
+                      )
+                    )?.data?.team_status_list || [];
+                if (g.length && f) {
+                  const P = g.find((K) => K.team_id.toString() == f);
+                  P && v(P);
+                }
+              }
+              try {
+                t();
+              } catch {
+                console.log("Could not fetch fan content status.");
+              }
+            }, [f]);
+            async function pe() {
+              if (
+                !I.r.DOTA_APP_ID ||
+                !I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
+              )
+                return;
+              const t = {
+                  appid: I.r.DOTA_APP_ID,
+                  registration_period:
+                    I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                },
+                O =
+                  (
+                    await R().get(
+                      I.r.BASE_URL +
+                        "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
+                      { params: t },
+                    )
+                  )?.data?.result?.teams || [];
+              O.length && k(O), F(!0);
+            }
+            (0, x.useEffect)(() => {
+              try {
+                pe();
+              } catch {
+                console.log("Could not fetch registered teams."), Y(!0);
+              }
+            }, []);
+            async function ge() {
+              if (
+                !I.r.DOTA_APP_ID ||
+                !I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
+                !f
+              )
+                return;
+              const t = { appid: I.r.DOTA_APP_ID, u: r, team_id: f },
+                u = await R().get(
+                  I.r.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
+                  { params: t },
+                ),
+                O = u?.data,
+                g = O?.members || [];
+              try {
+                const P = await R().get(
+                  I.r.BASE_URL + "teams/getugcfilelinks/",
+                  { params: { team_id: f } },
+                );
+                P.data && Object.assign(O, P.data),
+                  await Promise.all(
+                    g.map(async ($, B) => {
+                      const q = await R().get(
+                        I.r.BASE_URL +
+                          "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
+                        { params: { account_id: $.account_id } },
+                      );
+                      (g[B].is_pro = !!q?.data?.is_pro),
+                        (g[B].name = q?.data?.name || "");
+                      const Me = await R().get(
+                        I.r.BASE_URL + "teams/getpersonaname/",
+                        { params: { account_id: $.account_id } },
+                      );
+                      g[B].persona_name = Me?.data || "";
+                    }),
+                  );
+                const K = ($, B) =>
+                  $.is_pro && !B.is_pro
+                    ? -1
+                    : !$.is_pro && B.is_pro
+                      ? 1
+                      : $.admin && !B.admin
+                        ? -1
+                        : (!$.admin && B.admin) ||
+                            $?.pro_name.toLowerCase() >
+                              B?.pro_name.toLowerCase()
+                          ? 1
+                          : $?.pro_name.toLowerCase() <
+                              B?.pro_name.toLowerCase()
+                            ? -1
+                            : 0;
+                g.sort(K);
+              } catch {
+                console.log("Error fetching individual player info.");
+              }
+              u && u.data && U(O), ae(!0);
+            }
+            (0, x.useEffect)(() => {
+              try {
+                ge();
+              } catch {
+                console.log("Could not fetch single team info."), ce(!0);
+              }
+            }, [f]),
+              (0, x.useEffect)(() => {
+                async function t() {
+                  if (
+                    !I.r.DOTA_APP_ID ||
+                    !I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
+                    !f
+                  )
+                    return;
+                  const u = {
+                      team_id: f,
+                      registration_period:
+                        I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                    },
+                    O = await R().get(
+                      I.r.BASE_URL +
+                        "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
+                      { params: u },
+                    ),
+                    g = O?.data,
+                    P = g?.actions || [];
+                  await Promise.all(
+                    P.map(async (K) => {
+                      if (K.action === 9 && K.account_id) {
+                        const $ = await R().get(
+                          I.r.BASE_URL + "teams/getpersonaname/",
+                          { params: { account_id: K.account_id } },
+                        );
+                        K.target_manager_name = $?.data || "";
+                      }
+                    }),
+                  ),
+                    O && O.data && g.actions && Q(g.actions);
+                }
+                try {
+                  t();
+                } catch {
+                  console.log("Could not fetch single team info."), ce(!0);
+                }
+              }, [f]),
+              (0, x.useEffect)(() => {
+                let t;
+                try {
+                  t = JSON.parse(I.r.DPC_DATA).events;
+                } catch {}
+                if (!t) return;
+                t = t.filter(
+                  (g) =>
+                    g.registration_period ===
+                    I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                );
+                let u = [];
+                u.push(...ue);
+                for (let g of t) {
+                  const P = g.leagues.map((K) => K.league_id);
+                  u.push(...P);
+                }
+                u.sort().reverse(),
+                  (u = u.filter((g, P, K) => K.indexOf(g) == P)),
+                  u.length > Te && (u = u.slice(u.length - Te));
+                async function O() {
+                  if (!u.length) return;
+                  const g = { league_ids: u.join(",") },
+                    $ = (
+                      await R().get(
+                        I.r.BASE_URL +
+                          "webapi/IDOTA2League/GetLeaguesData/v001",
+                        { params: g },
+                      )
+                    )?.data?.leagues,
+                    B = [];
+                  for (let V of $)
+                    for (let de of V.node_groups)
+                      for (let be of de.node_groups)
+                        for (let M of be.nodes)
+                          M.team_id_1 &&
+                            M.team_id_2 &&
+                            (M.team_id_1 == f || M.team_id_2 == f) &&
+                            ((M.league_name =
+                              V.info.name + ` (${V.info.league_id})`),
+                            M.team_id_1 == f
+                              ? ((M.opponent_team_id = M.team_id_2),
+                                M.team_1_wins > M.team_2_wins
+                                  ? (M.outcome = "Win")
+                                  : M.team_1_wins === M.team_2_wins
+                                    ? (M.outcome = "Tie")
+                                    : (M.outcome = "Loss"),
+                                (M.score = `${M.team_1_wins} - ${M.team_2_wins}`))
+                              : ((M.opponent_team_id = M.team_id_1),
+                                M.team_2_wins > M.team_1_wins
+                                  ? (M.outcome = "Win")
+                                  : M.team_2_wins === M.team_1_wins
+                                    ? (M.outcome = "Tie")
+                                    : (M.outcome = "Loss"),
+                                (M.score = `${M.team_2_wins} - ${M.team_1_wins}`)),
+                            M.team_1_wins === 0 &&
+                              M.team_2_wins === 0 &&
+                              M.actual_time &&
+                              new Date().getTime() < M.actual_time * 1e3 &&
+                              (M.outcome = "Upcoming"),
+                            B.push(M));
+                  const q = (V, de) =>
+                    V.actual_time > de.actual_time
+                      ? -1
+                      : V.actual_time < de.actual_time
+                        ? 1
+                        : 0;
+                  B.sort(q);
+                  const Me = (V, de) =>
+                    V.reduce(
+                      (be, M) => ({
+                        ...be,
+                        [M[de]]: [...(be[M[de]] || []), M],
+                      }),
+                      {},
+                    );
+                  B.length && W(Me(B, "league_name"));
+                }
+                try {
+                  O();
+                } catch {
+                  console.log("Could not fetch leagues data.");
+                }
+              }, [f]);
+            const Pe = L.find((t) => t.team_id == f) || {};
+            let n;
+            if (
+              ((!H || !J) &&
+                (n = (0, e.jsx)("div", { children: "Loading..." })),
+              H &&
+                (L.length == 0 || te) &&
+                (n = (0, e.jsx)("div", {
+                  children: "Error loading registered teams...",
+                })),
+              J &&
+                (Object.keys(b).length == 0 || se) &&
+                (n = (0, e.jsx)("div", {
+                  children: `Error loading single team info for teamId ${f} `,
+                })),
+              n)
+            )
+              return (0, e.jsxs)("div", {
+                className: D().TeamDetails,
+                children: [
+                  (0, e.jsx)(Ge.A, { bOverlapping: !1 }),
+                  (0, e.jsx)(oe.mg, {
+                    children: (0, e.jsx)("title", {
+                      children: "Dota 2 - Team Details",
+                    }),
+                  }),
+                  (0, e.jsx)(Ye.A, {}),
+                  (0, e.jsx)("div", {
+                    className: D().ContentFrame,
+                    children: n,
+                  }),
+                  (0, e.jsx)(He.K, {}),
+                ],
+              });
+            const c = b.members || [];
+            c.forEach((t) => {
+              (t.kick_link = `${Se()}?u=${r}&appid=${I.r.DOTA_APP_ID}&team_id=${f}&account_id=${t.account_id}`),
+                (t.make_admin_link = t.admin
+                  ? ""
+                  : `${$e()}?u=${r}&appid=${I.r.DOTA_APP_ID}&team_id=${f}&account_id=${t.account_id}`);
+            });
+            const m = () => {
+                const t = [];
+                return (
+                  Object.keys(_).forEach((u, O) => {
+                    t.push(
+                      (0, e.jsx)(
+                        "h3",
+                        {
+                          style: { gridColumn: `span ${S.length}` },
+                          children: (0, e.jsx)("b", { children: u }),
+                        },
+                        `league-name-row-${O}`,
+                      ),
+                    ),
+                      t.push(
+                        S.map((g) =>
+                          (0, e.jsx)(
+                            "div",
+                            {
+                              children: (0, e.jsx)("b", {
+                                children: g.displayName || g.key,
+                              }),
+                            },
+                            `${g.key}-${g.displayName}-matches-grid-header-league-${O}`,
+                          ),
+                        ),
+                      );
+                    for (let g of _[u])
+                      t.push(
+                        S.map((P) =>
+                          (0, e.jsx)(
+                            "div",
+                            {
+                              children: P.formatFunction
+                                ? P.formatFunction.call(
+                                    null,
+                                    g[P.key],
+                                    l(g.opponent_team_id),
+                                  )
+                                : JSON.stringify(
+                                    g[P.key] || "",
+                                    null,
+                                    2,
+                                  ).replace(/['"]+/g, ""),
+                            },
+                            `${P.key}-${P.displayName}-${g.series_id}`,
+                          ),
+                        ),
+                      );
+                    t.push((0, e.jsx)("br", {}));
+                  }),
+                  t
+                );
+              },
+              l = (t) => {
+                const u = L.find((O) => O.team_id == t);
+                return u ? u.team_name : "";
+              };
+            return (0, e.jsxs)("div", {
+              className: D().TeamDetails,
+              children: [
+                (0, e.jsx)(Ge.A, { bOverlapping: !1 }),
+                (0, e.jsx)(oe.mg, {
+                  children: (0, e.jsx)("title", {
+                    children: "Dota 2 - Team Details",
+                  }),
+                }),
+                (0, e.jsx)(Ye.A, {}),
+                (0, e.jsxs)("div", {
+                  className: D().ContentFrame,
+                  children: [
+                    (0, e.jsx)("h1", {
+                      className: D().Header,
+                      children: `Team Details for ${b?.name} (${b.team_id})`,
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: D().MiscInfoGrid,
+                      children: [
+                        ie.map((t) =>
+                          (0, e.jsxs)(
+                            x.Fragment,
+                            {
+                              children: [
+                                (0, e.jsx)("div", {
+                                  children: t.displayName || t.key,
+                                }),
+                                (0, e.jsx)("div", {
+                                  children: t.formatFunction
+                                    ? t.formatFunction.call(null, b[t.key])
+                                    : JSON.stringify(
+                                        b[t.key] || "",
+                                        null,
+                                        2,
+                                      ).replace(/['"]+/g, ""),
+                                }),
+                              ],
+                            },
+                            `${t.key}-misc-row`,
+                          ),
+                        ),
+                        !Ie &&
+                          (0, e.jsxs)(x.Fragment, {
+                            children: [
+                              (0, e.jsx)("div", {
+                                className: D().Link,
+                                onClick: () => Ke(!0),
+                                children: "Update Info / Add Member",
+                              }),
+                              (0, e.jsx)("div", {}),
+                            ],
+                          }),
+                      ],
+                    }),
+                    Ie &&
+                      (0, e.jsxs)(x.Fragment, {
+                        children: [
+                          (0, e.jsx)("div", { className: D().SmoothLine }),
+                          (0, e.jsx)(he, { strTeamId: f }),
+                          (0, e.jsx)("div", { className: D().SmoothLine }),
+                          (0, e.jsx)(re, { strTeamId: f }),
+                        ],
+                      }),
+                    (0, e.jsx)("div", { className: D().SmoothLine }),
+                    (0, e.jsx)("h2", {
+                      className: D().Header,
+                      children: "Members",
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: D().MembersGrid,
+                      style: {
+                        gridTemplateColumns: `250px repeat(${Be.length - 1}, auto)`,
+                      },
+                      children: [
+                        (0, e.jsx)(x.Fragment, {
+                          children: Be.map((t) =>
+                            (0, e.jsx)(
+                              "div",
+                              {
+                                children: (0, e.jsx)("b", {
+                                  children: t.displayName || t.key,
+                                }),
+                              },
+                              `${t.key}-members-grid-header}`,
+                            ),
+                          ),
+                        }),
+                        (0, e.jsxs)(x.Fragment, {
+                          children: [
+                            !!c.length &&
+                              c.map((t) =>
+                                Be.map((u) =>
+                                  (0, e.jsx)(
+                                    "div",
+                                    {
+                                      children: u.formatFunction
+                                        ? u.formatFunction.call(
+                                            null,
+                                            t[u.key],
+                                            ge,
+                                          )
+                                        : JSON.stringify(
+                                            t[u.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    },
+                                    `${u.key}-member-row-${t.account_id}`,
+                                  ),
+                                ),
+                              ),
+                            !c.length &&
+                              (0, e.jsx)("div", {
+                                children: "No team members.",
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, e.jsx)("br", {}),
+                    (0, e.jsxs)("div", {
+                      className: D().ManagerGrid,
+                      style: {
+                        gridTemplateColumns: `250px repeat(${d.length - 1}, auto)`,
+                      },
+                      children: [
+                        (0, e.jsx)(x.Fragment, {
+                          children: d.map((t) =>
+                            (0, e.jsx)(
+                              "div",
+                              {
+                                children: (0, e.jsx)("b", {
+                                  children: t.displayName || t.key,
+                                }),
+                              },
+                              `${t.key}-manager-grid-header}`,
+                            ),
+                          ),
+                        }),
+                        (0, e.jsxs)(x.Fragment, {
+                          children: [
+                            d.map((t) =>
+                              (0, e.jsx)(
+                                x.Fragment,
                                 {
-                                  children: (0, n.jsx)("div", {
-                                    className: w().EventInfoInnerGrid,
-                                    children: e.formatFunction
-                                      ? e.formatFunction.call(
-                                          null,
-                                          r?.persona[e.key],
-                                        )
+                                  children: (0, e.jsx)("div", {
+                                    children: t.formatFunction
+                                      ? t.formatFunction.call(null, Pe[t.key])
                                       : JSON.stringify(
-                                          r?.persona[e.key] || "",
+                                          Pe[t.key] || "",
                                           null,
                                           2,
                                         ).replace(/['"]+/g, ""),
                                   }),
                                 },
-                                `${e.key}-${e.displayName}-eventInfo-row`,
+                                `${t.key}-manager-row`,
                               ),
                             ),
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, n.jsxs)("div", {
-                    className: (0, A.A)(!Fe && w().SupportGridHidden),
-                    children: [
-                      (0, n.jsx)("div", { className: w().SmoothLine }),
-                      (0, n.jsxs)("table", {
-                        className: w().BanHistoryTable,
+                            !d.length &&
+                              (0, e.jsx)("div", { children: "No manager." }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    Ie &&
+                      (0, e.jsxs)(x.Fragment, {
                         children: [
-                          (0, n.jsx)("thead", {
-                            children: (0, n.jsxs)("tr", {
-                              children: [
-                                (0, n.jsx)("th", {
-                                  align: "left",
-                                  children: (0, n.jsx)("h3", {
-                                    className: w().HeaderNoMargin,
-                                    children: "Ban Type",
-                                  }),
-                                }),
-                                (0, n.jsx)("th", {
-                                  align: "left",
-                                  children: (0, n.jsx)("h3", {
-                                    className: w().HeaderNoMargin,
-                                    children: "Ban Start",
-                                  }),
-                                }),
-                                (0, n.jsx)("th", {
-                                  align: "left",
-                                  children: (0, n.jsx)("h3", {
-                                    className: w().HeaderNoMargin,
-                                    children: "Ban End",
-                                  }),
-                                }),
-                                (0, n.jsx)("th", {
-                                  align: "left",
-                                  children: (0, n.jsx)("h3", {
-                                    className: w().HeaderNoMargin,
-                                    children: "Duration",
-                                  }),
-                                }),
-                                (0, n.jsx)("th", {
-                                  align: "left",
-                                  children: (0, n.jsx)("h3", {
-                                    className: w().HeaderNoMargin,
-                                    children: "Admin",
-                                  }),
-                                }),
-                                (0, n.jsx)("th", {
-                                  align: "left",
-                                  children: (0, n.jsx)("h3", {
-                                    className: w().HeaderNoMargin,
-                                    children: "Comment",
-                                  }),
-                                }),
-                              ],
-                            }),
-                          }),
-                          (0, n.jsxs)("tbody", {
-                            children: [
-                              (0, n.jsx)("tr", {
-                                children: (0, n.jsx)("td", {}),
-                              }),
-                              _e(r?.persona?.banhistory),
-                            ],
-                          }),
+                          (0, e.jsx)("div", { className: D().SmoothLine }),
+                          (0, e.jsx)(Oe, { strTeamId: f }),
                         ],
                       }),
-                    ],
-                  }),
-                  (0, n.jsx)("div", { className: w().SmoothLine }),
-                  C &&
-                    C.length &&
-                    (0, n.jsxs)("div", {
-                      className: w().OtherModesCheckBox,
-                      children: [
-                        (0, n.jsx)("input", {
-                          type: "checkbox",
-                          name: "othermode",
-                          id: "othermode",
-                          onChange: () => Re(!Se),
-                          checked: Se,
-                        }),
-                        (0, n.jsx)("label", {
-                          htmlFor: "othermode",
-                          children: (0, n.jsx)("span", {
-                            children:
-                              "Include custom games, practice games, and uncommon game modes",
-                          }),
-                        }),
-                      ],
+                    (0, e.jsx)("div", { className: D().SmoothLine }),
+                    (0, e.jsx)("h2", {
+                      className: D().Header,
+                      children: "Logos & Colors",
                     }),
-                  (0, n.jsx)("div", {
-                    className: w().MatchHistoryOuterContainer,
-                    children: (0, n.jsxs)("div", {
-                      className: w().MatchHistoryInnerContainer,
-                      children: [
-                        C &&
-                          C.length &&
-                          (0, n.jsx)(g.t$, {
-                            children: ({ width: e, height: a }) =>
-                              (0, n.jsx)(g.XI, {
-                                headerHeight: 70,
-                                height: a,
-                                width: e,
-                                rowHeight: 33.33,
-                                rowCount: P.length,
-                                rowGetter: ({ index: e }) => P[e],
-                                rowClassName: ({ index: e }) =>
-                                  -1 != e
-                                    ? e % 2
-                                      ? w().MatchRowEven
-                                      : w().MatchRowOdd
-                                    : "",
-                                overscanRowCount: 50,
-                                noRowsRenderer: () =>
-                                  (0, n.jsx)("h3", {
-                                    children:
-                                      "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
-                                  }),
-                                children: we.map((a) =>
-                                  (0, n.jsx)(
-                                    g.VP,
-                                    {
-                                      label: a.label,
-                                      dataKey: a.dataKey,
-                                      width: e * a.widthRelative,
-                                      cellRenderer: a.cellRenderer
-                                        ? a.cellRenderer
-                                        : G.RA,
-                                      columnData: { strAccountId: t },
-                                      headerRenderer: a.headerRenderer
-                                        ? a.headerRenderer
-                                        : g.o9,
-                                      cellDataGetter: G.fF,
-                                      flexGrow: 0,
-                                      flexShrink: 1,
-                                    },
-                                    a.dataKey,
-                                  ),
-                                ),
-                              }),
-                          }),
-                        (!C || !C.length) &&
-                          (0, n.jsx)("div", { children: "No matches" }),
-                      ],
-                    }),
-                  }),
-                ],
-              }),
-              (0, n.jsx)(I.K, {}),
-            ],
-          });
-        };
-      class ye extends i.Component {
-        render() {
-          return (0, n.jsx)(je, {});
-        }
-      }
-    },
-    4533: (e, a, t) => {
-      "use strict";
-      t.r(a), t.d(a, { default: () => C });
-      var n = t(69500),
-        r = t(75749),
-        s = t.n(r),
-        l = t(89506),
-        i = t(88351),
-        o = t(7552),
-        c = t(73202),
-        d = t(21384),
-        m = t(47202),
-        u = t(36305),
-        h = t(55651),
-        p = t(94610),
-        x = t(9784),
-        _ = t.n(x),
-        j = t(68613);
-      const y = "public",
-        g = 5e3,
-        f = (e) =>
-          (0, n.jsx)("a", {
-            href: `${l.r.BASE_URL}personadetails/${e}?u=${y}&appid=${l.r.DOTA_APP_ID}`,
-            children: e,
-          }),
-        A = [19785, 19894, 19890, 19891, 19892, 19893, 19101, 19696];
-      var N;
-      !(function (e) {
-        (e[(e.kTRAA_RegisterTeam = 0)] = "kTRAA_RegisterTeam"),
-          (e[(e.kTRAA_InvitePlayer = 1)] = "kTRAA_InvitePlayer"),
-          (e[(e.kTRAA_RemovePlayer = 2)] = "kTRAA_RemovePlayer"),
-          (e[(e.kTRAA_CancelInvite = 3)] = "kTRAA_CancelInvite"),
-          (e[(e.kTRAA_RegisterPlayer = 4)] = "kTRAA_RegisterPlayer"),
-          (e[(e.kTRAA_AcceptInvite = 5)] = "kTRAA_AcceptInvite"),
-          (e[(e.kTRAA_RejectInvite = 6)] = "kTRAA_RejectInvite"),
-          (e[(e.kTRAA_UnregisterTeam = 7)] = "kTRAA_UnregisterTeam"),
-          (e[(e.kTRAA_TransferTeam = 8)] = "kTRAA_TransferTeam"),
-          (e[(e.kTRAA_TransferTeamAdmin = 9)] = "kTRAA_TransferTeamAdmin"),
-          (e[(e.kTRAA_InviteCoach = 10)] = "kTRAA_InviteCoach"),
-          (e[(e.kTRAA_RemoveCoach = 11)] = "kTRAA_RemoveCoach"),
-          (e[(e.kTRAA_CancelInviteCoach = 12)] = "kTRAA_CancelInviteCoach"),
-          (e[(e.kTRAA_AcceptCoachInvite = 13)] = "kTRAA_AcceptCoachInvite"),
-          (e[(e.kTRAA_RejectCoachInvite = 14)] = "kTRAA_RejectCoachInvite"),
-          (e[(e.kTRAA_ValveUpdateName = 15)] = "kTRAA_ValveUpdateName"),
-          (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
-          (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
-      })(N || (N = {}));
-      const I = {
-          0: "kTRAA_RegisterTeam",
-          1: "kTRAA_InvitePlayer",
-          2: "kTRAA_RemovePlayer",
-          3: "kTRAA_CancelInvite",
-          4: "kTRAA_RegisterPlayer",
-          5: "kTRAA_AcceptInvite",
-          6: "kTRAA_RejectInvite",
-          7: "kTRAA_UnregisterTeam",
-          8: "kTRAA_TransferTeam",
-          9: "kTRAA_TransferTeamAdmin",
-          10: "kTRAA_InviteCoach",
-          11: "kTRAA_RemoveCoach",
-          12: "kTRAA_CancelInviteCoach",
-          13: "kTRAA_AcceptCoachInvite",
-          14: "kTRAA_RejectCoachInvite",
-          15: "kTRAA_ValveUpdateName",
-          16: "kTRAA_ValveUpdateTeamName",
-          20: "kTRAA_Penalty20",
-        },
-        T = [
-          {
-            enum: N.kTRAA_RegisterTeam,
-            formatFunction: () =>
-              "Registered a team or re-registered an existing team.",
-          },
-          {
-            enum: N.kTRAA_InvitePlayer,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  "Invited a new/legacy player ",
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  ".",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_RemovePlayer,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  "Removed a legacy player ",
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  ".",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_CancelInvite,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  " cancelled an issued invite.",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_RegisterPlayer,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  " registered a new player.",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_AcceptInvite,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  " accepted an invite.",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_RejectInvite,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  " rejected an invite.",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_UnregisterTeam,
-            formatFunction: () => "Manager removed the team registration.",
-          },
-          {
-            enum: N.kTRAA_TransferTeam,
-            formatFunction: () =>
-              "Manager transferred the team wholesale to new management.",
-          },
-          {
-            enum: N.kTRAA_TransferTeamAdmin,
-            formatFunction: (e = "", a = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  "Manager transferred management to a new manager ",
-                  (0, n.jsxs)("b", { children: [`${a}`, "."] }),
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_InviteCoach,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  "Invited a coach ",
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  ".",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_RemoveCoach,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  "Removed a coach ",
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  ".",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_CancelInviteCoach,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  " cancelled an issued coach invite.",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_AcceptCoachInvite,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  " (coach) accepted an invite.",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_RejectCoachInvite,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  " (coach) rejected an invite.",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_ValveUpdateName,
-            formatFunction: (e = "") =>
-              (0, n.jsxs)(o.Fragment, {
-                children: [
-                  "Valve fixed a name for player ",
-                  (0, n.jsx)("b", { children: `${e}` }),
-                  ".",
-                ],
-              }),
-          },
-          {
-            enum: N.kTRAA_ValveUpdateTeamName,
-            formatFunction: () => "Valve updated the team name.",
-          },
-          {
-            enum: N.kTRAA_Penalty20,
-            formatFunction: () => "20% point penalty.",
-          },
-        ],
-        v = [
-          {
-            key: "pro",
-            displayName: "Pro?",
-            formatFunction: (e) => (e ? "YES" : "NO"),
-          },
-          { key: "tag", displayName: "Tag" },
-          { key: "abbreviation", displayName: "Abbreviation" },
-          {
-            key: "time_created",
-            displayName: "Time Created",
-            formatFunction: (e) =>
-              e
-                ? new Date(1e3 * e).toLocaleString(j.pf.GetPreferredLocales())
-                : "",
-          },
-          {
-            key: "pickup_team",
-            displayName: "Pickup Team?",
-            formatFunction: (e) => (e ? "YES" : "NO"),
-          },
-          {
-            key: "url",
-            displayName: "URL",
-            formatFunction: (e) =>
-              e
-                ? (0, n.jsx)(o.Fragment, {
-                    children: (0, n.jsx)("a", { href: e, children: e }),
-                  })
-                : "",
-          },
-          {
-            key: "country_code",
-            displayName: "Country Code",
-            formatFunction: (e = "") => e.toUpperCase(),
-          },
-        ],
-        k = [
-          {
-            key: "account_id",
-            displayName: "Account ID",
-            formatFunction: (e) => f(e),
-          },
-          { key: "name", displayName: "Name" },
-          { key: "persona_name", displayName: "Persona Name" },
-          {
-            key: "is_pro",
-            displayName: "Pro",
-            formatFunction: (e) => (e ? "YES" : "NO"),
-          },
-          {
-            key: "admin",
-            displayName: "Admin",
-            formatFunction: (e) => (e ? "YES" : "NO"),
-          },
-          {
-            key: "kick_link",
-            displayName: "KICK",
-            formatFunction: (e, a) =>
-              (0, n.jsx)("div", {
-                className: _().Link,
-                onClick: async () => {
-                  await s().get(`${e}`), setTimeout(() => a(), 1e3);
-                },
-                children: "KICK",
-              }),
-          },
-          {
-            key: "make_admin_link",
-            displayName: "MAKE ADMIN",
-            formatFunction: (e, a) =>
-              !!e &&
-              (0, n.jsx)("div", {
-                className: _().Link,
-                onClick: async () => {
-                  await s().get(`${e}`), setTimeout(() => a(), 1e3);
-                },
-                children: "MAKE ADMIN",
-              }),
-          },
-        ],
-        S = [
-          {
-            key: "manager_account_id",
-            displayName: "Manager Account ID",
-            formatFunction: (e) => f(e),
-          },
-          { key: "manager_email", displayName: "Manager Email" },
-        ],
-        R = [
-          {
-            key: "color_primary",
-            displayName: "Color (Primary)",
-            formatFunction: (e = "") =>
-              (0, n.jsx)(o.Fragment, {
-                children:
-                  e &&
-                  (0, n.jsxs)("div", {
-                    children: [
-                      (0, n.jsx)("span", {
-                        className: _().ColorBox,
-                        style: { backgroundColor: e },
-                      }),
-                      " ",
-                      e,
-                    ],
-                  }),
-              }),
-          },
-          {
-            key: "color_secondary",
-            displayName: "Color (Secondary)",
-            formatFunction: (e = "") =>
-              (0, n.jsx)(o.Fragment, {
-                children:
-                  e &&
-                  (0, n.jsxs)("div", {
-                    children: [
-                      (0, n.jsx)("span", {
-                        className: _().ColorBox,
-                        style: { backgroundColor: e },
-                      }),
-                      " ",
-                      e,
-                    ],
-                  }),
-              }),
-          },
-          {
-            key: "url_logo",
-            displayName: "DPC Logo",
-            formatFunction: (e = "", a = 0) =>
-              (0, n.jsx)(o.Fragment, {
-                children:
-                  e &&
-                  a &&
-                  (0, n.jsx)("div", {
-                    className: _().DPCLogoContainer,
-                    children: (0, n.jsx)("img", {
-                      onError: ({ currentTarget: e }) => {
-                        (e.onerror = null),
-                          (e.src = `${l.r.IMG_URL}teams_override/team_unknown_web.png`);
-                      },
-                      src: `${l.r.CDN_URL}apps/dota2/teamlogos/${a}.png`,
-                    }),
-                  }),
-              }),
-          },
-        ],
-        D = [
-          {
-            key: "ugc_logo_url",
-            displayName: "Logo",
-            formatFunction: (e = "") =>
-              (0, n.jsx)(o.Fragment, {
-                children: (0, n.jsx)("div", {
-                  className: _().URLLogoContainer,
-                  children: e && (0, n.jsx)("img", { src: e }),
-                }),
-              }),
-          },
-          {
-            key: "ugc_base_logo_url",
-            displayName: "Base Logo",
-            formatFunction: (e = "") =>
-              (0, n.jsx)(o.Fragment, {
-                children: (0, n.jsx)("div", {
-                  className: _().URLLogoContainer,
-                  children: e && (0, n.jsx)("img", { src: e }),
-                }),
-              }),
-          },
-          {
-            key: "ugc_banner_logo_url",
-            displayName: "Banner Logo",
-            formatFunction: (e = "") =>
-              (0, n.jsx)(o.Fragment, {
-                children: (0, n.jsx)("div", {
-                  className: _().URLLogoContainer,
-                  children: e && (0, n.jsx)("img", { src: e }),
-                }),
-              }),
-          },
-          {
-            key: "ugc_sponsor_logo_url",
-            displayName: "Sponsor Logo",
-            formatFunction: (e = "") =>
-              (0, n.jsx)(o.Fragment, {
-                children: (0, n.jsx)("div", {
-                  className: _().URLLogoContainer,
-                  children: e && (0, n.jsx)("img", { src: e }),
-                }),
-              }),
-          },
-        ],
-        E = [
-          {
-            key: "account_id",
-            displayName: "Account ID",
-            formatFunction: (e) => f(e),
-          },
-          {
-            key: "timestamp",
-            displayName: "Timestamp",
-            formatFunction: (e) =>
-              e
-                ? new Date(1e3 * e).toLocaleString(j.pf.GetPreferredLocales())
-                : "",
-          },
-          {
-            key: "action",
-            displayName: "Action Enum",
-            formatFunction: (e) => `${I[e]} (${e})`,
-          },
-          {
-            key: "action",
-            displayName: "Audit Action",
-            formatFunction: (e, a = "", t = "") =>
-              T.find((a) => a.enum === e).formatFunction.call(null, a, t),
-          },
-        ],
-        O = [
-          { key: "workshop_account_id", displayName: "Workshop Account ID" },
-          {
-            key: "comment",
-            displayName: "Comment",
-            formatFunction: (e) => (e ? `"${e}"` : ""),
-          },
-          {
-            key: "comment_timestamp",
-            displayName: "Last Comment",
-            formatFunction: (e) =>
-              e
-                ? new Date(1e3 * e).toLocaleString(j.pf.GetPreferredLocales())
-                : "",
-          },
-          { key: "spray_count", displayName: "Sprays" },
-          { key: "wallpaper_count", displayName: "Wallpapers" },
-          { key: "emoticon_count", displayName: "Emoticons" },
-          { key: "voiceline_count", displayName: "Voicelines" },
-          {
-            key: "timestamp",
-            displayName: "Last Changed",
-            formatFunction: (e) =>
-              e
-                ? new Date(1e3 * e).toLocaleString(j.pf.GetPreferredLocales())
-                : "",
-          },
-        ],
-        b = [
-          { key: "series_id", displayName: "Series ID" },
-          {
-            key: "actual_time",
-            displayName: "Series Date & Time",
-            formatFunction: (e) =>
-              e
-                ? new Date(1e3 * e).toLocaleString(j.pf.GetPreferredLocales())
-                : "",
-          },
-          {
-            key: "outcome",
-            displayName: "Outcome",
-            formatFunction: (e) =>
-              (0, n.jsx)("div", {
-                style: {
-                  color:
-                    "" +
-                    ("Win" === e
-                      ? "green"
-                      : "Loss" === e
-                        ? "red"
-                        : "Tie" === e
-                          ? "yellow"
-                          : "skyblue"),
-                },
-                children: e,
-              }),
-          },
-          { key: "score", displayName: "Score" },
-          {
-            key: "opponent_team_id",
-            displayName: "Opponent",
-            formatFunction: (e, a) => {
-              return (0, n.jsxs)(o.Fragment, {
-                children: [
-                  `${a} ( `,
-                  ((t = e),
-                  (0, n.jsx)("a", {
-                    href: `${l.r.BASE_URL}${h.J.teamdetails(t).substr(1)}`,
-                    children: t,
-                  })),
-                  " )",
-                ],
-              });
-              var t;
-            },
-          },
-          {
-            key: "matches",
-            displayName: "Match IDs",
-            formatFunction: (e) => {
-              const a = [];
-              return (
-                a.push(
-                  e.map((e) => {
-                    return [
-                      ((a = e.match_id),
-                      (0, n.jsx)(
-                        "a",
-                        {
-                          href: `${l.r.BASE_URL}matches/match/${a}?u=${y}&appid=${l.r.DOTA_APP_ID}`,
-                          children: a,
-                        },
-                        a,
-                      )),
-                      (0, n.jsx)(
-                        "span",
-                        { children: " " },
-                        `${e.match_id}-tab`,
-                      ),
-                    ];
-                    var a;
-                  }),
-                ),
-                a
-              );
-            },
-          },
-        ],
-        F = (e) => {
-          const a = (0, i.g)().id,
-            [t, r] = (0, o.useState)([]),
-            [h, x] = (0, o.useState)(!1),
-            [j, f] = (0, o.useState)(!1),
-            [I, T] = (0, o.useState)({}),
-            [F, C] = (0, o.useState)(!1),
-            [M, L] = (0, o.useState)(!1),
-            [P, w] = (0, o.useState)({}),
-            [G, H] = (0, o.useState)([]),
-            [$, U] = (0, o.useState)(!0),
-            [B, K] = (0, o.useState)([]);
-          async function Y() {
-            if (
-              !l.r.DOTA_APP_ID ||
-              !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
-            )
-              return;
-            const e = {
-                appid: l.r.DOTA_APP_ID,
-                registration_period:
-                  l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-              },
-              a = await s().get(
-                l.r.BASE_URL + "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
-                { params: e },
-              ),
-              t = a?.data?.result?.teams || [];
-            t.length && r(t), x(!0);
-          }
-          async function W() {
-            if (
-              !l.r.DOTA_APP_ID ||
-              !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
-              !a
-            )
-              return;
-            const e = { appid: l.r.DOTA_APP_ID, u: y, team_id: a },
-              t = await s().get(
-                l.r.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
-                { params: e },
-              ),
-              n = t?.data,
-              r = n?.members || [];
-            try {
-              const e = await s().get(l.r.BASE_URL + "teams/getugcfilelinks/", {
-                params: { team_id: a },
-              });
-              e.data && Object.assign(n, e.data),
-                await Promise.all(
-                  r.map(async (e, a) => {
-                    const t = await s().get(
-                      l.r.BASE_URL + "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
-                      { params: { account_id: e.account_id } },
-                    );
-                    (r[a].is_pro = !!t?.data?.is_pro),
-                      (r[a].name = t?.data?.name || "");
-                    const n = await s().get(
-                      l.r.BASE_URL + "teams/getpersonaname/",
-                      { params: { account_id: e.account_id } },
-                    );
-                    r[a].persona_name = n?.data || "";
-                  }),
-                );
-              const t = (e, a) =>
-                e.is_pro && !a.is_pro
-                  ? -1
-                  : !e.is_pro && a.is_pro
-                    ? 1
-                    : e.admin && !a.admin
-                      ? -1
-                      : (!e.admin && a.admin) ||
-                          e?.pro_name.toLowerCase() > a?.pro_name.toLowerCase()
-                        ? 1
-                        : e?.pro_name.toLowerCase() < a?.pro_name.toLowerCase()
-                          ? -1
-                          : 0;
-              r.sort(t);
-            } catch (e) {
-              console.log("Error fetching individual player info.");
-            }
-            t && t.data && T(n), C(!0);
-          }
-          (0, o.useEffect)(() => {
-            try {
-              !(async function () {
-                if (!l.r.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) return;
-                const e = { season: l.r.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON },
-                  t = await s().get(
-                    l.r.BASE_URL +
-                      "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
-                    { params: e },
-                  ),
-                  n = t?.data?.team_status_list || [];
-                if (n.length && a) {
-                  const e = n.find((e) => e.team_id.toString() == a);
-                  e && w(e);
-                }
-              })();
-            } catch (e) {
-              console.log("Could not fetch fan content status.");
-            }
-          }, [a]),
-            (0, o.useEffect)(() => {
-              try {
-                Y();
-              } catch (e) {
-                console.log("Could not fetch registered teams."), f(!0);
-              }
-            }, []),
-            (0, o.useEffect)(() => {
-              try {
-                W();
-              } catch (e) {
-                console.log("Could not fetch single team info."), L(!0);
-              }
-            }, [a]),
-            (0, o.useEffect)(() => {
-              try {
-                !(async function () {
-                  if (
-                    !l.r.DOTA_APP_ID ||
-                    !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
-                    !a
-                  )
-                    return;
-                  const e = {
-                      team_id: a,
-                      registration_period:
-                        l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                    },
-                    t = await s().get(
-                      l.r.BASE_URL +
-                        "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
-                      { params: e },
-                    ),
-                    n = t?.data,
-                    r = n?.actions || [];
-                  await Promise.all(
-                    r.map(async (e) => {
-                      if (
-                        e.action === N.kTRAA_TransferTeamAdmin &&
-                        e.account_id
-                      ) {
-                        const a = await s().get(
-                          l.r.BASE_URL + "teams/getpersonaname/",
-                          { params: { account_id: e.account_id } },
-                        );
-                        e.target_manager_name = a?.data || "";
-                      }
-                    }),
-                  ),
-                    t && t.data && n.actions && K(n.actions);
-                })();
-              } catch (e) {
-                console.log("Could not fetch single team info."), L(!0);
-              }
-            }, [a]),
-            (0, o.useEffect)(() => {
-              let e;
-              try {
-                e = JSON.parse(l.r.DPC_DATA).events;
-              } catch (e) {}
-              if (!e) return;
-              e = e.filter(
-                (e) =>
-                  e.registration_period ===
-                  l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-              );
-              let t = [];
-              t.push(...A);
-              for (let a of e) {
-                const e = a.leagues.map((e) => e.league_id);
-                t.push(...e);
-              }
-              t.sort().reverse(),
-                (t = t.filter((e, a, t) => t.indexOf(e) == a)),
-                t.length > 50 && (t = t.slice(t.length - 50));
-              try {
-                !(async function () {
-                  if (!t.length) return;
-                  const e = { league_ids: t.join(",") },
-                    n = await s().get(
-                      l.r.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
-                      { params: e },
-                    ),
-                    r = n?.data,
-                    i = r?.leagues,
-                    o = [];
-                  for (let e of i)
-                    for (let t of e.node_groups)
-                      for (let n of t.node_groups)
-                        for (let t of n.nodes)
-                          t.team_id_1 &&
-                            t.team_id_2 &&
-                            (t.team_id_1 == a || t.team_id_2 == a) &&
-                            ((t.league_name =
-                              e.info.name + ` (${e.info.league_id})`),
-                            t.team_id_1 == a
-                              ? ((t.opponent_team_id = t.team_id_2),
-                                t.team_1_wins > t.team_2_wins
-                                  ? (t.outcome = "Win")
-                                  : t.team_1_wins === t.team_2_wins
-                                    ? (t.outcome = "Tie")
-                                    : (t.outcome = "Loss"),
-                                (t.score = `${t.team_1_wins} - ${t.team_2_wins}`))
-                              : ((t.opponent_team_id = t.team_id_1),
-                                t.team_2_wins > t.team_1_wins
-                                  ? (t.outcome = "Win")
-                                  : t.team_2_wins === t.team_1_wins
-                                    ? (t.outcome = "Tie")
-                                    : (t.outcome = "Loss"),
-                                (t.score = `${t.team_2_wins} - ${t.team_1_wins}`)),
-                            0 === t.team_1_wins &&
-                              0 === t.team_2_wins &&
-                              t.actual_time &&
-                              new Date().getTime() < 1e3 * t.actual_time &&
-                              (t.outcome = "Upcoming"),
-                            o.push(t));
-                  var c;
-                  o.sort((e, a) =>
-                    e.actual_time > a.actual_time
-                      ? -1
-                      : e.actual_time < a.actual_time
-                        ? 1
-                        : 0,
-                  ),
-                    o.length &&
-                      H(
-                        ((c = "league_name"),
-                        o.reduce(
-                          (e, a) => ({ ...e, [a[c]]: [...(e[a[c]] || []), a] }),
-                          {},
-                        )),
-                      );
-                })();
-              } catch (e) {
-                console.log("Could not fetch leagues data.");
-              }
-            }, [a]);
-          const V = t.find((e) => e.team_id == a) || {};
-          let J;
-          if (
-            ((h && F) || (J = (0, n.jsx)("div", { children: "Loading..." })),
-            h &&
-              (0 == t.length || j) &&
-              (J = (0, n.jsx)("div", {
-                children: "Error loading registered teams...",
-              })),
-            F &&
-              (0 == Object.keys(I).length || M) &&
-              (J = (0, n.jsx)("div", {
-                children: `Error loading single team info for teamId ${a} `,
-              })),
-            J)
-          )
-            return (0, n.jsxs)("div", {
-              className: _().TeamDetails,
-              children: [
-                (0, n.jsx)(m.A, { bOverlapping: !1 }),
-                (0, n.jsx)(c.mg, {
-                  children: (0, n.jsx)("title", {
-                    children: "Dota 2 - Team Details",
-                  }),
-                }),
-                (0, n.jsx)(p.A, {}),
-                (0, n.jsx)("div", { className: _().ContentFrame, children: J }),
-                (0, n.jsx)(u.K, {}),
-              ],
-            });
-          const X = I.members || [];
-          X.forEach((e) => {
-            (e.kick_link = `${l.r.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${y}&appid=${l.r.DOTA_APP_ID}&team_id=${a}&account_id=${e.account_id}`),
-              (e.make_admin_link = e.admin
-                ? ""
-                : `${l.r.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${y}&appid=${l.r.DOTA_APP_ID}&team_id=${a}&account_id=${e.account_id}`);
-          });
-          const z = (e) => {
-            const a = t.find((a) => a.team_id == e);
-            return a ? a.team_name : "";
-          };
-          return (0, n.jsxs)("div", {
-            className: _().TeamDetails,
-            children: [
-              (0, n.jsx)(m.A, { bOverlapping: !1 }),
-              (0, n.jsx)(c.mg, {
-                children: (0, n.jsx)("title", {
-                  children: "Dota 2 - Team Details",
-                }),
-              }),
-              (0, n.jsx)(p.A, {}),
-              (0, n.jsxs)("div", {
-                className: _().ContentFrame,
-                children: [
-                  (0, n.jsx)("h1", {
-                    className: _().Header,
-                    children: `Team Details for ${I?.name} (${I.team_id})`,
-                  }),
-                  (0, n.jsxs)("div", {
-                    className: _().MiscInfoGrid,
-                    children: [
-                      v.map((e) =>
-                        (0, n.jsxs)(
-                          o.Fragment,
+                    (0, e.jsx)("div", {
+                      className: D().LogoAndColorsGrid,
+                      children: Xe.map((t) =>
+                        (0, e.jsxs)(
+                          x.Fragment,
                           {
                             children: [
-                              (0, n.jsx)("div", {
-                                children: e.displayName || e.key,
+                              (0, e.jsx)("div", {
+                                children: t.displayName || t.key,
                               }),
-                              (0, n.jsx)("div", {
-                                children: e.formatFunction
-                                  ? e.formatFunction.call(null, I[e.key])
+                              (0, e.jsx)("div", {
+                                children: t.formatFunction
+                                  ? t.formatFunction.call(
+                                      null,
+                                      b[t.key],
+                                      b.team_id,
+                                    )
                                   : JSON.stringify(
-                                      I[e.key] || "",
+                                      b[t.key] || "",
                                       null,
                                       2,
                                     ).replace(/['"]+/g, ""),
                               }),
                             ],
                           },
-                          `${e.key}-misc-row`,
+                          `${t.key}-logo-colors-row`,
                         ),
                       ),
-                      !$ &&
-                        (0, n.jsxs)(o.Fragment, {
+                    }),
+                    (0, e.jsx)("br", {}),
+                    (0, e.jsxs)("div", {
+                      className: D().UGCLogosGrid,
+                      style: {
+                        gridTemplateColumns: `repeat(${z.length}, auto)`,
+                      },
+                      children: [
+                        (0, e.jsx)(x.Fragment, {
+                          children: z.map((t) =>
+                            (0, e.jsx)(
+                              "div",
+                              {
+                                children: (0, e.jsx)("b", {
+                                  children: t.displayName || t.key,
+                                }),
+                              },
+                              `${t.key}-ugc-grid-header}`,
+                            ),
+                          ),
+                        }),
+                        (0, e.jsx)(x.Fragment, {
+                          children: z.map((t) =>
+                            (0, e.jsx)(
+                              "div",
+                              {
+                                children: t.formatFunction
+                                  ? t.formatFunction.call(null, b[t.key])
+                                  : JSON.stringify(
+                                      b[t.key] || "",
+                                      null,
+                                      2,
+                                    ).replace(/['"]+/g, ""),
+                              },
+                              `${t.key}-ugc-logo`,
+                            ),
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, e.jsx)("div", { className: D().SmoothLine }),
+                    (0, e.jsx)("h2", {
+                      className: D().Header,
+                      children: "Audit Action History",
+                    }),
+                    (0, e.jsxs)("div", {
+                      className: D().AuditActionsGrid,
+                      style: {
+                        gridTemplateColumns: `repeat(${i.length}, auto)`,
+                      },
+                      children: [
+                        (0, e.jsx)(x.Fragment, {
+                          children: i.map((t) =>
+                            (0, e.jsx)(
+                              "div",
+                              {
+                                children: (0, e.jsx)("b", {
+                                  children: t.displayName || t.key,
+                                }),
+                              },
+                              `${t.key}-${t.displayName}-audit-action-grid-header`,
+                            ),
+                          ),
+                        }),
+                        (0, e.jsxs)(x.Fragment, {
                           children: [
-                            (0, n.jsx)("div", {
-                              className: _().Link,
-                              onClick: () => U(!0),
-                              children: "Update Info / Add Member",
-                            }),
-                            (0, n.jsx)("div", {}),
+                            !!ve.length &&
+                              ve.map((t) =>
+                                i.map((u) =>
+                                  (0, e.jsx)(
+                                    "div",
+                                    {
+                                      children: u.formatFunction
+                                        ? u.formatFunction.call(
+                                            null,
+                                            t[u.key],
+                                            t.player_name,
+                                            t.target_manager_name,
+                                          )
+                                        : JSON.stringify(
+                                            t[u.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    },
+                                    `${u.key}-${u.displayName}-${t.timestamp}`,
+                                  ),
+                                ),
+                              ),
+                            !ve.length &&
+                              (0, e.jsx)("div", {
+                                children: "No audit actions.",
+                              }),
                           ],
                         }),
-                    ],
-                  }),
-                  $ &&
-                    (0, n.jsxs)(o.Fragment, {
-                      children: [
-                        (0, n.jsx)("div", { className: _().SmoothLine }),
-                        (0, n.jsx)(
-                          ({ strTeamId: e }) => {
-                            const [a, t] = (0, o.useState)(""),
-                              [r, i] = (0, o.useState)(""),
-                              [c, d] = (0, o.useState)(""),
-                              [m, u] = (0, o.useState)(!1);
-                            return (0, n.jsxs)("form", {
-                              onSubmit: async (t) => {
-                                if ((t.preventDefault(), !a && !r && !c))
-                                  return;
-                                u(!0);
-                                const n = {
-                                  team_id: e,
-                                  team_name: a,
-                                  team_tag: r,
-                                  team_abbreviation: c,
-                                };
-                                await s().get(
-                                  `${l.r.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
-                                  { params: n },
-                                );
-                                W(), setTimeout(() => u(!1), g);
-                              },
-                              children: [
-                                (0, n.jsx)("h2", {
-                                  className: _().Header,
-                                  children: "Update Team Information",
-                                }),
-                                (0, n.jsxs)("div", {
-                                  className: _().EditInfoGrid,
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: "Team Name",
-                                    }),
-                                    (0, n.jsx)("input", {
-                                      className: _().MediumTextField,
-                                      type: "text",
-                                      name: "teamName",
-                                      maxLength: 32,
-                                      onChange: (e) => t(e.target.value),
-                                    }),
-                                    (0, n.jsx)("div", { children: "Tag" }),
-                                    (0, n.jsx)("input", {
-                                      className: _().SmallTextField,
-                                      type: "text",
-                                      name: "teamTag",
-                                      maxLength: 8,
-                                      onChange: (e) => i(e.target.value),
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: "Abbreviation",
-                                    }),
-                                    (0, n.jsx)("input", {
-                                      className: _().SmallTextField,
-                                      type: "text",
-                                      name: "teamAbbreviation",
-                                      maxLength: 4,
-                                      onChange: (e) => d(e.target.value),
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: (0, n.jsx)("button", {
-                                        className: _().SubmitButton,
-                                        disabled: m,
-                                        children: m ? "Updating..." : "Update",
-                                      }),
-                                    }),
-                                  ],
-                                }),
-                              ],
-                            });
-                          },
-                          { strTeamId: a },
-                        ),
-                        (0, n.jsx)("div", { className: _().SmoothLine }),
-                        (0, n.jsx)(
-                          ({ strTeamId: e }) => {
-                            const [a, t] = (0, o.useState)(""),
-                              [r, i] = (0, o.useState)(!1);
-                            return (0, n.jsxs)("form", {
-                              onSubmit: async (t) => {
-                                if ((t.preventDefault(), !a)) return;
-                                i(!0);
-                                const n = { team_id: e, account_id: a };
-                                await s().get(
-                                  `${l.r.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
-                                  { params: n },
-                                );
-                                W(), setTimeout(() => i(!1), g);
-                              },
-                              children: [
-                                (0, n.jsx)("h2", {
-                                  className: _().Header,
-                                  children: "Add Team Member",
-                                }),
-                                (0, n.jsxs)("div", {
-                                  className: _().EditInfoGrid,
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: "Account ID",
-                                    }),
-                                    (0, n.jsx)("input", {
-                                      className: _().MediumTextField,
-                                      type: "text",
-                                      name: "accountId",
-                                      maxLength: 20,
-                                      onChange: (e) => t(e.target.value),
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: (0, n.jsx)("button", {
-                                        className: _().SubmitButton,
-                                        disabled: r,
-                                        children: r
-                                          ? "Adding..."
-                                          : "Add Account",
-                                      }),
-                                    }),
-                                  ],
-                                }),
-                              ],
-                            });
-                          },
-                          { strTeamId: a },
-                        ),
                       ],
                     }),
-                  (0, n.jsx)("div", { className: _().SmoothLine }),
-                  (0, n.jsx)("h2", {
-                    className: _().Header,
-                    children: "Members",
-                  }),
-                  (0, n.jsxs)("div", {
-                    className: _().MembersGrid,
-                    style: {
-                      gridTemplateColumns: `250px repeat(${k.length - 1}, auto)`,
-                    },
-                    children: [
-                      (0, n.jsx)(o.Fragment, {
-                        children: k.map((e) =>
-                          (0, n.jsx)(
-                            "div",
-                            {
-                              children: (0, n.jsx)("b", {
-                                children: e.displayName || e.key,
-                              }),
-                            },
-                            `${e.key}-members-grid-header}`,
-                          ),
-                        ),
-                      }),
-                      (0, n.jsxs)(o.Fragment, {
-                        children: [
-                          !!X.length &&
-                            X.map((e) =>
-                              k.map((a) =>
-                                (0, n.jsx)(
-                                  "div",
-                                  {
-                                    children: a.formatFunction
-                                      ? a.formatFunction.call(null, e[a.key], W)
-                                      : JSON.stringify(
-                                          e[a.key] || "",
-                                          null,
-                                          2,
-                                        ).replace(/['"]+/g, ""),
-                                  },
-                                  `${a.key}-member-row-${e.account_id}`,
-                                ),
-                              ),
-                            ),
-                          !X.length &&
-                            (0, n.jsx)("div", { children: "No team members." }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, n.jsx)("br", {}),
-                  (0, n.jsxs)("div", {
-                    className: _().ManagerGrid,
-                    style: {
-                      gridTemplateColumns: `250px repeat(${S.length - 1}, auto)`,
-                    },
-                    children: [
-                      (0, n.jsx)(o.Fragment, {
-                        children: S.map((e) =>
-                          (0, n.jsx)(
-                            "div",
-                            {
-                              children: (0, n.jsx)("b", {
-                                children: e.displayName || e.key,
-                              }),
-                            },
-                            `${e.key}-manager-grid-header}`,
-                          ),
-                        ),
-                      }),
-                      (0, n.jsxs)(o.Fragment, {
-                        children: [
-                          S.map((e) =>
-                            (0, n.jsx)(
-                              o.Fragment,
-                              {
-                                children: (0, n.jsx)("div", {
-                                  children: e.formatFunction
-                                    ? e.formatFunction.call(null, V[e.key])
-                                    : JSON.stringify(
-                                        V[e.key] || "",
-                                        null,
-                                        2,
-                                      ).replace(/['"]+/g, ""),
-                                }),
-                              },
-                              `${e.key}-manager-row`,
-                            ),
-                          ),
-                          !S.length &&
-                            (0, n.jsx)("div", { children: "No manager." }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  $ &&
-                    (0, n.jsxs)(o.Fragment, {
-                      children: [
-                        (0, n.jsx)("div", { className: _().SmoothLine }),
-                        (0, n.jsx)(
-                          ({ strTeamId: e }) => {
-                            const [a, t] = (0, o.useState)(""),
-                              [r, i] = (0, o.useState)(""),
-                              [c, d] = (0, o.useState)(!1);
-                            return (0, n.jsxs)("form", {
-                              onSubmit: async (e) => {
-                                if ((e.preventDefault(), !a || !r)) return;
-                                d(!0);
-                                const t = {
-                                  admin_account_id: parseInt(a),
-                                  admin_email: r,
-                                  registration_period:
-                                    l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                                };
-                                await s().post(
-                                  `${l.r.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${y}&appid=${l.r.DOTA_APP_ID}`,
-                                  { params: t },
-                                );
-                                Y(), setTimeout(() => d(!1), g);
-                              },
-                              children: [
-                                (0, n.jsx)("h2", {
-                                  className: _().Header,
-                                  children: "Update Manager Email",
-                                }),
-                                (0, n.jsxs)("div", {
-                                  className: _().EditInfoGrid,
-                                  children: [
-                                    (0, n.jsx)("div", {
-                                      children: "Manager Account ID",
-                                    }),
-                                    (0, n.jsx)("input", {
-                                      className: _().MediumTextField,
-                                      type: "text",
-                                      name: "adminAccountId",
-                                      maxLength: 20,
-                                      onChange: (e) => t(e.target.value),
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: "Manager Email",
-                                    }),
-                                    (0, n.jsx)("input", {
-                                      className: _().MediumTextField,
-                                      type: "email",
-                                      name: "adminEmail",
-                                      maxLength: 255,
-                                      onChange: (e) => i(e.target.value),
-                                    }),
-                                    (0, n.jsx)("div", {
-                                      children: (0, n.jsx)("button", {
-                                        className: _().SubmitButton,
-                                        disabled: c,
-                                        children: c
-                                          ? "Updating..."
-                                          : "Update Manager Email",
-                                      }),
-                                    }),
-                                  ],
-                                }),
-                              ],
-                            });
-                          },
-                          { strTeamId: a },
-                        ),
-                      ],
+                    (0, e.jsx)("div", { className: D().SmoothLine }),
+                    (0, e.jsx)("h2", {
+                      className: D().Header,
+                      children: "Supporters Club / Workshop Status",
                     }),
-                  (0, n.jsx)("div", { className: _().SmoothLine }),
-                  (0, n.jsx)("h2", {
-                    className: _().Header,
-                    children: "Logos & Colors",
-                  }),
-                  (0, n.jsx)("div", {
-                    className: _().LogoAndColorsGrid,
-                    children: R.map((e) =>
-                      (0, n.jsxs)(
-                        o.Fragment,
-                        {
-                          children: [
-                            (0, n.jsx)("div", {
-                              children: e.displayName || e.key,
-                            }),
-                            (0, n.jsx)("div", {
-                              children: e.formatFunction
-                                ? e.formatFunction.call(
-                                    null,
-                                    I[e.key],
-                                    I.team_id,
-                                  )
-                                : JSON.stringify(
-                                    I[e.key] || "",
-                                    null,
-                                    2,
-                                  ).replace(/['"]+/g, ""),
-                            }),
-                          ],
-                        },
-                        `${e.key}-logo-colors-row`,
-                      ),
-                    ),
-                  }),
-                  (0, n.jsx)("br", {}),
-                  (0, n.jsxs)("div", {
-                    className: _().UGCLogosGrid,
-                    style: { gridTemplateColumns: `repeat(${D.length}, auto)` },
-                    children: [
-                      (0, n.jsx)(o.Fragment, {
-                        children: D.map((e) =>
-                          (0, n.jsx)(
-                            "div",
-                            {
-                              children: (0, n.jsx)("b", {
-                                children: e.displayName || e.key,
-                              }),
-                            },
-                            `${e.key}-ugc-grid-header}`,
-                          ),
-                        ),
-                      }),
-                      (0, n.jsx)(o.Fragment, {
-                        children: D.map((e) =>
-                          (0, n.jsx)(
-                            "div",
-                            {
-                              children: e.formatFunction
-                                ? e.formatFunction.call(null, I[e.key])
-                                : JSON.stringify(
-                                    I[e.key] || "",
-                                    null,
-                                    2,
-                                  ).replace(/['"]+/g, ""),
-                            },
-                            `${e.key}-ugc-logo`,
-                          ),
-                        ),
-                      }),
-                    ],
-                  }),
-                  (0, n.jsx)("div", { className: _().SmoothLine }),
-                  (0, n.jsx)("h2", {
-                    className: _().Header,
-                    children: "Audit Action History",
-                  }),
-                  (0, n.jsxs)("div", {
-                    className: _().AuditActionsGrid,
-                    style: { gridTemplateColumns: `repeat(${E.length}, auto)` },
-                    children: [
-                      (0, n.jsx)(o.Fragment, {
-                        children: E.map((e) =>
-                          (0, n.jsx)(
-                            "div",
-                            {
-                              children: (0, n.jsx)("b", {
-                                children: e.displayName || e.key,
-                              }),
-                            },
-                            `${e.key}-${e.displayName}-audit-action-grid-header`,
-                          ),
-                        ),
-                      }),
-                      (0, n.jsxs)(o.Fragment, {
-                        children: [
-                          !!B.length &&
-                            B.map((e) =>
-                              E.map((a) =>
-                                (0, n.jsx)(
-                                  "div",
-                                  {
-                                    children: a.formatFunction
-                                      ? a.formatFunction.call(
-                                          null,
-                                          e[a.key],
-                                          e.player_name,
-                                          e.target_manager_name,
-                                        )
-                                      : JSON.stringify(
-                                          e[a.key] || "",
-                                          null,
-                                          2,
-                                        ).replace(/['"]+/g, ""),
-                                  },
-                                  `${a.key}-${a.displayName}-${e.timestamp}`,
-                                ),
-                              ),
-                            ),
-                          !B.length &&
-                            (0, n.jsx)("div", {
-                              children: "No audit actions.",
-                            }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, n.jsx)("div", { className: _().SmoothLine }),
-                  (0, n.jsx)("h2", {
-                    className: _().Header,
-                    children: "Supporters Club / Workshop Status",
-                  }),
-                  (0, n.jsx)("div", {
-                    className: _().WorkshopStatusGrid,
-                    children: O.map((e) =>
-                      (0, n.jsxs)(
-                        o.Fragment,
-                        {
-                          children: [
-                            (0, n.jsx)("div", {
-                              children: e.displayName || e.key,
-                            }),
-                            (0, n.jsx)("div", {
-                              children: e.formatFunction
-                                ? e.formatFunction.call(null, P[e.key])
-                                : JSON.stringify(
-                                    P[e.key] || "",
-                                    null,
-                                    2,
-                                  ).replace(/['"]+/g, ""),
-                            }),
-                          ],
-                        },
-                        `${e.key}-workshop-status-row`,
-                      ),
-                    ),
-                  }),
-                  (0, n.jsx)("div", { className: _().SmoothLine }),
-                  (0, n.jsx)("h2", {
-                    className: (0, d.A)(_().Header, _().SeasonMatchHeader),
-                    children: `Season ${l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
-                  }),
-                  (0, n.jsx)("div", {
-                    className: _().MatchesGrid,
-                    style: { gridTemplateColumns: `repeat(${b.length}, auto)` },
-                    children: (0, n.jsxs)(o.Fragment, {
-                      children: [
-                        (() => {
-                          const e = [];
-                          return (
-                            Object.keys(G).forEach((a, t) => {
-                              e.push(
-                                (0, n.jsx)(
-                                  "h3",
-                                  {
-                                    style: { gridColumn: `span ${b.length}` },
-                                    children: (0, n.jsx)("b", { children: a }),
-                                  },
-                                  `league-name-row-${t}`,
-                                ),
-                              ),
-                                e.push(
-                                  b.map((e) =>
-                                    (0, n.jsx)(
-                                      "div",
-                                      {
-                                        children: (0, n.jsx)("b", {
-                                          children: e.displayName || e.key,
-                                        }),
-                                      },
-                                      `${e.key}-${e.displayName}-matches-grid-header-league-${t}`,
-                                    ),
-                                  ),
-                                );
-                              for (let t of G[a])
-                                e.push(
-                                  b.map((e) =>
-                                    (0, n.jsx)(
-                                      "div",
-                                      {
-                                        children: e.formatFunction
-                                          ? e.formatFunction.call(
-                                              null,
-                                              t[e.key],
-                                              z(t.opponent_team_id),
-                                            )
-                                          : JSON.stringify(
-                                              t[e.key] || "",
-                                              null,
-                                              2,
-                                            ).replace(/['"]+/g, ""),
-                                      },
-                                      `${e.key}-${e.displayName}-${t.series_id}`,
-                                    ),
-                                  ),
-                                );
-                              e.push((0, n.jsx)("br", {}));
-                            }),
-                            e
-                          );
-                        })(),
-                        !Object.keys(G).length &&
-                          (0, n.jsxs)("div", {
+                    (0, e.jsx)("div", {
+                      className: D().WorkshopStatusGrid,
+                      children: h.map((t) =>
+                        (0, e.jsxs)(
+                          x.Fragment,
+                          {
                             children: [
-                              (0, n.jsx)("br", {}),
-                              "No league matches.",
+                              (0, e.jsx)("div", {
+                                children: t.displayName || t.key,
+                              }),
+                              (0, e.jsx)("div", {
+                                children: t.formatFunction
+                                  ? t.formatFunction.call(null, Z[t.key])
+                                  : JSON.stringify(
+                                      Z[t.key] || "",
+                                      null,
+                                      2,
+                                    ).replace(/['"]+/g, ""),
+                              }),
                             ],
-                          }),
-                      ],
+                          },
+                          `${t.key}-workshop-status-row`,
+                        ),
+                      ),
                     }),
-                  }),
-                  (0, n.jsx)("br", {}),
-                ],
-              }),
-              (0, n.jsx)(u.K, {}),
-            ],
-          });
-        };
-      class C extends o.Component {
-        render() {
-          return (0, n.jsx)(F, {});
+                    (0, e.jsx)("div", { className: D().SmoothLine }),
+                    (0, e.jsx)("h2", {
+                      className: (0, w.A)(D().Header, D().SeasonMatchHeader),
+                      children: `Season ${I.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
+                    }),
+                    (0, e.jsx)("div", {
+                      className: D().MatchesGrid,
+                      style: {
+                        gridTemplateColumns: `repeat(${S.length}, auto)`,
+                      },
+                      children: (0, e.jsxs)(x.Fragment, {
+                        children: [
+                          m(),
+                          !Object.keys(_).length &&
+                            (0, e.jsxs)("div", {
+                              children: [
+                                (0, e.jsx)("br", {}),
+                                "No league matches.",
+                              ],
+                            }),
+                        ],
+                      }),
+                    }),
+                    (0, e.jsx)("br", {}),
+                  ],
+                }),
+                (0, e.jsx)(He.K, {}),
+              ],
+            });
+          };
+        class C extends x.Component {
+          render() {
+            return (0, e.jsx)(E, {});
+          }
         }
-      }
+      },
+      2466: (Re) => {
+        Re.exports = {
+          Tooltip: "_2IHKq8kE2FKkIkQ0uN1hI1",
+          CarouselFade: "_2jFWoHmtCDVmk-GJRBpunm",
+          StandardButton: "_3Vzjmf1OlnazpL0kLEaBk2",
+          ButtonText: "_1zE9KyknOxmGylbt0gT6G1",
+          Icon: "_2kUnsdlfHyidOkvHNRy-G5",
+          Play: "_3xQLJ4b-cm8IeXAoDPbn6R",
+          SteamLogo: "_1hoZQVEfsnXavdsZP34vJD",
+          ToolTip: "_3fIQnpYc0eNl9uXKBoSJam",
+          PlayerReportTooltip: "_13XzPZYgyQ52l8UHzh0EmH",
+          Facet: "_2479It67QW-Bm9uy6i44cg",
+          FacetColorRed0: "_2jAmS6ZJIahLUzOlKrjWpM",
+          BackgroundTexture: "Kt1MTBk5kBd4aK5CFW2BS",
+          FacetColorRed1: "_1VQ6_XxRXOarkHNtIZR9Bw",
+          FacetColorRed2: "_2npcwVYfERdNcBWrDZoEz0",
+          Background: "_3MfMXew7MDkO4ZAyjocp4l",
+          FacetColorYellow0: "_2dBam2Tl57qfOfNvHZ6ChQ",
+          FacetColorYellow1: "_28IIDyezxLgxIAUErmcPAh",
+          FacetColorYellow2: "_3jB4IMyM4FBN4ivpEPzbJd",
+          FacetColorYellow3: "_1Gjyr8DdaSBz6_43VEAz0d",
+          FacetColorGreen0: "_1c3NTvD5wY1eRXjzD8RPIe",
+          FacetColorGreen1: "_1-qGJ84BFxu0lBHUhb5BAi",
+          FacetColorGreen2: "_3sEfw4qhYeKQzhX1UOb60Z",
+          FacetColorGreen3: "_21o76udrdevLEWmI0ZuSCT",
+          FacetColorGreen4: "_3833UsaWsxduGGxeTuMWAC",
+          FacetColorBlue0: "_3gfEwvDy5HqyL6VGHoMRVO",
+          FacetColorBlue1: "_3O35_r4wm4_s7r6H_YdPCz",
+          FacetColorBlue2: "_3ejomd-TsjxlHuJOx2FYyf",
+          FacetColorBlue3: "_2HyBDMaS-B2ekmE3PItFMK",
+          FacetColorPurple0: "YXBKkoBCp4eQx9gFE-4GS",
+          FacetColorPurple1: "_1EmAB8GlcjfA1QEcuCJi6K",
+          FacetColorPurple2: "GNCP-xxNt9O4-ierkeGcM",
+          FacetColorGray0: "_2TRWZ2SI7jmu1RmANk84kq",
+          FacetColorGray1: "_2Z0PK6Dt5jIErUliJ1Nmcb",
+          FacetColorGray2: "_3wy1a1XvwtnmSkyJ_Uog4B",
+          FacetColorGray3: "_3CwxQRU26KizreV1hodszw",
+          DotaPlusTesterPage: "_3WgovHBiMUxsTea3MjGVj_",
+          SelectionHeader: "_1nNeHirsBILHpl2is8F5lW",
+          Option: "_2AFRQzgnX-YsecNy9XrxzY",
+          Selected: "wbLdHJ0ZWLvu8HF50SXla",
+          DotaPlusTesterSubPage: "_2CWEAN8f8RDC7hNnHa8Suk",
+          Content: "_3bNeyifasCN57MFYhqx6ZU",
+          HeroOption: "_2v0i2xJP4V-2Qpo3cyY1Nj",
+          Portrait: "_3i4UGSnvERSFqSVToiROro",
+          Name: "_1CHIkGehGqx3Ju9lDCMSL3",
+          HeroPickerPopupBackground: "BkuFnEL7cAyjCsMYhNyG3",
+          HeroPickerPopup: "_5HnIRB-JgFF82A3YeaDuq",
+          InvisibleBackground: "_2jAZ6RdYq6X6OeC7yk8dj3",
+          Title: "_3WFGlJosY89AeFD-YAn6gJ",
+          Grid: "_21gyki0jzxuKwN4H10o8X9",
+          HeroSelector: "_3fmy45UdjacZi73yO3E_uF",
+          ItemOption: "_6AJ-yI4g6fOtGfcDROYZt",
+          ItemPickerPopupBackground: "_145u0nzgVhn2-DZBoRWmsI",
+          ItemPickerPopup: "_1aNSszFcQFhi_uHGeZf8Rv",
+          ItemSelector: "_2SWf_NNmwQ7LWbLC4VYlOr",
+          Separator: "vvXhWtkA9z6wjvMnq8Cfh",
+          IncludExcludeItemOption: "_3Cu9n_EGnwgQDa94O5JQYa",
+          ItemOptionTitle: "_1KOTz4KFHV7evGoyiIIhmZ",
+          OptionColumn: "_29uhbNe06vW1DnR0UERABv",
+          Percent: "_3pU4B55o9M0cH7n06CQ15l",
+          ResultHeader: "_2Vl5GTvbioLQmgltncA3xD",
+          PenaltySelector: "_28XsJixV0GJwbwa0EysF95",
+          VariantTypes: "_3Zp2QG7HhI-jivO6IldhoV",
+          VariantType: "_219ADvdUd0lvulRTTvI5az",
+          ShowMore: "_1tx8GY0JVZNo7qQPdeDsTn",
+          HeroList: "AyejJ-aIiriywCHAZOeUo",
+          Allies: "_3Xuun95YKZ1YruK-b9hYEf",
+          Enemies: "_3FpjjT_dv_gp1luKSDDZhK",
+          MiscInfo: "_2PVHaq0Abzd8Vpp7ZSpR6X",
+          Results: "_1epogxsRPnR7xvn_EJk5ek",
+          Result: "_2aynAA7fYEBl7qeYdv4k7P",
+          Weight: "_1LCBQ-B3CRx5lvFPGuCCnL",
+          Score: "_3upfuZKsxFE7jDpMgQDHrF",
+          ScoreAdjust: "_1AWXivqjFK2i-xe23q043e",
+          SequenceID: "_2I5WaWpAnR7Xb9bJIjMAuB",
+          ItemList: "_1hs67D7V7zX-88hrbFgsay",
+          ItemIcon: "_1Wq63SoqJ5sm2AjU0GHg0G",
+          AbilityIcon: "_2jWYP5f6ScwPsEZ14cFB93",
+          Loading: "_2ie0WE5D9UyYhwIqhg8OUG",
+          ClearSkilledAbilities: "_2KHZb4-REKRB5a9tJlgkPK",
+          SkilledAbilityList: "_2U4uJQoF_QS4MJABMADMUe",
+          PurchasedItemList: "_1uTSEvOUBlQN2EaDV3Fj_K",
+          AbilitySuggestions: "_3vYlZs47O9z1ELF14LLEsV",
+          ScoredItems: "_2thRO1n5rmT_Vry4XHHkFu",
+          Level: "_3POW-ow0sU5DLsnpAxjZ4u",
+          Header: "_2pcHk7_VnLKZ4YPsfy3PPd",
+          Checkbox: "_1UYvWalxB-6TGfDko-EcKt",
+        };
+      },
+      40753: (Re) => {
+        Re.exports = {
+          Tooltip: "_3OELhBBscklv2IMdg5oomz",
+          CarouselFade: "_31I4llS_Lyhj5ATIkhm9Qt",
+          StandardButton: "_37aD3ynYPo1qUap4RVCcn1",
+          ButtonText: "_1kRqdz1Q6aw8DZs4fDMlS_",
+          Icon: "_3qIRiUalNYmwOuLpN0DODG",
+          Play: "_2vTU3GlbWNRYTktMAr4piA",
+          SteamLogo: "_1fP8sQd2eLdp1lnsGBSiIc",
+          ToolTip: "RYpRbQXFsKkHLprrRA1zi",
+          PlayerReportTooltip: "_3tRwpyEakf__WKj7w5jodF",
+          PersonaDetails: "_1zeGbjgrtzsTxpMX5En4ZN",
+          ContentFrame: "Z_Blbt7KKFTyy0LhWzqrd",
+          BansGrid: "_3V5pubLeXWOs7rDx7cGxI",
+          WarningsGrid: "_2THih7P04NzMQyRkSCU57p",
+          DetailedInfoInnerGrid: "_1hn0yQoWwUItL8u4npU1FJ",
+          DetailedInfoOuterGrid: "_1A5QRx9VlcVs-R0nrFE7ek",
+          VacInfoInnerGrid: "_2GLWyc9KftX65_eYbF9SbV",
+          VacInfoOuterGrid: "_3mMUpl5v4rdbX0Y3j6h9Vt",
+          TeamsInfoInnerGrid: "_1VvPwBnK6kaf04tlafgJzd",
+          TeamsInfoOuterGrid: "_3Yy6Z2mss8pTAjlVIJ7A9e",
+          OfficialProfileInnerGrid: "_3B-f5WgGwbIfjjQ79Ef-Nx",
+          OfficialProfileOuterGrid: "_3G-7dX2yZaIKFL9tnC0VkL",
+          EventInfoInnerGrid: "vvYl-3ZIeMPkGI94saJaY",
+          EventInfoOuterGrid: "e1kXopQGUfQO8ICcUgWT9",
+          TeamDetailsGrid: "_2qp3OE-MGle8fIYmzYo-mD",
+          AccessFlagsGrid: "_31PXUbr6Ft4mcgqJlnxbd4",
+          SupportInfoGrid: "_1OWRzmCzZ7Ff9zLvR0ij53",
+          SmurfExperimentalInfoGrid: "_2i8-FQlo99PtuRmUvtgurE",
+          SmurfInfoGrid: "_1ec2JlZSx2iKez9Tlm60Ho",
+          LinkedAccountsGrid: "_1CWPTeuaqNUawITjfayjh7",
+          SupportInfoTopGrid: "pEEkQfBPikqdsNi11lWM-",
+          RankInfoGrid: "xI5E6apwJIM7u3b5GpQHg",
+          GeneralInfoGrid: "_1fxrHZYArq4s_yW3AGlgLl",
+          Header: "DQGCOxrVoC7LBhM7mn-Js",
+          HeaderFixedHeight: "_2VaZtuM2kaB1JfOPNUHY7z",
+          HeaderNoMargin: "_26vpYMRjrF8IaAlDodSKYJ",
+          HeaderClickable: "_2OwWXhfu5Ir_RK5tZGdlV7",
+          TopContent: "_22K2AIz1_qxsa0prjSJght",
+          TopContentLeft: "AymWsmELt-04P2KDWP_ht",
+          TopContentRight: "_1_Nsd4gBtT24RXhTZX59hu",
+          ChartContainer: "NJ2SxLweSpIwwij01bEPa",
+          ChartTitle: "_2jj8F6TujCphllWG0mVZIR",
+          FilterGrid: "GCf_MpdLqqDAA2gYJy_OP",
+          RankedFilters: "_33ShEkw3vpxlYh9V4kq8vN",
+          MatchHistoryOuterContainer: "_3_r0BBZ53SWfDvtIYFmnVy",
+          MatchHistoryInnerContainer: "sL92M3TGZXFY52YJwBjqg",
+          MatchRowEven: "ux51myX2FubufpPVDr79F",
+          SupportGrid: "_2Y0XJ26SxbEz2ymss3IxT1",
+          SupportGridHidden: "fQ9JbuKILX6QcGliXkAAW",
+          BanHistoryTable: "_3WqIrnD55srvWk0usaiGU",
+          ReportRowElement: "_2D2t4sByBFxPdT19ZxDi2H",
+          Link: "_1ymUXcoOK9QMVUK3LqDNva",
+          MediumTextField: "eQUN1139S04UDBXZD9sj9",
+          SmallTextField: "_1NTGYvvayGBoCVLwOZeKqr",
+          SmoothLine: "TmbIeQaO211UMcS2rYilB",
+          HeroImage: "_3yyq7mdx9R7TGWugXYr-p1",
+          ItemContainer: "_2HKl4yY1a7E74CglG8uBUX",
+          ItemIcon: "_3fmaFLdu4JhnWu-pNzi4n_",
+          RankNumber: "_2DZJOGqgRmf8BXHrKl8NlI",
+          RankedUncertainty: "YGzF1cwttz9g-GD8lQa7u",
+          RankedBadgeIcon: "_1bjscpu27X92lwFnnDxuB-",
+          CheckBox: "_2YEZTwo84iD58hIg0yVu7c",
+          OtherModesCheckBox: "F2OsALGKET10BleQcREfT",
+          ArrowIcon: "_2409M7zgkG1YfIoKjf0xuW",
+          ArrowIconRight: "_2_9wfntkC3b3oqBh6DWQWS",
+          ArrowIconDown: "_3BwteZt73UOnhP1eZQzjLG",
+          MarginRightSmall: "_18x1jAkVSdDMbBRGE29U8Q",
+          TextCapitalize: "lT6nXg4T4nF_u8dPbxbLK",
+          TextUppercase: "_1zyxlvXRinV7kmTGr27_gu",
+        };
+      },
+      9784: (Re) => {
+        Re.exports = {
+          Tooltip: "_31hC1zqg_cK9fp6BCtDEz",
+          CarouselFade: "_2UcOFVBSgdG55jLKpxirAG",
+          StandardButton: "_1OiL0_UEMBNqnMh2NIyqgn",
+          ButtonText: "_3gcUnXWgY6QWkRKN1ClXpK",
+          Icon: "_17oKddncf6DrsSIQVgNvNG",
+          Play: "_1e79tla_NJpyJDcvbU9AF9",
+          SteamLogo: "_2Z206WYSu-kLFeeyQllJnA",
+          ToolTip: "_2w_iNwO7tcIXVjXubfdbpo",
+          PlayerReportTooltip: "_3oBx7dyVQTWVwPU7EuvqWT",
+          TeamDetails: "w3idBBCXL0rxnD6pwBRM6",
+          ContentFrame: "hjW9KalKzKYN16tpDQb7f",
+          MatchesGrid: "_3HPIK48slIcN5eHxvTSbKQ",
+          WorkshopStatusGrid: "_11m5MHnA6UknRRBsXpZ1rv",
+          AuditActionsGrid: "_1ohOp7TGfH5UAINZezcdxk",
+          LogoAndColorsGrid: "ndSeTE99iU-Ou7uTl5Si0",
+          UGCLogosGrid: "_1bbYnwq3o_lOjCCxe9iJaj",
+          MiscInfoGrid: "_1igOxRpLl7PyFY24wnePza",
+          MembersGrid: "_3tGp0SBmohvWD8Pzf5iiuc",
+          ManagerGrid: "_3GLmjRcbneW-hMwgcQ--3l",
+          TeamDetailsGrid: "_3V8yT6IOTf0yaOtb7uXfky",
+          EditInfoGrid: "_154vYGBrUHabGUpVtMn3B4",
+          Header: "_3gRz5dlEtd2bMEcJRISHKT",
+          SubmitButton: "_1RnAKrnaOcM3sRJ1ITONHN",
+          URLLogoContainer: "_2LgtuThAofytR-EoQUMOLR",
+          DPCLogoContainer: "_3uIWu7cqjGy0dv5tXwPZnF",
+          SeasonMatchHeader: "SV4lDRUSn4ErLJABsMRaN",
+          ColorBox: "_1Kvg9fL81Eb3WLk0EcFDTl",
+          Link: "_3Gjo1M2PApknKEf9Y8kZSI",
+          MediumTextField: "_2IXLMtIL66j_ePIFCMoMLn",
+          SmallTextField: "_1y2t9XMGl9stF97djWq0aK",
+          SmoothLine: "_3YaqJMKcvdAXYfVRX2W8PY",
+        };
+      },
     },
-  },
-]);
+  ]);
+})();
