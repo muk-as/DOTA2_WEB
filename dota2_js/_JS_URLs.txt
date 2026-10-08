@@ -26,7 +26,6 @@ dpc_team                                dpc_event_root()/teams/${}
 dpc_teams                               dpc_event_root()/teams
 dpc_ti_rules                            dpc_event_root()/tirules
 dpc_ti_standings                        dpc_event_root()/tistandings
-dpc_watch                               dpc_watch_root()/${}/${}/${}
 dpc_watch_root                          dpc_event_root()/watch
 hero                                    /hero/${}
 herogrid                                /heroes
@@ -44,12 +43,12 @@ marci                                   /marci
 muerta                                  /deadreckoning
 nemestice                               /nemestice
 new_frontiers                           /newfrontiers
-news                                    /news/()
+news                                    /news${}
 newsentry                               /newsentry/${}
 other                                   /
 pastupdates                             /pastupdates
 patch738                                /wanderingwaters
-patchnotes                              /patches/()
+patchnotes                              /patches${}
 personadetails                          /personadetails/${}
 portraitguidelines                      /portraitguidelines
 primalbeast                             /primalbeast
@@ -164,9 +163,11 @@ https://youtu.be/38ZwPC3xO78
 https://youtube.com/user/dota2
 AUDIO_URL/international2020/${X[X]}.wav
 AUDIO_URL/international2022/${X[X]}.wav
+BASE_URL/${`matches/match/${X}`}?u=${X(DOTA_APP_ID)}&appid=${DOTA_APP_ID}&highlight=${X}
+BASE_URL/${`matches/match/${X}`}?u=${X}&appid=${DOTA_APP_ID}
 BASE_URL/${autographguidelines().substr(1)}
 BASE_URL/${patch_website}
-BASE_URL/${personadetails($X).substr(1)}
+BASE_URL/${personadetails(X).substr(1)}
 BASE_URL/${teamdetails(X).substr(1)}
 BASE_URL/blog
 BASE_URL/datafeed/abilitydata,{params:{language:LANGUAGE,ability_id:X}}
@@ -187,8 +188,6 @@ BASE_URL/ingest
 BASE_URL/international2023
 BASE_URL/international2024
 BASE_URL/items
-BASE_URL/matches/match/${X}?u=${X(DOTA_APP_ID)}&appid=${DOTA_APP_ID}&highlight=${X}
-BASE_URL/matches/match/${X}?u=${X}&appid=${DOTA_APP_ID}
 BASE_URL/newsentry/3398555399418412272
 BASE_URL/oauth/logout
 BASE_URL/oauth/logout?goto=${pathname.substr(1)}
@@ -204,7 +203,7 @@ BASE_URL/quiz
 BASE_URL/react/getfavoriteteams,{}
 BASE_URL/react/getlivestreams,{params:{league_ids:X}}
 BASE_URL/react/getspoilerblock,{}
-BASE_URL/react/getwatchedgames,{params:{league_ids:X}}
+BASE_URL/react/getwatchedgames,{params:{league_ids:$}}
 BASE_URL/react/inference,{input_json:JSON.stringify(X),project_id:project_id}
 BASE_URL/react/setspoilerblock,{params:{block:X,sessionid:SESSION_ID}}
 BASE_URL/react/setwatchedgame,{params:{league_id:X,node_id:X,game:X,sessionid:SESSION_ID}}
@@ -214,6 +213,7 @@ BASE_URL/shortfilm()+/grantshortfilmpackage,{params:{sessionid:SESSION_ID}}
 BASE_URL/shortfilm()+/redirecttosteamcommunityshortfilm/
 BASE_URL/store
 BASE_URL/store/itemdetails/${X}
+BASE_URL/teams/getpersonaname/,{params:{account_id:$.account_id}}
 BASE_URL/teams/getpersonaname/,{params:{account_id:account_id}}
 BASE_URL/teams/getugcfilelinks/,{params:{team_id:X}}
 BASE_URL/theonetrueking
@@ -222,10 +222,10 @@ BASE_URL/webapi/IDOTA2DPC/GetDPCStandings/v001,{params:{registration_period:X}}
 BASE_URL/webapi/IDOTA2DPC/GetLeagueMatchMinimal/v001,{params:{league_id:X,match_id:X}}
 BASE_URL/webapi/IDOTA2DPC/GetLeagueResults/v001,{params:{league_id:X}}
 BASE_URL/webapi/IDOTA2DPC/GetPlayerInfo/v001,{params:{account_id:X}}
-BASE_URL/webapi/IDOTA2Fantasy/GetPlayerInfo/v0001,{params:{account_id:account_id}}
+BASE_URL/webapi/IDOTA2Fantasy/GetPlayerInfo/v0001,{params:{account_id:$.account_id}}
 BASE_URL/webapi/IDOTA2League/GetLeagueData/v001,{params:{league_id:X,delay_seconds:X}}
 BASE_URL/webapi/IDOTA2League/GetLeaguesData/v001,{params:X}
-BASE_URL/webapi/IDOTA2League/GetLeaguesData/v001,{params:{league_ids:X,delay_seconds:X}}
+BASE_URL/webapi/IDOTA2League/GetLeaguesData/v001,{params:{league_ids:$,delay_seconds:X}}
 BASE_URL/webapi/IDOTA2League/GetPrizePool/v001,{params:{league_id:14268}}
 BASE_URL/webapi/IDOTA2Teams/AddTeamMember/v0001
 BASE_URL/webapi/IDOTA2Teams/EditTeamName/v0001
@@ -234,8 +234,8 @@ BASE_URL/webapi/IDOTA2Teams/GetRegisteredTeams/v001,{params:X}
 BASE_URL/webapi/IDOTA2Teams/GetSingleTeamInfo/v001,{params:X}
 BASE_URL/webapi/IDOTA2Teams/GetSingleTeamInfo/v001,{params:{team_id:X,get_dpc_info:!0}}
 BASE_URL/webapi/IDOTA2Teams/GetTeamAuditInformation/v001,{params:X}
-BASE_URL/webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${X}&appid=${DOTA_APP_ID}&team_id=${X}&account_id=${account_id}
-BASE_URL/webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${X}&appid=${DOTA_APP_ID}&team_id=${X}&account_id=${account_id}
+BASE_URL/webapi/IDOTA2Teams/RemoveTeamMember/v0001
+BASE_URL/webapi/IDOTA2Teams/SetTeamAdmin/v0001
 BASE_URL/webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${X}&appid=${DOTA_APP_ID}
 BASE_URL/workshop/builds
 CDN_URL/apps/dota2/images/
@@ -246,25 +246,14 @@ CDN_URL/apps/dota2/teamlogos/${X}.png
 CDN_URL/apps/dota2/teamlogos/${nTeamID}.png
 CLAN_CDN_ASSET_URL/images/
 CLAN_CDN_ASSET_URL/locimages/
-COMMUNITY_BASE_URL/(vanity_url?groups/+vanity_url:gid/+ConvertTo64BitString())
-COMMUNITY_BASE_URL/X+/
-COMMUNITY_BASE_URL/app/+this.GetAppID()
-COMMUNITY_BASE_URL/app/+this.GetAppID()+/discussions/
 COMMUNITY_BASE_URL/app/+this.appid+/eventcomments/+this.forumTopicGID
-COMMUNITY_BASE_URL/games/${X}/ajaxgetvanityandclanid/?origin=${X()}
-COMMUNITY_BASE_URL/gid/${ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${X()}
-COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()
 COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()+/ajaxcreateupdatedeletepartnerevents/
-COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()+/ajaxgetpartnereventpermissions/
-COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()+/announcements/ajaxgetlocalization/+t
-COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()+/showclanimage/?image_hash_and_ext=+t
-COMMUNITY_BASE_URL/gid/+clanSteamID.ConvertTo64BitString()+/announcements/ajaxgetmyvote/+AnnouncementGID
-COMMUNITY_BASE_URL/gid/+clanSteamID.ConvertTo64BitString()+/announcements/rate/+AnnouncementGID
+COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()+/announcements/ajaxgetlocalization/+s
+COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()+/announcements/old_detail/+this.AnnouncementGID
+COMMUNITY_BASE_URL/gid/+ConvertTo64BitString()+/showclanimage/?image_hash_and_ext=+I1
 COMMUNITY_BASE_URL/gid/+this.clanSteamID.ConvertTo64BitString()+/eventcomments/+this.forumTopicGID
-COMMUNITY_BASE_URL/groups/${X}/ajaxgetvanityandclanid/?origin=${X()}
 COMMUNITY_BASE_URL/groups/+X+/eventcomments/+this.forumTopicGID
 COMMUNITY_BASE_URL/linkfilter/?u=+encodeURIComponent(X)
-COMMUNITY_BASE_URL/ogg/${X}/ajaxgetvanityandclanid/?origin=${X()}
 COMMUNITY_CDN_URL/g
 COMMUNITY_CDN_URL/public/shared/images/responsive/youtube_16x9_placeholder.gif
 COMMUNITY_URL/app/${DOTA_APP_ID}/guides
@@ -274,10 +263,10 @@ COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${X}
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${pathname.substr(1)}
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${proregistration_autographs().substr(1)}
 COMMUNITY_URL/oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
-HELP_BASE_URL/wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}
-HELP_BASE_URL/wizard/HelpWithLoginInfo?lost=8&issueid=402
-HELP_BASE_URL/wizard/HelpWithSteamGuardCode
+HELP_BASE_URL/${GetConfiguredLocale()}/
 IMG_URL/
+IMG_URL/${$1}.png
+IMG_URL/${$}${LANGUAGE}.png
 IMG_URL/${X}
 IMG_URL/${X}${LANGUAGE}.png
 IMG_URL/${X}.png
@@ -289,6 +278,7 @@ IMG_URL/${X}/immortal_treasure_${X+1}.png
 IMG_URL/${X}/players/${nAccountID}.png
 IMG_URL/${X}/river_vials/river_vial_${X+1}.jpg
 IMG_URL/${X}/river_vials/river_vial_icon_${X}.png
+IMG_URL/${capsuleImageLocation}${ConfigDota.LANGUAGE}.png
 IMG_URL/${capsuleImageLocation}${LANGUAGE}.png
 IMG_URL/${capsuleImageOnErrorLocation}
 IMG_URL/${dotBackgroundImage?dotBackgroundImage:imgSrc}
@@ -297,12 +287,14 @@ IMG_URL/${imgSrc}
 IMG_URL/${img_after}
 IMG_URL/${img_before}
 IMG_URL/${strBackgroundImage}
+IMG_URL/${strContentDir}/backgrounds/immortals2_teaser.png
 IMG_URL/${strContentDir}/immortals/${X}.jpg
 IMG_URL/${strContentDir}/immortals/art/${X}${X?_gold:}.png
 IMG_URL/${strPlayButton}
 IMG_URL/abilities/${X?.name?.replace(ability_,)}.png
 IMG_URL/abilities/${X}.png
 IMG_URL/abilities/${abilityData.name}.png
+IMG_URL/abilities/${has($1.name)?get($1.name):name}.png
 IMG_URL/abilities/${name}.png
 IMG_URL/arrow_left.png
 IMG_URL/arrow_over.png
@@ -443,13 +435,16 @@ IMG_URL/home/radiant_dire5.jpg
 IMG_URL/icons/${X?star_gold:star_black}.png
 IMG_URL/icons/${X}.svg
 IMG_URL/icons/arrow_right.svg
+IMG_URL/icons/arrow_top_right.svg
 IMG_URL/icons/cooldown.png
 IMG_URL/icons/dota_plus.png
 IMG_URL/icons/download.svg
 IMG_URL/icons/external_arrow.png
+IMG_URL/icons/facets/${$1.icon}.png
 IMG_URL/icons/facets/${facet_icon}.png
 IMG_URL/icons/facets/ripple_texture.png
 IMG_URL/icons/gold.png
+IMG_URL/icons/hero_${$1}.png
 IMG_URL/icons/hero_${X}.png
 IMG_URL/icons/hero_${X}.svg
 IMG_URL/icons/hero_agility.png
@@ -656,6 +651,7 @@ IMG_URL/international2022/diretide/taffy_well.png
 IMG_URL/international2022/emoticons/${X}.gif
 IMG_URL/international2022/favorite_teams.png
 IMG_URL/international2022/icons/carousel_mystery_mark.jpg
+IMG_URL/international2022/icons/logo_bp_shield.png
 IMG_URL/international2022/icons/molten_play_btn.png
 IMG_URL/international2022/icons/scroll_arrow.png
 IMG_URL/international2022/icons/social_fb.png
@@ -813,9 +809,11 @@ IMG_URL/labyrinth/rewards/hoodwink_prestige_crop.png
 IMG_URL/labyrinth/rewards/persona_mirana_flat.png
 IMG_URL/labyrinth/rewards/tower_dire.png
 IMG_URL/labyrinth/rewards/tower_radiant.png
+IMG_URL/labyrinth/wallpapers/mobile_1_${LANGUAGE==schinese?schinese:X}.jpg
 IMG_URL/labyrinth/wallpapers/mobile_1_${schinese==LANGUAGE?schinese:X}.jpg
 IMG_URL/labyrinth/wallpapers/mobile_1_thumb_${LANGUAGE}.jpg
 IMG_URL/labyrinth/wallpapers/mobile_1_thumb_en.jpg
+IMG_URL/labyrinth/wallpapers/wallpaper_1_${LANGUAGE==schinese?schinese:X}.jpg
 IMG_URL/labyrinth/wallpapers/wallpaper_1_${schinese==LANGUAGE?schinese:X}.jpg
 IMG_URL/labyrinth/wallpapers/wallpaper_1_thumb_${LANGUAGE}.jpg
 IMG_URL/labyrinth/wallpapers/wallpaper_1_thumb_en.jpg
@@ -1059,71 +1057,43 @@ IMG_URL/winter2023/snowflake_1.png
 IMG_URL/winter2023/snowflake_2.png
 IMG_URL/winter2023/snowflake_2_gold.png
 IMG_URL/winter2023/unusual_example.png
-LOGIN_BASE_URL/jwt/ajaxrefresh
-LOGIN_BASE_URL/jwt/checkdevice/${this.m_steamid}
-LOGIN_BASE_URL/jwt/finalizelogin
 MEDIA_CDN_COMMUNITY_URL/g
-MEDIA_CDN_COMMUNITY_URL/images/apps/${X}/${community_icon()}.jpg
-MEDIA_CDN_COMMUNITY_URL/images/apps/${X}/${community_icon()}_full.jpg
+MEDIA_CDN_COMMUNITY_URL/images/apps/+this.appid+/+X+.jpg
+MEDIA_CDN_COMMUNITY_URL/images/avatars/,X+=substr(0,2)+/)
+MEDIA_CDN_COMMUNITY_URL/images/steamtv/+X+/+L
 MEDIA_CDN_URL/g
 MEDIA_CDN_URL/steam/
-PARTNER_BASE_URL/${X}
 PARTNER_BASE_URL/doc/${X}
-PARTNER_BASE_URL/partnerevents/ajaxgetpartnereventpermissions
 PARTNER_BASE_URL/promotion/sales/ajaxsaveasset/${X}
 PARTNER_BASE_URL/sales/
-PARTNER_BASE_URL/sales/ajaxupdateclanaccountflags
 STORE_BASE_URL/
-STORE_BASE_URL/${store_url_path}
 STORE_BASE_URL/(X?events/ajaxgeteventdetailsforedit/:events/ajaxgeteventdetails/)
-STORE_BASE_URL/account/
-STORE_BASE_URL/actions/ajaxgetmyannouncementvote
-STORE_BASE_URL/app/${function(X){returne&&related_items?.standalone_demo_appid?related_items?.standalone_demo_appid:[]}(X)[0]}
-STORE_BASE_URL/app/+this.GetDemoStandaloneStorePageAppIDs()[0]
+STORE_BASE_URL/X(X,X,X)
+STORE_BASE_URL/X+?+newURLSearchParams(X).toString()
+STORE_BASE_URL/app/${X}
 STORE_BASE_URL/buyitem/${DOTA_APP_ID}/${X}/${X}
+STORE_BASE_URL/category/+C
 STORE_BASE_URL/category/+category
-STORE_BASE_URL/category/+e
-STORE_BASE_URL/curator/+GetClanAccountID()+/ajaxgetcreatorhomeinfo
-STORE_BASE_URL/curator/+this.clanSteamID.GetAccountID()+/sale/+this.jsondata.sale_vanity_id
-STORE_BASE_URL/curator/+this.m_clanSteamID.GetAccountID()+/
-STORE_BASE_URL/curator/0/ajaxsearchcurators
-STORE_BASE_URL/developer/+this.m_strVanity+/
-STORE_BASE_URL/events
+STORE_BASE_URL/dlc/${X}
 STORE_BASE_URL/events/
 STORE_BASE_URL/events/ajaxgetadjacentpartnerevents/
 STORE_BASE_URL/events/ajaxgetbatchedpartnerevent/
 STORE_BASE_URL/events/ajaxgetbesteventsforuser
-STORE_BASE_URL/events/ajaxgetcreatorhomeidforapp
-STORE_BASE_URL/events/ajaxgetdynamiceventmetadata,{params:X,cancelToken:token}
 STORE_BASE_URL/events/ajaxgetpartnerevent
-STORE_BASE_URL/events/ajaxgetpartnereventpermissions
 STORE_BASE_URL/events/ajaxgetpartnereventspageable/
 STORE_BASE_URL/events/ajaxgettodayboundedevents
-STORE_BASE_URL/events/ajaxreportnewshubstats/
-STORE_BASE_URL/franchise/+this.m_strVanity+/
 STORE_BASE_URL/genre/Early%20Access/
 STORE_BASE_URL/genre/Free%20to%20Play/
-STORE_BASE_URL/join/${X}
-STORE_BASE_URL/join/?guest=1&purchaseType=gift&checkout=1&redir=+encodeURIComponent(redirectURL)
-STORE_BASE_URL/meetsteam/${X}
-STORE_BASE_URL/mobile
-STORE_BASE_URL/mobile/?show=steamapp
-STORE_BASE_URL/news/download/${X}/${X}/${GID}?${X}
 STORE_BASE_URL/newshub/+(this.appid?app/+this.appid:group/+this.clanSteamID.GetAccountID())+/view/+this.GID
-STORE_BASE_URL/notification/ajaxusersettings
-STORE_BASE_URL/publisher/+this.m_strVanity+/
 STORE_BASE_URL/sale/+this.jsondata.sale_vanity_id
 STORE_BASE_URL/tags/+((0,X)()||X)+/+tagid
-STORE_BASE_URL/this.m_strStoreURLPath
 STORE_BASE_URL/type
 STORE_BASE_URL/updated/ajaxgetmyappsraw
-STORE_BASE_URL/updated/ajaxrateupdate/+AnnouncementGID
-STORE_CDN_URL/images/storepagebackground/${page_background_path()}
 STORE_URL/app/${DOTA_APP_ID}/Dota_2/
 STORE_URL/app/570/Dota_2/
-VIDEO_CDN_URL/store_trailers/+replace(${FILENAME},X)
 VIDEO_URL/${X}.mov
 VIDEO_URL/${X}.mp4
+VIDEO_URL/${X}.png
 VIDEO_URL/${X}.webm
 VIDEO_URL/${posterDir}
 VIDEO_URL/${strBackgroundVideo}.mp4
@@ -1140,15 +1110,15 @@ VIDEO_URL/${videoSrcWebm}
 VIDEO_URL/${video}
 VIDEO_URL/${video}.mp4
 VIDEO_URL/${video}.webm
+VIDEO_URL/abilities/${$1}/${abilityData.name}.jpg
+VIDEO_URL/abilities/${$1}/${abilityData.name}.mp4
+VIDEO_URL/abilities/${$1}/${abilityData.name}.webm
+VIDEO_URL/abilities/${X}/${$1.name}.jpg
+VIDEO_URL/abilities/${X}/${$1.name}.mp4
+VIDEO_URL/abilities/${X}/${$1.name}.webm
 VIDEO_URL/abilities/${X}/${X}.jpg
 VIDEO_URL/abilities/${X}/${X}.mp4
 VIDEO_URL/abilities/${X}/${X}.webm
-VIDEO_URL/abilities/${X}/${abilityData.name}.jpg
-VIDEO_URL/abilities/${X}/${abilityData.name}.mp4
-VIDEO_URL/abilities/${X}/${abilityData.name}.webm
-VIDEO_URL/abilities/${X}/${name}.jpg
-VIDEO_URL/abilities/${X}/${name}.mp4
-VIDEO_URL/abilities/${X}/${name}.webm
 VIDEO_URL/abilities/dawnbreaker/dawnbreaker_celestial_hammer.jpg
 VIDEO_URL/abilities/dawnbreaker/dawnbreaker_celestial_hammer.mp4
 VIDEO_URL/abilities/dawnbreaker/dawnbreaker_celestial_hammer.webm
@@ -1192,8 +1162,12 @@ VIDEO_URL/crownfall/${X}.png
 VIDEO_URL/crownfall/${X}.webm
 VIDEO_URL/crownfall/header_bg.webm
 VIDEO_URL/crownfall/header_fg.mov
+VIDEO_URL/crownfall/header_fg.png
 VIDEO_URL/crownfall/header_fg.webm
 VIDEO_URL/crownfall/how_to_play.webm?1
+VIDEO_URL/crownfall/logo_${LANGUAGE==schinese?schinese:english}.mov
+VIDEO_URL/crownfall/logo_${LANGUAGE==schinese?schinese:english}.png
+VIDEO_URL/crownfall/logo_${LANGUAGE==schinese?schinese:english}.webm
 VIDEO_URL/crownfall/logo_${schinese==LANGUAGE?schinese:english}.mov
 VIDEO_URL/crownfall/logo_${schinese==LANGUAGE?schinese:english}.webm
 VIDEO_URL/darkcarnival/automatons/${idleVideo}.mov
@@ -1203,10 +1177,11 @@ VIDEO_URL/darkcarnival/treasure/${X}.png
 VIDEO_URL/darkcarnival/treasure/${X}.webm
 VIDEO_URL/dawnbreaker/dawnbreaker_sfm.mp4
 VIDEO_URL/dawnbreaker/dawnbreaker_sfm.webm
-VIDEO_URL/heroes/renders/${X}.mov${has(X)?`?${get(X)}`:}
+VIDEO_URL/heroes/renders/${$1}.mov${has($1)?`?${get($1)}`:}
+VIDEO_URL/heroes/renders/${$1}.png
+VIDEO_URL/heroes/renders/${$1}.webm${has($1)!=null?`?${get($1)}`:}
 VIDEO_URL/heroes/renders/${X}.png
 VIDEO_URL/heroes/renders/${X}.webm
-VIDEO_URL/heroes/renders/${X}.webm${null!=has(X)?`?${get(X)}`:}
 VIDEO_URL/homepage/dota_montage_02.mp4
 VIDEO_URL/homepage/dota_montage_webm.webm
 VIDEO_URL/international2020/${X}.mp4
@@ -1290,6 +1265,8 @@ VIDEO_URL/international2024/ringmaster_debut_anim.mov?v5
 VIDEO_URL/international2024/ringmaster_debut_anim.webm
 VIDEO_URL/international2024/ringmaster_trailer_english.mp4
 VIDEO_URL/kez/${X}.mp4
+VIDEO_URL/kez/treasure/${X}.png
+VIDEO_URL/kez/treasure/${X}.webm
 VIDEO_URL/labyrinth/drow_loadout.jpg
 VIDEO_URL/labyrinth/drow_loadout.mp4
 VIDEO_URL/labyrinth/drow_loadout.webm
