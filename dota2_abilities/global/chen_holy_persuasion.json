@@ -6,12 +6,11 @@
           "id": 5330,
           "name": "chen_holy_persuasion",
           "name_loc": "Holy Persuasion",
-          "desc_loc": "Chen takes control of an enemy or neutral creep and receives a percentage of its bounty. Its maximum health is set to %health_min%. Converted creeps will have increased movement speed and bonus damage. Chen may globally target his own creep if it has not taken damage in the last %unsummon_time% seconds to unsummon it.",
+          "desc_loc": "Chen takes control of an enemy or neutral creep and receives a percentage of its bounty. Chen may globally target his own creep if it has not taken damage in the last %unsummon_time% seconds to unsummon it.<br><br>Casting Holy Persuasion on Chen teleports all creeps under his control to him after a delay. Taking damage from enemy heroes or their units cancels the teleport.",
           "lore_loc": "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted.",
           "notes_loc": [
             "Persuading a new creep above max unit count causes the oldest persuaded creep to die.",
             "Can target Ancient creeps when Chen has Aghanim's Shard.",
-            "The health of creeps already under Chen's control does not update to the new level upon leveling Holy Persuasion further.",
             "Fully restores the creep's mana upon converting."
           ],
           "shard_loc": "Allows Holy Persuasion to target Ancient creeps. Can control up to 1/2/3 Ancient creeps based on Hand of God's level. Additionally levels up some abilities of creeps by 1 level.",
@@ -87,24 +86,6 @@
               "required_facet": ""
             },
             {
-              "name": "health_min",
-              "values_float": [
-                400
-              ],
-              "is_percentage": false,
-              "heading_loc": "HEALTH MINIMUM:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_chen_4",
-                  "value": 1300,
-                  "operation": 0
-                }
-              ],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
               "name": "gold_pct",
               "values_float": [
                 25,
@@ -115,42 +96,6 @@
               "is_percentage": true,
               "heading_loc": "PERCENTAGE OF BOUNTY:",
               "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
-              "name": "movement_speed_bonus",
-              "values_float": [
-                5,
-                10,
-                20,
-                30
-              ],
-              "is_percentage": false,
-              "heading_loc": "MOVE SPEED BONUS:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
-              "name": "damage_bonus",
-              "values_float": [
-                5,
-                10,
-                15,
-                20
-              ],
-              "is_percentage": true,
-              "heading_loc": "BONUS DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_chen_5",
-                  "value": 12,
-                  "operation": 0
-                }
-              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -188,6 +133,21 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "teleport_delay",
+              "values_float": [
+                6,
+                5,
+                4,
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "TELEPORT DELAY:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

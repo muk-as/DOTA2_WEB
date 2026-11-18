@@ -6,26 +6,26 @@
           "id": 889,
           "name": "berserker_troll_break",
           "name_loc": "Break",
-          "desc_loc": "Whenever Hill Troll Berserker attacks a unit it applies break to it.",
+          "desc_loc": "Launches a stone at the target location, dealing a small amount of damage and applying break to units hit.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
+          "behavior": "16",
+          "target_team": 2,
+          "target_type": 19,
           "flags": 0,
-          "damage": 0,
+          "damage": 1,
           "immunity": 0,
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
-            0
+            750
           ],
           "cast_points": [
-            0
+            1
           ],
           "channel_times": [
             0
@@ -52,12 +52,99 @@
           "health_costs": [],
           "special_values": [
             {
+              "name": "base_damage",
+              "values_float": [
+                50,
+                60,
+                70,
+                80
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "impact_radius",
+              "values_float": [
+                175
+              ],
+              "is_percentage": false,
+              "heading_loc": "RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "break_duration",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "min_travel_time",
+              "values_float": [
+                0.8
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "max_travel_time",
+              "values_float": [
+                1.2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
               "name": "duration",
               "values_float": [
                 3
               ],
               "is_percentage": false,
-              "heading_loc": "DURATION:",
+              "heading_loc": "BREAK DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                750
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

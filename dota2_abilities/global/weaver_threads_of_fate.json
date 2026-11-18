@@ -6,7 +6,7 @@
           "id": 1754,
           "name": "weaver_threads_of_fate",
           "name_loc": "Threads of Fate",
-          "desc_loc": "Whenever Weaver deals damage to an enemy hero with an attack or ability, if he remains within %thread_setup_distance% range of them for %thread_setup_time%s, he establishes a Thread of Fate that briefly slows the enemy and ties Weaver and the enemy together. Each established thread of fate grants bonus damage to Weaver.",
+          "desc_loc": "Whenever Weaver deals damage to an enemy hero with an attack or ability, if he remains within %thread_setup_distance% range of them for %thread_setup_time%s, he establishes a Thread of Fate that briefly slows the enemy and ties Weaver and the enemy together. While the thread holds, the enemy is slowed again every %established_thread_duration%s. Each established thread of fate grants bonus damage to Weaver.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -63,7 +63,7 @@
             {
               "name": "thread_setup_time",
               "values_float": [
-                1.5
+                1.25
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -103,7 +103,13 @@
               ],
               "is_percentage": true,
               "heading_loc": "DAMAGE PER THREAD:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_weaver_threads_of_fate_damage",
+                  "value": 5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""

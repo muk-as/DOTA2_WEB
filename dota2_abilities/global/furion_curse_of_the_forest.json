@@ -6,16 +6,16 @@
           "id": 997,
           "name": "furion_curse_of_the_forest",
           "name_loc": "Curse of the Oldgrowth",
-          "desc_loc": "Applies a curse on all enemy heroes within %range% range, displaying them in fog, slowing them, and dealing damage over time based on the number of trees within %radius% radius. Treants count as trees for this purpose.",
+          "desc_loc": "Nature's Prophet and his treants curse enemies they attack, slowing them and dealing damage per second. Curses from different attackers stack. Each attacker's curse has an independent duration that can be refreshed by further attacks from the same unit that applied it.",
           "lore_loc": "Though powerful, Nature's Prophet's gifts do not include all-sight, and he must rely heavily upon reconnaissance and aid from a long-standing network of stalwart friends.",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "8589934597",
+          "behavior": "8589934595",
           "target_team": 2,
-          "target_type": 1,
+          "target_type": 19,
           "flags": 0,
           "damage": 2,
           "immunity": 4,
@@ -25,13 +25,13 @@
             0
           ],
           "cast_points": [
-            0.2
+            0
           ],
           "channel_times": [
             0
           ],
           "cooldowns": [
-            18
+            0
           ],
           "durations": [
             0
@@ -43,7 +43,7 @@
             0
           ],
           "mana_costs": [
-            80
+            0
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -51,7 +51,7 @@
             {
               "name": "duration",
               "values_float": [
-                7
+                5
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -61,84 +61,48 @@
               "required_facet": ""
             },
             {
-              "name": "damage_per_tree",
+              "name": "damage_per_second",
               "values_float": [
-                15
+                24
               ],
               "is_percentage": false,
-              "heading_loc": "DPS PER TREE:",
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
             },
             {
-              "name": "slow_per_tree",
+              "name": "slow",
               "values_float": [
-                7
+                10
               ],
               "is_percentage": true,
-              "heading_loc": "SLOW PER TREE:",
+              "heading_loc": "SLOW:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
             },
             {
-              "name": "radius",
+              "name": "treant_damage_per_second",
               "values_float": [
-                250
+                12
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "TREANT DAMAGE PER SECOND:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
             },
             {
-              "name": "range",
+              "name": "treant_slow",
               "values_float": [
-                900
+                5
               ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCastPoint",
-              "values_float": [
-                0.2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityManaCost",
-              "values_float": [
-                80
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
-              "name": "AbilityCooldown",
-              "values_float": [
-                18
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
+              "is_percentage": true,
+              "heading_loc": "TREANT SLOW:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

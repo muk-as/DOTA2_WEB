@@ -10,7 +10,7 @@
           "lore_loc": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings.",
           "notes_loc": [
             "If the target is an enemy, Clinkz will gain the correct experience and gold.",
-            "Increases Clinkz' current and max HP.",
+            "Increases Clinkz' current and max HP. Does not stack.",
             "When the duration ends, max HP returns to normal, but current HP stays the same."
           ],
           "shard_loc": "",
@@ -77,7 +77,23 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_clinkz_8",
-                  "value": 400,
+                  "value": 300,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "skeletons_spawned",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_clinkz_engulfing_step",
+                  "value": 1,
                   "operation": 0
                 }
               ],
@@ -87,12 +103,16 @@
             },
             {
               "name": "spawn_skeleton_on_origin",
-              "values_float": [
-                0
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_clinkz_engulfing_step",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -158,13 +178,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "BASE CHARGE RESTORE TIME:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_clinkz_9",
-                  "value": 10,
-                  "operation": 2
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""

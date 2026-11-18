@@ -6,7 +6,7 @@
           "id": 909,
           "name": "tinker_warp_grenade",
           "name_loc": "Warp Flare",
-          "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, rooting them and reducing their Cast and Attack Range for %debuff_duration% seconds.<br><br>The target is teleported further the closer they are to Tinker.",
+          "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, slowing them and reducing their Cast and Attack Range for %debuff_duration% seconds.<br><br>The target is teleported further the closer they are to Tinker.",
           "lore_loc": "Tinker's deadliest weapon instantly turns an enemy into space dust. Research to resolve the annoying 'perfect copy' side effect... is ongoing.",
           "notes_loc": [
             "Max teleportation distance is %warp_distance_pct_tooltip%%% of Warp Flare's cast range, which decreases down to 0 at max cast range."
@@ -113,10 +113,22 @@
             {
               "name": "debuff_duration",
               "values_float": [
-                2
+                3
               ],
               "is_percentage": false,
               "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "movement_slow_pct",
+              "values_float": [
+                100
+              ],
+              "is_percentage": true,
+              "heading_loc": "MOVEMENT SPEED SLOW:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

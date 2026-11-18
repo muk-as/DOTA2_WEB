@@ -6,7 +6,7 @@
           "id": 1756,
           "name": "ancient_apparition_bone_chill",
           "name_loc": "Bone Chill",
-          "desc_loc": "When Ancient Apparition deals Magic damage to an enemy with his abilities, it is slowed for a short duration. If the target is a Hero, its Strength is also reduced. Multiple instances of this effect stack and have independent durations.",
+          "desc_loc": "When Ancient Apparition deals Magic damage to an enemy Hero with his abilities its Strength is reduced. Multiple instances of this effect stack and have independent durations.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -88,12 +88,16 @@
             },
             {
               "name": "movement_slow_pct",
-              "values_float": [
-                2
-              ],
+              "values_float": [],
               "is_percentage": false,
               "heading_loc": "MOVEMENT SLOW:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_ancient_apparition_bone_chill",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""

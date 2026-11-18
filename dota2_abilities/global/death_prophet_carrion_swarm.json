@@ -12,7 +12,7 @@
             "Can hit units up to 1110 range away.",
             "Does not trigger spell block or spell reflect."
           ],
-          "shard_loc": "",
+          "shard_loc": "Crypt Swarm has %AbilityCharges% charges with a %AbilityCooldown%s cooldown between uses. Crypt Swarm slows enemies by %slow_movement_pct%%% for %slow_duration%s.",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
@@ -34,10 +34,10 @@
             0
           ],
           "cooldowns": [
+            10,
             9,
             8,
-            7,
-            6
+            7
           ],
           "durations": [
             0
@@ -70,7 +70,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_death_prophet_crypt_swarm_damage",
-                  "value": 50,
+                  "value": 110,
                   "operation": 0
                 }
               ],
@@ -127,6 +127,48 @@
               "required_facet": ""
             },
             {
+              "name": "apply_debuff",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                1
+              ],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "slow_duration",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                0.5
+              ],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "slow_movement_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                100
+              ],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 900
@@ -151,6 +193,37 @@
               "required_facet": ""
             },
             {
+              "name": "AbilityCharges",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [
+                2
+              ],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityChargeRestoreTime",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "BASE CHARGE RESTORE TIME:",
+              "bonuses": [],
+              "values_shard": [
+                10,
+                9,
+                8,
+                7
+              ],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
               "name": "AbilityManaCost",
               "values_float": [
                 80,
@@ -168,28 +241,24 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
+                10,
                 9,
                 8,
-                7,
-                6
+                7
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_death_prophet_2",
-                  "value": 2.5,
-                  "operation": 2
-                }
+              "bonuses": [],
+              "values_shard": [
+                1
               ],
-              "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
             }
           ],
           "is_item": false,
           "ability_has_scepter": false,
-          "ability_has_shard": false,
+          "ability_has_shard": true,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

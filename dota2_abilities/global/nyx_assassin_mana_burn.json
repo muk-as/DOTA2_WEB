@@ -5,8 +5,8 @@
         {
           "id": 5463,
           "name": "nyx_assassin_mana_burn",
-          "name_loc": "",
-          "desc_loc": "",
+          "name_loc": "Mind Flare",
+          "desc_loc": "Deals damage to the target based on its max mana.  A percentage of that damage is dealt as mana burn.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -54,6 +54,52 @@
           "gold_costs": [],
           "health_costs": [],
           "special_values": [
+            {
+              "name": "max_mana_as_damage_pct",
+              "values_float": [
+                20,
+                25,
+                30,
+                35
+              ],
+              "is_percentage": true,
+              "heading_loc": "MAX MANA AS DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "mana_burn_pct",
+              "values_float": [
+                12,
+                15,
+                18,
+                21
+              ],
+              "is_percentage": true,
+              "heading_loc": "MANA BURN:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "aoe",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_nyx",
+                  "value": 600,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
             {
               "name": "AbilityCastRange",
               "values_float": [
@@ -103,7 +149,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_nyx_jolt_cooldown",
+                  "value": 3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""

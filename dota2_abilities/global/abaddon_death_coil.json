@@ -6,13 +6,14 @@
           "id": 5585,
           "name": "abaddon_death_coil",
           "name_loc": "Mist Coil",
-          "desc_loc": "Abaddon releases a coil of deathly mist that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health.",
+          "desc_loc": "Abaddon releases a coil of deathly mist at the cost of Abaddon's health. Friendly units are healed and have their movement speed increased. Enemy units are damaged and slowed.<br><br>Health cost is %self_damage_pct%%% of the Damage/Heal amount.",
           "lore_loc": "A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will.",
           "notes_loc": [
-            "Abaddon can not kill himself with this skill."
+            "Abaddon can not kill himself with this skill.",
+            "Mist Coil's health cost will damage Aphotic Shield and other barriers before using Abaddon's health."
           ],
           "shard_loc": "",
-          "scepter_loc": "",
+          "scepter_loc": "Mist Coil affects all units in a %effect_radius% radius around the target.<br><br>When Mist Coil hits enemies, Abaddon deals %damage_percentage_on_perform_attack%%% of his attack damage and applies on-hit effects with %potency%%% Item Potency.",
           "facets_loc": [],
           "type": 0,
           "behavior": "8",
@@ -57,19 +58,7 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "self_damage",
-              "values_float": [
-                40
-              ],
-              "is_percentage": true,
-              "heading_loc": "SELF DAMAGE:",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
-              "name": "self_damage_enemy_target",
+              "name": "self_damage_pct",
               "values_float": [
                 40
               ],
@@ -102,61 +91,90 @@
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE/HEAL:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_abaddon_2",
-                  "value": 35,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
             },
             {
               "name": "effect_radius",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_abaddon_4",
-                  "value": 350,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                400
+              ],
               "required_facet": ""
             },
             {
               "name": "perform_attack",
-              "values_float": [],
+              "values_float": [
+                0
+              ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_abaddon_2",
-                  "value": 0,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                1
               ],
+              "required_facet": ""
+            },
+            {
+              "name": "potency",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                80
+              ],
+              "required_facet": ""
+            },
+            {
+              "name": "damage_percentage_on_perform_attack",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                100
+              ],
+              "required_facet": ""
+            },
+            {
+              "name": "duration",
+              "values_float": [
+                0.7,
+                0.8,
+                0.9,
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "DURATION:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
             },
             {
-              "name": "damage_percentage_on_perform_attack",
-              "values_float": [],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_abaddon_2",
-                  "value": 0,
-                  "operation": 0
-                }
+              "name": "movement_speed_pct",
+              "values_float": [
+                60
               ],
+              "is_percentage": true,
+              "heading_loc": "MOVEMENT SPEED:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -168,7 +186,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_abaddon_7",
+                  "value": 125,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -217,7 +241,7 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,

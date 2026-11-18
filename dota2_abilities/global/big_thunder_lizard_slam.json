@@ -6,7 +6,7 @@
           "id": 5332,
           "name": "big_thunder_lizard_slam",
           "name_loc": "Slam",
-          "desc_loc": "The Ancient Thunderhide slams his mammoth body against the ground. The shock damages nearby enemies and throws them off their footing. Heroes regain their balance more quickly.",
+          "desc_loc": "The Ancient Thunderhide slams his mammoth foot against the ground, sending %pulse_count% shockwaves, each smaller than the last. Every wave damages enemies it catches and throws them off their footing, slowing their movement and attack speed. Heroes regain their balance more quickly.",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
@@ -31,16 +31,16 @@
             0
           ],
           "cooldowns": [
-            6
+            15
           ],
           "durations": [
             0
           ],
           "damages": [
-            250
+            175
           ],
           "mana_costs": [
-            150
+            50
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -48,10 +48,58 @@
             {
               "name": "radius",
               "values_float": [
-                350
+                550
               ],
               "is_percentage": false,
-              "heading_loc": "RADIUS:",
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "base_radius",
+              "values_float": [
+                550
+              ],
+              "is_percentage": false,
+              "heading_loc": "INITIAL RADIUS:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "radius_increment_per_pulse",
+              "values_float": [
+                -100
+              ],
+              "is_percentage": false,
+              "heading_loc": "RADIUS DECREASE PER WAVE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "pulse_count",
+              "values_float": [
+                3
+              ],
+              "is_percentage": false,
+              "heading_loc": "SHOCKWAVES:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "pulse_interval",
+              "values_float": [
+                0.3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -60,7 +108,7 @@
             {
               "name": "movespeed_slow",
               "values_float": [
-                -60
+                -50
               ],
               "is_percentage": true,
               "heading_loc": "MOVEMENT SLOW:",
@@ -72,7 +120,7 @@
             {
               "name": "attack_slow_tooltip",
               "values_float": [
-                -60
+                -50
               ],
               "is_percentage": false,
               "heading_loc": "ATTACK SLOW:",
@@ -96,9 +144,6 @@
             {
               "name": "hero_duration",
               "values_float": [
-                2,
-                2.25,
-                2.5,
                 3
               ],
               "is_percentage": false,
@@ -111,7 +156,7 @@
             {
               "name": "AbilityDamage",
               "values_float": [
-                250
+                175
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -135,7 +180,7 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                150
+                50
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -147,7 +192,7 @@
             {
               "name": "AbilityCooldown",
               "values_float": [
-                6
+                15
               ],
               "is_percentage": false,
               "heading_loc": "",

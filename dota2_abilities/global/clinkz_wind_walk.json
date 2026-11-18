@@ -6,7 +6,7 @@
           "id": 5261,
           "name": "clinkz_wind_walk",
           "name_loc": "Skeleton Walk",
-          "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.<br><br>Skeleton Archers are immobile and die within multiple attacks from a hero or tower. Skeleton Archers deal a percentage of Clinkz' damage, and deal %skeleton_building_damage_reduction%%% less damage to buildings. Attack range is equal to Clinkz' attack range.",
+          "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.<br><br>Skeleton Archers are immobile and have %skeleton_health_tooltip% pip health. Creeps and illusions deal 25% damage to them. Skeleton Archers deal a percentage of Clinkz' damage, and deal %skeleton_building_damage_reduction%%% less damage to buildings. Attack range is equal to Clinkz' attack range.",
           "lore_loc": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
           "notes_loc": [
             "Has a fadetime of %fade_time% seconds."
@@ -106,7 +106,13 @@
               ],
               "is_percentage": false,
               "heading_loc": "SKELETON ARCHER COUNT:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_clinkz_skeletons",
+                  "value": 2,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -152,7 +158,7 @@
             {
               "name": "skeleton_health",
               "values_float": [
-                8
+                2
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -167,7 +173,7 @@
                 2
               ],
               "is_percentage": false,
-              "heading_loc": "SKELETON ARCHER HITS TO KILL:",
+              "heading_loc": "SKELETON ARCHER PIP HEALTH:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

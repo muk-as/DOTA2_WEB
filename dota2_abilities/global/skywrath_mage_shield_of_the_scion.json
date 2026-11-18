@@ -6,7 +6,7 @@
           "id": 833,
           "name": "skywrath_mage_shield_of_the_scion",
           "name_loc": "Shield of the Scion",
-          "desc_loc": "Every time Skywrath Mage deals magical damage to an enemy hero with his abilities, he gains a small magic damage barrier. Each buff stacks independently.",
+          "desc_loc": "Every time Skywrath Mage deals magical damage to an enemy hero with his abilities, he gains bonus intelligence and a small magic damage barrier. Each buff stacks independently.",
           "lore_loc": "The court mages of Skywrath may only deploy their magic in defense of the kingdom and the throne.",
           "notes_loc": [],
           "shard_loc": "",
@@ -61,13 +61,31 @@
               "required_facet": ""
             },
             {
+              "name": "bonus_intelligence",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "BONUS INTELLIGENCE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
               "name": "damage_barrier",
               "values_float": [
                 13.5
               ],
               "is_percentage": false,
               "heading_loc": "BARRIER:",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_skywrath_scion_shield_barrier",
+                  "value": 5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -75,7 +93,7 @@
             {
               "name": "barrier_duration",
               "values_float": [
-                12
+                10
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",

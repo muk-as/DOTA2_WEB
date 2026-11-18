@@ -5,17 +5,20 @@
         {
           "id": 5689,
           "name": "black_dragon_fireball",
-          "name_loc": "Fireball",
-          "desc_loc": "Hurls a fire blast on the ground, igniting the area in a %radius% radius for %duration% seconds. Enemies caught in the fire will take %damage% damage per second.",
+          "name_loc": "Searing Swoop",
+          "desc_loc": "Takes flight in an arc toward the targeted direction and loops back to its starting position, leaving a trail of fire in its wake. The fire burns for %duration% seconds, dealing %damage% damage per second to enemies caught in it.",
           "lore_loc": "",
-          "notes_loc": [],
+          "notes_loc": [
+            "The flight lasts %dive_duration% seconds and cannot be cancelled by the caster.",
+            "Overlapping patches of fire do not stack."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
           "behavior": "48",
-          "target_team": 0,
-          "target_type": 0,
+          "target_team": 2,
+          "target_type": 19,
           "flags": 0,
           "damage": 2,
           "immunity": 4,
@@ -25,10 +28,7 @@
             1000
           ],
           "cast_points": [
-            0.3,
-            0.3,
-            0.3,
-            0.3
+            0.6
           ],
           "channel_times": [
             0
@@ -54,7 +54,7 @@
             {
               "name": "radius",
               "values_float": [
-                300
+                150
               ],
               "is_percentage": false,
               "heading_loc": "RADIUS:",
@@ -66,6 +66,9 @@
             {
               "name": "damage",
               "values_float": [
+                65,
+                75,
+                85,
                 85
               ],
               "is_percentage": false,
@@ -78,10 +81,10 @@
             {
               "name": "duration",
               "values_float": [
-                8,
-                9,
-                10,
-                12
+                5,
+                6,
+                7,
+                9
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -103,6 +106,102 @@
               "required_facet": ""
             },
             {
+              "name": "dive_length",
+              "values_float": [
+                800
+              ],
+              "is_percentage": false,
+              "heading_loc": "DIVE LENGTH:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "dive_width",
+              "values_float": [
+                400
+              ],
+              "is_percentage": false,
+              "heading_loc": "DIVE WIDTH:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "dive_duration",
+              "values_float": [
+                1.9
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "fireball_spacing",
+              "values_float": [
+                225
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "fireball_forward_offset",
+              "values_float": [
+                150
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "player_cast_point",
+              "values_float": [
+                0.3
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "neutral_chance_to_cast",
+              "values_float": [
+                60
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "neutral_cast_attempt_cooldown",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
               "name": "AbilityCastRange",
               "values_float": [
                 1000
@@ -117,7 +216,7 @@
             {
               "name": "AbilityCastPoint",
               "values_float": [
-                0.3
+                0.6
               ],
               "is_percentage": false,
               "heading_loc": "",

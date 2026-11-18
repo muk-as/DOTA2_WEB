@@ -6,7 +6,7 @@
           "id": 5345,
           "name": "ancient_apparition_cold_feet",
           "name_loc": "Cold Feet",
-          "desc_loc": "Places a curse on an enemy, dealing damage over time.  If the enemy unit doesn't move outside of the given range from the initial location, it will be stunned and frozen in place after %AbilityDuration% seconds.",
+          "desc_loc": "Places a curse on an enemy, dealing damage over time and slowing the target.  If the enemy unit doesn't move outside of the given range from the initial location, it will be stunned and frozen in place after %AbilityDuration% seconds.",
           "lore_loc": "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity.",
           "notes_loc": [
             "Deals damage every half second."
@@ -75,13 +75,22 @@
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SECOND:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_ancient_apparition_cold_feet_dps",
-                  "value": 30,
-                  "operation": 0
-                }
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "movement_slow",
+              "values_float": [
+                4,
+                6,
+                8,
+                10
               ],
+              "is_percentage": true,
+              "heading_loc": "MOVEMENT SLOW:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -99,7 +108,7 @@
               "bonuses": [
                 {
                   "name": "special_bonus_unique_ancient_apparition_cold_feet_distance",
-                  "value": 250,
+                  "value": 150,
                   "operation": 0
                 }
               ],
@@ -118,6 +127,22 @@
               "is_percentage": false,
               "heading_loc": "STUN DURATION:",
               "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "leash",
+              "values_float": [],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_ancient_apparition_3",
+                  "value": 1,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""

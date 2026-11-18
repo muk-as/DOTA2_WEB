@@ -6,7 +6,7 @@
           "id": 5587,
           "name": "abaddon_frostmourne",
           "name_loc": "Curse of Avernus",
-          "desc_loc": "Abaddon strikes an enemy, affecting them by a chilling curse, slowing them, causing them to take damage over time, and all attacks against them gain an attack speed boost. Damage over time component to buildings is reduced by %tower_dps_pct%%%.",
+          "desc_loc": "Abaddon strikes an enemy, affecting them by a chilling curse, slowing them, causing them to take damage over time, and all attacks against them gain an attack speed boost. Abaddon gains %curse_self_attack_speed_multiplier_tooltip_only%x the attack speed boost. Damage over time component to buildings is reduced by %tower_dps_penalty_pct%%%.",
           "lore_loc": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated.",
           "notes_loc": [],
           "shard_loc": "",
@@ -49,33 +49,9 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "slow_duration",
-              "values_float": [
-                2
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
-              "name": "hit_count",
-              "values_float": [
-                1
-              ],
-              "is_percentage": false,
-              "heading_loc": "",
-              "bonuses": [],
-              "values_shard": [],
-              "values_scepter": [],
-              "required_facet": ""
-            },
-            {
               "name": "curse_duration",
               "values_float": [
-                2
+                3
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
@@ -102,20 +78,53 @@
             {
               "name": "curse_attack_speed",
               "values_float": [
-                10,
+                15,
                 20,
-                30,
-                40
+                25,
+                30
               ],
               "is_percentage": false,
               "heading_loc": "ATTACK SPEED:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_abaddon_3",
-                  "value": 65,
+                  "value": 50,
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "curse_self_attack_speed",
+              "values_float": [
+                22.5,
+                30,
+                37.5,
+                45
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_abaddon_3",
+                  "value": 75,
+                  "operation": 0
+                }
+              ],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "curse_self_attack_speed_multiplier_tooltip_only",
+              "values_float": [
+                1.5
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -123,17 +132,17 @@
             {
               "name": "curse_dps",
               "values_float": [
-                15,
-                25,
-                35,
-                45
+                12,
+                20,
+                28,
+                36
               ],
               "is_percentage": false,
-              "heading_loc": "DPS:",
+              "heading_loc": "DAMAGE PER SECOND:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_abaddon_5",
-                  "value": 30,
+                  "value": 25,
                   "operation": 0
                 }
               ],
@@ -142,7 +151,7 @@
               "required_facet": ""
             },
             {
-              "name": "tower_dps_pct",
+              "name": "tower_dps_penalty_pct",
               "values_float": [
                 100
               ],

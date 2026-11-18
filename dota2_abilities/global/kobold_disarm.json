@@ -6,26 +6,26 @@
           "id": 875,
           "name": "kobold_disarm",
           "name_loc": "Steal Weapon",
-          "desc_loc": "Every third attack Kobold Soldier will disarm its target temporarily. Attack counter doesn't increase while ability is on cooldown.",
+          "desc_loc": "Kobold Soldier sends forward a projection that deals a small amount of damage and applies break to enemies hit",
           "lore_loc": "",
           "notes_loc": [],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
           "type": 0,
-          "behavior": "2",
-          "target_team": 0,
-          "target_type": 0,
+          "behavior": "16",
+          "target_team": 2,
+          "target_type": 19,
           "flags": 0,
-          "damage": 0,
+          "damage": 2,
           "immunity": 0,
           "dispellable": 0,
           "max_level": 1,
           "cast_ranges": [
-            0
+            500
           ],
           "cast_points": [
-            0
+            1
           ],
           "channel_times": [
             0
@@ -49,7 +49,46 @@
           "health_costs": [],
           "special_values": [
             {
-              "name": "duration",
+              "name": "radius",
+              "values_float": [
+                75
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "speed",
+              "values_float": [
+                2000
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "base_damage",
+              "values_float": [
+                50,
+                60,
+                70,
+                80
+              ],
+              "is_percentage": false,
+              "heading_loc": "DAMAGE:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "break_duration",
               "values_float": [
                 3,
                 3.5,
@@ -58,6 +97,54 @@
               ],
               "is_percentage": false,
               "heading_loc": "DURATION:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "neutral_chance_to_cast",
+              "values_float": [
+                60
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "neutral_cast_attempt_cooldown",
+              "values_float": [
+                8
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastRange",
+              "values_float": [
+                500
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "AbilityCastPoint",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],

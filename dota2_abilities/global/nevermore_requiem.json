@@ -6,7 +6,7 @@
           "id": 5064,
           "name": "nevermore_requiem",
           "name_loc": "Requiem of Souls",
-          "desc_loc": "Shadow Fiend gathers up to %max_soul_release% of his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed and magic resistance reduced for %requiem_slow_duration% seconds for each line hit up to a maximum of %requiem_slow_duration_max%. Lines of energy are created for every soul captured through Necromastery. <br><br> Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
+          "desc_loc": "Shadow Fiend gathers up to %max_soul_release% of his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed reduced for %requiem_fear_duration% seconds, increased by %requiem_duration_per_soul% seconds for each additional soul that hits it. Lines of energy are created for every soul captured through Necromastery. <br><br> Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
           "lore_loc": "The captured souls of those past slain are released to ravage their former allies.",
           "notes_loc": [
             "One line is generated from Shadow Fiend for every %requiem_soul_conversion% soul in his possession.",
@@ -62,7 +62,7 @@
                 1000
               ],
               "is_percentage": false,
-              "heading_loc": "",
+              "heading_loc": "RADIUS:",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -83,15 +83,21 @@
               "required_facet": ""
             },
             {
-              "name": "requiem_reduction_mres",
+              "name": "requiem_fear_duration",
               "values_float": [
-                -5,
-                -10,
-                -15
+                1.2,
+                1.5,
+                1.8
               ],
-              "is_percentage": true,
-              "heading_loc": "MAGIC RESIST REDUCTION:",
-              "bonuses": [],
+              "is_percentage": false,
+              "heading_loc": "FEAR DURATION:",
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_nevermore_6",
+                  "value": 0.5,
+                  "operation": 0
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -99,14 +105,16 @@
             {
               "name": "requiem_slow_duration",
               "values_float": [
-                0.6
+                1.2,
+                1.5,
+                1.8
               ],
               "is_percentage": false,
-              "heading_loc": "FEAR DURATION PER SOUL HIT:",
+              "heading_loc": "SLOW DURATION:",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_nevermore_6",
-                  "value": 0.2,
+                  "value": 0.5,
                   "operation": 0
                 }
               ],
@@ -115,19 +123,13 @@
               "required_facet": ""
             },
             {
-              "name": "requiem_slow_duration_max",
+              "name": "requiem_duration_per_soul",
               "values_float": [
-                2.15
+                0.1
               ],
               "is_percentage": false,
-              "heading_loc": "FEAR DURATION MAX:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_nevermore_6",
-                  "value": 0.45,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "BONUS DURATION PER SOUL:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -177,7 +179,9 @@
               "heading_loc": "",
               "bonuses": [],
               "values_shard": [],
-              "values_scepter": [],
+              "values_scepter": [
+                30
+              ],
               "required_facet": ""
             },
             {

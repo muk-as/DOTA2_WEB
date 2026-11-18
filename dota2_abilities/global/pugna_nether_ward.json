@@ -6,7 +6,7 @@
           "id": 5188,
           "name": "pugna_nether_ward",
           "name_loc": "Nether Ward",
-          "desc_loc": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero.",
+          "desc_loc": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero. Only one Nether Ward can be active at a time; casting a new one destroys the previous ward.",
           "lore_loc": "While at the lamasery for the Arts of Oblivion, Pugna learned to dominate his classmates with a simple ward charged with Nether magic.",
           "notes_loc": [
             "Nether Ward deals damage before the actual spell is cast, so if the caster dies the spell will have no effect.",
@@ -53,7 +53,10 @@
             0
           ],
           "mana_costs": [
-            80
+            75,
+            100,
+            125,
+            150
           ],
           "gold_costs": [],
           "health_costs": [],
@@ -109,17 +112,14 @@
             {
               "name": "attacks_to_destroy",
               "values_float": [
-                4
+                3,
+                4,
+                5,
+                6
               ],
               "is_percentage": false,
-              "heading_loc": "ATTACKS TO DESTROY:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_pugna_6",
-                  "value": 2,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "PIP HEALTH:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -195,7 +195,10 @@
             {
               "name": "AbilityManaCost",
               "values_float": [
-                80
+                75,
+                100,
+                125,
+                150
               ],
               "is_percentage": false,
               "heading_loc": "",

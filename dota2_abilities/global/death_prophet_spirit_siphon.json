@@ -6,13 +6,14 @@
           "id": 5685,
           "name": "death_prophet_spirit_siphon",
           "name_loc": "Spirit Siphon",
-          "desc_loc": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+          "desc_loc": "Creates a spirit link between Death Prophet and an enemy unit, continuously dealing damage to the enemy and healing herself.",
           "lore_loc": "Krobelus willingly shows others the path she alone cannot follow.",
           "notes_loc": [
-            "Cannot cast multiple on same target."
+            "Cannot cast multiple on same target.",
+            "Death Prophet's Heal amount is not affected if the damage is mitigated or amplified."
           ],
-          "shard_loc": "Increases Spirit Siphon charges by %shard_bonus_charges% and causes enemies to be feared for %shard_fear_duration% seconds if they are siphoned for %shard_consecutive_siphon_duration% seconds consecutively.",
-          "scepter_loc": "",
+          "shard_loc": "",
+          "scepter_loc": "Spirit Siphon steals %attack_slow% attack speed from each afflicted enemy hero. Spirit Siphon drains an additional %max_health_damage_pct%%% of the target's maximum health per second.",
           "facets_loc": [],
           "type": 0,
           "behavior": "134217736",
@@ -20,7 +21,7 @@
           "target_type": 19,
           "flags": 0,
           "damage": 2,
-          "immunity": 4,
+          "immunity": 3,
           "dispellable": 3,
           "max_level": 4,
           "cast_ranges": [
@@ -59,14 +60,8 @@
                 100
               ],
               "is_percentage": false,
-              "heading_loc": "DAMAGE:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_death_prophet_3",
-                  "value": 30,
-                  "operation": 0
-                }
-              ],
+              "heading_loc": "DAMAGE/HEAL PER SECOND:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -96,45 +91,45 @@
               "required_facet": ""
             },
             {
-              "name": "shard_bonus_charges",
+              "name": "max_health_damage_pct",
               "values_float": [
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                1
+              "values_shard": [],
+              "values_scepter": [
+                2
               ],
-              "values_scepter": [],
               "required_facet": ""
             },
             {
-              "name": "shard_fear_duration",
+              "name": "attack_slow",
               "values_float": [
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                1
+              "values_shard": [],
+              "values_scepter": [
+                120
               ],
-              "values_scepter": [],
               "required_facet": ""
             },
             {
-              "name": "shard_consecutive_siphon_duration",
+              "name": "movement_slow",
               "values_float": [
                 0
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [],
-              "values_shard": [
-                3
+              "values_shard": [],
+              "values_scepter": [
+                0
               ],
-              "values_scepter": [],
               "required_facet": ""
             },
             {
@@ -179,14 +174,14 @@
             {
               "name": "AbilityChargeRestoreTime",
               "values_float": [
-                40
+                35
               ],
               "is_percentage": false,
               "heading_loc": "",
               "bonuses": [
                 {
                   "name": "special_bonus_unique_death_prophet_5",
-                  "value": 22,
+                  "value": 8,
                   "operation": 2
                 }
               ],
@@ -208,8 +203,8 @@
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
-          "ability_has_shard": true,
+          "ability_has_scepter": true,
+          "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
           "ability_is_innate": false,

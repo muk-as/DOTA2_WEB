@@ -6,14 +6,13 @@
           "id": 5028,
           "name": "juggernaut_blade_fury",
           "name_loc": "Blade Fury",
-          "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune with %immunity_resist%%% magic resistance and dealing damage every %blade_fury_damage_tick%s to nearby enemy units. Applies a strong dispel at the end of the spin.",
+          "desc_loc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune with %immunity_resist%%% magic resistance and dealing damage every %blade_fury_damage_tick%s to nearby enemy units. Applies a basic dispel at the start and end of the spin.\n\nDISPEL TYPE: Basic Dispel",
           "lore_loc": "Yurnero's renowned katana techniques are feared by warriors and sorcerors alike.",
           "notes_loc": [
-            "You can use items during Blade Fury.",
-            "Juggernaut can still perform attacks while in Blade Fury. However, only units that are not affected by Blade Fury, such as wards or structures, will take damage from these attacks."
+            "You can use items during Blade Fury."
           ],
           "shard_loc": "",
-          "scepter_loc": "Increases radius and slows enemies in the area of effect.<br><br> Juggernaut preforms an attack on affected enemies every %attack_interval%s.",
+          "scepter_loc": "Allows Juggernaut to attack his enemies during Blade Fury even while moving. These attacks deal %scepter_attack_damage_pct%%% damage and Item Potency.",
           "facets_loc": [],
           "type": 0,
           "behavior": "4196356",
@@ -67,13 +66,7 @@
               ],
               "is_percentage": false,
               "heading_loc": "DAMAGE PER SECOND:",
-              "bonuses": [
-                {
-                  "name": "special_bonus_unique_juggernaut",
-                  "value": 120,
-                  "operation": 0
-                }
-              ],
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
@@ -131,6 +124,20 @@
               "required_facet": ""
             },
             {
+              "name": "scepter_attack_damage_pct",
+              "values_float": [
+                0
+              ],
+              "is_percentage": false,
+              "heading_loc": "ATTACK DAMAGE WHILE SPINNING:",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [
+                75
+              ],
+              "required_facet": ""
+            },
+            {
               "name": "immunity_resist",
               "values_float": [
                 80
@@ -164,14 +171,20 @@
               ],
               "is_percentage": false,
               "heading_loc": "",
-              "bonuses": [],
+              "bonuses": [
+                {
+                  "name": "special_bonus_unique_juggernaut_blade_fury_cooldown",
+                  "value": 3,
+                  "operation": 2
+                }
+              ],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
             }
           ],
           "is_item": false,
-          "ability_has_scepter": false,
+          "ability_has_scepter": true,
           "ability_has_shard": false,
           "ability_is_granted_by_scepter": false,
           "ability_is_granted_by_shard": false,
