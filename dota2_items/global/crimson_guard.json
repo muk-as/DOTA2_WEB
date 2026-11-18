@@ -6,7 +6,7 @@
           "id": 242,
           "name": "item_crimson_guard",
           "name_loc": "Crimson Guard",
-          "desc_loc": "<h1>Active: Guard</h1> For %duration% seconds, grant nearby allied heroes and buildings a %block_chance_active%%% chance to block damage equal to %block_damage_active% plus %max_hp_pct%%% of the caster's max health value from each incoming attack.<br><br>Radius: %bonus_aoe_radius%\n\n<h1>Passive: Damage Block</h1> Grants a %block_chance%%% chance to block %block_damage_melee% damage from incoming attacks on melee heroes, and %block_damage_ranged% damage on ranged.",
+          "desc_loc": "<h1>Active: Guard</h1> For %duration% seconds, grant nearby allied heroes and buildings a %block_chance_active%%% chance to block damage equal to %block_damage_active% plus %max_hp_pct%%% of the caster's max health value from each incoming attack.<br><br>Radius: %bonus_aoe_radius%\n\n<h1>Passive: Damage Block</h1> Grants a %block_chance%%% chance to block %block_damage_melee% damage from incoming attacks on melee heroes, and %block_damage_ranged% damage on ranged\n\n<h1>Passive: Buckler Aura</h1> Grants %bonus_aoe_armor% armor to allied player units.<br><br>Radius: %aura_radius%",
           "lore_loc": "A cuirass originally built to protect against the dreaded Year Beast.",
           "notes_loc": [
             "Multiple sources of damage block do not stack.",
@@ -23,7 +23,7 @@
           "flags": 0,
           "damage": 0,
           "immunity": 0,
-          "dispellable": 3,
+          "dispellable": 2,
           "max_level": 0,
           "cast_ranges": [
             1200
@@ -67,7 +67,7 @@
             {
               "name": "bonus_health_regen",
               "values_float": [
-                12
+                9
               ],
               "is_percentage": false,
               "heading_loc": "+$hp_regen",
@@ -79,7 +79,7 @@
             {
               "name": "bonus_armor",
               "values_float": [
-                6
+                5
               ],
               "is_percentage": false,
               "heading_loc": "+$armor",
@@ -186,6 +186,42 @@
             },
             {
               "name": "max_hp_pct",
+              "values_float": [
+                2
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "add_nostack_debuff",
+              "values_float": [
+                1
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "aura_radius",
+              "values_float": [
+                1200
+              ],
+              "is_percentage": false,
+              "heading_loc": "",
+              "bonuses": [],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "bonus_aoe_armor",
               "values_float": [
                 2
               ],

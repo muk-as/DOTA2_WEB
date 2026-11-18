@@ -8,7 +8,9 @@
           "name_loc": "Harpoon",
           "desc_loc": "<h1>Active: Draw Forth</h1> When targeting an enemy, fire a harpoon at them, that pulls you and the target closer together, up to %pull_distance_pct%%% of the distance between you and your target. If the caster is melee, the hero and target are always pulled to within melee distance of each other. Targeting a tree always pulls you all the way to that tree.\n\n<h1>Passive: Echo Strike</h1> Causes melee attacks to attack twice in quick succession. The double attacks apply a %movement_slow%%% movement slow for %slow_duration% seconds on the first strike. Echo Strike cooldown: %passive_cooldown%s",
           "lore_loc": "A perfect solution for the flight of foes.",
-          "notes_loc": [],
+          "notes_loc": [
+            "Attack Range bonuses from Dragon Lance and its upgrades do not stack."
+          ],
           "shard_loc": "",
           "scepter_loc": "",
           "facets_loc": [],
@@ -63,7 +65,7 @@
             {
               "name": "bonus_strength",
               "values_float": [
-                25
+                30
               ],
               "is_percentage": false,
               "heading_loc": "+$str",
@@ -75,7 +77,7 @@
             {
               "name": "bonus_agility",
               "values_float": [
-                10
+                15
               ],
               "is_percentage": false,
               "heading_loc": "+$agi",
@@ -85,12 +87,12 @@
               "required_facet": ""
             },
             {
-              "name": "bonus_intellect",
+              "name": "base_attack_range_melee",
               "values_float": [
-                10
+                25
               ],
               "is_percentage": false,
-              "heading_loc": "+$int",
+              "heading_loc": "+$attack_range_melee",
               "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
@@ -99,7 +101,7 @@
             {
               "name": "bonus_mana_regen",
               "values_float": [
-                2
+                2.5
               ],
               "is_percentage": false,
               "heading_loc": "+$mana_regen",
