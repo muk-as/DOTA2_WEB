@@ -8,7 +8,7 @@
             "id": 242,
             "name": "item_crimson_guard",
             "name_loc": "赤红甲",
-            "desc_loc": "<h1>主动：坚盾</h1>使周围所有友方英雄和建筑每次受到物理攻击都有%block_chance_active%%%几率格挡伤害，数值为%block_damage_active% + %max_hp_pct%%%施法者最大生命值。持续%duration%秒。<br><br>作用范围：%bonus_aoe_radius%\n\n<h1>被动：伤害格挡</h1>近战英雄每次受到攻击都有%block_chance%%%几率格挡%block_damage_melee%点伤害，远程英雄则是格挡%block_damage_ranged%点。",
+            "desc_loc": "<h1>主动：坚盾</h1>使周围所有友方英雄和建筑每次受到物理攻击都有%block_chance_active%%%几率格挡伤害，数值为%block_damage_active% + %max_hp_pct%%%施法者最大生命值。持续%duration%秒。<br><br>作用范围：%bonus_aoe_radius%\n\n<h1>被动：伤害格挡</h1>近战英雄每次受到攻击都有%block_chance%%%几率格挡%block_damage_melee%点伤害，远程英雄则是格挡%block_damage_ranged%点。\n\n<h1>被动：玄冥光环</h1>向友方玩家单位提供%bonus_aoe_armor%点护甲。<br><br>作用范围：%bonus_aoe_radius%",
             "lore_loc": "原为抵御可怕的年兽所打造的铠甲。",
             "notes_loc": [
               "多种伤害格挡效果不会叠加。",
@@ -25,7 +25,7 @@
             "flags": 0,
             "damage": 0,
             "immunity": 0,
-            "dispellable": 3,
+            "dispellable": 2,
             "max_level": 0,
             "cast_ranges": [
               1200
@@ -69,7 +69,7 @@
               {
                 "name": "bonus_health_regen",
                 "values_float": [
-                  12
+                  9
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$hp_regen",
@@ -81,7 +81,7 @@
               {
                 "name": "bonus_armor",
                 "values_float": [
-                  6
+                  5
                 ],
                 "is_percentage": false,
                 "heading_loc": "+$armor",
@@ -188,6 +188,42 @@
               },
               {
                 "name": "max_hp_pct",
+                "values_float": [
+                  2
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "required_facet": ""
+              },
+              {
+                "name": "add_nostack_debuff",
+                "values_float": [
+                  1
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "required_facet": ""
+              },
+              {
+                "name": "aura_radius",
+                "values_float": [
+                  1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "required_facet": ""
+              },
+              {
+                "name": "bonus_aoe_armor",
                 "values_float": [
                   2
                 ],

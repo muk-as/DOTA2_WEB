@@ -8,7 +8,7 @@
             "id": 147,
             "name": "item_manta",
             "name_loc": "幻影斧",
-            "desc_loc": "<h1>主动：镜像</h1>制造%images_count%个你的幻象，持续%illusion_duration%秒。<br><br>近战英雄的幻象继承%tooltip_damage_outgoing_melee%%%的攻击力，远程英雄的幻象继承%tooltip_damage_outgoing_ranged%%%的攻击力。幻象承受%tooltip_damage_incoming_total_pct%%%的伤害。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>",
+            "desc_loc": "<h1>主动：镜像</h1>制造%images_count%个你的幻象，持续%illusion_duration%秒。<br><br>近战英雄的幻象继承%tooltip_damage_outgoing_melee%%%的攻击力，远程英雄的幻象继承%tooltip_damage_outgoing_ranged%%%的攻击力。幻象承受%tooltip_damage_incoming_total_pct%%%的伤害并拥有%illusion_effectiveness%%%物品威力。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>",
             "lore_loc": "用反光材料制成的斧头，能够混淆敌军。",
             "notes_loc": [
               "有%invuln_duration%秒的施法时间，其间处于无敌状态。",
@@ -105,7 +105,7 @@
               {
                 "name": "bonus_movement_speed",
                 "values_float": [
-                  10
+                  6
                 ],
                 "is_percentage": true,
                 "heading_loc": "+$move_speed",
@@ -118,6 +118,18 @@
                 "name": "images_count",
                 "values_float": [
                   2
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "required_facet": ""
+              },
+              {
+                "name": "illusion_effectiveness",
+                "values_float": [
+                  35
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -265,7 +277,7 @@
             "ability_is_granted_by_scepter": false,
             "ability_is_granted_by_shard": false,
             "ability_is_innate": false,
-            "item_cost": 4650,
+            "item_cost": 4550,
             "item_initial_charges": 0,
             "item_neutral_tier": 4294967295,
             "item_stock_max": 0,

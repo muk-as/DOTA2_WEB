@@ -8,9 +8,11 @@
             "id": 1806,
             "name": "item_devastator",
             "name_loc": "圣斧",
-            "desc_loc": "<h1>被动：巫师之刃</h1>使下次攻击具有克敌机先效果，并且会施加毒素，持续%slow_duration%秒，减缓%slow%%%移动速度，并且每秒造成%int_damage_multiplier%倍智力值的伤害。\n\n<h1>被动：法力腐蚀</h1>攻击会降低敌人%active_mres_reduction%%%魔法抗性，持续%passive_cooldown%秒。",
+            "desc_loc": "<h1>Passive: Witch Blade</h1> Causes your next attack to apply a poison for %slow_duration% seconds, slowing by %slow%%% and dealing %int_damage_multiplier%x your intelligence as damage every second. This attack has True Strike and can affect buildings. Deals %building_effectiveness_pct%%% damage to buildings. \n\n<h1>Passive: Magic Corruption</h1> Your attacks reduce the enemy's Magic resistance by %active_mres_reduction%%% for %reduction_duration% seconds.",
             "lore_loc": "警告：抓到另一头将无药可救。",
-            "notes_loc": [],
+            "notes_loc": [
+              "Illusions do not apply Witch Blade, but can apply Magic Corruption"
+            ],
             "shard_loc": "",
             "scepter_loc": "",
             "facets_loc": [],
@@ -113,7 +115,7 @@
               {
                 "name": "int_damage_multiplier",
                 "values_float": [
-                  0.75
+                  0.85
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -149,7 +151,19 @@
               {
                 "name": "active_mres_reduction",
                 "values_float": [
-                  20
+                  15
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "required_facet": ""
+              },
+              {
+                "name": "reduction_duration",
+                "values_float": [
+                  4
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
@@ -162,6 +176,18 @@
                 "name": "passive_cooldown",
                 "values_float": [
                   4
+                ],
+                "is_percentage": false,
+                "heading_loc": "",
+                "bonuses": [],
+                "values_shard": [],
+                "values_scepter": [],
+                "required_facet": ""
+              },
+              {
+                "name": "building_effectiveness_pct",
+                "values_float": [
+                  40
                 ],
                 "is_percentage": false,
                 "heading_loc": "",
