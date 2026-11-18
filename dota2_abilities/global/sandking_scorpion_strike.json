@@ -6,7 +6,7 @@
           "id": 1229,
           "name": "sandking_scorpion_strike",
           "name_loc": "Stinger",
-          "desc_loc": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing extra damage to each. Enemies within an innermost radius of %inner_radius% take %inner_radius_bonus_damage_pct%%% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
+          "desc_loc": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing extra damage to each. Attacks have decreased Item Potency. Enemies within an innermost radius of %inner_radius% take %inner_radius_bonus_damage_pct%%% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
           "lore_loc": "Crixalis is certainly capable of mercy, but the soul of the sand finds few foes worth sparing.",
           "notes_loc": [],
           "shard_loc": "A Caustic Finale explosion that deals %caustic_damage_pct%%% damage is created around every enemy hero hit in Stinger's innermost radius. Does not apply to strikes created by Aghanim's Scepter upgrade.",
@@ -72,7 +72,10 @@
             {
               "name": "inner_radius",
               "values_float": [
-                125
+                120,
+                140,
+                160,
+                180
               ],
               "is_percentage": false,
               "heading_loc": "",
@@ -97,9 +100,9 @@
               "name": "attack_damage",
               "values_float": [
                 50,
-                75,
-                100,
-                125
+                80,
+                110,
+                140
               ],
               "is_percentage": false,
               "heading_loc": "BONUS DAMAGE:",
@@ -143,6 +146,18 @@
                   "operation": 0
                 }
               ],
+              "values_shard": [],
+              "values_scepter": [],
+              "required_facet": ""
+            },
+            {
+              "name": "potency",
+              "values_float": [
+                60
+              ],
+              "is_percentage": true,
+              "heading_loc": "ITEM POTENCY:",
+              "bonuses": [],
               "values_shard": [],
               "values_scepter": [],
               "required_facet": ""
