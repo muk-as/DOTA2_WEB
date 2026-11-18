@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 670,
+          "max_health": 700,
           "health_regen": 2.75,
           "max_mana": 291,
           "mana_regen": 0.90000004,
@@ -852,7 +852,7 @@
               "id": 1486,
               "name": "abyssal_underlord_raid_boss",
               "name_loc": "Invading Force",
-              "desc_loc": "After an allied hero Teleports, they temporarily gain Damage Reduction and Movement Speed. Allies receive %dark_portal_multiplier%x bonuses if teleporting via Fiend's Gate.",
+              "desc_loc": "After an allied hero Teleports, they temporarily gain a Physical Damage Barrier based on their max health and Movement Speed. Allies receive %dark_portal_multiplier%x bonuses if teleporting via Fiend's Gate.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -898,12 +898,12 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage_reduction",
+                  "name": "barrier_max_health_pct",
                   "values_float": [
-                    3.7
+                    8.5
                   ],
                   "is_percentage": true,
-                  "heading_loc": "DAMAGE REDUCTION:",
+                  "heading_loc": "MAX HEALTH AS BARRIER:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_underlord_7",
@@ -963,7 +963,7 @@
                 {
                   "name": "buff_duration",
                   "values_float": [
-                    5
+                    6
                   ],
                   "is_percentage": false,
                   "heading_loc": "BUFF DURATION:",
@@ -1001,7 +1001,7 @@
                 "Double-click to teleport to your team's base, in front of your fountain"
               ],
               "shard_loc": "",
-              "scepter_loc": "Summons a Pit of Malice around each of the portals. Reduces cooldown.",
+              "scepter_loc": "Summons a Pit of Malice around the furthermost of the portals. Reduces cooldown.",
               "facets_loc": [
                 "",
                 "Underlord summons uncontrollable demonic Warriors and Archers after travelling through the Fiend's Gate that attack nearby enemies. These units deal %underling_building_damage_reduction_tooltip%%% damage to buildings."
@@ -1025,9 +1025,9 @@
                 0
               ],
               "cooldowns": [
-                110,
+                115,
                 105,
-                100
+                95
               ],
               "durations": [
                 0
@@ -1100,7 +1100,9 @@
                 {
                   "name": "warp_channel_duration",
                   "values_float": [
-                    3.5
+                    3.5,
+                    3.25,
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1250,6 +1252,158 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "aura_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1200
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shot_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    950
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shot_damage",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shot_slow_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    2.5
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shot_movement_speed_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    40
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shot_cooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.8
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shot_vision",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    100
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "shot_vision_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1.5
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityManaCost",
                   "values_float": [
                     175
@@ -1269,9 +1423,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    110,
+                    115,
                     105,
-                    100
+                    95
                   ],
                   "is_percentage": false,
                   "heading_loc": "COOLDOWN:",
@@ -1306,7 +1460,7 @@
             {
               "id": 663,
               "name": "special_bonus_unique_underlord_7",
-              "name_loc": "+{s:bonus_bonus_ms}% Invading Force Movement Bonus/Damage Reduction",
+              "name_loc": "+{s:bonus_bonus_ms}% Invading Force Movement Bonus/Barrier",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

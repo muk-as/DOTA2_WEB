@@ -12,11 +12,11 @@
           "npe_desc_loc": "Rides the waves to flank enemies",
           "facets": [],
           "str_base": 16,
-          "str_gain": 2.6,
+          "str_gain": 2.8,
           "agi_base": 33,
           "agi_gain": 4.2,
           "int_base": 19,
-          "int_gain": 1.8,
+          "int_gain": 2,
           "primary_attr": 1,
           "complexity": 3,
           "attack_capability": 2,
@@ -42,7 +42,7 @@
           "turn_rate": 0.7,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 472,
+          "max_health": 520,
           "health_regen": 2.1,
           "max_mana": 303,
           "mana_regen": 0.95,
@@ -890,7 +890,7 @@
                 "Does not trigger spell reflect."
               ],
               "shard_loc": "",
-              "scepter_loc": "Adds an alt-cast to Morph. When enabled, a strong illusion is created of the target hero that can cast all of the hero's basic abilities. If the illusion is alive when Morphling toggles the ability, he will take the place of the illusion, destroying it.",
+              "scepter_loc": "While Morph is active, every time Morphling casts a unit-targeted spell, %scepter_echo_count% lesser replicants appear one after another %scepter_echo_cast_delay% seconds apart, and cast it again at a nearby target, or the same target if no other valid targets are available. Every echo is weaker, dealing less damage, healing less health, and applying shorter buffs/debuffs than the previous one.",
               "facets_loc": [
                 "",
                 ""
@@ -959,16 +959,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_stat_steal",
+                  "name": "scepter_echo_count",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "ECHOES:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    20
+                    2
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -978,7 +978,45 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_spell_amplify",
+                  "name": "scepter_echo_cast_delay",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DELAY BETWEEN ECHOES:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.2
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_echo_damage_outgoing_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "FIRST ECHO EFFECT:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    50
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_echo_damage_falloff_pct",
                   "values_float": [
                     0
                   ],
@@ -997,73 +1035,16 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_attack_speed",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    70
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_status_resist",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    40
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_additional_stats",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    20
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_illusion_outgoing",
+                  "name": "scepter_echo_damage_second_tooltip_only",
                   "values_float": [
                     0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "ILLUSION OUTGOING DAMAGE:",
+                  "heading_loc": "SECOND ECHO EFFECT:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    100
+                    25
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -1073,16 +1054,73 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_illusion_incoming",
+                  "name": "scepter_echo_min_model_scale",
                   "values_float": [
                     0
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "ILLUSION INCOMING DAMAGE:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    200
+                    0.25
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_echo_appear_distance",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    150
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_echo_visible_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.75
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "scepter_echo_retarget_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    450
                   ],
                   "facet_bonus": {
                     "name": "",

@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
+          "max_health": 580,
           "health_regen": 2.15,
           "max_mana": 303,
           "mana_regen": 0.95,
@@ -417,7 +417,10 @@
               "dispellable": 2,
               "max_level": 4,
               "cast_ranges": [
-                600
+                600,
+                650,
+                700,
+                750
               ],
               "cast_points": [
                 0.2
@@ -459,13 +462,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "INITIAL DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_venomancer_4",
-                      "value": 100,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -553,7 +550,10 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    600
+                    600,
+                    650,
+                    700,
+                    750
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -642,9 +642,11 @@
               "id": 5180,
               "name": "venomancer_plague_ward",
               "name_loc": "Plague Ward",
-              "desc_loc": "Summons a plague ward to attack enemy units and structures. The ward is immune to magic. Wards gain the Poison Sting level from Venomancer, dealing 50% of the full damage.",
+              "desc_loc": "Summons a plague ward to attack enemy units and structures. The ward is immune to magic. Ward attacks apply Venomancer's Poison Sting with %poison_sting_potency%%% damage/slow.",
               "lore_loc": "A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Poison Sting from a plague ward fully stacks with Poison Sting from Venomancer."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -717,6 +719,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "poison_sting_potency",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1194,7 +1213,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MAX HEALTH DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_venomancer_plague_damage",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1689,9 +1714,9 @@
               "item_quality": 0
             },
             {
-              "id": 6980,
-              "name": "special_bonus_unique_venomancer_4",
-              "name_loc": "+{s:bonus_base_damage} Snakebite Initial Damage",
+              "id": 6981,
+              "name": "special_bonus_unique_venomancer_5",
+              "name_loc": "Snakebite Undispellable",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1813,9 +1838,9 @@
               "item_quality": 0
             },
             {
-              "id": 6981,
-              "name": "special_bonus_unique_venomancer_5",
-              "name_loc": "Snakebite Undispellable",
+              "id": 1902,
+              "name": "special_bonus_unique_venomancer_plague_damage",
+              "name_loc": "+{s:bonus_damage_per_second}% Noxious Plague Max Health Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

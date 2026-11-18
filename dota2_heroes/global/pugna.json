@@ -13,10 +13,10 @@
           "facets": [],
           "str_base": 19,
           "str_gain": 2,
-          "agi_base": 21,
-          "agi_gain": 1.3,
-          "int_base": 27,
-          "int_gain": 5.2,
+          "agi_base": 16,
+          "agi_gain": 1.5,
+          "int_base": 29,
+          "int_gain": 4.5,
           "primary_attr": 2,
           "complexity": 2,
           "attack_capability": 2,
@@ -31,21 +31,21 @@
             2,
             0
           ],
-          "damage_min": 48,
-          "damage_max": 55,
+          "damage_min": 50,
+          "damage_max": 57,
           "attack_rate": 1.7,
-          "attack_range": 630,
+          "attack_range": 600,
           "projectile_speed": 900,
-          "armor": 3.5,
+          "armor": 2.6666667,
           "magic_resistance": 25,
           "movement_speed": 325,
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
+          "max_health": 580,
           "health_regen": 2.15,
-          "max_mana": 399,
-          "mana_regen": 2.1,
+          "max_mana": 423,
+          "mana_regen": 2.2,
           "abilities": [
             {
               "id": 5186,
@@ -276,7 +276,7 @@
               "id": 5187,
               "name": "pugna_decrepify",
               "name_loc": "Decrepify",
-              "desc_loc": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Healing on affected allies is increased, while afflicted enemies take extra magic damage instead.",
+              "desc_loc": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Healing received and dealt by affected allies is increased, while afflicted enemies take extra magic damage instead.",
               "lore_loc": "A now-mastered relic from his childhood, Pugna delights in banishing others into the Nether Realm, whether for good, evil, or simple enjoyment.",
               "notes_loc": [
                 "Only magical and pure damage can affect a unit under the effects of Decrepify.",
@@ -329,6 +329,9 @@
                 0
               ],
               "mana_costs": [
+                50,
+                60,
+                70,
                 80
               ],
               "gold_costs": [],
@@ -378,10 +381,10 @@
                 {
                   "name": "bonus_spell_damage_pct",
                   "values_float": [
-                    -20,
-                    -30,
-                    -40,
-                    -50
+                    -16,
+                    -24,
+                    -32,
+                    -40
                   ],
                   "is_percentage": true,
                   "heading_loc": "ENEMY INCREASED MAGIC DAMAGE:",
@@ -478,6 +481,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
+                    50,
+                    60,
+                    70,
                     80
                   ],
                   "is_percentage": false,
@@ -530,7 +536,7 @@
               "id": 5188,
               "name": "pugna_nether_ward",
               "name_loc": "Nether Ward",
-              "desc_loc": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero.",
+              "desc_loc": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero. Only one Nether Ward can be active at a time; casting a new one destroys the previous ward.",
               "lore_loc": "While at the lamasery for the Arts of Oblivion, Pugna learned to dominate his classmates with a simple ward charged with Nether magic.",
               "notes_loc": [
                 "Nether Ward deals damage before the actual spell is cast, so if the caster dies the spell will have no effect.",
@@ -580,7 +586,10 @@
                 0
               ],
               "mana_costs": [
-                80
+                75,
+                100,
+                125,
+                150
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -651,17 +660,14 @@
                 {
                   "name": "attacks_to_destroy",
                   "values_float": [
-                    4
+                    3,
+                    4,
+                    5,
+                    6
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ATTACKS TO DESTROY:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_pugna_6",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
+                  "heading_loc": "PIP HEALTH:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -767,7 +773,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    80
+                    75,
+                    100,
+                    125,
+                    150
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -820,13 +829,13 @@
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Gains %AbilityCharges% charges with a %AbilityChargeRestoreTime% restore time. Pugna can cast any of his abilities an additional time, consuming an Oblivion Savant charge instead.",
               "facets_loc": [
                 "",
                 ""
               ],
               "type": 0,
-              "behavior": "2",
+              "behavior": "567347999932419",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -894,10 +903,67 @@
                     "operation": 0
                   },
                   "required_facet": ""
+                },
+                {
+                  "name": "recast_min_cooldown",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.25
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    2
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    20
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -913,11 +979,11 @@
               "id": 5189,
               "name": "pugna_life_drain",
               "name_loc": "Life Drain",
-              "desc_loc": "CHANNELED - When cast on an enemy, Pugna drains health from the target enemy unit to heal himself and granting vision over the target.\n\nWhen cast on an ally, Pugna will drain his own health into his ally.",
+              "desc_loc": "CHANNELED - When cast on an enemy, Pugna drains health from the target enemy unit, healing himself for the damage dealt and granting vision over the target.\n\nWhen cast on an ally, Pugna heals his ally and takes magical damage equal to the amount healed. This damage cannot kill Pugna.",
               "lore_loc": "Pugna has truly become more powerful than even the grandmaster of Oblivion.",
               "notes_loc": [],
               "shard_loc": "Life Drain can target your Nether Ward, causing life drain to refract to all enemy heroes within %abilitycastrange% units of the ward for %shard_damage_pct_from_ward%%% of its normal value. The effect is interrupted if the ward is destroyed.",
-              "scepter_loc": "Reduces cooldown by %abilitycooldown%s. When targeting an enemy hero, Pugna reduces their outgoing spell damage by %spell_amp_drain_rate%%% per second up to a maximum of %spell_amp_drain_max%%% and increases his own, up to a maximum of %max_spell_amp_drain_pct%%%. When draining through a Nether Ward using Shard, the rate of increase/decrease is %spell_amp_drain_rate_ward%%% instead. Debuff lasts %spell_amp_drain_duration% seconds.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 ""
@@ -940,13 +1006,13 @@
                 0.2
               ],
               "channel_times": [
-                10
+                0
               ],
               "cooldowns": [
                 7
               ],
               "durations": [
-                0
+                10
               ],
               "damages": [
                 0,
@@ -955,42 +1021,29 @@
                 0
               ],
               "mana_costs": [
-                115,
-                160,
-                205
+                100,
+                150,
+                200
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "health_drain",
+                  "name": "life_drain",
                   "values_float": [
                     150,
                     250,
                     350
                   ],
                   "is_percentage": false,
-                  "heading_loc": "ENEMY DRAIN PER SECOND:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "ally_healing",
-                  "values_float": [
-                    150,
-                    250,
-                    350
+                  "heading_loc": "DRAIN PER SECOND:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_pugna_1",
+                      "value": 50,
+                      "operation": 0
+                    }
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "ALLY DRAIN/HEAL PER SECOND:",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1054,122 +1107,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_heal_pct",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_pugna_1",
-                      "value": 15,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spell_amp_drain_rate",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    8
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spell_amp_drain_max",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    75
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spell_amp_drain_rate_ward",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    4
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spell_amp_drain_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    8
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "max_spell_amp_drain_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    100
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     700
@@ -1187,7 +1124,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "AbilityChannelTime",
+                  "name": "AbilityDuration",
                   "values_float": [
                     10
                   ],
@@ -1223,9 +1160,9 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    115,
-                    160,
-                    205
+                    100,
+                    150,
+                    200
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1246,11 +1183,15 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    50
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_pugna_6",
+                      "value": 3,
+                      "operation": 2
+                    }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1260,7 +1201,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1337,9 +1278,9 @@
               "item_quality": 0
             },
             {
-              "id": 6859,
-              "name": "special_bonus_unique_pugna_6",
-              "name_loc": "+{s:bonus_attacks_to_destroy} Nether Ward Health",
+              "id": 5959,
+              "name": "special_bonus_hp_200",
+              "name_loc": "+{s:value} Health",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1384,7 +1325,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1461,9 +1420,9 @@
               "item_quality": 0
             },
             {
-              "id": 5903,
-              "name": "special_bonus_hp_250",
-              "name_loc": "+{s:value} Health",
+              "id": 6859,
+              "name": "special_bonus_unique_pugna_6",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Life Drain Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1508,25 +1467,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    250
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1543,7 +1484,7 @@
             {
               "id": 6220,
               "name": "special_bonus_unique_pugna_1",
-              "name_loc": "+{s:bonus_bonus_heal_pct}% Life Drain Heal",
+              "name_loc": "+{s:bonus_life_drain} Life Drain Drain Per Second",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

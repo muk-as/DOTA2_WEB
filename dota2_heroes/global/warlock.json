@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 604,
+          "max_health": 640,
           "health_regen": 2.45,
           "max_mana": 375,
           "mana_regen": 1.25,
@@ -344,7 +344,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "HEAL/DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_warlock_shadow_word_damage",
+                      "value": 15,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -391,17 +397,11 @@
                 {
                   "name": "spell_aoe",
                   "values_float": [
-                    225
+                    250
                   ],
                   "is_percentage": false,
                   "heading_loc": "EFFECT RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_warlock_7",
-                      "value": 150,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -413,15 +413,17 @@
                 },
                 {
                   "name": "shard_movement_speed_pct",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [
-                    0
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_warlock_7",
+                      "value": 8,
+                      "operation": 0
+                    }
                   ],
+                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -588,13 +590,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_warlock_upheaval_aoe",
-                      "value": 50,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -690,7 +686,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_warlock_3",
-                      "value": 45,
+                      "value": 50,
                       "operation": 5
                     }
                   ],
@@ -733,7 +729,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_warlock_3",
-                      "value": 40,
+                      "value": 50,
                       "operation": 0
                     }
                   ],
@@ -1627,10 +1623,10 @@
               "item_quality": 0
             },
             {
-              "id": 1038,
-              "name": "special_bonus_unique_warlock_upheaval_aoe",
-              "name_loc": "+{s:bonus_aoe} Upheaval Radius",
-              "desc_loc": "",
+              "id": 764,
+              "name": "special_bonus_unique_warlock_7",
+              "name_loc": "Shadow Word Increases Movespeed by {s:bonus_shard_movement_speed_pct}%",
+              "desc_loc": "-{s:bonus_shard_movement_speed_pct}% Movespeed to enemies.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1751,9 +1747,9 @@
               "item_quality": 0
             },
             {
-              "id": 764,
-              "name": "special_bonus_unique_warlock_7",
-              "name_loc": "+{s:bonus_spell_aoe} Shadow Word AoE",
+              "id": 1928,
+              "name": "special_bonus_unique_warlock_shadow_word_damage",
+              "name_loc": "+{s:bonus_damage} Shadow Word Damage/Heal",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

@@ -42,7 +42,7 @@
           "turn_rate": 0.9,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 560,
+          "max_health": 600,
           "health_regen": 2.25,
           "max_mana": 267,
           "mana_regen": 0.8,
@@ -51,7 +51,7 @@
               "id": 6344,
               "name": "pangolier_swashbuckle",
               "name_loc": "Swashbuckle",
-              "desc_loc": "Pangolier dashes along the target line, then slashes and briefly slows all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
+              "desc_loc": "Pangolier dashes along the target line, then slashes and briefly slows all enemies in the drawn direction with several quick swipes. Attacks have decreased Item Potency.\n\nLucky Shot has a chance to activate from this damage.",
               "lore_loc": "The Pangolier's blade is even nimbler than his tongue.",
               "notes_loc": [
                 "Casting Swashbuckle during Rolling Thunder ends Rolling Thunder."
@@ -154,13 +154,30 @@
                 {
                   "name": "damage",
                   "values_float": [
-                    35,
-                    65,
-                    95,
-                    125
+                    25,
+                    50,
+                    75,
+                    100
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE PER STRIKE:",
+                  "heading_loc": "DAMAGE PER SLASH:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "potency",
+                  "values_float": [
+                    60
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ITEM POTENCY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -263,10 +280,10 @@
                 {
                   "name": "strikes",
                   "values_float": [
-                    3
+                    4
                   ],
                   "is_percentage": false,
-                  "heading_loc": "STRIKES:",
+                  "heading_loc": "SLASHES:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],

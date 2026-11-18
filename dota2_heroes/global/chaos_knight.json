@@ -31,8 +31,8 @@
             2,
             1
           ],
-          "damage_min": 56,
-          "damage_max": 76,
+          "damage_min": 61,
+          "damage_max": 71,
           "attack_rate": 1.7,
           "attack_range": 150,
           "projectile_speed": 900,
@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 648,
+          "max_health": 680,
           "health_regen": 2.65,
           "max_mana": 291,
           "mana_regen": 0.90000004,
@@ -57,7 +57,7 @@
                 "The stun duration and damage values dealt are inversely related.",
                 "Nearby illusions will mimic the cast animation."
               ],
-              "shard_loc": "Causes Chaos Bolt to create a Phantasm illusion to attack the target. This illusion deals %illusion_damage_reduction_pct%%% less damage.",
+              "shard_loc": "Causes Chaos Bolt to create a Phantasm illusion to attack the target. This illusion deals Chaos Knight's full damage and has %illusion_effectiveness%%% item potency.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -253,6 +253,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "illusion_effectiveness",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ILLUSION ITEM POTENCY:",
+                  "bonuses": [],
+                  "values_shard": [
+                    25
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "illusion_damage_reduction_pct",
                   "values_float": [
                     0
@@ -261,7 +280,7 @@
                   "heading_loc": "ILLUSION DAMAGE REDUCTION:",
                   "bonuses": [],
                   "values_shard": [
-                    15
+                    0
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -599,7 +618,7 @@
               "id": 5428,
               "name": "chaos_knight_chaos_strike",
               "name_loc": "Chaos Strike",
-              "desc_loc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Lifesteal from creeps is reduced.",
+              "desc_loc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal.",
               "lore_loc": "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors.",
               "notes_loc": [],
               "shard_loc": "",
@@ -764,14 +783,15 @@
               "item_quality": 0
             },
             {
-              "id": 1556,
-              "name": "chaos_knight_fundamental_forging",
-              "name_loc": "Fundamental Forging",
-              "desc_loc": "Chaos Knight's Neutral Items get an additional random enchantment.",
+              "id": 1910,
+              "name": "chaos_knight_armageddon",
+              "name_loc": "Ahead, Armageddon",
+              "desc_loc": "For each second Chaos Knight keeps moving without stopping or attacking, Armageddon gains bonus movement speed. The bonus drains away while stopping, and lost when attacking.<br><br>While at least one of Chaos Knight's phantasms is alive, Ahead, Armageddon can be activated to charge over terrain, building up to a max speed before releasing.  Chaos Knight and the illusions will attack units they charge over.",
               "lore_loc": "",
               "notes_loc": [
-                "The random enchantment can be any available enchantment in that tier except for enchantments with negative effects, including enchantments that are normally not available for Strength heroes.",
-                "The random enchantment cannot be the same as the chosen enchantment."
+                "Being stunned, hexed, feared, taunted or rooted during the windup cancels the charge.",
+                "Ahead, Armageddon is only available when at least 1 of Chaos Knight's illusions created with the active cast of Phantasm is alive.",
+                "Activation of Ahead, Armageddon will gather all of Chaos Knight's illusions in %illusion_radius% radius regardless of how they were created."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -782,25 +802,25 @@
                 ""
               ],
               "type": 0,
-              "behavior": "13194139533314",
+              "behavior": "525328",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
-              "immunity": 0,
+              "damage": 1,
+              "immunity": 3,
               "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
                 0
               ],
               "cast_points": [
-                0
+                0.4
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                0
+                30
               ],
               "durations": [
                 0
@@ -812,11 +832,403 @@
                 0
               ],
               "mana_costs": [
-                0
+                50
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "speed_per_second",
+                  "values_float": [
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "SPEED PER SECOND:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "drain_rate_multiplier",
+                  "values_float": [
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "think_interval",
+                  "values_float": [
+                    0.1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_bonus_speed",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX BONUS SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "charge_speed_multiplier",
+                  "values_float": [
+                    2
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CHARGE SPEED MULTIPLIER:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_max_charge_speed",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CURRENT MAX CHARGE SPEED:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "charge_accel_time",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CHARGE ACCELERATION TIME:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "charge_decel_time",
+                  "values_float": [
+                    0.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CHARGE DECELERATION TIME:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "illusion_radius",
+                  "values_float": [
+                    1300
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "turn_rate",
+                  "values_float": [
+                    25
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "hit_radius",
+                  "values_float": [
+                    150
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "formation_spacing",
+                  "values_float": [
+                    130
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "formation_jitter",
+                  "values_float": [
+                    60
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "formation_width",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "run_animation_rate",
+                  "values_float": [
+                    1.8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_charge_time",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MAX WINDUP TIME:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "windup_turn_rate",
+                  "values_float": [
+                    120
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_while_charging",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "jump_distance",
+                  "values_float": [
+                    500
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "jump_height",
+                  "values_float": [
+                    160
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    30
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -897,6 +1309,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "NUMBER OF PHANTASMS:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "illusion_effectiveness",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ILLUSION ITEM POTENCY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1142,6 +1571,105 @@
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1900,
+              "name": "chaos_knight_armageddons_flank_end",
+              "name_loc": "Heel, Armageddon",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "type": 0,
+              "behavior": "171968581",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 1,
+              "cast_ranges": [
+                999999
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0.3
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [
+                {
+                  "name": "AbilityCastRange",
+                  "values_float": [
+                    999999
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityCooldown",
+                  "values_float": [
+                    0.3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": true,
               "item_cost": 0,
               "item_initial_charges": 0,
               "item_neutral_tier": 4294967295,

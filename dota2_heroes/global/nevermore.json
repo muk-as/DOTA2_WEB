@@ -42,7 +42,7 @@
           "turn_rate": 0.9,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
+          "max_health": 580,
           "health_regen": 2.15,
           "max_mana": 267,
           "mana_regen": 1.1,
@@ -172,13 +172,13 @@
                 {
                   "name": "stack_bonus_damage",
                   "values_float": [
-                    35,
-                    50,
-                    65,
+                    20,
+                    40,
+                    60,
                     80
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS PER STACK:",
+                  "heading_loc": "BONUS DAMAGE PER STACK:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nevermore_7",
@@ -415,13 +415,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK SPEED:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_nevermore_4",
-                      "value": 30,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -624,6 +618,27 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "heal_per_soul",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_nevermore_frenzy_heal_per_soul",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "linger_duration",
                   "values_float": [
                     8
@@ -695,7 +710,7 @@
               "id": 5063,
               "name": "nevermore_dark_lord",
               "name_loc": "Presence of the Dark Lord",
-              "desc_loc": "Shadow Fiend's presence reduces the armor of nearby enemies.",
+              "desc_loc": "Shadow Fiend's presence reduces the armor and magic resistance of nearby enemies.",
               "lore_loc": "Even being near Nevermore eats away at one's soul.",
               "notes_loc": [
                 "Stacks fully with other armor reduction abilities and aura."
@@ -755,7 +770,33 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nevermore_3",
-                      "value": 1.5,
+                      "value": 1,
+                      "operation": 2
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "presence_magic_resistance_reduction",
+                  "values_float": [
+                    -4,
+                    -6,
+                    -8,
+                    -10
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MAGIC RESIST REDUCTION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_nevermore_3",
+                      "value": 2,
                       "operation": 2
                     }
                   ],
@@ -820,7 +861,7 @@
               "id": 5064,
               "name": "nevermore_requiem",
               "name_loc": "Requiem of Souls",
-              "desc_loc": "Shadow Fiend gathers up to %max_soul_release% of his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed and magic resistance reduced for %requiem_slow_duration% seconds for each line hit up to a maximum of %requiem_slow_duration_max%. Lines of energy are created for every soul captured through Necromastery. <br><br> Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
+              "desc_loc": "Shadow Fiend gathers up to %max_soul_release% of his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed reduced for %requiem_fear_duration% seconds, increased by %requiem_duration_per_soul% seconds for each additional soul that hits it. Lines of energy are created for every soul captured through Necromastery. <br><br> Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
               "lore_loc": "The captured souls of those past slain are released to ravage their former allies.",
               "notes_loc": [
                 "One line is generated from Shadow Fiend for every %requiem_soul_conversion% soul in his possession.",
@@ -879,7 +920,7 @@
                     1000
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "RADIUS:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -910,15 +951,21 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "requiem_reduction_mres",
+                  "name": "requiem_fear_duration",
                   "values_float": [
-                    -5,
-                    -10,
-                    -15
+                    1.2,
+                    1.5,
+                    1.8
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "MAGIC RESIST REDUCTION:",
-                  "bonuses": [],
+                  "is_percentage": false,
+                  "heading_loc": "FEAR DURATION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_nevermore_6",
+                      "value": 0.5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -931,14 +978,16 @@
                 {
                   "name": "requiem_slow_duration",
                   "values_float": [
-                    0.6
+                    1.2,
+                    1.5,
+                    1.8
                   ],
                   "is_percentage": false,
-                  "heading_loc": "FEAR DURATION PER SOUL HIT:",
+                  "heading_loc": "SLOW DURATION:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_nevermore_6",
-                      "value": 0.2,
+                      "value": 0.5,
                       "operation": 0
                     }
                   ],
@@ -952,19 +1001,13 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "requiem_slow_duration_max",
+                  "name": "requiem_duration_per_soul",
                   "values_float": [
-                    2.15
+                    0.1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "FEAR DURATION MAX:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_nevermore_6",
-                      "value": 0.45,
-                      "operation": 0
-                    }
-                  ],
+                  "heading_loc": "BONUS DURATION PER SOUL:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1034,7 +1077,9 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    30
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1518,9 +1563,9 @@
               "item_quality": 0
             },
             {
-              "id": 6876,
-              "name": "special_bonus_unique_nevermore_4",
-              "name_loc": "+{s:bonus_bonus_attack_speed} Feast of Souls Attack Speed",
+              "id": 1789,
+              "name": "special_bonus_unique_nevermore_frenzy_max_collection_count",
+              "name_loc": "+{s:bonus_soul_collection_per_hero} Feast of Souls Souls Collected Per Hero",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1582,7 +1627,7 @@
             {
               "id": 6875,
               "name": "special_bonus_unique_nevermore_3",
-              "name_loc": "+{s:bonus_presence_armor_reduction} Presence Armor Reduction",
+              "name_loc": "+{s:bonus_presence_armor_reduction}/{s:bonus_presence_magic_resistance_reduction}% Presence Armor/Resist Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1642,9 +1687,9 @@
               "item_quality": 0
             },
             {
-              "id": 1789,
-              "name": "special_bonus_unique_nevermore_frenzy_max_collection_count",
-              "name_loc": "+{s:bonus_soul_collection_per_hero} Feast of Souls Souls Collected Per Hero",
+              "id": 1922,
+              "name": "special_bonus_unique_nevermore_frenzy_heal_per_soul",
+              "name_loc": "Feast of Souls Heals {s:bonus_heal_per_soul} HP Per Soul",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1768,8 +1813,8 @@
             {
               "id": 815,
               "name": "special_bonus_unique_nevermore_6",
-              "name_loc": "+{s:bonus_requiem_slow_duration}s Requiem Fear per line",
-              "desc_loc": "Max Fear duration increased by +{s:bonus_requiem_slow_duration_max}s",
+              "name_loc": "+{s:bonus_requiem_fear_duration}s Requiem Fear and Slow Duration",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

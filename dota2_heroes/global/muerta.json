@@ -31,8 +31,8 @@
             0,
             0
           ],
-          "damage_min": 47,
-          "damage_max": 55,
+          "damage_min": 51,
+          "damage_max": 54,
           "attack_rate": 1.7,
           "attack_range": 575,
           "projectile_speed": 3000,
@@ -42,7 +42,7 @@
           "turn_rate": 0.7,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
+          "max_health": 580,
           "health_regen": 2.15,
           "max_mana": 351,
           "mana_regen": 1.15,
@@ -632,7 +632,13 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "MOVEMENT SLOW:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_muerta_the_calling_slow",
+                      "value": 20,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -846,17 +852,17 @@
                 {
                   "name": "double_shot_chance",
                   "values_float": [
-                    18,
-                    27,
-                    36,
-                    45
+                    20,
+                    30,
+                    40,
+                    50
                   ],
                   "is_percentage": true,
                   "heading_loc": "CHANCE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_muerta_gunslinger_double_shot_chance",
-                      "value": 20,
+                      "value": 15,
                       "operation": 0
                     }
                   ],
@@ -945,7 +951,7 @@
               "dispellable": 2,
               "max_level": 1,
               "cast_ranges": [
-                500
+                575
               ],
               "cast_points": [
                 0.2
@@ -954,7 +960,7 @@
                 0
               ],
               "cooldowns": [
-                12
+                0
               ],
               "durations": [
                 0
@@ -991,7 +997,7 @@
                 {
                   "name": "damage",
                   "values_float": [
-                    225
+                    125
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -1042,7 +1048,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    3
+                    2.25
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1093,7 +1099,7 @@
                 {
                   "name": "AbilityCastRange",
                   "values_float": [
-                    500
+                    575
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1125,9 +1131,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "AbilityManaCost",
+                  "name": "AbilityCharges",
                   "values_float": [
-                    75
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1142,9 +1148,26 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "AbilityCooldown",
+                  "name": "AbilityChargeRestoreTime",
                   "values_float": [
                     12
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
+                  "values_float": [
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1619,10 +1642,10 @@
               "item_quality": 0
             },
             {
-              "id": 1438,
-              "name": "special_bonus_unique_muerta_calling_hp_regen",
-              "name_loc": "+{s:bonus_hp_regen_pct}% Max HP Regen while inside The Calling",
-              "desc_loc": "Only applies to Muerta.",
+              "id": 5758,
+              "name": "special_bonus_unique_muerta_the_calling_num_revenants",
+              "name_loc": "The Calling summons {s:bonus_num_revenants} additional revenants",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1826,9 +1849,9 @@
               "item_quality": 0
             },
             {
-              "id": 5758,
-              "name": "special_bonus_unique_muerta_the_calling_num_revenants",
-              "name_loc": "The Calling summons {s:bonus_num_revenants} additional revenants",
+              "id": 1931,
+              "name": "special_bonus_unique_muerta_the_calling_slow",
+              "name_loc": "+{s:bonus_aura_movespeed_slow}% The Calling Movement Slow",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1891,7 +1914,7 @@
             {
               "id": 5759,
               "name": "special_bonus_unique_muerta_gunslinger_double_shot_chance",
-              "name_loc": "+{s:bonus_double_shot_chance}% Gunslinger chance",
+              "name_loc": "+{s:bonus_double_shot_chance}% Gunslinger Chance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

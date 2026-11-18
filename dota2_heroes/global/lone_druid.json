@@ -12,7 +12,7 @@
           "npe_desc_loc": "Commands a powerful spirit bear in battle",
           "facets": [],
           "str_base": 20,
-          "str_gain": 2.5,
+          "str_gain": 2.7,
           "agi_base": 22,
           "agi_gain": 2.8,
           "int_base": 13,
@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 560,
+          "max_health": 600,
           "health_regen": 2.25,
           "max_mana": 231,
           "mana_regen": 0.65000004,
@@ -442,10 +442,10 @@
                 {
                   "name": "bonus_movement_speed_druid",
                   "values_float": [
-                    10,
-                    20,
+                    15,
                     30,
-                    40
+                    45,
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "MOVEMENT SPEED (LONE DRUID):",
@@ -869,7 +869,7 @@
               "id": 1342,
               "name": "lone_druid_spirit_bear",
               "name_loc": "Summon Spirit Bear",
-              "desc_loc": "Summons a powerful Spirit Bear companion that can equip items.<br><br>If the bear moves %bear_attack_leash_range% distance away from the Lone Druid, it cannot attack.  Lone Druid suffers %backlash_damage%%% of his max health as backlash damage if the Spirit Bear dies.\nSpirit Bear has Demolish, Return, Entangling Claws, Savage Roar, and Spirit Link abilities.",
+              "desc_loc": "Summons a powerful Spirit Bear companion that can equip items.<br><br>If the bear moves too far away from the Lone Druid, it cannot attack.  Lone Druid suffers %backlash_damage%%% of his max health as backlash damage if the Spirit Bear dies.\nSpirit Bear has Demolish, Return, Entangling Claws, Savage Roar, and Spirit Link abilities.",
               "lore_loc": "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need.",
               "notes_loc": [
                 "Most spells interact with the Spirit Bear in the same way as they do with heroes.",
@@ -922,6 +922,23 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
+                {
+                  "name": "bear_attack_leash_range_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "ATTACK LEASH RANGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
                 {
                   "name": "bear_hp",
                   "values_float": [

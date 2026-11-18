@@ -42,7 +42,7 @@
           "turn_rate": 0.8,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 516,
+          "max_health": 560,
           "health_regen": 2.5500002,
           "max_mana": 291,
           "mana_regen": 1.1500001,
@@ -1129,7 +1129,7 @@
               "id": 5133,
               "name": "windrunner_focusfire",
               "name_loc": "Focus Fire",
-              "desc_loc": "Windranger channels the wind to gain %bonus_attack_speed% additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage.  Extra damage from secondary item effects is not reduced.",
+              "desc_loc": "Windranger channels the wind to gain %bonus_attack_speed% additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage and her Item Potency.",
               "lore_loc": "Lyralei's ability to bombard opponents with a flurry of arrows is unparalleled - even at the expense of accuracy.",
               "notes_loc": [
                 "Issuing a Hold Position command will pause Windranger's attacks.",
@@ -1233,25 +1233,23 @@
                 {
                   "name": "focusfire_damage_reduction",
                   "values_float": [
-                    -25
+                    -18
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE REDUCTION:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_windranger_8",
-                      "value": 10,
+                      "value": 8,
                       "operation": 0
                     }
                   ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "windrunner_whirlwind",
-                    "values": [
-                      5
-                    ],
-                    "operation": 2
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -1262,6 +1260,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "focusfire_attack_effectiveness",
+                  "values_float": [
+                    75
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ITEM POTENCY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1463,7 +1478,10 @@
               "name_loc": "Tailwind",
               "desc_loc": "Using an ability conjures a stacking Tailwind that gives Windranger a brief burst of movement speed. Movement speed bonus gradually starts fading halfway through the Tailwind duration.\n\nPassively increases Windranger's max movement speed.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the gaining of new stacks.",
+                "Break does not disable the bonuses from existing stacks."
+              ],
               "shard_loc": "",
               "scepter_loc": "Attacks grant Tailwind. Tailwind lasts longer and is undispellable.",
               "facets_loc": [

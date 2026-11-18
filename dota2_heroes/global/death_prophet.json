@@ -31,18 +31,18 @@
             3,
             0
           ],
-          "damage_min": 22,
-          "damage_max": 32,
+          "damage_min": 18,
+          "damage_max": 28,
           "attack_rate": 1.7,
-          "attack_range": 600,
+          "attack_range": 500,
           "projectile_speed": 1000,
           "armor": 3.8333335,
           "magic_resistance": 25,
-          "movement_speed": 290,
+          "movement_speed": 295,
           "turn_rate": 0.8,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 582,
+          "max_health": 620,
           "health_regen": 2.3500001,
           "max_mana": 363,
           "mana_regen": 1.7,
@@ -57,7 +57,7 @@
                 "Can hit units up to 1110 range away.",
                 "Does not trigger spell block or spell reflect."
               ],
-              "shard_loc": "",
+              "shard_loc": "Crypt Swarm has %AbilityCharges% charges with a %AbilityCooldown%s cooldown between uses. Crypt Swarm slows enemies by %slow_movement_pct%%% for %slow_duration%s.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -83,10 +83,10 @@
                 0
               ],
               "cooldowns": [
+                10,
                 9,
                 8,
-                7,
-                6
+                7
               ],
               "durations": [
                 0
@@ -119,7 +119,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_death_prophet_crypt_swarm_damage",
-                      "value": 50,
+                      "value": 110,
                       "operation": 0
                     }
                   ],
@@ -201,6 +201,63 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "apply_debuff",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "slow_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    0.5
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "slow_movement_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    100
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastRange",
                   "values_float": [
                     900
@@ -235,6 +292,47 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "AbilityCharges",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    2
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BASE CHARGE RESTORE TIME:",
+                  "bonuses": [],
+                  "values_shard": [
+                    10,
+                    9,
+                    8,
+                    7
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityManaCost",
                   "values_float": [
                     80,
@@ -257,21 +355,17 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
+                    10,
                     9,
                     8,
-                    7,
-                    6
+                    7
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_death_prophet_2",
-                      "value": 2.5,
-                      "operation": 2
-                    }
+                  "bonuses": [],
+                  "values_shard": [
+                    1
                   ],
-                  "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -283,7 +377,7 @@
               ],
               "is_item": false,
               "ability_has_scepter": false,
-              "ability_has_shard": false,
+              "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -329,10 +423,10 @@
                 0
               ],
               "cooldowns": [
+                17,
                 15,
-                14,
                 13,
-                12
+                11
               ],
               "durations": [
                 3.5,
@@ -365,7 +459,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_death_prophet_silence_aoe",
-                      "value": 75,
+                      "value": 125,
                       "operation": 0
                     }
                   ],
@@ -472,10 +566,10 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
+                    17,
                     15,
-                    14,
                     13,
-                    12
+                    11
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -507,13 +601,14 @@
               "id": 5685,
               "name": "death_prophet_spirit_siphon",
               "name_loc": "Spirit Siphon",
-              "desc_loc": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+              "desc_loc": "Creates a spirit link between Death Prophet and an enemy unit, continuously dealing damage to the enemy and healing herself.",
               "lore_loc": "Krobelus willingly shows others the path she alone cannot follow.",
               "notes_loc": [
-                "Cannot cast multiple on same target."
+                "Cannot cast multiple on same target.",
+                "Death Prophet's Heal amount is not affected if the damage is mitigated or amplified."
               ],
-              "shard_loc": "Increases Spirit Siphon charges by %shard_bonus_charges% and causes enemies to be feared for %shard_fear_duration% seconds if they are siphoned for %shard_consecutive_siphon_duration% seconds consecutively.",
-              "scepter_loc": "",
+              "shard_loc": "",
+              "scepter_loc": "Spirit Siphon steals %attack_slow% attack speed from each afflicted enemy hero. Spirit Siphon drains an additional %max_health_damage_pct%%% of the target's maximum health per second.",
               "facets_loc": [
                 "",
                 "",
@@ -525,7 +620,7 @@
               "target_type": 19,
               "flags": 0,
               "damage": 2,
-              "immunity": 4,
+              "immunity": 3,
               "dispellable": 3,
               "max_level": 4,
               "cast_ranges": [
@@ -564,14 +659,8 @@
                     100
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_death_prophet_3",
-                      "value": 30,
-                      "operation": 0
-                    }
-                  ],
+                  "heading_loc": "DAMAGE/HEAL PER SECOND:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -616,17 +705,17 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_bonus_charges",
+                  "name": "max_health_damage_pct",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    1
+                  "values_shard": [],
+                  "values_scepter": [
+                    2
                   ],
-                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -635,17 +724,17 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_fear_duration",
+                  "name": "attack_slow",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    1
+                  "values_shard": [],
+                  "values_scepter": [
+                    120
                   ],
-                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -654,17 +743,17 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "shard_consecutive_siphon_duration",
+                  "name": "movement_slow",
                   "values_float": [
                     0
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
-                  "values_shard": [
-                    3
+                  "values_shard": [],
+                  "values_scepter": [
+                    0
                   ],
-                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -729,14 +818,14 @@
                 {
                   "name": "AbilityChargeRestoreTime",
                   "values_float": [
-                    40
+                    35
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_death_prophet_5",
-                      "value": 22,
+                      "value": 8,
                       "operation": 2
                     }
                   ],
@@ -768,8 +857,8 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": true,
+              "ability_has_scepter": true,
+              "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
               "ability_is_innate": false,
@@ -784,9 +873,11 @@
               "id": 5092,
               "name": "death_prophet_witchcraft",
               "name_loc": "Witchcraft",
-              "desc_loc": "Death Prophet's occult knowledge deepens with experience, gaining movement speed and spell cooldown reduction.",
+              "desc_loc": "Whenever Death Prophet attacks an enemy, a ghost will fly out and hit the enemy and return to her with life. The spirit has a percentage of Death Prophet's attack damage and heals for %heal_percent%%% of the damage.<br><br>Death Prophet's occult knowledge deepens with experience, gaining movement speed and Witchcraft spirit damage.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Spirits do %building_damage_pct%%% damage to buildings."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -831,12 +922,35 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "movement_speed_pct",
+                  "name": "spirits",
                   "values_float": [
-                    0.5
+                    1
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "MOVEMENT SPEED:",
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_death_prophet_2",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "radius",
+                  "values_float": [
+                    700
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -848,12 +962,148 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "cooldown_reduction_pct",
+                  "name": "spirit_speed",
+                  "values_float": [
+                    650
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "max_distance",
+                  "values_float": [
+                    2000
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "give_up_distance",
+                  "values_float": [
+                    1200
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_damage_pct",
+                  "values_float": [
+                    15
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ATTACK DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "current_damage_tooltip",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "CURRENT SPIRIT DAMAGE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "building_damage_pct",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spirit_duration",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "heal_percent",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_speed_pct",
                   "values_float": [
                     0
                   ],
                   "is_percentage": true,
-                  "heading_loc": "COOLDOWN REDUCTION:",
+                  "heading_loc": "MOVEMENT SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -889,7 +1139,7 @@
                 "Spirit damage isn't reduced by damage block abilities."
               ],
               "shard_loc": "",
-              "scepter_loc": "Whenever an enemy is affected by Death Prophet's spells or when she attacks an enemy, a ghost will fly out and hit the enemy for an increased bonus of its usual damage then return to her with life.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
@@ -916,7 +1166,9 @@
                 0
               ],
               "cooldowns": [
-                150
+                145,
+                135,
+                125
               ],
               "durations": [
                 40
@@ -1120,52 +1372,14 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_spirit_life_duration",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    20
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_spirit_bonus_damage",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SPIRIT BONUS DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    60
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "duration_increase_per_kill",
+                  "name": "unslowable",
                   "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_death_prophet_exorcism_duration_on_kill",
-                      "value": 8,
+                      "name": "special_bonus_unique_death_prophet_4",
+                      "value": 1,
                       "operation": 0
                     }
                   ],
@@ -1234,7 +1448,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    150
+                    145,
+                    135,
+                    125
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1250,7 +1466,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1265,9 +1481,9 @@
           ],
           "talents": [
             {
-              "id": 1458,
-              "name": "special_bonus_unique_death_prophet_silence_aoe",
-              "name_loc": "+{s:bonus_radius} Silence AoE",
+              "id": 5960,
+              "name": "special_bonus_attack_damage_20",
+              "name_loc": "+{s:value} Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1313,7 +1529,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    20
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1409,216 +1643,9 @@
               "item_quality": 0
             },
             {
-              "id": 6020,
-              "name": "special_bonus_attack_speed_50",
-              "name_loc": "+{s:value} Attack Speed",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    50
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 6367,
-              "name": "special_bonus_unique_death_prophet_2",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Crypt Swarm Cooldown",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 6191,
-              "name": "special_bonus_unique_death_prophet",
-              "name_loc": "+{s:bonus_spirits} Exorcism Spirits",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
-              "id": 6628,
-              "name": "special_bonus_unique_death_prophet_3",
-              "name_loc": "+{s:bonus_damage} Spirit Siphon Damage/Heal",
+              "id": 1458,
+              "name": "special_bonus_unique_death_prophet_silence_aoe",
+              "name_loc": "+{s:bonus_radius} Silence AoE",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1742,9 +1769,198 @@
               "item_quality": 0
             },
             {
-              "id": 1810,
-              "name": "special_bonus_unique_death_prophet_exorcism_duration_on_kill",
-              "name_loc": "Deaths During Exorcism Extend Duration By +{s:bonus_duration_increase_per_kill}s",
+              "id": 6191,
+              "name": "special_bonus_unique_death_prophet",
+              "name_loc": "+{s:bonus_spirits} Exorcism Spirits",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 1284,
+              "name": "special_bonus_unique_death_prophet_crypt_swarm_damage",
+              "name_loc": "+{s:bonus_damage} Crypt Swarm Damage",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 6805,
+              "name": "special_bonus_unique_death_prophet_4",
+              "name_loc": "Unslowable During Exorcism",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 6367,
+              "name": "special_bonus_unique_death_prophet_2",
+              "name_loc": "+{s:bonus_spirits} Witchcraft Spirit",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

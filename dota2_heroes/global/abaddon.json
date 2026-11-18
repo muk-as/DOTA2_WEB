@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 582,
+          "max_health": 620,
           "health_regen": 3.1000001,
           "max_mana": 303,
           "mana_regen": 0.95,
@@ -51,17 +51,18 @@
               "id": 5585,
               "name": "abaddon_death_coil",
               "name_loc": "Mist Coil",
-              "desc_loc": "Abaddon releases a coil of deathly mist that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health.",
+              "desc_loc": "Abaddon releases a coil of deathly mist at the cost of Abaddon's health. Friendly units are healed and have their movement speed increased. Enemy units are damaged and slowed.<br><br>Health cost is %self_damage_pct%%% of the Damage/Heal amount.",
               "lore_loc": "A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will.",
               "notes_loc": [
-                "Abaddon can not kill himself with this skill."
+                "Abaddon can not kill himself with this skill.",
+                "Mist Coil's health cost will damage Aphotic Shield and other barriers before using Abaddon's health."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Mist Coil affects all units in a %effect_radius% radius around the target.<br><br>When Mist Coil hits enemies, Abaddon deals %damage_percentage_on_perform_attack%%% of his attack damage and applies on-hit effects with %potency%%% Item Potency.",
               "facets_loc": [
                 "",
                 "",
-                "Mist Coil also deals %damage_percentage_on_perform_attack%%% attack damage and applies effects from items and abilities. Self Damage increased when targeting enemies."
+                ""
               ],
               "type": 0,
               "behavior": "8",
@@ -106,24 +107,7 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "self_damage",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SELF DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "self_damage_enemy_target",
+                  "name": "self_damage_pct",
                   "values_float": [
                     40
                   ],
@@ -166,13 +150,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE/HEAL:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_abaddon_2",
-                      "value": 35,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -184,18 +162,16 @@
                 },
                 {
                   "name": "effect_radius",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_abaddon_4",
-                      "value": 350,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    400
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -205,16 +181,72 @@
                 },
                 {
                   "name": "perform_attack",
-                  "values_float": [],
+                  "values_float": [
+                    0
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_abaddon_2",
-                      "value": 0,
-                      "operation": 0
-                    }
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    1
                   ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "potency",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    80
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_percentage_on_perform_attack",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    100
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "duration",
+                  "values_float": [
+                    0.7,
+                    0.8,
+                    0.9,
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "DURATION:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -225,17 +257,13 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_percentage_on_perform_attack",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_abaddon_2",
-                      "value": 0,
-                      "operation": 0
-                    }
+                  "name": "movement_speed_pct",
+                  "values_float": [
+                    60
                   ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SPEED:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -252,7 +280,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_7",
+                      "value": 125,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -321,7 +355,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -453,27 +487,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "regen",
-                  "values_float": [],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_abaddon_7",
-                      "value": 8,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "absorb_to_damage",
                   "values_float": [
                     0
@@ -546,6 +559,47 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "AbilityCharges",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_2",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityChargeRestoreTime",
+                  "values_float": [
+                    12,
+                    10,
+                    8,
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityManaCost",
                   "values_float": [
                     110,
@@ -603,7 +657,7 @@
               "id": 5587,
               "name": "abaddon_frostmourne",
               "name_loc": "Curse of Avernus",
-              "desc_loc": "Abaddon strikes an enemy, affecting them by a chilling curse, slowing them, causing them to take damage over time, and all attacks against them gain an attack speed boost. Damage over time component to buildings is reduced by %tower_dps_pct%%%.",
+              "desc_loc": "Abaddon strikes an enemy, affecting them by a chilling curse, slowing them, causing them to take damage over time, and all attacks against them gain an attack speed boost. Abaddon gains %curse_self_attack_speed_multiplier_tooltip_only%x the attack speed boost. Damage over time component to buildings is reduced by %tower_dps_penalty_pct%%%.",
               "lore_loc": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated.",
               "notes_loc": [],
               "shard_loc": "",
@@ -650,43 +704,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "slow_duration",
-                  "values_float": [
-                    2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "hit_count",
-                  "values_float": [
-                    1
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "curse_duration",
                   "values_float": [
-                    2
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -723,20 +743,63 @@
                 {
                   "name": "curse_attack_speed",
                   "values_float": [
-                    10,
+                    15,
                     20,
-                    30,
-                    40
+                    25,
+                    30
                   ],
                   "is_percentage": false,
                   "heading_loc": "ATTACK SPEED:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_abaddon_3",
-                      "value": 65,
+                      "value": 50,
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "curse_self_attack_speed",
+                  "values_float": [
+                    22.5,
+                    30,
+                    37.5,
+                    45
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_3",
+                      "value": 75,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "curse_self_attack_speed_multiplier_tooltip_only",
+                  "values_float": [
+                    1.5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -749,17 +812,17 @@
                 {
                   "name": "curse_dps",
                   "values_float": [
-                    15,
-                    25,
-                    35,
-                    45
+                    12,
+                    20,
+                    28,
+                    36
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DPS:",
+                  "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_abaddon_5",
-                      "value": 30,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -773,7 +836,7 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "tower_dps_pct",
+                  "name": "tower_dps_penalty_pct",
                   "values_float": [
                     100
                   ],
@@ -824,7 +887,7 @@
               "id": 1481,
               "name": "abaddon_withering_mist",
               "name_loc": "Withering Mist",
-              "desc_loc": "Damaging enemies applies the Withering Mist debuff for %duration%s. Affected enemies have their Health Restoration reduced by %heal_reduction_pct%%% if they are below %hp_threshold_pct%%% HP.",
+              "desc_loc": "Damaging enemies reduces their Health Restoration for %duration%s. The lower the enemy's HP, the stronger the Health restoration reduction effect. Minimum effect of %min_heal_reduction_pct%%% at full health. Maximum effect at zero health.<br><br>Does not apply from item damage.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -871,13 +934,19 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "hp_threshold_pct",
+                  "name": "min_heal_reduction_pct",
                   "values_float": [
-                    40
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_6",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -888,13 +957,19 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "heal_reduction_pct",
+                  "name": "max_heal_reduction_pct",
                   "values_float": [
-                    29.5
+                    40
                   ],
                   "is_percentage": true,
-                  "heading_loc": "HEALTH RESTORATION REDUCTION:",
-                  "bonuses": [],
+                  "heading_loc": "MAX HEALTH RESTORATION REDUCTION:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_6",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -947,10 +1022,10 @@
                 "Break prevents Borrowed Time from automatically activating."
               ],
               "shard_loc": "",
-              "scepter_loc": "Increases duration. While Borrowed Time is active, anytime an ally takes more than %ally_threshold_scepter% damage while within Mist Coil's cast range of Abaddon, an individual Mist Coil will automatically fire towards that ally.",
+              "scepter_loc": "",
               "facets_loc": [
                 "",
-                "While Borrowed Time is active, Abaddon and enemies within %immolate_aoe% radius take %immolate_damage% damage per second.",
+                "",
                 ""
               ],
               "type": 1,
@@ -1019,30 +1094,15 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_abaddon_4",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
-                  "values_scepter": [
-                    3
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "ally_threshold_scepter",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DAMAGE THRESHOLD:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    550
-                  ],
+                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1136,7 +1196,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1216,7 +1276,70 @@
             {
               "id": 1165,
               "name": "special_bonus_unique_abaddon_7",
-              "name_loc": "Aphotic Shield provides +{s:bonus_regen} HP Regen",
+              "name_loc": "+{s:bonus_AbilityCastRange} Mist Coil Cast Range",
+              "desc_loc": "",
+              "lore_loc": "",
+              "notes_loc": [],
+              "shard_loc": "",
+              "scepter_loc": "",
+              "facets_loc": [
+                "",
+                "",
+                ""
+              ],
+              "type": 2,
+              "behavior": "2",
+              "target_team": 0,
+              "target_type": 0,
+              "flags": 0,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
+              "max_level": 4,
+              "cast_ranges": [
+                0
+              ],
+              "cast_points": [
+                0
+              ],
+              "channel_times": [
+                0
+              ],
+              "cooldowns": [
+                0
+              ],
+              "durations": [
+                0
+              ],
+              "damages": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mana_costs": [
+                0
+              ],
+              "gold_costs": [],
+              "health_costs": [],
+              "special_values": [],
+              "is_item": false,
+              "ability_has_scepter": false,
+              "ability_has_shard": false,
+              "ability_is_granted_by_scepter": false,
+              "ability_is_granted_by_shard": false,
+              "ability_is_innate": false,
+              "item_cost": 0,
+              "item_initial_charges": 0,
+              "item_neutral_tier": 4294967295,
+              "item_stock_max": 0,
+              "item_stock_time": 0,
+              "item_quality": 0
+            },
+            {
+              "id": 972,
+              "name": "special_bonus_unique_abaddon_6",
+              "name_loc": "+{s:bonus_min_heal_reduction_pct}% Withering Mist Health Restoration Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1340,69 +1463,6 @@
               "item_quality": 0
             },
             {
-              "id": 6601,
-              "name": "special_bonus_unique_abaddon_2",
-              "name_loc": "+{s:bonus_damage_heal} Mist Coil Damage / Heal",
-              "desc_loc": "",
-              "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "",
-              "scepter_loc": "",
-              "facets_loc": [
-                "",
-                "",
-                ""
-              ],
-              "type": 2,
-              "behavior": "2",
-              "target_team": 0,
-              "target_type": 0,
-              "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
-              "max_level": 4,
-              "cast_ranges": [
-                0
-              ],
-              "cast_points": [
-                0
-              ],
-              "channel_times": [
-                0
-              ],
-              "cooldowns": [
-                0
-              ],
-              "durations": [
-                0
-              ],
-              "damages": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "mana_costs": [
-                0
-              ],
-              "gold_costs": [],
-              "health_costs": [],
-              "special_values": [],
-              "is_item": false,
-              "ability_has_scepter": false,
-              "ability_has_shard": false,
-              "ability_is_granted_by_scepter": false,
-              "ability_is_granted_by_shard": false,
-              "ability_is_innate": false,
-              "item_cost": 0,
-              "item_initial_charges": 0,
-              "item_neutral_tier": 4294967295,
-              "item_stock_max": 0,
-              "item_stock_time": 0,
-              "item_quality": 0
-            },
-            {
               "id": 6100,
               "name": "special_bonus_unique_abaddon",
               "name_loc": "+{s:bonus_damage_absorb} Aphotic Shield Barrier Amount",
@@ -1466,10 +1526,10 @@
               "item_quality": 0
             },
             {
-              "id": 8251,
-              "name": "special_bonus_unique_abaddon_immolation",
-              "name_loc": "{s:bonus_immolate_damage} Borrowed Time Immolation DPS",
-              "desc_loc": "Affects Abaddon and all enemies in a {s:bonus_immolate_aoe} AoE.",
+              "id": 7335,
+              "name": "special_bonus_unique_abaddon_4",
+              "name_loc": "+{s:bonus_duration}s Borrowed Time Duration",
+              "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
@@ -1592,9 +1652,9 @@
               "item_quality": 0
             },
             {
-              "id": 7335,
-              "name": "special_bonus_unique_abaddon_4",
-              "name_loc": "{s:bonus_effect_radius} AoE Mist Coil",
+              "id": 6601,
+              "name": "special_bonus_unique_abaddon_2",
+              "name_loc": "{s:bonus_AbilityCharges} Aphotic Shield Charges",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

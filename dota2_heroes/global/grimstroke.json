@@ -31,8 +31,8 @@
             0,
             0
           ],
-          "damage_min": 47,
-          "damage_max": 51,
+          "damage_min": 49,
+          "damage_max": 53,
           "attack_rate": 1.7,
           "attack_range": 600,
           "projectile_speed": 900,
@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 582,
+          "max_health": 620,
           "health_regen": 2.3500001,
           "max_mana": 375,
           "mana_regen": 1.25,
@@ -149,7 +149,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_grimstroke_2",
-                      "value": 80,
+                      "value": 70,
                       "operation": 3
                     }
                   ],
@@ -175,7 +175,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_grimstroke_2",
-                      "value": 80,
+                      "value": 70,
                       "operation": 3
                     }
                   ],
@@ -201,7 +201,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_grimstroke_2",
-                      "value": 80,
+                      "value": 70,
                       "operation": 3
                     }
                   ],
@@ -542,7 +542,7 @@
               "id": 8006,
               "name": "grimstroke_ink_creature",
               "name_loc": "Phantom's Embrace",
-              "desc_loc": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once latched, the phantom damages and silences. If she survives the full latch duration she rends her victim for heavy damage and refreshes Phantom's Embrace's cooldown.\n\nHero attacks against the phantom count as 3 attacks each.",
+              "desc_loc": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once latched, the phantom damages and silences. If she survives the full latch duration she rends her victim for heavy damage and refreshes Phantom's Embrace's cooldown.\n\nCreeps and illusions deal 25% damage to the phantom.",
               "lore_loc": "Grimstroke holds no sorrow for the downfall of his people. Only for Yaovhi, she who was most dear to him, does he feel even a semblance of longing.",
               "notes_loc": [
                 "The phantom falls off if the target becomes invisible or spell immune.",
@@ -633,37 +633,20 @@
                 {
                   "name": "destroy_attacks",
                   "values_float": [
-                    6,
-                    6,
-                    9,
-                    9
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ATTACKS TO DESTROY:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_grimstroke_4",
-                      "value": 2,
-                      "operation": 0
-                    }
-                  ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "hero_attack_multiplier",
-                  "values_float": [
+                    2,
+                    2,
+                    3,
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
+                  "heading_loc": "PIP HEALTH:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_grimstroke_4",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1016,9 +999,9 @@
                 {
                   "name": "max_damage",
                   "values_float": [
-                    90,
-                    180,
-                    270,
+                    120,
+                    200,
+                    280,
                     360
                   ],
                   "is_percentage": false,
@@ -1313,7 +1296,7 @@
                 0
               ],
               "cooldowns": [
-                35
+                40
               ],
               "durations": [
                 0
@@ -1354,6 +1337,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "illusion_effectiveness",
+                  "values_float": [
+                    50
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ILLUSION ITEM POTENCY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1486,7 +1486,7 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    35
+                    40
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2200,7 +2200,7 @@
             {
               "id": 8004,
               "name": "special_bonus_unique_grimstroke_4",
-              "name_loc": "+{s:bonus_destroy_attacks} Attacks to Destroy Phantom",
+              "name_loc": "+{s:bonus_destroy_attacks} Phantom Pip Health",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

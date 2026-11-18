@@ -14,7 +14,7 @@
           "str_base": 24,
           "str_gain": 2.9,
           "agi_base": 19,
-          "agi_gain": 2,
+          "agi_gain": 2.3,
           "int_base": 16,
           "int_gain": 1.9,
           "primary_attr": 3,
@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 648,
+          "max_health": 680,
           "health_regen": 2.65,
           "max_mana": 267,
           "mana_regen": 0.8,
@@ -152,10 +152,10 @@
                 {
                   "name": "axe_damage",
                   "values_float": [
-                    40,
-                    80,
-                    120,
-                    160
+                    45,
+                    85,
+                    125,
+                    165
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER AXE:",
@@ -192,10 +192,10 @@
                 {
                   "name": "damage_amp",
                   "values_float": [
+                    4,
                     5,
                     6,
-                    7,
-                    8
+                    7
                   ],
                   "is_percentage": true,
                   "heading_loc": "DAMAGE AMP PER STACK:",
@@ -475,7 +475,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_beastmaster_2",
-                      "value": 25,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -496,7 +496,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_beastmaster_2",
-                      "value": 25,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -627,13 +627,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_beastmaster_3",
-                      "value": 5,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -689,7 +683,7 @@
                 0
               ],
               "cooldowns": [
-                30
+                25
               ],
               "durations": [
                 0
@@ -877,17 +871,17 @@
                 {
                   "name": "dive_damage",
                   "values_float": [
-                    60,
-                    95,
-                    130,
-                    165
+                    70,
+                    110,
+                    150,
+                    190
                   ],
                   "is_percentage": false,
                   "heading_loc": "DIVE DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_beastmaster_2",
-                      "value": 25,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -1042,17 +1036,11 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    30
+                    25
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_beastmaster_3",
-                      "value": 5,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1172,7 +1160,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_beastmaster_2",
-                      "value": 25,
+                      "value": 30,
                       "operation": 0
                     }
                   ],
@@ -1200,12 +1188,14 @@
               "item_quality": 0
             },
             {
-              "id": 1005,
-              "name": "beastmaster_drums_of_slom",
-              "name_loc": "Drums of Slom",
-              "desc_loc": "Attacks from Beastmaster or a nearby unit he controls will cause him bang his drum, dealing damage to nearby units and healing Beastmaster and units under his control for a portion of the damage dealt. Every attack decreases the interval between drum hits down to a minimum of %min_drum_hit_interval%s between hits after %max_stacks% attacks. If no attacks are made, the intervals gradually increase.<br><br>Using Primal Roar counts as %primal_roar_stacks% attacks.",
-              "lore_loc": "Nature's rage is timeless, and for those who know the secrets, it's easy to stir the echoes of ire that rejoiced in the downfall of Slom.",
-              "notes_loc": [],
+              "id": 1894,
+              "name": "beastmaster_summon_thunderhide",
+              "name_loc": "Summon Ancient Thunderhide",
+              "desc_loc": "Beastmaster calls forth an Ancient Thunderhide to fight alongside him. The Thunderhide can Slam the ground to damage and slow nearby enemies, and beats its Thunderhide Drum as Beastmaster or Beastmaster's units attack, increasing their damage and max health.",
+              "lore_loc": "",
+              "notes_loc": [
+                "A newly summoned Thunderhide's Slam starts on a %thunderhide_slam_spawn_cooldown% second cooldown."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1213,25 +1203,25 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8589934595",
+              "behavior": "8589934597",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 2,
-              "immunity": 4,
-              "dispellable": 3,
+              "damage": 0,
+              "immunity": 0,
+              "dispellable": 0,
               "max_level": 1,
               "cast_ranges": [
                 0
               ],
               "cast_points": [
-                0
+                0.3
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                0
+                60
               ],
               "durations": [
                 0
@@ -1243,18 +1233,18 @@
                 0
               ],
               "mana_costs": [
-                0
+                100
               ],
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "radius",
+                  "name": "thunderhide_base_max_health",
                   "values_float": [
-                    525
+                    2200
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DAMAGE RADIUS:",
+                  "heading_loc": "THUNDERHIDE BASE HEALTH:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1266,26 +1256,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "max_stacks",
+                  "name": "thunderhide_base_damage",
                   "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "ATTACKS FOR SHORTEST INTERVAL:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "stack_decay_time",
-                  "values_float": [
-                    1
+                    90
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1300,13 +1273,19 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "min_drum_hit_interval",
+                  "name": "thunderhide_total_damage_tooltip",
                   "values_float": [
-                    0.5
+                    90
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SHORTEST DRUM INTERVAL:",
-                  "bonuses": [],
+                  "heading_loc": "THUNDERHIDE ATTACK DAMAGE:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_beastmaster_2",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1317,12 +1296,33 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "max_drum_hit_interval",
+                  "name": "thunderhide_bonus_damage",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_beastmaster_2",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "thunderhide_base_xp_bounty",
                   "values_float": [
-                    3
+                    124
                   ],
                   "is_percentage": false,
-                  "heading_loc": "LONGEST DRUM INTERVAL:",
+                  "heading_loc": "THUNDERHIDE XP BOUNTY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1334,12 +1334,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "base_damage",
+                  "name": "thunderhide_base_movespeed",
                   "values_float": [
-                    70
+                    355
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DRUM HIT DAMAGE:",
+                  "heading_loc": "THUNDERHIDE MOVE SPEED:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1351,12 +1351,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "heal_pct",
+                  "name": "thunderhide_slam_spawn_cooldown",
                   "values_float": [
-                    20
+                    5
                   ],
-                  "is_percentage": true,
-                  "heading_loc": "HEAL FROM HEROES:",
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1368,7 +1368,24 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "creep_damage_pct",
+                  "name": "AbilityCastPoint",
+                  "values_float": [
+                    0.3
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "AbilityManaCost",
                   "values_float": [
                     100
                   ],
@@ -1385,43 +1402,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "creep_heal_pct",
+                  "name": "AbilityCooldown",
                   "values_float": [
-                    5
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "HEAL FROM CREEPS:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "aura_radius",
-                  "values_float": [
-                    1200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "primal_roar_stacks",
-                  "values_float": [
-                    10
+                    60
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -2197,7 +2180,7 @@
                 {
                   "name": "bonus_hp",
                   "values_float": [
-                    250
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "",

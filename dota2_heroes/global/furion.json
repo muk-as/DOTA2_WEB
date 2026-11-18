@@ -42,7 +42,7 @@
           "turn_rate": 0.9,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
+          "max_health": 580,
           "health_regen": 2.15,
           "max_mana": 339,
           "mana_regen": 1.1,
@@ -150,19 +150,13 @@
                   "name": "sprout_damage",
                   "values_float": [
                     70,
-                    130,
-                    190,
-                    250
+                    140,
+                    210,
+                    280
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_furion_4",
-                      "value": 240,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -284,7 +278,7 @@
               "id": 5246,
               "name": "furion_teleportation",
               "name_loc": "Teleportation",
-              "desc_loc": "Teleports to any point on the map. Gains a barrier after arriving to its destination.",
+              "desc_loc": "Teleports to any point on the map.",
               "lore_loc": "The Prophet keeps his sentinel over the forest, protecting it when in need.",
               "notes_loc": [
                 "Mana and cooldown take effect when the cast is completed.  Nature's Prophet will not use any mana or waste the cooldown if the spell is interrupted while casting.",
@@ -319,9 +313,9 @@
                 0
               ],
               "cooldowns": [
-                65,
-                50,
-                35,
+                80,
+                60,
+                40,
                 20
               ],
               "durations": [
@@ -344,38 +338,16 @@
               "special_values": [
                 {
                   "name": "barrier",
-                  "values_float": [
-                    70,
-                    130,
-                    190,
-                    250
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "BARRIER:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_furion_teleportation_barrier",
-                      "value": 100,
+                      "value": 0,
                       "operation": 0
                     }
                   ],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "buff_duration",
-                  "values_float": [
-                    15
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "DURATION:",
-                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -425,9 +397,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    65,
-                    50,
-                    35,
+                    80,
+                    60,
+                    40,
                     20
                   ],
                   "is_percentage": false,
@@ -533,7 +505,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_furion_force_of_nature_treants",
+                      "value": 50,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -553,7 +531,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "TREANTS SUMMONED:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_furion_force_of_nature_treants",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -583,7 +567,10 @@
                 {
                   "name": "treant_health",
                   "values_float": [
-                    450
+                    425,
+                    450,
+                    475,
+                    500
                   ],
                   "is_percentage": false,
                   "heading_loc": "TREANT HEALTH:",
@@ -606,10 +593,10 @@
                 {
                   "name": "treant_damage",
                   "values_float": [
-                    16,
+                    15,
                     25,
-                    34,
-                    43
+                    35,
+                    45
                   ],
                   "is_percentage": false,
                   "heading_loc": "TREANT DAMAGE:",
@@ -632,10 +619,10 @@
                 {
                   "name": "treant_bonus_hero_damage",
                   "values_float": [
-                    6,
+                    5,
                     10,
-                    14,
-                    18
+                    15,
+                    20
                   ],
                   "is_percentage": false,
                   "heading_loc": "TREANT BONUS HERO DAMAGE:",
@@ -646,6 +633,26 @@
                       "operation": 1
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "treant_armor",
+                  "values_float": [
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "TREANT ARMOR:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -881,7 +888,7 @@
               "id": 997,
               "name": "furion_curse_of_the_forest",
               "name_loc": "Curse of the Oldgrowth",
-              "desc_loc": "Applies a curse on all enemy heroes within %range% range, displaying them in fog, slowing them, and dealing damage over time based on the number of trees within %radius% radius. Treants count as trees for this purpose.",
+              "desc_loc": "Nature's Prophet and his treants curse enemies they attack, slowing them and dealing damage per second. Curses from different attackers stack. Each attacker's curse has an independent duration that can be refreshed by further attacks from the same unit that applied it.",
               "lore_loc": "Though powerful, Nature's Prophet's gifts do not include all-sight, and he must rely heavily upon reconnaissance and aid from a long-standing network of stalwart friends.",
               "notes_loc": [],
               "shard_loc": "",
@@ -892,9 +899,9 @@
                 ""
               ],
               "type": 0,
-              "behavior": "8589934597",
+              "behavior": "8589934595",
               "target_team": 2,
-              "target_type": 1,
+              "target_type": 19,
               "flags": 0,
               "damage": 2,
               "immunity": 4,
@@ -904,13 +911,13 @@
                 0
               ],
               "cast_points": [
-                0.2
+                0
               ],
               "channel_times": [
                 0
               ],
               "cooldowns": [
-                18
+                0
               ],
               "durations": [
                 0
@@ -922,7 +929,7 @@
                 0
               ],
               "mana_costs": [
-                80
+                0
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -930,7 +937,7 @@
                 {
                   "name": "duration",
                   "values_float": [
-                    7
+                    5
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -945,12 +952,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "damage_per_tree",
+                  "name": "damage_per_second",
                   "values_float": [
-                    15
+                    24
                   ],
                   "is_percentage": false,
-                  "heading_loc": "DPS PER TREE:",
+                  "heading_loc": "DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -962,12 +969,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "slow_per_tree",
+                  "name": "slow",
                   "values_float": [
-                    7
+                    10
                   ],
                   "is_percentage": true,
-                  "heading_loc": "SLOW PER TREE:",
+                  "heading_loc": "SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -979,12 +986,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "radius",
+                  "name": "treant_damage_per_second",
                   "values_float": [
-                    250
+                    12
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
+                  "heading_loc": "TREANT DAMAGE PER SECOND:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -996,63 +1003,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "range",
+                  "name": "treant_slow",
                   "values_float": [
-                    900
+                    5
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCastPoint",
-                  "values_float": [
-                    0.2
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityManaCost",
-                  "values_float": [
-                    80
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "AbilityCooldown",
-                  "values_float": [
-                    18
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "TREANT SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1081,10 +1037,10 @@
               "id": 1298,
               "name": "furion_spirit_of_the_forest",
               "name_loc": "Spirit of the Forest",
-              "desc_loc": "Nature's Prophet gains %damage_per_tree_pct%%% bonus damage for each nearby tree. Treants also provide this bonus with multiplied values regardless of proximity. Treants also possess this ability.",
+              "desc_loc": "Nature's Prophet's attacks gain %damage_per_tree_pct%%% bonus base damage for each tree near the target, including Sprout trees. Treants near the target also provide this bonus with multiplied values. Treants also possess this ability.",
               "lore_loc": "",
               "notes_loc": [
-                "Treants gain bonuses from trees and other treants around them.",
+                "Treants gain bonuses from trees and other treants around their target.",
                 "Treant Protector does not provide any bonuses."
               ],
               "shard_loc": "",
@@ -1631,9 +1587,9 @@
               "item_quality": 0
             },
             {
-              "id": 1300,
-              "name": "special_bonus_unique_furion_teleportation_barrier",
-              "name_loc": "+{s:bonus_barrier} Teleportation Barrier",
+              "id": 5993,
+              "name": "special_bonus_hp_300",
+              "name_loc": "+{s:value} Health",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1679,7 +1635,25 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [],
+              "special_values": [
+                {
+                  "name": "value",
+                  "values_float": [
+                    300
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                }
+              ],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1757,10 +1731,10 @@
               "item_quality": 0
             },
             {
-              "id": 6702,
-              "name": "special_bonus_unique_furion_4",
-              "name_loc": "+{s:bonus_sprout_damage} Sprout Damage",
-              "desc_loc": "",
+              "id": 1920,
+              "name": "special_bonus_unique_furion_force_of_nature_treants",
+              "name_loc": "+{s:bonus_max_treants} Nature's Call Treants",
+              "desc_loc": "Also increases Nature's Call radius by {s:bonus_area_of_effect}.",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

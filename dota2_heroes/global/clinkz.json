@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 516,
+          "max_health": 560,
           "health_regen": 2.0500002,
           "max_mana": 327,
           "mana_regen": 1.0500001,
@@ -80,9 +80,9 @@
                 0
               ],
               "cooldowns": [
-                30,
-                25,
-                20,
+                24,
+                21,
+                18,
                 15
               ],
               "durations": [
@@ -95,10 +95,10 @@
                 0
               ],
               "mana_costs": [
+                55,
                 60,
-                70,
-                80,
-                90
+                65,
+                70
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -261,10 +261,10 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
+                    55,
                     60,
-                    70,
-                    80,
-                    90
+                    65,
+                    70
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -281,9 +281,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    30,
-                    25,
-                    20,
+                    24,
+                    21,
+                    18,
                     15
                   ],
                   "is_percentage": false,
@@ -491,7 +491,7 @@
               "lore_loc": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings.",
               "notes_loc": [
                 "If the target is an enemy, Clinkz will gain the correct experience and gold.",
-                "Increases Clinkz' current and max HP.",
+                "Increases Clinkz' current and max HP. Does not stack.",
                 "When the duration ends, max HP returns to normal, but current HP stays the same."
               ],
               "shard_loc": "",
@@ -567,7 +567,28 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_clinkz_8",
-                      "value": 400,
+                      "value": 300,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "skeletons_spawned",
+                  "values_float": [],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clinkz_engulfing_step",
+                      "value": 1,
                       "operation": 0
                     }
                   ],
@@ -582,22 +603,24 @@
                 },
                 {
                   "name": "spawn_skeleton_on_origin",
-                  "values_float": [
-                    0
-                  ],
+                  "values_float": [],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clinkz_engulfing_step",
+                      "value": 1,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "clinkz_engulfing_step",
-                    "values": [
-                      1
-                    ],
+                    "name": "",
+                    "values": [],
                     "operation": 0
                   },
-                  "required_facet": "clinkz_engulfing_step"
+                  "required_facet": ""
                 },
                 {
                   "name": "creep_level",
@@ -680,21 +703,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BASE CHARGE RESTORE TIME:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_clinkz_9",
-                      "value": 10,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
-                    "name": "clinkz_engulfing_step",
-                    "values": [
-                      10
-                    ],
-                    "operation": 2
+                    "name": "",
+                    "values": [],
+                    "operation": 0
                   },
                   "required_facet": ""
                 },
@@ -776,7 +791,7 @@
                 0
               ],
               "mana_costs": [
-                40
+                75
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -886,7 +901,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    40
+                    75
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1101,7 +1116,7 @@
               "id": 5261,
               "name": "clinkz_wind_walk",
               "name_loc": "Skeleton Walk",
-              "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.<br><br>Skeleton Archers are immobile and die within multiple attacks from a hero or tower. Skeleton Archers deal a percentage of Clinkz' damage, and deal %skeleton_building_damage_reduction%%% less damage to buildings. Attack range is equal to Clinkz' attack range.",
+              "desc_loc": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Skeleton Archers.<br><br>Skeleton Archers are immobile and have %skeleton_health_tooltip% pip health. Creeps and illusions deal 25% damage to them. Skeleton Archers deal a percentage of Clinkz' damage, and deal %skeleton_building_damage_reduction%%% less damage to buildings. Attack range is equal to Clinkz' attack range.",
               "lore_loc": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
               "notes_loc": [
                 "Has a fadetime of %fade_time% seconds."
@@ -1220,7 +1235,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "SKELETON ARCHER COUNT:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_clinkz_skeletons",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1286,7 +1307,7 @@
                 {
                   "name": "skeleton_health",
                   "values_float": [
-                    8
+                    2
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1306,7 +1327,7 @@
                     2
                   ],
                   "is_percentage": false,
-                  "heading_loc": "SKELETON ARCHER HITS TO KILL:",
+                  "heading_loc": "SKELETON ARCHER PIP HEALTH:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1432,7 +1453,10 @@
               "name_loc": "Infernal Shred",
               "desc_loc": "Clinkz and his skeletons apply a stacking debuff that causes their attacks to pierce up to %max_armor_piercing_pct%%% of the target's total physical armor (does not reduce their armor).  Clinkz applies %hero_stacks%%% per attack, and skeletons apply %skeleton_stacks%%%. <br><br>Lasts %duration% seconds.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the applying of new stacks.",
+                "Break does not disable the bonuses from existing stacks."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1768,9 +1792,9 @@
               "item_quality": 0
             },
             {
-              "id": 554,
-              "name": "special_bonus_unique_clinkz_9",
-              "name_loc": "-{s:bonus_AbilityChargeRestoreTime}s Death Pact Charge Restore Time",
+              "id": 495,
+              "name": "special_bonus_unique_clinkz_8",
+              "name_loc": "+{s:bonus_health_gain} Death Pact Bonus Health",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1894,9 +1918,9 @@
               "item_quality": 0
             },
             {
-              "id": 495,
-              "name": "special_bonus_unique_clinkz_8",
-              "name_loc": "+{s:bonus_health_gain} Death Pact Bonus Health",
+              "id": 1923,
+              "name": "special_bonus_unique_clinkz_skeletons",
+              "name_loc": "+{s:bonus_skeleton_count} Skeleton Walk Skeletons",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

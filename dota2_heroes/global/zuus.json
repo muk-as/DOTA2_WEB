@@ -31,10 +31,10 @@
             0,
             0
           ],
-          "damage_min": 53,
-          "damage_max": 63,
+          "damage_min": 52,
+          "damage_max": 68,
           "attack_rate": 1.7,
-          "attack_range": 380,
+          "attack_range": 365,
           "projectile_speed": 1100,
           "armor": 2.8333335,
           "magic_resistance": 25,
@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 582,
+          "max_health": 620,
           "health_regen": 2.3500001,
           "max_mana": 351,
           "mana_regen": 1.15,
@@ -934,7 +934,8 @@
               "notes_loc": [
                 "Grants %cloud_bounty_tooltip% gold if destroyed by an enemy hero.",
                 "Affects the closest enemy unit with strikes from Zeus's current level of Lightning Bolt.",
-                "Towers and creeps do half damage to the Nimbus."
+                "Creeps and illusions deal 25% damage to the Nimbus.",
+                "The Nimbus has fragile pips: melee heroes and Roshan remove 2 pips per attack."
               ],
               "shard_loc": "",
               "scepter_loc": "",
@@ -1030,46 +1031,29 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "hits_to_kill_tooltip",
-                  "values_float": [
-                    8
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "HITS TO DESTROY:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "creep_hits_to_kill_tooltip",
-                  "values_float": [
-                    16
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "CREEP HITS TO DESTROY:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "cloud_bounty_tooltip",
                   "values_float": [
                     125
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "tooltip_fragile_pips",
+                  "values_float": [
+                    8
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "PIP HEALTH:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1227,23 +1211,6 @@
                     "operation": 0
                   },
                   "required_facet": ""
-                },
-                {
-                  "name": "arc_lightning_damage_illusion_pct",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
                 }
               ],
               "is_item": false,
@@ -1376,7 +1343,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_zeus_4",
-                      "value": 75,
+                      "value": 65,
                       "operation": 0
                     }
                   ],
@@ -1460,7 +1427,7 @@
               "id": 5112,
               "name": "zuus_static_field",
               "name_loc": "Static Field",
-              "desc_loc": "Zeus shocks any enemy that he attacks or is hit by his abilities, causing damage equal to a percentage of their current health.",
+              "desc_loc": "Zeus shocks any enemy that he attacks or is hit with his abilities, causing damage equal to a percentage of their current health.",
               "lore_loc": "The air crackles with static when the Thundergod walks the world.",
               "notes_loc": [],
               "shard_loc": "",
@@ -1938,7 +1905,7 @@
               "id": 8038,
               "name": "special_bonus_unique_zeus_5",
               "name_loc": "{s:bonus_aoe_radius} AoE Lightning Bolt",
-              "desc_loc": "",
+              "desc_loc": "Does not affect Nimbus' Lightning Bolt",
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",

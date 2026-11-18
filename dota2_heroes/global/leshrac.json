@@ -32,7 +32,7 @@
             0
           ],
           "damage_min": 49,
-          "damage_max": 53,
+          "damage_max": 55,
           "attack_rate": 1.7,
           "attack_range": 575,
           "projectile_speed": 900,
@@ -42,8 +42,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 560,
-          "health_regen": 2.25,
+          "max_health": 600,
+          "health_regen": 2.5,
           "max_mana": 339,
           "mana_regen": 1.1,
           "abilities": [
@@ -405,7 +405,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_leshrac_1",
-                      "value": 20,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -862,7 +862,7 @@
               "id": 539,
               "name": "leshrac_greater_lightning_storm",
               "name_loc": "Nihilism",
-              "desc_loc": "Causes Leshrac and all nearby enemies to turn ethereal, preventing them from attacking, slowing them, and making them take more magic damage. Increases Leshrac's speed rather than reducing it. Does not cause Leshrac to take amplified damage.",
+              "desc_loc": "Leshrac emits an aura that disarms and constantly dispels nearby enemy units. Leshrac also constantly dispels himself.<br><br>DISPEL TYPE: Basic Dispel",
               "lore_loc": "When it serves his purpose, Leshrac briefly reduces his presence in the Terrene Plane.",
               "notes_loc": [],
               "shard_loc": "",
@@ -874,11 +874,11 @@
               "type": 0,
               "behavior": "8589936645",
               "target_team": 2,
-              "target_type": 0,
+              "target_type": 19,
               "flags": 0,
               "damage": 0,
               "immunity": 4,
-              "dispellable": 2,
+              "dispellable": 3,
               "max_level": 1,
               "cast_ranges": [
                 0
@@ -902,7 +902,7 @@
                 0
               ],
               "mana_costs": [
-                75
+                125
               ],
               "gold_costs": [],
               "health_costs": [],
@@ -925,43 +925,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "magic_amp",
-                  "values_float": [
-                    30
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "INCREASED MAGIC DAMAGE:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "slow",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": true,
-                  "heading_loc": "SLOW:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "radius",
                   "values_float": [
-                    500
+                    550
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -978,7 +944,7 @@
                 {
                   "name": "AbilityManaCost",
                   "values_float": [
-                    75
+                    125
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1075,7 +1041,7 @@
                 {
                   "name": "aoe_per_int",
                   "values_float": [
-                    0.7
+                    0.6
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1095,7 +1061,7 @@
                     0
                   ],
                   "is_percentage": false,
-                  "heading_loc": "BONUS AOE:",
+                  "heading_loc": "BONUS AREA OF EFFECT:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1217,7 +1183,7 @@
                   "name": "damage",
                   "values_float": [
                     80,
-                    135,
+                    130,
                     180
                   ],
                   "is_percentage": false,
@@ -1596,9 +1562,9 @@
               "item_quality": 0
             },
             {
-              "id": 9418,
-              "name": "special_bonus_unique_leshrac_7",
-              "name_loc": "Diabolic Edict Hits An Additional Target",
+              "id": 6063,
+              "name": "special_bonus_unique_leshrac_1",
+              "name_loc": "+{s:bonus_num_explosions} Diabolic Edict Explosions",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1720,9 +1686,9 @@
               "item_quality": 0
             },
             {
-              "id": 6063,
-              "name": "special_bonus_unique_leshrac_1",
-              "name_loc": "+{s:bonus_num_explosions} Diabolic Edict Explosions",
+              "id": 9418,
+              "name": "special_bonus_unique_leshrac_7",
+              "name_loc": "Diabolic Edict Hits An Additional Target",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

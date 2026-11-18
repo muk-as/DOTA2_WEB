@@ -42,7 +42,7 @@
           "turn_rate": 0.9,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 626,
+          "max_health": 660,
           "health_regen": 2.55,
           "max_mana": 255,
           "mana_regen": 0.75,
@@ -261,7 +261,7 @@
                 "",
                 "",
                 "",
-                "Open Wounds' cooldown is refreshed if a unit dies while afflicted by Open Wounds.",
+                "",
                 ""
               ],
               "type": 0,
@@ -537,7 +537,7 @@
               "id": 5250,
               "name": "life_stealer_feast",
               "name_loc": "Feast",
-              "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. He gains permanent max HP whenever he kills a unit.",
+              "desc_loc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. He gains %bonus_hp_per_creep% permanent max HP whenever he kills a creep and %bonus_hp_per_hero% permanent max HP whenever he kills a hero.",
               "lore_loc": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path.",
               "notes_loc": [
                 "Works on allies and enemies. Does not affect Roshan.",
@@ -665,7 +665,7 @@
                     10
                   ],
                   "is_percentage": false,
-                  "heading_loc": "MAX HP PER HERO KILL:",
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -682,7 +682,24 @@
                     1
                   ],
                   "is_percentage": false,
-                  "heading_loc": "MAX HP PER CREEP KILL:",
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_hp_per_creep_num_required",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -833,10 +850,9 @@
               "notes_loc": [
                 "Lifestealer gains experience while under the effects of Infest.",
                 "Creeps that are controlled while Infested gain Infest's movement speed bonus.",
-                "Does not trigger spell reflect.",
                 "Infest can be used on Ancient creeps."
               ],
-              "shard_loc": "Consuming a creep with Infest drenches enemies in blood which deals damage over time based on the host's remaining health.",
+              "shard_loc": "Infest explosion applies a %dot_duration%s duration Open Wounds to enemies in the damage radius. Consuming a creep with Infest drenches enemies in blood which deals damage over time based on the host's remaining health.",
               "scepter_loc": "Increases cast range and reduces cooldown to %bonus_AbilityCooldown%s.  Infest may target enemy heroes for a short duration, attacking them from the inside while increasing Lifestealer's regeneration rate.",
               "facets_loc": [
                 "",
@@ -888,7 +904,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    700
+                    600
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE RADIUS:",
@@ -980,9 +996,9 @@
                 {
                   "name": "self_regen",
                   "values_float": [
+                    2,
                     3,
-                    4,
-                    5
+                    4
                   ],
                   "is_percentage": true,
                   "heading_loc": "SELF MAX HP REGEN:",

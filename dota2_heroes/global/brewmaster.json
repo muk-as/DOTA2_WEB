@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 648,
+          "max_health": 680,
           "health_regen": 2.9,
           "max_mana": 279,
           "mana_regen": 0.85,
@@ -186,10 +186,10 @@
                 {
                   "name": "duration",
                   "values_float": [
+                    3.5,
+                    3.75,
                     4,
-                    4.25,
-                    4.5,
-                    4.75
+                    4.25
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -359,10 +359,10 @@
                 {
                   "name": "total_ignite_damage",
                   "values_float": [
-                    80,
-                    160,
-                    240,
-                    320
+                    75,
+                    150,
+                    225,
+                    300
                   ],
                   "is_percentage": false,
                   "heading_loc": "IGNITE TOTAL DAMAGE:",
@@ -994,10 +994,12 @@
               "id": 1681,
               "name": "brewmaster_liquid_courage",
               "name_loc": "Liquid Courage",
-              "desc_loc": "When Brewmaster drops below %min_health_threshold%%% Health he gains a Status Resistance buff and his movement speed alternates every %speed_toggle_time%s between being faster and being slower. The effect becomes stronger at lower health, scaling from 0 up to max values at %max_health_threshold%%% Health.",
+              "desc_loc": "After taking %damage_threshold% damage from player-controlled units, Brewmaster gains a Status Resistance buff for %trigger_duration%s and his movement speed alternates every %speed_toggle_time%s between being faster and being slower. Damage taken is reset if Brewmaster takes no damage for %damage_reset_interval%s. Can only trigger once every %trigger_cooldown%s.",
               "lore_loc": "",
-              "notes_loc": [],
-              "shard_loc": "Toss a strong drink to a teammate or drink it yourself, activating the maximum power effect of Liquid Courage and granting %max_hp_regen%%% Max HP Regen per second.<br><br>Lasts %drink_duration% seconds.",
+              "notes_loc": [
+                "Damage from Roshan counts towards the damage threshold."
+              ],
+              "shard_loc": "Liquid Courage can be activated to toss a strong drink to a teammate or yourself to gain the effects of Liquid Courage and %max_hp_regen%%% Max HP Regen per second. Increases speed increase.<br><br>Lasts %drink_duration% seconds.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1005,7 +1007,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "1688849860263939",
+              "behavior": "1688849860263938",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1041,9 +1043,9 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "min_health_threshold",
+                  "name": "damage_threshold",
                   "values_float": [
-                    50
+                    400
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1058,9 +1060,43 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "max_health_threshold",
+                  "name": "trigger_duration",
                   "values_float": [
-                    20
+                    5
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "damage_reset_interval",
+                  "values_float": [
+                    7
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "trigger_cooldown",
+                  "values_float": [
+                    15
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1080,7 +1116,7 @@
                     10
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MAX STATUS RESIST:",
+                  "heading_loc": "STATUS RESIST:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1097,7 +1133,7 @@
                     10
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MAX SPEED SLOW:",
+                  "heading_loc": "SPEED SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1114,9 +1150,11 @@
                     30
                   ],
                   "is_percentage": true,
-                  "heading_loc": "MAX SPEED INCREASE:",
+                  "heading_loc": "SPEED INCREASE:",
                   "bonuses": [],
-                  "values_shard": [],
+                  "values_shard": [
+                    20
+                  ],
                   "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
@@ -1265,7 +1303,7 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [
-                    20
+                    15
                   ],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1389,9 +1427,9 @@
                   "name": "tooltip_earth_brewling_hp",
                   "values_float": [
                     1400,
-                    2300,
-                    3200,
-                    4100
+                    2200,
+                    3000,
+                    3800
                   ],
                   "is_percentage": false,
                   "heading_loc": "<font color=\"#9acd32\">EARTH BREWLING HP</font>:",
@@ -1424,7 +1462,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_brewmaster_2",
-                      "value": 13,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -1476,7 +1514,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_brewmaster_2",
-                      "value": 13,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -1519,16 +1557,16 @@
                   "name": "tooltip_fire_brewling_damage",
                   "values_float": [
                     70,
-                    120,
-                    170,
-                    220
+                    115,
+                    160,
+                    205
                   ],
                   "is_percentage": false,
                   "heading_loc": "<font color=\"#FF0000\">FIRE BREWLING DAMAGE</font>:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_brewmaster_2",
-                      "value": 13,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -1570,7 +1608,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_brewmaster_2",
-                      "value": 13,
+                      "value": 10,
                       "operation": 0
                     }
                   ],
@@ -1594,63 +1632,6 @@
                   "values_shard": [],
                   "values_scepter": [
                     1
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "hp_per_attribute",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    0
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "dmg_per_attribute",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    0
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "attribute_share_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    0
                   ],
                   "facet_bonus": {
                     "name": "",

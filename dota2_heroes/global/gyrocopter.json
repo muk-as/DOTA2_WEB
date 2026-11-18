@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 1000,
-          "max_health": 604,
+          "max_health": 640,
           "health_regen": 2.45,
           "max_mana": 327,
           "mana_regen": 1.0500001,
@@ -254,7 +254,7 @@
               "desc_loc": "Fires a homing missile to seek the targeted enemy unit. The missile gains speed over time, dealing damage and stunning when it impacts the target. Enemy units can destroy the missile before it reaches its target.",
               "lore_loc": "The biggest missile Aurel could possibly attach to his craft, The Bomb has carefully calculated aerodynamics and explosives for maximum impact.",
               "notes_loc": [
-                "Towers do half damage to the missile.",
+                "Creeps and illusions deal 25% damage to the missile.",
                 "The crosshair effect is visible to allies only.",
                 "The missile will follow and hit invisible units."
               ],
@@ -309,24 +309,7 @@
                     3
                   ],
                   "is_percentage": false,
-                  "heading_loc": "HITS TO DESTROY:",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "tower_hits_to_kill_tooltip",
-                  "values_float": [
-                    6
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "TOWER HITS TO DESTROY:",
+                  "heading_loc": "PIP HEALTH:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -441,9 +424,9 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "hero_damage",
+                  "name": "hits_to_kill",
                   "values_float": [
-                    2
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -618,7 +601,7 @@
               "id": 5363,
               "name": "gyrocopter_flak_cannon",
               "name_loc": "Flak Cannon",
-              "desc_loc": "Gyrocopter's attacks hit all enemy units in an area around it for a limited number of attacks.  Only the main target of attacks will receive attack bonuses such as Critical Strike.  Lasts %abilityduration% seconds or until the attacks are used.",
+              "desc_loc": "Gyrocopter's attacks hit all enemy units in an area around it for a limited number of attacks.  The additional attacks can proc attack modifiers at reduced effectiveness, except for Lifesteal and Critical Strike.  Lasts %abilityduration% seconds or until the attacks are used.",
               "lore_loc": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius.",
               "notes_loc": [
                 "Attack range for the primary attack is unchanged."
@@ -674,7 +657,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    1250
+                    1050
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -715,12 +698,12 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "projectile_speed",
+                  "name": "attack_effectiveness",
                   "values_float": [
-                    800
+                    50
                   ],
-                  "is_percentage": false,
-                  "heading_loc": "",
+                  "is_percentage": true,
+                  "heading_loc": "ITEM POTENCY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -732,17 +715,13 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "bonus_damage",
-                  "values_float": [],
+                  "name": "projectile_speed",
+                  "values_float": [
+                    800
+                  ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_gyrocopter_flak_cannon_bonus_damage",
-                      "value": 25,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -832,7 +811,10 @@
               "name_loc": "Afterburner",
               "desc_loc": "Gyrocopter gains movement speed for a short duration after damaging an enemy with his attacks or abilities.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Break disables the gaining of new stacks.",
+                "Break does not disable the bonuses from existing stacks."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -899,7 +881,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MOVESPEED (HEROES):",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_gyrocopter_4",
+                      "value": 2,
+                      "operation": 1
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -916,7 +904,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MOVESPEED (CREEPS):",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_gyrocopter_4",
+                      "value": 2,
+                      "operation": 1
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1015,6 +1009,23 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "attack_effectiveness",
+                  "values_float": [
+                    75
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ITEM POTENCY:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1169,7 +1180,7 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    400
+                    425
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
@@ -1333,7 +1344,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_gyrocopter_5",
-                      "value": 40,
+                      "value": 10,
                       "operation": 2
                     }
                   ],
@@ -1425,8 +1436,8 @@
               "item_quality": 0
             },
             {
-              "id": 5902,
-              "name": "special_bonus_hp_150",
+              "id": 6034,
+              "name": "special_bonus_hp_175",
               "name_loc": "+{s:value} Health",
               "desc_loc": "",
               "lore_loc": "",
@@ -1476,7 +1487,7 @@
                 {
                   "name": "value",
                   "values_float": [
-                    150
+                    175
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1567,9 +1578,9 @@
               "item_quality": 0
             },
             {
-              "id": 1012,
-              "name": "special_bonus_unique_gyrocopter_flak_cannon_bonus_damage",
-              "name_loc": "+{s:bonus_bonus_damage} Flak Cannon Damage",
+              "id": 6654,
+              "name": "special_bonus_unique_gyrocopter_5",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Call Down Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1815,9 +1826,9 @@
               "item_quality": 0
             },
             {
-              "id": 6654,
-              "name": "special_bonus_unique_gyrocopter_5",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Call Down Cooldown",
+              "id": 6653,
+              "name": "special_bonus_unique_gyrocopter_4",
+              "name_loc": "{s:bonus_bonus_movement_speed_per_hit}x Afterburner Movespeed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

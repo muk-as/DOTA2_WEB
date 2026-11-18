@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 604,
+          "max_health": 640,
           "health_regen": 2.45,
           "max_mana": 375,
           "mana_regen": 1.75,
@@ -224,6 +224,23 @@
                   "name": "extra_bolt_search_radius",
                   "values_float": [
                     500
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "secondary_bolt_interval",
+                  "values_float": [
+                    1
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -528,7 +545,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_skywrath_concussive_shot_slow",
-                      "value": 20,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -728,17 +745,17 @@
                 {
                   "name": "resist_debuff",
                   "values_float": [
+                    -16,
                     -20,
-                    -25,
-                    -30,
-                    -35
+                    -24,
+                    -28
                   ],
                   "is_percentage": true,
                   "heading_loc": "INCREASED MAGIC DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_skywrath_3",
-                      "value": 10,
+                      "value": 8,
                       "operation": 2
                     }
                   ],
@@ -857,7 +874,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_skywrath",
-                      "value": 6,
+                      "value": 5,
                       "operation": 2
                     }
                   ],
@@ -888,7 +905,7 @@
               "id": 833,
               "name": "skywrath_mage_shield_of_the_scion",
               "name_loc": "Shield of the Scion",
-              "desc_loc": "Every time Skywrath Mage deals magical damage to an enemy hero with his abilities, he gains a small magic damage barrier. Each buff stacks independently.",
+              "desc_loc": "Every time Skywrath Mage deals magical damage to an enemy hero with his abilities, he gains bonus intelligence and a small magic damage barrier. Each buff stacks independently.",
               "lore_loc": "The court mages of Skywrath may only deploy their magic in defense of the kingdom and the throne.",
               "notes_loc": [],
               "shard_loc": "",
@@ -951,13 +968,36 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "bonus_intelligence",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "BONUS INTELLIGENCE:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "damage_barrier",
                   "values_float": [
                     13.5
                   ],
                   "is_percentage": false,
                   "heading_loc": "BARRIER:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_skywrath_scion_shield_barrier",
+                      "value": 5,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -970,7 +1010,7 @@
                 {
                   "name": "barrier_duration",
                   "values_float": [
-                    12
+                    10
                   ],
                   "is_percentage": false,
                   "heading_loc": "DURATION:",
@@ -1096,15 +1136,15 @@
                   "name": "damage",
                   "values_float": [
                     800,
-                    1200,
-                    1600
+                    1125,
+                    1450
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_skywrath_5",
-                      "value": 400,
+                      "value": 350,
                       "operation": 0
                     }
                   ],
@@ -1242,9 +1282,9 @@
           ],
           "talents": [
             {
-              "id": 7132,
-              "name": "special_bonus_mp_regen_150",
-              "name_loc": "+{s:value} Mana Regen",
+              "id": 1927,
+              "name": "special_bonus_unique_skywrath_scion_shield_barrier",
+              "name_loc": "+{s:bonus_damage_barrier} Shield Of The Scion Barrier",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1289,25 +1329,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    1.5
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,

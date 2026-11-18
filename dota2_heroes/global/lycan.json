@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 736,
+          "max_health": 760,
           "health_regen": 3.05,
           "max_mana": 351,
           "mana_regen": 1.15,
@@ -184,11 +184,11 @@
                   "name": "wolf_damage",
                   "values_float": [
                     22,
-                    28,
-                    34,
-                    40,
-                    46,
-                    52
+                    32,
+                    42,
+                    52,
+                    62,
+                    72
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE:",
@@ -683,15 +683,17 @@
               "id": 5397,
               "name": "lycan_feral_impulse",
               "name_loc": "Feral Impulse",
-              "desc_loc": "Increases the HP regeneration and damage of Lycan and all units under his control.",
+              "desc_loc": "Increases the HP regeneration and damage for Lycan and all units under his control.",
               "lore_loc": "His animalistic symbiosis with canine kind gives Banehallow enhanced reflexes and hunting capabilities.",
-              "notes_loc": [],
+              "notes_loc": [
+                "Does not increase damage from items."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
                 "",
                 "",
-                "Max level decreased to %max_level%."
+                ""
               ],
               "type": 0,
               "behavior": "2",
@@ -739,13 +741,7 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "BONUS DAMAGE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_lycan_4",
-                      "value": 25,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -812,7 +808,7 @@
               "id": 333,
               "name": "lycan_wolf_bite",
               "name_loc": "Wolf Bite",
-              "desc_loc": "Lycan bites an allied hero or creep-hero, granting them Shapeshift properties. Lycan and the bitten target gain %lifesteal_percent%%% Lifesteal and share the healing effect of Lifesteal with each other as long as they are within %lifesteal_range% range of each other.",
+              "desc_loc": "Lycan bites an allied hero or creep-hero, granting them Shapeshift properties. While shapeshifted this way, the target counts as a unit under Lycan's control for Pack Hunter.",
               "lore_loc": "Does this bite look infected?",
               "notes_loc": [
                 "Wolf Bite cooldown matches the cooldown of the current level of Shapeshift."
@@ -865,40 +861,6 @@
               "gold_costs": [],
               "health_costs": [],
               "special_values": [
-                {
-                  "name": "lifesteal_percent",
-                  "values_float": [
-                    40
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "lifesteal_range",
-                  "values_float": [
-                    1200
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
                 {
                   "name": "attack_range",
                   "values_float": [
@@ -1007,12 +969,16 @@
               "item_quality": 0
             },
             {
-              "id": 1339,
-              "name": "lycan_apex_predator",
-              "name_loc": "Apex Predator",
-              "desc_loc": "Lycan and units he controls deal extra damage to neutral creeps.",
+              "id": 1921,
+              "name": "lycan_pack_hunter",
+              "name_loc": "Pack Hunter",
+              "desc_loc": "Lycan and units under his control mark units on attack for %mark_duration% seconds. When Lycan or a unit under his control attacks a marked unit, it deals bonus damage equal to %bonus_damage%%% of its attack damage per stack, and heals the attacker for %lifesteal%%% of its attack damage per stack.",
               "lore_loc": "",
-              "notes_loc": [],
+              "notes_loc": [
+                "Each unit can apply 1 mark per enemy.",
+                "Marked units are revealed through fog of war and invisibility.",
+                "Does not pierce Debuff Immunity."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -1025,9 +991,9 @@
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
-              "damage": 0,
-              "immunity": 0,
-              "dispellable": 0,
+              "damage": 1,
+              "immunity": 4,
+              "dispellable": 2,
               "max_level": 1,
               "cast_ranges": [
                 0
@@ -1057,12 +1023,52 @@
               "health_costs": [],
               "special_values": [
                 {
-                  "name": "damage_amp",
+                  "name": "mark_duration",
                   "values_float": [
-                    18
+                    6
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "MARK DURATION:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "bonus_damage",
+                  "values_float": [
+                    5
                   ],
                   "is_percentage": true,
-                  "heading_loc": "EXTRA DAMAGE:",
+                  "heading_loc": "BONUS DAMAGE PER STACK:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_lycan_4",
+                      "value": 2,
+                      "operation": 0
+                    }
+                  ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "lifesteal",
+                  "values_float": [
+                    3
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "LIFESTEAL PER STACK:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
@@ -1663,7 +1669,7 @@
             {
               "id": 6684,
               "name": "special_bonus_unique_lycan_4",
-              "name_loc": "+{s:bonus_bonus_damage}% Feral Impulse Damage",
+              "name_loc": "+{s:bonus_bonus_damage}% Pack Hunter Bonus Damage Per Stack",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

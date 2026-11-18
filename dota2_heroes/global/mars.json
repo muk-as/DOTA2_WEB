@@ -42,7 +42,7 @@
           "turn_rate": 0.8,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 626,
+          "max_health": 660,
           "health_regen": 2.55,
           "max_mana": 327,
           "mana_regen": 1.5500001,
@@ -517,10 +517,10 @@
                 0
               ],
               "cooldowns": [
-                16,
                 14,
                 12,
-                10
+                10,
+                8
               ],
               "durations": [
                 0
@@ -540,10 +540,10 @@
                 {
                   "name": "crit_mult",
                   "values_float": [
-                    150,
+                    160,
                     200,
-                    250,
-                    300
+                    240,
+                    280
                   ],
                   "is_percentage": true,
                   "heading_loc": "CRITICAL DAMAGE:",
@@ -583,17 +583,14 @@
                 {
                   "name": "radius",
                   "values_float": [
-                    500
+                    500,
+                    525,
+                    550,
+                    575
                   ],
                   "is_percentage": false,
                   "heading_loc": "DISTANCE:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_mars_rebuke_radius",
-                      "value": 100,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -745,17 +742,17 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    16,
                     14,
                     12,
-                    10
+                    10,
+                    8
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_mars_rebuke_cooldown",
-                      "value": 2.5,
+                      "value": 1.5,
                       "operation": 2
                     }
                   ],
@@ -1140,7 +1137,7 @@
               "lore_loc": "The long-dead members of the Ash Legion, assembled from the finest warriors to ever test the might of Mars, still revel in the thrill of combat, gladly beholden to the hand that fell them for as long as he so commands.",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Lowers cooldown by %bonus_AbilityCooldown%s and increases duration. If an enemy is killed in the Arena, Mars and all of his allies inside the Arena restore %arena_kill_buff_heal_pct%%  of their max health and mana and get a %arena_kill_buff_damage_pct%%  attack damage buff for %arena_kill_buff_duration%s. This effect stacks.",
+              "scepter_loc": "Lowers cooldown by %bonus_AbilityCooldown%s and increases duration. If an enemy is killed in the Arena, Mars and all of his allies inside the Arena restore %arena_kill_buff_heal_pct%%%  of their max health and mana and get a %arena_kill_buff_damage_pct%%%  attack damage buff for %arena_kill_buff_duration%s. This effect stacks.",
               "facets_loc": [
                 "If Mars is in the Arena when an enemy dies inside of it, he restores %arena_kill_buff_heal_pct%%% of his max health and mana and gets a %arena_kill_buff_damage_pct%%% attack damage buff for %arena_kill_buff_duration%s. Allies inside the Arena receive %allied_reduction_pct%%% of the bonuses.",
                 "Arena of Blood obscures vision and enemies within the arena do not share vision with their allies."
@@ -1164,9 +1161,9 @@
                 0
               ],
               "cooldowns": [
-                100,
+                105,
                 95,
-                90
+                85
               ],
               "durations": [
                 0
@@ -1394,7 +1391,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    35
+                    45
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -1518,9 +1515,9 @@
                 {
                   "name": "AbilityCooldown",
                   "values_float": [
-                    100,
+                    105,
                     95,
-                    90
+                    85
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -1553,9 +1550,9 @@
           ],
           "talents": [
             {
-              "id": 1020,
-              "name": "special_bonus_unique_mars_rebuke_radius",
-              "name_loc": "+{s:bonus_radius} God's Rebuke Distance",
+              "id": 884,
+              "name": "special_bonus_unique_mars_bulwark_damage_reduction",
+              "name_loc": "+{s:bonus_physical_damage_reduction}%/+{s:bonus_physical_damage_reduction_side}% Bulwark Front/Side Damage Reduction",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

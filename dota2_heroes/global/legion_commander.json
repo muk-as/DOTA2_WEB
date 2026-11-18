@@ -12,7 +12,7 @@
           "npe_desc_loc": "Increases power with each duel victory",
           "facets": [],
           "str_base": 25,
-          "str_gain": 3,
+          "str_gain": 2.8,
           "agi_base": 18,
           "agi_gain": 1.7,
           "int_base": 20,
@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 670,
+          "max_health": 700,
           "health_regen": 2.75,
           "max_mana": 315,
           "mana_regen": 1,
@@ -197,7 +197,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS ATTACK SPEED:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_legion_commander_overwhelming_odds_attack_speed",
+                      "value": 30,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -340,13 +346,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_legion_commander_9",
-                      "value": 2,
-                      "operation": 2
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -754,10 +754,25 @@
                   ],
                   "is_percentage": true,
                   "heading_loc": "LIFESTEAL:",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "crit_mult",
+                  "values_float": [],
+                  "is_percentage": true,
+                  "heading_loc": "CRITICAL DAMAGE:",
                   "bonuses": [
                     {
-                      "name": "special_bonus_unique_legion_commander_7",
-                      "value": 100,
+                      "name": "special_bonus_unique_legion_commander_moment_of_courage_crit",
+                      "value": 180,
                       "operation": 0
                     }
                   ],
@@ -1067,7 +1082,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_legion_commander_duel_refresh_on_victory",
-                      "value": 30,
+                      "value": 25,
                       "operation": 0
                     }
                   ],
@@ -1226,9 +1241,9 @@
           ],
           "talents": [
             {
-              "id": 1113,
-              "name": "special_bonus_unique_legion_commander_9",
-              "name_loc": "-{s:bonus_AbilityCooldown}s Overwhelming Odds Cooldown",
+              "id": 1939,
+              "name": "special_bonus_unique_legion_commander_overwhelming_odds_attack_speed",
+              "name_loc": "+{s:bonus_bonus_attack_speed} Overwhelming Odds Attack Speed",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1598,9 +1613,9 @@
               "item_quality": 0
             },
             {
-              "id": 880,
-              "name": "special_bonus_unique_legion_commander_7",
-              "name_loc": "+{s:bonus_hp_leech_percent}% Moment of Courage Lifesteal",
+              "id": 1932,
+              "name": "special_bonus_unique_legion_commander_moment_of_courage_crit",
+              "name_loc": "Moment of Courage Has a {s:bonus_crit_mult}% Critical Strike",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

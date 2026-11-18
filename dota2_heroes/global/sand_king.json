@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 626,
+          "max_health": 660,
           "health_regen": 2.55,
           "max_mana": 279,
           "mana_regen": 0.85,
@@ -57,7 +57,7 @@
                 "Does not trigger spell block or spell reflect."
               ],
               "shard_loc": "",
-              "scepter_loc": "",
+              "scepter_loc": "Increases Cast Range. Sand King leaves behind a trail of spines, that, after a %spine_duration%s delay, create Stinger attack areas along the path, that apply %spine_damage_pct%%% of Stinger damage to enemies hit.",
               "facets_loc": [
                 "",
                 "",
@@ -158,7 +158,9 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    1000
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -176,6 +178,63 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spine_radius",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    175
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spine_duration",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    0.8
+                  ],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "spine_damage_pct",
+                  "values_float": [
+                    0
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [
+                    75
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -212,16 +271,12 @@
                     775
                   ],
                   "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_sand_king_8",
-                      "value": 200,
-                      "operation": 0
-                    }
-                  ],
+                  "heading_loc": "RANGE:",
+                  "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    425
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -277,7 +332,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": false,
+              "ability_has_scepter": true,
               "ability_has_shard": false,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -549,7 +604,7 @@
               "id": 1229,
               "name": "sandking_scorpion_strike",
               "name_loc": "Stinger",
-              "desc_loc": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing extra damage to each. Enemies within an innermost radius of %inner_radius% take %inner_radius_bonus_damage_pct%%% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
+              "desc_loc": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing extra damage to each. Attacks have decreased Item Potency. Enemies within an innermost radius of %inner_radius% take %inner_radius_bonus_damage_pct%%% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
               "lore_loc": "Crixalis is certainly capable of mercy, but the soul of the sand finds few foes worth sparing.",
               "notes_loc": [],
               "shard_loc": "A Caustic Finale explosion that deals %caustic_damage_pct%%% damage is created around every enemy hero hit in Stinger's innermost radius. Does not apply to strikes created by Aghanim's Scepter upgrade.",
@@ -625,7 +680,10 @@
                 {
                   "name": "inner_radius",
                   "values_float": [
-                    125
+                    120,
+                    140,
+                    160,
+                    180
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
@@ -660,9 +718,9 @@
                   "name": "attack_damage",
                   "values_float": [
                     50,
-                    75,
-                    100,
-                    125
+                    80,
+                    110,
+                    140
                   ],
                   "is_percentage": false,
                   "heading_loc": "BONUS DAMAGE:",
@@ -716,6 +774,23 @@
                       "operation": 0
                     }
                   ],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "potency",
+                  "values_float": [
+                    60
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "ITEM POTENCY:",
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1198,120 +1273,6 @@
                   "required_facet": ""
                 },
                 {
-                  "name": "scepter_explosion_radius_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    35
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_explosion_min_dist",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    120
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "scepter_explosions_per_pulse",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    3
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spine_tick_rate",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    0.5
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "spine_damage_pct",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    40
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "shard_explosions_per_pulse",
-                  "values_float": [
-                    0
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [
-                    1
-                  ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
                   "name": "AbilityDuration",
                   "values_float": [
                     6
@@ -1373,7 +1334,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_sand_king_8",
+                      "value": 15,
+                      "operation": 2
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1385,7 +1352,7 @@
                 }
               ],
               "is_item": false,
-              "ability_has_scepter": true,
+              "ability_has_scepter": false,
               "ability_has_shard": true,
               "ability_is_granted_by_scepter": false,
               "ability_is_granted_by_shard": false,
@@ -1594,7 +1561,7 @@
             {
               "id": 890,
               "name": "special_bonus_unique_sand_king_8",
-              "name_loc": "+{s:bonus_AbilityCastRange} Burrowstrike Cast Range",
+              "name_loc": "-{s:bonus_AbilityCooldown}s Epicenter Cooldown",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

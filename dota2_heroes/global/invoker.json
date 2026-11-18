@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
+          "max_health": 580,
           "health_regen": 2.15,
           "max_mana": 339,
           "mana_regen": 1.1,
@@ -838,7 +838,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207978893385",
+              "behavior": "8724152393",
               "target_team": 2,
               "target_type": 19,
               "flags": 0,
@@ -1100,7 +1100,7 @@
               "notes_loc": [
                 "The slow effect does not work on Spell Immune enemies."
               ],
-              "shard_loc": "Ghost Walk now also applies the Ice Wall Damage Per Second to enemy heroes in its area of effect.",
+              "shard_loc": "Ghost Walk now also applies %ice_wall_damage_multiplier%x the Ice Wall Damage Per Second to enemy heroes in its area of effect.",
               "scepter_loc": "",
               "facets_loc": [
                 "",
@@ -1108,7 +1108,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207848872005",
+              "behavior": "8594131013",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1314,6 +1314,25 @@
                   "required_facet": ""
                 },
                 {
+                  "name": "ice_wall_damage_multiplier",
+                  "values_float": [
+                    1
+                  ],
+                  "is_percentage": false,
+                  "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [
+                    1.25
+                  ],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
                   "name": "AbilityCastPoint",
                   "values_float": [
                     0.05
@@ -1395,7 +1414,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007482856800337",
+              "behavior": "283602059345",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -1802,7 +1821,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207978893425",
+              "behavior": "8724152433",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -2048,7 +2067,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007208012447817",
+              "behavior": "8757706825",
               "target_team": 1,
               "target_type": 3,
               "flags": 0,
@@ -2262,7 +2281,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207978893393",
+              "behavior": "8724152401",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -2475,15 +2494,15 @@
                 {
                   "name": "burn_dps",
                   "values_float": [
-                    10,
-                    15,
+                    12,
+                    16,
                     20,
-                    25,
-                    30,
-                    35,
+                    24,
+                    28,
+                    32,
+                    36,
                     40,
-                    45,
-                    50
+                    44
                   ],
                   "is_percentage": false,
                   "heading_loc": "BURN DAMAGE PER SECOND (<font color='#cabe68'>EXORT</font>):\n",
@@ -2620,7 +2639,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207978893425",
+              "behavior": "8724152433",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -2693,14 +2712,14 @@
                   "name": "damage",
                   "values_float": [
                     175,
-                    225,
-                    275,
-                    325,
+                    215,
+                    255,
+                    295,
+                    335,
                     375,
-                    425,
-                    475,
-                    525,
-                    575
+                    415,
+                    455,
+                    495
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE (<font color='#cabe68'>EXORT</font>):\n",
@@ -2942,7 +2961,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207978893381",
+              "behavior": "8724152389",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -3288,7 +3307,7 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207978893381",
+              "behavior": "8724152389",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
@@ -3408,7 +3427,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_invoker_ice_wall_dps",
-                      "value": 50,
+                      "value": 40,
                       "operation": 0
                     }
                   ],
@@ -3672,7 +3691,9 @@
               "name_loc": "Deafening Blast",
               "desc_loc": "Invoker unleashes a mighty sonic wave in front of him, dealing damage to any enemy unit it collides with based on the level of <font color='#cabe68'>Exort</font>. The sheer impact from the blast is enough to knock those enemy units back for a duration based on the level of <font color='#7998b5'>Quas</font>, then disarm their attacks for a duration based on the level of <font color='#d671a9'>Wex</font>.",
               "lore_loc": "Buluphont's Aureal Incapacitator.",
-              "notes_loc": [],
+              "notes_loc": [
+                "The Knockback is undispellable."
+              ],
               "shard_loc": "",
               "scepter_loc": "",
               "facets_loc": [
@@ -3681,13 +3702,13 @@
                 ""
               ],
               "type": 0,
-              "behavior": "9007207978893393",
+              "behavior": "8724152401",
               "target_team": 0,
               "target_type": 0,
               "flags": 0,
               "damage": 2,
               "immunity": 4,
-              "dispellable": 3,
+              "dispellable": 2,
               "max_level": 1,
               "cast_ranges": [
                 1000
@@ -4236,9 +4257,9 @@
               "item_quality": 0
             },
             {
-              "id": 5762,
-              "name": "special_bonus_unique_invoker_additional_chaos_meteors",
-              "name_loc": "+{s:bonus_meteor_count} Chaos Meteors",
+              "id": 724,
+              "name": "special_bonus_unique_invoker_13",
+              "name_loc": "{s:bonus_move_speed_per_instance}x Quas/Wex/Exort Active Bonuses",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -4425,9 +4446,9 @@
               "item_quality": 0
             },
             {
-              "id": 724,
-              "name": "special_bonus_unique_invoker_13",
-              "name_loc": "{s:bonus_move_speed_per_instance}x Quas/Wex/Exort Active Bonuses",
+              "id": 5762,
+              "name": "special_bonus_unique_invoker_additional_chaos_meteors",
+              "name_loc": "+{s:bonus_meteor_count} Chaos Meteors",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],

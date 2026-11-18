@@ -11,7 +11,7 @@
           "hype_loc": "Tinker demolishes foes with <b>swarms of machines</b> and a host of <b>deadly gadgets</b>. If he can gather the resources he needs, the power that instantly <b>refreshes his abilities</b> enables him to lead his team from every front.",
           "npe_desc_loc": "Demolishes his enemies with swarms of machines",
           "facets": [],
-          "str_base": 19,
+          "str_base": 20,
           "str_gain": 2.3,
           "agi_base": 17,
           "agi_gain": 1.4,
@@ -42,8 +42,8 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 538,
-          "health_regen": 2.4,
+          "max_health": 600,
+          "health_regen": 2.5,
           "max_mana": 435,
           "mana_regen": 2,
           "abilities": [
@@ -173,7 +173,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_tinker_4",
-                      "value": 250,
+                      "value": 300,
                       "operation": 0
                     }
                   ],
@@ -232,7 +232,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    13
+                    9
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -538,7 +538,7 @@
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [
-                    35
+                    45
                   ],
                   "facet_bonus": {
                     "name": "",
@@ -662,7 +662,7 @@
               "lore_loc": "",
               "notes_loc": [],
               "shard_loc": "",
-              "scepter_loc": "Turrets fire missiles %missile_attack_rate_tooltip%%% faster.",
+              "scepter_loc": "Turrets missiles have %bonus_missile_range%%% faster attack interval, increased range, and increased speed.",
               "facets_loc": [
                 "",
                 ""
@@ -935,7 +935,7 @@
                   "bonuses": [
                     {
                       "name": "special_bonus_unique_tinker_deploy_turrets_missile_damage",
-                      "value": 60,
+                      "value": 45,
                       "operation": 0
                     }
                   ],
@@ -957,7 +957,9 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    20
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -997,7 +999,9 @@
                   "heading_loc": "TURRET RANGE:",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    20
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1017,7 +1021,9 @@
                   "heading_loc": "",
                   "bonuses": [],
                   "values_shard": [],
-                  "values_scepter": [],
+                  "values_scepter": [
+                    20
+                  ],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1077,23 +1083,6 @@
                   "values_scepter": [
                     0.3
                   ],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                },
-                {
-                  "name": "missile_attack_rate_tooltip",
-                  "values_float": [
-                    20
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
                   "facet_bonus": {
                     "name": "",
                     "values": [],
@@ -1227,7 +1216,7 @@
               "id": 909,
               "name": "tinker_warp_grenade",
               "name_loc": "Warp Flare",
-              "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, rooting them and reducing their Cast and Attack Range for %debuff_duration% seconds.<br><br>The target is teleported further the closer they are to Tinker.",
+              "desc_loc": "Throws a flare towards an enemy, dealing damage, teleporting them away, slowing them and reducing their Cast and Attack Range for %debuff_duration% seconds.<br><br>The target is teleported further the closer they are to Tinker.",
               "lore_loc": "Tinker's deadliest weapon instantly turns an enemy into space dust. Research to resolve the annoying 'perfect copy' side effect... is ongoing.",
               "notes_loc": [
                 "Max teleportation distance is %warp_distance_pct_tooltip%%% of Warp Flare's cast range, which decreases down to 0 at max cast range."
@@ -1362,10 +1351,27 @@
                 {
                   "name": "debuff_duration",
                   "values_float": [
-                    2
+                    3
                   ],
                   "is_percentage": false,
                   "heading_loc": "",
+                  "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "movement_slow_pct",
+                  "values_float": [
+                    100
+                  ],
+                  "is_percentage": true,
+                  "heading_loc": "MOVEMENT SPEED SLOW:",
                   "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],

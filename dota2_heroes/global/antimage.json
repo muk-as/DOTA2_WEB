@@ -42,7 +42,7 @@
           "turn_rate": 0.6,
           "sight_range_day": 1800,
           "sight_range_night": 800,
-          "max_health": 582,
+          "max_health": 620,
           "health_regen": 3.6000001,
           "max_mana": 219,
           "mana_regen": 0.6,
@@ -105,7 +105,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MANA BURNED AS DAMAGE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_antimage_mana_break_damage",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -533,7 +539,13 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "MAGIC RESISTANCE:",
-                  "bonuses": [],
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_antimage_4",
+                      "value": 10,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -602,6 +614,27 @@
                   "is_percentage": false,
                   "heading_loc": "",
                   "bonuses": [],
+                  "values_shard": [],
+                  "values_scepter": [],
+                  "facet_bonus": {
+                    "name": "",
+                    "values": [],
+                    "operation": 0
+                  },
+                  "required_facet": ""
+                },
+                {
+                  "name": "reflected_debuff_duration_pct",
+                  "values_float": [],
+                  "is_percentage": true,
+                  "heading_loc": "REFLECTED SPELL DEBUFF DURATION BONUS:",
+                  "bonuses": [
+                    {
+                      "name": "special_bonus_unique_antimage_counterspell_reflect_duration",
+                      "value": 25,
+                      "operation": 0
+                    }
+                  ],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -872,13 +905,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "DAMAGE PER 1 MANA MISSING:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_antimage_6",
-                      "value": 0.2,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -920,13 +947,7 @@
                   ],
                   "is_percentage": false,
                   "heading_loc": "RADIUS:",
-                  "bonuses": [
-                    {
-                      "name": "special_bonus_unique_antimage_manavoid_aoe",
-                      "value": 200,
-                      "operation": 0
-                    }
-                  ],
+                  "bonuses": [],
                   "values_shard": [],
                   "values_scepter": [],
                   "facet_bonus": {
@@ -1031,9 +1052,9 @@
           ],
           "talents": [
             {
-              "id": 1495,
-              "name": "special_bonus_hp_regen_3",
-              "name_loc": "+{s:value} Health Regen",
+              "id": 1935,
+              "name": "special_bonus_unique_antimage_counterspell_reflect_duration",
+              "name_loc": "+{s:bonus_reflected_debuff_duration_pct}% Counterspell Reflected Spell Debuff Duration",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1078,25 +1099,7 @@
               ],
               "gold_costs": [],
               "health_costs": [],
-              "special_values": [
-                {
-                  "name": "value",
-                  "values_float": [
-                    3
-                  ],
-                  "is_percentage": false,
-                  "heading_loc": "",
-                  "bonuses": [],
-                  "values_shard": [],
-                  "values_scepter": [],
-                  "facet_bonus": {
-                    "name": "",
-                    "values": [],
-                    "operation": 0
-                  },
-                  "required_facet": ""
-                }
-              ],
+              "special_values": [],
               "is_item": false,
               "ability_has_scepter": false,
               "ability_has_shard": false,
@@ -1111,9 +1114,9 @@
               "item_quality": 0
             },
             {
-              "id": 966,
-              "name": "special_bonus_unique_antimage_manavoid_aoe",
-              "name_loc": "+{s:bonus_mana_void_aoe_radius} Mana Void Radius",
+              "id": 1936,
+              "name": "special_bonus_unique_antimage_mana_break_damage",
+              "name_loc": "+{s:bonus_percent_damage_per_burn}% Mana Break Mana Burned As Damage",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
@@ -1235,9 +1238,9 @@
               "item_quality": 0
             },
             {
-              "id": 665,
-              "name": "special_bonus_unique_antimage_6",
-              "name_loc": "+{s:bonus_mana_void_damage_per_mana} Mana Void Damage Multiplier",
+              "id": 6607,
+              "name": "special_bonus_unique_antimage_4",
+              "name_loc": "+{s:bonus_magic_resistance}% Counterspell Magic Resistance",
               "desc_loc": "",
               "lore_loc": "",
               "notes_loc": [],
